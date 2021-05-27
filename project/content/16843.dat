@@ -1,0 +1,676 @@
+rolesim.net/article/sims-4-ispolzovanie-koda-moveobjects
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" version="XHTML+RDFa 1.0" dir="ltr">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8" />
+<link rel="shortcut icon" href="http://rolesim.net/sites/all/themes/rolesim_base/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="robots" content="follow, index" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="http://rolesim.net/article/sims-4-ispolzovanie-koda-moveobjects" />
+<link rel="shortlink" href="http://rolesim.net/article/sims-4-ispolzovanie-koda-moveobjects" />
+<meta name="original-source" content="http://rolesim.net" />
+  <title>The Sims 4: Использование кода MoveObjects - RoleSim.Net</title>
+  <style type="text/css" media="all">
+@import url("http://rolesim.net/modules/system/system.base.css?ol9zyd");
+@import url("http://rolesim.net/modules/system/system.menus.css?ol9zyd");
+@import url("http://rolesim.net/modules/system/system.messages.css?ol9zyd");
+@import url("http://rolesim.net/modules/system/system.theme.css?ol9zyd");
+</style>
+<style type="text/css" media="all">
+@import url("http://rolesim.net/modules/comment/comment.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/modules/contrib/date/date_api/date.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/modules/contrib/date/date_popup/themes/datepicker.1.7.css?ol9zyd");
+@import url("http://rolesim.net/modules/field/theme/field.css?ol9zyd");
+@import url("http://rolesim.net/modules/node/node.css?ol9zyd");
+@import url("http://rolesim.net/modules/poll/poll.css?ol9zyd");
+@import url("http://rolesim.net/modules/user/user.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/modules/contrib/ckeditor/css/ckeditor.css?ol9zyd");
+</style>
+<style type="text/css" media="all">
+@import url("http://rolesim.net/sites/all/modules/contrib/ctools/css/ctools.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/modules/contrib/panels/css/panels.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/modules/contrib/rate/rate.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/layouts/rolesim_two_second/style.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/modules/contrib/rate/templates/thumbs-up/thumbs-up.css?ol9zyd");
+</style>
+<style type="text/css" media="screen">
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/jquery/jquery.alerts.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/default.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/reset.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/wrapper.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/views.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/menu.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/form.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/comments.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/block.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/elements.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/media.css?ol9zyd");
+@import url("http://rolesim.net/sites/all/themes/rolesim_base/css/game.css?ol9zyd");
+</style>
+  <script type="text/javascript" src="http://rolesim.net/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="http://rolesim.net/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://rolesim.net/misc/drupal.js?ol9zyd"></script>
+<script type="text/javascript" src="http://rolesim.net/misc/jquery.cookie.js?v=1.0"></script>
+<script type="text/javascript" src="http://rolesim.net/sites/default/files/languages/ru_kEPy2KrIfY9y8cBKsWIgZ-8MzBJrDlI5LqW5hn7acNg.js?ol9zyd"></script>
+<script type="text/javascript" src="http://rolesim.net/sites/all/modules/contrib/authcache/authcache.js?ol9zyd"></script>
+<script type="text/javascript" src="http://rolesim.net/sites/all/modules/contrib/rate/rate.js?ol9zyd"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var switchTo5x = true;
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if (stLight !== undefined) { stLight.options({"publisher":"dr-d6ffbbb8-3f69-694b-c70e-2e8035c4b65","version":"5x"}); }
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://rolesim.net/sites/all/modules/contrib/google_analytics/googleanalytics.js?ol9zyd"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-47004546-1"]);_gaq.push(["_setDomainName", ".rolesim.net"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://rolesim.net/sites/all/themes/rolesim_base/jquery/jquery.min.js?ol9zyd"></script>
+<script type="text/javascript" src="http://rolesim.net/sites/all/themes/rolesim_base/jquery/jquery.alerts.js?ol9zyd"></script>
+<script type="text/javascript" src="http://rolesim.net/sites/all/themes/rolesim_base/js/main.js?ol9zyd"></script>
+<script type="text/javascript" src="http://rolesim.net/sites/all/themes/rolesim_base/js/elements.js?ol9zyd"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"rolesim_base","theme_token":"nBBItO0PLK1rt2tra3a6eRtL8UG2GpNe_8otqh8C5gY","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/jquery.cookie.js":1,"public:\/\/languages\/ru_kEPy2KrIfY9y8cBKsWIgZ-8MzBJrDlI5LqW5hn7acNg.js":1,"sites\/all\/modules\/contrib\/authcache\/authcache.js":1,"sites\/all\/modules\/contrib\/rate\/rate.js":1,"0":1,"http:\/\/w.sharethis.com\/button\/buttons.js":1,"1":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/rolesim_base\/jquery\/jquery.min.js":1,"sites\/all\/themes\/rolesim_base\/jquery\/jquery.alerts.js":1,"sites\/all\/themes\/rolesim_base\/js\/main.js":1,"sites\/all\/themes\/rolesim_base\/js\/elements.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/rate\/rate.css":1,"sites\/all\/themes\/rolesim_base\/layouts\/rolesim_two_second\/style.css":1,"sites\/all\/modules\/contrib\/rate\/templates\/thumbs-up\/thumbs-up.css":1,"sites\/all\/themes\/rolesim_base\/jquery\/jquery.alerts.css":1,"sites\/all\/themes\/rolesim_base\/css\/default.css":1,"sites\/all\/themes\/rolesim_base\/css\/reset.css":1,"sites\/all\/themes\/rolesim_base\/css\/wrapper.css":1,"sites\/all\/themes\/rolesim_base\/css\/views.css":1,"sites\/all\/themes\/rolesim_base\/css\/menu.css":1,"sites\/all\/themes\/rolesim_base\/css\/form.css":1,"sites\/all\/themes\/rolesim_base\/css\/comments.css":1,"sites\/all\/themes\/rolesim_base\/css\/block.css":1,"sites\/all\/themes\/rolesim_base\/css\/elements.css":1,"sites\/all\/themes\/rolesim_base\/css\/media.css":1,"sites\/all\/themes\/rolesim_base\/css\/game.css":1}},"authcache":{"q":"node\/992","cp":{"path":"\/","domain":".rolesim.net","secure":false},"cl":1},"rate":{"basePath":"\/rate\/vote\/js","destination":"node\/992"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip","trackDomainMode":"1"}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-992 node-type-portal-article domain-rolesim-net" >
+  <IDXSKIP><div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Перейти к основному содержанию</a>
+  </div></IDXSKIP>
+    
+<IDXSKIP><div id="domain-menu">
+      <div class="block ">
+      <a href="http://forum.rolesim.net" class="forum"><img src="http://rolesim.net/sites/all/themes/rolesim_base/img/domain/forum.png" alt="" /></a>          </div>
+      <div class="block content">
+      <a href="http://content.rolesim.net" class="content domain-link"><img src="http://rolesim.net/sites/all/themes/rolesim_base/img/domain/content.png" alt="" /></a>          </div>
+      <div class="block creation">
+      <a href="http://creation.rolesim.net" class="creation domain-link"><img src="http://rolesim.net/sites/all/themes/rolesim_base/img/domain/creation.png" alt="" /></a>          </div>
+  </div></IDXSKIP>
+
+<div id="page-wrapper">
+  <div id="page">
+    <div id="header"><div class="section clearfix">
+      <div class="header-box">
+
+        <IDXSKIP><div class="social-media-box">
+          <div class="tooltip" tooltip="Присоединяйтесь к нам:">Присоединяйтесь к нам:</div>
+                      <a href="javascript:void(0)" id="bookmarkme" tooltip="Добавить в избранное"><img src="http://rolesim.net/sites/all/themes/rolesim_base/img/social/social-home.png" alt="" /></a>                      <a href="https://twitter.com/Avenicci" target="_blank" tooltip="В Twitter"><img src="http://rolesim.net/sites/all/themes/rolesim_base/img/social/social-twitter.png" alt="" /></a>                      <a href="http://www.youtube.com/channel/UC6tv2hQhZRwf6_VON8glhkw" target="_blank" tooltip="На YouTube"><img src="http://rolesim.net/sites/all/themes/rolesim_base/img/social/social-youtube.png" alt="" /></a>                      <a href="/contact-us" tooltip="Обратная связь"><img src="http://rolesim.net/sites/all/themes/rolesim_base/img/social/social-mail.png" alt="" /></a>                      <a href="/rss/news" target="_blank" tooltip="RSS лента"><img src="http://rolesim.net/sites/all/themes/rolesim_base/img/social/social-rss.png" alt="" /></a>                  </div></IDXSKIP>
+
+        <IDXSKIP><div class="user-box">
+          <div class="user-links">
+                          <a href="/user/register" class="register">Регистрация</a>                          <a href="/user/password" class="forgot">Forgot password</a>                      </div>
+          <a href="/user/login" class="login-button"><span class="arrow"><span></span></span><span class="login">Вход на сайт</span></a>        </div></IDXSKIP>
+        <div class="clear"></div>
+
+      </div>
+
+      <a href="/" rel="home" id="logo"></a>
+          </div></div> <!-- /.section, /#header -->
+
+          <div class = "slogan-box">
+                  <div id="site-slogan"><IDXSKIP>Оставайтесь с нами, и вы узнаете все о The Sims первыми!</IDXSKIP></div>
+              </div>
+    
+    <div id="main-menu">
+      <ul class="menu"><IDXSKIP><li class="first leaf"><a href="/" title="">Главная</a></li></IDXSKIP>
+<IDXSKIP><li class="leaf"><a href="/what-new" title="">Что нового</a></li></IDXSKIP>
+<IDXSKIP><li class="leaf"><a href="/info/rules/common" title="">Правила</a></li></IDXSKIP>
+<IDXSKIP><li class="leaf"><a href="/news" title="">Новости</a></li></IDXSKIP>
+<IDXSKIP><li class="leaf"><a href="/articles" title="">Статьи</a></li></IDXSKIP>
+<IDXSKIP><li class="leaf"><a href="/journal" title="">Журнал</a></li></IDXSKIP>
+<IDXSKIP><li class="last expanded"><a href="/games" title="">Игры</a><ul class="menu"><li class="first leaf"><a href="/games/sims-3-0" title="">The Sims 3</a></li>
+<li class="last expanded"><a href="/games/sims-4" title="">The Sims 4</a><ul class="menu"><li class="first leaf"><a href="/games/sims-4/base" title="">Базовая игра</a></li>
+<li class="leaf"><a href="/games/sims-4/outdoor-retreat" title="">В поход!</a></li>
+<li class="leaf"><a href="/games/sims-4/get-to-work" title="">На работу</a></li>
+<li class="leaf"><a href="/games/roskoshnaya-vecherinka" title="">Роскошная вечеринка</a></li>
+<li class="leaf"><a href="/games/vnutrenniy-dvorik" title="">Внутренний дворик</a></li>
+<li class="leaf"><a href="/games/den-spa" title="">День Спа</a></li>
+<li class="leaf"><a href="/games/klassnaya-kuhnya" title="">Классная кухня</a></li>
+<li class="leaf"><a href="/games/veselimsya-vmeste" title="">Веселимся вместе!</a></li>
+<li class="leaf"><a href="/games/zhutkie-veshchi" title="">Жуткие вещи</a></li>
+<li class="last leaf"><a href="/games/domashniy-kinoteatr" title="">Домашний кинотеатр</a></li>
+</ul></li>
+</ul></li></IDXSKIP>
+</ul>    </div>
+
+    <div id="breadcrumb">
+      <IDXSKIP><a href="https://www.origin.com/ru-ru/store/browse?q=sims%204">Заказать игру The Sims 4 в Origin</a></IDXSKIP>
+<span></span>
+<IDXSKIP><a href="https://www.origin.com/ru-ru/store/browse?q=sims%203"> The Sims 3 в Origin</a></IDXSKIP>    </div>
+
+    
+    <div id="main-wrapper"><div id="main" class="clearfix">
+      <div id="content" class="column"><div class="section">
+        <a id="main-content"></a>
+                  <div class="region region-content">
+    
+
+<div class="panel-display panel-2col clearfix" >
+  <div class="panel-panel panel-col-first">
+    <div class="inside"><div class="panel-pane pane-node-title"  >
+  
+      
+  
+  <div class="pane-content">
+    <h1>The Sims 4: Использование кода MoveObjects</h1>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-view pane-node"  >
+  
+      
+  
+  <div class="pane-content">
+    <div id="node-992" class="node node-portal-article clearfix">
+
+      
+      <div class="submitted">
+      Опубликовано 24 декабря, 2014 - 04:12 пользователем <IDXSKIP><span class="username">Avenicci</span></IDXSKIP>    </div>
+  
+  <div class="content">
+    <div class="field field-name-field-portal-article-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>С выходом декабрьского патча в The Sims 4 был добавлен долгожданный код, известный как MoveObjects on (далее просто MOO). Однако, несмотря на ту же идею, что и в предыдущих играх франшизы, в ее четвертой части этот код претерпел изменения.</p>
+<p><strong>Введение кода</strong></p>
+<ul><li>Нажимаем Ctrl+Shift+C, чтобы открыть строку кода
+  </li>
+<li>Вводим bb.moveobjects
+  </li>
+<li>Еще раз нажимаем Ctrl+Shift+C, чтобы закрыть строку кода
+</li>
+</ul><p>Повторный ввод кода отключит его.</p>
+<p><em>Примечание: Во-первых, мы видим изменение синтаксиса кода MOO. Во-вторых, отмечаем, что код разработчика для работы МОО не нужен.</em></p>
+<p><strong>Использование кода в игре</strong></p>
+<p>Впервые с помощью кода МОО можно свободно перемещать объекты не только по горизонтали, но и по вертикали. Раньше это достигалось установкой в игру OMSP, теперь никакие сторонние моды не нужны! Чтобы поднять предмет в воздух или опустить его на землю, используйте клавиши 9 и 0 на клавиатуре. Ниже на скриншотах проиллюстрированы возможности обновленного кода МОО.</p>
+<p><em>Примечание 1: Если вы установили себе в опциях «Камеру The Sims 3», нажимайте не «9» и «0», а Ctrl+9 и Ctrl+0.<br />
+Примечание 2: Для полной свободы действий при перемещении объекта можно зажать кнопку ALT, это отключит привязку к сетке.</em></p>
+<p>Статуэтка кролика установлена на пьедестал стандартным образом. Фигурка гнома посажена на кролика с помощью ее поднятия кодом МОО (клавиша 9) до нужного уровня.</p>
+<p><img src="http://4put.ru/pictures/max/1049/3224509.jpg" alt="IMAGE(http://4put.ru/pictures/max/1049/3224509.jpg)" /></p>
+<p>Ваза с цветами поставлена подъемом до нужного уровня на скульптуру, что создало необычную декоративную композицию.</p>
+<p><img src="http://4put.ru/pictures/max/1049/3224510.jpg" alt="IMAGE(http://4put.ru/pictures/max/1049/3224510.jpg)" /></p>
+<p>Аналогично вы можете наслаивать объекты друг на друга, создавая кипы книг, многоуровневые фонтаны и многое другое.</p>
+<p>Старайтесь использовать код MOO только для декоративных целей, не ставьте с его помощью функциональные объекты на участке. Если же вы все-таки рискнули поставить стул/стол/кровать и т.д. с помощью МОО, обязательно проверьте в игре маршрутизацию и проходимость на участке, а также возможность взаимодействия с указанными предметами.</p>
+<p>Установленная на стол скрипка перестала быть доступной для сима:</p>
+<p><img src="http://4put.ru/pictures/max/1049/3224511.jpg" alt="IMAGE(http://4put.ru/pictures/max/1049/3224511.jpg)" /></p>
+<p><img src="http://4put.ru/pictures/max/1049/3224512.jpg" alt="IMAGE(http://4put.ru/pictures/max/1049/3224512.jpg)" /></p>
+<p>Обратите внимание, как МОО ведет себя при использовании на окнах. Если разместить с помощью этого кода два окна так, чтобы одно наслаивалось на другое, картина будет удручающей.</p>
+<p><img src="http://4put.ru/pictures/max/1049/3224514.jpg" alt="IMAGE(http://4put.ru/pictures/max/1049/3224514.jpg)" /></p>
+<p>Однако при возврате в режим жизни внезапно проявившаяся в окне стена вновь исчезает, оставляя только рамы и стекла. </p>
+<p><img src="http://4put.ru/pictures/max/1049/3224518.jpg" alt="IMAGE(http://4put.ru/pictures/max/1049/3224518.jpg)" /></p>
+<p>Этот трюк можно использовать для создания креативных окон.</p>
+<p><img src="http://4put.ru/pictures/max/1049/3224516.jpg" alt="IMAGE(http://4put.ru/pictures/max/1049/3224516.jpg)" /></p>
+<p><strong>MOO и Галерея</strong></p>
+<p>Вопрос о том, как влияет МОО на комнаты и дома, размещенные в Галерее, волнует многих. Ответ прост: влияет напрямую. При установке дома из Галереи через режим Управления городом объекты, поставленные кодом МОО, исчезают. Для того чтобы избежать этой пакости, ставьте дом только через режим покупки и строительства.</p>
+<p>Другой способ сохранить объекты при установке дома с МОО – это заранее включить код в своей игре. Сначала включаем код, потом ставим дом. Запомнили?</p>
+<p>Запомните еще кое-что. Если вы заливаете дом, интерьеры которого созданы с помощью МОО, в Галерею, обязательно укажите это в описании. Удобство для пользователей – респект для креатора!</p>
+<p>Прекрасных творений вам!</p>
+</div></div></div><div class="sharethis-buttons"><div class="sharethis-wrapper"><span st_url="http://rolesim.net/article/sims-4-ispolzovanie-koda-moveobjects" st_title="The Sims 4: Использование кода MoveObjects" class="st_twitter_hcount" displayText="twitter"></span>
+<span st_url="http://rolesim.net/article/sims-4-ispolzovanie-koda-moveobjects" st_title="The Sims 4: Использование кода MoveObjects" class="st_facebook_hcount" displayText="facebook"></span>
+<span st_url="http://rolesim.net/article/sims-4-ispolzovanie-koda-moveobjects" st_title="The Sims 4: Использование кода MoveObjects" class="st_vkontakte_hcount" displayText="vkontakte"></span>
+<span st_url="http://rolesim.net/article/sims-4-ispolzovanie-koda-moveobjects" st_title="The Sims 4: Использование кода MoveObjects" class="st_livejournal_hcount" displayText="livejournal"></span>
+<span st_url="http://rolesim.net/article/sims-4-ispolzovanie-koda-moveobjects" st_title="The Sims 4: Использование кода MoveObjects" class="st_plusone_hcount" displayText="plusone"></span>
+<span st_url="http://rolesim.net/article/sims-4-ispolzovanie-koda-moveobjects" st_title="The Sims 4: Использование кода MoveObjects" class="st_fblike_hcount" displayText="fblike"></span>
+</div></div>
+<div class="form-item form-type-item">
+  <IDXSKIP><label>Нравится статья? Голосуй! </label></IDXSKIP>
+ <div class="rate-widget-2 rate-widget clear-block rate-average rate-widget-thumbs_up rate-18fe39431bbfacf2672beb3882d85fd2 rate-node-992-2-3" id="rate-node-992-2-3"><span class="rate-button rate-thumbs-up-btn-up" id="rate-button-1">up</span><div class="rate-info">Проголосовали 0 пользователей.</div></div>
+</div>
+  </div>
+
+      <div class="rate-widget-wrapper">
+      <div class="rate-widget-inner">
+              </div>
+      <div class="clear"></div>
+    </div>
+  
+  <div class="outer-links"><ul class="links inline"><li class="comment_forbidden first last"><span><a href="/user/login?destination=node/992%23comment-form">Войдите</a> или <a href="/user/register?destination=node/992%23comment-form">зарегистрируйтесь</a>, чтобы отправлять комментарии</span></li>
+</ul></div>
+
+  <div id="comments" class="comment-wrapper">
+          <h2 class="title">Комментарии</h2>
+      
+  <div class="comment-wrapper">
+    <a id="comment-1362"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Малинка</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture-20-1449733433.jpg?itok=72aZn6ma" alt="Аватар пользователя Малинка" title="Аватар пользователя Малинка" />  </div>
+</div>
+    <div class="date">24 декабря, 2014 - 09:37</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1362#comment-1362" class="permalink" rel="bookmark">#1362</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>О отлично! Очень интересно и спасибо за такую подробную инструкцию! Я бы ни за что не нашла сама, какими клавишами можно поднимать и опускать предметы </p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<a id="comment-1363"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Marsia</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture_283.jpg?itok=dLA89Pha" alt="Аватар пользователя Marsia" title="Аватар пользователя Marsia" />  </div>
+</div>
+    <div class="date">24 декабря, 2014 - 11:04</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1363#comment-1363" class="permalink" rel="bookmark">#1363</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>А причем здесь код разработчика, с чего вообще они взяли, что это новшество?! Он никогда для МОО не нужен был, ни в двойке, ни в тройке...</p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<a id="comment-1364"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Avenicci</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture-19-1454266276.jpg?itok=cfhnfG0j" alt="Аватар пользователя Avenicci" title="Аватар пользователя Avenicci" />  </div>
+</div>
+    <div class="date">24 декабря, 2014 - 11:17</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1364#comment-1364" class="permalink" rel="bookmark">#1364</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p> с чего вообще они взяли, что это новшество<br />
+Кто "они", Marsia? Автор статьи перед тобой. И почему новшество? Про изменение кода сказано только в предложении, предшествующем данному.<br />
+Фраза о коде построена так: "отмечаем, что код разработчика для работы МОО не нужен"<br />
+А не так: "отмечаем, что код разработчика для работы МОО больше не нужен"<br />
+Я специально обратила внимание на этот факт, поскольку очень многие ресурсы написали у себя требование кода разработчиков для МОО. Даже на официальных ресурсах (форуме и ВК-группе). И люди запутались, надо или нет.</p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<a id="comment-1365"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Дюймовочка</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture-393-1449953244.jpg?itok=wlvwQCPG" alt="Аватар пользователя Дюймовочка" title="Аватар пользователя Дюймовочка" />  </div>
+</div>
+    <div class="date">24 декабря, 2014 - 12:09</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1365#comment-1365" class="permalink" rel="bookmark">#1365</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>МОО не нужен был, ни в двойке, ни в тройке..<br />
+Фраза о коде построена так: "отмечаем, что код разработчика для работы МОО не нужен"<br />
+ Девочки спасибо вам обеим,  из вашей  дискуссии нужную информацию для себя получила, я тоже код разработчика в 3-х сначала вводила, а  МОО  люблю  </p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<a id="comment-1366"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Marsia</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture_283.jpg?itok=dLA89Pha" alt="Аватар пользователя Marsia" title="Аватар пользователя Marsia" />  </div>
+</div>
+    <div class="date">24 декабря, 2014 - 12:40</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1366#comment-1366" class="permalink" rel="bookmark">#1366</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>А, ну я не читала, что там где еще понаписали - на другие ресурсы не хожу  Просто мне глаз резануло, вот и удивилась, а так статья отличная   Насчет авторства только сложно иногда понять - видно только что ты разместила и все - но ты и так все статьи размещаешь на этом сайте. Извини, если задела  </p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<a id="comment-1367"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Meissa</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture-21-1451341166.jpg?itok=MOZTU8gW" alt="Аватар пользователя Meissa" title="Аватар пользователя Meissa" />  </div>
+</div>
+    <div class="date">24 декабря, 2014 - 16:52</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1367#comment-1367" class="permalink" rel="bookmark">#1367</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Женераль, очередной респект за статейку) я вчера строила с мувом и не была в курсе некоторых тонкостей) но сейчас-то можно кое-чаво в постройке поисправлять и в описание к дому написать, что использован МОО.</p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<a id="comment-1368"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Avenicci</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture-19-1454266276.jpg?itok=cfhnfG0j" alt="Аватар пользователя Avenicci" title="Аватар пользователя Avenicci" />  </div>
+</div>
+    <div class="date">24 декабря, 2014 - 20:26</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1368#comment-1368" class="permalink" rel="bookmark">#1368</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Marsia, не задела, канеш, ты чего?  А вообще понять, ху из автор, легко. Если в статьях отдельно не указана строчка "Автор - Имярек", то авторов является опубликовавший статью человек )))<br />
+Танюш, я еще на твоем домике протестирую все. Ибо я сама на своем пробовала: сама залила, сама скачала. Так что чутка попозже отчитаюсь.</p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<a id="comment-1369"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Meissa</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture-21-1451341166.jpg?itok=MOZTU8gW" alt="Аватар пользователя Meissa" title="Аватар пользователя Meissa" />  </div>
+</div>
+    <div class="date">24 декабря, 2014 - 22:20</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1369#comment-1369" class="permalink" rel="bookmark">#1369</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Хорошо) а ты свой домик на скачку выложила уже?  </p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<a id="comment-1373"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Avenicci</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture-19-1454266276.jpg?itok=cfhnfG0j" alt="Аватар пользователя Avenicci" title="Аватар пользователя Avenicci" />  </div>
+</div>
+    <div class="date">25 декабря, 2014 - 16:36</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1373#comment-1373" class="permalink" rel="bookmark">#1373</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Нет еще ))) После выхода журнала выложу, там интерьеры из него. )))</p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<a id="comment-1381"></a>
+<div class="comment clearfix">
+
+  <div class="user-info">
+    <div class="author"><span class="username">Meissa</span></div>
+    <div class="avatar">  <div class="user-picture">
+    <img src="http://rolesim.net/sites/default/files/styles/thumbnail/public/users/avatars/picture-21-1451341166.jpg?itok=MOZTU8gW" alt="Аватар пользователя Meissa" title="Аватар пользователя Meissa" />  </div>
+</div>
+    <div class="date">27 декабря, 2014 - 12:59</div>
+      </div>
+
+  <div class="comment-body">
+    <div class="links"></div>
+    <div class="permalink"><a href="/comment/1381#comment-1381" class="permalink" rel="bookmark">#1381</a></div>
+
+    <div class="body">
+            <div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><p>Ааа)) окей)) спасибо, буду ждать)</p>
+</div></div></div>    </div>
+    
+  </div>
+
+</div>
+<h2 class="element-invisible">Страницы</h2><div class="item-list"><ul class="pager"><li class="pager-current first">1</li>
+<li class="pager-item"><a title="На страницу номер 2" href="/article/sims-4-ispolzovanie-koda-moveobjects?page=1">2</a></li>
+<li class="pager-next"><a title="На следующую страницу" href="/article/sims-4-ispolzovanie-koda-moveobjects?page=1">следующая ›</a></li>
+<li class="pager-last last"><a title="На последнюю страницу" href="/article/sims-4-ispolzovanie-koda-moveobjects?page=1">последняя »</a></li>
+</ul></div>  </div>
+
+  </div>
+
+</div>
+  </div>
+
+  
+  </div>
+</div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside"><div class="panel-pane pane-node rolesim-block rolesim-block-title-blue"  >
+  
+        <h2 class="pane-title">
+      The Sims 4 на форуме    </h2>
+    
+  
+  <div class="pane-content">
+    <div id="node-1833" class="node node-common-block clearfix">
+
+        <h2><a href="/block/sims-4-na-forume"></a></h2>
+    
+  
+  <div class="content">
+    <div class="field field-name-field-portal-block-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><IDXSKIP><p><img src="http://rolesim.net/sites/default/files/system/list-plumbob.png" /><strong> </strong> <a class="forumlink link-new" href="http://forum.rolesim.net/viewforum.php?f=35">Обсуждения и слухи</a></p></IDXSKIP>
+<IDXSKIP><p><img src="http://rolesim.net/sites/default/files/system/list-plumbob.png" /><strong> </strong> <a class="forumlink link-new" href="http://forum.rolesim.net/viewforum.php?f=37">Информация по игре и дополнениям</a></p></IDXSKIP>
+<IDXSKIP><p><img src="http://rolesim.net/sites/default/files/system/list-plumbob.png" /><strong> </strong> <a class="forumlink link-new" href="http://forum.rolesim.net/viewforum.php?f=39">Технические проблемы</a></p></IDXSKIP>
+<IDXSKIP><p><img src="http://rolesim.net/sites/default/files/system/list-plumbob.png" /><strong> </strong>  <a class="forumlink link-new" href="http://forum.rolesim.net/viewforum.php?f=113">Программы и патчи для игры</a></p></IDXSKIP>
+</div></div></div>  </div>
+
+      <div class="rate-widget-wrapper">
+      <div class="rate-widget-inner">
+              </div>
+      <div class="clear"></div>
+    </div>
+  
+  <div class="outer-links"></div>
+
+  
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-node rolesim-block rolesim-block-title-grey"  >
+  
+        <h2 class="pane-title">
+      The Sims 3 на форуме    </h2>
+    
+  
+  <div class="pane-content">
+    <div id="node-1834" class="node node-common-block clearfix">
+
+        <h2><a href="/block/sims-3-na-forume"></a></h2>
+    
+  
+  <div class="content">
+    <div class="field field-name-field-portal-block-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"><IDXSKIP><p><img src="http://rolesim.net/sites/default/files/system/list-plumbob.png" /><strong> </strong> <a class="forumlink link-new" href="http://forum.rolesim.net/viewforum.php?f=36">Обсуждения и слухи</a></p></IDXSKIP>
+<IDXSKIP><p><img src="http://rolesim.net/sites/default/files/system/list-plumbob.png" /><strong> </strong> <a class="forumlink link-new" href="http://forum.rolesim.net/viewforum.php?f=15">Информация по игре и дополнениям</a></p></IDXSKIP>
+<IDXSKIP><p><img src="http://rolesim.net/sites/default/files/system/list-plumbob.png" />  <a class="forumlink link-new" href="http://forum.rolesim.net/viewforum.php?f=40">The Sims™ 3: Store</a></p></IDXSKIP>
+<IDXSKIP><p><img src="http://rolesim.net/sites/default/files/system/list-plumbob.png" /><strong> </strong> <a class="forumlink link-new" href="http://forum.rolesim.net/viewforum.php?f=16">Технические проблемы</a></p></IDXSKIP>
+<IDXSKIP><p><img src="http://rolesim.net/sites/default/files/system/list-plumbob.png" />  <a class="forumlink link-new" href="http://forum.rolesim.net/viewforum.php?f=33">Программы и патчи для игры</a></p></IDXSKIP>
+</div></div></div>  </div>
+
+      <div class="rate-widget-wrapper">
+      <div class="rate-widget-inner">
+              </div>
+      <div class="clear"></div>
+    </div>
+  
+  <div class="outer-links"></div>
+
+  
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-portal-article-comments rolesim-block rolesim-block-title-green"  >
+  
+        <h2 class="pane-title">
+      Новые комментарии    </h2>
+    
+  
+  <div class="pane-content">
+    <div class="view view-portal-article-comments view-id-portal_article_comments view-display-id-block view-dom-id-5c906741fa685a12fc2eb0bcf5da33d9">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <IDXSKIP><div class="views-field views-field-subject row-left">        <span class="field-content"><a href="/comment/24372#comment-24372">Не помогло заселяю семью идет</a></span>  </div></IDXSKIP>  
+  <div class="views-field views-field-title">    <IDXSKIP><span class="views-label views-label-title"> - </span></IDXSKIP>    <span class="field-content"><a href="/article/sims-4-pri-zagruzke-semi-igra-vyletaet-na-kartu-goroda"><IDXSKIP>The Sims 4: При загрузке семьи игра вылетает на карту города</IDXSKIP></a></span>  </div>  
+  <IDXSKIP><div class="views-field views-field-name row-user row-left">        <span class="field-content"><span class="username">Vladeushay</span></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-created row-date">    <span class="views-label views-label-created"> - </span>    <span class="field-content">12.05.2017 - 07:58</span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-view-comment">        <span class="field-content"><a href="/comment/24372#comment-24372">смотреть полностью >></a></span>  </div></IDXSKIP>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <IDXSKIP><div class="views-field views-field-subject row-left">        <span class="field-content"><a href="/comment/24367#comment-24367">Ору орсириус инопланетян </a></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-title">    <span class="views-label views-label-title"> - </span>    <span class="field-content"><a href="/article/sims-freeplay-stranstviya-shchenka">The Sims Freeplay: Странствия щенка</a></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-name row-user row-left">        <span class="field-content"><span class="username">Элич-_-</span></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-created row-date">    <span class="views-label views-label-created"> - </span>    <span class="field-content">30.04.2017 - 16:15</span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-view-comment">        <span class="field-content"><a href="/comment/24367#comment-24367">смотреть полностью >></a></span>  </div></IDXSKIP>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <IDXSKIP><div class="views-field views-field-subject row-left">        <span class="field-content"><a href="/comment/24362#comment-24362">Огромное спасибо за статью!</a></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-title">    <span class="views-label views-label-title"> - </span>    <span class="field-content"><a href="/article/sims-3-chistka-kesh-faylov">The Sims 3: Чистка кэш-файлов</a></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-name row-user row-left">        <span class="field-content"><span class="username">Мистер Хоррор</span></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-created row-date">    <span class="views-label views-label-created"> - </span>    <span class="field-content">18.04.2017 - 14:28</span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-view-comment">        <span class="field-content"><a href="/comment/24362#comment-24362">смотреть полностью >></a></span>  </div></IDXSKIP>  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <IDXSKIP><div class="views-field views-field-subject row-left">        <span class="field-content"><a href="/comment/24347#comment-24347">Мне не помогло всё равно</a></span>  </div></IDXSKIP>  
+  <div class="views-field views-field-title">    <IDXSKIP><span class="views-label views-label-title"> - </span></IDXSKIP>    <span class="field-content"><a href="/article/sims-4-pri-zagruzke-semi-igra-vyletaet-na-kartu-goroda"><IDXSKIP>The Sims 4: При загрузке семьи игра вылетает на карту города</IDXSKIP></a></span>  </div>  
+  <IDXSKIP><div class="views-field views-field-name row-user row-left">        <span class="field-content"><span class="username">Kristina1995</span></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-created row-date">    <span class="views-label views-label-created"> - </span>    <span class="field-content">22.03.2017 - 12:58</span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-view-comment">        <span class="field-content"><a href="/comment/24347#comment-24347">смотреть полностью >></a></span>  </div></IDXSKIP>  </div>
+  <div class="views-row views-row-5 views-row-odd views-row-last">
+      
+  <IDXSKIP><div class="views-field views-field-subject row-left">        <span class="field-content"><a href="/comment/24311#comment-24311">А мне понравился осенний</a></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-title">    <span class="views-label views-label-title"> - </span>    <span class="field-content"><a href="/article/osen-v-vindenburge">Осень в Винденбурге</a></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-name row-user row-left">        <span class="field-content"><span class="username">Moggy</span></span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-created row-date">    <span class="views-label views-label-created"> - </span>    <span class="field-content">08.02.2017 - 11:26</span>  </div></IDXSKIP>  
+  <IDXSKIP><div class="views-field views-field-view-comment">        <span class="field-content"><a href="/comment/24311#comment-24311">смотреть полностью >></a></span>  </div></IDXSKIP>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div>
+  </div>
+</div>
+
+  </div>
+              </div></div> <!-- /.section, /#content -->
+
+      
+          </div></div> <!-- /#main, /#main-wrapper -->
+
+  </div><!-- /#page -->
+
+  <div id="additional">
+    <div class="left">
+          </div>
+    <div class="right">
+          </div>
+  </div>
+
+  <div id="footer">
+        <ul class="menu"><IDXSKIP><li class="first expanded"><a href="http://rolesim.net" title="">Портал</a><ul class="menu"><li class="first leaf"><a href="http://www.rolesim.net/news" title="">Новости</a></li>
+<li class="leaf"><a href="http://www.rolesim.net/articles" title="">Статьи</a></li>
+<li class="leaf"><a href="http://www.rolesim.net/games" title="">Игры</a></li>
+<li class="last leaf"><a href="http://www.rolesim.net/journal" title="">Журнал</a></li>
+</ul></li></IDXSKIP>
+<IDXSKIP><li class="expanded"><a href="http://creation.rolesim.net" title="">Творчество</a><ul class="menu"><li class="first leaf"><a href="http://creation.rolesim.net/universe" title="">Наши миры</a></li>
+<li class="leaf"><a href="http://creation.rolesim.net/dynasty" title="">Династии</a></li>
+<li class="leaf"><a href="http://creation.rolesim.net/workshop" title="">Мастерские</a></li>
+<li class="leaf"><a href="http://creation.rolesim.net/art" title="">Арт</a></li>
+<li class="last leaf"><a href="http://creation.rolesim.net/story" title="">Сериалы</a></li>
+</ul></li></IDXSKIP>
+<IDXSKIP><li class="expanded"><a href="http://content.rolesim.net" title="">Контент</a><ul class="menu"><li class="first leaf"><a href="http://content.rolesim.net/sims3" title="">The Sims 3</a></li>
+<li class="last leaf"><a href="http://content.rolesim.net/sims4" title="">The Sims 4</a></li>
+</ul></li></IDXSKIP>
+<IDXSKIP><li class="last expanded"><a href="http://forum.rolesim.net" title="">Форум</a><ul class="menu"><li class="first leaf"><a href="http://forum.rolesim.net/viewforum.php?f=6" title="">Команда RoleSim</a></li>
+<li class="leaf"><a href="http://forum.rolesim.net/viewforum.php?f=34" title="">The Sims 4</a></li>
+<li class="leaf"><a href="http://forum.rolesim.net/viewforum.php?f=10" title="">The Sims 3</a></li>
+<li class="leaf"><a href="http://forum.rolesim.net/viewforum.php?f=90" title="">The Sims 2</a></li>
+<li class="leaf"><a href="http://forum.rolesim.net/viewforum.php?f=14" title="">Мастерские</a></li>
+<li class="leaf"><a href="http://forum.rolesim.net/viewforum.php?f=41" title="">Компьютерные игры</a></li>
+<li class="last leaf"><a href="http://forum.rolesim.net/viewforum.php?f=3" title="">Общение</a></li>
+</ul></li></IDXSKIP>
+</ul>    <div class="clear"></div>
+    <hr/>
+    <div id="copyright">
+      <IDXSKIP><p class="copyright">Copyright &copy; 2017 </p></IDXSKIP>
+      <IDXSKIP><p class="credits">RoleSim.Net</p></IDXSKIP>
+      <div class="clear"></div>
+    </div>
+  </div> <!-- /#footer -->
+
+  <IDXSKIP><div class="footer-additional-wrapper">
+    <div class="counters"></div>
+    <div class="links"><a href="http://www.ea.com/ru" target="_blank">
+<img src="/sites/default/files/system/ea-logo.png">
+</a>
+<div>При сотрудничестве с Electronic Arts Inc. </div>
+</div>
+  </div></IDXSKIP>
+
+</div> <!-- /#page-wrapper -->
+
+<a href="javascript: void(0);" class="back-to-top"><div class="arrow"></div></a>
+  </body>
+</html>
+

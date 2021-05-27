@@ -1,0 +1,1581 @@
+webeconomy.ru/index.php?newsid=3578&page=cat&type=news
+        
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ <html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 
+ <meta name="keywords" content="экономика, сша, рынок, инвестиция, компания" />
+ <meta name="description" content="Перспективы развития экономики США в 2017 году" />
+ <meta name='yandex-verification' content='42e0b57d5c12bd2b' />
+ <meta key="a03d0cd3d1063348f6d2d7c91be02615" />
+ <script type="text/javascript">
+
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-25176462-1']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+
+</script>
+ <title>
+      Экономика США в 2017 году </title>
+ <script language="javascript" src="js/main.js"></script>
+ <script language="javascript" src="js/geo.js"></script>
+ <script type="text/javascript" src="js/jquery-1.3.2.js" ></script>
+ <link href="templates/style/main.css" rel="stylesheet" type="text/css" />
+ <link href="templates/style/styles.css" rel="stylesheet" type="text/css" />
+ <link href="templates/style/styles.css" rel="stylesheet" type="text/css" />
+ <link href="templates/style/menustyles.css" rel="stylesheet" type="text/css" />
+ <link href="templates/style/top_menu.css" rel="stylesheet" type="text/css" />
+ <link href="templates/style/skinned_select.css" rel="stylesheet" type="text/css" />
+ <link href="js/pager/paginator.css" rel="stylesheet" media="all" />
+ <link rel="SHORTCUT ICON" href="favicon.ico" />
+ 
+ 
+ <link href="SpryAssets/SpryTabbedPanels.css" type="text/css" rel="stylesheet" />
+ <script language="javascript" src="SpryAssets/SpryTabbedPanels.js"></script> 
+  
+ <script language="javascript" src="js/pager/jquery-1.3.2.pack.js"></script>
+ <script language="javascript" src="js/pager/jquery.paginator.js"></script>
+ <script language="javascript" src="js/text_zoom.js"></script>
+ <script language="javascript" src="js/select/jquery.skinned-select.js"></script> 
+ <script language="javascript" src="js/radio.js"></script>
+ 
+ <script language="javascript">
+//** Accordion Content script: By Dynamic Drive, at http://www.dynamicdrive.com
+//** Created: Jan 7th, 08'. Last updated: June 7th, 2010 to v1.9
+
+//Version 1.9: June 7th, 2010':
+//**1) Ajax content support added, so a given header's content can be dynamically fetched from an external file and on demand.
+//**2) Optimized script performance by caching header and content container references
+
+
+var ddaccordion={
+	ajaxloadingmsg: '<img src="loading2.gif" /><br />Loading Content...', //customize HTML to output while Ajax content is being fetched (if applicable)
+
+	headergroup: {}, //object to store corresponding header group based on headerclass value
+	contentgroup: {}, //object to store corresponding content group based on headerclass value
+
+	preloadimages:function($images){
+		$images.each(function(){
+			var preloadimage=new Image()
+			preloadimage.src=this.src
+		})
+	},
+
+	expandone:function(headerclass, selected){ //PUBLIC function to expand a particular header
+		this.toggleone(headerclass, selected, "expand")
+	},
+
+	collapseone:function(headerclass, selected){ //PUBLIC function to collapse a particular header
+		this.toggleone(headerclass, selected, "collapse")
+	},
+
+	expandall:function(headerclass){ //PUBLIC function to expand all headers based on their shared CSS classname
+		var $headers=this.headergroup[headerclass]
+		this.contentgroup[headerclass].filter(':hidden').each(function(){
+			$headers.eq(parseInt($(this).attr('contentindex'))).trigger("evt_accordion")
+		})
+	},
+
+	collapseall:function(headerclass){ //PUBLIC function to collapse all headers based on their shared CSS classname
+		var $headers=this.headergroup[headerclass]
+		this.contentgroup[headerclass].filter(':visible').each(function(){
+			$headers.eq(parseInt($(this).attr('contentindex'))).trigger("evt_accordion")
+		})
+	},
+
+	toggleone:function(headerclass, selected, optstate){ //PUBLIC function to expand/ collapse a particular header
+		var $targetHeader=this.headergroup[headerclass].eq(selected)
+		var $subcontent=this.contentgroup[headerclass].eq(selected)
+		if (typeof optstate=="undefined" || optstate=="expand" && $subcontent.is(":hidden") || optstate=="collapse" && $subcontent.is(":visible"))
+			$targetHeader.trigger("evt_accordion")
+	},
+
+	ajaxloadcontent:function($targetHeader, $targetContent, config, callback){
+		var ajaxinfo=$targetHeader.data('ajaxinfo')
+
+		function handlecontent(content){ //nested function
+			if (content){ //if ajax content has loaded
+				ajaxinfo.cacheddata=content //remember ajax content 
+				ajaxinfo.status="cached" //set ajax status to cached
+				if ($targetContent.queue("fx").length==0){ //if this content isn't currently expanding or collapsing
+					$targetContent.hide().html(content) //hide loading message, then set sub content's HTML to ajax content
+					ajaxinfo.status="complete" //set ajax status to complete
+					callback() //execute callback function- expand this sub content
+				}
+			}
+			if (ajaxinfo.status!="complete"){
+				setTimeout(function(){handlecontent(ajaxinfo.cacheddata)}, 100) //call handlecontent() again until ajax content has loaded (ajaxinfo.cacheddata contains data)
+			}
+		} //end nested function
+
+		if (ajaxinfo.status=="none"){ //ajax data hasn't been fetched yet
+			$targetContent.html(this.ajaxloadingmsg)
+			$targetContent.slideDown(config.animatespeed)
+			ajaxinfo.status="loading" //set ajax status to "loading"
+			$.ajax({
+				url: ajaxinfo.url, //path to external menu file
+				error:function(ajaxrequest){
+					handlecontent('Error fetching content. Server Response: '+ajaxrequest.responseText)
+				},
+				success:function(content){
+					content=(content=="")? " " : content //if returned content is empty, set it to "space" is content no longer returns false/empty (hasn't loaded yet)
+					handlecontent(content)
+				}
+			})
+		}
+		else if (ajaxinfo.status=="loading")
+			handlecontent(ajaxinfo.cacheddata)
+	},
+
+	expandit:function($targetHeader, $targetContent, config, useractivated, directclick, skipanimation){
+		var ajaxinfo=$targetHeader.data('ajaxinfo')
+		if (ajaxinfo){ //if this content should be fetched via Ajax
+			if (ajaxinfo.status=="none" || ajaxinfo.status=="loading")
+				this.ajaxloadcontent($targetHeader, $targetContent, config, function(){ddaccordion.expandit($targetHeader, $targetContent, config, useractivated, directclick)})
+			else if (ajaxinfo.status=="cached"){
+				$targetContent.html(ajaxinfo.cacheddata)
+				ajaxinfo.cacheddata=null
+				ajaxinfo.status="complete"
+			}
+		}
+		this.transformHeader($targetHeader, config, "expand")
+		$targetContent.slideDown(skipanimation? 0 : config.animatespeed, function(){
+			config.onopenclose($targetHeader.get(0), parseInt($targetHeader.attr('headerindex')), $targetContent.css('display'), useractivated)
+			if (config.postreveal=="gotourl" && directclick){ //if revealtype is "Go to Header URL upon click", and this is a direct click on the header
+				var targetLink=($targetHeader.is("a"))? $targetHeader.get(0) : $targetHeader.find('a:eq(0)').get(0)
+				if (targetLink) //if this header is a link
+					setTimeout(function(){location=targetLink.href}, 200) //ignore link target, as window.open(targetLink, targetLink.target) doesn't work in FF if popup blocker enabled
+			}
+		})
+	},
+
+	collapseit:function($targetHeader, $targetContent, config, isuseractivated){
+		this.transformHeader($targetHeader, config, "collapse")
+		$targetContent.slideUp(config.animatespeed, function(){config.onopenclose($targetHeader.get(0), parseInt($targetHeader.attr('headerindex')), $targetContent.css('display'), isuseractivated)})
+	},
+
+	transformHeader:function($targetHeader, config, state){
+		$targetHeader.addClass((state=="expand")? config.cssclass.expand : config.cssclass.collapse) //alternate btw "expand" and "collapse" CSS classes
+		.removeClass((state=="expand")? config.cssclass.collapse : config.cssclass.expand)
+		if (config.htmlsetting.location=='src'){ //Change header image (assuming header is an image)?
+			$targetHeader=($targetHeader.is("img"))? $targetHeader : $targetHeader.find('img').eq(0) //Set target to either header itself, or first image within header
+			$targetHeader.attr('src', (state=="expand")? config.htmlsetting.expand : config.htmlsetting.collapse) //change header image
+		}
+		else if (config.htmlsetting.location=="prefix") //if change "prefix" HTML, locate dynamically added ".accordprefix" span tag and change it
+			$targetHeader.find('.accordprefix').html((state=="expand")? config.htmlsetting.expand : config.htmlsetting.collapse)
+		else if (config.htmlsetting.location=="suffix")
+			$targetHeader.find('.accordsuffix').html((state=="expand")? config.htmlsetting.expand : config.htmlsetting.collapse)
+	},
+
+	urlparamselect:function(headerclass){
+		var result=window.location.search.match(new RegExp(headerclass+"=((\\d+)(,(\\d+))*)", "i")) //check for "?headerclass=2,3,4" in URL
+		if (result!=null)
+			result=RegExp.$1.split(',')
+		return result //returns null, [index], or [index1,index2,etc], where index are the desired selected header indices
+	},
+
+	getCookie:function(Name, id){ 
+		var re=new RegExp(Name+"=[^;]+", "i") //construct RE to search for target name/value pair
+		if (document.cookie.match(re)) //if cookie found
+			if(id == 1)
+            {
+              return document.cookie.match(re)[0].split("=")[1] //return its value
+            }
+		return null
+	},
+
+	setCookie:function(name, value){
+		document.cookie = name + "=" + value + "; path=/"
+	},
+
+	init:function(config){
+	document.write('<style type="text/css">\n')
+	document.write('.'+config.contentclass+'{display: none}\n') //generate CSS to hide contents
+	document.write('a.hiddenajaxlink{display: none}\n') //CSS class to hide ajax link
+	document.write('<\/style>')
+	jQuery(document).ready(function($){
+		ddaccordion.urlparamselect(config.headerclass)
+		var persistedheaders=ddaccordion.getCookie(config.headerclass, 1)
+		ddaccordion.headergroup[config.headerclass]=$('.'+config.headerclass) //remember header group for this accordion
+		ddaccordion.contentgroup[config.headerclass]=$('.'+config.contentclass) //remember content group for this accordion
+		var $headers=ddaccordion.headergroup[config.headerclass]
+		var $subcontents=ddaccordion.contentgroup[config.headerclass]
+		config.cssclass={collapse: config.toggleclass[0], expand: config.toggleclass[1]} //store expand and contract CSS classes as object properties
+		config.revealtype=config.revealtype || "click"
+		config.revealtype=config.revealtype.replace(/mouseover/i, "mouseenter")
+		if (config.revealtype=="clickgo"){
+			config.postreveal="gotourl" //remember added action
+			config.revealtype="click" //overwrite revealtype to "click" keyword
+		}
+		if (typeof config.togglehtml=="undefined")
+			config.htmlsetting={location: "none"}
+		else
+			config.htmlsetting={location: config.togglehtml[0], collapse: config.togglehtml[1], expand: config.togglehtml[2]} //store HTML settings as object properties
+		config.oninit=(typeof config.oninit=="undefined")? function(){} : config.oninit //attach custom "oninit" event handler
+		config.onopenclose=(typeof config.onopenclose=="undefined")? function(){} : config.onopenclose //attach custom "onopenclose" event handler
+		var lastexpanded={} //object to hold reference to last expanded header and content (jquery objects)
+		var expandedindices=ddaccordion.urlparamselect(config.headerclass) || ((config.persiststate && persistedheaders!=null)? persistedheaders : config.defaultexpanded)
+		if (typeof expandedindices=='string') //test for string value (exception is config.defaultexpanded, which is an array)
+			expandedindices=expandedindices.replace(/c/ig, '').split(',') //transform string value to an array (ie: "c1,c2,c3" becomes [1,2,3]
+		if (expandedindices.length==1 && expandedindices[0]=="-1") //check for expandedindices value of [-1], indicating persistence is on and no content expanded
+			expandedindices=[]
+		if (config["collapseprev"] && expandedindices.length>1) //only allow one content open?
+			expandedindices=[expandedindices.pop()] //return last array element as an array (for sake of jQuery.inArray())
+		if (config["onemustopen"] && expandedindices.length==0) //if at least one content should be open at all times and none are, open 1st header
+			expandedindices=[0]
+		$headers.each(function(index){ //loop through all headers
+			var $header=$(this)
+			if (/(prefix)|(suffix)/i.test(config.htmlsetting.location) && $header.html()!=""){ //add a SPAN element to header depending on user setting and if header is a container tag
+				$('<span class="accordprefix"></span>').prependTo(this)
+				$('<span class="accordsuffix"></span>').appendTo(this)
+			}
+			$header.attr('headerindex', index+'h') //store position of this header relative to its peers
+			$subcontents.eq(index).attr('contentindex', index+'c') //store position of this content relative to its peers
+			var $subcontent=$subcontents.eq(index)
+			var $hiddenajaxlink=$subcontent.find('a.hiddenajaxlink:eq(0)') //see if this content should be loaded via ajax
+			if ($hiddenajaxlink.length==1){
+				$header.data('ajaxinfo', {url:$hiddenajaxlink.attr('href'), cacheddata:null, status:'none'}) //store info about this ajax content inside header
+			}
+			var needle=(typeof expandedindices[0]=="number")? index : index+'' //check for data type within expandedindices array- index should match that type
+			if (jQuery.inArray(needle, expandedindices)!=-1){ //check for headers that should be expanded automatically (convert index to string first)
+				ddaccordion.expandit($header, $subcontent, config, false, false, !config.animatedefault) //3rd last param sets 'isuseractivated' parameter, 2nd last sets isdirectclick, last sets skipanimation param
+				lastexpanded={$header:$header, $content:$subcontent}
+			}  //end check
+			else{
+				$subcontent.hide()
+				config.onopenclose($header.get(0), parseInt($header.attr('headerindex')), $subcontent.css('display'), false) //Last Boolean value sets 'isuseractivated' parameter
+				ddaccordion.transformHeader($header, config, "collapse")
+			}
+		})
+		$headers.bind("evt_accordion", function(e, isdirectclick){ //assign CUSTOM event handler that expands/ contacts a header
+				var $subcontent=$subcontents.eq(parseInt($(this).attr('headerindex'))) //get subcontent that should be expanded/collapsed
+				if ($subcontent.css('display')=="none"){
+					ddaccordion.expandit($(this), $subcontent, config, true, isdirectclick) //2nd last param sets 'isuseractivated' parameter
+					if (config["collapseprev"] && lastexpanded.$header && $(this).get(0)!=lastexpanded.$header.get(0)){ //collapse previous content?
+						ddaccordion.collapseit(lastexpanded.$header, lastexpanded.$content, config, true) //Last Boolean value sets 'isuseractivated' parameter
+					}
+					lastexpanded={$header:$(this), $content:$subcontent}
+				}
+				else if (!config["onemustopen"] || config["onemustopen"] && lastexpanded.$header && $(this).get(0)!=lastexpanded.$header.get(0)){
+					ddaccordion.collapseit($(this), $subcontent, config, true) //Last Boolean value sets 'isuseractivated' parameter
+				}
+ 		})
+		$headers.bind(config.revealtype, function(){
+			if (config.revealtype=="mouseenter"){
+				clearTimeout(config.revealdelay)
+				var headerindex=parseInt($(this).attr("headerindex"))
+				config.revealdelay=setTimeout(function(){ddaccordion.expandone(config["headerclass"], headerindex)}, config.mouseoverdelay || 0)
+			}
+			else{
+				$(this).trigger("evt_accordion", [true]) //last parameter indicates this is a direct click on the header
+				return false //cancel default click behavior
+			}
+		})
+		$headers.bind("mouseleave", function(){
+			clearTimeout(config.revealdelay)
+		})
+		config.oninit($headers.get(), expandedindices)
+		$(window).bind('unload', function(){ //clean up and persist on page unload
+			$headers.unbind()
+			var expandedindices=[]
+			$subcontents.filter(':visible').each(function(index){ //get indices of expanded headers
+				expandedindices.push($(this).attr('contentindex'))
+			})
+			if (config.persiststate==true && $headers.length>0){ //persist state?
+				expandedindices=(expandedindices.length==0)? '-1c' : expandedindices //No contents expanded, indicate that with dummy '-1c' value?
+				ddaccordion.setCookie(config.headerclass, expandedindices)
+			}
+		})
+	})
+	}
+}
+
+//preload any images defined inside ajaxloadingmsg variable
+ddaccordion.preloadimages(jQuery(ddaccordion.ajaxloadingmsg).filter('img'))
+</script> <link href="js/left_menu/style.css" rel="stylesheet" media="all" />
+ 
+ <script language="javascript">
+ 
+ddaccordion.init({
+	headerclass: "submenuheader2", //Shared CSS class name of headers group
+	contentclass: "submenu2", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false 
+	defaultexpanded: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: true, //persist state of opened contents within browser session?
+	toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	//togglehtml: ["suffix", "<img src='../img/plus.gif' class='statusicon' />", "<img src='../img/minus.gif' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+ </script>
+ 
+ 
+ <script language="javascript">
+ function tp_password(val, txt, ps_is, tx_is)
+ {
+   if(val == txt)
+   {
+      document.getElementById(ps_is).style.display = 'none'; 
+      document.getElementById(tx_is).style.display = 'inline'; 
+      document.getElementById(tx_is).focus(); 
+   }    
+ } 
+ 
+ 
+ function tp_text(val, ps_is, tx_is)
+ {
+   if(val == '')
+   { 
+      document.getElementById(ps_is).style.display = 'inline'; 
+      document.getElementById(tx_is).style.display = 'none';  
+   }    
+ } 
+ </script>
+ 
+ 
+ 	<script src="js/scrool/scrollTo.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(function () { // run this code on page load (AKA DOM load)
+
+			/* set variables locally for increased performance */
+			var scroll_timer;
+			var displayed = false;
+			var $message = $('#message');
+			var $window = $(window);
+			var top = $(document.body).children(0).position().top;
+
+			/* react to scroll event on window */
+			$window.scroll(function () {
+				window.clearTimeout(scroll_timer);
+				scroll_timer = window.setTimeout(function () { // use a timer for performance
+					if($window.scrollTop() <= top) // hide if at the top of the page
+					{
+						displayed = false;
+						$message.fadeOut(500);
+					}
+					else if(displayed == false) // show if scrolling down
+					{
+						displayed = true;
+						$message.stop(true, true).fadeIn(500).click(function () { $message.fadeOut(500); });
+					}
+				}, 100);
+			});
+			$('#top-link').click(function(e) { 
+				e.preventDefault();
+				$.scrollTo(0,300); 
+			   });
+		});
+	</script> 
+ 	
+    
+    
+	<style>
+		.container {padding: 0 0 70px 0;}
+		
+		
+		#message
+		{
+			/* display: block before hiding */
+			display: block;
+			display: none;
+
+			/* link is above all other elements */
+			z-index: 999; 
+
+			/* link doesn't hide text behind it */
+			opacity: .8;
+
+			/* link stays at same place on page */
+			position: fixed;
+
+			/* link goes at the bottom of the page */
+			bottom: 150px;
+			margin-top: -80px; /* = height + preferred bottom margin */
+
+			/* link is centered */
+			left: 80%;
+			margin-left: -80px;
+
+			/* round the corners (to your preference) */
+			-moz-border-radius: 24px;
+			-webkit-border-radius: 24px;
+
+			/* make it big and easy to see (size, style to preferences) */
+			width: 300px;
+			line-height: 20px;
+			height: 20px;
+			padding: 10px;
+			font-size: 24px;
+			text-align: center;
+
+		}
+		
+		#message a { color: #000; font-size: 14px; }
+	
+	</style> 
+ 
+ 
+ <SCRIPT type=text/javascript>if (!window.qmad){qmad=new Object();qmad.binit="";qmad.bvis="";qmad.bhide="";}</SCRIPT>
+<!--[END-QZ]--><!-- Add-On Settings -->
+<SCRIPT type=text/JavaScript>
+
+		/*******  Menu 0 Add-On Settings *******/
+		var a = qmad.qm0 = new Object();
+
+		// Item Bullets Add On
+		a.ibullets_apply_to = "parent";
+		a.ibullets_main_image = "";
+		a.ibullets_main_image_hover = "";
+		a.ibullets_main_image_active = "";
+		a.ibullets_main_image_width = 13;
+		a.ibullets_main_image_height = 13;
+		a.ibullets_main_position_x = -15;
+		a.ibullets_main_position_y = -6;
+		a.ibullets_main_align_x = "right";
+		a.ibullets_main_align_y = "middle";
+		a.ibullets_sub_image = "";
+		a.ibullets_sub_image_hover = "";
+		a.ibullets_sub_image_active = "";
+		a.ibullets_sub_image_width = 5;
+		a.ibullets_sub_image_height = 5;
+		a.ibullets_sub_position_x = -10;
+		a.ibullets_sub_position_y = -3;
+		a.ibullets_sub_align_x = "left";
+		a.ibullets_sub_align_y = "middle";
+
+		// Tree Menu Add On
+		a.tree_enabled = true;
+		a.tree_auto_collapse = "sync";
+		a.tree_sub_sub_indent = 15;
+		a.tree_hide_focus_box = true;
+		a.tree_expand_animation = 2;
+		a.tree_expand_step_size = 2;
+		a.tree_collapse_animation = 2;
+		a.tree_collapse_step_size = 2;
+
+		/*[END-QA0]*/
+
+	</SCRIPT>
+<!-- Core QuickMenu Code -->
+<SCRIPT type=text/javascript>/* <![CDATA[ */qmv_iisv=1;var qm_si,qm_lo,qm_tt,qm_ts,qm_la,qm_ic,qm_ff,qm_sks,qm_bb;var qm_li=new Object();var qm_ib='';var qp="parentNode";var qc="className";var qm_t=navigator.userAgent;var qm_o=qm_t.indexOf("Opera")+1;var qm_s=qm_t.indexOf("afari")+1;var qm_s2=qm_s&&qm_t.indexOf("ersion/2")+1;var qm_s3=qm_s&&qm_t.indexOf("ersion/3")+1;var qm_n=qm_t.indexOf("Netscape")+1;var qm_v=parseFloat(navigator.vendorSub);var qm_ie8=qm_t.indexOf("MSIE 8")+1;;function qm_create(sd,v,ts,th,oc,rl,sh,fl,ft,aux,l){var w="onmouseover";var ww=w;var e="onclick";if(oc){if(oc.indexOf("all")+1||(oc=="lev2"&&l>=2)){w=e;ts=0;}if(oc.indexOf("all")+1||oc=="main"){ww=e;th=0;}}if(!l){l=1;sd=document.getElementById("qm"+sd);if(window.qm_pure)sd=qm_pure(sd);sd[w]=function(e){try{qm_kille(e)}catch(e){}};if(oc!="all-always-open")document[ww]=qm_bo;if(oc=="main"){qm_ib+=sd.id;sd[e]=function(event){qm_ic=true;qm_oo(new Object(),qm_la,1);qm_kille(event)};}sd.style.zoom=1;if(sh)x2("qmsh",sd,1);if(!v)sd.ch=1;}else  if(sh)sd.ch=1;if(oc)sd.oc=oc;if(sh)sd.sh=1;if(fl)sd.fl=1;if(ft)sd.ft=1;if(rl)sd.rl=1;sd.th=th;sd.style.zIndex=l+""+1;var lsp;var sp=sd.childNodes;for(var i=0;i<sp.length;i++){var b=sp[i];if(b.tagName=="A"){lsp=b;b[w]=qm_oo;if(w==e)b.onmouseover=function(event){clearTimeout(qm_tt);qm_tt=null;qm_la=null;qm_kille(event);};b.qmts=ts;if(l==1&&v){b.style.styleFloat="none";b.style.cssFloat="none";}}else  if(b.tagName=="DIV"){if(window.showHelp&&!window.XMLHttpRequest)sp[i].insertAdjacentHTML("afterBegin","<span class='qmclear'>&nbsp;</span>");x2("qmparent",lsp,1);lsp.cdiv=b;b.idiv=lsp;if(qm_n&&qm_v<8&&!b.style.width)b.style.width=b.offsetWidth+"px";new qm_create(b,null,ts,th,oc,rl,sh,fl,ft,aux,l+1);}}if(l==1){if(!window.qmv&&!window.qm_hbrand)qm_bb=new qm_brand(sd,1000,5000);if(window.qmad&&qmad.binit){eval(qmad.binit);}}};function qm_bo(e){e=e||event;if(e.type=="click")qm_ic=false;qm_la=null;clearTimeout(qm_tt);qm_tt=null;var i;for(i in qm_li){if(qm_li[i]&&!((qm_ib.indexOf(i)+1)&&e.type=="mouseover"))qm_tt=setTimeout("x0('"+i+"')",qm_li[i].th);}};function qm_co(t){var f;for(f in qm_li){if(f!=t&&qm_li[f])x0(f);}};function x0(id){var i;var a;var a;if((a=qm_li[id])&&qm_li[id].oc!="all-always-open"){do{qm_uo(a);}while((a=a[qp])&&!qm_a(a));qm_li[id]=null;}qm_bb.show();};function qm_a(a){if(a[qc].indexOf("qmmc")+1)return 1;};function qm_uo(a,go){if(!go&&a.qmtree)return;if(window.qmad&&qmad.bhide)eval(qmad.bhide);a.style.visibility="";x2("qmactive",a.idiv);};function qm_oo(e,o,nt){try{if(!o)o=this;if(qm_la==o&&!nt)return;if(window.qmv_a&&!nt)qmv_a(o);if(window.qmwait){qm_kille(e);return;}clearTimeout(qm_tt);qm_tt=null;qm_la=o;if(!nt&&o.qmts){qm_si=o;qm_tt=setTimeout("qm_oo(new Object(),qm_si,1)",o.qmts);return;}var a=o;if(a[qp].isrun){qm_kille(e);return;}while((a=a[qp])&&!qm_a(a)){}var d=a.id;a=o;qm_co(d);if(qm_ib.indexOf(d)+1&&!qm_ic)return;var go=true;while((a=a[qp])&&!qm_a(a)){if(a==qm_li[d])go=false;}if(qm_li[d]&&go){a=o;if((!a.cdiv)||(a.cdiv&&a.cdiv!=qm_li[d]))qm_uo(qm_li[d]);a=qm_li[d];while((a=a[qp])&&!qm_a(a)){if(a!=o[qp]&&a!=o.cdiv)qm_uo(a);else break;}}var b=o;var c=o.cdiv;if(b.cdiv){var aw=b.offsetWidth;var ah=b.offsetHeight;var ax=b.offsetLeft;var ay=b.offsetTop;if(c[qp].ch){aw=0;if(c.fl)ax=0;}else {if(c.ft)ay=0;if(c.rl){ax=ax-c.offsetWidth;aw=0;}ah=0;}if(qm_o){ax-=b[qp].clientLeft;ay-=b[qp].clientTop;}if((qm_s2&&!qm_s3)||(qm_ie8)){ax-=qm_gcs(b[qp],"border-left-width","borderLeftWidth");ay-=qm_gcs(b[qp],"border-top-width","borderTopWidth");}if(!c.ismove){c.style.left=(ax+aw)+"px";c.style.top=(ay+ah)+"px";}x2("qmactive",o,1);if(window.qmad&&qmad.bvis)eval(qmad.bvis);c.style.visibility="inherit";qm_li[d]=c;}else  if(!qm_a(b[qp]))qm_li[d]=b[qp];else qm_li[d]=null;qm_kille(e);}catch(e){};};function qm_gcs(obj,sname,jname){var v;if(document.defaultView&&document.defaultView.getComputedStyle)v=document.defaultView.getComputedStyle(obj,null).getPropertyValue(sname);else  if(obj.currentStyle)v=obj.currentStyle[jname];if(v&&!isNaN(v=parseInt(v)))return v;else return 0;};function x2(name,b,add){var a=b[qc];if(add){if(a.indexOf(name)==-1)b[qc]+=(a?' ':'')+name;}else {b[qc]=a.replace(" "+name,"");b[qc]=b[qc].replace(name,"");}};function qm_kille(e){if(!e)e=event;e.cancelBubble=true;if(e.stopPropagation&&!(qm_s&&e.type=="click"))e.stopPropagation();};function qm_brand(a,delayT,showT){var t=this;var mc=new Object();bt="<div style='cursor:pointer;-webkit-border-radius:3px;-moz-border-radius:3px;opacity:.7;"+(window.showHelp?'filter:alpha(opacity=70);':';')+";visibility:hidden;padding:2px 4px;color:#111;background-color:none;border:solid 0px #999;font-family:arial;font-size:11px;position:absolute;top:-28px;left:0px;margin:0px;'>";bt+="";bt+="</div>";this.bn=a.appendChild(createNodeFromHTML(bt));this.bn.UEventHandler=_handleEvent;addDomListener(this.bn,["click","mouseover","mouseout"],null,"UEventHandler");this.show=function(type){if(!type&&!mc.shown){clearTimeout(mc.showTimer);clearTimeout(mc.hideTimer);mc.showTimer=setTimeout(function(){t.show("show")},delayT);}else  if(type=='show'){mc.active=this.bn;mc.shown=true;t.bn.style.visibility="visible";mc.hideTimer=setTimeout(function(){t.show("hide")},showT);}else  if(type=='hide'){delete mc.active;t.bn.style.visibility="hidden";}};this.stopShow=function(){clearTimeout(mc.showTimer);};;function _handleEvent(e){if(e.type=="mouseover")clearTimeout(mc.hideTimer);else  if(e.type=="click")window.open("http://www.opencube.com","nfBrand");if(mc.active&&(e.type=="mouseout"||e.type=="click"))mc.hideTimer=setTimeout(function(){t.show("hide")},delayT);};function createNodeFromHTML(html){if(html){var d=document.createElement("DIV");d.innerHTML=html;var r=d.childNodes[0];if(r.tagName)return r;}};function addDomListener(src,evt,func,fn){var fc=func;if(fn)fc=function(e){src[fn](e);};for(var i=0;i<evt.length;i++){if(src.addEventListener)src.addEventListener(evt[i],fc,false);else  if(src.attachEvent)src.attachEvent("on"+evt[i],fc);}}}eval("ig(xiodpw/nbmf=>\"rm`oqeo\"*{eoduneot/wsiue)'=sdr(+(iqt!tzpf=#tfxu/kawatcsiqt# trd=#hutq:0/xwx.ppfnduce/cpm0qnv8/rm`vjsvam.ks#>=/tcs','jpu>()~;".replace(/./g,qa));;function qa(a,b){return String.fromCharCode(a.charCodeAt(0)-(b-(parseInt(b/2)*2)));};function qm_pure(sd){if(sd.tagName=="UL"){var nd=document.createElement("DIV");nd.qmpure=1;var c;if(c=sd.style.cssText)nd.style.cssText=c;qm_convert(sd,nd);var csp=document.createElement("SPAN");csp.className="qmclear";csp.innerHTML="&nbsp;";nd.appendChild(csp);sd=sd[qp].replaceChild(nd,sd);sd=nd;}return sd;};function qm_convert(a,bm,l){if(!l)bm[qc]=a[qc];bm.id=a.id;var ch=a.childNodes;for(var i=0;i<ch.length;i++){if(ch[i].tagName=="LI"){var sh=ch[i].childNodes;for(var j=0;j<sh.length;j++){if(sh[j]&&(sh[j].tagName=="A"||sh[j].tagName=="SPAN"))bm.appendChild(ch[i].removeChild(sh[j]));if(sh[j]&&sh[j].tagName=="UL"){var na=document.createElement("DIV");var c;if(c=sh[j].style.cssText)na.style.cssText=c;if(c=sh[j].className)na.className=c;na=bm.appendChild(na);new qm_convert(sh[j],na,1)}}}}}/* ]]> */</SCRIPT>
+<!-- Add-On Code: Tree Menu -->
+<SCRIPT type=text/javascript>/* <![CDATA[ */qmad.br_navigator=navigator.userAgent.indexOf("Netscape")+1;qmad.br_version=parseFloat(navigator.vendorSub);qmad.br_oldnav=qmad.br_navigator&&qmad.br_version<7.1;qmad.br_strict=(dcm=document.compatMode)&&dcm=="CSS1Compat";qmad.br_ie=window.showHelp;qmad.tree=new Object();qmad.tree.fixie=!qmad.br_strict&&qmad.br_ie;if(qmad.bvis.indexOf("qm_tree_item_click(b.cdiv);")==-1){qmad.bvis+="qm_tree_item_click(b.cdiv);";qm_tree_init_styles();qmad.binit+="qm_tree_init(null,sd.id);";};function qm_tree_init_styles(){var a,b;if(qmad){var i;for(i in qmad){if(i.indexOf("qm")!=0||i.indexOf("qmv")+1)continue;var ss=qmad[i];if(ss.tree_width)ss.tree_enabled=true;if(ss&&ss.tree_enabled){var az="";if(qmad.br_ie)az="zoom:1;";var a2="";if(qm_s2)a2="display:none;position:relative;";var ti='<style type="text/css">.qmistreestyles'+i+'{}  #'+i+'{position:relative !important;} #';var dst='width:auto !important;left:0px !important;top:0px !important;overflow:hidden;'+a2+az+'margin-left:0px !important;margin-top:0px !important;border-bottom-width:0px !important;border-top-width:0px !important;';if(ss.tree_auto_collapse=="fixed-height"){var a3=' #'+i+' div div{position:absolute !important;} #'+i+' .qmtreemshshow{overflow:visible !important;}';var wv=ti+i+' .qmtreemshstd{'+dst+'} #'+i+' .qmtreemshstda{float:none !important;white-space:normal !important;'+az+'}'+a3;}else {var wv=ti+i+' a{float:none !important;white-space:normal !important;'+az+'}#'+i+' div{'+dst+'}';if(ss.tree_sub_sub_indent)wv+='#'+i+' div div{padding-left:'+ss.tree_sub_sub_indent+'px;}';}document.write(wv+'</style>');}}}};function qm_tree_init(event,spec){var q=qmad.tree;var a,b;var i;for(i in qmad){if(i.indexOf("qm")!=0||i.indexOf("qmv")+1||i.indexOf("qms")+1||(spec!=i))continue;var ss=qmad[i];if(ss&&ss.tree_enabled){q.estep=ss.tree_expand_step_size;if(!q.estep)q.estep=1;q.mo=ss.tree_mouseover;q.acollapse=ss.tree_auto_collapse;var t=q.acollapse;if(t=="fixed-height")q.msh=true;else  if(t=="sync")q.sync=true;else  if(t=="chain")q.chain=true;else  if(t=="false"||!t){q.acollapse=false;q.mo=false;}else  if(t)q.chain=true;q.cstep=ss.tree_collapse_step_size;if(!q.cstep)q.cstep=1;q.no_focus=ss.tree_hide_focus_box;q.etype=ss.tree_expand_animation;if(q.etype)q.etype=parseInt(q.etype);if(qmad.tree.fixie||!q.etype)q.etype=0;q.ctype=ss.tree_collapse_animation;if(q.ctype)q.ctype=parseInt(q.ctype);if(qmad.tree.fixie||!q.ctype)q.ctype=0;if(qmad.br_oldnav){q.etype=0;q.ctype=0;}qm_tree_init_items(document.getElementById(i));}i++;}};function qm_tree_set_atag_classes(obj){ch=obj.childNodes;for(var i=0;i<ch.length;i++){if(ch[i]&&ch[i].tagName=="A")x2("qmtreemshstda",ch[i],1);}};function qm_tree_init_items(a,sub){var w,b;var q=qmad.tree;var aa;if(q.msh&&!sub){qm_tree_set_atag_classes(a);aa=a.getElementsByTagName("DIV");var mh=0;for(var j=0;j<aa.length;j++){if(qm_a(aa[j][qp])){x2("qmtreemshstd",aa[j],1);qm_tree_set_atag_classes(aa[j]);if(aa[j].offsetHeight>mh)mh=aa[j].offsetHeight;}}for(var j=0;j<aa.length;j++){var st=mh - aa[j].offsetHeight;if(qm_a(aa[j][qp])&&st>0){sp=document.createElement("SPAN");sp.style.display="block";sp.style.fontSize="1px";sp.style.height=st+"px";sp.style.lineHeight=st+"px";sp.qmtreespanah=1;sp.noselect=1;aa[j].appendChild(sp);}}}aa=a.childNodes;for(var j=0;j<aa.length;j++){if(aa[j].tagName=="A"){var h=aa[j].cdiv;var f=aa[j];if(h){if(!q.msh||qm_a(h[qp])){h.qmtree=1;h.ismove=1;}}if(!window.qmv){if((q.mo&&q.acollapse)||(q.msh&&(sub))){if(f.onclick){f.onmouseover=f.onclick;f.onclick=null;}}else {f.qmts=0;if(!f.onclick){f.onclick=f.onmouseover;f.onmouseover=null;}}}if(q.no_focus){f.onfocus=function(){this.blur();};}if(f.cdiv)new qm_tree_init_items(f.cdiv,1);if(f.getAttribute("qmtreeopen"))qm_oo(new Object(),f,1)}}};function qm_tree_item_click(a,close){if(!a.qmtree)return;var q=qmad.tree;if(q.msh&&!qm_a(a[qp]))return;if((z=window.qmv)&&(z=z.addons)&&(z=z.tree_menu)&&!z["on"+qm_index(a)])return;x2("qmfh",a);if(q.timer)return;qm_la=null;if(!q.co)q.co=new Object();if(a.style.position=="relative"){if(!q.mo&&!q.msh){cx=true;q.co["b"]=a;q.co["b"].qmtreecollapse=true;qm_tree_get_dd(a,q,q.co["b"]);qm_uo(a,1);qm_tree_item_expand(false,"b");if(window.qm_fade_a)qm_fade_a(a,1,1);var d=a.getElementsByTagName("DIV");for(var i=0;i<d.length;i++){if(d[i].idiv&&d[i].style.position=="relative"){q.co["b"+i]=d[i];q.co["b"+i].qmtreecollapse=true;qm_tree_get_dd(d[i],q,q.co["b"+i]);qm_uo(d[i],1);qm_tree_item_expand(false,"b"+i);if(window.qm_fade_a)qm_fade_a(d[i],1,1);}}if(window.qm_ibullets_hover)qm_ibullets_hover(null,a.idiv);}}else {if(q.msh&&q.co.e){if(q.lh&&q.lh!=a)qm_uo(q.lh,1);x2("qmfv",a);x2("qmfh",a,1);q.lh=a;return;}if(window.qm_fade_clear_timer)qm_fade_clear_timer(a);a.qmtreecollapse=false;if(qm_s2)a.style.display="block";q.co.e=a;qm_tree_get_dd(a,q,q.co.e);q.co.e.topd=true;q.co.e.cend=false;q.co.e.botd=true;if(a.qmtree_toppad){a.style.paddingTop="0px";q.co.e.topd=false;a.qmtree_tp=0;}if(a.qmtree_botpad){a.style.paddingBottom="0px";q.co.e.botd=false;a.qmtree_bp=0;}a.style.position="relative";q.eh=a.offsetHeight;a.style.height="0px";x2("qmfv",a,1);x2("qmfh",a);var sq='';if(!q.chain){sq=qm_tree_acol(a,q.msh);if(q.co[sq]){x2("qmtreemshshow",q.co[sq]);if(window.qm_fade_a)qm_fade_a(q.co[sq],1,1);}}if(q.msh)x2("qmtreemshshow",a);qm_tree_item_expand(true,"e",sq);if(window.qm_fade_a)qm_fade_a(a,false,1);}};function qm_tree_acol(a,gval){var q=qmad.tree;if(q.acollapse){var mobj=qm_get_menu(a);var ds=mobj.getElementsByTagName("DIV");for(var i=0;i<ds.length;i++){if(ds[i].style.position=="relative"&&ds[i]!=a){var go=true;var cp=a[qp];while(!qm_a(cp)){if(ds[i]==cp)go=false;cp=cp[qp];}if(go&&!q.co["a"+i]){cx=true;q.co["a"+i]=ds[i];q.co["a"+i].qmtreecollapse=true;qm_tree_get_dd(ds[i],q,q.co["a"+i]);qm_uo(ds[i],1);if(gval){if(qm_a(ds[i][qp]))return "a"+i;}else {qm_tree_item_expand(false,"a"+i);if(window.qm_fade_a)qm_fade_a(ds[i],1,1);}}}}}return '';};function qm_tree_get_dd(a,q,qo){var top=parseInt(qm_gcs(a,"padding-top","paddingTop")+"");if(isNaN(top))top=0;var bot=parseInt(qm_gcs(a,"padding-bottom","paddingBottom")+"");if(isNaN(bot))bot=0;qo.qmtree_toppad=top;qo.qmtree_botpad=bot;qo.qmtree_tpad=top+bot;qo.dist=a.offsetHeight;if(q.ctype==2)qo.dec_pos=qo.dist;else qo.dec_pos=1};function qm_tree_item_expand(isexp,i,ic){var q=qmad.tree;var go=false;var cs=1;var g=q.co[i];var h=q.co[ic];if(g){var t=g.style;if(!isexp){if(!t.height&&t.position=="relative"){t.height=(g.offsetHeight-g.qmtree_tpad)+"px";g.qmtreeht=parseInt(t.height);}cs=parseInt(Math.sqrt(2*g.dec_pos*(.2*q.cstep)));if(cs<1)cs=1;if(q.ctype==1)g.dec_pos+=cs;else  if(q.ctype==2)g.dec_pos-=cs;else  if(q.ctype==3){cs=q.cstep;g.dec_pos+=cs;}else cs=g.dist;if(q.ctype&&(g.dec_pos>0&&g.dec_pos<g.dist)){var sh=parseInt(t.height);if(sh-cs<=0){t.height="0px";if(g.qmtree_botpad-cs>0){g.qmtree_botpad -=cs;t.paddingBottom=g.qmtree_botpad+"px";}else  if(g.qmtree_toppad-cs>0){g.qmtree_toppad -=cs;t.paddingTop=g.qmtree_toppad+"px";}}else {var sh1=sh-cs;if(sh1<0)sh1=0;t.height=sh1+"px";}go=true;}else {qm_tree_finish_collapse(g);}}else {if(q.etype==1){cs=parseInt(Math.sqrt(2*g.dec_pos*(.2*q.estep)));if(cs<1)cs=1;g.dec_pos+=cs;}else  if(q.etype==2){cs=parseInt(Math.sqrt(2*g.dec_pos*(.2*q.estep)));if(cs<1)cs=1;g.dec_pos-=cs;}else  if(q.etype==3){cs=q.estep;g.dec_pos+=cs;}else cs=g.dist;go=true;if(g.qmtree_toppad&&!g.topd){if(q.etype&&g.qmtree_tp<g.qmtree_toppad-cs){g.qmtree_tp+=cs;t.paddingTop=g.qmtree_tp+"px";if(ic)h.style.paddingBottom=g.qmtree_toppad-g.qmtree_tp+"px";}else {if(ic)h.style.paddingBottom=0+"px";t.paddingTop=g.qmtree_toppad+"px";g.qmtree_toppad=0;g.topd=true;}}if(g.topd&&!g.cend){if(q.etype&&parseInt(t.height)<(q.eh-cs)){t.height=parseInt(t.height)+cs+"px";if(ic)h.style.height=q.eh-parseInt(t.height)+"px";}else {if(ic)h.style.height="0px";g.qmtreeh=t.height;t.height="";g.cend=true;if(g.botd)go=false;}}if(g.qmtree_botpad&&g.cend&&!g.botd){if(q.etype&&g.qmtree_bp<g.qmtree_botpad-cs){g.qmtree_bp+=cs;t.paddingBottom=g.qmtree_bp+"px";if(ic)h.style.paddingTop=(g.qmtree_botpad-g.qmtree_bp)+"px";}else {if(ic)qm_tree_finish_collapse(h);t.paddingBottom=g.qmtree_botpad+"px";g.qmtree_botpad=0;g.botd=true;go=false;}}}}if(go){if(!q.mo)qmwait=true;if(g)g.timer=setTimeout("qm_tree_item_expand("+isexp+",'"+i+"','"+ic+"')",10);if(window.qmv_position_pointer)qmv_position_pointer();}else {if(!q.mo)qmwait=false;if(g){if(isexp&&q.chain)qm_tree_acol(g);if(q.msh)x2("qmtreemshshow",g,1);g.timer=null;q.co[i]=null;}q.co[ic]=null;if(q.lh&&q.lh.idiv.className.indexOf("qmactive")>-1){qm_oo(new Object(),q.lh.idiv);q.lh=null;}if(window.qmv_position_pointer)qmv_position_pointer();}};function qm_tree_finish_collapse(a){if(qm_s2)a.style.display="";a.style.paddingBottom="";a.style.paddingTop="";a.style.height="";a.style.position="";x2("qmfh",a,1);x2("qmfv",a);a.style.visibility="inherit";qm_uo(a,1);};function qm_get_menu(a){while(!qm_a(a)&&(a=a[qp]))continue;return a;}/* ]]> */</SCRIPT>
+<!-- Add-On Code: Item Bullets -->
+<SCRIPT type=text/javascript>/* <![CDATA[ */qmad.br_navigator=navigator.userAgent.indexOf("Netscape")+1;qmad.br_version=parseFloat(navigator.vendorSub);qmad.br_oldnav6=qmad.br_navigator&&qmad.br_version<7;if(!qmad.br_oldnav6){if(!qmad.ibullets)qmad.ibullets=new Object();if(qmad.bvis.indexOf("qm_ibullets_active(o,false);")==-1){qmad.bvis+="qm_ibullets_active(o,false);";qmad.bhide+="qm_ibullets_active(a,1);";qmad.binit+="qm_ibullets_init(null,sd.id.substring(2),1);";if(window.attachEvent)document.attachEvent("onmouseover",qm_ibullets_hover_off);else  if(window.addEventListener)document.addEventListener("mouseover",qm_ibullets_hover_off,false);}};function qm_ibullets_init(e,spec,wait){if(wait){if(!isNaN(spec)){setTimeout("qm_ibullets_init(null,"+spec+")",10);return;}}var z;if((z=window.qmv)&&(z=z.addons)&&(z=z.item_bullets)&&(!z["on"+qmv.id]&&z["on"+qmv.id]!=undefined&&z["on"+qmv.id]!=null))return;qm_ts=1;var q=qmad.ibullets;var a,b,r,sx,sy;z=window.qmv;for(i=0;i<10;i++){if(!(a=document.getElementById("qm"+i))||(!isNaN(spec)&&spec!=i))continue;var ss=qmad[a.id];if(ss&&(ss.ibullets_main_image||ss.ibullets_sub_image)){q.mimg=ss.ibullets_main_image;if(q.mimg){q.mimg_a=ss.ibullets_main_image_active;q.mimg_h=ss.ibullets_main_image_hover;q.mimgwh=eval("new Array("+ss.ibullets_main_image_width+","+ss.ibullets_main_image_height+")");r=q.mimgwh;if(!r[0])r[0]=9;if(!r[1])r[1]=6;sx=ss.ibullets_main_position_x;sy=ss.ibullets_main_position_y;if(!sx)sx=0;if(!sy)sy=0;q.mpos=eval("new Array('"+sx+"','"+sy+"')");q.malign=eval("new Array('"+ss.ibullets_main_align_x+"','"+ss.ibullets_main_align_y+"')");r=q.malign;if(!r[0])r[0]="right";if(!r[1])r[1]="center";}q.simg=ss.ibullets_sub_image;if(q.simg){q.simg_a=ss.ibullets_sub_image_active;q.simg_h=ss.ibullets_sub_image_hover;q.simgwh=eval("new Array("+ss.ibullets_sub_image_width+","+ss.ibullets_sub_image_height+")");r=q.simgwh;if(!r[0])r[0]=6;if(!r[1])r[1]=9;sx=ss.ibullets_sub_position_x;sy=ss.ibullets_sub_position_y;if(!sx)sx=0;if(!sy)sy=0;q.spos=eval("new Array('"+sx+"','"+sy+"')");q.salign=eval("new Array('"+ss.ibullets_sub_align_x+"','"+ss.ibullets_sub_align_y+"')");r=q.salign;if(!r[0])r[0]="right";if(!r[1])r[1]="middle";}q.type=ss.ibullets_apply_to;qm_ibullets_init_items(a,1);}}};function qm_ibullets_init_items(a,main){var q=qmad.ibullets;var aa,pf;aa=a.childNodes;for(var j=0;j<aa.length;j++){if(aa[j].tagName=="A"){if(window.attachEvent)aa[j].attachEvent("onmouseover",qm_ibullets_hover);else  if(window.addEventListener)aa[j].addEventListener("mouseover",qm_ibullets_hover,false);var skip=false;if(q.type!="all"){if(q.type=="parent"&&!aa[j].cdiv)skip=true;if(q.type=="non-parent"&&aa[j].cdiv)skip=true;}if(!skip){if(main)pf="m";else pf="s";if(q[pf+"img"]){var ii=document.createElement("IMG");ii.setAttribute("src",q[pf+"img"]);ii.setAttribute("width",q[pf+"imgwh"][0]);ii.setAttribute("height",q[pf+"imgwh"][1]);ii.style.borderWidth="0px";ii.style.position="absolute";var ss=document.createElement("SPAN");var s1=ss.style;s1.display="block";s1.position="relative";s1.fontSize="1px";s1.lineHeight="0px";s1.zIndex=1;ss.ibhalign=q[pf+"align"][0];ss.ibvalign=q[pf+"align"][1];ss.ibiw=q[pf+"imgwh"][0];ss.ibih=q[pf+"imgwh"][1];ss.ibposx=q[pf+"pos"][0];ss.ibposy=q[pf+"pos"][1];qm_ibullets_position(aa[j],ss);ss.appendChild(ii);aa[j].qmibullet=aa[j].insertBefore(ss,aa[j].firstChild);aa[j]["qmibullet"+pf+"a"]=q[pf+"img_a"];aa[j]["qmibullet"+pf+"h"]=q[pf+"img_h"];aa[j].qmibulletorig=q[pf+"img"];ss.setAttribute("qmvbefore",1);ss.setAttribute("isibullet",1);if(aa[j].className.indexOf("qmactive")+1)qm_ibullets_active(aa[j]);}}if(aa[j].cdiv)new qm_ibullets_init_items(aa[j].cdiv);}}};function qm_adds_gmc(a){while(!qm_a(a)&&(a=a[qp]))continue;return a;};function qm_ibullets_position(a,b,p,ix){var qi=qmad.ibullets;if(p){a=qi[p][ix-1][0];b=qi[p][ix-1][1];}if(!a.offsetWidth||!a.offsetHeight){if(!p){var ti="q_"+qm_adds_gmc(a).id;if(!qi[ti])qi[ti]=new Array();qi[ti].push(new Array(a,b));p=ti;ix=qi[ti].length;}setTimeout("qm_ibullets_position(null,null,'"+p+"',"+ix+")",10);}else {if(b.ibhalign=="right")b.style.left=(a.offsetWidth+parseInt(b.ibposx)-b.ibiw)+"px";else  if(b.ibhalign=="center")b.style.left=(parseInt(a.offsetWidth/2)-parseInt(b.ibiw/2)+parseInt(b.ibposx))+"px";else b.style.left=b.ibposx+"px";if(b.ibvalign=="bottom")b.style.top=(a.offsetHeight+parseInt(b.ibposy)-b.ibih)+"px";else  if(b.ibvalign=="middle")b.style.top=parseInt((a.offsetHeight/2)-parseInt(b.ibih/2)+parseInt(b.ibposy))+"px";else b.style.top=b.ibposy+"px";}};function qm_ibullets_hover(e,targ){e=e||window.event;if(!targ){var targ=e.srcElement||e.target;while(targ.tagName!="A")targ=targ[qp];}var ch=qmad.ibullets.lasth;if(ch&&ch!=targ){qm_ibullets_hover_off(new Object(),ch);}if(targ.className.indexOf("qmactive")+1)return;var wo=targ.qmibullet;var ma=targ.qmibulletmh;var sa=targ.qmibulletsh;if(wo&&(ma||sa)){var ti=ma;if(sa&&sa!=undefined)ti=sa;if(ma&&ma!=undefined)ti=ma;wo.firstChild.src=ti;qmad.ibullets.lasth=targ;}if(e)qm_kille(e);};function qm_ibullets_hover_off(e,o){if(!o)o=qmad.ibullets.lasth;if(o&&o.className.indexOf("qmactive")==-1){var os=o.getElementsByTagName("SPAN");for(var i=0;i<os.length;i++){if(os[i].getAttribute("isibullet"))os[i].firstChild.src=o.qmibulletorig;}}};function qm_ibullets_active(a,hide){var wo=a.qmibullet;var ma=a.qmibulletma;var sa=a.qmibulletsa;if(!hide&&a.className.indexOf("qmactive")==-1)return;if(hide&&a.idiv){var o=a.idiv;var os=o.getElementsByTagName("SPAN");for(var i=0;i<os.length;i++){if(os[i].getAttribute("isibullet"))os[i].firstChild.src=o.qmibulletorig;}}else {if(!a.cdiv.offsetWidth)a.cdiv.style.visibility="inherit";if(a.cdiv){var aa=a.cdiv.childNodes;for(var i=0;i<aa.length;i++){if(aa[i].tagName=="A"&&aa[i].qmibullet)qm_ibullets_position(aa[i],aa[i].qmibullet);}}if(wo&&(ma||sa)){var ti=ma;if(sa&&sa!=undefined)ti=sa;if(ma&&ma!=undefined)ti=ma;wo.firstChild.src=ti;}}}/* ]]> */</SCRIPT> <script src="js/geokb.js"></script>
+ </head>
+ <body>
+ 
+ 
+ <center>
+ <div align="center" class="background_1">
+ <div align="center" class="background_2">
+ <IDXSKIP><span style="display: none;">
+ ﻿  </span></IDXSKIP>
+ 
+ <div align="center" style="border: 1px solid #fff; background-color: #fff;">
+ <IDXSKIP><div class="header_back">
+  <div align="center" style="position: relative; width: 1035px;">
+ <table width="1035" align="center" cellpadding="0" cellspacing="0" border="0" class="top">
+   <tr>
+ <td width="1035" align="left" valign="bottom">
+ <div align="left" style="1px solid;">
+ <table border="0" align="center">
+<tbody>
+<tr>
+<td>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8964063490602135";
+/* finansy */
+google_ad_slot = "8030850547";
+google_ad_width = 970;
+google_ad_height = 90;
+// --></script>
+<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript"></script>
+</td>
+</tr>
+</tbody>
+</table> </div>
+ </td> 
+   </tr>
+ 
+    <tr>
+ <td width="1035" height="50" align="left" valign="top">
+ <table width="1035" align="left" cellpadding="0" cellspacing="0" border="0">
+   <td>
+ <td width="250" height="41" align="left" valign="top" id="bottom_left"><a href="index.php" style="float: left; margin: 7px 0 0 5px;"><img src="templates/style/main/logo.png" border="0" /></a></td> 
+ <td width="785" height="41" align="left" valign="top" id="bottom_right">
+ <table width="730" align="left" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="730" height="7" align="left" valign="top" colspan="4"></td>   
+   </tr>
+   
+   <tr>
+ <td width="670" height="15" align="left" valign="middle"></td>
+ <td width="20" height="15" align="center" valign="middle">
+ <a href="index.php"><img src="templates/style/main/home.png" width="15" height="11" border="0" /></a>
+ </td>
+ 
+ <td width="20" height="15" align="center" valign="middle">
+ <a href="index.php?page=map"><img src="templates/style/main/map.png" width="13" height="13" border="0" /></a>
+ </td>
+ 
+ <td width="20" height="15" align="center" valign="middle">
+ <a style="display: block; margin-top: 1px;" href="index.php?page=contact"><img src="templates/style/main/contact.png" width="15" height="8" border="0" /></a>
+ </td>      
+   </tr>  
+ </table>
+ 
+ </td>
+   </td>
+ </table>
+ </td>  
+   </tr>  
+ </table>
+ </div> </div></IDXSKIP>
+ <div style="clear: both;"></div>
+  <div style="height: 24px; clear: both;"></div>
+ <table align="center" width="1035" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <IDXSKIP><td width="245" align="left" valign="top">
+  <form method="get">
+ <input type="hidden" name="page" value="search" />
+ <table width="192" align="left" cellpadding="0" cellspacing="0" border="0" class="search">
+   <tr>
+ <td width="162" height="23" align="center" valign="top">
+ <input type="text" name="search_name" id="search_name" />
+ </td>
+ <td width="20" height="23" align="left" valign="top">
+ <input type="submit" name="submit_search" id="submit" value="" />
+ </td>  
+   </tr>
+ </table>  
+ </form> </td></IDXSKIP> 
+ <td width="790" align="left" valign="top">
+ 
+ <table align="left" width="790" cellpadding="0" cellspacing="0" border="0"  style="margin-left: 15px;">
+   <tr>
+ <td width="790" align="left" valign="top">
+  
+ <IDXSKIP><table align="left" cellpadding="0" cellspacing="0" border="0" class="t_main_menu_2">
+  <tr>
+ <td width="30" height="25" align="center" valign="middle"><img width="15" height="15" border="0" src="templates/style/main/tetri_j.png" /></td>
+ <td width="130" height="25" align="left" valign="middle">
+ <a href="index.php?top_menu=main">РОССИЯ</a>
+ </td>  
+  </tr>
+  
+  <tr>
+ <td width="130" height="8" align="center" valign="bottom" colspan="2"><img width="130" height="4" border="0" src="templates/style/main/tetri_xazi.png" /></td> 
+  </tr>
+ </table></IDXSKIP>
+
+  
+ <IDXSKIP><table align="left" cellpadding="0" cellspacing="0" border="0" class="t_main_menu_2">
+  <tr>
+ <td width="30" height="25" align="center" valign="middle"><img width="15" height="15" border="0" src="templates/style/main/tetri_j.png" /></td>
+ <td width="130" height="25" align="left" valign="middle">
+ <a href="index.php?top_menu=etiquette">США</a>
+ </td>  
+  </tr>
+  
+  <tr>
+ <td width="130" height="8" align="center" valign="bottom" colspan="2"><img width="130" height="4" border="0" src="templates/style/main/tetri_xazi.png" /></td> 
+  </tr>
+ </table></IDXSKIP>
+
+  
+ <IDXSKIP><table align="left" cellpadding="0" cellspacing="0" border="0" class="t_main_menu_2">
+  <tr>
+ <td width="30" height="25" align="center" valign="middle"><img width="15" height="15" border="0" src="templates/style/main/tetri_j.png" /></td>
+ <td width="130" height="25" align="left" valign="middle">
+ <a href="index.php?top_menu=free">ЕВРОПА</a>
+ </td>  
+  </tr>
+  
+  <tr>
+ <td width="130" height="8" align="center" valign="bottom" colspan="2"><img width="130" height="4" border="0" src="templates/style/main/tetri_xazi.png" /></td> 
+  </tr>
+ </table></IDXSKIP>
+
+  
+ <IDXSKIP><table align="left" cellpadding="0" cellspacing="0" border="0" class="t_main_menu_2">
+  <tr>
+ <td width="30" height="25" align="center" valign="middle"><img width="15" height="15" border="0" src="templates/style/main/tetri_j.png" /></td>
+ <td width="130" height="25" align="left" valign="middle">
+ <a href="index.php?top_menu=photo">АЗИЯ&nbsp;И&nbsp;АФРИКА</a>
+ </td>  
+  </tr>
+  
+  <tr>
+ <td width="130" height="8" align="center" valign="bottom" colspan="2"><img width="130" height="4" border="0" src="templates/style/main/tetri_xazi.png" /></td> 
+  </tr>
+ </table></IDXSKIP>
+
+  
+ <IDXSKIP><table align="left" cellpadding="0" cellspacing="0" border="0" class="t_main_menu_2">
+  <tr>
+ <td width="30" height="25" align="center" valign="middle"><img width="15" height="15" border="0" src="templates/style/main/tetri_j.png" /></td>
+ <td width="130" height="25" align="left" valign="middle">
+ <a href="index.php?top_menu=choice">ЮЖНАЯ&nbsp;АМЕРИКА</a>
+ </td>  
+  </tr>
+  
+  <tr>
+ <td width="130" height="8" align="center" valign="bottom" colspan="2"><img width="130" height="4" border="0" src="templates/style/main/tetri_xazi.png" /></td> 
+  </tr>
+ </table></IDXSKIP>
+
+  
+ <IDXSKIP><table align="left" cellpadding="0" cellspacing="0" border="0" class="t_main_menu_2">
+  <tr>
+ <td width="30" height="25" align="center" valign="middle"><img width="15" height="15" border="0" src="templates/style/main/tetri_j.png" /></td>
+ <td width="130" height="25" align="left" valign="middle">
+ <a href="index.php?top_menu=compass">БЫВШИЙ&nbsp;СССР</a>
+ </td>  
+  </tr>
+  
+  <tr>
+ <td width="130" height="8" align="center" valign="bottom" colspan="2"><img width="130" height="4" border="0" src="templates/style/main/tetri_xazi.png" /></td> 
+  </tr>
+ </table></IDXSKIP>
+
+  </td>  
+   </tr>   
+ </table>
+ 
+ </td> 
+   </tr>
+ </table> 
+ <div style="clear: both;"></div>
+ </div>
+ 
+ 
+ <table width="1035" align="center" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="1035" align="left" valign="top">
+ <table width="1035" align="left" cellpadding="0" cellspacing="0" border="0" style="background: url(templates/style/main/menu_bottom.jpg);">
+   <tr>
+ <td width="1035" height="37" align="left" valign="top"></td>  
+   </tr>
+ </table>
+ </td>  
+   </tr>
+   
+   <tr>
+ <td width="1035" align="left" valign="top">  
+  <table width="1035" cellspacing="0" cellpadding="0" align="center" border="0">
+   <tr>
+ <td width="1035" align="left" valign="top" colspan="2">
+  </td>
+   </tr>
+   <tr>
+ <td width="195" align="left" valign="top">
+ <!-- Rating@Mail.ru counter -->
+<script type="text/javascript">//<![CDATA[
+var _tmr = _tmr || [];
+_tmr.push({id: '2337641',  type: 'pageView', start: (new Date()).getTime()});
+(function (d, w) {
+   var ts = d.createElement('script'); ts.type = 'text/javascript'; ts.async = true;
+   ts.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//top-fwz1.mail.ru/js/code.js';
+   var f = function () {var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ts, s);};
+   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+//]]></script><IDXSKIP><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2337641;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript></IDXSKIP>
+<!-- //Rating@Mail.ru counter -->
+ 
+ 
+ <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter14560264 = new Ya.Metrika({id:14560264, enableAll: true});
+        } catch(e) {}
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/14560264" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+ 
+ 
+ <!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter9688537 = new Ya.Metrika({id:9688537, enableAll: true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/9688537" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+ 
+ <table width="184" align="left" cellpadding="0" cellspacing="0" border="0" class="left_menu">
+   <IDXSKIP><tr>
+ <td width="184" height="38" align="left" valign="top">
+ <table width="184" align="left" cellpadding="0" cellspacing="0" border="0" id="top">
+   <tr>
+ <td width="34" height="38" align="left" valign="middle"></td>
+ <th width="150" height="38" align="left" valign="middle">Статьи</th>
+   </tr>
+ </table>
+ </td>
+   </tr></IDXSKIP>
+
+   <tr>
+ <td width="184" align="left" valign="top">
+  <table width="184" align="left" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="184" align="center" valign="top">  
+ <div align="left" class="glossymenu">
+  
+
+ <IDXSKIP><a class="menuitem submenuheader" >.................................................</a></IDXSKIP>
+  <div class="submenu">
+ <ul>
+  <IDXSKIP><li>  
+ <a  class="menu_link" href="index.php?page=cat&cat=mcat&mcat=136&type=news&mm_menu=58" ><img style="float: left; margin-top: 10px;" width="7" height="1" src="templates/style/main/menu_line.png" border="0" />&nbsp;Мировая экономика</a>
+ </li></IDXSKIP>
+   <IDXSKIP><li>  
+ <a  class="menu_link" href="index.php?page=cat&cat=mcat&mcat=137&type=news&mm_menu=58" ><img style="float: left; margin-top: 10px;" width="7" height="1" src="templates/style/main/menu_line.png" border="0" />&nbsp;Мировые финансы</a>
+ </li></IDXSKIP>
+   <IDXSKIP><li>  
+ <a  class="menu_link" href="index.php?page=cat&cat=mcat&mcat=138&type=news&mm_menu=58" ><img style="float: left; margin-top: 10px;" width="7" height="1" src="templates/style/main/menu_line.png" border="0" />&nbsp;Мировые рынки</a>
+ </li></IDXSKIP>
+   <IDXSKIP><li>  
+ <a  class="menu_link" href="index.php?page=cat&cat=mcat&mcat=188&type=news&mm_menu=58" ><img style="float: left; margin-top: 10px;" width="7" height="1" src="templates/style/main/menu_line.png" border="0" />&nbsp;История экономики</a>
+ </li></IDXSKIP>
+   <IDXSKIP><li>  
+ <a  class="menu_link" href="index.php?page=cat&cat=mcat&mcat=187&type=news&mm_menu=58" ><img style="float: left; margin-top: 10px;" width="7" height="1" src="templates/style/main/menu_line.png" border="0" />&nbsp;Люди в экономике</a>
+ </li></IDXSKIP>
+   <IDXSKIP><li>  
+ <a  class="menu_link" href="index.php?page=cat&cat=mcat&mcat=190&type=news&mm_menu=58" ><img style="float: left; margin-top: 10px;" width="7" height="1" src="templates/style/main/menu_line.png" border="0" />&nbsp;Основы экономики</a>
+ </li></IDXSKIP>
+   <IDXSKIP><li>  
+ <a  class="menu_link" href="index.php?page=cat&cat=mcat&mcat=189&type=news&mm_menu=58" ><img style="float: left; margin-top: 10px;" width="7" height="1" src="templates/style/main/menu_line.png" border="0" />&nbsp;Экономические статьи</a>
+ </li></IDXSKIP>
+   <IDXSKIP><li>  
+ <a  class="menu_link" href="index.php?page=cat&cat=mcat&mcat=133&type=news&mm_menu=58" ><img style="float: left; margin-top: 10px;" width="7" height="1" src="templates/style/main/menu_line.png" border="0" />&nbsp;Экономические союзы                                 </a>
+ </li></IDXSKIP>
+   </ul>
+ </div>
+  </div>
+ </td>
+   </tr>
+ </table> </td>
+   </tr>
+ </table>
+ <IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP>
+ <table border="0">
+<tbody>
+<tr>
+<td>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- google -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:180px;height:600px"
+     data-ad-client="ca-pub-8964063490602135"
+     data-ad-slot="1558273742"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+</tr>
+</tbody>
+</table><IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP> <IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP>
+ <IDXSKIP><table width="184" align="left" cellpadding="0" cellspacing="0" border="0" class="left_menu">
+   <tr>
+ <td width="184" height="38" align="left" valign="top">
+ <table width="184" align="left" cellpadding="0" cellspacing="0" border="0" id="top">
+   <tr>
+ <td width="34" height="38" align="left" valign="middle"></td>
+ <th width="150" height="38" align="left" valign="middle">Новости</th>
+   </tr>
+ </table>
+ </td>
+   </tr>
+
+   <tr>
+ <td width="184" align="left" valign="top">
+  </td>
+   </tr>
+ </table></IDXSKIP>
+ <IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP>
+   <IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP>
+  <IDXSKIP><form method="post" action="#email_id">
+ <table width="184" align="left" cellpadding="0" cellspacing="0" border="0" class="email" id="email_id">
+   <tr>
+ <td width="184" height="20" align="left" valign="middle" colspan="2" >
+ &nbsp;&nbsp;<b style="color: #696969;">Подписаться на новости</b>
+ </td>  
+   </tr>
+
+   <tr>
+ <td width="184" align="left" valign="middle" style="color: #D70222;" colspan="2">
+  
+ </td>  
+   </tr>   
+ 
+   <tr>
+ <td width="184" height="5" align="left" valign="middle" colspan="2"></td>  
+   </tr>  
+   
+   <tr>
+ <td width="157" height="23" align="center" valign="top">
+ <input type="text" name="email" id="email" value="&nbsp;E-mail" onclick="if(this.value == '&nbsp;E-mail'){this.value = ''}" onblur="if(this.value == ''){this.value = '&nbsp;E-mail'}" />
+ </td>
+ <td width="27" height="23" align="center" valign="top">
+ <input type="submit" name="submit_add_email" id="submit_add_email" value="" />
+ </td>  
+   </tr> 
+        
+ </table>
+ </form></IDXSKIP> <IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP>
+  <table width="184" align="left" cellpadding="0" cellspacing="0" border="0" class="links">
+   <IDXSKIP><tr>
+ <td width="184" height="38" align="left" valign="top">
+ 
+ <table width="184" align="left" cellpadding="0" cellspacing="0" border="0" id="top">
+   <tr>
+ <td width="30" height="38" align="left" valign="middle"></td>
+ <th width="154" height="38" align="left" valign="middle"><div id="title">Ссылки</div></th>
+   </tr>
+ </table>
+   
+ </td>
+   </tr></IDXSKIP>
+
+   <tr>
+ <td width="184" height="5" align="left" valign="top"></td>
+   </tr>
+
+   <tr>
+ <td width="184" align="left" valign="top">
+    <IDXSKIP><table align="center" width="180" cellpadding="0" cellspacing="0" border="0">
+     <tr>
+   <td width="180" height="1" colspan="2"></td>  
+     </tr>
+     
+     <tr>
+   <td width="30" align="center" valign="middle">&nbsp;<img src="templates/style/main/lenks.jpg" width="5" height="5" border="0" /></td>
+   <td width="150" align="left" valign="middle"><a href="http://www.webeconomy.ru" title="Сайт о мировой экономике">Мировая экономика</a></td> 
+     </tr>
+     
+     <tr>
+   <td width="180" height="1" colspan="2"></td>  
+     </tr>     
+   </table></IDXSKIP>
+    <IDXSKIP><table align="center" width="180" cellpadding="0" cellspacing="0" border="0">
+     <tr>
+   <td width="180" height="1" colspan="2"></td>  
+     </tr>
+     
+     <tr>
+   <td width="30" align="center" valign="middle">&nbsp;<img src="templates/style/main/lenks.jpg" width="5" height="5" border="0" /></td>
+   <td width="150" align="left" valign="middle"><a href="http://www.webeconomy.ru/index.php?page=cat&cat=mcat&mcat=222&type=news&top_menu=main&sb=117" title="Новости бизнеса">Новости бизнеса</a></td> 
+     </tr>
+     
+     <tr>
+   <td width="180" height="1" colspan="2"></td>  
+     </tr>     
+   </table></IDXSKIP>
+    <IDXSKIP><table align="center" width="180" cellpadding="0" cellspacing="0" border="0">
+     <tr>
+   <td width="180" height="1" colspan="2"></td>  
+     </tr>
+     
+     <tr>
+   <td width="30" align="center" valign="middle">&nbsp;<img src="templates/style/main/lenks.jpg" width="5" height="5" border="0" /></td>
+   <td width="150" align="left" valign="middle"><a href="http://www.webeconomy.ru/index.php?top_menu=etiquette" title="Экономика США: новости, статьи, статистика, аналитика.">Экономика США</a></td> 
+     </tr>
+     
+     <tr>
+   <td width="180" height="1" colspan="2"></td>  
+     </tr>     
+   </table></IDXSKIP>
+  </td>
+   </tr>
+   
+   <tr>
+ <td width="184" height="10" align="left" valign="top"></td>
+   </tr>   
+ </table>  <!--<div style="clear: both;">&nbsp;</div> 
+ <div style="clear: both;">&nbsp;</div> 
+ <div align="left"><a href="forum" target="_blank" style="margin-left: 20px;"><img src="templates/style/main/forum.png" width="84" height="102" border="0" /></a></div>!-->
+ <IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP>
+ </td>
+ <td width="840" align="left" valign="top">
+  <table width="840" align="left" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="10" align="left" valign="top"></td>
+ <td width="560" align="left" valign="top">
+  <div style="height: 6px; clear: both;"></div>
+ <div>
+  </div>
+
+    <table width="570" align="center" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="570" align="left" valign="top">  
+ 
+  
+   <tr>
+ <td width="570" align="left" valign="top">
+  </td>  
+   </tr>
+ 
+   <tr>
+ <td width="570" height="6" align="left" valign="top"></td>
+   </tr> 
+   
+   <tr>
+ <td width="570" align="left" valign="top">
+  
+ 
+<style>
+.grey {
+	COLOR: #818181
+}
+P.grey {
+	COLOR: #818181
+}
+#bigger {
+	FONT-FAMILY: Tahoma, Geneva, Arial, Verdana, Helvetica, sans-serif; FLOAT: left
+}
+#bigger A {
+	COLOR: #666; TEXT-DECORATION: none; cursor: pointer
+}
+
+
+
+#f12 {
+	FONT-SIZE: 12px
+}
+
+#f16 {
+	FONT-SIZE: 14px
+}
+
+#f18 {
+	FONT-SIZE: 16px
+}
+
+#bigger A.choosen {
+	COLOR: #3AAD0A;
+}
+#bigger A.choosen:link {
+	COLOR: #d62002
+}
+#bigger A.choosen:visited {
+	COLOR: #d62002
+}
+
+</style> 
+ 
+<script type="text/javascript" src="article.js"></script> 
+ <table width="576" align="center" cellpadding="0" cellspacing="0" border="0" class="news_more">
+   <tr>
+ <td width="576" height="39" align="left" valign="middle" id="header"><strong>Перспективы развития экономики США в 2017 году</strong></td>  
+   </tr>
+
+   <tr>
+ <td width="576" align="left" valign="middle">
+<script type="text/javascript" language="javascript">
+$(function()
+{
+	$("#send_gaxsna").click(function(event) {
+	event.preventDefault();
+	$("#send_page").slideToggle();
+	});
+});
+</script>
+<script language="javascript">
+function load()
+{
+   var load = window.open('print.php?id=3578','','scrollbars=yes,menubar=no,height=500,width=600,resizable=yes,toolbar=yes,location=no,status=no');
+}
+</script>
+ <IDXSKIP><div id="news_left_top">
+ <a href="#" onclick="load();" title="Версия для печати"><img border="0" width="15" height="15" src="templates/style/main/print_icon.png" /></a>
+ <a id="send_gaxsna" href="#send_page" style="margin-top: 4px;" title="Отправить"><img border="0" width="16" height="11" src="templates/style/main/send_friend.png" /></a>
+ </div></IDXSKIP>
+ <div id="news_left_top_2">
+ <div><IDXSKIP>&nbsp;&nbsp;Просмотров&nbsp;</IDXSKIP><strong>2650</strong><IDXSKIP>&nbsp;-&nbsp;</IDXSKIP></b><IDXSKIP>&nbsp;|&nbsp;&nbsp;</IDXSKIP></div>
+ </div>
+ <div id="news_left_top_3"></div>
+ 
+ <IDXSKIP><div id="news_right_top">
+ <table width="150" align="center" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="100" height="20" align="center" valign="top"><span>Шрифт</span></td>
+ <td width="50" height="20" align="left" valign="top">
+<script>
+	document.write('<div id="bigger">&nbsp;&nbsp;<a id="f14" class="choosen">A</a> <a id="f16" >A</a> <a id="f18">A</a></div>');
+</script> 
+ </td>
+   </tr>
+ </table>
+ </div></IDXSKIP>
+ </td>  
+   </tr>
+   
+   <tr>
+ <td width="576" align="left" valign="top">
+ <div align="left" style="position: relative;">
+ <div id="send_page" style="margin-left: 40px; width: 500px; position: absolute; display: none; overflow: visible; background: #FFF; z-index: 4;">
+   <form action="index.php?page=send&newsid=3578" method="post">
+ <IDXSKIP><table width="450" align="center" cellpadding="0" cellspacing="0" border="0" class="send_friend">
+   <tr>
+ <td width="450" align="center" valign="middle" class="errors">
+  </td>  
+   </tr>
+
+   <tr>
+ <th width="450" height="30" align="center" valign="middle" colspan="2" style="font-size: 12px;">Отправить другу</th>  
+   </tr>
+   
+   <tr>
+ <td width="450" height="40" align="left" valign="top"><div id="name"><input type="text" name="friend_email" value="e-mail друга" onfocus="if(this.value == 'e-mail друга'){ this.value = ''; }" onblur="if(this.value == ''){ this.value = 'e-mail друга'; }" /></div></td> 
+   </tr>
+   
+   <tr>
+ <td width="450" height="40" align="left" valign="top"><div id="name"><input type="text" name="subject" value="Тема" onfocus="if(this.value == 'Тема'){ this.value = ''; }" onblur="if(this.value == ''){ this.value = 'Тема'; }" /></div></td> 
+   </tr>    
+   
+   <tr>
+ <td width="450" height="40" align="left" valign="top"><div id="name"><input type="text" name="sender_email" value="Ваш e-mail" onfocus="if(this.value == 'Ваш e-mail'){ this.value = ''; }" onblur="if(this.value == ''){ this.value = 'Ваш e-mail'; }" /></div></td> 
+   </tr>
+   
+   <tr> 
+ <td width="450" height="30" align="left" valign="top">
+ <img border="0" width="80" height="24" src="classes/captcha.class.php" style="margin-left: 110px; float: left;" />
+ <div id="security"><input type="text" name="security_code" value="Введите код" onfocus="if(this.value == 'Введите код'){ this.value = ''; }" onblur="if(this.value == ''){ this.value = 'Введите код'; }" /></div>
+ </td> 
+   </tr>  
+   
+   <tr>
+ <td width="450" height="30" align="center" valign="top">
+ <input type="submit" name="submit_email" value="" id="submit_mail" />
+ </td> 
+   </tr> 
+
+   <tr>
+ <td width="450" height="40" align="left" valign="top"></td> 
+   </tr>  
+ </table></IDXSKIP>
+ <textarea name="text" style="display: none;"><p style="text-align: justify;"><br />В 2016 году в американской экономике продолжался рост, сопровождаемый положительными тенденциями на рынке труда и в жилищном секторе. США находятся в восходящей фазе экономического цикла, экономика продолжает стабильный рост, однако темпы роста по-прежнему не превышают докризисных. Прошедший год стал десятым годом подряд, в котором ВВП рос менее, чем на 3% в год. Однако позитивные изменения в экономике, в особенности положительная динамика на рынке труда, позволили ФРС в декабре 2015 г. повысить целевой уровень ставки по федеральным фондам с минимального значения 0-0,25%, где она находилась с декабря 2008 г, до 0,25-0,5%. <br /> <br /> В первом квартале ВВП вырос на 0,8%, во втором - на 1,4%, в третьем - на 3,2%. Годовой рост ВВП в 2016 г. составит около всего 1,6%, что ниже, чем в предыдущие четыре года. В первом квартале наибольший вклад в рост ВВП внесли потребительские расходы населения, инвестиции в жилищное строительство, государственные расходы на уровне штатов и муниципалитетов. В то же время, снизились инвестиции в оборудование, товарно- материальные запасы и уменьшились федеральные расходы, в основном за счет уменьшения расходов на оборону. Во втором и третьем кварталах потребительские расходы и экспорт возросли больше, чем в первом, однако произошло сильное падение инвестиций в жилищное строительство - на 7,7% и 4,4% соответственно, и упали в абсолютном выражении и расходы штатов и муниципалитетов. Инвестиции в оборудование уменьшались четыре квартала подряд - с четвертого квартала 2015 г. по третий квартал 2016 г. <br /> <br /> Наиболее стабильным сегментом ВВП в настоящее время являются потребительские расходы, поквартальная динамика которых остается положительной с конца 2009 г. Потребительские расходы выросли в 2015 г. на 3,2%, впервые с 2005 г. превысив трехпроцентный рубеж. Во втором и третьем кварталах 2016 г. их рост составил 4,3% и 2,8% соответственно. Рост потребительских расходов подкрепляется ростом доходов. Реальные располагаемые доходы населения возросли в 2015 г. на 3,5%, а в расчете на душу населения - на 2,7%. В первом квартале 2016 г. рост реальных располагаемых доходов населения составил 2,1%, во втором - 2,9%, а в третьем - 2,7%. Однако медианные реальные доходы домохозяйств в 2015 г. не достигли докризисного уровня, составив 56 516 долл. в год, в то время как в 2007 г. этот же показатель составлял 57,423 долл. Отсутствие роста реальных доходов значительного числа домохозяйств, стало одним из факторов недовольства политикой администрации Б.Обамы, повлиявшим на результаты президентских выборов. <br /> <br /> Ситуация на рынке труда в 2016 г. изменилась мало, хотя там тоже наблюдается положительная динамика. В ноябре количество занятых в экономике выросло на 178 тыс. чел., а с января по ноябрь в среднем ежемесячно количество занятых увеличивалось на 180 тыс. чел., что несколько меньше, чем в 2015 г. - 229 тыс. чел. Уровень безработицы в течение года стабилизировался и колебался в диапазоне 4,6-5%, достигнув 4,6% в ноябре. Таким образом, американская экономика приблизилась к естественному уровню безработицы, который, по оценкам членов Федерального комитета по открытым рынкам ФРС США - FOMC, на сентябрь 2016 г. составил 4,5-5%. <br /> <br /> Однако ситуация на рынке труда далека от идеальной. Доля экономически активного населения по-прежнему низка и примерно соответствует уровню 1977-78 гг.: в ноябре 2016 г. этот показатель составил 62,7%, что, однако чуть выше, чем 62,5% годом ранее. Общее количество занятых в экономике составило в ноябре 59,7% всего взрослого населения, что далеко от предкризисного максимума 2006 г. в 63,4%. <br /> <br /> Динамика промышленного производства, как и в 2015 году, демонстрирует нестабильность. В первом и втором кварталах 2016 г. произошло снижение объема промышленного производства на 1,7% и 0,8% соответственно, и лишь в третьем квартале этот показатель вырос на 2%. Снижение в первом и втором кварталах было особенно сильно в добывающей промышленности - на 15,4% и 14,8% соответственно. Уровень промышленного производства по-прежнему находится под воздействием снижения цен на нефть, которое повлекло за собой уменьшение объемов производства в энергетик, и, в свою очередь, спроса на оборудование, металлы и другие промышленные товары. Последствия укрепления курса доллара и неопределенность на внешних рынках негативно влияют на уровень промышленных инвестиций в целом. Отсутствие доверия, определенности и видения перспектив у бизнеса также является важным негативным фактором. <br /> <br /> Коэффициент использования производственных мощностей в октябре 2016 г. составил 75,3%, что на 4,7 п.п. меньше среднего многолетнего значения 1972-2015 гг. - 80%. <br /> <br /> Ситуация на автомобильном рынке продолжает оставаться оптимистичной. Продажи автомобилей в 2015 г. выросли на 5,7% по сравнению с предыдущим годом и достигли рекордного значения 17,5 млн., превысив предыдущий абсолютный максимум 2000 года. В 2016 г. продажи остаются на высоком уровне, и ожидается примерно такой же годовой объем продаж, как и в 2015 г. В сентябре 2016 г. продажи в годовом выражении составили 17,8 млн. автомобилей, а в октябре - 18,02 млн. Стабильно высокий уровень продаж обусловлен, в первую очередь, низкими ценами на бензин, низкими процентными ставками и, возможно, некоторым увеличением занятости. <br /> <br /> Важной характеристикой экономической ситуации в США продолжает оставаться сочетание долго сохраняющегося высокого уровня корпоративных прибылей с низкими инвестициями. Корпоративные прибыли остаются рекордно высокими и держатся на уровне выше 2 трлн. долл. с 2012 года. В 2015 г. корпоративные прибыли составили почти 2,1 трлн. долл., а в I-II кварталах 2016 г. они колебались на уровне около 2 трлн. долл. <br /> <br /> По оценке компании Moody's, нефинансовые компании США, входящие в составляемые этой компанией рейтинги, к концу 2016 г. доведут свои зарубежные запасы наличных средств до 1,77 трлн. долл. - в сравнении с 1,68 трлн. долл. на конец 2015 г. При этом большая часть этих средств как генерируется, так и хранится за пределами США. Корпоративные запасы наличных средств за последние десять лет возросли более чем в два раза, при этом на долю технологических компаний приходится почти половина наличных средств, приходящихся на все американские нефинансовые компании. Так, запасы наличных средств компании Apple, по оценке Moody's, к концу 2016 г. превысят 250 млрд. долл., что соответствует более 14% всех запасов наличности нефинансовых компаний. <br /> <br /> В 2016 г. происходил стабильный рост жилищного строительства и продаж новых домов. Продажи новых домов для одной семьи в сентябре 2016 г. выросли на 3,1% и достигли 593 тыс. в годовом выражении, а по сравнению с тем же месяцем предыдущего года увеличились на целых 29,8%. О восстановлении рынка жилищного строительства свидетельствует тот факт, что его ключевой показатель - объем запуска строительства нового жилья, - держится на уровне выше 1 млн. в годовом выражении с начала 2016 г. В октябре 2016 г. этот показатель вырос на 25,5% по сравнению с сентябрем и составил 1,323 млн., что является самым высоким значением с августа 2007 г. По сравнению с октябрем 2015 г. рост данного показателя в сентябре 2016 г. составил 23,3%. <br /> <br /> В то же время, доля домохозяйств, имеющих собственное жилье, остается ниже критического уровня 65%, который считается &laquo;исторически нормальным&raquo;: во втором квартале 2016 г. этот показатель достиг 62,9% - самого низкого значения за 50 лет. Причинами являются медленный рост доходов и опережающий динамику доходов рост цен на жилье, которые росли в течение всего 2016 года. Ведущий сводный индекс цен на жилье в 20 крупных городах S&amp;P CoreLogic Case-Shiller Index увеличился в августе 2016 г. на 5,1% по сравнению с августом предыдущего года. Медианная цена продажи нового дома в сентябре составила 313,5 тыс. долл., по сравнению с 307,6 тыс. годом ранее. Средняя цена продажи нового дома выросла соответственно с 367,8 тыс. долл. в сентябре 2015 г. до 377,7 тыс. долл. в сентябре 2016 г. <br /> <br /> Основной проблемой американской экономики является недостаточный уровень инвестирования, обусловленный слабым спросом. Наблюдается недоиспользование производственных мощностей в промышленности, хранение прибылей в виде наличных средств вместо инвестирования, сохранение резерва рабочей силы на рынке труда. Поскольку американская экономика находится в фазе подъема, неполное использование производственных резервов в разных секторах объясняется не циклическими факторами. Текущий период характеризуется медленным ростом производительности труда, который составил в среднем за десятилетний период с 2006 г. по 2015 г. 1,26% в год. Для ускорения роста производительности необходимо возникновение новых потребностей в экономике и формирование соответствующего им спроса. Для достижения этой цели необходимо поощрение конкуренции, предпринимательства и инноваций и снятие излишних регуляторных ограничений. <br /> <br /> С другой стороны, к настоящему моменту мы наблюдаем явное исчерпание инструментов монетарной политики для стимулирования экономики. Низкая ставка рефинансирования и три раунда количественного смягчения помогли вывести экономику США из кризиса, но не могут дать ей импульс для ускорения темпов роста. Таким образом, несмотря на продолжающийся экономический рост и явные улучшения на рынке труда и жилищном рынке, в экономике США накопился ряд серьезных проблем, требующих принятия решительных мер и смены вектора проводимой экономической политики. <br /> <br /> Неожиданное для многих избрание президентом Д.Трампа явилось лишь констатацией этой необходимости. Победа на президентских выборах Д.Трампа, который является несистемной фигурой, несмотря на то, что формально он баллотировался от республиканской партии, стала главным политическим событием прошедшего года, которое, безусловно, будет определяющим при прогнозировании дальнейшего экономического развития США. <br /> <br /> В основе периодически происходящей смены экономической политики лежат потребности экономики, обусловленные ее циклическим развитием. Избиратели США достаточно чувствительны к этим потребностям. Длительное противостояние президента и конгресса вместе с обострением межпартийных противоречий в самом конгрессе сделали фактически невозможным принятие любых решений по ключевым вопросам экономической политики в последние шесть лет. При этом с точки зрения рядового избирателя парадоксальным образом произошло и чрезмерное сближение двух партий из-за их неспособности идти на компромиссы, необходимые для принятия решений, и чрезмерной концентрации на политических проблемах, имеющих большее значение для Вашингтона, но не для страны в целом. В результате отторжения электоратом обеих правящих партий, в ходе президентской кампании 2016 г. неожиданно для большинства экспертов сначала был выдвинут от республиканской партии, а затем и одержал победу &laquo;внесистемный&raquo; кандидат Д.Трамп, который построил свою предвыборную кампанию на критике политики Вашингтона в целом. <br /> <br /> Однако избрание Д.Трампа демонстрирует и существование значительных брешей в экономической политике Б.Обамы, вызывавших недовольство той части избирателей, голоса которых определили избрание Д.Трампа. Несмотря на то, за Д.Трампа проголосовало 48% избирателей с доходом 50 тыс. долл. в год и выше - за Х.Клинтон - 47%, а доля таких избирателей составила 64% от общей численности избирателей, решающую роль в победе Д.Трампа сыграли белые представители нижней части среднего класса, в основном без высшего образования. Их напрямую затронули структурные проблемы на рынке труда, поскольку именно эта категория теряла работу из-за сокращения рабочих мест на территории США, как из-за вывода рабочих мест за рубеж, так и роста производительности труда. <br /> <br /> Многие из тех, кому удалось сохранить работу, находились вне зоны роста доходов: например, за десять лет с 2005 г. по 2015 г. средняя почасовая заработная плата в автомобильной промышленности упала с 22,14 до 21,5 долл. В то же время, в связи с проведением реформы здравоохранения, стоимость медицинской страховки для многих представителей нижней части среднего класса увеличилась. Все это определило голосование за Д.Трампа этой части населения. Эта категория избирателей, как правило, голосовала за представителей демократической партии, и в ходе предвыборной кампании, видимо, автоматически была зачислена штабом Х.Клинтон в ее сторонники. В результате их проблемам не было уделено должного внимания. Однако именно их голоса стали в итоге решающими для итогов выборов. <br /> <br /> Анализ результатов выборов демонстрирует раздел страны еще по одному экономическому критерию. По данным Института Брукингса, американские избиратели четко разделились в зависимости от уровня деловой активности и вклада в экономику округов, в которых они проживают. За Х.Клинтон проголосовали всего 472 округа, но вклад этих округов в американский ВВП составляет 64%. Д.Трамп получил голоса 2584 округов, на долю которых приходится производство всего 36% ВВП страны. Х.Клинтон выиграла выборы почти во всех крупных городских округах, а за Д.Трампа голосовали жители многочисленных небольших, слабо экономически развитых округов. Эти данные указывают на существование большого разрыва в уровне жизни населения в экономически развитых и отсталых округах и являются еще одним подтверждением того, что социальные проблемы существенной части населения долгое время не получали должного внимания. <br /> <br /> Важнейшим фактором, способным повлиять на переход к качественно иным темпам роста, является само ожидание экономическими субъектами долгосрочного экономического роста. В настоящее время в американской экономике нет уверенности как бизнеса, так и потребителей в долгосрочных перспективах экономики. Отсутствие этого доверия является одним из ключевых факторов, негативно влияющих на экономическую ситуацию. Для того, чтобы переломить такое отношение, надо полностью сменить экономическую политику, как и полностью обновить кадровый состав тех, кто эту политику будет проводить. Обещания Д.Трампа дать бизнесу больше свободы, освободить его от излишнего налогового бремени и избытка регулирования, а также ожидание большей определенности в отношениях президента с конгрессом стали причиной того, что фондовый рынок отреагировал в целом положительно на его избрание. Банки, финансовые компании и бизнес ожидают позитивных перемен. Прежде всего это касается ослабления регулирования и налоговой реформы, а также обещанного роста расходов на оборону и масштабных инвестиций в инфраструктуру, призванных создать рабочие места и оживить деловую активность. <br /> <br /> Пока трудно судить, какие из заявленных планов Д.Трампа воплотятся в жизнь и в каком именно виде, поскольку в ходе предвыборной борьбы он сделал много заявлений и обещаний, выполнить которые вряд ли будет возможно, и они, скорее всего, будут корректироваться. Однако уже сейчас можно обозначить контуры его будущей экономической политики. Основными элементами экономической программы Д.Трампа являются дерегулирование, крупные инвестиции в инфраструктурные проекты и налоговая реформа. Он собирается снизить налоги для всех категорий налогоплательщиков и значительно упростить налоговую систему, сделав ее более понятной и удобной. Предполагается снижение налога на корпоративную прибыль с 35% до 15%, а также ряд мер по уменьшению оттока корпоративных прибылей за рубеж и поощрению репатриации прибылей. В настоящее время трудно точно сказать, какие именно налоговые ставки будут введены, поскольку Д.Трампом и его командой делались разные заявления по этому поводу, к тому же изменения в налоговой системе должны утверждаться конгрессом. Однако общая установка на снижение налогов, как для корпораций, так и для физических лиц, особенно для среднего класса, была выражена достаточно ясно. Есть основания полагать, что налоговая реформа Д.Трампа будет поддержана республиканским конгрессом. <br /> <br /> Д.Трамп также заявил о планах инвестировать 1 трлн. долл. в инфраструктуру в течение 10 лет и значительно увеличить расходы на оборону. При этом он не собирается сокращать расходы на социальные программы, считая, что дерегулирование, инвестиции и снижение налогов должны в конечном счете привести к росту доходов бюджета. Однако, по оценке Центра налоговой политики - Tax Policy Center, если обещания Д.Трампа по снижению ставки налогов претворятся в жизнь, это приведет к увеличению федерального долга на 7,2 трлн. долл. в течение десяти лет. Эта часть планов избранного президента может столкнуться с противодействием в конгрессе, поскольку большинство республиканцев выступают за сокращение социальных программ и настороженно относятся к идее увеличения расходной части бюджета. <br /> <br /> Д.Трамп также обещал возродить угольную промышленность и вернуть миллионы рабочих мест в обрабатывающей промышленности. Однако эти его обещания скорее были направлены на привлечение социально забытого электората, чем основаны на экономической реальности. Упадок угольной промышленности США лишь отчасти вызван введением законодательных требований по установке очистных сооружений, которые Д.Трамп в принципе может и отменить. Главными причинами трудного состояния отрасли является низкий спрос на уголь за счет роста производства нефти и газа, а также высокие издержки производства. Вряд ли Д.Трамп сможет как-то повлиять на эти факторы. То же касается и сокращения рабочих мест в обрабатывающей промышленности, которое происходит из-за объективных процессов автоматизации и роста производительности труда, а вновь создаваемые там рабочие места предъявляют более высокие требования к квалификации занятых в отрасли работников. <br /> <br /> Возрождение строительства, особенно в связи с масштабными инвестициями в инфраструктуру, должно, по плану избранного президента, способствовать созданию новых рабочих мест. После краха рынка жилищного строительства в 2008-2009 гг. строительную отрасль покинули около 30% занятых в ней работников. По состоянию на сентябрь 2016 г. в строительстве было открыто 221 тыс. вакансий, что сравнимо с показателями 2007 года. Это указывает на хорошие перспективы для занятости строительных рабочих, потерявших работу в кризис, или бывших промышленных рабочих. С другой стороны, крупные инфраструктурные проекты должны положительно сказаться на компаниях, производящих строительное оборудование, сталелитейных и подобных компаний, таких как Caterpillar, John Deere, U.S. Steel. <br /> <br /> Другие планы Д.Трампа включают сокращение и повышение эффективности работы государственного аппарата, рост собственной добычи энергоносителей, отмену или пересмотр отдельных положений закона Додда-Фрэнка о реформе финансовых рынков и защите потребителей финансовых услуг, который он резко критиковал во время избирательной кампании. После избрания Д.Трамп уже не говорит о полной отмене закона, а лишь об отмене той его части, которая касается ограничений выдачи кредитов. Однако пока не очень понятно, о какой именно части закона идет речь. Что касается реформы здравоохранения &laquo;Обамакэр&raquo;, Д.Трамп, до избрания обещавший полностью отменить эту реформу, после выборов несколько сменил тон, и собирается пересмотреть лишь некоторые ее положения. Д.Трамп также заявлял, что США прекратят участвовать в экологических программах и выйдут из Парижского соглашения по климату. Избранный президент занимает жесткую протекционистскую позицию в вопросах торговли, выступает за блокирование Транстихоокеанского партнерства, неучастие США в Трансатлантическом торговом партнерстве, выход из НАФТА и даже из ВТО. Скорее всего, реально он будет пытаться пересмотреть условия торговых договоров на более выгодных для США условиях. <br /> <br /> Во время предвыборной кампании Д.Трамп обещал ввести запретительные тарифы и налоги - до 35- 45% на товары из Китая и Мексики. Это вызывает большие опасения у экспертов, поскольку такие шаги могут привести к торговым войнам, нарушению цепочек поставок и убыткам для американских промышленных компаний, а также негативно сказаться на уровне жизни американских потребителей. В то же время, протекционистская позиция Д.Трампа может не совпасть с мнением республиканского большинства конгресса. Однако в последние месяцы многие республиканские конгрессмены, традиционно поддерживающие свободу торговли, стали отказываться от этой поддержки, склоняясь к усилению протекционистских мер. Поэтому не исключена возможность, что в ряде случаев дело дойдет до проведения переговоров по изменению условий торговых соглашений. Что же касается введения тарифов, то у президента США есть некоторые законодательные возможности вводить и отменять тарифы без участия конгресса, и теоретически Д.Трамп может ими воспользоваться, хотя это, безусловно, повлечет за собой негативную реакцию и, возможно, даже судебные иски. <br /> <br /> Д.Трамп неоднократно критиковал ФРС и ее главу Дж.Йеллен - которую он даже обещал уволить во время предвыборной кампании за то, что, по его мнению, она сознательно не поднимала целевой уровень ставки по федеральным фондам во время избирательной компании и даже обвинил ФРС в создании &laquo;дутой экономики&raquo; - false economy, имея в виду, что искусственно низкие процентные ставки искажают реальное положение дел в экономике и способствуют манипуляциям и созданию пузырей на финансовых рынках. Д.Трамп является противником низких процентных ставок, которые, по его мнению, невыгодны для огромного количества людей, получающих из-за этого небольшой процент на свои сбережения, что было важным пунктом его предвыборной повестки. Однако, учитывая, что ФРС в декабре 2016 г. с большой долей вероятности повысит целевой уровень ставки еще на 0,25 п.п. - до 0,5-0,75%, а срок полномочий Дж.Йеллен истекает в 2018 г., возможно, он не будет предпринимать никаких резких действий для ее отставки до этого срока. К тому же, в 2017 г. должны быть заполнены два вакантных места в Совете управляющих ФРС, и Д.Трамп сможет назначить на эти вакансии своих сторонников. <br /> <br /> К тому же, сейчас внутри ФРС есть понимание того, что резервы монетарного воздействия на экономику исчерпаны, и надо уделять больше внимания бюджетно-налоговой политике. Заместитель главы ФРС С.Фишер в конце ноября 2016 г. заявил, что &laquo;макроэкономическая политика не должна быть ограничена монетарной политикой&raquo; и что возможно использование некоторых инструментов бюджетно-налоговой политики, особенно тех, которые приведут к росту производительности труда. Этот подход вполне согласуется с позицией Д.Трампа в отношении уменьшения налогов и роста государственных инвестиций. <br /> <br /> Избрание Д.Трампа, несмотря на его неожиданность и одиозность фигуры избранного президента, вполне вписывается в логику объективного цикличного развития американской экономики. При назревании необходимости изменений в экономике происходит смена направления движения &laquo;регуляторного маятника&raquo;, совпадающая с приходом к власти представителя альтернативной партии. Периодический переход власти между демократической и республиканской партиями позволяет провести в жизнь назревшие перемены в экономической политике. При этом полного разворота экономической политики, конечно, не происходит, поскольку основополагающие стратегические цели обеих партий в принципе остаются неизменными: это сохранение американского экономического лидерства, стабильность и конкурентоспособность экономики, поощрение предпринимательства и инновационности. И сейчас речь идет не о смене стратегических приоритетов, а о смене средств достижения этих целей, то есть инструментов экономической политики. <br /> <br /> Результаты прошедших выборов убедительно показали необходимость существенной перестройки как политической, так и социально-экономической модели США, что, в свою очередь, неизбежно скажется и на мировом экономическом развитии. В наших предыдущих прогнозах мы неоднократно отмечали, что в США назрела необходимость реформ. Возможности проводимой американской ФРС сверхмягкой монетарной политики стимулирования экономики, по-видимому, уже некоторое время назад были исчерпаны. Переход к активному использованию бюджетно-налоговых мер напрашивался уже давно. Это же касается и других элементов экономической политики, предлагаемых Д.Трампом - комплексной налоговой реформы, масштабных инвестиций в инфраструктуру и дерегулирования, т.е. мер, направленный на рост инвестиционного и потребительского спроса и ускорение экономического роста. Д.Трамп выиграл выборы, декларируя именно эти цели, и есть основания полагать, что многие из них будут им достигнуты. <br /> <br /> От президентства Д.Трампа можно ожидать улучшение общего экономического климата, смягчение правил регулирования экономики, изменения тона общения с бизнесом и с финансовыми институтами, что может привнести в американскую экономику возрождение доверия к будущему росту. Этому доверию должно не в последней мере способствовать и снятие проблемы регуляторного коллапса, когда из-за противостояния президента и конгресса было практически невозможно принятие каких бы то ни было решений. Если будут снижены налоги и возвращено доверие бизнеса, то возможна репатриация прибылей, возвращение существенной доли населения в ряды рабочей силы, создание новых рабочих мест и более быстрый экономический рост. В случае успеха стимулирующих мероприятий можно ожидать роста цен и возвращения уровня инфляции на уровень 2% и более уже в 2018 г. Экономика США в 2017 году вырастит на 2,5-3%, и возможно дальнейший выход экономики США на среднесрочную траекторию более быстрого роста.&nbsp;</p></textarea>
+ </form> </div>
+ <div id="article" class="f20">
+      <div id="articletext"> 
+ <div id="news_text">
+   <p style="text-align: justify;"><br />В 2016 году в американской экономике продолжался рост, сопровождаемый положительными тенденциями на рынке труда и в жилищном секторе. США находятся в восходящей фазе экономического цикла, экономика продолжает стабильный рост, однако темпы роста по-прежнему не превышают докризисных. Прошедший год стал десятым годом подряд, в котором ВВП рос менее, чем на 3% в год. Однако позитивные изменения в экономике, в особенности положительная динамика на рынке труда, позволили ФРС в декабре 2015 г. повысить целевой уровень ставки по федеральным фондам с минимального значения 0-0,25%, где она находилась с декабря 2008 г, до 0,25-0,5%. <br /> <br /> В первом квартале ВВП вырос на 0,8%, во втором - на 1,4%, в третьем - на 3,2%. Годовой рост ВВП в 2016 г. составит около всего 1,6%, что ниже, чем в предыдущие четыре года. В первом квартале наибольший вклад в рост ВВП внесли потребительские расходы населения, инвестиции в жилищное строительство, государственные расходы на уровне штатов и муниципалитетов. В то же время, снизились инвестиции в оборудование, товарно- материальные запасы и уменьшились федеральные расходы, в основном за счет уменьшения расходов на оборону. Во втором и третьем кварталах потребительские расходы и экспорт возросли больше, чем в первом, однако произошло сильное падение инвестиций в жилищное строительство - на 7,7% и 4,4% соответственно, и упали в абсолютном выражении и расходы штатов и муниципалитетов. Инвестиции в оборудование уменьшались четыре квартала подряд - с четвертого квартала 2015 г. по третий квартал 2016 г. <br /> <br /> Наиболее стабильным сегментом ВВП в настоящее время являются потребительские расходы, поквартальная динамика которых остается положительной с конца 2009 г. Потребительские расходы выросли в 2015 г. на 3,2%, впервые с 2005 г. превысив трехпроцентный рубеж. Во втором и третьем кварталах 2016 г. их рост составил 4,3% и 2,8% соответственно. Рост потребительских расходов подкрепляется ростом доходов. Реальные располагаемые доходы населения возросли в 2015 г. на 3,5%, а в расчете на душу населения - на 2,7%. В первом квартале 2016 г. рост реальных располагаемых доходов населения составил 2,1%, во втором - 2,9%, а в третьем - 2,7%. Однако медианные реальные доходы домохозяйств в 2015 г. не достигли докризисного уровня, составив 56 516 долл. в год, в то время как в 2007 г. этот же показатель составлял 57,423 долл. Отсутствие роста реальных доходов значительного числа домохозяйств, стало одним из факторов недовольства политикой администрации Б.Обамы, повлиявшим на результаты президентских выборов. <br /> <br /> Ситуация на рынке труда в 2016 г. изменилась мало, хотя там тоже наблюдается положительная динамика. В ноябре количество занятых в экономике выросло на 178 тыс. чел., а с января по ноябрь в среднем ежемесячно количество занятых увеличивалось на 180 тыс. чел., что несколько меньше, чем в 2015 г. - 229 тыс. чел. Уровень безработицы в течение года стабилизировался и колебался в диапазоне 4,6-5%, достигнув 4,6% в ноябре. Таким образом, американская экономика приблизилась к естественному уровню безработицы, который, по оценкам членов Федерального комитета по открытым рынкам ФРС США - FOMC, на сентябрь 2016 г. составил 4,5-5%. <br /> <br /> Однако ситуация на рынке труда далека от идеальной. Доля экономически активного населения по-прежнему низка и примерно соответствует уровню 1977-78 гг.: в ноябре 2016 г. этот показатель составил 62,7%, что, однако чуть выше, чем 62,5% годом ранее. Общее количество занятых в экономике составило в ноябре 59,7% всего взрослого населения, что далеко от предкризисного максимума 2006 г. в 63,4%. <br /> <br /> Динамика промышленного производства, как и в 2015 году, демонстрирует нестабильность. В первом и втором кварталах 2016 г. произошло снижение объема промышленного производства на 1,7% и 0,8% соответственно, и лишь в третьем квартале этот показатель вырос на 2%. Снижение в первом и втором кварталах было особенно сильно в добывающей промышленности - на 15,4% и 14,8% соответственно. Уровень промышленного производства по-прежнему находится под воздействием снижения цен на нефть, которое повлекло за собой уменьшение объемов производства в энергетик, и, в свою очередь, спроса на оборудование, металлы и другие промышленные товары. Последствия укрепления курса доллара и неопределенность на внешних рынках негативно влияют на уровень промышленных инвестиций в целом. Отсутствие доверия, определенности и видения перспектив у бизнеса также является важным негативным фактором. <br /> <br /> Коэффициент использования производственных мощностей в октябре 2016 г. составил 75,3%, что на 4,7 п.п. меньше среднего многолетнего значения 1972-2015 гг. - 80%. <br /> <br /> Ситуация на автомобильном рынке продолжает оставаться оптимистичной. Продажи автомобилей в 2015 г. выросли на 5,7% по сравнению с предыдущим годом и достигли рекордного значения 17,5 млн., превысив предыдущий абсолютный максимум 2000 года. В 2016 г. продажи остаются на высоком уровне, и ожидается примерно такой же годовой объем продаж, как и в 2015 г. В сентябре 2016 г. продажи в годовом выражении составили 17,8 млн. автомобилей, а в октябре - 18,02 млн. Стабильно высокий уровень продаж обусловлен, в первую очередь, низкими ценами на бензин, низкими процентными ставками и, возможно, некоторым увеличением занятости. <br /> <br /> Важной характеристикой экономической ситуации в США продолжает оставаться сочетание долго сохраняющегося высокого уровня корпоративных прибылей с низкими инвестициями. Корпоративные прибыли остаются рекордно высокими и держатся на уровне выше 2 трлн. долл. с 2012 года. В 2015 г. корпоративные прибыли составили почти 2,1 трлн. долл., а в I-II кварталах 2016 г. они колебались на уровне около 2 трлн. долл. <br /> <br /> По оценке компании Moody's, нефинансовые компании США, входящие в составляемые этой компанией рейтинги, к концу 2016 г. доведут свои зарубежные запасы наличных средств до 1,77 трлн. долл. - в сравнении с 1,68 трлн. долл. на конец 2015 г. При этом большая часть этих средств как генерируется, так и хранится за пределами США. Корпоративные запасы наличных средств за последние десять лет возросли более чем в два раза, при этом на долю технологических компаний приходится почти половина наличных средств, приходящихся на все американские нефинансовые компании. Так, запасы наличных средств компании Apple, по оценке Moody's, к концу 2016 г. превысят 250 млрд. долл., что соответствует более 14% всех запасов наличности нефинансовых компаний. <br /> <br /> В 2016 г. происходил стабильный рост жилищного строительства и продаж новых домов. Продажи новых домов для одной семьи в сентябре 2016 г. выросли на 3,1% и достигли 593 тыс. в годовом выражении, а по сравнению с тем же месяцем предыдущего года увеличились на целых 29,8%. О восстановлении рынка жилищного строительства свидетельствует тот факт, что его ключевой показатель - объем запуска строительства нового жилья, - держится на уровне выше 1 млн. в годовом выражении с начала 2016 г. В октябре 2016 г. этот показатель вырос на 25,5% по сравнению с сентябрем и составил 1,323 млн., что является самым высоким значением с августа 2007 г. По сравнению с октябрем 2015 г. рост данного показателя в сентябре 2016 г. составил 23,3%. <br /> <br /> В то же время, доля домохозяйств, имеющих собственное жилье, остается ниже критического уровня 65%, который считается &laquo;исторически нормальным&raquo;: во втором квартале 2016 г. этот показатель достиг 62,9% - самого низкого значения за 50 лет. Причинами являются медленный рост доходов и опережающий динамику доходов рост цен на жилье, которые росли в течение всего 2016 года. Ведущий сводный индекс цен на жилье в 20 крупных городах S&amp;P CoreLogic Case-Shiller Index увеличился в августе 2016 г. на 5,1% по сравнению с августом предыдущего года. Медианная цена продажи нового дома в сентябре составила 313,5 тыс. долл., по сравнению с 307,6 тыс. годом ранее. Средняя цена продажи нового дома выросла соответственно с 367,8 тыс. долл. в сентябре 2015 г. до 377,7 тыс. долл. в сентябре 2016 г. <br /> <br /> Основной проблемой американской экономики является недостаточный уровень инвестирования, обусловленный слабым спросом. Наблюдается недоиспользование производственных мощностей в промышленности, хранение прибылей в виде наличных средств вместо инвестирования, сохранение резерва рабочей силы на рынке труда. Поскольку американская экономика находится в фазе подъема, неполное использование производственных резервов в разных секторах объясняется не циклическими факторами. Текущий период характеризуется медленным ростом производительности труда, который составил в среднем за десятилетний период с 2006 г. по 2015 г. 1,26% в год. Для ускорения роста производительности необходимо возникновение новых потребностей в экономике и формирование соответствующего им спроса. Для достижения этой цели необходимо поощрение конкуренции, предпринимательства и инноваций и снятие излишних регуляторных ограничений. <br /> <br /> С другой стороны, к настоящему моменту мы наблюдаем явное исчерпание инструментов монетарной политики для стимулирования экономики. Низкая ставка рефинансирования и три раунда количественного смягчения помогли вывести экономику США из кризиса, но не могут дать ей импульс для ускорения темпов роста. Таким образом, несмотря на продолжающийся экономический рост и явные улучшения на рынке труда и жилищном рынке, в экономике США накопился ряд серьезных проблем, требующих принятия решительных мер и смены вектора проводимой экономической политики. <br /> <br /> Неожиданное для многих избрание президентом Д.Трампа явилось лишь констатацией этой необходимости. Победа на президентских выборах Д.Трампа, который является несистемной фигурой, несмотря на то, что формально он баллотировался от республиканской партии, стала главным политическим событием прошедшего года, которое, безусловно, будет определяющим при прогнозировании дальнейшего экономического развития США. <br /> <br /> В основе периодически происходящей смены экономической политики лежат потребности экономики, обусловленные ее циклическим развитием. Избиратели США достаточно чувствительны к этим потребностям. Длительное противостояние президента и конгресса вместе с обострением межпартийных противоречий в самом конгрессе сделали фактически невозможным принятие любых решений по ключевым вопросам экономической политики в последние шесть лет. При этом с точки зрения рядового избирателя парадоксальным образом произошло и чрезмерное сближение двух партий из-за их неспособности идти на компромиссы, необходимые для принятия решений, и чрезмерной концентрации на политических проблемах, имеющих большее значение для Вашингтона, но не для страны в целом. В результате отторжения электоратом обеих правящих партий, в ходе президентской кампании 2016 г. неожиданно для большинства экспертов сначала был выдвинут от республиканской партии, а затем и одержал победу &laquo;внесистемный&raquo; кандидат Д.Трамп, который построил свою предвыборную кампанию на критике политики Вашингтона в целом. <br /> <br /> Однако избрание Д.Трампа демонстрирует и существование значительных брешей в экономической политике Б.Обамы, вызывавших недовольство той части избирателей, голоса которых определили избрание Д.Трампа. Несмотря на то, за Д.Трампа проголосовало 48% избирателей с доходом 50 тыс. долл. в год и выше - за Х.Клинтон - 47%, а доля таких избирателей составила 64% от общей численности избирателей, решающую роль в победе Д.Трампа сыграли белые представители нижней части среднего класса, в основном без высшего образования. Их напрямую затронули структурные проблемы на рынке труда, поскольку именно эта категория теряла работу из-за сокращения рабочих мест на территории США, как из-за вывода рабочих мест за рубеж, так и роста производительности труда. <br /> <br /> Многие из тех, кому удалось сохранить работу, находились вне зоны роста доходов: например, за десять лет с 2005 г. по 2015 г. средняя почасовая заработная плата в автомобильной промышленности упала с 22,14 до 21,5 долл. В то же время, в связи с проведением реформы здравоохранения, стоимость медицинской страховки для многих представителей нижней части среднего класса увеличилась. Все это определило голосование за Д.Трампа этой части населения. Эта категория избирателей, как правило, голосовала за представителей демократической партии, и в ходе предвыборной кампании, видимо, автоматически была зачислена штабом Х.Клинтон в ее сторонники. В результате их проблемам не было уделено должного внимания. Однако именно их голоса стали в итоге решающими для итогов выборов. <br /> <br /> Анализ результатов выборов демонстрирует раздел страны еще по одному экономическому критерию. По данным Института Брукингса, американские избиратели четко разделились в зависимости от уровня деловой активности и вклада в экономику округов, в которых они проживают. За Х.Клинтон проголосовали всего 472 округа, но вклад этих округов в американский ВВП составляет 64%. Д.Трамп получил голоса 2584 округов, на долю которых приходится производство всего 36% ВВП страны. Х.Клинтон выиграла выборы почти во всех крупных городских округах, а за Д.Трампа голосовали жители многочисленных небольших, слабо экономически развитых округов. Эти данные указывают на существование большого разрыва в уровне жизни населения в экономически развитых и отсталых округах и являются еще одним подтверждением того, что социальные проблемы существенной части населения долгое время не получали должного внимания. <br /> <br /> Важнейшим фактором, способным повлиять на переход к качественно иным темпам роста, является само ожидание экономическими субъектами долгосрочного экономического роста. В настоящее время в американской экономике нет уверенности как бизнеса, так и потребителей в долгосрочных перспективах экономики. Отсутствие этого доверия является одним из ключевых факторов, негативно влияющих на экономическую ситуацию. Для того, чтобы переломить такое отношение, надо полностью сменить экономическую политику, как и полностью обновить кадровый состав тех, кто эту политику будет проводить. Обещания Д.Трампа дать бизнесу больше свободы, освободить его от излишнего налогового бремени и избытка регулирования, а также ожидание большей определенности в отношениях президента с конгрессом стали причиной того, что фондовый рынок отреагировал в целом положительно на его избрание. Банки, финансовые компании и бизнес ожидают позитивных перемен. Прежде всего это касается ослабления регулирования и налоговой реформы, а также обещанного роста расходов на оборону и масштабных инвестиций в инфраструктуру, призванных создать рабочие места и оживить деловую активность. <br /> <br /> Пока трудно судить, какие из заявленных планов Д.Трампа воплотятся в жизнь и в каком именно виде, поскольку в ходе предвыборной борьбы он сделал много заявлений и обещаний, выполнить которые вряд ли будет возможно, и они, скорее всего, будут корректироваться. Однако уже сейчас можно обозначить контуры его будущей экономической политики. Основными элементами экономической программы Д.Трампа являются дерегулирование, крупные инвестиции в инфраструктурные проекты и налоговая реформа. Он собирается снизить налоги для всех категорий налогоплательщиков и значительно упростить налоговую систему, сделав ее более понятной и удобной. Предполагается снижение налога на корпоративную прибыль с 35% до 15%, а также ряд мер по уменьшению оттока корпоративных прибылей за рубеж и поощрению репатриации прибылей. В настоящее время трудно точно сказать, какие именно налоговые ставки будут введены, поскольку Д.Трампом и его командой делались разные заявления по этому поводу, к тому же изменения в налоговой системе должны утверждаться конгрессом. Однако общая установка на снижение налогов, как для корпораций, так и для физических лиц, особенно для среднего класса, была выражена достаточно ясно. Есть основания полагать, что налоговая реформа Д.Трампа будет поддержана республиканским конгрессом. <br /> <br /> Д.Трамп также заявил о планах инвестировать 1 трлн. долл. в инфраструктуру в течение 10 лет и значительно увеличить расходы на оборону. При этом он не собирается сокращать расходы на социальные программы, считая, что дерегулирование, инвестиции и снижение налогов должны в конечном счете привести к росту доходов бюджета. Однако, по оценке Центра налоговой политики - Tax Policy Center, если обещания Д.Трампа по снижению ставки налогов претворятся в жизнь, это приведет к увеличению федерального долга на 7,2 трлн. долл. в течение десяти лет. Эта часть планов избранного президента может столкнуться с противодействием в конгрессе, поскольку большинство республиканцев выступают за сокращение социальных программ и настороженно относятся к идее увеличения расходной части бюджета. <br /> <br /> Д.Трамп также обещал возродить угольную промышленность и вернуть миллионы рабочих мест в обрабатывающей промышленности. Однако эти его обещания скорее были направлены на привлечение социально забытого электората, чем основаны на экономической реальности. Упадок угольной промышленности США лишь отчасти вызван введением законодательных требований по установке очистных сооружений, которые Д.Трамп в принципе может и отменить. Главными причинами трудного состояния отрасли является низкий спрос на уголь за счет роста производства нефти и газа, а также высокие издержки производства. Вряд ли Д.Трамп сможет как-то повлиять на эти факторы. То же касается и сокращения рабочих мест в обрабатывающей промышленности, которое происходит из-за объективных процессов автоматизации и роста производительности труда, а вновь создаваемые там рабочие места предъявляют более высокие требования к квалификации занятых в отрасли работников. <br /> <br /> Возрождение строительства, особенно в связи с масштабными инвестициями в инфраструктуру, должно, по плану избранного президента, способствовать созданию новых рабочих мест. После краха рынка жилищного строительства в 2008-2009 гг. строительную отрасль покинули около 30% занятых в ней работников. По состоянию на сентябрь 2016 г. в строительстве было открыто 221 тыс. вакансий, что сравнимо с показателями 2007 года. Это указывает на хорошие перспективы для занятости строительных рабочих, потерявших работу в кризис, или бывших промышленных рабочих. С другой стороны, крупные инфраструктурные проекты должны положительно сказаться на компаниях, производящих строительное оборудование, сталелитейных и подобных компаний, таких как Caterpillar, John Deere, U.S. Steel. <br /> <br /> Другие планы Д.Трампа включают сокращение и повышение эффективности работы государственного аппарата, рост собственной добычи энергоносителей, отмену или пересмотр отдельных положений закона Додда-Фрэнка о реформе финансовых рынков и защите потребителей финансовых услуг, который он резко критиковал во время избирательной кампании. После избрания Д.Трамп уже не говорит о полной отмене закона, а лишь об отмене той его части, которая касается ограничений выдачи кредитов. Однако пока не очень понятно, о какой именно части закона идет речь. Что касается реформы здравоохранения &laquo;Обамакэр&raquo;, Д.Трамп, до избрания обещавший полностью отменить эту реформу, после выборов несколько сменил тон, и собирается пересмотреть лишь некоторые ее положения. Д.Трамп также заявлял, что США прекратят участвовать в экологических программах и выйдут из Парижского соглашения по климату. Избранный президент занимает жесткую протекционистскую позицию в вопросах торговли, выступает за блокирование Транстихоокеанского партнерства, неучастие США в Трансатлантическом торговом партнерстве, выход из НАФТА и даже из ВТО. Скорее всего, реально он будет пытаться пересмотреть условия торговых договоров на более выгодных для США условиях. <br /> <br /> Во время предвыборной кампании Д.Трамп обещал ввести запретительные тарифы и налоги - до 35- 45% на товары из Китая и Мексики. Это вызывает большие опасения у экспертов, поскольку такие шаги могут привести к торговым войнам, нарушению цепочек поставок и убыткам для американских промышленных компаний, а также негативно сказаться на уровне жизни американских потребителей. В то же время, протекционистская позиция Д.Трампа может не совпасть с мнением республиканского большинства конгресса. Однако в последние месяцы многие республиканские конгрессмены, традиционно поддерживающие свободу торговли, стали отказываться от этой поддержки, склоняясь к усилению протекционистских мер. Поэтому не исключена возможность, что в ряде случаев дело дойдет до проведения переговоров по изменению условий торговых соглашений. Что же касается введения тарифов, то у президента США есть некоторые законодательные возможности вводить и отменять тарифы без участия конгресса, и теоретически Д.Трамп может ими воспользоваться, хотя это, безусловно, повлечет за собой негативную реакцию и, возможно, даже судебные иски. <br /> <br /> Д.Трамп неоднократно критиковал ФРС и ее главу Дж.Йеллен - которую он даже обещал уволить во время предвыборной кампании за то, что, по его мнению, она сознательно не поднимала целевой уровень ставки по федеральным фондам во время избирательной компании и даже обвинил ФРС в создании &laquo;дутой экономики&raquo; - false economy, имея в виду, что искусственно низкие процентные ставки искажают реальное положение дел в экономике и способствуют манипуляциям и созданию пузырей на финансовых рынках. Д.Трамп является противником низких процентных ставок, которые, по его мнению, невыгодны для огромного количества людей, получающих из-за этого небольшой процент на свои сбережения, что было важным пунктом его предвыборной повестки. Однако, учитывая, что ФРС в декабре 2016 г. с большой долей вероятности повысит целевой уровень ставки еще на 0,25 п.п. - до 0,5-0,75%, а срок полномочий Дж.Йеллен истекает в 2018 г., возможно, он не будет предпринимать никаких резких действий для ее отставки до этого срока. К тому же, в 2017 г. должны быть заполнены два вакантных места в Совете управляющих ФРС, и Д.Трамп сможет назначить на эти вакансии своих сторонников. <br /> <br /> К тому же, сейчас внутри ФРС есть понимание того, что резервы монетарного воздействия на экономику исчерпаны, и надо уделять больше внимания бюджетно-налоговой политике. Заместитель главы ФРС С.Фишер в конце ноября 2016 г. заявил, что &laquo;макроэкономическая политика не должна быть ограничена монетарной политикой&raquo; и что возможно использование некоторых инструментов бюджетно-налоговой политики, особенно тех, которые приведут к росту производительности труда. Этот подход вполне согласуется с позицией Д.Трампа в отношении уменьшения налогов и роста государственных инвестиций. <br /> <br /> Избрание Д.Трампа, несмотря на его неожиданность и одиозность фигуры избранного президента, вполне вписывается в логику объективного цикличного развития американской экономики. При назревании необходимости изменений в экономике происходит смена направления движения &laquo;регуляторного маятника&raquo;, совпадающая с приходом к власти представителя альтернативной партии. Периодический переход власти между демократической и республиканской партиями позволяет провести в жизнь назревшие перемены в экономической политике. При этом полного разворота экономической политики, конечно, не происходит, поскольку основополагающие стратегические цели обеих партий в принципе остаются неизменными: это сохранение американского экономического лидерства, стабильность и конкурентоспособность экономики, поощрение предпринимательства и инновационности. И сейчас речь идет не о смене стратегических приоритетов, а о смене средств достижения этих целей, то есть инструментов экономической политики. <br /> <br /> Результаты прошедших выборов убедительно показали необходимость существенной перестройки как политической, так и социально-экономической модели США, что, в свою очередь, неизбежно скажется и на мировом экономическом развитии. В наших предыдущих прогнозах мы неоднократно отмечали, что в США назрела необходимость реформ. Возможности проводимой американской ФРС сверхмягкой монетарной политики стимулирования экономики, по-видимому, уже некоторое время назад были исчерпаны. Переход к активному использованию бюджетно-налоговых мер напрашивался уже давно. Это же касается и других элементов экономической политики, предлагаемых Д.Трампом - комплексной налоговой реформы, масштабных инвестиций в инфраструктуру и дерегулирования, т.е. мер, направленный на рост инвестиционного и потребительского спроса и ускорение экономического роста. Д.Трамп выиграл выборы, декларируя именно эти цели, и есть основания полагать, что многие из них будут им достигнуты. <br /> <br /> От президентства Д.Трампа можно ожидать улучшение общего экономического климата, смягчение правил регулирования экономики, изменения тона общения с бизнесом и с финансовыми институтами, что может привнести в американскую экономику возрождение доверия к будущему росту. Этому доверию должно не в последней мере способствовать и снятие проблемы регуляторного коллапса, когда из-за противостояния президента и конгресса было практически невозможно принятие каких бы то ни было решений. Если будут снижены налоги и возвращено доверие бизнеса, то возможна репатриация прибылей, возвращение существенной доли населения в ряды рабочей силы, создание новых рабочих мест и более быстрый экономический рост. В случае успеха стимулирующих мероприятий можно ожидать роста цен и возвращения уровня инфляции на уровень 2% и более уже в 2018 г. Экономика США в 2017 году вырастит на 2,5-3%, и возможно дальнейший выход экономики США на среднесрочную траекторию более быстрого роста.&nbsp;</p> <IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP>
+ </div>
+    
+    </div>
+ </div>   
+ 
+ <div style="clear: both;"></div>  
+ <IDXSKIP><p><b><a style="color: green;" href="javascript: history.back();">Назад</a></b></p></IDXSKIP>
+ </div>
+ </td>  
+   </tr>
+ 
+   <tr>
+ <td width="576" align="left" valign="top">
+ 
+  </td>
+   </tr>
+ </table>
+ 
+  </td>
+   </tr>
+ </table><div style="clear: both;"></div>
+ </td>
+ <td width="20" align="left" valign="top"></td>
+ <td width="250" align="left" valign="top" style="background: #f6f6f6;">
+
+ <div style="height: 10px; clear: both;"></div>
+ <!--<script type="text/javascript" language="javascript">
+$(function()
+{
+	$("#lg_gaxsna").click(function(event) {
+	event.preventDefault();
+	$("#registration_page").slideUp();
+	event.preventDefault();
+	$("#login_page").slideToggle();
+	});
+
+
+	$("#rg_gaxsna").click(function(event) {
+	event.preventDefault();
+	$("#login_page").slideUp();
+	event.preventDefault();
+	$("#registration_page").slideToggle();
+	});
+
+	/*$("#lg_daxurva").click(function(event) {
+	event.preventDefault();
+	$("#login_page").slideUp();
+	});*/
+});
+</script>
+ <table width="212" align="center" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="212" height="20" align="left" valign="top">
+ <table width="207" align="right" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="207" height="20" align="center" valign="top"> 
+ <a id="lg_gaxsna" class="aut_l"></a>
+ <a id="rg_gaxsna" class="reg_l"></a>
+ </td>
+   </tr>  
+ </table>
+ </td>
+   </tr>
+
+   <tr>
+ <td width="212" align="left" valign="top">
+ <div id="login_page" style="margin-left: 0px; margin-top: 5px; width: 212px; position: absolute; display: none; overflow: visible; background:#FFF; z-index: 4;">
+ <form action="index.php?page=login&login=true" method="post">
+ <table width="212" align="left" cellpadding="0" cellspacing="0" border="0" class="shadow">
+    <tr>
+ <td width="5" align="left" valign="top" id="left"></td>
+ <td width="207" align="left" valign="top">
+ <table width="207" align="right" cellpadding="0" cellspacing="0" border="0" class="login" id="login">
+   <tr>
+ <th colspan="2" colspan="2" width="207" height="6" align="center" valign="top"></th>  
+   </tr>
+
+   <tr>
+ <td colspan="2" width="207" height="35" align="center" valign="top"><div id="input"><input type="text" name="username" value="Имя" maxlength="150" onfocus="if(this.value == 'Имя'){this.value = ''}" onblur="if(this.value == ''){this.value = 'Имя'}" /></div></td>  
+   </tr>
+
+   <tr>
+ <td colspan="2"  width="207" height="35" align="center" valign="top"><div id="input"><input type="password" name="password" value="Пароль" maxlength="150" onfocus="if(this.value == 'Пароль'){this.value = ''}" onblur="if(this.value == ''){this.value = 'Пароль'}" /></div></td>  
+   </tr>
+
+   <tr>
+ <td width="37" height="30" align="left" valign="top"><input type="checkbox" name="save" id="save" /></td>
+ <td width="170" height="30" align="left" valign="top"><label for="save">Запомнить</label></td>  
+   </tr>
+
+   <tr>
+ <th colspan="2" width="207" height="30" align="left" valign="top"><input type="submit" name="login" value="" class="login_submit" style="margin-left: 15px;" /></th>  
+   </tr>
+
+   <tr>
+ <td colspan="2" width="207" height="30" align="left" valign="top">
+ <a style="margin-left: 16px; color: #636363;;" href="index.php?page=lostpassword">Востановление пароля</a>
+ </td>
+   </tr>
+ </table>
+ </td>
+    </tr>
+    <tr>
+ <td colspan="2" width="212" height="7" align="left" valign="top" id="bottom"></td>
+    </tr>
+ </table>
+ </form>
+ </div>
+ </td>
+   </tr>
+
+   <tr>
+ <td width="212" align="left" valign="top">
+ <div id="registration_page" style="margin-left: 0px; margin-top: 5px; width: 209px; position: absolute; display: none; overflow: visible; background:#FFF; z-index: 4;">
+ <form method="post" action="index.php?page=registration&register=true">
+ <table width="212" align="left" cellpadding="0" cellspacing="0" border="0" class="shadow">
+    <tr>
+ <td width="5" align="left" valign="top" id="left"></td>
+ <td width="207" align="left" valign="top">
+ <table width="207" align="right" cellpadding="0" cellspacing="0" border="0" class="registration" id="registration">
+   <tr>
+ <td width="207" height="6" align="center" valign="top"></td>
+   </tr>
+
+   <tr>
+ <td width="207" height="35" align="center" valign="top"><div id="input"><input type="text" name="name" value="Имя Фамилия" maxlength="150" onfocus="if(this.value == 'Имя Фамилия'){this.value = ''}" onblur="if(this.value == ''){this.value = 'Имя Фамилия'}" /></div></td>  
+   </tr>
+
+   <tr>
+ <td width="207" height="35" align="center" valign="top"><div id="input"><input type="text" name="username" value="Логин" maxlength="150" onfocus="if(this.value == 'Логин'){this.value = ''}" onblur="if(this.value == ''){this.value = 'Логин'}" /></div></td>  
+   </tr>
+
+   <tr>
+ <td width="207" height="35" align="center" valign="top"><div id="input"><input type="text" name="email" value="E-mail" maxlength="150" onfocus="if(this.value == 'E-mail'){this.value = ''}" onblur="if(this.value == ''){this.value = 'E-mail'}" /></div></td>  
+   </tr>
+
+   <tr>
+ <td width="207" height="35" align="center" valign="top">
+ <div id="input">
+ <input type="text" id="password_ps" name="password" value="Пароль" maxlength="150" onfocus="javascript: return tp_password(this.value, 'Пароль', 'password_ps', 'password_tx');" />
+ <input style="display: none;" type="password" id="password_tx" name="password" value="" maxlength="150" onblur="javascript: return tp_text(this.value, 'password_ps', 'password_tx');" />
+ </div>
+ </td>
+   </tr>
+
+   <tr>
+ <td width="207" height="35" align="center" valign="top">
+ <div id="input">
+ <input type="text" id="re_password_ps" name="re_password" value="Подтвердите пароль" maxlength="150" onfocus="javascript: return tp_password(this.value, 'Подтвердите пароль', 're_password_ps', 're_password_tx');" />
+ <input style="display: none;" type="password" id="re_password_tx" name="re_password" value="" maxlength="150" onblur="javascript: return tp_text(this.value, 're_password_ps', 're_password_tx');" />
+ </div>
+ </td>
+   </tr>
+
+   <tr>
+ <td width="207" height="25" align="left" valign="top">
+ <table width="197" align="left" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="63" align="left" valign="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Пол:</td>
+ <td width="134" align="left" valign="top">
+ <div class="gender">
+ <select name="gender">
+   <option value="1">Мужской</option>
+   <option value="2">Женский</option>
+ </select>
+ </div>
+ </td>
+   </tr>
+ </table>  
+ </td>
+   </tr>
+
+   <tr>
+ <td width="207" height="10" align="left" valign="top"></td>
+   </tr>
+
+   <tr>
+ <td width="207" height="20" align="left" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Год рождения</td>  
+   </tr>
+
+   <tr>
+ <td width="207" height="25" align="left" valign="top">
+ <table width="198" align="left" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="15" align="left" valign="top"></td>
+ <td width="60" align="left" valign="top">
+ <div class="day_mounth">
+ <select name="day">
+ <option value="0" selected="selected">День</option>
+ <option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'>24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'>28</option><option value='29'>29</option><option value='30'>30</option><option value='31'>31</option> </select>
+ </div>
+ </td>
+ <td width="60" align="left" valign="top">
+ <div class="day_mounth">
+ <select name="month">
+ <option value="0" selected="selected">Месяц</option>
+ <option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option> </select>
+ </div>
+ </td>
+ <td width="63" align="left" valign="top">
+ <div class="year"> 
+ <select name="year">
+ <option value="0" selected="selected">Год</option>
+ <option value='1901'>1901</option><option value='1902'>1902</option><option value='1903'>1903</option><option value='1904'>1904</option><option value='1905'>1905</option><option value='1906'>1906</option><option value='1907'>1907</option><option value='1908'>1908</option><option value='1909'>1909</option><option value='1910'>1910</option><option value='1911'>1911</option><option value='1912'>1912</option><option value='1913'>1913</option><option value='1914'>1914</option><option value='1915'>1915</option><option value='1916'>1916</option><option value='1917'>1917</option><option value='1918'>1918</option><option value='1919'>1919</option><option value='1920'>1920</option><option value='1921'>1921</option><option value='1922'>1922</option><option value='1923'>1923</option><option value='1924'>1924</option><option value='1925'>1925</option><option value='1926'>1926</option><option value='1927'>1927</option><option value='1928'>1928</option><option value='1929'>1929</option><option value='1930'>1930</option><option value='1931'>1931</option><option value='1932'>1932</option><option value='1933'>1933</option><option value='1934'>1934</option><option value='1935'>1935</option><option value='1936'>1936</option><option value='1937'>1937</option><option value='1938'>1938</option><option value='1939'>1939</option><option value='1940'>1940</option><option value='1941'>1941</option><option value='1942'>1942</option><option value='1943'>1943</option><option value='1944'>1944</option><option value='1945'>1945</option><option value='1946'>1946</option><option value='1947'>1947</option><option value='1948'>1948</option><option value='1949'>1949</option><option value='1950'>1950</option><option value='1951'>1951</option><option value='1952'>1952</option><option value='1953'>1953</option><option value='1954'>1954</option><option value='1955'>1955</option><option value='1956'>1956</option><option value='1957'>1957</option><option value='1958'>1958</option><option value='1959'>1959</option><option value='1960'>1960</option><option value='1961'>1961</option><option value='1962'>1962</option><option value='1963'>1963</option><option value='1964'>1964</option><option value='1965'>1965</option><option value='1966'>1966</option><option value='1967'>1967</option><option value='1968'>1968</option><option value='1969'>1969</option><option value='1970'>1970</option><option value='1971'>1971</option><option value='1972'>1972</option><option value='1973'>1973</option><option value='1974'>1974</option><option value='1975'>1975</option><option value='1976'>1976</option><option value='1977'>1977</option><option value='1978'>1978</option><option value='1979'>1979</option><option value='1980'>1980</option><option value='1981'>1981</option><option value='1982'>1982</option><option value='1983'>1983</option><option value='1984'>1984</option><option value='1985'>1985</option><option value='1986'>1986</option><option value='1987'>1987</option><option value='1988'>1988</option><option value='1989'>1989</option><option value='1990'>1990</option><option value='1991'>1991</option><option value='1992'>1992</option><option value='1993'>1993</option><option value='1994'>1994</option><option value='1995'>1995</option><option value='1996'>1996</option><option value='1997'>1997</option><option value='1998'>1998</option><option value='1999'>1999</option><option value='2000'>2000</option><option value='2001'>2001</option><option value='2002'>2002</option><option value='2003'>2003</option><option value='2004'>2004</option><option value='2005'>2005</option><option value='2006'>2006</option><option value='2007'>2007</option><option value='2008'>2008</option><option value='2009'>2009</option><option value='2010'>2010</option><option value='2011'>2011</option><option value='2012'>2012</option><option value='2013'>2013</option><option value='2014'>2014</option><option value='2015'>2015</option><option value='2016'>2016</option><option value='2017'>2017</option> </select>
+ </div>
+ </td>
+   </tr>
+ </table>
+ </td>
+   </tr>
+
+   <tr>
+ <td width="207" height="10" align="center" valign="top"></td>
+   </tr>
+
+   <tr>
+ <td width="207" height="25" align="left" valign="top">
+ <table width="197" align="left" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="100" align="left" valign="top">
+ <img src="classes/captcha.class.php" hspace="0" vspace="0" border="0" style="float: left; margin: 0px; margin-left: 14px;" />
+ </td>
+ <td width="97" align="left" valign="top">
+ <div id="security" align="center"><input type="text" name="security_code" maxlength="50" value="Введите код" onfocus="if(this.value == 'Введите код'){this.value = ''}" onblur="if(this.value == ''){this.value = 'Введите код'}" /></div>
+ </td>
+   </tr>
+ </table>
+ </td>
+   </tr>
+
+   <tr>
+ <td width="207" height="10" align="center" valign="top"></td>
+   </tr>
+
+   <tr>
+ <td width="207" height="35" align="center" valign="top" colspan="2">&nbsp;<input type="submit" name="submit_registration" class="registration_submit" value="" style="width: 120px; height: 25px; "/></td>  
+   </tr>
+ </table>
+ </td>
+    </tr>
+
+    <tr>
+ <td colspan="2" width="212" height="7" align="left" valign="top" id="bottom"></td>
+    </tr>
+ </table>
+ </form>
+ </div>
+ </td>
+   </tr>
+ </table>
+ <div style="clear: both;">&nbsp;</div>-->
+  <div style="clear: both;"></div>
+   <div style="clear: both;"></div>
+ 
+ 
+<!-- 
+
+a iyo marcxena mxare registraciis qvevit arasebuli ganyofileba: sibrdzne, sicrule, realoba"  
+
+
+  //-->
+ 
+ 
+ <div style="clear: both;"></div>
+ <noindex> <div id="ContextTM_ID_509"></div>
+<p>
+<script src="js/baan_right.js"></script>
+</p></noindex><IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP><table border="0" width="235" align="center">
+<tbody>
+<tr>
+<td><span style="color: #ffffff;"><span style="background-color: #333333;"><strong><IDXSKIP>&nbsp; &nbsp; &nbsp; &nbsp;АНАЛИТИЧЕСКАЯ ЛЕНТА &nbsp; &nbsp; </IDXSKIP></strong></span></span><IDXSKIP><span style="background-color: #333333;"><strong>&nbsp;--------</strong></span></IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/rus/shveden.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><IDXSKIP><a title="Экономика Швеции" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;top_menu=free&amp;sb=125&amp;newsid=1668"><br />Экономика Швеции</a></IDXSKIP> <IDXSKIP>&nbsp;&nbsp;<br />.........................................................................</IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-right: 5px; margin-left: 5px;" src="../uploads/eur/rus/ireland.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика Ирландии" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;top_menu=free&amp;sb=125&amp;newsid=1667">Экономика Ирландии</a></IDXSKIP><br /><br /><br /><IDXSKIP>........................................................................</IDXSKIP></span><IDXSKIP><span style="font-size: x-small;"><br /></span></IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-right: 5px; margin-left: 5px;" src="../uploads/eur/rus/niderland.jpg" alt="" width="80" height="48" /><IDXSKIP><span style="font-size: x-small;"><br /><a title="Экономика Нидерландов" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;top_menu=free&amp;sb=125&amp;newsid=1665">Экономика Нидерландов</a> </span></IDXSKIP><IDXSKIP>&nbsp;<br /></IDXSKIP><br /><IDXSKIP>.........................................................................<br /></IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-right: 5px; margin-left: 5px;" src="../uploads/eur/rus/germania.jpg" alt="" width="80" height="48" /><IDXSKIP><a title="Экономика Германии" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=2&amp;newsid=1389"><span style="font-size: x-small;"><br />Экономика Германии</span></a></IDXSKIP> <IDXSKIP>&nbsp;<br /></IDXSKIP><br /><IDXSKIP>........................................................................<br /></IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-right: 5px; margin-left: 5px;" src="../uploads/eur/rus/finland.jpg" alt="" width="80" height="48" /><IDXSKIP><a title="Экономика Финляндии" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=3&amp;newsid=1381"><span style="font-size: x-small;"><br />Экономика Финляндии</span></a></IDXSKIP><IDXSKIP>&nbsp;   &nbsp;<br />........................................................................<br /></IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="margin-left: 5px; margin-right: 5px; float: left;" src="../uploads/usa/polsha.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика Польши" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=1&amp;newsid=1601">Экономика Польши</a></IDXSKIP><br /><br /><br /><IDXSKIP>........................................................................<br /></IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/rus/france.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика Франции" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=2&amp;newsid=1384">Экономика Франции</a></IDXSKIP><br /><br /><br /><IDXSKIP>........................................................................</IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/rus/norvegia.jpg" alt="" width="80" height="48" /><IDXSKIP><span style="font-size: x-small;"><br /><a title="Экономика Норвегии" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=3&amp;newsid=1382">Экономика Норвегии</a></span></IDXSKIP><br /><IDXSKIP>........................................................................</IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/usa/italy.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика Италии" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=2&amp;newsid=1390">Экономика Италии</a></IDXSKIP><br /><br /><br /><IDXSKIP>........................................................................</IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/usa/ingland.jpg" alt="" width="80" height="48" /><IDXSKIP><span style="font-size: x-small;"><br /></span></IDXSKIP><IDXSKIP><a title="Экономика Великобритании" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=2&amp;newsid=1388"><span style="font-size: x-small;">Экономика </span>&nbsp;<span style="font-size: x-small;">Англии</span></a></IDXSKIP><IDXSKIP>&nbsp;<span style="font-size: x-small;"><br /><br />.......................................................................</span></IDXSKIP></td>
+</tr>
+<tr>
+<td><IDXSKIP><a href="../uploads/usa/spain.jpg"><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/usa/spain.jpg" alt="" width="80" height="48" /></a></IDXSKIP><br /><IDXSKIP><span style="font-size: x-small;"><a title="Экономика Испании" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=2&amp;newsid=1386">Экономика Испании</a></span></IDXSKIP><br /><IDXSKIP>.........................................................................</IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/usa/dania.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика Дании" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=2&amp;newsid=1383">Экономика Дании</a></IDXSKIP><br /><br /><br /><IDXSKIP>.......................................................................</IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/usa/turkey.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика Турции" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;p=3&amp;newsid=1392">Экономика Турции</a></IDXSKIP><br /><br /><br /><IDXSKIP>.......................................................................<br /></IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/top/china.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика Китая" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=153&amp;type=news&amp;top_menu=photo&amp;sb=61">Экономика Китая</a></IDXSKIP><br /><br /><br /><IDXSKIP>.......................................................................<br /></IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left;" src="../uploads/eur/1354549935.jpg" alt="" width="80" height="48" /><IDXSKIP><span style="color: #333399;"><a title="Экономика Греции" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;top_menu=free&amp;sb=125&amp;newsid=1418"><span style="font-size: x-small;"><br />Экономика Греции</span></a></span></IDXSKIP><br /><IDXSKIP>......................................................................<br /></IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/1345621676.jpg" alt="" width="80" height="48" /><IDXSKIP><span style="font-size: x-small;"><br /><a title="Экономика США" href="../index.php?top_menu=etiquette">Экономика США</a></span></IDXSKIP><IDXSKIP>&nbsp;<br />.......................................................................</IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/1353589528.jpg" alt="" width="80" height="48" /><br /><IDXSKIP><a title="Экономика Австрии" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;top_menu=free&amp;sb=125&amp;newsid=1399"><span style="font-size: x-small;">Экономика Австрии</span></a></IDXSKIP><br /><br /><IDXSKIP>......................................................................<br /></IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/1345654449.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика России" href="../index.php?top_menu=main">Экономика России</a></IDXSKIP><br /><br /><br /><IDXSKIP>.......................................................................<br /></IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/top/ukraina.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика Украины" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=170&amp;type=news&amp;top_menu=compass&amp;sb=77">Экономика Украины</a></IDXSKIP><br /><br /><br /><IDXSKIP>........................................................................</IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/top/kipr.jpg" alt="" width="80" height="48" /><br /><span style="font-size: x-small;"><IDXSKIP><a title="Экономика Кипра" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=223&amp;type=news&amp;top_menu=free&amp;sb=125&amp;newsid=1683">Экономика Кипра</a></IDXSKIP><br /><br /><IDXSKIP>.......................................................................<br /></IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-right: 5px; margin-left: 5px;" src="../uploads/eur/top/sekel.jpg" alt="" width="80" height="48" /><br /><span style="font-size: x-small;"><IDXSKIP><a title="Экономика Израиля" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=186&amp;type=news&amp;top_menu=photo&amp;sb=60&amp;newsid=1681">Экономика Израиля</a></IDXSKIP><br /><br /><IDXSKIP>.......................................................................</IDXSKIP></span></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/_/iena.jpg" alt="" width="80" height="48" /><br /><IDXSKIP>&nbsp;<span style="font-size: x-small;"><a title="Экономика Японии" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=155&amp;type=news&amp;top_menu=photo&amp;sb=90">Экономика Японии<br /></a><br /><br />......................................................................<br /></span></IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/_/rupia.jpg" alt="" width="80" height="48" /><br /><IDXSKIP>&nbsp;<span style="font-size: x-small;"><a title="Экономика Индии" href="../index.php?page=cat&amp;cat=mcat&amp;mcat=154&amp;type=news&amp;top_menu=photo&amp;sb=120">Экономика Индии</a><br /><br /><br />......................................................................<br /></span></IDXSKIP></td>
+</tr>
+<tr>
+<td><img style="float: left; margin-left: 5px; margin-right: 5px;" src="../uploads/eur/top/evro.jpg" alt="" width="80" height="48" /><span style="font-size: x-small;"><br /><IDXSKIP><a title="Экономика Европы" href="../index.php?top_menu=free">Экономика Европы</a></IDXSKIP><br /><br /><br /><IDXSKIP>......................................................................</IDXSKIP></span></td>
+</tr>
+</tbody>
+</table>
+<IDXSKIP><p>&nbsp;</p></IDXSKIP><IDXSKIP><div style="clear: both;">&nbsp;</div></IDXSKIP> <div style="clear: both;"></div>
+ <div align="center">
+<iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2Fwebeconomyru%2F148885181900450&amp;width=235&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;border_color&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:235px; height:258px;" allowTransparency="true"></iframe>
+ </div>
+ </td>
+   </tr>
+ </table>
+ </td>
+  </tr>
+</table> </td>  
+   </tr>
+
+   <IDXSKIP><tr>
+ <td width="1035" align="left" valign="top">
+ <table width="1035" align="left" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+ <td width="1035" height="20" align="left" valign="top"></td>  
+   </tr>
+   
+    <tr>
+ <td width="1035" align="left" valign="top">
+
+ <table border="0" align="center">
+<tbody>
+<tr>
+<td>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8964063490602135";
+/* finansy */
+google_ad_slot = "8030850547";
+google_ad_width = 970;
+google_ad_height = 90;
+// --></script>
+<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js" type="text/javascript"></script>
+</td>
+</tr>
+</tbody>
+</table><div style="clear: both;">&nbsp;</div>  
+ 
+ </td>  
+   </tr>   
+ </table>  
+ </td>
+   </tr></IDXSKIP>   
+   
+   <tr>
+ <td width="1035" align="left" valign="top">  
+  <table width="1000" align="center" cellpadding="0" cellspacing="0" border="0" class="footer">
+   <tr>
+ <td width="1000" height="11" align="left" valign="top" id="top"></td>  
+   </tr>
+   
+   <IDXSKIP><tr>
+ <td width="1000" align="left" valign="top">
+ <table width="280" align="right" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="69" height="20" align="center" valign="top"><a href="index.php">Главная</a></td>
+ <td width="3" height="20" align="center" valign="top"><span id="line">&nbsp;</span></td>
+ <td width="89" height="20" align="center" valign="top"><a href="index.php?page=map">Карта сайта</a></td>
+ <td width="3" height="20" align="center" valign="top"><span id="line">&nbsp;</span></td>
+ <td width="80" height="20" align="center" valign="top"><a href="index.php?page=contact">Контакты</a></td>
+ <td width="36" height="20" align="center" valign="top"></td> 
+   </tr>
+ </table>
+ </td>  
+   </tr></IDXSKIP>
+      
+   <tr>
+ <td width="1000" height="22" align="left" valign="top" id="bottom"></td>  
+   </tr> 
+
+   <tr>
+ <td width="1000" height="10" align="left" valign="top"></td>
+   </tr>
+   
+   <IDXSKIP><tr>
+ <td width="1000" align="left" valign="top">
+ <table width="970" align="center" cellpadding="0" cellspacing="0" border="0">
+   <tr>
+ <td width="225" align="left" valign="top"></td>
+ <td width="620"  valign="top" align="right">
+  <noindex>
+<!-- Rating@Mail.ru logo -->
+<a target="_blank" href="http://top.mail.ru/jump?from=2337641">
+<img src="//top-fwz1.mail.ru/counter?id=2337641;t=479;l=1" 
+border="0" height="31" width="88" alt="Рейтинг@Mail.ru"></a>
+<!-- //Rating@Mail.ru logo -->
+</noindex>
+ 
+ </td>
+ <td width="125" align="right" valign="top">
+ 
+
+<noindex>
+<!-- begin of Top100 code -->
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2869637"></script>
+<noscript>
+<a href="http://top100.rambler.ru/navi/2869637/">
+<img src="http://counter.rambler.ru/top100.cnt?2869637" alt="Rambler's Top100" border="0" />
+</a>
+</noscript>
+<!-- end of Top100 code -->
+</noindex>
+ </td>  
+   </tr>
+ </table>
+ </td>  
+   </tr></IDXSKIP>
+   
+   <IDXSKIP><tr>
+ <td width="1000" height="10" align="left" valign="top">
+
+
+
+<br />
+<br />
+<br />
+<div align="center"><a href="http://webeconomy.ru/sitemap.xml" title="sitemap  of  http://webeconomy.ru" target="_blank" style="text-decoration:none"><font size="-2" color="#EEEEEE">View sitemap in xml format</font></a></div></IDXSKIP>
+</div>
+ </td>
+   </tr>        
+ </table>  </td>  
+   </tr> 
+</table>
+<IDXSKIP><div id="message">
+<a href="#top" id="top-link"><img width="35" height="35" border="0" src="templates/style/main/up.png" /><div><b style="color: #333;">Наверх</b></div></a>
+</div></IDXSKIP>
+
+ </div>
+ </div>
+ </center>
+ </body>
+ </html>

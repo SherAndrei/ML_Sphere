@@ -1,0 +1,929 @@
+tas-ix.net/viewtopic.php?t=68793
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="robots" content="noarchive">
+<meta charset="UTF-8">
+<meta name="description" content="Торрент трекер в TAS-IX. Фильмы, сериалы, игры, музыка mp3 и lossless, программы, книги, мультфильмы и аниме.">
+<title>Trainz Simulator 2012 (2011) (Auran) (ENG) [P] :: скачать торрент TAS-IX.NET</title>
+<link rel="stylesheet" href="https://tas-ix.net:443/templates/default/css/main.css?v=20150903">
+<link rel="stylesheet" href="http://tas-ix.net/templates/default/css/main.css?v=20150903">
+<link rel="icon" href="http://tas-ix.net/favicon.ico" type="image/x-icon">
+<link rel="search" type="application/opensearchdescription+xml" href="http://tas-ix.net/opensearch.xml" title="Поиск скачать торрент TAS-IX.NET">
+<script type="text/javascript" src="http://tas-ix.net/misc/js/jquery.pack.js"></script>
+<script type="text/javascript" src="http://tas-ix.net/misc/js/main.js"></script>
+<script src="http://tas-ix.net/misc/js/bbcode.js?v=20150903"></script>
+<script>
+	window.BB = {};
+	window.encURL = encodeURIComponent;
+</script>
+<script>
+var bb_url = 'http://tas-ix.net/';
+var bbl    = { "code": "Код", "wrote": "писал(а)", "quote": "Цитата", "quoted_post": "Перейти к цитируемому сообщению", "loading": "Загружается…", "spoiler_head": "Скрытый текст", "spoiler_close": "Свернуть", "links_are": "Ссылки запрещены", "scr_rules": "Прочтите правила размещения скриншотов!", "play_on": "Начать проигрывание на текущей странице" };
+
+var postImg_MaxWidth = screen.width - 202;
+var postImgAligned_MaxWidth = Math.round(screen.width/3);
+var attachImg_MaxWidth = screen.width - 280;
+var ExternalLinks_InNewWindow = '1';
+var hidePostImg = false;
+</script>
+<script>
+var BB_ROOT      = "./";
+var cookieDomain = ".tas-ix.net";
+var cookiePath   = "/";
+var cookiePrefix = "bb_";
+var cookieSecure = 0;
+var LOGGED_IN    = 0;
+var IWP          = 'HEIGHT=510,WIDTH=780,resizable=yes';
+var IWP_US       = 'HEIGHT=250,WIDTH=400,resizable=yes';
+var IWP_SM       = 'HEIGHT=420,WIDTH=470,resizable=yes,scrollbars=yes';
+
+var user = {
+	opt_js: {},
+
+	set: function (opt, val, days, reload) {
+		this.opt_js[opt] = val;
+		setCookie('opt_js', $.toJSON(this.opt_js), days);
+		if (reload) {
+			window.location.reload();
+		}
+	}
+};
+
+$(document).ready(function(){
+	$("div.jumpbox").html('\
+		<span id="jumpbox-container"> \
+		<select id="jumpbox"> \
+			<option id="jumpbox-title" value="-1">&nbsp;&raquo;&raquo; Выберите форум для перехода &nbsp;</option> \
+		</select> \
+		</span> \
+		<input id="jumpbox-submit" type="button" class="lite" value="Перейти" /> \
+	');
+	$('#jumpbox-container').one('click', function(){
+		$('#jumpbox-title').html('&nbsp;&nbsp; Загружается… ... &nbsp;');
+		var jumpbox_src = './ajax/html/' + (0 ? 'jumpbox_user.html' : 'jumpbox_guest.html');
+		$(this).load(jumpbox_src);
+		$('#jumpbox-submit').click(function(){ window.location.href='./viewforum.php?f='+$('#jumpbox').val(); });
+	});
+});
+
+var ajax = new Ajax('http://tas-ix.net/ajax.php', 'POST', 'json');
+
+function getElText (e)
+{
+	var t = '';
+	if (e.textContent !== undefined) { t = e.textContent; } else if (e.innerText !== undefined) { t = e.innerText; } else { t = jQuery(e).text(); }
+	return t;
+}
+function escHTML (txt)
+{
+	return txt.replace(/</g, '&lt;');
+}
+
+function cfm (txt)
+{
+	return window.confirm(txt);
+}
+function post2url (url, params) {
+	params = params || {};
+	var f = document.createElement('form');
+	f.setAttribute('method', 'post');
+	f.setAttribute('action', url);
+	params['form_token'] = '';
+	for (var k in params) {
+		var h = document.createElement('input');
+		h.setAttribute('type', 'hidden');
+		h.setAttribute('name', k);
+		h.setAttribute('value', params[k]);
+		f.appendChild(h);
+	}
+	document.body.appendChild(f);
+	f.submit();
+	return false;
+}
+</script>
+<!--[if gte IE 7]><style type="text/css">
+input[type="checkbox"] { margin-bottom: -1px; }
+</style><![endif]-->
+<!--[if IE]><style type="text/css">
+.post-hr { margin: 2px auto; }
+.fieldsets div > p { margin-bottom: 0; }
+</style><![endif]-->
+<style type="text/css">.menu-sub,#ajax-loading,#ajax-error,var.ajax-params,.sp-title,.q-post{display:none;}</style>
+<script type="text/javascript" src="http://tas-ix.net/misc/js/jquery.scrollUp.js"></script>
+<style>#scrollUp{background-image:url("img/top.png");bottom:20px;right:20px;width:38px;height:38px;}</style>
+<script>
+$(function () {
+    $.scrollUp();
+});
+</script>
+<style>body{padding-top:25px;background:#FFFFFF;}.navbar-fixed-top,.navbar-fixed-bottom{position:fixed;right:0;left:0;z-index:1030;}.navbar-fixed-top{top:0;border-width:0 0 1px;}</style>
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/101050028/234x60', [234, 60], 'div-gpt-ad-1427795947503-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+</head>
+<body>
+<IDXSKIP><div class="menu-sub" id="pg-jump">
+<table cellspacing="1" cellpadding="4">
+<tr><th>К странице…</th></tr>
+<tr><td>
+<form method="get" onsubmit="return go_to_page();">
+<input id="pg-page" type="text" size="5" maxlength="4"/>
+<input type="submit" value="Перейти"/>
+</form>
+</td></tr>
+</table>
+</div></IDXSKIP>
+<script>
+function go_to_page ()
+{
+	var page_num = (parseInt( $('#pg-page').val() ) > 1) ? $('#pg-page').val() : 1;
+	var pg_start = (page_num - 1) * 15;
+	window.location = 'viewtopic.php?t=68793&start=' + pg_start;
+	return false;
+}
+</script>
+<div id="ajax-loading"></div><div id="ajax-error"></div>
+<div id="preload" style="position: absolute; overflow: hidden; top: 0; left: 0; height: 1px; width: 1px;"></div>
+<div id="body_container">
+ 
+ 
+ 
+<div id="page_container">
+<a name="top"></a>
+ 
+<div id="page_header">
+<div id="old-browser-warn" style="background: #FFF227; padding: 8px 0 10px; text-align: center; font-size: 14px; display: none; ">
+<b><IDXSKIP>Вы используете устаревший браузер. Сайт может отображаться некорректно.</IDXSKIP></b>
+</div>
+<script>
+if ( (typeof(window.opera) != "undefined" && window.opera.version() < 12) || (window.attachEvent && !window.addEventListener) /* IE < 9 */ ) {
+	document.getElementById('old-browser-warn').style.display = '';
+}
+</script>
+ 
+<div class="navbar-fixed-top" id="main-nav" style="height: 17px;">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td class="nowrap">
+<IDXSKIP><a href="./index.php"><b>Главная</b></a></IDXSKIP><IDXSKIP><span style="color:#CDCDCD;">|</span></IDXSKIP>
+<IDXSKIP><a href="tracker.php"><b>Трекер</b></a></IDXSKIP><IDXSKIP><span style="color:#CDCDCD;">|</span></IDXSKIP>
+<IDXSKIP><a href="/" target="_blank"><b>Галерея</b></a></IDXSKIP><IDXSKIP><span style="color:#CDCDCD;">|</span></IDXSKIP>
+<IDXSKIP><a href="search.php"><b>Поиск</b></a></IDXSKIP><IDXSKIP><span style="color:#CDCDCD;">|</span></IDXSKIP>
+<IDXSKIP><a href="viewtopic.php?t=2"><b style="color: #993300;">Правила</b></a></IDXSKIP><IDXSKIP><span style="color:#CDCDCD;">|</span></IDXSKIP>
+<IDXSKIP><a href="group.php"><b>Группы</b></a></IDXSKIP><IDXSKIP><span style="color:#CDCDCD;">|</span></IDXSKIP>
+<IDXSKIP><a href="viewforum.php?f=3"><b>ЧаВО</b></a></IDXSKIP><IDXSKIP><span style="color:#CDCDCD;">|</span></IDXSKIP>
+<IDXSKIP><a href="/chat.php"><b>CHAT</b></a></IDXSKIP><IDXSKIP><span style="color:#CDCDCD;">|</span></IDXSKIP>
+<IDXSKIP><a target="_blank" href="http://borku.uz/" rel="nofollow"><b>Сайты UZ</b></a></IDXSKIP><IDXSKIP><span style="color:#CDCDCD;">|</span></IDXSKIP>
+</td>
+<td class="nowrap" align="right">
+</td>
+</tr>
+</table>
+</div>
+ 
+ 
+<div id="logo">
+ 
+<IDXSKIP><a href="./index.php"><img src="images/logo/logo.png" alt="скачать торрент TAS-IX.NET"/></a></IDXSKIP>
+<div id="pbgvxfb">
+<a href="https://olymptrade.com/l/LPL19-10/affiliate?affiliate_id=60213&subid1=2f5e&subid2=" target="_blank"></a></div>
+<style type="text/css">#ifwuuwj a{display:block;background:url(/olhdggvndgd.gif);width:728px;height:90px;margin-left:auto;margin-top:-90px;}</style>
+<script type="text/javascript">
+if(!document.getElementById('UnAomfEkupxF')){
+document.getElementById('pbgvxfb').id = 'ifwuuwj';
+}
+</script>
+ 
+ 
+<div class="topmenu">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td class="tCenter pad_2">
+<IDXSKIP><a href="profile.php?mode=register" id="register_link"><b>Регистрация</b></a></IDXSKIP> <IDXSKIP>&#0183;
+<form action="login.php" method="post">
+Имя: <input type="text" name="login_username" size="12" tabindex="1" accesskey="l"/>
+Пароль: <input type="password" name="login_password" size="12" tabindex="2"/>
+<label title="Автоматически входить при каждом посещении"><input type="checkbox" name="autologin" value="1" tabindex="3" checked="checked"/>Запомнить</label>&nbsp;
+<input type="submit" name="login" value="Вход" tabindex="4"/>
+</form></IDXSKIP> <IDXSKIP>&#0183;
+<a href="profile.php?mode=sendpassword">Забыли пароль?</a></IDXSKIP>
+</td>
+</tr>
+</table>
+</div>
+ 
+</div>
+ 
+ 
+ 
+ 
+<div id="page_content">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+<tr>
+ 
+<td id="main_content">
+<div id="main_content_wrap">
+<div id="latest_news">
+<table cellspacing="0" cellpadding="0" width="100%">
+<tr>
+</tr>
+</table>
+</div>
+ 
+ 
+ 
+ 
+<div class="spacer_6"></div>
+<h1 class="maintitle">
+<a class="tt-text" href="viewtopic.php?t=68793">Trainz Simulator 2012 (2011) (Auran) (ENG) [P] скачать торрент</a>
+</h1>
+<p class="small" style="padding: 1px 6px 5px;"><b><a class="menu-root" href="#pg-jump">Страницы</a> :&nbsp;&nbsp;<b>1</b>, <a href="viewtopic.php?t=68793&amp;start=15">2</a>, <a href="viewtopic.php?t=68793&amp;start=30">3</a>, <a href="viewtopic.php?t=68793&amp;start=45">4</a>&nbsp;&nbsp;<a href="viewtopic.php?t=68793&amp;start=15">След.</a></b></p>
+<table cellpadding="0" class="w100">
+<tr>
+<td valign="bottom">
+<a href="posting.php?mode=reply&amp;t=68793"><img src="./templates/default/images/lang/ru/reply.gif" alt="Ответить на тему"/></a>
+</td>
+<td class="nav w100" style="padding-left: 8px;">
+<IDXSKIP><a href="./index.php">Главная</a></IDXSKIP><IDXSKIP>&nbsp;<em>&raquo;</em></IDXSKIP>
+<a href="index.php?c=4">Игры</a>
+<IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=23">Симуляторы</a>
+</td>
+</tr>
+</table>
+<table class="w100 border bw_TRL" cellpadding="0" cellspacing="0">
+<tr>
+<td class="cat pad_2">
+<table cellspacing="0" cellpadding="0" class="borderless w100">
+<tr>
+<td class="small bold nowrap tRight" width="100%">
+&nbsp;
+</td>
+<td class="nowrap" style="padding: 0 4px 2px 4px;">
+<form action="search.php?t=68793&amp;dm=1&amp;s=1" method="post">
+<input id="search-text" type="text" name="nm" class="hint" style="width: 150px;" placeholder="Искать в теме…" required />
+<input type="submit" class="bold" value="&raquo;" style="width: 30px;"/>
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table class="topic" id="topic_main" cellpadding="0" cellspacing="0">
+<tbody id="post_583810" class="row1">
+<tr>
+<td class="poster_info td1"><a name="583810"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">EXPY</span> </p>
+<p class="joined" title="Рег.: 28-Июн-2012"> Рег.: 28-Июн-2012</p> <p class="posts"><em>Сообщений:</em>&nbsp;35</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_583810"></span>
+<span id="pp_583810"><span style="font-size: 24px; line-height: normal;">Trainz Simulator 2012</span><IDXSKIP><span class="post-br"><br/></span></IDXSKIP><var class="postImg postImgAligned img-right" title="http://img.tas-ix.net/images/2013/qLHKn.jpg">&#10;</var><IDXSKIP><span class="post-b">Год выпуска</span></IDXSKIP>: 2011<br/><IDXSKIP><span class="post-b">Жанр</span></IDXSKIP>: Simulator<br/><IDXSKIP><span class="post-b">Разработчик</span></IDXSKIP>: Auran<br/><span class="post-b">Издательство</span>: Auran<br/><IDXSKIP><span class="post-b">Платформа</span></IDXSKIP>: Win XP, 7<br/><IDXSKIP><span class="post-b">Системные требования</span></IDXSKIP>: Операционная система: XP, Vista, Seven<br/>v Процессор: Pentium D 3,4 ГГц<br/>v Оперативная память: 1 ГБ ОЗУ<br/>v Место на жестком диске: 9 ГБ свободного места на жестком диске<br/>v Звуковое устройство: DirectX Compatible Soundcard<br/>v Видеокарта: видеокарта nVidia GeForce 7200 128 МБ<br/><span class="post-b">Тип издания</span>: пиратка<br/><IDXSKIP><span class="post-b">Язык интерфейса</span></IDXSKIP>: только английский<br/><span class="post-b">Язык озвучки</span>: только английский<br/><IDXSKIP><span class="post-b">Таблэтка</span></IDXSKIP>: Присутствует<br/><IDXSKIP><span class="post-b">Описание</span></IDXSKIP>: В предыдущей версии симулятора Trainz поклонники этой игры могли ознакомиться с красотами Абхазии, а так же прокатиться по Транссибирской магистрали. В этой версии игры, продолжая добрую традицию, мы даем вам возможность полюбоваться красотами необъятных просторов бывшего СССР. Карта и сценарий "Фантазия", разработанная коллективом поклонников этой игры, даст вам возможность совершить увлекательное путешествие по просторам Украины, причем не только сквозь пространство, но и сквозь время. За часовую поездку вы увидите смену всех четырех времен года.<br/><IDXSKIP><span class="post-b">Доп. информация</span></IDXSKIP>:<br/>• Настоящий контроль над мощными локомотивами, которые проезжают через городах и холмистые местности.<br/>• <span class="post-b">Проектирование и строительство собственных железных дорог с Trainz Surveyor и доступ к сотням тысяч новых примочек для строительства.</span><br/>• Поделитесь своим энтузиазмом с другими любителями железнодорожных симуляторов и обьедините свои усилия для строительства железной дороги в режиме мультиплеера.<br/>• Возможность просматривания железной дороги с высоты спутника.<br/> • Более реалистичные деревья<br/> • Совместимость с контентом с TS2010.<div class="sp-wrap"><div class="sp-body" title="Скриншоты"><h3 class="sp-title">Скриншоты</h3><var class="postImg" title="http://img.tas-ix.net/images/2013/omhjc.jpg">&#10;</var><br/><var class="postImg" title="http://img.tas-ix.net/images/2013/XYJc.jpg">&#10;</var><br/><var class="postImg" title="http://img.tas-ix.net/images/2013/ARMpr.jpg">&#10;</var><br/><var class="postImg" title="http://img.tas-ix.net/images/2013/0j1ms.jpg">&#10;</var></div></div></span>
+<div id="pc_583810" style="display: none;">
+<div id="mc_class_583810" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_583810"></div>
+</div>
+</div>
+<IDXSKIP><center><a target="_blank" href="/1758.html"><img src="/555.png"></a></center></IDXSKIP>
+<center><script type="text/javascript">(function(){ var id = Math.floor(Math.random() * 999); document.write('<div id="x'+id+'"></div>'); var wsc=document.createElement('script'); wsc.type='text/javascript'; wsc.src='http://cityads.com/zrxNDQ5Njk4MzU1/async/1/dv/' + id; wsc.async=true; var ssc = document.getElementsByTagName('script')[0]; ssc.parentNode.insertBefore(wsc, ssc); })();</script></center>
+</div> 
+<div class="last_edited"><br/><br/>Последний раз редактировалось: EXPY (2013-04-24 21:03), всего редактировалось 3 раз(а)</div> </div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 21-Апр-2013 12:16 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=68287"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=68287"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_583840" class="row2">
+<tr>
+<td class="poster_info td1"><a name="583840"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">EXPY</span> <sup>&reg;</sup></p>
+<p class="joined" title="Рег.: 28-Июн-2012"> Рег.: 28-Июн-2012</p> <p class="posts"><em>Сообщений:</em>&nbsp;35</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_583840"></span>
+<span id="pp_583840">Раздавать буду по возможности... Провайдер узонлине у меня после 18:00 иной раз подключиться не даёт</span>
+<div id="pc_583840" style="display: none;">
+<div id="mc_class_583840" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_583840"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 21-Апр-2013 13:06 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=68287"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=68287"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_583936" class="row1">
+<tr>
+<td class="poster_info td1"><a name="583936"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">dimanixa89</span> </p>
+<p class="joined" title="Рег.: 26-Окт-2012"> Рег.: 26-Окт-2012</p> <IDXSKIP><p class="posts"><em>Сообщений:</em>&nbsp;6</p></IDXSKIP>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_583936"></span>
+<span id="pp_583936">ааа искал давно спасиб большое ток когда проверят</span>
+<div id="pc_583936" style="display: none;">
+<div id="mc_class_583936" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_583936"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 21-Апр-2013 15:36 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=83235"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=83235"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_584355" class="row2">
+<tr>
+<td class="poster_info td1"><a name="584355"></a>
+<p class="nick"><span title="Модератор Game" class="colorMod">Uzel</span> </p>
+<p class="joined" title="Рег.: 20-Апр-2011"> Рег.: 20-Апр-2011</p> <p class="posts"><em>Сообщений:</em>&nbsp;995</p> <p class="posts"><em>Симпатии:</em>&nbsp;47</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_584355"></span>
+<span id="pp_584355"><span class="post-b">EXPY ®</span>, Добавьте ещё один сриншот и чтобы они были одного размера</span>
+<div id="pc_584355" style="display: none;">
+<div id="mc_class_584355" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_584355"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 22-Апр-2013 08:28 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=20182"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=20182"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_584443" class="row1">
+<tr>
+<td class="poster_info td1"><a name="584443"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">david</span> </p>
+<p class="joined" title="Рег.: 02-Июн-2010"> Рег.: 02-Июн-2010</p> <p class="posts"><em>Сообщений:</em>&nbsp;652</p> <p class="posts"><em>Симпатии:</em>&nbsp;12</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_584443"></span>
+<span id="pp_584443"><div class="q-wrap"><div class="q" head="Uzel"><span class="post-b">EXPY ®</span>, Добавьте ещё один сриншот и чтобы они были одного размера</div></div>я б попросил скриншоты которые сам геймплей раскрывают, а то не совсем понятно -- можно в самой игре строить дороги(как в Rail Works) и хотелось бы посмотреть на графику города т.к скучно будет только на поезд смотреть, хочется экзотики уже -- например красивый пейзажик, закаты (не понятно что значит за часовую поездку пройдет год т.е игровое время ускорено в 8760 раз ? и за одну секунду будет проходить около 2 часов ? )</span>
+<div id="pc_584443" style="display: none;">
+<div id="mc_class_584443" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_584443"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 22-Апр-2013 12:20 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=3422"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=3422"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_584636" class="row2">
+<tr>
+<td class="poster_info td1"><a name="584636"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">EXPY</span> <sup>&reg;</sup></p>
+<p class="joined" title="Рег.: 28-Июн-2012"> Рег.: 28-Июн-2012</p> <p class="posts"><em>Сообщений:</em>&nbsp;35</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_584636"></span>
+<span id="pp_584636">Извините что скрины разного размера, загружал с телефона...</span>
+<div id="pc_584636" style="display: none;">
+<div id="mc_class_584636" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_584636"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 22-Апр-2013 18:19 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=68287"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=68287"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_584792" class="row1">
+<tr>
+<td class="poster_info td1"><a name="584792"></a>
+<p class="nick"><span title="Модератор Game" class="colorMod">Uzel</span> </p>
+<p class="joined" title="Рег.: 20-Апр-2011"> Рег.: 20-Апр-2011</p> <p class="posts"><em>Сообщений:</em>&nbsp;995</p> <p class="posts"><em>Симпатии:</em>&nbsp;47</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_584792"></span>
+<span id="pp_584792"><span class="post-b">EXPY</span>, Поправьте скриншоты</span>
+<div id="pc_584792" style="display: none;">
+<div id="mc_class_584792" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_584792"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 23-Апр-2013 00:24 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=20182"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=20182"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_585847" class="row2">
+<tr>
+<td class="poster_info td1"><a name="585847"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">EXPY</span> <sup>&reg;</sup></p>
+<p class="joined" title="Рег.: 28-Июн-2012"> Рег.: 28-Июн-2012</p> <p class="posts"><em>Сообщений:</em>&nbsp;35</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_585847"></span>
+<span id="pp_585847">имеется так же 2 доп. тепловоза с реалистичным запуском как на настоящих локомотивах, кому надо пишите в личку...</span>
+<div id="pc_585847" style="display: none;">
+<div id="mc_class_585847" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_585847"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 24-Апр-2013 21:06 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=68287"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=68287"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_586286" class="row1">
+<tr>
+<td class="poster_info td1"><a name="586286"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">RichmanVIP</span> </p>
+<p class="joined" title="Рег.: 02-Мар-2013"> Рег.: 02-Мар-2013</p> <p class="posts"><em>Сообщений:</em>&nbsp;103</p> <IDXSKIP><p class="posts"><em>Симпатии:</em>&nbsp;3</p></IDXSKIP>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_586286"></span>
+<span id="pp_586286">ты лучше на раздачу иди, а не по личкам раздавать дополнения</span>
+<div id="pc_586286" style="display: none;">
+<div id="mc_class_586286" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_586286"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 25-Апр-2013 18:59 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=91365"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=91365"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_602377" class="row2">
+<tr>
+<td class="poster_info td1"><a name="602377"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">hoffnung-umid</span> </p>
+<p class="joined" title="Рег.: 12-Янв-2013"> Рег.: 12-Янв-2013</p> <p class="posts"><em>Сообщений:</em>&nbsp;6</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_602377"></span>
+<span id="pp_602377">Кто нибудь раздавать будет? Пожалуйста поставьте на стабильную раздачу по возможности! давно искал, скачать не могу.</span>
+<div id="pc_602377" style="display: none;">
+<div id="mc_class_602377" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_602377"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 19-Май-2013 22:54 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=88011"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=88011"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_615213" class="row1">
+<tr>
+<td class="poster_info td1"><a name="615213"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">ibrohimov_</span> </p>
+<p class="joined" title="Рег.: 14-Сен-2012"> Рег.: 14-Сен-2012</p> <p class="posts"><em>Сообщений:</em>&nbsp;55</p> <IDXSKIP><p class="posts"><em>Симпатии:</em>&nbsp;2</p></IDXSKIP>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_615213"></span>
+<span id="pp_615213">У МЕНЯ ЕСТЬ TRAINZ ДОПОЛНЕНИЯ МАРШРУТЫ, ПОЕЗДА, ОБЬЕКТЫ ВСЁ ВМЕСТЕ - 15 ГБ!!!<br/><a href="http://tas-ix.net/viewtopic.php?t=72084" class="postLink" rel="nofollow">http://tas-ix.net/viewtopic.php?t=72084</a> (ПОКА ТОЛЬКО 2 ГБ ВЫЛОЖЛ, ОСТТАЛЬНОЕ ПОТОМ)</span>
+<div id="pc_615213" style="display: none;">
+<div id="mc_class_615213" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_615213"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 07-Июн-2013 20:27 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=75420"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=75420"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_615275" class="row2">
+<tr>
+<td class="poster_info td1"><a name="615275"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">Влодимир</span> </p>
+<p class="joined" title="Рег.: 07-Июн-2011"> Рег.: 07-Июн-2011</p> <p class="posts"><em>Сообщений:</em>&nbsp;60</p> <IDXSKIP><p class="posts"><em>Симпатии:</em>&nbsp;1</p></IDXSKIP>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_615275"></span>
+<span id="pp_615275">Дайте раздачу не как немогу скачать уже неделя прошла. 0,00 %</span>
+<div id="pc_615275" style="display: none;">
+<div id="mc_class_615275" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_615275"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 07-Июн-2013 21:01 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=23486"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=23486"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_615349" class="row1">
+<tr>
+<td class="poster_info td1"><a name="615349"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">EXPY</span> <sup>&reg;</sup></p>
+<p class="joined" title="Рег.: 28-Июн-2012"> Рег.: 28-Июн-2012</p> <p class="posts"><em>Сообщений:</em>&nbsp;35</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_615349"></span>
+<span id="pp_615349"><div class="q-wrap"><div class="q" head="Влодимир">Дайте раздачу не как немогу скачать уже неделя прошла. 0,00 %</div></div>Ну незнаю я сижу всю неделю уже с 18 до 22, 1 или 2 чела качают</span>
+<div id="pc_615349" style="display: none;">
+<div id="mc_class_615349" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_615349"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 07-Июн-2013 22:18 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=68287"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=68287"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_616608" class="row2">
+<tr>
+<td class="poster_info td1"><a name="616608"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">ibrohimov_</span> </p>
+<p class="joined" title="Рег.: 14-Сен-2012"> Рег.: 14-Сен-2012</p> <p class="posts"><em>Сообщений:</em>&nbsp;55</p> <p class="posts"><em>Симпатии:</em>&nbsp;2</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_616608"></span>
+<span id="pp_616608"><a href="http://tas-ix.net/" class="postLink" rel="nofollow"><var class="postImg" title="http://tas-ix.net/bar/75420.png">&#10;</var></a><br/>Пока торрент не залит</span>
+<div id="pc_616608" style="display: none;">
+<div id="mc_class_616608" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_616608"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 09-Июн-2013 17:17 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=75420"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=75420"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+<tbody id="post_621993" class="row1">
+<tr>
+<td class="poster_info td1"><a name="621993"></a>
+<p class="nick"><span title="Пользователь" class="colorUser">Влодимир</span> </p>
+<p class="joined" title="Рег.: 07-Июн-2011"> Рег.: 07-Июн-2011</p> <p class="posts"><em>Сообщений:</em>&nbsp;60</p> <p class="posts"><em>Симпатии:</em>&nbsp;1</p>
+<div style="width: 110px;"></div>
+</td>
+<td class="message td2" rowspan="3">
+<div class="post_body">
+<div class="post_wrap">
+<span id="pe_621993"></span>
+<span id="pp_621993">Дайте раздачу</span>
+<div id="pc_621993" style="display: none;">
+<div id="mc_class_621993" class="alert alert-" style="width: 92%;">
+<h4 class="alert-heading"></h4><hr/>
+<div id="mc_comment_621993"></div>
+</div>
+</div>
+</div> 
+</div> 
+<div class="post_head">
+<p style="float: left; padding: 4px 0 3px;">
+<img src="./templates/default/images/icon_minipost.gif" class="icon1" alt="Создавать темы"/> 17-Июн-2013 12:57 </p>
+</td>
+</tr>
+<tr>
+<td class="poster_btn td3">
+<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=23486"><b>Профиль</b></a>&nbsp; <a class="txtb" href="privmsg.php?mode=post&amp;u=23486"><b>ЛС</b></a>&nbsp; </div>
+</td>
+</tr>
+</tbody>
+</table> 
+<script>$('img.smile').remove();</script>
+<table id="pagination" class="topic" cellpadding="0" cellspacing="0">
+<tr>
+<td class="nav pad_6 row2">
+<IDXSKIP><p style="float: left">Страница <b>1</b> из <b>4</b></p></IDXSKIP>
+<p style="float: right"><a class="menu-root" href="#pg-jump">Страницы</a> :&nbsp;&nbsp;<b>1</b>, <a href="viewtopic.php?t=68793&amp;start=15">2</a>, <a href="viewtopic.php?t=68793&amp;start=30">3</a>, <a href="viewtopic.php?t=68793&amp;start=45">4</a>&nbsp;&nbsp;<a href="viewtopic.php?t=68793&amp;start=15">След.</a></p>
+</td>
+</tr>
+</table> 
+<table class="topic" cellpadding="0" cellspacing="0">
+<tr>
+<td class="catBottom med">
+<form method="post" action="viewtopic.php?t=68793&amp;start=0">
+Показать сообщения:
+<select name="postdays" id="postdays">
+<option selected="selected" value="0">&nbsp;все сообщения&nbsp;</option>
+<option value="1">&nbsp;за последний день&nbsp;</option>
+<option value="7">&nbsp;за последние 7 дней&nbsp;</option>
+<option value="14">&nbsp;за последние 2 недели&nbsp;</option>
+<option value="30">&nbsp;за последний месяц&nbsp;</option>
+<option value="90">&nbsp;за последние 3 месяца&nbsp;</option>
+<option value="180">&nbsp;за последние 6 месяцев&nbsp;</option>
+<option value="364">&nbsp;за последний год&nbsp;</option>
+</select>
+&nbsp;
+<select name="postorder" id="postorder">
+<option selected="selected" value="asc">&nbsp;Начиная со старых&nbsp;</option>
+<option value="desc">&nbsp;Начиная с новых&nbsp;</option>
+</select>
+&nbsp;
+<input type="submit" value="Перейти" class="lite" name="submit"/>
+</form>
+</td>
+</tr>
+</table>
+<table cellpadding="0" class="w100" style="padding-top: 2px;">
+<tr>
+<td valign="top">
+<a href="posting.php?mode=reply&amp;t=68793"><img src="./templates/default/images/lang/ru/reply.gif" alt="Ответить на тему"/></a>
+</td>
+<td class="nav w100" style="padding-left: 8px;">
+<IDXSKIP><a href="./index.php">Главная</a></IDXSKIP><IDXSKIP>&nbsp;<em>&raquo;</em></IDXSKIP>
+<a href="index.php?c=4">Игры</a>
+<IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=23">Симуляторы</a>
+</td>
+</tr>
+</table>
+<IDXSKIP><table width="100%">
+<tr>
+<td width="40%" valign="top" nowrap="nowrap"><span class="small"></span><br/>
+<div class="small">
+</div>
+</td>
+</tr>
+</table></IDXSKIP>
+</div> 
+</td> 
+</tr></table>
+</div>
+ 
+<center><script type="text/javascript">(function(){ var id = Math.floor(Math.random() * 999); document.write('<div id="x'+id+'"></div>'); var wsc=document.createElement('script'); wsc.type='text/javascript'; wsc.src='http://cityads.com/zrxNDQ5Njk4MzU1/async/1/dv/' + id; wsc.async=true; var ssc = document.getElementsByTagName('script')[0]; ssc.parentNode.insertBefore(wsc, ssc); })();</script></center>
+ 
+<div id="page_footer">
+<div class="clear"></div>
+<br/><br/>
+<div class="med bold tCenter">
+<IDXSKIP><a href="misc.php?do=info&show=user_agreement" onclick="window.open(this.href, '', IWP); return false;">Пользовательское соглашение</a></IDXSKIP>
+<IDXSKIP><span class="normal">&nbsp;|&nbsp;</span></IDXSKIP>
+<IDXSKIP><a href="misc.php?do=info&show=copyright_holders" onclick="window.open(this.href, '', IWP); return false;">Для правообладателей</a></IDXSKIP>
+<IDXSKIP><span class="normal">&nbsp;|&nbsp;</span></IDXSKIP>
+<IDXSKIP><a href="misc.php?do=info&show=advert" onclick="window.open(this.href, '', IWP); return false;">Реклама на сайте</a></IDXSKIP>
+</div>
+<br/>
+</div>
+<IDXSKIP><div align="center">
+<script type="text/javascript"><!--
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script>
+ 
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter35298095 = new Ya.Metrika({
+                    id:35298095,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/35298095" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+ 
+ 
+<script lang="javascript">
+                <!--
+                top_js="1.0";top_r="id=20638&r="+escape(document.referrer)+"&pg="+
+                escape(window.location.href);
+                document.cookie="smart_top=1; path=/"; top_r+="&c="+(document.cookie?"Y":"N")
+                //-->
+            </script>
+<script lang="javascript1.1">
+            <!--
+            top_js="1.1";top_r+="&j="+(navigator.javaEnabled()?"Y":"N")
+            //-->
+            </script>
+<script lang="javascript1.2">
+            <!--
+            top_js="1.2";top_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+            (((navigator.appName.substring(0,3)=="Mic"))?
+            screen.colorDepth:screen.pixelDepth)
+            //-->
+            </script>
+<script lang="javascript1.3">
+            <!--
+            top_js="1.3";
+            //-->
+            </script>
+<script lang="JavaScript">
+            <!--
+            top_r+="&js="+top_js+"";
+            document.write('<img src="http://www.uz/plugins/top_rating/count/cnt.png?'+top_r+'" width=0 height=0 border=0 alt="счетчик www.uz">')
+            //-->
+            </script>
+<noscript>
+<IMG height=0 src="http://www.uz/plugins/top_rating/count/nojs_cnt.png?id=20638" width=0 border=0 alt="счетчик www.uz">
+</noscript>
+ 
+</div></IDXSKIP>
+<div class="copyright tCenter">
+<IDXSKIP><b style="color:rgb(204,0,0);">!ВНИМАНИЕ!</b></IDXSKIP><br/>
+<IDXSKIP>Сайт не предоставляет электронные версии произведений, а занимается лишь коллекционированием и каталогизацией ссылок, присылаемых и публикуемых на форуме нашими читателями. Если вы являетесь правообладателем какого-либо представленного материала и не желаете, чтобы ссылка на него находилась в нашем каталоге, свяжитесь с нами, и мы незамедлительно удалим ее. Файлы для обмена на трекере предоставлены пользователями сайта, и администрация не несет ответственности за их содержание. Просьба не заливать файлы, защищенные авторскими правами, а также файлы нелегального содержания! </IDXSKIP></div>
+ 
+</div>
+ 
+</div> 
+</body>
+</html>
+

@@ -1,0 +1,1002 @@
+mdex-nn.ru/aktivacija-terminalnogo-servera-winserver-2008-r2.html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Активация терминального сервера Windows Server 2003/2008/2008 R2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name='yandex-verification' content='6e5162d56dad3697' />
+  <meta name="description" content="Активация терминальных серверов Windows Server 2003, Windows Server 2008 и Windows Server 2008 R2. Получение клиентских лицензий для терминального сервера." />
+  <meta name="keywords" content="активация терминального сервера, терминальный сервер, Server 2008 R2, Server 2008, RDP, сервер терминалов, бесплатная активация терминального сервера, клиентские лицензии" />
+  <link rel="icon" href="http://mdex-nn.ru/application/maxsite/templates/easy/img/favicon.gif" type="image/gif">
+  <link rel="shortcut icon" href="http://mdex-nn.ru/application/maxsite/templates/easy/img/favicon.gif" type="image/gif" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=cyrillic" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://mdex-nn.ru/application/maxsite/templates/easy/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="http://mdex-nn.ru/application/maxsite/templates/easy/style.css" type="text/css" media="screen" />
+  <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://mdex-nn.ru/feed" />
+  	<script type="text/javascript" src="http://mdex-nn.ru/application/maxsite/plugins/syntaxhighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="http://mdex-nn.ru/application/maxsite/plugins/syntaxhighlighter/scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="http://mdex-nn.ru/application/maxsite/plugins/syntaxhighlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="http://mdex-nn.ru/application/maxsite/plugins/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="http://mdex-nn.ru/application/maxsite/plugins/syntaxhighlighter/scripts/shBrushPhp.js"></script>
+	<script type="text/javascript" src="http://mdex-nn.ru/application/maxsite/plugins/syntaxhighlighter/scripts/shBrushXml.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = "http://mdex-nn.ru/application/maxsite/plugins/syntaxhighlighter/scripts/clipboard.swf";
+SyntaxHighlighter.all();
+	</script>
+
+	<link type="text/css" rel="stylesheet" href="http://mdex-nn.ru/application/maxsite/plugins/syntaxhighlighter/styles/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="http://mdex-nn.ru/application/maxsite/plugins/syntaxhighlighter/styles/shThemeDefault.css" /><script src="http://mdex-nn.ru/application/maxsite/common/jquery/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="http://mdex-nn.ru/application/maxsite/plugins/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+  <script type="text/javascript" src="http://mdex-nn.ru/application/maxsite/plugins/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://mdex-nn.ru/application/maxsite/plugins/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").fancybox();
+    $("a.fancybox").attr('rel', 'gallery').fancybox();
+  });
+  </script>
+<script src="http://mdex-nn.ru/application/maxsite/plugins/comment_button/comment_button.js"></script>
+	<script src="http://mdex-nn.ru/application/maxsite/plugins/audioplayer/audio-player.js"></script>  <script type="text/javascript" src="http://mdex-nn.ru/application/maxsite/templates/easy/js/all.js"></script>
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?79"></script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7720739955018121",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+  <body>
+<!-- end header -->
+
+<!-- START TOP HEADER -->
+
+<IDXSKIP><div id="header">
+<a href="http://mdex-nn.ru/"><img class="img-responsive" src="http://mdex-nn.ru/application/maxsite/templates/easy/images/logos/logo.png" alt="Админ в маленьком городе" /></a>
+</div></IDXSKIP>
+
+<div id="main_menu">
+  <div class="container">
+  <ul class="col-md-8 hidden-xs"><IDXSKIP><li class="first"><a href="http://mdex-nn.ru/"><span>Главная</span></a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/about"><span>О сайте</span></a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/portfolio"><span>Портфолио</span></a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/contact"><span>Контакты</span></a></li></IDXSKIP>
+<IDXSKIP><li class="last"><a href="http://mdex-nn.ru/sitemap"><span>Архив</span></a></li></IDXSKIP>
+</ul>
+
+<IDXSKIP><form id="search_form" class="col-md-4 col-xs-12" name="f_search" action="" method="get" onsubmit="location.href='http://mdex-nn.ru/search/' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;">
+<input type="text" name="s" id="s" placeholder="Поиск по сайту" maxlength="255" class="input-text search">
+</form></IDXSKIP>
+
+  </div><!-- container -->
+</div><!-- main_menu -->
+
+<!-- END TOP HEADER -->
+<div class="container">
+
+<div id="content" class="col-md-8">
+<div class="type type_page">
+
+<div class="page_only">
+<h1>Активация терминального сервера Windows Server 2003/2008/2008 R2</h1><script type="text/javascript">
+  VK.init({apiId: 3429432, onlyWidgets: true});
+</script>
+
+<!-- Put this div tag to the place, where the Like block will be -->
+<div id="vk_like"></div>
+<script type="text/javascript">
+VK.Widgets.Like("vk_like", {type: "button", height: 18});
+</script><div class="info"><span>Март, 01st 2013</span><br><IDXSKIP><span>Рубрика:</span></IDXSKIP> <IDXSKIP><a href="http://mdex-nn.ru/category/windows">Windows</a></IDXSKIP><br><IDXSKIP><span>Подписаться на</span></IDXSKIP> <a href="http://mdex-nn.ru/page/aktivacija-terminalnogo-servera-winserver-2008-r2.html/feed">комментарии по RSS</a></div><div class="page_content type_page"><div class="reklama">
+<!-- Яндекс.Директ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 73889;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'utf-8';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'flat';
+yandex_direct_limit = 1;
+yandex_direct_title_font_size = 2;
+yandex_direct_title_color = '1986B5';
+yandex_direct_url_color = '1986B5';
+yandex_direct_text_color = '444444';
+yandex_direct_hover_color = 'FF3300';
+yandex_direct_favicon = true;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+</div>
+<p><img src="/uploads/tsserver.jpg" alt="терминальный сервера"></p>
+<p>Продолжаю тему настройки терминальных серверов. И сегодня расскажу о том, как получить и активировать терминальный сервер и лицензии на подключение абсолютно бесплатно. <b>Статья дается исключительно в целях ознакомления</b>.</p>
+<p>Способ работает уже не первый год, и раз в Microsoft до сих пор его не прикрыли, то мы с чистой совестью будем им пользоваться. Актуально для Windows Server 2003, 2008 и 2008 R2 (на WinServer 2012 не проверял). Конечно, на рабочих серверах, я призываю использовать исключительно честно купленные лицензии. Итак, приступим...</p>
+<a id="cut"></a>
+
+<h3>Установка роли «Службы терминалов»</h3>
+<p>Подопытным сервером выступит Windows Server 2008 R2. Активируем терминальный сервер и получим клиентские лицензии CAL на пользователя. Первым делом добавляем роли нашему серверу. Сильно подробно расписывать не буду - тут все просто.</p>
+
+<ol>
+
+<li>Диспетчер сервера -> Роли -> Добавить роль -> <i>Службы терминалов</i></li>
+<li>В списке «Службы роли» отмечаем <i>Сервер терминалов</i> и <i>Лицензирование служб терминалов</i></li></ol>
+<p>Этого вполне достаточно для поддержания базовой функциональности терминального сервера.</p>
+<p>В процессе установки вам потребуется выбрать метод проверки подлинности - требовать проверку подлинности на уровне сети или нет. Включение проверки (рекомендуемое) обеспечит повышенную безопасность, но в этом режиме к серверу не смогут подключаться пользователи с устаревшими клиентами (rdp 5.х и ниже).</p>
+<p>Решение данной проблемы я описывал ранее - <a class="extlink" href="/page/rdp-winxp-server2008.html">Windows XP и терминальный сервер на Server 2008 R2</a>.</p>
+<p>Осталось определиться с режимом лицензирования: «на пользователя» или «на устройство».</p>
+<p>Лицензии «на пользователя» следует выбирать в случае, когда пользователи не привязаны к конкретному компьютеру, требуется доступ к серверу как из корпоративной сети, так и из удаленной (дом, другой офис). В противном случае, выбирайте лицензии «на устройство».</p>
+
+<h3>Активация сервера лицензий терминалов</h3>
+<p>Мне было не лень, наделал скриншотов, так что сегодня инструкция будет в картинках. Идем в <i>Диспетчер лицензирования удаленные рабочих столов</i> -> <i>Активировать сервер</i>.</p>
+<p><img src="/uploads/ts2008r2-2.jpg" alt="Диспетчер лицензирования удаленные рабочих столов. Windows Server 2008 R2"></p>
+<p>Выбираем метод подключения «В браузере веб-страниц»</p>
+<p><img src="/uploads/ts2008r2-3.jpg" alt="мастер активации терминального сервера Windows Server 2008"></p>
+<p>Узел лицензирования удаленных рабочих столов: <a class="extlink" target="_blank" href="https://activate.microsoft.com/">https://activate.microsoft.com/</a></p>
+<p><img src="/uploads/ts2008r2-4.jpg" alt="Страница узла лицензирования удаленных рабочих столов Microsoft"></p>
+<p>В предложенной форме необходимо заполнить поля, помеченные (*). <i>Product ID</i> указан в мастере активации, остальные поля заполняем любой лабудой, (например Шариков Полиграф Полиграфович, компания «Рога и Копыта»).</p>
+<p><img src="/uploads/ts2008r2-5.jpg" alt="Активация сервера лицензий терминалов Windows Server 2008 R2"></p>
+<p>Если все сделано правильно, то мы получим необходимый <i>license server ID</i>. Скопируйте его в буфер обмена. Сайт <i>https://activate.microsoft.com/</i> закрывать пока не нужно, он нам еще пригодится для получения клиентских лицензий (CALs).</p>
+<p><img src="/uploads/ts2008r2-6.jpg" alt="Активация терминального сервера Windows Server 2008 R2"></p>
+
+<h3>Получение клиентских лицензий (CALs)</h3>
+<p>Ну вот мы и добрались до самого интересного...</p>
+<p><img src="/uploads/ts2008r2-7.jpg" alt="Активация терминального сервера Windows Server 2008 R2"></p>
+<p>Переходим на уже знакомый нам узел лицензирования Microsoft, где на этот раз выбираем <i>Установить клиентские лицензии доступа</i>.</p>
+<p><img src="/uploads/ts2008r2-8.jpg" alt="Узел лицензирования Microsoft. Получение клиентских лицензий доступа терминального сервера Server 2008 R2"></p>
+<p>Снова заполнить поля, помеченные (*) той же лабудой, что и первый раз. Вставляем License Server ID, в качестве программы лицензирования <i>(License Program)</i> выбираем <i style="color:red">Enterprise agreement</i> (! иначе не прокатит).</p>
+<p><img src="/uploads/ts2008r2-9.jpg" alt="Активация терминального сервера Windows Server 2008 R2"></p>
+<p>Внимательно выбираем нужные нам лицензии и их количество (определялись ранее. в примере выбор на пользователя):</p>
+<p> </p>
+<p>Тип продукта - <i>Windows Server 2008 Terminal Server Per User Client Access License</i> (для Windows Server 2003 - <i>Windows 2003 Terminal Server Per User Client Access License</i>) </p>
+<p>Соглашение Enterprise agreement - <b style="color:red">6565792</b>, <b style="color:red">5296992</b>, <b style="color:red">3325596</b> или любой другой, найденный в сети. </p>
+<p><img src="/uploads/ts2008r2-10.jpg" alt="Получение клиентских лицензий терминального сервера Windows Server 2008 R2"></p>
+<p>Ну вот мы и получили нужные нам клиентские лицензии. Поздравляю!</p>
+<p><img src="/uploads/ts2008r2-11.jpg" alt="Получение клиентских лицензий терминального сервера Windows Server 2008 R2"></p>
+<p>Собственно, теперь мы имеем полноценный активированный сервер терминалов. При желании можно добавить WEB-доступ, установив дополнительную роль.</p>
+<p><img src="/uploads/ts2008r2-12.jpg" alt="терминальный сервер Windows Server 2008 R2"></p>
+<div id="social">
+<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter" data-counter=""></div>
+<p><IDXSKIP>Если вы считаете статью полезной,<br>не ленитесь ставить лайки и делиться с друзьями.</IDXSKIP></p>
+</div><div class="page_other_pages"><ul><li><i class="icon-edit"></i> <a href="http://mdex-nn.ru/page/windows-xp-home-edition-ne-zapominaet-paroli-k-setevym-diskam.html" title="Windows XP Home Edition не запоминает пароли к сетевым дискам">Windows XP Home Edition не запоминает пароли к сетевым дискам</a></li><li><i class="icon-edit"></i> <a href="http://mdex-nn.ru/page/ubiraem-vosstanovlenie-posle-oshibok-windows.html" title="Отключаем запуск средства восстановления при загрузке Windows">Отключаем запуск средства восстановления при загрузке Windows</a></li><li><i class="icon-edit"></i> <a href="http://mdex-nn.ru/page/kakoj-dns-server-ispolzuet-sistema.html" title="Как определить какой DNS сервер использует система?">Как определить какой DNS сервер использует система?</a></li><li><i class="icon-edit"></i> <a href="http://mdex-nn.ru/page/vmesto-rabochego-stola-zagruzhaetsya-provodnik.html" title="Вместо рабочего стола загружается проводник!">Вместо рабочего стола загружается проводник!</a></li></ul></div></div>
+</div><!--div class="page_only"-->
+<span><a id="comments"></a></span>
+<div class="type type_page_comments">
+<div class="comments"><h3 class="comments">Комментариев: 144</h3><ol>
+<li class="anonim light"><a class="date" href="#comment-981" name="comment-981">2013-07-26 в 22:27:29</a> | <span class="comm_url">xikko</span>
+<p>Премного благодарен!</p>
+<p>По состоянию на 26,07,2013 есчо работает.</p>
+<p>кстати.. первыйнах!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-987" name="comment-987">2013-07-31 в 21:13:46</a> | <span class="comm_url">SERSER</span>
+<p>на 01.08.13 тоже работает</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-997" name="comment-997">2013-08-09 в 11:50:13</a> | <span class="comm_url">well</span>
+<p>Спасибо!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1000" name="comment-1000">2013-08-16 в 09:07:08</a> | <span class="comm_url">Vi</span>
+<p>Спасибо, все работает!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1045" name="comment-1045">2013-09-04 в 15:25:39</a> | <span class="comm_url">Денис</span>
+<p>Спасибо, работает)</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1080" name="comment-1080">2013-09-13 в 15:09:58</a> | <span class="comm_url">maximus</span>
+<p>спасибо, пока все работает на 13,09,2013</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1100" name="comment-1100">2013-09-20 в 17:47:51</a> | <span class="comm_url">miker</span>
+<p>а скажите... сброс триала сервера терминалов кто нить знает?  как в 2003  (через regedit)</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1109" name="comment-1109">2013-10-01 в 21:50:32</a> | <span class="comm_url">Аноним</span>
+<p>SPOSIBOOOOOOOOOOOOOOOOOOOOO</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1120" name="comment-1120">2013-10-10 в 13:35:38</a> | <span class="comm_url">Влад</span>
+<p>Подскажите пожалуйста,а лучше так же подробную инструкцию,что нужно сделать чтобы добавить WEB-доступ?</p>
+</li>
+<li class="users"><a class="date" href="#comment-1121" name="comment-1121">2013-10-10 в 17:59:12</a> | <span class="comm_url">dre@mer</span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=5311ce9d53cfe8eaa288e9a91281a3e8&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Влад, читайте тут: <a href="http://mdex-nn.ru/page/dobavljaem-veb-dostup-k-udalennym-rabochim-stolam.html">http://mdex-nn.ru/page/dobavljaem-veb-dostup-k-udalennym-rabochim-stolam.html</a></p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1141" name="comment-1141">2013-10-24 в 07:43:23</a> | <span class="comm_url">TEST</span>
+<p>24.10.2013 РАБОТАЕТ</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1149" name="comment-1149">2013-10-28 в 20:44:52</a> | <span class="comm_url">Rule off</span>
+<p>28.10.2013 Работает!!! ))) Спасибо )</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1162" name="comment-1162">2013-10-29 в 17:47:36</a> | <span class="comm_url">itmanager</span>
+<p>День добрый, могу 100% сказать, что это канает и 2012 уже парочку активил, стабильность в этом вопросе радует.</p>
+</li>
+<li class="comusers"><a class="date" href="#comment-1169" name="comment-1169">2013-10-31 в 18:58:52</a> | <span class="comm_url"><a href="http://mdex-nn.ru/users/77">Nevsky</a></span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=fd60cf0de0a938330215020812dc4ae1&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Не работает на 12 серваке стандарт   Программе лицензирования служб удаленных рабочих столов не удается обработать запрос. Убедитесь, что указаны правильные сведения. При повторном возникновении ошибки попробуйте применить другие методы активации. Код ошибки: 800 </p>
+</li>
+<li class="comusers light"><a class="date" href="#comment-1171" name="comment-1171">2013-11-01 в 18:53:43</a> | <span class="comm_url"><a href="http://mdex-nn.ru/users/77">Nevsky</a></span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=fd60cf0de0a938330215020812dc4ae1&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Нашел решение для выдачи лицензий в Windows Server 2012 Standsrt (способ в статье ошибку выдавал - выше описал ее )!</p>
+<p>---------</p>
+<p>Решение:</p>
+<p>Идем в Диспетчер лицензирования удаленные рабочих столов -> Активировать сервер и при запросе мастера, <b>Выбираем метод подключения «Авто(реком.)» Соглашение «Enterpraiz»</b> И вводим код: Соглашение Enterprise agreement - 6565792, 5296992, 3325596  или любой другой, найденный в сети. </p>
+<p>Ну вот мы и получили нужные нам клиентские лицензии. Поздравляю!</p>
+<p>------------</p>
+<p>Именно в самом мастере срабатывают коды...</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1197" name="comment-1197">2013-11-18 в 11:16:11</a> | <span class="comm_url">Роман</span>
+<p>Странно но после всех пунктов у меня появляется лицензия, но на месте "Доступно" -  пришет "Создать отчет". И терминал не работает</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1198" name="comment-1198">2013-11-18 в 11:18:34</a> | <span class="comm_url">Роман</span>
+<p>тогда как ранее на другом сервере все дела так же и все работает без проблем! Только единственно 2008 32-х битный стоит на том сервере</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1220" name="comment-1220">2013-12-05 в 11:20:43</a> | <span class="comm_url">Денчик</span>
+<p>Все проделал, заработало.</p>
+<p>Спасибо!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1222" name="comment-1222">2013-12-07 в 21:19:59</a> | <span class="comm_url">Аноним</span>
+<p>Спасибо, работает!!!!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1224" name="comment-1224">2013-12-08 в 14:45:51</a> | <span class="comm_url">Danzo</span>
+<p>огонь все работает. 2003 сервер.</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1226" name="comment-1226">2013-12-10 в 17:57:35</a> | <span class="comm_url">Ruslan</span>
+<p>Windows Home Server 2011 - все работает</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1228" name="comment-1228">2013-12-13 в 10:39:05</a> | <span class="comm_url">Аноним</span>
+<p>2008 работает. Спасибо</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1252" name="comment-1252">2013-12-23 в 19:25:43</a> | <span class="comm_url">Aleman</span>
+<p>2008R2 standart все работает! Огромное спасибо автору!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1280" name="comment-1280">2014-01-03 в 16:05:34</a> | <span class="comm_url">aprogrammer</span>
+<p>Спасибо, так же можно использовать только активатор MSA — http://sysadmin.te.ua/windows/windows2012tune.html . Но что делать с активацией 2012 R2 для хостовой машины??</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1302" name="comment-1302">2014-01-09 в 07:10:49</a> | <span class="comm_url">Аноним</span>
+<p>Спасибо!! все работает...</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1317" name="comment-1317">2014-01-14 в 02:24:09</a> | <span class="comm_url">Виктор</span>
+<p>Ацки благодарен!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1348" name="comment-1348">2014-01-20 в 11:43:25</a> | <span class="comm_url">Аноним</span>
+<p>На 2008r2 stand активируется или enterprise надо ставить?</p>
+</li>
+<li class="users"><a class="date" href="#comment-1352" name="comment-1352">2014-01-20 в 16:35:02</a> | <span class="comm_url">dre@mer</span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=5311ce9d53cfe8eaa288e9a91281a3e8&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Активируется на любом из серверов 2003/2008/2008 R2</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1383" name="comment-1383">2014-01-26 в 18:09:38</a> | <span class="comm_url">rus6767</span>
+<p>А обновления можно ставить? или потом опять надо активировать?</p>
+</li>
+<li class="users"><a class="date" href="#comment-1384" name="comment-1384">2014-01-26 в 20:51:58</a> | <span class="comm_url">dre@mer</span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=5311ce9d53cfe8eaa288e9a91281a3e8&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Вам терминальные лицензии выдаются вполне легально с сайта microsoft, так что проблем с обновлениями быть не должно. Другой вопрос как у вас активирован сам сервер...</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1391" name="comment-1391">2014-01-28 в 18:52:23</a> | <span class="comm_url">Стасик</span>
+<p>Все арбайтен, автору зачет. Огромное спасибо.</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1422" name="comment-1422">2014-02-12 в 20:17:16</a> | <span class="comm_url">SkorpionEx</span>
+<p>Обалдеть. До сих пор работает!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1424" name="comment-1424">2014-02-13 в 15:48:34</a> | <span class="comm_url">LoxmatiyGT</span>
+<p>13/02/14 Всё ещё работает. Спасибо.</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1434" name="comment-1434">2014-02-20 в 10:20:38</a> | <span class="comm_url">Аноним</span>
+<p>Спасибо вам и Nevsky. 20 февраля 2014, 2012 standart работает.</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1484" name="comment-1484">2014-04-06 в 20:37:48</a> | <span class="comm_url">Andrews</span>
+<p>Спасибо вам. 6 апреля 2014, 2003 standart работает.</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1485" name="comment-1485">2014-04-08 в 13:31:58</a> | <span class="comm_url">zod1ac</span>
+<p>8 апреля 2014, 2012 не работает ни по одной схеме, выдает ошибку.</p>
+</li>
+<li class="users light"><a class="date" href="#comment-1486" name="comment-1486">2014-04-08 в 14:50:31</a> | <span class="comm_url">dre@mer</span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=5311ce9d53cfe8eaa288e9a91281a3e8&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>А где вы увидели что для 2012 должно работать? Русскими же буквами написано что способ рабочий для 2003/2008/2008 R2</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1490" name="comment-1490">2014-04-10 в 11:34:36</a> | <span class="comm_url">Аноним</span>
+<p>2012r2 активировался!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1498" name="comment-1498">2014-04-16 в 15:53:17</a> | <span class="comm_url">t3s</span>
+<p>2008 работает</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1505" name="comment-1505">2014-04-24 в 17:30:17</a> | <span class="comm_url">Moro</span>
+<p>2012 R2 активировался без проблем. Автору - спасибо!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1517" name="comment-1517">2014-05-06 в 16:56:19</a> | <span class="comm_url">fantino</span>
+<p>2008 r2 enterprise работает! О***ть можно! СПС автору!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1533" name="comment-1533">2014-05-15 в 09:51:45</a> | <span class="comm_url">pozevalkin</span>
+<p>Автору мучас грасиас! По состоянию на 15.05.14 вполне пашет на вин2к8 стандарт.</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1535" name="comment-1535">2014-05-15 в 13:22:45</a> | <span class="comm_url">Аноним</span>
+<p>Спасбо ишо пока работает 150514</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1547" name="comment-1547">2014-05-18 в 22:31:04</a> | <span class="comm_url">rustam</span>
+<p>Спасбо </p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1560" name="comment-1560">2014-05-27 в 18:00:30</a> | <span class="comm_url">Валерий</span>
+<p>27.05.2014 - пашет и еще как) Просто нижайший поклон )</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1574" name="comment-1574">2014-06-04 в 14:28:27</a> | <span class="comm_url">Иван</span>
+<p>Ребята, не пашет ((( ошибка 610, проверьте правильность заполнения информации о компании или что то в этом роде, всё проверил, всё правильно, по этой инструкции ставлю не в первый раз. Что за фигня ?(((</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1582" name="comment-1582">2014-06-15 в 21:04:06</a> | <span class="comm_url">Алем</span>
+<p>15 06 2014</p>
+<p>Работает!! Windows Server 2008 R2</p>
+<p>Спасибо АFТОРУ!!!</p>
+<p>Рога и Копыта)))))</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1605" name="comment-1605">2014-07-02 в 15:07:35</a> | <span class="comm_url">Egor</span>
+<p>2.07.2014 </p>
+<p>работает. ws 2003 r2 sp2 </p>
+<p>низкий поклон!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1607" name="comment-1607">2014-07-02 в 23:32:29</a> | <span class="comm_url">Alex</span>
+<p>Премного благодарен. Очень выручили. </p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1615" name="comment-1615">2014-07-07 в 15:21:23</a> | <span class="comm_url">km3</span>
+<p>2012r2 пашит</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1617" name="comment-1617">2014-07-09 в 12:21:55</a> | <span class="comm_url">Максим</span>
+<p>дайте код лицензии для терминалов windows server 2012</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1620" name="comment-1620">2014-07-15 в 00:34:45</a> | <span class="comm_url">Glukozzz</span>
+<p>2008 Standart. Работает. Сенкс!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1627" name="comment-1627">2014-07-17 в 09:29:22</a> | <span class="comm_url">Александр</span>
+<p>Общее число лицензий появилось, на доступно - создать отчет.</p>
+<p>Подскажите, что не так делаю? Сервер Win2008R2-64</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1633" name="comment-1633">2014-07-22 в 12:44:52</a> | <span class="comm_url">DubleSpace</span>
+<p>ОГРОМОНЕ СПАСИБОООО!</p>
+<p>На 22/07/2014 Всё работает!!!!!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1634" name="comment-1634">2014-07-22 в 12:45:39</a> | <span class="comm_url">DubleSpace</span>
+<p><b>FUCK THE SYSTEM !!!!!!!</b></p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1656" name="comment-1656">2014-08-04 в 08:34:54</a> | <span class="comm_url">Mikael</span>
+<p>Спасибо!</p>
+<p>На 04.08.2014 все работает!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1663" name="comment-1663">2014-08-10 в 18:20:36</a> | <span class="comm_url">Александр</span>
+<p><b>Windows Server 2012 R2 Datacenter</b> работает!!!</p>
+<p>Указал 100 клиентов, прокатило. Большое спасибо автору.</p>
+<p>Дата активации 10.08.2014</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1667" name="comment-1667">2014-08-12 в 21:45:03</a> | <span class="comm_url">Виталий</span>
+<p>Указал 100 клиентов. Активация прошла успешно. 12-08-2014</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1670" name="comment-1670">2014-08-14 в 14:35:18</a> | <span class="comm_url">Юрий</span>
+<p>Активировал на 100 клиентовю Автору спасибо! 14.08.2014</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1683" name="comment-1683">2014-08-25 в 20:30:21</a> | <span class="comm_url">AssA</span>
+<p>Все на ура - работает!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1684" name="comment-1684">2014-08-26 в 20:41:08</a> | <span class="comm_url">alexruban</span>
+<p>Если нужно активировать обычную виндовс, то активатор здесь:</p>
+<p>http://rubana.ru/soft/9-aktivator-windows-7.html</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1699" name="comment-1699">2014-09-08 в 13:24:53</a> | <span class="comm_url">dar_veter</span>
+<p>красава, всё пашет, 08-09-2014 <b>Ъ</b></p>
+</li>
+<li class="comusers light"><a class="date" href="#comment-1700" name="comment-1700">2014-09-08 в 17:11:02</a> | <span class="comm_url"><a href="http://mdex-nn.ru/users/93">NT</a></span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=5a8b361acbf2c886f3f7fee70bd680fd&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Подскажите плз, после выполнения инструкции, пишет: </p>
+<p>режим лицензирования удаленных рабочих столов не настроен службы будут остановленычерез 117 рабочих дней...</p>
+</li>
+<li class="users"><a class="date" href="#comment-1702" name="comment-1702">2014-09-09 в 10:42:02</a> | <span class="comm_url">dre@mer</span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=5311ce9d53cfe8eaa288e9a91281a3e8&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Вы не забыли прописать свой сервер в качестве сервера лицензий?</p>
+<p>Для 2008R2 зайдите в "Диспетчер сервера -> Службы удаленных рабочих столов -> Конфигурация узла сеансов удаленных рабочих столов -> Диагностика лицензирования. Посмотрите что у вас там делается.</p>
+<p>Для WinServer 2012 можете почитать об этом http://mdex-nn.ru/page/terminalnyj-server-na-windows-server-2012.html</p>
+</li>
+<li class="comusers light"><a class="date" href="#comment-1703" name="comment-1703">2014-09-09 в 13:18:48</a> | <span class="comm_url"><a href="http://mdex-nn.ru/users/93">NT</a></span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=5a8b361acbf2c886f3f7fee70bd680fd&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Да действительно, спасибо все отлично 09,09,2014!!!!!!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1714" name="comment-1714">2014-09-17 в 16:48:24</a> | <span class="comm_url">Василий</span>
+<p>Отлично, всё работает. Благодарю.</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1724" name="comment-1724">2014-09-21 в 18:30:40</a> | <span class="comm_url">Євген</span>
+<p>Дякую</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1729" name="comment-1729">2014-09-25 в 11:59:10</a> | <span class="comm_url">r00t</span>
+<p>Работает 2008р2</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1730" name="comment-1730">2014-09-25 в 15:01:28</a> | <span class="comm_url">Ден</span>
+<p>не работает ! 25.09.2014</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1731" name="comment-1731">2014-09-26 в 07:34:02</a> | <span class="comm_url">Ден</span>
+<p>Забираю свои слова назад ! </p>
+<p>Утром пришел, все с нуля сделали и заработало !!! Работает 26.09.2014 win2003r2x64</p>
+<p>Благодарю !</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1737" name="comment-1737">2014-09-30 в 14:49:05</a> | <span class="comm_url">Vilka</span>
+<p>Огромное спасибо и уважуха автору!</p>
+<p>Делал по шагам.</p>
+<p>W2008Rx64</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1746" name="comment-1746">2014-10-03 в 21:00:17</a> | <span class="comm_url">vova</span>
+<p>Автору респект и уважуха.</p>
+<p>Win2003SE sp2 сработало.</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1752" name="comment-1752">2014-10-09 в 13:43:23</a> | <span class="comm_url">Михаил</span>
+<p>09,10,14 не работает, ошибка </p>
+<p>Ваш запрос не может быть обработан. Проверьте правильность предоставленных сведений и повторите запрос. При повторном возникновении этой проблемы попробуйте использовать другой метод подключения.</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1754" name="comment-1754">2014-10-10 в 09:47:54</a> | <span class="comm_url">Денис</span>
+<p><b>10,10,2014</b></p>
+
+<pre>Спасибо огромнейшее, все робит =) Вот бы теперь только не сбросилось</pre>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1755" name="comment-1755">2014-10-10 в 09:48:43</a> | <span class="comm_url">Денис</span>
+<p>А да, Windows Server 2008 R2 Standard </p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1756" name="comment-1756">2014-10-10 в 14:44:20</a> | <span class="comm_url">Антон</span>
+<p>Спасибо!</p>
+<p>На Windows Server 2012 R2 работает :))</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1762" name="comment-1762">2014-10-13 в 13:17:58</a> | <span class="comm_url">Аноним</span>
+<p>Поделитесь рабочими номерами соглашений</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1795" name="comment-1795">2014-10-28 в 13:42:29</a> | <span class="comm_url">Евгений</span>
+<p>Спасибо!!!!!</p>
+<p>28,10,14. работает!!!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1796" name="comment-1796">2014-10-31 в 12:01:21</a> | <span class="comm_url">Валерий</span>
+<p>Спасибо! =)</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1814" name="comment-1814">2014-11-11 в 13:52:37</a> | <span class="comm_url">Евгений</span>
+<p>Шикарная статья</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1834" name="comment-1834">2014-11-26 в 23:21:06</a> | <span class="comm_url">Николай</span>
+<p>Активирую этим способом уже 3-й сервер. Все работает! Спасибо!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1836" name="comment-1836">2014-11-27 в 14:50:35</a> | <span class="comm_url">Lysh</span>
+<p>Шикарно! Спасибо большое. 27.11.2014 Всё работает</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1838" name="comment-1838">2014-11-28 в 10:08:16</a> | <span class="comm_url">Алекс29рус</span>
+<p><b>Спасибо работает! WindowsSever2012R2!</b></p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1845" name="comment-1845">2014-12-04 в 18:37:24</a> | <span class="comm_url">Евгений</span>
+<p>Спасибо, работает!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1878" name="comment-1878">2015-01-03 в 17:15:21</a> | <span class="comm_url">ОНОТОЛЕ</span>
+<p>3.01.2015 --- работает</p>
+<p>ОГРОМНОЕ спасибо, хлопцы)))</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1889" name="comment-1889">2015-01-12 в 19:31:03</a> | <span class="comm_url">Дмитрий</span>
+<p>Ошибка. </p>
+<p>Диспетчер сервера -> Службы удаленных рабочих столов -> Конфигурация узла сеансов удаленных рабочих столов -> Диагностика лицензирования.</p>
+<p>Пишет: "Льготный период использования сервера узла сеансов удаленных рабочих столов еще не истек, однако..."</p>
+<p>Хотя в диспетчере лицензирования удаленных рабочих столов Состояние - Активирован. Можете помочь разобраться?</p>
+</li>
+<li class="users light"><a class="date" href="#comment-1890" name="comment-1890">2015-01-12 в 21:03:05</a> | <span class="comm_url">dre@mer</span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=5311ce9d53cfe8eaa288e9a91281a3e8&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Вы не забыли указать что используете свой сервера лицензий? Про то как это сделать на WinServer 2012 написано тут:</p>
+<p><a href="http://mdex-nn.ru/page/terminalnyj-server-na-windows-server-2012.html">http://mdex-nn.ru/page/terminalnyj-server-na-windows-server-2012.html</a></p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1891" name="comment-1891">2015-01-12 в 21:48:38</a> | <span class="comm_url">Дмитрий</span>
+<p>Спасибо. Уже разобрался. Нужно справку внимательно читать. Нужно было указать локальный сервер лицензий.</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1896" name="comment-1896">2015-01-17 в 11:57:19</a> | <span class="comm_url">аноним1</span>
+<p>на 19.01.2015 тоже работает</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1911" name="comment-1911">2015-01-26 в 13:20:41</a> | <span class="comm_url">Lyashenko</span>
+<p>26-01-2015 Активация актуальна. Автор большое тебе спасибо</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1915" name="comment-1915">2015-01-28 в 13:08:00</a> | <span class="comm_url">Лёва</span>
+<p>Активировал! Автору спасибо огормнейшее!!!!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1919" name="comment-1919">2015-01-29 в 22:53:55</a> | <span class="comm_url">iDeAl</span>
+<p>Народ, по данной статье активировал несколько 2008. А сейчас столкнулся с такой траблой. Есть 2012 сервак с несколькими активированными лицензиями на устройство. Можно ли как то их отозвать или разактивировать и все сделать по этой статье... или по какому то схожему алгоритму?</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1936" name="comment-1936">2015-02-20 в 01:26:47</a> | <span class="comm_url">timofey</span>
+<p>Все работает! 2008R2. Спасибо огромное! </p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1947" name="comment-1947">2015-02-27 в 11:45:58</a> | <span class="comm_url">Russiagreat</span>
+<p>2012 R2 -Работает, спасибо!!!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-1984" name="comment-1984">2015-03-25 в 12:21:23</a> | <span class="comm_url">Жека</span>
+<p>Работает в марте 2015)</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-1985" name="comment-1985">2015-03-25 в 15:28:42</a> | <span class="comm_url">влад</span>
+<p>25 марта 2015, win2003, всё работает. спасибо!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2001" name="comment-2001">2015-04-01 в 12:18:46</a> | <span class="comm_url">Vladislav</span>
+<p>Спасибо! Помогло!</p>
+<p>Как отозвать клиентскую лицензию служб удаленных рабочих столов «на устройство»?</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2019" name="comment-2019">2015-05-04 в 18:53:29</a> | <span class="comm_url">Asdop</span>
+<p>Слишком уж майкрософт дорогой сейчас, доллар и санкции сыграли большую роль. Мы в новом офисе организовали терминальный сервер через Thinstuff с тонкими клиентами и WTware. Получилось вполне неплохо, а экономия просто огромная. http://thinstuf.ru/</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2020" name="comment-2020">2015-05-04 в 23:39:50</a> | <span class="comm_url">Евгений</span>
+<p>Благодарю всё получилось</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2031" name="comment-2031">2015-05-21 в 17:19:17</a> | <span class="comm_url">Аноним</span>
+<p>алилуиа!!!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2043" name="comment-2043">2015-06-03 в 20:27:39</a> | <span class="comm_url">Дмитрий</span>
+<p>Спасибо!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2059" name="comment-2059">2015-07-02 в 11:01:48</a> | <span class="comm_url">InjectoR</span>
+<p>На 02.07.2015 метод работает! 2008R2 Standart.</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2070" name="comment-2070">2015-07-15 в 09:25:39</a> | <span class="comm_url">Alibaba</span>
+<p>ВСЕ ОК на 07.15.2015</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2076" name="comment-2076">2015-07-23 в 19:28:12</a> | <span class="comm_url">Билл Гейтс</span>
+<p>Разрешаю, пользуйтесь на здоровье!!!:))))</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2108" name="comment-2108">2015-09-12 в 18:08:12</a> | <span class="comm_url">Fitter</span>
+<p>W2k8 R2 Standart Полет нормальнй!</p>
+<p>Автору респект. </p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2117" name="comment-2117">2015-09-21 в 23:38:29</a> | <span class="comm_url">vitasint</span>
+<p>сам не верю, но работает!!! в конце не забудьте указать сервер лицензирования</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2134" name="comment-2134">2015-10-14 в 12:23:18</a> | <span class="comm_url">Skm</span>
+<p>13.10.2015 Windows Server 2008 R2 Активировал на 100 пользователей</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2140" name="comment-2140">2015-10-26 в 14:50:24</a> | <span class="comm_url">иван</span>
+<p>26-10-2015 windows 2012r2  - Работает!</p>
+</li>
+<li class="comusers light"><a class="date" href="#comment-2145" name="comment-2145">2015-10-31 в 14:45:42</a> | <span class="comm_url"><a href="http://mdex-nn.ru/users/114">compdv</a></span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=2a73262d10f58e7a19f23a0dd1eff939&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>Перестал это способ работать ( хотя раньше я им пользовался и все было хорошо ). Выдается сообщение </p>
+<p>"Ваш запрос не может быть обработан. Убедитесь, что вы предоставили всю необходимую информацию точно , а затем повторно передать запрос . Если проблема не устраняется , обратитесь в службу технической поддержки корпорации Майкрософт" . </p>
+<p>Пробовал все указанные коды</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2146" name="comment-2146">2015-10-31 в 21:11:43</a> | <span class="comm_url">ttt</span>
+<p>Работает. север 2008 р2 х64</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2155" name="comment-2155">2015-11-21 в 10:13:13</a> | <span class="comm_url">Аноним</span>
+<p>Огромное спасибо, очень помогло</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2157" name="comment-2157">2015-11-27 в 11:26:39</a> | <span class="comm_url">анонимус</span>
+<p>работает! всякой лабудой заполнил, далее далее, готово) 6565792 - этот номер почему то не прокатил..2 других - подошли без вопросов</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2164" name="comment-2164">2015-12-02 в 00:58:47</a> | <span class="comm_url">МоёИмя</span>
+<p>Спасибо! Очень полезно! </p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2167" name="comment-2167">2015-12-06 в 11:53:08</a> | <span class="comm_url">Артур</span>
+<p>Спасибо, прокатило, но есть вопрос</p>
+<p>Захожу в Диспетчер сервера-Роли-Конфигурация узла удаленных рабочих столов-Диагностика лицензирования, пишет что Чисто лицензий, доступных клиентам 0, и в предупреждениях такое сообщение "Сервер узла сеансов удаленных рабочих столов находится в режиме лицензирования На устройство и режиме перенаправителя Нет, однако на сервере лицензирования termate не установлены лицензии установлено со следующими атрибутами: </p>
+<p>Версия продукта: Windows Server 2008 или Windows Server 2008 R2 </p>
+<p>Режим лицензирования: На устройство </p>
+<p>Тип лицензии: клиентские лицензии служб удаленных рабочих столов или лицензии VDI Premium Suite"</p>
+<p>Это нормальное явление?</p>
+</li>
+<li class="comusers light"><a class="date" href="#comment-2222" name="comment-2222">2016-02-25 в 12:50:50</a> | <span class="comm_url"><a href="http://mdex-nn.ru/users/121">J()KER</a></span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=e2728f79134549f18498b8d9f5024ae5&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>лучше не забывать сделать ещё:</p>
+<p>конфигурация сервера узла сеансов удалённых рабочих столов - лицензирование - серверы... - на пользователя и localhost</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2224" name="comment-2224">2016-03-02 в 15:49:03</a> | <span class="comm_url">Максим</span>
+<p>Здравствуйте. Смог поставить лицензию на windows server 2008r2, вроде пашет, не выдает предупреждений, что на 120 дней. </p>
+<p>На этом же сервере стоит vmware и развернуты виртуалки с тем же windows server 2008r2, скажите пожалуйста, как rdp лицензировать, потому что срок в 120 дней проходит через 13 дней. Спасибо.</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2248" name="comment-2248">2016-04-14 в 16:41:38</a> | <span class="comm_url">Gr Inc</span>
+<p>Огромное спасибо!</p>
+<p>на 14.04.2016 все отлично работает!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2261" name="comment-2261">2016-05-06 в 11:46:06</a> | <span class="comm_url">Vik</span>
+<p>Спасибо всеробит!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2267" name="comment-2267">2016-05-27 в 16:15:49</a> | <span class="comm_url">арти</span>
+<p>Все работает, 27.05.2016 ! Спасибо!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2273" name="comment-2273">2016-06-16 в 08:26:51</a> | <span class="comm_url">Вася</span>
+<p>16.06.2016 Способ работает. Поставил на 2008r2</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2283" name="comment-2283">2016-06-28 в 23:20:30</a> | <span class="comm_url">sciensys</span>
+<p>как вариант, получение временной лицензии на 120 дней, ну скажем с января 2040 года до мая 2040. (если установлен сервер лицензий, а то бывают случаи)</p>
+<p>крутим дату на DC, потом на сервере и на клиенте, после выдачи можно крутнуть в текущую дату. порядок важен, а то потом можно и не попасть на серв :)))</p>
+<p>времянку проверяем в менеджере.</p>
+<p>если ошибнулись, то придёться сменить имя машины клиента и повторить процедуру, сброс MSLicensing в реестре вроде не помогал в данном случае, но могу ошибаться, не помню уже.</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2288" name="comment-2288">2016-07-11 в 03:38:40</a> | <span class="comm_url">lexs</span>
+<p>Спасибо!</p>
+<p>По состоянию на лето 2016 все еще работает :)</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2291" name="comment-2291">2016-07-29 в 12:04:18</a> | <span class="comm_url">paf</span>
+<p>29/07/16 2012r2 - все гуд</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2300" name="comment-2300">2016-08-09 в 17:06:56</a> | <span class="comm_url">Mike</span>
+<p>На момент 9 августа 2016г, сервер 2012 данный метод все еще работает! Спасибо тебе, автор!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2308" name="comment-2308">2016-08-29 в 10:16:20</a> | <span class="comm_url">ExNRF</span>
+<p>СПАСИБО БОЛЬШОЕ!</p>
+<p>Win Server 2008 Datacenter (не R2)</p>
+</li>
+<li class="comusers"><a class="date" href="#comment-2316" name="comment-2316">2016-09-22 в 12:55:04</a> | <span class="comm_url"><a href="http://mdex-nn.ru/users/125">artyut</a></span><span style="display: none"><![CDATA[<noindex>]]></span><img src="http://www.gravatar.com/avatar.php?gravatar_id=357f1f6a4c8178fa8e105bfde23c3d05&amp;size=32" alt="avatar" class="gravatar"><span style="display: none"><![CDATA[</noindex>]]></span>
+<p>СПАСИБО! Все работает!!!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2329" name="comment-2329">2016-10-05 в 08:30:16</a> | <span class="comm_url">Сергей</span>
+<p>октябрь 16  -  РАБОТАЕТ!!! Спасибо</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2332" name="comment-2332">2016-10-07 в 14:27:16</a> | <span class="comm_url">Димон</span>
+<p>Драсти вопрос 2008 R2  не активирован, но очень нужны службы терминалов, как быть, если подключу его к инету винда ругаться начнет?..... </p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2337" name="comment-2337">2016-10-18 в 20:42:10</a> | <span class="comm_url">Аноним</span>
+<p>18.10.2016 - работает! Спасибо!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2345" name="comment-2345">2016-11-01 в 00:50:42</a> | <span class="comm_url">kamrad</span>
+<p>31.10.16 работает</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2360" name="comment-2360">2016-11-20 в 15:18:17</a> | <span class="comm_url">Воин</span>
+<p>Огромная человеческая благодарность!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2362" name="comment-2362">2016-11-28 в 10:36:52</a> | <span class="comm_url">zAdmin1976</span>
+<p>Спасибо! Очень помогло...</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2367" name="comment-2367">2016-12-06 в 23:27:38</a> | <span class="comm_url">Аноним</span>
+<p>Работает</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2370" name="comment-2370">2016-12-12 в 15:57:22</a> | <span class="comm_url">Мухортов Дмитрий</span>
+<p>Автор, спасибо, все работает!!!!!!!!!!! 12.12.2016</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2382" name="comment-2382">2016-12-27 в 17:41:24</a> | <span class="comm_url">Аноним</span>
+<p>27.12.2016 Все работает. Огромное спасибо автору.</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2415" name="comment-2415">2017-01-19 в 02:17:00</a> | <span class="comm_url">Андрей</span>
+<p> windows 2012r2 19.01.2017 все работает всем спасибо ))))</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2418" name="comment-2418">2017-01-20 в 16:51:50</a> | <span class="comm_url">ыы</span>
+<p>январь 2017 работает!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2419" name="comment-2419">2017-01-23 в 18:43:39</a> | <span class="comm_url">Fess</span>
+<p>На 23 января 2017 по прежнему работает. Респект!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2523" name="comment-2523">2017-04-07 в 07:21:13</a> | <span class="comm_url">ashetray</span>
+<p>07.04.2017 Работает!!!</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2531" name="comment-2531">2017-04-11 в 12:42:01</a> | <span class="comm_url">Egik</span>
+<p>Огромное спасибо! Помогло!</p>
+<p>На состояние 2017.04.10 РАБОТАЕТ!</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2535" name="comment-2535">2017-04-14 в 16:41:18</a> | <span class="comm_url">Sky</span>
+<p>По состоянию на текущий момент (14.04.17) <b>подтверждаю работоспособность на WinSrv 2016</b> тестировалось на виртуалке.</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2537" name="comment-2537">2017-04-17 в 11:43:58</a> | <span class="comm_url">smbd</span>
+<p>17.04.2017 работает, спасибо</p>
+</li>
+<li class="anonim light"><a class="date" href="#comment-2546" name="comment-2546">2017-04-20 в 23:49:35</a> | <span class="comm_url">Аноним</span>
+<p>апрель 2017, все еще работает. Спасибо автору.</p>
+</li>
+<li class="anonim"><a class="date" href="#comment-2586" name="comment-2586">2017-05-30 в 08:25:59</a> | <span class="comm_url">NICK</span>
+<p>Спсибо! 08R2 30.05.2017  - работает!</p>
+</li></ol></div>
+<div class="reklama">
+<!-- Яндекс.Директ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 73889;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'utf-8';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'flat';
+yandex_direct_limit = 1;
+yandex_direct_title_font_size = 2;
+yandex_direct_title_color = '1986B5';
+yandex_direct_url_color = '1986B5';
+yandex_direct_text_color = '444444';
+yandex_direct_hover_color = 'FF3300';
+yandex_direct_favicon = true;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+</div><div id="hypercomments_widget"></div>
+<script type="text/javascript">
+_hcwp = window._hcwp || [];
+_hcwp.push({widget:"Stream", widget_id: 25690});
+(function() {
+if("HC_LOAD_INIT" in window)return;
+HC_LOAD_INIT = true;
+var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/25690/"+lang+"/widget.js";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hcc, s.nextSibling);
+})();
+</script>
+<IDXSKIP><a href="http://hypercomments.com" class="hc-link" title="comments widget">comments powered by HyperComments</a></IDXSKIP><div class="break"></div><form action="" method="post">
+<div class="comment-form">
+  <input type="hidden" name="comments_page_id" value="267">
+  <input type="hidden" value="a73e21cb34b4e5f998887caf0d59d079" name="comments_session">													<div class="comments-noreg">
+						<input type="radio" name="comments_reg" id="comments_reg_1" value="noreg"  checked="checked" class="no-margin""><IDXSKIP><span>Без регистрации</span></IDXSKIP><br/>
+						<input type="text"  placeholder="ваше имя" name="comments_author" id="comments_author" class="input-text" onfocus="document.getElementById('comments_reg_1').checked = 'checked';">
+						<span><i><small><IDXSKIP>ваш комментарий будет опубликован после проверки</IDXSKIP></i></small></span>
+					</div>		
+							
+			<div class="comments-reg">
+									<input type="radio" name="comments_reg" id="comments_reg_2" value="reg"> 
+				<IDXSKIP><span>Регистрация на сайте</span></IDXSKIP><br/>
+				<input type="text" placeholder="ваш e-mail" name="comments_email" id="comments_email" class="input-text" onfocus="document.getElementById('comments_reg_2').checked = 'checked';">
+				<input type="password" placeholder="пароль" name="comments_password" id="comments_password" value="" class="input-text" onfocus="document.getElementById('comments_reg_2').checked = 'checked';">
+<p class="regtxt"><IDXSKIP>На указанный адрес будет отправлено письмо с кодом активации. Вы можете настроить собственный профиль и стать активным участником или автором.</IDXSKIP></p>
+			</div>
+						
+		</div>
+		<div class="comments-textarea">
+			<IDXSKIP><p class="comment_button">
+	<button type="button" class="comment_button_b" title="Полужирный" onClick="addText('<b>', '</b>') ">B</button>
+	<button type="button" class="comment_button_i" title="Курсив" onClick="addText('<i>', '</i>') ">I</button>
+	<button type="button" class="comment_button_u" title="Подчеркнутый" onClick="addText('<u>', '</u>') ">U</button>
+	<button type="button" class="comment_button_s" title="Зачеркнутый" onClick="addText('<s>', '</s>') ">S</button>
+	<button type="button" class="comment_button_blockquote" title="Цитата" onClick="addText('<blockquote>', '</blockquote>') ">Цитата</button>
+	<button type="button" class="comment_button_pre" title="Код или преформатированный текст" onclick="addText('<pre>', '</pre>') ">Код</button>
+	</p></IDXSKIP>			<textarea class="input-text textarea" name="comments_content" id="comments_content" rows="7"  placeholder="Оставьте свой комментарий..."></textarea><br/>
+			
+			<input type="text" placeholder="введите нижние символы" name="comments_captha" id="comments_captha" value="" maxlength="4" class="input-text captha"> <img src="http://mdex-nn.ru/application/maxsite/plugins/captcha/img.php?image=a73e21cb34b4e5f998887caf0d59d079&amp;page=aktivacija-terminalnogo-servera-winserver-2008-r2.html&amp;code=1497377974" alt="" title="Защита от спама: введите только нижние символы">
+					
+			<input name="comments_submit" type="submit" value="КОММЕНТИРОВАТЬ" class="button_submit">
+		</div>
+</form>
+
+</div><!-- class="type type_page_comments" -->
+
+</div><!-- class="type type_page" -->
+</div><!-- END content -->
+
+
+<div id="sidebar" class="col-md-4 hidden-xs">
+<IDXSKIP><div id="rss_twitter">
+  <a href="http://mdex-nn.ru/feed"><img src="http://mdex-nn.ru/application/maxsite/templates/easy/img/icon-rss.png" alt="подписаться на RSS" /></a>
+  <a href="http://twitter.com/#!/_mdex_" target="_blank"><img src="http://mdex-nn.ru/application/maxsite/templates/easy/img/icon-twitter.png" alt="следуйте за мной в twitter" /></a>
+</div></IDXSKIP>
+
+
+<div class="widget widget_1_1 category_widget category_widget_0"><div class="w0"><div class="w1"><IDXSKIP><h2 class="box"><span>Категории</span></h2></IDXSKIP>
+<ul class="is_link">
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/nix" title="NIX">*NIX<sup>49</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/apple-world" title="Apple изнутри">Apple изнутри<sup>111</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/mobilis" title="Mobilis">Mobilis<sup>24</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/soft" title="Soft">Soft<sup>35</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/tips-tricks" title="Tips and Tricks">Tips and Tricks<sup>81</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/web" title="Web-мастеринг">Web-мастеринг<sup>72</sup></a><br></li></IDXSKIP>
+<li><a href="http://mdex-nn.ru/category/windows" title="Windows" class="curent-page-cat">Windows<sup>79</sup></a><br></li>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/avtolife" title="Автожизнь">Автожизнь<sup>24</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/virusologiya" title="Безопасность. Вирусы">Безопасность. Вирусы<sup>38</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/zhelezo" title="Железо">Железо<sup>49</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/media" title="Медиа">Медиа<sup>54</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/life" title="Мысли вслух">Мысли вслух<sup>60</sup></a><br></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/uslugi" title="Услуги">Услуги<sup>5</sup></a><br></li></IDXSKIP>
+</ul>
+</div><div class="w2"></div></div></div>
+
+<div class="widget widget_1_2 ushki_widget ushki_widget_yandexdirect"><div class="w0"><div class="w1"><!-- Яндекс.Директ -->
+<script type="text/javascript">
+yandex_partner_id = 73889;
+yandex_site_bg_color = 'FFFFFF';
+yandex_ad_format = 'direct';
+yandex_font_size = 1;
+yandex_direct_type = 'flat';
+yandex_direct_limit = 4;
+yandex_direct_title_font_size = 3;
+yandex_direct_links_underline = true;
+yandex_direct_title_color = '1986B5';
+yandex_direct_url_color = '1986B5';
+yandex_direct_text_color = '444444';
+yandex_direct_hover_color = 'FF3300';
+yandex_direct_favicon = true;
+yandex_no_sitelinks = true;
+document.write('<scr'+'ipt type="text/javascript" src="//an.yandex.ru/system/context.js"></scr'+'ipt>');
+</script></div><div class="w2"></div></div></div>
+
+<div class="widget widget_1_3 tagclouds_widget tagclouds_widget_0"><div class="w0"><div class="w1"><IDXSKIP><h2 class="box"><span>Облако тэгов</span></h2></IDXSKIP><div class="tagclouds"><IDXSKIP><span style="font-size: 230%"><a href="http://mdex-nn.ru/tag/Apple">Apple</a><sub style="font-size: 7pt;">21</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 216%"><a href="http://mdex-nn.ru/tag/OS+X">OS X</a><sub style="font-size: 7pt;">19</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 209%"><a href="http://mdex-nn.ru/tag/FreeBSD">FreeBSD</a><sub style="font-size: 7pt;">18</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 174%"><a href="http://mdex-nn.ru/tag/iPhone">iPhone</a><sub style="font-size: 7pt;">13</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 160%"><a href="http://mdex-nn.ru/tag/%D1%82%D1%80%D0%BE%D1%8F%D0%BD">троян</a><sub style="font-size: 7pt;">11</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 160%"><a href="http://mdex-nn.ru/tag/Windows">Windows</a><sub style="font-size: 7pt;">11</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 153%"><a href="http://mdex-nn.ru/tag/Mac+OS+X">Mac OS X</a><sub style="font-size: 7pt;">10</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 153%"><a href="http://mdex-nn.ru/tag/iTunes">iTunes</a><sub style="font-size: 7pt;">10</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 146%"><a href="http://mdex-nn.ru/tag/%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80">терминальный сервер</a><sub style="font-size: 7pt;">9</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 146%"><a href="http://mdex-nn.ru/tag/iPad">iPad</a><sub style="font-size: 7pt;">9</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 139%"><a href="http://mdex-nn.ru/tag/%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BE%D1%87%D0%BD%D0%B0%D1%8F+%D1%84%D0%BB%D0%B5%D1%88%D0%BA%D0%B0">загрузочная флешка</a><sub style="font-size: 7pt;">8</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 139%"><a href="http://mdex-nn.ru/tag/%D1%8E%D0%BC%D0%BE%D1%80">юмор</a><sub style="font-size: 7pt;">8</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 139%"><a href="http://mdex-nn.ru/tag/%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F">презентация</a><sub style="font-size: 7pt;">8</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 132%"><a href="http://mdex-nn.ru/tag/%D0%B4%D0%B2%D0%B8%D0%B6%D0%BE%D0%BA+%D0%B4%D0%BB%D1%8F+%D1%81%D0%B0%D0%B9%D1%82%D0%B0">движок для сайта</a><sub style="font-size: 7pt;">7</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 132%"><a href="http://mdex-nn.ru/tag/OpenVPN">OpenVPN</a><sub style="font-size: 7pt;">7</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 132%"><a href="http://mdex-nn.ru/tag/MacBook">MacBook</a><sub style="font-size: 7pt;">7</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 132%"><a href="http://mdex-nn.ru/tag/jQuery">jQuery</a><sub style="font-size: 7pt;">7</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 132%"><a href="http://mdex-nn.ru/tag/linux">linux</a><sub style="font-size: 7pt;">7</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 132%"><a href="http://mdex-nn.ru/tag/Windows+7">Windows 7</a><sub style="font-size: 7pt;">7</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 132%"><a href="http://mdex-nn.ru/tag/%D0%BF%D1%80%D0%B5%D0%B7%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F+Apple">презентация Apple</a><sub style="font-size: 7pt;">7</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 125%"><a href="http://mdex-nn.ru/tag/iOS+7">iOS 7</a><sub style="font-size: 7pt;">6</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 125%"><a href="http://mdex-nn.ru/tag/SSD">SSD</a><sub style="font-size: 7pt;">6</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 125%"><a href="http://mdex-nn.ru/tag/Mac">Mac</a><sub style="font-size: 7pt;">6</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 118%"><a href="http://mdex-nn.ru/tag/BIOS">BIOS</a><sub style="font-size: 7pt;">5</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 118%"><a href="http://mdex-nn.ru/tag/Land+Rover">Land Rover</a><sub style="font-size: 7pt;">5</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 118%"><a href="http://mdex-nn.ru/tag/mac+mini">mac mini</a><sub style="font-size: 7pt;">5</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 118%"><a href="http://mdex-nn.ru/tag/Windows+8.1">Windows 8.1</a><sub style="font-size: 7pt;">5</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 118%"><a href="http://mdex-nn.ru/tag/%D0%BF%D0%B0%D1%80%D0%BE%D0%BB%D1%8C">пароль</a><sub style="font-size: 7pt;">5</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 118%"><a href="http://mdex-nn.ru/tag/HDD">HDD</a><sub style="font-size: 7pt;">5</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 118%"><a href="http://mdex-nn.ru/tag/bitrix">bitrix</a><sub style="font-size: 7pt;">5</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 118%"><a href="http://mdex-nn.ru/tag/%D0%B2%D0%B8%D1%80%D1%83%D1%81">вирус</a><sub style="font-size: 7pt;">5</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/iOS">iOS</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/WordPress">WordPress</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/Windows+8">Windows 8</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/DNS">DNS</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5+Windows">обновление Windows</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%B0%D1%82%D0%BE%D1%80">блокиратор</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/CSS">CSS</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/ModX">ModX</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/Squid">Squid</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 111%"><a href="http://mdex-nn.ru/tag/iFixit">iFixit</a><sub style="font-size: 7pt;">4</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 104%"><a href="http://mdex-nn.ru/tag/MySQL">MySQL</a><sub style="font-size: 7pt;">3</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 104%"><a href="http://mdex-nn.ru/tag/%D0%B2%D0%B8%D1%80%D1%83%D1%81-%D1%88%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%B0%D0%BB%D1%8C%D1%89%D0%B8%D0%BA">вирус-шифровальщик</a><sub style="font-size: 7pt;">3</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 104%"><a href="http://mdex-nn.ru/tag/%D0%B2%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5+HDD">восстановление HDD</a><sub style="font-size: 7pt;">3</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 104%"><a href="http://mdex-nn.ru/tag/Mavericks">Mavericks</a><sub style="font-size: 7pt;">3</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 104%"><a href="http://mdex-nn.ru/tag/BSOD">BSOD</a><sub style="font-size: 7pt;">3</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 104%"><a href="http://mdex-nn.ru/tag/VPN">VPN</a><sub style="font-size: 7pt;">3</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 104%"><a href="http://mdex-nn.ru/tag/UEFI">UEFI</a><sub style="font-size: 7pt;">3</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 104%"><a href="http://mdex-nn.ru/tag/%D0%BF%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%B8%D1%8F">путешествия</a><sub style="font-size: 7pt;">3</sub></span></IDXSKIP> <IDXSKIP><span style="font-size: 104%"><a href="http://mdex-nn.ru/tag/Internet+Security">Internet Security</a><sub style="font-size: 7pt;">3</sub></span></IDXSKIP> </div></div><div class="w2"></div></div></div>
+
+<div class="widget widget_1_4 ushki_widget ushki_widget_adsense"><div class="w0"><div class="w1"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-7720739955018121";
+/* mdex_left_sidebar */
+google_ad_slot = "6903256694";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div><div class="w2"></div></div></div>
+
+<div class="widget widget_1_5 last_comments_widget last_comments_widget_0"><div class="w0"><div class="w1"><IDXSKIP><h2 class="box"><span>Последние комментарии</span></h2></IDXSKIP><span class="last_comment"><IDXSKIP>Установка Windows на данный диск невозможна.</IDXSKIP></span>
+<ul class="is_link last_comment">
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/ustanovka-windows-na-dannyj-disk-nevozmozhna.html#comment-2564"><strong>Аноним »</strong>  
+Ласточка прав. у кого не заработало после смены формата диска на IDE. просто введите вBIOS первую загрузку с HARD Disk и вупля все работает. Рахмет тебе большой
+</a></li></IDXSKIP>
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/ustanovka-windows-na-dannyj-disk-nevozmozhna.html#comment-2613"><strong>Аноним »</strong>  
+Такая же ошибка но биоса нет материнка нр
+</a></li></IDXSKIP>
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/ustanovka-windows-na-dannyj-disk-nevozmozhna.html#comment-2614"><strong>Ренат »</strong>  
+Материнка нр 3397 невозможно установить винду
+</a></li></IDXSKIP>
+</ul>
+<span class="last_comment"><IDXSKIP>[Решено] Thunderbird. Не удалось подключиться к IMAP-серверу. Возможно вы превысили ограничение на максимальное число соединений к этому серверу. </IDXSKIP></span>
+<ul class="is_link last_comment">
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/ne-udalos-podkljuchitsja-k-imap-serveru.html#comment-2604"><strong>Герд »</strong>  
+Спасибо!
+Статья очень помогла. А то замучили эти выскочки-окошки.
+</a></li></IDXSKIP>
+</ul>
+<span class="last_comment"><IDXSKIP>Красный экран на iPad. Не спешите нести в сервис</IDXSKIP></span>
+<ul class="is_link last_comment">
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/krasnyj-ekran-na-ipad.html#comment-2565"><strong>Дарья »</strong>  
+Ууууу!!!!!Круто!!!! !!Работает!!Шлепнули так,что искры посыпались)))!Спасиб о за подсказку!
+</a></li></IDXSKIP>
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/krasnyj-ekran-na-ipad.html#comment-2600"><strong>Аноним »</strong>  
+Я ТЕБЯ ОБОЖАЮ 
+ОГРОМНОЕ СПАСИБО 
+</a></li></IDXSKIP>
+</ul>
+<span class="last_comment"><IDXSKIP>Windows XP Home Edition не запоминает пароли к сетевым дискам</IDXSKIP></span>
+<ul class="is_link last_comment">
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/windows-xp-home-edition-ne-zapominaet-paroli-k-setevym-diskam.html#comment-2592"><strong>Владимир »</strong>  
+В батник для паузы вставить перед командой авторизации:
+ping -n 21 127.0.0.1 >nul
+это пауза на 20 секунд
+ping -n 11 127.0.0.1 >nul
+это на 10 секунд
+</a></li></IDXSKIP>
+</ul>
+<span class="last_comment"><IDXSKIP>Активация терминального сервера Windows Server 2003/2008/2008 R2</IDXSKIP></span>
+<IDXSKIP><ul class="is_link last_comment">
+<li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/aktivacija-terminalnogo-servera-winserver-2008-r2.html#comment-2586"><strong>NICK »</strong>  
+Спсибо! 08R2 30.05.2017  - работает!
+</a></li>
+</ul></IDXSKIP>
+<IDXSKIP><span class="last_comment">Настройка DNS сервера Unbound в FreeBSD 10</span></IDXSKIP>
+<ul class="is_link last_comment">
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/nastrojka-dns-unbound-v-freebsd10.html#comment-2584"><strong>Вован »</strong>  
+В конфиг я бы еще добавил пару строк:
+        access-control: 192.168.1.0/24 allow
+        access-control: 127.0.0.0/8 allow
+</a></li></IDXSKIP>
+</ul>
+<IDXSKIP><span class="last_comment">Активация CorelDRAW X6, X7</span></IDXSKIP>
+<ul class="is_link last_comment">
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/aktivacija-coreldraw-x6-x7.html#comment-2580"><strong>Hackod »</strong>  
+Респект.
+</a></li></IDXSKIP>
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/aktivacija-coreldraw-x6-x7.html#comment-2583"><strong>Corsar »</strong>  
+огромное спасибо  - помогло
+</a></li></IDXSKIP>
+</ul>
+<IDXSKIP><span class="last_comment">Комплектации Volvo XC60</span></IDXSKIP>
+<IDXSKIP><ul class="is_link last_comment">
+<li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/komplektacii-volvo-xc60.html#comment-2582"><strong>Аноним »</strong>  
+Спасибо большое! 
+</a></li>
+</ul></IDXSKIP>
+<IDXSKIP><span class="last_comment">[Решено] Ошибка C7990 на МФУ Kyocera</span></IDXSKIP>
+<IDXSKIP><ul class="is_link last_comment">
+<li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/oshibka-c7990-kyocera.html#comment-2579"><strong>Аноним »</strong>  
+Спасибо помогло
+</a></li>
+</ul></IDXSKIP>
+<span class="last_comment"><IDXSKIP>OpenWrt. Установка и первоначальная настройка альтернативной прошивки для wi-fi роутеров на примере Linksys EA4500. Поднимаем WAN и web-интерфейс из командной строки.</IDXSKIP></span>
+<ul class="is_link last_comment">
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/openwrt-ustanovka-i-nastrojka.html#comment-2577"><strong>Павел »</strong>  
+Добрый день,  подскажите, если установить данную прошивку на это устройство, то появится ли возможность подключить к нему usb модем e3372H от "хувея", и если да, то можно ли увидеть...</a></li></IDXSKIP>
+</ul>
+<IDXSKIP><span class="last_comment">Прошивка Samsung GT-S5250</span></IDXSKIP>
+<ul class="is_link last_comment">
+<IDXSKIP><li class="last_comment_anonim"><a href="http://mdex-nn.ru/page/proshivka-samsung-gt-s5250#comment-2566"><strong>Аноним »</strong>  
+Большое спасибо, очень полезная статья. Правда прошивка для S-5250 подошла только четвёртая по счёту, все предыдущие слетали.
+</a></li></IDXSKIP>
+</ul>
+</div><div class="w2"></div></div></div>
+
+<div class="widget widget_1_6 page_views_widget page_views_widget_0"><div class="w0"><div class="w1"><IDXSKIP><h2 class="box"><span>Самое читаемое</span></h2></IDXSKIP><ul class="is_link page_views">
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/aktivacija-terminalnogo-servera-winserver-2008-r2.html" title="Просмотров в сутки: 189">Активация терминального сервера Windows Server 2003/2008/2008 R2</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/proverka-iphone-pered-pokupkoj.html" title="Просмотров в сутки: 165">Проверка б/у iPhone перед покупкой. Как узнать практически всё о телефоне по IMEI</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/ustanovka-winxp-s-fleshki.html" title="Просмотров в сутки: 163">Установка Windows XP с флешки. Простой способ создания установочной флешки WinXP.</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/nastrojka-d-link-dir300-v-rezhime-wi-fi-povtoritelja" title="Просмотров в сутки: 158">Настройка D-link DIR-300 в режиме Wi-Fi повторителя</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/oshibka-pri-zapuske-prilozhenija-0xc0000005.html" title="Просмотров в сутки: 132">Ошибка при запуске приложения (0xc0000005)</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/terminalnyj-server-na-windows-server-2012.html" title="Просмотров в сутки: 100">Терминальный сервер на Windows Server 2012 в рабочей группе</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/kak-snjat-parol-s-bios-i-hdd-notebooke.html" title="Просмотров в сутки: 88">Как снять пароль с BIOS и HDD на ноутбуке.</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/multizagruzochnaja-fleshka-winsetupfromusb.html" title="Просмотров в сутки: 85">Мультизагрузочная флешка с помощью WinSetupFromUSB</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/aktivacija-coreldraw-x6-x7.html" title="Просмотров в сутки: 80">Активация CorelDRAW X6, X7</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/page/na-kompjutere-nedostatochno-pamjati.html" title="Просмотров в сутки: 80">Сообщение "На компьютере недостаточно памяти" в Windows 8/8.1</a></li></IDXSKIP>
+</ul>
+</div><div class="w2"></div></div></div>
+
+<IDXSKIP><div class="widget widget_1_7 ushki_widget ushki_widget_follow_twitter"><div class="w0"><div class="w1"><div style="border-top:1px dashed #c0c0c0; padding:10px;">
+<a rel="nofollow" href="https://twitter.com/_mdex_" class="twitter-follow-button" data-lang="ru">Читать @_mdex_</a>
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script><br>
+<a href="http://feeds.feedburner.com/mdex-nnru"><img src="http://feeds.feedburner.com/~fc/mdex-nnru?bg=efefef&amp;fg=1986b5&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
+</div>
+</div><div class="w2"></div></div></div></IDXSKIP>
+</div>
+
+</div><!--container-->
+
+<div id="footer"><div class="container">
+<div class="hidden-xs">
+
+<div class="f_category_widget"><IDXSKIP><h2 class="box"><span>Рубрики</span></h2></IDXSKIP>
+<ul class="is_link">
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/nix" title="NIX">*NIX</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/apple-world" title="Apple изнутри">Apple изнутри</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/mobilis" title="Mobilis">Mobilis</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/soft" title="Soft">Soft</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/tips-tricks" title="Tips and Tricks">Tips and Tricks</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/web" title="Web-мастеринг">Web-мастеринг</a></li></IDXSKIP>
+<li><a href="http://mdex-nn.ru/category/windows" title="Windows" class="curent-page-cat">Windows</a></li>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/virusologiya" title="Безопасность. Вирусы">Безопасность. Вирусы</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/zhelezo" title="Железо">Железо</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/media" title="Медиа">Медиа</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/category/life" title="Мысли вслух">Мысли вслух</a></li></IDXSKIP>
+</ul>
+</div>
+</div>
+
+<div id="f_menu">
+<div class="hidden-xs">
+<IDXSKIP><h2 class="box"><span>О сайте</span></h2></IDXSKIP>
+<ul>
+<IDXSKIP><li><a href="">Партнерам</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/contact">Реклама</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/contact">Контакты</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/portfolio">Портфолио</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://mdex-nn.ru/login">Вход</a></li></IDXSKIP></ul>
+<hr>
+</div>
+
+
+	<IDXSKIP>&copy; Админ в маленьком городе, 2017<br></IDXSKIP><small><IDXSKIP>Работает на <a href="http://max-3000.com/">MaxSite CMS</a></IDXSKIP>| Время: 0.1195 | SQL: 16 | Память: 2.89MB</small><!--global_cache_footer-->
+<IDXSKIP><div class="counters">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.4;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=9671134&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/9671134/3_0_FFFFFFFF_FFFFFFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:9671134,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter9671134 = new Ya.Metrika({id:9671134,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/9671134" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</div></IDXSKIP>
+</div></div></div>
+<a id="yt-totop" class="backtotop" href="#"><i class="icon-angle-up"></i></a>
+<script type="text/javascript">
+        jQuery(".backtotop").addClass("hidden-top");
+			jQuery(window).scroll(function () {
+			if (jQuery(this).scrollTop() === 0) {
+				jQuery(".backtotop").addClass("hidden-top")
+			} else {
+				jQuery(".backtotop").removeClass("hidden-top")
+			}
+		});
+
+		jQuery('.backtotop').click(function () {
+			jQuery('body,html').animate({
+					scrollTop:0
+				}, 1200);
+			return false;
+		});
+</script>
+</body>
+</html>

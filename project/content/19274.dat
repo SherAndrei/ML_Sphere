@@ -1,0 +1,4181 @@
+forums.goha.ru/showthread_0_0_t1027070
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru">
+<head>
+	<style type="text/css">
+#optnotice
+{
+	margin-bottom: 4px;
+	padding: 8px;
+	text-align: center;
+	background: #FFFFE1;
+	border: 1px solid #999;
+	color: #000;
+}
+
+#optnotice a
+{
+	color: #00F;
+}
+#optnotice a:hover
+{
+	color: #F00;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+var optvars = {
+	bburl:         "http://forums.goha.ru",
+	querystring:   "t=1027070",
+	userfile:      "showthread",
+	dstyleid:      "67",
+	mstyleid:      "82",
+	dlangid:       "3",
+	forumid:       "4190",
+	threadid:      "1027070",
+	feature:       "",
+
+	cookie: {
+		prefix:  "bb",
+		name:    "lflag",
+		value:   "bqeGcsK5",
+		timeout: parseInt("900", 10)
+	}
+};
+
+var lflag = 0;
+var uflag = 0;
+
+(function()
+{
+	var u;
+	var url = new String(window.location);
+	var cookie = optvars.cookie;
+
+	var dourl = function(url)
+	{
+		if (window.stop)
+		{
+			window.stop();
+		}
+		window.location = url;
+	};
+
+	var set_cookie = function(name, value, expires)
+	{
+		var cookieStr = name + '=' + escape(value) + '; path=/';
+
+		if (typeof expires == 'number' && expires > 0)
+		{
+			var date = new Date();
+				date.setTime(date.getTime() + expires * 1000);
+			cookieStr += '; expires=' + date.toGMTString();
+		}
+
+		document.cookie = cookieStr;
+	};
+
+	var fetch_cookie = function(name)
+	{
+		var m = document.cookie.match(new RegExp("(?:^|; )" + name.toString().replace(/(\+|\{|\}|\(|\)|\[|\]|\||\/|\?|\^|$|\\|\.|\=|\!|\<|\>|\:|\*)/g, "\$1") + "=([^;]*)"));
+		return m ? m[1] : null;
+	};
+
+	var intval = function(i)
+	{
+		return parseInt(i, 10) || 0;
+	};
+
+	if ((u = url.match(new RegExp(optvars.userfile + "_([0-9]+)_([0-9]+)(_([a-z0-9_]+))*", "i"))) || (optvars.userfile == "index"))
+	{
+		if (fetch_cookie(cookie.prefix + cookie.name) == cookie.value)
+		{
+			lflag = 1;
+			var qstr = (optvars.querystring ? '?' + optvars.querystring.replace(/&amp;/g, "&") : '');
+
+			if (optvars.feature.length > 0)
+			{
+				qstr += ((qstr.indexOf("?") == -1) ? "?" : "&") + optvars.feature;
+			}
+
+			//var s = u ? u[1] : 0;
+			//set_cookie(cookie.prefix + 'mobilestyleid', s, 0);
+			//set_cookie(cookie.prefix + 'styleid', s, (s != optvars.mstyleid) ? 365 * 86400 : 0);
+
+			dourl(optvars.bburl + "/" + optvars.userfile + ".php" + qstr);
+		}
+		else
+		{
+			var session = {
+				lastvisit: intval(fetch_cookie(cookie.prefix + 'lastvisit')),
+				forumid: intval(fetch_cookie(cookie.prefix + 'optforumid')),
+				threadid: intval(fetch_cookie(cookie.prefix + 'optthreadid')),
+				inside: intval(fetch_cookie(cookie.prefix + 'optinside'))
+			};
+
+			var timenow = Math.ceil((new Date().getTime()) / 1000);
+			var outdated = session.lastvisit < timenow - cookie.timeout;
+			if ((optvars.forumid != session.forumid) || (optvars.threadid != session.threadid) || outdated || !session.inside)
+			{
+				uflag = 1;
+
+				set_cookie(cookie.prefix + 'lastvisit', timenow, 0);
+				set_cookie(cookie.prefix + 'optforumid', optvars.forumid, 0);
+				set_cookie(cookie.prefix + 'optthreadid', optvars.threadid, 0);
+			}
+			set_cookie(cookie.prefix + 'optinside', 1, 0);
+
+			// check style/language
+			var s = u ? u[1] : 0;
+			var l = u ? u[2] : 0;
+			var styleid = 0;
+			var langid = 0;
+
+			if (s == "0")
+			{
+				styleid = (fetch_cookie(cookie.prefix + "mobilestyleid") || fetch_cookie(cookie.prefix + "styleid"));
+				if (!styleid)
+				{
+					var m, md;
+					if (m = fetch_cookie(cookie.prefix + "mobiledevice"))
+					{
+						md = (m == 1);
+					}
+					else
+					{
+						md = navigator.userAgent.match(/(mobi|android|iphone|opera mini|windows ce|ipad|ipod|blackberry|palm)+/i) ? true : false;
+						set_cookie(cookie.prefix + 'mobiledevice', md ? 1 : 2, 0);
+					}
+					if (md)
+					{
+						styleid = optvars.mstyleid;
+					}
+				}
+				if (styleid == optvars.dstyleid)
+				{
+					styleid = 0;
+				}
+			}
+			s = styleid || s || 0;
+
+			if (l == "0")
+			{
+				langid = fetch_cookie(cookie.prefix + "languageid");
+				if (langid == optvars.dlangid)
+				{
+					langid = 0;
+				}
+			}
+			l = langid || l || 0;
+
+			if (styleid > 0 || langid > 0)
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + "_" + s + "_" + l + ((u && u[4]) ? "_" + u[4] : ""));
+			}
+			else if (u && u[1] == 0 && u[2] == 0 && optvars.userfile == "index")
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + ".php");
+			}
+		}
+	}
+})();
+// -->
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="generator" content="vBulletin 3.8.8" />
+
+<meta name="keywords" content=" F.A.Q. по игре, Skyforge, скайфордж, вопрос, ответ, видео" />
+<meta name="description" content="Skyforge: советы, гайды, видео, руководства, вопросы и ответы." />
+
+
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+/**
+* vBulletin 3.8.8 CSS
+* Style: 'GoHa.Ru'; Style ID: 67
+*/
+@import url("clientscript/vbulletin_css/style-527a2356-00067.css");
+</style>
+<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_important.css" />
+<style type="text/css">
+<!--
+.sizedsig
+{
+	max-height: 150px;
+	height: expression(this.scrollHeight > 150 ? "150px" : "hidden" );
+	overflow: hidden;
+}
+.sizedsigvip
+{
+	max-height: 225px;
+	height: expression(this.scrollHeight > 225 ? "225px" : "hidden" );
+	overflow: hidden;
+}
+// -->
+</style>
+
+
+
+<!-- / CSS Stylesheet -->
+
+
+
+<script type="text/javascript">
+<!--
+var SESSIONURL = "s=f8647378599d2e9847c78a3dccd1ccb0&";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "images/customstyles/vbgoha/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+
+
+
+	
+		<link rel="alternate" type="application/rss+xml" title="GoHa.Ru - Вопросы и ответы, Гиды и советы, FAQ - RSS Feed" href="feed/rss2/4190.xml" />
+	
+
+
+<link rel="shortcut icon" href="http://forums.goha.ru/favicon.ico" />
+
+<!-- GoHa.Ru -->
+
+<script type="text/javascript" src="clientscript/jquery.js"></script>
+
+<script type="text/javascript" src="clientscript/trmenu.js"></script>
+
+<link rel="stylesheet" type="text/css" media="screen" href="wow/wt.css" />
+
+
+<script type="text/javascript" src="http://forums.goha.ru/c02/m30a.js"></script>
+
+<!-- Preroll scripts -->
+<script type="text/javascript">window.adBlockEnabled = true;</script>
+<script type="text/javascript" src="http://www.goha.ru/app/video/adblock.teaser.js"></script>
+<script type="text/javascript" src="http://images.pub.goha.ru/imageshare/sites/files/fast/preroll.js"></script>
+<script type="text/javascript" src="http://www.goha.ru/app/video/v54/pre-roll.js"></script>
+<!-- / Preroll scripts -->
+<!-- Archebox.ru tooltips -->
+
+
+<!-- / Archebox.ru tooltips -->
+<!-- EVE-Online Fitting -->
+<script type="text/javascript" src="ghdb/js/eve/fitting.js"></script>
+<!-- / EVE-Online Fitting -->
+<!-- Database tooltip -->
+<script type="text/javascript" src="ghdb/js/dbtips.js"></script>
+<!-- / Database tooltip -->
+
+
+
+<script type="text/javascript">
+function checkVip()
+{
+	return false;
+}
+</script>
+
+<!-- / GoHa.Ru -->
+
+<script type="text/javascript" src="http://forums.goha.ru/clientscript/vbulletin_css/main-5f651b01-00040.js"></script>
+
+	
+
+<style type="text/css">
+img.bbCodeImage {
+	max-width: 800px;
+}
+.wysiwyg img.bbCodeImage {
+	max-width: 800px;
+}
+</style>
+<style type="text/css">
+.postrating_container {
+	margin-right: 8px;
+}
+.postrating_container, .postrating_counter {
+	display: inline;
+}
+.postrating_container a.postrating_link {
+	text-decoration: none;
+	font-weight: bold;
+}
+.postrating_container a.postrating_link:hover {
+	text-decoration: underline;
+}
+
+/* icon (temp) */
+/*
+.postrating_icon {
+	position: absolute;
+	left: 0;
+	top: -1px;
+}
+.postrating_link {
+	position: relative;
+	padding-left: 20px;
+}
+*/
+.postrating_title{
+	display: none;
+}
+</style>
+<script type="text/javascript">
+<!--
+vbphrase["postrating_confirminc"] = "Увеличить рейтинг сообщения #%1$s?";
+vbphrase["postrating_please_wait_prev"] = "Пожалуйста, дождитесь выполнения предыдущей операции.";
+//-->
+</script>
+<script type="text/javascript" src="clientscript/postrating.js"></script>
+<style type="text/css">
+<!--
+#scrolltotop,
+#scrolltobottom
+{
+	display: none;
+	position: fixed;
+	box-shadow: 0px 0px 5px RGBA(0, 0, 0, .3);
+	cursor: pointer;
+
+	bottom: 58px;
+	right: 10px;
+}
+
+#scrolltobottom
+{
+	bottom: 20px;
+	right: 10px;
+}
+.scrollmobile
+{
+	position: absolute !important;
+}
+.scrollmobile img
+{
+	width: 84px;
+	height: 45px;
+}
+#scrolltotop.scrollmobile
+{
+	bottom: 73px;
+}
+// -->
+</style>
+<script type="text/javascript">
+<!--
+var scrolledtop = false;
+var scrolledbottom = false;
+
+jQuery(document).ready(function()
+{
+	var mobile = false;
+	if ('ontouchstart' in window)
+	{
+		mobile = true;
+		jQuery('#scrolltotop').addClass('scrollmobile');
+		jQuery('#scrolltobottom').addClass('scrollmobile');
+	}
+
+	if (jQuery(window).scrollTop() > 100)
+	{
+		scrolledtop = true;
+		jQuery('#scrolltotop').show();
+	}
+	if (jQuery("body").height() - jQuery(window).height() - jQuery(window).scrollTop() > 100)
+	{
+		scrolledbottom = true;
+		jQuery('#scrolltobottom').show();
+	}
+
+	jQuery(window).scroll(function ()
+	{
+		if (mobile)
+		{
+			jQuery('#scrolltotop').css('bottom', -jQuery(this).scrollTop() + 73).css('right', -jQuery(this).scrollLeft() + 10);
+			jQuery('#scrolltobottom').css('bottom', -jQuery(this).scrollTop() + 20).css('right', -jQuery(this).scrollLeft() + 10);
+		}
+
+		if (jQuery(this).scrollTop() > 100)
+		{
+			if (!scrolledtop)
+			{
+				scrolledtop = true;
+				jQuery('#scrolltotop').fadeIn();
+			}
+		}
+		else
+		{
+			if (scrolledtop)
+			{
+				scrolledtop = false;
+				jQuery('#scrolltotop').fadeOut();
+			}
+		}
+
+		if (jQuery("body").height() - jQuery(this).height() - jQuery(this).scrollTop() > 100)
+		{
+			if (!scrolledbottom)
+			{
+				scrolledbottom = true;
+				jQuery('#scrolltobottom').fadeIn();
+			}
+		}
+		else
+		{
+			if (scrolledbottom)
+			{
+				scrolledbottom = false;
+				jQuery('#scrolltobottom').fadeOut();
+			}
+		}
+	});
+
+	jQuery('#scrolltotop').click(function ()
+	{
+		jQuery('body,html').animate(
+		{
+			scrollTop: 0
+		}, 600);
+		return false;
+	});
+
+	jQuery('#scrolltobottom').click(function ()
+	{
+		jQuery('body,html').animate(
+		{
+			scrollTop: jQuery("body").height() - jQuery(window).height()
+		}, 600);
+		return false;
+	});
+});
+// -->
+</script><script type="text/javascript">
+<!--
+var cqvars = {
+	imgdir_buttons: "images/customstyles/vbgoha/buttons",
+	imgdir: "images",
+	bburl: "http://forums.goha.ru",
+	cleargifpath: "clear.gif",
+	mode: "1"
+}
+
+var cquote = {
+	level: 0,
+	init: function(obj)
+	{
+		if (typeof jQuery == 'undefined')
+		{
+			console.log('cquote :: jQuery not found');
+			return;
+		}
+		var t = 'div.cquote:not(div.cquote div.cquote)';
+		obj = obj ? jQuery(obj).find(t) : jQuery(t);
+
+		obj.each
+		(
+			function(i)
+			{
+				if (cqvars.mode == 1)
+				{
+					if
+					(
+						jQuery(this).text().length > 1000 ||
+						jQuery(this).html().match(/<(iframe|object|embed)/) != null ||
+						jQuery(this).find('img:not([src^="' + cqvars.bburl + '/' + cqvars.imgdir + '"],[src^="' + cqvars.imgdir + '/"],[src*="' + cqvars.cleargifpath + '"])').length > 0
+					)
+					{
+						cquote.process(jQuery(this).closest('div.cqwrapper'));
+						return true;
+					}
+				}
+				var c = jQuery(this).children('div.cqwrapper');
+				c.each
+				(
+					function(i)
+					{
+						cquote.process(jQuery(this).find('div.cqwrapper'));
+					}
+				);
+			}
+		);
+	},
+
+	process: function(obj)
+	{
+		if (obj.length > this.level)
+		{
+			var c = jQuery(obj[this.level]);
+			var q = jQuery(obj).prev('div.cqtitle');
+			if (jQuery(q[this.level]))
+			{
+				q = jQuery(q[this.level]).show();
+				var img = jQuery('<img>')
+					.addClass('inlineimg')
+					.attr({
+						'src': cqvars.imgdir_buttons + '/collapse_thead_collapsed.gif',
+						'border': 0,
+						'alt': ''
+						})
+					.css({
+						'margin-left': '6px'
+						});
+				var s = q.children('span.thead')
+					.css({
+						'display': 'inline-block',
+						'padding': '6px',
+						'text-decoration': 'none',
+						'cursor': 'pointer'
+						})
+					.append(img);
+				s.data('q', c.children().hide());
+				s.click
+				(
+					function(e)
+					{
+						if (e.target.parentNode.tagName != 'A' )
+						{
+							jQuery(this).parent().hide().end().data('q').slideDown('fast');
+							return false;
+						}
+					}
+				);
+			}
+		}
+	}
+};
+cq_vBulletin_init = vBulletin_init;
+vBulletin_init = function()
+{
+	cq_vBulletin_init();
+	cquote.init();
+}
+cq_PostBit_Init = PostBit_Init;
+PostBit_Init = function(obj, postid)
+{
+	cq_PostBit_Init(obj, postid);
+	cquote.init(obj);
+}
+// -->
+</script>
+
+<style type="text/css">
+
+#banner > div
+{
+	width: 728px;
+	height: 90px;
+
+}
+#banner.bannersmall > div
+{
+	width: 468px;
+	height: 58px;
+	padding: 0;
+	background: none;
+}
+
+#banner.bannersmall > div div,
+#banner.bannersmall > div img,
+#banner.bannersmall > div embed,
+#banner.bannersmall > div object
+{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+#banner.bannersmall > div > div > iframe
+{
+	transform: scale(.65) translate(-29%, -30%);
+	-o-transform: scale(.65) translate(-29%, -30%);
+	-webkit-transform: scale(.65) translate(-29%, -30%);
+	-ms-transform: scale(.65) translate(-29%, -30%);
+}
+
+.kwhCNNkQNX
+{
+	display: none;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+var MDAtDMwbcN_Handler = {
+	div: null,
+	bannercont: null,
+	banner: null,
+	bannercell: null,
+	links: [],
+	timerId: 0,
+	small: false,
+
+	smallwidth: 1320,
+
+	init: function()
+	{
+		MDAtDMwbcN_Handler.replacelogo();
+
+		this.bannercont = fetch_object('banner-container');
+		this.banner = fetch_object('banner');
+		this.bannercell = fetch_object('bannercell');
+
+		if (!this.bannercont)
+		{
+			this.bannercont = fetch_object("MDAtDMwbcN");
+			this.smallwidth = 1050;
+		}
+
+		this.div = fetch_object("MDAtDMwbcN-buttons");
+		if (this.div)
+		{
+			var a = this.div.getElementsByTagName('A');
+
+			for (var i = 0; i < a.length; i++)
+			{
+				var img = a[i].getElementsByTagName('IMG');
+				if (img.length)
+				{
+					var d = YAHOO.util.Dom.getStyle(img[0], "display");
+					if (d == 'block')
+					{
+						a[i].style.zIndex = 4;
+					}
+				}
+
+				a[i].storedWidth = a[i].offsetWidth;
+				a[i].style.display = 'none';
+				this.links.push(a[i]);
+			}
+
+			this.setrealign();
+		}
+		YAHOO.util.Event.on(window, "resize", (is_ie ? this.setrealign : this.realign), this, true);
+	},
+
+	replacelogo: function()
+	{
+		var logo = document.getElementById("logo");
+		if (logo && logo.tagName == 'DIV')
+		{
+			var m = logo.innerHTML.match(/onclick="location.href=\'(.*)\';"/, "i");
+			if (m)
+			{
+				var img = logo.getElementsByTagName('IMG');
+				if (img.length)
+				{
+					img = img[0];
+					img.onclick = function(e){return true;};
+
+					var a = document.createElement('A');
+					img.parentNode.insertBefore(a, img.nextSibling); 
+					a.appendChild(img);
+					a.href = m[1];
+					a.setAttribute("target", "_blank");
+				}
+			}
+		}
+	},
+
+	setrealign: function()
+	{
+		clearTimeout(this.timerId);
+		this.timerId = setTimeout(function()
+			{
+				MDAtDMwbcN_Handler.realign();
+			}, 1);
+	},
+
+	process_small: function()
+	{
+		if (is_ie)
+		{
+			return;
+		}
+
+		var w = YAHOO.util.Dom.getViewportWidth();
+		if (w < this.smallwidth && !this.small)
+		{
+			this.small = true;
+			YAHOO.util.Dom.addClass(this.bannercell, 'bannersmall');
+			YAHOO.util.Dom.addClass(this.banner, 'bannersmall');
+			YAHOO.util.Dom.addClass(this.bannercont, 'bannersmall');
+		}
+		else if (w >= this.smallwidth && this.small)
+		{
+			this.small = false;
+			YAHOO.util.Dom.removeClass(this.bannercell, 'bannersmall');
+			YAHOO.util.Dom.removeClass(this.banner, 'bannersmall');
+			YAHOO.util.Dom.removeClass(this.bannercont, 'bannersmall');
+		}
+	},
+
+	realign: function(e)
+	{
+		this.process_small();
+
+		if (this.div)
+		{
+			var fw = this.div.offsetWidth;
+			var w = 0;
+			var ids = [];
+
+			var a = this.links;
+			for (var i = 0; i < a.length; i++)
+			{
+				w += a[i].storedWidth;
+				if (w < fw)
+				{
+					ids[i] = i;
+				}
+			}
+			for (var i = 0; i < ids.length; i++)
+			{
+				a[i].style.display = 'inline-block';
+			}
+			for (var i = 0; i < a.length; i++)
+			{
+				if (typeof ids[i] == 'undefined')
+				{
+					a[i].style.display = 'none';
+				}
+			}
+		}
+	}
+};
+// -->
+</script>
+<script type="text/javascript">
+var Social_Networks_Counter = {'networks': 8, 'visible': 5};
+var Social_Networks_Array = {"vkontakte":{"name":"vkontakte","iconsmall":{"width":16,"height":16,"src":"social\/vkontakte16.png","dimensions":" width=\"16\" height=\"16\""},"iconmedium":{"width":32,"height":32,"src":"social\/vkontakte32.png","dimensions":" width=\"32\" height=\"32\""},"popupWidth":0,"popupHeight":0,"nettitle":"\u0412\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u0435"},"facebook":{"name":"facebook","iconsmall":{"width":16,"height":16,"src":"social\/facebook16.png","dimensions":" width=\"16\" height=\"16\""},"iconmedium":{"width":32,"height":32,"src":"social\/facebook32.png","dimensions":" width=\"32\" height=\"32\""},"popupWidth":0,"popupHeight":0,"nettitle":"Facebook"},"twitter":{"name":"twitter","iconsmall":{"width":16,"height":16,"src":"social\/twitter16.png","dimensions":" width=\"16\" height=\"16\""},"iconmedium":{"width":32,"height":32,"src":"social\/twitter32.png","dimensions":" width=\"32\" height=\"32\""},"popupWidth":0,"popupHeight":0,"nettitle":"Twitter"},"google":{"name":"google","iconsmall":{"width":16,"height":16,"src":"social\/google16.png","dimensions":" width=\"16\" height=\"16\""},"iconmedium":{"width":32,"height":32,"src":"social\/google32.png","dimensions":" width=\"32\" height=\"32\""},"popupWidth":0,"popupHeight":0,"nettitle":"Google+"},"steam":{"name":"steam","iconsmall":{"width":16,"height":16,"src":"social\/steam16.png","dimensions":" width=\"16\" height=\"16\""},"iconmedium":{"width":32,"height":32,"src":"social\/steam32.png","dimensions":" width=\"32\" height=\"32\""},"popupWidth":1000,"popupHeight":700,"nettitle":"Steam"},"yandex":{"name":"yandex","iconsmall":{"width":16,"height":16,"src":"social\/yandex16.png","dimensions":" width=\"16\" height=\"16\""},"iconmedium":{"width":32,"height":32,"src":"social\/yandex32.png","dimensions":" width=\"32\" height=\"32\""},"popupWidth":0,"popupHeight":600,"nettitle":"\u042f\u043d\u0434\u0435\u043a\u0441"},"mailru":{"name":"mailru","iconsmall":{"width":16,"height":16,"src":"social\/mailru16.png","dimensions":" width=\"16\" height=\"16\""},"iconmedium":{"width":32,"height":32,"src":"social\/mailru32.png","dimensions":" width=\"32\" height=\"32\""},"popupWidth":0,"popupHeight":0,"nettitle":"Mail.Ru"},"odnoklassniki":{"name":"odnoklassniki","iconsmall":{"width":16,"height":16,"src":"social\/odnoklassniki16.png","dimensions":" width=\"16\" height=\"16\""},"iconmedium":{"width":32,"height":32,"src":"social\/odnoklassniki32.png","dimensions":" width=\"32\" height=\"32\""},"popupWidth":0,"popupHeight":0,"nettitle":"\u041e\u0434\u043d\u043e\u043a\u043b\u0430\u0441\u0441\u043d\u0438\u043a\u0438"}};
+</script>
+<style type="text/css">
+.sociallogin{display:inline-block;padding-left:20px;min-height:16px;background-position:left;background-repeat:no-repeat;}
+.sociallogin[data-netname="vkontakte"]{background-image:url("images/customstyles/vbgoha/misc/social/vkontakte16.png");background-size:16px 16px;}
+.sociallogin[data-netname="facebook"]{background-image:url("images/customstyles/vbgoha/misc/social/facebook16.png");background-size:16px 16px;}
+.sociallogin[data-netname="twitter"]{background-image:url("images/customstyles/vbgoha/misc/social/twitter16.png");background-size:16px 16px;}
+.sociallogin[data-netname="google"]{background-image:url("images/customstyles/vbgoha/misc/social/google16.png");background-size:16px 16px;}
+.sociallogin[data-netname="steam"]{background-image:url("images/customstyles/vbgoha/misc/social/steam16.png");background-size:16px 16px;}
+.sociallogin[data-netname="yandex"]{background-image:url("images/customstyles/vbgoha/misc/social/yandex16.png");background-size:16px 16px;}
+.sociallogin[data-netname="mailru"]{background-image:url("images/customstyles/vbgoha/misc/social/mailru16.png");background-size:16px 16px;}
+.sociallogin[data-netname="odnoklassniki"]{background-image:url("images/customstyles/vbgoha/misc/social/odnoklassniki16.png");background-size:16px 16px;}
+.socialpostbiticons{display: inline-block;padding: 4px 0;}
+</style>
+
+<script type="text/javascript">
+Social.set_phrase('login_with_x', 'Войти с помощью %1$s');
+
+Social.set_phrase('more_networks', 'Еще социальные сети');
+
+
+YAHOO.util.Event.onDOMReady(function(e)
+{
+	Social.construct_buttons('');
+});
+</script>
+
+<style type="text/css">
+.socialbuttons a
+{
+	display: inline-block;
+}
+.socialauthsmall
+{
+	padding: 3px;
+}
+.socialauthsmall:before
+{
+	content: 'Войти с помощью: ';
+}
+.socialauthsmall.orauth:before
+{
+	content: ': ';
+}
+.socialauthmedium
+{
+	padding: 3px;
+	text-align: right;
+}
+
+</style>
+<script type="text/javascript">
+var LiveIcon_Data = {
+	'iconname'   : 'liveicon',
+	'classlist'  : ['streams', 'forums'],
+	'items'      : {"forums":{"thread:1191776":{"type":"article","threadid":"1191776","threadtitle":"E3 2017: Bethesda - \u0413\u043b\u0430\u0432\u043d\u044b\u0435 \u0430\u043d\u043e\u043d\u0441\u044b \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u0438","forumid":"1525","forumtitle":"\u0421\u0442\u0430\u0442\u044c\u0438 \u0438 \u043e\u0431\u0437\u043e\u0440\u044b","userid":"65562","username":"Tapik","dateline":"1497529391","avatarurl":"__F_Shared\/frm_avatar\/thumbs\/avatar65562_138.gif"}}},
+	'templates'  : {"menuitemstreams":"<table class=\"liveiconmenuitem\" width=\"100%\" cellspacing=\"0\" cellpadding=\"4\" border=\"0\">\
+		<tr valign=\"top\">\
+			<td>\
+				<img class=\"preview\" src=\"{previewurl}\" alt=\"\" border=\"0\" />\
+			</td>\
+			<td width=\"100%\">\
+				<a class=\"bigusername\" href=\"{channelurl}\" target=\"_blank\" title=\"{channelname}\" data-item=\"{type}:{name}\" data-countername=\"link\">{channelname}</a>\
+				<div>{gamename}</div>\
+			</td>\
+		</tr>\
+		<tr valign=\"top\">\
+			<td align=\"right\">\
+				<img src=\"images/customstyles/vbgoha/misc/liveiconurl.png\" alt=\"\" border=\"0\" />\
+			</td>\
+			<td>\
+				<span class=\"smallfont\">{streamtitle}</span>\
+			</td>\
+		</tr>\
+		</table>","menuitemforums":"<table class=\"liveiconmenuitem\" width=\"100%\" cellspacing=\"0\" cellpadding=\"4\" border=\"0\">\
+		<tr valign=\"top\">\
+			<td width=\"100%\">\
+				<img class=\"avatar\" src=\"{avatarurl}\" alt=\"\" border=\"0\" />\
+				<a class=\"threadtitle\" href=\"showthread.php?t={threadid}\" title=\"{phrase:type}: {threadtitle}\" data-item=\"{type}:{forumid}\" data-countername=\"link\">{threadtitle}</a>\
+				<div class=\"smallfont\">Автор: {username}</div>\
+				<div class=\"smallfont\">Раздел: {forumtitle}</div>\
+			</td>\
+		</tr>\
+		</table>"},
+	'phrases'    : {"streams":{"items_count":"\u0410\u043a\u0442\u0438\u0432\u043d\u044b\u0445 \u0442\u0440\u0430\u043d\u0441\u043b\u044f\u0446\u0438\u0439: %1$s","menu_title":"\u0421\u0435\u0439\u0447\u0430\u0441 \u0432 \u044d\u0444\u0438\u0440\u0435!"},"shared":{"template_forum":"\u041d\u043e\u0432\u0430\u044f \u0442\u0435\u043c\u0430","template_article":"\u0421\u0442\u0430\u0442\u044c\u044f","template_news":"\u041d\u043e\u0432\u043e\u0441\u0442\u044c"}},
+	'autoupdate' : parseInt('0', 10) | 0
+};
+
+YAHOO.util.Event.onDOMReady(function(e)
+{
+	LiveIcon = new LiveIcon_Handler(window.LiveIcon_Data);
+});
+</script>
+<style type="text/css">
+#liveiconcontainer
+{
+	display: none;
+	position: relative;
+}
+
+.liveiconposition
+{
+	position: absolute;
+	top: -19px;
+	width: 32px;
+	height: 36px;
+	display: inline-block;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out, background-position 0.2s ease-in-out;
+}
+.liveiconposition.transparent
+{
+	opacity: 0;
+	transform: scale(0);
+}
+.liveiconposition1
+{
+	right: 12px;
+	z-index: 21;
+}
+.liveiconposition2
+{
+	right: 48px;
+	z-index: 22;
+}
+.liveiconnew
+{
+	background-position: -32px 0;
+}
+
+.liveiconmenuitem td
+{
+	min-width: 100px;
+	max-width: 200px;
+	white-space: normal;
+}
+.liveiconforumsmenutable .liveiconmenuitem td
+{
+	max-width: 450px;
+}
+
+.liveiconmenuitem .preview
+{
+	max-width: 100px;
+}
+
+.liveiconforumsmenutable .liveiconmenuitem td
+{
+	padding-left: 62px;
+}
+.liveiconmenuitem .avatar
+{
+	float: left;
+	margin-right: 6px;
+	margin-left: -56px;
+	max-width: 50px;
+	max-height: 50px;
+	transition: all .25s ease-in-out;
+	filter: grayscale(100%);
+	opacity: .75;
+}
+.liveiconmenuitem:hover .avatar
+{
+	filter: grayscale(0);
+	opacity: 1;
+}
+
+.liveiconmenuitem a
+{
+	text-decoration: underline !important;
+}
+
+.liveiconmenuitem a.bigusername,
+.liveiconmenuitem .threadtitle
+{
+	white-space: nowrap;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.liveiconmenuitem .threadtitle
+{
+	font-size: 10pt;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+.liveiconmenuitem .threadtitle + div
+{
+	margin-bottom: 1px;
+}
+</style><script type="text/javascript">
+(function()
+{
+	var _toggle_collapse = toggle_collapse;
+	toggle_collapse = function(objid, forcestate)
+	{
+		if (!is_regexp)
+		{
+			return false;
+		}
+
+		var obj = fetch_object('collapseobj_' + objid);
+		var img = fetch_object('collapseimg_' + objid);
+		var cel = fetch_object('collapsecel_' + objid);
+
+		if (!obj)
+		{
+			// nothing to collapse!
+			if (img)
+			{
+				// hide the clicky image if there is one
+				img.style.display = 'none';
+			}
+			return false;
+		}
+
+		if ((obj.style.display == 'none' && forcestate == 'open') || (obj.style.display != 'none' && forcestate == 'closed'))
+		{
+			return _toggle_collapse(objid, forcestate);
+		}
+
+		if (obj.firstwrapping !== 1)
+		{
+			jQuery(obj)
+				.children('tr')
+				.children('td, th')
+				.wrapInner(
+					function(index)
+					{
+						if (this.collapsewrapped == 1)
+						{
+							return "";
+						}
+						else
+						{
+							this.collapsewrapped = 1;
+							return "<div class=\"collapsewrap_" + objid + "\"></div>";
+						}
+					}
+				);
+		}
+
+		var speed = forcestate ? 0 : 'fast';
+
+		if ((obj.style.display == 'none' && !forcestate) || 'open' == forcestate)
+		{
+			if (obj.firstwrapping !== 1)
+			{
+				jQuery('.collapsewrap_' + objid)
+					.slideUp(0)
+					.parent().animate({ paddingTop: "toggle", paddingBottom: "toggle" }, 0)
+			}
+
+			obj.style.display = '';
+			jQuery('.collapsewrap_' + objid)
+				.parent().animate({ paddingTop: "toggle", paddingBottom: "toggle" }, speed)
+				.end().animate({ height: "toggle", opacity: "toggle" }, speed);
+
+			if (!forcestate)
+			{
+				save_collapsed(objid, false);
+			}
+
+			if (img)
+			{
+				img_re = new RegExp("_collapsed\\.gif$");
+				img.src = img.src.replace(img_re, '.gif');
+			}
+			if (cel)
+			{
+				cel_re = new RegExp("^(thead|tcat)(_collapsed)$");
+				cel.className = cel.className.replace(cel_re, '$1');
+			}
+		}
+		else if ((obj.style.display != 'none' && !forcestate) || 'closed' == forcestate)
+		{
+			jQuery('.collapsewrap_' + objid)
+				.animate({ height: "toggle", opacity: "toggle" }, speed)
+				.parent().animate({ paddingTop: "toggle", paddingBottom: "toggle" }, speed)
+				.promise()
+				.then(function(e)
+					{
+						obj.style.display = 'none';
+					}
+				);
+
+			if (!forcestate)
+			{
+				save_collapsed(objid, true);
+			}
+
+			if (img)
+			{
+				img_re = new RegExp("\\.gif$");
+				img.src = img.src.replace(img_re, '_collapsed.gif').replace('_collapsed_collapsed.gif', '_collapsed.gif');
+			}
+			if (cel)
+			{
+				cel_re = new RegExp("^(thead|tcat)$");
+				cel.className = cel.className.replace(cel_re, '$1_collapsed');
+			}
+		}
+
+		obj.firstwrapping = 1;
+		return false;
+	}
+})();
+</script><style type="text/css">
+#slcontainer
+{
+	width: 70%;
+	max-width: 1000px;
+}
+#slcontainer .link
+{
+	white-space: nowrap;
+}
+
+#slmessage
+{
+	padding: 1px;
+	box-shadow: 0px 0px 40px RGBA(0, 0, 0, .5);
+}
+#sltitle
+{
+	padding: 6px;
+	margin-bottom: 1px;
+}
+#sltext
+{
+	padding: 6px;
+	overflow: hidden;
+}
+#slbuttons
+{
+	padding-top: 6px;
+	text-align: center;
+}
+</style>
+<script type="text/javascript">
+<!--
+var slvars = {
+	doubleext: ['jpe?g', 'html?', 'exe', 'com']
+};
+
+vbphrase["sllinkexternal"] = "Внешняя ссылка";
+vbphrase["slhometitle"] = "GoHa.Ru";
+vbphrase["sltitle"] = "Внимание";
+vbphrase["sltext"] = "<div class=\"panel\">\
+Вы собираетесь перейти по внешней ссылке, не относящейся к порталу %1$s.<br/> <br />\
+\
+<strong>%2$s</strong><br/> <br />\
+\
+Помните, что администрация портала %1$s не несет ответственности за содержание сайта <strong class=\"link\">%3$s</strong>, даже если на нем упоминается портал %1$s.<br />\
+Будьте осторожны и не указывайте нигде данные Вашего профиля, имя пользователя и пароль.<br /><br />\
+\
+Вы уверены, что сайт <strong class=\"link\">%3$s</strong> заслуживает доверия?<br />\
+\
+</div>\
+<div id=\"slbuttons\"><input class=\"button\" type=\"button\" value=\"Да, я хочу перейти по ссылке\" id=\"slyes\" /> <input class=\"button\" type=\"button\" value=\"Нет, закрыть\" id=\"slno\" /></div>";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/seclink.js"></script>
+<style type="text/css">
+<!--
+.shlink
+{
+	margin-right: 4px;
+	opacity: .5;
+}
+.shlink:hover
+{
+	opacity: 1;
+}
+// -->
+</style>
+<script type="text/javascript">
+<!--
+var sharevars = {
+	title: "F.A.Q.%20%D0%BF%D0%BE%20%D0%B8%D0%B3%D1%80%D0%B5%20-%20GoHa.Ru",
+	url: "http://forums.goha.ru/showthread.php?p={postid}#post{postid}",
+	guestaccess: 1
+};
+vbphrase["sh_shareit"]     = "Поделиться";
+vbphrase["sh_sharewith"]   = "Поделитесь с друзьями";
+vbphrase["sh_access_post"] = "Социальные сети и гости форума не могут получить доступ к этому сообщению.\nПродолжить?";
+vbphrase["sh_facebook"]    = "Facebook";
+vbphrase["sh_twitter"]     = "Twitter";
+vbphrase["sh_vkontakte"]   = "ВКонтакте";
+// -->
+</script>
+<script type="text/javascript" src="clientscript/socnet.js"></script>
+
+<meta property="og:image" content="http://forums.goha.ru/images/goharu250x250.gif" />
+<meta property="og:title" content="F.A.Q. по игре" />
+<meta property="og:description" content="GoHa.Ru" />
+<script type="text/javascript">
+<!--
+sharevars.url = "http://forums.goha.ru/showthread_0_0_p{postid}";
+// -->
+</script>
+
+	<title> F.A.Q. по игре - GoHa.Ru</title>
+	<script type="text/javascript" src="clientscript/vbulletin_post_loader.js"></script>
+	<style type="text/css" id="vbulletin_showthread_css">
+	<!--
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+</head>
+<body onload="">
+<div id="optnotice">Для входа на форум нажмите <a href="http://forums.goha.ru/showthread.php?t=1027070">здесь</a></div>
+<script type="text/javascript">
+<!--
+if (!lflag)
+{
+	document.getElementById("optnotice").style.display = "none";
+}
+if (uflag)
+{
+	YAHOO.util.Connect.asyncRequest("POST", "optcounter.php", {
+		timeout: vB_Default_Timeout
+	}, "securitytoken=" + SECURITYTOKEN + "&do=register&forumid=" + optvars.forumid + "&threadid=" + optvars.threadid);
+}
+vBpagenav.prototype.form_gotopage = function(e)
+{
+	if ((pagenum = parseInt(document.getElementById('pagenav_itxt').value, 10)) > 0)
+	{
+		window.location = vBmenu.menus[vBmenu.activemenu].addr + '_page' + pagenum;
+	}
+	return false;
+};
+// -->
+</script>
+
+<div class="body_border">
+
+
+
+<a name="top"></a>
+<!-- logo -->
+<table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+<tr>
+	<td align="left">
+<!-- FSmCJehMeu -->
+<em class="kwhCNNkQNX"></em><em class="kwhCNNkQNX"></em><em class="kwhCNNkQNX"></em><img class="kwhCNNkQNX" src="clear.gif" alt="" border="0" /><span class="kwhCNNkQNX"></span><em class="kwhCNNkQNX"></em>
+	
+<div id="MDAtDMwbcN">
+<div id="kCvuPguTTp">
+<table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+<tr>
+	<td align="left">
+		<a id="logo" href="http://www.goha.ru"><img src="images/goharu.gif" border="0" alt="GoHa.Ru" /></a>
+	</td>
+	<td align="center" width="100%" id="banner">
+		<div id="banner_holder"></div>
+	</td>
+</tr>
+</table>
+</div>
+</div>
+<script type="text/javascript">
+
+
+var MDAtDMwbcN = new trumedia(29, 0, 150, null, 1);
+document.getElementById("kCvuPguTTp").id = MDAtDMwbcN.hid;
+YAHOO.util.Dom.setStyle('logo', 'visibility', 'hidden');
+MDAtDMwbcN.eow = function()
+{
+	MDAtDMwbcN_Handler.init();
+	YAHOO.util.Dom.setStyle('logo', 'visibility', 'visible');
+
+		var banner = new trumedia(20, 728, 90, null, 1);
+		setTimeout(function()
+		{
+			document.getElementById("banner_holder").id = banner.hid;
+			banner.process_banner();
+
+			MDAtDMwbcN_Handler.realign();
+			MDAtDMwbcN_Handler.realign();
+
+		}, MDAtDMwbcN.banner ? 2000 : 1);
+
+}
+MDAtDMwbcN.process_banner();
+
+
+new trumedia(37, 0, 0);
+
+</script>
+	
+<strong class="kwhCNNkQNX"></strong><img class="kwhCNNkQNX" src="clear.gif" alt="" border="0" /><span class="kwhCNNkQNX"></span><img class="kwhCNNkQNX" src="clear.gif" alt="" border="0" /><strong class="kwhCNNkQNX"></strong><strong class="kwhCNNkQNX"></strong><span class="kwhCNNkQNX"></span>
+<!-- / FSmCJehMeu -->
+	</td>
+</tr>
+</table>
+<!-- /logo -->
+
+<!-- nav buttons bar -->
+<div class="navbar_border">
+	<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+	<tr align="center">
+		<IDXSKIP><td class="vbmenu_control" width="10">&nbsp;</td></IDXSKIP>
+		<IDXSKIP><td class="vbmenu_control" width="16"><a href="http://forums.goha.ru/index.php"><img src="images/customstyles/vbgoha/misc/home.gif" alt="GoHa.Ru" border="0" /></a></td></IDXSKIP>
+		
+		
+			<td class="vbmenu_control"><a href="register.php?s=f8647378599d2e9847c78a3dccd1ccb0" rel="nofollow">Регистрация</a></td>
+		
+		<IDXSKIP><td class="vbmenu_control"><a href="vip.php" rel="nofollow"><img src="images/customstyles/vbgoha/misc/vipnavbar.gif" alt="VIP" border="0" /></a></td></IDXSKIP><td class="vbmenu_control">
+	<a id="guildnavbar" href="guild.php?s=f8647378599d2e9847c78a3dccd1ccb0">Гильдии</a>
+	<script type="text/javascript"> vbmenu_register("guildnavbar"); </script>
+</td>
+		<td class="vbmenu_control"><a rel="help" href="faq.php?s=f8647378599d2e9847c78a3dccd1ccb0" accesskey="5">Справка</a></td>
+		
+			<IDXSKIP><td class="vbmenu_control"><a id="community" href="#community" rel="nofollow" accesskey="6">Сообщество</a> <script type="text/javascript"> vbmenu_register("community"); </script></td></IDXSKIP>
+		
+		<td class="vbmenu_control">
+			<a id="navbar_games" href="arcade.php?s=f8647378599d2e9847c78a3dccd1ccb0">Игры</a>
+			<script type="text/javascript"> vbmenu_register("navbar_games"); </script>
+		</td>
+		        
+			
+				<td class="vbmenu_control"><a id="navbar_search" href="search.php?s=f8647378599d2e9847c78a3dccd1ccb0" accesskey="4" rel="nofollow">Поиск</a> </td>
+			
+			
+		
+		
+		
+	</tr>
+	</table>
+</div>
+<!-- / nav buttons bar -->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 17px 0px 17px" align="left">
+
+
+
+
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = _tmr || [];
+_tmr.push({id: "1059157", type: "pageView", start: (new Date()).getTime()});
+(function (d, w) {
+   var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+   ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+   var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+   if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+</script><IDXSKIP><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=1059157;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript></IDXSKIP>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- Google Analyst -->
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1733792-4']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+<!-- /Google Analyst -->
+<br />
+
+<div id="liveiconcontainer"></div>
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="alt1" width="100%">
+		
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tr valign="bottom">
+				<IDXSKIP><td><a href="#" onclick="history.back(1); return false;"><img src="images/customstyles/vbgoha/misc/navbits_start.gif" alt="Вернуться" border="0" /></a></td></IDXSKIP>
+				<IDXSKIP><td>&nbsp;</td></IDXSKIP>
+				<td width="100%"><IDXSKIP><span class="navbar"><a href="http://forums.goha.ru/index.php" accesskey="1">GoHa.Ru</a></span></IDXSKIP> 
+	<IDXSKIP><span class="navbar">&gt; <a href="http://forums.goha.ru/forumdisplay_0_0_3">Форумы</a></span></IDXSKIP>
+
+
+	<IDXSKIP><span class="navbar">&gt; <a href="http://forums.goha.ru/forumdisplay_0_0_768--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B">ММО Игры</a></span></IDXSKIP>
+
+
+	<span class="navbar">&gt; <a href="http://forums.goha.ru/forumdisplay_0_0_4104--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge">Skyforge</a></span>
+
+
+	<span class="navbar">&gt; <a href="http://forums.goha.ru/forumdisplay_0_0_4190--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge+%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%D0%B8+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B+%D0%93%D0%B8%D0%B4%D1%8B+%D0%B8+%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%8B+FAQ">Вопросы и ответы, Гиды и советы, FAQ</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><a href="/showthread_0_0_t1027070"><img class="inlineimg" src="images/customstyles/vbgoha/misc/navbits_finallink_ltr.gif" alt="Перезагрузить страницу" border="0" /></a> <strong>
+	 F.A.Q. по игре
+
+</strong></td>
+			</tr>
+			</table>
+		
+		<div id="gohanav">
+		<!-- GOHARU NAVIGATION -->
+		<script type="text/javascript" src="nav_menu/menu.js"></script>
+		<!-- / GOHARU NAVIGATION -->
+		<!-- SUBFORUM NAVIGATION -->
+<script type="text/javascript" src="nav_menu/sub4104.js"></script>
+		<!-- /SUBFORUM NAVIGATION -->
+		</div>
+	</td>
+
+	<td class="alt2" nowrap="nowrap" style="padding:0px">
+		<!-- login form -->
+		<form action="10gin.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="clientscript/vbulletin_md5.js"></script>
+		<table cellpadding="0" cellspacing="3" border="0">
+		<tr>
+			<td class="smallfont" style="white-space: nowrap;"><label for="navbar_username">Имя</label></td>
+			<td><input type="text" class="bginput" style="font-size: 11px" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Имя" onfocus="if (this.value == 'Имя') this.value = '';" /></td>
+			<td class="smallfont" nowrap="nowrap"><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" />Запомнить?</label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password">Пароль</label></td>
+			<td><input type="password" class="bginput" style="font-size: 11px" name="vb_login_password" id="navbar_password" size="10" tabindex="102" /></td>
+			<td><input type="submit" class="button" value="Вход" tabindex="104" title="Введите ваше имя пользователя и пароль, чтобы войти, или нажмите кнопку 'Регистрация', чтобы зарегистрироваться." accesskey="s" /></td>
+		</tr>
+		</table>
+		<input type="hidden" name="s" value="f8647378599d2e9847c78a3dccd1ccb0" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="login" />
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+	</td>
+
+</tr>
+</table>
+<!-- / breadcrumb, login, pm info -->
+
+<br />
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	<!-- Games menu -->
+	<div class="vbmenu_popup" id="navbar_games_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr><td class="thead">Игры</td></tr>
+		<tr><td class="vbmenu_option"><a href="arcade.php?s=f8647378599d2e9847c78a3dccd1ccb0">Аркады</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="http://forums.goha.ru/showthread_0_0_t3168">Обсудить на форуме</a></td></tr>
+		</table>
+	</div>
+    <!-- / Games menu -->
+
+	
+	<!-- community link menu -->
+	<div class="vbmenu_popup" id="community_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<IDXSKIP><tr><td class="thead">Ссылки сообщества</td></tr></IDXSKIP>
+		<tr><td class="vbmenu_option"><a href="guild.php?s=f8647378599d2e9847c78a3dccd1ccb0">Гильдии</a></td></tr>
+		
+					<tr><td class="vbmenu_option"><a href="group.php?s=f8647378599d2e9847c78a3dccd1ccb0">Социальные группы</a></td></tr>
+		
+		
+					<tr><td class="vbmenu_option"><a href="album.php?s=f8647378599d2e9847c78a3dccd1ccb0">Изображения и альбомы</a></td></tr>
+		
+		
+		
+			<tr><td class="vbmenu_option"><a href="memberlist.php?s=f8647378599d2e9847c78a3dccd1ccb0">Пользователи</a></td></tr>
+			<tr>
+				<td class="vbmenu_option" title="nohilite">
+					<form action="memberlist.php?do=getall" method="post">
+						<input type="hidden" name="s" value="f8647378599d2e9847c78a3dccd1ccb0" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="getall" />
+						<input type="text" class="bginput" name="ausername" size="20" value="" title="Имя пользователя" placeholder="Имя пользователя" />
+						<input type="submit" class="button" title="Нийти пользователя" value="Поиск" />
+					</form>
+				</td>
+			</tr>
+		
+		
+		</table>
+	</div>
+	<!-- / community link menu -->
+	
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<IDXSKIP><tr>
+			<td class="thead">Поиск по форуму</td>
+		</tr></IDXSKIP>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<form action="search.php?do=process" method="post">
+
+					<input type="hidden" name="do" value="process" />
+					<input type="hidden" name="quicksearch" value="1" />
+					<input type="hidden" name="childforums" value="1" />
+					<input type="hidden" name="exactname" value="1" />
+					<input type="hidden" name="s" value="f8647378599d2e9847c78a3dccd1ccb0" />
+					<input type="hidden" name="securitytoken" value="guest" />
+					<IDXSKIP><div><input type="text" class="bginput" name="query" size="25" tabindex="1001" /><input type="submit" class="button" value="Вперёд" tabindex="1004" /></div></IDXSKIP>
+					<div style="margin-top:6px">
+						<IDXSKIP><label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" />Отобразить темы</label></IDXSKIP>
+						<IDXSKIP>&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" />Отображать сообщения</label></IDXSKIP>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="tags.php?s=f8647378599d2e9847c78a3dccd1ccb0" rel="nofollow">Поиск по метке</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="search.php?s=f8647378599d2e9847c78a3dccd1ccb0" accesskey="4" rel="nofollow">Расширенный поиск</a></td>
+		</tr>
+		
+		
+		</table>
+	</div>
+	<!-- / header quick search form -->
+	
+	
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+	<IDXSKIP><div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead" nowrap="nowrap">К странице...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="http://forums.goha.ru/index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4" />
+				<input type="button" class="button" id="pagenav_ibtn" value="Вперёд" />
+			</form>
+			</td>
+		</tr>
+		</table>
+	</div></IDXSKIP>
+<!-- / PAGENAV POPUP -->
+
+
+
+
+
+	<!-- guild link menu -->
+	<div class="vbmenu_popup" id="guildnavbar_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<IDXSKIP><tr><td class="thead">Гильдии</td></tr></IDXSKIP>
+			<tr><td class="vbmenu_option"><a href="guild.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;&amp;do=create">Создать гильдию</a></td></tr>
+			<tr><td class="vbmenu_option"><a href="guild.php?s=f8647378599d2e9847c78a3dccd1ccb0">Список гильдий</a></td></tr>
+		
+			<IDXSKIP><tr><td class="vbmenu_option"><a href="http://forums.goha.ru/showthread_0_0_t830356">Поддержка и обсуждение</a></td></tr></IDXSKIP>
+		
+		</table>
+	</div>
+	<!-- / guild link menu -->
+
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<IDXSKIP><table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+<tr valign="bottom">
+	
+		<td class="smallfont">&nbsp;</td>
+	
+	
+</tr>
+</table></IDXSKIP>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<IDXSKIP><table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools" nowrap="nowrap">
+		<a href="#goto_threadtools">Опции темы</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script>
+	</td>
+	
+	
+	
+
+	
+
+</tr>
+</table></IDXSKIP>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #151658388 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 17px 0px 17px" align="left">
+
+	<div id="edit151658388" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+
+<table id="post151658388" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	
+		<td class="thead" style="font-weight:normal;" >
+			<!-- status icon and date -->
+			<a name="post151658388"><img class="inlineimg" src="images/customstyles/vbgoha/statusicon/post_old.gif" alt="Старый" border="0" /></a>
+			17.12.2014, 17:29
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal;" align="right">
+			&nbsp;
+			<div class="postrating_container" title="Рейтинг сообщения">
+	<img src="images/customstyles/vbgoha/misc/11x11progress.gif" style="display:none;" id="postrating_progress_151658388" alt="" />
+	<span class="postrating_title">Рейтинг сообщения:</span>
+	<div class="postrating_counter" id="postmenu_postrating_151658388">
+		<a href="postrating.php?do=inc&amp;p=151658388" class="postrating_link">
+			<img src="images/customstyles/vbgoha/misc/icon_pr.png" class="postrating_icon inlineimg" alt="" border="0" />
+			<span id="postrating151658388">0</span><span class="postrating_plus">+</span>
+		</a>
+	</div>
+	<script type="text/javascript"> vbmenu_register('postmenu_postrating_151658388'); </script>
+</div>
+
+<a href="http://forums.goha.ru/showpost_0_0_151658388_1--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge+%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%D0%B8+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B+%D0%93%D0%B8%D0%B4%D1%8B+%D0%B8+%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%8B+FAQ+F.A.Q.+%D0%BF%D0%BE+%D0%B8%D0%B3%D1%80%D0%B5" target="new" rel="nofollow" id="postcount151658388" name="1" title="Показать сообщение отдельно">#</a><a href="http://forums.goha.ru/showthread_0_0_p151658388" rel="nofollow"><strong>1</strong></a><IDXSKIP>&nbsp;
+			
+			
+			
+			
+			
+		</IDXSKIP></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2 alt3" width="190">
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td align="center">
+						<table style="display: inline-table; vertical-align: middle;" cellspacing="0" cellpadding="0" border="0"><tr><td><div id="postmenu_151658388">
+							
+							<a class="bigusername" href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=40853">Unter</a>
+							<script type="text/javascript"> vbmenu_register("postmenu_151658388", true); </script>
+				
+							
+							
+						</div></td><td>	</td></tr></table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<div class="smallfont"><strong><img src="images/signs/goharu_team.gif"  border="0" align="middle" /></strong> <img class="inlineimg" src="images/customstyles/vbgoha/statusicon/user_offline.gif" alt="Unter вне форума" border="0" />
+
+</div>
+			</td>
+		</tr>
+		</table>
+		<br />
+
+		
+		
+
+		
+			<div style="text-align: center;" class="smallfont">
+				&nbsp;<a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=40853"><img src="__F_Shared/frm_avatar/avatar40853_16.gif" width="150" height="150" alt="Аватар для Unter" border="0" /></a>
+			</div>
+		
+
+		<!-- controls -->
+		<div style="text-align: center;">
+			<br />
+		
+		
+		
+			<a href="newreply.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=newreply&amp;p=151658388" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/quote.gif" alt="Ответить с цитированием" border="0" /></a>
+		
+		
+		
+		
+		</div>
+		<!-- / controls -->
+
+		<div style="text-align: center;" class="smallfont">
+			
+			
+			
+			
+		</div>
+
+		
+		<fieldset>
+			<legend><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=40853">Info</a></legend>
+			<table width="100%" border="0" cellspacing="0" cellpadding="1">
+			
+
+			<tr> 
+				<td><span class="smallfont"><b>Сообщений:</b> 21,144</span></td>
+			</tr>
+			<tr> 
+				<td><span class="smallfont"><b>Регистрация:</b> 21.03.2006</span></td>
+			</tr>
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			<tr>
+				<td align="center"><!--socialicons[40853]-->     </td>
+			</tr>
+
+			<tr>
+				<td align="center">
+<a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=40853&amp;tab=myawards#aw_issue10865879"><img src="http://forums.goha.ru/images/medals/aw_10year.png" alt="GoHa.Ru - 10 лет" border="0" class="inlineimg" /></a><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=40853&amp;tab=myawards#aw_issue62959"><img src="http://forums.goha.ru/images/medals/aw_helper.png" alt="Просветитель
+Награжден за: Раздел Age of Conan" border="0" class="inlineimg" /></a><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=40853&amp;tab=myawards#aw_issue17"><img src="http://forums.goha.ru/images/medals/aw_moder.png" alt="Заслуженный Модератор
+Награжден за: Руководитель раздела AoC" border="0" class="inlineimg" /></a>
+				</td>
+			</tr>
+			</table>
+		</fieldset>
+		
+
+	</td>
+	
+	<td class="alt1" id="td_post_151658388">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>F.A.Q. по игре</strong>
+			</div>
+			<hr size="1" style="color:#337793; background-color:#337793" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_151658388">
+			
+			<font size="5"><b>Общее</b></font><br />
+<br />
+  <b>Что такое Skyforge?</b><br />
+Skyforge — бесплатная игра в жанре Sci-Fi/Fantasy MMORPG. Ее действие происходит в фантастическом мире, где боги и герои с помощью технологий будущего защищают свою планету от вторжений. Начав игру молодым бессмертным, вы сможете проявить отвагу и доблесть, стать великим богом, достигнуть вершин славы и возглавить свой собственный пантеон. <br />
+ <b><br />
+  Кто разрабатывает Skyforge?</b><br />
+Skyforge — совместная разработка Allods Team и Obsidian Entertainment. <br />
+Студия Allods Team — ведущий российский разработчик компьютерных игр. Мы собрали под одной крышей лучших специалистов отечественной индустрии. Наши игры заслужили признание миллионов игроков. Чтобы подробнее узнать о студии, посетите сайт <span class="linkexternal"><a href="http://allodsteam.ru/" target="_blank">http://allodsteam.ru/</a></span><br />
+Студия Obsidian Entertainment — ведущий мировой разработчик компьютерных ролевых игр. Главный офис компании расположен в г. Ирвайн, штат Калифорния. Чтобы подробнее узнать об Obsidian, посетите сайт <span class="linkexternal"><a href="http://www.obsidian.net/" target="_blank">http://www.obsidian.net/</a></span><br />
+ <br />
+ <b><br />
+  Чем конкретно занимается студия Obsidian Entertainment?</b><br />
+Obsidian занимается переводом и адаптацией игры для западной аудитории, а так же разрабатывает часть локаций и классов.<br />
+ <br />
+ <br />
+  <b>В чем смысл игры?</b><br />
+Ваша цель — стать богом! Перед вами открыт путь героя. Защищайте свой мир от инопланетных вторжений, зарабатывайте веру смертных последователей, и вы сможете посоперничать с самыми могущественными божествами.<br />
+<br />
+  <b>Skyforge — это очередная «гриндилка»?</b><br />
+Нет. Игра не принуждает вас к монотонному убийству монстров. Мы приготовили для вас множество активностей, от которых вы не сможете оторваться!<br />
+<br />
+  <b>Можно ли будет в Skyforge сражаться с другими игроками?</b><br />
+Да, у нас предусмотрено множество PvE- и PvP-активностей — от арен на несколько человек до масштабных PvP-баталий. <br />
+<br />
+  <b>Какие классы будут в игре?</b><br />
+Разнообразие классов Skyforge удивит даже самых требовательных игроков.<br />
+  Вам больше не понадобится ждать, пока соберется группа, ведь сменить класс можно на лету, одним щелчком мыши! Примерьте на себя любую роль — одному и тому же персонажу могут быть доступны все классы!<br />
+  <br />
+  На момент запуска проекта в Skyforge будет одна игровая раса, а вот враждебных рас у нас множество, и каждая со своими отличительными особенностями.<br />
+   <br />
+  <b>Чем классы будут отличаться от классов других MMO?</b><br />
+  Одно из основных отличий — это геймплей. В Skyforge он больше похож на слешеры, чем на классические ММО с огромным количеством умений на панели. Благодаря этому игровой процесс гораздо более динамичен.<br />
+<br />
+Второе отличие в самом подходе к классовой системе. В Skyforge можно развивать сколько угодно классов и переключать их в любой момент. Таким образом, игроки не ограничены рамками одного конкретного класса и могут подстраиваться под разные задачи.<br />
+<b><br />
+  Направленность игры будет идти на PvE или на PvP?</b><br />
+  Наш игрок сам решает, что ему больше по душе. Игра предоставляет целый ряд возможностей для любителей PvP и PvE, поэтому каждый найдет себе занятие. Кроме того, в будущем (после запуска) мы планируем смещать этот ориентир в ту или иную сторону, в соответствии со спросом игроков.<br />
+<br />
+  <b>Будут ли в игре разные фракции и расы?</b><br />
+В мире Skyforge много миров населённых представителями разных рас. Но на момент запуска игрокам будет доступны только Элионцы. А инопланетные гости будут представлены мобами и NPC. Фракционные же различия полностью отданы на откуп игрокам и их объединениям. <br />
+ <br />
+  <b>На чём строится система взаимодействия игровых сообществ?</b><br />
+На конкуренции за ресурсы и содействии в защите Элиона. <br />
+ <br />
+ <b>Будет ли в игре мировая экономика?</b><br />
+Да, и мы приложили немало усилий, чтобы предоставить игрокам как удобные инструменты взаимодействия с ней, так и внутренние вспомогательные механики, позволяющие урегулировать экономические «бедствия» классических ММО. <br />
+ <br />
+ <br />
+  <b>Будет ли в игре возможность основывать свои города и государства и с их помощью влиять на мировую экономику?</b><br />
+Эту часть боги Элиона оставили торговцам, градостроителям и смертным правителям. Боги в Skyforge не торгуют рыбой и не строят базаров. Товары, интересующие богов соответствуют их статусу. <br />
+ <br />
+  <b>Есть ли в мире сила, которую может получить любой бессмертный вне зависимости от класса?</b><br />
+  Персонаж в игре — бессмертный герой, открывающий в себе новые уникальные способности. Они получают силу и могущество от своих последователей и свершений. Мощь бессмертных растет вне зависимости от выбранного класса и со временем проявляется в грандиозных божественных способностях и формах.<br />
+   <br />
+  <b>Будет ли в игре собственность? Как минимум дома.</b><br />
+Ещё одна тема, о которой нужно говорить подробно и показывать наглядно. Что бы не нарушить обещания, но и не оставить вас без ответов скажу так: у божества свой масштаб «собственности» и он больше чем хижина. <br />
+  Что еще есть кроме, как стать богом, можно строить дома, возить караваны, торговать и тд или гринд, гринд и еще раз григд. <br />
+«Стать богом» - не титул и не Buff. В это становление входит много разных механик, систем, событий, достижений и геймплея. И «быть богом» - не значит «называться». У богов немало божественных забот и занятий.<br />
+ <br />
+ <br />
+  <b>На какие языки будет переведена игра?</b><br />
+Сейчас в игре есть русский и английский языки, также запланированы немецкая, французская и испанская версии. О поддержке других языков будет объявлено дополнительно.<br />
+  Для игры в Skyforge понадобится подписка или единовременная плата?<br />
+Нет, в Skyforge можно будет играть бесплатно.<br />
+<br />
+  <b>Игра очень напоминает &quot; ..Вставьте название игры..&quot; Не кажется ли вам, что этот проект будет лишь ее вариацией?</b><br />
+О сходствах и различиях судить игрокам. ММО уже не молодой жанр и у него есть свой «джентельменский набор» составляющих. Но многое в нашей игре сделано «иначе». Узнавая сущность, вы часто будете видеть её неклассическую реализацию. И, тем не менее, конечно, параллелей с другими играми не избежать. <br />
+<br />
+  <b>По мнению АО тим, есть ли у игры конкуренты - из числа находящихся в разработке игр?</b><br />
+Современный игрок – уже не тот «однолюб», готовый несколько лет убивать Когтей смерти вокруг Нью-Рено. Сегодня с любой игрой конкурирует огромный спектр развлечений на разных платформах: другие онлайн игры, мобильные, консольные, сериалы, кино, социальные сети. Вопрос давно перестал стоять о «конкуренции». Теперь это вопрос о «суметь встроиться в ритм современного человека». <br />
+<b><br />
+  Будут ли взаимные с АО плюшки/взаимодействия? Как пример приведу всем известную Метелочную компанию, где все проекты взаимосвязаны.</b><br />
+Не исключаю такой возможности. <br />
+ <br />
+ <br />
+  <b>Насколько часто планируется выдавать контентные обновления после релиза?</b><br />
+Пока рано говорить о графике обновлений, так как на него напрямую будет влиять ситуация на запуске игры, но мы строим дизайн и рассчитываем на регулярные пополнения классов, локаций, инстансов и активностей. Ну и конечно исправление, и улучшение имеющегося контента, особенно в первое время после старта. <br />
+ <br />
+  <b>Будет ли коллекционное издание?</b><br />
+Возможно. <br />
+  <b><br />
+  Как скачать игру?</b><br />
+  Игровой клиент будет доступен для скачивания через «Игровой центр», а появится он там только после начала тестирования.<br />
+<b><br />
+  Сколько примерно будет весить клиент?</b><br />
+  Вес игрового клиента составит около 10 Гб, но это очень приблизительная цифра, она может измениться к моменту запуска проекта.<br />
+   <br />
+  <font size="5"><b>Системные требования</b></font><br />
+<br />
+  <b>Какие минимальные системные требования Skyforge?</b><br />
+Точных системных требований пока нет, но мы стараемся сделать проект доступным для максимального количества пользователей, а не только для владельцев топовых ПК. Изменив настройки графики, вы сможете с комфортом поиграть и не на самом мощном компьютере. При этом «картинка» значительно не изменится – это особенность собственного движка, на котором разрабатывался Skyforge.<br />
+<br />
+  <b>Появится ли Skyforge на консолях, в Steam или на компьютерах с OS X?</b><br />
+Skyforge — эксклюзивная разработка для платформы ПК. Если мы решим выпустить игру на других платформах, мы объявим об этом дополнительно.<br />
+<br />
+  <b>Можно ли будет играть со смартфонов или планшетов?</b><br />
+Некоторые из сервисов игры будут доступны с телефонов и планшетов. Прежде всего – это игровой портал, доступный через браузер любого компьютера (в том числе смартфонов, планшетов и т.п.) В него входят база знаний по игре, встроенная социальная сеть, некоторые игровые механики. Но подробно об этом мы расскажем в новостях. Скоро мы расскажем о них подробнее.<br />
+<br />
+  <b>В игре мы имеем возможность отыгрывать только доблестного воина справедливости, или можно обратиться во зло и нести хаос миру?</b><br />
+Мы основательно подошли к этому вопросу, разрабатывая концепцию богов Элиона. Многие подразумевают под «добрыми богами» - защитников, а под «злыми» - бездумных разрушителей. В мире Элиона быть бессмысленным убийцей не выгодно. Ведь люди – это источник силы и власти божества. Истребление людей злым богом равносильно уничтожению боезапаса и собственной армии. Зло отличается от добра отношением к людям, а не убийствами. Бог, не потерявший человечности, помогает людям ради этих самых людей. Бог, превозносящий себя над судьбами смертных, с помощью подвигов просто «пополняет свои ресурсы», и не ограничивает себя в способах. Согласитесь, такое зло опаснее, чем опереточная мясорубка. <br />
+ <br />
+  <b>Будет ли игра поддерживать Windows XP? Будет ли поддержка DX9 и Windows xp?</b><br />
+На момент запуска ОБТ – однозначно да по обоим пунктам. <br />
+ <b><br />
+  Могут ли владельцы далеко не самых современных компьютеров расчитывать на игру, а не слайдшоу? Будет ли учитываться такая категория пользователей и будут ли возможности значительно понижать качество графики для комфортной игры?</b><br />
+Да, во внутренних тестах мы используем очень разнообразный парк машин, а некоторые коллеги играют на «офисных» ноутбуках.<br />
+<br />
+  <b>Будет ли игра запускаться на Linux или других не-Windows «осях»?</b><br />
+  Сейчас такой возможности не предусмотрено. Мы хотим сконцентрироваться на самой востребованной платформе и довести оптимизацию игры на ней до должного уровня. Мы не исключаем, что в будущем, возможно, будет поддержка и других платформ.<br />
+  <br />
+<b>В последнее время вышло достаточно много разных онлайн-проектов, и почти в каждом из них есть пункт «работает только на 64-битных системах».Skyforge будет работать на 32-битных системах?</b><br />
+  Игра будет поддерживать 32-битные системы.<br />
+<br />
+  <b>На каком языке можно будет создавать имена персонажей?</b><br />
+  В именах могут использоваться только буквы кириллицы.<br />
+<br />
+  <b>Можно ли будет менять имя и пол персонажа?</b><br />
+  Да, такая возможность будет.<br />
+<br />
+  <b>Будет ли мобильная версия форума и сайта для смартфонов и подобных устройств?</b><br />
+  Сейчас мы работаем над адаптивной версткой сайта, чтобы он корректно отображался на мобильных устройствах, планшетах и ноутбуках с нестандартным разрешением или небольшим экраном.<br />
+<br />
+  <b>Выдержат ли большой наплыв посетителей серверы игры в первый день ОБТ? Не придется ли ждать своей очереди несколько часов на старте, при этом испытывая дискомфорт от невозможности пройти какие-либо стартовые задания из-за чрезмерного количества игроков?</b><br />
+  К сожалению, ни одна многопользовательская игра с хорошей графикой и большим количеством игроков не может гарантировать полное отсутствие лагов. Но есть два фактора, которые помогут нам минимизировать эту проблему: мощное оборудование с высокой пропускной способностью и каналы, которые при необходимости будут создаваться автоматически. Атмосферу игры они не разрушат: на открытых локациях будет достаточно других игроков (причем собранная группа будет находиться в одном канале), а в инстансах каналы не требуются по понятным причинам. <br />
+   <br />
+   <br />
+  <font size="5"><b>Разработка и тестирование</b></font><br />
+<br />
+  <b>Сколько людей работает над игрой?</b><br />
+На разных этапах разработки – это число изменялось и в пике находилось в районе 300. <br />
+ <br />
+  <b>Что вдохновило разработчиков на создание этого проекта? Что вдохновляло во время процесса разработки (книги, фильмы, видеоигры и т.д.)?</b><br />
+  Этот список будет длиннее, чем весь FAQ. У нас в команде почти 300 человек, и каждый имеет свои собственные пристрастия, любимые произведения и взгляд на мир Skyforge. Но будьте уверены, если в книге, фильме или видеоигре речь идет о богах, то мы внимательно изучили произведение и тщательно взвесили каждый элемент.<br />
+<br />
+   <b>Сколько лет вы разрабатываете Skyforge?</b><br />
+  Разработка игры с уже сформировавшейся, обдуманной концепцией ведется с 2010 года, однако какие-то наработки, референсы и удачные идеи появились гораздо раньше.<br />
+<br />
+  <b>Когда начнется бета-тестирование Skyforge?</b><br />
+Закрытое бета-тестирование стартует 15 декабря в 16:00 по московскому времени.<br />
+<br />
+  <b>Как стать участником бета-тестирования Skyforge?</b><br />
+Регистрируясь на официальном сайте, вы автоматически оставляете заявку на участие в бета-тестировании Skyforge.<br />
+<br />
+  <b>Дадут ли в ЗБТ опробовать все 15 классов?</b><br />
+В СВТ будет представлен ограниченный контент и часть игры останется недоступной до более поздних версий. Но что именно попадёт или не попадёт в тест говорить рано. <br />
+<br />
+  <b>Когда ждать старта второй волны тестирования?</b><br />
+  Разработчики еще продолжают трудиться над игрой. От первого впечатления зависит многое, и крайне важно представить публике качественный продукт. Поэтому запустить ЗБТ любой ценой как можно скорее — не всегда хороший вариант. Такие масштабные проекты требуют большого количества времени и на создание игры, и на шлифовку найденных ошибок между этапами тестирования. Как только мы сможем назвать точные сроки — сразу же объявим их в новостях на сайте.<br />
+<br />
+  <b>Будет ли учитываться мнение игроков, после проведения ЗБТ (например, изменение некоторых аспектов геймплея)?</b><br />
+Конечно, для этого такие тесты и проводятся. И не только мнение. Мы собираем статистику, мониторим поведение игроков, анализируем действия социальных групп и объединений. И это справедливо не только для СВТ, но и для ОВТ, и для игры после релиза. <br />
+ <b><br />
+ Я так понимаю, был запрет на разглашение в первую волну ЗБТ, так во время второй волны тоже нельзя будет снимать видео/делать стримы? Хотелось бы хотя бы стримы посмотреть. :)</b><br />
+  Информация о запретах на скриншоты/видео/стримы из игры появится непосредственно перед следующим этапом тестирования.<br />
+  После ЗБТ прокачка и вещи персонажей сохраняются? Будут ли какие-то бонусы участникам ЗБТ, которые не достанутся другим?<br />
+  После ЗБТ будет вайп персонажей. По поводу бонусов пока что нет точного решения.<br />
+   <br />
+  <b>Будут ли разработчики поддерживать ПТС после релиза игры?</b><br />
+  Да, мы считаем хорошим тоном проводить открытые тестирования предстоящего контента. Во-первых, у игроков появляется уникальная возможность изучить новое и сразу это обсудить. Подобный фидбэк очень важен для разработки, он помогает скорректировать направленность тех или иных особенностей игры, сделать их более удобными и интересными.<br />
+Во-вторых, что не менее важно, ПТС позволяет узнать о возможных ошибках на этапе, когда обновление еще не установлено на боевой сервер. Это может уберечь от серьезных проблем не только разработчиков, но и самих игроков.<br />
+Чтобы повысить качество тестирования, мы сделали внутриигровой интерфейс для отправки баг-репорта — это ускорит процедуру и сэкономит время.<br />
+  <br />
+ <br />
+ <font size="5"><b>Игровой процесс</b></font><br />
+<br />
+  <b>Насколько будет актуально пве и пвп в открытом мире? не заменят ли их полностью арены и инстансы? Будет ли вообще пвп в открытом мире?</b><br />
+Игровой процесс в Skyforge учитывает личные пристрастия игрока. Среди геймеров есть универсалы, которые одинаково комфортно себя чувствуют во всех режимах. Есть чистые PVP-шники, которым быстро наскучивает бить мобов и чистые PVE-шники, для которых неприятна агрессия по отношению к «живому» человеку. И это не малые доли аудитории. Игра предлагает богатый выбор всех видов активности и не принуждает к обязательному участию в любой из них. Вы по своему усмотрению формируете свою занятость без потерь чего-либо, так как с обоих видов активностей идут одинаковые ресурсы для развития персонажа. <br />
+При этом и внутри этих типов есть достаточное разнообразие. Небольшие инстансы, огромные локации, приключения с законченным сюжетом, соревновательные испытания, сольные, групповые, рейдовые, гильдейские активности. На поверхности Элиона много событий, а чем заняться прямо сейчас решают сами игроки. <br />
+<br />
+  <b>Можно играть одному или для хай контента нужно искать кп?</b><br />
+Как и в значимости PVP\PVE, социальным игрокам и одиночкам найдётся достаточно занятий для комфортной игры и развития. Исключения составляют разве что «гильдейские активности», которые по понятным причинам невозможны без гильдии. <br />
+<br />
+<b>Смысл играть в вашу игру после фулл лвл?</b><br />
+В нашей игре нет уровней, а от практики «пришёл в одну игру, а на капе – совсем другая» мы отказались. Наш «High End» начинается быстро, а со временем только расширяется и усложняется. <br />
+<br />
+  <b>Сколько времени надо обязательно проводить в игре, проходя топ-контент? Не получится ли так, что те, кто работает, не будут успевать, или же наоборот, возникнет ситуация, когда нечем заняться?</b><br />
+<br />
+  Этот вопрос нас волновал с самого начала, и мы приложили максимум усилий, чтобы обеспечить и удобство занятым игрокам, и возможности для более свободных геймеров. Чтобы поддерживать свое лидирующее положение, будет достаточно проводить в игре от 2,5 часов в сутки. Все остальное уже зависит от вашего желания, т.к. количество доступных игроку активностей только растет. Время, проведенное в игре, всегда будет идти на пользу вашему персонажу. Вам не придется растрачивать его впустую, ожидая какого-либо события.<br />
+<br />
+  <b>Будут ли мирные занятия среди всего «слешера», который нас ждет? Собирательство, выращивание, какие-нибудь другие мини-игры в большой онлайн-игре?</b><br />
+  Да, в игре есть и мирные занятия, которые будут приносить определенные ресурсы. Кроме этого, чтобы стать богом, юному бессмертному нужно заслужить веру своих последователей. Именно она дает большую часть силы персонажу. Вам предстоит уделять время верующим в бога жителям планеты и развивать их.<br />
+   <b><br />
+  Было сказано то что у проекта будет 1 сервер. Получается будет на сервере множество каналов или же и в правду вы готовы держать огромный онлайн на 1 сервере?</b><br />
+Все игроки одного региона будут играть друг с другом на одном общем шарде. Это возможно благодаря устройству сервера (который способен работать на большом количестве машин), устройству локаций (где используются каналы) и многим интересным техническим находкам наших замечательных программистов<br />
+<br />
+  <b>Как будет влиять война богов на остальной мир?</b><br />
+Война с богами вторжения – это всегда катастрофа для смертных и всего Элиона. Несмотря на то, что у жителей планеты богатый опыт таких противостояний – ни одно столкновение с иными мирами не остаётся бесследным. Например, развитые технологии пришли в результате победы над одним из вторжений. А флора и фауна вынуждена постоянно адаптироваться под занесённые войной чужеродные формы жизни.<br />
+<br />
+  Бои богов Элиона между собой скорее влияют на политический ландшафт, чем на обычный. Ведь никто не хочет остаться властителем выжженной пустыне на месте когда-то процветающей провинции. <br />
+ <br />
+ <br />
+  <b>Если серверы разделены на каналы, могу ли я сам выбирать нужный мне канал, если там есть место? Что произойдет, если я приглашу в группу игрока, находящегося в другом канале?</b><br />
+  Если произойдет так, что вы с вашими друзьями попали в разные каналы на открытой территории, например на <span class="linkexternal"><a href="http://sf.mail.ru/sites/sf.mail.ru/files/panorama/panorama1.html" target="_blank">раскопках Исолы</a></span>, то вам достаточно объединиться в группу и нажать кнопку перемещения к другу. Далее сервер все сделает за вас.<br />
+Если рассматривать участие в приключениях, то тут все еще проще. У вас есть возможность отправиться туда заранее сформированной группой.<br />
+  Будет ли подбор игроков на активности по силе или рейтингу? Если да, то по каким критериям?<br />
+  Как мы уже говорили, в игре есть определенный показатель, отвечающий за «павер» персонажа — наш аналог гирскора. Система подбора игроков учитывает этот показатель, текущее развитие персонажа и предыдущий рейтинг в подобных активностях.<br />
+  Будут ли в игре возможности летать?<br />
+Да, там где это нужно по геймплею. <br />
+ <br />
+ <br />
+  <b>Будет ли возможность приобрести какой-либо транспорт для ускоренного передвижения по просторам Элиона (водный, наземный)?</b><br />
+  Да, но подробности мы расскажем чуть позже. Личного водного транспорта в игре не предусмотрено (по крайней мере на момент запуска проекта), а вот наземный обязательно будет.<br />
+  <br />
+<b>Можно ли прыгать в игре?</b><br />
+  Да.<br />
+<br />
+   <br />
+<font size="5"><b>Классы и развитие персонажа</b></font><br />
+<br />
+  <b>Сколько классов будет в игре?</b><br />
+К моменту открытого запуска в игре будет от 10 до 15 классов. На старте ОБТ мы планируем в районе 10 классов, так как нам нужно обеспечить не только все классические групповые и PVP роли, но и уравновешенную систему их взаимосвязи. С самого начала игроку доступны всего 3 класса (это уже показанные в роликах и статьях melee - Паладин, range - Криомант и ещё не сильно засвеченный Support-класс). Постепенно с развитием персонажа игрок доберётся и до остальных или сможет полностью сконцентрироваться на этих. Но подробно про классы лучше рассказывать с видео и скриншотами, а не на пальцах и общих формулировках. <br />
+<br />
+  <b>Насколько каждый класс будет уникален и не похож на другой? </b><br />
+15 классов - это конечно очень здорово, но, согласитесь, что сложно уйти от стандартного &quot;маг, воин, танк, хил, син&quot;, поскольку велосипед уже изобретен.<br />
+Даже внутри классических групповых ролей есть место разнообразию. Танк на паки и танк на босса, контроль для PVP и контроль для PVE, AOE DD и DD по одиночной цели. Во всех играх есть свои тонкости и нюансы разницы классов. Мы специально берём разные референсы, вдохновляемся разными играми и даже делаем классы разными людьми, что бы добиться максимально различного ощущения от каждого из них.<br />
+<br />
+  <b>Как устроена прокачка персонажа?</b><br />
+В игре предусмотрена уникальная система прокачки — без опыта и уровней. Новые таланты и способности открываются с помощью атласа развития, который предоставляет множество путей для создания уникального персонажа.<br />
+<br />
+  <b>У игры будут отсутствовать опыт и уровни, тогда каким образом будет осуществляться прогресс персонажа?</b><br />
+  В играх с опытом и уровнями эти сущности теряют актуальность на поздних этапах. Иногда это связано с достижением максимума по уровню, иногда с непрямой зависимостью цифр развития и цифр урона. В итоге игроки начинают пользоваться сводными рейтингами, такими как GearScore (рейтинг экипировки). Мы пошли навстречу игрокам и избавились от лишних этапов и отмирающих характеристик. Основной параметр героев в Skyforge — &quot;престиж&quot; персонажа, это и есть наш аналог GearScore.<br />
+<br />
+  <b>Что такое престиж? Расскажите про это подробнее.</b><br />
+  Все очень просто. Престиж — это наш аналог гирскора, т.е. рейтинга экипировки. Это сумма всех характеристик вашего персонажа. Показатель престижа отражает развитие героя. Он увеличивается, когда вы открываете новые вершины в атласе, обзаводитесь новыми предметами экипировки или увеличиваете число последователей.<br />
+<br />
+  <b>Будет ли какая-то максимально допустимая разница в показателях престижа для персонажей в группе? Могут ли в ней состоять новичок и опытный игрок?</b><br />
+  Есть ряд активностей, в которых слишком большая разница в развитии игроков недопустима (к примеру, PVP), но большинство приключений и локаций можно посещать в группе с любым игроком.<br />
+   <br />
+  <b>Есть ли привязка пола к расе(классу)?</b><br />
+Забавно, но у нас были идеи по этому поводу, однако то, что для нас является очевидным и нормальным, для западных игроков – на грани оскорбления. По опытной экспертизе Obsidian мы отказались от однополых классов. <br />
+<br />
+  <b>Правда что не будет хил класса? Будут ли в игре хилы(лекари)?</b><br />
+Да, правда. В игре не будет классов - Healer-ов. Мы пришли к такому решению из-за дискомфорта который вызывает лечение в таких играх. Бесконечное «перетягивание каната» - барчика здоровья. Фокус всего рейда в бедолагу хиллера. Затягивающиеся боссфайты там, где шансов одолеть уже нет. Безысходное ПВП. Всё это с лёгкостью исправляется одним решением, а высвободившуюся роль заполнят несколько классов поддержки. <br />
+<br />
+  <b>Если в игре не будет хилов, то будет ли система восстановления медитацией, как это было в Blade and Soul? Там отползаешь от монстров подальше, садишься на медитацию и XP пополняешь, пока игроки отвлекают монстров от тебя. Будет что-то похожее в Skyforge?</b><br />
+  В Skyforge роль хила заменяется ролью саппорта. В классическом представлении хилер должен поддерживать уровень здоровья танка. В нашей группе саппорт поддерживает уровень его защиты, а восстановление показателей персонажа происходит вне боя и очень быстро. Благодаря этому тактика ведения боя значительно меняется. Про систему классов и их роли в группе мы подробно расскажем в одной из наших будущих статей.<br />
+   <br />
+  <b>Будет ли в игре стелс класс?</b><br />
+Да и про него можно будет узнать в недалёком будущем. А с учётом того, что одним из направлений развития проекта мы выбрали «классы» - со временем их может стать довольно много. <br />
+   <br />
+  <b>Будет ли в игре класс, который подразумевает призыв существ-помощников?</b><br />
+  Да, такой класс появится. Вообще мы планируем большое количество разнообразных классов.<br />
+   <br />
+  <b>Очень хочу знать, будут ли темные классы типа некромантов?</b><br />
+  Да.<br />
+<br />
+  <b>Здравствуйте! Хотелось бы узнать, будет ли класс «самурай»? Уж очень бы хотелось увидеть его среди списка всех классов. Сам изучаю кендо, поэтому хотелось бы поиграть за самурая.</b><br />
+  Уже на старте есть как минимум два класса, связанных с «восточными единоборствами». Один из них — знакомый вам мастер теней (ниндзя). Ну а поскольку классы в нашей игре не выбираются «на старте и насовсем», мы планируем в будущем расширять их количество, так что может быть все что угодно.<br />
+<br />
+  <b>Будут ли комбинированные классы? Допустим, можно ли, выбрав криоманта, получить также несколько навыков другого класса?</b><br />
+  Играя криомантом, использовать, например, некоторые из скилов паладина, не получится. Но благодаря быстрой смене классов и их независимости от характеристик, каждый персонаж — это своеобразный «смешанный класс», так как он может выполнять любую роль, которая необходима будет в той или иной ситуации.<br />
+   <br />
+  <b>Какая в игре система навыков? Будут ли &quot;особые&quot;, которые открываются в награду за разные достижения в игре. </b><br />
+Будет ли реализована система уникальности персонажа? Скрытые классы или ценные находки , уникальное оружие или титулы , доступные малому количеству игроков. <br />
+Отказ от уровней и решение использовать моментальное переключение классов сильно повлияло на систему развития персонажа, навыков, умений, заклинаний и т.п. В ней нашлось место и «особым» достижениям, и уникальным способностям, и гибкой настройке и достаточному разнообразию. <br />
+ <br />
+  <b>Будет ли возможность сбросить изученные навыки? Можно ли будет при этом вернуть затраченные на их изучение ресурсы? Если да, то каким образом?</b><br />
+  В Skyforge достаточно интересная система развития персонажей. Вариантов билдов огромное количество. Соответственно, можно создать действительно уникального героя. Мы не ставим игрока в условия, когда, прокачав одну ветку, он понимает, что хотел добиться другого, а навыки уже не сбросить. Способы заработать специальные предметы для изучения новых талантов не заканчиваются на high end, поэтому в стандартном сбросе навыков отпадает необходимость. Таким образом, можно просто наращивать возможности персонажа. <br />
+<br />
+  Продвигаясь по атласу, вы учите не только навыки, но и развиваете всего персонажа в целом, увеличивая характеристики защиты, здоровья и т.д. Сброс персонажа «в ноль» пока не предусмотрен. Но так как за выполнение заданий и прохождение инстансов вы сможете бесконечно получать требуемые для открытия вершин ресурсы, то вы в любой момент можете сменить вектор своего развития в сторону другого билда или класса, при этом не теряя ранее прокачанных характеристик.<br />
+<br />
+  <b>Будет ли возможность переключиться не на другой класс, а на другой билд в рамках одного класса?</b><br />
+  Да, конечно. Более того, это нужно будет делать, ведь разные билды требуются для разных активностей. Если вы, пройдя PvE-миссию, захотите помериться силами с другими игроками в PvP, то вам стоит задуматься над иным набором умений и талантов, а может быть, и чего-то еще. ;)<br />
+   <br />
+  <b>В интервью разработчики упомянули, что система смены классов поможет сбалансировать игру. К примеру, если на БГ стало много магов, то все пересели на синов. То есть игра обязывает менять класс в зависимости от текущей ситуации и это ложится в основу геймплея, а соответственно, играть одним классом будет невыгодно. Будет ли игра навязывать смену класса? Или же я смогу выбрать, к примеру, лучника и независимо от ситуации комфортно им играть?</b><br />
+  В игре нет «обязаловки» или искусственных ограничений для смены класса. <br />
+<br />
+Кто-то захочет попробовать поиграть сразу несколькими классами. Другому нравится развивать полностью один класс и оттачивать мастерство боя именно им. Выбор класса в тот или иной момент остается только за вами.<br />
+<br />
+  <b>Будет ли тратится игровые монеты или инергия на смену класса в один клик?</b><br />
+На данный момент мы не планируем ограничивать смену классов чем-то кроме состояния «вне боя», но это не банальный вопрос и по результатам тестирования мы можем добавить ряд лимитов из балансных соображений. <br />
+<br />
+  <b>Будут ли ограничения по развитию или же можно действительно интересно поиграть вместе с друзьями, несмотря на разницу в престиже?</b><br />
+<br />
+  В игре есть система недельных лимитов на получение ресурсов, требующихся для прогресса персонажа. Цель этой системы — уменьшить разрыв по престижу между игроками, которые начали играть вместе, но проводят в игре разное количество времени. После достижения лимита получаемый в награду основной ресурс заменится на другой, дающий временные преимущества. Если же его не удалось исчерпать за неделю, то остаток будет приплюсован к лимиту следующей недели.<br />
+<br />
+Таким образом, если вы ограничены во времени, то игроки, в чьем распоряжении его больше, не смогут резко обогнать вас в прогрессе.<br />
+<br />
+Если ваш друг отстал от вас, скажем, уехал в отпуск на две недели, то он сможет наверстать упущенное, получив за будущую неделю столько же ресурсов, сколько вы получили за три.<br />
+<br />
+Получив максимально возможное количество ресурсов в пределах недельного лимита, вы сможете двигаться к своим целям другими путями. В награду вам будут доставаться ресурсы, косвенно влияющие на прогресс. Например, исчерпав лимит на сбор искр, вы будете получать временные усилители, которые сможете потратить либо ради удовольствия на арене или в иных активностях, либо приберечь их для усиления персонажа в бою с более сильным противником на следующей неделе.<br />
+<br />
+  <b>Расскажите подробнее про лимит развития. Каков он будет? На сколько часов игры в неделю?</b><br />
+  В зависимости от фидбека и результатов тестов этот и многие другие числовые показатели в игре могут корректироваться вплоть до самого запуска проекта. При обновлении лимитов неистраченные ранее не обнуляются, а прибавляются к новым. Для того, чтобы быть конкурентоспособным, достаточно 2-3 часов в день. Но при этом игроку нужно будет приложить все силы и проводить это время максимально активно.<br />
+<br />
+  <b>Скажите, а будут ли в игре особенные классы, которые можно получить, выполнив задания или убив определенных боссов?</b><br />
+  У нас классы трех диапазонов: ближний (есть у всех) средний (открывается через некоторое время) и поздний (открывается в районе хай-энда и тяжело). Взять классы дальнего диапазона непросто, и потому все будут брать тот класс, который им по душе. Это соизмеримо с выполнением задания, но не ограничено необходимостью проходить одного босса.<br />
+   <br />
+  <font size="5"><b>Боги</b></font><br />
+<br />
+  <b>Как будет развита кастомизация в игре? Будет ли широкие возможности по настройке внешности персонажа?</b><br />
+Боги – сверхъестественные сущности. Они могут принимать много обличий, и не скованны ограничениями смертных. Им не обязательно носить броню, что бы защититься, а как предстать перед смертными зависит только от их воли. Поэтому вы сможете настроить свою внешность и одежду независимо от класса. Подобрать себе реалистичный доспех, одеться как экстравагантный маг или найти необычный элемент гардероба, отражающий вашу оригинальность.<br />
+  <br />
+При разработке кастомизации персонажей мы уделяли особое внимание тому, что наиболее заметно в игре: телосложению, пропорциям и так далее. Это не значит, что мы обошли стороной лица и т.п. «спрятанные» черты. <br />
+<br />
+  <b>Как именно будет работать сущность бога? Она будет временной или навсегда?</b><br />
+  С тех пор, как ваш персонаж дорастет до возможности стать богом, она сохранится навсегда. Однако для применения божественного облика вам потребуется определенный ресурс — вера последователей. Ее можно расходовать, копить, а также увеличивать ее количественное значение, приумножая число своих последователей.<br />
+<br />
+  <b>Будет ли фиксированное количество богов на один сервер (для избранных, так сказать), или богом может стать любой, не сидящий 24/7 за игрой?</b><br />
+  Уже в первые минуты игры герой открывает в себе дар бессмертия и начинает развивать необычные способности, становясь впоследствии настоящим богом. Но на этом его путь не заканчивается, ведь достичь вершины и стать Хранителем Элиона (старшим богом) смогут лишь очень умелые и усердные игроки.<br />
+<br />
+  <b>Существуют какие-либо промежуточные стадии между &quot;обычным игроком&quot; и богом? Для обретения статуса бога нужно отстраивать культ имени себя или достаточно добыть/захватить локацию/строение/цацку?</b><br />
+Игрок узнаёт о своём бессмертии очень быстро. Буквально в первые минуты игры. Но для того, что бы стать богом ему придётся пройти немало испытаний. С умом участвовать в судьбе Элиона. Заслужить уважение смертных и других богов. И не последнее место в этом процессе занимает его культ от описания которого я уже дважды увильнул. Следите за новостями. <br />
+ <br />
+  <b>Сможет ли игрок, ставший верховным богом, заниматься терраморфингом? Так сказать, в прямом смысле сворачивать горы и выпивать моря?</b><br />
+  На данный момент мы не раскрываем настолько далекую информацию, так как стать даже младшим и средним божеством игроки смогут нескоро.<br />
+<br />
+  Уважаемые разработчики, как я понял, когда игрок становится богом и принимает новое обличье, он начинает парить над землей. Можно ли будет самому выбирать способ передвижения? А то, например, мне не очень-то и нравится парить над землей.<br />
+<br />
+  Внешний вид (а именно его частью являются анимации передвижения) у божественной формы — это опция. Мы планируем расширять ассортимент в будущем, а следовательно вполне возможно, что когда-то появятся и другие способы передвижения.<br />
+   <br />
+   <br />
+  <font size="5"><b>Боевая система </b></font><br />
+<b><br />
+  Как устроена боевая система Skyforge?</b><br />
+Дизайн боевой системы вобрал в себя все лучшее из игр разных жанров. Прицеливание мышью работает, как в шутерах, но при желании можно выбирать цель клавишами. Умопомрачительные серии ударов и эффектные добивания делают бой динамичным.<br />
+<br />
+  <b>Будут ли штрафы за смерть персонажа? Если да, то какие?</b><br />
+  Так как вы играете за бессмертного, то гибель героя в игре несет символический характер. Бессмертие выражается в том, что после исчерпания всех сил у физического тела, персонаж возрождается вновь.<br />
+<br />
+И тут речь идет скорее не о штрафах, а о досадной необходимости вновь добираться до врага, чтобы отомстить. Воскрешение происходит у ближайшего визора. Если же это приключение, то персонаж появляется на старте или перед местом схватки с предыдущим боссом.<br />
+<br />
+  <b>Будет ли реализована механика уклонения от умений других персонажей (как ближнего боя, так и дальнего)?</b><br />
+  В Skyforge есть «деши» (рывки), с помощью которых можно уклониться от умений, действующих по площади.<br />
+<br />
+  <b>Есть ли способы быстро восстановить здоровье во время боя?</b><br />
+  На данном этапе разработки в игре есть специальные механики для восстановления здоровья, пришедшие из слешеров — например, в PVE это выпадающие из монстров сферы здоровья. Особенно они полезны в сражениях с боссами. Их распределение в группе и своевременное использование в одиночной игре — важная часть боевого геймплея. Кроме того, в игре существуют расходные итемы регенерации и умение исцеления, доступное персонажу в божественной форме. При этом все способы восстановления здоровья сильно ограничены по частоте применения.<br />
+<br />
+  <b>Будут ли негативные/положительные эффекты от навыков образовывать комбо-цепи?</b><br />
+  Да, у некоторых классов есть умения, после использования которых на врага накладывается эффект, оказывающий влияние и на последующие примененные скилы.<br />
+<br />
+  <b>Будут ли петы, которые смогут дебафать или дамажить с тобой?</b><br />
+  У нас есть класс, который сможет призывать в бою помощника. А в дальнейшем не исключено, что таких классов будет несколько.<br />
+<br />
+  <b>1)Нужно ли стрелять на упреждение по движущейся цели?<br />
+  2)Возможно ли увернуться от снаряда, если ты в таргете, не используя рывок и подобные способности?<br />
+  3)Возможно ли перехватить снаряд, встав на линии огня, если он изначально летел не в тебя?<br />
+  </b>Если это АОЕ, то да.<br />
+<br />
+  В каких-то случаях механика боя подразумевает возможность увернуться от атаки, в каких-то нет. Если атакующее умение действует на линии или на площади, то из его поля действия можно уйти.<br />
+<br />
+  Возможно, но не все.<br />
+   <br />
+<br />
+  <font size="5"><b>Гильдии и совместная игры<br />
+ </b></font><br />
+ <br />
+<b>Какая максимальная вместимость игроков в группе?</b><br />
+У нас «резиновая» группа. Есть активности под разное количество. 3, 5, 10 и более человек. Каждый раз, когда мы разрабатываем новое приключение мы в первую очередь руководствуемся удобством и нуждами геймплея. <br />
+<br />
+  <b>Как планируется осуществлять распределение трофеев в группе? Не будет ли драк за очередную шмотку или оружие, которые, скорее всего, понадобятся всем?</b><br />
+  Награду за прохождение группового приключения и добычу с монстров каждый персонаж получает индивидуально, а не один предмет на всех участников. Таким образом, споры и конфликты исключаются — не будет возникать конкуренции за награду.<br />
+<br />
+  <b>Хотелось бы узнать больше о гильдиях или кланах. Как они будут называться? Как будет устроена эта система? Будет ли какая-то польза от того, что состоишь в гильдии или клане?</b><br />
+  Называться они будут пантеонами. Ощутимая польза от этого несомненно будет. В подробностях мы расскажем про пантеоны в большом отдельном материале.<br />
+<br />
+  Как будут реализованы в игре отличия гильдий, будут ли гербы гильдии и если да, то как и на чем они будут отображаться? Ну и формат заранее хотелось бы знать тоже. Заранее спасибо.<br />
+  Пока что мы размышляем над деталями данного функционала.<br />
+   <br />
+<br />
+  <font size="5"><b>Экипировка</b></font><br />
+<br />
+  <b><br />
+Весь шмот будет привязан к классу или он будет делиться на определенные виды, и что носить решает сам игрок?</b><br />
+Часть экипировки (например, оружие) привязано к классу и решая «каким классом играть» пользователь определяет и тип оружия. Другая часть экипировки – универсальна и не зависит от класса. <br />
+<br />
+  <b>Вы говорите о мгновенной смене класса. А как же экипировка?</b><br />
+Как я уже писал выше: часть экипировки универсальна для всех классов. Та же часть, которая привязана к классу – удобно «сохраняется» в персонаже и не требует переодевания при каждой смене. Вспомните оружие в TF2 – очень похожий способ решения задачи. <br />
+ <b><br />
+ Экипировка. Смена экипировки при смене класса автоматическая, но где брать экипировку вообще? Будет ли в ней разница по грейду или цвету или статам (если они будут)? Или же экипировка не имеет особого значения в игре?</b><br />
+  Как и в большинстве ММО, экипировка привычным образом достаётся игроку в качестве трофеев в боях с особо сильными врагами. Но не стоит забывать, что наши герои бессмертны и броня для них не так важна, как для простого смертного. Наши боги предпочитают владеть внушительным оружием или могучими артефактами. Они не чураются использовать различные кольца и амулеты, которые приносят им удачу в бою.<br />
+<br />
+  <b>Вопрос по оружию. Оно будет классическим (стилизованные под игру мечи, луки, посохи и т.д.) или есть шанс увидеть огнестрел и ему подобное?</b><br />
+  Наверняка вы уже обратили внимание, что в графическом плане наш мир находится на стыке сверхсовременных технологий и самобытной культуры, сложившейся за века существования Элиона. Схожую картину вы увидите в арсенале, доступном игроку. Как говорится, лучше один раз увидеть, чем десять раз услышать! Следите за новостями.<br />
+<b><br />
+  Меня интересует вопрос: вот при смене класса меняется оружие, а можно ли будет сделать так, чтобы вместе с оружием менялась и остальная экипировка?</b><br />
+  Боевая экипировка универсальна, а визуальная экипировка (костюмы\стили) привязана к классу и вполне может меняться по вашему усмотрению.<br />
+   <br />
+  <b>Каков будет основной источник топовой экипировки (квесты, покупка за различные валюты, крафт)? Она будет стандартной или есть индивидуальные особенности в зависимости от происхождения?</b><br />
+  Саму экипировку можно получить в награду за победу над боссами и в качестве добычи с убитых монстров, хотя и с меньшим шансом. В разных активностях, соответственно, разные по силе боссы. Но экипировка дает только около трети престижа персонажа. Кроме подбора снаряжения, вам нужно будет изучать атлас развития, а также завоевывать веру последователей, чтобы стать могущественнее и сильнее.<br />
+<br />
+  <b>Судя по последним роликам с E3, персонажи сражаются либо огромными мечами, либо при помощи каких-то технологично-магических предметов. Будет ли в игре реалистичное оружие, так сказать, для ценителей классики?</b><br />
+  Учитывая сеттинг игры, где герой — это бессмертный и будущий бог, мы не стали ориентироваться лишь на оружие, имеющее вполне реальные аналоги. Да, конечно, у определенных классов оно представлено в классическом виде, например лук, посох или экзотическая кусаригама. Но в то же время не стоит забывать, что это игра со своим фантастическим миром и со своим ходом истории, что-то необычное в ней должно присутствовать. Словом, мы уверены, что любому игроку удастся найти себе оружие по вкусу.<br />
+<br />
+  <b>Я боюсь, что персонажи будут одинаковы. Я знаю о стилях и прочем, но так сложилось, что легко их не достать и большую часть времени ходят в дефолтной одежде, а так как в вашей игре нет брони, которая освежала бы вид персонажа, то обновляться в образе персонажа нечему. Как вы решите эту проблему? Вернете ли вы в игру броню, поножи, сапоги и прочее или сделаете стиль легко доступным для игроков?</b><br />
+Броню, которую вы имеете в виду, возвращать мы не планируем, но выбор стилей будет очень богатым, а способов получения декоративных костюмов в нашей игре множество. Не все из них можно получить легко, но некоторые костюмы будут доступны уже на самом старте игры.<br />
+  <br />
+<b>Вопрос по поводу эмблемы клана на одежде. Будет ли что-то подобное? Или видоизменение одежды для своего клана, для индивидуальности?</b><br />
+  Не исключено, что в будущем мы добавим подобные элементы.<br />
+<b><br />
+  Будет ли покраска оружия/брони?</b><br />
+В игре есть кастомизация цветов экипировки. <br />
+ <b><br />
+ Скажите, а в игре можно будет увеличивать сумку, выполняя квесты (игровым путем, без доната)?</b><br />
+  Да, можно.<br />
+<br />
+  <b>Если я игрок-одиночка и не могу безотрывно находиться в игре, не скажется ли это на качестве экипировки персонажа? Ведь обычно хорошие предметы можно добыть только в составе рейда или группы.</b><br />
+  Хорошую экипировку можно самостоятельно скрафтить или достать в соло инстах и группа для этого не обязательна. Обещать, что экипировка совсем никак не будет отличаться, мы не можем, так как любая MMORPG в первую очередь все-таки основана на взаимодействии игроков. И чаще всего бывает так, что пользователю, предпочитающему играть в одиночку, недоступен весь игровой контент.<br />
+<br />
+  Но, во-первых, не забывайте, что от экипировки зависит лишь треть силы вашего персонажа, на две другие составляющие — веру последователей и прокачку атласа — ваш стиль игры не повлияет.<br />
+<br />
+  Во-вторых, групповые задания, инстансы и даже рейды в Skyforge не рассчитаны на безотрывную многочасовую активность, преимущественно это короткие сессии. Кроме того, если у вас нет постоянной группы, вам не придется самостоятельно искать себе союзников для прохождения — в Skyforge есть и автоматический подбор случайных игроков.<br />
+   <br />
+  <br />
+<font size="5"><b>Мир игры<br />
+</b></font><br />
+  <b>Касательно размеров игрового мира. Каковы его размеры? Можно ли сравнить относительные размеры с другими проектами?</b><br />
+Точную цифру назвать сложно, но некоторое время назад суммарная площадь перевалила за 50 квадратных километров. <br />
+<br />
+  <b>Сколько времени потребуется, чтобы освоиться в мире Skyforge?</b><br />
+  Простое и понятное обучение поможет разобраться в основах управления и не займет много времени. Мы приложили все усилия, чтобы максимально сгладить переход от заданий, помогающих освоиться новичку, к самой игре. Скорее всего вы даже не заметите, как кончится обучение. Игроку потребуется около 150 часов, чтобы открыть большинство активностей. Однако изучить все возможности своего персонажа и полностью раскрыть его божественную мощь не выйдет и за сотни часов.<br />
+<br />
+  <b>В игре все таки открытый мир? Или же просто много больших локаций, с невидимыми стенами?</b><br />
+Элион – это планета и игроку предоставлен доступ к многочисленным регионам на всей её поверхности. Есть большие открытые локации. Есть крошечные инстансы. Мы отказались от бесшовного мира по геймплейным соображениям, но не стали лишать игрока чувства путешествия и исследования территорий. <br />
+<b><br />
+  Планета одна или можно захватывать и другие где живут другие боги?</b><br />
+Первоочередная задача Элионцев – отстоять свой родной дом от многочисленных врагов. Пока рано строить планы о контр-атаках. <br />
+<br />
+<b>Если не будет системы прокачки и уровней, сможем ли мы отправиться в абсолютно любую локацию или инстанс в самом начале игры? Или все же будут какие-то ограничения?</b><br />
+  Система инстансов предполагает разную сложность, от которой зависит и награда. Именно поэтому игровой контент открывается постепенно. Проще говоря, инстансы привязаны к показателю престижа персонажа. Чем лучше развит герой, тем выше его престиж и тем больше приключений ему доступно.<br />
+   <br />
+  <font size="5"><b>PVE</b></font><br />
+<br />
+  <b>Будет ли в игре очень сложные данжи (инсты)?</b><br />
+Да. Хардкорщики найдут для себя испытания, но сложность игры под контролем игроков и трудностей с прохождением у новичков не возникнет. <br />
+ <br />
+ <br />
+  <b>Есть ли в игре система поиска инстансов?</b><br />
+  Да, но в отличие от многих аналогов она значительно глубже интегрирована в игру. Система легкодоступна, понятна и проста в использовании. Она служит удобной отправной точкой в различные активности, инстансы, PvE- и PvP-миссии. Благодаря единому серверу этот процесс не занимает много времени, а система в свою очередь тщательно подбирает вам соответствующих союзников и (или) противников<br />
+<br />
+  <b>Как будет поощряться участие в разных активностях, чтобы не возникло ситуации, когда фармить одну активность выгоднее всего? Игроки ходят туда с утра до вечера, а на остальные активности группу не собрать.</b><br />
+  В Skyforge реализована специальная комплексная система, которая позволит игрокам комфортно проходить и перепроходить понравившиеся приключения, при этом совершенно не обязательно участвовать в уже надоевших активностях. Награды за приключения постоянно меняются. Изменяется тип и количество вознаграждения. Кроме того, приключения претерпевают некоторые изменения с течением времени. Чем больше раз игрок проходит его, тем сложнее оно становится. В результате, переусердствовав, можно сделать приключение непроходимым для себя на какое-то время. Также игрокам будут интересны приключение дня, недели и месяца. Они выбираются случайным образом, а за первое прохождение такого приключения выдаётся особо ценная награда.<br />
+<br />
+  <b>Квестовая система будет стандартной или больше ивентовой (аналогично GW 2)?</b><br />
+  У нашей квестовой системы есть схожие элементы и со стандартной схемой получения заданий, и с достаточно необычной схемой из GW 2. Мы пошли дальше и постарались воплотить в игре наиболее удачные элементы, сделав ее максимально удобной для пользователя. В Skyforge вы не будете тратить время на перемещения между NPC ради того, чтобы получить или закончить задание. Например, на некоторых локациях квесты подгружаются автоматически, если вы попадаете в место, где можно их выполнить. Завершив все цели миссии, вам достаточно нажать одну кнопку, чтобы получить награду.<br />
+<b><br />
+  Вопрос касаемо добычи с рядовых мобов. Из них будет сыпаться куча мусора непонятного назначения, как в корейских гриндилках, или же все предметы будут упорядочены и подписаны? </b>Очень не нравится ситуация, когда уже в начале игры инвентарь забивается всяким магическим мусором и артефактами, а сразу понять нельзя — пригодятся они в дальнейшем или же их можно спокойно выкинуть.<br />
+<br />
+  Вся добыча в игре имеет прямое влияние на мощь персонажа. Мы не стремимся завалить его инвентарь предметами до того, как объясним их назначение, более того, даем возможность ими воспользоваться.<br />
+<br />
+  <b>Насколько разнообразными будут PVE-активности? Ранее упоминали, что в игре можно будет найти занятие «на любой вкус». Значит ли это, что будут инстансы где, например, не придется бить мобов, а надо просто добраться до финишной черты через сложные препятствия? Может, будут активности, предлагающие решать головоломки?</b><br />
+  Чтобы достичь разнообразия, в нашей команде над разными активностями работают люди с отличающимися вкусами и пристрастиями в играх. Поэтому в игре есть активности и про полосу препятствий, и про сбор ресурсов, и про хитрых многофазовых боссов. Наши приключения легко добавляются в мир Элиона, и мы планируем расширять их ассортимент с будущими апдейтами.<br />
+  Будут ли усложненные данжи, как в АО?<br />
+  При неоднократном прохождении данжа и в зависимости от количества вашего престижа его сложность будет увеличиваться.<br />
+   <br />
+  <font size="5"><b>PVP</b></font><br />
+<br />
+  <b>Будет ли отображение мастерства в пвп (Ранги, таблицы, рейтинги, арены?)</b><br />
+Да, конечно.<br />
+<br />
+  <b>Сможем ли мы увидеть в игре большие противостояния игроков (например, 200х200)?</b><br />
+Это тема для отдельного подробного рассказа, но немного информации выдам. Большие PVP сражения – это эпично и привлекательно… до тех пор, пока не окажешься в них сам. Вклад одной двухсотой сил сражения незаметен. Тактики в толпе не проявить (она начинает работать на большем масштабе, но играть за одного юнита в РТС – не весело), умения нивелируются «фокусом» и «ваншотами». Сводить огромные количества игроков в одном сражении – геймплейно плохо. Но всегда есть место компромиссу и мы его нашли. Не раскрывая деталей скажу, что для успешного участия в гильдейских сражениях вашему объединению понадобится не менее 100 активных игроков.<br />
+<br />
+  <b>Будет ли отдельный вид пвп на военной технике? ведь мир не обделен наукой.</b><br />
+Не исключено. <br />
+<b><br />
+  Будет ли в игре режим «Дуэль» (честный бой 1 на 1, без вмешательства посторонних игроков)?</b><br />
+  Да, механизм дуэлей сейчас в активной разработке. Бросить вызов, чтобы помериться силами с другим игроком один на один, можно будет в любом месте, где вы с ним встретитесь.<br />
+<br />
+  <b>Планируется ли игровое взаимодействие между разными серверами, например межсерверные турниры?</b><br />
+  Как мы уже говорили ранее, наши игровые миры едины для каждой отдельной оперируемой зоны. Т.е. для российской территории и стран СНГ будет единый сервер, а это означает, что соперников будет достаточно. Если в определенный момент мы столкнемся с необходимостью проведения международного турнира, то это будет поводом для обсуждения, а пока об этом рано говорить.<br />
+<b><br />
+  Будут ли межсерверные киберспортивные чемпионаты по PvP?</b><br />
+  Пока что такого в планах нет, но в дальнейшем не исключено.<br />
+   <br />
+   <br />
+  <font size="5"><b>Крафт и торговля</b></font><br />
+<br />
+  <b>Будет ли в игре крафт, и как он будет работать?</b><br />
+В Skyforge несколько механик похожих на крафты из других игр. Есть простая сборка (склейка) предметов. Есть улучшение экипировки. На многих локациях есть близкий аналог «сбора». Но главная «крафтовая» механика – это большая и необычная часть божественности, о которой мы подробно расскажем в ближайшее время.<br />
+<b><br />
+  Будут ли ремесленные профессии?</b><br />
+  В Skyforge есть механики, похожие на крафт из других игр, но именно профессий у самого персонажа на данный момент нет. Профессиями обладают адепты – особые последователи бога. Подробнее вы можете прочитать об этом в <span class="linkexternal"><a href="https://sf.mail.ru/news/711.html" target="_blank">статье о культе</a></span><span class="linkexternal"><a href="https://sf.mail.ru/news/711.html." target="_blank">.</a></span><br />
+<b><br />
+  Как будет реализована торговля между персонажами? Аукцион или из рук в руки?</b><br />
+  Торговля будет реализована посредством торговой площадки — маркета. Это будет не аукцион со ставками, а именно торговая площадка, на которую будет оказывать прямое влияние спрос и предложение на конкретный товар. Прямой торговли в игре нет.<br />
+  <br />
+ <br />
+  <font size="5"><b>Интерфейс и управление</b></font><br />
+<br />
+  <b>Смогу ли я использовать с игрой 1) геймпад 2) Окулус рифт или иной 3D шлем?</b><br />
+Мы думаем о геймпаде и даже успешно экспериментировали с этим на ранних этапах разработки, но наша главная аудитория – игроки в ММО, а их привычная среда – это ПК, мышь и клавиатура. Поэтому на момент запуска такой поддержки не будет. А вот поддержка шлемов виртуальной реальности полностью зависит от их успешности и распространения.<br />
+<b><br />
+  Интерфейс, мелькавший в видео, останется неизменным до старта ЗБТ? Будет ли поддержка пользовательских аддонов как в WOW и Аллодах? Будет ли настройка базового интерфеса (перемещение/масштаб/прозрачность каждого фрейма по отдельности)?</b><br />
+Мы ещё не демонстрировали финального интерфейса, работы идут сейчас, продолжатся после СВТ и даже после релиза процесс усовершенствования не остановится. Об остальных аспектах его настроек и модификаций пока говорить рано. <br />
+<br />
+  <b>Есть ли возможность, что все таки можно будет создать более одного персонажа на аккаунте(например по одному мужского и женского пола как минимум).</b><br />
+<br />
+Этого не потребуется, и кастомизация внешности, и развитие персонажа – гибкие механизмы и позволяют получить все желаемые результаты не пересоздавая персонажа. Но никто не помешает иметь 2 аккаунта одному человеку. <br />
+ <br />
+  <b>Будет ли хоть какая-нибудь кастомизация интерфейса игры? Можно ли, например, выкинуть ненужную панель, уменьшить карту, скрыть чат и т.д.</b><br />
+  Мы старались сделать интерфейс, который игрок видит во время сражения, максимально информативным и в то же время минималистичным. По нашей задумке он не должен отвлекать на себя слишком много внимания или мешать в бою. <br />
+ <br />
+  <b>При пересмотре стримов возник вопрос: что за круг слева от полоски здоровья персонажа?</b><br />
+  Это <span class="linkexternal"><a href="https://pp.vk.me/c616124/v616124611/1bf07/XEnzP48_q04.jpg" target="_blank">интерфейс</a></span>, отображающий количество и цвет искр, которые вам осталось собрать, чтобы открыть следующую вершину в атласе развития. Как только вы накопите достаточное количество требуемого ресурса, то интерфейс отобразит напоминание, какой горячей клавишей можно быстро открыть атлас развития, чтобы изучить новые вершины.<br />
+   <br />
+   <br />
+   <font size="5"><b>Остальное</b></font><br />
+  <br />
+<b>Будет ли у игры собственная ингейм-энциклопедия? Описание предметов, мобов, боссов, и т.п.</b><br />
+  Да, и она является одной из важнейших частей нашего портала. Там вы найдете самую свежую и актуальную информацию о всевозможных игровых аспектах. Ее наполнение будет происходить как автоматически (часть контента будет браться напрямую из игры), так и в ручном режиме, т.е. игроки смогут добавлять свои руководства и полезные комментарии к уже существующим статьям, тактикам, билдам и т.п.<br />
+<br />
+  <b>Вы упомянули, что специально для Skyforge разрабатывается собственная игровая соцсеть. Так вот, будут ли в профиле указываться достижения игрока, его последняя активность? Например, игрок завершил приключение «название приключения», набрав 5 баллов из 5.</b><br />
+  На нашем игровом портале будет отдельная вкладка в профиле игрока с достижениями персонажа. Учитывая, что портал является частью игры, то в наших силах отображать практически любую информацию об игровых достижениях персонажа. Кроме этого, мы сможем выводить и достижения, заработанные на самом портале, например разные медали, звания и прочее. <br />
+<b><br />
+Вопрос «что именно отображать?» еще обсуждается. Когда вы сами посмотрите на игру и у вас сложится понимание, чего именно не хватает в списке отображаемых достижений, мы будем готовы выслушать пожелания.</b><br />
+  Будет ли в профиле указываться личная информация? Например, в какой гильдии состоит игрок.<br />
+  Равно как и в случае с достижениями, на портале предусмотрена вкладка и для вашего игрового персонажа. Т.е. посетители портала смогут посмотреть не только информацию о вас как о пользователе именно портала, но и узнать что-то полезное о вашем герое, например класс вашего персонажа или гильдию.<br />
+<br />
+  <b>Будет ли возможность проводить стримы по Skyforge через игровую соцсеть?</b><br />
+  На нашем портале уже сейчас есть возможность встраивания плееров с youtube, rutube, mail.ru и vk. В дальнейшем мы постараемся реализовать возможность использования иных сервисов, например twitch.<br />
+<br />
+  <b>Есть возможность увидеть через внутриигровую соцсеть, чем занимается твой друг или согильдеец, и моментально переместиться в игру, чтобы, например, помочь ему?</b><br />
+  Нет, такой возможности нет. Внутриигровая соцсеть — это портал, который включает в себя форум и игровые сервисы. Его интерфейс полностью повторяется при просмотре с помощью браузера любого устройства. Это подразумевает, что вы можете просматривать информацию игрока, не только находясь в самой игре. <br />
+<br />
+Вход в инстансы осуществляется с помощью другого игрового функционала, о котором мы скоро расскажем отдельно.<br />
+<b><br />
+  Будет ли на сайте калькулятор умений и талантов? Будет ли на портале реализован аукцион, интегрированный с игровым?</b><br />
+  Существующий функционал портала не финальный и будет расширяться. Мы думаем над тем, чтобы дать игрокам возможность влиять на своего персонажа, даже не находясь в игре.<br />
+  По личному опыту мы знаем, сколько различных сервисов требуется в процессе освоения контента. Мы хотим взглянуть шире на эту сторону игрового процесса и объединить все самое полезное на одном ресурсе. <br />
+<br />
+  Задумка в том, чтобы игрок смог заглянуть в инвентарь и совершить различные манипуляции с вещами, принять участие в торговле, в жизни своей гильдии, наметить цель на атласе развития или составить билд и перераспределить умения и таланты персонажа. Словом, предпринимать любые действия, которые не связаны с передвижением по локациям и боем, находясь при этом на портале, скажем, с мобильного телефона.<br />
+<br />
+  Еще раз стоит оговориться, что портал находится в стадии разработки. Мы хотим сделать его как можно функциональнее и удобнее для пользователей, чтобы не пришлось ходить на десятки сторонних сайтов в поисках необходимых сервисов. Но все сразу реализовать не получится.<br />
+  Резюмируя вопрос: да, такой функционал будет, но точного времени его появления мы пока не назовем. Ориентировочно — уже на ОБТ.<br />
+<br />
+  <b>Надёжная ли будет античит система, и будит ли в игре возможность (кнопка) чтоб админы обратили внимания на действия игрока?</b><br />
+Очень интересно узнать о защите игры, я надеюсь, она будет *кхм* отличаться от *кхм* других античитов. <br />
+<br />
+Мы уделяем немало внимания безопасности и честности игрового процесса, ведь читер портит игру не только разработчикам и другим игрокам, но и самому себе. Вся информация хранится на нашей стороне, пакетные данные зашифрованы, а на стороне клиента остается лишь красивая картинка.<br />
+<br />
+  <b>Здравствуйте! У меня вот какой вопрос. Когда мы сможем увидеть возможности редактора персонажа? Или это пока не в приоритете?</b><br />
+  На одном из этапов тестирования.<br />
+<br />
+<span class="linkexternal"><a href="https://portal.sf.mail.ru/comments/5350ceb751ce9e46e9596192?page=1" target="_blank">Источник</a></span>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<div class="sizedsigvip"><div align="right"><b><a href="http://www.goha.ru/game" target="_blank">База игр GoHa.Ru</a></b><br />
+<font face="Comic Sans MS"><font size="3"><font color="Red">Ю</font>нтер</font></font></div></div>
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#337793; background-color:#337793" />
+				<em>
+					
+						Последний раз редактировалось Unter; 17.12.2014 в <span class="time">19:46</span><IDXSKIP>.
+					
+					
+				</IDXSKIP></em>
+			</div>
+		<!-- / edit note -->
+		
+
+		
+		
+		
+		
+			
+		
+
+	</td>
+</tr>
+</table>
+
+
+ 
+<!-- post 151658388 popup menu -->
+<div class="vbmenu_popup" id="postmenu_151658388_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Unter</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=40853">Посмотреть профиль</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=finduser&amp;u=40853" rel="nofollow">Найти ещё сообщения от Unter</a></td></tr>
+	
+	
+	
+	
+	<!-- v3 Arcade -->
+	<IDXSKIP><tr><td class="thead">Аркады</td></tr></IDXSKIP>
+	<tr><td class="vbmenu_option"><a href="arcade.php?do=newchallenge&amp;userid=40853">Поединок <b>Unter</b>!</a></td></tr>
+	<!-- /v3 Arcade -->
+	</table>
+</div>
+<!-- / post 151658388 popup menu -->
+
+
+<!-- post 151658388 rating popup menu -->
+<div class="vbmenu_popup" id="postmenu_postrating_151658388_menu" style="display: none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+		<IDXSKIP><tr><td class="thead">Рейтинг сообщений</td></tr></IDXSKIP>
+		
+		<tr><td class="vbmenu_option"><a href="postrating.php?do=stats&amp;p=151658388" target="_blank">Статистика сообщения</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="faq.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;faq=vb3_board_usage#faq_postrating" target="_blank">Справка</a></td></tr>
+		
+	</table>
+</div>
+<!-- / post 151658388 rating popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #151658388 --><!-- post #151659108 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 17px 0px 17px" align="left">
+
+	<div id="edit151659108" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+
+<table id="post151659108" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	
+		<td class="thead" style="font-weight:normal;" >
+			<!-- status icon and date -->
+			<a name="post151659108"><img class="inlineimg" src="images/customstyles/vbgoha/statusicon/post_old.gif" alt="Старый" border="0" /></a>
+			17.12.2014, 20:00
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal;" align="right">
+			&nbsp;
+			<div class="postrating_container" title="Рейтинг сообщения">
+	<img src="images/customstyles/vbgoha/misc/11x11progress.gif" style="display:none;" id="postrating_progress_151659108" alt="" />
+	<span class="postrating_title">Рейтинг сообщения:</span>
+	<div class="postrating_counter" id="postmenu_postrating_151659108">
+		<a href="postrating.php?do=inc&amp;p=151659108" class="postrating_link">
+			<img src="images/customstyles/vbgoha/misc/icon_pr.png" class="postrating_icon inlineimg" alt="" border="0" />
+			<span id="postrating151659108">0</span><span class="postrating_plus">+</span>
+		</a>
+	</div>
+	<script type="text/javascript"> vbmenu_register('postmenu_postrating_151659108'); </script>
+</div>
+
+<a href="http://forums.goha.ru/showpost_0_0_151659108_2--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge+%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%D0%B8+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B+%D0%93%D0%B8%D0%B4%D1%8B+%D0%B8+%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%8B+FAQ+F.A.Q.+%D0%BF%D0%BE+%D0%B8%D0%B3%D1%80%D0%B5" target="new" rel="nofollow" id="postcount151659108" name="2" title="Показать сообщение отдельно">#</a><a href="http://forums.goha.ru/showthread_0_0_p151659108" rel="nofollow"><strong>2</strong></a><IDXSKIP>&nbsp;
+			
+			
+			
+			
+			
+		</IDXSKIP></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2 alt3" width="190">
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td align="center">
+						<table style="display: inline-table; vertical-align: middle;" cellspacing="0" cellpadding="0" border="0"><tr><td><div id="postmenu_151659108">
+							
+							<a class="bigusername" href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=1091702">Alsimoos</a>
+							<script type="text/javascript"> vbmenu_register("postmenu_151659108", true); </script>
+				
+							
+							
+						</div></td><td>	</td></tr></table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<div class="smallfont"><strong>Забанен</strong> <img class="inlineimg" src="images/customstyles/vbgoha/statusicon/user_offline.gif" alt="Alsimoos вне форума" border="0" />
+
+</div>
+			</td>
+		</tr>
+		</table>
+		<br />
+
+		
+		
+
+		
+
+		<!-- controls -->
+		<div style="text-align: center;">
+			
+		
+		
+		
+			<a href="newreply.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=newreply&amp;p=151659108" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/quote.gif" alt="Ответить с цитированием" border="0" /></a>
+		
+		
+		
+		
+		</div>
+		<!-- / controls -->
+
+		<div style="text-align: center;" class="smallfont">
+			
+			
+			
+			
+		</div>
+
+		
+		<fieldset>
+			<legend><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=1091702">Info</a></legend>
+			<table width="100%" border="0" cellspacing="0" cellpadding="1">
+			
+
+			<tr> 
+				<td><span class="smallfont"><b>Сообщений:</b> 2,107</span></td>
+			</tr>
+			<tr> 
+				<td><span class="smallfont"><b>Регистрация:</b> 30.11.2013</span></td>
+			</tr>
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			<tr>
+				<td align="center"><!--socialicons[1091702]-->     </td>
+			</tr>
+
+			
+			</table>
+		</fieldset>
+		
+
+	</td>
+	
+	<td class="alt1" id="td_post_151659108">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Re: F.A.Q. по игре</strong>
+			</div>
+			<hr size="1" style="color:#337793; background-color:#337793" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_151659108">
+			
+			<div class="cqtitle" style="display: none;">
+	<span class="thead">
+		Цитата:
+		<span class="normal">
+			Сообщение от <strong>Unter</strong>
+			</span>
+			<a href="http://forums.goha.ru/showthread_0_0_p151658388" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/viewpost.gif" border="0" alt="Посмотреть сообщение" /></a>
+		
+	</span>
+</div>
+<div class="cqwrapper">
+<div style="margin:20px; margin-top:5px; ">
+	<IDXSKIP><div class="smallfont" style="margin-bottom:2px">Цитата:</div></IDXSKIP>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Сообщение от <strong>Unter</strong>
+					<a href="http://forums.goha.ru/showthread_0_0_p151658388" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/viewpost.gif" border="0" alt="Посмотреть сообщение" /></a>
+				</div>
+				<div style="font-style:italic"><div class="cquote" title="Сообщение от Unter">  <b>Skyforge — это очередная «гриндилка»?</b><br />
+Нет. Игра не принуждает вас к монотонному убийству монстров. Мы приготовили для вас множество активностей, от которых вы не сможете оторваться!</div>
+</div>
+			
+		</td>
+	</tr>
+	</table>
+</div></div>врут,нагло врут,вас будут заставлять гриндить одни и теж *активности* на протяжении всего кача<br />
+<br />
+<font size="1"><font color="#666686"><i>Добавлено через 6 минут</i></font></font><br />
+повеселили ответы на большинство вопросов,ответы мутные и факты расплывчаты)))отмазы вообщем)
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+		<!-- edit note -->
+			<div class="smallfont">
+				<hr size="1" style="color:#337793; background-color:#337793" />
+				<em>
+					
+						Последний раз редактировалось Alsimoos; 17.12.2014 в <span class="time">20:00</span><IDXSKIP>.
+					
+					
+						Причина: Добавлено сообщение
+					
+				</IDXSKIP></em>
+			</div>
+		<!-- / edit note -->
+		
+
+		
+		
+		
+		
+			
+		
+
+	</td>
+</tr>
+</table>
+
+
+ 
+<!-- post 151659108 popup menu -->
+<div class="vbmenu_popup" id="postmenu_151659108_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Alsimoos</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=1091702">Посмотреть профиль</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=finduser&amp;u=1091702" rel="nofollow">Найти ещё сообщения от Alsimoos</a></td></tr>
+	
+	
+	
+	
+	<!-- v3 Arcade -->
+	<IDXSKIP><tr><td class="thead">Аркады</td></tr></IDXSKIP>
+	<tr><td class="vbmenu_option"><a href="arcade.php?do=newchallenge&amp;userid=1091702">Поединок <b>Alsimoos</b>!</a></td></tr>
+	<!-- /v3 Arcade -->
+	</table>
+</div>
+<!-- / post 151659108 popup menu -->
+
+
+<!-- post 151659108 rating popup menu -->
+<div class="vbmenu_popup" id="postmenu_postrating_151659108_menu" style="display: none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+		<IDXSKIP><tr><td class="thead">Рейтинг сообщений</td></tr></IDXSKIP>
+		
+		<tr><td class="vbmenu_option"><a href="postrating.php?do=stats&amp;p=151659108" target="_blank">Статистика сообщения</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="faq.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;faq=vb3_board_usage#faq_postrating" target="_blank">Справка</a></td></tr>
+		
+	</table>
+</div>
+<!-- / post 151659108 rating popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #151659108 --><!-- post #152415850 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 17px 0px 17px" align="left">
+
+	<div id="edit152415850" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+
+<table id="post152415850" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	
+		<td class="thead" style="font-weight:normal;" >
+			<!-- status icon and date -->
+			<a name="post152415850"><img class="inlineimg" src="images/customstyles/vbgoha/statusicon/post_old.gif" alt="Старый" border="0" /></a>
+			24.04.2015, 07:21
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal;" align="right">
+			&nbsp;
+			<div class="postrating_container" title="Рейтинг сообщения">
+	<img src="images/customstyles/vbgoha/misc/11x11progress.gif" style="display:none;" id="postrating_progress_152415850" alt="" />
+	<span class="postrating_title">Рейтинг сообщения:</span>
+	<div class="postrating_counter" id="postmenu_postrating_152415850">
+		<a href="postrating.php?do=inc&amp;p=152415850" class="postrating_link">
+			<img src="images/customstyles/vbgoha/misc/icon_pr.png" class="postrating_icon inlineimg" alt="" border="0" />
+			<span id="postrating152415850">0</span><span class="postrating_plus">+</span>
+		</a>
+	</div>
+	<script type="text/javascript"> vbmenu_register('postmenu_postrating_152415850'); </script>
+</div>
+
+<a href="http://forums.goha.ru/showpost_0_0_152415850_3--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge+%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%D0%B8+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B+%D0%93%D0%B8%D0%B4%D1%8B+%D0%B8+%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%8B+FAQ+F.A.Q.+%D0%BF%D0%BE+%D0%B8%D0%B3%D1%80%D0%B5" target="new" rel="nofollow" id="postcount152415850" name="3" title="Показать сообщение отдельно">#</a><a href="http://forums.goha.ru/showthread_0_0_p152415850" rel="nofollow"><strong>3</strong></a><IDXSKIP>&nbsp;
+			
+			
+			
+			
+			
+		</IDXSKIP></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2 alt3" width="190">
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td align="center">
+						<table style="display: inline-table; vertical-align: middle;" cellspacing="0" cellpadding="0" border="0"><tr><td><div id="postmenu_152415850">
+							
+							<a class="bigusername" href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=920590">Chesters</a>
+							<script type="text/javascript"> vbmenu_register("postmenu_152415850", true); </script>
+				
+							
+							
+						</div></td><td>	</td></tr></table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<div class="smallfont"><strong>Писaтель</strong> <img class="inlineimg" src="images/customstyles/vbgoha/statusicon/user_offline.gif" alt="Chesters вне форума" border="0" />
+
+</div>
+			</td>
+		</tr>
+		</table>
+		<br />
+
+		
+		
+
+		
+
+		<!-- controls -->
+		<div style="text-align: center;">
+			
+		
+		
+		
+			<a href="newreply.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=newreply&amp;p=152415850" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/quote.gif" alt="Ответить с цитированием" border="0" /></a>
+		
+		
+		
+		
+		</div>
+		<!-- / controls -->
+
+		<div style="text-align: center;" class="smallfont">
+			
+			
+			
+			
+		</div>
+
+		
+		<fieldset>
+			<legend><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=920590">Info</a></legend>
+			<table width="100%" border="0" cellspacing="0" cellpadding="1">
+			
+
+			<tr> 
+				<td><span class="smallfont"><b>Сообщений:</b> 74</span></td>
+			</tr>
+			<tr> 
+				<td><span class="smallfont"><b>Регистрация:</b> 24.04.2012</span></td>
+			</tr>
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			<tr>
+				<td align="center"><!--socialicons[920590]-->     </td>
+			</tr>
+
+			
+			</table>
+		</fieldset>
+		
+
+	</td>
+	
+	<td class="alt1" id="td_post_152415850">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Re: F.A.Q. по игре</strong>
+			</div>
+			<hr size="1" style="color:#337793; background-color:#337793" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_152415850">
+			
+			Напишите в шапке что это игра к ммо вобще не имеет слабое отношение, это обычная сессионная кооперативная игра, с пве событиями и данжами, и пвп ареной. НО не ммо в класическом понимании этого слова а ля линейдж, вов, тера, айон АА итд, отдаленно похожа тока на Гилдварс 2.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		
+		
+		
+		
+			
+		
+
+	</td>
+</tr>
+</table>
+
+
+ 
+<!-- post 152415850 popup menu -->
+<div class="vbmenu_popup" id="postmenu_152415850_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Chesters</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=920590">Посмотреть профиль</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=finduser&amp;u=920590" rel="nofollow">Найти ещё сообщения от Chesters</a></td></tr>
+	
+	
+	
+	
+	<!-- v3 Arcade -->
+	<IDXSKIP><tr><td class="thead">Аркады</td></tr></IDXSKIP>
+	<tr><td class="vbmenu_option"><a href="arcade.php?do=newchallenge&amp;userid=920590">Поединок <b>Chesters</b>!</a></td></tr>
+	<!-- /v3 Arcade -->
+	</table>
+</div>
+<!-- / post 152415850 popup menu -->
+
+
+<!-- post 152415850 rating popup menu -->
+<div class="vbmenu_popup" id="postmenu_postrating_152415850_menu" style="display: none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+		<IDXSKIP><tr><td class="thead">Рейтинг сообщений</td></tr></IDXSKIP>
+		
+		<tr><td class="vbmenu_option"><a href="postrating.php?do=stats&amp;p=152415850" target="_blank">Статистика сообщения</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="faq.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;faq=vb3_board_usage#faq_postrating" target="_blank">Справка</a></td></tr>
+		
+	</table>
+</div>
+<!-- / post 152415850 rating popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #152415850 --><!-- post #152415993 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 17px 0px 17px" align="left">
+
+	<div id="edit152415993" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+
+<table id="post152415993" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	
+		<td class="thead" style="font-weight:normal;" >
+			<!-- status icon and date -->
+			<a name="post152415993"><img class="inlineimg" src="images/customstyles/vbgoha/statusicon/post_old.gif" alt="Старый" border="0" /></a>
+			24.04.2015, 08:21
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal;" align="right">
+			&nbsp;
+			<div class="postrating_container" title="Рейтинг сообщения">
+	<img src="images/customstyles/vbgoha/misc/11x11progress.gif" style="display:none;" id="postrating_progress_152415993" alt="" />
+	<span class="postrating_title">Рейтинг сообщения:</span>
+	<div class="postrating_counter" id="postmenu_postrating_152415993">
+		<a href="postrating.php?do=inc&amp;p=152415993" class="postrating_link">
+			<img src="images/customstyles/vbgoha/misc/icon_pr.png" class="postrating_icon inlineimg" alt="" border="0" />
+			<span id="postrating152415993">0</span><span class="postrating_plus">+</span>
+		</a>
+	</div>
+	<script type="text/javascript"> vbmenu_register('postmenu_postrating_152415993'); </script>
+</div>
+
+<a href="http://forums.goha.ru/showpost_0_0_152415993_4--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge+%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%D0%B8+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B+%D0%93%D0%B8%D0%B4%D1%8B+%D0%B8+%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%8B+FAQ+F.A.Q.+%D0%BF%D0%BE+%D0%B8%D0%B3%D1%80%D0%B5" target="new" rel="nofollow" id="postcount152415993" name="4" title="Показать сообщение отдельно">#</a><a href="http://forums.goha.ru/showthread_0_0_p152415993" rel="nofollow"><strong>4</strong></a><IDXSKIP>&nbsp;
+			
+			
+			
+			
+			
+		</IDXSKIP></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2 alt3" width="190">
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td align="center">
+						<table style="display: inline-table; vertical-align: middle;" cellspacing="0" cellpadding="0" border="0"><tr><td><div id="postmenu_152415993">
+							
+							<a class="bigusername" href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=726053">Darkaction</a>
+							<script type="text/javascript"> vbmenu_register("postmenu_152415993", true); </script>
+				
+							
+							
+						</div></td><td>	</td></tr></table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<div class="smallfont"><strong>Справедливость</strong> <img class="inlineimg" src="images/customstyles/vbgoha/statusicon/user_offline.gif" alt="Darkaction вне форума" border="0" />
+
+</div>
+			</td>
+		</tr>
+		</table>
+		<br />
+
+		
+		
+
+		
+			<div style="text-align: center;" class="smallfont">
+				&nbsp;<a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=726053"><img src="__F_Shared/frm_avatar/avatar726053_3.gif" width="150" height="150" alt="Аватар для Darkaction" border="0" /></a>
+			</div>
+		
+
+		<!-- controls -->
+		<div style="text-align: center;">
+			<br />
+		
+		
+		
+			<a href="newreply.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=newreply&amp;p=152415993" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/quote.gif" alt="Ответить с цитированием" border="0" /></a>
+		
+		
+		
+		
+		</div>
+		<!-- / controls -->
+
+		<div style="text-align: center;" class="smallfont">
+			
+			
+			
+			
+		</div>
+
+		
+		<fieldset>
+			<legend><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=726053">Info</a></legend>
+			<table width="100%" border="0" cellspacing="0" cellpadding="1">
+			
+
+			<tr> 
+				<td><span class="smallfont"><b>Сообщений:</b> 6,458</span></td>
+			</tr>
+			<tr> 
+				<td><span class="smallfont"><b>Регистрация:</b> 10.02.2010</span></td>
+			</tr>
+
+			<tr> 
+				<td><span class="smallfont"><b>Игра:</b> булки</span></td>
+			</tr>
+
+			
+
+			
+
+			
+
+			
+
+			<tr>
+				<td align="center"><!--socialicons[726053]-->     </td>
+			</tr>
+
+			<tr>
+				<td align="center">
+<a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=726053&amp;tab=myawards#aw_issue10868889"><img src="http://forums.goha.ru/images/medals/aw_crafter.png" alt="Крафтер" border="0" class="inlineimg" /></a><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=726053&amp;tab=myawards#aw_issue10867770"><img src="http://forums.goha.ru/images/medals/aw_5year.png" alt="GoHa.Ru - Старожил" border="0" class="inlineimg" /></a>
+				</td>
+			</tr>
+			</table>
+		</fieldset>
+		
+
+	</td>
+	
+	<td class="alt1" id="td_post_152415993">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Re: F.A.Q. по игре</strong>
+			</div>
+			<hr size="1" style="color:#337793; background-color:#337793" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_152415993">
+			
+			<div class="cqtitle" style="display: none;">
+	<span class="thead">
+		Цитата:
+		<span class="normal">
+			Сообщение от <strong>Chesters</strong>
+			</span>
+			<a href="http://forums.goha.ru/showthread_0_0_p152415850" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/viewpost.gif" border="0" alt="Посмотреть сообщение" /></a>
+		
+	</span>
+</div>
+<div class="cqwrapper">
+<div style="margin:20px; margin-top:5px; ">
+	<IDXSKIP><div class="smallfont" style="margin-bottom:2px">Цитата:</div></IDXSKIP>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Сообщение от <strong>Chesters</strong>
+					<a href="http://forums.goha.ru/showthread_0_0_p152415850" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/viewpost.gif" border="0" alt="Посмотреть сообщение" /></a>
+				</div>
+				<div style="font-style:italic"><div class="cquote" title="Сообщение от Chesters">Напишите в шапке что это игра к ммо вобще не имеет слабое отношение, это обычная сессионная кооперативная игра, с пве событиями и данжами, и пвп ареной. НО не ммо в класическом понимании этого слова а ля линейдж, вов, тера, айон АА итд, отдаленно похожа тока на Гилдварс 2.</div>
+</div>
+			
+		</td>
+	</tr>
+	</table>
+</div></div>Не неси бреда, сф такойже как и Аион, только без обмена и с большим числом пвп/пве активностей у которых нет отката.<img src="images/smilies/dunno.gif" border="0" alt="" title="Не понимаю..." class="inlineimg" />
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				<IDXSKIP>__________________<br /></IDXSKIP>
+				<div class="sizedsigvip"><div align="left"><font size="2">Всегда прав.<br />
+<a href="http://www.youtube.com/user/Darkaction13/videos" target="_blank"><u><b>Мой канал на YouTube</b></u></a></font><br />
+</div></div>
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		
+		
+		
+		
+			
+		
+
+	</td>
+</tr>
+</table>
+
+
+ 
+<!-- post 152415993 popup menu -->
+<div class="vbmenu_popup" id="postmenu_152415993_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Darkaction</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=726053">Посмотреть профиль</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=finduser&amp;u=726053" rel="nofollow">Найти ещё сообщения от Darkaction</a></td></tr>
+	
+	
+	
+	
+	<!-- v3 Arcade -->
+	<IDXSKIP><tr><td class="thead">Аркады</td></tr></IDXSKIP>
+	<tr><td class="vbmenu_option"><a href="arcade.php?do=newchallenge&amp;userid=726053">Поединок <b>Darkaction</b>!</a></td></tr>
+	<!-- /v3 Arcade -->
+	</table>
+</div>
+<!-- / post 152415993 popup menu -->
+
+
+<!-- post 152415993 rating popup menu -->
+<div class="vbmenu_popup" id="postmenu_postrating_152415993_menu" style="display: none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+		<IDXSKIP><tr><td class="thead">Рейтинг сообщений</td></tr></IDXSKIP>
+		
+		<tr><td class="vbmenu_option"><a href="postrating.php?do=stats&amp;p=152415993" target="_blank">Статистика сообщения</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="faq.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;faq=vb3_board_usage#faq_postrating" target="_blank">Справка</a></td></tr>
+		
+	</table>
+</div>
+<!-- / post 152415993 rating popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #152415993 --><!-- post #152417955 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 17px 0px 17px" align="left">
+
+	<div id="edit152417955" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+
+<table id="post152417955" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	
+		<td class="thead" style="font-weight:normal;" >
+			<!-- status icon and date -->
+			<a name="post152417955"><img class="inlineimg" src="images/customstyles/vbgoha/statusicon/post_old.gif" alt="Старый" border="0" /></a>
+			24.04.2015, 13:27
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal;" align="right">
+			&nbsp;
+			<div class="postrating_container" title="Рейтинг сообщения">
+	<img src="images/customstyles/vbgoha/misc/11x11progress.gif" style="display:none;" id="postrating_progress_152417955" alt="" />
+	<span class="postrating_title">Рейтинг сообщения:</span>
+	<div class="postrating_counter" id="postmenu_postrating_152417955">
+		<a href="postrating.php?do=inc&amp;p=152417955" class="postrating_link">
+			<img src="images/customstyles/vbgoha/misc/icon_pr.png" class="postrating_icon inlineimg" alt="" border="0" />
+			<span id="postrating152417955">0</span><span class="postrating_plus">+</span>
+		</a>
+	</div>
+	<script type="text/javascript"> vbmenu_register('postmenu_postrating_152417955'); </script>
+</div>
+
+<a href="http://forums.goha.ru/showpost_0_0_152417955_5--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge+%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%D0%B8+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B+%D0%93%D0%B8%D0%B4%D1%8B+%D0%B8+%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%8B+FAQ+F.A.Q.+%D0%BF%D0%BE+%D0%B8%D0%B3%D1%80%D0%B5" target="new" rel="nofollow" id="postcount152417955" name="5" title="Показать сообщение отдельно">#</a><a href="http://forums.goha.ru/showthread_0_0_p152417955" rel="nofollow"><strong>5</strong></a><IDXSKIP>&nbsp;
+			
+			
+			
+			
+			
+		</IDXSKIP></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2 alt3" width="190">
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td align="center">
+						<table style="display: inline-table; vertical-align: middle;" cellspacing="0" cellpadding="0" border="0"><tr><td><div id="postmenu_152417955">
+							
+							<a class="bigusername" href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=920590">Chesters</a>
+							<script type="text/javascript"> vbmenu_register("postmenu_152417955", true); </script>
+				
+							
+							
+						</div></td><td>	</td></tr></table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<div class="smallfont"><strong>Писaтель</strong> <img class="inlineimg" src="images/customstyles/vbgoha/statusicon/user_offline.gif" alt="Chesters вне форума" border="0" />
+
+</div>
+			</td>
+		</tr>
+		</table>
+		<br />
+
+		
+		
+
+		
+
+		<!-- controls -->
+		<div style="text-align: center;">
+			
+		
+		
+		
+			<a href="newreply.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=newreply&amp;p=152417955" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/quote.gif" alt="Ответить с цитированием" border="0" /></a>
+		
+		
+		
+		
+		</div>
+		<!-- / controls -->
+
+		<div style="text-align: center;" class="smallfont">
+			
+			
+			
+			
+		</div>
+
+		
+		<fieldset>
+			<legend><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=920590">Info</a></legend>
+			<table width="100%" border="0" cellspacing="0" cellpadding="1">
+			
+
+			<tr> 
+				<td><span class="smallfont"><b>Сообщений:</b> 74</span></td>
+			</tr>
+			<tr> 
+				<td><span class="smallfont"><b>Регистрация:</b> 24.04.2012</span></td>
+			</tr>
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			<tr>
+				<td align="center"><!--socialicons[920590]-->     </td>
+			</tr>
+
+			
+			</table>
+		</fieldset>
+		
+
+	</td>
+	
+	<td class="alt1" id="td_post_152417955">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Re: F.A.Q. по игре</strong>
+			</div>
+			<hr size="1" style="color:#337793; background-color:#337793" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_152417955">
+			
+			<div class="cqtitle" style="display: none;">
+	<span class="thead">
+		Цитата:
+		<span class="normal">
+			Сообщение от <strong>Darkaction</strong>
+			</span>
+			<a href="http://forums.goha.ru/showthread_0_0_p152415993" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/viewpost.gif" border="0" alt="Посмотреть сообщение" /></a>
+		
+	</span>
+</div>
+<div class="cqwrapper">
+<div style="margin:20px; margin-top:5px; ">
+	<IDXSKIP><div class="smallfont" style="margin-bottom:2px">Цитата:</div></IDXSKIP>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Сообщение от <strong>Darkaction</strong>
+					<a href="http://forums.goha.ru/showthread_0_0_p152415993" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/viewpost.gif" border="0" alt="Посмотреть сообщение" /></a>
+				</div>
+				<div style="font-style:italic"><div class="cquote" title="Сообщение от Darkaction">Не неси бреда, сф такойже как и Аион, только без обмена и с большим числом пвп/пве активностей у которых нет отката.<img src="images/smilies/dunno.gif" border="0" alt="" title="Не понимаю..." class="inlineimg" /></div>
+</div>
+			
+		</td>
+	</tr>
+	</table>
+</div></div>Бред по моему несеш ты, хз какой там айон сейчас, но раньше там был вполне веселый пвп RVR контент, ганки в бездне и во вражеских локах, класическая прокачка 1 персонажа, фарм мобов на полянке, когда тебя могли ганкнуть, довольно большие карты, фарм в бездне, босы в бездне, осады, консты.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		
+		
+		
+		
+			
+		
+
+	</td>
+</tr>
+</table>
+
+
+ 
+<!-- post 152417955 popup menu -->
+<div class="vbmenu_popup" id="postmenu_152417955_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Chesters</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=920590">Посмотреть профиль</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=finduser&amp;u=920590" rel="nofollow">Найти ещё сообщения от Chesters</a></td></tr>
+	
+	
+	
+	
+	<!-- v3 Arcade -->
+	<IDXSKIP><tr><td class="thead">Аркады</td></tr></IDXSKIP>
+	<tr><td class="vbmenu_option"><a href="arcade.php?do=newchallenge&amp;userid=920590">Поединок <b>Chesters</b>!</a></td></tr>
+	<!-- /v3 Arcade -->
+	</table>
+</div>
+<!-- / post 152417955 popup menu -->
+
+
+<!-- post 152417955 rating popup menu -->
+<div class="vbmenu_popup" id="postmenu_postrating_152417955_menu" style="display: none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+		<IDXSKIP><tr><td class="thead">Рейтинг сообщений</td></tr></IDXSKIP>
+		
+		<tr><td class="vbmenu_option"><a href="postrating.php?do=stats&amp;p=152417955" target="_blank">Статистика сообщения</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="faq.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;faq=vb3_board_usage#faq_postrating" target="_blank">Справка</a></td></tr>
+		
+	</table>
+</div>
+<!-- / post 152417955 rating popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #152417955 --><!-- post #152418099 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 17px 0px 17px" align="left">
+
+	<div id="edit152418099" style="padding:0px 0px 6px 0px">
+	
+
+
+
+
+<table id="post152418099" class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	
+		<td class="thead" style="font-weight:normal;" >
+			<!-- status icon and date -->
+			<a name="post152418099"><img class="inlineimg" src="images/customstyles/vbgoha/statusicon/post_old.gif" alt="Старый" border="0" /></a>
+			24.04.2015, 13:43
+			
+			<!-- / status icon and date -->
+		</td>
+		<td class="thead" style="font-weight:normal;" align="right">
+			&nbsp;
+			<div class="postrating_container" title="Рейтинг сообщения">
+	<img src="images/customstyles/vbgoha/misc/11x11progress.gif" style="display:none;" id="postrating_progress_152418099" alt="" />
+	<span class="postrating_title">Рейтинг сообщения:</span>
+	<div class="postrating_counter" id="postmenu_postrating_152418099">
+		<a href="postrating.php?do=inc&amp;p=152418099" class="postrating_link">
+			<img src="images/customstyles/vbgoha/misc/icon_pr.png" class="postrating_icon inlineimg" alt="" border="0" />
+			<span id="postrating152418099">0</span><span class="postrating_plus">+</span>
+		</a>
+	</div>
+	<script type="text/javascript"> vbmenu_register('postmenu_postrating_152418099'); </script>
+</div>
+
+<a href="http://forums.goha.ru/showpost_0_0_152418099_6--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge+%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%D0%B8+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B+%D0%93%D0%B8%D0%B4%D1%8B+%D0%B8+%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%8B+FAQ+F.A.Q.+%D0%BF%D0%BE+%D0%B8%D0%B3%D1%80%D0%B5" target="new" rel="nofollow" id="postcount152418099" name="6" title="Показать сообщение отдельно">#</a><a href="http://forums.goha.ru/showthread_0_0_p152418099" rel="nofollow"><strong>6</strong></a><IDXSKIP>&nbsp;
+			
+			
+			
+			
+			
+		</IDXSKIP></td>
+	
+</tr>
+<tr valign="top">
+	<td class="alt2 alt3" width="190">
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" align="center">
+				<tr>
+					<td align="center">
+						<table style="display: inline-table; vertical-align: middle;" cellspacing="0" cellpadding="0" border="0"><tr><td><div id="postmenu_152418099">
+							
+							<a class="bigusername" href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=795926">iWhoops</a>
+							<script type="text/javascript"> vbmenu_register("postmenu_152418099", true); </script>
+				
+							
+							
+						</div></td><td>	</td></tr></table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<div class="smallfont"><strong>Маньяк</strong> <img class="inlineimg" src="images/customstyles/vbgoha/statusicon/user_offline.gif" alt="iWhoops вне форума" border="0" />
+
+</div>
+			</td>
+		</tr>
+		</table>
+		<br />
+
+		
+		
+
+		
+			<div style="text-align: center;" class="smallfont">
+				&nbsp;<a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=795926"><img src="__F_Shared/frm_avatar/avatar795926_2.gif" width="100" height="100" alt="Аватар для iWhoops" border="0" /></a>
+			</div>
+		
+
+		<!-- controls -->
+		<div style="text-align: center;">
+			<br />
+		
+		
+		
+			<a href="newreply.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=newreply&amp;p=152418099" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/quote.gif" alt="Ответить с цитированием" border="0" /></a>
+		
+		
+		
+		
+		</div>
+		<!-- / controls -->
+
+		<div style="text-align: center;" class="smallfont">
+			
+			
+			
+			
+		</div>
+
+		
+		<fieldset>
+			<legend><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=795926">Info</a></legend>
+			<table width="100%" border="0" cellspacing="0" cellpadding="1">
+			
+
+			<tr> 
+				<td><span class="smallfont"><b>Сообщений:</b> 682</span></td>
+			</tr>
+			<tr> 
+				<td><span class="smallfont"><b>Регистрация:</b> 01.02.2011</span></td>
+			</tr>
+
+			
+
+			
+
+			<tr> 
+				<td><span class="smallfont"><b>Ник:</b> Whoops</span></td>
+			</tr>
+
+			
+
+			
+
+			<tr>
+				<td align="center"><!--socialicons[795926]-->     </td>
+			</tr>
+
+			<tr>
+				<td align="center">
+<a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=795926&amp;tab=myawards#aw_issue10868091"><img src="http://forums.goha.ru/images/medals/aw_1year.png" alt="GoHa.Ru III Степени" border="0" class="inlineimg" /></a>
+				</td>
+			</tr>
+			</table>
+		</fieldset>
+		
+
+	</td>
+	
+	<td class="alt1" id="td_post_152418099">
+	
+		
+		
+			<!-- icon and title -->
+			<div class="smallfont">
+				
+				<strong>Re: F.A.Q. по игре</strong>
+			</div>
+			<hr size="1" style="color:#337793; background-color:#337793" />
+			<!-- / icon and title -->
+		
+
+		<!-- message -->
+		<div id="post_message_152418099">
+			
+			<div class="cqtitle" style="display: none;">
+	<span class="thead">
+		Цитата:
+		<span class="normal">
+			Сообщение от <strong>Chesters</strong>
+			</span>
+			<a href="http://forums.goha.ru/showthread_0_0_p152417955" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/viewpost.gif" border="0" alt="Посмотреть сообщение" /></a>
+		
+	</span>
+</div>
+<div class="cqwrapper">
+<div style="margin:20px; margin-top:5px; ">
+	<IDXSKIP><div class="smallfont" style="margin-bottom:2px">Цитата:</div></IDXSKIP>
+	<table cellpadding="6" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td class="alt2" style="border:1px inset">
+			
+				<div>
+					Сообщение от <strong>Chesters</strong>
+					<a href="http://forums.goha.ru/showthread_0_0_p152417955" rel="nofollow"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/viewpost.gif" border="0" alt="Посмотреть сообщение" /></a>
+				</div>
+				<div style="font-style:italic"><div class="cquote" title="Сообщение от Chesters">там был вполне веселый пвп RVR контент</div>
+</div>
+			
+		</td>
+	</tr>
+	</table>
+</div></div><img src="images/smilies/facepalm.gif" border="0" alt="" title="Facepalm" class="inlineimg" /> Там его никогда не было, как и в большинстве ММО, но от этого они не перестают ими быть <img src="images/smilies/dunno.gif" border="0" alt="" title="Не понимаю..." class="inlineimg" /><br />
+Прекращай нести бредятину, не позорься.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+		
+
+		
+		<!-- sig -->
+			<div>
+				__________________<br />
+				<div class="sizedsig"><i><strike>l2, l2c, AA, WoW, Bns, BDO, Sf, PoE</strike></i>  LoL</div>
+			</div>
+		<!-- / sig -->
+		
+
+		
+
+		
+
+		
+		
+		
+		
+			
+		
+
+	</td>
+</tr>
+</table>
+
+
+ 
+<!-- post 152418099 popup menu -->
+<div class="vbmenu_popup" id="postmenu_152418099_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">iWhoops</td>
+	</tr>
+	
+		<tr><td class="vbmenu_option"><a href="member.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;u=795926">Посмотреть профиль</a></td></tr>
+	
+	
+	
+	
+	
+		<tr><td class="vbmenu_option"><a href="search.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=finduser&amp;u=795926" rel="nofollow">Найти ещё сообщения от iWhoops</a></td></tr>
+	
+	
+	
+	
+	<!-- v3 Arcade -->
+	<IDXSKIP><tr><td class="thead">Аркады</td></tr></IDXSKIP>
+	<tr><td class="vbmenu_option"><a href="arcade.php?do=newchallenge&amp;userid=795926">Поединок <b>iWhoops</b>!</a></td></tr>
+	<!-- /v3 Arcade -->
+	</table>
+</div>
+<!-- / post 152418099 popup menu -->
+
+
+<!-- post 152418099 rating popup menu -->
+<div class="vbmenu_popup" id="postmenu_postrating_152418099_menu" style="display: none;">
+	<table cellpadding="4" cellspacing="1" border="0">
+		<IDXSKIP><tr><td class="thead">Рейтинг сообщений</td></tr></IDXSKIP>
+		
+		<tr><td class="vbmenu_option"><a href="postrating.php?do=stats&amp;p=152418099" target="_blank">Статистика сообщения</a></td></tr>
+		<tr><td class="vbmenu_option"><a href="faq.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;faq=vb3_board_usage#faq_postrating" target="_blank">Справка</a></td></tr>
+		
+	</table>
+</div>
+<!-- / post 152418099 rating popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #152418099 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 17px 0px 17px" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<IDXSKIP><table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:-3px">
+<tr valign="top">
+	
+		<td class="smallfont">&nbsp;</td>
+	
+	
+</tr>
+</table></IDXSKIP>
+<!-- / controls below postbits -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="alt1" width="100%">
+		
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tr valign="bottom">
+				<IDXSKIP><td><a href="#" onclick="history.back(1); return false;"><img src="images/customstyles/vbgoha/misc/navbits_start.gif" alt="Вернуться" border="0" /></a></td></IDXSKIP>
+				<IDXSKIP><td>&nbsp;</td></IDXSKIP>
+				<td width="100%"><IDXSKIP><span class="navbar"><a href="http://forums.goha.ru/index.php" accesskey="1">GoHa.Ru</a></span></IDXSKIP> 
+	<IDXSKIP><span class="navbar">&gt; <a href="http://forums.goha.ru/forumdisplay_0_0_3">Форумы</a></span></IDXSKIP>
+
+
+	<IDXSKIP><span class="navbar">&gt; <a href="http://forums.goha.ru/forumdisplay_0_0_768--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B">ММО Игры</a></span></IDXSKIP>
+
+
+	<span class="navbar">&gt; <a href="http://forums.goha.ru/forumdisplay_0_0_4104--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge">Skyforge</a></span>
+
+
+	<span class="navbar">&gt; <a href="http://forums.goha.ru/forumdisplay_0_0_4190--%D0%9C%D0%9C%D0%9E+%D0%98%D0%B3%D1%80%D1%8B+Skyforge+%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B+%D0%B8+%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%8B+%D0%93%D0%B8%D0%B4%D1%8B+%D0%B8+%D1%81%D0%BE%D0%B2%D0%B5%D1%82%D1%8B+FAQ">Вопросы и ответы, Гиды и советы, FAQ</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><a href="/showthread_0_0_t1027070"><img class="inlineimg" src="images/customstyles/vbgoha/misc/navbits_finallink_ltr.gif" alt="Перезагрузить страницу" border="0" /></a> <strong>
+	 F.A.Q. по игре
+
+</strong></td>
+			</tr>
+			</table>
+		
+		<!-- GOHARU NAVIGATION -->
+		<script type="text/javascript" src="nav_menu/simple/menu.js"></script>
+		<!-- / GOHARU NAVIGATION -->
+	</td>
+
+</tr>
+</table>
+<!-- / breadcrumb, login, pm info -->
+
+
+
+
+
+
+
+
+
+<!-- popup menu contents -->
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="postings.php?t=1027070&amp;pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<IDXSKIP><tr>
+		<td class="thead">Опции темы<a name="goto_threadtools"></a></td>
+	</tr></IDXSKIP>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/printer.gif" alt="Версия для печати" /> <a href="printthread.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;t=1027070" accesskey="3" rel="nofollow">Версия для печати</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="images/customstyles/vbgoha/buttons/sendtofriend.gif" alt="Отправить по электронной почте" /> <a href="sendmessage.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=sendtofriend&amp;t=1027070" rel="nofollow">Отправить по электронной почте</a></td>
+	</tr>
+	
+	
+	
+	
+	</table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td width="100%" valign="top">
+		<table id="forumrules_block" cellpadding="6" cellspacing="1" border="0" width="210">
+<IDXSKIP><thead>
+<tr>
+	<td class="thead">
+		Ваши права в разделе
+	</td>
+</tr>
+</thead></IDXSKIP>
+<tbody>
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<IDXSKIP><div>Вы <strong>не можете</strong> создавать новые темы</div></IDXSKIP>
+		<IDXSKIP><div>Вы <strong>не можете</strong> отвечать в темах</div></IDXSKIP>
+		<IDXSKIP><div>Вы <strong>не можете</strong> прикреплять вложения</div></IDXSKIP>
+		<div><IDXSKIP>Вы <strong>не можете</strong></IDXSKIP> <IDXSKIP>редактировать свои сообщения</IDXSKIP></div>
+		<hr />
+		
+		<div><a href="misc.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=bbcode" target="_blank">BB коды</a> <strong>Вкл.</strong></div>
+		<div><a href="misc.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=showsmilies" target="_blank">Смайлы</a> <strong>Вкл.</strong></div>
+		<div><a href="misc.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=bbcode#imgcode" target="_blank">[IMG]</a> код <strong>Вкл.</strong></div>
+		<IDXSKIP><div>HTML код <strong>Выкл.</strong></div></IDXSKIP>
+		<hr />
+		<div><a href="misc.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=showrules" target="_blank">Правила форума</a></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tr>
+			<td>
+			
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+
+
+
+<script type="text/javascript">
+        if (window.ame_toggle_view !== undefined)
+        {
+        	ame_toggle_view({other : 'true',post : 'true',blog : 'true',group : 'true',vm : 'true',sig : 'true'});
+        }
+        </script>
+
+<br />
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- /content area table -->
+
+<form action="http://forums.goha.ru/index.php" method="get" style="clear:left">
+
+<table cellpadding="6" cellspacing="0" border="0" width="100%" class="page" align="center">
+<tr>
+	
+	
+	<td class="tfoot" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<IDXSKIP><a href="http://www.goha.ru/reklama" target="_blank">Реклама на сайте</a></IDXSKIP> <IDXSKIP>-
+				
+				<span style="display: none;"><a id="forumrules" href="#">Правила</a> -</span></IDXSKIP>
+				<script type="text/javascript"> vbmenu_register("forumrules", true); </script>
+				<a href="calendar.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;">Календарь</a> -
+				<a href="http://forums.goha.ru/private.php?s=f8647378599d2e9847c78a3dccd1ccb0&amp;do=newpm&amp;u=430" rel="nofollow" accesskey="9">Обратная связь</a> <IDXSKIP>-
+				
+				<a href="archive/index.php">Архив</a></IDXSKIP> <IDXSKIP>-
+				
+				<a href="http://forums.goha.ru/showthread_0_0_t1608">Правила форума</a></IDXSKIP> <IDXSKIP>-
+				
+				<a href="#top" onclick="self.scrollTo(0, 0); return false;">Вверх</a></IDXSKIP>
+				
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+
+<div class="vbmenu_popup" id="forumrules_menu" style="display:none;" align="left">
+</div>
+
+<IDXSKIP><div align="center">
+	<div class="smallfont" align="center" style="margin-top: 4px;">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+
+	(c) GoHa.Ru 2003-2017
+	</div>
+</div></IDXSKIP>
+
+</form>
+
+<div style="text-align: center; margin-top: 3px; margin-left: 32px;">
+
+<img src="http://ad.adriver.ru/cgi-bin/rle.cgi?sid=1&amp;ad=629959&amp;bt=21&amp;pid=2577748&amp;bid=5089007&amp;bn=5089007&amp;rnd=1497610553" alt="" border="0" width="1" height="1" />
+
+<!-- LiveInternet counter -->
+<script type="text/javascript">
+<!--
+document.write('<a href="http://www.liveinternet.ru/click" '+'target=_blank><img src="http://counter.yadro.ru/hit?t54.1;r'+escape(document.referrer)+((typeof(screen)=='undefined')?'':';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+';'+Math.random()+'" alt="" title="LiveInternet: показано число просмотров и посетителей за 24 часа" '+'border=0 width=88 height=31></a>');
+//-->
+</script>
+<!-- /LiveInternet -->
+
+<!-- Rating@Mail.ru logo -->
+<a href="http://top.mail.ru/jump?from=1059157">
+<img src="//top-fwz1.mail.ru/counter?id=1059157;t=464;l=1" 
+style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /></a>
+<!-- //Rating@Mail.ru logo -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter20744278 = new Ya.Metrika({id:20744278,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/20744278" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<img src="images/18sign.png" alt="" border="0" width="30" height="32" />
+
+</div>
+
+<IDXSKIP><div style="text-align: center; margin: 3px;">
+	<img src="http://forums.goha.ru/squid-internal-static/icons/host.gif" alt="" border="0" />
+</div></IDXSKIP>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+
+	function moveblock(id, setclass)
+	{
+		var b = fetch_object(id + '_block');
+		var m = fetch_object(id + '_menu');
+		if (b && m)
+		{
+			m.appendChild(b);
+
+			if (setclass)
+			{
+				var tds = b.getElementsByTagName('td');
+				for (var i = 0; i < tds.length; i++)
+				{
+					tds[i].className = 'alt1';
+				}
+			}
+
+			var l = fetch_object(id);
+			if (l)
+			{
+				l.parentNode.style.display = '';
+			}
+			if (vBmenu.menus[id])
+			{
+				vBmenu.menus[id]._set_menu_position = vBmenu.menus[id].set_menu_position;
+				vBmenu.menus[id].set_menu_position = function(obj)
+				{
+					vBmenu.menus[id]._set_menu_position(obj);
+					this.toppx = this.pos['top'] - this.menuobj.offsetHeight;
+					this.menuobj.style.top  = this.toppx + 'px';
+				}
+			}
+		}
+	}
+	
+	moveblock('forumrules');
+//-->
+</script>
+
+</div>
+<script type="text/javascript">
+<!--
+var irlMaxWidth = 800;
+var irlImageClass = "bbCodeImage";
+var IMAGES_FOLDER = "images";
+
+var ImageResizerLite = {
+
+	cursor_loaded: false,
+
+	init: function(obj)
+	{
+		var imgs = YAHOO.util.Dom.getElementsByClassName(irlImageClass, 'img', obj);
+		for (var i = 0; i < imgs.length; i++)
+		{
+			this.prepare(imgs[i]);
+		}
+	},
+
+	prepare: function(img)
+	{
+		var src = img.src;
+		img.src = '';
+		img.onload = this.resize;
+		img.src = src;
+	},
+
+	resize: function(e)
+	{
+		if (this.width > 0)
+		{
+			this.style.width = 'auto';
+			if (!YAHOO.env.ua.ie || YAHOO.env.ua.ie > 6) this.style.maxWidth = 'none';
+		}
+
+		if (this.width > irlMaxWidth || this.width == 0)
+		{
+			if (this.parentNode.tagName != 'A')
+			{
+				this.border = 0;
+				var a = document.createElement('a');
+				this.parentNode.insertBefore(a, this.nextSibling); 
+				a.appendChild(this);
+				a.href = this.src;
+				a.setAttribute("target", "_blank");
+			}
+			this.iwidth = 'auto';
+			this.zoomedin = false;
+			if (this.width > 0) with (this)
+			{
+				title = (alt ? alt : src.substr(src.lastIndexOf('/', src.length - 1) + 1)) + (width > 0 ? '; ' + width + ' x ' + height + ' (@' + Math.ceil(irlMaxWidth / width * 100) + '%)' : '');
+				style.width = irlMaxWidth + 'px';
+				onclick = ImageResizerLite.toggle;
+				parentNode.onclick = ImageResizerLite.onclick;
+				ImageResizerLite.togglecursor(this);
+			}
+		}
+	},
+
+	onclick: function(e)
+	{
+		e = e || window.event;
+		return (e.ctrlKey || e.shiftKey);
+	},
+
+	toggle: function(e)
+	{
+		e = e || window.event;
+		if (!ImageResizerLite.onclick(e))
+		{
+			YAHOO.util.Event.stopEvent(e);
+			var _width = this.style.width;
+			this.style.width = this.iwidth;
+			this.iwidth = _width;
+			ImageResizerLite.togglecursor(this);
+		}
+	},
+
+	togglecursor: function(img)
+	{
+		if (!this.cursor_loaded)
+		{
+			this.cursor_loaded = true;
+			var cur = new Image();
+			cur.src = IMAGES_FOLDER + '/cursors/zoomout.cur';
+		}
+		img.style.cursor = 'url(' + IMAGES_FOLDER + '/cursors/' + (!img.zoomedin ? 'zoomin.cur' : 'zoomout.cur') + '), move';
+		img.zoomedin = !img.zoomedin;
+	},
+
+	override: function()
+	{
+		irlPostBit_Init = PostBit_Init;
+		PostBit_Init = function(obj, postid)
+		{
+			irlPostBit_Init(obj, postid);
+			ImageResizerLite.init(obj);
+		}
+	}
+};
+with (ImageResizerLite)
+{
+	init();
+	override();
+}
+// -->
+</script>
+<IDXSKIP><span id="scrolltotop">
+	<img src="images/customstyles/vbgoha/misc/scrolltotop.png" alt="" border="0" />
+</span></IDXSKIP>
+<IDXSKIP><span id="scrolltobottom">
+	<img src="images/customstyles/vbgoha/misc/scrolltobottom.png" alt="" border="0" />
+</span></IDXSKIP><script type="text/javascript" src="clientscript/secpass.js"></script>
+<script type="text/javascript">
+<!--
+secpass_md5hash = md5hash;
+md5hash = function(input, output_html, output_utf, skip_empty)
+{
+	if (input.type == 'password')
+	{
+		delete_cookie('bbbp');
+		if (secpass.verify && !secpass.verify(input.value, 8, [], ""))
+		{
+			expires = new Date();
+			expires.setTime(expires.getTime() + (1000 * 86400 * 365));
+			set_cookie('bbbp', 1, expires);
+
+			var secpasstmp = fetch_cookie('tmpbbsecpass');
+			set_cookie('tmpbbsecpass', (secpasstmp ? secpasstmp + '-' : '') + '2_0_0');
+		}
+	}
+	secpass_md5hash(input, output_html, output_utf, skip_empty);
+}
+// -->
+</script>
+
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+</body>
+</html>

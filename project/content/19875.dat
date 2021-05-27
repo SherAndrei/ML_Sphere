@@ -1,0 +1,2002 @@
+pixel24.ru/catalog/view/id/18248
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="description" content="Intel Core i5, 3000 МГц, AMD Mobility Radeon HD 8890A, объем видеопамяти 2 Гб, 6 Гб, 2 Тб"/>
+    <meta name="keywords" content=""/>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+
+
+    <meta name="og:title" content="Asus ET2702IGKH-B002K 27\&quot; FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web" />
+<meta name="og:url" content="https://pixel24.ru/catalog/view/id/18248" />
+<meta name="og:image" content="https://pixel24.ru/pictures/min/090/090064a8b4aa50a8379416b3a3ff6101.jpg?2" />
+<meta name="og:description" content="Моноблок Asus EeeTop PC ET2702IGKH-B002K представляет собой мощную игровую машину, которая справится практически с любой задачей" />
+<link rel="stylesheet" type="text/css" href="/assets/cbb114cb/cusel.css" />
+<link rel="stylesheet" type="text/css" href="/assets/7a617012/checkbox.css" />
+<link rel="stylesheet" type="text/css" href="/assets/a3bb7471/jquery.fancybox.css" />
+<link rel="stylesheet" type="text/css" href="/assets/20030d7f/jquery.mcustomscrollbar.css" />
+<link rel="stylesheet" type="text/css" href="/assets/d896a046/slick.css" />
+<link rel="stylesheet" type="text/css" href="/assets/d896a046/slick-manual-theme.css" />
+<link rel="stylesheet" type="text/css" href="/assets/5181a814/rating/jquery.rating.css" />
+<link rel="stylesheet" type="text/css" href="/assets/34875b97/listview/styles.css" />
+<link rel="stylesheet" type="text/css" href="/assets/3e6bd9ca/css/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="/assets/5181a814/jui/css/base/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/assets/726431f8/css/auth.css" />
+<link rel="stylesheet" type="text/css" href="/assets/55176afb/ui-lightness/jquery-ui-1.8.18.custom.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/assets/3e6bd9ca/css/style.css?3" />
+<script type="text/javascript" src="/assets/5181a814/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/5181a814/jquery.metadata.js"></script>
+<script type="text/javascript" src="/assets/5181a814/jquery.rating.js"></script>
+<script type="text/javascript" src="/assets/5181a814/jquery.ba-bbq.min.js"></script>
+<script type="text/javascript" src="/assets/5181a814/jquery.yiiactiveform.js"></script>
+<script type="text/javascript" src="/assets/cbb114cb/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="/assets/cbb114cb/jScrollPane.js"></script>
+<script type="text/javascript" src="/assets/cbb114cb/cusel.js"></script>
+<script type="text/javascript" src="/assets/7a617012/custCheckBox.js"></script>
+<script type="text/javascript" src="/assets/a3bb7471/jquery.fancybox.js"></script>
+<script type="text/javascript" src="/assets/20030d7f/jquery.mcustomscrollbar.js"></script>
+<script type="text/javascript" src="/assets/2727c4d5/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="/assets/d7b20dcc/bs-affix.js"></script>
+<script type="text/javascript" src="/assets/d896a046/slick.min.js"></script>
+<script type="text/javascript" src="/assets/5181a814/jui/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/jquery.ui.autocomplete.html.js"></script>
+<script type="text/javascript" src="/assets/55176afb/jquery.minMaxSlider1-1.js"></script>
+<script type="text/javascript" src="/assets/55176afb/common.js"></script>
+<script type="text/javascript" src="/assets/55176afb/script.js"></script>
+<title>Купить Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web - в фотомагазине Pixel24.ru, цена, отзывы, характеристики</title>
+    <!--[if IE]>
+    <link rel="stylesheet" href="/assets/3e6bd9ca/css/style-ie.css" type="text/css" media="screen"/>
+    <![endif]-->
+    <!--[if lte IE 7 ]><script type="text/javascript">window.location.href="/ie6/index_ru.html";</script><![endif]-->
+    </head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KDGM55"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KDGM55');</script>
+<!-- End Google Tag Manager -->
+<div id="vk_api_transport"></div>
+<div id="fb-root"></div>
+
+<!--<div class="top-bg right-bg"></div>
+<div class="top-bg left-bg"></div>-->
+
+<div id="feedback-window" class="sidewindow" style="">
+    <div class="label">
+        <IDXSKIP><a href="/feedback/create" class="show-full question" window-class="type-3"><div class="rotate-text">Задать вопрос</div></a></IDXSKIP>
+        <IDXSKIP><a href="/feedback/create" class="show-full positive" window-class="type-2"><div class="rotate-text">Поблагодарить</div></a></IDXSKIP>
+        <IDXSKIP><a href="/feedback/create" class="show-full negative" window-class="type-1"><div class="rotate-text">Пожаловаться</div></a></IDXSKIP>
+    </div><div class="window"><div class="form">
+    <h2>Обратная связь</h2>
+
+    <form id="feedback-form" action="/feedback/create" method="post">
+    <input name="Feedback[userData][1]" id="Feedback_userData_1" type="hidden" value="https://pixel24.ru/catalog/view/id/18248" /><input name="Feedback[userData][2]" id="Feedback_userData_2" type="hidden" value="Asus ET2702IGKH-B002K 27&quot; FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web" />
+    <div class="form_box">
+
+        <IDXSKIP><div class="row">
+            <label for="Feedback_type_id" class="required">Выберите тему <span class="required">*</span></label>            <select name="Feedback[type_id]" id="Feedback_type_id">
+<option value="1" class="feedback-type type-1">Жалоба: На обслуживание в магазине</option>
+<option value="2" class="feedback-type type-1">Жалоба: На доставку</option>
+<option value="3" class="feedback-type type-1">Жалоба: На консультацию</option>
+<option value="5" class="feedback-type type-1">Жалоба: Не могу дозвониться</option>
+<option value="6" class="feedback-type type-1">Жалоба: Ошибка на сайте</option>
+<option value="7" class="feedback-type type-1">Жалоба: Другие претензии</option>
+<option value="16" class="feedback-type type-2">Благодарность: За консультацию по телефону</option>
+<option value="8" class="feedback-type type-2">Благодарность: За выполнение доставки</option>
+<option value="4" class="feedback-type type-2">Благодарность: За обслуживание в магазине</option>
+<option value="17" class="feedback-type type-2">Благодарность: Другие пожелания</option>
+<option value="11" class="feedback-type type-3">Вопрос: Другие вопросы</option>
+<option value="12" class="feedback-type type-3">Вопрос: Заказать звонок</option>
+<option value="13" class="feedback-type type-3">Вопрос: Гарантия</option>
+<option value="14" class="feedback-type type-3">Вопрос: Выполнение заказа</option>
+<option value="15" class="feedback-type type-3">Вопрос: Вопрос о товаре</option>
+</select>                    </div></IDXSKIP>
+
+        <IDXSKIP><div class="row">
+            <label for="Feedback_name" class="required">Имя <span class="required">*</span></label>            <input name="Feedback[name]" id="Feedback_name" type="text" maxlength="255" value="" />                    </div></IDXSKIP>
+
+        <IDXSKIP><div class="row">
+            <label for="Feedback_phone">Телефон</label>            <input name="Feedback[phone]" id="Feedback_phone" type="text" maxlength="32" />                    </div></IDXSKIP>
+
+        <IDXSKIP><div class="row">
+            <label for="Feedback_email" class="required">Email <span class="required">*</span></label>            <input name="Feedback[email]" id="Feedback_email" type="text" maxlength="255" value="" />                    </div></IDXSKIP>
+
+        <IDXSKIP><div class="row">
+            <label for="Feedback_text" class="required">Текст <span class="required">*</span></label>            <textarea name="Feedback[text]" id="Feedback_text"></textarea>                    </div></IDXSKIP>
+
+                <div class="row captcha-row">
+            <label for="Feedback_captcha">Введите результат вычисления</label>            <img id="yw2" src="/site/captcha/v/590e1c9366f3f" alt="" />            <input name="Feedback[captcha]" id="Feedback_captcha" type="text" />                    </div>
+                <div class="tips">
+            <IDXSKIP>* - поля, отмеченные звездочкой, обязательны для заполнения.
+        </IDXSKIP></div>
+    </div>
+
+
+    <IDXSKIP><div class="action_box ml20">
+        <div class="buy_box">
+            <div>
+                <button type="submit" class="animated_btn red_btn">
+                    <span class="br_l"></span>
+                    <span class="c_bg">Отправить</span>
+                    <span class="br_r"></span>
+                </button>
+            </div>
+        </div>
+    </div></IDXSKIP>
+
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#feedback-form').on('submit', function () {
+                var $form = $(this);
+                $.ajax({
+                    url: $form.attr('action'),
+                    data: $form.serialize(),
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function(json){
+                        if(json.ok){
+                            var $wrapper = $form.parents('.form');
+                            $wrapper.fadeOut();
+                            $wrapper.siblings('.success-info').fadeIn();
+                        } else {
+                            $form.find('.form_box').replaceWith($(json.content).find('.form_box'));
+                            $form.find('select').cuSel();
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+
+</div>
+<div class="success-info">
+    <IDXSKIP><strong>Спасибо!</strong></IDXSKIP> <br/> <IDXSKIP>Ваше мнение очень важно для нас!
+</IDXSKIP></div></div>
+</div>
+
+<!-- ********** HEADER ********** -->
+
+<div class="top-line">
+    <div class="inner-wrapper">
+        <ul id="yw3">
+<IDXSKIP><li><a href="/about">О компании</a></li></IDXSKIP>
+<IDXSKIP><li><a class="shares" href="/news/shares">Акции</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/news/index">Новости</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/news/review">Обзоры</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/contacts">Контакты</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/shema_proezda">Схема проезда</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/how-buy">Как купить?</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/payment">Оплата</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/credit">Кредит</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/delivery">Доставка</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/guarantees">Возврат</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/partner">Партнеры</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/reviews">Отзывы</a></li></IDXSKIP>
+</ul>
+    </div>
+    <!-- end inner-wrapper -->
+</div>
+<!-- end top-line -->
+
+<div id="header">
+
+
+    <div class="inner-wrapper">
+
+        <div class="header-nav">
+            <IDXSKIP><div class="logo">
+                <a href="/"><img src="/assets/3e6bd9ca/img/logo.png" alt="" /></a>            </div></IDXSKIP>
+
+            <div class="phone-list">
+                                    <ul>
+	<IDXSKIP><li><span style="font-size:11px">ОТДЕЛ ПРОДАЖ</span>
+	<p><a href="tel:8 (499) 704-24-24">8 (499) 704-24-24</a></p>
+	</li></IDXSKIP>
+	<IDXSKIP><li><span style="color:#808080"><span style="font-size:11px">ПРОКАТ И ТРЕЙД-ИН</span></span>
+	<p><a href="tel:8 (495) 517-92-96">8 (499) 704-10-48</a></p>
+	</li></IDXSKIP>
+	<IDXSKIP><li><span style="color:#808080"><span style="font-size:11px">ЕДИНЫЙ НОМЕР</span></span>
+	<p><a href="tel:8 (800) 555-24-04">8 (800) 555-24-04</a></p>
+	</li></IDXSKIP>
+</ul>
+                            </div>
+            <!-- end phone-list -->
+
+
+            <!--<div class="callback">
+                                <a href="#"><strong>ОБРАТНЫЙ ЗВОНОК</strong></a>
+            </div>-->
+            <!-- end callback -->
+
+
+            <div class="shedule">
+                <div class="shedule-help">
+                    <div class="week">пн-пт.</div>
+                    <div class="weekend">сб-вс.</div>
+                </div>
+                <div class="clear"></div>
+                <ul>
+                    <li class=""><span></span></li>
+                    <li class=""><span></span></li>
+                    <li class=""><span></span></li>
+                    <li class=""><span></span></li>
+                    <li class=""><span></span></li>
+                    <li class="day-weekend current"><span></span></li>
+                    <li class="day-weekend "><span></span></li>
+                </ul>
+
+                <div class="week">10.00 - 20.30</div>
+                <div class="weekend">11.00 - 18.00</div>
+            </div>
+            <IDXSKIP><div class="map-link">
+                <a href="/shema_proezda">Как нас найти?</a>
+            </div></IDXSKIP>
+            <!-- end shedule -->
+
+        </div>
+        <!-- end header-nav -->
+
+    </div>
+    <!-- end inner-wrapper -->
+
+</div>
+<!-- end header -->
+
+<div class="header-fixed" data-spy="affix" data-offset-top="60">
+
+    <div class="header-menu">
+        <ul id="yw4">
+<IDXSKIP><li><a title="Фотоаппараты" alt="Фотоаппараты" href="/vcd-1085/catalog.html">Фотоаппараты</a>
+<div>
+<sup class="arrow"></sup>
+<ul>
+<li><a title="Зеркальные фотоаппараты" alt="Зеркальные фотоаппараты" href="/vcd-96/catalog.html">Зеркальные фотоаппараты</a></li>
+<li><a title="Беззеркальные камеры" alt="Беззеркальные камеры" href="/vcd-1118/catalog.html">Беззеркальные камеры</a></li>
+<li><a title="Компактные фотокамеры" alt="Компактные фотокамеры" href="/vcd-512/catalog.html">Компактные фотокамеры</a></li>
+<li class="subav"><a title="Вспышки и аксессуары" alt="Вспышки и аксессуары" href="/vcd-87/catalog.html">Вспышки и аксессуары</a>
+<ul>
+<li><a title="Вспышки" alt="Вспышки" href="/vcd-509/catalog.html">Вспышки</a></li>
+<li><a title="Аксессуары для фотовспышек" alt="Аксессуары для фотовспышек" href="/vcd-437/catalog.html">Аксессуары для фотовспышек</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Аксессуары для фотокамер" alt="Аксессуары для фотокамер" href="/vcd-113/catalog.html">Аксессуары для фотокамер</a>
+<ul>
+<li><a title="Батарейные ручки, рукоятки" alt="Батарейные ручки, рукоятки" href="/vcd-444/catalog.html">Батарейные ручки, рукоятки</a></li>
+<li><a title="Дистанционное управление" alt="Дистанционное управление" href="/vcd-446/catalog.html">Дистанционное управление</a></li>
+<li><a title="Зарядные устройства" alt="Зарядные устройства" href="/vcd-447/catalog.html">Зарядные устройства</a></li>
+<li><a title="Сетевые адаптеры" alt="Сетевые адаптеры" href="/vcd-503/catalog.html">Сетевые адаптеры</a></li>
+<li><a title="Аккумуляторы" alt="Аккумуляторы" href="/vcd-451/catalog.html">Аккумуляторы</a></li>
+<li><a title="Источники питания тип АА" alt="Источники питания тип АА" href="/vcd-449/catalog.html">Источники питания тип АА</a></li>
+<li><a title="Микрофоны" alt="Микрофоны" href="/vcd-508/catalog.html">Микрофоны</a></li>
+<li><a title="Защитные крышки и пленки" alt="Защитные крышки и пленки" href="/vcd-448/catalog.html">Защитные крышки и пленки</a></li>
+<li><a title="Фокусировочные экраны" alt="Фокусировочные экраны" href="/vcd-455/catalog.html">Фокусировочные экраны</a></li>
+<li><a title="Наглазники, видоискатели" alt="Наглазники, видоискатели" href="/vcd-452/catalog.html">Наглазники, видоискатели</a></li>
+<li><a title="Подводные боксы" alt="Подводные боксы" href="/vcd-476/catalog.html">Подводные боксы</a></li>
+<li><a title="Ремни, лямки, упоры" alt="Ремни, лямки, упоры" href="/vcd-453/catalog.html">Ремни, лямки, упоры</a></li>
+<li><a title="Чистящие средства " alt="Чистящие средства " href="/vcd-454/catalog.html">Чистящие средства </a></li>
+<li><a title="Программное обеспечение" alt="Программное обеспечение" href="/vcd-1295/catalog.html">Программное обеспечение</a></li>
+<li><a title="Прочие" alt="Прочие" href="/vcd-1302/catalog.html">Прочие</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Флэш-память" alt="Флэш-память" href="/vcd-103/catalog.html">Флэш-память</a>
+<ul>
+<li><a title="Карты памяти" alt="Карты памяти" href="/vcd-103/catalog.html">Карты памяти</a></li>
+<li><a title="Карт ридеры" alt="Карт ридеры" href="/vcd-1056/catalog.html">Карт ридеры</a></li>
+</ul>
+</li>
+<li><a title="Внешние диски" alt="Внешние диски" href="/vcd-1293/catalog.html">Внешние диски</a></li>
+<li class="subav"><a title="Фотопринтеры" alt="Фотопринтеры" href="/vcd-1417/catalog.html">Фотопринтеры</a>
+<ul>
+<li><a title="Фотопринтеры" alt="Фотопринтеры" href="/vcd-1379/catalog.html">Фотопринтеры</a></li>
+<li><a title="Бумага для фотопринтеров" alt="Бумага для фотопринтеров" href="/vcd-1389/catalog.html">Бумага для фотопринтеров</a></li>
+<li><a title="Картриджи для фотопринтеров" alt="Картриджи для фотопринтеров" href="/vcd-1425/catalog.html">Картриджи для фотопринтеров</a></li>
+</ul>
+</li>
+<li><a title="Услуги" alt="Услуги" href="/vcd-988/catalog.html">Услуги</a></li>
+<li><a title="Комиссионка" alt="Комиссионка" href="/vcd-1311/catalog.html">Комиссионка</a></li>
+</ul>
+<ul class="sub_menu"></ul></div>
+</li></IDXSKIP>
+<IDXSKIP><li><a title="Объективы" alt="Объективы" href="/vcd-91/catalog.html">Объективы</a>
+<div>
+<sup class="arrow"></sup>
+<ul>
+<li><a title="Объективы" alt="Объективы" href="/vcd-91/catalog.html">Объективы</a></li>
+<li><a title="Светофильтры" alt="Светофильтры" href="/vcd-135/catalog.html">Светофильтры</a></li>
+<li><a title="Наборы светофильтров" alt="Наборы светофильтров" href="/vcd-556/catalog.html">Наборы светофильтров</a></li>
+<li><a title="Бленды для объективов" alt="Бленды для объективов" href="/vcd-440/catalog.html">Бленды для объективов</a></li>
+<li><a title="Экстендеры, конвертеры" alt="Экстендеры, конвертеры" href="/vcd-443/catalog.html">Экстендеры, конвертеры</a></li>
+<li><a title="Насадки, макролинзы" alt="Насадки, макролинзы" href="/vcd-442/catalog.html">Насадки, макролинзы</a></li>
+<li><a title="Адаптеры и кольца" alt="Адаптеры и кольца" href="/vcd-439/catalog.html">Адаптеры и кольца</a></li>
+<li><a title="Крышки на объективы" alt="Крышки на объективы" href="/vcd-441/catalog.html">Крышки на объективы</a></li>
+<li><a title="Чехлы для объективов" alt="Чехлы для объективов" href="/vcd-641/catalog.html">Чехлы для объективов</a></li>
+<li><a title="Док-станции" alt="Док-станции" href="/vcd-1317/catalog.html">Док-станции</a></li>
+</ul>
+<ul class="sub_menu"></ul></div>
+</li></IDXSKIP>
+<IDXSKIP><li><a title="Студийный свет" alt="Студийный свет" href="/vcd-432/catalog.html">Студийный свет</a>
+<div>
+<sup class="arrow"></sup>
+<ul>
+<li class="subav"><a title="Импульсный свет" alt="Импульсный свет" href="/vcd-1335/catalog.html">Импульсный свет</a>
+<ul>
+<li><a title="Bowens" alt="Bowens" href="/vcd-1437/catalog.html">Bowens</a></li>
+<li><a title="Falcon" alt="Falcon" href="/vcd-1445/catalog.html">Falcon</a></li>
+<li><a title="Fancier" alt="Fancier" href="/catalog/index/category_id/1449">Fancier</a></li>
+<li><a title="FST" alt="FST" href="/catalog/index/category_id/1473">FST</a></li>
+<li><a title="Hensel" alt="Hensel" href="/catalog/index/category_id/1453">Hensel</a></li>
+<li><a title="Lumifor" alt="Lumifor" href="/catalog/index/category_id/1457">Lumifor</a></li>
+<li><a title="Phottix" alt="Phottix" href="/catalog/index/category_id/1477">Phottix</a></li>
+<li><a title="Profoto" alt="Profoto" href="/vcd-1461/catalog.html">Profoto</a></li>
+<li><a title="Rekam" alt="Rekam" href="/catalog/index/category_id/1465">Rekam</a></li>
+<li><a title="Visico" alt="Visico" href="/catalog/index/category_id/1469">Visico</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Постоянный свет" alt="Постоянный свет" href="/vcd-1339/catalog.html">Постоянный свет</a>
+<ul>
+<li><a title="Bowens" alt="Bowens" href="/catalog/index/category_id/1481">Bowens</a></li>
+<li><a title="Dedolight" alt="Dedolight" href="/catalog/index/category_id/1485">Dedolight</a></li>
+<li><a title="Falcon" alt="Falcon" href="/catalog/index/category_id/1489">Falcon</a></li>
+<li><a title="Fancier" alt="Fancier" href="/catalog/index/category_id/1493">Fancier</a></li>
+<li><a title="FST" alt="FST" href="/catalog/index/category_id/1497">FST</a></li>
+<li><a title="GreenBeen" alt="GreenBeen" href="/catalog/index/category_id/1501">GreenBeen</a></li>
+<li><a title="Lumifor" alt="Lumifor" href="/catalog/index/category_id/1505">Lumifor</a></li>
+<li><a title="Manfrotto" alt="Manfrotto" href="/catalog/index/category_id/1509">Manfrotto</a></li>
+<li><a title="Sunpak" alt="Sunpak" href="/catalog/index/category_id/1513">Sunpak</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Системы крепления" alt="Системы крепления" href="/vcd-1347/catalog.html">Системы крепления</a>
+<ul>
+<li><a title="Системы установки фонов" alt="Системы установки фонов" href="/vcd-463/catalog.html">Системы установки фонов</a></li>
+<li><a title="Системы подвесов" alt="Системы подвесов" href="/vcd-1198/catalog.html">Системы подвесов</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Софтбоксы" alt="Софтбоксы" href="/vcd-465/catalog.html">Софтбоксы</a>
+<ul>
+<li><a title="Октобоксы" alt="Октобоксы" href="/vcd-1351/catalog.html">Октобоксы</a></li>
+<li><a title="Софтбоксы для накамерных вспышек" alt="Софтбоксы для накамерных вспышек" href="/vcd-1355/catalog.html">Софтбоксы для накамерных вспышек</a></li>
+<li><a title="Квадратные софтбоксы" alt="Квадратные софтбоксы" href="/vcd-1359/catalog.html">Квадратные софтбоксы</a></li>
+<li><a title="Прямоугольные софтбоксы, стрипбоксы" alt="Прямоугольные софтбоксы, стрипбоксы" href="/vcd-1363/catalog.html">Прямоугольные софтбоксы, стрипбоксы</a></li>
+<li><a title="Байонетныe адаптеры" alt="Байонетныe адаптеры" href="/vcd-1371/catalog.html">Байонетныe адаптеры</a></li>
+<li><a title="Соты для софтбоксов " alt="Соты для софтбоксов " href="/vcd-1375/catalog.html">Соты для софтбоксов </a></li>
+<li><a title="Аксессуары для софтбоксов " alt="Аксессуары для софтбоксов " href="/catalog/index/category_id/1433">Аксессуары для софтбоксов </a></li>
+</ul>
+</li>
+<li class="subav"><a title="Измерительное оборудование" alt="Измерительное оборудование" href="/vcd-1343/catalog.html">Измерительное оборудование</a>
+<ul>
+<li><a title="Экспонометры и колориметры" alt="Экспонометры и колориметры" href="/vcd-582/catalog.html">Экспонометры и колориметры</a></li>
+<li><a title="Серые карты" alt="Серые карты" href="/vcd-1287/catalog.html">Серые карты</a></li>
+</ul>
+</li>
+<li><a title="Стойки для освещения" alt="Стойки для освещения" href="/vcd-459/catalog.html">Стойки для освещения</a></li>
+<li class="subav"><a title="Фоны" alt="Фоны" href="/vcd-688/catalog.html">Фоны</a>
+<ul>
+<li><a title="Бумажные фоны" alt="Бумажные фоны" href="/vcd-1319/catalog.html">Бумажные фоны</a></li>
+<li><a title="Тканевые фоны" alt="Тканевые фоны" href="/vcd-1321/catalog.html">Тканевые фоны</a></li>
+<li><a title="Складные фоны" alt="Складные фоны" href="/vcd-1323/catalog.html">Складные фоны</a></li>
+<li><a title="Пластиковые фоны" alt="Пластиковые фоны" href="/vcd-1325/catalog.html">Пластиковые фоны</a></li>
+<li><a title="Нетканые фоны" alt="Нетканые фоны" href="/vcd-1327/catalog.html">Нетканые фоны</a></li>
+<li><a title="Хромакей фоны" alt="Хромакей фоны" href="/vcd-1329/catalog.html">Хромакей фоны</a></li>
+</ul>
+</li>
+<li><a title="Синхронизаторы" alt="Синхронизаторы" href="/vcd-642/catalog.html">Синхронизаторы</a></li>
+<li><a title="Макро-Боксы и столы" alt="Макро-Боксы и столы" href="/vcd-490/catalog.html">Макро-Боксы и столы</a></li>
+<li><a title="Светоотражатели" alt="Светоотражатели" href="/vcd-462/catalog.html">Светоотражатели</a></li>
+<li><a title="Фотозонты" alt="Фотозонты" href="/vcd-464/catalog.html">Фотозонты</a></li>
+<li><a title="Питание" alt="Питание" href="/vcd-1142/catalog.html">Питание</a></li>
+<li><a title="Накамерный свет" alt="Накамерный свет" href="/vcd-1162/catalog.html">Накамерный свет</a></li>
+<li><a title="Рефлекторы и насадки" alt="Рефлекторы и насадки" href="/vcd-1331/catalog.html">Рефлекторы и насадки</a></li>
+<li><a title="Спец-эффекты " alt="Спец-эффекты " href="/vcd-1252/catalog.html">Спец-эффекты </a></li>
+<li><a title="Лампы" alt="Лампы" href="/vcd-1367/catalog.html">Лампы</a></li>
+</ul>
+<ul class="sub_menu"></ul></div>
+</li></IDXSKIP>
+<IDXSKIP><li><a title="Фотосумки" alt="Фотосумки" href="/vcd-1093/catalog.html">Фотосумки</a>
+<div>
+<sup class="arrow"></sup>
+<ul>
+<li><a title="Рюкзаки, фотосумки, чехлы" alt="Рюкзаки, фотосумки, чехлы" href="/vcd-110/catalog.html">Рюкзаки, фотосумки, чехлы</a></li>
+<li><a title="Аксессуары для фотосумок" alt="Аксессуары для фотосумок" href="/vcd-1091/catalog.html">Аксессуары для фотосумок</a></li>
+</ul>
+<ul class="sub_menu"></ul></div>
+</li></IDXSKIP>
+<IDXSKIP><li><a title="Штативы" alt="Штативы" href="/vcd-1401/catalog.html">Штативы</a>
+<div>
+<sup class="arrow"></sup>
+<ul>
+<li class="subav"><a title="Штативы" alt="Штативы" href="/vcd-148/catalog.html">Штативы</a>
+<ul>
+<li><a title="Триподы" alt="Триподы" href="/vcd-695/catalog.html">Триподы</a></li>
+<li><a title="Моноподы" alt="Моноподы" href="/vcd-389/catalog.html">Моноподы</a></li>
+<li><a title="Оригинальные" alt="Оригинальные" href="/vcd-649/catalog.html">Оригинальные</a></li>
+</ul>
+</li>
+<li><a title="Слайдеры" alt="Слайдеры" href="/vcd-1397/catalog.html">Слайдеры</a></li>
+<li><a title="Аксессуары" alt="Аксессуары" href="/vcd-636/catalog.html">Аксессуары</a></li>
+<li><a title="Плечевые упоры" alt="Плечевые упоры" href="/vcd-1405/catalog.html">Плечевые упоры</a></li>
+<li><a title="Стедикамы" alt="Стедикамы" href="/vcd-1409/catalog.html">Стедикамы</a></li>
+</ul>
+<ul class="sub_menu"></ul></div>
+</li></IDXSKIP>
+<IDXSKIP><li><a title="Видеокамеры" alt="Видеокамеры" href="/vcd-118/catalog.html">Видеокамеры</a>
+<div>
+<sup class="arrow"></sup>
+<ul>
+<li><a title="Видеокамеры" alt="Видеокамеры" href="/vcd-120/catalog.html">Видеокамеры</a></li>
+<li class="subav"><a title="Аксессуары для видеокамер" alt="Аксессуары для видеокамер" href="/vcd-468/catalog.html">Аксессуары для видеокамер</a>
+<ul>
+<li><a title="Кофры, сумки, чехлы, боксы" alt="Кофры, сумки, чехлы, боксы" href="/vcd-475/catalog.html">Кофры, сумки, чехлы, боксы</a></li>
+<li><a title="Объективы, насадки, конвертеры" alt="Объективы, насадки, конвертеры" href="/vcd-471/catalog.html">Объективы, насадки, конвертеры</a></li>
+<li><a title="Источники питания" alt="Источники питания" href="/vcd-473/catalog.html">Источники питания</a></li>
+<li><a title="Лампы и вспышки" alt="Лампы и вспышки" href="/vcd-474/catalog.html">Лампы и вспышки</a></li>
+<li><a title="Дистанционное управление" alt="Дистанционное управление" href="/vcd-470/catalog.html">Дистанционное управление</a></li>
+<li><a title="Микрофоны" alt="Микрофоны" href="/vcd-472/catalog.html">Микрофоны</a></li>
+<li><a title="Диктофоны" alt="Диктофоны" href="/vcd-1291/catalog.html">Диктофоны</a></li>
+<li><a title="Наушники" alt="Наушники" href="/vcd-1305/catalog.html">Наушники</a></li>
+<li><a title="Прочие" alt="Прочие" href="/vcd-1128/catalog.html">Прочие</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Видеооборудование" alt="Видеооборудование" href="/vcd-1148/catalog.html">Видеооборудование</a>
+<ul>
+<li><a title="Заполняющие LED светильники" alt="Заполняющие LED светильники" href="/vcd-1150/catalog.html">Заполняющие LED светильники</a></li>
+<li><a title="Галогенные светильники" alt="Галогенные светильники" href="/vcd-1152/catalog.html">Галогенные светильники</a></li>
+<li><a title="Комплекты репортажного света" alt="Комплекты репортажного света" href="/vcd-1154/catalog.html">Комплекты репортажного света</a></li>
+<li><a title="Люминесцентные светильники" alt="Люминесцентные светильники" href="/vcd-1160/catalog.html">Люминесцентные светильники</a></li>
+<li><a title="Видеомониторы" alt="Видеомониторы" href="/vcd-1166/catalog.html">Видеомониторы</a></li>
+<li><a title="Операторские краны" alt="Операторские краны" href="/vcd-1176/catalog.html">Операторские краны</a></li>
+<li><a title="Риги" alt="Риги" href="/vcd-1196/catalog.html">Риги</a></li>
+<li><a title="Фоллоу-фокусы" alt="Фоллоу-фокусы" href="/vcd-1279/catalog.html">Фоллоу-фокусы</a></li>
+<li><a title="Каркасы" alt="Каркасы" href="/vcd-1281/catalog.html">Каркасы</a></li>
+<li><a title="Панорамные головки" alt="Панорамные головки" href="/vcd-1283/catalog.html">Панорамные головки</a></li>
+<li><a title="Тележки и рельсы" alt="Тележки и рельсы" href="/vcd-1285/catalog.html">Тележки и рельсы</a></li>
+<li><a title="Телесуфлеры" alt="Телесуфлеры" href="/vcd-1289/catalog.html">Телесуфлеры</a></li>
+<li><a title="Рекордеры" alt="Рекордеры" href="/vcd-1299/catalog.html">Рекордеры</a></li>
+<li><a title="Стедикамы и автогрипы" alt="Стедикамы и автогрипы" href="/vcd-1200/catalog.html">Стедикамы и автогрипы</a></li>
+<li><a title="Слайдеры" alt="Слайдеры" href="/vcd-1254/catalog.html">Слайдеры</a></li>
+<li><a title="Плечевые упоры" alt="Плечевые упоры" href="/vcd-1383/catalog.html">Плечевые упоры</a></li>
+</ul>
+</li>
+<li><a title="Экстрим камеры " alt="Экстрим камеры " href="/vcd-619/catalog.html">Экстрим камеры </a></li>
+<li class="subav"><a title="Аксессуары для экстрим камер" alt="Аксессуары для экстрим камер" href="/vcd-1261/catalog.html">Аксессуары для экстрим камер</a>
+<ul>
+<li><a title="Кейсы SP" alt="Кейсы SP" href="/vcd-1178/catalog.html">Кейсы SP</a></li>
+<li><a title="Моноподы SP" alt="Моноподы SP" href="/vcd-1182/catalog.html">Моноподы SP</a></li>
+<li><a title="Крепления" alt="Крепления" href="/vcd-1180/catalog.html">Крепления</a></li>
+<li><a title="Прочие аксессуары" alt="Прочие аксессуары" href="/vcd-1184/catalog.html">Прочие аксессуары</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Квадрокоптеры" alt="Квадрокоптеры" href="/vcd-1263/catalog.html">Квадрокоптеры</a>
+<ul>
+<li><a title="Phantom 3" alt="Phantom 3" href="/catalog/index/category_id/1517">Phantom 3</a></li>
+<li><a title="Phantom 4" alt="Phantom 4" href="/catalog/index/category_id/1521">Phantom 4</a></li>
+<li><a title="Mavic" alt="Mavic" href="/vcd-1525/catalog.html">Mavic</a></li>
+<li><a title="Inspire" alt="Inspire" href="/catalog/index/category_id/1545">Inspire</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Аксессуары для квадрокоптеров" alt="Аксессуары для квадрокоптеров" href="/vcd-1256/catalog.html">Аксессуары для квадрокоптеров</a>
+<ul>
+<li><a title="Аксесуары для Phantom 3" alt="Аксесуары для Phantom 3" href="/catalog/index/category_id/1529">Аксесуары для Phantom 3</a></li>
+<li><a title="Аксесуары для Phantom 4" alt="Аксесуары для Phantom 4" href="/catalog/index/category_id/1533">Аксесуары для Phantom 4</a></li>
+<li><a title="Аксесуары для Inspire" alt="Аксесуары для Inspire" href="/catalog/index/category_id/1537">Аксесуары для Inspire</a></li>
+<li><a title="Аксесуары для Mavic" alt="Аксесуары для Mavic" href="/catalog/index/category_id/1541">Аксесуары для Mavic</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Системы стабилизации" alt="Системы стабилизации" href="/vcd-1265/catalog.html">Системы стабилизации</a>
+<ul>
+<li><a title="Аксессуары" alt="Аксессуары" href="/vcd-1267/catalog.html">Аксессуары</a></li>
+</ul>
+</li>
+</ul>
+<ul class="sub_menu"></ul></div>
+</li></IDXSKIP>
+<IDXSKIP><li><a title="Оптические приборы" alt="Оптические приборы" href="/vcd-578/catalog.html">Оптические приборы</a>
+<div>
+<sup class="arrow"></sup>
+<ul>
+<li><a title="Бинокли" alt="Бинокли" href="/vcd-1307/catalog.html">Бинокли</a></li>
+<li><a title="Дальномеры" alt="Дальномеры" href="/vcd-577/catalog.html">Дальномеры</a></li>
+<li><a title="Зрительные трубы" alt="Зрительные трубы" href="/vcd-1220/catalog.html">Зрительные трубы</a></li>
+<li><a title="Оптические прицелы" alt="Оптические прицелы" href="/vcd-1303/catalog.html">Оптические прицелы</a></li>
+<li><a title="Тепловизоры" alt="Тепловизоры" href="/vcd-1313/catalog.html">Тепловизоры</a></li>
+<li><a title="Приборы ночного видения" alt="Приборы ночного видения" href="/vcd-1421/catalog.html">Приборы ночного видения</a></li>
+</ul>
+<ul class="sub_menu"></ul></div>
+</li></IDXSKIP>
+<IDXSKIP><li><a title="Гаджеты" alt="Гаджеты" href="/vcd-986/catalog.html">Гаджеты</a>
+<div>
+<sup class="arrow"></sup>
+<ul>
+<li><a title="Видеорегистраторы" alt="Видеорегистраторы" href="/vcd-621/catalog.html">Видеорегистраторы</a></li>
+<li><a title="Радар-детекторы" alt="Радар-детекторы" href="/vcd-1136/catalog.html">Радар-детекторы</a></li>
+<li><a title="Комбо (радар+регистратор)" alt="Комбо (радар+регистратор)" href="/catalog/index/category_id/1549">Комбо (радар+регистратор)</a></li>
+<li><a title="Аксессуары для автотехники" alt="Аксессуары для автотехники" href="/vcd-1553/catalog.html">Аксессуары для автотехники</a></li>
+<li class="subav"><a title="Аксессуары для смартфонов" alt="Аксессуары для смартфонов" href="/vcd-1012/catalog.html">Аксессуары для смартфонов</a>
+<ul>
+<li><a title="Чехлы для смартфонов" alt="Чехлы для смартфонов" href="/vcd-507/catalog.html">Чехлы для смартфонов</a></li>
+<li><a title="Защитные пленки" alt="Защитные пленки" href="/vcd-402/catalog.html">Защитные пленки</a></li>
+</ul>
+</li>
+<li class="subav"><a title="Аксессуары для планшетов" alt="Аксессуары для планшетов" href="/vcd-1014/catalog.html">Аксессуары для планшетов</a>
+<ul>
+<li><a title="Чехлы для планшетов" alt="Чехлы для планшетов" href="/vcd-492/catalog.html">Чехлы для планшетов</a></li>
+</ul>
+</li>
+</ul>
+<ul class="sub_menu"></ul></div>
+</li></IDXSKIP>
+<IDXSKIP><li><a title="Комиссионка" alt="Комиссионка" href="https://pixel24.ru/vcd-1311/catalog.html">Комиссионка</a></li></IDXSKIP>
+<IDXSKIP><li class="btn_renta"><a title="Фотопрокат" alt="Фотопрокат" href="http://rent.pixel24.ru">Фотопрокат</a></li></IDXSKIP>
+</ul>    </div>
+    <!-- end header-menu -->
+
+
+    <div class="header-bottom">
+
+        <IDXSKIP><div class="search-block">
+            <div class="search-form">
+                <form id="yw5" action="/catalog/search" method="GET">                <input placeholder="Что Вы ищете?" id="Product_search_text" name="Product[search_text]" type="text" />                <input type="submit" name="yt0" value="" />                </form>            </div>
+            <!-- end search-form -->
+        </div></IDXSKIP>
+        <!-- end search-block -->
+
+
+        <IDXSKIP><div class="user-btn user-basket">
+    <a data-empty-text="&lt;img src=&quot;/assets/3e6bd9ca/img/icon_basket.png&quot; alt=&quot;&quot; /&gt;Ваши покупки" data-text="&lt;img src=&quot;/assets/3e6bd9ca/img/icon_basket.png&quot; alt=&quot;&quot; /&gt;&lt;em class=&quot;count&quot;&gt;&lt;span&gt;0&lt;/span&gt;&lt;/em&gt;&lt;em class=&quot;price&quot;&gt;&lt;span&gt;0&lt;/span&gt;р.&lt;/em&gt;" data-cart-url="/user/cart" data-profile-url="/profile/actualPurchase" href="/profile/actualPurchase"><img src="/assets/3e6bd9ca/img/icon_basket.png" alt="" />Ваши покупки</a></div></IDXSKIP>
+
+
+                    <IDXSKIP><div class="user-btn no-authorize" id="loginDialog">
+                <a href="#" class="fancybox">Вход</a>
+            </div></IDXSKIP>
+                
+
+        <noindex>
+            <div id="auth_box">
+                <IDXSKIP><form id="auth-form" action="/user/login" method="post">    <div class="form_box">
+
+        <div class="form-inputs">
+
+            <input id="form-userid" name="AuthUser[id]" type="hidden" />
+            <div class="row">
+                <label for="AuthUser_email" class="required">Email <span class="required">*</span></label>                <input name="AuthUser[email]" id="AuthUser_email" type="text" maxlength="255" />                            </div>
+
+            <div class="row">
+                <label for="AuthUser_password" class="required">Пароль <span class="required">*</span></label>                <input name="AuthUser[password]" id="AuthUser_password" type="password" maxlength="255" />                            </div>
+
+        </div>
+
+        <div class="submit_box">
+            <button type="submit" class="animated_btn red_btn fright">
+                <span class="br_l"></span>
+                <span class="c_bg">войти</span>
+                <span class="br_r"></span>
+            </button>
+            <a class="mt15 password-recovery" href="/user/passwordRecovery">Забыли пароль?</a>
+        </div>
+    </div>
+</form></IDXSKIP><IDXSKIP><div class="cos-net-autho">
+    <div class="soc-net-title">Войти, используя аккаунт соцсети</div>
+<div class="soc-net-list">
+    <a href="/user/login/service/facebook"><i class="soc-ico soc-net-facebook"></i></a><a href="/user/login/service/vkontakte"><i class="soc-ico soc-net-vkontakte"></i></a></div>
+</div></IDXSKIP>
+<div class="reg_select"><IDXSKIP>Регистрация <a
+        href="/user/registration/is_legal_person/0">физического</a></IDXSKIP> <IDXSKIP>или <a
+        href="/user/registration/is_legal_person/1">юридического</a></IDXSKIP> <IDXSKIP>лица
+</IDXSKIP></div>
+
+<!--<div class="login_soc_list">-->
+<!--    <span>Войти через:</span>-->
+<!---->
+<!--    <a href="#" class="soc_ico_16 vk"></a>-->
+<!--    <a href="#" class="soc_ico_16 fb"></a>-->
+<!--    <a href="#" class="soc_ico_16 ok"></a>-->
+<!--    <a href="#" class="soc_ico_16 tw"></a>-->
+<!--    <a href="#" class="soc_ico_16 google"></a>-->
+<!--    <a href="#" class="soc_ico_16 mail"></a>-->
+<!--    <a href="#" class="soc_ico_16 lj"></a>-->
+<!--    <a href="#" class="soc_ico_16 ya"></a>-->
+<!--</div>-->            </div>
+        </noindex>
+
+
+    </div>
+    <!-- end header-bottom -->
+
+</div>
+
+<div class="clear"></div>
+
+<div id="wrapper">
+
+<div class="main">
+
+ <!-- <div class="sorry-banner" style="text-align: center;">
+        <img src="/style/img/samovyvoz.jpg" alt="" />
+    </div> -->
+
+    <div class="wrapper">
+
+                <IDXSKIP><div class="banner">
+
+            <div class="banner"><a title="Lowepro" target="_blank" href="http://bagfinder.lowepro.com/pixel24/choose-profile"><img src="/pictures/original/03e/03eadab604d6ed2658450de69fdc5628.jpg" alt="" /></a></div>        </div></IDXSKIP>
+        
+        
+        <h1>Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web</h1>
+        <div class="chain_menu">
+<IDXSKIP><a href="/">Главная</a></IDXSKIP> <span></span> <b>Asus ET2702IGKH-B002K 27&quot; FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web</b></div>
+    </div>
+
+    
+<div style="display: none" class="google">
+  <div itemscope itemtype="http://schema.org/Product">
+    <span itemprop="name">Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web</span>
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+      <meta itemprop="priceCurrency" content="RUB" />РУБ
+        <span itemprop="price">54900</span>
+          
+      <meta itemprop="availability" content="http://schema.org/OutOfStock"/><IDXSKIP>Нет в наличии
+      
+      <meta itemprop="itemCondition" itemtype="http://schema.org/OfferItemCondition" content="http://schema.org/NewCondition"/>новый
+    </IDXSKIP></div>
+  </div>    
+</div>
+
+<div class="wrapper">
+
+<div class="categ_item">
+
+    <div class="dop_info">
+        
+
+<div class="actions tov-actions-18248">
+    <a href="/catalog/toggleComparison/id/18248"
+       title="Добавить к сравнению"
+       class="compare ">
+        <span></span><br/>
+        Сравнить
+    </a>
+    <a href="/catalog/toggleFavorite/id/18248"
+       title="Добавить в избранное"
+       class="favorite ">
+        <span></span><br/>
+        Отложить
+    </a>
+</div>
+
+    <div class="price_info">
+
+        
+        
+        <div class="price-block original-price ">
+            <span class="info">Старая цена</span>
+            <span class="info2">Цена</span>
+            <span class="price-wrapper">&nbsp;</span>
+            <span class="price">54<label class="finSeporate">&nbsp;</label>900р.</span>
+        </div>
+        
+                    <span class="art">Код производителя: 90PT00J1000060Q</span>
+            </div>
+
+    
+    
+    
+
+<hr/>
+
+<IDXSKIP><div class="paymant_box">
+    <img src="/assets/3e6bd9ca/img/ico_pay_visa.png" alt="" />    <img src="/assets/3e6bd9ca/img/ico_pay_mcard.png" alt="" />    <img src="/assets/3e6bd9ca/img/ico_pay_mcard_2.png" alt="" />    <img src="/assets/3e6bd9ca/img/ico_pay_qiwi.png" alt="" />    <img src="/assets/3e6bd9ca/img/ico_pay_wm.png" alt="" />    <img src="/assets/3e6bd9ca/img/ico_pay_yad.png" alt="" /></div></IDXSKIP>
+
+<hr/>
+
+<IDXSKIP><span class="social-widget-title">Поделиться в социальных сетях:</span></IDXSKIP>
+
+<div class="soc-widget-plugins">
+
+                
+    <div id="yashare"></div>
+    <script type="text/javascript" src="//yandex.st/share/share.js"
+            charset="utf-8"></script>
+    
+</div>    </div>
+
+    <div class="descr">
+
+        <div>
+
+        <div class="col">
+
+            <div class="main-image">
+                                <a href="/pictures/full_size/090/090064a8b4aa50a8379416b3a3ff6101.jpg?2" >
+                    <img title="Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web" alt="Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web" src="/pictures/view_list_w/090/090064a8b4aa50a8379416b3a3ff6101.jpg?2"/>
+                </a>
+                
+                <div class="info-links">
+                                                                </div>
+            </div>
+
+            <div class="avatar_scroll">
+                <div class="images_container">
+                                            <a href="/pictures/full_size/090/090064a8b4aa50a8379416b3a3ff6101.jpg?2"
+                           data-mid-size-url="/pictures/view_list_w/090/090064a8b4aa50a8379416b3a3ff6101.jpg?2">
+                            <img title="Asus ET2702IGKH-B002K 27&quot; FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web" class="picture_big_alt_height" src="/pictures/min/090/090064a8b4aa50a8379416b3a3ff6101.jpg?2" alt="Asus ET2702IGKH-B002K 27&quot; FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web" />                        </a>
+
+                                            <a href="/pictures/full_size/52b/52bc248f87f39fb0d9fbe18ac6be9378.jpg?2"
+                           data-mid-size-url="/pictures/view_list_w/52b/52bc248f87f39fb0d9fbe18ac6be9378.jpg?2">
+                            <img title="Asus ET2702IGKH-B002K 27&quot; FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web" class="picture_big_alt_height" src="/pictures/min/52b/52bc248f87f39fb0d9fbe18ac6be9378.jpg?2" alt="Asus ET2702IGKH-B002K 27&quot; FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web" />                        </a>
+
+                                    </div>
+            </div>
+
+        </div>
+
+        <div class="col ml30">
+
+            <ul class="main-parameters">
+
+                                <li>
+                    <span class="param-name">Код товара:</span>
+                    <span class="param-value">
+                        <strong>300414008</strong>
+                    </span>
+                </li>
+
+                                <li>
+                    <span class="param-name">Производитель:</span>
+                    <span class="param-value">
+                        <strong>Asus</strong>
+                    </span>
+                </li>
+                                                <IDXSKIP><li>
+                    <span class="param-name">Гарантия:</span>
+                    <span class="param-value">
+                        <strong>Производителя</strong>
+                    </span>
+                </li></IDXSKIP>
+                                <IDXSKIP><li>
+                    <span class="param-name">Наличие:</span>
+                    <span class="param-value">
+                                                    <span class="label_box darkgray">архив</span>
+                            <span class="availability-time"></span>
+                                            </span>
+                </li></IDXSKIP>
+
+                <IDXSKIP><li>
+                    <span class="param-name">Оплата:</span>
+                    <span class="param-value">
+                        нал/безнал <a href="#payment-info" class="fancybox"><b>Без комиссии!</b></a>
+                    </span>
+                </li></IDXSKIP>
+                <IDXSKIP><li class="hide-when-yandex-delivery">
+                    <span class="param-name">Самовывоз:</span>
+                    <span class="param-value">
+                                                    недоступен
+                                            </span>
+                </li></IDXSKIP>
+                <IDXSKIP><li class="hide-when-yandex-delivery">
+                    <span class="param-name">Доставка:</span>
+                    <span class="param-value">
+                        <div class="tooltip-container">
+                                                            не осуществляется
+                                                    </div>
+                    </span>
+                </li></IDXSKIP>
+                                <IDXSKIP><li class="hide-when-yandex-delivery">
+                    <span class="param-name">Стоимость:</span>
+                    <span class="param-value">
+                        <b>350 руб. по Москве</b>
+                        (в пределах МКАД)
+                    </span>
+                </li></IDXSKIP>
+                            </ul>
+
+            <div class="address-hint hide-when-yandex-delivery">
+                <IDXSKIP>Для расчета стоимости доставки в Ваш город звоните оператору: </IDXSKIP><IDXSKIP><strong>8-800-555-24-04</strong></IDXSKIP> <IDXSKIP>(звонок бесплатный)
+            </IDXSKIP></div>
+            
+        </div>
+
+        </div>
+
+        
+
+
+
+
+<div class="col">
+    <h2>Описание</h2>
+
+    <p class="mb0">Моноблок Asus EeeTop PC ET2702IGKH-B002K представляет собой мощную игровую машину, которая справится практически с любой задачей</p>
+
+    <IDXSKIP><a href="#citl_description" class="scroll-top">Полное описание</a></IDXSKIP>
+
+    <div></div>
+
+</div>
+
+<div class="col ml30">
+    <h2>Характеристики</h2>
+        <p class="mb0">Intel Core i5, 3000 МГц, AMD Mobility Radeon HD 8890A, объем видеопамяти 2 Гб, 6 Гб, 2 Тб</p>
+    <IDXSKIP><a href="#citl_characteristic" class="scroll-top">Все характеристики</a></IDXSKIP>
+            </div>
+
+    </div>
+</div>
+
+<div class="clear"> </div>
+
+
+
+
+    
+<span id="info_menu"></span>
+
+
+<IDXSKIP><span id="info_menu" style="color: #fff">#</span></IDXSKIP>
+<div class="ci_tabs_box">
+    <div class="ci_tabs">
+                    
+<div class="ci_tabs">
+<ul class="menu_info">
+<IDXSKIP><li>
+    <a class="active" href="#citl_reviews">Отзывы <span class="stars-rating ml10 mt7" id="Product_averageRating">
+<input id="Product_averageRating_0" value="1" type="radio" name="Product[averageRating]" />
+<input id="Product_averageRating_1" value="2" type="radio" name="Product[averageRating]" />
+<input id="Product_averageRating_2" value="3" type="radio" name="Product[averageRating]" />
+<input id="Product_averageRating_3" value="4" type="radio" name="Product[averageRating]" />
+<input id="Product_averageRating_4" value="5" type="radio" name="Product[averageRating]" />
+</span></a></li></IDXSKIP>
+<IDXSKIP><li><a href="#citl_answer" class="">Вопрос / Ответ</a></li></IDXSKIP>
+<IDXSKIP><li><a id="citl_description_label" href="#citl_description" class="">Описание</a></li></IDXSKIP>
+<IDXSKIP><li><a id="citl_characteristic_label" href="#citl_characteristic" class="">Характеристики</a></li></IDXSKIP>
+        
+</ul>    </div>            
+
+    </div>
+
+    <div class="content_box">
+    <div id="citl_reviews" class="comments">
+
+        <div id="comments-list" class="list-view">
+<div class="items">
+<span class="empty"><div class="empty_text">У данного товара нет отзывов</div></span></div><div class="keys" style="display:none" title="/catalog/view/id/18248"></div>
+</div>
+        <IDXSKIP><div class="actions" id="toggle-review">
+                        <a href="#toggle-review" class="toggle-review">добавить отзыв</a>
+                
+        </div></IDXSKIP>
+
+        <div class="add_comment add-review" style="display: none">
+
+            <form id="product-review-form" action="/catalog/view/id/18248#product-review-form" method="post">
+            <h2>добавить отзыв</h2>
+
+                    
+            <div class="form_box">
+
+                <IDXSKIP><div>
+<label for="ProductReview_name" class="required">Вас зовут <span class="required">*</span></label>                    <input name="ProductReview[name]" id="ProductReview_name" type="text" maxlength="255" value="Аноним" />                    <div class="errorMessage" id="ProductReview_name_em_" style="display:none"></div>                </div></IDXSKIP>
+
+
+                    <IDXSKIP><div>
+    <label for="ProductReview_author_email">Ваш email</label>                        <input name="ProductReview[author_email]" id="ProductReview_author_email" type="text" maxlength="255" />                        <div class="errorMessage" id="ProductReview_author_email_em_" style="display:none"></div>                    </div></IDXSKIP>
+
+
+                <IDXSKIP><div>
+                    <label for="ProductReview_positive" class="required">Достоинства <span class="required">*</span></label>                    <textarea name="ProductReview[positive]" id="ProductReview_positive"></textarea>                    <div class="errorMessage" id="ProductReview_positive_em_" style="display:none"></div>                </div></IDXSKIP>
+
+                <IDXSKIP><div>
+                    <label for="ProductReview_negative" class="required">Недостатки <span class="required">*</span></label>                    <textarea name="ProductReview[negative]" id="ProductReview_negative"></textarea>                    <div class="errorMessage" id="ProductReview_negative_em_" style="display:none"></div>                </div></IDXSKIP>
+
+                <IDXSKIP><div>
+                    <label for="ProductReview_text" class="required">Отзыв <span class="required">*</span></label>                    <textarea name="ProductReview[text]" id="ProductReview_text"></textarea>                    <div class="errorMessage" id="ProductReview_text_em_" style="display:none"></div>                </div></IDXSKIP>
+
+                <IDXSKIP><div class="mb15">
+                    <label for="ProductReview_rating" class="required">Оценка <span class="required">*</span></label>                    <span class="stars-rating" id="ProductReview_rating">
+<input id="ProductReview_rating_0" value="1" type="radio" name="ProductReview[rating]" />
+<input id="ProductReview_rating_1" value="2" type="radio" name="ProductReview[rating]" />
+<input id="ProductReview_rating_2" value="3" type="radio" name="ProductReview[rating]" />
+<input id="ProductReview_rating_3" value="4" type="radio" name="ProductReview[rating]" />
+<input id="ProductReview_rating_4" value="5" type="radio" name="ProductReview[rating]" />
+</span>                    <div class="errorMessage" id="ProductReview_rating_em_" style="display:none"></div>                </div></IDXSKIP>
+
+                                        <div class="row">
+                    <label for="ProductReview_captcha">Введите результат вычисления</label>    <img id="product-review-captcha" src="/site/captchaReview/v/590e1c935f9f5" alt="" />    <input name="ProductReview[captcha]" id="ProductReview_captcha" type="text" />    <div class="errorMessage" id="ProductReview_captcha_em_" style="display:none"></div>                    </div>
+            </div>
+
+            <IDXSKIP><div class="pos_right">
+                <button type="submit" class="animated_btn  red_btn">
+                    <span class="br_l"></span>
+                    <span class="c_bg">отправить</span>
+                    <span class="br_r"></span>
+                </button>
+
+                <a href="#" class="gray_btn toggle-review">закрыть</a>
+            </div></IDXSKIP>
+
+</form>
+        </div>
+    </div>
+    
+    <div id="citl_answer" class="comments" style="display: none">
+        <div id="comments-list" class="list-view">
+<div class="items">
+<span class="empty"><div class="empty_text">По данному товару нет вопросов</div></span></div><div class="keys" style="display:none" title="/catalog/view/id/18248"></div>
+</div>        
+        <IDXSKIP><div class="actions" id="toggle-answer">
+                        <a href="#toggle-answer"  class="toggle-answer">задать вопрос</a>
+        </div></IDXSKIP>
+
+        <div class="add_comment add-answer" style="display: none">
+
+            <form id="product-answer-form" action="/catalog/view/id/18248#product-answer-form" method="post">
+            <h2>Задать вопрос</h2>
+
+                    
+            <div class="form_box">
+
+                <IDXSKIP><div>
+<label for="ProductAnswer_name" class="required">Вас зовут <span class="required">*</span></label>                    <input name="ProductAnswer[name]" id="ProductAnswer_name" type="text" maxlength="255" value="Аноним" />                    <div class="errorMessage" id="ProductAnswer_name_em_" style="display:none"></div>                </div></IDXSKIP>
+
+
+                    <IDXSKIP><div>
+    <label for="ProductAnswer_author_email">Ваш email</label>                        <input name="ProductAnswer[author_email]" id="ProductAnswer_author_email" type="text" maxlength="255" />                        <div class="errorMessage" id="ProductAnswer_author_email_em_" style="display:none"></div>                    </div></IDXSKIP>
+
+
+                <IDXSKIP><div>
+                    <label for="ProductAnswer_question" class="required">Вопрос <span class="required">*</span></label>                    <textarea name="ProductAnswer[question]" id="ProductAnswer_question"></textarea>                    <div class="errorMessage" id="ProductAnswer_question_em_" style="display:none"></div>                </div></IDXSKIP>
+
+                                <div class="row">
+                <label for="ProductAnswer_captcha">Введите результат вычисления</label>                <img id="product-answer-captcha" src="/site/captchaAnswer/v/590e1c936148d" alt="" />                <input name="ProductAnswer[captcha]" id="ProductAnswer_captcha" type="text" />                <div class="errorMessage" id="ProductAnswer_captcha_em_" style="display:none"></div>                </div>
+            </div>
+
+            <IDXSKIP><div class="pos_right">
+                <button type="submit" class="animated_btn red_btn">
+                    <span class="br_l"></span>
+                    <span class="c_bg">отправить</span>
+                    <span class="br_r"></span>
+                </button>
+
+                <a href="#" class="gray_btn toggle-answer">закрыть</a>
+            </div></IDXSKIP>
+
+</form>
+        </div>        
+    </div>
+    <div id="citl_description" class="fancy-text comments" style="display: none">
+        <div class="wrapper">
+            Моноблок&nbsp;Asus EeeTop PC ET2702IGKH-B002K&nbsp;представляет собой мощную игровую машину, которая справится практически с любой задачей пользователя: графические и видеоредакторы, ресурсоемкие приложения, разнообразный медиаконтент &ndash; даже при самой высокой нагрузке девайс будет работать корректно и плавно. Модель снабжена высококачественным ярким дисплеем, полным интерфейсным комплектом, большим объемом внутренней памяти. Она с легкостью заменит домашний компьютер и все устройства для воспроизведения медиаконтента.<br />
+<br />
+<strong>Вместительный жесткий диск</strong><br />
+<br />
+Пользователю предоставлено 2000 Гб памяти &ndash; проблемы хранения большого количества информации не возникнет.<br />
+<br />
+<strong>Домашний кинотеатр</strong><br />
+<br />
+Моноблок Asus EeeTop PC ET2702IGKH-B002K снабжен превосходным 27-дюймовым дисплеем с высочайшим разрешением 2560x1440 точек. Установленная здесь акустическая система ASUS SonicMaster обеспечит объемное звучание. Производительная видеокарта с 2 Гб памяти позаботится о высокой детализации фильмов и игр. Модель комплектуется также встроенным ТВ-тюнером, благодаря чему устройство с успехом заменит телевизор.<br />
+<br />
+<strong>Комфорт на каждый день</strong><br />
+<br />
+Моноблок прост в управлении: резервное копирование и восстановление системы доступны нажатием одной кнопки. Четыре порта USB предоставляют возможность подсоединять самые разные устройства, а разъем HDMI позволяет подключить девайс к внешнему экрану, игровой консоли. Оптический привод поддерживает носители формата Blu-ray.        </div>   
+    </div>
+    <div id="citl_characteristic" class="fancy-text comments" style="display: none">
+        <div class="wrapper">
+                    <div id="yw0" class="list-view">
+<div class="items">
+<span class="empty"></span></div><div class="keys" style="display:none" title="/catalog/view/id/18248"></div>
+</div><div id="yw1" class="list-view">
+<div class="items">
+<span class="empty">Нет результатов.</span></div><div class="keys" style="display:none" title="/catalog/view/id/18248"></div>
+</div>            
+                            <IDXSKIP><table class="param_list">
+                    <tbody>
+                        <tr>
+                            <th colspan="2">Гарантия</th>
+                        </tr>
+                        <tr>
+                            <td><span><span>Гарантия</span></span></td>
+                            <td>Производителя</td>
+                        </tr>
+                    </tbody>
+                </table></IDXSKIP>
+                                        <div class="note">
+                    <IDXSKIP>* Производитель может изменить технические характеристики и комплектацию без уведомления.
+                </IDXSKIP></div>    
+        </div>        
+    </div>
+        
+    <div id="citl_video" class="comments fancy-text" style="display: none">
+        <div class="wrapper text_box show">
+                
+        </div>        
+    </div>
+    
+    <div id="citl_survey" class="comments fancy-text" style="display: none">
+        <div class="wrapper">
+              
+        </div>    
+    </div>
+  </div>  
+</div>    
+<script>
+    $('.toggle-block').click(function(){
+        var id = $(this).attr('data-id');
+        if ($('.add-comment-'+id).css('display') == 'none') $('.add-comment-'+id).css('display','block');
+        else                                                $('.add-comment-'+id).css('display','none');
+    });
+</script>    
+<div class="addition_info inlblock">
+    <h2>информация для покупателей</h2>
+
+<IDXSKIP><h3 class="cut-header" rel-element="deny-reasons1"><a href="#">Покупка в магазине</a></h3></IDXSKIP>
+
+<div id="deny-reasons1">
+
+<p>Вы можете приобрести Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web непосредственно в нашем магазине на ул. Большая Семеновская, д.11, стр. 5 (м.Электрозаводская) или заказать доставку по Москве или по России. Для совершения покупки в магазине самостоятельно (самовывоз), Вам нужно созвониться с любым из наших менеджеров и поставить товар в резерв, либо оставить заказ на нашем сайте, указав способ доставки - самовывоз, в этом случае наши менеджеры сами свяжутся с Вами. После этого Вы можете подъехать в любое удобное для Вас время в наш магазин, чтобы купить Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web.</p>
+
+<p>В нашем магазине Вы можете проверить комплектацию товара, его работоспособность и качество. По всем возникающим техническим вопросам, наши сотрудники магазина окажут консультацию, помогут проверить Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web, расскажут как начать правильно пользоваться, оформят гарантию и все необходимые документы. У нас всегда имеется широкий выбор дополнительных аксессуаров и оборудования. Вы можете подобрать и купить необходимые аксессуары для Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web Для проверки в магазине имеется все необходимое оборудование для проверки технически сложного товара.</p>
+</div><br>
+
+<IDXSKIP><h3 class="cut-header" rel-element="deny-reasons2"><a href="#">Покупка в интернет-магазине</a></h3></IDXSKIP>
+
+<div id="deny-reasons2">
+
+<p>Для совершения покупки с доставкой по Москве или по России, Вам нужно будет зарегистрироваться в интернет-магазине, выбрать интересующий Вас товар, заполнить необходимые поля, указать способ оплаты, доставки и отправить заказ. После получения заказа, наш менеджер свяжется с Вами для уточнения деталей заказа и времени доставки. Более подробно, как заказать, оплатить и купить Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web Вы можете ознакомиться в соответствующем разделе нашего сайта &quot;<IDXSKIP><a href="http://pixel24.ru/site/page/view/how-buy">Как купить?</a></IDXSKIP>&quot;. Если у Вас возникли дополнительные вопросы по оформлению заказа и оплате, Вы всегда можете связаться с нами по контактному телефону или электронной почте. При заказе с доставкой по России транспортной компанией, Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web обязательно упаковывается в защитную пузырьковую пленку, при необходимости в более плотную коробку для избежания повреждений во время транспортировки. Также любой товар в обязательном порядке страхуется на время доставки. Мы делаем все, чтобы Вы получили Вашу покупку в целости и сохранности.</p>
+</div><br>
+
+
+<p>Информация, размещенная на сайте (описания и характеристики товара), имеет справочный характер. Производитель может изменить технические характеристики и комплектацию Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web без уведомления, как потребителей, так и продавцов. Согласно действующему законодательству Российской Федерации, данное предложение не является публичной офертой, в соответствии с положением Статьи 437 Гражданского кодекса. Всю интересующую Вас подробную и дополнительную информацию уточняйте на сайтах производителя или у наших менеджеров.</p></div>
+
+</div>
+<script type="text/javascript">
+(function($){
+
+    $('.tooltip-link').tooltip();
+
+    $('.main-image > a').productGallery({
+        images: $('.images_container > a')
+    });
+
+    $(document).ready(function () {
+
+        $('.fastpay').on('click', function(){
+
+            $.ajax({
+                url: $(this).attr('href'),
+                dataType: 'json',
+                success: function(data){
+
+                    var $form = $(data.form);
+
+                    $.fancybox($form);
+
+                    ;
+                    ;
+
+                    $form.fastpayForm({'yaMetrikaTarget':'order_finish_3457ryhd892','success':function(order){}});
+                }
+            });
+
+            return false;
+        });
+
+        $('.descr .more').fancybox({
+            type:           'inline',
+            centerOnScroll: true
+        });
+
+
+        $('.toggle-review').click(function () {
+            $('.add-review').toggle();
+            return false;
+        });
+
+        if(window.location.hash == '#toggle-review'){
+            $('.add-review').show();
+        }
+
+        if(window.location.hash == '#toggle-answer'){
+            $('.add-answer').show();
+        }
+
+        $('.toggle-answer').click(function () {
+            $('.add-answer').toggle();
+            return false;
+        });
+
+        $('.comments .allReviews').click(function () {
+            return true;
+            var $link = $(this)
+
+            $.ajax({
+                url: $link.attr('href'),
+                success: function(data){
+
+                }
+            });
+
+            return false;
+        });
+
+     $('.scroll-top').click( function(){
+
+	var scroll_el = $(this).attr('href');
+
+            $('.comments').hide();
+            $(scroll_el).show();
+
+	    $('html, body').animate({ scrollTop: $('#info_menu').offset().top - 150 }, 1000);
+
+
+            $('.menu_info li a').removeClass('active')
+            $(scroll_el+'_label').addClass('active')
+
+	    return false;
+    });
+
+
+        $('.dop_info .actions a').click(function () {
+            var $link = $(this);
+            $.ajax({
+                url:$link.attr('href'),
+                success:function (data) {
+                    $link.toggleClass('active');
+                    tryUpdateFooterTabs(data);
+                }
+            });
+            return false;
+        });
+
+        $('.dop_info a.cart, .dop_info .kupi-v-kredit, .product-sets .cart').on('click', function(){
+
+            var $link = $(this);
+            
+            if(!$link.hasClass('enabled')){
+                showProductNotAvailablePopup();
+                return false;
+            }
+
+            $.ajax({
+                url: $link.attr("href"),
+                success: function(data){
+                        if ($link.hasClass('cart')) {
+                            dataLayer.push({
+                            "ecommerce": {
+                                "add": {
+                                    "products": [{
+                                                "id": $link.attr('data-product-id'),
+                                                "name": $link.attr('data-name'),
+                                                "price": $link.attr('data-price'),
+                                                "brand": $link.attr('data-brand'),
+                                                "category": $link.attr('data-category'),
+                                                "quantity": $link.attr('data-quantity')
+                                            }
+                                        ]
+                                    }
+                                }
+                            });                            
+                        }
+                    
+                    
+                    
+                    var $data = $.parseJSON(data);
+                    if($data.footer){
+                        tryUpdateFooterTabs($data.footer);
+                    }
+                    var $basketWidget = $('.user-basket a');
+                    if($data.cart_count || !$basketWidget.data('empty-text')){
+                        $basketWidget.html($basketWidget.data('text'));
+                        $basketWidget.find('em.count span').text($data.cart_count);
+                        $basketWidget.find('em.price span').text($data.price);
+                        $basketWidget.attr('href', $basketWidget.data('cart-url'));
+                    } else {
+                        $basketWidget.html($basketWidget.data('empty-text'));
+                        $basketWidget.attr('href', $basketWidget.data('profile-url'));
+                    }
+                    showCartAddedPopup();
+                    var initColor = $('.cart-count').find('span.gray').css('color');
+                    $('.cart-count').find('span.gray').
+                        animate({opacity:0, color: '#ff0000'}).
+                        html('(<span class="value">'+$data.cart_count+'</span>)').
+                        animate({opacity:1}).
+                        animate({opacity:0}).
+                        animate({opacity:1,color:initColor});
+                }
+            });
+            return false;
+
+        });
+
+        var DeliveryWidgetController = function() {
+
+            this._runTimerHandle = 0;
+
+            this.productPrice = 0;
+            this.isWidgetModified = false;
+
+            this.deliveryAvailable = true;
+            this.hasFreeDelivery = false;
+            this.deliveryPrice = 350;
+            this.$changeCityHint =  $('.change-city-hint');
+
+            this.locationMoscow = 1;
+            this.locationMoscowRegion = 2;
+            this.locationOtherArea = 3;
+
+            this.run = function (interval) {
+
+                this.productPrice = $('meta[name="ydWidgetData"]').data('cost');
+
+                var self = this;
+                this._runTimerHandle = setInterval(function () {
+                    self.onTick();
+                }, interval);
+
+                yd_$(document).on('ydWidget.widget.city.change', function (e, cityName, geoId) {
+                    if (self.$changeCityHint) {
+                        self.$changeCityHint.hide("slow");
+                    }
+
+                    if (sessionStorage) {
+                        sessionStorage.yaCityWasChanged = true;
+                    }
+                });
+
+            };
+
+            this.stop = function () {
+                clearInterval(this._runTimerHandle);
+            };
+
+            this.onTick = function () {
+                var selectedCityString = this.getLocationType();
+
+                if (!selectedCityString) {
+                    return;
+                }
+
+                this.commonLocationWorker();
+
+                switch (selectedCityString) {
+                    case this.locationMoscow:
+                        this.moscowLocationWorker();
+                        break;
+                    case this.locationMoscowRegion:
+                        break; // disabled
+                        this.moscowRegionLocationWorker();
+                        break;
+                    case this.locationOtherArea:
+                        this.otherAreaLocationWorker();
+                        break;
+                }
+            };
+
+            this.isMaxSumReached = function () {
+                return this.productPrice >= 100000;
+            };
+
+            this.getSelectedCity = function () {
+                return $('.js-w_city_name_hidden').val();
+            };
+
+            this.getLocationType = function () {
+
+                var yadSelectedCity = this.getSelectedCity();
+
+                var locationType;
+
+                if (/Московская/i.test(yadSelectedCity)) {
+                    locationType = this.locationMoscowRegion
+                } else if (/Москва/i.test(yadSelectedCity)) {
+                    locationType = this.locationMoscow
+                } else {
+                    locationType = this.locationOtherArea
+                }
+
+                return locationType;
+            };
+
+            this.moscowLocationWorker = function () {
+                this.isWidgetModified = true;
+
+                // replace yandex.delivery widget footer link
+                var $ydDeliveryDetailsLink = $('#d53777c29b42c91351f1f5e .widget-card-footer a.ya-link');
+
+                if ($ydDeliveryDetailsLink) {
+                    var $linkToReplace = $('<a href="#delivery-info" class="fancybox">Условия доставки</a>');
+                    // добавим свой линк
+                    var $whereToBuy = $('<a href="/shema_proezda" style="padding-left: 18px" target="_blank">Где купить?</a>');
+                    $ydDeliveryDetailsLink.after($whereToBuy).after($linkToReplace);
+
+                    $ydDeliveryDetailsLink.remove();
+                }
+
+                $('#d53777c29b42c91351f1f5e .widget-card-body.w-table').remove();
+
+                var openTable = '<msw class="widget-card-body w-table">';
+                var closeTable = '</msw>';
+
+                var courierRow = null;
+                
+                var pickupRow = null;
+
+                
+                var rowString = [openTable, courierRow, pickupRow, closeTable].join('');
+
+                var $row = $(rowString);
+
+                if (this.deliveryAvailable) {
+                    $('.widget-card-head.ya-header').after($row);
+                }
+
+            };
+
+            this.moscowRegionLocationWorker = function () {
+                this.isWidgetModified = true;
+
+                // replace yandex.delivery widget footer link
+                var $ydDeliveryDetailsLink = $('#d53777c29b42c91351f1f5e .widget-card-footer a.ya-link');
+
+                if ($ydDeliveryDetailsLink) {
+                    var $linkToReplace = $('<a href="#delivery-info" class="fancybox">Условия доставки</a>');
+                    // добавим свой линк
+                    var $whereToBuy = $('<a href="/shema_proezda" style="padding-left: 18px" target="_blank">Где купить?</a>');
+                    $ydDeliveryDetailsLink.after($whereToBuy).after($linkToReplace);
+
+                    $ydDeliveryDetailsLink.remove();
+                }
+
+                $('#d53777c29b42c91351f1f5e .widget-card-body.w-table').remove();
+
+                var openTable = '<msw class="widget-card-body w-table">';
+                var closeTable = '</msw>';
+
+                var courierRow = null;
+                
+                var pickupRow = null;
+
+                
+                if (this.isMaxSumReached()) {
+                    // если товар дороже лимита, показываем ограничение доставки
+                    courierRow = '<msw class="w-var-delivery-todoor-cheapest msw-tr">' +
+                        '<msw class="ya-td type">Доставка производится по тарифам ТК Major Express, СПСР-Экспресс</msw>' +
+                        '</msw>';
+
+                    pickupRow = '<msw class="w-var-delivery-todoor-cheapest msw-tr">' +
+                        '<msw class="ya-td type">Стоимость доставки другими компаниями, уточняйте у операторов Call-центра: 8-800-555-24-04</msw>' +
+                        '</msw>';
+                }
+
+                var rowString = [openTable, courierRow, pickupRow, closeTable].join('');
+
+                var $row = $(rowString);
+
+                if (this.deliveryAvailable) {
+                    $('.widget-card-head.ya-header').after($row);
+                }
+
+            };
+
+            this.otherAreaLocationWorker = function () {
+                this.isWidgetModified = false;
+
+                // в регионы для заказов больше 100к показываем модифицированный виджет
+                if (this.isMaxSumReached()) {
+                    this.isWidgetModified = true;
+                    // replace yandex.delivery widget footer link
+                    var $ydDeliveryDetailsLink = $('#d53777c29b42c91351f1f5e .widget-card-footer a.ya-link');
+
+                    if ($ydDeliveryDetailsLink) {
+                        var $linkToReplace = $('<a href="#delivery-info" class="fancybox">Условия доставки</a>');
+                        // добавим свой линк
+                        var $whereToBuy = $('<a href="/shema_proezda" style="padding-left: 18px" target="_blank">Где купить?</a>');
+                        $ydDeliveryDetailsLink.after($whereToBuy).after($linkToReplace);
+
+                        $ydDeliveryDetailsLink.remove();
+                    }
+
+                    $('#d53777c29b42c91351f1f5e .widget-card-body.w-table').remove();
+
+                    var openTable = '<msw class="widget-card-body w-table">';
+                    var closeTable = '</msw>';
+
+                        // если товар дороже лимита, показываем ограничение доставки
+                        courierRow = '<msw class="w-var-delivery-todoor-cheapest msw-tr">' +
+                            '<msw class="ya-td type">Доставка производится по тарифам ТК Major Express, СПСР-Экспресс</msw>' +
+                            '</msw>';
+
+                        pickupRow = '<msw class="w-var-delivery-todoor-cheapest msw-tr">' +
+                            '<msw class="ya-td type">Стоимость доставки другими компаниями, уточняйте у операторов Call-центра: 8-800-555-24-04</msw>' +
+                            '</msw>';
+
+                    var rowString = [openTable, courierRow, pickupRow, closeTable].join('');
+
+                    var $row = $(rowString);
+
+                    if (this.deliveryAvailable) {
+                        $('.widget-card-head.ya-header').after($row);
+                    }
+                }// limit for price
+
+            };
+
+            this.commonLocationWorker = function () {
+                // прячем подсказку с просьбой выбрать город если уже выбирали
+                if (!$('.change-city-hint').length && sessionStorage.yaCityWasChanged !== 'true') {
+                    yd_$('.js-w_city_v2.w-var-city-v2').after('<br><div class="change-city-hint">(Для расчета стоимости уточните Ваш город)</div>');
+                }
+
+                // remove items from post of russia
+                var $postOfRussiaBids = $('#d53777c29b42c91351f1f5e .widget-card-body.w-table .w-var-delivery-post-cheapest.msw-tr:contains("Почтой России")')
+                if ($postOfRussiaBids) {
+                    $postOfRussiaBids.remove();
+                }
+
+                // hide Yandex logo when we show modified widget
+                $('.widget-card-footer a.w-right.msw-geo-logo').toggle(!this.isWidgetModified);
+                $('.widget-card-footer a.w-right.yd-logo').toggle(!this.isWidgetModified);
+
+                // fix widget size
+                $('#d53777c29b42c91351f1f5e').css('min-width', '345px');
+            }
+        };
+
+        if (window.enableYandexDelivery) {
+            var deliveryWidgetController = new DeliveryWidgetController();
+            deliveryWidgetController.run(1000);
+
+            $('.hide-when-yandex-delivery').hide();
+        }
+
+    });
+})(jQuery);
+</script>
+<img width="1" height="1" src="//retarget.ssl-services.com/p/wv.php?shop_id=171&action=enter_product&url=https%3A%2F%2Fpixel24.ru%2Fcatalog%2Fview%2Fid%2F18248&product_id=18248"/>
+
+<div id="payment-info" class="fancy-text">
+    <div class="wrapper">
+        <h4>Мы не берем никакой комиссии для всех видов платежей!</h4>
+        <p></p>
+        <h4>Наличная оплата</h4>
+        <p><IDXSKIP>- Осуществляется через кассу в магазине при самовывозе или на  руки курьеру при доставке в пределах Москвы и МО не далее 15 км от МКАД.</IDXSKIP></p>
+        <p><IDXSKIP>Наличная оплата возможна только при нахождении покупателя в Москве или МО в пределах доступности курьерской службы магазина.</IDXSKIP></p>
+        <h4>Безналичная оплата для физических лиц с помощью квитанции</h4>
+        <p><IDXSKIP>- При оформлении заказа Вы можете указать этот вид оплаты и после обработки заказа распечатать квитанцию из личного кабинета. По этой квитанции Вы можете произвести оплату в банке.</IDXSKIP></p>
+        <h4>Безналичная оплата для юридических лиц с помощью счета</h4>
+        <p><IDXSKIP>- При оформлении заказа Вы можете указать этот вид оплаты и после обработки заказа распечатать счет из личного кабинета, доступно только для зарегистрированных покупателей, как юридическое лицо.</IDXSKIP></p>
+        <h4>Онлайн оплата кредитными картами через терминал в магазине</h4>
+        <p><IDXSKIP>- Оплата кредитными картами (VISA, MASTERCARD и др.) в магазине через терминал. </IDXSKIP></p>
+        <h4>Онлайн оплата кредитными картами или электронными деньгами через сайт интернет магазина (ASSIST)</h4>
+        <p><IDXSKIP>- При оформлении заказа Вы можете указать этот вид оплаты, после обработки заказа в личном кабинете появится кнопка -оплатить. К оплате принимаются карты - VISA, VISA Electron, MasterCard, MC Maestro, электронные деньги - WebMoney, Яндекс.Деньги, QIWI кошелек (мобильные платежи).</IDXSKIP></p>
+
+    </div>
+</div>
+
+<div id="delivery-info" class="fancy-text">
+    <div class="wrapper">
+
+        <h4>Доставка по Москве и Московской области.</h4>
+
+        <ul class="ul">
+            <IDXSKIP><li>Возможна доставка в день заказа, при условии оформления заказа до 15-00!</li></IDXSKIP>
+            <IDXSKIP><li>Доставка осуществляется на следующий день, но не позднее 2-х рабочих дней со дня оформления заказа за наличный расчет.</li></IDXSKIP>
+            <IDXSKIP><li>При заказе по безналичному расчету, доставка осуществляется только после поступления денег на расчетный счет.</li></IDXSKIP>
+        </ul>
+
+        <h4>Стоимость доставки по Москве и МО:</h4>
+        <ul class="ul">
+            <IDXSKIP><li>Доставка по Москве (в пределах МКАД) до 5 кг. - 0 руб. - 350 руб.</li></IDXSKIP>
+            <IDXSKIP><li>Доставка по Москве (в пределах МКАД) от 5 кг. - 0 руб. - 700 руб.</li></IDXSKIP>
+            <IDXSKIP><li>Доставка за МКАД (не далее 15 км.) до 5 кг. - 350 руб.- 700 руб.</li></IDXSKIP>
+            <IDXSKIP><li>Доставка за МКАД (не далее 15 км.) от 5 кг. -700 руб. -1400 руб.</li></IDXSKIP>
+        </ul>
+
+        <h4>Доставка по России.</h4>
+        <p><IDXSKIP>Стоимость доставки по России - расчитывается по тарифам выбранной транспортной компании.</IDXSKIP></p>
+
+        <h4>Условия доставки по России:</h4>
+        <ul class="ul">
+            <IDXSKIP><li>Доставка возможна только по предоплате (оплата по счету через банк, оплата при помощи квитанции, оплата электронными деньгами или банковской картой)</li></IDXSKIP>
+            <IDXSKIP><li>Доставка осуществляется после поступления денег на наш расчетный счет. При оплате картой на сайте зачисления денежных средств происходит моментально.</li></IDXSKIP>
+            <IDXSKIP><li>Доставка по России осуществляется следующими транспортными компаниями: Major Express , СПСР-Экспресс.</li></IDXSKIP>
+            <IDXSKIP><li>Условия и стоимость доставки другими транспортными компаниями, уточняйте у операторов CALL-центра</li></IDXSKIP>
+            <IDXSKIP><li>При расчете, обязательно учитывается стоимость страховки за пересылку товара.</li></IDXSKIP>
+        </ul>
+
+    </div>
+</div>
+<script>
+    dataLayer.push({
+    "ecommerce": {
+        "detail": {
+            "products": [
+                {
+                    "id": "18248",
+                    "name" : "Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web",
+                        "price": 54900,
+                   
+                        "brand": "<![CDATA[Asus]]>",
+                            
+                    "category": "",
+                }
+            ]
+        }
+    }
+});
+</script>    
+</div>
+
+</div>
+
+<div id="footer">
+    <div class="footer-wrapper">
+
+        <div class="footer-inner">
+
+            <div class="left-col">
+                <div class="company-contacts">
+                    <IDXSKIP><p>Розничные продажи:  8(800)555-24-04</p></IDXSKIP>
+
+                    <IDXSKIP><p>Электронная почта: <a href="mailto:info@pixel24.ru">info@pixel24.ru</a></p></IDXSKIP>
+                </div>
+                <!-- end company-contacts -->
+
+                <div class="company-soc">
+                    <IDXSKIP><p>
+                        <span class="company-soc-title">Мы в соцсетях:</span>
+                        <span class="company-soc-button">
+                            <a href="https://www.facebook.com/pages/Pixel24ru/338514989514145"><img src="/assets/3e6bd9ca/img/soc_fb.png" alt="Facebook" /></a><a href="https://twitter.com/Pixel24ru"><img src="/assets/3e6bd9ca/img/soc_twit.png" alt="Twitter" /></a><a href="https://vk.com/club29190410"><img src="/assets/3e6bd9ca/img/soc_vk.png" alt="Vkontakte" /></a><a href="http://www.youtube.com/channel/UC9UJ3noSiJ4zEz0KVtKPhcg"><img src="/assets/3e6bd9ca/img/soc_youtube.png" alt="YouTube" /></a>                        </span>
+                    </p></IDXSKIP>
+                </div>
+                <!-- end company-soc -->
+            </div>
+
+                            <IDXSKIP><div class="counters" style="margin-left: -90px;">
+
+	<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t18.2;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+ 
+<a href="https://clck.yandex.ru/redir/dtype=stred/pid=47/cid=2508/*https://market.yandex.ru/shop/22848/reviews"><img src="https://clck.yandex.ru/redir/dtype=stred/pid=47/cid=2505/*https://grade.market.yandex.ru/?id=22848&action=image&size=0" border="0" width="88" height="31" alt="Читайте отзывы покупателей и оценивайте качество магазина на Яндекс.Маркете" /></a>
+
+
+<!-- <script type="text/javascript">//<![CDATA[
+                    (function(w,n,d,r,s){d.write('<div style="display: inline-block;"><a href="https://top.mail.ru/jump?from=2172574"><img src="'+
+                        ('https:'==d.location.protocol?'https:':'http:')+'//top-fwz1.mail.ru/counter?id=2172574;t=47;js=13'+
+                        ((r=d.referrer)?';r='+escape(r):'')+((s=w.screen)?';s='+s.width+'*'+s.height:'')+';_='+Math.random()+
+                        '" style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /><\/a><\/div>');})(window,navigator,document);//]]>
+                </script><noscript><div><a href="https://top.mail.ru/jump?from=2172574">
+                            <img src="//top-fwz1.mail.ru/counter?id=2172574;t=47;js=na" style="border:0;"
+                                 height="0" width="0" alt="Рейтинг@Mail.ru" /></a></div></noscript> -->
+
+<!-- /Facebook pixel -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '263192643877327']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=263192643877327&ev=PixelInitialized" /></noscript>
+
+<!-- /Facebook pixel -->
+
+
+</div></IDXSKIP>            
+            <div class="right-col">
+                <div class="company-address">
+                    <IDXSKIP><p><em>© Магазин фототехники "Pixel24.ru" 2009-2017</em></p></IDXSKIP>
+
+                    <p><IDXSKIP>Большая Семеновская ул., д.11. стр.5, подъезд 2</IDXSKIP></p>
+                </div>
+
+                <div class="developer">
+                    <p><IDXSKIP>Создание и поддержка: </IDXSKIP><IDXSKIP><a href="#">Илья Халтуринский</a></IDXSKIP></p>
+                </div>
+                <!-- end developer -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer_tabs_box">
+
+        <div class="footer_tabs">
+            <ul>
+                <IDXSKIP><li>
+                    <a href="#ftl_view" class="" id="ftl-viewed">
+                        <span>Просмотренные товары</span>
+                        <span class="gray">(<span
+                                class="value">1</span>)</span>
+                    </a>
+                </li></IDXSKIP>
+                <IDXSKIP><li>
+                    <a href="#ftl_favorites" class="favorite-count" id="ftl-favorites">
+                        <span>избранное</span> <span class="gray">(<span
+                            class="value">0</span>)</span>
+                    </a>
+                </li></IDXSKIP>
+                <IDXSKIP><li>
+                    <a href="#ftl_comparison" class="comparison-count" id="ftl-comparison">
+                        <span>список сравнения</span>
+                        <span class="gray">(<span
+                                class="value">0</span>)</span>
+                    </a>
+                </li></IDXSKIP>
+                <IDXSKIP><li>
+                    <a href="#ftl_cart" class="cart-count" id="ftl-cart">
+                        <span>корзина</span>
+                        <span class="gray">(<span
+                                class="value">0</span>)</span>
+                    </a>
+                </li></IDXSKIP>
+            </ul>
+            <a href="#" class="close_btn"></a>
+        </div>
+
+        <div class="content_box">
+
+            <div class="footer_tabs_carousel_box noscroll"
+                 id="ftl_view">
+                <div rel-list-type="viewed" id="yw7" class="list-view">
+<ul class="ft_carousel">
+<li class="tov_card">
+    <span class="ava_box"><img src="/pictures/normal/090/090064a8b4aa50a8379416b3a3ff6101.jpg?2"
+                               alt=""/></span>
+    <a href="/catalog/view/id/18248"
+       class="title">Asus ET2702IGKH-B002K 27" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web</a>
+    <span class="price">54<label class="finSeporate">&nbsp;</label>900р.</span>
+    <a href="/user/deleteViewed/id/18248"
+       class="del_item" style="visibility: hidden;"
+       rel-tov-actions-id="tov-actions-18248"></a>
+</li></ul><div class="keys" style="display:none" title="/catalog/view/id/18248"><span>18248</span></div>
+</div>            </div>
+
+            <div class="footer_tabs_carousel_box noscroll"
+                 id="ftl_favorites">
+                <div rel-list-type="favorite" id="yw8" class="list-view">
+<ul class="ft_carousel">
+<span class="empty"><div class="empty_text">Нет товаров</div></span></ul><div class="keys" style="display:none" title="/catalog/view/id/18248"></div>
+</div>            </div>
+
+            <div class="footer_tabs_carousel_box noscroll"
+                 id="ftl_comparison">
+                <div rel-list-type="compare" id="yw9" class="list-view">
+<ul class="ft_carousel">
+<span class="empty"><div class="empty_text">Нет товаров</div></span></ul><div class="keys" style="display:none" title="/catalog/view/id/18248"></div>
+</div>                            </div>
+
+            <div class="footer_tabs_carousel_box noscroll"
+                 id="ftl_cart">
+                <div rel-list-type="cart" id="yw10" class="list-view">
+<ul class="ft_carousel">
+<span class="empty"><div class="empty_text">Нет товаров</div></span></ul><div class="keys" style="display:none" title="/catalog/view/id/18248"></div>
+</div>                            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="popup-message" id="popup-message">
+
+    <div class="wrapper">
+
+    </div>
+
+</div>
+
+<div class="product-subscription" id="product-subscription">
+
+    <div class="wrapper">
+
+    </div>
+
+</div>
+
+<!-- Yandex.Metrika counter --><script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.pixel24YaCounter = new Ya.Metrika({id:1635965,
+                webvisor:true,
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                ecommerce:"dataLayer"});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script><IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/1635965" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP><!-- /Yandex.Metrika counter -->
+<script type="text/javascript">var google_tag_params = {"ecomm_prodid":"18248","ecomm_pagetype":"product","ecomm_totalvalue":"54900"};</script><script type="text/javascript">
+            /* <![CDATA[ */
+                var google_conversion_id = 101225442;
+                var google_custom_params = window.google_tag_params;
+                var google_remarketing_only = true;
+            /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+            <IDXSKIP><noscript>
+                <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/101225442/?value=0&guid=ON&script=0"/>
+                </div>
+            </noscript></IDXSKIP><script type="text/javascript" src="/assets/34875b97/listview/jquery.yiilistview.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+            var YaShareInstance = new Ya.share({
+                element: 'yashare',
+                title: 'Asus ET2702IGKH-B002K 27\\\" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web',
+                link: 'https://pixel24.ru/catalog/view/id/18248',
+                onready: function(instance) {},
+                elementStyle: {
+                    quickServices: ['yaru','vkontakte','facebook','twitter','odnoklassniki','moimir'],
+                    type: 'icon'
+                },
+                serviceSpecific: {
+                    twitter: {
+                        
+                        title: 'Asus ET2702IGKH-B002K 27\" FHD i5 4430/6Gb/2Tb/HD8890A 2Gb/BD/MCR/Win8/WiFi/BT/TV/Web'
+                    }
+                }
+        });
+        
+jQuery(function($) {
+jQuery('#Product_averageRating > input').rating({'readOnly':true});
+jQuery('#comments-list').yiiListView({'ajaxUpdate':['comments-list'],'ajaxVar':'ajax','pagerClass':'paginator','loadingClass':'list-view-loading','sorterClass':'sorter','enableHistory':false});
+jQuery('#ProductReview_rating > input').rating({'required':true});
+jQuery('#product-review-captcha').after("<a id=\"product-review-captcha_button\" href=\"\/site\/captchaReview\/refresh\/1\">\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u043d\u043e\u0432\u044b\u0439 \u043a\u043e\u0434<\/a>");
+jQuery(document).on('click', '#product-review-captcha_button', function(){
+	jQuery.ajax({
+		url: "\/site\/captchaReview\/refresh\/1",
+		dataType: 'json',
+		cache: false,
+		success: function(data) {
+			jQuery('#product-review-captcha').attr('src', data['url']);
+			jQuery('body').data('/site/captchaReview.hash', [data['hash1'], data['hash2']]);
+		}
+	});
+	return false;
+});
+
+jQuery('#product-review-form').yiiactiveform({'validateOnSubmit':true,'attributes':[{'id':'ProductReview_name','inputID':'ProductReview_name','errorID':'ProductReview_name_em_','model':'frontend\\models\\ProductReview','name':'name','enableAjaxValidation':false,'hideErrorMessage':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)!='') {
+	
+if(value.length>255) {
+	messages.push("\u0412\u0430\u0441 \u0437\u043e\u0432\u0443\u0442 \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u0434\u043b\u0438\u043d\u043d\u044b\u0439 (\u041c\u0430\u043a\u0441\u0438\u043c\u0443\u043c: 255 \u0441\u0438\u043c\u0432.).");
+}
+
+}
+
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u0412\u0430\u043c \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u044c\u0441\u044f");
+}
+
+}},{'id':'ProductReview_author_email','inputID':'ProductReview_author_email','errorID':'ProductReview_author_email_em_','model':'frontend\\models\\ProductReview','name':'author_email','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)!='') {
+	
+if(value.length>255) {
+	messages.push("\u0412\u0430\u0448 email \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u0434\u043b\u0438\u043d\u043d\u044b\u0439 (\u041c\u0430\u043a\u0441\u0438\u043c\u0443\u043c: 255 \u0441\u0438\u043c\u0432.).");
+}
+
+}
+
+
+
+if(jQuery.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("\u0412\u0430\u0448 email \u043d\u0435 \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u043c E-Mail \u0430\u0434\u0440\u0435\u0441\u043e\u043c.");
+}
+
+}},{'id':'ProductReview_positive','inputID':'ProductReview_positive','errorID':'ProductReview_positive_em_','model':'frontend\\models\\ProductReview','name':'positive','enableAjaxValidation':false,'hideErrorMessage':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u041d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u0437\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u044c \u043f\u043e\u043b\u0435 \u00ab\u0414\u043e\u0441\u0442\u043e\u0438\u043d\u0441\u0442\u0432\u0430\u00bb.");
+}
+
+}},{'id':'ProductReview_negative','inputID':'ProductReview_negative','errorID':'ProductReview_negative_em_','model':'frontend\\models\\ProductReview','name':'negative','enableAjaxValidation':false,'hideErrorMessage':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u041d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u0437\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u044c \u043f\u043e\u043b\u0435 \u00ab\u041d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043a\u0438\u00bb.");
+}
+
+}},{'id':'ProductReview_text','inputID':'ProductReview_text','errorID':'ProductReview_text_em_','model':'frontend\\models\\ProductReview','name':'text','enableAjaxValidation':false,'hideErrorMessage':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u041d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u0437\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u044c \u043f\u043e\u043b\u0435 \u00ab\u041e\u0442\u0437\u044b\u0432\u00bb.");
+}
+
+}},{'id':'ProductReview_rating','inputID':'ProductReview_rating','errorID':'ProductReview_rating_em_','model':'frontend\\models\\ProductReview','name':'rating','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u041e\u0446\u0435\u043d\u0438\u0442\u0435 \u0442\u043e\u0432\u0430\u0440");
+}
+
+
+if(jQuery.trim(value)!='') {
+	
+if(!value.match(/^\s*[+-]?\d+\s*$/)) {
+	messages.push("\u041e\u0446\u0435\u043d\u043a\u0430 \u0434\u043e\u043b\u0436\u0435\u043d \u0431\u044b\u0442\u044c \u0446\u0435\u043b\u044b\u043c \u0447\u0438\u0441\u043b\u043e\u043c.");
+}
+
+if(value<1) {
+	messages.push("\u041e\u0446\u0435\u043d\u043a\u0430 \u0434\u043e\u043b\u0436\u043d\u0430 \u0431\u044b\u0442\u044c \u0432 \u043f\u0440\u0435\u0434\u0435\u043b\u0430\u0445 \u043e\u0442 1 \u0434\u043e 5");
+}
+
+if(value>5) {
+	messages.push("\u041e\u0446\u0435\u043d\u043a\u0430 \u0434\u043e\u043b\u0436\u043d\u0430 \u0431\u044b\u0442\u044c \u0432 \u043f\u0440\u0435\u0434\u0435\u043b\u0430\u0445 \u043e\u0442 1 \u0434\u043e 5");
+}
+
+}
+
+}},{'id':'ProductReview_captcha','inputID':'ProductReview_captcha','errorID':'ProductReview_captcha_em_','model':'frontend\\models\\ProductReview','name':'captcha','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+var hash = $('body').data('/site/captchaReview.hash');
+if(hash == null){
+	hash = 101;
+}else{
+	hash = hash[1];
+}
+value = value.replace(/\s/g,'');
+value = value.toLowerCase();
+value = encodeURIComponent(value);
+for(var i=value.length-1, h=0; i >= 0; --i){
+	h+=value.charCodeAt(i);
+}
+if(h != hash) {
+	messages.push("\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u043f\u0440\u043e\u0432\u0435\u0440\u043e\u0447\u043d\u044b\u0439 \u043a\u043e\u0434");
+}
+
+}}],'errorCss':'error'});
+jQuery('#product-answer-captcha').after("<a id=\"product-answer-captcha_button\" href=\"\/site\/captchaAnswer\/refresh\/1\">\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u043d\u043e\u0432\u044b\u0439 \u043a\u043e\u0434<\/a>");
+jQuery(document).on('click', '#product-answer-captcha_button', function(){
+	jQuery.ajax({
+		url: "\/site\/captchaAnswer\/refresh\/1",
+		dataType: 'json',
+		cache: false,
+		success: function(data) {
+			jQuery('#product-answer-captcha').attr('src', data['url']);
+			jQuery('body').data('/site/captchaAnswer.hash', [data['hash1'], data['hash2']]);
+		}
+	});
+	return false;
+});
+
+jQuery('#product-answer-form').yiiactiveform({'validateOnSubmit':true,'attributes':[{'id':'ProductAnswer_name','inputID':'ProductAnswer_name','errorID':'ProductAnswer_name_em_','model':'frontend\\models\\ProductAnswer','name':'name','enableAjaxValidation':false,'hideErrorMessage':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)!='') {
+	
+if(value.length>255) {
+	messages.push("\u0412\u0430\u0441 \u0437\u043e\u0432\u0443\u0442 \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u0434\u043b\u0438\u043d\u043d\u044b\u0439 (\u041c\u0430\u043a\u0441\u0438\u043c\u0443\u043c: 255 \u0441\u0438\u043c\u0432.).");
+}
+
+}
+
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u0412\u0430\u043c \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u044c\u0441\u044f");
+}
+
+}},{'id':'ProductAnswer_author_email','inputID':'ProductAnswer_author_email','errorID':'ProductAnswer_author_email_em_','model':'frontend\\models\\ProductAnswer','name':'author_email','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)!='') {
+	
+if(value.length>255) {
+	messages.push("\u0412\u0430\u0448 email \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u0434\u043b\u0438\u043d\u043d\u044b\u0439 (\u041c\u0430\u043a\u0441\u0438\u043c\u0443\u043c: 255 \u0441\u0438\u043c\u0432.).");
+}
+
+}
+
+
+
+if(jQuery.trim(value)!='' && !value.match(/^[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/)) {
+	messages.push("\u0412\u0430\u0448 email \u043d\u0435 \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u044b\u043c E-Mail \u0430\u0434\u0440\u0435\u0441\u043e\u043c.");
+}
+
+}},{'id':'ProductAnswer_question','inputID':'ProductAnswer_question','errorID':'ProductAnswer_question_em_','model':'frontend\\models\\ProductAnswer','name':'question','enableAjaxValidation':false,'hideErrorMessage':true,'clientValidation':function(value, messages, attribute) {
+
+if(jQuery.trim(value)=='') {
+	messages.push("\u041d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u0437\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u044c \u043f\u043e\u043b\u0435 \u00ab\u0412\u043e\u043f\u0440\u043e\u0441\u00bb.");
+}
+
+}},{'id':'ProductAnswer_captcha','inputID':'ProductAnswer_captcha','errorID':'ProductAnswer_captcha_em_','model':'frontend\\models\\ProductAnswer','name':'captcha','enableAjaxValidation':false,'clientValidation':function(value, messages, attribute) {
+
+var hash = $('body').data('/site/captchaAnswer.hash');
+if(hash == null){
+	hash = 98;
+}else{
+	hash = hash[1];
+}
+value = value.replace(/\s/g,'');
+value = value.toLowerCase();
+value = encodeURIComponent(value);
+for(var i=value.length-1, h=0; i >= 0; --i){
+	h+=value.charCodeAt(i);
+}
+if(h != hash) {
+	messages.push("\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u043f\u0440\u043e\u0432\u0435\u0440\u043e\u0447\u043d\u044b\u0439 \u043a\u043e\u0434");
+}
+
+}}],'errorCss':'error'});
+jQuery('#yw0').yiiListView({'ajaxUpdate':['yw0'],'ajaxVar':'ajax','pagerClass':'paginator','loadingClass':'list-view-loading','sorterClass':'sorter','enableHistory':false});
+jQuery('#yw1').yiiListView({'ajaxUpdate':['yw1'],'ajaxVar':'ajax','pagerClass':'paginator','loadingClass':'list-view-loading','sorterClass':'sorter','enableHistory':false});
+jQuery('#yw2').after("<a id=\"yw2_button\" href=\"\/site\/captcha\/refresh\/1\">\u041f\u043e\u043b\u0443\u0447\u0438\u0442\u044c \u043d\u043e\u0432\u044b\u0439 \u043a\u043e\u0434<\/a>");
+jQuery(document).on('click', '#yw2_button', function(){
+	jQuery.ajax({
+		url: "\/site\/captcha\/refresh\/1",
+		dataType: 'json',
+		cache: false,
+		success: function(data) {
+			jQuery('#yw2').attr('src', data['url']);
+			jQuery('body').data('/site/captcha.hash', [data['hash1'], data['hash2']]);
+		}
+	});
+	return false;
+});
+
+jQuery('#Product_search_text').autocomplete({'html':true,'select':function(event, ui){
+                                if(ui.item.url){
+                                    $(this).val(ui.item.name);
+                                    window.location.href = ui.item.url;
+                                    return false;
+                                } else {
+                                    $(this).val(ui.item.name);
+                                    var $form = $(this).closest("form");
+                                    $form.submit();
+                                    return false;
+                                }
+                            },'open':function(event, ui){
+                                $(this).parents(".search-form").css("border-radius", "10px 10px 0px 0px")
+                            },'close':function(event, ui){
+                                $(this).parents(".search-form").css("border-radius", "10px 10px 10px 10px")
+                            },'source':'/catalog/searchItems'});
+
+
+                $('#loginDialog').loginDialog({"authenticated":false,"window":"#auth_box"});
+
+            
+jQuery('#yw7').yiiListView({'ajaxUpdate':['yw7'],'ajaxVar':'ajax','pagerClass':'paginator','loadingClass':'list-view-loading','sorterClass':'sorter','enableHistory':false});
+jQuery('#yw8').yiiListView({'ajaxUpdate':['yw8'],'ajaxVar':'ajax','pagerClass':'paginator','loadingClass':'list-view-loading','sorterClass':'sorter','enableHistory':false});
+jQuery('#yw9').yiiListView({'ajaxUpdate':['yw9'],'ajaxVar':'ajax','pagerClass':'paginator','loadingClass':'list-view-loading','sorterClass':'sorter','enableHistory':false});
+jQuery('#yw10').yiiListView({'ajaxUpdate':['yw10'],'ajaxVar':'ajax','pagerClass':'paginator','loadingClass':'list-view-loading','sorterClass':'sorter','enableHistory':false});
+});
+/*]]>*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4ca8e09bc9","applicationID":"54901449","transactionName":"YlcGZEYEXEtQUERRWlsdJVNADF1WHlVCV1tBVwpUaAZdVkVBX1RZUEAXbHcERlldXFd7WltGFl9YCVdKHkVZXUI=","queueTime":0,"applicationTime":206,"atts":"ThAFEg4eT0U=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

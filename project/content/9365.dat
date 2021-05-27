@@ -1,0 +1,432 @@
+evrasia.spb.ru/history.html
+<!doctype html>
+<html>
+<head>
+<title>История сети ресторанов Евразия</title>
+<meta name="viewport" content="width=940, initial-scale=0.8">
+<META http-equiv="content-type" content="text/html; charset=windows-1251">
+
+<META name="Description" content="История">
+<META name="Keywords" content="История">
+
+
+<LINK rel="stylesheet" type="text/css" href="/katalog_img/katalog.css?1470931823">
+		<LINK rel="stylesheet" type="text/css" href="/public_img/public.css?1456829450">
+		<LINK rel="stylesheet" type="text/css" href="/style.css?1495541697">
+		
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!-- ?? --> 
+<script type="text/javascript" src="/js/swfobject.js"></script>
+
+<!-- jquery -->
+<script src="//code.jquery.com/jquery-1.11.3.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<!-- jquery -->
+
+<script type="text/javascript" src="/js/jquery.selectric.min.js"></script>
+<link href="/js/selectric.css" rel="stylesheet">
+
+
+<!-- <link href="/css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet"> -->
+<link href="/js/jquery-ui.css" rel="stylesheet">
+<link href="/css/zoom-showcase.css" rel="stylesheet">
+
+
+<!-- jquery.fancybox (???????) -->
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="/js/jquery.fancybox.js?v=2.1.3"></script>
+	<link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.2" media="screen" />
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="/js/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="/js/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="/js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+<!-- jquery.fancybox -->
+
+
+<!-- jqueryslidemenu (??) -->
+<script type="text/javascript" src="/js/jqueryslidemenu.js"></script>
+<!--[if lte IE 7]>
+<style type="text/css">
+html .jqueryslidemenu{height: 1%;} /*Holly Hack for IE7 and below*/
+</style>
+<![endif]-->
+<!--??? ??????? <div id="myslidemenu" class="jqueryslidemenu"> ??? ???? <ul> </div>-->
+<!-- jqueryslidemenu -->
+
+<!-- treeview -->
+<script type="text/javascript" src="/js/jquery.treeview.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/treeview/jquery.treeview.css" />
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<!-- treeview -->
+
+<!-- rating -->
+<script type="text/javascript" src="/js/rating/jquery.rating.js"></script>
+<script type="text/javascript" src="/js/rating/jquery.form.js"></script>
+<script type="text/javascript" src="/js/rating/jquery.MetaData.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/rating/jquery.rating.css" />
+<!-- rating -->
+
+
+<!--скролл в акциях jscrollpane
+<link rel="stylesheet" type="text/css" href="/js/jscrollpane/jscrollpane.css" />
+<script type="text/javascript" src="/js/jscrollpane/jquery.jscrollpane.js"></script> 
+скролл в акциях jscrollpane-->
+
+<!-- ???? -->
+<script type="text/javascript" src="/js/jquery.carouFredSel-6.1.0-packed.js"></script>
+<!-- ???? -->
+
+<script type="text/javascript" src="/js/functions.js"></script>
+<script type="text/javascript" src="/js/my.js"></script>
+
+
+
+
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyBM9vQXR7gYB85CKJ6YZyO_qExWUxuSkN4&sensor=false" type="text/javascript"></script> 
+  
+  <script src="/js/jquery.easing.1.3.min.js" type="text/javascript"></script>
+  <script src="/js/zoom-showcase.js" type="text/javascript"></script>
+  <script src="/js/script.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var map = null;
+    var geocoder = null;
+
+     function initialize() {
+      if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("map_canvas"));
+        map.setCenter(new GLatLng(50.4430, 30.5221), 13);
+        geocoder = new GClientGeocoder();
+		 map.setUIToDefault();
+      }
+    }
+	
+
+
+    function showAddress(address) {
+	ad="санкт-петербург";
+	address=ad+address;
+
+      if (geocoder) {
+        geocoder.getLatLng(
+          address,
+          function(point) {
+            if (!point) {
+              alert(address + " not found");
+            } else {
+              map.setCenter(point, 13);
+              var marker = new GMarker(point);
+              map.addOverlay(marker);
+              marker.openInfoWindowHtml(address);
+            }
+          }
+        );
+      }
+    }
+</script>
+
+
+
+<script>
+time = 100000; //10 сек
+setTimeout("$('#flash_pers').remove();", time);
+</script>
+
+</head>
+<body>
+
+<div id="container">
+
+<div id="container2">
+<!-- Красная плашка вверху сайта
+
+<a href="/workingtime.html"style="display: block; color: #fff; background: red;margin: 0px -26px;font-size: 1.4em; padding: 5px 15px;">
+Внимание изменения в акциях в ресторанах "Евразия".</a>
+-->
+
+	<div id="header">
+    	<div id="language"><a href="http://www.evrasia.spb.ru"><img src="/img/default/ico_ru.png" alt=""> Ru</a> &nbsp; <a href="http://www.evrasia.spb.ru/en/"><img src="/img/default/ico_en.png" alt=""> En</a></div>
+      
+      <div class="ui-widget goroda">
+<select id="combobox1" onchange="window.location.href=this.options[this.selectedIndex].value">
+    <option value="http://evrasia.spb.ru/" selected="selected">Санкт-Петербург</option>
+<option value="http://evrasia-kzn.ru/">Казань</option>
+</select>
+</div>
+
+        <div id="share">
+        	<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+			<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,lj"></div> 
+         </div>
+		<div class="clearfloat"></div>
+<!--        <div class="logo"><a href="/"><img src="/img/default/logo.gif"></a></div>
+ <div><a href="/public/akcii/view/98.html"><img src="/img/default/3rlls.jpg" border="0" width="940" height="290"></a></div> 
+-->
+	<div class="logo2"><a href="/"><img src="/img/default/logo.png"  alt=""></a></div>
+    	<div id="banner">
+            <div class="image_carousel">
+                <div id="foo">
+                <div><a href="http://www.evrasia.spb.ru/public/akcii_new/view/145.html"><img src="/img/35r.jpg" width="940" height="290" alt=""></a></div>
+                <div><a href="http://www.evrasia.spb.ru/katalog/obed.html"><img src="/img/obed.jpg" width="940" height="290" alt=""></a></div>
+
+              <!--   <div><a href="http://www.evrasia.spb.ru/public/akcii_new/view/175.html"><img src="/img/pivo.jpg" width="940" height="290" alt=""></a></div> -->
+
+
+<div><a href=""><img src="/img/burger.jpg" width="940" height="290" alt=""></a></div>
+
+
+  
+
+<div><a href="http://www.evrasia.spb.ru/public/akcii/view/1.html"><img src="/img/S4.jpg" width="940" height="290" alt=""></a></div> 
+<div><a href="http://www.evrasia.spb.ru/public/akcii/view/134.html"><img src="/img/default/s70.jpg" width="940" height="290" alt=""></a></div>
+ 
+
+<div><a href="http://www.evrasia.spb.ru/public/akcii_new/view/170.html"><img src="/img/default/k1.jpg" width="940" height="290" alt=""></a></div> 
+
+<!-- скидка по карте
+<div><a href="http://www.evrasia.spb.ru/public/akcii/view/137.html"><img src="/img/default/010316.jpg" width="940" height="290" alt=""></a></div> 
+--> 
+
+<div><a href="http://www.sam-zaberu.ru/" target="_blank"><img src="/img/default/sz.jpg" width="940" height="290" alt=""></a></div> 
+
+<!-- фиксируем доллар
+<div><a href="http://evrasia.spb.ru/public/akcii.html"><img src="/img/default/dollar-sait.jpg" width="940" height="290" alt=""></a></div> 
+-->
+
+
+
+
+  		   
+                              
+ </div>
+
+            <div class="pagination" id="foo2_pag"></div>
+            </div>
+        </div>
+		<div class="clearfloat"></div>
+        
+    </div>
+	
+	<div class="clearfloat"></div>
+ 
+<IDXSKIP><a href="http://evrasia.spb.ru/reklama.html"><img src="/fckfiles/image/rek.jpg" style="margin:13px 0 -6px 0;" alt=""></a></IDXSKIP>
+<!--<a href="http://sam-zaberu.ru/" target="_blank" ><img src="/img/banner/samline.jpg" style="margin:13px 0 -6px 0;"></a>-->
+	<div class="clearfloat"></div>
+	<div id="centerside">
+    	<!--<div class="menu_end"></div>-->
+    	<div id="myslidemenu" class="jqueryslidemenu"><ul id="up">
+<IDXSKIP><li id="menu_list_1"><A href="/" title="На главную страницу" id="menu_1" >Главная</A></IDXSKIP>
+<li id="menu_list_3"><a>О нас</a>
+<ul>
+<li id="menu_list_18"><A href="/history.html" title="История" id="menu_18" class="active" >История</A>
+<li id="menu_list_20"><A href="/career.html" title="Карьера" id="menu_20" >Карьера</A>
+<li id="menu_list_19"><A href="/contacts.html" title="Контакты" id="menu_19" >Контакты</A>
+<li id="menu_list_43"><A href="/service.html" title="Служба Контроля Качества" id="menu_43" >Служба Контроля Качества</A>
+<li id="menu_list_60"><A href="/sobytie.html" title="События" id="menu_60" >События</A>
+</ul>
+<IDXSKIP><li id="menu_list_14"><A href="/public/akcii.html" title="Акции" id="menu_14" >Акции</A></IDXSKIP>
+<li id="menu_list_27"><A href="/katalog/obed.html" title="Меню" id="menu_27" >Меню</A>
+<IDXSKIP><li id="menu_list_53"><A href="/vin_kart.html" title="" id="menu_53"  rel="nofollow">Винная карта</A></IDXSKIP>
+<IDXSKIP><li id="menu_list_46"><A href="/togo.html" title="Сам заберу" id="menu_46" >Сам заберу</A></IDXSKIP>
+<IDXSKIP><li id="menu_list_24"><a>Рестораны</a>
+<ul>
+<li id="menu_list_22"><A href="/address/1.html" title="Санкт-Петербург" id="menu_22" >Санкт-Петербург</A>
+<li id="menu_list_58"><A href="/to_kazan.html" title="Перейти на сайт Евразии города Казань" id="menu_58" >Казань</A>
+</ul></IDXSKIP>
+<li id="menu_list_15"><A href="/evrabonus.html" title="" id="menu_15" >Евразия BONUS</A>
+<ul>
+<li id="menu_list_69"><A href="/karta_partner.html" title="Активация карт "Евразия BONUS" " id="menu_69" >Активация карт "Евразия BONUS" </A>
+<li id="menu_list_17"><A href="/bonus.html" title="Партнеры" id="menu_17" >Партнеры</A>
+</ul>
+<IDXSKIP><li id="menu_list_32"><A href="/dostavka.html" title="" id="menu_32" >Доставка</A></IDXSKIP>
+</ul>
+</div>
+    	<!--<div class="menu_end menu_right"></div>-->
+        
+		<div class="clearfloat"></div>
+		<div class="content">
+		<table cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="padding-right: 20px" valign="top" width="250"><img alt="" src="/fckfiles/image/av1.jpg" style="border-width: 0px; width: 250px; height: 375px;" />
+			<h3>&nbsp;</h3>
+
+			<h3>Фурсов Алексей Васильевич</h3>
+
+			<p>Родился 6 октября 1974 г. в Ленинграде. В 1995 г. окончил Санкт-Петербургский государственный университет экономики и финансов по специальности «Бухучет». В 2004 г. окончил Северо-Западную академию государственной службы по специальности «Управление персоналом». В 1994 - 1995 гг. работал экономистом в Инкомбанке. В 1995 - 1996 гг. - генеральный директор компании «Атлантис» (оптовая торговля продуктами). В 1997 - 1998 гг. - генеральный директор компании «Дек плюс» (телекоммуникации). В 1999 - 2001 гг. - вице-президент компании «Великий город». В 2000 - 2004 гг. - генеральный директор Невской телефонной компании (специализируется на IP-телефонии). В 2001 г. основал и возглавил ресторанную группу «Евразия Холдинг». В 2005 г. «Деловой Петербург» назвал Алексея Фурсова лучшим топ-менеджером года и лицом специального делового издания «Золотой выпуск. ТОП 100».<br />
+			В 2008-2011 гг. Алексей Фурсов дважды стал победителем престижного российского конкурса «Шеф года» в номинации «Прорыв года»,а также лауреатом(двукратно) известнейшего международного конкурса, организованного корпорацией Ernst &amp; Young в России.</p>
+			</td>
+			<td valign="top">
+			<p style="margin: 0cm 0cm 0.0001pt;"><strong><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif; border: 1pt none windowtext; padding: 0cm;">«Евразия» - крупнейшая сеть ресторанов и суши-баров в России<o:p></o:p></span></strong></p>
+
+			<p style="margin: 0cm 0cm 0.0001pt;"><strong><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif; border: 1pt none windowtext; padding: 0cm;">&nbsp;</span></strong></p>
+
+			<p style="margin: 0cm 0cm 0.0001pt;"><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif;">Сеть ресторанов «Евразия» уже много лет является лидером на рынке ресторанных услуг г.Санкт-Петербурга.<o:p></o:p></span></p>
+
+			<p style="margin: 0cm 0cm 0.0001pt;"><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif;">Первый ресторан сети был открыт в 2001 г., в бизнес-центре на Пироговской набережной.<o:p></o:p></span></p>
+
+			<p style="margin: 0cm 0cm 0.0001pt;"><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif;">В настоящее время сеть насчитывает более 100 ресторанов и суши-баров в&nbsp; России и за ее пределами -- Санкт-Петербурге, Казани, Минске.<o:p></o:p></span></p>
+
+			<p style="margin: 0cm 0cm 0.0001pt;"><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif;">Большая часть ресторанов «Евразия» находится в Санкт-Петербурге. Географически,&nbsp; «Евразия» охватывает весь город, от спальных районов до центральных магистралей.<o:p></o:p></span></p>
+
+			<p style="margin:0cm;margin-bottom:.0001pt"><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif;">&nbsp;Также рестораны и суши-бары «Евразия» успешно работают в пригородах Петербурга --&nbsp; в Колпино, Гатчине, Пушкине, Сестрорецке, Кронштадте, Приозерске и Выборге.<br />
+			<br />
+			Сеть ресторанов «Евразия» известна не только своим разнообразным меню и стабильно высоким качеством блюд, но и интересными акциями и спецпредложениями, позволяющими любителям суши пообедать или поужинать по максимально выгодным ценам.<o:p></o:p></span></p>
+
+			<p style="margin:0cm;margin-bottom:.0001pt"><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif;">В ресторанах «Евразия» комфортно себя чувствуют&nbsp; самые разные категории гостей: от веселых молодежных компаний&nbsp; до семей с маленькими&nbsp; детьми. Практически все рестораны «Евразия» оснащены&nbsp; уютными детскими&nbsp; уголками,&nbsp; везде&nbsp; маленьким гостям предложат вкусные блюда и напитки и развлечения и игры по возрасту, от раскрасок и конструктора до посещения детских кулинарных Мастер-классов.<br />
+			«Евразия» предлагает&nbsp; удобную услугу «Сам заберу», &nbsp;оказывая своим гостям сервис принципиально нового уровня.<o:p></o:p></span></p>
+
+			<p style="margin:0cm;margin-bottom:.0001pt"><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif;">&nbsp;В каждом из ресторанов сети&nbsp; гость может заказать банкет или детский праздник, воспользовавшись специальным банкетным меню и выгодными предложениями по проведению банкетов и торжеств.<o:p></o:p></span></p>
+
+			<p style="margin:0cm;margin-bottom:.0001pt"><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif;">&nbsp;</span></p>
+
+			<p style="margin:0cm;margin-bottom:.0001pt"><span style="font-size: 10.5pt; font-family: 'Trebuchet MS', sans-serif;">Холдинг «Евразия» с вниманием относится к предложениям и пожеланиям своих гостей, с этой целью проводятся опросы посетителей и была создана специальная Служба Контроля Качества.<br />
+			<br />
+			В 2010 г. Сеть ресторанов и суши-баров «Евразия» была официально занесена в Книгу рекордов России, как крупнейшая сеть японских ресторанов и суши-баров в Санкт-Петербурге.<br />
+			В 2012 г. успехи и популярность сети ресторанов «Евразия» были отмечены и за пределами Российской Федерации: «Евразия» получила престижнейшую украинскую премию «Бренд года» в Киеве.<br />
+			В 2015 г. сеть ресторанов «Евразия» продолжает расти и развиваться, принимая активное участие&nbsp; как в собственных внутрисетевых&nbsp; мероприятиях, так и в социально значимых городских событиях. <o:p></o:p></span></p>
+
+			<p><span style="font-size: 10.5pt; line-height: 115%; font-family: 'Trebuchet MS', sans-serif;">&nbsp;И каждый гость&nbsp; масштабного городского праздника с участием сети&nbsp; может убедиться в искренности и справедливости&nbsp; «фирменного» утверждения: «Евразия любит Вас», ведь мы действительно любим и ценим всех наших гостей!<br />
+			<!--[if !supportLineBreakNewLine]--><br />
+			<!--[endif]--></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<IDXSKIP><div style="position:absolute; 	right:0; bottom:0;">
+    <div id="flash_pers">
+    <div id="flash_close" onclick="$('#flash_pers').remove();">[x]</div>
+    <script type="text/javascript">
+    var flashvars = {};
+    var params = {};
+    var attributes = {
+       wmode: "transparent"
+    };
+    
+    swfobject.embedSWF("/img/default/ninja.swf", "blockninja", "290", "200", "9.0.0", flashvars, params, attributes);
+    </script>
+    
+    <div id="blockninja"></div>
+    
+    </div>
+</div></IDXSKIP>
+
+	</div>
+    </div>
+
+	<div class="clearfloat"></div>
+	<div class="empty"></div>
+</div>
+</div>
+
+
+<div id="footer">
+
+<table>
+<tr valign="top">
+<td width="660" height="210" rowspan="2">
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?87"></script>
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 0, width: "660", height: "200", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 20458507);
+</script>
+</td>
+
+<td width="660" height="200" rowspan="2" style="padding:0 0 0 20px;">
+	<iframe src='/inwidget/index.php?toolbar=false' scrolling='no' frameborder='no' style='border:none;width:260px;height:235px;overflow:hidden;'></iframe>
+</td>
+
+
+</table>
+
+
+<!--
+<table>
+<tr>
+<td><a href="http://vk.com/club20458507"><img src="/img/default/vk.png" ></a></td>
+<td width="70" align="center"><span style="font-size: 12px;">Следите<br>за нами:</span></td>
+<td><a href="https://twitter.com/evrasia_spb"><img src="/img/default/twit.png" ></a></td>
+<td width="70" align="center"><img src="/img/default/line.png"></td>
+<td align="center" width="90"><img src="/img/default/andruha.png"><br><span style="font-size: 12px;">Приложение</span></td>
+<td><img src="/img/default/android.jpg" border="0" ></td>
+<td width="40" align="center"> </td>
+<td align="center" width="90"><img src="/img/default/ogryzok.png"><br><span style="font-size: 12px;">Приложение</span></td>
+<td><img src="/img/default/ios.jpg" border="0" ></td>
+</tr>
+</table>
+-->
+
+
+    <p><IDXSKIP>&copy; 2008–2017 «Евразия Холдинг». Все права защищены. </IDXSKIP><IDXSKIP><a href="?mobile">мобильная версия</a></IDXSKIP><a href="/polit.html" style="position: absolute; right: 10px; text-decoration: underline;">Политика конфиденциальности</a></p>
+	<p style="font-size:10px;"><IDXSKIP>Сеть ресторанов и суши-баров "Евразия" (Chain of restaurants and sushi-bars Evrasia) работает с 2001 года и насчитывает более 130 ресторанов в России. Это неизменное качество ваших любимых суши и роллов в японском меню. В ресторанах представлена узбекская, восточная, мексиканская, европейская, русская кухня. Любители итальянской кухни могут оценить пицца меню. "Евразия" предлагает уникальные акции, скидки и предложения для предъявителей дисконтных карт "Евразия Bonus".                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         	</IDXSKIP></div>
+
+
+
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-9162834-1");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>	
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter27142385 = new Ya.Metrika({id:27142385,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/27142385" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+
+<script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=IE/PXQHb2jo4eOtnVAqSlxdVuCdXJc9DxXV7oBkTTqXi9wi/eMQYZUnfqxfEbl5CdszgdaroBb5s5vrMfdTUFpyTE9MgOWwloH2nghhxfNz1B*aapcDLrtDSwOeoiGOjn4TAfhl83g*subaO3h81T/o6MZ8odCfsG7We3jn6250-';</script>
+
+<script type="text/javascript">
+(function(h){function k(){var a=function(d,b){if(this instanceof AdriverCounter)d=a.items.length||1,a.items[d]=this,b.ph=d,b.custom&&(b.custom=a.toQueryString(b.custom,";")),a.request(a.toQueryString(b));else return a.items[d]};a.httplize=function(a){return(/^\/\//.test(a)?location.protocol:"")+a};a.loadScript=function(a){try{var b=g.getElementsByTagName("head")[0],c=g.createElement("script");c.setAttribute("type","text/javascript");c.setAttribute("charset","windows-1251");c.setAttribute("src",a.split("![rnd]").join(Math.round(1E6*Math.random())));c.onreadystatechange=function(){/loaded|complete/.test(this.readyState)&&(c.onload=null,b.removeChild(c))};c.onload=function(){b.removeChild(c)};b.insertBefore(c,b.firstChild)}catch(f){}};a.toQueryString=function(a,b,c){b=b||"&";c=c||"=";var f=[],e;for(e in a)a.hasOwnProperty(e)&&f.push(e+c+escape(a[e]));return f.join(b)};a.request=function(d){var b=a.toQueryString(a.defaults);a.loadScript(a.redirectHost+"/cgi-bin/erle.cgi?"+d+"&rnd=![rnd]"+(b?"&"+b:""))};a.items=[];a.defaults={tail256:document.referrer||"unknown"};a.redirectHost=a.httplize("//ad.adriver.ru");return a}var g=document;"undefined"===typeof AdriverCounter&&(AdriverCounter=k());new AdriverCounter(0,h)})
+({"sid":216276,"bt":62,"custom":{"153":"user_id"}});
+</script>
+
+<script type="text/javascript">
+(function(h){function k(){var a=function(d,b){if(this instanceof AdriverCounter)d=a.items.length||1,a.items[d]=this,b.ph=d,b.custom&&(b.custom=a.toQueryString(b.custom,";")),a.request(a.toQueryString(b));else return a.items[d]};a.httplize=function(a){return(/^\/\//.test(a)?location.protocol:"")+a};a.loadScript=function(a){try{var b=g.getElementsByTagName("head")[0],c=g.createElement("script");c.setAttribute("type","text/javascript");c.setAttribute("charset","windows-1251");c.setAttribute("src",a.split("![rnd]").join(Math.round(1E6*Math.random())));c.onreadystatechange=function(){/loaded|complete/.test(this.readyState)&&(c.onload=null,b.removeChild(c))};c.onload=function(){b.removeChild(c)};b.insertBefore(c,b.firstChild)}catch(f){}};a.toQueryString=function(a,b,c){b=b||"&";c=c||"=";var f=[],e;for(e in a)a.hasOwnProperty(e)&&f.push(e+c+escape(a[e]));return f.join(b)};a.request=function(d){var b=a.toQueryString(a.defaults);a.loadScript(a.redirectHost+"/cgi-bin/erle.cgi?"+d+"&rnd=![rnd]"+(b?"&"+b:""))};a.items=[];a.defaults={tail256:document.referrer||"unknown"};a.redirectHost=a.httplize("//ad.adriver.ru");return a}var g=document;"undefined"===typeof AdriverCounter&&(AdriverCounter=k());new AdriverCounter(0,h)})
+({"sid":216276,"sz":"action_lead","bt":62,"custom":{"150":"lead_id","153":"user_id"}});
+</script>
+
+
+</body>
+</html>

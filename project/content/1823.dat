@@ -1,0 +1,927 @@
+forums.goha.ru/showthread_82_1_t368129
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<style type="text/css">
+#optnotice
+{
+	margin-bottom: 4px;
+	padding: 8px;
+	text-align: center;
+	background: #FFFFE1;
+	border: 1px solid #999;
+	color: #000;
+}
+
+#optnotice a
+{
+	color: #00F;
+}
+#optnotice a:hover
+{
+	color: #F00;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+var optvars = {
+	bburl:         "http://forums.goha.ru",
+	querystring:   "t=368129",
+	userfile:      "showthread",
+	dstyleid:      "67",
+	mstyleid:      "82",
+	dlangid:       "3",
+	forumid:       "1897",
+	threadid:      "368129",
+	feature:       "",
+
+	cookie: {
+		prefix:  "bb",
+		name:    "lflag",
+		value:   "bqeGcsK5",
+		timeout: parseInt("900", 10)
+	}
+};
+
+var lflag = 0;
+var uflag = 0;
+
+(function()
+{
+	var u;
+	var url = new String(window.location);
+	var cookie = optvars.cookie;
+
+	var dourl = function(url)
+	{
+		if (window.stop)
+		{
+			window.stop();
+		}
+		window.location = url;
+	};
+
+	var set_cookie = function(name, value, expires)
+	{
+		var cookieStr = name + '=' + escape(value) + '; path=/';
+
+		if (typeof expires == 'number' && expires > 0)
+		{
+			var date = new Date();
+				date.setTime(date.getTime() + expires * 1000);
+			cookieStr += '; expires=' + date.toGMTString();
+		}
+
+		document.cookie = cookieStr;
+	};
+
+	var fetch_cookie = function(name)
+	{
+		var m = document.cookie.match(new RegExp("(?:^|; )" + name.toString().replace(/(\+|\{|\}|\(|\)|\[|\]|\||\/|\?|\^|$|\\|\.|\=|\!|\<|\>|\:|\*)/g, "\$1") + "=([^;]*)"));
+		return m ? m[1] : null;
+	};
+
+	var intval = function(i)
+	{
+		return parseInt(i, 10) || 0;
+	};
+
+	if ((u = url.match(new RegExp(optvars.userfile + "_([0-9]+)_([0-9]+)(_([a-z0-9_]+))*", "i"))) || (optvars.userfile == "index"))
+	{
+		if (fetch_cookie(cookie.prefix + cookie.name) == cookie.value)
+		{
+			lflag = 1;
+			var qstr = (optvars.querystring ? '?' + optvars.querystring.replace(/&amp;/g, "&") : '');
+
+			if (optvars.feature.length > 0)
+			{
+				qstr += ((qstr.indexOf("?") == -1) ? "?" : "&") + optvars.feature;
+			}
+
+			//var s = u ? u[1] : 0;
+			//set_cookie(cookie.prefix + 'mobilestyleid', s, 0);
+			//set_cookie(cookie.prefix + 'styleid', s, (s != optvars.mstyleid) ? 365 * 86400 : 0);
+
+			dourl(optvars.bburl + "/" + optvars.userfile + ".php" + qstr);
+		}
+		else
+		{
+			var session = {
+				lastvisit: intval(fetch_cookie(cookie.prefix + 'lastvisit')),
+				forumid: intval(fetch_cookie(cookie.prefix + 'optforumid')),
+				threadid: intval(fetch_cookie(cookie.prefix + 'optthreadid')),
+				inside: intval(fetch_cookie(cookie.prefix + 'optinside'))
+			};
+
+			var timenow = Math.ceil((new Date().getTime()) / 1000);
+			var outdated = session.lastvisit < timenow - cookie.timeout;
+			if ((optvars.forumid != session.forumid) || (optvars.threadid != session.threadid) || outdated || !session.inside)
+			{
+				uflag = 1;
+
+				set_cookie(cookie.prefix + 'lastvisit', timenow, 0);
+				set_cookie(cookie.prefix + 'optforumid', optvars.forumid, 0);
+				set_cookie(cookie.prefix + 'optthreadid', optvars.threadid, 0);
+			}
+			set_cookie(cookie.prefix + 'optinside', 1, 0);
+
+			// check style/language
+			var s = u ? u[1] : 0;
+			var l = u ? u[2] : 0;
+			var styleid = 0;
+			var langid = 0;
+
+			if (s == "0")
+			{
+				styleid = (fetch_cookie(cookie.prefix + "mobilestyleid") || fetch_cookie(cookie.prefix + "styleid"));
+				if (!styleid)
+				{
+					var m, md;
+					if (m = fetch_cookie(cookie.prefix + "mobiledevice"))
+					{
+						md = (m == 1);
+					}
+					else
+					{
+						md = navigator.userAgent.match(/(mobi|android|iphone|opera mini|windows ce|ipad|ipod|blackberry|palm)+/i) ? true : false;
+						set_cookie(cookie.prefix + 'mobiledevice', md ? 1 : 2, 0);
+					}
+					if (md)
+					{
+						styleid = optvars.mstyleid;
+					}
+				}
+				if (styleid == optvars.dstyleid)
+				{
+					styleid = 0;
+				}
+			}
+			s = styleid || s || 0;
+
+			if (l == "0")
+			{
+				langid = fetch_cookie(cookie.prefix + "languageid");
+				if (langid == optvars.dlangid)
+				{
+					langid = 0;
+				}
+			}
+			l = langid || l || 0;
+
+			if (styleid > 0 || langid > 0)
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + "_" + s + "_" + l + ((u && u[4]) ? "_" + u[4] : ""));
+			}
+			else if (u && u[1] == 0 && u[2] == 0 && optvars.userfile == "index")
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + ".php");
+			}
+		}
+	}
+})();
+// -->
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="HandheldFriendly" content="true" />
+<script type="text/javascript">
+<!--
+var SESSIONURL = "s=64b5b3816751e914b802607023fa66e1&";
+var SECURITYTOKEN = "guest";
+var IMAGESFOLDER = "images/mobilestyle";
+var DSTYLE_PERMANENT = parseInt("0", 10);
+function checkclick(str, docookie)
+{
+	if (confirm(str))
+	{
+		if (docookie)
+		{
+			document.cookie = 'bbmobilestyleid=67; path=/';
+
+			if (DSTYLE_PERMANENT == 1)
+			{
+				var expires = new Date();
+					expires.setTime(expires.getTime() + 86400 * 365 * 1000);
+			}
+			document.cookie = 'bbstyleid=67; path=/' + (typeof expires != 'undefined' ? '; expires=' + expires.toGMTString() : '');
+		}
+		return true;
+	}
+	return false;
+}
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="mobilestyle.css.php" />
+<script type="text/javascript" src="clientscript/mobilehelper.min.v30.js"></script>
+<!-- MOBILE CLEAN START HERE (header) -->
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:image" content="http://forums.goha.ru/images/goharu250x250.gif" />
+<meta property="og:title" content="Сага Жреца Евы (Верховный Жрец Холлинт) гайд" />
+<meta property="og:description" content="GoHa.Ru" />
+
+
+<title> Сага Жреца Евы (Верховный Жрец Холлинт) гайд - GoHa.Ru</title>
+
+
+</head>
+
+<body>
+<div class="bodywrapping">
+
+<div class="header">
+</div>
+
+
+
+
+<script type="text/javascript">
+<!--
+function fixImgs(b)
+{
+	var a = document.getElementsByTagName("img");
+	for (i = 0; i < a.length; i++)
+	{
+		if (w = a[i].width, h = a[i].height, w > b)
+		{
+			f = 1 - (w - b) / w, a[i].width = w * f, a[i].height = h * f
+		}
+	}
+}
+function addLoadEvent(b)
+{
+	var a = window.onload;
+	window.onload = typeof window.onload != "function" ? b : function(){a && a(); b()}
+}
+addLoadEvent(function(){fixImgs(240)});
+// -->
+</script>
+
+<div id="navbar-container">
+
+<div class="navbar" id="navbar">
+<ul>
+	<li><a href="http://forums.goha.ru/index_82_1">Домой</a></li>
+	
+
+	<li><a href="search.php?s=64b5b3816751e914b802607023fa66e1">Search</a></li>
+	<li><a href="search.php?s=64b5b3816751e914b802607023fa66e1&amp;do=getdaily&amp;forumid=1897&amp;childforum=1">Новое</a></li>
+	
+	<li><a href="#" id="login-button" rel="nolabel"><strong>Вход</strong></a></li>
+
+</ul>
+</div>
+
+
+<div class="dropdownbox" id="login-box" style="display: none;">
+<form action="10gin.php" method="post">
+<input type="hidden" name="s" value="64b5b3816751e914b802607023fa66e1" />
+<input type="hidden" name="securitytoken" value="guest" />
+<input type="hidden" name="do" value="login" />
+<input type="hidden" name="url" value="/showthread_82_1_t368129" />
+<input type="hidden" name="vb_login_md5password" />
+<input type="hidden" name="vb_login_md5password_utf" />
+
+<div class="textarea-container">
+	<input type="text" name="vb_login_username" class="textarea shadow-inset corner-all" id="navbar_username" size="8" tabindex="1" value="" title="Имя пользователя" />
+</div>
+<div class="textarea-container">
+	<input type="password" name="vb_login_password" class="textarea shadow-inset corner-all" id="navbar_password" size="8" tabindex="1" value="" title="Пароль" />
+</div>
+<div class="selectors">
+	<fieldset class="fieldset">
+	<ul>
+		<li class="checkbox">
+			<label class="label-selector" for="cb_cookieuser">
+				<span><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser" tabindex="1" />Remember Me?</span>
+			</label>
+		</li>
+	</ul>
+	</fieldset>
+</div>
+<div><input type="submit" class="bigbutton-go bigbutton-shadow big-corner-all" value="Log in" tabindex="1" /></div>
+<div><a class="bigbutton bigbutton-shadow big-corner-all" href="register.php?s=64b5b3816751e914b802607023fa66e1" tabindex="1">Register</a></div>
+</form>
+</div>
+
+
+<div class="breadcrumb" id="breadcrumb_t">
+	
+	<div class="dropdownbox" id="breadcrumb_t-box" style="display: none;">
+		
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_3">
+			<span style="white-space: nowrap;">&bull; </span>
+			Форумы
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_768">
+			<span style="white-space: nowrap;">&bull; &bull; </span>
+			ММО Игры
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_7">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; </span>
+			LINEAGE 2
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_4820">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; &bull; </span>
+			Lineage 2 Main
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_2943">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; &bull; &bull; </span>
+			Игровая механика
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_3320">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; &bull; &bull; &bull; </span>
+			Квесты
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_1897">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; &bull; &bull; &bull; &bull; </span>
+			Получение третьей профессии
+		</a>
+	</div>
+</div>
+
+
+	</div>
+	
+	<div class="breadcrumb-title">
+		<a class="breadcrumb-up" href="http://forums.goha.ru/forumdisplay_82_1_1897" rel="nofollow">
+			<img src="images/mobilestyle/bcup.png" alt="" border="0" />
+		</a>
+		<div class="breadcrumb-buttonbox">
+			<div id="breadcrumb_t-button">
+				
+	 Сага Жреца Евы (Верховный Жрец Холлинт) гайд
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+
+
+
+
+<div id="posts"><div class="postbit"><div class="windowbg2 postbit-head" id="post8809819">
+<a name="post8809819"></a>
+<span style="float: right; display: inline-block;">#1</span>
+
+<a href="member.php?userid=696331">Alex A. Lex</a> <span class="postbit-date">17.12.2009, 09:33</span>
+
+</div>
+<div class="postbit-message"><b>Комплекс квестов на профессию &quot;Жрец Евы&quot;</b><br />
+Искал смотрел по ресурсникам - везде инфа разрозненая - посему есть мнение объединить все тут в одну тему. Если бойан, значит мудрено бойаны запрятаны.<br />
+ <br />
+<b>Часть 1</b><br />
+Берем 73 лвл и начинаем процесс получения Кристалла Льда <br />
+ <br />
+Стартовая область: Горячие Источники<br />
+Стартовый НИП:  Шеф-Повар Джереми  <br />
+Минимальный лвл: 73 <br />
+ <br />
+Описание задания:<br />
+ТП из Годдарда в Горячие Источники.<br />
+Говорим с Шеф-Поваром Джереми в Горячих Источниках.<br />
+Охотьтесь на Непентисов Горячих Источников, Драколовов Горячих Источников, Отродье Горячих Источников, Ужасное Отродье Горячих Источников. Надо собрать:<br />
+50 Ног драколовов<br />
+50 Веток Непентиса<br />
+50 Острых Приправ<br />
+Возвращаемся к Шеф-Повару Джереми. Он даст нам награду — Кристал Льда для завершающего квеста на 3-ю профессию.<br />
+ <br />
+Для второй части вам необходимо взять 74 лвл.<br />
+ <br />
+<b>Часть 2</b><br />
+ <b>Этап 1</b><br />
+Альянс с Орками из Кетры или Фавнами Варки, ниже будет приведен вариант прохождения при Альянсе С Орками из Кетры.<br />
+Для получения третьей профессии нам надо сделать альянс второго уровня.<br />
+Будет желание, продолжите этот квест позже.<br />
+Ниже описано прохождение квеста только до 2-го уровня альянса.<br />
+ <br />
+Стартовая область: Застава Орков Кетра <br />
+Стартовый НИП: Вахкан <br />
+Минимальный лвл: 74 <br />
+ <br />
+Это непрекращающийся квест, во время которого Вы формируете альянс с Орками из Кетры. Вы будете убивать Фавнов Варки. <u>Но если вы или кто-то из вашей партии нанесет вред Оркам из Кетры, то ваш альянс разрушится и станет первого уровня. Будте бдительны и не допускайте такого развития событий. </u><br />
+ <br />
+Начали <br />
+Говорим с Вахканом на юге Заставы Орков Кетра у входа. Он попросит принести ему 100 Значков Солдата Варка. <br />
+Идите в Лагерь Фавнов Варка. Убивайте Рекрутов Фавнов Варка, Пехотинецев Фавнов Варка, Разведчиков Фавнов Варка, Охотник Фавнов Варка  пока не получите 100 Значков Солдата Варков <br />
+Получив их вернитесь к Вахкану. Говорим с ним. Получаем 1ой Символ Союза с Кетрой.<br />
+ <br />
+Дльнейшее прохождение квеста на альянс для получения третьей профессии не требуется.  <i>Не отменяйте квест на альянс и не причиняйте вреда дружественной стороне, иначе вы лишитесь этой марки альянса.</i><br />
+ <br />
+<b>Этап 2</b><br />
+Для получения третьей профессии на потребуеться Освященный Камень.<br />
+Для получения Освященного Камня необходимо пройти квест Магия Воды - Часть 1. В процессе выполнения которого вы и получите камень. . <br />
+ <br />
+Стартовая область: Застава Орков Кетра<br />
+Стартовый НИП: Вахкан<br />
+Минимальный лвл: 74 <br />
+ <br />
+Настало время украсть источник волшебной энергии ваших врагов. <br />
+ <br />
+Описание задания:<br />
+ <br />
+I. Поговорите с Вахканом на юге Заставы Орков Кетра у входа и возьмите квест. Он пошлет вас к Азефе, которая стоит у палаток в центре Заставы Орков Кетры. <br />
+ <br />
+II. Азефа попросит украсть тотем из сундука в лагере врага. <br />
+Возвращайтесь в город и купите в магазине ключ (Ключ Вора) . <br />
+ <br />
+III. Идите в Лагерь Фавнов Варка. Сундук находиться за палатками в торговой области Лагеря Фавнов Варка. Вам надо пройти туда незамеченными врагом. Если кто-то из врагов заметит вас, он повесит специальный дебафф, который не позволит завершить квест. Для снятия дебаффа придется вернуться к Азефе и попросить о второй попытке. <br />
+Легче всего пройти дагерщикам или в партии с Призрачным танцором, используя скилы невидимости. Поможет также трансформация в Панцерного Дракона и использование его скила Ассимиляция. Можно послать вперед себя соклановцев, которые будут вырезать всех Фавнов по дороге. Можно попробовать пройти одному, обходя врагов.<br />
+Открывать сундук ключом не надо, «поговорите» с ним, ключ используется автоматически и вы получите тотем.<br />
+Используйте Свиток Телепорта и возвращайтесь к Азефе.<br />
+ <br />
+IV. Обменяйте у Азефы тотем на Освященый Камень.  <br />
+ <br />
+ <br />
+<b>Часть 3</b><br />
+ <br />
+ <br />
+<b>Получение профессии</b><br />
+ <br />
+Для третьей части вам необходимо взять 76 лвл. <br />
+Для этого рекомендую пройти на 75  <a href="http://forums.goha.ru/showthread_82_1_t237131" target="_blank">палайку что даеться в Годдарде на 73 лвл</a>. <br />
+Приберегите её для 75, на 75 она в инквизе проходиться очень легко и не принужденно.<br />
+Фулвиталити не даст грустно смотреть на медленно растущие проценты.<br />
+ <br />
+<u>Эта часть обязательно выполняется тем классом, который получает профессию. Если у вас есть подкласс, то переключаться на него в процессе выполнения третьей части нельзя.</u><br />
+ <br />
+<b>Итак: - &quot;Сага о Жреце Евы&quot;</b><br />
+<br />
+<b><i>Стартовая область: Орен </i></b><br />
+<b><i>Стартовый НИП: Верховный Жрец Холлинт </i></b><br />
+<br />
+<b>Описание задания:</b><br />
+1. Идём в Орен к  Верховному Жрецу Холлинту (храм). Подходим, берем квест. Получаем книгу.<br />
+ <br />
+2. Идём в Годдард к Агнесе (Магический Магазин). Берем задание в район горячих источников.<br />
+ <br />
+3. Отправляйтесь в Горячие Источники к  Шеф- Повару Дункану (у палаток. см. отметку на карте). Дункан просит принести Кристал Льда. Его вы должны были получить в первой части. Если его у вас нет, пройдите первую часть заново и продолжите с этого места.<br />
+Если Кристал Льда у вас есть просто поговорите еще раз с Дунканом. Заберите Подношение.<br />
+ <br />
+4. Возвращайтесть в Годдард к Агнесе. Отдав подношение вы получите 1ый Амулет Резонанса, и узнаете, как найти первый Камень Познания (отметка на карте).<br />
+Вам предстоит пройти шесть каменных табличек (Камень Познания) и прочитать на них тайные знаки мудрости древних. Чтобы эти знаки появились на табличке необходимо настроиться на неё, ваша душа должна войти в резонанс с душой таблички. Вам помогут амулеты резонанса, которые вы добудете.<br />
+ <br />
+5. Ищем первый Камень Познания. Она находиться южнее Башни Дерзости у окончания небольшой реки. Поговорите с табличкой (1ый Амулет Резонанса исчезнет). Сияние вас и таблички подтвердит, что вы прочитали тайные знаки на ней.<br />
+ <br />
+6.Отправляемся искать ещё одну табличку в Долине Святых. (см. маркер на карте). Говорим с Камнем Познания. Самостоятельно (!), не находясь в группе убиваем всех Стражей Запретных Знаний, получаем 2ой Амулет Резонанса. Возвращаемся к Камню Познания. Сияние вас и таблички сопровождает получение тайных знаний. (Прихватите с собой на всякий случай знакомого Биша или ЕЕ - не помешает.)<br />
+ <br />
+7. Снова в путь. На карте появится следующая точка расположения таблички. Она находится в Заставе Орков Кетра (см. карту). Знания этой таблички охраняются. Поговорите с табличкой. Убейте появившегося Падший Ангел Хаурес (у него еще будет 2 миньона, все они мертвяки, миньонов можно не бить, квест-итем дают с главного, (появляються быстро ХП сносят бодро)) не находясь в группе. Другие во время боя не должны вас даже лечить, поэтому запасайтесь бутылками. Получаем 3ий Амул Резонанса.<br />
+Говорим с Камнем Познания, смотрим сияние.<br />
+ <br />
+8. Про то, где находиться следующая табличка знает  Жрец Бастиан из Годдарда (храм), найдите его и поговорите с ним. Бастиан готов поделиться с вами знаниями если вы достанете ему  Освященный Камень.<br />
+Для дальнейдего продолжения задания вам необходим альянс с Орками из Кетры 2-го уровня или выше ну и сам камешек.<br />
+Если 2-й марки и камня нет - пройдите еще раз часть 2 и продолжите задание на получение профессии с этого места.<br />
+ <br />
+9. Относим Освященный Камень к  Жрецу Бастиану в Годдард (храм), узнаем от него местонахождение четвертой таблички, получаем 4ый Амулет Резонанса.<br />
+ <br />
+10. Отправляйтесь к Камню Познания. Он находится недалеко от Заставы Орков Кетра, за палатками на горке. Табличка окружена мобами, игнорируем их и говорим с ней, смотрим сияние.<br />
+ <br />
+11. Направляемся к  Жрецу Бастиану в Годдард, беседуем. Узнаем про пятую табличку. Чтобы получить к ней амулет вам придеться сразиться с Архонтом Халиши. Архонт Халиши находиться в виде рейд босса в Императорской Гробнице (4 гробницы). Но лучше не убивать его там, а пойти в Усыпальницу Верности (проход к Императорской Гробнице из Стены Агроса) и охотиться на Могильных Скарабеев, Скарабеев Падальщиков, Могильных Муравьев, Муравьев Падальщиков, Рыцарей Усыпальницы,  Стражей Усыпальницы.<br />
+Вам надо получить с них 700 Знапков Халиши. Можно находиться в партии, но наносить последний удар для получения марки. Позовите с собой двух трех боевых магов, вы им ману они вам знаки Халиши за час полтора.<br />
+На 701-м появиться Архонт Халиши и у вас исчезнут 20 Знаков Халиши. Убейте его сами! Это важно. Желательно даже не находиться в группе. Если кто-то еще будет вам помогать (бить моба, лечить, или бафать). Появляющийся Архонт Халиши расчитан на то, что его может забить персонаж вашего уровня в одиночку. Если вам это не удается, получите перед боем бафы, оденьтесь получше, запаситесь бутылками и пр. Получаем 5ый Амулет Резонанса. Если все же Архонт Халиши исчез, а вы не получили амулет, побейте мобов опять до 700. На 701-м он должен появиться вновь. Не ТПшимся а прямо тут же ищем пятый Камень Познания в Стене Агроса. Говорим, наблюдаем сияние.<br />
+ <br />
+12. Включаем инквиз и ищем шестой Камень Познания в Лесу Неупокоенных (смотрим карту).Говорим с табличкой, появляется квестовый монстр Падший Ангел Танакиа и Старейшина Леса Элрика. Элрика призывает вас бороться вместе. Не ждите! Сразу атакуйте квест-моба. Если не успели и они исчезли попробуйте поговорить с табличкой снова. Бить надо одному, не находясь в группе. Как Танакиа исчезнет поговорите с Элрикией в независимости сколько сняли ХП у падшего. Получаем 6ой Амулет Резонанса.<br />
+Говорим с табличкой, наблюдаем сияние.<br />
+ <br />
+13. Возвращайтесь в Орен к  Главному Жрецу Холлинту (храм) и, если вы все ещё уровня 76, то можете получить 3-ю профессию.<br />
+ <br />
+Ну и собственно грац!<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=64b5b3816751e914b802607023fa66e1&amp;do=newreply&amp;p=8809819">Reply</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post8916317">
+<a name="post8916317"></a>
+<span style="float: right; display: inline-block;">#2</span>
+
+<a href="member.php?userid=">Jaklin</a> <span class="postbit-date">26.12.2009, 23:02</span>
+
+</div>
+<div class="postbit-message">дело говоришь - &quot;мудрено баяны запрятаны&quot;... Я так понимаю и на шило такой же квест?<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=64b5b3816751e914b802607023fa66e1&amp;do=newreply&amp;p=8916317">Reply</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post8991307">
+<a name="post8991307"></a>
+<span style="float: right; display: inline-block;">#3</span>
+
+<a href="member.php?userid=696331">Alex A. Lex</a> <span class="postbit-date">05.01.2010, 06:27</span>
+
+</div>
+<div class="postbit-message">С мелкими отличиями<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=64b5b3816751e914b802607023fa66e1&amp;do=newreply&amp;p=8991307">Reply</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post9349761">
+<a name="post9349761"></a>
+<span style="float: right; display: inline-block;">#4</span>
+
+<a href="member.php?userid=">rromank</a> <span class="postbit-date">10.02.2010, 16:43</span>
+
+</div>
+<div class="postbit-message">Спс за фак квеста =))<br />
+<br />
+<br />
+________________________________<br />
+<span class="linkexternal"><a href="http://photo-shop.org.ua" target="_blank"><img src="http://www.topglobus.ru/userbar/a652e4b135b7a8ce8b1a89814e5f96ef.gif" class="bbCodeImage" border="0" alt="" /></a></span><br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=64b5b3816751e914b802607023fa66e1&amp;do=newreply&amp;p=9349761">Reply</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post11983565">
+<a name="post11983565"></a>
+<span style="float: right; display: inline-block;">#5</span>
+
+<a href="member.php?userid=738384">swfenix</a> <span class="postbit-date">29.09.2010, 08:36</span>
+
+</div>
+<div class="postbit-message">На квестовых мобах Вас не должен лечить/помогать другой ПЕРСОНАЖ, а вот ПИТОМЕЦ может и лечить и бафать (бить за Вас не проверял), это не запрещается и квест не прерывается :)<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=64b5b3816751e914b802607023fa66e1&amp;do=newreply&amp;p=11983565">Reply</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post12115346">
+<a name="post12115346"></a>
+<span style="float: right; display: inline-block;">#6</span>
+
+<a href="member.php?userid=755160">Bugi</a> <span class="postbit-date">10.10.2010, 18:47</span>
+
+</div>
+<div class="postbit-message">Теперь для прохождения квеста нужен всего лишь 1 альянс с Кетрой/Варкой<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=64b5b3816751e914b802607023fa66e1&amp;do=newreply&amp;p=12115346">Reply</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post12117477">
+<a name="post12117477"></a>
+<span style="float: right; display: inline-block;">#7</span>
+
+<a href="member.php?userid=731091">TheStranger</a> <span class="postbit-date">10.10.2010, 22:23</span>
+
+</div>
+<div class="postbit-message">вы правы кэп <img src="images/smilies/nice.gif" border="0" alt="" title="Классно!" class="inlineimg" /><br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=64b5b3816751e914b802607023fa66e1&amp;do=newreply&amp;p=12117477">Reply</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post12119703">
+<a name="post12119703"></a>
+<span style="float: right; display: inline-block;">#8</span>
+
+<a href="member.php?userid=755160">Bugi</a> <span class="postbit-date">11.10.2010, 06:51</span>
+
+</div>
+<div class="postbit-message">Дай плиз ссылку, где написано это давно и все об этом знают.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=64b5b3816751e914b802607023fa66e1&amp;do=newreply&amp;p=12119703">Reply</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13353348">
+<a name="post13353348"></a>
+<span style="float: right; display: inline-block;">#9</span>
+
+<a href="member.php?userid=696331">Alex A. Lex</a> <span class="postbit-date">16.01.2011, 05:17</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Originally Posted by <strong>swfenix</strong>:<br />
+На квестовых мобах Вас не должен лечить/помогать другой ПЕРСОНАЖ, а вот ПИТОМЕЦ может и лечить и бафать (бить за Вас не проверял), это не запрещается и квест не прерывается :)</i></div>
+Можно и бить петом. Проверял.<br />
+<br />
+<div class="quote"><i>Originally Posted by <strong>Fox Fire</strong>:<br />
+Теперь для прохождения квеста нужен всего лишь 1 альянс с Кетрой/Варкой</i></div>
+fxd<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=64b5b3816751e914b802607023fa66e1&amp;do=newreply&amp;p=13353348">Reply</a>
+	</div>
+</div></div>
+</div>
+
+
+
+
+
+
+
+<div class="breadcrumb" id="breadcrumb_b">
+	
+	<div class="dropdownbox" id="breadcrumb_b-box" style="display: none;">
+		
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_3">
+			<span style="white-space: nowrap;">&bull; </span>
+			Форумы
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_768">
+			<span style="white-space: nowrap;">&bull; &bull; </span>
+			ММО Игры
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_7">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; </span>
+			LINEAGE 2
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_4820">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; &bull; </span>
+			Lineage 2 Main
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_2943">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; &bull; &bull; </span>
+			Игровая механика
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_3320">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; &bull; &bull; &bull; </span>
+			Квесты
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_1_1897">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; &bull; &bull; &bull; &bull; </span>
+			Получение третьей профессии
+		</a>
+	</div>
+</div>
+
+
+	</div>
+	
+	<div class="breadcrumb-title">
+		<a class="breadcrumb-up" href="http://forums.goha.ru/forumdisplay_82_1_1897" rel="nofollow">
+			<img src="images/mobilestyle/bcup.png" alt="" border="0" />
+		</a>
+		<div class="breadcrumb-buttonbox">
+			<div id="breadcrumb_b-button">
+				
+	 Сага Жреца Евы (Верховный Жрец Холлинт) гайд
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+<div class="counter" id="cfleft">
+<!-- LiveInternet counter -->
+<script type="text/javascript">
+<!--
+document.write('<a href="http://www.liveinternet.ru/click" '+'target=_blank><img src="http://counter.yadro.ru/hit?t50.6;r'+escape(document.referrer)+((typeof(screen)=='undefined')?'':';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+';'+Math.random()+'" alt="" title="LiveInternet: показано число просмотров и посетителей за 24 часа" '+'border=0 width=31 height=31></a>');
+//-->
+</script>
+<!-- /LiveInternet -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1733792-37', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+<div class="counter" id="cfright">
+<img src="images/mobilestyle/18sign_mobile.png" alt="" border="0" width="30" height="33" />
+
+<!-- Rating@Mail.ru counter -->
+<a target="_top" href="http://top.mail.ru/jump?from=1059157">
+<img src="http://d9.c2.b0.a1.top.list.ru/counter?id=1059157;t=76" border="0" height="31" width="38" alt="Рейтинг@Mail.ru" /></a>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter20744278 = new Ya.Metrika({id:20744278,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/20744278" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</div>
+
+	<div id="cron" class="smallfont" align="center">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	</div>
+
+	<div class="footlinks">
+		<ul>
+			<li id="copyright">
+				<a class="footbtn" href="http://www.goha.ru">
+				
+					(c) GoHa.Ru 2003-2017
+				</a>
+			</li>
+			<li id="fullversion"><a class="footbtn" href="/showthread_0_1_t368129" onclick="return checkclick('Переключиться на стиль \'GoHa.Ru\'?', true);">Полная версия</a></li>
+			
+			
+			<li id="lastchild"><a class="footbtn" href="register.php?s=64b5b3816751e914b802607023fa66e1">Register</a></li>
+			
+			
+		</ul>
+	</div>
+
+</div>
+
+
+<!-- MOBILE CLEAN START HERE (footer) -->
+
+
+
+
+
+</div>
+</body>
+</html>
+

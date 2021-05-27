@@ -1,0 +1,1251 @@
+doktor.medkrug.ru
+<!DOCTYPE html>
+<html>
+                    
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Доктор.Медкруг.ру. Портал для общения и самообразования медицинских работников</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" type="image/x-icon" href="/portal_images/doctor_favicon_red.ico" />
+        <link href="/js/jquery/tooltipster/tooltipster.css?7a40f7a70aa6e34e16577cafdba7fc0e" rel="stylesheet" type="text/css" />
+		<link href="/css/portal_main.css" rel="stylesheet" type="text/css">
+		<link href="/css/portal_chosen.css" rel="stylesheet" type="text/css">
+		<link href="/css/portal_main2.css" rel="stylesheet" type="text/css">
+        <link href="/css/portal_idoctor.css" rel="stylesheet" type="text/css">
+        <link href="/css/portal_polls.css" rel="stylesheet" type="text/css">
+        <link href="/css/jqui/ui-lightness/jquery-ui-1.8.13.custom.css?7a40f7a70aa6e34e16577cafdba7fc0e" rel="stylesheet" type="text/css">
+        <link href="/css/jqui/ui-lightness/jquery-ui-1.8.13.portal.css?7a40f7a70aa6e34e16577cafdba7fc0e" rel="stylesheet" type="text/css">
+		<!--[if lt IE 9]>
+		<link href="/css/portal_ie.css" rel="stylesheet" type="text/css">
+		<![endif]-->
+    <script data-hash="7a40f7a70aa6e34e16577cafdba7fc0e" src="/js/mto/mtoapp.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>
+    <!--script>
+        mtoApp.load("/js/mto/jquery.js", null, true, "jquery").load("/js/mto/jquery-ui.js", null, true, "jquery-ui")
+        .load("/js/jquery/jquery.mk.lifilter.js").load("/js/tiny_mce/jquery.tinymce.js").load("/js/tiny_mce/tiny_mce.js")
+        .load("/js/jquery/chosen.jquery.min.js").load("/js/jquery/jquery.mk.thread.js")
+        .load("/js/portal/portal_site.js").load("/js/portal/portal_site2.js")
+        .load("/js/portal/front.js").load("/js/jquery/jquery.loadmask.js")
+        .load("/js/jquery/jquery.blockui.js")
+        .load("/js/utils.js?7a40f7a70aa6e34e16577cafdba7fc0e")
+        .load("/js/jquery/noty/jquery.noty.js")
+        .load("/js/jquery/noty/layouts/top.js").load("/js/jquery/noty/layouts/topRight.js").load("/js/jquery/noty/themes/default.js")
+        .load("/js/jquery.simplemodal.1.4.2.min.js")
+        .load("/js/jquery/jquery.mk.text_suggest.js")
+        .load("/js/jquery/jquery.updnWatermark.js")
+        .load("/js/jquery.countdown.min.js")
+        .load("/js/jquery.cookie.js?7a40f7a70aa6e34e16577cafdba7fc0e")
+    </script -->
+		<script type="text/javascript" src="/js/mto/jquery.js"></script>
+    <script type="text/javascript" src="/js/mto/jquery-ui.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>
+    <script type="text/javascript" src="/js/jquery/jquery.mk.lifilter.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>  
+    <script type="text/javascript" src="/js/tiny_mce/jquery.tinymce.js"></script>  
+    <script type="text/javascript" src="/js/tiny_mce/tiny_mce.js"></script>  
+    <script type="text/javascript" src="/js/jquery/chosen.jquery.min.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>
+    <script type="text/javascript" src="/js/jquery/jquery.mk.thread.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>  
+    <script type="text/javascript" src="/js/jquery/tooltipster/jquery.tooltipster.min.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>  
+    <script type="text/javascript" src="/js/portal/portal_site.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>
+    <script type="text/javascript" src="/js/portal/portal_site2.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>  
+    <script type="text/javascript" src="/js/main_new.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>
+    
+    
+    <script type="text/javascript" src="/js/portal/front.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>  
+
+
+    <script type="text/javascript" src="/js/jquery/jquery.loadmask.js"></script>
+    <script type="text/javascript" src="/js/jquery/jquery.blockui.js"></script>
+    <script type="text/javascript" src="/js/utils.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>
+    <script type="text/javascript" src="/js/jquery/noty/jquery.noty.js"></script>
+    <script type="text/javascript" src="/js/jquery/noty/layouts/top.js"></script>
+    <script type="text/javascript" src="/js/jquery/noty/layouts/topRight.js"></script>
+    <script type="text/javascript" src="/js/jquery/noty/layouts/center.js"></script>
+    <script type="text/javascript" src="/js/jquery/noty/themes/default.js"></script>
+    <script src="/js/jquery.simplemodal.1.4.2.min.js"></script>
+     
+    <script type="text/javascript" src="/js/jquery/jquery.mk.text_suggest.js"></script>  
+    <script type="text/javascript" src="/js/jquery/jquery.updnWatermark.js"></script>
+    <script type="text/javascript" src="/js/jquery.countdown.min.js"></script>    
+    <script type="text/javascript" src="/js/jquery.cookie.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>    
+    
+    <script type="text/javascript" src="/js/auth_add.js?7a40f7a70aa6e34e16577cafdba7fc0e"></script>
+    
+        <script>
+            mtoApp.ready("jquery", function(){
+                $(".popupdiv .close").live("click", function (e) {
+                    $(this).parent().hide().unwrap();
+
+                    $("body").css("overflow", "visible");
+                    $(".blockUI").remove();
+                });
+            });
+            function openPopUpDiv(popID)
+            {
+                $.blockUI({ message: $('#'+popID) });
+                var height = $('#'+popID).height()/2-6;
+                var width = $('#'+popID).width()/2-6;
+                $('#'+popID).attr("style", "margin: -" + height +"px 0 0 -" + width + "px; display: block;");
+                $("body").css("overflow", "hidden");
+            };
+        </script>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="/js/ie9.js"></script>
+		<![endif]-->
+	</head>
+<body>
+                
+<div id="body" class="notlogged">
+<div id="header">
+ <div class="authorization">
+    <div class="wrap_fixed">        
+               
+        <div id="width">
+            <div class="login">
+                                    <link href="/css/auth_add.css" rel="stylesheet" type="text/css" />
+                    <IDXSKIP><form method="post" id="inner_login_form">
+                        <div id="oblako">Пожалуйста, авторизуйтесь!<div></div></div>
+                        <input type="text" name="login" placeholder="Почта" class="text f" />
+                        <input type="password" name="password" placeholder="Пароль" class="text f" />
+                        <input type="hidden" name="submit_login" value="1" />
+                        <input type="hidden" name="store_login" value="1" />
+                        <input type="hidden" name="back_url" value="" />
+                        <button type="submit" form="inner_login_form" class="f">
+                            <span>Войти</span>
+                        </button>
+                    </form></IDXSKIP>
+                    <IDXSKIP><form action="" method="post" id="form_remind">
+                      <input type="text" name="r_email" placeholder="E-mail" class="text f">
+                      <button type="submit" class="f"><span>Напомнить</span></button>
+                      <button class="f hide lnk_form"><span>Спасибо</span></button>
+                      <a href="" class="lnk_recall">Вспомнил</a>
+                    </form></IDXSKIP>
+                    <IDXSKIP><div class="floatl ml1">
+                    <span class="black"><a href="/user/register">Регистрация&nbsp;для&nbsp;врачей</a></span>
+                    </div></IDXSKIP>
+                    <div id="hlp_balloon_1" class="v1">
+                      <div class="text"></div>
+                      <div class="hlp_text ok_1"><IDXSKIP>Введите свой адрес электронной почты и мы вышлем вам ссылку для восстановления пароля</IDXSKIP></div>
+                      <div class="hlp_text ok_2"><IDXSKIP>На этот адрес электронной почты выслана ссылка для восстановления пароля</IDXSKIP></div>
+                      <IDXSKIP><div class="hlp_text err_0">Необходимо указать логин и пароль.</div></IDXSKIP>
+                      <div class="hlp_text err_1"><IDXSKIP>Эл. почта введна неверно. Попробуйте еще раз.</IDXSKIP></div>
+                      <IDXSKIP><div class="hlp_text err_2">Пароль неверный. <a href="" class="lnk_remind">Напомнить пароль?</a></div></IDXSKIP>
+                      <IDXSKIP><div class="hlp_text err_3">Укажите адрес электронной почты.</div></IDXSKIP>
+                      <IDXSKIP><div class="hlp_text err_4">Пользователь с таким email не найден.</div></IDXSKIP>
+                      <div class="arr"></div>
+                    </div>
+                                            </div>
+        </div>
+    </div>
+</div>
+ <a href="http://medkrug.ru" title="Перейти на сайт пациентов" id="go_medkrug_angle"></a>
+   <div class="wrap_fixed">
+       <div class="top_add_menu_cont">
+           <ul class="top_add_menu clearfix">
+               <li class="li_4 lnk_goto_mk2">
+                   <span class="pre-link">Вы НЕ медик? <a href="http://medkrug.ru" class="">Перейти на сайт пациентов</a></span>
+                   <span class="tshadow">Более 500 сообществ и консультирующие врачи помогут</span>
+                   <span class="tshadow">разобраться с любой проблемой</span>
+               </li>
+           </ul>
+       </div>
+       <IDXSKIP><div class="logo">
+           <a href="/"><img alt="" src="/portal_images/logo.png" /></a>
+       </div></IDXSKIP>
+   </div>
+ </div>
+<link href="/css/portal_index_not_logged.css" rel="stylesheet" type="text/css" />
+<div id="main">
+    <div class="blck_join">
+        <div class="container">
+            <div class="medical_network">
+                <div class="sprite_index_not_logged join_plus"></div>
+                <div class="question_text">Вы &mdash; медик?</div>
+                <div class="join_text">Присоединяйтесь <br>к крупнейшей <br>медицинской сети <br>Рунета</div>
+            </div>
+            <div class="sprite_index_not_logged join_form">
+                <div class="form">
+                    <div class="title">Зарегистрируйтесь <br>сейчас!</div>
+                    <form action="/user/register" method="post" id="join_form">                        <ul class="flds">
+                            <li class="fld">
+                                <div class="input">
+                                        <input type="text" name="email" id="email" title="Ваш e-mail" value="">
+                                </div>
+                            </li>
+                            <li class="fld">
+                                <div class="select">
+                                                                        <select name="primary_portal_spec_id" id="primary_portal_spec_id" data-placeholder="Выберите специализацию"><option value="" selected="selected"></option><option value="10906">Абдоминальный хирург</option><option value="9238">Акушер-гинеколог</option><option value="9239">Аллерголог-иммунолог</option><option value="9241">Андролог</option><option value="9242">Анестезиолог</option><option value="10881">Бактериолог</option><option value="9243">Вертеброневролог</option><option value="9244">Вирусолог</option><option value="10884">Военный врач</option><option value="9264">Врач лабораторной диагностики</option><option value="10892">Врач медицины катастроф</option><option value="10895">Врач общей практики</option><option value="10894">Врач по медико-социальной экспертизе</option><option value="10883">Врач по медицинской реабилитации</option><option value="10896">Врач профилактической медицины</option><option value="9299">Врач радиодиагностики</option><option value="9245">Врач скорой медицинской помощи</option><option value="9323">Врач функциональной диагностики</option><option value="10893">Врач-статистик</option><option value="9247">Гастроэнтеролог</option><option value="9249">Гематолог</option><option value="9251">Генетик</option><option value="10885">Гепатолог</option><option value="9252">Гериатр</option><option value="9253">Гинеколог</option><option value="9254">Гистолог</option><option value="9255">Гомеопат</option><option value="10887">Дезинфектолог</option><option value="9256">Дерматовенеролог</option><option value="9240">Детский аллерголог-иммунолог</option><option value="9268">Детский врач ЛФК</option><option value="9246">Детский врач функциональной диагностики, УЗИ</option><option value="9248">Детский гастроэнтеролог</option><option value="9250">Детский гематолог</option><option value="10888">Детский гинеколог</option><option value="9259">Детский диетолог</option><option value="9262">Детский кардиолог</option><option value="9267">Детский ЛОР</option><option value="9274">Детский невропатолог</option><option value="9278">Детский нефролог</option><option value="9280">Детский онколог</option><option value="9282">Детский ортодонт</option><option value="9286">Детский офтальмолог</option><option value="9293">Детский психиатр</option><option value="9298">Детский ревматолог</option><option value="9306">Детский стоматолог</option><option value="10889">Детский травматолог-ортопед</option><option value="9317">Детский уролог</option><option value="9320">Детский физиотерапевт</option><option value="9322">Детский фтизиатр, пульмонолог</option><option value="9325">Детский хирург</option><option value="9330">Детский эндокринолог</option><option value="9257">Диабетолог</option><option value="9258">Диетолог</option><option value="10901">Зубной техник</option><option value="9260">Инфекционист</option><option value="9261">Кардиолог</option><option value="10890">Кардиохирург</option><option value="10891">Клинический фармаколог</option><option value="9263">Косметолог</option><option value="10902">Лаборант</option><option value="9265">Логопед-дефектолог</option><option value="9266">ЛОР</option><option value="9269">ЛФК и спортивная медицина</option><option value="9270">Маммолог</option><option value="9271">Мануальный терапевт</option><option value="10903">Медицинский юрист</option><option value="10882">Миколог</option><option value="9814">Миолог</option><option value="9272">Нарколог</option><option value="10905">Научный работник в области медицины</option><option value="9273">Невролог</option><option value="9275">Нейрохирург</option><option value="9276">Неонатолог</option><option value="9277">Нефролог</option><option value="9279">Онколог</option><option value="9335">Организатор здравоохранения</option><option value="9281">Ортодонт</option><option value="9283">Ортопед</option><option value="9284">Остеопат</option><option value="9285">Офтальмолог</option><option value="9287">Паразитолог</option><option value="9288">Патологоанатом</option><option value="9289">Педиатр</option><option value="9290">Пластический хирург</option><option value="9291">Проктолог</option><option value="10897">Профпатолог</option><option value="9292">Психиатр</option><option value="9294">Психолог</option><option value="9295">Психотерапевт</option><option value="9296">Пульмонолог</option><option value="9300">Радиотерапевт</option><option value="9334">Реаниматолог</option><option value="9297">Ревматолог</option><option value="10898">Рентгенолог</option><option value="9301">Репродуктолог</option><option value="9302">Рефлексотерапевт</option><option value="10886">Санитарный врач</option><option value="9303">Сексолог</option><option value="9337">Сомнолог</option><option value="9304">Сосудистый хирург</option><option value="9305">Стоматолог</option><option value="9307">Судебно-психиатрический эксперт</option><option value="9308">Судмедэксперт</option><option value="9309">Сурдолог</option><option value="9336">Терапевт</option><option value="9310">Токсиколог</option><option value="9311">Торакальный хирург</option><option value="9312">Травматолог</option><option value="9313">Трансплантолог</option><option value="9314">Трансфузиолог</option><option value="9315">УЗИ</option><option value="9316">Уролог</option><option value="9318">Фармацевт</option><option value="10900">Фельдшер</option><option value="9319">Физиотерапевт</option><option value="9338">Флеболог</option><option value="9321">Фтизиатр</option><option value="9324">Хирург</option><option value="9326">Хирург-онколог</option><option value="9327">Цитолог</option><option value="9328">Челюстно-лицевой хирург</option><option value="9329">Эндокринолог</option><option value="9331">Эндоскопист</option><option value="10899">Эпидемиолог</option></select>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="submit-wrap">
+                            <button class="button button-rounded button-large" form="join_form" name="submit_front" type="submit">Присоединиться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="features">
+                <div class="item">
+                    <div class="sprite_index_not_logged join_community_members"></div>
+                    <div class="description">
+                        <div class="title">500 000</div>
+                        <div class="info">участников <br>сообщества</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="sprite_index_not_logged join_visitors_every_day"></div>
+                    <div class="description">
+                        <div class="title">150 000</div>
+                        <div class="info">посетителей <br>каждый день</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="sprite_index_not_logged join_closed_community"></div>
+                    <div class="description">
+                        <div class="info">Закрытое <br>сообщество <br>врачей</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blck_menu">
+        <div class="container">
+            <ul class="main_menu">
+                <li class="item"><a href="#share_experience" class="link" title="Обменивайтесь опытом">Обменивайтесь опытом</a></li>
+                <li class="item"><a href="#training" class="link" title="Обучайтесь">Обучайтесь</a></li>
+                <li class="item"><a href="#attract_patients" class="link" title="Привлекайте пациентов">Привлекайте пациентов</a></li>
+                <li class="item"><a href="#earn" class="link" title="Зарабатывайте">Зарабатывайте</a></li>
+                <li class="item"><a href="/user/register" class="button" title="Присоединяйтесь">Присоединяйтесь</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="blck_share_experience">
+        <div class="container">
+            <a name="share_experience"></a>
+            <div class="blck_title">Обменивайтесь опытом</div>
+            <table class="overview" cellpadding="0" cellapscing="0">
+                <tr>
+                    <td class="col-1">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged share_experience_closed_community"></div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="description-wrap">
+                            <div class="label">Закрытое сообщество врачей</div>
+                            <div class="text">Сообщество врачей Медкруг предназначено только для медиков. Здесь Вы найдете коллег по более чем 100 специальностям. Статус врача подтверждается в ходе быстрой проверки после регистрации.</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <div class="description-wrap">
+                            <div class="label">Обмен опытом с коллегами</div>
+                            <div class="text">Сложный пациент? Задайте вопрос и получите квалифицированный совет от других врачей, научных работников или специалистов по медицинскому праву. Делитесь своим опытом, помогайте студентам и ординаторам, повышайте Вашу известность в медицинском сообществе.</div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged share_experience_answers_to_questions"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged share_experience_anonymity"></div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="description-wrap">
+                            <div class="label">Анонимность</div>
+                            <div class="text">Вы можете публиковать вопросы как от собственного лица, так и под псевдонимом. Пишите, что думаете, задавайте любые вопросы без стеснения.</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="blck_training">
+        <div class="container">
+            <a name="training"></a>
+            <div class="blck_title">Обучайтесь</div>
+            <table class="overview" cellpadding="0" cellapscing="0">
+                <tr>
+                    <td class="col-1">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged training_library"></div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="description-wrap">
+                            <div class="label">Свободный доступ к обширной библиотеке с материалами для повышения квалификации и справочниками</div>
+                            <div class="text">В <a href="/document/overview">нашей библиотеке</a> Вы найдёте несколько тысяч документов: <a href="/document/display/3">стандартов лечения</a>, <a href="/document/display/2">национальных руководств</a>, <a href="/document/display/4">рекомендаций и информационных листков ВОЗ</a> и <a href="/document/display/5">постановлений Минздрава</a>, а также <a href="/reference/diseases">справочники заболеваний</a>, лекарств, их аналогов и взаимодействия, а также <a href="/reference/mkb">МКБ-10</a>. Будьте в курсе современных эталонов диагностики и лечения, повышайте Вашу квалификацию.</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <div class="description-wrap">
+                            <div class="label">&laquo;Горячие&raquo; новости, авторские статьи, познавательные видео</div>
+                            <div class="text">В <a href="/article">разделе &laquo;Публикации&raquo;</a> Вы можете следить за самыми последними новостями науки и здравоохранения, читать профессиональные статьи и анонсы зарубежных материалов. В <a href="/video">разделе &laquo;Видео&raquo;</a> мы собрали самые интересные и познавательные записи с медицинских конференций и семинаров, операций, проводимых в зарубежных клиниках, и видео-пособия по топографической анатомии.</div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged training_hot_news"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged training_coverage"></div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="description-wrap">
+                            <div class="label">Анонсы медицинских конференций и курсов повышения квалификации</div>
+                            <div class="text"><a href="/event">Узнайте о запланированных мероприятиях</a> по Вашей специальности и в Вашем городе, запишитесь и порекомендуйте их своим коллегам!</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="blck_attract_patients">
+        <div class="container">
+            <a name="attract_patients"></a>
+            <div class="blck_title">Привлекайте пациентов</div>
+            <table class="overview" cellpadding="0" cellapscing="0">
+                <tr>
+                    <td class="col-1">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged attract_patients_card_doctor"></div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="description-wrap">
+                            <div class="label">Создайте карточку врача</div>
+                            <div class="text">МедКруг объединяет между собой портал для врачей и сайт для пациентов, который посещают около 150 000 человек в день. Среди наших пользователей есть люди из Вашего города, которым требуется профессиональная медицинская помощь. Расскажите им о Ваших услугах, создайте &laquo;карточку врача&raquo; на сайте пациентов.</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <div class="description-wrap">
+                            <div class="label">Консультируйте пациентов и приглашайте их на приём</div>
+                            <div class="text"><a href="/user/my_questions">Отвечайте на вопросы пациентов</a> и приглашайте их на очную консультацию. Под каждым ответом будут публиковаться Ваши контактные данные. Квалифицированный совет привлечёт в Ваш кабинет множество новых клиентов.</div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged attract_patients_invited_to_reception"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged attract_patients_promote_fame"></div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="description-wrap">
+                            <div class="label">Повысьте Вашу известность</div>
+                            <div class="text">Известность &mdash; залог профессионального успеха и материального благополучия. Повысьте Вашу известность в медицинских кругах и среди пациентов!</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="blck_earn">
+        <div class="container">
+            <a name="earn"></a>
+            <div class="blck_title">Зарабатывайте</div>
+            <table class="overview" cellpadding="0" cellapscing="0">
+                <tr>
+                    <td class="col-1">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged earn_write_about_experiences"></div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="description-wrap">
+                            <div class="label">Бонус для Вас и Ваших коллег</div>
+                            <div class="text">Мы подарим Вам бонус за Ваше первое обсуждение или публикацию: у Вас наверняка есть опыт, которым стоит поделиться! Приглашайте Ваших коллег &mdash; каждое принятое приглашение гарантирует Вам денежное вознаграждение</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <div class="description-wrap">
+                            <div class="label">Участвуйте в опросах</div>
+                            <div class="text">Мнение практикующих врачей интересно и важно нашей редакции, Вашим коллегам и конечно фармкомпаниям. Участвуйте в опросах, получайте оплату и бонусы за Ваши голоса.</div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged earn_participate_to_polls"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">
+                        <div class="image-wrap">
+                            <div class="sprite_index_not_logged earn_extra"></div>
+                        </div>
+                    </td>
+                    <td class="col-2">
+                        <div class="description-wrap">
+                            <div class="label">Статьи, новости, обсуждения &mdash; получайте деньги за активность</div>
+                            <div class="text">Вы увидели новость, которая будет интересна другим врачам, у Вас есть материал для увлекательной статьи или интересная клиническая задача? Публикуйте! Ваши материалы добавят денег в Ваш кошелёк и увеличат Ваш рейтинг.</div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<IDXSKIP><div id="prefooter">
+    <br />
+</div></IDXSKIP>
+<div id="footer">
+    <div class="wrap_fixed">
+        <div class="wrapper">
+            <div class="col">
+                <h4>Обсуждения</h4>
+                                                                    <ul>
+                    <IDXSKIP><li><a href="/discussion/display" title="Все темы">Все темы</a></li></IDXSKIP>
+                                                                        <IDXSKIP><li><a href="/discussion/display/1" title="Кафедральная">Кафедральная</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/discussion/display/3" title="Ординаторская">Ординаторская</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/discussion/display/4" title="Курилка">Курилка</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/discussion/display/5" title="Экспресс-вопрос">Экспресс-вопрос</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/discussion/display/8" title="Медицинский юмор">Медицинский юмор</a></li></IDXSKIP>
+                                                            </ul>
+            </div>            
+            <div class="col">
+                <h4>Публикации</h4>
+                <ul>
+                    <IDXSKIP><li><a href="/article/display" title="Все публикации">Все публикации</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/article/display/1" title="Новости">Новости</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/article/display/2" title="Статьи">Статьи</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/article/display/3" title="Статьи">Анонсы</a></li></IDXSKIP>
+                </ul>
+            </div>                
+            <div class="col">
+                <h4>Видео</h4>
+                <ul>
+                                                                                                            <IDXSKIP><li><a href="/video?flush=1" title="Все видео">Все видео</a></li></IDXSKIP>
+                                                                        <IDXSKIP><li><a href="/video/display/10977" title="Анатомия">Анатомия</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/video/display/10978" title="Конференции">Конференции</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/video/display/11305" title="Новости медицины">Новости медицины</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/video/display/10976" title="Обучение">Обучение</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/video/display/10979" title="Операции">Операции</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/video/display/11304" title="События">События</a></li></IDXSKIP>
+                                                            </ul>
+            </div>                
+            <div class="col">
+                <h4>Документы</h4>
+                                                                    <ul>
+                    <IDXSKIP><li><a href="/document/overview" title="Обзор раздела">Обзор раздела</a></li></IDXSKIP>
+                                                                        <IDXSKIP><li><a href="/document/display/3" title="Стандарты медицинской помощи">Стандарты медицинской помощи</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/document/display/5" title="Документы Минздрава">Документы Минздрава</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/document/display/2" title="Национальные руководства">Национальные руководства</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/document/display/4" title="Документы ВОЗ">Документы ВОЗ</a></li></IDXSKIP>
+                                                    <IDXSKIP><li><a href="/document/display/6" title="Guidelines">Guidelines</a></li></IDXSKIP>
+                                                                <IDXSKIP><li><a href="/document/display" title="Все документы">Все документы</a></li></IDXSKIP>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Справочники</h4>
+                <ul>
+                    <IDXSKIP><li><a href="/reference" title="Обзор раздела">Обзор раздела</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/reference/diseases" title="Справочник болезней">Справочник болезней</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/reference/mkb" title="МКБ-10">МКБ-10</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/medicament" title="Лекарства и аналоги">Лекарства и аналоги</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/medicament/interaction" title="Взаимодействие лекарств">Взаимодействие лекарств</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/reference/anatomy" title="Анатомический атлас">Анатомический атлас</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/reference/reference" title="Медицинский справочник">Медицинский справочник</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/reference/latin" title="Латинский справочник">Латинский справочник</a></li></IDXSKIP>
+                    <IDXSKIP><li><a href="/reference/mnn" title="Конвертер МНН">Конвертер МНН</a></li></IDXSKIP>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="down clearfix"> 
+            <div class="down-right">
+                <IDXSKIP><p class="ad-agency-logo">
+                    <a href="http://www.strongbrand.ru/" title="Strongbrand рекламное агентство"><img src="/portal_images/strongbrand_logo.png" width="150" height="45" alt="Strongbrand рекламное агентство" /></a>
+                </p></IDXSKIP>
+            </div>
+            <div class="down-left">
+                <ul class="menu">
+                    <IDXSKIP><li>
+                        <a href="/" title="Главная">Главная</a>
+                    </li></IDXSKIP>
+                    <IDXSKIP><li>
+                        <a href="http://medkrug.ru/" title="Сайт пациентов" target="_blank">Сайт пациентов</a>
+                    </li></IDXSKIP>
+                    <IDXSKIP><li>
+                        <a onclick="openPopUpDiv('ww_terms'); return false;" href="#">Пользовательское соглашение</a>
+                    </li></IDXSKIP>
+                    <IDXSKIP><li>
+                        <a href="/content/ticket">Написать в редакцию</a>
+                    </li></IDXSKIP>
+                </ul>
+                <p class="ad-agency"><IDXSKIP>По вопросам планирования и организации рекламных компаний обращайтесь в агентство </IDXSKIP><IDXSKIP><a href="http://www.strongbrand.ru/">Strongbrand</a></IDXSKIP></p>
+                <p class="copy"><IDXSKIP>&copy;&nbsp;Медицинский портал «МедКруг». Все права защищены.</IDXSKIP></p>
+            </div>
+        </div>
+        <div id="ww_terms" class="popupdiv" style="display: none;">
+    <IDXSKIP><div class="tit">Пользовательское соглашение</div></IDXSKIP>
+    <div class="container">
+        <div class="block">
+            <p>
+            <IDXSKIP>Деятельность портала http://doktor.medkrug.ru/ основана на «Пользовательском соглашении». Правила, описанные в «Пользовательском соглашении», действительны для всех пользователей портала http://doktor.medkrug.ru/. Перед регистрацией пользователь обязательно должен ознакомиться с текущим «Пользовательским соглашением».
+            </IDXSKIP></p>
+            <IDXSKIP><p>
+            <strong>1. Общие положения</strong>
+            </p></IDXSKIP>
+            <p>
+            <IDXSKIP>1.1. <strong>Настоящее</strong></IDXSKIP> <IDXSKIP>Соглашение устанавливает условия и правила использования портала  http://doktor.medkrug.ru/.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>1.2. Пользователь принимает и обязуется соблюдать все условия настоящего Соглашения.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>1.3. Настоящее Соглашение полностью или частично может быть изменено в любое. Новое Соглашение вступает в силу с момента опубликования на портале http://doktor.medkrug.ru/. Все зарегистрированные пользователи будут оповещены об изменении Соглашения.
+            </IDXSKIP></p>
+            <IDXSKIP><p>
+            <strong>2. Порядок пользования сайтом</strong>
+            </p></IDXSKIP>
+            <p>
+            <IDXSKIP>2.1. Для начала пользования порталом Пользователю необходимо пройти процедуру регистрации.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>2.2. Для регистрации Пользователь обязуется предоставить достоверную и полную информацию о себе по всем вопросам, предлагаемым в форме регистрации, и поддерживать эту информацию в актуальном состоянии. Если Пользователь предоставляет неверную либо неполную информацию или у Администрации возникают основания полагать, что предоставленная Пользователем информация неполна или недостоверна, Администрация имеет право заблокировать либо удалить регистрационную запись Пользователя и отказать Пользователю в использовании портала http://doktor.medkrug.ru/ .
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>2.3. Полный доступ к порталу имеют только Пользователи, имеющие высшее медицинское образование, подтвержденное документально.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>2.4. После регистрации Пользователю предоставляется право размещать материалы с учетом ограничений, установленных п.п. 3 и 5 настоящего Соглашения.
+            </IDXSKIP></p>
+            <IDXSKIP><p>
+            <strong>3. Права и обязанности Сторон</strong>
+            </p></IDXSKIP>
+            <p>
+            <IDXSKIP>3.1. Права и обязанности Пользователя
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.1. Пользователь имеет право размещать материалы в различных разделах портала в соответствии с действующим законодательством РФ и настоящим Соглашением.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.2. Все материалы, размещаемые Пользователем, должны соответствовать медицинской и околомедицинской тематике. Администрация портала оставляет за собой право редактировать и/или удалять несоответствующие материалы без предварительного уведомления Пользователя.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.3. Пользователь имеет право размещать материалы, созданные самим Пользователем.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.4. Пользователь имеет право участвовать в жизни портала http://medkrug.ru.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.5. Пользователь имеет право отвечать на вопросы, адресованные врачам и размещенные на портале http://medkrug.ru.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.6. Допускается цитирование сторонних источников. Цитата должна быть заключена в кавычки и иметь ссылку на источник информации.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.7. Пользователь обязан указывать достоверную информацию о себе.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.8. Пользователь обязан подтвердить свой медицинский статус после регистрации.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.9. Регистрируясь на портале Пользователь автоматически дает разрешение Администрации использовать и обрабатывать персональные данные Пользователя, указанные при регистрации и в его профиле на портале http://doktor.medkrug.ru/ , в целях и рамках,  предусмотренных работой портала.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.10. Запрещается размещение плагиата. Плагиатом считается присвоение себе авторства чужого материала или умышленное сокрытие информации о подлинном авторстве того или иного текста, размещенного на портале.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.11. Не допускается перепечатка материалов, размещенных на портале, на сторонних сайтах.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.1.12. Запрещается размещение и распространение Пользователем спама и рекламных публикаций, не согласованных с Администрацией портала.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2. Права и обязанности Администрации
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.1. Администрация определяет тематику, информационное наполнение портала и сервисы, предоставляемые Пользователям.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.2. Администрация обязана обеспечить соблюдение данного Соглашения.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.3. Принимать необходимые организационные и технические меры для защиты персональных данных Пользователя от несанкционированного и неправомерного или случайного доступа к ним, уничтожения, изменения, блокирования, копирования, распространения персональных данных. Соблюдать политику конфиденциальности сайта.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.4. В случае предоставления персональных данных Пользователя в соответствии с требованиями законодательства РФ и правилами пользования сайтом, следить за правомерностью их использования.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.5. Запрашивать у Пользователей отсканированные копии либо фотографии диплома или сертификата специалиста, в случаях, когда это требуется для подтверждения статуса (примечание: предоставленные файлы являются сугубо конфиденциальной информацией, не передаются в третьи руки и безвозвратно удаляются с сайта сразу же после подтверждения статуса. Администрация самостоятельно определяет необходимость предоставления данной информации и не сообщает о причинах принятого решения).
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.6. Администрация обязана рассматривать все жалобы и предложения Пользователей и прикладывать максимальные усилия для разрешения конфликтных ситуаций, возникающих между Пользователями в процессе общения на портале врачей.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.7. Администрация вправе частично или полностью изменить текст данного Соглашения в любое время без какого-либо специального уведомления. Новое Соглашение вступает в силу с момента опубликования на портале http://doktor.medkrug.ru/.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.8. Администрация вправе редактировать или удалять материалы, размещенные Пользователем.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.9. Администрация может материально поощрять Пользователей, активно участвующих в наполнении портала материалами.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>3.2.10.  Администрация вправе ограничить или прекратить работу Портала врачей по своему усмотрению и без какого-либо предварительного уведомления.
+            </IDXSKIP></p>
+            
+            <IDXSKIP><p><strong>4. Политика конфиденциальности</strong></p></IDXSKIP>
+            <p><IDXSKIP>4.1. Администрация сайта обеспечивает сохранность конфиденциальной информации, полученной от Пользователей, включая персональную информацию, в соответствии с требованиями законодательства РФ.</IDXSKIP></p>
+            <p><IDXSKIP>4.2. На сайте осуществляется сбор, хранение, обработка, использование и распространение информации в целях, определенных настоящими Правилами и лицензионным договором о предоставлении права использования сайта.</IDXSKIP></p>
+            <p><IDXSKIP>4.3. На сайте собирается и используется персональная информация (имя, фамилия, адрес электронной почты, данные об образовании и профессиональном статусе, контактные данные), которую Пользователи добровольно сообщают Администрации сайта о себе.</IDXSKIP></p>
+            <p><IDXSKIP>4.4. Вся полученная персональная информация рассматривается как информация, полученная в связи с заключением с Пользователем гражданско-правового договора с Администрацией сайта – лицензионного договора на предоставление права использования сайта.</IDXSKIP></p>
+            <p><IDXSKIP>4.5. Использование Администрацией сайта персональной информации осуществляется только в связи с согласием Пользователей на использование такой информацией, данным при регистрации Пользователя и присоединении к лицензионному договору на предоставление права использования сайта.</IDXSKIP></p>
+            <p><IDXSKIP>4.6. Для защиты конфиденциальной информации Администрация сайта принимает все необходимые организационно-технические меры.</IDXSKIP></p>
+            <p><IDXSKIP>4.7. Администрация сайта гарантирует конфиденциальность финансовых данных о Пользователях. Финансовые данные не могут быть переданы третьей стороне и используются только для целей предоставления сервисов и услуг на сайте.</IDXSKIP></p>
+            <p><IDXSKIP>4.8. Лицензиат, присоединяясь к настоящему договору, соглашается на получение, как на сайте, так и в виде почтовой рассылки, рассылки по электронной почте или рассылки сообщений, уведомлений на мобильные телефоны и иные устройства рекламы медицинских препаратов, средств и способов лечения и другой рекламы по тематике сайта. Кроме того, Лицензиат дает согласие на обработку Лицензиаром его персональных данных, предоставленных при регистрации, а также добровольно размещенных на сайте, как это указано в федеральном законе «О персональных данных». Обработка персональных данных осуществляется Лицензиаром в целях предоставления Пользователю услуг, в том числе в целях получения Пользователем персонализированной (таргетированной) рекламы; проверки, исследования и анализа таких данных, позволяющих поддерживать и улучшать сервисы и разделы сайта, а также разрабатывать новые сервисы и разделы сайта, производить выборку Пользователей сайта по различным критериям для проведения опросов и исследований по различным темам.</IDXSKIP></p>
+
+            <IDXSKIP><p>
+            <strong>5. Авторские права</strong>
+            </p></IDXSKIP>
+            <p>
+            <IDXSKIP>5.1. Исключительные права на сайте принадлежат Администрации сайта.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>5.2. Размещая материалы, статьи, базы данных и иные информационные ресурсы на сайте, Пользователь автоматически безвозмездно предоставляет Администрации сайта исключительное право на использование таких информационных материалов путем копирования, публичного исполнения, воспроизведения, переработки, публикации, перевода и распространения для целей сайта или в связи с ними, в том числе для его популяризации.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>5.3. Во всем остальном авторские права Пользователей и Администрации сайта определяются и регулируются законодательством РФ.
+            </IDXSKIP></p>
+            <p>
+            <strong><IDXSKIP>6. Правила размещения информации в разделах «Обсуждения» и «Публикации»</IDXSKIP></strong>
+            </p>
+            <p>
+            <IDXSKIP>Выделение разделов преследует цель упорядочить структуру публикаций на сайте. Редакция оставляет за собой право переместить публикацию в любой раздел по своему усмотрению либо удалить публикацию с сайта.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>«Клинические задачи». Случай из практики Пользователя, оформленный в виде задачи или теста. Подразумевает поиск решения читателями. Можете быть опубликован случай из практики другого врача, если этот врач согласен с публикацией, и случай еще не был опубликован на других порталах.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>«Случай из практики». Случай из клинической практики Пользователя, который может быть интересен коллегам. Не подразумевает поиска решения читателями. Может быть опубликован случай из практики другого врача, если этот врач согласен с публикацией и случай еще не был опубликован на других порталах.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>«Разговор о медицине». Обсуждение различных вопросов профессиональной деятельности врачей. Обмен мнениями с коллегами. Материалы о немедицинских вопросах в этом разделе запрещены.
+            </IDXSKIP></p>
+            <p>
+             <IDXSKIP>«Разговор «Обо всем». Размещаются материалы на около медицинские и немедицинские темы, а также медицинский юмор.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>«Экспресс-вопрос». Лаконичный, не более 200 символов, вопрос коллегам, требующий максимально быстрого отклика. Вопрос должен касаться исключительно профессиональной деятельности: консультация по препарату, лабораторным показателям, симптомам, диагностике и т.п.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>«Новость». Раздел содержит новости медицины или здравоохранения. Пользователь может опубликовать переводную новость из зарубежного источника, а также взять новость с отечественного сайта в неизменном или переписанном виде. Оценочные мнения при публикации данной категории темы запрещены, ссылка на источник новости обязательна. 
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>Плагиат не допускается и будет удаляться. Плагиатом считается присвоение себе авторства чужого материала или умышленное сокрытие информации о подлинном авторстве того или иного текста, размещенного на портале. Также не допускается перепечатка текстов больше чем 300 символов и изображений с других сайтов или печатных источников.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>«Статья». Научный материал или эссе на медицинскую тематику. Пользователь имеет право публиковать статьи, написанные лично им или их коллегами при условии их согласия с размещением материала.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>Во всех разделах сайта запрещаются:
+            </IDXSKIP></p>
+            <ul>
+            <IDXSKIP><li>рекламные публикации без согласования с Администрацией сайта.</li></IDXSKIP>
+            <IDXSKIP><li>публикации, нарушающие законодательство Российской Федерации.</li></IDXSKIP>
+            <IDXSKIP><li>оскорбительные высказывания и употребление нецензурной лексики.</li></IDXSKIP>
+            <IDXSKIP><li>навязчивые способы привлечения внимания к своей публикации, в том числе использование написания заголовков заглавными буквами, несколько знаков препинания, нестандартный шрифт и т.п.</li></IDXSKIP>
+            </ul>
+            <IDXSKIP><p>
+            <strong>7. Заключительные положения</strong>
+            </p></IDXSKIP>
+            <p>
+            <IDXSKIP>7.1. Настоящие Правила регулируются в соответствии с законодательством Российской Федерации.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>7.2. В случае возникновения любых споров или разногласий, связанных с исполнением настоящих Правил, Пользователь и Администрация приложат все усилия для их разрешения путем проведения переговоров между ними. В случае, если споры не будут разрешены путем переговоров, споры подлежат разрешению в порядке, установленном действующим законодательством Российской Федерации.
+            </IDXSKIP></p>
+            <p>
+            <IDXSKIP>7.3. Настоящие Правила вступают в силу для Пользователя с момента регистрации на портале врачей и действуют в течении неопределенного срока.
+            </IDXSKIP></p>
+        </div>
+    </div>
+    <a href="#" class="close close_btn" onclick="$.unblockUI(); return false;"></a>
+</div>
+        <div class="prescription" id="prescription_popup" style="display: none;">
+    <form action="#" id="prescription_form">
+        <div class="top">
+            <IDXSKIP><dl>
+                <dt>
+                    <label class="label" for="prescription_okud_code">Код учреждения по ОКУД</label>
+                </dt>
+                <dd>
+                    <div class="input">
+                        <input type="text" value="" name="prescription_okud_code" id="prescription_okud_code">
+                    </div>
+                    <div id="error-prescription_okud_code"></div>
+                </dd>
+            </dl></IDXSKIP>
+            <IDXSKIP><dl>
+                <dt>
+                    <label class="label" for="prescription_okpo_code">Код учреждения по ОКПО</label>
+                </dt>
+                <dd>
+                    <div class="input">
+                        <input type="text" value="" name="prescription_okpo_code" id="prescription_okpo_code">
+                    </div>
+                    <div id="error-prescription_okpo_code"></div>
+                </dd>
+            </dl></IDXSKIP>
+        </div>
+        <div class="middle">
+            <dl>
+                <IDXSKIP><dt>
+                    <div class="chap">Рецепт <span>Форма № 107-1/у</span></div>
+                </dt></IDXSKIP>
+                <IDXSKIP><dd>
+                    <input type="radio" name="prescription_recipe" value="1" id="prescription_recipe_1"><label class="label" for="prescription_recipe_1">взрослый</label>
+                    <input type="radio" name="prescription_recipe" value="2" id="prescription_recipe_2"><label class="label" for="prescription_recipe_2">детский</label>
+                    <div class="date-wrapper">
+                        <label class="label" for="prescription_date">Дата </label><div class="input"><input type="text" value="" name="prescription_date" id="prescription_date"></div>
+                    </div>
+                    <div id="error-prescription_recipe"></div>
+                    <div id="error-prescription_date"></div>
+                </dd></IDXSKIP>
+            </dl>
+            <IDXSKIP><dl>
+                <dt>
+                    <label class="label" for="prescription_fio">Ф.И.О. больного</label>
+                </dt>
+                <dd>
+                    <div class="input">
+                        <input type="text" value="" name="prescription_fio" id="prescription_fio">
+                    </div>
+                    <div id="error-prescription_fio"></div>
+                </dd>
+            </dl></IDXSKIP>
+            <IDXSKIP><dl>
+                <dt>
+                    <label class="label" for="prescription_age">Возраст больного</label>
+                </dt>
+                <dd>
+                    <div class="input">
+                        <input type="text" value="" name="prescription_age" id="prescription_age">
+                    </div>
+                    <div id="error-prescription_age"></div>
+                </dd>
+            </dl></IDXSKIP>
+            <IDXSKIP><dl>
+                <dt>
+                    <label class="label" for="prescription_fio_doc">Ф.И.О. врача</label>
+                </dt>
+                <dd>
+                    <div class="input">
+                        <input type="text" value="" name="prescription_fio_doc" id="prescription_fio_doc">
+                    </div>
+                    <div id="error-prescription_fio_doc"></div>
+                </dd>
+            </dl></IDXSKIP>
+            <IDXSKIP><ul class="prescription_list" data-js="prescription_list">
+                <li>
+                    <dl>
+                        <dt>
+                            <span class="label">руб. | коп. | Rp.</span>
+                        </dt>
+                        <dd>
+                            <div class="input">
+                                <input type="text" value="" name="prescription_item[]"><span class="delete_item" data-js="prescription_delete"></span><span class="search_item" data-js="prescription_search"></span>
+                            </div>
+                        </dd>
+                    </dl>
+                    <div id="error-prescription_item"></div>
+                    <div class="drug-list"></div>
+                </li>
+            </ul></IDXSKIP>
+            <IDXSKIP><dl>
+                <dt>&nbsp;</dt>
+                <dd>
+                    <span class="prescription_add_item" data-js="prescription_add_item">+ Добавить</span><br><br>
+                </dd>
+            </dl></IDXSKIP>
+            <dl>
+                <IDXSKIP><dt><label class="label" for="prescription_validity">Рецепт действителен</label></dt></IDXSKIP>
+                <IDXSKIP><dd>
+                    <input type="radio" name="prescription_validity" value="1" id="prescription_validity_1"><label class="label" for="prescription_validity_1">10 дней</label>
+                    <input type="radio" name="prescription_validity" value="2" id="prescription_validity_2"><label class="label" for="prescription_validity_2">2 месяца</label>
+                    <input type="radio" name="prescription_validity" value="3" id="prescription_validity_3"><label class="label" for="prescription_validity_3">1 год</label>
+                    <div id="error-prescription_validity"></div>
+                </dd></IDXSKIP>
+            </dl>
+        </div>
+        <div class="bottom">
+            <IDXSKIP><a href="#" class="button_grey" data-js="prescription_print">Распечатать</a></IDXSKIP> <IDXSKIP>&nbsp; <a href="#" class="button_grey" data-js="prescription_email">Отправить на email</a></IDXSKIP> <IDXSKIP><a href="/107-1uf.doc" class="form_numb" title="Скачать бланк">Форма № 107-1/у</a></IDXSKIP>
+        </div>
+    </form>
+</div>
+<script>
+    mtoApp.ready(function(){
+
+        $(document).on("click", "[data-js=button_prescription]", function(e) {
+            e.preventDefault();
+            $("#prescription_popup").dialog( {
+                modal: true,
+                width: 570, 
+                resizable: false
+            });
+            $(document).trigger('prescription_popup');
+            return false;
+        });
+            
+        /*$("#prescription_form").validate( {
+            errorPlacement: function(error, element) {
+                error.appendTo('#error-' + element.attr('name'));
+            },
+            rules: {
+                prescription_okud_code: "required",
+                prescription_okpo_code: "required",
+                prescription_recipe: "required",
+                prescription_date: "required",
+                prescription_fio: "required",
+                prescription_age: "required",
+                prescription_fio_doc: "required",
+                //prescription_item: "required",
+                prescription_validity: "required"
+            },
+            messages: {
+                prescription_okud_code: "Введите код по ОКУД",
+                prescription_okpo_code: "Введите код по ОКПО",
+                prescription_recipe: "Обязательное поле",
+                prescription_date: "Выберите дату",
+                prescription_fio: "Пожалуйста, введите Ф.И.О. больного",
+                prescription_age: "Пожалуйста, введите возраст больного",
+                prescription_fio_doc: "Пожалуйста, введите Ф.И.О. врача",
+                //prescription_item: "Пожалуйста, введите название",
+                prescription_validity: "Укажите срок действия рецепта"
+            }
+        });*/
+    
+        $.datepicker.setDefaults($.datepicker.regional["ru"]);
+        $('#prescription_date').datepicker({
+            changeYear: false,
+            yearRange: '1950:2025',
+            beforeShow: function(input) {
+                $(input).css("background-color","#e9f5f6");
+            },
+            onSelect: function(dateText, inst) {
+                $(this).css("background-color","");
+            },
+            onClose: function(dateText, inst) {
+                $(this).css("background-color","");
+            }
+        });
+
+        $(document).on("prescription_popup", function(e){
+            var c = $('#prescription_form');
+            $("*[data-js=prescription_list] li").each(function(){
+                if ($(this).index() > 0)
+                {
+                    $(this).remove();
+                }
+                else
+                {
+                    $("input", $(this)).val("");
+                }
+            });
+            $("*[data-ref_molecule]").each(function(){
+                if ($("[data-js=prescription_list] li").length == 1 && $("input", $("[data-js=prescription_list] li")).val() == "")
+                {
+                    $("input", $("[data-js=prescription_list] li")).val($(this).html());
+                }
+                else
+                {
+                    $("[data-js=prescription_list]").append('<li><dl><dt><span class="label">руб. | коп. | Rp.</span></dt><dd><div class="input"><input type="text" value="'+$(this).html()+'" name="prescription_item[]"><span class="delete_item" data-js="prescription_delete"></span><span class="search_item" data-js="prescription_search"></span></div></dd></dl><div class="drug-list"></div></li>');
+                }
+            })
+        });
+
+        $(document).on("click", "[data-js=prescription_add_item]", function(e) {
+            e.preventDefault();
+            $("[data-js=prescription_list]").append('<li><dl><dt><span class="label">руб. | коп. | Rp.</span></dt><dd><div class="input"><input type="text" value="" name="prescription_item[]"><span class="delete_item" data-js="prescription_delete"></span><span class="search_item" data-js="prescription_search"></span></div></dd></dl><div class="drug-list"></div></li>');
+        });
+        
+        $(document).on("click", "[data-js=prescription_delete]", function(e) {
+            e.preventDefault();
+            if($("[data-js=prescription_list] li").length == 1)
+                return;
+            $(this).closest("li").remove();
+        });
+        
+        $(document).on("click", "[data-js=prescription_list] .drug-item", function(e) {
+            e.preventDefault();
+            $(this).closest("li").find("input[name^=prescription_item]").val($(this).find(".name").html());
+            $(this).closest(".drug-list").empty();
+        });
+        
+        $(document).on("click", "[data-js=prescription_search]", function(e) {
+            e.preventDefault();
+            var request = $(this).siblings("input").val();
+            var drug_list = $(this).closest("li").find(".drug-list");
+            drug_list.empty();
+            $.ajax({
+                url: "/medicament/molecules",
+                dataType: "json",
+                data: {
+                    term: request
+                },
+                success: function(data) {
+                    $.each(data, function(i, item){
+                        drug_list.append('<div class="drug-item"><div class="title"><span class="name">' + item.name + '</span></div><div class="description">' + item.description + '</div></div>');
+                    });
+                }
+            });
+        });
+        
+ 
+        $(document).on("click", "[data-js=prescription_print],[data-js=prescription_email]", function(e) {
+        
+            var GetFieldValue = function (field) {
+                if((typeof field.val() !== "undefined") && (field.val().length > 0))
+                    return field.val();
+                else
+                    return "&nbsp;";
+            }
+            
+            e.preventDefault();
+            var html = [];
+            var form = $('#prescription_form');
+            /*if(!form.valid())
+                return;*/
+            var okud_code = GetFieldValue(form.find('input[name="prescription_okud_code"]'));
+            var okpo_code = GetFieldValue(form.find('input[name="prescription_okpo_code"]'));
+            var recipe_value = GetFieldValue(form.find('input[name="prescription_recipe"]:checked'));
+            var recipe = 'взрослый, детский';
+            if (recipe_value == 1) {
+                recipe = '<span style="text-decoration:underline;">взрослый</span>, детский';
+            } else if (recipe_value == 2) {
+                recipe = 'взрослый, <span style="text-decoration:underline;">детский</span>';
+            }
+            var date = GetFieldValue(form.find('input[name="prescription_date"]')).split(" ");
+            if(date.length !== 3)
+                date = ["___", "____________", "20___"];
+            var fio = GetFieldValue(form.find('input[name="prescription_fio"]'));
+            var age = GetFieldValue(form.find('input[name="prescription_age"]'));
+            var fio_doc = GetFieldValue(form.find('input[name="prescription_fio_doc"]'));
+            
+            var drugs = '';
+            form.find('input[name="prescription_item[]"]').each(function() {
+                var item_value = GetFieldValue($(this));
+                drugs += '<table cellpadding="0" cellspacing="0" border="0" style="width:100%;">\
+                        <tr>\
+                            <td style="width:130px; vertical-align:top; font-size:15px;">\
+                                руб. | коп. | Rp.\
+                            </td>\
+                            <td style="vertical-align:top;">\
+                               <div style="font-size:17px; border-bottom:1px dotted; font-style:italic; font-weight:bold;">' + item_value + '</div>\
+                            </td>\
+                        </tr>\
+                    </table>\
+                    <div style="font-size:17px; border-bottom:1px dotted; font-style:italic; font-weight:bold;"><br></div>\
+                    <br>\
+                    <div style="margin-top:10px; padding-top:10px; border-top:1px solid;"></div>';
+            });
+            var validity_value = GetFieldValue(form.find('input[name="prescription_validity"]:checked'));
+            var validity = '10 дней, 2 месяца, 1 года';
+            if (validity_value == 1) {
+                validity = '10 дней, <span style="text-decoration:line-through;">2 месяца</span>, <span style="text-decoration:line-through;">1 года</span>';
+            } else if (validity_value == 2) {
+                validity = '<span style="text-decoration:line-through;">10 дней</span>, 2 месяца, <span style="text-decoration:line-through;">1 года</span>';
+            } else if (validity_value == 3) {
+                validity = '<span style="text-decoration:line-through;">10 дней</span>, <span style="text-decoration:line-through;">2 месяца</span>, 1 года';
+            }
+            
+            /*console.log('okud_code = ' + okud_code);
+            console.log('okpo_code = ' + okpo_code);
+            console.log('recipe = ' + recipe);
+            console.log('date = ' + date);
+            console.log('fio = ' + fio);
+            console.log('age = ' + age);
+            console.log('fio_doc = ' + fio_doc);
+            console.log('validity = ' + validity);*/
+            
+            html.push('<html><head><title>Рецептурный бланк</title>');
+            html.push('</head><body><div style="width:550px; margin:0 auto;">');
+            html.push('\
+                <div style="text-align:center; font-size:16px; font-weight:bold;">Рецептурный бланк</div>\
+                <br>\
+                <table cellpadding="0" cellspacing="0" border="0" style="width:100%;">\
+                    <tr>\
+                        <td style="width:50%; vertical-align:top; font-size:15px;">\
+                            Министерство здравоохранения<br>\
+                            и социального развития<br> \
+                            Российской Федерации<br>\
+                            Наименование (штамп)<br>\
+                            учреждения\
+                        </td>\
+                        <td style="width:50%; vertical-align:top; font-size:15px;">\
+                            Код учреждения по ОКУД <span style="text-decoration:underline; font-size:17px; font-weight:bold; font-style:italic;">' + okud_code + '</span><br>\
+                            Код учреждения по ОКПО <span style="text-decoration:underline; font-size:17px; font-weight:bold; font-style:italic;">' + okpo_code + '</span><br>\
+                            Медицинская документация<br>\
+                            Форма № 107-1/у<br>\
+                            Утверждена приказом Министерства<br>\
+                            здравоохранения и социального<br>\
+                            развития Российской федерации<br>\
+                            от 12 февраля 2007 г. №110<br>\
+                        </td>\
+                    </tr>\
+                </table>\
+                <br>\
+                <div style="margin-top:10px; padding-top:10px; border-top:1px solid;"></div>\
+                <br>\
+                <div style="text-align:center; font-size:16px; font-weight:bold;">РЕЦЕПТ</div>\
+                <div style="text-align:center; font-size:15px;">(' + recipe + ' &mdash; нужное подчеркнуть)</div>\
+                <div style="text-align:center; font-size:17px;">&laquo;' + date[0] + '&raquo; ' + date[1] + ' ' + date[2] + 'г.</div>\
+                <br>\
+                <div style="margin-top:10px; padding-top:10px; border-top:1px solid;"></div>\
+                <br>\
+                <table cellpadding="0" cellspacing="0" border="0" style="width:100%;">\
+                    <tr>\
+                        <td style="width:130px; vertical-align:top; font-size:15px;">\
+                            Ф.И.О больного\
+                        </td>\
+                        <td style="vertical-align:top;">\
+                           <div style="font-size:17px; border-bottom:1px solid; font-style:italic; font-weight:bold;">' + fio + '</div>\
+                        </td>\
+                    </tr>\
+                    <tr>\
+                        <td style="width:130px; vertical-align:top; font-size:15px;">\
+                            Возраст\
+                        </td>\
+                        <td style="vertical-align:top;">\
+                           <div style="font-size:17px; border-bottom:1px solid; font-style:italic; font-weight:bold;">' + age + '</div>\
+                        </td>\
+                    </tr>\
+                    <tr>\
+                        <td style="width:130px; vertical-align:top; font-size:15px;">\
+                            Ф.И.О врача\
+                        </td>\
+                        <td style="vertical-align:top;">\
+                           <div style="font-size:17px; border-bottom:1px solid; font-style:italic; font-weight:bold;">' + fio_doc + '</div>\
+                        </td>\
+                    </tr>\
+                </table>\
+                <br>\
+                ' + drugs + '\
+                <br>\
+                <table cellpadding="0" cellspacing="0" border="0" style="width:100%;">\
+                    <tr>\
+                        <td style="width:50%; vertical-align:top; font-size:15px;">\
+                            Подпись и личная печать врача\
+                        </td>\
+                        <td style="width:50%; vertical-align:top; font-size:15px; text-align:center;">\
+                           М.П.\
+                        </td>\
+                    </tr>\
+                </table>\
+                <br>\
+                <br>\
+                <div style="font-size:15px;">Рецепт действителен в течение ' + validity + ' (ненужное зачеркнуть)</div>\
+                <br>\
+            ');
+            html.push('</div></body></html>');
+            if ($(this).data("js") == "prescription_print")
+            {
+                var mywindow = window.open('', 'Рецептурный бланк', 'height=400,width=600,scrollbars=yes');
+                mywindow.document.write(html.join(''));
+                mywindow.print();
+            }
+            if ($(this).data("js") == "prescription_email")
+            {
+                $.post("/medicament/send_prescription", {html: html.join("")}, function(){
+                    //$('#prescription_popup').dialog('close');
+                    show_message('Бланк рецепта успешно отправлен на email, указанный Вами при регистрации', 'success');
+                });
+            }
+        });
+
+    });
+</script>
+        
+    </div>
+</div>
+</div>
+ 
+     
+             
+                 
+
+
+<div id="ww_notice" class="popupdiv">
+    <div class="wrap_ww">
+        <div class="txt">
+                        <IDXSKIP>Сайт пациентов ежедневно посещают сотни тысяч пользователей. Для того, чтобы создать "</IDXSKIP><IDXSKIP><strong>Карточку врача</strong></IDXSKIP><IDXSKIP>" на сайте пациентов и привлекать пациентов, отвечая на вопросы, необходимо зарегистрироваться.
+                                </IDXSKIP></div>
+        <IDXSKIP><div class="btn">
+            <a href="http://medkrug.ru">Перейти на сайт пациентов</a>
+        </div></IDXSKIP>
+        <form method="post" action="/">
+            <div class="chkbox">
+                <input type="checkbox" value="1" name="flg_nonotice" id="flg_nonotice">
+                <label for="flg_nonotice"><IDXSKIP>Не показывать больше это уведомление</IDXSKIP></label>
+            </div>
+        </form>
+    </div>
+    <div class="close close_btn"></div>
+</div>
+
+
+<div id="validate_popup" class="popupdiv ww_notice">
+    <div class="wrap_ww">
+        <div class="txt">
+            <IDXSKIP>Подтвердите ваш статус врача для совершения этого действия
+        </IDXSKIP></div>
+        <IDXSKIP><div class="btn">
+            <a href="/user/validate">Перейти к подтверждению</a>
+        </div></IDXSKIP>
+        
+    </div>
+    <div class="close close_btn"></div>
+</div>
+
+<!-- ww - invite colleague -->
+<div id="ww_invite">
+    <a href="" class="icon_x" title="Закрыть"></a>
+    <div class="wrap_ww">
+        <!-- block -->
+<div class="invite-blk">
+    <!-- step 1 -->
+    <div class="step a">
+        <IDXSKIP><p class="chap">
+            Пригласить коллегу
+        </p></IDXSKIP>
+        <div class="form">
+            <p class="notice"><IDXSKIP>Получите 100 рублей. Ваш коллега получит 200!</IDXSKIP></p>
+            <IDXSKIP><form action="/" method="post" class="invite_popup_form">
+                <input type="hidden" value="1" name="invite_place" />
+                <ul class="flds">
+                    <li class="fld">
+                        <label>
+                            <span class="label l-email">Отправить приглашение на email</span>
+                            <div class="input">
+                                <input type="text" name="iemail" placeholder="Несколько email-адресов через запятую" value="">
+                            </div>
+                        </label>
+                    </li>
+                    <!--li class="fld">
+                        <label>
+                            <span class="label">Текст приглашения</span>
+                            <div class="tarea">
+                               <textarea rows="5" cols="5" name="itext" placeholder="Не обязательно"></textarea>
+                            </div>        
+                        </label>                        
+                    </li-->
+                </ul>
+                <div class="submit v2">
+                    <input type="submit" value="Пригласить" data-trigger="et" id="send_event" data-event-sub="2" data-event="invite">
+                </div>
+            </form></IDXSKIP>
+        </div>
+        <div class="share">
+            <br />
+            <br />
+            <p class="label"><IDXSKIP>Опубликовать приглашение в социальной сети</IDXSKIP></p>
+            <div class="share-bts">
+                <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,lj" data-yashareLink="http://doktor.medkrug.ru/" data-yashareTitle="Доктор.Медкруг.ру - профессиональное закрытое сообщество для врачей" data-yashareDescription="Общение с коллегами со всех концов России, медицинское видео, национальные руководства, стандарты медицинской помощи, справочники заболеваний и лекарств, последние новости здравоохранения, возможность привлекать пациентов и заработать на своих знаниях! Каждый врач, зарегистрировавшийся по этой ссылке, получит 200 рублей в кошелёк."></div> 
+            </div>
+        </div>
+    </div>
+    <!-- /step 1 -->
+    <!-- step 2 -->
+    <div class="step">
+        <IDXSKIP><p class="chap">
+            Спасибо
+        </p></IDXSKIP>
+        <div class="text">
+            <IDXSKIP><p>
+                <strong>Ваше приглашение отправлено.</strong>
+            </p></IDXSKIP>
+        </div>
+    </div>
+    <!-- /step 2 -->
+</div>
+<!-- block -->
+    </div>
+</div>
+<!-- /ww - invite colleague -->
+                
+                
+<script>
+    mtoApp.ready(function(){
+        $('#ww_notice .btn a').click(function(e){
+            e.preventDefault();
+            if ($.cookie('mk_portal_goto_mk'))
+            {
+                return false;
+            }
+            if ($('#ww_notice .chkbox input:checked').length > 0)
+            {
+                $.cookie("mk_portal_goto_mk", 1, { expires: 365, path: '/' });
+            }
+            window.open($(this).attr("href"));
+            $('#ww_notice .close_btn').click();
+        });
+    });
+</script>
+<input type="hidden" name="CU_SPECS" id="CU_SPECS" value="" />
+<noindex style="display: block; height: 0px;">
+    <script type="text/javascript">document.write("<img src='http://web.medkrug.ru/stat.php?pid2;ref"+escape(document.referrer)+";url"+escape(document.URL)+";scr"+(typeof(screen) != "undefined" ? (screen.width + "*" + screen.height + "*" + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) : ("0*0*0"))+";cid0;cat0;grp;uid0;lid85;"+Math.random()+"' width='0' height='0' border='0' />");</script></noindex>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42227275-2', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter22615594 = new Ya.Metrika({id:22615594,
+                    webvisor:true,
+                    clickmap:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/22615594" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+</body>    
+</html>

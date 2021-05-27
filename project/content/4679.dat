@@ -1,0 +1,1466 @@
+energia78.ru/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Biryusa_W_310_EK
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Холодильник витрина Бирюса В 310 ЕК (Birusa) , купить холодильную витрину Бирюса В 310 ЕК в интернет магазине energia78.ru</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+		<meta name="viewport" content="width=1024">
+		<link href='//fonts.googleapis.com/css?family=Cuprum&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="/template/css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="/template/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+	<link href="/template/js/slider/default.css" rel="stylesheet" type="text/css" />
+    <link href="/template/css/cusel.css" rel="stylesheet" type="text/css" />
+	<link href="/template/css/main.css" rel="stylesheet" type="text/css" />
+	<link href="/template/css/add.css" rel="stylesheet" type="text/css" />
+    
+	<link href='//fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+	<link rel="icon" href="/img/settings/speeddeal.JPG" >	<link rel="icon" href="/img/settings/favicon.JPG" >	
+	
+	<script src="/template/js/jquery-1.8.2.min.js"></script>
+	<script src="/template/js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+	<script src="/template/js/js.js"></script>
+
+	<script src="/template/js/mobilyslider.js"></script>
+	<script src="/js/jquery.inputmask.js"></script>
+	<script>
+		var REQUEST_URI = '/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Biryusa_W_310_EK/';
+		
+		$(document).ready(function(){	
+			$("a[href$='.jpg'], a[href$='.png'], a[href$='.gif'], a[href$='.JPG'], a[href$='.PNG'], a[href$='.GIF']").fancybox({helpers:{title:{type:'over'}},padding:'0'});
+			$('.popup').fancybox({helpers:{title:null},padding:'0',width:'800'}); // <a class="popup fancybox.ajax" href="link">title</a>
+		});
+	</script>
+    <script type="text/javascript">
+          jQuery(document).ready(function() {
+			  setTimeout(function(){
+          $('.slider').mobilyslider({
+				transition: 'fade',
+				animationSpeed: 1000,
+				bullets: true,
+				arrows:true,
+				arrowsHide: false,
+				autoplay: true,
+				autoplaySpeed: 6000
+			});
+			  }, 100);
+			  $('.sliderContent .item').first().css('display','block');
+          });
+     </script>
+     <script>
+		$(document).ready(function(){
+			var timer = 1;
+		   $('.cat-content ul li ul li.active').parent().parent().addClass('active');
+		   $('.cat-content ul li ul li ul li.active').parent().parent().addClass('active').parent().parent().addClass('active');
+           $('.cat-content ul li ul.level_2').parent().hover(function(){
+			  if(!$(this).hasClass('active')){
+			  $(this).children('ul.level_2').css({'display':'block'});
+			  }
+		   },function(){
+			   if(!$(this).hasClass('active')){
+			  $(this).children('ul.level_2').css({'display':'none'});
+			   }
+		   });
+		$('.single .tab-box ul li a').click(function(){
+		var tabRel = $(this).attr('data-rel');
+			$('.single .tab-box ul li').removeClass('active');
+			$(this).parent().addClass('active');
+			$('.single .tab-box .tab.active').removeClass('active');
+			$('.single .tab-box .tab[data-rel="'+tabRel+'"]').addClass('active');	
+		});
+		
+		$('.single .tovar-box ul li a').click(function(){
+		var tabRel = $(this).attr('data-rel');
+		$('.single .tovar-box ul li').removeClass('active');
+		$(this).parent().addClass('active');
+		$('.single .tovar-box .tab.active').removeClass('active');
+		$('.single .tovar-box .tab[data-rel="'+tabRel+'"]').addClass('active');	
+		});
+		
+		$('.form-brand .form-brand-title .open-brend').click(function(){
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+				$(this).closest('.form-brand').find('.form-b').slideToggle("slow");
+				//$('.form-b').slideToggle("slow");	
+			}else{
+				$(this).addClass('active');
+				//$('.form-b').slideToggle("slow");		
+				$(this).closest('.form-brand').find('.form-b').slideToggle("slow");
+			}	
+		});
+		
+		$('.sravnit input, .tovar-status input').click(function(){
+			var Val = $(this).val();
+			var checked = $(this).attr('checked');
+			var src=$(this).attr('data-src');
+		    if(src)
+				var span =$(this).parent().find('span');
+			$.ajax({
+			type: 'post',
+			data: "checked=" + checked + "&cook=1&id="+Val,
+			url: '/js/addcompare.php',
+			cache: false,
+	                dataType: "json",
+			error: function(t){
+				alert('error');
+			},
+			success: function(r){
+				if(src){
+					if(r.checked==='checked'){
+						span.empty();
+						span.append('<a href="/sravnenie/" title="Сравнить">&#150;&#62;</a>');
+					}else{
+						span.empty();
+					}
+				 
+				 } else {
+					 if(r.checked==='checked'){
+						var SpanHtml = $('.sravnit span').html();
+						$('.sravnit span').empty();
+						$('.sravnit span').append('<a href="/sravnenie/" title="'+SpanHtml+'">'+SpanHtml+'</a>'); 
+					 }else{
+						var AHtml = $('.sravnit span a').html();
+						$('.sravnit span').empty();
+						$('.sravnit span').append(AHtml); 
+					 }
+				 }
+//				 alert(r.mes);
+				}
+			});
+		});
+		
+		$('.form-brand-title .all-brend').click(function(){
+			$('.form-b input').each(function(){
+				$(this).attr('checked','checked');
+			});
+		});
+			
+		
+		$('.tovar').each(function(){
+		   var an =	$(this).children('.tovar-announce').height();
+		   if(parseInt(an)>40){
+			  $(this).children('.tovar-announce').css({'font-size':'12px','line-height':'16px'});   
+		   }
+		});
+		
+		$('#samovyvoz_checkbox').click(function(){
+			var samovyvoz = $(this).attr('checked');
+			if(samovyvoz==="checked"){
+				//$('.tr_individual.dos-inp').css({'display':'none'});
+				$('#samovyvoz_checkbox2').attr('checked','checked');
+				$('#samovyvoz_checkbox3').removeAttr('checked','checked');
+
+//				$('.basket-list').each(function(){
+//					var basketRel = $(this).attr('rel');
+//					var priceText = $(this).attr('alt');
+//					var priceLink = $(this).attr('link');
+//					var itogs = parseInt(priceText) - parseInt(basketRel) + parseInt(priceLink);
+//					$(this).children('.cartList__td_price').children('.carting-price').text(number_format(itogs));
+//					$(this).children('.cartList__td_price').children('.carting-dos').text(number_format(0));
+//					var Global = $('#global_price').attr('rel');
+//					var itogGlobal = parseInt(Global) - parseInt(basketRel) + parseInt(priceLink);
+//					$('#global_price').text(number_format(itogGlobal));
+//				});
+			}else{
+				//$('.tr_individual.dos-inp').css({'display':'table-row'});
+				$('#samovyvoz_checkbox2').removeAttr('checked');
+				$('#samovyvoz_checkbox3').attr('checked','checked');
+				$('.basket-list').each(function(){
+//					var basketRel = $(this).attr('rel');
+//					var priceText = $(this).attr('alt');
+//					var priceLink = $(this).attr('link');
+//					var itogs = parseInt(priceText);
+//					$(this).children('.cartList__td_price').children('.carting-price').text(number_format(itogs));
+//					$(this).children('.cartList__td_price').children('.carting-dos').text(number_format(basketRel));
+				});
+//				var Global = $('#global_price').attr('rel');
+//				$('#global_price').text(number_format(Global));
+			}
+		});
+		$('#samovyvoz_checkbox2').click(function(){
+			var samovyvoz = $(this).attr('checked');
+			$('#global_price').text($('#total_with_selfdelivery').html());
+			$('.show_delivery_price').hide(0);
+			$('.show_selfdelivery_price').show(0);
+				//$('.tr_individual.dos-inp').css({'display':'none'});
+				$('.tr_individual.dos-inp').addClass('hide');
+				$('#samovyvoz_checkbox').attr('checked','checked');
+				$('.basket-list').each(function(){
+//					var basketRel = $(this).attr('rel');
+//					var priceText = $(this).attr('alt');
+//					var priceLink = $(this).attr('link');
+//					var itogs = parseInt(priceText) - parseInt(basketRel) + parseInt(priceLink);
+//					$(this).children('.cartList__td_price').children('.carting-price').text(number_format(itogs));
+//					$(this).children('.cartList__td_price').children('.carting-dos').text(number_format(priceLink));
+//					var Global = $('#global_price').attr('rel');
+//					var itogGlobal = parseInt(Global) - parseInt(basketRel) + parseInt(priceLink);
+//					$('#global_price').text(number_format(itogGlobal));
+				});
+		});
+		
+		$('#samovyvoz_checkbox3').click(function(){
+			var samovyvoz = $(this).attr('checked');
+			if(samovyvoz==="checked"){
+			$('#global_price').text($('#total_with_delivery').html());
+			$('.show_delivery_price').show(0);
+			$('.show_selfdelivery_price').hide(0);
+				//$('.tr_individual.dos-inp').css({'display':'table-row'});
+				$('.tr_individual.dos-inp').removeClass('hide');
+				$('#samovyvoz_checkbox').removeAttr('checked','checked');
+				$('.basket-list').each(function(){
+//					var basketRel = $(this).attr('rel');
+//					var priceText = $(this).attr('alt');
+//					var priceLink = $(this).attr('link');
+//					var itogs = parseInt(priceText) - parseInt(priceLink) + parseInt(basketRel);
+//					$(this).children('.cartList__td_price').children('.carting-price').text(number_format(itogs));
+//					$(this).children('.cartList__td_price').children('.carting-dos').text(number_format(basketRel));
+//					var Global = $('#global_price').attr('rel');
+//					var itogGlobal = parseInt(Global) - parseInt(priceLink) + parseInt(basketRel);
+//					$('#global_price').text(number_format(itogGlobal));
+				});
+			}
+		});
+		
+		$('#service .serv').click(function(){
+			var servRel = $(this).attr('rel');
+			window.location.href = servRel;
+		});
+		
+		});
+	</script>
+    <script>
+	 $(document).ready(function(){
+	 $('#mycarousel li').each(function(e){
+	 var nextE = e + 1;
+	 $(this).attr('data-rel',nextE);
+	 });
+	 $('#mycarousel li').last().css('margin-right','0');
+	 var num = 3;
+	 var LastLi = $('#mycarousel li').last().attr('data-rel');
+	 var WidthLi = $('#mycarousel li').width();
+	 var WidthLeft = parseInt(WidthLi) * 1;
+	 var WidthUl = parseInt(WidthLi) * parseInt(LastLi);
+	 $('#mycarousel').css({'width':WidthUl+'px','position':'absolute','left':'0','top':'0'});
+	 $('#mycarousel').attr('data-rel','0');
+	 
+	 $('#EasySlider .nextFeat-link').click(function(){
+	 var carRel = $('#mycarousel').attr('data-rel');
+	 var del = (parseInt(carRel) / 80) + parseInt(num);
+	 var minCar = parseInt(LastLi) -  parseInt(del);
+	 if(parseInt(minCar)===1){
+	 var lefting = parseInt(carRel) + parseInt(WidthLeft);
+	 $('#mycarousel').animate({'left':'-'+lefting+'px'}, 500);
+	 $('#mycarousel').attr('data-rel',lefting);	 
+	 }
+	 if(parseInt(minCar)>1){
+	 var lefting = parseInt(carRel) + parseInt(WidthLeft);
+	 $('#mycarousel').animate({'left':'-'+lefting+'px'}, 500);
+	 $('#mycarousel').attr('data-rel',lefting);	 
+	 }
+	 if(parseInt(minCar)<1){
+	 var dalee = parseInt(minCar) * parseInt(WidthLi);
+	 var lefting = parseInt(carRel) + parseInt(dalee);
+	 $('#mycarousel').animate({'left':'-'+lefting+'px'}, 500);
+	 $('#mycarousel').attr('data-rel',lefting);	 
+	 }
+	 });
+	 
+	 
+	 
+	 $('#EasySlider .prevFeat-link').click(function(){
+	 var carRel = $('#mycarousel').attr('data-rel');
+	 var del = parseInt(carRel) / parseInt(WidthLi);
+	 if(parseInt(del)===1){
+	 $('#mycarousel').animate({'left':'0'}, 500);
+	 $('#mycarousel').attr('data-rel','0');	 
+	 }
+	 if(parseInt(del)>1){
+	 var carDel = (parseInt(del) - 1) * parseInt(WidthLi);
+	 var lefting = parseInt(carDel)
+	 $('#mycarousel').animate({'left':'-'+lefting+'px'}, 500);
+	 $('#mycarousel').attr('data-rel',lefting);	 
+	 }
+	 if(parseInt(del)<1){
+	 $('#mycarousel').animate({'left':'0'}, 500);
+	 $('#mycarousel').attr('data-rel','0');	 
+	 }
+	 });
+	 });
+ 		$('.ozlink').fancybox();
+		$('.oplink').fancybox();
+	</script>
+
+	<!--[if lt IE 8]>
+	<script src="js/html5shiv.js"></script>
+    <style type="text/css">
+		.overflow, .wapka, .wapka-right, .menu ul li span ul{ behavior: url("//sbp.murzik.lg.ua/template/pie.htc"); }
+        .overflow{ position:relative;}
+        .left, .right{ padding-top:20px;}
+	</style>
+	<![endif]-->
+</head>
+
+<body>
+  <div class="wrap">
+   <div class="center">
+    <div class="top-head">
+      <div class="top-left">
+         
+			
+		<select id="domens">
+							<option  selected="selected"  value="" data-id="1000" >Санкт-Петербург</option>
+							<option  value="chudovo" data-id="2" >Чудово</option>
+							<option  value="valdai" data-id="3" >Валдай</option>
+							<option  value="okulovka" data-id="4" >Окуловка</option>
+							<option  value="borovichi" data-id="5" >Боровичи</option>
+							<option  value="xvojnaya" data-id="6" >Хвойная</option>
+							<option  value="m.vishera" data-id="8" >Малая Вишера</option>
+							<option  value="pestovo" data-id="7" >Пестово</option>
+					
+		 </select>
+		
+		 
+		 		 <ul>
+           <li><a class="home" href="/" title="//energia78.ru/"></a></li>
+           <li><a class="map" href="/sitemap/" title="карта сайта"></a></li>
+           <li><a class="email" href="mailto:3720552@mail.ru" title="3720552@mail.ru"></a></li>
+         </ul>
+         <IDXSKIP>Интернет-магазин бытовой техники и электроники      </IDXSKIP></div>
+      <div class="top-right">
+	<IDXSKIP>Мы находимся:
+		</IDXSKIP><p>
+	<IDXSKIP>198216, Россия г. Санкт-Петербург, б-р Новаторов дом 11 литер А.</IDXSKIP></p>
+	<IDXSKIP>[ <a href="/chema-proezda/" title="схема проезда">схема проезда</a></IDXSKIP> <IDXSKIP>]
+	      </IDXSKIP></div>
+      <div class="clear"></div>
+    </div>
+    <div class="head">
+      <div class="top">
+	  <!--div class="toy tree"></div-->
+        <a class="logo" href="/" title="Интернет-магазин бытовой техники и электроники"></a>
+        <div class="head-dop">
+          <div class="info info-1">
+            
+			<div class="info-top">
+    <span class="info-tel-left"><IDXSKIP><span>8 (812) 407-17-60</span></IDXSKIP><IDXSKIP><a class="ozlink" href="#oz" title="Заказать обратный звонок">Заказать обратный звонок</a></IDXSKIP></span>
+    <span class="info-tel-right"><IDXSKIP><span>8 (812)  923-94-62</span></IDXSKIP><IDXSKIP><a class="ozlink" href="#oz" title="Заказать обратный звонок">Заказать обратный звонок</a></IDXSKIP></span>
+    <div class="clear"></div>
+</div>
+            
+<div class="info-bot">
+    <span class="info-tel-left"><IDXSKIP><span>8 (812) 372-05-52</span></IDXSKIP><IDXSKIP><a class="ozlink" href="#oz" title="Заказать обратный звонок">Заказать обратный звонок</a></IDXSKIP></span>
+    <span class="info-tel-right info-tel-mail">
+		<IDXSKIP><span>3720552@mail.ru</span></IDXSKIP>
+				<IDXSKIP><a class="oplink" href="#opost" title="Заказ по электронной почте">Заказ по электронной почте</a></IDXSKIP>
+	</span>
+	<div class="clear"></div>
+</div>				
+			
+			
+			<IDXSKIP><div class="oz" id="oz">
+				<form action="/zakazat-obratnyiy-zvonok/?send" method="post">
+					<div class="errors"></div>
+					<table>
+						<tr><td><label for="fio">Ваше имя</label></td><td><input type="text" name="fio" id="fio" /></td></tr>
+						<tr><td><label for="tel">Ваш телефон</label></td><td><input type="text" name="tel" id="tel" /></td></tr>
+						<tr><td>&nbsp;</td><td><input type="submit" id="btn_callback" name="save" value="Отправить" />
+					</table>
+					<input type="hidden" name="parent" value="229"/>
+					<input type="hidden" name="date" value="1403868507" />
+				</form>
+			</div></IDXSKIP>
+
+		<IDXSKIP><div class="opost" id="opost">
+				<form action="/zakaz-po-pochte/?send" method="post">
+					<div class="errors"></div>
+					<table>
+						<tr><td><label for="fio2">Ваше имя</label></td><td><input type="text" name="fio" id="fio2" /></td></tr>
+						<tr><td><label for="mail">Email</label></td><td><input type="text" name="mail" id="mail" /></td></tr>
+						<tr><td>&nbsp;</td><td><input type="submit" id="btn_postorder" name="save" value="Отправить" />
+					</table>
+					<input type="hidden" name="parent" value="250"/>
+					<input type="hidden" name="date" value="1403868507" />
+				</form>
+			</div></IDXSKIP>
+
+          </div>
+          <IDXSKIP><div class="info info-2">
+            <div class="korzina">
+              <h3>Ваша корзина</h3>
+              <span>В корзине пусто</span>
+              </div>
+          </div></IDXSKIP>
+          <div class="info info-3">
+            <h3>Личный кабинет</h3>
+						<IDXSKIP><form action="/account/?info" method="POST" name="form" enctype="multipart/form-data">
+				<input type="text" class="login" name="login" placeholder="email" value=""><input class="pass" type="password" name="password" placeholder="пароль" value=""><input type="hidden" name="action" value="loginprocess"><input class="submit" type="submit" name="save" value="Войти">
+			</form></IDXSKIP>
+			<div class="clear"></div>
+		   <IDXSKIP><a class="reg" href="/registration/" title="Регистрация">Регистрация</a></IDXSKIP>
+		   <IDXSKIP><a href="/forgot/" title="Забыли пароль?">Забыли пароль?</a></IDXSKIP>
+				 </div>
+        
+		</div>
+        <div class="clear"></div>
+      </div>
+      <div class="menu">
+        <ul class="menu__ul level_1" id="menu">
+<IDXSKIP><li class="menu__li level_1 my-1 first"><a href="/" class="menu__a level_1"><span>Главная</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-2"><a href="/o-kompanii/" class="menu__a level_1"><span>О компании</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-3"><a href="/oplata-tovara/" class="menu__a level_1"><span>Оплата товара</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-4"><a href="/dostavka/" class="menu__a level_1"><span>Доставка</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-5"><a href="/garantiya/" class="menu__a level_1"><span>Гарантия</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-6"><a href="/podklyuchenie-tehniki/" class="menu__a level_1"><span>Подключение</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-7"><a href="/akcii-i-skidki/" class="menu__a level_1"><span>Скидки и подарки</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-8"><a href="/kontaktyi/" class="menu__a level_1"><span>Магазины</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-9 last"><a href="/help/" class="menu__a level_1"><span>Помощь</span></a></li></IDXSKIP>
+
+</ul>
+        
+
+
+
+	<div class="search">
+	    <form action="/search/" class="js-autocomplete-search" method="get">
+			<IDXSKIP><p><input id="t1" name="query" class="js-autocomplete-inp" type="text" placeholder="поиск..."><input id="search_button" type="submit"></p></IDXSKIP>
+			<div id="suggest" class="autocomplete"></div>
+		</form>
+	</div>
+	<div class="clear"></div>
+
+	<IDXSKIP><div style="display:none">
+	    <div class="new-search">
+	        <form action="/search/" class="js-autocomplete-search" method="get">
+	        	<fieldset>
+		    		<input id="t1" placeholder="поиск по модели или артикулу..." name="query" type="text" class="inp js-autocomplete-inp" />
+		    		<div id="suggest" class="autocomplete" style=""></div>
+	            	<input value="найти" type="submit">
+	            </fieldset>
+	        </form>
+	    </div>
+	</div></IDXSKIP>
+</div>
+
+
+
+
+    <div id="content">
+
+      <div class="left">
+
+         <div class="news">
+           <IDXSKIP><div class="head-title">Категории <a href="#" id="cat-menu-ctr">-</a></div></IDXSKIP>
+           <div class="cat-content" id="cat-menu">
+
+
+
+
+
+<ul>
+	<IDXSKIP><li><a href="/Tovary_so_skidkoy/">Товары со скидкой до 50% (100)</a></li></IDXSKIP>
+	<li class="active"><a href="/Krupnaya_bytovaya_tehnika/">Крупная бытовая техника (2155)</a>
+	<ul class="level_1">
+		<li><a href="/Krupnaya_bytovaya_tehnika/Kulery_dlya_vody_i_pityevye_fontanchiki/">Кулеры для воды и питьевые фонтанчики</a></li>
+		<li><a href="/Krupnaya_bytovaya_tehnika/Morozilynye_kamery/">Морозильные камеры</a></li>
+		<li><a href="/Krupnaya_bytovaya_tehnika/Plity/">Плиты</a></li>
+		<li><a href="/Krupnaya_bytovaya_tehnika/Posudomoechnye_mashiny/">Посудомоечные машины</a></li>
+		<li><a href="/Krupnaya_bytovaya_tehnika/Stiralynye_mashiny/">Стиральные машины</a></li>
+		<li><a href="/Krupnaya_bytovaya_tehnika/Sushilynye_avtomaty/">Сушильные автоматы</a></li>
+		<li class="active"><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/">Холодильники</a>
+		<ul class="level_2">
+			<li><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Side_by_Side/">Side by Side</a></li>
+			<li><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Winnyy_shkaf/">Винный шкаф</a></li>
+			<li class="active"><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/">Витрины</a></li>
+			<li><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Dvuhkamernye/">Двухкамерные</a></li>
+			<li><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Odnokamernye/">Однокамерные</a></li>
+			<li><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Pyatikamernye/">Пятикамерный</a></li>
+			<li><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Trehkamernye/">Трехкамерный</a></li>
+			<li><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Chetyrehkamernyy/">Четырехкамерный</a></li>
+			</ul></li>
+		<li><a href="/Krupnaya_bytovaya_tehnika/Tsentrifuga_dlya_otzhima_belyya/">Центрифуга для отжима белья</a></li>
+			</ul></li>
+	<li><a href="/Wstraivaemaya_kuhonnaya_tehnika/">Встраиваемая кухонная техника (3395)</a></li>
+	<IDXSKIP><li><a href="/Melkaya_kuhonnaya_tehnika/">Мелкая кухонная техника (1968)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Dom_i_dacha/">Товары для дома и дачи (1811)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Stroitelystvo_i_remont/">Товары для строительства и ремонта (1225)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Klimaticheskoe_oborudovanie/">Климатическое оборудование (521)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Tehnika_dlya_doma/">Техника для дома (593)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Detskie_tovary/">Детские товары (162)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Tovary_dlya_avto-_i_mototehniki/">Товары для авто- и мототехники (104)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Elektronika_i_Foto/">Электроника и Фото (539)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Oborudovanie/">Оборудование (26)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Otoplenie/">Системы отопления и вентиляции (150)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Sport_i_otdyh/">Спорт и отдых (205)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Dlya_individualynogo_uhoda/">Техника для красоты и здоровья (600)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Muzykalynye_instrumenty/">Музыкальные инструменты (9)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Aksessuary/">Аксессуары и бытовая химия (962)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Odezhda_obuvy_i_aksessuary/">Одежда, обувь и аксессуары (14)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Katalog_zapchastey/">Каталог запчастей (645)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Kompyyuternaya_tehnika/">Компьютерная техника (203)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Sertifikaty/">Сертификаты (4)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Tovary_dlya_ofisa/">Товары для офиса (16)</a></li></IDXSKIP>
+	<IDXSKIP><li><a href="/Podarki_suveniry_tsvety/">Подарки, сувениры, цветы (3)</a></li></IDXSKIP>
+	</ul>
+
+
+		     
+           </div>
+
+</div>
+
+         <div class="shadow"></div>
+         <div class="shadow"></div>
+            <div class="news">
+           <IDXSKIP><div class="head-title">Новости магазина</div></IDXSKIP>
+           <div class="news-content">
+              <div class="new-box">
+
+            <div class="new">
+             <IDXSKIP><div class="new-left">
+               <span>29</span>
+               May</div></IDXSKIP>
+             <div class="new-right">
+               <a href="/news/0/13/" title="Режим работы в праздничные дни 12 июня!"><IDXSKIP>Режим работы в праздничные дни 12 июня!</IDXSKIP></a>
+             </div>
+             <div class="clear"></div>
+           </div>
+
+
+            <IDXSKIP><div class="new">
+             <div class="new-left">
+               <span>30</span>
+               Apr</div>
+             <div class="new-right">
+               <a href="/news/0/129/" title="Режим работы в праздничные дни!">Режим работы в праздничные дни!</a>
+             </div>
+             <div class="clear"></div>
+           </div></IDXSKIP>
+
+
+            <div class="new">
+             <IDXSKIP><div class="new-left">
+               <span>21</span>
+               Apr</div></IDXSKIP>
+             <div class="new-right">
+               <a href="/news/0/126/" title="Новый магазин г.Боровичи, Новгородская обл."><IDXSKIP>Новый магазин г.Боровичи, Новгородская обл.</IDXSKIP></a>
+             </div>
+             <div class="clear"></div>
+           </div>
+
+
+                      </div>
+                      <IDXSKIP><div class="new-bot">
+             <a class="all" href="/news/" title="Все новости">Все новости</a>
+             <a class="rassulka" href="/rassyilka-novostey/" title="Рассылка новостей">Рассылка новостей</a>
+             <a class="rss" href="/" title="RSS">RSS</a>
+             <div class="clear"></div>
+           </div></IDXSKIP>
+           </div>
+         </div>
+         <div class="shadow"></div>
+         <div class="news">
+           <IDXSKIP><div class="head-title">Статьи</div></IDXSKIP>
+           <div class="news-content">
+                      <div class="new-box art-box">
+
+
+
+          <div class="art">
+               <a href="/articles/0/41" title="Как выбрать кронштейн для ЖК-телевизора?"><IDXSKIP>Как выбрать кронштейн для ЖК-телевизора?</IDXSKIP></a>
+           </div>
+
+
+          <IDXSKIP><div class="art">
+               <a href="/articles/0/40" title="Вибрационный насос UNIPUMP БАВЛЕНЕЦ 2">Вибрационный насос UNIPUMP БАВЛЕНЕЦ 2</a>
+           </div></IDXSKIP>
+
+
+          <IDXSKIP><div class="art">
+               <a href="/articles/0/39" title="Отпариватель для одежды GL6204">Отпариватель для одежды GL6204</a>
+           </div></IDXSKIP>
+
+
+                      </div>
+                      <IDXSKIP><div class="new-bot">
+             <a class="all" href="/articles/" title="Все статьи">Все статьи</a>
+             <a class="rassulka" href="/rassyilka-statey/" title="Рассылка статей">Рассылка статей</a>
+             <a class="rss" href="/" title="RSS">RSS</a>
+             <div class="clear"></div>
+           </div></IDXSKIP>
+           </div>
+         </div>
+         <div class="shadow"></div>
+      </div>
+
+      <div class="right">
+
+        			
+
+        <div class="breadcramb">
+
+
+
+<IDXSKIP><span><a href="/">Главная</a></span></IDXSKIP>
+					  <IDXSKIP>/ <span><a href="/Krupnaya_bytovaya_tehnika/">Крупная бытовая техника</a></span></IDXSKIP>
+
+					  / <span><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/">Холодильники</a></span>
+
+					  / <span><a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/">Витрины</a></span>
+ / <span>Бирюса В 310 ЕК</span>
+
+        </div>
+
+
+
+<script>
+var req;
+function add2compare(id){
+    req=new JsHttpRequest();
+    req.onreadystatechange=function(){
+	if(req.readyState==4){
+	    eval(req.responseJS.js);
+	}
+    }
+    req.open(null,'/add2compare.php',true);
+    req.send({id:id});
+}
+function remcompare(id){
+    req=new JsHttpRequest();
+    req.onreadystatechange=function(){
+	if(req.readyState==4){
+	    eval(req.responseJS.js);
+	}
+    }
+    req.open(null,'/add2compare.php',true);
+    req.send({id:id,action:'rem'});
+}
+
+</script>
+
+
+<div class="data-title"><h1>Холодильник витрина Бирюса В 310 ЕК</h1><a class="nazad" href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/" title="Назад к списку товара"></a>
+<div class="clear"></div></div>
+<div class="single">
+<div class="s-top"></div>
+<div class="s-cen">
+<div class="sing-info">
+
+
+<div id="EasySlider">
+<div class="all-slider">
+ <div class="e-cont">
+  <div class="e-item">
+  <div class="item-box">
+  <div class="item-position">
+<a href="/images/581dfe824c5bf.jpg"><img src="/images/180x290/581dfe824c5bf.jpg" alt="Холодильник витрина  Бирюса В 310 ЕК" /></a>  </div>
+  </div>
+ </div>
+
+
+
+
+  <div class="futured-zone">
+ <div class="futured-list">
+  <ul id="mycarousel">
+     <li data-rel="1">
+     <div class="feat-img">
+      <a href="/images/581dfe824c5bf.jpg" title="Бирюса В 310 ЕК1">
+	    <img src="/images/160x67/581dfe824c5bf.jpg" alt="Бирюса В 310 ЕК1" />
+      </a>
+     </div>
+   </li>
+
+      </ul>
+ </div>
+ <a class="nextFeat-link"></a>
+ <a class="prevFeat-link"></a>
+</div>
+
+   </div>
+</div>
+</div>
+</div>
+<div class="sing-cart">
+  <div class="articul">
+    <div class="sravnit"><input type="checkbox" name="sravnit" value="10019999"/> <span>сравнить</span></div>
+    <span>Артикул: 10019999</span>
+    <div class="clear"></div>
+  </div>
+   	  <div class="kol-none">
+		<IDXSKIP><span>Нет в наличии</span></IDXSKIP>
+		<br/><IDXSKIP>(Позвоните, и мы подберем аналогичную модель)
+	  </IDXSKIP></div>
+
+	 <IDXSKIP><div class="dostavka">Стоимость доставки: <strong>700 руб.</strong></div></IDXSKIP>
+	<div class="distavka-info"><a href="/dostavka/"><IDXSKIP>Информация о доставке по С.Пб и Лен. области</IDXSKIP></a></div>
+	    
+		    	    <IDXSKIP><div class="dostavka">Стоимость самовывоза:<strong> 300 руб.</strong></div></IDXSKIP>
+    	    			<div class="distavka-selfinfo"><a href="/dostavka/#tab5"><IDXSKIP>Информация о доставке в пункт выдачи</IDXSKIP></a></div>
+
+
+    <div class="sing-price">
+    17 845<span> руб.</span>
+    </div>
+
+
+
+</div>
+
+
+<div class="sing-dop">
+  <ul>
+    <IDXSKIP><li class="first icon-1"><a title="Быстрый заказ" data-rel="popup-zakaz"><span>Быстрый заказ</span></a></li></IDXSKIP>
+    <IDXSKIP><li class="icon-2"><a title="Доставка" data-rel="popup-dostavka"><span>Доставка</span></a></li></IDXSKIP>
+    <IDXSKIP><li class="icon-3"><a title="Самовывоз" data-rel="popup-camovuvoz"><span>Самовывоз</span></a></li></IDXSKIP>
+    <IDXSKIP><li class="icon-4"><a title="Способы оплаты" data-rel="popup-oplata"><span>Способы оплаты</span></a></li></IDXSKIP>
+    <IDXSKIP><li class="icon-5"><a title="Вывоз и утилизация" data-rel="popup-ytil"><span>Вывоз и утилизация старой техники</span></a></li></IDXSKIP>
+	<IDXSKIP><li class="last icon-8"><a title="Скидка на монтаж" data-rel="popup-discount"><span>Скидка на монтаж при покупке оборудования</span></a></li></IDXSKIP>
+
+
+  </ul>
+
+  <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki"></div>
+</div>
+
+<div class="clear"></div>
+</div>
+
+
+<div class="s-bot"></div>
+
+
+<div class="tab-box">
+  <ul class="tab-menu">
+   <IDXSKIP><li class="first active li-1"><a title="Описание товара" data-rel="1"><span class="span-left"></span><span class="span-cen">Описание товара</span><span class="span-right"></span></a></li></IDXSKIP>
+   <IDXSKIP><li class="li-2"><a title="Гарантия" data-rel="2"><span class="span-left"></span><span class="span-cen">Гарантия</span><span class="span-right"></span></a></li></IDXSKIP>
+   <IDXSKIP><li class="li-3"><a title="Отзывы" data-rel="3"><span class="span-left"></span><span class="span-cen">Отзывы 
+   (0)   </span><span class="span-right"></span></a></li></IDXSKIP>
+   <IDXSKIP><li class="li-4"><a title="Вопрос ответ" data-rel="4"><span class="span-left"></span><span class="span-cen">Вопрос ответ (0)</span><span class="span-right"></span></a></li></IDXSKIP>
+  </ul>
+  <div class="clear"></div>
+
+
+  <div class="tab active" data-rel="1">
+
+<p style="margin: 0px 0px 20px; line-height: 18px; background-color: rgb(254, 239, 224); font-family: Arial, Helvetica, sans-serif; color: rgb(0, 0, 0); text-align: center;">
+	<u style="color: rgb(47, 47, 47); font-family: Cuprum, Arial, sans-serif;"><em><span style="color: rgb(32, 87, 134);"><span style="font-size: 16px;">Холодильник витрина &nbsp;</span></span></em></u><u style="color: rgb(47, 47, 47); font-family: Cuprum, Arial, sans-serif;"><em><span style="color: rgb(32, 87, 134);"><span style="font-size: 16px;">Бирюса В 310 ЕК</span></span></em></u></p>
+
+
+    						<strong><IDXSKIP>Техническое описание подготавливается магазином</IDXSKIP></strong>
+
+<IDXSKIP>Фирма-производитель оставляет за собой право на внесение изменений в конструкцию, дизайн и комплектацию, страну производства приборов без предварительного уведомления. Во избежание недоразумений при покупке приборов уточняйте информацию у продавцов. Вся информация на сайте носит справочный характер и не является публичной офертой.
+
+
+</IDXSKIP><IDXSKIP><p>
+	&nbsp;</p></IDXSKIP>
+  </div>
+  <div class="tab" data-rel="2">
+ 
+  <p style="margin: 0px 0px 10px; color: rgb(47, 47, 47); font-family: Cuprum, Arial, sans-serif; line-height: 18px; background-color: rgb(254, 239, 224); text-align: center;">
+	<u><em><span style="color: rgb(32, 87, 134);"><span style="font-size: 16px;">Холодильник витрина &nbsp;</span></span></em></u>
+	<u style="color: rgb(34, 34, 34); font-family: Arial, Verdana, sans-serif;"><em><span style="color: rgb(32, 87, 134);"><span style="font-size: 16px;">Бирюса В 310 ЕК</span></span></em></u>
+</p>
+
+
+<p>Срок гарантии: <b>3 года</b></p>
+
+
+
+<div>
+	<div class="seo_bodytext_search" style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;"><strong>Интернет магазин бытовой техники (холодильников, морозильныз камер, холодильных витрин) Бирюса в Санкт-Петербурге и Ленинградской области - Энергия 78</strong></span></span></div>
+<div class="seo_bodytext_search" style="text-align: justify;">
+	&nbsp;</div>
+<div class="seo_bodytext_search" id="seo_bodytext" style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Холодильники и морозильные камеры Бирюса купить недорого в спб - каталог с описаниями и фото. Выбери лучшую цену на холодильник и морозильную камеру Бирюса в интернет-магазине Энергия 78 в Санкт-Петербурге, а также по всей России. Прочитай отзывы владельцев холодильников или морозильных камер Бирюса и купи холодильник Бирюса дешево в интерент магазине. Найди свою модель Бирюса со скидками по параметрам среди разнообразия характеристик, форм, цвета и функций.</span></span></div>
+<h2 style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Как выбрать холодильник и морозильную камеру Бирюса</span></span></h2>
+<p style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Холодильники и морозильные камеры Бирюса выбирают покупатели, которые отдают предпочтение отличному качеству и разумной цене. Модельный ряд холодильников Бирюса представлен однокамерными, двухкамерными агрегатами, морозильными камерами, винными ларями. Существуют модели с одним компрессором и двумя. Надежные и недорогие холодильники отвечают всем современным тенденциям рынка бытовой техники. Как правильно выбрать нужный тип холодильника Бирюса среди огромного числа предложений? Попробуем разобраться в основных функциях и характеристиках моделей, предназначенных для всех категорий потребителей.</span></span></p>
+<h3 style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Тип холодильника Бирюса</span></span></h3>
+<p style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Чтобы правильно выбрать тип холодильника, нужно определить, что вы будете в нем хранить. Холодильники Бирюса бывают однокамерные и двухкамерные. Однокамерные модели компактны, их легко расположить на кухне с небольшой площадью, они предназначены для небольших семей, состоящих из 2-3 человек. Имея только одну компрессорную установку, они создают меньше шума и достаточно быстро производят охлаждение продуктов питания. Все однокамерные модели оснащены низкотемпературным отделением. Обратите внимание, выбирая однокамерный холодильник, на наличие у некоторых моделей очень практичной функции быстрого замораживания. Все однокамерные модели Бирюса при отключении электроэнергии могут сохранять температуру внутри на протяжении 12 часов. Однокамерные модели отличаются компактностью, малошумной работой и экономностью потребления электроэнергии. Двухкамерные холодильники Бирюса наиболее популярны и могут быть однокомпрессорными или двухкомпрессорными, с верхним и нижним расположением морозильной камеры, с системой No Frost и без нее.</span></span></p>
+<h3 style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Габариты и объем, компрессорные установки</span></span></h3>
+<p style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Размеры холодильника нужно выбирать, исходя из возможностей кухни. При этом нужно учитывать, что просвет между стеной и задней поверхностью аппарата должен быть не меньше 5 см. Достаточная вентиляция задней стенки влияет на энергопотребление, эффективность и срок службы холодильника. Однокамерные модели небольшие, высотой до 1,5 метров и имеют полезный объем до 250 литров. Двухкамерные холодильники имеют высоту от 1, 5 до 2 метров и литраж в пределах 400 л. Если у вас семья из 2-3 человек, и вы не делаете больших запасов продуктов, то достаточно будет однокамерной модели, если семья побольше, рассмотрите вариант двухкамерного агрегата с соответствующим литражом.<br />
+	Существуют модели холодильников Бирюса с одним или двумя компрессорами. Двухкомпрессорные холодильники имеют по компрессору на каждую камеру и обеспечивают различные температурные режимы в каждой из них. Они более эффективны, так как при открытии дверей в одной из камер, температура ворой остается неизменной. К минусам таких конструкций можно отнести повышенный уровень шума, по сравнению с однокомпрессорными моделями. Некоторые модели снабжены датскими и австрийскими компрессорами с минимальным уровнем шума.</span></span></p>
+<h3 style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Система размораживания</span></span></h3>
+<p style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Среди холодильников Бирюса еще встречаются модели с ручной разморозкой. Но чаще всего холодильники имеют капельную разморозку для холодильного отделения и технологию No Frost - для морозильного. При капельной разморозке влага конденсируется на задней поврхности холодильника, затем стекает по каналам в испаритель. В современной системе No Frost вентилятор обеспечивает циркуляцию воздуха без образования инея на внутренних поверхностях камеры. Благодаря такой технологии холодильник можно размораживать лишь изредка. Особенностью такого вида заморозки является низкая влажность, что приводит к пересушиванию продуктов. Поэтому зелень, фрукты и овощи нужно хранить в целлофане или пластиковых контейнерах.</span></span></p>
+<h3 style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Преимущества холодильников и морозильников Бирюса</span></span></h3>
+<p style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Несмотря на огромное количество предложений на рынке холодильных агрегатов, холодильники Бирюса пользуются хорошим спросом. У них есть ряд преимуществ, выгодно отличающих их от конкурентов. Они доступны в цене для людей с любым достатком. Все модели работают без вибрации и имеют невысокий уровень шума. Холодильники Бирюса энергоэфективны, расход электроэнергии на их содержание невелик, а перепады напряжения переносят отказов. Основным преимуществом холодильников Бирюса является невысокая стоимость сервисного обслуживания, а запчасти стоят недорого и ждать их при заказе нужно недолго. Холодильники Бирюса зарекомендовали себя как надежные и практичные и долговечные.</span></span></p>
+<h3 style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Торговое холодильное оборудование Бирюса</span></span></h3>
+<p style="text-align: justify;">
+	Благодаря новейшим производственным технологиям и сотрудничеству с лидирующими&nbsp;поставщиками комплектующих, торговое холодильное оборудование &quot;Бирюса&quot; соответствует всем современным требованиям рынка:</p>
+<p style="text-align: justify;">
+	- надежность</p>
+<p style="text-align: justify;">
+	-&nbsp;<span style="line-height: 1.4em;">высокая эффективность охлаждения&nbsp;продуктов</span></p>
+<p style="text-align: justify;">
+	<span style="line-height: 1.4em;">- максимальная демонстрационная площадь</span></p>
+<p style="text-align: justify;">
+	<span style="line-height: 1.4em;">- низкое потребление электроэнергии</span></p>
+<p style="text-align: justify;">
+	<span style="line-height: 1.4em;">В ассортименте интерент магазина Энергия78 вы можете дешево купить холодильные шкафы-витрины и морозильные лари Бирюса. </span></p>
+<p style="text-align: justify;">
+	<span style="line-height: 1.4em;">Морозильные лари &quot;Бирюса&quot; предназначены для заморозки и хранения продуктов. Широкий модельный ряд позволяет выбрать морозильный ларь как для оснащения супермаркетов, так и небольших павильонов. Холодильные шкафы-витрины предназначены для охлаждения, хранения, демонстрации и продажи упакованных пищевых продуктов и напитков.&nbsp;Занимая меньшую площадь, шкафы-витрины&nbsp;позволяют демонстрировать значительно большее количество товара, чем обычные горизонтальные витрины.</span></p>
+<p style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">На сайте интернет магазина Энергия78 вы можете недорого купить бытовую технику Бирюса: </span></span></p>
+<ul>
+	<li style="text-align: justify;">
+		<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">купить холодильник, морозульную камеру, холодильную витрину, морозильный ларь Бирюса в интернет-магазине в Санкт-Петербурге с доставкой,</span></span></li>
+	<li style="text-align: justify;">
+		<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">заказать <span style="font-size: 12px;">холодильник, морозульную камеру, холодильную витрину, морозильный ларь <span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Бирюса</span></span></span> дешево</span></span></li>
+	<li style="text-align: justify;">
+		<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">найти <span style="font-size: 12px;">холодильник, морозульную камеру, холодильную витрину, морозильный ларь <span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Бирюса </span></span></span>со скидками</span></span></li>
+	<li style="text-align: justify;">
+		<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">купить <span style="font-size: 12px;">холодильник, морозульную камеру, холодильную витрину, <span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">фармацевтический холодильник Бирюса</span></span> в Ленинградской области</span></span></span></li>
+	<li style="text-align: justify;">
+		<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">узнать стоимость <span style="font-size: 12px;">холодильников, морозульных камер, холодильных витрин, морозильников <span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Бирюса</span></span></span>: цена самая низкая,</span></span></li>
+	<li style="text-align: justify;">
+		<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">оформить доставку на все товары.</span></span></li>
+</ul>
+<p style="text-align: justify;">
+	<span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Продажа дешевых <span style="font-size: 12px;"><span style="font-size: 12px;">холодильников, морозильных камер, холодильных витрин, морозильников <span style="font-family:arial,helvetica,sans-serif;"><span style="font-size: 12px;">Бирюса</span></span> </span></span>в СПб с гарантией официального сервисного центра!</span></span></p>
+</div>
+
+<h2>Сервисные центры</h2>
+	<ul class="services_address_list" style="padding: 0px 40px; color: rgb(34, 34, 34); font-family: Arial, Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+	<li class="services_address_item">
+		<p class="title">
+			ООО &quot;ЭЛЕКТА&quot;</p>
+		<p class="address">
+			г. Санкт-Петербург, б-р Новаторов, 11</p>
+		<p>
+			+7(812)372-23-12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+			+7(812)372-23-13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+			+7(812)376-75-36 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+			service_em@rambler.ru&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.energia78.ru">www.energia78.ru</a></p>
+	</li>
+</ul>
+<ul class="services_address_list" style="padding: 0px 40px; color: rgb(34, 34, 34); font-family: Arial, Verdana, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+	<li class="services_address_item">
+		<p class="title">
+			ООО &quot;ПКФ &quot;Гарда&quot;</p>
+		ул. Салова, 57, к.3<br />
+		Тел.: 8 (812) 766-26-51, 766-63-70</li>
+</ul>
+
+
+  </div>
+  <div class="tab" data-rel="3">
+<IDXSKIP><p>Отзывов пока нет.</p></IDXSKIP>    <div class="okey"></div>
+        <h1>Отзывы: Холодильник витрина Бирюса В 310 ЕК</h1>
+    <form action="/" method="POST" name="form" enctype="multipart/form-data">
+        <input type="hidden" name="action" value="add_response">
+        <input type="hidden" name="tovar" value="10019999">
+        <div class="otzuv"><label>ФИО :</label><input type="text" name="fio" size="70" maxlength="70" value=""><div class="clear"></div></div>
+		<div class="otzuv"><label>E-mail :</label><input type="text" name="mail" size="70" maxlength="70" value=""><div class="clear"></div></div>
+		<div class="otzuv"><label>Сообщение :</label><textarea name="message" cols="53" rows="8"></textarea><div class="clear"></div></div>                       
+        <input type="submit" name="save" value="Отправить">
+    </form>
+  </div>
+  <div class="tab" data-rel="4">
+  <div class="okey"></div>
+      <h1>Задать вопрос</h1>
+    <form action="/" method="POST" name="form" enctype="multipart/form-data">
+        <input type="hidden" name="action" value="send_question">
+        <input type="hidden" name="tovar" value="10019999">
+        <div class="otzuv"><label>ФИО :</label><input type="text" name="fio" value=""><div class="clear"></div></div>
+        <div class="otzuv"><label>Ваш вопрос :</label><textarea name="question" cols="54" rows="8"></textarea></div>                      
+        <input type="submit" name="save" value="Отправить">
+    </form>
+
+
+  </div>
+</div>
+<div class="tovars">
+ <div class="tovar-box">
+  <IDXSKIP><ul class="tovar-menu">
+   <li class="first active li-1"><a title="Доп. аксессуары" data-rel="1"><span class="span-left"></span><span class="span-cen">Доп. аксессуары</span><span class="span-right"></span></a></li>
+   <li class="li-2"><a title="Похожие товары" data-rel="2"><span class="span-left"></span><span class="span-cen">Похожие товары</span><span class="span-right"></span></a></li>
+  </ul></IDXSKIP>
+  <div class="clear"></div>
+  <div class="tab active" data-rel="1">
+      <div class="dop">
+      <div class="dop-img">
+        <a href="/Aksessuary/Dlya_holodilynikov/Indesit_Chistyaschee_sredstvo_dlya_holodilynika/" title="">
+	    <img src="/images/89x89/56f9136feac3d.jpg" alt="Акссесуар для холодильников  Indesit Чистящее средство для холодильника" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Aksessuary/Dlya_holodilynikov/Indesit_Chistyaschee_sredstvo_dlya_holodilynika/">
+            Indesit Чистящее средство для холодильника</a>
+        <div class="dop-price">
+           400 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Stroitelystvo_i_remont/Elektrika/Stabilizatory_napryazheniya/RN-117/" title="">
+	    <img src="/images/89x89/584b9af9bdfa6.jpg" alt="Стабилизатор напряжения  NovaTek-Electro РН-117" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Stroitelystvo_i_remont/Elektrika/Stabilizatory_napryazheniya/RN-117/">
+            NovaTek-Electro РН-117</a>
+        <div class="dop-price">
+           1200 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Stroitelystvo_i_remont/Elektrika/Stabilizatory_napryazheniya/RN-116/" title="">
+	    <img src="/images/89x89/53e5ee4034e65.jpg" alt="Стабилизатор напряжения  NovaTek-Electro РН-116" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Stroitelystvo_i_remont/Elektrika/Stabilizatory_napryazheniya/RN-116/">
+            NovaTek-Electro РН-116</a>
+        <div class="dop-price">
+           1450 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Aksessuary/Dlya_holodilynikov/Chistyaschee_sredstvo_dlya_holodilynika_Indesit_-_Razmorozka_holodilynika/" title="">
+	    <img src="/images/89x89/56f9144041bf8.jpg" alt="Акссесуар для холодильников  Чистящее средство для холодильника Indesit - Разморозка холодильника" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Aksessuary/Dlya_holodilynikov/Chistyaschee_sredstvo_dlya_holodilynika_Indesit_-_Razmorozka_holodilynika/">
+            Чистящее средство для холодильника Indesit - Разморозка холодильника</a>
+        <IDXSKIP><div class="dop-price">
+           350 <span>руб.</span>
+        </div></IDXSKIP>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <IDXSKIP><div class="dop">
+      <div class="dop-img">
+        <a href="/Aksessuary/Dlya_plit/Indesit_Sredstvo_dlya_uhoda_za_stalynymi_poverhnostyami/" title="">
+	    <img src="/images/89x89/56fa679035f1d.jpg" alt="Акссесуар для плит и духовых шкафов  Indesit Блеск стали" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Aksessuary/Dlya_plit/Indesit_Sredstvo_dlya_uhoda_za_stalynymi_poverhnostyami/">
+            Indesit Блеск стали</a>
+        <div class="dop-price">
+           250 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div></IDXSKIP>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Aksessuary/Dlya_plit/Top_House__Salfetka_dlya_uhoda_za_metpoverhnostyami_Profi/" title="">
+	    <img src="/images/89x89/53cd1206498aa.jpg" alt="Акссесуар для плит и духовых шкафов  Top House Салфетка для ухода за мет.поверхностями Профи" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Aksessuary/Dlya_plit/Top_House__Salfetka_dlya_uhoda_za_metpoverhnostyami_Profi/">
+            Top House Салфетка для ухода за мет.поверхностями Профи</a>
+        <div class="dop-price">
+           180 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Katalog_zapchastey/Zapchasti_dlya_holodilynikov/Atlant_Wkladysh_dlya_yaits_18s/" title="">
+	    <img src="/images/89x89/540702fbbce67.jpg" alt="Запчасть  ATLANT Вкладыш для яиц 18с." />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Katalog_zapchastey/Zapchasti_dlya_holodilynikov/Atlant_Wkladysh_dlya_yaits_18s/">
+            ATLANT Вкладыш для яиц 18с.</a>
+        <div class="dop-price">
+           100 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Katalog_zapchastey/Zapchasti_dlya_holodilynikov/Atlant_Ersh/" title="">
+	    <img src="/images/89x89/54070e0a67752.jpg" alt="Запчасть  ATLANT Ерш" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Katalog_zapchastey/Zapchasti_dlya_holodilynikov/Atlant_Ersh/">
+            ATLANT Ерш</a>
+        <div class="dop-price">
+           50 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="tab" data-rel="2">
+      <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Atlant_HT-2000-000/" title="">
+	    <img src="/images/89x89/545fbf8fbb168.jpg" alt="Холодильник витрина  Атлант ХТ-2000-000" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Atlant_HT-2000-000/">
+            Атлант ХТ-2000-000</a>
+        <div class="dop-price">
+           27106 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Mir_-164/" title="">
+	    <img src="/images/89x89/5471ed37b3054.jpg" alt="Холодильник витрина  Мир -164" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Mir_-164/">
+            Мир -164</a>
+        <div class="dop-price">
+           17750 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Biryusa_460N-1/" title="">
+	    <img src="/images/89x89/5471ec9e738ca.jpg" alt="Холодильник витрина  Бирюса 460Н-1" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Biryusa_460N-1/">
+            Бирюса 460Н-1</a>
+        <div class="dop-price">
+           21100 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Saratov_505-01_KSh-160_korichnevyy/" title="">
+	    <img src="/images/89x89/58c77f2018296.jpg" alt="Холодильник витрина  Саратов 505-01 КШ-160 коричневый" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Saratov_505-01_KSh-160_korichnevyy/">
+            Саратов 505-01 КШ-160 коричневый</a>
+        <div class="dop-price">
+           16845 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Biryusa_460N-1/" title="">
+	    <img src="/images/89x89/5471ec9e738ca.jpg" alt="Холодильник витрина  Бирюса 460Н-1" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Biryusa_460N-1/">
+            Бирюса 460Н-1</a>
+        <div class="dop-price">
+           21100 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/POZIS_Sviyaga_513-6_S/" title="">
+	    <img src="/images/89x89/562efd6b6b491.jpg" alt="Холодильник витрина  Pozis Свияга 513-6 С" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/POZIS_Sviyaga_513-6_S/">
+            Pozis Свияга 513-6 С</a>
+        <div class="dop-price">
+           13990 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Atlant_HT-2001-000/" title="">
+	    <img src="/images/89x89/53fc54819ab32.jpg" alt="Холодильник витрина  Атлант ХТ-2001-000" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Atlant_HT-2001-000/">
+            Атлант ХТ-2001-000</a>
+        <div class="dop-price">
+           26342 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Liebherr_CMes_502-20_001/" title="">
+	    <img src="/images/89x89/5470c01327334.jpg" alt="Холодильник витрина  Liebherr CMes 502" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Liebherr_CMes_502-20_001/">
+            Liebherr CMes 502</a>
+        <div class="dop-price">
+           60975 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Pozis_RK-254/" title="">
+	    <img src="/images/89x89/57e2afa44e9f1.jpg" alt="Холодильник витрина  Pozis RK-254" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Pozis_RK-254/">
+            Pozis RK-254</a>
+        <div class="dop-price">
+           18550 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="dop">
+      <div class="dop-img">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Atlant_HT_1006/" title="">
+	    <img src="/images/89x89/545fbe3c6a854.jpg" alt="Холодильник витрина  ATLANT ХТ 1006" />        </a>
+      </div>
+      <div class="dop-info">
+        <a href="/Krupnaya_bytovaya_tehnika/Holodilyniki/Witriny/Atlant_HT_1006/">
+            ATLANT ХТ 1006</a>
+        <div class="dop-price">
+           34655 <span>руб.</span>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+
+  
+  </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    <div class="clear"></div>
+	    </div>      
+	</div>
+      <div class="clear"></div>
+    </div>
+  <div id="service">
+     <div class="serv" rel="//energia78.ru/dostavka/" style="background:url(//energia78.ru/img/articles/a5.png) no-repeat left center;">
+			<IDXSKIP><span class="serv-title">Доставка товаров по России</span></IDXSKIP>
+			<div><IDXSKIP>Мы доставляем приобретённые товары по всей территории&nbsp;</IDXSKIP></div>
+			<IDXSKIP><div>Российской федерации</div></IDXSKIP>
+      </div>
+ <div class="serv" rel="//energia78.ru/podklyuchenie-tehniki/" style="background:url(//energia78.ru/img/articles/a6.png) no-repeat left center;">
+         <IDXSKIP><span class="serv-title">Сервисная монтажная служба</span></IDXSKIP>
+         <div><IDXSKIP>Мы установим и подключим любое приобретённое в нашем&nbsp;</IDXSKIP></div>
+		<IDXSKIP><div>магазине оборудование</div></IDXSKIP>
+ </div>
+ <div class="serv" rel="//energia78.ru/garantiya/" style="background:url(//energia78.ru/img/articles/a7.png) no-repeat left center;margin-right:0;">
+         <IDXSKIP><span class="serv-title">Гарантия качества продукции</span></IDXSKIP>
+         <div><IDXSKIP>Приобретаемая техника и электроника имеет все&nbsp;</IDXSKIP></div>
+		<div><IDXSKIP>необходимые гарантийные обязательства</IDXSKIP></div>
+  </div>
+     <div class="clear"></div>
+   </div>
+   
+	<div class="shadow2"></div>
+    <div id="footer">
+       <div class="foot-top">
+         <ul class="menu__ul level_1" id="menu2">
+<IDXSKIP><li class="menu__li level_1 my-1 first"><a href="/" class="menu__a level_1"><span>Главная</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-2"><a href="/o-kompanii/" class="menu__a level_1"><span>О компании</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-3"><a href="/oplata-tovara/" class="menu__a level_1"><span>Оплата товара</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-4"><a href="/dostavka/" class="menu__a level_1"><span>Доставка</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-5"><a href="/garantiya/" class="menu__a level_1"><span>Гарантия</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-6"><a href="/podklyuchenie-tehniki/" class="menu__a level_1"><span>Подключение</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-7"><a href="/akcii-i-skidki/" class="menu__a level_1"><span>Скидки и подарки</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-8"><a href="/kontaktyi/" class="menu__a level_1"><span>Магазины</span></a></li></IDXSKIP>
+
+<IDXSKIP><li class="menu__li level_1 my-9 last"><a href="/help/" class="menu__a level_1"><span>Помощь</span></a></li></IDXSKIP>
+
+
+
+</ul>
+         <div class="clear"></div>
+       </div>
+       <div class="foot-bot">
+         <a class="logo" href="/" title="Интернет-магазин бытовой техники и электроники"></a>
+        <div class="head-dop">
+          <div class="info info-1" style="background:none;">
+            
+						<div class="info-top">
+              <span class="info-tel-left"><IDXSKIP><span>8 (812) 923-94-62</span></IDXSKIP><IDXSKIP><a class="ozlink" href="#oz" title="Заказать обратный звонок">Заказать обратный звонок</a></IDXSKIP></span>
+              <span class="info-tel-right"><IDXSKIP><span>8 (812) 372-05-52</span></IDXSKIP><IDXSKIP><a class="ozlink" href="#oz" title="Заказать обратный звонок">Заказать обратный звонок</a></IDXSKIP></span>
+              <div class="clear"></div>
+            </div>
+            <div class="info-bot">
+              <span class="info-tel-left"><IDXSKIP><span>8(950) 036-25-69</span></IDXSKIP><IDXSKIP><a class="ozlink" href="#oz" title="Заказать обратный звонок">Заказать обратный звонок</a></IDXSKIP></span>
+              <span class="info-tel-right info-tel-mail"><IDXSKIP><span>3720552@mail.ru</span></IDXSKIP><IDXSKIP><a href="mailto:3720552@mail.ru" title="Заказ по электронной почте">Заказ по электронной почте</a></IDXSKIP></span>
+              <div class="clear"></div>
+            </div>
+			          </div>
+          <IDXSKIP><div class="info info-2">
+           <div class="foot-info2">
+                                    <a href="//market.yandex.ru/shop/196896/reviews" title="Market"><img src="//energia78.ru/img/banners/banner1.png" alt=""/></a>
+                        <a href="/oplata-tovara/" title="Visa"><img src="/img/banners/banner2.png" alt=""/></a>
+                        <a href="//vk.com/energia78" title="Соц. сети"><img src="/img/banners/banner3.png" alt=""/></a>                                                
+                                   </div>
+          </div></IDXSKIP>
+        </div>
+       </div>
+    </div>
+    <div class="copy">
+<div style="float:left; padding: 0 0 0 20px;">
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t12.18;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+</div>
+
+<div>
+<span style="font-size:14px;"><IDXSKIP>© 1993-2017 WWW.ENERGIA78.RU  ИНТЕРНЕТ МАГАЗИН  БЫТОВОЙ ТЕХНИКИ И ЭЛЕКТРОНИКИ &laquo;ЭНЕРГИЯ&raquo;</IDXSKIP></span></div>
+<div><span style="font-size:11px;"><IDXSKIP>Россия, 198216, Санкт-Петербург, Адрес б-р Новаторов, дом 11, лите А,  Пн-Пт с 09:00 до 20:00, Сб с 11:00 до 19:00, Вск с 11:00 до 17:00 САЙТ КРУГЛОСУТОЧНО</IDXSKIP></span></div>   
+
+<IDXSKIP>Думаете где купить стиральную машину плиту или холодильник? Звоните в магазин Энергия! Самые низкие цены в СПб и Лен.области, а так же в Новгородской области - дешевле только даром! 
+
+	   </IDXSKIP></div>
+   </div>
+  </div>
+
+<script>
+function check_fastcheck(){
+
+    ret=1;
+    if($('#fc_fio').val()==''){
+	alert('Введите фио');
+	return 0;
+    }
+    if($('#fc_tel').val()==''){
+	alert('Введите телефон');
+	return 0;
+    
+    }
+    if($('#fc_mail').val()==''){
+	alert('Введите емайл');
+	return 0;    
+    }
+
+    tel=$('#fc_tel').val();
+    var testPattern = /\+7\([0-9]{3}\)[0-9]{3}\-[0-9]{2}\-[0-9]{2}/;
+    if(testPattern.test(tel)==false){
+	alert('Введите правильно телефон');
+	return 0;    
+    }
+
+    return ret;
+}
+$(document).ready(function(){
+      $("#fc_tel").inputmask("mask", {"mask": "+7(999)999-99-99"});
+});
+</script>
+    <div class="popups">
+    <div class="popup-table">
+     <div class="popup-zakaz popup-box">
+      <IDXSKIP><div class="this-title">Быстрый заказ</div></IDXSKIP>
+
+       <form action="/" method="POST" name="form" enctype="multipart/form-data">
+        <input type="hidden" name="action" value="fast_order">
+        <input type="hidden" name="tovar" value="10019999">
+
+        <IDXSKIP><div class="otzuv"><label>Ваше имя :</label><input id="fc_fio" type="text" name="fio" size="70" maxlength="70" value=""><div class="clear"></div></div></IDXSKIP>
+        <IDXSKIP><div class="otzuv"><label>Телефон :</label><input id="fc_tel" type="text" name="tel" size="70" maxlength="70" value=""><div class="clear"></div></div></IDXSKIP>
+		<IDXSKIP><div class="otzuv"><label>E-mail :</label><input id="fc_mail" type="text" name="mail" size="70" maxlength="70" value=""><div class="clear"></div></div></IDXSKIP>
+		<IDXSKIP><div class="otzuv"><label>Сообщение :</label><textarea name="message" cols="53" rows="8"></textarea><div class="clear"></div></div></IDXSKIP>
+		<div class="captcha">
+			<table>
+			<tr>
+			<td>Введите код:</td>
+			<td>	<img src="/securimage/securimage_show.php?sid=f4ed656d924bf8799584740c2e98e54f" style="width:200px; height:50px;" alt=""></td>
+			<td><input type="text" name="code" /></td></tr>
+			</table>
+		</div>
+        <input type="submit" name="save" value="Отправить" onclick="if(!check_fastcheck())return false;">
+    </form>
+      <span class="close"></span>
+     </div>
+    </div>
+
+    <div class="popup-table">
+     <div class="popup-dostavka popup-box">
+            <IDXSKIP><div class="this-title">Доставка</div></IDXSKIP>
+			
+				<p>
+	<span style="color: rgb(64, 64, 64); font-family: Verdana; font-size: 11px;"><IDXSKIP>Сотрудники службы доставки не&nbsp;устанавливают и&nbsp;не&nbsp;подключают технически сложные бытовые приборы к&nbsp;водоснабжению, электричеству и т.п.. Подключение и&nbsp;установка бытовой техники производится специалистами по&nbsp;подключению технически сложных бытовых приборов. </IDXSKIP><IDXSKIP><a href="//energia78.ru/podklyuchenie-tehniki/">Установка и подключение.</a></IDXSKIP></span></p>
+<IDXSKIP><p>
+	&nbsp;</p></IDXSKIP>
+<p style="text-align: justify;">
+	<span style="color: rgb(64, 64, 64); font-family: Verdana; font-size: 11px;"><IDXSKIP>Более подробную информацию по доставке товара можно получить в разделе </IDXSKIP><IDXSKIP><a href="//energia78.ru/dostavka/">&laquo;</a></IDXSKIP></span><IDXSKIP><a href="//energia78.ru/dostavka/"><span style="font-size: 11px;">Доставка</span></a></IDXSKIP><IDXSKIP><span style="color: rgb(64, 64, 64); font-family: Verdana; font-size: 11px;"><a href="//energia78.ru/dostavka/">&raquo;</a>.</span></IDXSKIP></p>
+        
+			
+			<span class="close"></span>
+     </div>
+    </div>
+    <div class="popup-table">
+     <div class="popup-camovuvoz popup-box">
+            <IDXSKIP><div class="this-title">Самовывоз</div></IDXSKIP>
+					<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">
+	<IDXSKIP>Сидя на рабочем месте или в уютной обстановке дома, Вы можете сделать заказ и в любое удобное для Вас время приехать за ним в наш магазин. Мы зарезервируем,&nbsp;&nbsp;сформируем&nbsp;&nbsp;и соберем Ваш заказ, а Вам останется его лишь забрать. В итоге Вы сэкономите свое время и деньги.</IDXSKIP></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">
+	<IDXSKIP>Забрать заказы самостоятельно, &nbsp;можно:</IDXSKIP></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">
+	<IDXSKIP>- <a href="//energia78.ru/chema-proezda/"><span style="color:#000080;"><u><strong>из магазина</strong></u></span></a></IDXSKIP> <IDXSKIP>(б-р Новаторов, дом 11(вход со двора))&nbsp;понедельника по пятницу с 10.00 до 18.30 и в субботу с 11:00 &nbsp;до 18:30; воскресенье с 11:00 до 16:00</IDXSKIP></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">
+	<IDXSKIP>- <a href="//energia78.ru/chema-proezda/"><span style="color:#000080;"><u><strong>со склада</strong></u></span></a></IDXSKIP> <IDXSKIP>(Кубинская ул. дом 76 кор 4), с понедельника по пятницу&nbsp;с 09:30 до 16:30, и в пятницу с 09:30 до 16:00 со склада ул. Кубинская дом 76 кор 4</IDXSKIP></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">
+	<IDXSKIP>предварительно связавшись с нашим менеджером по тел. 923-94-62.</IDXSKIP></p>
+<p style="margin: 10px 0px; font-family: Arial, Helvetica, sans-serif; padding: 0px; border: 0px; color: rgb(85, 85, 85); line-height: 19px; text-align: center;">
+	<a href="//energia78.ru/dostavka/#tab5"><em><IDXSKIP>Стоимость данной услуги (указана в карточке каждого товара) от 150р</IDXSKIP></em></a></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">
+	<IDXSKIP>Такая схема очень удобна для людей, проживающих в области и жителей других регионов, которые посещают г.Санкт-Петербург или планируют его посетить.&nbsp;&nbsp;</IDXSKIP></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; text-align: justify;">
+	<IDXSKIP>Если Вы решили организовать забор техники самостоятельно, то для правильного выбора габаритов автомобиля, наши менеджеры предоставят Вам полную информацию о весе и объеме техники.</IDXSKIP></p>
+        
+            <span class="close"></span>
+     </div>
+    </div>
+    <div class="popup-table">
+     <div class="popup-oplata popup-box">
+            <IDXSKIP><div class="this-title">Способы оплаты</div></IDXSKIP>
+				<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">
+	<IDXSKIP><strong>1.<a href="//energia78.ru/oplata-tovara/#tab1"> Наличная оплата</a></strong></IDXSKIP><br />
+	<strong><IDXSKIP>2. <a href="//energia78.ru/oplata-tovara/#tab2">Безналичная оплата (физ. и юр. лица)</a></IDXSKIP></strong><br />
+	<strong><IDXSKIP>3. <a href="//energia78.ru/oplata-tovara/#tab3">Оплата по банковским картам</a></IDXSKIP><br />
+	<IDXSKIP>4. <a href="//energia78.ru/oplata-tovara/#tab4">Кредит</a></IDXSKIP></strong></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">
+	<br />
+	<strong><strong><IDXSKIP>Оплата Yandex Деньгами, Webmoney и иными отличными от перечисленных выше способами в нашем магазине</IDXSKIP></strong><IDXSKIP>&nbsp;<span style="font-size: 16px;"></IDXSKIP><IDXSKIP><span style="color: rgb(255, 0, 0);"><strong><u>не предусмотрена</u></strong></span></IDXSKIP></span><IDXSKIP><strong>.</strong></IDXSKIP></strong></p>
+   
+                 <span class="close"></span>
+     </div>
+    </div>
+    
+	<div class="popup-table">
+     <div class="popup-ytil popup-box">
+            <IDXSKIP><div class="this-title">Утилизация</div></IDXSKIP>
+					<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">
+	<span style="font-size:12px;"><IDXSKIP>Производим вывоз на утилизацию бытовой техники (холодильников, стиральных машин, электрических и газовых плит, микроволновых печей и т.д.), &nbsp; &nbsp;электроники (телевизоров, музыкальных центров и т.д.), кондиционеров, и т.д.), сейфов и т.п.</IDXSKIP></span></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">
+	<span style="font-size:12px;"><IDXSKIP><b>У</b></IDXSKIP><IDXSKIP>с<strong>луга может быть предоставлена одновременно при заказе товара,&nbsp;</strong></IDXSKIP></span><IDXSKIP>&nbsp;стоимость уточняйте у операторов</IDXSKIP></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">
+	<span style="font-size:12px;"><IDXSKIP>Вывоз и утилизация старых холодильников&nbsp;от 700 рублей.&nbsp;&nbsp;</IDXSKIP></span></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">
+	<span style="font-size:12px;"><IDXSKIP>Вывоз и утилизация старых стиральных машин газовых и электрических плит от 600 рублей.&nbsp;</IDXSKIP></span></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">
+	<span style="font-size:12px;"><IDXSKIP><strong>Утилизация холодильников</strong></IDXSKIP><IDXSKIP>&nbsp;и&nbsp;<strong>утилизация стиральных машин</strong></IDXSKIP><IDXSKIP>. В любой квартире есть бытовая техника - холодильники, стиральные машины, микроволновые печи (свч), водонагреватели, газовые и электрические плиты. С течением времени они ломаются, теряют свой функционал и банально стареют. Невольно приходится обращаться к сервису утилизация бытовой техники и покупать новую. Все мы понимаем, что сдавая старые вещи в переработку, мы не только избавляются от ненужных приборов, но и сохраняем окружающую среду, ведь из переработанного пластика можно сделать новые вещи, и вполне возможно, что ваша старая стиральная машинка вернётся к Вам в виде ноутбука или телевизора.</IDXSKIP></span></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">
+	<span style="font-size:12px;"><IDXSKIP>Наша компания поможет&nbsp;</IDXSKIP><IDXSKIP><u><strong>Вам</strong></u></IDXSKIP><IDXSKIP>&nbsp;в этом.&nbsp;</IDXSKIP></span></p>
+<p style="margin-top: 0px; margin-bottom: 20px; color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">
+	<span style="font-size:12px;"><IDXSKIP>Не пытайтесь выбрасывать бытовую технику на свалку - за это полагается крупный штраф.&nbsp;Не передвигайте технику сами - можно повредить пол, да и не забудьте про свое здоровье.</IDXSKIP></span></p>
+   
+            <span class="close"></span>
+     </div>
+    </div>
+
+ <div class="popup-table">
+     <div class="popup-discount popup-box">
+            <div class="this-title"><IDXSKIP>Скидка на монтаж при покупке оборудования</IDXSKIP></div>
+				<p>
+	<IDXSKIP>Нашим Покупателям, оформивших покупку в магазине или через сайт, дарим скидку от 10% на все услуги. Скидка распространяется на подключение всех типов оборудования. Заявку на поключение можно оформить при заказе или отправить запрос на эл.почту&nbsp; </IDXSKIP><IDXSKIP><span style="font-family:georgia,serif;"><strong>3720552@mail.ru</strong></span></IDXSKIP></p>
+   
+		 <span class="close"></span>
+     </div>
+    </div>
+
+
+
+  </div>
+
+    <script type="text/javascript">document.write('<script type="text/javascript" charset="utf-8" async="true" id="onicon_loader" src="//cp.onicon.ru/js/simple_loader.js?site_id=5325ddf272d22cea11000008&' + (new Date).getTime() + '"></scr' + 'ipt>');</script>
+<div id = "toTop" ></div>
+<!-- BEGIN CLICKTEX CODE {literal} -->
+<script type="text/javascript" charset="utf-8" async="async" src="//www.clicktex.ru/code/20466"></script>
+<!-- {/literal} END CLICKTEX CODE -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter32201639 = new Ya.Metrika({
+                    id:32201639,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/32201639" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+
+
+</body>
+</html><!-- Time: 2,5199910000 -->

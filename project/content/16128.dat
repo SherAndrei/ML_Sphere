@@ -1,0 +1,2273 @@
+forumnov.com/index.php?showtopic=3522834
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="ru" lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<title>где можно постирать палас? - Форум умных людей</title>
+<link rel="alternate" type="application/rss+xml" title="Альтернативное краеведение Новгородской области" href="http://forumnov.com/index.php?act=rssout&amp;id=1" />
+<link rel="alternate" type="application/rss+xml" title="Новости Великого Новгорода и Новгородской области" href="http://forumnov.com/index.php?act=rssout&amp;id=2" />
+<link rel="alternate" type="application/rss+xml" title="Форум Умных Людей. Новости" href="http://forumnov.com/index.php?act=rssout&amp;id=3" />
+
+<style type="text/css" media="all">
+
+@import url(http://forumnov.com/style_images/css_11.css);
+
+</style>
+<style type='text/css'>
+@import url( "http://forumnov.com/style_images/fnrgrey1197122529/folder_editor_images/css_rte.css" );
+</style>
+
+<script type="text/javascript" src='/custom/js/jquery-1.8.3.js'></script>
+<script type="text/javascript" src='/custom/js/jquery-ui-1.9.2.custom.js'></script>
+<script type="text/javascript" src='/custom/js/instrumentary.js?v=01'></script>
+<script type="text/javascript" src="/custom/js/jquery.positioning.js"></script>
+<script type="text/javascript" src="/custom/js/gift.js"></script>
+<script type="text/javascript" src="/jscripts/swfobject.js"></script>  
+<script type="text/javascript" src="/custom/player/audio-player.js"></script>  
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js" charset="windows-1251"></script>  
+<script type="text/javascript">  
+            AudioPlayer.setup("/custom/player/player.swf", {  
+                width: 290  
+            });  
+</script>
+<script type="text/javascript" src="/fultv_chat/js/jquery.ajaxChat.js"></script>
+
+<script type="text/javascript" src="http://vkontakte.ru/js/api/openapi.js?9" charset="windows-1251"></script>
+<script type="text/javascript">
+  VK.init({apiId: 2838233, onlyWidgets: true});
+</script>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD8_WZmrlr0GtIKRICumOOGA7PFyqOX-6Y&sensor=true"></script>
+<script type="text/javascript">
+var Gmap = {
+ 
+  DATA: {
+  	marker_new: 0,
+  	uid: 1,
+  	zoom: 1,
+  	coords: "1,1",
+  	testo: 1
+  },
+
+  init: function(param) {
+  	var Obj = this;
+		Obj.setDATA("uid", param['uid']);
+		Obj.setDATA("coords",param['coords']);
+		if (param['zoom'] != '' && param['zoom']) Obj.setDATA("zoom",param['zoom']);
+		cr = Obj.DATA.coords.match(/([0-9\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-]+),([0-9\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-]+)/);
+    var latLng = new google.maps.LatLng(cr[1],cr[2]);
+    Obj.map = new google.maps.Map(document.getElementById('map-container'+Obj.DATA.uid), {
+      zoom: parseInt(Obj.DATA.zoom),
+      center: latLng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scaleControl: true
+    });
+  
+    var marker = new google.maps.Marker({
+      position: latLng,
+      map: Obj.map,
+      title:""+latLng+""
+    });
+
+    google.maps.event.addListener(Obj.map, "rightclick",function(event){
+     		Obj.NewMarker(event.latLng);
+				Obj.setDATA("coords", event.latLng);
+     		Obj.MakeBB();
+    });
+    
+    google.maps.event.addListener(Obj.map, "click",function(event){
+     		Obj.NewMarker(event.latLng);
+     		Obj.setDATA("coords", event.latLng);
+     		Obj.MakeBB();
+    });
+    
+    google.maps.event.addListener(Obj.map, "zoom_changed",function(event){
+     		Obj.setDATA("zoom", Obj.map.getZoom());
+     		Obj.MakeBB();
+    });
+
+  },
+  	
+	NewMarker: function(LatLng) {
+		var Obj = this;
+		if (Obj.DATA.marker_new) {
+			Obj.DATA.marker_new.setMap(null);
+		}
+		
+		Obj.DATA.marker_new = new google.maps.Marker({
+      position: LatLng,
+      map: Obj.map,
+      draggable:true,
+      icon: '/custom/img/map/blue-dot.png',
+      animation: google.maps.Animation.DROP,
+      title:""+LatLng+""
+    });
+	
+		google.maps.event.addListener(Obj.DATA.marker_new, "drag",function(event){
+			Obj.setDATA("coords", event.latLng);
+			Obj.MakeBB();
+    });
+		
+	},
+	
+	MakeBB: function(LatLng) {
+		dat = "c"+this.DATA.coords+"";
+		if (this.DATA.zoom) dat += "|z"+this.DATA.zoom;
+		var iname = 'input[name="coords-container'+this.DATA.uid+'"]';
+		$(iname).val('[map '+dat+']');
+
+	},
+	
+	setDATA: function(varname,latLng) {
+		if(varname == "coords") {
+			latLng += '';
+			latLng = latLng.replace(/[\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\(\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\)]/g,"");
+		}
+		this.DATA[varname] = latLng;
+	
+	}
+
+};
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="/fultv_chat/chat.css" media="screen" />
+<link href="/custom/css/start/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+</head>
+<body onload="return;setTimeout('GiftBegin()', 5000);">
+<script type="text/javascript" src="/custom/js/wz_tooltip.js"></script> 
+<div id="ipbwrapper">
+<!--ipb.javascript.start-->
+<script type="text/javascript">
+ //<![CDATA[
+ var ipb_var_st            = "0";
+ var ipb_lang_tpl_q1       = "Введите номер страницы, на которую хотите перейти.";
+ var ipb_var_s             = "125fd2d17f71763c539e3855251975ed";
+ var ipb_var_phpext        = "php";
+ var ipb_var_base_url      = "http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&";
+ var ipb_var_image_url     = "style_images/fnrgrey1197122529";
+ var ipb_input_f           = "14";
+ var ipb_input_t           = "3522834";
+ var ipb_input_p           = "0";
+ var ipb_var_cookieid      = "";
+ var ipb_var_cookie_domain = "";
+ var ipb_var_cookie_path   = "/";
+ var ipb_md5_check         = "880ea6a14ea49e853634fbdc5015a024";
+ var ipb_new_msgs          = 0;
+ var use_enhanced_js       = 0;
+ var use_charset           = "windows-1251";
+ var ipb_myass_chars_lang  = "Вы ввели слишком мало символов для поиска";
+ var ajax_load_msg		   = "Загрузка...";
+ //]]>
+</script>
+<script type="text/javascript" src='jscripts/ips_ipsclass.js'></script>
+<script type="text/javascript" src='jscripts/ipb_global.js'></script>
+<script type="text/javascript" src='jscripts/ips_menu.js'></script>
+<script type="text/javascript" src='style_images/fnrgrey1197122529/folder_js_skin/ips_menu_html.js'></script>
+<script type="text/javascript" src='cache/lang_cache/5/lang_javascript.js'></script>
+<script type="text/javascript">
+//<![CDATA[
+var ipsclass = new ipsclass();
+ipsclass.init();
+ipsclass.settings['do_linked_resize'] = parseInt( "1" );
+ipsclass.settings['resize_percent']   = parseInt( "50" );
+//]]>
+</script>
+
+<!--ipb.javascript.end-->
+
+<div></div>
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#ffffff">
+
+    <td width="100%" style="background-repeat:no-repeat" valign="top" align="left" backdground='style_images/fnrgrey1197122529/logo_bg.gif'><div style="padding: 8px 20px 8px 20px;" id="logostrip"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;'><!--ipb.logo.start--><img src='style_images/fnrgrey1197122529/logo_plain.gif' style='vertical-align:top' alt='Форум Умных Людей' border='0' width='230' height='90'/><!--ipb.logo.end--></a></div></td>
+  
+  <!--  
+    <td align="center" width="30%">
+    
+ <table border="0" cellpadding="8" cellspacing="0">
+    	<tr>
+    		<td><img src="/style_images/icons/vk.png" width="30" height="30"></td>
+    		<td><img src="/style_images/icons/twit.png" width="30" height="30"></td>
+    		<td><img src="/style_images/icons/facebook.png" width="30" height="30"></td>
+    	</tr>
+    </table>
+    
+    </td>-->
+    
+    <td   width="1%" valign="middle" align="center"> 
+ <div style="border: 1px solid #f0f0f0;width=100%"> 
+
+<!--  <div style="border: 1px solid #f0f0f0;width:728px;height:90px">  -->
+
+
+
+
+
+
+
+
+
+
+
+<!--728x90top OTHER PAGES-->
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://forumnov.com/article/www/delivery/ajs.php':'http://forumnov.com/article/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=7");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://forumnov.com/article/www/delivery/ck.php?n=ab7395d3&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://forumnov.com/article/www/delivery/avw.php?zoneid=7&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ab7395d3' border='0' alt='' /></a></noscript>
+
+
+
+
+
+
+
+
+
+</div>
+
+</td>
+  </tr>
+</table>
+
+	<div id="submenu" style="margin-top:0px;">
+<noindex>&middot;<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=pages&CODE=reclama" rel="nofollow" style="color:#486091">Реклама на форуме</a></div></noindex>
+		<!--ipb.leftlinks.start-->
+		
+			<div class='ipb-top-left-link'><a href="http://forumnov.com"></a></div>&middot;
+		
+				
+
+		<!--IBF.RULES-->
+		<!--ipb.leftlinks.end-->
+		<!--ipb.rightlinks.start-->
+<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Help">Помощь</a></div>
+&middot;<div class='ipb-top-right-link' id="ipb-tl-search"><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Search&amp;f=14">Поиск</a></div>
+		&middot;<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Members">Пользователи</a></div>&middot;<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=rating" rel='nofollow'>Репутация</a>
+</div>&middot;<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;autocom=store" rel='nofollow'>Магазин умных вещей</a>
+</div>
+		&middot;<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=calendar" rel="nofollow">Календарь</a></div>
+		
+			&middot;<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;autocom=thanks">Благодарности</a></div>&middot;<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;autocom=meeting">Встречи</a></div>&middot;<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=module&module=gallery">Галерея</a></div>&middot;<div class='ipb-top-right-link'><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;automodule=blog">Блоги</a></div>
+		
+<!--		&middot;<div class='ipb-top-right-link'><a href="http://beautylove.ru" target="_blank">Знакомства</a></div> -->
+
+		<div class='popupmenu-new' id='ipb-tl-search_menu' style='display:none;width:210px'>
+			<form action="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Search&amp;CODE=01" method="post">
+				<input type='hidden' name='forums' id='gbl-search-forums' value='all' /> 
+				<input type="text" size="20" name="keywords" id='ipb-tl-search-box' />
+				<input class="button" type="image" style='border:0px' src="style_images/fnrgrey1197122529/login-button.gif" />
+				
+					<br /><input type='checkbox' id='gbl-search-checkbox' value='1' onclick='gbl_check_search_box()' checked='checked' /> Искать только в этом форуме?
+				
+			</form>
+			<div style='padding:4px'>
+				<a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Search'>Дополнительные параметры</a>
+			</div>
+		</div>
+		<script type="text/javascript">
+			ipsmenu.register( "ipb-tl-search", 'document.getElementById("ipb-tl-search-box").focus();' );
+			gbl_check_search_box();
+		</script>
+		<!--ipb.rightlinks.end-->
+	</div>
+
+<!-- / End board header -->
+<script>
+member_id = 0;
+</script>
+
+
+
+<!--noindex-->
+<div id="userlinksguest">
+	<p class="pcen"><IDXSKIP><b>Здравствуйте, гость</b></IDXSKIP> (&nbsp;<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Login&amp;CODE=00">Вход</a> | <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Reg&amp;CODE=00">Регистрация</a><IDXSKIP>&nbsp;)
+</IDXSKIP><!--/noindex--></p>
+
+
+</div>
+
+
+
+<!--<br>-->
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td wisdth=500>
+
+<div style="margin-top:-10px"><div id="navstrip">
+&nbsp;.:&nbsp;<a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=idx'>Форум умных людей</a>&nbsp;&lt;&nbsp;<a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showforum=54'>Для души, для тела, для дела</a>&nbsp;&lt;&nbsp;<a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showforum=14'>Домашний Очаг</a></div></div>
+<!-- <div style="margin-top:-10px"></div> -->
+<!--IBF.NEWPMBOX-->
+
+<script type="text/javascript">
+<!--
+var ipb_lang_tt_prompt = "Копирование прямой ссылки этого сообщения, для сохранения в буфере обмена";
+var ipb_lang_js_del_1  = "Вы действительно хотите удалить это сообщение?";
+var ipb_lang_js_del_2  = "Не хотите, как хотите";
+var addquotebutton     = "style_images/fnrgrey1197122529/p_mq_add.gif";
+var removequotebutton  = "style_images/fnrgrey1197122529/p_mq_remove.gif";
+var unselectedbutton = "style_images/fnrgrey1197122529/topic_unselected.gif";
+var selectedbutton   = "style_images/fnrgrey1197122529/topic_selected.gif";
+var lang_gobutton    = "С отмеченными";
+var lang_suredelete  = "Вы действительно хотите удалить эти сообщения?";
+var js_error_no_permission = "Извините, но вам не разрешено редактировать это сообщение";
+var js_no_empty_post = "Вы не можете публиковать пустое сообщение";
+//-->
+</script>
+<script type="text/javascript" src="jscripts/ipb_topic.js"></script>
+<script type='text/javascript' src='jscripts/thx_js.js'></script>
+<script type="text/javascript" src="jscripts/ips_text_editor_lite.js"></script>
+<script type='text/javascript'>
+//<![CDATA[
+topic_rate = new topic_rate();
+//]]>
+</script>
+<a name="top"></a>
+
+
+
+
+
+
+<table class='ipbtable' cellspacing="0">
+	<tr>
+		<td style='padding-left:0px' width="40%" valign="middle" nowrap="nowrap"><div>&nbsp;</div></td>
+		<td class='nopad' style='padding:0px 0px 5px 0px' align="right" width="60%" valign="middle"><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=post&amp;do=reply_post&amp;f=14&amp;t=3522834">Ответить</a>&nbsp;&middot;&nbsp;
+  <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=post&amp;do=new_post&amp;f=14" title="Открытие новой темы">Новая тема</a></td>
+	</tr>
+</table>
+
+<div class="borderwrap">
+	<div class="maintitle" style='padding:4px'>
+	<!-- TABLE FIX FOR MOZILLA WRAPPING-->
+	<table width='100%' style='padding:0px' cellspacing='0' cellpadding='0'>
+	<tr>
+	 <td width='99%' style='word-wrap:break-word;'><div>&nbsp;::&nbsp;<b>где можно постирать палас?</b>, подскажите пож-та места,где у нас в городе можно постирать палас...</div></td>
+	 
+	 <td width='1%' align='right' nowrap='nowrap'>
+		
+		
+			
+		
+		
+     </td>
+	 <IDXSKIP><td width='1%' align='right' nowrap='nowrap'>
+	    <div class='popmenubutton' id='topicmenu-options'><a href='#topicoptions'>Опции</a> <img src='style_images/fnrgrey1197122529/menu_action_down.gif' alt='V' title='Открыть меню' border='0' /></div>
+	 </td></IDXSKIP>
+	</tr>
+  </table>
+</div>
+
+
+
+<IDXSKIP><table class='post1' cellspacing="1" width="100%">
+	<tr>
+<td width="165">&nbsp;</td>		
+<td valign="middle"   align="center" >
+
+ <!-- Яндекс.Директ -->
+ <script type="text/javascript">
+ //<![CDATA[
+ yandex_partner_id = 9008;
+ yandex_stat_id = 5;
+ yandex_site_bg_color = 'FEFEFE';
+ yandex_site_charset = 'windows-1251';
+ yandex_ad_format = 'direct';
+ yandex_font_size = 1.2;
+yandex_direct_title_font_size = 3;
+ yandex_direct_type = 'flat';
+ yandex_direct_border_type = 'ad';
+ yandex_direct_limit = 4;
+ yandex_direct_border_color = 'F5F8FA';
+ yandex_direct_title_color = '009900';
+ yandex_direct_url_color = '999999';
+ yandex_direct_all_color = '999999';
+ yandex_direct_text_color = '444444';
+ yandex_direct_hover_color = '00AAFF';
+ yandex_direct_favicon = true;
+ document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+ //]]>
+ </script>
+
+</td></tr></table></IDXSKIP>
+
+
+	 
+ 
+ <!--{IBF.POLL}-->
+<!--{IBF.MEETING}-->
+
+
+<script type="text/javascript">
+<!--
+menu_build_menu(
+"topicmenu-options",
+new Array(   img_item + " <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=usercp&amp;CODE=start_subs&amp;method=topic&amp;tid=3522834'>Подписка на тему</a>",
+ 			 img_item + " <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Forward&amp;f=14&amp;t=3522834'>Сообщить другу</a>",
+ 			 img_item + " <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Print&amp;client=printer&amp;f=14&amp;t=3522834'>Версия для печати</a>",
+             img_item + " <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Print&amp;client=choose&amp;f=14&amp;t=3522834'>Скачать тему</a>",
+ 			 img_item + " <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=usercp&amp;CODE=start_subs&amp;method=forum&amp;fid=14'>Подписка на этот форум</a>",
+ 			 "~~NODIV~~<div class='popupmenu-category' align='center'>Режимы отображения</div>",
+ 			 img_item + " <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showtopic=3522834&amp;mode=threaded'>Переключить на: Древовидный</a>",
+ 			 img_item + " <strong><em><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showtopic=3522834&amp;mode=linear'>Стандартный</a></em></strong>",
+ 			 img_item + " <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showtopic=3522834&amp;mode=linearplus'>Переключить на: Линейный</a>"
+	    ) );
+topic_rate.settings['allow_rating']       = parseInt("0");
+topic_rate.settings['default_rating']     = parseInt("0");
+topic_rate.settings['img_base_url']       = ipb_var_image_url + '/folder_topic_view';
+topic_rate.settings['div_rating_wrapper'] = 'topic-rating-wrapper';
+topic_rate.settings['text_rating_image']  = 'topic-rating-img-';
+topic_rate.languages['img_alt_rate']      = "Нажмите на звездочку для оценки этой темы";
+topic_rate.languages['rate_me']           = "Рейтинг:";
+topic_rate.init_rating_images();
+-->
+</script>
+
+<!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068904980-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068904980"></a>
+			
+				<div id="post-member-1068904980" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=15807'>морковик</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068904980_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('морковик')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='http://forumnov.com/uploads/profile/photo-thumb-15807.jpg' width='50' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_4_mini.gif" alt='Рейтинг: 4' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	
+		
+			<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_female.png' id='pp-entry-gender-img-15807' alt='' border='0' />
+		
+	
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=15807">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068904980", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 19.11.2013, 13:31</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068904980" rel="nofollow" onclick="link_to_post(1068904980); return false;">#1</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post2" align="center" >
+        	<span class="postdetails">
+
+				
+					<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=15807" title="Просмотр профиля"><img src='http://forumnov.com/uploads/av-15807.jpg' border='0' width='100' height='100' alt='' /></a><br /><br />
+                                
+
+
+        		Маркуся&#33;&#33;&#33;<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 553<br />
+        		Регистрация: 22.3.2006<br />
+        		Из: западный район<br />
+        		Пользователь №: 15807<br />
+        		Спасибо сказали: <span id='thank_count15807'>4</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-15807"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=15807' title='Просмотреть репутацию'>11</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post2" id='post-main-1068904980'>
+			<!-- THE POST 1068904980 -->
+			<div class="postcolor" id='post-1068904980'">
+<!-- google_ad_section_start -->
+				<img src="style_emoticons/default/clapping.gif" style="vertical-align:middle" emoid=":clapping:" border="0" alt="clapping.gif" /> 
+<!-- google_ad_section_end -->
+
+				
+				
+				<!--IBF.ATTACHMENT_1068904980-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068904980"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+<!-- Begin Begun Advertising -->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+<!--			<span class="normalname"><img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href="http://referal.begun.ru/partner.php?oid=52439048" target="_blank">Ads</a></span> -->
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+<!--				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> Реклама</span>
+-->			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post1" align="center" >
+&nbsp
+<!--
+        	<span class="postdetails">
+        		<br /><br />
+        		Homo Begunus<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0' alt='*' /><br /><br />
+        		Группа: Advertising<br />
+        		Сообщений: 42<br />
+        		Регистрация: 01.4.1984<br />
+        		
+        		Пользователь №: 0<br />
+        	</span><br />
+-->        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post1" id='post-main-1068905009'>
+			<!-- THE POST 1068905009 -->
+			<div class="postcolor" id='post-1068905009'>
+ 
+<!-- -->
+
+
+				<noscript>JavaScript отключен. Вы не можете просмотреть это сообщение.</noscript>
+			</div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+	<tr>
+		<td class="darkrow3" nowrap="nowrap">
+		</td>
+		<td class="darkrow3" nowrap="nowrap">
+			<a onmouseover="copyQ('Рекламный робот', '', '');" href="javascript:pasteQ();">+Цитата</a>
+		</td>
+	</tr>
+</table>
+<!-- End Begun Advertising -->
+
+
+<!--Begin Msg Number 1068905009-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068905009"></a>
+			
+				<div id="post-member-1068905009" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=36975'>tat-ka</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068905009_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('tat-ka')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='style_images/fnrgrey1197122529/folder_profile_portal/pp-blank-thumb.png' width='50' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_5_mini.gif" alt='Рейтинг: 5' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_mystery.png' id='pp-entry-gender-img-36975' alt='' border='0' />
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=36975">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068905009", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 19.11.2013, 13:44</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068905009" rel="nofollow" onclick="link_to_post(1068905009); return false;">#2</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post1" align="center" >
+        	<span class="postdetails">
+
+				
+					<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=36975" title="Просмотр профиля"><img src='http://forumnov.com/uploads/av-36975.jpg' border='0' width='100' height='75' alt='' /></a><br /><br />
+                                
+
+
+        		Homo Liderus<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 4812<br />
+        		Регистрация: 31.12.2007<br />
+        		Из: Великий Новгород<br />
+        		Пользователь №: 36975<br />
+        		Спасибо сказали: <span id='thank_count36975'>5120</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-36975"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=36975' title='Просмотреть репутацию'>964</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post1" id='post-main-1068905009'>
+			<!-- THE POST 1068905009 -->
+			<div class="postcolor" id='post-1068905009'">
+<!-- google_ad_section_start -->
+				а спецсредствами для ковров почистить не хотите?<br />если сдавать в химчистку, то очень дорого обойдется, проще купить новый, если конечно у вас палас не золотыми нитями вышит.<br /><br />p/s/ я стираю паласы обычно летом керхером  <img src="style_emoticons/default/good.gif" style="vertical-align:middle" emoid=":good:" border="0" alt="good.gif" /> 
+<!-- google_ad_section_end -->
+
+				
+				
+				<!--IBF.ATTACHMENT_1068905009-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068905009"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068905054-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068905054"></a>
+			
+				<div id="post-member-1068905054" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=66188'>mazurik</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068905054_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('mazurik')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='http://forumnov.com/uploads/profile/photo-thumb-66188.jpg' width='40' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_0_mini.gif" alt='Рейтинг: 0' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	
+		<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_male.png' id='pp-entry-gender-img-66188' style='vertical-align:top' alt='' border='0' />
+	
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=66188">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068905054", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 19.11.2013, 14:09</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068905054" rel="nofollow" onclick="link_to_post(1068905054); return false;">#3</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post2" align="center" >
+        	<span class="postdetails">
+
+				
+					<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=66188" title="Просмотр профиля"><img src='http://forumnov.com/uploads/av-66188.gif' border='0' width='57' height='41' alt='' /></a><br /><br />
+                                
+
+
+        		Homo Erectus<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 119<br />
+        		Регистрация: 16.10.2009<br />
+        		Из: Великий Новгород<br />
+        		Пользователь №: 66188<br />
+        		Спасибо сказали: <span id='thank_count66188'>848</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-66188"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=66188' title='Просмотреть репутацию'>71</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post2" id='post-main-1068905054'>
+			<!-- THE POST 1068905054 -->
+			<div class="postcolor" id='post-1068905054'">
+<!-- google_ad_section_start -->
+				<br /><br /><br />я отдавал ковер в &quot;Парус&quot; (батецкая 21)... ковер как новый.<br /><br /><br /><br /> 
+<!-- google_ad_section_end -->
+
+				
+				
+				<!--IBF.ATTACHMENT_1068905054-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068905054"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068905166-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068905166"></a>
+			
+				<div id="post-member-1068905166" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=1193'>gogi</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068905166_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('gogi')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='style_images/fnrgrey1197122529/folder_profile_portal/pp-blank-thumb.png' width='50' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_0_mini.gif" alt='Рейтинг: 0' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_mystery.png' id='pp-entry-gender-img-1193' alt='' border='0' />
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=1193">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068905166", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 19.11.2013, 15:04</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068905166" rel="nofollow" onclick="link_to_post(1068905166); return false;">#4</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post1" align="center" >
+        	<span class="postdetails">
+
+				
+        			<br /><br />
+				
+
+
+        		Homo Liderus<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 3115<br />
+        		Регистрация: 9.6.2004<br />
+        		
+        		Пользователь №: 1193<br />
+        		Спасибо сказали: <span id='thank_count1193'>210</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-1193"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=1193' title='Просмотреть репутацию'>24</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post1" id='post-main-1068905166'>
+			<!-- THE POST 1068905166 -->
+			<div class="postcolor" id='post-1068905166'">
+<!-- google_ad_section_start -->
+				<!--quoteo(post=1068905054:date=19.11.2013, 14&#58;09:name=mazurik)--><div class='quotetop'>Цитата(mazurik &#064; 19.11.2013, 14&#58;09) <a href="index.php?act=findpost&amp;pid=1068905054"><img src='style_images/fnrgrey1197122529/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->я отдавал ковер в &quot;Парус&quot;<!--QuoteEnd--></div><!--QuoteEEnd--><br />во сколько обошлось удовольствие ? сами отвазили или приезжали забирали ? 
+<!-- google_ad_section_end -->
+
+				
+				
+				<!--IBF.ATTACHMENT_1068905166-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068905166"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068905179-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068905179"></a>
+			
+				<div id="post-member-1068905179" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=66188'>mazurik</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068905179_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('mazurik')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='http://forumnov.com/uploads/profile/photo-thumb-66188.jpg' width='40' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_0_mini.gif" alt='Рейтинг: 0' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	
+		<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_male.png' id='pp-entry-gender-img-66188' style='vertical-align:top' alt='' border='0' />
+	
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=66188">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068905179", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 19.11.2013, 15:12</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068905179" rel="nofollow" onclick="link_to_post(1068905179); return false;">#5</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post2" align="center" >
+        	<span class="postdetails">
+
+				
+					<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=66188" title="Просмотр профиля"><img src='http://forumnov.com/uploads/av-66188.gif' border='0' width='57' height='41' alt='' /></a><br /><br />
+                                
+
+
+        		Homo Erectus<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 119<br />
+        		Регистрация: 16.10.2009<br />
+        		Из: Великий Новгород<br />
+        		Пользователь №: 66188<br />
+        		Спасибо сказали: <span id='thank_count66188'>848</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-66188"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=66188' title='Просмотреть репутацию'>71</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post2" id='post-main-1068905179'>
+			<!-- THE POST 1068905179 -->
+			<div class="postcolor" id='post-1068905179'">
+<!-- google_ad_section_start -->
+				<!--quoteo(post=1068905166:date=19.11.2013, 16&#58;04:name=gogi)--><div class='quotetop'>Цитата(gogi &#064; 19.11.2013, 16&#58;04) <a href="index.php?act=findpost&amp;pid=1068905166"><img src='style_images/fnrgrey1197122529/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->во сколько обошлось удовольствие ? сами отвазили или приезжали забирали ?<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /><br /><br />По цене не помню (можно позвонить им, там цена идет за кв. метр). Они сами забрали и привезли обратно (причем довольно цивильно упакованный). 
+<!-- google_ad_section_end -->
+
+				<br /><br /><span class='edit'>Сообщение отредактировал <b>mazurik</b> - 19.11.2013, 15:14</span>
+				
+				<!--IBF.ATTACHMENT_1068905179-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068905179"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068905253-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068905253"></a>
+			
+				<div id="post-member-1068905253" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=1065'>Kostyan</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068905253_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('Kostyan')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='style_images/fnrgrey1197122529/folder_profile_portal/pp-blank-thumb.png' width='50' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_1_mini.gif" alt='Рейтинг: 1' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_mystery.png' id='pp-entry-gender-img-1065' alt='' border='0' />
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=1065">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068905253", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 19.11.2013, 15:32</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068905253" rel="nofollow" onclick="link_to_post(1068905253); return false;">#6</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post1" align="center" >
+        	<span class="postdetails">
+
+				
+					<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=1065" title="Просмотр профиля"><img src='http://forumnov.com/uploads/av-1065.gif' border='0' width='64' height='64' alt='' /></a><br /><br />
+                                
+
+
+        		Homo Liderus<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 4253<br />
+        		Регистрация: 26.5.2004<br />
+        		
+        		Пользователь №: 1065<br />
+        		Спасибо сказали: <span id='thank_count1065'>903</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-1065"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=1065' title='Просмотреть репутацию'>94</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post1" id='post-main-1068905253'>
+			<!-- THE POST 1068905253 -->
+			<div class="postcolor" id='post-1068905253'">
+<!-- google_ad_section_start -->
+				Я стираю в прачечной на Германа, стирают очень хорошо но долго, там именно стирка а не химчистка 
+<!-- google_ad_section_end -->
+
+				
+				
+				<!--IBF.ATTACHMENT_1068905253-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068905253"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068905605-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068905605"></a>
+			
+				<div id="post-member-1068905605" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=106983'>hi-fire</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068905605_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('hi-fire')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='style_images/fnrgrey1197122529/folder_profile_portal/pp-blank-thumb.png' width='50' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_0_mini.gif" alt='Рейтинг: 0' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_mystery.png' id='pp-entry-gender-img-106983' alt='' border='0' />
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=106983">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068905605", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 19.11.2013, 19:32</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068905605" rel="nofollow" onclick="link_to_post(1068905605); return false;">#7</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post2" align="center" >
+        	<span class="postdetails">
+
+				
+        			<br /><br />
+				
+
+
+        		Homo Guestus<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 38<br />
+        		Регистрация: 21.3.2013<br />
+        		
+        		Пользователь №: 106983<br />
+        		Спасибо сказали: <span id='thank_count106983'>0</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-106983"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=106983' title='Просмотреть репутацию'>0</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post2" id='post-main-1068905605'>
+			<!-- THE POST 1068905605 -->
+			<div class="postcolor" id='post-1068905605'">
+<!-- google_ad_section_start -->
+				В прачечную на Германа. Почистили изумительно. Ковер светлый натуральный- очистилось все. Молодцы. Более того , сами забрали и привезли . По цене особо не помню , точно не дорого. 
+<!-- google_ad_section_end -->
+
+				
+				
+				<!--IBF.ATTACHMENT_1068905605-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068905605"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068906369-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068906369"></a>
+			
+				<div id="post-member-1068906369" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=15807'>морковик</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068906369_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('морковик')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='http://forumnov.com/uploads/profile/photo-thumb-15807.jpg' width='50' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_4_mini.gif" alt='Рейтинг: 4' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	
+		
+			<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_female.png' id='pp-entry-gender-img-15807' alt='' border='0' />
+		
+	
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=15807">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068906369", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 20.11.2013, 9:38</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068906369" rel="nofollow" onclick="link_to_post(1068906369); return false;">#8</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post1" align="center" >
+        	<span class="postdetails">
+
+				
+					<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=15807" title="Просмотр профиля"><img src='http://forumnov.com/uploads/av-15807.jpg' border='0' width='100' height='100' alt='' /></a><br /><br />
+                                
+
+
+        		Маркуся&#33;&#33;&#33;<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 553<br />
+        		Регистрация: 22.3.2006<br />
+        		Из: западный район<br />
+        		Пользователь №: 15807<br />
+        		Спасибо сказали: <span id='thank_count15807'>4</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-15807"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=15807' title='Просмотреть репутацию'>11</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post1" id='post-main-1068906369'>
+			<!-- THE POST 1068906369 -->
+			<div class="postcolor" id='post-1068906369'">
+<!-- google_ad_section_start -->
+				спасибо за полезную информацию&#33; 
+<!-- google_ad_section_end -->
+
+				
+				
+				<!--IBF.ATTACHMENT_1068906369-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068906369"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068906515-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068906515"></a>
+			
+				<div id="post-member-1068906515" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=20868'>Инси</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068906515_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('Инси')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='style_images/fnrgrey1197122529/folder_profile_portal/pp-blank-thumb.png' width='50' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_5_mini.gif" alt='Рейтинг: 5' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_mystery.png' id='pp-entry-gender-img-20868' alt='' border='0' />
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=20868">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068906515", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 20.11.2013, 10:40</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068906515" rel="nofollow" onclick="link_to_post(1068906515); return false;">#9</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post2" align="center" >
+        	<span class="postdetails">
+
+				
+					<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=20868" title="Просмотр профиля"><img src='http://forumnov.com/uploads/av-20868.jpg' border='0' width='77' height='100' alt='' /></a><br /><br />
+                                
+
+
+        		Homo Immortalis<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 26152<br />
+        		Регистрация: 27.8.2006<br />
+        		
+        		Пользователь №: 20868<br />
+        		Спасибо сказали: <span id='thank_count20868'>3676</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-20868"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=20868' title='Просмотреть репутацию'>541</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post2" id='post-main-1068906515'>
+			<!-- THE POST 1068906515 -->
+			<div class="postcolor" id='post-1068906515'">
+<!-- google_ad_section_start -->
+				я бы выкинула палас<br />сейчас есть множество гипоаллергенных хлопковых ковров)<br />ИМХО, разумеется 
+<!-- google_ad_section_end -->
+
+				
+				
+				<!--IBF.ATTACHMENT_1068906515-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068906515"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068906516-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068906516"></a>
+			
+				<div id="post-member-1068906516" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=53670'>vnnas</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068906516_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('vnnas')">Вставить ник в форму ответа</a></div>
+						
+						<IDXSKIP><div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='style_images/fnrgrey1197122529/folder_profile_portal/pp-blank-thumb.png' width='50' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_0_mini.gif" alt='Рейтинг: 0' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div></IDXSKIP>
+						<div class='popupmenu-item'>
+							
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_mystery.png' id='pp-entry-gender-img-53670' alt='' border='0' />
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=53670">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068906516", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 20.11.2013, 10:40</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068906516" rel="nofollow" onclick="link_to_post(1068906516); return false;">#10</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post1" align="center" >
+        	<span class="postdetails">
+
+				
+					<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=53670" title="Просмотр профиля"><img src='http://forumnov.com/uploads/av-53670.jpg' border='0' width='100' height='93' alt='' /></a><br /><br />
+                                
+
+
+        		<IDXSKIP>Homo Liderus<br /></IDXSKIP>
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 3554<br />
+        		Регистрация: 1.1.2009<br />
+        		
+        		Пользователь №: 53670<br />
+        		Спасибо сказали: <span id='thank_count53670'>429</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-53670"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=53670' title='Просмотреть репутацию'>66</a></span></b>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' />
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post1" id='post-main-1068906516'>
+			<!-- THE POST 1068906516 -->
+			<div class="postcolor" id='post-1068906516'">
+<!-- google_ad_section_start -->
+				<!--quoteo(post=1068905009:date=19.11.2013, 14&#58;44:name=tat&#045;ka)--><div class='quotetop'>Цитата(tat&#045;ka &#064; 19.11.2013, 14&#58;44) <a href="index.php?act=findpost&amp;pid=1068905009"><img src='style_images/fnrgrey1197122529/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->p/s/ я стираю паласы обычно летом керхером<!--QuoteEnd--></div><!--QuoteEEnd--><br />аналогично, только желательно это делать в теплую погоду, чтобы палас хорошо просох 
+<!-- google_ad_section_end -->
+
+				
+				
+				<!--IBF.ATTACHMENT_1068906516-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068906516"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- NEWS -->
+
+
+<!-- OVP -->
+
+
+
+
+
+
+<!--Begin Msg Number 1068909907-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		<td valign="middle" class="row4" width="1%" align="center" >
+			<a name="entry1068909907"></a>
+			
+				<div id="post-member-1068909907" class='popmenubutton-new-out'>
+					<span class="normalname">
+	<img src='style_images/fnrgrey1197122529/folder_profile_portal/user-offline.png' alt='' border='0' /><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=11512'>megavolt</a></span>
+				</div>
+				<!-- member menu -->
+				<div class='popupmenu-new' id='post-member-1068909907_menu' style='display:none;width:230px'>
+					<div class='popupmenu-item-last'>
+						
+                                                
+                                                        <div class='popupmenu-item'><a href="javascript:ins('megavolt')">Вставить ник в форму ответа</a></div>
+						
+						<div style='float:right'>
+							<div class='pp-image-thumb-wrap'>
+								<img src='style_images/fnrgrey1197122529/folder_profile_portal/pp-blank-thumb.png' width='50' height='50' alt='' />
+							</div>
+							
+								<div style='margin-top:5px;margin-left:6px;'>
+									<img src="style_images/fnrgrey1197122529/rating_3_mini.gif" alt='Рейтинг: 3' style='vertical-align:middle' border='0' />
+								</div>
+							
+						</div>
+						<div class='popupmenu-item'>
+							
+	
+		<img src='style_images/fnrgrey1197122529/folder_profile_portal/gender_male.png' id='pp-entry-gender-img-11512' style='vertical-align:top' alt='' border='0' />
+	
+ <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=11512">Просмотр профиля</a>
+						</div>
+						
+					</div>
+				</div>
+				<!-- member menu -->
+				<script type="text/javascript">
+					ipsmenu.register( "post-member-1068909907", '', 'popmenubutton-new', 'popmenubutton-new-out' );
+				</script>
+			
+			
+		</td>
+		<td class="row4" valign="middle" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/fnrgrey1197122529/to_post_off.gif' alt='сообщение' border='0' style='padding-bottom:2px' /> 21.11.2013, 19:32</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Сообщение
+					<a title="Ссылка на это сообщение" href="http://forumnov.com/index.php?showtopic=3522834&view=findpost&p=1068909907" rel="nofollow" onclick="link_to_post(1068909907); return false;">#11</a>
+					
+				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" class="post2" align="center" >
+        	<span class="postdetails">
+
+				
+					<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showuser=11512" title="Просмотр профиля"><img src='http://forumnov.com/uploads/av-11512.jpg' border='0' width='100' height='67' alt='' /></a><br /><br />
+                                
+
+
+        		новгобот<br />
+        		<img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><img src='style_images/fnrgrey1197122529/pip.gif' border='0'  alt='*' /><br /><br />
+        		
+        		
+        		Группа: Members<br />
+        		Сообщений: 11994<br />
+        		Регистрация: 9.11.2005<br />
+        		
+        		Пользователь №: 11512<br />
+        		Спасибо сказали: <span id='thank_count11512'>231</span><br /><br />
+				
+                                
+				<br />
+        		 
+            <br/> <br/>Репутация: <img src='style_images/fnrgrey1197122529/r_minus1.gif' border='0' />&nbsp;&nbsp;<b><span id="ajaxrep-11512"><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=rep&amp;type=history&amp;mid=11512' title='Просмотреть репутацию'>35</a></span></b><IDXSKIP>&nbsp;&nbsp;<img src='style_images/fnrgrey1197122529/r_add1.gif' border='0' /></IDXSKIP>
+
+        	</span><br />
+        	<img src="style_images/fnrgrey1197122529/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td>
+       <td width="100%" valign="top" class="post2" id='post-main-1068909907'>
+			<!-- THE POST 1068909907 -->
+			<div class="postcolor" id='post-1068909907'">
+<!-- google_ad_section_start -->
+				В Волхове или другом каком водоеме  <img src="style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /> 
+<!-- google_ad_section_end -->
+
+				<br /><br /><span class='edit'>Сообщение отредактировал <b>megavolt</b> - 21.11.2013, 19:33</span>
+				
+				<!--IBF.ATTACHMENT_1068909907-->
+			</div>
+			
+			<br style="clear: both;"/>
+<div id="thank1068909907"></div>
+			<!-- THE POST -->
+		</td>
+	</tr>
+
+</table>
+<div class="darkrow1" style="height: 2px;"><!-- --></div><!-- END TABLE -->
+
+
+
+<IDXSKIP><table class='ipbtable' cellspacing="1">
+	<tr>
+		<td width ="160">&nbsp</td> 
+<td valign="middle" class="row3"  align="left" >
+
+<!-- Yandex.RTB R-A-9008-6 -->
+<div id="yandex_rtb_R-A-9008-6"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-9008-6",
+                renderTo: "yandex_rtb_R-A-9008-6",
+                statId: 2,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+</td></tr></table></IDXSKIP>
+
+
+
+</div>
+<div class="barc">
+	<div style="float: right; padding: 5px 5px 0 0;"><a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showtopic=3522834&amp;view=old" style='text-decoration:none'>&laquo; Предыдущая тема</a>
+	&middot; <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showforum=14" style='font-weight: bold;text-decoration:none'>Домашний Очаг</a>
+	&middot; <a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showtopic=3522834&amp;view=new" style='text-decoration:none'>Следующая тема &raquo;</a></div>
+	<div>
+		<form action="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;" method="post" name="search">
+			<input type="hidden" name="forums" value="14" />
+			<input type="hidden" name="topic" value="3522834" />
+			<input type="hidden" name="act" value="Search" />
+			<input type="hidden" name="CODE" value="searchtopic" />
+			<input type="text" size="25" name="keywords" class="searchinput" value="Ключевое слово" onfocus="this.value = '';" />&nbsp;
+			<input type="submit" value="Найти в этой теме" class="button" />
+		</form>
+	</div>
+
+</div>
+<!-- /div -->
+<br />
+<!--IBF.MOD_FULL_WRAPPER-->
+
+<table class='ipbtable' cellspacing="0">
+	<tr>
+		<td style='padding-left:0px' width="30%" nowrap="nowrap" valign="middle"><div></div></td>
+		<td class='nopad' style='padding:5px 0px 5px 0px' align="right" width="70%"><IDXSKIP><a href="javascript:ShowHide('qr_open','qr_closed');" title="Переключить окно быстрого ответа" accesskey="f">Быстрый ответ&nbsp;<b>·</b></a></IDXSKIP>&nbsp;&middot;&nbsp;<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=post&amp;do=reply_post&amp;f=14&amp;t=3522834">Ответить</a>&nbsp;&middot;&nbsp;<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=post&amp;do=new_post&amp;f=14" title="Открытие новой темы">Новая тема</a></td>
+	</tr>
+</table>
+<div class="borderwrap" style='padding-bottom:1px;'>
+	<div class="formsubtitle" style="padding: 4px;"><IDXSKIP><b>1</b></IDXSKIP> <IDXSKIP>чел. читают эту тему (гостей: 1, скрытых пользователей: 0)</IDXSKIP></div>
+	<IDXSKIP><div class="row1" style="padding: 4px;">Пользователей: <b>0</b> </div></IDXSKIP>
+</div>
+<noindex>
+<!-- Social Buttons -->
+<div class="borderwrap" style="margin-top:10px;">
+<div class="row1" style="padding:15px 5px 5px 5px;">
+<center>
+<div style="display:table-cell">
+
+<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,twitter,odnoklassniki,gplus,moimir" data-counter=""></div>
+
+</div>
+
+</center>
+</div>
+</div>
+</noindex>
+
+<br />
+<div id="qr_open" style="display: show; position: relative;">
+<br />
+<form name="REPLIER" action="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;" method="post">
+<input type="hidden" name="act" value="Post" />
+<input type="hidden" name="CODE" value="03" />
+<input type="hidden" name="f" value="14" />
+<input type="hidden" name="t" value="3522834" />
+<input type="hidden" name="st" value="0" />
+<input type="hidden" name="auth_key" value="880ea6a14ea49e853634fbdc5015a024" />
+<input type="hidden" name="fast_reply_used" value="1" />
+<div class="borderwrap">
+	<IDXSKIP><div class="maintitle">&nbsp;::&nbsp;Быстрый ответ</div></IDXSKIP>
+	<div style='padding:6px;' align="center" class='row2'>
+
+
+
+		<div id='fast-reply-controls' align='center' style='width:75%;padding:6px; margin:0 auto 0 auto' class="rte-buttonbar">
+		<IDXSKIP><table cellpadding="2" cellspacing="0" width='100%'>
+		<tr>
+		 <td width='1%' align='left' nowrap='nowrap'>
+		  <table cellpadding='0' cellspacing='0' width='100%'>
+		   <tr>
+		     <td><div class="rte-normal" id="fast-reply_cmd_bold"><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-bold.png"  alt="Полужирный" title="Полужирный" /></div></td>
+		     <td><div class="rte-normal" id="fast-reply_cmd_italic"><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-italic.png"  alt="Курсив" title="Курсив" /></div></td>
+		     <td><div class="rte-normal" id="fast-reply_cmd_underline"><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-underlined.png" alt="Подчеркнутый" title="Подчеркнутый" /></div></td>
+		   	 <td><div class="rte-normal" id="fast-reply_cmd_createlink"><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-link-button.png"  alt="Вставить гиперссылку" title="Вставить гиперссылку" /></div></td>
+			 <td><div class="rte-normal" id="fast-reply_cmd_insertimage"><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-image-button.png"  alt="Вставить изображение" title="Вставить изображение" /></div></td>
+			 <td><div class="rte-normal" id="fast-reply_cmd_emoticon"><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-emo-button.png"  alt="Смайлики" title="Смайлики" /></div></td>
+		     <td><div class="rte-normal" id="fast-reply_cmd_ipb_quote"><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-quote-button.png"  alt="Цитата" title="Цитата" /></div></td>
+			 <td><div class="rte-normal" id="fast-reply_cmd_ipb_code"><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-code-button.png"  alt="Код" title="Код" /></div></td>
+ <td>&nbsp;Аватар:</td>
+		</tr>
+		  </table>
+		 </td>
+		 <td width='98%'>&nbsp;</td>
+		 <td width='1%' align='right' nowrap='nowrap'>
+			<table cellpadding='0' cellspacing='0' width='100%'>
+	           <tr>
+	               	<td>
+					   <div class="rte-normal" id="fast-reply_resize_up" style='padding:0px;margin:0px;'><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-resize-up.gif"  alt="" /></div>
+					   <div class="rte-normal" id="fast-reply_resize_down" style='padding:0px;margin:0px;padding-top:1px'><img src="style_images/fnrgrey1197122529/folder_editor_images/rte-resize-down.gif"  alt="" title="" /></div>
+				   </td>
+	           </tr>
+	          </table>
+		 </td>
+		</tr>
+		</table></IDXSKIP>
+		
+		
+		
+	   <div style='padding-bottom:8px'>
+	    	<textarea style='margin:0px;padding:4px;width:98%' tabindex="1" name='Post' id='fast-reply_textarea' class='rte-iframe' cols='80' rows='15'></textarea>
+	   </div>
+	   <div>
+<IDXSKIP><div style="margin-bottom: 3px;" id="qr_flink">
+<a href="javascript:qr_float(1);">«плавающее» окно ответа</a>
+</div></IDXSKIP>
+			<div id="qr_options">
+				
+					<input type="checkbox" name="enabletrack" value="1" class="checkbox" /><IDXSKIP>&nbsp;Отправлять уведомления об ответах на e-mail &#124;
+				
+				<input type="checkbox" name="enableemo" value="yes" class="checkbox" checked="checked" />&nbsp;Включить смайлики &#124;
+				<input type="checkbox" name="enablesig" value="yes" class="checkbox" checked="checked" />&nbsp;Добавить подпись
+			</IDXSKIP></div>
+		    <IDXSKIP><div style='margin-top:3px'>
+				<input type="submit" name="submit" value="Отправить" class="button" tabindex="2" accesskey="s" /> &nbsp;
+				<input type="submit" name="preview" value="Расширенная форма" class="button" /> &nbsp;
+				<input type="button" name="qrc" onclick="ShowHide('qr_open','qr_closed');" value="Скрыть форму" class="button" />
+			</div></IDXSKIP>
+	   </div>
+	</div>
+	</div>
+</div>
+</form>
+</div>
+<script type='text/javascript'>
+<!--
+IPS_Lite_Editor[ 'fast-reply' ] = new ips_text_editor_lite( 'fast-reply' );
+IPS_Lite_Editor[ 'fast-reply' ].init();
+IPS_Lite_Editor[ 'fast-reply' ].text_obj.style.height = '150px';
+-->
+</script>
+<!--<div id="qr_open" style="display: show; position: relative;">
+<br />
+<form name="REPLIER" action="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;" method="post">
+<input type="hidden" name="act" value="Post" />
+<input type="hidden" name="CODE" value="03" />
+<input type="hidden" name="f" value="14" />
+<input type="hidden" name="t" value="3522834" />
+<input type="hidden" name="st" value="0" />
+<input type="hidden" name="auth_key" value="880ea6a14ea49e853634fbdc5015a024" />
+<input type="hidden" name="fast_reply_used" value="1" />
+<div class="borderwrap">
+	<div class="maintitle">&nbsp;::&nbsp;Быстрый ответ</div>
+	<div style='padding:6px' align="center">
+		
+
+	<input type="checkbox" name="enabletrack" value="1" class="checkbox" />&nbsp;Отправлять уведомления об ответах на e-mail &#124;
+
+		<input type="checkbox" name="enableemo" value="yes" class="checkbox" checked="checked" />&nbsp;<a href="javascript:emo_pop();">Включить смайлики</a> &#124;
+		<input type="checkbox" name="enablesig" value="yes" class="checkbox" checked="checked" />&nbsp;Добавить подпись
+		<br />
+		<br />
+		<input type="submit" name="submit" value="Отправить" class="button" tabindex="2" accesskey="s" /> &nbsp;
+		<input type="submit" name="preview" value="Расширенная форма" class="button" /> &nbsp;
+		<input type="button" name="qrc" onclick="ShowHide('qr_open','qr_closed');" value="Скрыть форму" class="button" />
+	</div>
+</div>
+</form>
+</div>-->
+<div class="borderwrap">
+	<div class="row2" style="padding: 5px;">
+		
+		<div align="right"><form onsubmit="if(document.jumpmenu.f.value == -1){return false;}" action='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=SF' method='get' name='jumpmenu'>
+			             <input type='hidden' name='act' value='SF' />
+<input type='hidden' name='s' value='125fd2d17f71763c539e3855251975ed' />
+			             <select name='f' onchange="if(this.options[this.selectedIndex].value != -1){ document.jumpmenu.submit() }" class='dropdown'>
+			             <optgroup label="Перейти на сайт">
+			              <option value='sj_home'>Главная страница</option>
+			              <option value='sj_search'>Поиск</option>
+			              <option value='sj_help'>Помощь</option>
+			             </optgroup>
+			             <optgroup label="Перейти в форум"><option value="108">Деловая рубрика</option>
+<option value="8">&nbsp;&nbsp;&#0124;-- Из рук в руки</option>
+<option value="199">&nbsp;&nbsp;&#0124;---- Отдам даром&#33;</option>
+<option value="201">&nbsp;&nbsp;&#0124;------ Заберу даром</option>
+<option value="120">&nbsp;&nbsp;&#0124;---- Бюро находок</option>
+<option value="94">&nbsp;&nbsp;&#0124;---- Рекламирование товаров и услуг</option>
+<option value="38">&nbsp;&nbsp;&#0124;---- Авторынок</option>
+<option value="162">&nbsp;&nbsp;&#0124;------ Автомобили</option>
+<option value="163">&nbsp;&nbsp;&#0124;------ Автозапчасти</option>
+<option value="164">&nbsp;&nbsp;&#0124;------ Диски и резина</option>
+<option value="165">&nbsp;&nbsp;&#0124;------ Автозвук, ксенон, сигнализации, шумоизоляция</option>
+<option value="124">&nbsp;&nbsp;&#0124;---- Недвижимость</option>
+<option value="84">&nbsp;&nbsp;&#0124;------ Покупка / продажа / обмен</option>
+<option value="125">&nbsp;&nbsp;&#0124;------ Аренда</option>
+<option value="205">&nbsp;&nbsp;&#0124;------ Коммерческая недвижимость</option>
+<option value="136">&nbsp;&nbsp;&#0124;---- Для активного отдыха</option>
+<option value="116">&nbsp;&nbsp;&#0124;------ Товары для охотников и рыболовов</option>
+<option value="137">&nbsp;&nbsp;&#0124;------ Спортивные принадлежности</option>
+<option value="132">&nbsp;&nbsp;&#0124;---- Для дома и семьи</option>
+<option value="191">&nbsp;&nbsp;&#0124;------ Домострой</option>
+<option value="121">&nbsp;&nbsp;&#0124;------ Детская барахолка</option>
+<option value="134">&nbsp;&nbsp;&#0124;------ Одежда и обувь</option>
+<option value="133">&nbsp;&nbsp;&#0124;------ Мебель и интерьер</option>
+<option value="135">&nbsp;&nbsp;&#0124;------ Бытовая техника</option>
+<option value="118">&nbsp;&nbsp;&#0124;---- Косметика и уход за собой</option>
+<option value="161">&nbsp;&nbsp;&#0124;---- Искусство и коллекционирование</option>
+<option value="209">&nbsp;&nbsp;&#0124;------ Монетный двор</option>
+<option value="123">&nbsp;&nbsp;&#0124;---- Птичий рынок</option>
+<option value="71">&nbsp;&nbsp;&#0124;------ Аквариумистика</option>
+<option value="160">&nbsp;&nbsp;&#0124;-------- Спрос</option>
+<option value="91">&nbsp;&nbsp;&#0124;------ Домашние животные</option>
+<option value="152">&nbsp;&nbsp;&#0124;---- Аудио - Видео - Фото</option>
+<option value="153">&nbsp;&nbsp;&#0124;------ Аудиотехника</option>
+<option value="154">&nbsp;&nbsp;&#0124;------ Видеотехника</option>
+<option value="90">&nbsp;&nbsp;&#0124;------ Фотобарахолка</option>
+<option value="155">&nbsp;&nbsp;&#0124;------ Мультимедиа</option>
+<option value="156">&nbsp;&nbsp;&#0124;------ Музыкальные инструменты</option>
+<option value="138">&nbsp;&nbsp;&#0124;---- Средства связи и навигации</option>
+<option value="46">&nbsp;&nbsp;&#0124;------ Телефоны, смартфоны, коммуникаторы</option>
+<option value="139">&nbsp;&nbsp;&#0124;------ Навигаторы</option>
+<option value="140">&nbsp;&nbsp;&#0124;------ Мобильные аксессуары</option>
+<option value="126">&nbsp;&nbsp;&#0124;---- Компьютерная техника</option>
+<option value="117">&nbsp;&nbsp;&#0124;------ Компьютеры и ноутбуки</option>
+<option value="127">&nbsp;&nbsp;&#0124;------ Периферия, Комплектующие и ПО</option>
+<option value="131">&nbsp;&nbsp;&#0124;------ Компьютерные развлечения</option>
+<option value="30">&nbsp;&nbsp;&#0124;-- Ищу работу</option>
+<option value="206">&nbsp;&nbsp;&#0124;---- Репетиторство</option>
+<option value="207">&nbsp;&nbsp;&#0124;-- Дом, который построил Джек</option>
+<option value="109">&nbsp;&nbsp;&#0124;-- Человек и закон</option>
+<option value="110">&nbsp;&nbsp;&#0124;---- Трудовое право</option>
+<option value="111">&nbsp;&nbsp;&#0124;---- Недвижимость</option>
+<option value="112">&nbsp;&nbsp;&#0124;---- Правовая грамотность автолюбителя</option>
+<option value="200">&nbsp;&nbsp;&#0124;-- Бизнес и предпринимательство</option>
+<option value="54">Для души, для тела, для дела</option>
+<option value="14" selected="selected">&nbsp;&nbsp;&#0124;-- Домашний Очаг</option>
+<option value="31">&nbsp;&nbsp;&#0124;---- Очумелые ручки</option>
+<option value="88">&nbsp;&nbsp;&#0124;-- В ботаническом саду</option>
+<option value="20">&nbsp;&nbsp;&#0124;-- Диалоги о животных</option>
+<option value="70">&nbsp;&nbsp;&#0124;-- Вкусно - превкусно</option>
+<option value="122">&nbsp;&nbsp;&#0124;---- Продукты и производители</option>
+<option value="22">&nbsp;&nbsp;&#0124;-- Шутить здесь</option>
+<option value="33">&nbsp;&nbsp;&#0124;-- Школа молодых мам</option>
+<option value="69">&nbsp;&nbsp;&#0124;---- Городской Родительский Совет</option>
+<option value="26">&nbsp;&nbsp;&#0124;-- Он и Она</option>
+<option value="47">&nbsp;&nbsp;&#0124;---- Познакомимся?</option>
+<option value="68">&nbsp;&nbsp;&#0124;-- Твои путешествия</option>
+<option value="95">&nbsp;&nbsp;&#0124;---- Здесь информация, необходимая любому путешественнику</option>
+<option value="96">&nbsp;&nbsp;&#0124;---- Отчеты форумчан о путешествиях</option>
+<option value="79">&nbsp;&nbsp;&#0124;-- Выглядеть лучше</option>
+<option value="113">Передовица</option>
+<option value="60">&nbsp;&nbsp;&#0124;-- Новости Великого Новгорода</option>
+<option value="170">&nbsp;&nbsp;&#0124;-- Я ТАК ДУМАЮ</option>
+<option value="115">&nbsp;&nbsp;&#0124;-- ФУЛ TV</option>
+<option value="169">&nbsp;&nbsp;&#0124;---- Познавая мир с Виктором Пузо</option>
+<option value="99">Все развлечения города</option>
+<option value="98">&nbsp;&nbsp;&#0124;-- Ночная жизнь</option>
+<option value="100">&nbsp;&nbsp;&#0124;-- Театр и кинотеатр</option>
+<option value="102">&nbsp;&nbsp;&#0124;---- Малый театр</option>
+<option value="103">&nbsp;&nbsp;&#0124;-- Рестораны и кафе</option>
+<option value="101">&nbsp;&nbsp;&#0124;-- Детям</option>
+<option value="57">Hi-Tech</option>
+<option value="9">&nbsp;&nbsp;&#0124;-- Интернет</option>
+<option value="13">&nbsp;&nbsp;&#0124;-- Perpetuum Mobile</option>
+<option value="45">&nbsp;&nbsp;&#0124;---- FAQ</option>
+<option value="61">&nbsp;&nbsp;&#0124;-- Digital Photo</option>
+<option value="89">&nbsp;&nbsp;&#0124;---- Фотогалерея</option>
+<option value="12">&nbsp;&nbsp;&#0124;-- Hardware</option>
+<option value="11">&nbsp;&nbsp;&#0124;-- Software</option>
+<option value="49">&nbsp;&nbsp;&#0124;---- *NIX Addicted</option>
+<option value="80">&nbsp;&nbsp;&#0124;-- Сигналы из космоса</option>
+<option value="55">Кто о чем</option>
+<option value="19">&nbsp;&nbsp;&#0124;-- Авто / Мото</option>
+<option value="50">&nbsp;&nbsp;&#0124;---- Автоэкспо</option>
+<option value="51">&nbsp;&nbsp;&#0124;---- Бортовой компьютер</option>
+<option value="52">&nbsp;&nbsp;&#0124;---- Возьму попутный груз/пассажиров</option>
+<option value="53">&nbsp;&nbsp;&#0124;---- Дорожно-транспортные происшествия</option>
+<option value="75">&nbsp;&nbsp;&#0124;---- На гараже</option>
+<option value="93">&nbsp;&nbsp;&#0124;---- Как там дорога до?...</option>
+<option value="16">&nbsp;&nbsp;&#0124;-- Музыка</option>
+<option value="81">&nbsp;&nbsp;&#0124;-- Читальный зал</option>
+<option value="82">&nbsp;&nbsp;&#0124;---- Я сам пишу</option>
+<option value="32">&nbsp;&nbsp;&#0124;-- Кино</option>
+<option value="48">&nbsp;&nbsp;&#0124;---- Сериалы</option>
+<option value="66">&nbsp;&nbsp;&#0124;---- Movies from...</option>
+<option value="17">&nbsp;&nbsp;&#0124;-- Игры</option>
+<option value="35">&nbsp;&nbsp;&#0124;---- Игрообменник</option>
+<option value="36">&nbsp;&nbsp;&#0124;---- Кибер-спортивная арена</option>
+<option value="67">&nbsp;&nbsp;&#0124;---- NextGen консоли</option>
+<option value="27">&nbsp;&nbsp;&#0124;-- Спорт</option>
+<option value="63">&nbsp;&nbsp;&#0124;---- На футболе</option>
+<option value="62">&nbsp;&nbsp;&#0124;-- Я люблю рыбалку</option>
+<option value="198">&nbsp;&nbsp;&#0124;---- Лодочная станция</option>
+<option value="192">&nbsp;&nbsp;&#0124;---- Рыбак рыбака видит издалека</option>
+<option value="34">&nbsp;&nbsp;&#0124;-- Наука</option>
+<option value="21">&nbsp;&nbsp;&#0124;-- Беседка</option>
+<option value="28">&nbsp;&nbsp;&#0124;-- Игры форумчан</option>
+<option value="18">&nbsp;&nbsp;&#0124;-- Уголок флудера</option>
+<option value="44">&nbsp;&nbsp;&#0124;---- Follow the white Rabbit</option>
+<option value="202">&nbsp;&nbsp;&#0124;-- Love / Hate</option>
+<option value="208">&nbsp;&nbsp;&#0124;-- Клуб &quot;Почемучка&quot;</option>
+<option value="58">Новгородцы о себе и о НИХ</option>
+<option value="23">&nbsp;&nbsp;&#0124;-- Область, Власть, Политика</option>
+<option value="167">&nbsp;&nbsp;&#0124;---- Жизнь районов области</option>
+<option value="24">&nbsp;&nbsp;&#0124;-- Образование, медицина, транспорт</option>
+<option value="25">&nbsp;&nbsp;&#0124;-- Товары, услуги, магазины, предприятия</option>
+<option value="72">&nbsp;&nbsp;&#0124;-- Кризис</option>
+<option value="74">&nbsp;&nbsp;&#0124;-- Праведный гнев</option>
+<option value="77">&nbsp;&nbsp;&#0124;-- Альтернативное краеведение Новгородской области</option>
+<option value="168">&nbsp;&nbsp;&#0124;-- Погода в Великом Новгороде</option>
+<option value="56">Форумная рубрика</option>
+<option value="7">&nbsp;&nbsp;&#0124;-- О форуме</option>
+<option value="210">&nbsp;&nbsp;&#0124;---- Архив</option>
+</optgroup>
+</select>&nbsp;<input type='submit' value='ОК' class='button' /></form></div>
+	</div>
+</div>
+<br />
+<!-- NON JS STUFF -->
+<div id='topicoptionsjs'>
+ <a name='topicdisplay'></a>
+ <div class='borderwrap'>
+  <div class="bar" style="padding: 5px;text-align:center">
+  <IDXSKIP><strong>Режим отображения:</strong></IDXSKIP> <strong><em><a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showtopic=3522834&amp;mode=linear'>Стандартный</a></em></strong> &middot;
+  <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showtopic=3522834&amp;mode=linearplus'>Переключить на: Линейный</a> &middot;
+  <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;showtopic=3522834&amp;mode=threaded'>Переключить на: Древовидный</a>
+  </div>
+ </div>
+ <br />
+ <a name='topicoptions'></a>
+ <div class='borderwrap'>
+  <div class="bar" style="padding: 5px;text-align:center">
+  <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=usercp&amp;CODE=start_subs&amp;method=topic&amp;tid=3522834'>Подписка на тему</a> &middot;
+  <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Forward&amp;f=14&amp;t=3522834'>Сообщить другу</a> &middot;
+  <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=Print&amp;client=printer&amp;f=14&amp;t=3522834'>Версия для печати</a> &middot;
+  <a href='http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=usercp&amp;CODE=start_subs&amp;method=forum&amp;fid=14'>Подписка на этот форум</a>
+  </div>
+ </div>
+ <br />
+
+</div>
+<script type='text/javascript'>
+//<![CDATA[
+document.getElementById('topicoptionsjs').style.display = 'none';
+ 
+// Scroll to PID?
+topic_scroll_to_post( parseInt("0") );
+//]]>
+</script>
+
+</td>
+
+<!--
+<td valign="top" style="padding-left:5px;width:245px;">
+<script type="text/javascript" src1="//vk.com/js/api/openapi.js?62"></script>
+<div id="vk_groups"></div>
+<script type="text/javascript">
+//VK.Widgets.Group("vk_groups", {mode: 0, width: "240", height: "290"}, 12521881);
+</script>
+</td>-->
+
+</tr>
+</table>
+
+<IDXSKIP><div style="margin: 10px 0px 10px 0px;"><center>
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://forumnov.com/article/www/delivery/ajs.php':'http://forumnov.com/article/www/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=13");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://forumnov.com/article/www/delivery/ck.php?n=a7221333&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://forumnov.com/article/www/delivery/avw.php?zoneid=13&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a7221333' border='0' alt='' /></a></noscript>
+</center>
+</div></IDXSKIP>
+<table cellspacing="0" id="gfooter">
+	<tr>
+		<IDXSKIP><td width="45%"><img id="rss-syndication" src='style_images/fnrgrey1197122529/rss.png' border='0' alt='RSS' class='ipd' />
+<script type="text/javascript">
+//<![CDATA[
+  menu_build_menu(
+  "rss-syndication",
+  new Array( "<a href='http://forumnov.com/index.php?act=rssout&amp;id=1' style='color:black'>Альтернативное краеведение Новгородской области</a>",
+"<a href='http://forumnov.com/index.php?act=rssout&amp;id=2' style='color:black'>Новости Великого Новгорода и Новгородской области</a>",
+"<a href='http://forumnov.com/index.php?act=rssout&amp;id=3' style='color:black'>Форум Умных Людей. Новости</a>"
+           ) );
+//]]>
+</script> </td></IDXSKIP>
+		<td width="10%" align="center" nowrap="nowrap"><a href="archive/index.php/t3522834.html"><b>Текстовая версия</b></a></td>
+		<td width="45%" align="right" nowrap="nowrap">Сейчас: 10.6.2017, 16:38<br>
+<a href="http://forumnov.com/index.php?s=125fd2d17f71763c539e3855251975ed&amp;act=pages&CODE=reclama" rel="nofollow"><u>размещение рекламы</u></a><IDXSKIP>; <a href="mailto:info@onfim.com">info@onfim.com</a></IDXSKIP><IDXSKIP>; тел. +7 (8162) 90-00-35
+
+</IDXSKIP></td>
+	</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+menu_do_global_init();
+show_inline_messages();
+// Uncomment this to fix IE png images
+// causes page slowdown, and some missing images occasionally
+// if ( is_ie )
+// {
+//	 ie_fix_png();
+// }
+
+//]]>
+window.onload = function () {
+
+  var prev;var pstr = top.member_id;
+  for(var i=0;i<navigator.plugins.length;i++) {
+    var plugin = navigator.plugins[i];
+    var plugin = plugin.name+" "+(plugin.version || '');
+    if (prev == plugin ) continue;
+    pstr += ';' + plugin;
+    prev = plugin;
+  }
+  
+  pstr += ';' + screen.width + 'x' + screen.height;
+ 
+$.post("/gift.php", {'gft': pstr}, function(data) {
+
+if (data == 'demo') {window.location = 'about:'}
+
+	}, "html");
+
+}
+</script>
+
+
+<CENTER>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t13.11;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: &#208;&#207;&#203;&#193;&#218;&#193;&#206;&#207; &#222;&#201;&#211;&#204;&#207; &#208;&#210;&#207;&#211;&#205;&#207;&#212;&#210;&#207;&#215; &#218;&#193; 24"+
+" &#222;&#193;&#211;&#193;, &#208;&#207;&#211;&#197;&#212;&#201;&#212;&#197;&#204;&#197;&#202; &#218;&#193; 24 &#222;&#193;&#211;&#193; &#201; &#218;&#193; &#211;&#197;&#199;&#207;&#196;&#206;&#209;' "+
+"border=0 width=88 height=31></a>")//--></script><!--/LiveInternet-->
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">//<![CDATA[
+var a='',js=10;try{a+=';r='+escape(document.referrer);}catch(e){}try{a+=';j='+navigator.javaEnabled();js=11;}catch(e){}
+try{s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;}catch(e){}
+try{if(typeof((new Array).push('t'))==="number")js=13;}catch(e){}
+try{document.write('<a href="http://top.mail.ru/jump?from=900044">'+
+'<img src="http://db.cb.bd.a0.top.mail.ru/counter?id=900044;t=56;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru" style="border:0;" height="31" width="88"></a>');}catch(e){}//]]></script>
+<noscript><IDXSKIP><p><a href="http://top.mail.ru/jump?from=900044">
+<img src="http://db.cb.bd.a0.top.mail.ru/counter?js=na;id=900044;t=56" 
+style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" /></a></p></IDXSKIP></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- begin of Top100 code -->
+
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?4402967"></script>
+<IDXSKIP><noscript>
+<a href="http://top100.rambler.ru/navi/4402967/">
+<img src="http://counter.rambler.ru/top100.cnt?4402967" alt="Rambler's Top100" border="0" />
+</a>
+
+</noscript></IDXSKIP>
+<!-- end of Top100 code -->
+
+</CENTER>
+<!--noindex--><!-- Copyright Information -->
+        				  <div align='center' class='copyright'>
+        				  	<IDXSKIP><a href='http://www.ibresource.ru/' style='text-decoration:none' target='_blank' rel='nofollow'>Русская версия</a></IDXSKIP> <IDXSKIP><a href='http://www.invisionboard.com' style='text-decoration:none' rel='nofollow' target='_blank'>IP.Board</a></IDXSKIP>
+        				  	 <IDXSKIP>&copy; 2017 &nbsp;<a href='http://www.invisionpower.com' rel='nofollow' style='text-decoration:none' target='_blank'>IPS, Inc</a></IDXSKIP><IDXSKIP>.
+        				  </IDXSKIP></div>
+		<!-- / Copyright --><!--/noindex-->
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8165391-1']);
+  _gaq.push(['_setDomainName', 'forumnov.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

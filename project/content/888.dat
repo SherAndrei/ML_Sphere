@@ -1,0 +1,723 @@
+pb.buhgalteria.ru/faq/staff/?PAGEN_1=2
+<!doctype html>
+<html lang="ru">
+	<head>
+<script type="text/javascript">
+			function ctSetCookie(c_name, value) {
+				document.cookie = c_name + "=" + encodeURIComponent(value) + "; path=/";
+			}
+
+			ctSetCookie("ct_ps_timestamp", Math.floor(new Date().getTime()/1000));
+			ctSetCookie("ct_fkp_timestamp", "0");
+			ctSetCookie("ct_pointer_data", "0");
+			ctSetCookie("ct_timezone", "0");
+
+			setTimeout(function(){
+				ctSetCookie("ct_checkjs", "9691a8cb7b00ed8fadadc191d01a5785");
+				ctSetCookie("ct_timezone", new Date().getTimezoneOffset()/60);
+			},1000);
+
+			//Stop observing function
+			function ctMouseStopData(){
+				if(typeof window.addEventListener == "function")
+					window.removeEventListener("mousemove", ctFunctionMouseMove);
+				else
+					window.detachEvent("onmousemove", ctFunctionMouseMove);
+				clearInterval(ctMouseReadInterval);
+				clearInterval(ctMouseWriteDataInterval);				
+			}
+
+			//Stop key listening function
+			function ctKeyStopStopListening(){
+				if(typeof window.addEventListener == "function"){
+					window.removeEventListener("mousedown", ctFunctionFirstKey);
+					window.removeEventListener("keydown", ctFunctionFirstKey);
+				}else{
+					window.detachEvent("mousedown", ctFunctionFirstKey);
+					window.detachEvent("keydown", ctFunctionFirstKey);
+				}			
+			}
+
+			var d = new Date(), 
+				ctTimeMs = new Date().getTime(),
+				ctMouseEventTimerFlag = true, //Reading interval flag
+				ctMouseData = "[",
+				ctMouseDataCounter = 0;
+				
+			//Reading interval
+			var ctMouseReadInterval = setInterval(function(){
+					ctMouseEventTimerFlag = true;
+				}, 300);
+				
+			//Writting interval
+			var ctMouseWriteDataInterval = setInterval(function(){ 
+					var ctMouseDataToSend = ctMouseData.slice(0,-1).concat("]");
+					ctSetCookie("ct_pointer_data", ctMouseDataToSend);
+				}, 3000);
+
+			//Logging mouse position each 300 ms
+			var ctFunctionMouseMove = function output(event){
+				if(ctMouseEventTimerFlag == true){
+					var mouseDate = new Date();
+					ctMouseData += "[" + event.pageY + "," + event.pageX + "," + (mouseDate.getTime() - ctTimeMs) + "],";
+					ctMouseDataCounter++;
+					ctMouseEventTimerFlag = false;
+					if(ctMouseDataCounter >= 100)
+						ctMouseStopData();
+				}
+			}
+			//Writing first key press timestamp
+			var ctFunctionFirstKey = function output(event){
+				var KeyTimestamp = Math.floor(new Date().getTime()/1000);
+				ctSetCookie("ct_fkp_timestamp", KeyTimestamp);
+				ctKeyStopStopListening();
+			}
+
+			if(typeof window.addEventListener == "function"){
+				window.addEventListener("mousemove", ctFunctionMouseMove);
+				window.addEventListener("mousedown", ctFunctionFirstKey);
+				window.addEventListener("keydown", ctFunctionFirstKey);
+			}else{
+				window.attachEvent("onmousemove", ctFunctionMouseMove);
+				window.attachEvent("mousedown", ctFunctionFirstKey);
+				window.attachEvent("keydown", ctFunctionFirstKey);
+			}
+		</script>
+		<meta name="author" content="buhgalteria.ru">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://pb.buhgalteria.ru/favicon.ico">
+		<link rel="stylesheet" href="/template/css/style.css">
+		<!--[if lte IE 8]><link rel="stylesheet" href="/template/css/ie.css"><![endif]-->
+		<style type='text/css'>@import "http://buhgalteria.ru/template/css/style.css";</style>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<link href="/bitrix/js/main/core/css/core.min.css?14471460162854" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/main/core/css/core_popup.min.css?147065665829699" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/catalog/pb-online/style.css?14328942663954" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/catalog/pb-online/bitrix/menu/berator-menu-left/style.css?14295960852424" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/catalog/pb-online/bitrix/catalog.section/.default/style.css?1432114246315" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/js/fancybox/jquery.fancybox-1.3.1.css?14302959945264" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/system.auth.form/auth_20131008/style.css?14353067742278" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/search.title/pb-search-title/style.css?14347007182322" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/menu/menu/style.css?142959608451" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/styles.css?14944115208567" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/template_styles.css?149441152012016" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BUH_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1497259984','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'2d66a66b3738ca37232d181dd368312c'});</script>
+
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.min.js?148041549773556"></script>
+<script type="text/javascript" src="/bitrix/js/main/rsasecurity.min.js?144714601513967"></script>
+<script type="text/javascript" src="/bitrix/js/main/utils.min.js?144714601519858"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.min.js?147065665821031"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_popup.min.js?147065665529812"></script>
+<script type="text/javascript" src="/bitrix/js/main/jquery/jquery-1.8.3.min.js?136500318293636"></script>
+
+
+<script type="text/javascript" src="/bitrix/templates/buhgalteria2.0-PB_new_2015/js/fancybox/jquery.fancybox-1.3.1.pack.js?143029599414799"></script>
+<script type="text/javascript" src="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/system.auth.form/auth_20131008/script.js?1429596085564"></script>
+<script type="text/javascript" src="/bitrix/components/bitrix/search.title/script.min.js?14804154566110"></script>
+<script type="text/javascript" src="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/catalog/pb-online/script.js?1429596085558"></script>
+<script type="text/javascript" src="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/catalog/pb-online/bitrix/menu/berator-menu-left/script.js?14295960851054"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "332f12302faa34c96bfe86f1e127a860"]); _ba.push(["host", "pb.buhgalteria.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+				<script src="/template/js/libs/modernizr-2.0.6.min.js"></script>
+
+		<script type="text/javascript" src="/template/js/js.js"></script>
+		<script src="/template/js/libs/jquery-ui-1.8.19.min.js"></script>
+		<script src="/template/js/script.js"></script>
+
+		
+				<title>Персонал</title>
+	</head>
+	<body>
+			<div id="wrapper">
+		<IDXSKIP><div class="pb_top_banner" id="pb_top_banner">
+			<!--'start_frame_cache_pb_top_banner'--><div id="default-1RrCSy">
+<noindex><a href="/bitrix/rk.php?id=690&amp;site_id=s1&amp;goto=http%3A%2F%2Fwww.buhgalteria.ru%2Fpodpiska2017new%2F%3Futm_source%3Dpb_buhgalteria%26utm_medium%3Dbanners%26utm_campaign%3Dtop%26utm_content%3D01%23pb" target="_blank"  rel="nofollow"><img alt="" title="" src="/upload/rk/977/97716bf2b0650f16c7e0119f8332e4a0.jpg" width="980" height="126" style="border:0;" /></a></noindex></div><!--'end_frame_cache_pb_top_banner'-->		</div></IDXSKIP>
+
+	<header id="header">
+	<nav class="header-tabs">
+		
+		
+<script type="text/javascript">
+top.BX.defer(top.rsasec_form_bind)({'formid':'system_auth_form6zOYVN','key':{'M':'vcySwUx2Yg0VrnHIi3Ufg+hvxeumUY2yl1WKNol8wZBvLEBxpkKf2PxS4T5WfUHwFwajxVsIcm0TpL2daxIWR9VYBSAtvuqZIQ6AiiCVqWaVkAP9pYqCZquNePP5YoGjxNFYElTQWAq56nzymlPmvk2lE5KxsvwrI41OV+LL+Lo=','E':'AQAB','chunk':'128'},'rsa_rand':'593e5fd0188640.35637888','params':['USER_PASSWORD']});
+</script>
+<!--'start_frame_cache_iIjGFB'-->
+
+	<div id="login-form-window">
+	
+		<a class="close" href="javascript:void(0)" onclick="return CloseLoginForm()" title="Закрыть"></a>
+	
+			
+		<form method="post" target="_top" action="/faq/staff/?PAGEN_1=2">
+			<input type="hidden" name="popup_window" value="Y" />
+							<input type="hidden" name="backurl" value="/faq/staff/index.php?PAGEN_1=2" />
+									<input type="hidden" name="AUTH_FORM" value="Y" />
+			<input type="hidden" name="TYPE" value="AUTH" />
+
+			<IDXSKIP><div class="login-title">
+				<span class="title">Вход</span>
+							</div></IDXSKIP>
+			
+			<IDXSKIP><div class="input-field">
+				<input class="login-f" type="text" name="USER_LOGIN" value="" maxlength="50" />
+			</div></IDXSKIP>
+			
+			<IDXSKIP><div class="input-field">
+				<input class="passwd-f" type="password" name="USER_PASSWORD" value="" maxlength="50" />
+			</div></IDXSKIP>
+			
+						
+			<IDXSKIP><div class="login-buttons">
+									<span>
+						<input class="remember" type="checkbox" id="USER_REMEMBER" name="USER_REMEMBER" value="Y" />
+						<label for="USER_REMEMBER"><span></span>Запомнить меня</label>
+					</span>
+									<span class="login-area">
+						<input class="login-submit" type="submit" name="Login" value="Войти" />
+					</span>
+			</div></IDXSKIP>
+			<div class="clear-both"></div>
+			
+			<div class="login-title">
+			<span class="registr"><a href="/auth/?forgot_password=yes&amp;backurl=%2Ffaq%2Fstaff%2Findex.php%3FPAGEN_1%3D2">Забыли свой пароль?</a></span>
+			</div>
+			<div class="clear-both"></div>
+		</form>
+	</div>
+
+	<div class="login-button">
+		<!--<a href="/auth/?register=yes&amp;register=yes&amp;backurl=%2Ffaq%2Fstaff%2Findex.php%3FPAGEN_1%3D2">
+					Зарегистрироваться
+					
+		</a>-->
+		 
+		<a href="/auth/?register=yes&amp;register=yes&amp;backurl=%2Ffaq%2Fstaff%2Findex.php%3FPAGEN_1%3D2" onclick="return ShowLoginForm();"><i class="icon bsignin"></i> Войти</a>
+	</div>
+
+
+<!--'end_frame_cache_iIjGFB'-->
+		<IDXSKIP><ul style="float:right;">
+			<li class="rounded">
+				<a href="http://www.buhgalteria.ru/beratorpb/?utm_source=akzia_dr2016&utm_medium=pb&utm_campaign=button&utm_content=top">
+				  Оформить подписку					
+				</a>
+			</li>
+		</ul></IDXSKIP>
+
+		<IDXSKIP><a href="http://buhgalteria.ru/" class="buhgalteria">Бухгалтерия<span>.ru</span></a></IDXSKIP>
+
+			</nav>
+		<div class="header-box rounded">
+			<IDXSKIP><a href="/" class="header-logo">Практическая бухгалтерия</a></IDXSKIP>
+				<IDXSKIP><div id="title-search" class="search-form">
+	<form class="header-search-form" action="/search/index.php" >
+		<input class="field" id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Поиск по сайту" /><input class="button" name="s" type="submit" value="" />
+	</form>
+	</div></IDXSKIP>
+<script type="text/javascript">
+var jsControl_047d514cb78d27614405030735c0b002 = new JCTitleSearch({
+	//'WAIT_IMAGE': '/bitrix/themes/.default/images/wait.gif',
+	'AJAX_PAGE' : '/faq/staff/?PAGEN_1=2',
+	'CONTAINER_ID': 'title-search',
+	'INPUT_ID': 'title-search-input',
+	'MIN_QUERY_LEN': 2
+});
+</script>
+			<nav class="header-menu">
+				
+
+<ul>
+
+						<IDXSKIP><li><a class="orange-item" href="/berator/">Бератор</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/uchetnye_resheniya/">Учет</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/ur_aspekt/">У юриста</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/kadry/">Зарплата</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/nalogovoe_planirovanie/">Налоги</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/proverki/">Проверки</a></li></IDXSKIP>
+			
+						<IDXSKIP><li class="orange-right"><a class="orange-item" href="/pr/">Проводки на примерах</a></li></IDXSKIP>
+			
+			<IDXSKIP><li class="cur orange-right"><a href="/faq/">Ответы экспертов</a></li></IDXSKIP>
+	
+
+</ul>
+
+			</nav>
+		</div>
+			</header>
+	<!--header-->
+	
+
+<div class="berator-content">
+	<table class="berator-table" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td class="pb-section-title" colspan="2">
+					<div class="td-title">
+					Ответы экспертов 					</div>
+					<div class="td-menu" id="td-menu">
+						<!--'start_frame_cache_td-menu'--><!--'end_frame_cache_td-menu'-->					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="berator-table-left">
+					
+<ul id="berator-multilevel-menu">
+
+	
+			<IDXSKIP><li><a href="/faq/taxes/" class="root-item">Налоги</a></li></IDXSKIP>
+		
+	
+	
+			<IDXSKIP><li><a href="/faq/property-equipment-and-intangible-assets/" class="root-item">Основные средства и НМА</a></li></IDXSKIP>
+		
+	
+	
+			<li><a href="/faq/statements/" class="root-item">Отчетность</a></li>
+		
+	
+	
+			<IDXSKIP><li><a href="/faq/primary-documents/" class="root-item">Первичные документы</a></li></IDXSKIP>
+		
+	
+	
+			<li><a href="/faq/staff/" class="root-item-selected">Персонал</a></li>
+		
+	
+	
+			<IDXSKIP><li><a href="/faq/check/" class="root-item">Проверки</a></li></IDXSKIP>
+		
+	
+	
+			<IDXSKIP><li><a href="/faq/company-registration/" class="root-item">Юридические вопросы</a></li></IDXSKIP>
+		
+	
+
+
+</ul>
+
+				</td>
+				<td class="berator-table-center">
+					<div class="berator-section">
+	
+					<div class="item" id="bx_3966226736_138962">
+<p class="fresh">свежий вопрос</p>			
+<div class="item-name"><a href="/faq/staff/138962/">Обложение страховыми взносами компенсации питания</a></div>
+		
+<div class="item-preview"><p>Общеобразовательное учреждение предоставляет работающим педагогам ежемесячную денежную компенсацию на питание в виде горячих завтраков. Должны ли данные выплаты облагаться взносами в фонды?</p></div>
+		</div>
+					<div class="item" id="bx_3966226736_138032">
+			
+<div class="item-name"><a href="/faq/staff/138032/">Нужно ли распределять отпускные в налоговом учете, если отпуск начинается в декабре, а оканчивается в январе следующего года?</a></div>
+		
+<div class="item-preview"><p>Работнику, отработавшему 11 месяцев, предоставлен ежегодный оплачиваемый отпуск. Начинается он в декабре, а оканчивается в январе следующего года. Нужно ли распределять отпускные в налоговом учете?</p>
+ </div>
+		</div>
+					<div class="item" id="bx_3966226736_138107">
+			
+<div class="item-name"><a href="/faq/staff/138107/">Как учесть проведение медицинского осмотра по программе финансирования предупредительных мер от ФСС?</a></div>
+		
+<div class="item-preview"><p> По программе финансирования предупредительных мер от ФСС нами по безналичному расчету получена сумма на проведение медицинского осмотра. Как правильно сделать бухгалтерскую запись этой операции? </p></div>
+		</div>
+					<div class="item" id="bx_3966226736_138469">
+			
+<div class="item-name"><a href="/faq/staff/138469/">Страховые взносы за совместителей: платить или нет?</a></div>
+		
+<div class="item-preview"><p>В нашей организации есть внешние совместители. Они трудоустроены только в 2014 году. Так как они заняты на работе по совместительству меньше двух лет, при заболевании организация не назначает им пособие. Надо ли нам начислять  взносы в ФСС с их зарплаты?</p></div>
+		</div>
+					<div class="item" id="bx_3966226736_137627">
+			
+<div class="item-name"><a href="/faq/staff/137627/">Запись в трудовой книжке при работе на полставки</a></div>
+		
+<div class="item-preview">Принимаем работника на полставки. Нужно ли оговаривать неполную ставку в трудовой книжке? </div>
+		</div>
+					<div class="item" id="bx_3966226736_136712">
+			
+<div class="item-name"><a href="/faq/staff/136712/">Предрейсовые и послерейсовые медосмотры водителей</a></div>
+		
+<div class="item-preview">Наша компания эксплуатирует легковые и грузовые автомобили для собственных нужд. Платные услуги по перевозке грузов и пассажиров мы не оказываем. А директор вообще управляет служебным автомобилем сам.&nbsp;&nbsp;Должны ли наши работники проходить предрейсовые и послерейсовые медосмотры?</div>
+		</div>
+					<div class="item" id="bx_3966226736_136710">
+			
+<div class="item-name"><a href="/faq/staff/136710/">Отпуск за неотработанное время</a></div>
+		
+<div class="item-preview">Работник проработал в компании всего семь месяцев, но ему авансом был предоставлен ежегодный оплачиваемый отпуск в полном объеме. Как отразить отпускные в бухгалтерском и в налоговом учете?</div>
+		</div>
+					<div class="item" id="bx_3966226736_133848">
+			
+<div class="item-name"><a href="/faq/staff/133848/">На какой счет списывать отпускные?</a></div>
+		
+<div class="item-preview">На какой счет нужно начислять отпускные работникам, занятым в производстве, если заработная плата им начисляется по счету 20 «Основное производство»? Некоторые коллеги считают, что эти выплаты нужно относить на счет 26 «Общехозяйственные расходы». </div>
+		</div>
+					<div class="item" id="bx_3966226736_132825">
+			
+<div class="item-name"><a href="/faq/staff/132825/">Выдача займа из наличной выручки</a></div>
+		
+<div class="item-preview">Чем грозит выдача займа из наличной выручки?</div>
+		</div>
+					<div class="item" id="bx_3966226736_132824">
+			
+<div class="item-name"><a href="/faq/staff/132824/">Выплата стипендий из наличной выручки</a></div>
+		
+<div class="item-preview">У нашей компании имеются ученические договоры &#40;ст. 198 ТК РФ&#41;. Вправе ли мы выплачивать стипендии из наличной выручки?</div>
+		</div>
+					<div class="item" id="bx_3966226736_132820">
+			
+<div class="item-name"><a href="/faq/staff/132820/">Заявление на выдачу денег под отчет</a></div>
+		
+<div class="item-preview">Изменились ли правила оформления заявления на выдачу денег под отчет?</div>
+		</div>
+					<div class="item" id="bx_3966226736_130610">
+			
+<div class="item-name"><a href="/faq/staff/130610/">Больничный лист после увольнения? Законно!</a></div>
+		
+<div class="item-preview">Бывший работник принес в бухгалтерию листок временной нетрудоспособности за период, в котором он у нас уже не работал.&nbsp;&nbsp;Разве мы обязаны его оплачивать? Дело в том, что через неделю после увольнения он сломал ногу. </div>
+		</div>
+					<div class="item" id="bx_3966226736_126093">
+			
+<div class="item-name"><a href="/faq/staff/126093/">О больничном в период простоя</a></div>
+		
+<div class="item-preview">В организации простой. Работник принес листок нетрудоспособности. Должны ли мы его оплатить?</div>
+		</div>
+					<div class="item" id="bx_3966226736_123891">
+			
+<div class="item-name"><a href="/faq/staff/123891/">Об обязанности выплаты материальной помощи</a></div>
+		
+<div class="item-preview">Если выплата материальной помощи при рождении ребенка не предусмотрена в коллективном или трудовом договоре, должен работодатель выплатить сотруднику мат.помощь при рождении ребенка по письменному заявлению ?</div>
+		</div>
+					<div class="item" id="bx_3966226736_123198">
+			
+<div class="item-name"><a href="/faq/staff/123198/">В командировке плюс «за свой счет»</a></div>
+		
+<div class="item-preview">Сотрудник направлен в командировку, во время командировки он написал заявление на отпуск за свой счет. Правомерно ли это?</div>
+		</div>
+					<div class="item" id="bx_3966226736_123105">
+			
+<div class="item-name"><a href="/faq/staff/123105/">НДФЛ: оплата проезда к месту собеседования</a></div>
+		
+<div class="item-preview">Сотрудник едет на трудоустройство из другого города. Облагаются ли НДФЛ суммы, компенсирующие проезд потенциального сотрудника?</div>
+		</div>
+					<div class="item" id="bx_3966226736_123011">
+			
+<div class="item-name"><a href="/faq/staff/123011/">НДФЛ с резидента</a></div>
+		
+<div class="item-preview">Я стала резидентом Российской Федерации в декабре 2011 года. Из моих доходов ежемесячно удерживали 30 процентов. По истечении 183 дней я получила статус налогового резидента. На данный момент я работаю в той же организации, на той же должности, однако с моих доходов все равно удерживают налог по ставке 30 процентов. Правильно ли это?</div>
+		</div>
+					<div class="item" id="bx_3966226736_120708">
+			
+<div class="item-name"><a href="/faq/staff/120708/">Авансовый отчет: трудоустройство</a></div>
+		
+<div class="item-preview">Сотрудник едет на трудоустройство в Москву из региона 6 июня, прилетает только 7 июня, соответственно устраивается на работу 7 июня. Какие документы необходимо оформить на поездку, полагаются ли ему суточные после устройства на работу?</div>
+		</div>
+					<div class="item" id="bx_3966226736_120344">
+			
+<div class="item-name"><a href="/faq/staff/120344/">Отпуск по уходу за ребенком до трех лет</a></div>
+		
+<div class="item-preview">Сотрудница вышла на работу, когда ребенку было 9 месяцев. Сейчас ребенку 1,5 года. Может ли она взять отпуск по уходу за ребенком до 3-х лет?</div>
+		</div>
+					<div class="item" id="bx_3966226736_120343">
+			
+<div class="item-name"><a href="/faq/staff/120343/">Порядок расчета пособия вновь принятой сотруднице</a></div>
+		
+<div class="item-preview">Работница была уволена до истечения ребенку 1,5 лет в связи с окончанием трудового договора и тут же была принята вновь на это же предприятие по срочному договору. Какой порядок расчета для пособия при продолжении отпуска?</div>
+		</div>
+					<div class="item" id="bx_3966226736_119577">
+			
+<div class="item-name"><a href="/faq/staff/119577/">Выход на работу без закрытия «больничного»</a></div>
+		
+<div class="item-preview">Находясь в отпуске, работник получил рваную глубокую травму. С 27 июня поступил на лечение и открыл больничный лист, через каждую неделю его продлевают еще на одну неделю, на данный момент восстановилась трудоспособность и появилось огромное желание выйти на работу. Может ли он рассчитывать на выход на работу без закрытия больничного листа? Если нет, то после закрытия больничного листа может ли он сразу выйти на работу без догула полагающихся дней к отпуску?</div>
+		</div>
+					<div class="item" id="bx_3966226736_119576">
+			
+<div class="item-name"><a href="/faq/staff/119576/">Рассчет декретных</a></div>
+		
+<div class="item-preview">Трудовой стаж сотрудницы с августа 2013 года. В декабре 2013 года сотрудница уходит в декретный отпуск. Как рассчитывать декретные?</div>
+		</div>
+					<div class="item" id="bx_3966226736_118426">
+			
+<div class="item-name"><a href="/faq/staff/118426/">О расчете «декретных»</a></div>
+		
+<div class="item-preview">Как расчитать декретные, если в 2011 и в 2012 году не было заработка, работник проживает в районах крайнего севера, условия исчисления 44?</div>
+		</div>
+					<div class="item" id="bx_3966226736_118585">
+			
+<div class="item-name"><a href="/faq/staff/118585/">О получении материальной помощи</a></div>
+		
+<div class="item-preview">Здравствуйте! Скажите, пожалуйста, если я написала заявление на получение материальной помощи, приложив квитанцию, в связи с получением первого высшего образования, работодатель имеет право отказать? Работаю в школе.</div>
+		</div>
+					<div class="item" id="bx_3966226736_117378">
+			
+<div class="item-name"><a href="/faq/staff/117378/">Расчет пособия по уходу за вторым ребенком</a></div>
+		
+<div class="item-preview">Такая ситуация. Работала, ушла в декрет. Каждый месяц платили определенную сумму на ребенка. Не успев выйти из первого декрета, ушла во второй. Написала отказ от первого отпуска по уходу за ребенком и написала заявление на отпуск по уходу за вторым ребенком. Теперь каждый месяц платят меньше, чем на первого ребенка. Подскажите, как рассчитывается эта сумма? Потому что я думала, что на второго ребенка должны платить больше, чем на первого. </div>
+		</div>
+					<div class="item" id="bx_3966226736_116299">
+			
+<div class="item-name"><a href="/faq/staff/116299/">О расчете пособия по уходу за ребенком</a></div>
+		
+<div class="item-preview">Сколько составят «декретные» на первого ребенка, если сотрудница работала 6 месяцев и получала зарплату 12 300 рублей?</div>
+		</div>
+					<div class="item" id="bx_3966226736_116295">
+			
+<div class="item-name"><a href="/faq/staff/116295/">О заключении бессрочных трудовых договоров</a></div>
+		
+<div class="item-preview">Подскажите, могут ли заключаться бессрочные трудовые договора с заместителем генерального директора, финансовым и исполнительным директором? Статья 59 Трудового кодекса РФ говорит о том, что с ними могут заключаться срочные трудовые договора. </div>
+		</div>
+					<div class="item" id="bx_3966226736_116045">
+			
+<div class="item-name"><a href="/faq/staff/116045/">Отпуск на праздники</a></div>
+		
+<div class="item-preview">В отпускной записке отпуск с 22 апреля 2013 года на 14 календарных дней. 6 мая – выход на работу. Если 1-5 мая нерабочие дни, то когда выходить?</div>
+		</div>
+					<div class="item" id="bx_3966226736_113887">
+			
+<div class="item-name"><a href="/faq/staff/113887/">Материнский капитал</a></div>
+		
+<div class="item-preview">В каком размере предоставляется материнский капитал за первого ребенка? И где его получать?</div>
+		</div>
+					<div class="item" id="bx_3966226736_109488">
+			
+<div class="item-name"><a href="/faq/staff/109488/">Компенсационные выплаты матерям</a></div>
+		
+<div class="item-preview">Добрый день! Подскажите, пожалуйста, с какого возраста положено выплачивать компенсационные выплаты матерям в размере 50 рублей? И на основании какого закона. Так как на моем предприятии бухгалтер говорит, что после 1,5 лет. Права ли она? И какой срок исковой давности данных выплат? Спасибо.</div>
+		</div>
+	
+			<p><div class="navigation">
+		<div class="navigation-arrows">
+			<span class="arrow">&larr;</span><span class="ctrl"> ctrl</span>&nbsp;<a href="/faq/staff/" id="navigation_1_previous_page">предыдущая</a>&nbsp;<a href="/faq/staff/?PAGEN_1=3" id="navigation_1_next_page">следующая</a>&nbsp;<span class="ctrl">ctrl </span><span class="arrow">&rarr;</span>
+		</div>
+
+		<div class="navigation-pages">
+			<span class="navigation-title">Страницы:</span>
+				<a href="/faq/staff/">1</a>
+				<span class="nav-current-page">2</span>
+				<a href="/faq/staff/?PAGEN_1=3">3</a>
+		</div>
+</div>
+<script type="text/javascript">
+	BX.bind(document, "keydown", function (event) {
+
+		event = event || window.event;
+		if (!event.ctrlKey)
+			return;
+
+		var target = event.target || event.srcElement;
+		if (target && target.nodeName && (target.nodeName.toUpperCase() == "INPUT" || target.nodeName.toUpperCase() == "TEXTAREA"))
+			return;
+
+		var key = (event.keyCode ? event.keyCode : (event.which ? event.which : null));
+		if (!key)
+			return;
+
+		var link = null;
+		if (key == 39)
+			link = BX('navigation_1_next_page');
+		else if (key == 37)
+			link = BX('navigation_1_previous_page');
+
+		if (link && link.href)
+			document.location = link.href;
+	});
+</script></p>
+	</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter15969604 = new Ya.Metrika({
+                    id:15969604,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    ut:"noindex"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/15969604?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter24568064 = new Ya.Metrika({
+                    id:24568064,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    ut:"noindex"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/24568064?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->	
+
+
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter41691 = new Ya.Metrika({
+                    id:41691,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    ut:"noindex"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/41691?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+	new Image().src = "//counter.yadro.ru/hit;buhgalteria?r"+
+	escape(document.referrer)+((typeof(screen)=="undefined")?"":
+	";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+		screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+	";"+Math.random();//--></script><!--/LiveInternet-->
+
+<footer id="footer" class="rounded">
+	<nav class="footer-menu">
+		<div class="footer-menu-box">
+			<IDXSKIP><h5>РУБРИКИ</h5></IDXSKIP>
+			
+
+<ul>
+
+						<IDXSKIP><li><a href="/articles/uchetnye_resheniya/">Учет</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/ur_aspekt/">У юриста</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/kadry/">Зарплата</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/nalogovoe_planirovanie/">Налоги</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/proverki/">Проверки</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/good_bad_news/">Плохая и хорошая новость</a></li></IDXSKIP>
+			
+
+</ul>
+
+		</div>
+		<div class="footer-menu-box">
+			<IDXSKIP><h5>В ПОМОЩЬ БУХГАЛТЕРУ</h5></IDXSKIP>
+			
+
+<ul>
+
+			<IDXSKIP><li class="cur orange-right"><a href="/faq/">Вопрос-Ответ</a></li></IDXSKIP>
+	
+						<IDXSKIP><li class="orange-right"><a class="orange-item" href="/pr/">Проводки на примерах</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/samples/company-registration/">Примеры на практике</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/obzory/">Обзоры</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/about/">О журнале</a></li></IDXSKIP>
+			
+
+</ul>
+
+		</div>
+	</nav>
+
+	<div class="footer_description_block">
+		<IDXSKIP>© 2001—2017 «Практическая бухгалтерия».<br />
+			Использование материалов возможно только с письменного разрешения </IDXSKIP><IDXSKIP><a href="mailto:admin@buhgalteria.ru"><ins>редакции сайта</ins></a></IDXSKIP><IDXSKIP>.<br />
+		Свидетельство о регистрации СМИ: ПИ № ФС77-28196</IDXSKIP></a>
+	</div>
+	<IDXSKIP><div class="counters-logo">
+		<span id="bx-composite-banner"></span>
+		<!--LiveInternet logo-->
+		<a href="http://www.liveinternet.ru/click" target="_blank" ><img src="//counter.yadro.ru/logo?44.6" title="LiveInternet" border="0" width="31" height="31" /></a>
+		<!--/LiveInternet-->
+	</div></IDXSKIP>
+<script type="text/javascript" src="//www.giraff.io/data/widget-buhgalteriaru.js" async></script>
+</footer>
+<!--footer-->
+</div>
+</body>
+</html>

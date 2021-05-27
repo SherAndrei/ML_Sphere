@@ -1,0 +1,668 @@
+info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go
+<!DOCTYPE html>
+<html class="no-js" lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://info-csgo.ru/xmlrpc.php" />
+<title>Как выдавать себе оружие в CS:GO</title>
+
+<!-- All in One SEO Pack 2.3.13.2 by Michael Torbert of Semper Fi Web Design[273,312] -->
+<link rel="canonical" href="http://info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go/" />
+<meta property="og:title" content="Как выдавать себе оружие в CS:GO" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go/" />
+<meta property="og:image" content="http://info-csgo.ru/wp-content/uploads/2017/02/Flash.png" />
+<meta property="og:site_name" content="Руководства  и обновления CS:GO" />
+<meta property="og:description" content="На собственном сервере с включенной в консоли переменной sv_cheats 1, можно самому себе выдавать оружие в любом месте не покупая его. Команды на получение оружия - и их значение give weapon_ak47 - ak47 give weapon_aug - aug give weapon_xm1014 - xm1014 give weapon_ump45 - ump45 give weapon_usp - usp give weapon_tec9 - tec9 give weapon_p250 - p250 give weapon_glock - glock give weapon_hkp2000 - p2000 give weapon_fiveseven - fiveseven give weapon_elite - berettas give weapon_deagle - desert eagle give weapon_awp - awp give weapon_famas - famas give weapon_g3sg1 - g3sg1 give weapon_galilar - galil give weapon_m249 - m249 give weapon_m3 - benelli m3 give weapon_m4a1_silencer -m4a1-s give weapon_m4a1 - m4a1 give weapon_mag7 - mag7 give weapon_mac10 - mac10 give weapon_mp9 - mp9 give weapon_mp7 - mp7 give weapon_negev - negev give weapon_nova - nova give weapon_sawedoff - sawedoff give weapon_p90 - p90 give weapon_ssg08 - ssg give weapon_sg556 - sg give weapon_scar20 - scar give weapon_taser" />
+<meta property="article:published_time" content="2017-02-10T13:28:44Z" />
+<meta property="article:modified_time" content="2017-02-10T13:29:11Z" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Как выдавать себе оружие в CS:GO" />
+<meta name="twitter:description" content="На собственном сервере с включенной в консоли переменной sv_cheats 1, можно самому себе выдавать оружие в любом месте не покупая его. Команды на получение оружия - и их значение give weapon_ak47 - ak47 give weapon_aug - aug give weapon_xm1014 - xm1014 give weapon_ump45 - ump45 give weapon_usp - usp give weapon_tec9 - tec9 give weapon_p250 - p250 give weapon_glock - glock give weapon_hkp2000 - p2000 give weapon_fiveseven - fiveseven give weapon_elite - berettas give weapon_deagle - desert eagle give weapon_awp - awp give weapon_famas - famas give weapon_g3sg1 - g3sg1 give weapon_galilar - galil give weapon_m249 - m249 give weapon_m3 - benelli m3 give weapon_m4a1_silencer -m4a1-s give weapon_m4a1 - m4a1 give weapon_mag7 - mag7 give weapon_mac10 - mac10 give weapon_mp9 - mp9 give weapon_mp7 - mp7 give weapon_negev - negev give weapon_nova - nova give weapon_sawedoff - sawedoff give weapon_p90 - p90 give weapon_ssg08 - ssg give weapon_sg556 - sg give weapon_scar20 - scar give weapon_taser" />
+<meta name="twitter:image" content="http://info-csgo.ru/wp-content/uploads/2017/02/Flash.png" />
+<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Лента" href="http://info-csgo.ru/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Лента комментариев" href="http://info-csgo.ru/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Лента комментариев к &laquo;Как выдавать себе оружие в CS:GO&raquo;" href="http://info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go/feed/" />
+		<script type="text/javascript">
+			'use strict';
+			(function (w) {
+				var darx = {};
+
+				darx.addEvent = function (elem, event, fn) {
+					if (elem.addEventListener) {
+						elem.addEventListener(event, fn, false);
+					} else {
+						elem.attachEvent('on' + event, function () {
+							return (fn.call(elem, window.event));
+						});
+					}
+				};
+
+				darx.fireEvent = function (elem, event) {
+					var evt = elem.createEvent('Event');
+					evt.initEvent(event, true, true);
+					elem.dispatchEvent(evt);
+				};
+
+				darx.get = function (url, data, callback) {
+					sendRequest('GET', url, data, callback);
+				};
+
+				darx.post = function (url, data, callback) {
+					sendRequest('POST', url, data, callback);
+				};
+
+				darx.getJSON = function (url, data, callback) {
+					var callbackName = 'darx_jsonp_' + Math.round(1000000000 * Math.random());
+					window[callbackName] = function(data) {
+						delete window[callbackName];
+						document.body.removeChild(script);
+						callback(data);
+					};
+					
+					
+					var script = document.createElement('script');
+					script.type = "text/javascript";
+					script.async = true;
+					data.callback = callbackName;
+					script.src = url + '?' + http_build_query(data);
+					document.body.appendChild(script);
+				};
+
+				var http_build_query = function (data) {
+					var params = [];
+					var type;
+					for (var key in data){
+						if (data.hasOwnProperty(key)) {
+							type = Object.prototype.toString.call(data[key]);
+							if (type === '[object Array]' || type === '[object Object]') {
+								for (var i in data[key]) {
+									if (data[key].hasOwnProperty(i)) {
+										params.push(encodeURIComponent(key) + '[]=' + encodeURIComponent(data[key][i]));
+									}
+								}
+							} else {
+								params.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
+							}
+						}
+					}
+					return params.join('&');
+				};
+
+				var sendRequest = function (method, url, data, callback) {
+					var xhr = false;
+					var XMLHttpFactories = [
+						function () {return new XMLHttpRequest()},
+						function () {return new ActiveXObject("Msxml2.XMLHTTP")},
+						function () {return new ActiveXObject("Msxml3.XMLHTTP")},
+						function () {return new ActiveXObject("Microsoft.XMLHTTP")}
+					];
+					for (var i=0; i<XMLHttpFactories.length; ++i) {
+						try { xhr = XMLHttpFactories[i]() } catch (e) { continue; }
+						break;
+					}
+
+					if (!xhr) return;
+
+					if (method === 'GET')  {
+						data.r = Math.random();
+						url += '?' + http_build_query(data);
+					}
+
+					xhr.open(method, url, true);
+					xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+					xhr.timeout = 5000;
+
+					if (callback) {
+						xhr.loaded = xhr.onreadystatechange = function () {
+							if (xhr.readyState !== 4) return;
+							callback(xhr.responseText, xhr);
+						}
+					}
+
+					if (method !== 'GET')  {
+						xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+						xhr.send(http_build_query(data));
+					} else {
+						xhr.send(null);
+					}
+				};
+
+				w.darx = darx;
+			}(window));
+		</script>
+				<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/info-csgo.ru\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='yarppWidgetCss-group-css' href='http://info-csgo.ru/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/yet-another-related-posts-plugin/style/widget.css,wp-content/plugins/sportspress/assets/css/sportspress.css,wp-content/plugins/sportspress/assets/css/icons.css,wp-content/plugins/sportspress/assets/css/sportspress-style.css,wp-content/plugins/sportspress/assets/css/sportspress-style-ltr.css,wp-content/plugins/wpfront-scroll-top/css/wpfront-scroll-top.min.css,wp-content/themes/mh-magazine-lite/style.css,wp-content/themes/mh-magazine-lite/includes/font-awesome.min.css,wp-content/plugins/tablepress/css/default.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://info-csgo.ru/wp-includes/css/dashicons.min.css?ver=4.8' type='text/css' media='all' />
+<link rel='stylesheet' id='sportspress-roboto-css'  href='//fonts.googleapis.com/css?family=Roboto%3A400%2C500&#038;subset=cyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese&#038;ver=2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='mh-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600' type='text/css' media='all' />
+<style type="text/css"></style><script type='text/javascript' src='http://info-csgo.ru/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://info-csgo.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://info-csgo.ru/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/wpfront-scroll-top/js/wpfront-scroll-top.min.js,wp-content/themes/mh-magazine-lite/js/scripts.js'></script>
+<link rel='https://api.w.org/' href='http://info-csgo.ru/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://info-csgo.ru/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://info-csgo.ru/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='#fixcsgo &#8212; протест YouTube&#8217;ров против Valve' href='http://info-csgo.ru/news/fixcsgo-protest-youtube-rov-protiv-valve/' />
+<link rel='next' title='Как выдавать предметы в CS:GO' href='http://info-csgo.ru/konsolnye-komandy/kak-vydavat-predmety-v-cs-go/' />
+<meta name="generator" content="WordPress 4.8" />
+<meta name="generator" content="SportsPress 2.3.2" />
+<link rel='shortlink' href='http://info-csgo.ru/?p=2108' />
+<link rel="alternate" type="application/json+oembed" href="http://info-csgo.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Finfo-csgo.ru%2Fkonsolnye-komandy%2Fkak-vydavat-sebe-oruzhie-v-cs-go%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://info-csgo.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Finfo-csgo.ru%2Fkonsolnye-komandy%2Fkak-vydavat-sebe-oruzhie-v-cs-go%2F&#038;format=xml" />
+
+<link rel="stylesheet" href="http://info-csgo.ru/wp-content/plugins/auto-highslide/highslide/highslide.css" type="text/css" />
+<script type="text/javascript" src="http://info-csgo.ru/wp-content/plugins/auto-highslide/highslide/highslide-with-html.packed.js"></script>
+<script type="text/javascript">
+	hs.graphicsDir = "http://info-csgo.ru/wp-content/plugins/auto-highslide/highslide/graphics/";
+	hs.outlineType = "rounded-white";
+	hs.outlineWhileAnimating = true;
+	hs.showCredits = false;
+</script>
+	<style type="text/css">.myfixed { margin:0 auto!important; float:none!important; border:0px!important; background:none!important; max-width:100%!important; }
+	#mysticky-nav { width:100%!important;  position: static;top: -100px;}.wrapfixed { position: fixed!important; top:0px!important; left: 0px!important; margin-top:0px!important;  z-index: 1000000; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s;   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=95)"; filter: alpha(opacity=95); opacity:.95; background-color: #2a2a2a!important;  }
+	@media (max-width: 359px) {.wrapfixed {position: static!important; display: none!important;}}
+	</style>
+	<!--[if lt IE 9]>
+<script src="http://info-csgo.ru/wp-content/themes/mh-magazine-lite/js/css3-mediaqueries.js"></script>
+<![endif]-->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #303030; background-image: url("http://info-csgo.ru/wp-content/uploads/2016/10/maxresdefault-2.jpg"); background-position: left top; background-size: auto; background-repeat: no-repeat; background-attachment: fixed; }
+</style>
+<link rel="icon" href="http://info-csgo.ru/wp-content/uploads/2016/02/cropped-csgo-e1471012712262-120x120.png" sizes="32x32" />
+<link rel="icon" href="http://info-csgo.ru/wp-content/uploads/2016/02/cropped-csgo-e1471012712262.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://info-csgo.ru/wp-content/uploads/2016/02/cropped-csgo-e1471012712262.png" />
+<meta name="msapplication-TileImage" content="http://info-csgo.ru/wp-content/uploads/2016/02/cropped-csgo-e1471012712262.png" />
+<meta property="vk:app_id" content="4086585" /></head>
+<body id="mh-mobile" class="post-template-default single single-post postid-2108 single-format-standard custom-background wp-custom-logo mh-right-sb" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48482378-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div class="mh-container mh-container-outer">
+<div class="mh-header-mobile-nav clearfix"></div>
+<header class="mh-header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<IDXSKIP><div class="mh-container mh-container-inner mh-row clearfix">
+		<div class="mh-custom-header clearfix">
+<div class="mh-site-identity">
+<div class="mh-site-logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+<a href="http://info-csgo.ru/" class="custom-logo-link" rel="home" itemprop="url"><img width="308" height="54" src="http://info-csgo.ru/wp-content/uploads/2016/08/cropped-marka2-2.png" class="custom-logo" alt="" itemprop="logo" srcset="http://info-csgo.ru/wp-content/uploads/2016/08/cropped-marka2-2.png 308w, http://info-csgo.ru/wp-content/uploads/2016/08/cropped-marka2-2-300x53.png 300w" sizes="(max-width: 308px) 100vw, 308px" /></a><style type="text/css" id="mh-header-css">.mh-header-title, .mh-header-tagline { color: #1e73be; }</style>
+<div class="mh-header-text">
+<a class="mh-header-text-link" href="http://info-csgo.ru/" title="" rel="home">
+</a>
+</div>
+</div>
+</div>
+</div>
+	</div></IDXSKIP>
+	<div class="mh-main-nav-wrap">
+		<nav class="mh-navigation mh-main-nav mh-container mh-container-inner clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+			<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><IDXSKIP><li id="menu-item-737" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-737"><a href="http://info-csgo.ru/">Главная</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-1962" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1962"><a href="http://info-csgo.ru/bets/">Ставки</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-1390" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1390"><a href="http://info-csgo.ru/category/obnovleniya/">Обновления</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-1623" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1623"><a href="http://info-csgo.ru/category/news/">Новости</a></li></IDXSKIP>
+<li id="menu-item-1391" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1391"><a href="#">Руководства</a>
+<ul  class="sub-menu">
+	<li id="menu-item-1392" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1392"><a href="http://info-csgo.ru/category/interesnosti/">Интересно знать</a></li>
+	<li id="menu-item-1393" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1393"><a href="http://info-csgo.ru/category/konsolnye-komandy/">Консольные команды</a></li>
+	<li id="menu-item-1394" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1394"><a href="http://info-csgo.ru/category/konfigi/">Конфиги</a></li>
+	<li id="menu-item-1395" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1395"><a href="http://info-csgo.ru/category/major-turniry/">Major-турниры</a></li>
+	<li id="menu-item-1396" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1396"><a href="http://info-csgo.ru/category/obshaya/">Общая</a></li>
+	<li id="menu-item-1397" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1397"><a href="http://info-csgo.ru/category/steam/">Steam</a></li>
+	<li id="menu-item-1398" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1398"><a href="http://info-csgo.ru/category/roli-taktiki-dymy/">Роли\Тактики\Дымы</a></li>
+	<li id="menu-item-1399" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1399"><a href="http://info-csgo.ru/category/errors/">Ошибки</a></li>
+	<li id="menu-item-1400" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1400"><a href="http://info-csgo.ru/category/karty-radary/">Карты\Радары</a></li>
+	<li id="menu-item-1401" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1401"><a href="http://info-csgo.ru/category/server-cs-go/">Сервер CS:GO</a></li>
+	<li id="menu-item-1402" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1402"><a href="http://info-csgo.ru/category/tekst-shrifty/">Текст\Шрифты</a></li>
+	<li id="menu-item-1403" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1403"><a href="http://info-csgo.ru/category/traning/">Тренировки</a></li>
+</ul>
+</li>
+<IDXSKIP><li id="menu-item-1601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-1601"><a href="http://info-csgo.ru/#">Сервисы</a>
+<ul  class="sub-menu">
+	<li id="menu-item-1600" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1600"><a href="http://info-csgo.ru/onlajn-generator-pritsela-cs-go/">Онлайн генератор прицела CS:GO</a></li>
+</ul>
+</li></IDXSKIP>
+<IDXSKIP><li id="menu-item-2121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2121"><a href="http://info-csgo.ru/skiny-besplatno/">Скины бесплатно*</a></li></IDXSKIP>
+</ul></div>		</nav>
+	</div>
+<ads>
+</header><div class="mh-wrapper clearfix">
+	<div id="main-content" class="mh-content" role="main" itemprop="mainContentOfPage"><article id="post-2108" class="post-2108 post type-post status-publish format-standard has-post-thumbnail hentry category-konsolnye-komandy tag-csgo tag-oruzhie">
+	<header class="entry-header clearfix">
+		<h1 class="entry-title">
+			Как выдавать себе оружие в CS:GO		</h1>
+		<p class="mh-meta entry-meta">
+<span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="http://info-csgo.ru/2017/02/">10.02.2017</a></span>
+<span class="entry-meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="http://info-csgo.ru/author/making/">making</a></span>
+<span class="entry-meta-categories"><i class="fa fa-folder-open-o"></i><a href="http://info-csgo.ru/category/konsolnye-komandy/" rel="category tag">Консольные команды</a></span>
+<span class="entry-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-scroll" href="http://info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go/#mh-comments">0</a></span>
+</p>
+	</header>
+		<div class="entry-content clearfix">
+							<script type="text/javascript">
+						window.stManager = {};
+						window.stManager.done = function (type) {
+							if (type === 'api/share.js') {
+								darx.fireEvent(document, 'vkapi_vkshare');
+							}
+						};
+					</script>
+					<p>На собственном сервере с включенной в консоли переменной sv_cheats 1, можно самому себе выдавать оружие в любом месте не покупая его.<span id="more-2108"></span></p>
+
+<!-- Easy Plugin for AdSense V8.67 -->
+<!-- [midtext: 0 urCount: 0 urMax: 0] -->
+<div class="ezAdsense adsense adsense-midtext" style="text-align:center;margin:12px;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- прямоугольник  (старый) -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-9884831377313195"
+     data-ad-slot="6436879065"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+<!-- Easy Plugin for AdSense V8.67 -->
+<p>Команды на получение оружия - и их значение<br />
+give weapon_ak47 - ak47<br />
+give weapon_aug - aug<br />
+give weapon_xm1014 - xm1014<br />
+give weapon_ump45 - ump45<br />
+give weapon_usp - usp<br />
+give weapon_tec9 - tec9<br />
+give weapon_p250 - p250<br />
+give weapon_glock - glock<br />
+give weapon_hkp2000 - p2000<br />
+give weapon_fiveseven - fiveseven<br />
+give weapon_elite - berettas<br />
+give weapon_deagle - desert eagle<br />
+give weapon_awp - awp<br />
+give weapon_famas - famas<br />
+give weapon_g3sg1 - g3sg1<br />
+give weapon_galilar - galil<br />
+give weapon_m249 - m249<br />
+give weapon_m3 - benelli m3<br />
+give weapon_m4a1_silencer -m4a1-s<br />
+give weapon_m4a1 - m4a1<br />
+give weapon_mag7 - mag7<br />
+give weapon_mac10 - mac10<br />
+give weapon_mp9 - mp9<br />
+give weapon_mp7 - mp7<br />
+give weapon_negev - negev<br />
+give weapon_nova - nova<br />
+give weapon_sawedoff - sawedoff<br />
+give weapon_p90 - p90<br />
+give weapon_ssg08 - ssg<br />
+give weapon_sg556 - sg<br />
+give weapon_scar20 - scar<br />
+give weapon_taser - zeus<br />
+give weapon_knife - нож<br />
+give weapon_c4 - бомба<br />
+give item_vest - броня<br />
+give item_vesthelm - броня и каска<br />
+give item_heavyassaultsuit - тяжёлая броня ( 200 брони )<br />
+give item_defuser - дефуза<br />
+give weapon_smokegrenade - Smoke<br />
+give weapon_molotov - Молотов<br />
+give weapon_incgrenade - Зажигательная граната<br />
+give weapon_hegrenade - Осколочная граната<br />
+give weapon_decoy - Декой<br />
+give weapon_flashbang - Флешка<br />
+give weapon_tagrenade - ВХ граната<br />
+give weapon_healthshot - Шприц</p>
+<p style="text-align: center;">Удачи в игре!</p>
+<!--noindex--><div style='clear:both;'><ul class='nostyle' style='float:right'><li><div class='vkapishare' id='vkapi_share_2108_1842306195'></div></li>
+			<script type="text/javascript">
+				(function(){
+					darx.addEvent(document, 'vkapi_vkshare', function () {
+						document.getElementById('vkapi_share_2108_1842306195').innerHTML = VK.Share.button(
+							{
+								url: 'http://info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go/',
+								title: 'Как выдавать себе оружие в CS:GO',
+								description: 'На собственном сервере с включенной в консоли переменной sv_cheats 1, можно самому себе выдавать оружие в любом месте не покупая его.  Кома',
+								image: 'http://info-csgo.ru/wp-content/uploads/2017/02/Flash.png'
+							},
+							{
+								type: 'round',
+								text: 'Рассказать тиммейтам'
+							}
+						);
+					});
+				})();
+			</script><li><div
+					class='g-plusone'
+					data-href='http://info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go/'
+					data-size='medium'
+					data-annotation='none'></div></li><li><div id='vkapi_like_2108_558439284'></div></li>
+			<script type="text/javascript">
+				(function(){
+					darx.addEvent(document, 'vk', function(){
+						VK.Widgets.Like('vkapi_like_2108_558439284', {
+							width: 1,
+							height: 20,
+							type: 'full',
+							verb: '0',
+							pageTitle: 'Как выдавать себе оружие в CS:GO',
+							pageDescription: 'На собственном сервере с включенной в консоли переменной sv_cheats 1, можно самому себе выдавать оружие в любом месте не покупая его.  Кома',
+							pageUrl: 'http://info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go/',
+							pageImage: 'http://info-csgo.ru/wp-content/uploads/2017/02/Flash.png',
+							text: 'На собственном сервере с включенной в консоли переменной sv_cheats 1, можно самому себе выдавать оружие в любом месте не покупая его.  Кома'
+						}, 2108);
+					});
+				})();
+			</script></ul></div><br style="clear:both;"><!--/noindex--><div class='yarpp-related'>
+<h3>ТАК ЖЕ РЕКОМЕНДУЕМ:</h3><ol>
+<li><a href="http://info-csgo.ru/konsolnye-komandy/komandy-dlya-trenirovok-v-cs-go/" rel="bookmark" title="Команды для тренировок в CS GO">Команды для тренировок в CS GO </a></li>
+<IDXSKIP><li><a href="http://info-csgo.ru/konsolnye-komandy/kak-nastroit-pritsel-v-cs-go/" rel="bookmark" title="Как настроить прицел">Как настроить прицел </a></li></IDXSKIP>
+<li><a href="http://info-csgo.ru/konsolnye-komandy/konsolnye-kommandy/" rel="bookmark" title="Консольные команды">Консольные команды </a></li>
+<li><a href="http://info-csgo.ru/konsolnye-komandy/veselye-komandy-v-cs-go/" rel="bookmark" title="Веселые команды в CS:GO">Веселые команды в CS:GO </a></li>
+<li><a href="http://info-csgo.ru/interesnosti/kak-pravilno-zazhimat-spreit-s-ak-47-m4a4-m4a1-s-v-cs-go/" rel="bookmark" title="Как правильно зажимать(спреить) с AК-47, M4A4, M4A1-S в CS GO">Как правильно зажимать(спреить) с AК-47, M4A4, M4A1-S в CS GO </a></li>
+<li><a href="http://info-csgo.ru/konsolnye-komandy/avtodvijenie-v-csgo/" rel="bookmark" title="Автодвижение в CS GO">Автодвижение в CS GO </a></li>
+<li><a href="http://info-csgo.ru/konsolnye-komandy/nastrojka-mikrofona-v-cs-go-s-pomoshhyu-konsoli/" rel="bookmark" title="Настройка микрофона в CS:GO с помощью консоли">Настройка микрофона в CS:GO с помощью консоли </a></li>
+<li><a href="http://info-csgo.ru/konsolnye-komandy/kak-usilit-zvuk-shagov-v-cs-go/" rel="bookmark" title="Как усилить звук шагов в CS:GO">Как усилить звук шагов в CS:GO </a></li>
+</ol>
+</div>
+	</div>
+<span class="pageviews-placeholder" data-key="2108"></span>	<div class="entry-tags clearfix"><i class="fa fa-tag"></i><ul><li><a href="http://info-csgo.ru/tag/csgo/" rel="tag">csgo</a></li><li><a href="http://info-csgo.ru/tag/oruzhie/" rel="tag">оружие</a></li></ul></div>	</article>
+<div id="comments">
+	<input type="hidden" id="comments_post_id" value="2108"/>
+
+
+			<div id='vk-comments' style='max-width:100%'>
+				<div id='vk-comments-widget'></div>
+				<script type='text/javascript'>
+					(function(){
+						darx.addEvent(document, 'vk', function(){
+		                    VK.Widgets.Comments(
+		                        'vk-comments-widget', {
+		                            width: 0,
+		                            height: 0,
+		                            limit: 15,
+		                            attach: 'graffiti,photo,audio,video,link',
+		                            autoPublish: 1,
+		                            mini: 1,
+		                            pageUrl: 'http://info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go/'
+		                        }, 2108);
+						});
+						var data = {
+							v: 5.52,
+							widget_api_id: 4086585,
+							page_id: 2108,
+							url: 'http://info-csgo.ru/konsolnye-komandy/kak-vydavat-sebe-oruzhie-v-cs-go/'
+						};
+						darx.getJSON('https://api.vk.com/method/widgets.getComments', data, function (r) {
+							document.getElementById('vkapi_comm_vk_count').innerHTML = r.response.count;
+						});
+					})();
+				</script>
+			</div>
+</div>
+		</div>
+	<IDXSKIP><aside class="mh-widget-col-1 mh-sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><div id="search-5" class="mh-widget widget_search"><form role="search" method="get" class="search-form" action="http://info-csgo.ru/">
+				<label>
+					<span class="screen-reader-text">Найти:</span>
+					<input type="search" class="search-field" placeholder="Поиск&hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Поиск" />
+			</form></div><!-- fixed widget --><div id="text-30" class="mh-widget widget_text"><h4 class="mh-widget-title"><span class="mh-widget-title-inner">Ставки</span></h4>			<div class="textwidget"><iframe src="http://widget.gainskins.com/w2/landing/ver?initialLoad=1&ws=0&header=1&cnt=2&footer=1&referralCode=wkoafjexls&rootUrl=http://info-csgo.ru/bets/" 
+width="350px" height="350px" frameborder="0"></iframe></div>
+		</div><!-- fixed widget --><div id="text-31" class="mh-widget widget_text">			<div class="textwidget"><a href="http://info-csgo.ru/skiny-besplatno" target="_blank" rel="nofollow"><img src="http://info-csgo.ru/wp-content/uploads/2017/02/reklama2.gif"></a></div>
+		</div><!-- fixed widget --><div id="text-22" class="mh-widget widget_text">			<div class="textwidget"><script type="text/javascript" src="//vk.com/js/api/openapi.js?139"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 3, no_cover: 1, width: "auto", color3: 'E64946'}, 123455747);
+</script></div>
+		</div></aside></IDXSKIP></div>
+<div class="mh-copyright-wrap">
+<center>
+<IDXSKIP><p><noindex><a href="http://info-csgo.ru/adv/">Реклама</a> <a href="http://info-csgo.ru/about/">О сайте</a><br>
+<a href="http://info-csgo.ru/karta-sajta/">Карта сайта</a></noindex></p></IDXSKIP>
+	<center>
+<center><IDXSKIP>При копировании материалов с нашего сайта, ссылка обязательна.</IDXSKIP></center>
+<IDXSKIP><noindex><a href="http://webhost1.ru/?r=1380" target="_blank" title="Дешевый хостинг"><img src="https://webhost1.ru/design/1/88x31.gif" border="0" alt="Дешевый хостинг"></a></noindex></IDXSKIP>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t14.5;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+<!-- Yandex.Metrika informer -->
+<IDXSKIP><a href="https://metrika.yandex.ru/stat/?id=35709680&amp;from=informer"
+target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/35709680/3_0_2F2F2FFF_0F0F0FFF_1_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="35709680" data-lang="ru" /></a></IDXSKIP>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter35709680 = new Ya.Metrika({
+                    id:35709680,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/35709680" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2785545", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><IDXSKIP><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2785545;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
+</div></noscript></IDXSKIP>
+<!-- //Rating@Mail.ru counter -->
+<!-- Rating@Mail.ru logo -->
+<IDXSKIP><a href="http://top.mail.ru/jump?from=2785545">
+<img src="//top-fwz1.mail.ru/counter?id=2785545;t=305;l=1" 
+style="border:0;" height="15" width="88" alt="Рейтинг@Mail.ru" /></a></IDXSKIP>
+<!-- //Rating@Mail.ru logo -->
+	</center></div>
+</div>
+</div><!-- .mh-container-outer -->
+			<script type="text/javascript">
+				window.vkAsyncInit = function () {
+					VK.Observer.subscribe('widgets.comments.new_comment', function (num, last_comment, date, sign) {
+						var data = {
+							action: 'darx.comments',
+							provider: 'vk',
+							job: 'add',
+							id: document.getElementById("comments_post_id").value,
+							num: num,
+							last_comment: last_comment,
+							date: date,
+							sign: sign
+						};
+						darx.post('http://info-csgo.ru/wp-admin/admin-ajax.php', data);
+					});
+
+					VK.Observer.subscribe('widgets.comments.delete_comment', function (num, last_comment, date, sign) {
+						var data = {
+							action: 'darx.comments',
+							provider: 'vk',
+							job: 'remove',
+							id: document.getElementById("comments_post_id").value,
+							num: num,
+							last_comment: last_comment,
+							date: date,
+							sign: sign
+						};
+						darx.post('http://info-csgo.ru/wp-admin/admin-ajax.php', data);
+					});
+				};
+			</script>
+		<script type="text/javascript">
+				(function (d) {
+					var id = "vk";
+					if (d.getElementById(id)) return;
+					var el = document.createElement("script");
+					el.type = "text/javascript";
+					el.async = true;
+					el.id = id;
+					el.src = "https://vk.com/js/api/openapi.js";
+					el.onload = function(){darx.fireEvent(d, "vk")};
+					var ref = document.getElementsByTagName("script")[0]; 
+                    ref.parentNode.insertBefore(el,ref);
+				}(document));
+				(function (d) {
+					var id = "vkshare";
+					if (d.getElementById(id)) return;
+					var el = document.createElement("script");
+					el.type = "text/javascript";
+					el.async = true;
+					el.id = id;
+					el.src = "https://vk.com/js/api/share.js";
+					el.onload = function(){darx.fireEvent(d, "vkshare")};
+					var ref = document.getElementsByTagName("script")[0]; 
+                    ref.parentNode.insertBefore(el,ref);
+				}(document));
+				(function (d) {
+					var id = "gp";
+					if (d.getElementById(id)) return;
+					var el = document.createElement("script");
+					el.type = "text/javascript";
+					el.async = true;
+					el.id = id;
+					el.src = "https://apis.google.com/js/plusone.js";
+					el.onload = function(){darx.fireEvent(d, "gp")};
+					var ref = document.getElementsByTagName("script")[0]; 
+                    ref.parentNode.insertBefore(el,ref);
+				}(document));</script>
+
+
+    <IDXSKIP><div id="wpfront-scroll-top-container"><img src="http://info-csgo.ru/wp-content/uploads/2017/03/skroll-top2.png" alt="" /></div></IDXSKIP>
+    <script type="text/javascript">function wpfront_scroll_top_init() {if(typeof wpfront_scroll_top == "function" && typeof jQuery !== "undefined") {wpfront_scroll_top({"scroll_offset":100,"button_width":0,"button_height":0,"button_opacity":0.8,"button_fade_duration":200,"scroll_duration":400,"location":2,"marginX":20,"marginY":40,"hide_iframe":false,"auto_hide":false,"auto_hide_after":2});} else {setTimeout(wpfront_scroll_top_init, 100);}}wpfront_scroll_top_init();</script><script type="text/javascript">var q2w3_sidebar_options = new Array();
+q2w3_sidebar_options[0] = { "sidebar" : "sidebar", "margin_top" : 10, "margin_bottom" : 200, "stop_id" : "", "screen_max_width" : 600, "screen_max_height" : 0, "width_inherit" : false, "refresh_interval" : 1500, "window_load_hook" : false, "disable_mo_api" : false, "widgets" : ['text-30','text-31','text-22'] };
+</script>		<!-- Pageviews SDK -->
+		<script>
+		var _pv_config = {"account":"252f7fd6d5d055d41816fe5fe7585e02e3f9d8d3","incr":2108,"base":"https:\/\/pv.pjtsu.com\/v1"};
+		(function(){
+			var js = document.createElement('script'); js.type = 'text/javascript'; js.async = true;
+			js.src = 'http://info-csgo.ru/wp-content/plugins/pageviews/pageviews.js?v=4';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(js, s);
+		})();
+		</script>
+		<link rel='stylesheet' id='yarppRelatedCss-group-css' href='http://info-csgo.ru/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/yet-another-related-posts-plugin/style/related.css' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var mysticky_name = {"mysticky_string":".mh-main-nav","mysticky_active_on_height_string":"180","mysticky_disable_at_width_string":"359"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var localized_strings = {"days":"\u0434\u043d.","hrs":"\u0447\u0430\u0441.","mins":"\u043c\u0438\u043d.","secs":"\u0441\u0435\u043a.","previous":"\u041d\u0430\u0437\u0430\u0434","next":"\u0414\u0430\u043b\u0435\u0435"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://info-csgo.ru/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/mystickymenu/js/mystickymenu.min.js,wp-content/plugins/sportspress/assets/js/jquery.dataTables.min.js,wp-content/plugins/sportspress/assets/js/jquery.countdown.min.js,wp-content/plugins/sportspress/assets/js/sportspress.js,wp-includes/js/comment-reply.min.js,wp-content/plugins/q2w3-fixed-widget/js/q2w3-fixed-widget.min.js,wp-includes/js/wp-embed.min.js'></script>
+<script type='text/javascript' src='http://info-csgo.ru/wp-content/plugins/mousewheel-smooth-scroll/js/wpmss.php?step=100&#038;speed=500&#038;ver=1'></script>
+		<style type="text/css">
+			ul.nostyle,
+			ul.nostyle li {
+				list-style: none;
+				background: none;
+			}
+
+			ul.nostyle li {
+				height: 20px;
+				line-height: 20px;
+				padding: 5px;
+				margin: 0;
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			ul.nostyle li:before,
+			ul.nostyle li:after {
+				content: none !important;
+			}
+
+			ul.nostyle a {
+				border: none !important;
+			}
+
+			ul.nostyle li div table {
+				margin: 0;
+				padding: 0;
+			}
+
+			.vkapishare {
+				padding: 0 3px 0 0;
+			}
+
+			.vkapishare td,
+			.vkapishare tr {
+				border: 0 !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				vertical-align: top !important;
+			}
+
+			ul.nostyle iframe {
+				max-width: none !important;
+			}
+
+			[id^=___plusone_] {
+				vertical-align: top !important;
+			}
+
+			.fb_iframe_widget {
+				width: 100%;
+			}
+		</style></body>
+
+</html>

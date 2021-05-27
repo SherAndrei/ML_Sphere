@@ -1,0 +1,2198 @@
+credit-card.ru/articles/using-cards/vernut-dengi.php
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name='yandex-verification' content='6651f0dbe4d948ec' />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Можно ли вернуть ошибочно переведенные средства с карты на карту? | Credit-Card.ru</title>
+<meta name="description" content="Эксперт рассказывает про ошибочные переводы и возможность возврата денег обратно на счет.">
+<meta name="keywords" content="как вернуть деньги по ошибочному переводу">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/design/credit-card/css/app.css">
+
+
+<link rel="yandex-tableau-widget" href="/js/man.json" />
+<script src="/design/credit-card/js/jquery.min.js"></script>
+<script src="/design/credit-card/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="wrap" style="background-color:#fff; padding: 0 10px; margin-top:15px;">
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+        <div class="logo logo2"><a href="/" title="Credit-Card.ru"></a></div>
+        <div class="span6 hidden-phone2">
+                <p></p>
+<span style="font-size:17px;">        
+<a href="/cards/">535</a> <IDXSKIP>кредитных карт, </IDXSKIP><a href="/cards/debet.php">628</a> дебетовых, <a href="/banks/">99</a> <IDXSKIP>банков 
+</IDXSKIP></span>
+                </div>
+        <div class="pull-right text-center" style="line-height:12px; margin-top:12px;">
+        <IDXSKIP><p><a href="https://credit-card.ru/auth/login/">Войти</a>&nbsp;
+          <img src="/images/point.png" class="hidden-phone"> <a class="pseudo btn-city">Москва</a></p></IDXSKIP>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrap" style="background-color:#ddd; margin-bottom:20px;">
+    <div class="container">
+        <div class="navbar cc-navbar" style="margin:0;">
+        <div class="navbar-inner">
+        <div class="container">
+          <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          
+          <div class="nav-collapse collapse navbar-responsive-collapse">
+            <ul class="nav">
+              <IDXSKIP><li><a href="/cards/">Каталог карт <br><small>кредитные, дебетовые</small></a></li></IDXSKIP>
+              <IDXSKIP><li><a href="/rating/">Рейтинг <br><small> 20 категорий</small></a></li></IDXSKIP>
+              <IDXSKIP><li><a href="/selection/">Выбор <br><small> онлайн заявка</small></a></li></IDXSKIP>
+              <li class="active"><a href="/articles/">О картах <br><small> акции, новости</small></a></li>
+              <IDXSKIP><li><a href="/calc/">Калькулятор <br><small> выплат по кредиту</small></a></li></IDXSKIP>
+                       
+			  <IDXSKIP><li><a href="/articles/applications/dengi-na-karty.php">Займ <br><small>на карту</small></a></li></IDXSKIP>             
+              <IDXSKIP><li><a href="/otvet/">Вопросы <br><small> и ответы</small></a></li></IDXSKIP>                 
+            </ul>
+        
+            <ul class="nav pull-right">
+            <form action="/search/ss/" method="post" class="navbar-search hidden-phone" id="site-search-form">       
+                <input type="hidden" name="site_token" value="7b714826a23cbb3328a4bfafa1938a26">
+                <input type="text" placeholder="Поиск" name="sword" id="sword" value="" class="search-query span2">
+            </form>
+        
+                           
+              
+            </ul>
+          </div><!-- /.nav-collapse -->
+        </div>
+        </div><!-- /navbar-inner -->
+        </div>
+    </div>
+</div>
+<div class="wrap">
+  <div class="container">    
+     
+    
+	 
+     
+    <div class="row hidden-phone">
+      <div class="span12 box" style="background-color:#b3dab3;"> 
+      <script>
+	  function get_cc()
+	  {
+		$.get('/ajax/get_cc/', {
+			
+			ss:1,
+			bid:$('#s_b').val(),
+			view:$('#view').val(),
+			options:$('#options').val()
+			
+			} , function(data){ $('#count_cc').text(data);});
+	  }
+	  
+	  function get_bo()
+	  {
+	     $.get('/ajax/get_banks_options/', { bid: '' },  
+		 function(data){ 
+		 	$('#s_b').html(data);
+		});			  
+	  }	  
+	  
+	  
+	  
+	  $(document).ready(function(e) { get_cc(); get_bo(); });
+	  
+	  </script>
+      <form action="/cards/" method="get" id="noajax_get_cards_table" class="form-inline" autocomplete="off"> 
+      <input type="hidden" name="ss" value="1">    
+        <div class="span2">        
+        	<IDXSKIP>Какой банк?<br></IDXSKIP>
+            <select name="bid" id="s_b" class="span2" onChange="get_cc()" style="color:#444"></select>
+            <IDXSKIP><p><small style="color:#fff">99 банков (<a class="btn-city" style="color:#fff; cursor:pointer;">Москва</a>)</small></p></IDXSKIP>
+        </div>       
+        <IDXSKIP><div class="span2">
+            Какие карты?<br>
+            <select name="view" id="view" class="span2" onChange="get_cc()" style="color:#444"> 
+            <option value="credit">Кредитные</option>
+            <option value="debet">Дебетовые</option>
+            <option value="overdraft">С овердрафтом</option>        
+                        </select> 
+            <p><small style="color:#fff"><span id="count_cc"></span></small></p>        
+        </div></IDXSKIP>        
+        <div class="span3">
+            <IDXSKIP>Условия:<br></IDXSKIP>
+			            <select name="options" id="options" class="span2" onChange="get_cc()" style="color:#444">
+            <option value="">Любые</option> 
+            <option value="1">без справок</option> 
+            <option value="2">онлайн заявка</option> 
+            <option value="3">с доставкой</option>           
+            </select>
+            <p><small style="color:#fff"><IDXSKIP>без справок, онлайн заявка, с доставкой...</IDXSKIP></small></p>        
+        </div>        
+        <div class="span4 text-center">        	
+			<input type="submit" class="btn btn-primary" value="Найти карты" style="margin-top:17px; padding: 5px 20px; border:2px solid #fff;"> 
+            <IDXSKIP><p><small><a href="/cards/?as=1#as" class="white pseudo" rel="nofollow">расширенный поиск</a></small></p></IDXSKIP>    
+        </div>             
+      </form>
+      </div>
+    </div>      
+	 
+	    </div>
+</div>
+
+<style>
+.main-menu { margin-top:10px; margin-bottom:10px; }
+.main-menu a { font-size:14px; text-decoration:underline; }
+.main-menu .active a { text-decoration:none; }
+.white { color:#fff; }
+</style><div class="wrap">
+  <div class="container">
+            
+        
+        
+        <div class="alert visible-desktop">
+      <IDXSKIP><button type="button" class="close" data-dismiss="alert">&times;</button></IDXSKIP>
+      <IDXSKIP>Ваш регион установлен как </IDXSKIP><IDXSKIP><strong>
+      Москва      </strong></IDXSKIP> <IDXSKIP><abbr title="Изменить регион" class="btn-city">выбрать город</abbr></IDXSKIP><IDXSKIP>. </IDXSKIP></div>
+                <div class="row">
+  <div class="span9" style="float:left;">
+    <div class="row">
+      <div class="span9 article">
+        <div class="shares visible-desktop"><div class="tw">
+					<a href="#" class="tip" title="Опубликовать в Twitter" onclick="window.open('http://twitter.com/intent/tweet?text=Можно ли вернуть ошибочно переведенные с карты на карту средства?+http://credit-card.ru%2Farticles%2Fusing-cards%2Fvernut-dengi.php', 'Опубликовать в Twitter', 'width=640,height=436,toolbar=0,status=0'); return false" rel="nofollow" id="tw_count"></a>					
+					
+				</div>
+
+				<div class="vk">
+					<a href="#" class="tip" title="Опубликовать ссылку во ВКонтакте" onclick="window.open('http://vk.com/share.php?url=http://credit-card.ru%2Farticles%2Fusing-cards%2Fvernut-dengi.php', 'Опубликовать ссылку во Вконтакте', 'width=800,height=300'); return false" rel="nofollow" id="vk_count"></a>
+				</div>
+
+				<div class="fb">
+					<a href="#" class="tip" title="Опубликовать ссылку в Facebook" onclick="window.open('https://www.facebook.com/sharer.php?u=http://credit-card.ru%2Farticles%2Fusing-cards%2Fvernut-dengi.php', 'Опубликовать ссылку в Facebook', 'width=640,height=436,toolbar=0,status=0'); return false" rel="nofollow" id="fb_count"></a>
+				</div>
+
+	</div>        <span class="muted">&larr; <a href="/articles/">Все о картах</a>&nbsp;&nbsp;&larr; <a href="/articles/using-cards/">Вопросы использования карт</a></span> 
+        <h1>Можно ли вернуть ошибочно переведенные с карты на карту средства?</h1>
+        
+		        
+        
+        
+                
+        <span class="times">
+                        </span>
+        
+        <span class="pull-right muted"></span>
+        <div class="author">
+                              <div class="foto"> <img src="/upload-files/users/valkir.jpg" border="0" width="36" height="43"> </div>
+                    <div class="name"><a href="/author/content.php">Валентина Кириллова</a>
+                        <noindex><a href="https://plus.google.com/103356171385805026068?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>
+                      </div>
+                    <span class="info">
+          Главный редактор          </span>
+                            </div>
+        <div class="row">
+        <div class="span4"> 
+        <!-- Яндекс.Директ -->
+        <div id="yandex_ad"></div>
+        <script type="text/javascript">
+        (function(w, d, n, s, t) {
+            w[n] = w[n] || [];
+            w[n].push(function() {
+                Ya.Direct.insertInto(93431, "yandex_ad", {
+                    stat_id: 1,
+                    ad_format: "direct",
+                    font_size: 1,
+                    type: "flat",
+                    border_type: "block",
+                    limit: 2,
+                    title_font_size: 3,
+                    border_radius: true,
+                    links_underline: true,
+                    site_bg_color: "FFFFFF",
+                    border_color: "CCCCCC",
+                    title_color: "0088CC",
+                    url_color: "666666",
+                    text_color: "666666",
+                    hover_color: "0066FF",
+                    no_sitelinks: true
+                });
+            });
+            t = d.getElementsByTagName("script")[0];
+            s = d.createElement("script");
+            s.src = "//an.yandex.ru/system/context.js";
+            s.type = "text/javascript";
+            s.async = true;
+            t.parentNode.insertBefore(s, t);
+        })(window, document, "yandex_context_callbacks");
+        </script> 
+        </div>
+        <div class="anons span5">
+                   Бывает, что люди ошибаются при наборе цифр, и деньги уходят на карту абсолютно чужого человека. Что делать в этом случае? Может ли банк вернуть средства законному обладателю?                </div>
+        </div>
+
+        <div class="text">
+
+<div class="text">
+<h3>Ошибка при переводе</h3>
+<p>Ошибки с переводами совершают очень много людей, и мы не раз отвечали в рубрике "Вопрос-ответ":<br /><br /><a href="http://credit-card.ru/otvet/33519/">Что делать если при переводе с карты на карту допустил ошибку?</a><br /><br /><a href="http://credit-card.ru/otvet/33520/">Как вернуть деньги, если оплатил на мошенническом сайте?</a><br /><br /><a href="http://credit-card.ru/otvet/33468/">Что делать если перевел деньги на просроченную карту?</a><br /><br /><a href="http://credit-card.ru/otvet/33292/">Почему не поступает перевод с карты на карту Сбербанка?</a><br /><br /><br />Неважно, где именно вы осуществляли перевод с карты на карту &ndash; в банкомате, по SMS или через Интернет. В любом случае первым делом  стоит обратиться в банк сразу же, как заметили ошибку. Но не надейтесь,  что вам тут же вернут деньги. Дело в том, что кредитная организация не  имеет права отменять операцию без согласия того человека, на чью карту  отправлены средства.</p>
+<p><em>Максимум, что может сделать банк</em> &ndash; это принять от вас  заявление, на его основании сделать письменный запрос и отправить его по  почте держателю пополненной карты. Если человек откажется возвращать  деньги или вообще не ответит, разбираться с ним придется уже  самостоятельно.</p>
+<p><em>И здесь снова есть одно &laquo;но&raquo;:</em> по закону и своим внутренним  документам банк не имеет права разглашать данные клиента, которого вы  обогатили. Так, например, пункт 2.4.1. &laquo;Общих условий обслуживая физлиц в  Связном Банке&raquo; гласит: &laquo;Банк гарантирует тайну Банковских счетов,  операций по ним и сведений о Клиенте в соответствии с действующим  законодательством РФ&raquo;.</p>
+<p>Таким образом, остается только одно &ndash; самостоятельно обращаться в  правоохранительные органы (в суд) с заявлением о том, что некий человек  незаконно обогатился за ваш счет и отказывается вернуть ошибочно  отправленные средства. Уже оттуда будет сделан официальный запрос в банк  о владельце чужой карты. Ну а дальше следует ждать расследования и  судебного решения.<br /><br /><strong>Вот пример, как человек за 2 дня вернул деньги:</strong></p>
+<br /><iframe src="https://www.youtube.com/embed/2oYtqzHMUhA" frameborder="0" height="240" width="429"></iframe>
+<h3>А можно ли ошибиться?</h3>
+<p>Скажу сразу, что вероятность ошибки ничтожно мала. Все дело в том, что последняя цифра <a href="http://credit-card.ru/articles/other/nomer-karti.php">номера карты</a> является неким сгенерированным кодом, зависящим от предыдущих цифр.   Поэтому нужно еще постараться, чтобы ошибиться и набрать номер, который   действительно существует.</p>
+<p>Кстати, на многих банковских форумах пишут, что случайно ввести чужой номер карты вообще нереально.</p>
+<p>Для интереса я попробовала через <a href="http://credit-card.ru/articles/using-cards/mob-bank-sbrf.php">&laquo;Сбербанк ОнЛ@йн&raquo;</a> отправить деньги со своей карты на реальную карту Сбербанка другого   человека. Только меняла при этом то одну, то две, то три цифры. Так вот,   из десяти попыток удалось &laquo;попасть&raquo; на реальный номер только один раз   (поменяла, кстати, две цифры). Все остальные разы система сообщала мне:   &laquo;Вы неправильно ввели номер карты получателя. Пожалуйста, проверьте   номер карты&raquo;. Так что нечаянно &laquo;угадать&raquo; чужой номер вполне реально,   хоть и трудно.</p>
+<h3>Почему банк не возвращает средства?</h3>
+<p><strong><em>Во-первых</em></strong>, потому что это запрещает закон.   Ошибочно перечисленные деньги являются уже не вашими, а того человека,   которому вы их переслали. По Закону же &laquo;О банках и банковской   деятельности&raquo; конфискация денежных средств может быть произведена только   на основании вступившего в силу приговора суда.</p>
+<p><strong><em>Во-вторых</em></strong>, банки изначально прописывают в   своих договорах, что держатель несет ответственность за все операции по   карте, а особенно &ndash; за произведенные с помощью ПИН-кода.</p>
+<p>Но даже если перевод был совершен через интернет-банк, радоваться не   стоит. К примеру, в условиях по картам Сбербанка ясно написано, что &laquo;В   случаях необоснованного или ошибочного перечисления Держателем средств   получателям через &laquo;Сбербанк ОнЛ@йн&raquo; Держатель самостоятельно  урегулирует  вопрос возврата средств с их получателями&raquo;.</p>
+<p>Делаем вывод, что вернуть ошибочно отправленные средства если и не   невозможно, то очень сложно. Поэтому отправлять деньги с карты на карту   нужно очень внимательно и не торопясь, сверяя каждую цифру. Если же   ошибка при переводе денег уже совершена, остается только пожелать вам   настойчивости и терпения в возврате своих кровно заработанных.</p>
+</div><p> 
+<a href="http://credit-card.ru/articles/using-cards/ukrali-dengi.php">Украли деньги с карты. Кто виноват и что делать?</a><br><a href="http://credit-card.ru/articles/using-cards/bankomat-siel-karty.php">Банкомат «съел» карту. Что делать?</a><br><a href="http://credit-card.ru/articles/using-cards/poteryal-karty.php">Рекомендации: что делать, если потерял карту? </a><br>
+</p>
+    </div>   
+                 
+<section id="comments">
+		<section id="comments_list">  
+		<div class="row">
+        <div class="span9">
+                        
+                                    <h4>Комментарии пользователей:</h4><br>
+                                   
+        </div>
+    </div>
+    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Наталья</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Скажите, пожалуйста, что делать если при переводе на карту по номеру телефона вели ошибочно другой номер телефона, но код подтверждения не вводили. Деньги не снимут?</p></div>
+      
+    </div>
+    <IDXSKIP><div id="line"><hr></div></IDXSKIP>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Наталья, если операция перевода средств с банковской карты на баланс мобильного телефона не была подтверждена одноразовым паролем, денежные средства с карты списаны не будут. Вы можете вернуться на шаг назад и откорректировать номер мобильного телефона.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Наталья</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Спасибо большое!!!</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Елена</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14">доброй ночи.а как вернуть деньги которые списал сам банк(в пользу штрафа ГИБДД) после долгих разбирательств стало понятно что штраф оплачен давно и тут как бы ошибка приставов,они выдали мне все бумаги о переплате этого штрафа,а вот сбербанк даже принимать заявление отказываеться...я не сама их перевела,не вводила пин кодов,мне просто пришло смс о снятии...вот что теперь делать и куда обращаться.заранее спасибо</div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Елена, в данном случае не стоит обвинять во всем сотрудников Сбербанка, они действовали не по своей инициативе, а лишь исполняли решение суда или постановление судебных приставов. Вот туда Вам и нужно обращаться с требованием о возврате излишне перечисленных денежных средств.</p><p>Сбербанк в этой ситуации выступал лишь посредником. Возможность проведения операций по карте такого рода без согласия держателя закреплена в&nbsp;договоре банковского обслуживания или условиях выпуска и обслуживания банковских карт.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Виктория</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14">Здравствуйте. Я живу в Беларуси. Нашла в контакте группе, где подают товар, заказала. Но оплатить надо было в росс.рублях на карту Сбербанка. Я попросила сестру в Москве. Она на карту перевела нужную сумму. Продавец через 2 дня исчез. У меня не товара, ни денег. Возможно ли вернуть как-то деньги? Спасибо.</div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14">Виктория, к сожалению, добровольно переведенные на карту денежные средства вернуть можно только с согласия получателя или в судебном порядке.
+В данном случае, если Вы сможете как-то доказать факт мошенничества, то попробуйте обратиться в органы внутренних дел с соответствующим заявлением.</div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Людмила</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Перепутала две последние цифры карты получателя при переводе денег через банкомат Сбербанка.Деньги со счета у меня сняли.Затем проверила через онлай-банк этот номер карты,пришел ответ что номер набран не верно,получается что такой карты нет.Как вернуть деньги,которые сняли с меня при переводе через банкомат на ошибочно набранный номер?</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Людмила, если при переводе средств номер карты указан не верно, и такой карты в системе не существует, деньги, как правило, возвращаются на карту отправителя в автоматическом режиме.</p><p>В данной ситуации Вы можете также обратиться в филиал Сбербанка с соответствующим заявлением.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>любовь</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте.</p>
+<p>Скажите пожалуйста, я отправила деньги на карту сбербанка - частному лицу за товар, но человек меня обманул и товар не отправил, на связь со мной не выходит. Обратилась в сбербанк и написала заявление, что не правильно указала № карты, и ошибочно отправила деньги не туда, но так понимаю что сбербанк мне не вернет деньги? Как я могу вернуть деньги?</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Любовь, в данной ситуации денежные средства можно вернуть только через суд. Вы добровольно осуществили перевод на указанный номер карты, и Сбербанк здесь не при чем. Кредитная организация не обязана возвращать средства в случае, если их получатель оказался под подозрением в мошенничестве, вины банка здесь нет.</p><p>Для возврата денежных средств Вам необходимо обращаться в правоохранительные органы с соответствующим заявлением.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>айсулу</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте!я случайно перевела крупную сумму денег с карты на свой телефонный номер через мобильный банк,могу ли я вернуть свои деньги как нибудь?</p><p></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Айсулу, в данной ситуации возможность вывода средств на карту с баланса Вашего мобильного телефона зависит от&nbsp;возможности предоставления данной услуги самим оператором сотовой связи. Как правило, все крупные поставщики услуг мобильной связи позволяют сделать платеж такого характера.</p>
+<p>Таким образом, Вам необходимо зайти на официальный сайт мобильного оператора, SIM-картой которого Вы пользуетесь. В случае, если такие операции доступны для проведения, осуществить их можно будет прямо на сайте в соответствующем разделе или найти рекомендации по их проведению другими способами.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>айсулу</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте!у меня сим карта связана с моей сбер.картой. и мне пришло смс якобы я перевела на свою симку 4500 т .р. У меня на счёту снимки такая сумма пришла.а сегодня утром эти деньги перевелась на какую та карту но &nbsp;не на мою.зашла в сообщении там отправленные смски не мои,то есть я их не отправляла.а они есть и телефон только у меня был.как такое может быть?и как поступить?на счёту деньги не остались все перевели кто-то куда-то.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Айсулу, Ваша ситуации звучит как-то совсем неправдоподобно. Две сим-карты с одним номером не могут быть оформлены одновременно, соответственно, осуществление переводов было возможно только с Вашего телефона, тем более, в телефоне сохранились подтверждающие СМС-сообщения.</p><p>Если у Вас все-таки есть подозрения о возможных мошеннических действиях, Вы можете заблокировать карту, позвонив по номеру телефона на ее оборотной стороне, и обратиться в филиал Сбербанка для оформления перевыпуска карты в связи с подозрением на ее несанкционированное использование.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>айсулу</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Спасибо. Я позвонила,оказалась что есть второй хозяин сим карты,симкой я не пользовалась 1год поэтому номер продали другому человеку и вот у нас у обоих один номер. Все заблокировали,в сбербанк и В полицию написали заявление. Сказали разберуться у них есть номер той карты куда перевели деньги,теперь только хозяина найти надо.вот так вот бывает,и это правда.сама в шоке.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Денис</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Подскажите пожалуйста я забыл дома карту мне срочно нужны были деньги на работе я обратился к коллеги по работе перевел на его карту деньги, а карта кредитная оказалась, но она заблокирована потому что он два месяца не платил!!! Но баланс был на ней положителен в этом месяце он платил!!! как мне вернуть деньги и он не против</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Денис, возможность разблокировки кредитных карт существует, как правило, после полного погашения просроченной задолженности по звонку в Службу поддержки клиентов или при личном обращении в кредитную организацию и оформлению соответствующего заявления.</p><p>Таким образом,&nbsp;сейчас держателю карты необходимо обращаться в банк-эмитент данной карты, уточнять возможность разблокировки и возврата ошибочно внесенных средств.<span id="ctrlcopy"><br>Подробнее: <a href="http://credit-card.ru/articles/using-cards/vernut-dengi.php">http://credit-card.ru/articles/using-cards/vernut-dengi.php</a></span><br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>илья</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>у меня случилась такая ситуация я продавал холодильник &nbsp;и мне позвонили клиент и сказал что бы я пошел в сбербанк и подключил его мобильный полный пакет я ввел его номер(якобы он мне деньги за холодильник отдаст )я так и сделал , потом он мне попросил что бы &nbsp; я распечатал одноразовый пароль и логин . и сказал ему это через телефон &nbsp; , конечно я это не стал делать и я заподозрил &nbsp; мошеничество &nbsp;пошел к сотруднику &nbsp; объяснил всю ситуацию и мне вернули обратно на старый номер (мобильный банк) и все &nbsp; и я ушел &nbsp;через 10 мин мне приходит &nbsp;крупная сумма денег &nbsp; из не откуда &nbsp; и &nbsp;потом разные люди снимают &nbsp;по частям &nbsp; сумму &nbsp;и я заблокировал карту &nbsp; &nbsp; - и конечно &nbsp; я восстанавливаю карту &nbsp; &nbsp; &nbsp;что мне ждет &nbsp; ? &nbsp; или я могу оставить их себе &nbsp;спасибо &nbsp;&nbsp;</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Илья, данная ситуация похожа на один из способов обналичивания денежных средств.</p>
+<p>Будьте внимательны, никогда не подключайте услугу мобильного банка&nbsp;или интернет-банка к чужим номерам телефона, и уж тем более - не сообщайте паролей и логинов третьими лицами. Тем самым Вы нарушаете условия обслуживания банковских карт, что влечет за собой невозможность возврата средств при проведении мошеннических операций.</p>
+<p>При перевыпуске карты изменяются все ее реквизиты, кроме карточного счета, что предотвращает возможность ее дальнейшего несанкционированного использования.</p>
+<p>Возврат Вами ошибочно полученных средств возможен только через суд, если отправитель этих средств обратится туда с исковым заявлением.</p>
+<p>Однако, как показывает практика и жизненный опыт, чужие деньги никому не приносят счастья, по возможности лучше вернуть их во избежание дальнейших проблем. Если сумма достаточно крупная, мошенники могут пытаться вернуть средства в обход закона.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Ксения</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Я нечаянно, &nbsp;не проверив данные в евросети отправила деньги на MoneyGram в другую страну.</p><p>Я могу вернуть деньги?&nbsp;</p><p></p><p></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Ксения, для возврата перевода Вам необходимо обращаться в пункт его отправки, имея при себе паспорт и подтверждающие&nbsp;документы.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Ирина</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте, а как вернуть деньги если при переводе с карты на карту, ошибочно был набран номер, меньше на две цифры, позвонили ни горячую линюю, сказали что надо писать заявление, а отделение откроется только в понедельник и нет возможности выехать в город. Куда денуться эти деньги если такой карты в принципе не существует.&nbsp;</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Ирина, средства, поступившие в кредитную организацию по переводам, при невозможности их зачисления по указанным реквизитам, относятся на определенный счет невыясненных платежей, после чего направляются обратно отправителю.</p><p>Поэтому в данной ситуации переживать не стоит, если указанного Вами номера карты не существует, средства должны вернуться Вам обратно. А, обратившись в ближайший рабочий день в отделение банка, Вы сможете написать заявление на уточнение реквизитов либо на возврат&nbsp;перевода.<span id="ctrlcopy"><br>Подробнее: <a href="http://credit-card.ru/articles/using-cards/vernut-dengi.php">http://credit-card.ru/articles/using-cards/vernut-dengi.php</a></span><br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Денис</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Доброго времени суток! Если средства переводились с Украины с карты банка приват24-сбербан в Россию на карту сбербанк! Можно ли вернуть как то средства если обратиться моментально на возврат денежный средств!?</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14">Денис, транзакцию по карте можно отменить, если денежные средства еще не зачислены на карту или счет получателя, то есть перевод находится в стадии обработки.
+Для уточнения возможности осуществления отмены перевода необходимо обращаться в Службу поддержки клиентов по номеру телефона, указанному на оборотной стороне карты отправителя.</div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Наталья</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Добрый день!У меня сложилась следующая ситуация.Я работаю у ИП и мне переводятся на карту подотчетные деньги, которые я перевожу сотрудникам под отчет.Через пол года после всех сверок выяснилось, что я отправила не маленькую сумму не тому сотруднику.Он на данный момент уволился.Могу ли я как физ. лицо подать на него в суд и вернуть деньги обратно?</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>ирина</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Мне на сберкнижку пришли деньги(мама должна была перевести). Пошла. Сняла. Звонят с сбербанка, что они неправильно перевели ,просят положить обратно деньги, угрожают, что напишут заявление в полицию. Что делать. &nbsp;Деньги потратила</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Наталья, в первую очередь советую Вам обратиться напрямую к сотруднику, которому неверно переведены подотчетные денежные средства. Желательно это сделать в письменном виде, например, отправить письмо по почте, при этом отправлять такой запрос нужно от лица , т.к. денежные средства принадлежат ему.</p><p>Если сотрудник откажется от добровольного возврата денежных средств, в этом случае Вы можете обратиться с соответствующим заявлением в судебные инстанции. При этом Вам необходимо будет иметь подтверждающие документы, по которым будет понятно, что средства действительно были направлены ошибочно, а также документы об отказе от добровольного возврата денег.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Ирина, в данной ситуации сначала Вам необходимо выяснить у мамы, переводила ли она денежные средства. Если она подтвердит, что перевод действительно был ею осуществлен, и сумма данного перевода совпадает с поступившей на Ваш счет, то переживать не о чем.</p><p>Однако если денежные средства действительно были зачислены ошибочно, их нужно будет вернуть на счет и дать согласие на списание средств. Банк может обратиться в судебные инстанции и требовать возврата денег через суд.</p><p>В любом случае, лучше обратиться в филиал Сбербанка и выяснить, что же все-таки произошло. Можно попросить показать платежное поручение, которое являлось основанием для зачисления средств на счет, из которого будет видно, кому предназначены денежные средства и по какой причине могло произойти ошибочное зачисление.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Елена</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Добрый день, я оплачивала счет мобильного телефона через сбербанк онлайн по своей карте и ошиблась на одну цифру,платеж был быстро исполнен, &nbsp;могу ли я вернуть деньги себе обратно???</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Елена, в таких ситуациях необходимо в кратчайшие сроки звонить в Службу поддержки клиентов, возможно, если платеж еще не обработался в процессинговом центре, осуществить его отмену.</p><p>К сожалению, банк в этом случае ничем Вам уже помочь не сможет, он выступает лишь посредником при проведении платежа. А для возврата средств Вам нужно обращаться к оператору мобильной связи с соответствующим заявлением&nbsp;и документами, подтверждающими осуществление оплаты на соответствующий номер телефона.</p><p>Также можете попробовать позвонить по номеру, указанному ошибочно, и попросить о добровольном возврате ошибочно зачисленных денежных средств.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Екатерина</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Покупатель приобретал товар в моем магазине. Производил оплату картой. Мобильный терминал завис и в итоге платеж прошел 2 раза. Заметили это только когда обратился сам покупатель. Просим покупателя написать заявление с указанием реквизитов для возврата как ошибочно проведенного платежа. Покупатель отказывается это делать , ссылаясь на то , что владелец карты за рубежом и просит перевести средства без заявления, угрожая тем, что если мы не произведем возврат - обратиться с заявлением "куда нужно" . Правомерны ли действия покупателя в таком случае? Может ли он в таком случае иметь основания на иск в нашем случае?</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Екатерина, изначально законным держателем карты были нарушены условия договора банковского обслуживания, согласно которым передача карт третьим лицам и разглашение паролей запрещается. Таким образом, при обращении "куда нужно", первым делом карта вообще может быть заблокирована по подозрению в несанкционированном использовании.</p>
+<p>Вам же, для корректного оформления возврата денежных средств, нужно заявление владельца карты, в ином случае Вы не сможете подтвердить причину, по которой будете проводить такую операцию.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Лера</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте,  перевела деньги с карты на карту. Как оказалось мошенникам. За услугу. Но эту услугу я не могу сказать полиции. Ничего конечно в ней нет очень страшного. Но всё же не хотелось бы чтоб они знали. Что делать? Как вернуть деньги.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Лера, к сожалению, если в добровольном порядке возврат ошибочно перечисленных средств осуществить невозможно, Вам необходимо с данной проблемой обращаться в органы внутренних дел или в судебные инстанции, где придется рассказать правду.</p><p>Таким образом, Вам необходимо&nbsp;сделать выбор: либо Вы обращаетесь за помощью и рассказываете суть Вашей проблемы, либо решаете свою проблему самостоятельно&nbsp;путем личного обращения к получателям средств.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Юлия</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте. Я перевела сумму со своего счета на Яндекс. Деньгах на карту Сбербанка. С Яндекса деньги списались, но на карту так и не пришли (прошло уже полтора месяца). Обращалась и в Яндекс, и в Сбербанк. В Яндексе говорят, что платеж ушел, а в Сборе, что он не приходил, у них в системе его нет. Что здесь можно сделать и как лучше разобраться? Благодарю.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Юлия, если средства так и не поступили на Вашу карту, скорее всего, номер карты был указан неверно. Деньги не могут просто так пропасть. После списания средств с одного счета происходит их движение через корреспондентские банковские счета и зачисление на указанные реквизиты непосредственно получателю. В случае, если такие реквизиты указаны неверно, и&nbsp;данные в системе отсутствуют, перевод&nbsp;поступает на специальный счет для невыясненных платежей, а в банк-отправитель направляется запрос на уточнение реквизитов. При отсутствии уточнения, средства по истечение&nbsp;3 дней возвращаются обратно.</p><p>Если средства не вернулись, это означает, что указанный Вами номер карты существует, и перевод был зачислен на нее. В данной ситуации советую Вам уточнить, на какой именно номер карты были отправлены денежные средства, после чего попробовать найти ее владельца или обратиться с соответствующим заявлением в суд.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Елена</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте! Подскажите как можно узнать правильно ли написала номер карты получателя? Переводила через банкомат Сбербанка. Первые и последние цифры на чеке совпадают, возможноя опечаталась при вводе номера не могу вспомнить. Получатель говорит что деньги не получал. И еще через какое время приходят деньги на карту получателя если перевела через банкомат? Спасибо&nbsp;</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Елена, скорость зачисления средств на карту во многом зависит от банка-получателя. Как правило, любые переводы осуществляются в течение 3-х рабочих дней. </p><p>Номер карты получателя на терминальном чеке не отражается полностью в целях безопасности. Полные реквизиты номера карты получателя денежных средств сохраняется лишь в банковских отчетных документах в сшиве дня. Запросить копию такого документа можно, обратившись в филиал Банка и оформив соответствующее заявление.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Оксана</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте, Наталья. Подскажите, пожалуйста, как лучше поступить в такой ситуации, когда на мою карту СБ ошибочно перевели деньги. В смс я вижу только имя-отчество отправителя, т.е. это физлицо. Информацию в банке о нем мне не дадут и ему, как я понимаю, тоже. Ему придется обращаться в суд. Мне что же ждать, когда меня вызовут в суд и ещё доказывать, что я не виновата? Заранее спасибо)</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14">Оксана, в таком случае советую Вам обратиться в филиал Сбербанка. Объясните сотрудникам сложившуюся ситуацию, т.к. они не могут разглашать информацию о своих клиентах, пусть самостоятельно посмотрят данные отправителя в системе и свяжутся с ним. Возможно, Вам смогут сообщить его номер карты для возврата денежных средств.</div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Лора</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Добрый день! Я перевела деньги с карты на карту своей знакомой, но ее карта оказалась арестована приставами. могу ли я вернуть свои деньги.&nbsp;</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Лора, операции по карте, заблокированной по решению судебных приставов, могут осуществляться только после снятия ареста. А для этого необходимо выполнить все требования, указанные в постановлении и погасить все долги. Только при выполнении этих условий арест может быть снят.</p><p>Таким образом, Вы можете обратиться к своей знакомой с требованием возврата ошибочно перечисленных средств, а в случае ее отказа решение данной проблемы возможно также через суд.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Андрей</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте , у меня такой вопрос человек мне отправил деньги на Сбербанк карту 2 месяца назад отправил он осознано , и сейчас звонит и говорит что он обратится в суд , что он ошибочно отправил .что делать ?</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Эдуард</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Здравствуйте такая вот проблема подскажите, я хотел оплатить домашний интернет через приложение сбербанк-онлайн, и дело в том что я не проверив номер договора интернета на который перечеслял деньги, и ошибочно написал одну неверную цифру и деньги ушли на другой счет другому человеку что мне делать и как быть?</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Андрей, к сожалению, если решить проблему не удается самостоятельно, любой гражданин РФ имеет право обратиться в суд. Дать Вам какие-то рекомендации, не зная сути проблемы и не понимая причин такого поведения, довольно затруднительно.</p><p>В случае судебного разбирательства каждой стороне необходимо будет предоставить доказательства своей правоты. Таким образом, если переведенные средства получены Вами на законных основаниях, то доказать это не составит труда, в ином случае возможно вынесение решения в пользу истца.</p><p><br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Эдуард, в данной ситуации Вам необходимо обращаться в организацию - получатель денежных средств и оформлять соответствующее заявление. Банк выступает лишь посредником между поставщиком данных услуг и их конечным потребителем, поэтому, если средства уже зачислены на счет получателя, отозвать платеж через банк невозможно.</p><p>Однако, насколько мне известно, такие проблемы довольно просто решаются при обращении непосредственно к поставщику услуг Интернета.<br></p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+                      
+                
+                    <br><strong>Юлия</strong>         
+                          
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Наталья, благодарю Вас за ответ. Скажите, пожалуйста, где и как я могу выяснить, на какой номер я перевела деньги? В Яндексе мне не могут ответить на этот вопрос. Говорят, что у них в системе номер выдается зашифрованным.</p></div>
+      
+    </div>
+    <div id="line"><hr></div>    
+        <div class="row">
+		<div id="author" class="author span2">
+                
+             
+        <div class="foto">  
+        <img src="http://credit-card.ru/upload-files/users/nataliya.png" alt="Анджелян Наталья">
+        </div>
+                      
+                <div class="name"><a href="/author/nataliya.php">Наталья Анджелян</a><br />
+		<span class="info">Эксперт</span>
+        
+      	
+      <noindex><a href="https://plus.google.com/u/0/105789010466939982510?rel=author" rel="nofollow" target="_blank" style="text-decoration:none;">&nbsp;</a></noindex>      
+               
+      </div>
+        
+                
+                 
+    	</div>
+      <div class="span7 fs-14"><p>Юлия, для просмотра деталей операции попробуйте зайти в личный кабинет Яндекс.Деньги и во вкладке История найти интересующую Вас операцию. Кликнув по ней, в реквизитах платежах возможно отражение всей информации в полном объеме.<br></p></div>
+      
+    </div>
+    <IDXSKIP><div id="line"><hr></div></IDXSKIP>    
+        </section>
+    <div class="clearfix"></div>
+	<div class="pagination pagination-centered">
+    <ul><li class="active"><a>1</a></li><li><a href="http://credit-card.ru/articles/using-cards/vernut-dengi.php?P=1" class="page_digit2" rel="1">2</a></li><li><a href="http://credit-card.ru/articles/using-cards/vernut-dengi.php?P=2" class="page_digit2" rel="2">3</a></li><li><a href="http://credit-card.ru/articles/using-cards/vernut-dengi.php?P=3" class="page_digit2" rel="3">4</a></li><li><a href="http://credit-card.ru/articles/using-cards/vernut-dengi.php?P=4" class="page_digit2" rel="4">5</a></li></ul>    
+    </div>
+    <br />
+
+	    
+	<section id="add_comments_form"><a name="comments"></a>
+    
+     
+    <h4>Добавить комментарий</h4>
+        
+    <div id="addCommentsResult">
+        </div>
+    <form name="addComment" method="post" action="/comments/add/" id="no_ajaxForm">  
+		<input type="hidden" name="site_token" value="7b714826a23cbb3328a4bfafa1938a26"> 
+    	<input type="hidden" name="comment_item_ID" value="1352" />
+	    <input type="hidden" name="comment_item_URL" value="/articles/using-cards/vernut-dengi.php" />   
+    	<input type="hidden" name="comment_parent" value="" id="comment_parent" />      
+        <input type="hidden" name="content_type" value="articles" id="comment_parent" />            
+        <input type="hidden" name="content_author_id" value="6" />                  
+      <table width="100%">
+            <IDXSKIP><tr class="form">      
+      <td width="100" valign="middle">
+      <label for="comment_author">Ваше имя:</label>
+      </td>
+      <td>
+      <input name="comment_author" id="comment_author" type="text" class="zf" value="" required /> <small class="zf-error">Введите ваше имя.</small>
+      </td>
+      </tr></IDXSKIP>
+      
+      <IDXSKIP><tr class="form">
+      <td valign="middle">
+      <label for="comment_author_email">E-mail:</label>
+      </td>
+      <td>
+      <input name="comment_author_email" id="comment_author_email" type="text" class="zf" required /> <small class="zf-error">Введите правильный E-mail адрес.</small>
+      </td>
+      </tr></IDXSKIP>
+      
+            
+      
+      <IDXSKIP><tr class="form">
+      <td colspan="2">
+              
+              <br />
+        <textarea name="comment_content" id="comment_content" class="set-redactor" required></textarea>
+              
+	  </td>
+      </tr></IDXSKIP>
+      
+      <IDXSKIP><tr>
+      <td colspan="2">		
+        
+
+        
+        
+        
+        <button id="button" class="btn btn-info pull-right" type="submit"><span class="button_label">Добавить</span></button>            
+      </td>
+      </tr></IDXSKIP>
+      
+      </table>
+    </form>
+	</section>
+</section>		      </div>
+    </div>    
+  </div> 
+  
+  
+  <div class="span3" style="float:left;"> 
+        
+<div class="well" style="padding:0px; background:#fff;">
+    <ul class="nav nav-tabs" id="cardsTab" style="margin-top:-1px; margin-left:-1px;">
+    <li class="active" style="width:50%"><a href="#credit"><b>Кредитные</b></a></li>
+    <li style="width:50%"><a href="#debet"><b>Дебетовые</b></a></li>
+    </ul>
+     
+    <div class="tab-content" style="margin-bottom:20px;">
+    <div class="tab-pane active" id="credit"><h4 align="center" style="margin-top:-2px;">Кредитные карты г. Москва</h4>
+        <ul class="nav nav-list rating">
+			<li><a href="/no-reference.php">Без справок <small class="muted">(364)</small></a></li>  
+			<li><a href="/mail-delivery.php">Доставка почтой <small class="muted">(32)</small></a></li>
+			<li><a href="/grace-period.php">Льготные - 0% <small class="muted">(150)</small></a></li>
+            <li><a href="/instant-approval.php">Срочные <small class="muted">(132)</small></a></li>
+        </ul>
+    
+    
+    </div>
+    <div class="tab-pane" id="debet">
+        <h4 align="center" style="margin-top:-2px;">Дебетовые карты г. Москва</h4>
+        <ul class="nav nav-list rating">
+            <li><a href="/cash-back-debet.php">Cash Back <small class="muted">(12)</small></a></li>
+            <li><a href="/virtual.php">Виртуальные карты <small class="muted">(14)</small></a></li>
+            <li><a href="/salary-debet.php">Зарплатные <small class="muted">(6)</small></a></li>
+            <li><a href="/payment-cards.php">Расчетные <small class="muted">(39)</small></a></li>
+        </ul>    
+    </div>
+    </div>
+</div>
+    
+	        <div class="well">
+            <h3 style="margin:0px;">Вопросы</h3>
+            тема: «платежи» 
+			
+            <ul style="margin-top:10px;">
+                            <li style="margin-bottom:20px;"> 
+                <span class="muted">
+                22.06.2017, 22:01 - Константин, Донецк                </span><br />
+                <a href="/otvet/42043/">Можно ли расплатиться картой МИР онлайн на сайте Госпаром?</a>       
+                
+                                                <ul>
+                <li>Константин, согласно информации, размещенной на официальном сайте Гаспаром, оплата электронных билетов осуществляется с помощью...</li>                </ul>
+                            
+                </li>
+                            <li style="margin-bottom:20px;"> 
+                <span class="muted">
+                22.06.2017, 15:48 - Оксана, Санкт-Петербург                </span><br />
+                <a href="/otvet/42035/">Нужно ли оплачивать комиссию за ежегодное обслуживание по зарплатной карте ВТБ24?</a>       
+                
+                            
+                </li>
+                            <li style="margin-bottom:20px;"> 
+                <span class="muted">
+                22.06.2017, 05:43 - Елена Логунова, Гатчина                </span><br />
+                <a href="/otvet/42025/">Как узнать сумму погашения по кредитной карте банка Тинькофф?</a>       
+                
+                            
+                </li>
+                        </ul>  
+            
+            <div align="right"><a href="/otvet/plateji-i-perevody/">Все вопросы</a></div>  
+        </div>
+	
+        <div class="box well">
+      <div class="h3" align="center" style="margin-bottom:-5px;">Подобрать карту</div>
+      <IDXSKIP><p>&nbsp;</p></IDXSKIP>    
+      <form action="/selection/select/">
+        <div style="margin-left:10px;">
+        <label>
+        <div class="around">1</div>
+        Для чего нужна карта?
+        </label>
+        <div style="margin-left:10px; margin-bottom:25px;">
+          <label class="radio" for="radio">
+            <input value="1" id="radio" name="bonus_balls" type="checkbox">
+            <span class="blue-label">Покупки</span></label>
+          <label class="radio" for="radio2">
+            <input value="1" id="radio2" name="bonus_fly" type="checkbox">
+            <span class="blue-label">Путешествия</span></label>
+          <label class="radio" for="radio3">
+            <input value="1" id="radio3" name="biz" type="checkbox">
+            <span class="blue-label">Наличные</span></label>
+        </div>
+        <label>
+        <div class="around">2</div>
+        Какие условия интересны?
+        </label>
+        <div style="margin-left:10px;">
+          <label class="checkbox" for="checkbox">
+            <input value="1" id="checkbox" name="annual" type="checkbox">
+            <span class="blue-label">Обслуживание - 0 руб.</span></label>
+          <label class="checkbox" for="checkbox2">
+            <input value="30" id="checkbox2" name="period" type="checkbox">
+            <span class="blue-label">Льготный период</span></label>
+          <label class="checkbox" for="checkbox3">
+            <input value="18" id="checkbox3" name="stavka_po_kreditu" type="checkbox">
+            <span class="blue-label">Низкие %</span></label>
+          <label class="checkbox" for="checkbox4">
+            <input value="1" id="checkbox4" name="nono" type="checkbox">
+            <span class="blue-label">Без справок</span></label>
+          <label class="checkbox" for="checkbox5">
+            <input value="5" id="checkbox5" name="waiting" type="checkbox">
+            <span class="blue-label">Срочные</span></label>
+        </div><br />
+
+        <label>
+        <div class="around">3</div>
+        Для кого?
+        </label>
+        
+		<div style="margin-left:1px;">
+          <label class="checkbox" for="checkbox6">
+            <input value="student" name="who" id="checkbox6" type="radio">
+            <span class="blue-label">Студенты</span></label>
+		  
+          <label class="checkbox" for="checkbox7">            
+            <input value="salary" name="who" id="checkbox7" type="radio">
+            <span class="blue-label">Зарплатные</span></label>
+          
+          <label class="checkbox" for="checkbox8">
+            <input value="pensioner" name="who" id="checkbox8" type="radio">
+            <span class="blue-label">Пенсионеры</span></label>
+          
+          <label class="checkbox" for="checkbox9">
+            <input value="all" name="who" id="checkbox9" type="radio">
+            <span class="blue-label">Для всех остальных</span></label>
+        </div><br />        
+
+        </div>        
+        
+        <div class="box-bottom">
+          <button type="submit" class="btn btn-primary">Показать подходящие карты</button>
+        </div>
+      </form>
+    </div>	    <IDXSKIP><p><a href="https://www.alfaportal.ru/card2card/ptpl/credit-card/initial.html" target="_blank"><img src="/images/banners/card-to-card.png"></a></p></IDXSKIP>
+    <div id="subs-result"></div>
+<div class="box box-green" style="text-align:center;">
+  <div class="h3" align="center" style="margin-bottom:20px;">Узнайте первым!</div>
+  <p style="padding:0 10px;">о новых кредитных картах, скидках, бонусах и акциях - подпишитесь и экономьте!</p>
+  <form id="ajaxSuscribe" action="/ajax/subscribe/" method="post" name="ajaxSuscribe" class="form-inline">
+  <input type="hidden" name="site_token" value="7b714826a23cbb3328a4bfafa1938a26"> 
+  
+    <p><input type="text" name="email" class="email span2" placeholder="E-mail"></p>
+    <p><button type="submit" class="btn btn-primary" id="btn-subs-on">Подписаться</button></p>
+         
+  </form>
+  <div class="clearfix"></div>
+</div>    <div style="text-align:center;" class="box box-green">
+  <p><a href="/apply.php" align="center" style="color:#fff; text-decoration:underline;" class="h3">Онлайн заявка</a></p>
+  <h4>Получи кредитку всего за 2 шага!</h4>
+</div>  
+   
+  </div>  
+  
+</div>
+
+ 
+
+<div class="well" style="padding:20px 0; border:none;">
+	<IDXSKIP><h4 style="margin-left:15px; margin-top:0;">Выбор посетителей, Июнь 2017    <a class="more-link" href="/rating/top20/">ТОП 20</a></h4></IDXSKIP>
+	<br>
+	<div class="row">
+        	        
+		        
+      
+        
+        <div class="span4 text-center card-detail">
+           
+            <div class="card-image">
+                  
+                
+                <IDXSKIP><a href="/cards/tinkoff-credit-system/tinkoff-platinum.php">
+                <div class="card-image-fon">
+                    <div class="card" style="width:180px; margin:auto; border-color:#777;">
+                    	<img src="/upload-files/cards/tinkoff-credit-system/tcs-01-2017_c.png" class="lazy2" width="180" height="114" style="width:180px; height:114px;">
+                    </div>
+                </div>
+                </a></IDXSKIP>
+                
+                            
+              
+          <IDXSKIP><p align="center" style="margin-top:20px;">  
+          <a href="/cards/tinkoff-credit-system/tinkoff-platinum.php" class="btn btn-primary">Подробнее</a>          
+          </p></IDXSKIP>
+            
+            
+            
+                          
+            </div>            
+            
+	        <div class="msg">Заявку оформили<br> 698 человек из <span class="tip" style="cursor:pointer; border-bottom:1px dotted;" title="<div align='left'>Москва&nbsp;(174)&nbsp;<br>Санкт&nbsp;Петербург&nbsp;(63)&nbsp;<br>Новосибирск&nbsp;(40)&nbsp;<br>Краснодар&nbsp;(31)&nbsp;<br>Екатеринбург&nbsp;(29)&nbsp;<br>Нижний&nbsp;Новгород&nbsp;(25)&nbsp;<br>Ростов&nbsp;на&nbsp;Дону&nbsp;(23)&nbsp;<br>Самара&nbsp;(20)&nbsp;<br>Челябинск&nbsp;(16)&nbsp;<br>Воронеж&nbsp;(14)&nbsp;<br>...</div>">102 городов</span></div>
+                  
+            
+            
+        </div>
+        	        
+		        
+      
+        
+        <div class="span4 text-center card-detail">
+           
+            <div class="card-image">
+                  
+                
+                <IDXSKIP><a href="/cards/alfa-bank/credit-cash-back.php">
+                <div class="card-image-fon">
+                    <div class="card" style="width:180px; margin:auto; border-color:#777;">
+                    	<img src="/upload-files/cards/alfa-bank/cashback-alfa-2016_c.png" class="lazy2" width="180" height="114" style="width:180px; height:114px;">
+                    </div>
+                </div>
+                </a></IDXSKIP>
+                
+                            
+              
+          <IDXSKIP><p align="center" style="margin-top:20px;">  
+          <a href="/cards/alfa-bank/credit-cash-back.php" class="btn btn-primary">Подробнее</a>          
+          </p></IDXSKIP>
+            
+            
+            
+                          
+            </div>            
+            
+	        <div class="msg">Заявку оформили<br> 236 человек из <span class="tip" style="cursor:pointer; border-bottom:1px dotted;" title="<div align='left'>Москва&nbsp;(81)&nbsp;<br>Санкт&nbsp;Петербург&nbsp;(21)&nbsp;<br>Краснодар&nbsp;(12)&nbsp;<br>Новосибирск&nbsp;(12)&nbsp;<br>Самара&nbsp;(11)&nbsp;<br>Екатеринбург&nbsp;(10)&nbsp;<br>Ростов&nbsp;на&nbsp;Дону&nbsp;(9)&nbsp;<br>Казань&nbsp;(8)&nbsp;<br>Иркутск&nbsp;(7)&nbsp;<br>Петропавловск&nbsp;Камчатский&nbsp;(3)&nbsp;<br>...</div>">52 городов</span></div>
+                  
+            
+            
+        </div>
+        	        
+		        
+      
+        
+        <div class="span4 text-center card-detail">
+           
+            <div class="card-image">
+                  
+                
+                <IDXSKIP><a href="/cards/airloans/moment-online.php">
+                <div class="card-image-fon">
+                    <div class="card" style="width:180px; margin:auto; border-color:#777;">
+                    	<img src="/upload-files/cards/platina/kviku_c.png" class="lazy2" width="180" height="114" style="width:180px; height:114px;">
+                    </div>
+                </div>
+                </a></IDXSKIP>
+                
+                            
+              
+          <IDXSKIP><p align="center" style="margin-top:20px;">  
+          <a href="/cards/airloans/moment-online.php" class="btn btn-primary">Подробнее</a>          
+          </p></IDXSKIP>
+            
+            
+            
+                          
+            </div>            
+            
+	        <div class="msg">Заявку оформили<br> 1110 человек из <span class="tip" style="cursor:pointer; border-bottom:1px dotted;" title="<div align='left'>Москва&nbsp;(258)&nbsp;<br>Санкт&nbsp;Петербург&nbsp;(90)&nbsp;<br>Краснодар&nbsp;(65)&nbsp;<br>Новосибирск&nbsp;(59)&nbsp;<br>Екатеринбург&nbsp;(40)&nbsp;<br>Ростов&nbsp;на&nbsp;Дону&nbsp;(38)&nbsp;<br>Самара&nbsp;(36)&nbsp;<br>Нижний&nbsp;Новгород&nbsp;(31)&nbsp;<br>Челябинск&nbsp;(29)&nbsp;<br>Казань&nbsp;(25)&nbsp;<br>...</div>">149 городов</span></div>
+                  
+            
+            
+        </div>
+        </div>
+</div>
+
+
+
+<br>
+
+</div>
+
+<div class="footer">
+    <div class="container">
+    <div class="row">
+    	<div class="span3">
+          <div class="ft-logo ft-icons"></div>
+          <div class="text-center"> 
+          <IDXSKIP><p><small>&nbsp;&nbsp;&nbsp;Давайте дружить!</small></p></IDXSKIP> 
+          <a href="//vk.com/club36782003" target="_blank" title="Вконтакте" rel="nofollow" class="tip soc s_vk"></a>
+          <a href="//www.facebook.com/creditcardru" target="_blank" title="Facebook" rel="nofollow" class="tip soc s_fb"></a>
+          <a href="https://twitter.com/creditcardru" title="Twitter" rel="nofollow" class="tip soc s_tw"></a>  
+          <a href="https://plus.google.com/+Credit-cardRu/" title="Google Plus" class="tip soc s_gp"></a>  
+          <a href="https://www.pinterest.com/creditcardru/%D0%BA%D1%80%D0%B5%D0%B4%D0%B8%D1%82%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D1%80%D1%82%D1%8B/" title="Pinterest" class="tip soc s_pt"></a>          
+          </div>       
+        </div>
+    	<div class="span2">
+        <IDXSKIP><div class="ft-header">Сервис</div></IDXSKIP>
+        <ul class="footer-menu">
+        <IDXSKIP><li><a href="/about.php">О проекте</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/nashi-ludi.php">Наши люди</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/kontakty.php">Контакты</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/forbanks.php">Банкам</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/map.php">Карта сайта</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="">Условия использования</a></li></IDXSKIP>
+        </ul>
+        </div>
+    	<div class="span2">
+        <IDXSKIP><div class="ft-header">Карты</div></IDXSKIP>
+        <ul class="footer-menu">
+        <IDXSKIP><li><a href="/cards/">Кредитные</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/cards/debet.php">Дебетовые</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/rating/">ТОП 20 и категории</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/actions/">Акции</a> и <a href="/news/">новости</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/otvet/">Вопрос-ответ</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/reviews/">Обзоры</a></li></IDXSKIP>
+        </ul>        
+        </div>
+    	<div class="span2">
+        <IDXSKIP><div class="ft-header">Инструменты</div></IDXSKIP>
+        <ul class="footer-menu">
+        <IDXSKIP><li><a href="/selection/profit/">«Карта лучше твоей»</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/selection/credit/">«Сколько денег дадут?»</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/selection/kopim/">«Калькулятор халявы»</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/selection/profiles/">Подбор карты по профилю</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/calc/">Калькулятор выплат</a></li></IDXSKIP>
+        <IDXSKIP><li><a href="/atm/">Банкоматы на карте</a></li></IDXSKIP>
+        </ul>        
+        </div>   
+        <div class="span3 text-center">
+        	<div class="ft-itpark ft-icons"></div>
+            <IDXSKIP><small>Резидент «IT Park»</small></IDXSKIP>
+        	<div class="ft-ssl ft-icons"></div>
+			<IDXSKIP><small>безопасное SSL соединение</small></IDXSKIP>
+        </div>          
+    </div>
+    </div>
+</div>
+<p align="center">
+<span class="muted"><IDXSKIP>&copy; 2012-2017 ООО «Лайк Ит» «Кредит Кард» - сервис выбора и онлайн оформления кредитных карт.<br>
+Информация на сайте носит информационный характер. При перепечатке ссылка обязательна.</IDXSKIP></span>
+</p>
+
+
+
+<div class="modal hide fade" id="modal-city">
+  <IDXSKIP><div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="h3">Сменить город</div>
+  </div></IDXSKIP>
+  <div class="modal-body">
+    <IDXSKIP><p>Выберите ваш город:</p></IDXSKIP>
+    <form action="" method="get">
+    <table width="100%">
+    <tr>
+    <td align="center">
+    <IDXSKIP><p>
+    <input type="hidden" class="bigdrop" id="gorod" style="width:200px" onChange="$.cookie('user_city', $(this).val(), { path: '/', domain: '.credit-card.ru', expires: 300})"/>
+    <input type="submit" class="btn btn-primary" value="Сменить" style="width:120px; height: 29px;"/></p></IDXSKIP>    
+    <hr>
+    </td>
+    </tr>
+    <tr>
+    <td>
+	<IDXSKIP><p align="center">Все карты <a href="" onClick="$.cookie('user_city', 'all', { path: '/', domain: '.credit-card.ru', expires: 300});" >России</a> и <a href="" onClick="$.cookie('user_city', 'ukraine', { path: '/', domain: '.credit-card.ru', expires: 300});" >Украины</a></p></IDXSKIP>
+    </td>
+    </tr>
+    </table>
+    </form>
+  </div>
+</div>
+
+
+<IDXSKIP><a class="hidden-phone" style="position: fixed; right: -1000px; bottom: 200px; display: inline;" href="#modal-errors" data-toggle="modal">
+<img src="/images/feedback.png">
+</a></IDXSKIP>
+
+
+
+
+
+
+<div class="modal hide fade" id="modal-errors">
+  <div class="modal-header">
+    <IDXSKIP><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></IDXSKIP>
+    <IDXSKIP><div class="h3">Обнаружили ошибку? Сообщите нам!</div></IDXSKIP>
+  </div>
+  <div class="modal-body">
+    <form onsubmit="return send_error($(this))" autocomplete="off" method="post" id="send_error" action="/ajax/send_errors/">
+        <div class="form-group"> 
+            <input type="text" placeholder="Имя:" required="required" name="name" class="form-control" id="name" style="width:98%">
+        </div>
+        <div class="form-group">         
+            <input type="text" placeholder="E-mail:" required="required" name="email" class="form-control" id="email" style="width:98%">
+        </div>
+        <div class="form-group">
+            <label>Текст сообщения:</label>
+            <textarea required style="width:98%; height:190px;" class="form-control" name="message" id="message"></textarea>
+        </div> 
+        <div class="form-group text-right"> 
+        <button class="btn btn-success">Отправить</button>
+        </div>
+        
+        <input type="hidden" name="site_token" value="7b714826a23cbb3328a4bfafa1938a26">
+    </form>
+  </div>
+</div>
+
+<script>
+function send_error(that)
+{
+	$.post(that.attr('action'), that.serialize(), 
+		function(d,t,j){
+			if(d.status == 'error')
+				alert(d.message)
+			else {
+				alert('Спасибо!');
+				that[0].reset();
+				$('#modal-errors').modal('hide');
+			}
+		},"json");
+
+	return false;
+}
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-38051956-1', 'auto');  ga('send', 'pageview');
+</script>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter14096452 = new Ya.Metrika({id:14096452,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/14096452" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<script src="/design/credit-card/js/all_js3.js"></script>
+
+
+<link href="/design/credit-card/js/select/select2.css" rel="stylesheet" type="text/css">
+<link href="/design/credit-card/js/fs/jquery.formstyler.css" rel="stylesheet" type="text/css">
+<link href="/design/credit-card/js/redactor/redactor.css" rel="stylesheet" type="text/css"/>
+
+<style>
+.redactor_editor, .redactor_editor:focus { max-height:220px; }
+</style>
+
+<script>
+$(document).ready(
+	function() {
+		$("img.lazy").lazyload({placeholder:"/upload-files/cards/levoberezhniy/zaglushka.png"});
+		$('.set-redactor').redactor({
+			maxHeight: 500 // pixels
+		});
+	}
+);
+</script>
+
+<div class="modal hide fade" id="modal-ask">
+  <IDXSKIP><div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="h3">Задать вопрос эксперту</div>
+  </div></IDXSKIP>
+  <form method="post" id="form-ask" action="/otvet/ask/" style="margin:0;">  
+  <div class="modal-body">
+  <p><IDXSKIP>Если вы не можете найти ответ на официальных сайтах банков либо в нашей базе вопросов-ответов, то спросите у нашего эксперта Натальи Анджелян. <br>
+    Наталья ответит Вам в течение суток.</IDXSKIP></p>
+    <input type="hidden" name="site_token" value="7b714826a23cbb3328a4bfafa1938a26">
+    <p>
+      <select id="select-banks" style="width:250px;" class="populate placeholder" name="bank_id">
+        <option></option>
+                <option value="183">
+        Forward Bank        </option>
+                <option value="169">
+        QIWI        </option>
+                <option value="150">
+        Touch Bank        </option>
+                <option value="67">
+        Абсолют Банк        </option>
+                <option value="25">
+        Авангард        </option>
+                <option value="57">
+        Аверс        </option>
+                <option value="190">
+        Автоградбанк        </option>
+                <option value="162">
+        Азиатско Тихоокеанский Банк (АТБ)        </option>
+                <option value="51">
+        Ак Барс Банк        </option>
+                <option value="189">
+        АКИБАНК        </option>
+                <option value="192">
+        Аксонбанк        </option>
+                <option value="82">
+        Акцепт        </option>
+                <option value="24">
+        Альфа-Банк        </option>
+                <option value="170">
+        Альфа-Банк Украина        </option>
+                <option value="167">
+        Балтийский Банк        </option>
+                <option value="73">
+        Банк Интеза        </option>
+                <option value="202">
+        Банк Кредит Днiпро        </option>
+                <option value="33">
+        Банк Москвы (ВТБ)        </option>
+                <option value="191">
+        БашКомСнабБанк        </option>
+                <option value="44">
+        Бинбанк        </option>
+                <option value="35">
+        БИНБАНК кредитные карты (МосКомПриватбанк)        </option>
+                <option value="134">
+        БИНБАНК Столица        </option>
+                <option value="188">
+        БКС - Инвестиционный Банк        </option>
+                <option value="98">
+        БыстроБанк        </option>
+                <option value="178">
+        ВБРР        </option>
+                <option value="194">
+        Венец банк        </option>
+                <option value="48">
+        Возрождение        </option>
+                <option value="36">
+        Восточный Экспресс        </option>
+                <option value="30">
+        ВТБ24        </option>
+                <option value="103">
+        ВУЗ-банк        </option>
+                <option value="88">
+        Вятка-банк        </option>
+                <option value="61">
+        Газпромбанк        </option>
+                <option value="105">
+        Газэнергобанк        </option>
+                <option value="154">
+        Генбанк        </option>
+                <option value="161">
+        Глобэкс        </option>
+                <option value="52">
+        Гута-Банк        </option>
+                <option value="129">
+        Дальневосточный банк        </option>
+                <option value="117">
+        Девон-Кредит        </option>
+                <option value="86">
+        Запсибкомбанк        </option>
+                <option value="70">
+        Зенит        </option>
+                <option value="85">
+        ИнвестКапиталБанк        </option>
+                <option value="182">
+        Ідея Банк        </option>
+                <option value="92">
+        Кольцо Урала        </option>
+                <option value="185">
+        Крайинвестбанк        </option>
+                <option value="38">
+        Кредит Европа Банк        </option>
+                <option value="196">
+        КС Банк        </option>
+                <option value="156">
+        Кубань Кредит        </option>
+                <option value="96">
+        Левобережный        </option>
+                <option value="176">
+        Липецккомбанк        </option>
+                <option value="76">
+        ЛОКО-Банк        </option>
+                <option value="34">
+        МДМ Банк (Бинбанк)        </option>
+                <option value="64">
+        Меткомбанк        </option>
+                <option value="114">
+        Меткомбанк (Уральский банк)        </option>
+                <option value="49">
+        Московский Индустриальный банк        </option>
+                <option value="50">
+        Московский кредитный банк        </option>
+                <option value="113">
+        Москомбанк        </option>
+                <option value="84">
+        Москоммерцбанк        </option>
+                <option value="79">
+        Мособлбанк        </option>
+                <option value="68">
+        МТС-Банк        </option>
+                <option value="163">
+        Нейва        </option>
+                <option value="112">
+        Новикомбанк        </option>
+                <option value="179">
+        НОКССбанк        </option>
+                <option value="95">
+        Нордеа Банк        </option>
+                <option value="55">
+        Открытие        </option>
+                <option value="28">
+        ОТП Банк        </option>
+                <option value="172">
+        ОТП Банк Украина        </option>
+                <option value="198">
+        Ощадбанк        </option>
+                <option value="93">
+        Первомайский        </option>
+                <option value="158">
+        Пересвет        </option>
+                <option value="186">
+        Платина        </option>
+                <option value="119">
+        Плюс Банк        </option>
+                <option value="193">
+        Пойдём! банк        </option>
+                <option value="138">
+        Почта Банк (Лето Банк)        </option>
+                <option value="171">
+        Приватбанк Украина        </option>
+                <option value="97">
+        Приморье        </option>
+                <option value="131">
+        Примсоцбанк        </option>
+                <option value="46">
+        Промсвязьбанк        </option>
+                <option value="173">
+        ПУМБ Украина        </option>
+                <option value="174">
+        Райффайзен Банк Аваль        </option>
+                <option value="26">
+        Райффайзенбанк        </option>
+                <option value="180">
+        Раунд банк        </option>
+                <option value="22">
+        Ренессанс Кредит        </option>
+                <option value="110">
+        РЕСО Кредит        </option>
+                <option value="153">
+        РНКБ        </option>
+                <option value="140">
+        РНКО        </option>
+                <option value="141">
+        Рокетбанк        </option>
+                <option value="19">
+        Росбанк        </option>
+                <option value="53">
+        Росгосстрах Банк        </option>
+                <option value="62">
+        РосЕвроБанк        </option>
+                <option value="69">
+        Россельхозбанк        </option>
+                <option value="89">
+        Российский Капитал        </option>
+                <option value="155">
+        Россия        </option>
+                <option value="144">
+        Русский Ипотечный Банк        </option>
+                <option value="17">
+        Русский Стандарт        </option>
+                <option value="54">
+        Русский Торговый Банк        </option>
+                <option value="71">
+        Русфинанс Банк        </option>
+                <option value="159">
+        Санкт-Петербург        </option>
+                <option value="181">
+        СаровБизнесБанк        </option>
+                <option value="18">
+        Сбербанк России        </option>
+                <option value="152">
+        Связь-Банк        </option>
+                <option value="78">
+        СДМ-Банк        </option>
+                <option value="100">
+        Севергазбанк (СГБ)        </option>
+                <option value="145">
+        Сетелем        </option>
+                <option value="135">
+        СИАБ        </option>
+                <option value="21">
+        Ситибанк        </option>
+                <option value="74">
+        СКБ-Банк        </option>
+                <option value="58">
+        СМП Банк        </option>
+                <option value="31">
+        Советский        </option>
+                <option value="136">
+        Совкомбанк        </option>
+                <option value="72">
+        Союз        </option>
+                <option value="130">
+        Сургутнефтегазбанк        </option>
+                <option value="16">
+        Тинькофф Банк        </option>
+                <option value="77">
+        Транскапиталбанк        </option>
+                <option value="45">
+        Траст        </option>
+                <option value="201">
+        УкрСиббанк        </option>
+                <option value="200">
+        Укрсоцбанк        </option>
+                <option value="199">
+        Укрэксимбанк        </option>
+                <option value="126">
+        Урал ФД        </option>
+                <option value="42">
+        Уралсиб        </option>
+                <option value="83">
+        Уральский банк реконструкции и развития        </option>
+                <option value="99">
+        Уральский Транспортный Банк        </option>
+                <option value="177">
+        Уссури        </option>
+                <option value="118">
+        Финам        </option>
+                <option value="47">
+        Финансовая Корпорация Открытие (Номос-Банк)        </option>
+                <option value="60">
+        Фондсервисбанк        </option>
+                <option value="175">
+        Фора-Банк        </option>
+                <option value="133">
+        Форштадт        </option>
+                <option value="184">
+        Хакасский муниципальный банк        </option>
+                <option value="75">
+        Ханты-Мансийский Банк        </option>
+                <option value="166">
+        Хлынов        </option>
+                <option value="20">
+        Хоум Кредит энд Финанс Банк        </option>
+                <option value="187">
+        Центр-инвест        </option>
+                <option value="80">
+        Челиндбанк        </option>
+                <option value="107">
+        Чувашкредитпромбанк        </option>
+                <option value="197">
+        ЭйрЛоанс        </option>
+                <option value="195">
+        Эксперт Банк        </option>
+                <option value="66">
+        Экспобанк        </option>
+                <option value="104">
+        Экспресс-Волга        </option>
+                <option value="127">
+        Энергобанк        </option>
+                <option value="149">
+        Югра        </option>
+                <option value="39">
+        Юниаструм Банк        </option>
+                <option value="40">
+        ЮниКредит Банк        </option>
+                <option value="168">
+        Яндекс Деньги        </option>
+                <option value="137">
+        ЯР-Банк        </option>
+              </select>
+    </p>
+        <IDXSKIP><div>
+      <div class="pull-left">
+        <label for="name">Ваше имя</label>
+        <div style="position:relative">
+          <input type="text" name="name" id="name" value="" style="width:240px; margin-right:20px;">
+        </div>
+      </div>
+      <div class="pull-left">
+        <label for="email">Адрес электронной почты</label>
+        <div style="position:relative">
+          <input type="text" name="email" id="email" value="" style="width:240px;" placeholder="name@mail.ru">
+        </div>
+      </div>
+    </div></IDXSKIP>
+    <div class="clearfix"></div>
+    <IDXSKIP><div>
+      <label for="text">Задайте вопрос</label>
+      <div style="position:relative">
+        <textarea rows="5" name="text" class="input-block-level" style="resize:none; height:200px;"></textarea>
+      </div>
+    </div></IDXSKIP>
+    <div class="clearfix"></div>
+    </div>
+    <IDXSKIP><div class="modal-footer">
+      <input type="submit" class="btn" value="Задать вопрос">
+    </div></IDXSKIP>
+  </form>
+</div>
+</div>
+<IDXSKIP><div id="ajax_notifer" class="ajax_notifer"><img src="/design/credit-card/img/spinner.gif"></div></IDXSKIP>
+
+
+<IDXSKIP><div id='Rambler-counter2' style="display:none">
+<!-- Внимание! В этом div'е не нельзя размещать пользовательский контент: он будет затерт! -->
+<noscript>
+<a href="//top100.rambler.ru/navi/3142062/">
+  <img src="//counter.rambler.ru/top100.cnt?3142062" alt="Rambler's Top100" border="0" width="0" height="0" />
+</a>
+</noscript>
+</div></IDXSKIP>
+
+<!-- Код скрипта должен быть размещен строго ниже контейнера для логотипа (div c id='Rambler-counter') -->
+<script type="text/javascript">
+var _top100q = _top100q || [];
+_top100q.push(['setAccount', '3142062']);
+_top100q.push(['trackPageviewByLogo', document.getElementById('Rambler-counter')]);
+
+(function(){
+  var pa = document.createElement("script"); 
+  pa.type = "text/javascript"; 
+  pa.async = true;
+  pa.src = ("https:" == document.location.protocol ? "https:" : "http:") + "//st.top100.ru/top100/top100.js";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(pa, s);
+})();
+</script>
+
+<script type="text/javascript">
+  $(function(){
+    $("body").addtocopy({htmlcopytxt: '<br>Подробнее: <a href="'+window.location.href+'">'+window.location.href+'</a>', minlen:35, addcopyfirst: false});
+  });
+</script>
+
+<!-- HotLog -->
+<span id="hotlog_counter2"></span>
+<span id="hotlog_dyn"></span>
+<script type="text/javascript"> var hot_s = document.createElement('script');
+hot_s.type = 'text/javascript'; hot_s.async = true;
+hot_s.src = '//js.hotlog.ru/dcounter/2533060.js';
+hot_d = document.getElementById('hotlog_dyn');
+hot_d.appendChild(hot_s);
+</script>
+<IDXSKIP><noscript>
+<img src="//hit19.hotlog.ru/cgi-bin/hotlog/count?s=2533060&im=68" border="0"
+title="HotLogs" alt="HotLogs" width="0" height="0">
+</noscript></IDXSKIP>
+<!-- /HotLog -->
+
+
+<script type="text/javascript">
+(function(w, d, n, s, t) {
+w[n] = w[n] || [];
+w[n].push(function() {
+Ya.Direct.insertInto(93431, "horizont_banner2", {
+stat_id: 1,
+ad_format: "direct",
+font_size: 1,
+type: "flat",
+border_type: "none",
+limit: 1,
+title_font_size: 3,
+border_radius: true,
+site_bg_color: "FFFFFF",
+header_bg_color: "FFFFFF",
+border_color: "CCCCCC",
+title_color: "0088CC",
+url_color: "00CC00",
+text_color: "000000",
+hover_color: "0066FF", 
+favicon: false,
+no_sitelinks: true
+});
+});
+t = d.getElementsByTagName("script")[0];
+s = d.createElement("script");
+s.src = "//an.yandex.ru/system/context.js";
+s.type = "text/javascript";
+s.async = true;
+t.parentNode.insertBefore(s, t);
+})(window, document, "yandex_context_callbacks");
+</script>
+<script type="text/javascript">
+(function(w, d, n, s, t) {
+w[n] = w[n] || [];
+w[n].push(function() {
+Ya.Direct.insertInto(93431, "horizont_banner", {
+stat_id: 1,
+ad_format: "direct",
+font_size: 1,
+type: "flat",
+border_type: "block",
+limit: 2,
+title_font_size: 3,
+border_radius: true,
+site_bg_color: "FFFFFF",
+header_bg_color: "FFFFFF",
+border_color: "CCCCCC",
+title_color: "0088CC",
+url_color: "00CC00",
+text_color: "000000",
+hover_color: "0066FF",
+favicon: true,
+no_sitelinks: true
+});
+});
+t = d.getElementsByTagName("script")[0];
+s = d.createElement("script");
+s.src = "//an.yandex.ru/system/context.js";
+s.type = "text/javascript";
+s.async = true;
+t.parentNode.insertBefore(s, t);
+})(window, document, "yandex_context_callbacks");
+</script>
+<script type="text/javascript">
+(function(w, d, n, s, t) {
+w[n] = w[n] || [];
+w[n].push(function() {
+Ya.Direct.insertInto(93431, "left_direct", {
+stat_id: 1,
+ad_format: "direct",
+font_size: 1,
+type: "flat",
+border_type: "block",
+limit: 1,
+title_font_size: 3,
+border_radius: true,
+site_bg_color: "FFFFFF",
+header_bg_color: "FFFFFF",
+border_color: "CCCCCC",
+title_color: "0088CC",
+url_color: "00CC00",
+text_color: "000000",
+hover_color: "0066FF",
+favicon: true,
+no_sitelinks: true
+});
+});
+t = d.getElementsByTagName("script")[0];
+s = d.createElement("script");
+s.src = "//an.yandex.ru/system/context.js";
+s.type = "text/javascript";
+s.async = true;
+t.parentNode.insertBefore(s, t);
+})(window, document, "yandex_context_callbacks");
+</script>
+
+
+</body></html>

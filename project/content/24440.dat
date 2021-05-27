@@ -1,0 +1,1404 @@
+serialam.ru/query/kak_ustanovit_fifu_na_android
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- serialam.ru --><title>Как установить фифу на Андроид</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="Амазонки 1 сезон">
+<meta name="keywords" content="Амазонки 1 сезон">
+<meta name="generator" content="">
+<link rel="search" type="application/opensearchdescription+xml" href="/cms/opensearch.php" title="Сериалы online">
+<link rel="alternate" type="application/rss+xml" title="Сериалы online" href="/rss.xml">
+<script type="text/javascript" src="/cms/classes/js/jquery.js"></script><script type="text/javascript" src="/cms/classes/js/jqueryui.js"></script><script type="text/javascript" src="/cms/classes/js/gpl_js.js"></script><script type="text/javascript">
+  var url = ""; //Адрес Вашего сайта
+  var title = "Сериалы online - ежедневные обновления"; //Название Вашего сайта
+  function addFavorite(a) {
+    try {
+      window.external.AddFavorite(url, title);
+    }
+    catch (e) {
+      try {
+        window.sidebar.addPanel (title, url, "");
+        }
+      catch (e) {
+        if (typeof(opera)=="object") {
+          a.rel = "sidebar";
+          a.title = title;
+          a.url = url;
+          return true;
+        }
+        else {
+          alert("Нажмите Ctrl-D для добавления в избранное");
+        }
+      }
+    }
+    return false;
+          }
+</script><link rel="image_src" href="/se.jpg">
+<link rel="shortcut icon" href="/templates/Default/images/favicon.ico">
+<link media="screen" href="/templates/Default/style/style.css" type="text/css" rel="stylesheet">
+<link media="screen" href="/templates/Default/style/rustyle.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="/templates/Default/style/st.css" type="text/css">
+<style type="text/css">
+            #menuBlock1 {
+    height: 28px;
+    padding-top: 0px;
+    border-bottom: 1px solid #01298D;
+}
+#nav {
+    list-style: none;
+    font: 12px tahoma, arial;
+}
+#nav li#recent span {
+    background:  no-repeat left;
+}
+#nav li#popular span{
+    background:  no-repeat left;
+}
+#nav li#novelty span{
+    background:  no-repeat left;
+}
+#nav li#recomend span{
+    background:  no-repeat left;
+}
+#nav li#catalog span{
+    background:  no-repeat left;
+}
+#nav li#invite span{
+    background:  no-repeat left;
+}
+#nav li#favorites span{
+    background:  no-repeat left;
+}
+#nav li#fav span{
+    background:  no-repeat left;
+}
+#nav li#tv span{
+    background:  no-repeat left;
+}
+#nav li#my span{
+    background:  no-repeat left;
+}
+#nav li {
+    float: left;
+    margin-left: 10px;
+}
+#nav li:hover {
+    background:  no-repeat right;
+}
+#nav li a {
+    display: block;
+    height: 29px;
+    padding:0 10px;
+    text-align: center;
+    line-height: 29px;
+    color: #00288D;
+    text-decoration: none;
+}
+#nav li a:hover {
+    background:  no-repeat left
+}
+#nav li a span {
+    display: block;
+    height: 100%;
+    padding-left: 23px;
+}
+#nav li.active {
+    background: no-repeat right;
+}
+#nav li.active  a {
+    color: #fff;
+    background:  no-repeat left;
+}
+
+#share42 {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #E9E9E9;
+	border-radius: 4px 4px 4px 4px;
+	padding: 6px;
+	position: fixed;
+	right: 0px;
+	z-index: 1000;
+	font-size: 100%;
+	margin: 0;
+	outline: 0 none;
+	line-height: 1;
+	-width:37px;
+	-position:absolute;
+	-padding: 6px 0px 0px 6px;
+}
+#share42:hover {
+	background: none repeat scroll 0 0 #F6F6F6;
+	border: 1px solid #D4D4D4;
+	box-shadow: 0 0 5px #DDDDDD;
+}
+#share42 a {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+#share42 #sb_google {
+   background: #ffffff;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+#share42:hover a {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+#share42 {
+
+    top:65%;  
+     }
+
+
+#share42 a:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+#share42:hover #sb_google {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+#share42 #sb_google:hover {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+#share42 img {
+	border: medium none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+#sb_facebook { display: block; width: 32px; height: 32px; margin: 0pt 0pt 6px; background: url('/icons_.png') repeat scroll 0px 0pt transparent; }
+#sb_livejournal { display: block; width: 32px; height: 32px; margin: 0pt 0pt 6px; background: url('/icons_.png') repeat scroll -32px 0pt transparent; }
+#sb_mailru { display: block; width: 32px; height: 32px; margin: 0pt 0pt 6px; background: url('/icons_.png') repeat scroll -64px 0pt transparent; }
+#sb_odnoklassniki { display: block; width: 32px; height: 32px; margin: 0pt 0pt 6px; background: url('/icons_.png') repeat scroll -96px 0pt transparent; }
+#sb_twitter { display: block; width: 32px; height: 32px; margin: 0pt 0pt 6px; background: url('/icons_.png') repeat scroll -128px 0pt transparent; }
+#sb_vkontakte { display: block; width: 32px; height: 32px; margin: 0pt 0pt 6px; background: url('/icons_.png') repeat scroll -160px 0pt transparent; }
+        </style>
+<script type="text/javascript" src="/jquery-1.3.1.min.js"></script><script type="text/javascript">
+    $(document).ready(function(){
+    var url = document.location.href;
+
+    var nashu_serialy = url.indexOf("nashu_serialy");
+    var zaryb_serial = url.indexOf("zaryb_serial");
+    var multserialy = url.indexOf("multserialy");
+    var form = url.indexOf("do=form");
+
+    
+    if (nashu_serialy !== -1) {
+        $('#navigation li a[href*=nashu_serialy]').parent().addClass('active')
+    }
+    else if (zaryb_serial !== -1) {
+        $('#navigation li a[href*=zaryb_serial]').parent().addClass('active')
+    }
+    else if (multserialy !== -1) {
+        $('#navigation li a[href*=multserialy]').parent().addClass('active')
+    }
+    else if (form !== -1) {
+        $('#navigation li a[href*=do=form]').parent().addClass('active')
+    }
+    else {
+        $('#navigation li#recent').addClass('active')
+    }
+});
+</script><script type="text/javascript" src="/tmp/img/gaqyhe.js"></script>
+<style type='text/css'>
+
+.news_menu {
+}
+
+.news_head {
+ height:29px;
+}
+
+.news_footer {
+ height:16px; 
+ display:none;
+}
+
+.st1 {
+
+}
+
+#news_box {
+ width:193px;
+ margin:20px 0px 0px 5px;
+ padding:40px 0px 0px 0px;
+
+}
+
+.title_h {
+ padding-left:10px;
+}
+
+.news_bd {
+ padding:5px 10px 0px 10px;
+ text-align:justify;
+ font-size:11px;
+}
+
+#news p a {
+  font-size:11px;
+ color:#17b0ff;
+ text-decoration:underline;
+ font-family:Tahoma;
+}
+
+#news p {
+  padding:10px 30px 10px 15px;
+}
+
+ul.news {
+ padding:0px 3px 0px 0px;
+ list-style-type:none;
+ margin:0px;
+}
+
+ul.news li {
+ padding:0px 7px 0px 15px;
+}
+
+.news_datetitle {
+}
+
+.tttanews , .tttaprojects, .tttaevents,.tttafoto{
+ height:36px !important;
+}
+
+.news_date{
+  color:#9f0a0c;
+  text-decoration:none;
+  vertical-align:top;
+  font-family:Tahoma;
+  font-weight:bold;
+  font-size:11px;
+  padding:2px 3px 5px 0px;
+}
+
+.news_text, .news_text a, .news_text a:hover{
+  color:#000;
+ text-decoration:none;
+  font-family:Tahoma;
+  font-size:11px;
+  
+}
+
+.news_text {
+ text-align:justify;
+ padding-bottom:6px !important;
+}
+
+.news_title, .news_title a, .news_title a:hover{
+  color:#000;
+  font-family:Tahoma;
+  font-weight:bold;
+  font-size:11px;
+  text-decoration:none;
+}
+
+.news_full {
+ text-align:right;
+ padding-right:20px;
+ white-space:nowrap;
+}
+
+.news_full a , .news_full a :hover{
+ font-family:Tahoma;
+ font-size:11px;
+ font-weight:bold;
+ color:#9f0a0c !important; 
+ text-decoration:none;
+ 
+}
+
+.zehugap a , .zehugap a :hover{
+ color:#9f0a0c;
+}
+
+.news_black {
+ text-decoration:none;
+ color:#000;
+}
+
+.nunu{
+  color:#9e0b0f;
+  font-weight:bold;
+  font-family:Tahoma;
+  font-size:12px;
+}
+
+.velowis{
+  color:#333333;
+  padding-top:5px;
+  font-family:Tahoma;
+  font-size:12px;
+  text-align:justify;
+}
+
+.pypas4{
+  color:#9e0b0f;
+  padding:4px 0px 2px 0px;
+  font-family:Tahoma;
+  font-weight:bold;
+  font-size:12px;
+  text-align:justify;
+}
+
+.news_all {
+ text-align:right;
+}
+
+.news_all a {
+ font-family:Tahoma;
+ font-size:13px;
+ font-weight:bold;
+ color:#9f0a0c;
+ text-decoration:none;
+}
+
+.news_all a:hover {
+ color:#9f0a0c;
+}
+
+
+.p_news {
+ position:absolute;
+ margin:-2px 0px 0px 5px;
+}
+
+</style>
+</head>
+<body>
+
+
+<IDXSKIP><div id="loading-layer" style="display:none"><div id="loading-layer-text">Загрузка. Пожалуйста, подождите...</div></div></IDXSKIP>
+<script language="javascript" type="text/javascript">
+<!--
+var gpl_root       = '/';
+var gpl_admin      = '';
+var gpl_login_hash = '';
+var gpl_group      = 5;
+var gpl_skin       = 'Default';
+var gpl_wysiwyg    = 'no';
+var quick_wysiwyg  = '0';
+var gpl_act_lang   = ["Да", "Нет", "Ввод", "Отмена"];
+var menu_short     = 'Быстрое редактирование';
+var menu_full      = 'Полное редактирование';
+var menu_profile   = 'Просмотр профиля';
+var menu_send      = 'Отправить сообщение';
+var menu_uedit     = 'Админцентр';
+var gpl_info       = 'Информация';
+var gpl_confirm    = 'Подтверждение';
+var gpl_prompt     = 'Ввод информации';
+var gpl_req_field  = 'Заполните все необходимые поля';
+var gpl_del_agree  = 'Вы действительно хотите удалить? Данное действие невозможно будет отменить';
+var gpl_del_news   = 'Удалить статью';
+var allow_gpl_delete_news   = false;
+var gpl_search_delay   = false;
+var gpl_search_value   = '';
+$(function(){
+	FastSearch();
+});//-->
+</script><div id="share42">
+	<a rel="nofollow" href="" title="Поделиться в Facebook" id="sb_facebook"></a>
+	<a rel="nofollow" href="" title="Опубликовать в LiveJournal" id="sb_livejournal"></a>
+	<a rel="nofollow" href="" title="Поделиться в Моем Мире@Mail.Ru" id="sb_mailru"></a>
+	<a rel="nofollow" href="" title="Добавить в Одноклассники" id="sb_odnoklassniki"></a>
+	<a rel="nofollow" href="" title="Добавить в Twitter" id="sb_twitter"></a>
+	<a rel="nofollow" href="" title="Поделиться В Контакте" id="sb_vkontakte"></a>
+    <div id="sb_google"><plusone size="medium" annotation="none"></plusone></div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var sb_title = $('h1:first').text();
+        var sb_title_array = sb_title.split('/');
+        if (sb_title_array.length >= 2) {
+            sb_title = sb_title_array[sb_title_array.length - 1];
+        }
+        if (!sb_title) {
+            sb_title = $('title').text();
+        }
+        var sb_url = document.location.href;
+	    var sb_facebook = encodeURI(""+sb_url+"&t="+sb_title);
+        var sb_livejournal = encodeURI(""+sb_url+"&subject="+sb_title);
+	    var sb_mailru = encodeURI(""+sb_url+"&title="+sb_title);
+	    var sb_odnoklassniki = encodeURI(""+sb_url+"&title="+sb_title);
+	    var sb_twitter = encodeURI(""+sb_title);
+	    var sb_vkontakte = encodeURI(""+sb_url+"&title="+sb_title);
+	    $('#sb_facebook').attr('href', sb_facebook);
+            $('#sb_livejournal').attr('href', sb_livejournal);
+	    $('#sb_mailru').attr('href', sb_mailru);
+	    $('#sb_odnoklassniki').attr('href', sb_odnoklassniki);
+	    $('#sb_twitter').attr('href', sb_twitter);
+	    $('#sb_vkontakte').attr('href', sb_vkontakte);
+	});
+</script><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"><tr>
+<td width="827">
+<div id="wrapper">
+	 <div id="header2" align="center">
+	 <IDXSKIP><div id="logo">
+	 <object type="application/x-shockwave-flash" data="/templates/Default/style/logo.swf" width="300" height="100">
+	<param name="movie" value="/templates/Default/style/logo.swf">
+<param name="wmode" value="transparent"></object> </div></IDXSKIP>
+<div id="nav2"> <ul id="navigation">
+<IDXSKIP><li id="recent"><a href="/"><span><span><span><span>Главная</span></span></span></span></a></li></IDXSKIP>
+    <IDXSKIP><li><a href="/nashu_serialy.html"><span><span><span><span>Русские</span></span></span></span></a></li></IDXSKIP>
+    <IDXSKIP><li><a href="/zaryb_serial.html"><span><span><span><span>Зарубежные</span></span></span></span></a></li></IDXSKIP>
+    <IDXSKIP><li class=""><a href="/multserialy.html"><span><span><span><span>МультСериалы</span></span></span></span></a></li></IDXSKIP>
+    <IDXSKIP><li class="last-item"><a href="/index.php?do=form&amp;id=1"><span><span><span><span>Заказ сериала</span></span></span></span></a></li></IDXSKIP>
+
+
+                  </ul>
+</div>
+</div>
+
+      <div id="content">
+        <div class="left">
+          <div id="news_list">
+            <div class="news ">
+              <IDXSKIP><table width="100%" border="0" align="center" cellspacing="2">
+<div class="speedbar"><span id="gpl-speedbar"><a href="/">Сериалы</a> » Амазонки 1 сезон</span></div>
+                <tr>
+<th height="20" colspan="2" align="center" scope="col"> 
+
+
+<!-- Форма старого поиска -->
+
+                <form action="" method="post" name="searchform" id="searchform">
+                    <input type="hidden" name="do" value="search"><input type="hidden" name="subaction" value="search"><table width="410" height="61" border="0" cellpadding="0" cellspacing="0"><tr>
+<td height="49">
+<div align="center"><span class="style1">
+                            <input name="story" type="text" class="status" id="story" onfocus="if(this.value=='Поиск сериалов...') this.value='';" onblur="if(this.value=='value=" this.value="Поиск сериала..." size="40"></span></div>
+                        </td>
+                        <td><span class="style1">
+                          <input name="image" type="image" class="appImage" title="Iaeoe" src="/ppo.jpg" alt="Iaeoe" align="middle"></span></td>
+                      </tr></table>
+</form>
+
+<!-- Форма нового поиска -->                
+<!--
+<form action="" method="post" name="searchform" id="searchform">
+    <input type="hidden" name="do" value="ssearch" />
+    <input type="hidden" name="newphrase" value="" />
+    <table width="410" height="61" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td height="49">
+            <div align="center">
+                <span class="style1">
+                    <input name="phrase" id='story' type="text" class="status" value='Поиск сериала...' onfocus="if(this.value=='Поиск сериала...') this.value='';" onblur="if(this.value=='') this.value='Поиск сериала...';" size="40"/>
+                </span>
+            </div>
+            </td>
+            <td>
+            <span class="style1">
+                <input type="image" class="appImage" title="Поиск" src="" alt="Поиск" align="middle" onclick="this.submit();" />
+            </span>
+            </td>
+        </tr>
+    </table>
+</form>
+-->
+                </th>
+                </tr>
+<tr></tr>
+</table></IDXSKIP>
+<div id="gpl-content"><div class="basecont">
+	<div class="dpad">
+		<h2 class="heading">Как установить фифу на Андроид</h2>
+		<IDXSKIP><p> </p></IDXSKIP>
+<IDXSKIP><table width="100%" border="0"><tbody>
+<tr valign="bottom" align="center">
+<th valign="middle" scope="col">
+<a href="/prigorod/"> <strong> </strong></a><strong><a href="/amazonki-1-sezon/">Амазонки</a></strong> </th>
+</tr>
+<tr>
+<th align="center" valign="middle" scope="col"><a href="/amazonki-1-sezon/"><img width="133" height="190" border="0" alt="" src="/u65440831/138888261/x_ca20a87a.jpg"></a></th>
+</tr>
+</tbody></table></IDXSKIP>
+<table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+<td colspan="3">
+<div style='color:silver;'><IDXSKIP><a href='/query/'>Материалы</a></IDXSKIP> | <a href='/query/kak_ustanovit_fifu_na_android/'>Как установить фифу на Андроид</a> <IDXSKIP>| </IDXSKIP></div><div id="mcontent"><!--163--><h3>Установил ФИФУ 12 на андроид, а там вместо газона разноцветное поле какое-то, в чем проблема???</h3><p>Я устоновил на lg optimys l9 все норм попробуйскачать с сайта tegra3</p><p>Устанавливайте игру взломанный FIFA 14 на Андроид и погружайтесь в волнующую футбольную стихию. Данная игровая серия относится к признанным футбольным симуляторам.</p><h3>Как играть в фифа 15 на андроид в онлайн девизионах???</h3><p>Установи привяжи к телефону и играй правда с бронзой</p><p>Установка 1.Устанавливаем .apk 2.Копируем кэш по пути sdcard Android obb Способы взлома 1. Обязательно ... 2. Нужно запустить фифу через Freedom есть в раздаче и купить е там. Но купить вы е не сможете - выскочит ошибка.21 октября 2014</p><h3>Установил ФИФУ 12 на андроид, а там вместо газона разноцветное поле какое-то, в чем проблема???</h3><p>Увеличить</p><p>Скачать бесплатно игру FIFA 2012 - лучший футбол на андроид. ... Ключевые теги Sport, Simulator, футбол, фифа, 2012. ... Как устанавливать приложения игры, программы, виджеты... ?</p><h3>Чтобы продолжить, вам нужно установить секретный вопрос на своем игровом устройстве фифа 15 ut android</h3><p>Скачай заново <a href='http://mobigama.net/android/free/2402-fifa-15-nepobedimaya-komanda-fifa-15-ultimate-team.html' target='_blank' rel='nofollow'>http://mobigama.net/android/free/2402-fifa-15-nepobedimaya-komanda-fifa-15-ultimate-team.html</a> , парень играет и не было в игре никакого вопроса. Лаг это</p><p>FIFA 14 самый лучший футбольный симулятор этого года на андроид устройства. ... В ФИФА 2014 будет доступно пользователям 3 игровых режима быстрые матчи, турниры и режим тренера.</p><h3>Парни скиньте кто нибудь сылку на фифа 13 для андроид. А то скачиваю устанавливаю и вылетает игра</h3><p>Это фигня вот 15 лучше</p><p>Описание FIFA 14 - лучший футбол за 2014 год для андроид устройств от компании EA Sports, предлагающий игрокам реальные ... Что касается правил Фифа 14, то все будет происходить, как на самом настоящем футбольном поле, а вот реализации...</p><h3>Какой лучше тел взять? на платформе андройд или apple</h3><p>Вопрос вкуса</p><p>Извините что в конце звук пропал.</p><p>Андроид в нем много приложений</p><p>IOS Apple!!!В ней на 250 000 приложений больше, чем в Android!!!</p><p>Обе эти ос на телефонах - говно. так что вопрос личных предпочтений. ios в целом поприятнее будет.</p><p>Если много денег бери яблоки если мало бери андроид хотя есть дорогие модели андроид но батарея на андроиде не особо держит так что сложно вот так советовать надо конкретно модели телефонов сравнивать гдето камера лучше где-то дисплей больше и. т. д</p><p>Андрюшу бери)</p><p>Как установить FIFA 14 на андроид. Просмотров 11,114 Загружено 1 год. ... Как взломать фифу 14 без рута на андроид... Добавлено 8 мес. Добавил Степан Дьяченко.</p><p>Возьми лучше windows phone. Намучаешься, зато скучно не будет.</p><p>Это нужно выбирать по вкусу, андройд хорош тем то что в нём много хороших приложений, но плох тем то что немного тупит (смотря какую модель покупать) , а аррle тоже имеет много хороших приложений и все они нужны, у эйпл (я так буду писать) много места на карте памяти, но эйпл мало держит зарядку и через год использования выключается из за игр, я советую андройд)</p><p>Apple конечно<br />
+идеальный просто телефон, сама пользуюсь и радуюсь)</p><p>Рекомендую изучить операционные системы по статьям и видео-роликам.</p><p>Apple (ios) - это как игровая приставка среди мощных компов. , а андройд анологично только наоборот.</p><p>Скачать игру FIFA 14. Как установить? ... Ребят чо парится скачайте фифу 12 она лучше. Кстати фифу 14 не качайте ее надо с плай маркета потомучто если с плай маркета скачал у тебя будут открыты все режимы .</p><p>По мне так все равно. Все надоедает. Лично у меня от телефона нового поколения эйфория была месяца 4, потом тупо звонки, смс, пара приложений и интернет. А это тянут и Андроид, и Эпл.<br />
+Все просто - смотрите телефон 2-х ядерный, разрешение экрана, блики, камеру проверьте, громкость, количество памяти, почитайте комментарии на профильных сайтах. Вот и все.</p><p>Бери от эппл, там намнооооого больше приложений, чем на андройде + есть программы, позволяющие устанавливать игры\программы не платя за них</p><p>Привет всем))) ккогда закачиваю игру фифа 2014 на андроид все идет хорошо.. но на 99 % вылазит " неизвестный код ошибки при установке приложения 919" что делать? и что это за ошика вообще.. помогите пожалуйсто (</p><p>Appl - адаптирован для работы с интернет сетями + стабильная работа iOS.<br />
+Android - это апендикс, от которого мы избавляется со временем.</p><p>Итого, вопрос очень сложный, у меня android - hts desar, в работе великолепен, но почему то хочу ios. Сам не понимаю чем он меня так привлекает, дизайном наверно)</p><p>Фифа 2014 на андроид это возможность выбрать одну из 33 лиг, 600 футбольных команд и 16000 тысяч игроков, а так же 34 реально существующих стадиона. ... Как установить игры на Андроид?</p><p>Конечно же андроид, эпл нужен чисто для понтов, у меня планшет на платформе андроид и все просто великолепно, так что без сомнений покупайте андроид...</p><p>Телевизор лучше брать на платформе SmartTV? чтобы всегда была возможность самообновления. Проиводители известы всему миру: Hitachi, Sharp, Panasonic, Sony, Lenovo, Toshiba, Выбирай на вкус (!!!) и цвет. Аррle немного отстаёт в виду внедрения ранее своей платформы, а теперь вот вынужден перестраиваться.</p><p>На ваших понтах мы делаем миллионы (с) Стив Джобс</p><p>Апле лучше вирусов нет и не лагает. ценой, если брать лопату, то не отличаются)</p><p>Виндоус фон рулит!!!</p><p>Игра FIFA 14 для Android. Скачать бесплатно игру ФИФА 14 на Андроид планшет или телефон. ... Как установить игру с кэшем? Путь для кэша sdcard Android obb.</p><p>Телефон-устройство для установки исходящего или входящего соединения. А все прочее- это способ заставить покупателя платить больше. Андрюша и IOS тянут одеяло каждый на себя, предлагая пользователю разные заманушки. Общаться в сети, играть и прочее в любом случае удобнее на ББ.</p><p>Смотря что отвечает требованиям, андройд открытая система куда все можно скачать, передать, установить, многие любят такое разнообразие а для некоторых это бардак. IOS замкнута некоторым скучно с ней но многие чувствуют аппарат зашищенным.</p><p>Samsung GT-S7270 Galaxy Ace 3 или еще Philips Xenium W6500 неплохой вариант на ос андроид</p><p>Андроид однозначно, на яблоке нету блютуса, отсутствие некоторых программ просто убивает, перекачка файлов возможно только через вайфай, андроид заряд держит дольше. и как уже писали яблоко - только для понтов.</p><p>Лучше ios он побыстрей но вы покупайте потому сами выбирайте</p><p>Скриншоты FIFA 14 Android, Скачать FIFA 14 на Андроид, FIFA 14 Android скачать, FIFA 14 Android полная версия. ... 1. Скачать и установить .apk файл 2. Скачать кэш игры и скопировать его в SD Android Obb 3. В результате должно быть так...</p><p>Бери дроид и не парься.</p><p>Яблоко</p><p>Андроид в нем много приложений</p><p>Если телефон, то без всякой ОСи. Для звонков, да что бы не убиваемый подойдёт RugGear по военному стандарту IP-67. В любом ПО есть свои плюсы и минусы. Выбирай функционал, а не ОС.</p><p>Сама пользуюсь apple и не нарадуюсь! Был Андрюша (хорошая модель) как -то не понравился.</p><p>Кэш amp установка игры! ... Как установить FIFA 15 Ultimate Team. как установить игры на андроид. как устанавливать игры с кешем.</p><p>Ios apple лучше, там нет вирусов и много приложений и игр.</p><p>На Андроиде и IOS приложение практически все одинаковые но мне кажется что в андроиде интерфейс удобнее и красивее ну и андроид дешевле</p><p>Андройд Лучше!</p><p>Если Вам нужен только телефон и фотоаппарат, то без разницы.<br />
+А если Вам нужен компьютер, если Вы хотите своим смартфоном полностью заменить ноутбук, то на платформе андроид. Только не Самсунг, конечно же. В Смсунгах установлен кастрированный андроид, он не заменит компьютер. Ищите китайские смартфоны с полным андроидом.</p><p>Для меня только андроид!!!</p><p>Как установить FIFA 14 на андроид. FIFA 15 Android UT 2 открытие паков на 300к. ... Что делать если выбрасывает из FIFA 15 ANDROID IOS. ФИФА 15 Демо - Установка. Как скачать и установить FIFA 15 UPDATED LINK 2015.04.20.</p><p>Смотря для чего<br />
+работы- аррл<br />
+игр-андроид</p><p>По мне так лучше взять такой телефон, что б звонил. А для игрулек и прочего планшет.<br />
+Выбираю эпл за надежность и универсальность. Так как я все же девушка и люблю что бы не только практично, но и красивенько. На айфон легче найти чехлы. А из за многообразия форм самсунгов и прочих устройств, много чехлов не найдешь.<br />
+В приложениях на айос уверенна на 100% знаю что они безопасны и будут работать +эксклюзив. В то время как на андроиде вирусы, взломанные и не всегда работающие приложения.</p><p>Выбирай между Sony Xperia z1, LG g2 и Samsung galaxy note3(9005)</p><p>На вкус, но на android предложения бесплатно можно с интернета качать и видео и музыку! А apple только с iTunes и AppStore!</p><p>Андроид лучше. Эпл просто для понтов (имхо).</p><p>Главной фишкой серии Фифа является лицензионные образы игроков и команд. ... Также разработчики говорят об улучшенном управлении. Ударь босса 3 на андроид как установить fifa 12.</p><p>Windows 8</p><p>Андроид надёжнее</p><p>Тотальная слежка ведется за пользователями и иос, и андроида, так что разницы нет )<br />
+юзайте нокию 1110</p><p>Возьми на платформе Самсунг</p><p>Бери андроид лучше</p><p>Игра FIFA 14, в считанные минуты установленная на мобильный гаджет Android, станет настоящим подарком собственным амбициям, стремлению к победе, жажде новых впечатлений. ... Скачать FIFA 14 полная версия Мод на андроид</p><p>Яблочко. Андроид лагает постоянно.</p><p>Я за apple</p><p>Кому как нравится, мне лично Андройд, им удобнее и быстрее пользоваться, больше возможностей с рутом. Еще хочу добавить что покупая Apple, ты платишь не столько за субьект, сколько за логотип.</p><h3>Игры на двоих поиграть?</h3><p>Lego Star Wars)</p><p>Как скачать и установить FIFA 14 на андроид. По расположенной ниже ссылке можно бесплатно скачать игру FIFA 14 для ОС Андроид непосредственно с нашего сайта.</p><p>Мortal Kombat. x</p><p>Shank 2</p><p>Мортал комбат, новый, не знаю вышел или нет.... теккен...<br />
+а гонки хз, гранд туризмо наверно только на сони, поиграйте в футбол или баскетбол!</p><p>Игры от серии Lego, если на разных компах то замечательная игра про зомби Dead Island, Shank 2</p><p>А ты набери в инете тупо "Игры на двоих"</p><p>Лучший на сегодня футбольный симмулятор ФИФА 2014 для мобильных устройств на базе операционной системы Андроид. ... Подробнее - Как установить игры на Android.</p><p>Шахматы.</p><p>Мortal Kombat</p><p>Майнкравт игра в жанре преключений!</p><p>Попробуй megabyte punch</p><p>Minecraft с модами</p><p>Как установить FIFA 14 на андроид. Похожее видео. 9 17. ... FIFA 14 Прохождение Карьеры за Atletico Madrid - 1 Трансферное Окно . Просмотров 34434.</p><p>The Forest, Garry's mod, Mortal Kombar, The Crew, Dota 2, Counter-Strike, Saints Row, GTA 4-5, Assasin's Creed, Left 4 Dead...</p><p>Fifa 10/11/12/13/14</p><p>Если устанавливать - Split Second. Графика просто прекрасная!<br />
+Ах да, в эту игру можно играть как по сети, так и на одном компьютере!</p><p>Чераечки ворамс или лего игры (их много)</p><p>Огонь и Вода. - Очень даже хорошая классическая игра на двоих с разнообразными и интересными играми.</p><p>Андроид игры Спортивные игры FIFA 14 для андроид. ... Настоящее произведение игрового искусства Фифа уже давно по праву занимает место лучшего симулятора футбола. ... Как установить игру с кэшем?</p><p>Футбольные головы 2, ваще заебца, играл с братом с 8 до 19</p><p>В Far Cry 4 по мультиплееру</p><p>Шахматы</p><p>Fuse</p><p>Маенкрафт :)</p><p>FIFA 14 - лучший футбольный симулятор на Андроид. ... FIFA 14 один из самых лучших футбольных симуляторов, которые имеются на платформе Android на сегодняшний день.</p><p>Огонь и вода</p><p>Coop-land.ru - очень большой выбор игр, удобно классифицированных по жанрам.</p><p>GRID 2 [ссылка заблокирована по решению администрации проекта] по ссылке трейлер и лицензия</p><p>Split Second,MK 9,Ingustice:gau.</p><p>Попробуй Counter Strike 1.6. или cs go или Spec Ops The LIne по локальной</p><p>Множество небольших изменений, улучшающих игровой процесс Фифа 14 . Видео-обзор. Ссылки для скачивания FIFA 14 на Андроид. ... Как устанавливать удалять игры и приложения?</p><p>Asphalt 8 (на андроиде)</p><p>Lego Star Wars 2</p><p>Dota 2 и симулятор камня и симулятор говна вот игры))))))))))))))!!!!</p><p>Огонь и вода</p><p>Режим игры - split screen (с разделением экрана) !.в поисковике будет легче найти.<br />
+ .</p><p>Как установить FIFA 14 на андроид Похожие видео. Ссылка на новый канал https ... FIFA 14 для Android-Обзор. Как взломать фифу 14 без рута на андроид. Как распаковать кэш на андроиде быстро и легко.</p><p>Поиграй в кс-ку или в Batllfield 3-4 часть по мультиплееру</p><p>Играющие головы в браузере</p><p>Выше перечисленное это тоже норм но<br />
+На днях выйдет Dead or alive 5<br />
+А ещё с братом играю в игруху вообше ржачная Gang Beasts<br />
+Ещё есть Rubber Ninjas, Ragdoll Masters и Asterix The Olympic Games</p><p>Есто очень хороший сайт coop-land .ru там и игры найти можно и напарников</p><p>Divinity original sin</p><p>FIFA 2014 видео геймплея. Скриншоты из ФИФА 14 на андроид. ... Инструкция по установке и кэш. Установить игру ссылка ниже . После запуска игры будут докачаны недостающие файлы, так что лучше включить Wi-Fi.</p><p>Сибирь 1 2 части</p><p>Dota 2.</p><p>Го дота? =))))))</p><p>Mortal kombat</p><p>Покупай Батлу или The crew</p><p>Скачать игру FIFA 14 для Android на ваше устройство бесплатно очень удобно выберите необходимый файл и нажмите Cкачать FIFA 14 для Android и установите бесплатно. ... Режимы игры ФИФА 14 для Андроид. Ultimate Team это новинка, в...</p><p>Предложу вернуться в реальный мир и поиграть в шахматы, шашки, монополию. А, если, все таки хочешь компьютерного, то The Forest, Left 4 Dead,(2) , Dying Light . Или же просто игры с качественным мультиплеером. Battlefield 4 (3) DayZ, Unturned, Call Of Duty. Ну на крайняк CS GO. Или что то свое. Выбор, воистину, велик. Если есть консоль, то GTA O тебя порадует.</p><p>В civilization 5 на одном компьютере играть можно. Затягивающая стратежка. А вот про гонки и файтинги сказать ничего не могу...</p><p>Огонь и вода :DD</p><p>Поиграй в rust days 7 day to die the forest но эти иры с ранним доступом</p><p>Gang beasts,mount our friends,mortal kombat,cheat screen,Residen evil,need for speed и тд</p><p>FIFA15 iOS Android. Самый быстрый рэпер Украины - Укра на ма талант-6 - Кастинг в Донецке. ... Yulia Vodopian. Как установить fifa 16 android у кого не идет. Санчес Кипечестер.</p><p>Garrys, minecraft, battelfielt 4, battlefield hardline</p><p>CS GO Туземцы против монстров, lego star wars</p><p>Blur гоночка зашибатая</p><p>Wresling Mpire Remix классная игра Только там джойстик нужен</p><h3>Можно ли играть в фифу андройд версию на пк и как? можно ли играть в фифу андройд версию на пк и как?</h3><p>Вот скачай <a href='http://www.bluestacks.com/' target='_blank' rel='nofollow'>http://www.bluestacks.com/</a><br />
+Это эмулятор андроида, на него установи ''фифу'' и играй.</p><p>Как установить FIFA 14 на андроид. Категория Разное. Tweet. ... как установить fifa 15 пиратку на компьютер Время 00 02 07 Просмотров 1 448. Как устанавливать игры с кешем Время 00 09 17 Просмотров 67 515.</p><p>То же самое, что и спросить: Можно ли вставить картридж для сони из 80-х в дисковод ПК?</p><p>Ты просто дддддддурак</p><h3>Lenovo p780 и другие телефоны на андроиде</h3><p>По большому счету, смотреть HD-изображение на милипиперном экране - еще то извращение. Только одни детишки рады этому. Чтоб на уроках не скучать.<br />
+Да и играть на сенсорном экране тоже не айс. Кнопки не чувствуются, экран мелкий.<br />
+В ЧЕМ ТУТ МОЖЕТ БЫТЬ КАЙФ? ?<br />
+К слову, тот 10-гиговый фильм предназначен для просмотра на телевизоре.<br />
+Но чтобы посмотреть его на своей мобилке, его можно ужать до меньших<br />
+размеров, и потери качества ты не увидишь.<br />
+С кэшами для игр все просто. Они могут быть закинуты вручную на карту памяти. Обычно это путь sdcard/Android/obb или sdcard/Android/data<br />
+К слову, все описанные тобой возможности имеют и планшеты за 100 долларов, у которых аппаратная начинка может быть хуже, но экран не в пример больше телефонных.</p><p>Как установить fifa 15 пиратку на компьютер. ... Установка FIFA 14 на AndroId. Извините за качество видео !</p><h3>Где можно скачать чит на монеты в ФИФА 15 андроид</h3><p>Если игра оффлайн то ищи сразу крякнутую, если же онлайн, то и не старайся</p><p>В июле обновился с андроид 4.2 кстати, когда был андроид 4.2, FIFA установилась на андроид 4.4.2 KitKat, может ... удалил, и только сейчас меня поперло на фифашку фифа 15 я у вас скачал без кеша она прекрасно все грузила, а 14 помоги установить!?</p><p>Ты прорутируй смартфон свой и фридом поставь (читы будут не нужны)</p><h3>Какие игры можно устанавливать на sd карту? На андроид.</h3><p>Любые</p><p>Русския язык в фифе на . Скачал вчера в play market, но играть по сети не наш л как, вроде заш л. 5 дн. ... Как установить fifa 14 на андроид - вопрос. Любителям общения обязательно нужно скачать бесплатно skype. скайп представляет собой бесплатную...</p><p>Все, главное путь установки правильно поставить</p><p>Игры на сд карту нельзя устанавливать, а вот кэш можно! с помощью foldermount, только рут права нужны (качай с оф. сайта kingo root) проверено. Кэши находятся в папке android/obb. таким способом можно например все игры от gameloft или фифу или гташку. удачи!</p><h3>Android вопрос.</h3><p>Перепрошейся на новую версию</p><p>Dungeon hunter 4. FIFA 14 фифа 2014. Подписывайтесь ... Если не получается, то задавайте вопросы в комментариях или читайте Как установить игру на Андроид .</p><p>Прошивку обнови, или кастом попробуй.</p><p>Скачай прошивку последней версии, (у меня Samsung Galaxy S Advance был андроид 4.1.2 тоже не было много игр в маркете, сейчас поставил прошивку 4.4.2,поддерживаются все игры</p><h3>Как удалить неудаляемые файлы на андроид</h3><p>Что значит "неудаляемые"?</p><p>КАК СКАЧАТЬ 14-Ю ФИФУ НА IOS Android. MEDIAPORTAL FIFA15IOS Android. ... FiFa 14 v1.3.6 Full Android Скачать бесплатно РАБОЧИЙ мой личный способ !!! На Андроид !!! HayKoJR.</p><p>1) в русском языке нет слова "сного"<br />
+2) это системные файлы, юзеру они не доступны<br />
+3) удаление их все равно не поможет установить фифу<br />
+а чё за хрень там у тебя на тарабарском из 70-ых?</p><h3>Помогите срочно!_)</h3><p>Характеристики ПК слабые.</p><p>Предлагаем вам скачать Фифа 2014 на Андроид с сайта Смартовод.су! ... В маркете игра будет определяться, как установленная, то есть она сможет обновляться. com.ea.game.fifa14 row в этой папке лежат все сохранения, то есть вы можете ее...</p><p>Никита у него смартфон... .<br />
+Петр у меня тоже Explay но другой но тоже смартфон и никакие игры не тянет кроме серии Talking Toм и Сut The Rope( все части)</p><p>Может игра такая</p><p>Никита купи очки у него андроид а не пк</p><h3>Почему, когда входишь в fifa 14 на андроид, загорается чёрный экран и игра вылетает Фифа</h3><p>Купи яблоко</p><p>Как установить игру с кэшем. как получить права root на android. Обратная Связь. Карта Сайта. ... Топ Комментариев. admin on WIBR взлом WIFI на андроид.</p><h3>Не устанавливается приложение на андроид 4.2.2</h3><p>Какого ху# Fifa 14 на андройд!! !<br />
+WDF????</p><p>Как установить FIFA 14 на андроид. Похожие видео. как установить fifa 15 пиратку на компьютер.</p><p>Памяти может не хватает?</p><h3>Как сделать чтобы игры из плеймаркета и из и-нета качались на micro sd?</h3><p>Скачай AppMgr Тут https://play.google.com/store/apps/details?id=com.a0soft.gphone.app2sd</p><p>Скачать бесплатно игру FIFA 14 EA Swiss Sarl на смартфон андроид быстро и без рекламы, регистрации и смс. ... Скачать. Как установить? Android версии 2.3.3 и выше.</p><p>Надо в диспетчере предложений перенести данные игр в SD</p><p>У тебя андроид 4.2 заиди в настроики &gt;приложения&gt;выбрать место установки</p></div><ul><li><a href='/query/karty_k_navitel_5510/'>Карты к навител 5.5.1.0</a> - <small>Какой формат карт подойдет для Navitel 5.5.1?
+Http://navitel.ru/ru/downloads/demo/maps55
+Navitel 5.5.0.182 - одна из пос</small></li><li><a href='/query/skachat_igry_na_mobilnye_mob_ua/'>Скачать игры на мобильные mob ua</a> - <small>Где можно скачать игру 94 процента? только не в гугл плей
+Mob.ua там посмотри
+Mob.org.ru - лучший контент для телефонов </small></li><li><a href='/query/skachat_pesnju_devochka_pajj_na_mobilnyjj/'>Скачать песню девочка пай на мобильный</a> - <small>Пожалуйста дайте песню Михаила Круга - Девочка пай
+Http://mp3mega.net/page.php?id=4819
+Михаил Круг - Девочка-пай это рин</small></li><li><a href='/query/ustanovka_programm_na_planshety_digma/'>Установка программ на планшеты digma</a> - <small>У меня вопрос по показу видео в UC Browser v.10.7(если что, то у меня планшет Digma IDx10, на Android 2.3 +Flash Player)</small></li><li><a href='/query/melodii_na_telefon_mp3_s_golosom_skachat/'>Мелодии на телефон mp3 с голосом скачать</a> - <small>Какие вы знаете сайты где можно бесплатно скачать кучу коротких мр3 мелодий на телефон?
+Http://sds.2bb.ru зелый раздел п</small></li><li><a href='/query/igry_dlja_ipad_vinni_pukh/'>Игры для ipad винни пух</a> - <small>Что ваши дети получат на Новый Год?
+Подарки
+Малышу будет не полные 11 месяцев, вот и думаю покупать что-то или нет? Виде</small></li><li><a href='/query/gorjashhijj_mech_dlja_gta/'>Горящий меч для гта</a> - <small>Ваша Любимая Игра?
+Кто хочет стать миллионером!
+FIFA 08 и Gothic 1 2 3
+Моя любимая игра в онлайн троецарствие
+Пляжного в</small></li><li><a href='/query/telefon_monoblok_s_cifrovojj_klaviaturojj_android/'>Телефон моноблок с цифровой клавиатурой Андроид</a> - <small>Китайские телефоны . Какие есть китайские телефоны с йцукен клавиатурой, не выдвежной, а просто на моноблоке.
+Cмешно) то</small></li><li><a href='/query/registracija_territorii_v_minecraft/'>Регистрация территории в minecraft</a> - <small>Подскажите как приватить территорию в майнкрафт?
+Эмм.. . На сервере смотри через /help. Это совсем просто.
+Регистрация. </small></li><li><a href='/query/navitel_android_agent/'>Навител Android agent</a> - <small>Скачал Навител Навигатор и Мобильный Агент для Андроид, в какую папку вставлять вообще без понятия, подскажите пожалуйст</small></li></ul>
+
+
+</td>
+</tr>
+<IDXSKIP><tr>
+<td>
+<div align="center"></div>
+</td>
+<td><br></td>
+<td>
+<div align="center"></div>
+</td>
+</tr></IDXSKIP>
+</tbody></table>
+<br clear="all"><div class="storenumber"></div>
+	
+</div>
+</div></div>
+</div>
+          </div>
+          <div class="advert_block">
+            <div class="vertical">
+              <div class="advert last">
+                <div class="advert_content">
+                  <div class="advert_thumb advert_photo"></div>
+                  <h1 class="advert_title"></h1>
+                  <span class="advert_text"></span> </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+<IDXSKIP><table width="170px" border="0" cellspacing="5" cellpadding="5"><tr>
+<td><a href="#" onclick="return addFavorite(this);"><img src="/ff.jpg" width="40" height="40"></a></td>
+    <td><a href="#" onclick="return addFavorite(this);"><strong>В закладки </strong></a></td>
+  </tr></table></IDXSKIP>
+<div align="left"></div>
+        <div class="right">
+<link rel="stylesheet" href="/cms/classes/js/jquery-cluetip/jquery.cluetip.css" type="text/css">
+<script src="/cms/classes/js/jquery-cluetip/lib/jquery.hoverIntent.js" type="text/javascript"></script><!-- optional --><script src="/cms/classes/js/jquery-cluetip/jquery.cluetip.all.js" type="text/javascript"></script><script src="/cms/classes/js/utils.js" type="text/javascript"></script><style type="text/css">
+
+.dropdown {
+
+    display: none;
+
+}
+
+.letter {
+
+    font-weight: bold;
+
+}
+
+</style>
+<script language="javascript">
+
+var Filters = {}; // Список применённых к списку фильтров
+
+
+
+$(document).ready(function() {
+
+    // Выпадающее меню
+
+    $('.dropdown > a').cluetip({
+
+        cluetipClass:   'rounded', 
+
+        width:          300,
+
+        arrows:         false,
+
+        dropShadow:     true, 
+
+        hoverIntent:    false,
+
+        showTitle:      false,
+
+        positionBy:     'auto',
+
+        topOffset:      '30px',
+
+        fx: {
+
+            open:       'slideDown', // can be 'show' or 'slideDown' or 'fadeIn'
+
+            openSpeed:  '100'
+
+        },
+
+        hoverIntent: {
+
+            sensitivity:  100,
+
+            interval:     800,
+
+            timeout:      0
+
+        }
+
+    });
+
+    
+
+   // Скрыть/показать список под буквой
+
+    $('.letter').click(function (e) {
+
+        $(this).siblings().toggle(100);
+
+    });
+
+    
+
+    // Фильтр по стране
+
+    $('.country_filter').click(function (e) {
+
+        var country = $(this).val();
+
+        var genre = $('#genre_filter_box').val();        
+
+        filterBy( {country: country, genre: genre} );
+
+    });
+
+    
+
+    // Фильтр по жанру
+
+    $('#genre_filter_box').change(function (e) {
+
+        var genre = $(this).val();
+
+        var country = $('.country_filter:checked').val();
+
+        filterBy( {country: country, genre: genre} );
+
+    });
+
+});
+
+
+
+function filterBy(fields) {
+
+    $('.dropdown a').each(function (index) {
+
+        switch ( fields.country ) {
+
+            case 'ru':
+
+                if ( $(this).attr('country') == 'ru' ) { 
+
+                    $(this).css('display', 'block');
+
+                } else {
+
+                    $(this).css('display', 'none');
+
+                }
+
+                break;
+
+            case 'other':
+
+                if ( $(this).attr('country') != 'ru' ) {
+
+                    $(this).css('display', 'block');
+
+                } else {
+
+                    $(this).css('display', 'none');
+
+                }
+
+                break;
+
+            default:
+
+                $(this).css('display', 'block');
+
+        }
+
+
+
+        if (fields.genre != 'all') {
+
+            if ( $(this).attr('genre') != fields.genre ) $(this).css('display', 'none');
+
+        }
+
+    });
+
+}
+
+
+
+function setFilter(o, fname) {
+
+    $(o).attr(fname+'_filter', 1);
+
+}
+
+
+
+function canFilter(el, fname) {
+
+    if ( $(el).attr(fname+'_filter') == 1 || !otherFilters(fname) ) {
+
+        return true;
+
+    }
+
+    return false;
+
+}
+
+
+
+function otherFilters(name) {
+
+    for (property in Filters) {
+
+        if (property != name) return true;
+
+    }
+
+    return false;
+
+}
+
+
+
+// Развернуть/свернуть
+
+function toggleLetters(input) {
+
+    if ($(input).val() == '+') {
+
+        $(input).val('—');
+
+        $(input).attr('title', 'Свернуть все');
+
+        $('.dropdown').css('display', 'block');
+
+    } else {
+
+        $(input).val('+');
+
+        $(input).attr('title', 'Развернуть все');
+
+        $('.dropdown').css('display', 'none');
+
+    }
+
+}
+
+</script><IDXSKIP><div class="filters" style="margin: 10px auto 8px">
+
+
+
+<div style="color: #2B587A; font-size: 10px; margin: 6px auto">
+
+    <input type="radio" name="country_filter" class="country_filter" value="all" checked>все
+
+    <input type="radio" name="country_filter" class="country_filter" value="ru">русские
+
+    <input type="radio" name="country_filter" class="country_filter" value="other">зарубежные
+
+    <div style="clear: both;"></div>
+
+</div>
+
+
+
+</div></IDXSKIP>
+
+
+
+<IDXSKIP><div class="head_block">
+
+Сериалы
+
+<span style="color: #2B587A; font-size: 10px; margin: 0 auto; text-align: center;  margin-left: 6px;">
+
+    <select id="genre_filter_box" style="font-size: 11px; color: #2B587A; width: 75px;"><option value="all" selected>все</option>
+<option value="comedy">комедия</option>
+<option value="action">боевики</option>
+<option value="thriller">триллеры</option>
+<option value="detective">детективы</option>
+<option value="history">исторические</option>
+<option value="family">семейные</option>
+<option value="adventure">приключения</option>
+<option value="animation">анимационные</option>
+<option value="anime">аниме</option>
+<option value="documentary">документальные</option>
+<option value="sci-fi">фантастические</option>
+<option value="mystery">мистические</option>
+<option value="horror">ужасы</option>
+<option value="fantasy">фэнтези</option>
+<option value="drama">драмы</option>
+<option value="romance">мелодрамы</option>
+<option value="crime">криминальные</option></select></span>
+
+<input type="button" value="+" title="Развернуть все" style="font-weight: bold; background-color: #DAE2E8; color:#2B587A;" onclick="toggleLetters(this);">
+</div></IDXSKIP>
+
+<div class="news_nav">
+
+    <div id="profileActions" class="float_right right_border" style="height: 450px; overflow: auto;"> 
+
+        <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#">Последние добавления</a></div></IDXSKIP>
+
+            <div class="dropdown" style="display: block">
+
+     
+
+      
+
+
+
+
+       <IDXSKIP><a rel="" href="/90210-novoe-pokolenie-2-sezon/11099-90210-novoe-pokolenie-2-sezon-21-seriya.html" genre="comedy" country="en" year="2011">Роб</a></IDXSKIP>     
+   <IDXSKIP><a rel="" href="/sverx-1/6867-16-seriya-ten.html" genre="horror" country="en" year="2011">Быть человеком</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/papiny-dochki/3063-73-seriya.html" genre="comedy" country="en" year="2012">Обитель лжи</a></IDXSKIP>
+
+<IDXSKIP><a rel="" href="/kupidon-1-sezon/13223-kupidon-19-seriya.html" genre="action" country="en" year="2012">Фирма</a></IDXSKIP>
+<IDXSKIP><a rel="" href="/papiny-dochki/3047-89-seriya.html" genre="crime" country="en" year="2012">Сыщик</a></IDXSKIP>
+<IDXSKIP><a rel="" href="/spletnica-4-sezon/8427-spletnica-4-sezon-12-seriya.html" genre="thriller" country="en" year="2012">Тайны Эдвина</a></IDXSKIP>
+<IDXSKIP><a rel="" href="/nikita-1-sezon/12651-nikita-1-sezon-12-seriya.html" genre="comedy" country="en" year="2012">В стиле Джейн</a></IDXSKIP>
+<IDXSKIP><a rel="" href="/kosti-bones-6-sezon/14084-kosti-bones-6-sezon-19-seriya.html" genre="action" country="en" year="2012">Спартак: Месть</a></IDXSKIP>
+</div>
+
+        </div>
+
+        <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># А</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+    <IDXSKIP><a rel="" href="/ad-na-kolesah-1-sezon/" genre="drama" country="en" year="2011">Ад на колесах</a></IDXSKIP>
+    <IDXSKIP><a rel="" href="/amazonki.html" genre="detective" country="ru" year="2011">Амазонки</a></IDXSKIP>
+    <IDXSKIP><a rel="" href="/amerikanskaya-istoriya-uzhasov/" genre="horror" country="en" year="2011">Американская история ужасов</a></IDXSKIP>
+    <IDXSKIP><a rel="" href="/amerikanskaya-semeyka-1-3-sezony.html" genre="comedy" country="ru" year="2009">Американская семейка</a></IDXSKIP>
+    <IDXSKIP><a rel="" href="/angely-charli-1-sezon/" genre="action" country="en" year="2011">Ангелы чарли</a></IDXSKIP>
+            </div>
+
+        </div>
+
+        <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># Б</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+
+             <IDXSKIP><a rel="" href="/banditskiy-peterburg-1-10-sezony.html" genre="crime" country="ru" year="2000">Бандитский петербург</a></IDXSKIP>
+             <IDXSKIP><a rel="" href="/bezumcy-1-4-sezon.html" genre="drama" country="en" year="2007">Безумцы</a></IDXSKIP>
+             <IDXSKIP><a rel="" href="/novoe-pokolenie-1-4-sezony.html" genre="comedy" country="en" year="2008">Беверли хилз 90210</a></IDXSKIP>
+             <IDXSKIP><a rel="" href="/kalifornia.html" genre="comedy" country="en" year="2008">Блудливая калифорния</a></IDXSKIP>
+             <IDXSKIP><a rel="" href="/bratstvo-1-3-sezony.html" genre="crime" country="en" year="2006">Братство</a></IDXSKIP>
+             <IDXSKIP><a rel="" href="/boss-1-sezon/" genre="drama" country="en" year="2011">Босс</a></IDXSKIP>
+             <IDXSKIP><a rel="" href="/bolshie-nadezhdy-1-sezon/" genre="comedy" country="ru" year="2011">Большие надежды</a></IDXSKIP>
+             <IDXSKIP><a rel="" href="/bud-muzhikom-1-sezon/" genre="comedy" country="en" year="2011">Будь мужиком</a></IDXSKIP>
+  <IDXSKIP><a rel="" href="/sverx-1/6867-16-seriya-ten.html" genre="horror" country="en" year="2011">Быть человеком</a></IDXSKIP>
+
+
+            </div>
+
+        </div>
+
+        <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># В</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+   <IDXSKIP><a rel="" href="/serial-vo-vse-tyazhkie-1-4-sezon.html" genre="crime" country="en" year="2008">Во все тяжкие</a></IDXSKIP>
+   <IDXSKIP><a rel="" href="/vizitery-1-2-sezony.html" genre="sci-fi" country="en" year="2009">Визитеры</a></IDXSKIP>
+   <IDXSKIP><a rel="" href="/v-filadelfii-vsegda-solnechno.html" genre="comedy" country="en" year="2005">В филадельфии всегда солнечно</a></IDXSKIP>
+   <IDXSKIP><a rel="" href="/vozmezdie-1-sezon/" genre="thriller" country="en" year="2010">возмездие</a></IDXSKIP>
+   <IDXSKIP><a rel="" href="/vozvraschenie-muhtara-1-sezon.html" genre="crime" country="ru" year="2003">Возвращение мухтара</a></IDXSKIP>
+   <IDXSKIP><a rel="" href="/voroniny-1-11-sezony.html" genre="comedy" country="ru" year="2009">Воронины</a></IDXSKIP>
+   <IDXSKIP><a rel="" href="/vsegda-govori-vsegda/" genre="romance" country="ru" year="2010">Всегда говори всегда</a></IDXSKIP>
+         <IDXSKIP><a rel="" href="/nikita-1-sezon/12651-nikita-1-sezon-12-seriya.html" genre="comedy" country="en" year="2012">В стиле Джейн</a></IDXSKIP>  
+ </div>
+
+        </div>
+
+        <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># Г</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+      <IDXSKIP><a rel="" href="/geroi-1-4-sezony.html" genre="sci-fi" country="en" year="2010">Герои</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/govoryaschaya-s-prizrakami.html" genre="fantasy" country="en" year="2006">Говорящая с призраками</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/gorod-hischnic-1-2-sezony.html" genre="comedy" country="en" year="2009">Город хищниц</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/gryaznye-mokrye-dengi-1-2-sezony.html" genre="drama" country="en" year="2007">Грязные мокрые деньги</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/grabezh-heist.html" genre="action" country="en" year="2006">Грабеж</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/granica-teni.html" genre="detective" country="en" year="2010">Границы тени</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/grimm.html" genre="horror" country="en" year="2011">Гримм</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/gavayi-5-0.html" genre="action" country="en" year="2010">Гавайи</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/glavnyy-podozrevaemyy.html" genre="thriller" country="en" year="2011">Главный подозреваемый</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/gran-1-4-sezon.html" genre="horror" country="en" year="2008">Грань</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/galileo/" genre="documentary" country="ru" year="2010">Галилео</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/gluhar-1-4-sezon.html" genre="detective" country="ru" year="2008">Глухарь</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/garazhi/" genre="comedy" country="ru" year="2010">Гаражи</a></IDXSKIP>
+            </div>
+
+        </div>
+
+        <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># Д</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+          <IDXSKIP><a rel="" href="/dnevnikivampirov.html" genre="fantasy" country="en" year="2009">Дневники вампиров</a></IDXSKIP>
+          <IDXSKIP><a rel="" href="/doktor-haus.html" genre="drama" country="en" year="2008">Доктор хаус</a></IDXSKIP>
+          <IDXSKIP><a rel="" href="/dolina-mertvecov-1-2-sezon.html" genre="horror" country="en" year="2008">Долина мертвецов</a></IDXSKIP>
+          <IDXSKIP><a rel="" href="/dvoynik.html" genre="drama" country="en" year="2011">Двойник</a></IDXSKIP>
+          <IDXSKIP><a rel="" href="/dve-razorivshiesya-devochki-1.html" genre="comedy" country="en" year="2011">Две разорившиеся девочки</a></IDXSKIP>
+          <IDXSKIP><a rel="" href="/dom-sester-elliott-1-sezon.html" genre="drama" country="en" year="1991">Дом сестер эллиот</a></IDXSKIP>
+          <IDXSKIP><a rel="" href="/daesh-molodezh-vse-serii.html" genre="comedy" country="ru" year="2009">Даешь молодежь</a></IDXSKIP>
+          <IDXSKIP><a rel="" href="/doktor-tyrsa/" genre="drama" country="ru" year="2010">Доктор тырса</a></IDXSKIP>
+          <IDXSKIP><a rel="" href="/10prichin-moey-nenavesti.html" genre="comedy" country="en" year="2009">Десять причин моей ненависти</a></IDXSKIP>
+            </div>
+
+        </div>
+
+        <IDXSKIP><div class="letter_box">
+
+            <div class="letter"><a href="#"># Е</a></div>
+
+            <div class="dropdown">
+
+                <a rel="" href="/efrosinya-1-2-sezon.html" genre="drama" country="ru" year="2010">Ефросинья</a>
+    
+
+            </div>
+
+        </div></IDXSKIP>
+
+        <IDXSKIP><div class="letter_box">
+
+            <div class="letter"><a href="#"># Ж</a></div>
+
+            <div class="dropdown">
+
+                <a rel="" href="/zherebec.html" genre="drama" country="en" year="2009">Жеребец</a>
+                <a rel="" href="/zhizn-tak-korotka-1-sezon/" genre="comedy" country="en" year="2011">Жизнь так коротка</a>
+
+
+             </div>
+        </div></IDXSKIP>
+
+        <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># З</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/zvezdnye-vrata-1-10-sezony.html" genre="sci-fi" country="en" year="2007">Зведные врата</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/atlantida-1-5-sezon.html" genre="sci-fi" country="en" year="2004">Звездные врата атлантида</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/zvezdnye-vrata-vselennaya-1-2-sezony.html" genre="sci-fi" country="en" year="2009">З\В Вселенная</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/zenit.html" genre="sci-fi" country="en" year="2010">Зенит</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/zakon-herri.html" genre="drama" country="en" year="2011">Закон хэрри</a></IDXSKIP>
+
+     <IDXSKIP><a rel="" href="/zakrytaya-shkola-1-2-sezony.html" genre="thriller" country="ru" year="2011">Закрытая школа</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/zona-tyuremnyy-roman/" genre="crime" country="ru" year="2010">Зона</a></IDXSKIP>
+
+            </div>
+
+        </div>
+
+        <IDXSKIP><div class="letter_box">
+
+            <div class="letter"><a href="#"># И</a></div>
+
+            <div class="dropdown">
+
+                <a rel="" href="/igrapre/" genre="fantasy" country="en" year="2011">Игра престолов</a>
+                <a rel="" href="/serial-igra-v-lozh.html" genre="drama" country="en" year="2011">Игра в ложь</a>
+
+            </div>
+
+        </div></IDXSKIP>
+
+   <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># К</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/serial-kak-ya-vstretil-vashu-mamu.html" genre="romance" country="en" year="2005">Как я встертил вашу маму</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-klinika-1-9-sezon.html" genre="drama" country="en" year="2011">Клиника</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/klan-soprano-1-6-sezony.html" genre="thriller" country="en" year="1996">Клан сопрано</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-kayl-xy-1-3-sezon.html" genre="sci-fi" country="en" year="2009">Кайл xy</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/kompyuterschiki-1-4-sezony.html" genre="comedy" country="en" year="2006">Компьютерщики</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-klub-pleyboya.html" genre="drama" country="en" year="2010">Клуб плейбоя</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/king.html" genre="crime" country="en" year="2010">Кинг</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/kak-sdelat-eto-v-amerike.html" genre="drama" country="en" year="2010">Как сделать это в америке</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-korabl.html" genre="sci-fi" country="en" year="2010">Корабль</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/kosti.html" genre="drama" country="en" year="2010">Кости</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/kanikuly-v-meksike/" genre="comedy" country="ru" year="2011">Каникулы в мексике</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/kupidon-1-sezon/" genre="drama" country="ru" year="2011">Купидон</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/karamel/" genre="comedy" country="ru" year="2011">Карамель</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/kasl.html" genre="drama" country="en" year="2011">Касл</a></IDXSKIP>
+            </div>
+
+        </div>
+
+ <IDXSKIP><div class="letter_box">
+
+            <div class="letter"><a href="#"># Л</a></div>
+
+            <div class="dropdown">
+
+     <a rel="" href="/serial-ostatsya-v-zhivyh-1-6-sezon.html" genre="sci-fi" country="en" year="2004">Лост</a>
+     <a rel="" href="/lizzie-mcguire-1-2-sezony.html" genre="en" country="en" year="2006">Лиза MCGuire</a>
+     <a rel="" href="/serial-lyudi-alfa.html" genre="sci-fi" country="en" year="2002">Люди альфа</a>
+            </div>
+
+        </div></IDXSKIP>
+
+ <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># М</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/muzhchiny-srednego-vozrasta.html" genre="drama" country="en" year="2009">Мужчина среднего возраста</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/merlin.html" genre="fantasy" country="en" year="2010">Мерлин</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-mentalist.html" genre="thriller" country="en" year="2008">Менталист</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/moya-lyubimaya-vedma/" genre="comedy" country="ru" year="2010">Моя любимая ведьма</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/molodozheny/" genre="comedy" country="ru" year="2002">Молодожены</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/mentovskie-voyny-1-5-sezon.html" genre="crime" country="ru" year="2005">Ментовские войны</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/serial-morpehi.html" genre="action" country="ru" year="2010">Морпехи</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/nashu_serialy.html" genre="romance" country="ru" year="2011">Мужчина во мне</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/master-i-margarita/" genre="thriller" country="ru" year="2005">Мастер и маргарита</a></IDXSKIP>
+
+            </div>
+
+        </div>
+
+ <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># Н</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/novenkaya.html" genre="comedy" country="en" year="2011">Новенькая</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/nikita.html" genre="action" country="en" year="2010">Никита</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-nezabyvaemoe.html" genre="drama" country="en" year="2011">Незабываемое</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/neobhodimaya-zhestokost.html" genre="drama" country="en" year="2011">Необходимая жестокость</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="#" genre="comedy" country="ru" year="2010">Наша раша</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/nastoyaschie.html" genre="crime" country="ru" year="2010">Настоящие</a></IDXSKIP>
+
+
+            </div>
+
+        </div>
+
+ <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># О</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/otbrosy-1-2-sezony.html" genre="sci-fi" country="en" year="2009">Отбросы</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/obitel-lzhi-house-of-lies-1-sezon/" genre="comedy" country="en" year="2011">Обитель лжи</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/otchayannye-domohozyayki-1-8.html" genre="drama" country="en" year="2008">Отчаянные домохозяйки</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/odarennyy-chelovek.html" genre="drama" country="en" year="2010">Одаренный человек</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/odnazhdy.html" genre="fantasy" country="en" year="2011">Однажды</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/odin-v-pole-voin.html" genre="action" country="en" year="2011">Один в поле воин</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/papiny-dochki/3063-73-seriya.html" genre="comedy" country="en" year="2012">Обитель лжи</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/otchayannye-domohozyayki-7-sezon/11704-otchayannye-domohozyayki-7-sezon-14-seriya.html" genre="drama" country="en" year="2012">Обвиняемые</a></IDXSKIP>
+            </div>
+
+        </div>
+
+ <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># П</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/pobeg-iz-tyurmy-1-4-sezony.html" genre="crime" country="en" year="2010">Побег из тюрьмы</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-prigorod.html" genre="comedy" country="en" year="2011">Пригород</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-prestupnaya-imperiya-1-2-sezon.html" genre="crime" country="en" year="2010">Преступная империя</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/pravila-sovmestnoy-zhizni.html" genre="romance" country="en" year="2006">Правила совместной жизни</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/podozrevaemye.html" genre="thriller" country="en" year="2011">Подозреваемые</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/prosvetlennaya.html" genre="drama" country="en" year="2011">Просветленная</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/prizraki.html" genre="horror" country="en" year="2010">Призраки</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/prestupleniya-proshlogo-1-sezon/" genre="detective" country="en" year="2010">Преступление прошлого</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/pobeg-1/" genre="action" country="ru" year="2010">Побег</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/posledniy-nastoyaschiy-muzhik-1-sezon/" genre="comedy" country="en" year="2011"> Последний настоящий мужик</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/papiny-dochki/" genre="family" country="ru" year="2008">Папины дочки</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/pautina-1-5-sezon.html" genre="detective" country="ru" year="2002">Паутина</a></IDXSKIP>
+
+
+            </div>
+
+        </div>
+
+
+ <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># Р</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+
+     <IDXSKIP><a rel="" href="/serial-rycar-dorog.html" genre="thriller" country="en" year="2008">Рыцарь дорог</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/razrushiteli-legend/" genre="documentary" country="en" year="2002">Разрушители ленегд</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/ryxnebesa/" genre="sci-fi" country="en" year="2011">Рухнувшие небеса</a></IDXSKIP>
+      <IDXSKIP><a rel="" href="/90210-novoe-pokolenie-2-sezon/11099-90210-novoe-pokolenie-2-sezon-21-seriya.html" genre="comedy" country="en" year="2011">Роб</a></IDXSKIP>     
+ </div>
+
+        </div>
+
+ <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># С</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/serial-spartak-1-2-sezony.html" genre="action" country="en" year="2011">Спартак</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/sverhestestvennoe-1-7-sezony.html" genre="horror" country="en" year="2006">Сверхъестественное</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/spletnica-1-5-sezony.html" genre="romance" country="en" year="2007">Сплетницы</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/sledstvie-po-telu-1-2-sezony.html" genre="drama" country="en" year="2011">Следствие по телу</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/sireny-1-sezon/" genre="drama" country="en" year="2011">Сирены</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/schastlivy-v-razvode-1-sezon/" genre="comedy" country="en" year="2011">Счастливы в разводе</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/schastlivyy-konec.html" genre="comedy" country="en" year="2011">Счастливый конец</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/seks-po-druzhbe.html" genre="comedy" country="en" year="2011">Секс по дружбе</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/smert-v-rayu-1-sezon/" genre="drama" country="en" year="2010">Смерть в раю</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/soobschestvo.html" genre="comedy" country="en" year="2009">Сообщество</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/smertelno-skuchayuschiy-1-3-sezon.html" genre="comedy" country="en" year="2009">Смертельно скучающий</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/svetofor-1-3-sezony.html" genre="comedy" country="ru" year="2011">Светофор</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/serial-svetlyachok.html" genre="sci-fi" country="en" year="2002">Светлячок</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/sluchaynye-svyazi/" genre="comedy" country="ru" year="2010">Случайные связи</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/sreda-obitaniya/" genre="documentary" country="ru" year="2010">Среда обитания</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/svaty-1-4-sezony.html" genre="comedy" country="ru" year="2009">Сваты</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/specialnoe-zadanie/" genre="comedy" country="ru" year="2011">Специальное задание бежать</a></IDXSKIP>
+ <IDXSKIP><a rel="" href="/papiny-dochki/3047-89-seriya.html" genre="crime" country="en" year="2012">Сыщик</a></IDXSKIP>          
+ <IDXSKIP><a rel="" href="/kosti-bones-6-sezon/14084-kosti-bones-6-sezon-19-seriya.html" genre="action" country="en" year="2012">Спартак: Месть</a></IDXSKIP>
+</div>
+
+        </div>
+
+ <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># Т</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/taksi.html" genre="family" country="ru" year="2011">Такси</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-tovarischi-policeyskie.html" genre="crime" country="ru" year="2011">Таворищи полицейские</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/tanec-nashey-lyubvi-1-sezon/" genre="romance" country="ru" year="2011">Танец нашей любви</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/taynye-svyazi.html" genre="action" country="en" year="2010">Тайные связи</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-taynyy-krug.html" genre="horror" country="en" year="2011">Тайный круг</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/tishina.html" genre="thriller" country="en" year="2011">Тишина</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/terra-nova.html" genre="sci-fi" country="en" year="2011">Терра нова</a></IDXSKIP><br><IDXSKIP><a rel="" href="/tyudory.html" genre="drama" country="en" year="2007">Тюдоры</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-igra-v-lozh.html" genre="drama" country="en" year="2009">Теория лжи</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/teoriya-bolshogo-vzryva-1-5-sezon.html" genre="comedy" country="en" year="2007">Теория большого взрыва</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-tayny-smolvilya.html" genre="sci-fi" country="en" year="2001">Тайны смолвиля</a></IDXSKIP>
+       <IDXSKIP><a rel="" href="/spletnica-4-sezon/8427-spletnica-4-sezon-12-seriya.html" genre="thriller" country="en" year="2012">Тайны Эдвина</a></IDXSKIP>
+
+     </div>
+
+        </div>
+
+ <div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># У</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/serial-uchastkovyy-detektiv.html" genre="detective" country="ru" year="2011">Участковый детектив</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/univer-1-4-sezony.html" genre="comedy" country="ru" year="2011">Универ</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/uboynaya-sila-1-6-sezony.html" genre="crime" country="ru" year="2002">Убойная сила</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/serial-uilfred.html" genre="comedy" country="en" year="2011">Уилфред</a></IDXSKIP>
+
+
+        </div>
+
+    </div>
+
+
+<div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># Ф</a></div></IDXSKIP>
+
+            <IDXSKIP><div class="dropdown">
+
+     <a rel="" href="/serial-fizika-ili-himiya.html" genre="romance" country="ru" year="2011">Физика и химия</a>
+     <a rel="" href="/ferma-tel-the-body-farm-1-sezon/" genre="drama" country="en" year="2011">Ферма тел</a>
+     <a rel="" href="/feyri.html" genre="fantasy" country="en" year="2011">Фэйри</a>
+   <a rel="" href="/kupidon-1-sezon/13223-kupidon-19-seriya.html" genre="action" country="en" year="2012">Фирма</a>
+            </div></IDXSKIP>
+
+        </div>
+
+
+<div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># Х</a></div></IDXSKIP>
+
+            <div class="dropdown">
+
+     <IDXSKIP><a rel="" href="/horoshaya-zhena.html" genre="drama" country="en" year="2009">Хорошая жена</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/hranilische-13.html" genre="sci-fi" country="en" year="2010">Хранилище 13</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/heyven.html" genre="horror" country="en" year="2010">Хэйвен</a></IDXSKIP>
+     <IDXSKIP><a rel="" href="/zaryb_serial.html" genre="horror" country="en" year="2010">Ходячие мертвецы</a></IDXSKIP>
+   
+            </div>
+
+        </div>
+
+
+<div class="letter_box">
+
+            <IDXSKIP><div class="letter"><a href="#"># Ч</a></div></IDXSKIP>
+
+            <IDXSKIP><div class="dropdown">
+
+     <a rel="" href="/chas-the-hour.html" genre="drama" country="en" year="2010">Час</a>
+     <a rel="" href="/chuzhoy-sredi-svoih.html" genre="thriller" country="en" year="2011">Чижой среди своих</a>
+     <a rel="" href="/serial-chernye-volki.html" genre="crime" country="ru" year="2002">Черные волки</a>
+
+   
+            </div></IDXSKIP>
+
+        </div>
+
+<IDXSKIP><div class="letter_box">
+
+            <div class="letter"><a href="#"># Ш</a></div>
+
+            <div class="dropdown">
+
+     <a rel="" href="/6-kadrov/" genre="comedy" country="ru" year="2006">Шесть кадров</a>
+ 
+         <a rel="" href="/sherlok-sherlock-2-sezon/" genre="detective" country="en" year="2010">Шерлок</a>
+
+
+   
+            </div>
+
+        </div></IDXSKIP>
+
+<IDXSKIP><div class="letter_box">
+
+            <div class="letter"><a href="#"># Я</a></div>
+
+            <div class="dropdown">
+
+     <a rel="" href="/img/yas.jpg" genre="adventure" country="en" year="2005">Ястреб</a>
+
+            </div>
+
+        </div></IDXSKIP>
+
+</div>
+</div>
+
+
+
+
+<IDXSKIP><div class="head_block" style="margin-top:8px;">Реклама</div></IDXSKIP>
+
+<IDXSKIP><div class="news_top_list">
+
+    <div style="padding-left:7px; padding-top:10px; padding-bottom:10px;">
+
+    
+        <table width="100%" border="0" style="border-bottom: 1px dotted #E1E1E1;">
+<tr>
+<td width="64" height='64"' align="center" valign="top">
+
+                                   </td>
+
+            </tr>
+<td width="91%" valign="left" style="padding-left: 7px; padding-bottom: 7px;">
+
+                   
+                </td>
+
+            
+
+        </table>
+<br>
+</div>
+
+</div></IDXSKIP>
+
+
+          
+          <div class="news_nav"> </div>
+
+          <div class="advert_block">
+            <div class="vertical">
+              <div class="advert "> </div>
+            </div>
+          </div>
+ 
+      
+          </div>
+        </div>
+
+      </div>
+
+      <IDXSKIP><div align="center">
+<a href="/">serialam.ru 2012
+</a> 
+
+
+ <img src="/se.jpg" alt="Каждый выбирает отдых по своему вкусу. Одни предпочитают экстремальные вида отдыха другие любят лёжа на диванчике смотреть сериалы. для них это наилучший вид отдыха ,только так они могут расслабиться и отдохнуть Сегодня в эру  интернета и цифрового вещания любимый сериал можно смотреть онлайн в любое удобное, время, не занимая место на жестком диске, не тратя время на скачивание  и даже  не переживая о не сделанных домашних  делах.  телеканалы забиты разными сериалами -  российскими, американскими, армянскими, бразильскими, мексиканскими...Не которые склонны  считают ,что  присмотром занимаются люди,  имеющие свободное время - это абсолютное заблуждение. Поклонников у сериалов большое  множество - это не только домохозяйки ,тинэйджеры- подростки,  но и много работающие деловые люди. Так они  отстраняются от насыщенного  рабочего дня.  Их смотрят и дети  и взрослые .
+ Несмотря на то, что многие жалуются на обилие сериалов, примитивные сценарии, однако, тем не менее, продолжают их смотреть. Почему мы так увлеченно  любим, проводить своё свободное время за просмотром. Психологи утверждают, что просмотр сериалов  оказывают на людей и  положительное и успокаивающее  воздействие. Просматривая  сериал   мы " . width="30" height="34">
+</div></IDXSKIP>
+</td>
+
+  </tr></table>
+<script type="text/javascript" charset="utf-8">
+var proto = (document.location.protocol=='https:')?'https:':'http:';
+var host = proto+'//widget.copiny.com';
+document.write(unescape("%3Cscript src='" + host + "/static/js/widget.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>
+

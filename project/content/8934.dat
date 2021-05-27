@@ -1,0 +1,1826 @@
+club.motor-master.ru/viewtopic.php?t=507
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru" xml:lang="ru">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="ru" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>Мотор Мастер Клуб &bull; Просмотр темы - Програматор ЭБУ и SAE J2534</title>
+
+
+
+<link rel="stylesheet" href="./styles/subsilver2/theme/stylesheet.css" type="text/css" />
+
+
+<script type="text/JavaScript">
+function getElement(iElementId)
+{
+   if (document.all) 
+   {
+      return document.all[iElementId];
+   }
+   if (document.getElementById)
+   {
+      return document.getElementById(iElementId);
+   }
+}
+
+function toggleElement(oElement)
+{
+   if (oElement.style.display == "none")
+   {
+      oElement.style.display = "";
+   }
+   else
+   {
+      oElement.style.display = "none";
+   }
+}
+</script>
+<script type="text/javascript">
+// <![CDATA[
+
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Введите номер страницы, на которую хотите перейти:', '1');
+	var per_page = '15';
+	var base_url = './viewtopic.php?f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d';
+
+	if (page !== null && !isNaN(page) && page == Math.floor(page) && page > 0)
+	{
+		if (base_url.indexOf('?') == -1)
+		{
+			document.location.href = base_url + '?start=' + ((page - 1) * per_page);
+		}
+		else
+		{
+			document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * per_page);
+		}
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+
+// ]]>
+</script>
+
+
+
+<script type="text/javascript">
+
+	function countAdClick(id)
+	{
+	   loadXMLDoc('./ads/click.php?a=' + id);
+	}
+
+	function countAdView(id)
+	{
+	   loadXMLDoc('./ads/view.php?a=' + id);
+	}
+
+	function loadXMLDoc(url) {
+	   req = false;
+	   if(window.XMLHttpRequest) {
+	      try {
+	         req = new XMLHttpRequest();
+	      } catch(e) {
+	         req = false;
+	      }
+	   } else if(window.ActiveXObject) {
+	      try {
+	         req = new ActiveXObject("Msxml2.XMLHTTP");
+	      } catch(e) {
+	         try {
+	            req = new ActiveXObject("Microsoft.XMLHTTP");
+	         } catch(e) {
+	            req = false;
+	         }
+	      }
+	   }
+	   if(req) {
+	      req.open("GET", url, true);
+	      req.send(null);
+	   }
+	}
+</script>
+</head>
+<body class="ltr">
+
+<a name="top"></a>
+
+<div id="wrapheader">
+	
+
+	<div id="logodesc">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td><a href="./index.php?sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/site_logo.gif" width="170" height="94" alt="" title="" /></a></td>
+			<td width="100%" align="center"><h1>Мотор Мастер Клуб</h1><span class="gen"><IDXSKIP>Автодиагностика для любителей и профессионалов</IDXSKIP></span></td>
+		</tr>
+		</table>
+	</div>
+
+	<div id="menubar">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td class="genmed">
+				<a href="./ucp.php?mode=login&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/theme/images/icon_mini_login.gif" width="12" height="13" alt="*" /> Вход</a>&nbsp; &nbsp;<a href="./ucp.php?mode=register&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/theme/images/icon_mini_register.gif" width="12" height="13" alt="*" /> Регистрация</a>
+					
+			</td>
+			<td class="genmed" align="right">
+				<a href="./faq.php?sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/theme/images/icon_mini_faq.gif" width="12" height="13" alt="*" /> FAQ</a>
+				
+			</td>
+		</tr>
+		</table>
+	</div>
+
+	<div id="datebar">
+		<table width="100%" cellspacing="0">
+		<tr>
+			<td class="gensmall"></td>
+			<td class="gensmall" align="right">Текущее время: Сб июл 08, 2017 10:09 am<br /></td>
+		</tr>
+		</table>
+	</div>
+
+</div>
+
+
+
+
+<iframe scrolling="no" frameborder="no"  style="margin-left: 20px; width: 100%; height:154px" src="http://motor-master.ru/?tmpl=module&position=banner">j</iframe><br />
+<div id="wrapcentre">
+
+	
+
+	<br style="clear: both;" />
+
+	<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td class="row1">
+			<p class="breadcrumbs"><a href="./index.php?sid=995a72e43c2a7ba701c6900e52dc073d">Список форумов</a> &#187; <a href="./viewforum.php?f=77&amp;sid=995a72e43c2a7ba701c6900e52dc073d">ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</a> &#187; <a href="./viewforum.php?f=100&amp;sid=995a72e43c2a7ba701c6900e52dc073d">Архив (Вопросы производителю)</a></p>
+			<p class="datetime"><IDXSKIP>Часовой пояс: UTC + 4 часа [ Летнее время ]</IDXSKIP></p>
+		</td>
+	</tr>
+	</table>
+
+	<br />
+	<div class="forumrules">
+		
+			<h3>Правила форума</h3><br />
+			<IDXSKIP><a href="http://club.motor-master.ru/viewtopic.php?f=43&amp;t=4365"><b>Посмотреть правила форума</b></a></IDXSKIP>
+		
+	</div>
+
+	<br clear="all" />
+
+
+<div id="pageheader">
+	<h2><a class="titles" href="./viewtopic.php?f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d">Програматор ЭБУ и SAE J2534</a></h2>
+
+
+	<p class="moderators">Модератор: <a href="./memberlist.php?mode=viewprofile&amp;u=2393&amp;sid=995a72e43c2a7ba701c6900e52dc073d" style="color: #006600;" class="username-coloured">dimka112</a></p>
+
+</div>
+
+<br clear="all" /><br />
+
+
+
+
+
+<div id="pagecontent">
+
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		<a href="./posting.php?mode=post&amp;f=100&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/button_topic_locked.gif" alt="Форум закрыт" title="Форум закрыт" /></a>&nbsp;<a href="./posting.php?mode=reply&amp;f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/button_topic_locked.gif" alt="Эта тема закрыта, вы не можете редактировать и оставлять сообщения в ней." title="Эта тема закрыта, вы не можете редактировать и оставлять сообщения в ней." /></a>
+		</td>
+		
+			<IDXSKIP><td class="nav" valign="middle" nowrap="nowrap">&nbsp;Страница <strong>1</strong> из <strong>2</strong><br /></td></IDXSKIP>
+			<IDXSKIP><td class="gensmall" nowrap="nowrap">&nbsp;[ Сообщений: 28 ]&nbsp;</td></IDXSKIP>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"><b><a href="#" onclick="jumpto(); return false;" title="Перейти на страницу…">На страницу</a> <strong>1</strong><span class="page-sep">, </span><a href="./viewtopic.php?f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d&amp;start=15">2</a> &nbsp;<a href="./viewtopic.php?f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d&amp;start=15">След.</a></b></td>
+		
+	</tr>
+	</table>
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr>
+		<td class="cat">
+			<table width="100%" cellspacing="0">
+			<tr>
+				<td class="nav" nowrap="nowrap">&nbsp;
+				<a href="./viewtopic.php?f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d&amp;view=print" title="Версия для печати">Версия для печати</a>
+				</td>
+				<td class="nav" align="right" nowrap="nowrap"><a href="./viewtopic.php?f=100&amp;t=507&amp;view=previous&amp;sid=995a72e43c2a7ba701c6900e52dc073d">Пред. тема</a> | <a href="./viewtopic.php?f=100&amp;t=507&amp;view=next&amp;sid=995a72e43c2a7ba701c6900e52dc073d">След. тема</a>&nbsp;</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+
+	</table>
+
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	
+		<IDXSKIP><tr>
+			<th>Автор</th>
+			<th>Сообщение</th>
+		</tr></IDXSKIP>
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p7860"></a>
+				<b class="postauthor">EvgenyARM</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;"><IDXSKIP>&nbsp;<b>Заголовок сообщения:</b></IDXSKIP> <a href="#p7860">Програматор ЭБУ и SAE J2534</a></div><div style="float: right;"><a href="./viewtopic.php?p=7860&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p7860"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Ср июл 01, 2009 10:32 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Ср июл 01, 2009 8:09 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 536<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Красноярск<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <IDXSKIP>0 раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=1177&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">41</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">Возник вопрос  - а авторы софта не задумывались о реализации поддержки этого протокола в каком то далеком или недалеком будущем?
+<br />Конечно возникает вопрос а нужно ли ???
+<br />Лично моё мнение по этому поводу и за ( а возможно эти за и будут против ).
+<br />1) этот протокол должен поддерживаться всеми диагностическими протоколами.
+<br />2) Хоть ГАЗ и закрыл пока ( а можит и совсем ) линию легковых авто , но Волга 31105 Евро-2 с Крайслером ( и некотрые газельки )имела Мотроллу которая перешивается именно по этому протаколу и через диагностику. И нашлепали их не мало. Но американцы то делали исходя из своей культуры производства и они не имели понятия что введя температуру срабатывания вентилятора 104 градуса наш производитель не сможит удержать давление в системе ОЖ чтоб авто не скипали в жару от того что вылетают пробки расширительных бачков или не держут шланги или клапана этих бачков ( это один из примеров ). С Микас-11 слава богу мы находим общий язык.
+<br />3) Хоть немного но наштамповали Саберов , которые 100% аналог Крайслер себринг и Додж Стратус и которые тоже перешиваются все исходя из этого же протакола.
+<br />4) Митцу и Субару те вообще имеют уже готовые программы для работы с готовыми редакторами ( <!-- m --><a class="postlink" href="http://www.openecu.org/index.php?title=EcuFlash">http://www.openecu.org/index.php?title=EcuFlash</a><!-- m --> )
+<br />5) Зловредный УАЗ Патриот Евро-3 с Бошь МЕ17,9,7 - вдруг тоже откликнется ( это вообще темная лошадь и кто му же вредная).
+<br />6) После просмотра схем адаптеров пришел к выводу что интрфейс - простой K-line адаптер.
+<br />**************************
+<br />В целом док по этому протоколу можно подчерпнуть здесь - 
+<br /><!-- m --><a class="postlink" href="http://tunertools.com/prodimages/DrewTech/Manuals/PassThru_API-1.pdf">http://tunertools.com/prodimages/DrewTe ... _API-1.pdf</a><!-- m -->
+<br />************************************
+<br />Напрашивается вопрос - зачем это надо если нет редакторов , нет карт . Просто мысль что возможно появление инструмента - даст стимул кому нибудь для разработки редактора .
+<br />Ну и так бывают случаи когда горе пользователи умудряются завалить флешь на своих авто и есть хоть маленький шанс поднять блок если имеется на руках диагноста копия прошивки такого блока.
+<br />*************************
+<br /><strong>Это просто мысли вслух и связи с этим и возник вопрос - возможно я что то не допанимаю или не знаю</strong>.
+<br />Лично мои личный интерес - это патриоты с МЕ . Что то натворили в Ульяновске ( я еще не сравнивал паспорта ) , но за последние месяцы все повально новые Патриоты пошли с двумя прогресирующими ошибками , причем ругаясь на обсалютно исправные вещи и корректно работающие. Подозрение что на заводе ведут эксперименты готовясь к 2010 году и новому стандарту Евро-4 .
+<br />Но Евро-3 у них никогда корректно не работал а сейчас и вообще туши свет. Вот потихой грусти хотя бы менять новые прошивки на старые ( с теми еще как то можно было лечить авто).
+<br />*************************
+<br /> Но опять же загрузчик от ROY случайно работает не по этому протоколу ?  Смысл этого в том что блок шьется через диагностический разьем , а не через колодку. И ЭБУ обязан ( но не должен) без всяких доп. коммуникаций ( которые предусматривают старые загрузчики) отдать и принять ПО.
+<br />Вот пара схемок которые прилипли с топа на ОКТЕ когда была попытка обсуждения OPEN ECU ...</div>
+
+					
+						<span class="gensmall error"><br /><br /><IDXSKIP>У вас нет необходимых прав для просмотра вложений в этом сообщении.</IDXSKIP></span>
+					
+						<div class="postbody"><br />_________________<br />Не ошибается тот - кто ничего не делает!!</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=1177&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p7885"></a>
+				<b class="postauthor">kbh72</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p7885"></a></div><div style="float: right;"><a href="./viewtopic.php?p=7885&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p7885"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Чт июл 02, 2009 1:09 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Пт дек 19, 2008 2:33 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 1487<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Псков<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=909&amp;give=true&amp;sid=995a72e43c2a7ba701c6900e52dc073d">3</a> <IDXSKIP>раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=909&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">43</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">Блоки с Мотороллами ,я думаю можно шить через интерфейс BCM , точнее смогу сказать когда с Доджем закончим. Но не факт. Может стоять защита от считывания. Как например на Микасах-11.(да и на 17.9.7вроде тоже )
+<br />А за ссылку спасибо. Полезная инфа.</div>
+
+					
+						<div class="postbody"><br />_________________<br />Эксперт - это человек, который совершил все возможные ошибки в очень узкой специальности</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=909&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p7903"></a>
+				<b class="postauthor">EvgenyARM</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p7903"></a></div><div style="float: right;"><a href="./viewtopic.php?p=7903&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p7903"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Чт июл 02, 2009 7:19 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Ср июл 01, 2009 8:09 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 536<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Красноярск<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <IDXSKIP>0 раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=1177&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">41</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">Насчет защиты от считывания в Микас-11ЕТ -  выкладываю исправленную прошку , где убрали ( незнаю защиту или косяк ) .
+<br />Прошка 52 , с ограничением 130км\час ( мы газелям специально подрезаем чтоб не убивали носясь как гонки гарантийное железо - кому надо снимайте в СТП ) . На родную элкаровскую 5* не ляжет без вскрытия. Шьем лодырем от СМС на работе подтягивая 104 ногу к массе.
+<br />После смены , уже нет проблемм с перепрошивкой ( пока опять не всунете элкаровскую - хоть и к примеру доработанную на тему карт ).
+<br />В целом прошка лежит на чиптюнере - но вдруг кто не знает.
+<br />****************************************************
+<br />В файло обменник положу доки и схемы по Саберу и Себрингу . Там есть письмо от крайслера по перепрошивке ключей , магнитол и пр. с рекомендацией прогера . Можит тоже будет кому полезна инфа - в сети нигде её сейчас нет , так ка тут форум закрытый для пользователей Трейд - решил поделиться.
+<br />******************************************************
+<br />Насчет програматора Трейд-М  - увы пока огорчен. Моя работа связанна только с ГАЗ и УАЗ . Но увы микасс-11 несмог зашить . Блоки без дароботок ( резюки и транзюк) - специфика что шить приходится много ( в день иногда набегает до 10 смен ПО с 22, 32 , 05 и 06 ЕТ\CR ) . И поэтому нам никто не будет оплачивать впайку и доработку. Шьем как писал комбиком . Трейд -( набор Скан-мастер ) взял себе любимому мучить свою волгу с крайслером и микасом в часы досуга ( на работе чужое железо не дает оторваться на своей). И увы попробывал перешить блок микас11 от помирайки ( буханки ) с 409 мотором увы в режиме без доработки не смог считать флаш ( писать не пробывал) . Схематично и платно блок едентичен МИКАС-11 CR с маленькими дополнениями . Решил попробывать перешить свой запасной блок от Волги - не удача . Причем еще программа сыпится с ругательством на системную ошибку и пожеланием сходить в гости к дяде гейцу.
+<br />В целом по протаколу не можит прочитать бутстрап.
+<br />Если выбрать с доработкой блок - проге удается подключиться , но прочитать флеш не можит - только епром.
+<br />---------
+<br />Попробывал микас 7,1 - все работает без проблем.
+<br />Обидно однако - лодырь то от СМС жует мои блоки на ура.
+<br />Вот интересно кто еще жалуется - или только у меня все так....</div>
+
+					
+						<span class="gensmall error"><br /><br /><IDXSKIP>У вас нет необходимых прав для просмотра вложений в этом сообщении.</IDXSKIP></span>
+					
+						<div class="postbody"><br />_________________<br />Не ошибается тот - кто ничего не делает!!</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=1177&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p7924"></a>
+				<b class="postauthor">kbh72</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p7924"></a></div><div style="float: right;"><a href="./viewtopic.php?p=7924&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p7924"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Пт июл 03, 2009 12:37 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> <IDXSKIP>Пт дек 19, 2008 2:33 pm<br /></IDXSKIP><IDXSKIP><b>Сообщения:</b></IDXSKIP> <IDXSKIP>1487<br /></IDXSKIP><IDXSKIP><b>Откуда:</b></IDXSKIP> <IDXSKIP>Псков<br /></IDXSKIP><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=909&amp;give=true&amp;sid=995a72e43c2a7ba701c6900e52dc073d">3</a> <IDXSKIP>раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=909&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">43</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">Я шил 11ЕТ правда на старой платформе. Все прошло без проблем и доработок.
+<br />Может повезло. <img src="./images/smilies/icon_neutral.gif" alt=":|" title="Neutral" /> Будет, при случае попробую.</div>
+
+					
+						<div class="postbody"><br /><IDXSKIP>_________________<br />Эксперт - это человек, который совершил все возможные ошибки в очень узкой специальности</IDXSKIP></div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=909&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p7931"></a>
+				<b class="postauthor">gory</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p7931"></a></div><div style="float: right;"><a href="./viewtopic.php?p=7931&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p7931"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Пт июл 03, 2009 8:27 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				<tr>
+					<td><img src="./download/file.php?avatar=116.jpg" width="81" height="64" alt="Аватара пользователя" /></td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Вс фев 03, 2008 10:22 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 688<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Ростовская-на -Дону обл.  г.Шахты<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=116&amp;give=true&amp;sid=995a72e43c2a7ba701c6900e52dc073d">5</a> <IDXSKIP>раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=116&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">36</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody"><div class="quotetitle">EvgenyARM писал(а):</div><div class="quotecontent">Насчет защиты от считывания в Микас-11ЕТ -  выкладываю исправленную прошку , где убрали ( незнаю защиту или косяк ) ..... <br />....  </div>
+<br /> Будь внимательнее, защиту на Мик 11ет с бутом 2.06 еще не победили
+<br />и ложатся они безвозвратно. 
+<br />Микасы 11 и 11ет да и VS8 по диагнозе шьются не все, а некоторые после прошивки не запускают двигатель без перемыкания главного реле.
+<br />  С доработкой проблем не было. Ну кроме того что очень долго.
+<br />Быстрее шить бесплатныл от Roy/</div>
+
+					
+						<div class="postbody"><br />_________________<br />Подумай, посмейся.
+<br />За темой не слежу, кидай в Аську.
+<br /><a href="http://nick-name.ru/sertificates/43479/" class="postlink"><img src="http://nick-name.ru/forum/gory.gif" alt="Изображение" /></a></div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=116&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p7936"></a>
+				<b class="postauthor">EvgenyARM</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p7936"></a></div><div style="float: right;"><a href="./viewtopic.php?p=7936&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p7936"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Пт июл 03, 2009 12:36 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Ср июл 01, 2009 8:09 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 536<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Красноярск<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <IDXSKIP>0 раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=1177&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">41</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody"><div class="quotetitle">gory писал(а):</div><div class="quotecontent"> Будь внимательнее, защиту на Мик 11ет с бутом 2.06 еще не победили<br />и ложатся они безвозвратно. <br /></div>
+<br />Насчет чего предупреждение я немного не понял.
+<br />Говорю что вдень перешиваю иногда по 10 машин без разницы какой бут стоит ( про свою волгу молчу так как уже раз 20 перешил свой ЭБУ используя прошивку 800-081м1 с 2,06 бутом - притягиваю перемычкой 104 ногу и вперед  . Так как устал уже каждый раз рвать герметик и потом опять мазать я уже впаял геркон и поднося неодимовый магнит к блоку спокойно сейчас шью свои блоки. И по этой причине <!-- m --><a class="postlink" href="http://www.auto-bk.ru/forum/index.php?showtopic=3044">http://www.auto-bk.ru/forum/index.php?showtopic=3044</a><!-- m -->
+<br /> приходится очень часто менять прошивку так как много приходится работать над картами .
+<br />**********
+<br />А для Газелей выложил прошивку где сменили загрузчик 2,06 на 2,04. Нужно только один раз вскрыть блок притянув 104 ногу для перепрошивки и залить &quot;мою&quot; прошивку чтобы убрать элкаровскую 5*
+<br />Если блок с 22 или 32 то вообще смело заливайте без вскрытия и перешивайте потом хоть 52 хоть 32 - все будет работать .
+<br />И причем все шьется без доработок блока.
+<br />Насчет того победили или нет - но наверное всетаки есть лозейка -- ведь сами Элкаровцы перешивают блоки без вскрытия блока ( правдо они шьют не комбиками и пр. софтом).
+<br />Упомянутый мной выше протакол для всех цевилизованных производителей работает на смене ПО где используетются корректные протоколы.
+<br />*************************
+<br />Насчет бесплатного ( или воровоного ) загрузчика от ROY-я , он работает только для прошивок до 52 на ЕТ или до 07 для Крайслера.
+<br />А если нужно обновить 52 ,62 или зашить новые версии на Крайслер - 07 ,08 ,09,013,014,015 - загрузчик увы просто даже не загрузит эту прошивку , не говоря уже чтоб зашить .
+<br />Так что увы  пока не как.
+<br />************************
+<br />Насчет пугалок что положишь блок , что попадешь на бабло - Сами элкаровцы сказали просто ничего супер страшного нет для того кто знает как это делать и это вам в помощь для заробатывания денег - отваливаются автоматом ваши конкуренты которые начали шить чуть не в каждом гараже ( не дословно - в моей редакции )........
+<br />******************************
+<br />Так что вот .
+<br />А если программа будет уметь больше чем вся классика которая есть на рынке россии ( к примеру поддерживать перепрошивку субарей и митсу , тайот ( этим протаколом за бугром на ура перепрошивают и тайоты ) - это что испортит софт и он упадет в рейтинге .
+<br />Думаю что нет , это только даст положительный момент.</div>
+
+					
+						<div class="postbody"><br />_________________<br />Не ошибается тот - кто ничего не делает!!</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=1177&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p7966"></a>
+				<b class="postauthor">EvgenyARM</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p7966"></a></div><div style="float: right;"><a href="./viewtopic.php?p=7966&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p7966"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Сб июл 04, 2009 6:15 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Ср июл 01, 2009 8:09 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 536<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Красноярск<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> 0 раз.<br /><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=1177&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">41</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">Напрасно я растроился по поводу того что прогер не шьет 11-ое семейство микасей. Нет прошить удается , не удается слить никаким образом .....
+<br /><img src="http://s48.radikal.ru/i121/0907/65/7ea5a5884db4.jpg" alt="Изображение" />
+<br />Вот как видите шил сверху 08 прошки и заливал 014 ( с неправленным бутом ).
+<br />И как видите страшилки все насчет смертельного Боотлоадера 2,06 
+<br /><img src="http://s41.radikal.ru/i094/0907/6e/d1378927d910.jpg" alt="Изображение" />
+<br />Просто не комфортно работать поверх него.
+<br />Ну пока и на этом радость , если надо что то слить , солью комбиком на работе. Более актуальна заливка после редактирования прошивки...</div>
+
+					
+						<div class="postbody"><br />_________________<br />Не ошибается тот - кто ничего не делает!!</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=1177&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p7974"></a>
+				<b class="postauthor">gory</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p7974"></a></div><div style="float: right;"><a href="./viewtopic.php?p=7974&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p7974"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Сб июл 04, 2009 10:34 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				<tr>
+					<td><img src="./download/file.php?avatar=116.jpg" width="81" height="64" alt="Аватара пользователя" /></td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Вс фев 03, 2008 10:22 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 688<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Ростовская-на -Дону обл.  г.Шахты<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=116&amp;give=true&amp;sid=995a72e43c2a7ba701c6900e52dc073d">5</a> <IDXSKIP>раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=116&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">36</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody"><div class="quotetitle">EvgenyARM писал(а):</div><div class="quotecontent"> .......  Насчет чего предупреждение я немного не понял..... .</div><br /> Ну прочитай может поймёшь, не знаю что тебе по секрету сообщили элкаровцы но офф информация вота тута <!-- m --><a class="postlink" href="http://www.mikas-service.ru/forum.html?idbook=97&amp;idmain=3473&amp;r=75119">http://www.mikas-service.ru/forum.html? ... 73&amp;r=75119</a><!-- m --><br /><div class="quotetitle">EvgenyARM писал(а):</div><div class="quotecontent">  ...Насчет бесплатного ( или воровоного ) .....</div>
+<br /> Это от  горячности или не знания , что это в свободном доступе :
+<br /><!-- m --><a class="postlink" href="http://www.oktja.ru/forum/index.php?showtopic=67795">http://www.oktja.ru/forum/index.php?showtopic=67795</a><!-- m -->
+<br />
+<br />P.S. Так и не понял  зачем дал ссылку на свою пространную статью &quot; не о чём &quot; ? <img src="./images/smilies/icon_cool.gif" alt="8)" title="Cool" /></div>
+
+					
+						<div class="postbody"><br />_________________<br />Подумай, посмейся.
+<br />За темой не слежу, кидай в Аську.
+<br /><a href="http://nick-name.ru/sertificates/43479/" class="postlink"><img src="http://nick-name.ru/forum/gory.gif" alt="Изображение" /></a></div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=116&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p7978"></a>
+				<b class="postauthor">EvgenyARM</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p7978"></a></div><div style="float: right;"><a href="./viewtopic.php?p=7978&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p7978"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Сб июл 04, 2009 11:38 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Ср июл 01, 2009 8:09 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 536<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Красноярск<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> 0 раз.<br /><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=1177&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">41</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">Я думал вы про опен 3,08 или 3,10 от роя ( это его последние в отличие от флашера ) и вот многие по причине всяких непонятностей 3,08 ( а теперь 3,10 ) стали называть бесплатным .
+<br />Мне микосовцы ничего не шепнули - был там несколько месяцев вопрос им в лоб и они вполне откровенно сказали так как я сказал выше.
+<br />Покранее мере ни один блок еще не уснул.</div>
+
+					
+						<div class="postbody"><br />_________________<br />Не ошибается тот - кто ничего не делает!!</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=1177&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p8036"></a>
+				<b class="postauthor">gory</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p8036"></a></div><div style="float: right;"><a href="./viewtopic.php?p=8036&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p8036"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Вс июл 05, 2009 1:52 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				<tr>
+					<td><img src="./download/file.php?avatar=116.jpg" width="81" height="64" alt="Аватара пользователя" /></td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Вс фев 03, 2008 10:22 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 688<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Ростовская-на -Дону обл.  г.Шахты<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=116&amp;give=true&amp;sid=995a72e43c2a7ba701c6900e52dc073d">5</a> <IDXSKIP>раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=116&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">36</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody"><div class="quotetitle">EvgenyARM писал(а):</div><div class="quotecontent"> .... и вот многие по причине всяких непонятностей 3,08 ( а теперь 3,10 ) стали называть бесплатным .<br /></div><br />Первый раз слышу, что-то ломанных ещё не встречал в сети.<br />И на сколько надо быть пьяным или бестолковым, что-бы так вольно манипулировать понятиями. Дай адресок хоть одного чела. <img src="./images/smilies/icon_sad.gif" alt=":(" title="Sad" /> <br /><div class="quotetitle">EvgenyARM писал(а):</div><div class="quotecontent"> там несколько месяцев вопрос им в лоб и они вполне откровенно сказали так как я сказал выше..</div><br /> Дай ссылочку, пожалуйста. <img src="./images/smilies/icon_confused.gif" alt=":?" title="Confused" /> <br /><div class="quotetitle">EvgenyARM писал(а):</div><div class="quotecontent">Покранее мере ни один блок еще не уснул.</div>
+<br />Сплюнь !!!  <img src="./images/smilies/icon_wink.gif" alt=":wink:" title="Wink" /></div>
+
+					
+						<div class="postbody"><br />_________________<br />Подумай, посмейся.
+<br />За темой не слежу, кидай в Аську.
+<br /><a href="http://nick-name.ru/sertificates/43479/" class="postlink"><img src="http://nick-name.ru/forum/gory.gif" alt="Изображение" /></a></div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=116&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p8040"></a>
+				<b class="postauthor">EvgenyARM</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p8040"></a></div><div style="float: right;"><a href="./viewtopic.php?p=8040&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p8040"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Вс июл 05, 2009 7:19 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Ср июл 01, 2009 8:09 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 536<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Красноярск<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> 0 раз.<br /><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=1177&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">41</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody"><div class="quotetitle">gory писал(а):</div><div class="quotecontent">И на сколько надо быть пьяным или бестолковым, что-бы так вольно манипулировать понятиями. Дай адресок хоть одного чела. <img src="./images/smilies/icon_sad.gif" alt=":(" title="Sad" /> <br /></div>
+<br />Вы это поосторожнее в вырожениях , на земле вы бы ответили за такое растовление букв ( пока считаю что это вы себе такую оценку дали )....
+<br />***************
+<br />Пример - пожалуйста .
+<br />Это что акция по раскручиванию бренда от ROY-я - <!-- m --><a class="postlink" href="http://www.auto-bk.ru/forum/index.php?showtopic=1493">http://www.auto-bk.ru/forum/index.php?showtopic=1493</a><!-- m -->
+<br />Тоже самое там было и с 3,08 .
+<br />Отсюда уже и пошло называть опен роя бесплатным .....
+<br />***********************************
+<br />В остальном если у вас есть время , идите и лопатьте форум Элкаровцев - мне лично не досуг , лопатить тот крайне неудобный вариант того форума.
+<br /> А проверять меня нечего на вшывость - боитесь и правильно делаете - не подходите к этим блокам и спите спокойно. 
+<br />Я как шил так и дальше буду - это моя работа .
+<br />Если сомнения мучают с намеком на то что я тут вру - ради бога берите СТП , редактируйте паспорт ( чтоб не было от вас опять каких обвинений) и я вам выложу скрин процесса заливки вашей прошивки ( только сейчас дома нет под рукой ЕТ-шного блока и потому пожалуйста крайслеровский или на бухань с 409 мотором ).</div>
+
+					
+						<div class="postbody"><br />_________________<br />Не ошибается тот - кто ничего не делает!!</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=1177&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p8041"></a>
+				<b class="postauthor">EvgenyARM</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p8041"></a></div><div style="float: right;"><a href="./viewtopic.php?p=8041&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p8041"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Вс июл 05, 2009 7:33 am&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Ср июл 01, 2009 8:09 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 536<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Красноярск<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <IDXSKIP>0 раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=1177&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">41</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">И вообще ST10Flasher разве это роевский изночально продукт , ноги то растут этого прогера отсюда - <!-- m --><a class="postlink" href="http://www.st.com/mcu/forumsid-5.html">http://www.st.com/mcu/forumsid-5.html</a><!-- m -->
+<br />----------------------
+<br />Так что не надо острых вырожений - смешно если честно...
+<br />Вот флешер от ST
+<br />А здесь вся документация и пр. - <!-- m --><a class="postlink" href="http://www.st.com/mcu/modules.php?name=mcu&amp;file=familiesdocs&amp;FAM=17">http://www.st.com/mcu/modules.php?name= ... ocs&amp;FAM=17</a><!-- m --></div>
+
+					
+						<span class="gensmall error"><br /><br />У вас нет необходимых прав для просмотра вложений в этом сообщении.</span>
+					
+						<div class="postbody"><br />_________________<br />Не ошибается тот - кто ничего не делает!!</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=1177&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p8058"></a>
+				<b class="postauthor" style="color: #006600">VL@DIMIR</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p8058"></a></div><div style="float: right;"><a href="./viewtopic.php?p=8058&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p8058"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Вс июл 05, 2009 7:23 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				<tr>
+					<td class="postdetails">Модератор</td>
+				</tr>
+			
+				<tr>
+					<td><img src="./download/file.php?avatar=8_1401027698.gif" width="100" height="100" alt="Аватара пользователя" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> <IDXSKIP>Вс дек 30, 2007 2:22 pm<br /></IDXSKIP><IDXSKIP><b>Сообщения:</b></IDXSKIP> 2434<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> <IDXSKIP>Россия Киров<br /></IDXSKIP><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=8&amp;give=true&amp;sid=995a72e43c2a7ba701c6900e52dc073d">299</a> <IDXSKIP>раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=8&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">339</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">наверно вы уважаемый что-то путаете микас 11 ет с заводской 52 прошивкой и бутстрепом версии 2.06 засыпают навсегда <img src="./images/smilies/icon_idea.gif" alt=":idea:" title="Idea" /></div>
+
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=8&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row2">
+
+			<td align="center" valign="middle">
+				<a name="p8074"></a>
+				<b class="postauthor">EvgenyARM</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p8074"></a></div><div style="float: right;"><a href="./viewtopic.php?p=8074&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p8074"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Вс июл 05, 2009 10:59 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td valign="top" class="profile">
+				<IDXSKIP><table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				</table></IDXSKIP>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Ср июл 01, 2009 8:09 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 536<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Красноярск<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <IDXSKIP>0 раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=1177&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">41</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody">Для начала возмите карту красноярского края и посмотрите територию.
+<br />К чему все это - шить мне приходится много и перешивать как 52 так и с более нижних версий. Еще раз скажу работа моя - работаю у представителя тд &quot; русские машины&quot; предстовляющим официально гарантийные обязательства именно от этого торгового дома - а точнее ГАЗ. Больше по краю знаю точно никто не подходит к ГАЗ-овским производным по поводу смены ПО - все гарантийные авто проходят через меня и я между делом проверяю ( работа такая ) было вмешательство в ПО или нет.
+<br />********************
+<br />Я на многих форумах читал и всегда для меня это вызывало такие чувства что кто спорит шьет просто по случаю или еще как или вообще распространяет байки.
+<br />--------------------
+<br />Сегодня дважды перешил свой крайслеровский блок , так как для эксперимента залил газелевскую 014 прошку ( скрин выше - вы что своим глазам не верите ) - и опять залил свою 08 под ДД так как пока нет карты под 14 чтоб снять ограничение скорости.
+<br />И могу сказать с полной увереностью CR  с бутом 2,06 прогером от Трейд шьётся на ура без доработок ( впайкой транзюка) . Читать пока не можит. Как шью описал выше. Если лень вскрыть блок и ткнуть в контактную точку на плате - ну извените это ваши проблемы.
+<br />Но лодырем от СМС который на работе делаю все и сливаю и заливаю . 
+<br />****************************************
+<br />Усыпил за все время один блок сжарив процессор - вместо минуса по запарке на 104 ногу подал + .
+<br />*******************************
+<br />Мне спортивно интересно сколько перешили блоков чтоб появилось стойкое убеждение что не шьется после 2,06 и главное инструмент - чем вы пытаетесь шить.
+<br />Флейшер не берет скажу сразу . Опен 3,08 только можит залить 52 на 22 или 32 и больше тем софтом вы ничего не сделаете - даже не вернете обратно 32. Но я вроде в примерах с картинками выложил - этот прогер шьет.
+<br />Вот сами посмотрите паспорт того блока в который вчера залил и сегодня перезалил дважды 
+<br /><img src="http://s40.radikal.ru/i089/0907/6e/f38c461d8ffc.jpg" alt="Изображение" />
+<br />****************
+<br />Короче устал - считайте что мне по блату Дерепаско высылает авто со спец контроллерами . А вам устроил аниткризисную программу по усыплению блоков .
+<br />На работе покажу  топ - народ кататься будет или шайтаном назовут.
+<br />Попутал , ничего себе - за три дня моей смены иногда проходит около 70 авто через мои руки - это не одна две в неделю ....
+<br />************************</div>
+
+					
+						<div class="postbody"><br />_________________<br />Не ошибается тот - кто ничего не делает!!</div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row2">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=1177&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table class="tablebg" width="100%" cellspacing="1">
+	<tr class="row1">
+
+			<td align="center" valign="middle">
+				<a name="p8077"></a>
+				<b class="postauthor">gory</b>
+			</td>
+			<td width="100%" height="25">
+				<table width="100%" cellspacing="0">
+				<tr>
+				
+					<td class="gensmall" width="100%"><div style="float: left;">&nbsp;<b>Заголовок сообщения:</b> <a href="#p8077"></a></div><div style="float: right;"><a href="./viewtopic.php?p=8077&amp;sid=995a72e43c2a7ba701c6900e52dc073d#p8077"><img src="./styles/subsilver2/imageset/icon_post_target.gif" width="12" height="9" alt="Сообщение" title="Сообщение" /></a><b>Добавлено:</b> Вс июл 05, 2009 11:20 pm&nbsp;</div></td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td valign="top" class="profile">
+				<table cellspacing="4" align="center" width="150">
+			
+				<tr>
+					<td><img src="./styles/subsilver2/imageset/ru/icon_user_offline.gif" alt="Не в сети" title="Не в сети" /></td>
+				</tr>
+			
+				<tr>
+					<td><img src="./download/file.php?avatar=116.jpg" width="81" height="64" alt="Аватара пользователя" /></td>
+				</tr>
+			
+				</table>
+
+				<span class="postdetails">
+					<br /><IDXSKIP><b>Зарегистрирован:</b></IDXSKIP> Вс фев 03, 2008 10:22 pm<br /><IDXSKIP><b>Сообщения:</b></IDXSKIP> 688<br /><IDXSKIP><b>Откуда:</b></IDXSKIP> Ростовская-на -Дону обл.  г.Шахты<br /><IDXSKIP><b>Благодарил&nbsp;(а):</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=116&amp;give=true&amp;sid=995a72e43c2a7ba701c6900e52dc073d">5</a> <IDXSKIP>раз.<br /></IDXSKIP><IDXSKIP><b>Поблагодарили:</b></IDXSKIP> <a href="./thankslist.php?mode=givens&amp;author_id=116&amp;give=false&amp;sid=995a72e43c2a7ba701c6900e52dc073d">36</a> <IDXSKIP>раз.
+				</IDXSKIP></span>
+
+			</td>
+			<td valign="top">
+				<table width="100%" cellspacing="5">
+				<tr>
+					<td>
+					
+
+						<div class="postbody"><div class="quotetitle">EvgenyARM писал(а):</div><div class="quotecontent">  Вы это <span style="color: red"><strong>,</strong></span> поосторожнее в выр<strong><span style="color: red">а</span></strong>жениях , на земле вы бы ответили за такое рас<strong><span style="color: red">с</span></strong>т<strong><span style="color: red">о</span></strong>вление <br /><em> <span style="color: red">(расстановка?)</span> </em> букв ......  </div>
+<br />Что-то много букв не правильно стоит. <img src="./images/smilies/icon_biggrin.gif" alt=":D" title="Very Happy" /> 
+<br />Несёшь какуе-то ерунду и еще обижаешься. Причём здесь авторство ?
+<br />Ты перепутал понятия а теперь пытаешься выкрутиться.
+<br /> Не владея вопросом и заявляя о якобы полной безопасности перепрошивки Микасов с бутлодером 2.06 ты просто можешь подставить на бабки начинающих диагностов.
+<br /> Это тебе не лампочки в стоп сигналах по два дня менять. <img src="./images/smilies/icon_cool.gif" alt="8)" title="Cool" /></div>
+
+					
+						<div class="postbody"><br />_________________<br />Подумай, посмейся.
+<br />За темой не слежу, кидай в Аську.
+<br /><a href="http://nick-name.ru/sertificates/43479/" class="postlink"><img src="http://nick-name.ru/forum/gory.gif" alt="Изображение" /></a></div>
+					<br clear="all" /><br />
+
+						<table width="100%" cellspacing="0">
+						<tr valign="middle">
+							<td class="gensmall" align="right">
+							
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+
+		<tr class="row1">
+
+			<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+			<td><div class="gensmall" style="float: left;">&nbsp;<a href="./memberlist.php?mode=viewprofile&amp;u=116&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/icon_user_profile.gif" alt="Профиль" title="Профиль" /></a> &nbsp;</div> <div class="gensmall" style="float: right;">&nbsp;</div></td>
+	
+		</tr>
+
+	<IDXSKIP><tr>
+		<td class="spacer" colspan="2" height="1"><img src="images/spacer.gif" alt="" width="1" height="1" /></td>
+	</tr></IDXSKIP>
+	</table>
+
+
+
+	
+	<table width="100%" cellspacing="1" class="tablebg">
+	<tr align="center">
+		<td class="cat"><form name="viewtopic" method="post" action="./viewtopic.php?f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><IDXSKIP><span class="gensmall">Показать сообщения за:</span></IDXSKIP> <select name="st" id="st"><option value="0" selected="selected">Все сообщения</option><option value="1">1 день</option><option value="7">7 дней</option><option value="14">2 недели</option><option value="30">1 месяц</option><option value="90">3 месяца</option><option value="180">6 месяцев</option><option value="365">1 год</option></select><IDXSKIP>&nbsp;<span class="gensmall">Поле сортировки</span></IDXSKIP> <select name="sk" id="sk"><option value="a">Автор</option><option value="t" selected="selected">Время размещения</option><option value="s">Заголовок</option></select> <select name="sd" id="sd"><option value="a" selected="selected">по возрастанию</option><option value="d">по убыванию</option></select><IDXSKIP>&nbsp;<input class="btnlite" type="submit" value="Перейти" name="sort" /></IDXSKIP></form></td>
+	</tr>
+	</table>
+	
+
+	<table width="100%" cellspacing="1">
+	<tr>
+		<td align="left" valign="middle" nowrap="nowrap">
+		<a href="./posting.php?mode=post&amp;f=100&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/button_topic_locked.gif" alt="Форум закрыт" title="Форум закрыт" /></a>&nbsp;<a href="./posting.php?mode=reply&amp;f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d"><img src="./styles/subsilver2/imageset/ru/button_topic_locked.gif" alt="Эта тема закрыта, вы не можете редактировать и оставлять сообщения в ней." title="Эта тема закрыта, вы не можете редактировать и оставлять сообщения в ней." /></a>
+		</td>
+		
+			<IDXSKIP><td class="nav" valign="middle" nowrap="nowrap">&nbsp;Страница <strong>1</strong> из <strong>2</strong><br /></td></IDXSKIP>
+			<IDXSKIP><td class="gensmall" nowrap="nowrap">&nbsp;[ Сообщений: 28 ]&nbsp;</td></IDXSKIP>
+			<td class="gensmall" width="100%" align="right" nowrap="nowrap"><b><a href="#" onclick="jumpto(); return false;" title="Перейти на страницу…">На страницу</a> <strong>1</strong><span class="page-sep">, </span><a href="./viewtopic.php?f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d&amp;start=15">2</a> &nbsp;<a href="./viewtopic.php?f=100&amp;t=507&amp;sid=995a72e43c2a7ba701c6900e52dc073d&amp;start=15">След.</a></b></td>
+		
+	</tr>
+	</table>
+
+</div>
+
+
+
+
+
+<div id="pagefooter"></div>
+
+<br clear="all" />
+<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td class="row1">
+			<p class="breadcrumbs"><a href="./index.php?sid=995a72e43c2a7ba701c6900e52dc073d">Список форумов</a> &#187; <a href="./viewforum.php?f=77&amp;sid=995a72e43c2a7ba701c6900e52dc073d">ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</a> &#187; <a href="./viewforum.php?f=100&amp;sid=995a72e43c2a7ba701c6900e52dc073d">Архив (Вопросы производителю)</a></p>
+			<p class="datetime"><IDXSKIP>Часовой пояс: UTC + 4 часа [ Летнее время ]</IDXSKIP></p>
+		</td>
+	</tr>
+	</table>
+	<br clear="all" />
+
+	<table class="tablebg" width="100%" cellspacing="1">
+	<IDXSKIP><tr>
+		<td class="cat"><h4>Кто сейчас на конференции</h4></td>
+	</tr></IDXSKIP>
+	<tr>
+		<td class="row1"><p class="gensmall"><IDXSKIP>Сейчас этот форум просматривают: нет зарегистрированных пользователей и гости: 2</IDXSKIP></p></td>
+	</tr>
+	</table>
+
+
+<br clear="all" />
+
+<table width="100%" cellspacing="1">
+<tr>
+	<td width="40%" valign="top" nowrap="nowrap" align="left"></td>
+	<td align="right" valign="top" nowrap="nowrap"><span class="gensmall"><IDXSKIP>Вы <strong>не можете</strong></IDXSKIP> <IDXSKIP>начинать темы<br />Вы <strong>не можете</strong></IDXSKIP> <IDXSKIP>отвечать на сообщения<br />Вы <strong>не можете</strong></IDXSKIP> <IDXSKIP>редактировать свои сообщения<br />Вы <strong>не можете</strong></IDXSKIP> <IDXSKIP>удалять свои сообщения<br />Вы <strong>не можете</strong></IDXSKIP> <IDXSKIP>добавлять вложения<br /></IDXSKIP></span></td>
+</tr>
+</table>
+
+<br clear="all" />
+
+<table width="100%" cellspacing="0">
+<tr>
+	<td></td>
+	<td align="right">
+	<form method="post" name="jumpbox" action="./viewforum.php?sid=995a72e43c2a7ba701c6900e52dc073d" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+
+	<table cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td nowrap="nowrap"><span class="gensmall">Перейти:</span>&nbsp;<select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+
+		
+			<option value="-1">Выберите форум</option>
+		<option value="-1">------------------</option>
+			<option value="76">ОБЪЯВЛЕНИЯ, ИНФОРМАЦИЯ</option>
+		
+			<option value="43">&nbsp; &nbsp;ПРАВИЛА</option>
+		
+			<option value="16">&nbsp; &nbsp;Объявления</option>
+		
+			<option value="17">&nbsp; &nbsp;Статьи</option>
+		
+			<option value="77">ТЕХНИЧЕСКАЯ ПОДДЕРЖКА</option>
+		
+			<option value="176">&nbsp; &nbsp;Установка и обновление ПО &quot;Мотор-мастер&quot;</option>
+		
+			<option value="71">&nbsp; &nbsp;Motor-scan (сканер)</option>
+		
+			<option value="126">&nbsp; &nbsp;&nbsp; &nbsp;Архив (вопросы по сканеру)</option>
+		
+			<option value="72">&nbsp; &nbsp;Motor-Loader (загрузчик)</option>
+		
+			<option value="73">&nbsp; &nbsp;DiSco, DiSco-Express, Мотор-Тестер, Тест-мастер</option>
+		
+			<option value="129">&nbsp; &nbsp;&nbsp; &nbsp;История изменений</option>
+		
+			<option value="74">&nbsp; &nbsp;Другие приборы и датчики</option>
+		
+			<option value="93">&nbsp; &nbsp;Альфаметр ALC</option>
+		
+			<option value="100" selected="selected">&nbsp; &nbsp;Архив (Вопросы производителю)</option>
+		
+			<option value="141">МОТОР-МАСТЕР</option>
+		
+			<option value="142">&nbsp; &nbsp;Disco (осциллограф, самописец и т.д.)</option>
+		
+			<option value="143">&nbsp; &nbsp;Motor-Tester (системы зажигания)</option>
+		
+			<option value="144">&nbsp; &nbsp;DiSco-Express (экспресс-диагностика)</option>
+		
+			<option value="145">&nbsp; &nbsp;Тест-Мастер (тестирование датчиков и ИМ)</option>
+		
+			<option value="147">&nbsp; &nbsp;Motor-Loader (загрузчик)</option>
+		
+			<option value="149">&nbsp; &nbsp;&nbsp; &nbsp;Общие вопросы</option>
+		
+			<option value="150">&nbsp; &nbsp;&nbsp; &nbsp;Чип-тюнинг ВАЗ, ГАЗ, УАЗ</option>
+		
+			<option value="151">&nbsp; &nbsp;&nbsp; &nbsp;Чип-тюнинг иномарок</option>
+		
+			<option value="148">&nbsp; &nbsp;Одометры (программатор одометров)</option>
+		
+			<option value="153">&nbsp; &nbsp;&nbsp; &nbsp;Общие вопросы</option>
+		
+			<option value="154">&nbsp; &nbsp;&nbsp; &nbsp;Демонтаж и разборка приборных панелей</option>
+		
+			<option value="158">&nbsp; &nbsp;Помощь новичкам</option>
+		
+			<option value="78">ДИАГНОСТИКА</option>
+		
+			<option value="111">&nbsp; &nbsp;Диагностика ВАЗ, ГАЗ, УАЗ, ЗАЗ</option>
+		
+			<option value="212">&nbsp; &nbsp;&nbsp; &nbsp;ВАЗ</option>
+		
+			<option value="213">&nbsp; &nbsp;&nbsp; &nbsp;ГАЗ</option>
+		
+			<option value="214">&nbsp; &nbsp;&nbsp; &nbsp;УАЗ</option>
+		
+			<option value="217">&nbsp; &nbsp;&nbsp; &nbsp;ЗАЗ</option>
+		
+			<option value="206">&nbsp; &nbsp;Диагностика иномарок</option>
+		
+			<option value="207">&nbsp; &nbsp;&nbsp; &nbsp;Европа</option>
+		
+			<option value="208">&nbsp; &nbsp;&nbsp; &nbsp;Япония</option>
+		
+			<option value="209">&nbsp; &nbsp;&nbsp; &nbsp;Азия</option>
+		
+			<option value="215">&nbsp; &nbsp;&nbsp; &nbsp;Америка</option>
+		
+			<option value="211">&nbsp; &nbsp;Диагностика дизелей</option>
+		
+			<option value="107">&nbsp; &nbsp;&quot;Железные&quot; вопросы</option>
+		
+			<option value="108">&nbsp; &nbsp;&nbsp; &nbsp;Двигатели</option>
+		
+			<option value="109">&nbsp; &nbsp;&nbsp; &nbsp;Системы питания (железо)</option>
+		
+			<option value="198">&nbsp; &nbsp;&nbsp; &nbsp;Ходовая часть</option>
+		
+			<option value="199">&nbsp; &nbsp;&nbsp; &nbsp;Трансмиссии</option>
+		
+			<option value="200">&nbsp; &nbsp;&nbsp; &nbsp;Кузов</option>
+		
+			<option value="201">&nbsp; &nbsp;&nbsp; &nbsp;Система выпуска отработавших газов</option>
+		
+			<option value="202">&nbsp; &nbsp;&nbsp; &nbsp;Смазочные материалы</option>
+		
+			<option value="203">&nbsp; &nbsp;&nbsp; &nbsp;Инструмент и расходные материалы</option>
+		
+			<option value="204">&nbsp; &nbsp;&nbsp; &nbsp;Подбор запчастей и комплектующих</option>
+		
+			<option value="5">&nbsp; &nbsp;Приспособления для диагностики</option>
+		
+			<option value="159">&nbsp; &nbsp;Электрика и электроника</option>
+		
+			<option value="160">&nbsp; &nbsp;&nbsp; &nbsp;Автоэлектрика</option>
+		
+			<option value="161">&nbsp; &nbsp;&nbsp; &nbsp;Сигнализация и музыка</option>
+		
+			<option value="162">&nbsp; &nbsp;&nbsp; &nbsp;Ремонт ЭБУ и других блоков</option>
+		
+			<option value="210">&nbsp; &nbsp;Разное</option>
+		
+			<option value="232">&nbsp; &nbsp;Раздел для начинающих и автовладельцев</option>
+		
+			<option value="177">АВТОРСКИЕ МАТЕРИАЛЫ и ПРОГРАММЫ</option>
+		
+			<option value="180">&nbsp; &nbsp;Информация о разделе</option>
+		
+			<option value="187">&nbsp; &nbsp;Виджар</option>
+		
+			<option value="192">&nbsp; &nbsp;kdv</option>
+		
+			<option value="221">&nbsp; &nbsp;S.A.W.</option>
+		
+			<option value="239">&nbsp; &nbsp;DataLook (программа для настройки прошивок)</option>
+		
+			<option value="178">КОММЕРЧЕСКИЕ ПРОШИВКИ</option>
+		
+			<option value="247">&nbsp; &nbsp;Статьи и материалы для начинающих и не только...</option>
+		
+			<option value="248">&nbsp; &nbsp;&nbsp; &nbsp;Чип-тюнинг</option>
+		
+			<option value="249">&nbsp; &nbsp;&nbsp; &nbsp;Диагностика</option>
+		
+			<option value="250">&nbsp; &nbsp;&nbsp; &nbsp;Приборы и приспособления</option>
+		
+			<option value="251">&nbsp; &nbsp;&nbsp; &nbsp;Информационные материалы</option>
+		
+			<option value="233">&nbsp; &nbsp;Представители &quot;Мотор-Мастер&quot;</option>
+		
+			<option value="179">&nbsp; &nbsp;ВАЗ</option>
+		
+			<option value="218">&nbsp; &nbsp;УАЗ</option>
+		
+			<option value="223">&nbsp; &nbsp;КОРЕЯ</option>
+		
+			<option value="231">&nbsp; &nbsp;&nbsp; &nbsp;Kefico M(G)798 Кia-Hyundai</option>
+		
+			<option value="235">&nbsp; &nbsp;&nbsp; &nbsp;Bosch ME17911(12) Кia-Hyundai</option>
+		
+			<option value="242">&nbsp; &nbsp;&nbsp; &nbsp;Kefico 797</option>
+		
+			<option value="236">&nbsp; &nbsp;RENAULT</option>
+		
+			<option value="237">&nbsp; &nbsp;&nbsp; &nbsp;EMS3132</option>
+		
+			<option value="238">&nbsp; &nbsp;&nbsp; &nbsp;Valeo 40/42</option>
+		
+			<option value="252">&nbsp; &nbsp;&nbsp; &nbsp;EMS3120</option>
+		
+			<option value="253">&nbsp; &nbsp;&nbsp; &nbsp;EMS3125</option>
+		
+			<option value="240">&nbsp; &nbsp;CHEVROLET</option>
+		
+			<option value="241">&nbsp; &nbsp;&nbsp; &nbsp;Simtec 7.6</option>
+		
+			<option value="244">&nbsp; &nbsp;Объявления</option>
+		
+			<option value="87">ОБЩИЕ ВОПРОСЫ</option>
+		
+			<option value="168">&nbsp; &nbsp;Общие вопросы</option>
+		
+			<option value="169">&nbsp; &nbsp;&nbsp; &nbsp;Работа сайта</option>
+		
+			<option value="170">&nbsp; &nbsp;&nbsp; &nbsp;Общение</option>
+		
+			<option value="171">&nbsp; &nbsp;&nbsp; &nbsp;Барахолка</option>
+		
+			<option value="172">&nbsp; &nbsp;&nbsp; &nbsp;Автосервисы (предложение услуг)</option>
+		
+			<option value="173">&nbsp; &nbsp;&nbsp; &nbsp;Все о нашей работе</option>
+		
+			<option value="222">&nbsp; &nbsp;&nbsp; &nbsp;Компьютеры, ноутбуки и т.д.</option>
+		
+			<option value="220">&nbsp; &nbsp;&nbsp; &nbsp;Здравствуй, Дедушка Мороз-2013!</option>
+		
+			<option value="216">Перенесенные темы</option>
+		
+
+		</select>&nbsp;<input class="btnlite" type="submit" value="Перейти" /></td>
+	</tr>
+	</table>
+
+	</form>
+</td>
+</tr>
+</table>
+
+
+</div>
+
+
+<div id="wrapfooter">
+	
+	<span class="copyright"><IDXSKIP>Powered by <a href="http://www.phpbb.com/">phpBB</a></IDXSKIP><IDXSKIP>&reg; Forum Software &copy; phpBB Group
+	<br /></IDXSKIP><IDXSKIP><a href='http://www.phpbbguru.net/'>Русская поддержка phpBB</a></IDXSKIP></span>
+</div>
+
+
+
+
+<br /><IDXSKIP><div class="copyright" style="text-align: center; margin-top: 5px;">Advertisements by <a href="http://www.lithiumstudios.org/">Advertisement Management</a></div></IDXSKIP>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35328512-1', 'motor-master.ru');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>

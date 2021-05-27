@@ -1,0 +1,576 @@
+eva.ru/static/forums/48/2007_3/905670.html
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head lang="ru-RU"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="language" content="ru"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="cache-control" content="max-age=0"> 
+  <meta http-equiv="cache-control" content="no-cache"> 
+  <meta http-equiv="expires" content="0"> 
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"> 
+  <meta http-equiv="pragma" content="no-cache"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/eva/css/normalize.css" rel="stylesheet"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/vendors/social/bootstrap-social.css" rel="stylesheet" media="screen"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/eva/css/eva.css?3.2.026" rel="stylesheet"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/fonts/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/vendors/switch/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet"> 
+  <title>        Лунный календарь и результат ЭКО    </title>
+ </head>
+ <body>
+  <nav class="navbar navbar-fixed-top hidden" id="nav-scrolled" role="navigation"> 
+   <div class="container"> 
+    <ul class="nav navbar-nav"> 
+     <IDXSKIP><li> <a href="/forum.htm">Форумы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/news.htm">Новости</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/polls.htm">Опросы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/contests.htm">Конкурсы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/do.htm">Объявления</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/photoalbum/index.htm">Фотозалы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/top5.htm">Топ 5</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="dropdown pull-right hidden-xs"> <a class="dropdown-toggle" data-toggle="dropdown">Войти<span class="caret"></span></a> 
+      <div class="dropdown-menu login-menu"> 
+       <form class="form" id="frmLogin" action="/login.htm"> 
+        <input type="hidden" name="action" value="login"> 
+        <input type="hidden" name="successRedirect" value=":start"> 
+        <input type="hidden" name="errorRedirect" value=":user-forget-password"> 
+        <div class="form-group"> 
+         <div class="input-group"> 
+          <span class="input-group-addon"><i class="fa fa-user"></i></span> 
+          <input class="form-control" type="text" required="true" title="Введите логин" data-valid-min="2" pattern="^[a-z,A-Z,0-9,_]{6,15}$" size="15" placeholder="Логин или @" id="username" name="username"> 
+         </div> 
+        </div> 
+        <div class="form-group clearfix"> 
+         <div class="pull-left"> 
+          <div class="input-group"> 
+           <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+           <input class="form-control" type="password" required="true" title="Введите пароль" placeholder="Пароль" id="password" size="15" name="password"> 
+          </div> 
+         </div> 
+         <button id="btnLogin" class="btn-eva-login btn btn-default pull-right"> <i class="fa fa-sign-in"></i>&nbsp; </button> 
+        </div> 
+        <div> 
+         <a class="btn btn-vk btn-sm btn-block btn-social" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i> Зайти через VK</a> 
+         <a class="btn btn-facebook btn-sm btn-block btn-social" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook"><i class="fa fa-facebook"></i> Зайти через Facebook</a> 
+         <a class="btn btn-openid btn-sm btn-block" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; Зайти через Одноклассников</a> 
+        </div> 
+       </form> 
+      </div> </li></IDXSKIP> 
+     <IDXSKIP><li class="pull-right"> 
+      <form role="form" action="http://yandex.ru/sitesearch" class="search form-inline"> 
+       <input type="hidden" name="searchid" value="153288"> 
+       <input type="text" name="text" class="form-control" placeholder="Найти на Еве.Ру" style="width:200px"> 
+       <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i> </button> 
+      </form> </li></IDXSKIP> 
+    </ul> 
+   </div>
+  </nav>
+  <div class="eva container"> 
+   <header> 
+    <IDXSKIP><div class="hat-xs visible-xs-block clearfix"> 
+     <div class="pull-left"> 
+      <a href="/" title="Ева.Ру"><img src="https://cloudstatic.eva.ru/design/eva3//eva/images/logo2.png" alt="Ева.Ру">EVA.RU</a> 
+     </div> 
+     <form role="form" action="http://yandex.ru/sitesearch" class="form-inline"> 
+      <input type="hidden" name="searchid" value="153288"> 
+      <button type="submit" class="btn btn-sm btn-danger">Поиск</button> 
+      <input type="text" name="text" class="input-sm form-control" placeholder="Найти на Еве.Ру"> 
+     </form> 
+    </div></IDXSKIP> 
+    <div class="hat-non-logged"> 
+     <IDXSKIP><div class="additional visible-xs-block"> 
+      <a class="reg" href="/registration.htm" title="Зарегистрироваться">Регистрация</a> 
+     </div></IDXSKIP> 
+     <div class="clearfix"> 
+      <IDXSKIP><div class="logo pull-left hidden-xs"> 
+       <a href="/" title="Ева.Ру"><img class="hidden-xs" src="https://cloudstatic.eva.ru/design/eva3//eva/images/logo.png" alt="Ева.Ру"></a> 
+      </div></IDXSKIP> 
+      <IDXSKIP><ul class="list-unstyled pull-right"> 
+       <li> 
+        <form class="form-login-inline" id="frmLogin" action="/login.htm"> 
+         <input type="hidden" name="action" value="login"> 
+         <input type="hidden" name="successRedirect" value=":start"> 
+         <input type="hidden" name="errorRedirect" value=":user-forget-password"> 
+         <input class="form-control input-sm" type="text" required="true" title="Введите логин" data-valid-min="2" pattern="^[a-z,A-Z,0-9,_]{6,15}$" size="15" placeholder="Логин или @" id="username" name="username"> 
+         <input class="form-control input-sm" type="password" required="true" title="Введите пароль" placeholder="Пароль" id="password" size="15" name="password"> 
+         <button id="btnLogin" class="btn-eva-login btn-sm btn btn-default"> <i class="fa fa-sign-in"></i>&nbsp; </button> 
+        </form> </li> 
+       <li class="hidden-xs"> 
+        <div class="clearfix"> 
+         <a class="btn btn-danger btn-sm" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook">&nbsp;<i class="fa fa-facebook"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники">&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; </a> 
+         <a class="reg pull-right" href="/registration.htm" title="Зарегистрироваться">Регистрация</a> 
+        </div> </li> 
+      </ul></IDXSKIP> 
+      <IDXSKIP><ul class="list-unstyled pull-right visible-xs-inline"> 
+       <li> 
+        <div class="clearfix "> 
+         <a class="btn btn-danger btn-sm" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook">&nbsp;<i class="fa fa-facebook"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники">&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; </a> 
+        </div> </li> 
+      </ul></IDXSKIP> 
+     </div> 
+    </div> 
+   </header> 
+   <nav class="navbar navbar-static-top clearfix" role="navigation"> 
+    <ul class="nav navbar-nav"> 
+     <IDXSKIP><li> <a href="/forum.htm">Форумы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/news.htm">Новости</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/polls.htm">Опросы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/contests.htm">Конкурсы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/do.htm">Объявления</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/photoalbum/index.htm">Фотозалы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/top5.htm">Топ 5</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="dropdown visible-xs-inline"> <a class="dropdown-toggle" data-toggle="dropdown">Разделы <span class="caret"></span></a> 
+      <ul class="dropdown-menu"> 
+       <li><a href="/beauty/index.htm"> <small>Красота</small> </a></li> 
+       <li><a href="/pregnancy/index.htm"> <small>Беременность</small> </a></li> 
+       <li><a href="/kids/index.htm"> <small>Дети</small> </a></li> 
+       <li><a href="/house-and-hobby/index.htm"> <small>Дом</small> </a></li> 
+       <li><a href="/health/index.htm"> <small>Здоровье</small> </a></li> 
+       <li><a href="/animals/index.htm"> <small>Звери</small> </a></li> 
+       <li><a href="/travel/index.htm"> <small>Отдых</small> </a></li> 
+       <li><a href="/recipes/index.htm"> <small>Рецепты</small> </a></li> 
+       <li><a href="/love/index.htm"> <small>Любовь</small> </a></li> 
+       <li><a href="/eva-life/index.htm"> <small>LIFE</small> </a></li> 
+      </ul> </li></IDXSKIP> 
+     <IDXSKIP><li class="pull-right"> 
+      <form role="form" action="http://yandex.ru/sitesearch" class="search form-inline"> 
+       <input type="hidden" name="searchid" value="153288"> 
+       <input type="text" name="text" class="form-control" placeholder="Найти на Еве.Ру" style="width:200px"> 
+       <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i> </button> 
+      </form> </li></IDXSKIP> 
+    </ul> 
+   </nav> 
+   <div class="row"> 
+    <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12"> 
+     <div id="mainContent"> 
+      <h1> Лунный календарь и результат ЭКО </h1> 
+      <hr> 
+      <div id="archivedContent">
+        
+       <table border="0" width="100%"> 
+        <tbody> 
+         <tr> 
+          <td width="70%" valign="middle"> <b><a href="/static/forums" style="color:cc3333;"><IDXSKIP>Список всех форумов (версия для печати) </IDXSKIP></a></b><br><br> <b><a href="/static/forums/48" style="color:cc3333;">Помесячная карта форума Хочу ребенка &gt; Экстракорпоральное оплодотворение (версия для печати) </a></b><br><br> <b><a href="/static/forums/48/2007_3" style="color:cc3333;">Все темы форума Хочу ребенка &gt; Экстракорпоральное оплодотворение за 2007 Март (версия для печати) </a></b><br><br><br> <b><font style="color:999999;font-size:14px">Список сообщений топика "Лунный календарь и результат ЭКО" форума Хочу ребенка &gt; Экстракорпоральное оплодотворение</font><br> <br><br> </b></td> 
+         </tr> 
+         <tr> 
+          <td> 
+           <table border="0" cellpadding="0" cellspacing="2"> 
+            <tbody> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27149216.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/64191.html">Wesunchik</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 07:03 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Девочки, просто очень интересно, может действительно есть связь между фазой луны и результатом. Давайте напишем примерно так и укажем какя фаза луны была (Р-растущая, У-убывающая, Н-новолуние, П-полнолуние):<br>Начало протокола<br>Пункция (оплодотворение)<br>Подсадка<br>Ожидание<br>РЕЗУЛЬТАТ<br>Ссылка на 2006 - http://www.moon-calendar.net.ru/<br>Ссылка на 2007 - http://www.sunhome.ru/mooncalendar/140 <br>Спасибо за участие. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message27195919"></a></td> 
+              <td width="99%" colspan="1"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27195919.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message27149216">сообщение 27149216</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> Anonymous &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> анонимный пользователь&nbsp; &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 20:50 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 12 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Фигня это все!!!!!!!!!!! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27149312.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/64191.html">Wesunchik</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 07:38 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> 1 протокол<br>Нчало протокола с 21 дмц - Р<br>Пункция - У<br>Подсадка - Р<br>Ожидание - 90% дней на Р<br>Результат - хгч на 15 дпп 20 и потом 0 </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27158357.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/75879.html">БудуМама2007</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 17:29 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Везунчик, у нас на местном форуме (я заграницей живу) дамы проводили подобный опрос: связь между фазой луны и ЭКО (анализировался день подсадки и совпдение между периодом имплантации с растущей/убывающей луной). Ничего общего не нашли. Были дамы, которые делали подсадку в дни т.н. черной луны, потом луна убывала, а у них успешно наступала беременность, и были дамы, у которых подсадка совпадала с растущей луной, но имплантации так и не было. В опросе принимали участие многие, поэтому была возможность установить ничтожную связь между фазами луны и фазами ЭКО :-). </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message27195865"></a></td> 
+              <td width="99%" colspan="1"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27195865.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message27158357">сообщение 27158357</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/64191.html">Wesunchik</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 20:49 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 12 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Я знаю, на пробирке видела. Мне кажется что здесь больше участниц:) Просто 2 протокола были удачными в смысле фазы луны и неудачными в результате. Теперь предстоит еще протокол, а по подсчетам выпадает на противоположные фазы луны чем в первых двух протоколах. ХОЧУ доказать сама себе что зависимости нет. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27194331.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/105428.html">Angela007</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 20:03 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 12 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Все же напишу. Все протоколы и свежие и крио - подсадку (в 2006г) делали на растущую луну, а ХГ сдавала уже нет. В итоге, биохимическая почти каждый раз. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27201317.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/45440.html">natasha111</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Ветеран &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 06:29 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 13 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Наверное около года назад поднималась эта тема, все высчитывали зависимость совего рождения от луны и потом предполагаемое удачное зачатие, у меня все должно было получится в последнем протоколе, но что то не фига........ </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27204206.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> :) &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> анонимный пользователь&nbsp; &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 10:31 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 13 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Я слышала, что в какой по счету лунный день женщина родилась, в такой день у нее гораздо более высокие шансы забеременнеть, чем в остальные дни, но насколько это правда, не знаю :) да и трудно протокол под этот день подстроить. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27247386.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> пока не вышла из сумрака:) &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> анонимный пользователь&nbsp; &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 13:09 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 14 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> а я грешна:) не удержалась и развлеклась, посчитав по лунному календарю зачатия благоприятные дни. мб потому, что нынешний год мой - кабанчиковский мб поэтому у меня благоприятные дней аш 6 из 12 месяцев. мб вас тоже развлечет. и самый прикол состоит в том что благоприятный день совпал с днем пункции. вот теперь проверим:)<br>http://calendar.astromobile.ru/zachatie/ </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27250726.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/74324.html">СВЕТ-ЛАНА</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Новичок &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 14:34 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 14 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> я твердо убеждена, что все связано. делала 6 попыток и все время перенос попадал на полнолуние - пролет. 7 попытка пришлась на другую фазу луны (уже не помню какую - 28 октября 2002)- все ок. дочка. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27251013.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/77099.html">Юля_nsk</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 14:42 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 14 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Если цикл свой 28 дней, и, как известно лунный цикл 28 дней, то как что-то можно поменять?<br>На мой взгляд нет логики в этом деле. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message27256512"></a></td> 
+              <td width="99%" colspan="1"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27256512.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message27251013">сообщение 27251013</a>&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/74324.html">СВЕТ-ЛАНА</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Новичок &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 17:10 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 14 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> так оно и было, только из-за протокола длина цикла увеличивалась. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 27260475.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/73431.html">Олюка</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Корифей &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:57 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 14 мар 2007 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Девочки, не парьтесь вы еще и этим. Мало у нас, экошек, вопросов, которые надо решать?<br>У меня именно на растущей луне прекратился рост ХГЧ, это я в первом протоколе заметила. Потом были подсадки и на растущей и на убывающей, все фигня. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+            </tbody> 
+           </table> </td> 
+         </tr> 
+         <tr> 
+          <td> <a href="/main/forum" style="color:cc3333;"><IDXSKIP>Перейти к динамической версии форумов </IDXSKIP></a> </td> 
+         </tr> 
+        </tbody> 
+       </table>
+       <div class="clearfix"></div>
+<!-- Яндекс.Директ -->
+<div id="yandex_ad"></div>
+<script type="text/javascript">
+(function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+        Ya.Direct.insertInto(50948, "yandex_ad", {
+            ad_format: "direct",
+            font_size: 0.9,
+            type: "horizontal",
+            border_type: "ad",
+            limit: 4,
+            title_font_size: 3,
+            links_underline: false,
+            site_bg_color: "FFFFFF",
+            header_bg_color: "FFFFFF",
+            border_color: "FFCCCC",
+            title_color: "CC0000",
+            url_color: "000000",
+            text_color: "000000",
+            hover_color: "0066FF",
+            favicon: true,
+            no_sitelinks: true
+        });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.src = "//an.yandex.ru/system/context.js";
+    s.type = "text/javascript";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+})(window, document, "yandex_context_callbacks");
+</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+     <center>
+<!-- R-50948-2 Яндекс.RTB-блок  -->
+<div id="yandex_ad_R-50948-2"></div>
+<script type="text/javascript">
+    (function (w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function () {
+            Ya.Context.AdvManager.render({blockId: "R-50948-2", renderTo: "yandex_ad_R-50948-2", async: true});
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+<iframe id='a6296f44' name='a6296f44' src='http://ad.eva.ru/ad/adframe.php?n=a6296f44&amp;what=zone:989' framespacing='0' frameborder='no' scrolling='no' width='240' height='140'><a href='http://ad.eva.ru/ad/adclick.php?n=a6296f44' target='_blank'><img src='http://ad.eva.ru/ad/adview.php?what=zone:989&amp;n=a6296f44' border='0' alt=''></a></iframe>
+</center>
+    </div> 
+   </div> 
+  </div>
+  <footer> 
+   <div class="container"> 
+    <div class="row clearfix"> 
+     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">О проекте</h5></IDXSKIP> 
+      <hr> 
+      <p class="text-justify"> <small> <IDXSKIP>Все права на материалы, размещенные на сайте, защищены законодательством об авторском праве и смежных правах и не могут быть воспроизведены или каким либо образом использованы без письменного разрешения правообладателя и проставления активной ссылки на главную страницу портала Ева.Ру (www.eva.ru) рядом с использованными материалами.<br> За содержание рекламных материалов редакция ответственности не несет. Свидетельство о регистрации СМИ Эл № ФС77-36354 от 22 мая 2009 г. v.3.2.026 </IDXSKIP></small> </p> 
+     </div> 
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">Мы в соцсетях</h5></IDXSKIP> 
+      <hr> 
+      <IDXSKIP><ul class="list-inline"> 
+       <li><a class="btn btn-vk" target="_blank" href="http://vk.com/evato4karu"><span class="hidden-sm hidden-xs">&nbsp;</span><i class="fa fa-vk fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;</span></a></li> 
+       <li> <a class="btn btn-facebook" target="_blank" href="https://www.facebook.com/evato4karu"><span class="hidden-sm hidden-xs">&nbsp;&nbsp;</span><i class="fa fa-facebook fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;&nbsp;</span></a> </li> 
+       <li> <a class="btn btn-instagram" target="_blank" href="https://instagram.com/eva__ru/"><span class="hidden-sm hidden-xs">&nbsp;</span><i class="fa fa-instagram fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;</span></a> </li> 
+      </ul></IDXSKIP> 
+     </div> 
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">Контакты</h5></IDXSKIP> 
+      <hr> 
+      <ul class="list-unstyled"> 
+       <IDXSKIP><li><a href="/articles/peopleeva.htm">Контакты</a></li></IDXSKIP> 
+       <IDXSKIP><li><a href="/articles/reklama.htm">Реклама на сайте</a></li></IDXSKIP> 
+       <IDXSKIP><li><a href="/articles/payforum.htm">Реклама в форумах</a></li></IDXSKIP> 
+      </ul> 
+     </div> 
+    </div> 
+    <hr> 
+    <IDXSKIP><p> <span class="btn btn-circle btn-danger btn-sm">18+</span> © Eva.ru 2002-2015 <a href="http://top100.rambler.ru/top100/"><img src="https://cloudstatic.eva.ru/design/eva/images/rambler-w7.gif" alt="Rambler's Top100" width="88" height="31" border="0"></a> <a href="http://www.liveinternet.ru/click" target="_blank"><img src="https://cloudstatic.eva.ru/design/eva/images/liveinternet-logo.gif" title="LiveInternet:" border="0" width="88" height="15"></a> <script type="text/javascript">                var img = new Image();                img.src = 'http://www.tns-counter.ru/V13a***R>' + document.referrer.replace(/\*/g, '%2a') + '*eva_ru/ru/UTF-8/tmsec=eva_total/' + Math.round(Math.random() * 1000000000);            </script> 
+     <noscript> 
+      <img src="http://www.tns-counter.ru/V13a****eva_ru/ru/UTF-8/tmsec=eva_total/" width="1" height="1"> 
+     </noscript> <script type="text/javascript">            var _gaq = _gaq || [];            _gaq.push(['_setAccount', 'UA-20593733-1']);            _gaq.push(['_trackPageview']);            (function () {                var ga = document.createElement('script');                ga.type = 'text/javascript';                ga.async = true;                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';                var s = document.getElementsByTagName('script')[0];                s.parentNode.insertBefore(ga, s);            })();        </script> <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script> <script type="text/javascript">try {            var yaCounter132528 = new Ya.Metrika(132528);        } catch (e) {        }</script> 
+     <noscript> 
+     </noscript></p></IDXSKIP>
+    <IDXSKIP><div style="position: absolute;">
+     <img src="//mc.yandex.ru/watch/132528">
+    </div></IDXSKIP>  
+    <script type="text/javascript">(function () {            function c() {                if (!g) {                    g = !0;                    var d = a.createElement(e);                    d.type = "text/java" + e;                    var b;                    b = "?rnd=" + (100 * ((new Date).getTime() % 1E7) + h.round(99 * h.random()));                    b += a.referrer ? "&r=" + encodeURIComponent(a.referrer) : "";                    b += "&t=" + (new Date).getTime();                    b += '&https=' + ('https:' == window.location.protocol ? 1 : 0);                    "undefined" !== typeof __lx__target && (b += "&trg=" + encodeURIComponent(__lx__target));                    d.src = ("https:" == document.location.protocol ? "https://ssl." : "http://") + "luxup.ru/tr_js/" + j + "/24673/" + b;                    "undefined" != typeof d && a.getElementsByTagName(e)[0].parentNode.appendChild(d)                }            }            var j = 737, g = !1, a = document, i = a.documentElement, h = Math, f = window, e = "script";            a.addEventListener ? a.addEventListener("DOMContentLoaded", c, !1) : a.attachEvent ? (i.doScroll && f == f.top && function () {                try {                    i.doScroll("left")                } catch (a) {                    setTimeout(arguments.callee, 0);                    return                }                c()            }(), a.attachEvent("onreadystatechange", function () {                "complete" === a.readyState && c()            })) : f.onload = c        })();</script> 
+    <IDXSKIP><a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?592288" width="0" height="0" border="0"></a></IDXSKIP> 
+    <script type="text/javascript">            document.write("<img style='float:left;' src='http://counter.yadro.ru/hit?r" + escape(document.referrer) + ((typeof(screen) == "undefined") ? "" : ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) + ";" + Math.random() + "' width=1 height=1 alt=''>");        </script> 
+    <p></p> 
+   </div>
+  </footer>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/scrollup/dist/jquery.scrollUp.min.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/plugins/tooltip.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/eva/js/functions.js?jsv=3.2.026"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/jquery-cookie/src/jquery.cookie.js"></script>
+  <script type="text/javascript">    function setScrollUpRight() {        var right = $(window).width() - $('div.eva').width();        if (right > 150) {            $('#scrollUp').css('right', (Math.round(right / 2) + 10) + 'px');        }        else {            $('#scrollUp').css('right', '10px');        }    }    $(function () {        $("[data-toggle='tooltip']").tooltip();        $.scrollUp({            scrollText: 'Наверх',            zIndex: 200,            topDistance: '300',            topSpeed: 300,            animation: 'fade',            animationInSpeed: 200,            animationOutSpeed: 200        });        setScrollUpRight();        $(window).on('resize', function () {            setScrollUpRight();        });        var orgElementPos = $('.navbar-static-top').offset();        if (orgElementPos) {            var orgElementTop = orgElementPos.top;            $(window).scroll(function () {                if ($(window).scrollTop() > orgElementTop) {                    $('#nav-scrolled').removeClass('hidden');                } else {                    $('#nav-scrolled').addClass('hidden');                }            });        }    });</script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/eva/js/profile.js?jsv=3.2.026"></script>
+ </body>
+</html>

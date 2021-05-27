@@ -1,0 +1,2479 @@
+railway.kanaries.ru/index.php?act=Print&client=printer&f=70&t=4769
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+		<title>Форум работников железнодорожного транспорта [Форум Invision Power Board]</title>
+		<style type="text/css">
+	/*~START CSS~*/
+
+/*  
+ * CSS for IP.Board 2.3.0
+ * Author: Rikki Tissier, original IP.Board CSS by James Mathias
+ * Copyright: 2005 IPS, Inc, all rights reserved 
+ *
+ * All style attributes in alpha-numeric order starting from 0
+ *
+ */
+
+/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+@import url(style_images/ip.boardpr/css_colors.css);
+
+/* ----------------------------------- */
+
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+}
+
+body{ 
+	font-family: Arial, Verdana, Tahoma, "Trebuchet MS", Sans-Serif, Georgia, Courier, "Times New Roman", Serif;
+	font-size: 12px;
+	line-height: 135%;
+	margin: 0px;
+	padding: 0px; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+}
+
+/* 
+ * ========================================
+ * Set up IPB table
+ * ========================================
+ */
+ 
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable
+{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #222;
+	font-size: 12px;
+	line-height: 135%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 5px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+/* Safari... */
+th
+{
+	text-align: left;
+}
+
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+
+img{
+	border: 0; /* makes sure linked images do not have a border */
+	vertical-align: middle;
+}
+
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #222;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+}
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+#ipbwrapper{ 
+	margin: 15px auto 20px auto; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	/* EDIT THIS TO CHANGE THE WIDTH OF THE BOARD -> 960px is a common fixed resolution size */
+	width: 98%;
+}
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+
+/* @group Pagination */
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: #d8d8d8;
+	padding: 2px 4px 2px 4px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #d8d8d8;
+}
+
+
+.pagecurrent{
+
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #C2CFDF;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+
+
+/* @end */
+
+/* fake button effect for some links */
+.fauxbutton{
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 11px; 
+	color: #666;
+	line-height: 135%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #FFF;
+	border: 3px solid #d7d7d7;
+	color: #000;
+	margin: 0px;
+	padding: 0px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 150%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #808080 url(style_images/ip.boardpr/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #808080;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood,
+.warnbad{ 
+	color: #0B9500;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #DD0000;
+}
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 28px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #000; 
+	font-size: 24px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+}
+
+/* @group User CP */
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #f3f3f3;
+	border: 1px solid #c4c4c4;
+	padding: 1px;
+	line-height: 150%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+
+
+/* @end */
+
+.activeuserstrip{ 
+	background: #BCD0ED;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #737373; 
+	font-size: 10px;
+	line-height: 150%;
+}
+
+.postdetails{ 
+	font-size: 11px;
+	line-height:140%;
+}
+
+.postcolor{ 
+	font-size: 13px; 
+	line-height: 160%;
+}
+
+.normalname{ 
+	color: #003;
+	font-size: 12px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 12px;
+}
+
+.post_head {
+}
+
+.post1,
+.bg1,
+.post2,
+.bg3,
+.post1.post_left,
+.post2.post_left
+{ 
+}
+
+.row2shaded,
+.post1shaded { background-color: #DEDBE4 }
+.row4shaded,
+.post2shaded { background-color: #E3DFE7 }
+
+.row1{ 
+}
+
+.row2{  
+}
+
+.ipbtable .row1,
+.ipbtable .row2 {
+}
+
+.rowhighlight{
+	background-color: #FFF9BA;
+}
+
+.darkrow1,
+.darkrow3{ 
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #f5f5f5;
+	border: 1px solid #345487;
+}
+
+.tablefill,
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: 1.5em;
+	width: 25%;
+}
+
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 11px; 
+}
+
+.lastaction
+{
+	font-size: 11px; 
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #FFF;
+	border-left: 0;
+	border-right: 0;
+	line-height: 150%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/* @group Calendar */
+
+.calmonths{ 
+	background: #eeeeee;
+	font-size: 18px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #e8e8e8;
+	color: #4b4b4b;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #AAA;
+	color: #222;
+	font-size: 14px;
+	padding: 6px;
+	text-align: center;
+}
+
+.celltodayshaded,
+.celldateshaded,
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #f5f5f5; 
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.celltodayshaded,
+.celldateshaded
+{
+	background: #E3DFE7;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #d1d1d1;
+}
+
+.celltoday,
+.celltodayshaded,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+
+.calranged
+{
+	border: 2px outset #C2CFDF;
+	background: #C2CFDF;
+	padding:4px;
+}
+
+.calitem
+{
+	border-bottom: 1px dotted #C2CFDF;
+	padding:4px;
+}
+
+
+
+/* @end */
+
+/* @group Input elements */
+
+.input-warn,
+.input-green,
+.input-checkbox,
+input,
+textarea,
+select{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 5px;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+select
+{
+	margin: 0px;
+}
+
+.input-checkbox
+{
+	border: none;
+}
+
+.input-warn,
+.input-warn-content
+{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content
+{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+
+.input-text
+{
+	color: #900;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+	cursor: pointer;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 0;
+	vertical-align: middle;
+	background: transparent;
+}
+
+
+
+/* @end */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+}
+
+.pformleft,
+.pformleftw {
+	background-color: #e4e6e9;
+}
+
+.pformright {
+	background-color: #eff1f3;
+}
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0px;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: #dcdcdc;
+	border: 1px solid #9FB9D4; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	border: 0;
+	color: #474747;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.formtable td.formstrip{
+	background: #DDE8F2;
+	border: 1px solid #9FB9D4;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	background: #E4EAF2 url(style_images/ip.boardpr/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #000;
+	border-bottom: 0;
+	border-left: 4px solid #8394B2;
+	color: #000;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 2px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: #FAFCFE;
+	border: 1px dotted #000;
+	border-left: 4px solid #8394B2;
+	border-top: 0;
+	color: #465584;
+	padding: 4px;
+	margin: 0 auto 0 auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	background: #FDDBCC url(style_images/ip.boardpr/css_img_code.gif) no-repeat right;
+	color: #000;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: #FAFCFE;
+	border: 1px dotted #000;
+	color: #465584;
+	font-family: Courier, "Courier New", Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+}
+
+/* 
+ * ========================================
+ * old school quote and code styles - backwards compatibility 
+ * ========================================
+ */
+
+#QUOTE,
+#CODE{  
+	background: #FAFCFE; 
+	border: 1px solid #000; 
+	color: #465584; 
+	font-family: Verdana, Arial; 
+	font-size: 11px; 
+	padding: 2px; 
+	white-space: normal;
+}
+
+#CODE{ 
+	font-family: Courier, "Courier New", Verdana, Arial;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+	background: #FFF;
+	padding: 1px; 
+	margin: 0px; 
+}
+
+.borderwrapm{
+	margin: 5px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	font-size: 13px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px 8px 8px 15px;
+}
+
+.maintitle td { 
+	font-size: 13px;
+	font-weight: bold;
+}
+
+
+.maintitlecollapse{
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	text-decoration: none;
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited, 
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active
+{ 
+	background: transparent;
+	text-decoration: none;
+}
+
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover
+{
+	
+}
+
+.borderwrap h4{
+	background: #DDE6F2;
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	border-top: 1px solid #5176B5;
+	color: #5176B5; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+
+td.formbuttonrow,
+.formbuttonrow,
+.pformstrip,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+
+td.formbuttonrow{
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.borderwrap p.formbuttonrow1{
+	background: #F9F9F9 !important;
+	border: 0;
+	border-top: 1px solid #CCC;
+}
+
+.bar,
+.barb,
+.barc{
+
+}
+
+.barc{
+	border-bottom: 0;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	font-size: 11px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	font-size: 1px;
+	height: 5px;
+}
+
+.newslink{
+	background: #eeeeee;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #222;
+	font-size: 11px;
+	padding: 5px 5px 5px 10px;
+}
+
+.newslink span{
+	background: transparent;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	vertical-align: middle;
+}
+
+.fieldwrap{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #EEE;
+	border: 1px solid #CCC;
+	border-left: 0;
+	border-right: 0;
+	color: #444; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap {
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+
+.errorwrap h4 {
+	background: #E3C0C0;
+	border: 1px solid #992A2A;
+	border-left: 0;
+	border-right: 0;
+	color: #992A2A; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap p {
+	background: transparent;
+	border: 0;
+	color: #992A2A;
+	margin: 0;
+	padding: 8px;
+}
+
+
+.ruleswrap{
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	color: #992A2A; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #FFF;
+	border: 1px solid #c4c4c4;
+	padding: 1px;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0; 
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+
+
+#gfooter{
+	margin: 5px 0 5px 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	font-size: 10px;
+	padding: 7px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+}
+
+#logostrip{ 
+	height: 68px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+#logographic{
+	background: transparent url(style_images/ip.boardpr/logo4.gif) no-repeat left;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+
+#submenu{ 
+	margin: 0;
+	height: 30px;
+	text-align: right;
+}
+
+	#submenu_left a {
+		float: left;
+	}
+	
+	#submenu_right a {
+		float: right;
+	}
+	
+	#submenu a {
+		display: block;
+		padding: 7px;
+		text-decoration: none;
+	}
+	
+		#submenu a:hover {
+		
+		}
+
+#userlinks,
+#userlinksguest{ 
+	margin: 0px 0 5px 0;
+	padding: 0 5px 0 5px;
+	clear: both;
+}
+
+#userlinksguest{ 
+	
+}
+
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 11px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0 !important;
+	padding: 7px 0 7px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#navstrip{ 
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 5px 0px 8px 0px; 
+}
+
+#navstrip a:link, 
+#navstrip  a:visited{ 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+ 
+}
+
+.toplinks{
+	background: transparent;
+	color: #565656;
+	margin: 0;
+	padding: 0 0 5px 0;
+	text-align: right;
+}
+
+.toplinks span{
+	color: #565656;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px;
+}
+
+.toplinks a {
+	color: #686868;
+}
+
+.copyright{ 
+	font-size: 11px; 
+	margin: 0 0 5px 0;
+	padding: 8px;
+}
+
+/* @group Print styles */
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+#print h4{
+	background: #F9F9F9;
+	font-size: 11px;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #000;
+	text-align: center;
+}
+
+.dny-edit-title
+{
+	border:0px;
+	padding:3px;
+	margin:0px;
+	background: #D1DCEB; 
+	color: #3A4F6C; 
+}
+
+
+
+/* @end */
+
+
+/* ======================================== */
+/* TABS
+/* ======================================== */
+
+.tabon
+{
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	padding:8px;
+	float:left;
+	width:auto;
+	margin-top:1px;
+	font-size:11px;
+}
+
+.taboff
+{
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	padding:8px;
+	float: left;
+	width: auto;
+	margin-top:1px;
+	font-size:11px;
+}
+
+.tabon a:link, 
+.tabon a:visited, 
+.tabon a:active
+{
+	text-decoration:none;
+}
+
+.taboff a:link, 
+.taboff a:visited, 
+.taboff a:active
+{
+	text-decoration:none;
+}
+
+.mya-back
+{
+	background: #eaeaea;
+	margin:1px;
+	padding: 1px;
+}
+
+.mya-content
+{
+	background: #FFF;
+	padding:8px;
+	margin: 1px;
+	border: 1px solid #777;
+}
+
+.mya-content-tbl
+{
+   background: #F0F5FA;
+   border: 1px solid #777;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   margin:1px;
+}
+
+.mya-fieldwrap
+{
+	background: transparent;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 4px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Create PM box defaults           */
+/* -------------------------------- */
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+
+
+/* -------------------------------- */
+/* Experimental                     */
+/* -------------------------------- */
+
+/* @group Popup Menus */
+
+.popupmenu,
+.popupmenu-new
+{
+   background: #f4f4f4;
+   border: 1px solid #989898;
+   text-align:left;
+   font-size:11px;
+   white-space:nowrap;
+   /*padding:3px 5px 3px 3px;*/
+   /*width:300px;*/
+}
+
+.popupmenu-item
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	border-bottom: 1px solid #d0d0d0;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popupmenu-item-last
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popmenubutton-new,
+.popmenubutton
+{
+	white-space:nowrap;
+	background-color: #f0f0f0;
+	border: 1px solid #adadad;
+	color: #30343b;
+	font-weight:bold;
+	float:right;
+	text-align:center;
+	margin:0px;
+	font-size:11px;
+	padding: 2px 8px 2px 8px;
+}
+
+.popmenubutton-new,
+.popmenubutton-new-out
+{
+	float:none;
+	width:auto;
+	text-align:left;
+	height:auto;
+	padding:4px;
+	font-weight:normal;
+	background-color:#f0f0f0;
+	background-image: url(style_images/ip.boardpr/menu_action_down-padded.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.popmenubutton-new-out
+{
+	padding: 4px;
+	background-color:#dce1e8;
+	border: 1px solid #a9b0bb;
+}
+
+
+.popupmenu-new
+{
+	background-color: #f4f4f4;
+}
+
+.maintitle .popmenubutton {
+	margin: -3px 0px -3px 5px;
+}
+
+.popmenubutton a:link, 
+.popmenubutton a:visited,
+.popmenubutton-new a:link, 
+.popmenubutton-new a:visited,
+.popmenubutton-new-out a:link,
+.popmenubutton-new-out a:visited,
+.popupmenu-item a:link, 
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link, 
+.popupmenu-item-last a:visited
+{ 
+	text-decoration: none;
+	-moz-outline: none;
+}
+
+.popmenubutton a:hover,
+.popmenubutton-new a:hover,
+.popupmenu-item a:hover, 
+.popupmenu-item-last a:hover
+{  
+	text-decoration: none;
+}
+
+.popupmenu-category
+{
+	background-color: #aaaaaa; 
+	color: #464646; 
+	font-size: 11px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+
+
+/* @end */
+
+/* -------------------------------- */
+/* Loading box
+/* -------------------------------- */
+
+#loading-layer-inner
+{
+	width:220px;
+	height:28px;
+	padding:18px 10px 10px 10px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#CCC #666 #666 #CCC;
+	background-color: #FCF8C7;
+}
+
+/* -------------------------------- */
+/* Message in a bo(x|ttle)
+/* -------------------------------- */
+
+#ipd-msg-wrapper
+{
+	display: none;
+	width: 220px;
+}
+
+#ipd-msg-inner
+{
+	width:100%;
+	height:45px;
+	padding: 6px 4px 4px 4px;
+	margin: 0px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#ccc #666 #666 #ccc;
+	background-color: #FCF8C7;
+	filter:alpha(opacity=75);
+	opacity:.75
+}
+
+#ipd-msg-title
+{
+	width: 100%;
+	height:20px;
+	margin: 0px;
+	padding: 6px 4px 4px 4px;
+	background: transparent url(style_images/ip.boardpr/css_pp_header.gif);
+	border: 1px solid #3A4F6C;
+	border-bottom: 0px;
+	color: #FFF;
+}
+
+.linked-image
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.resized-linked-image
+{
+	margin: 1px 0px 0px 0px;
+	padding: 0px;
+	background-color: #000;
+	border: 0px;
+	color: #FFF;
+	font-size: 10px;
+	width: auto;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+}
+
+.resized-linked-image-zoom
+{
+	width: 200px;
+	height: 30px;
+	filter:alpha(opacity=85);
+	opacity:.85;
+	background-color: #FFF;
+	padding-top: 6px;
+	padding-left: 5px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	display: none;
+}
+
+/* -------------------------------- */
+/* Edit post reason
+/* -------------------------------- */
+
+.post-edit-reason
+{
+	background: #E7EAEF;
+	margin-top: 9px;
+	margin-bottom: 0px;
+	padding: 4px;
+	color: #333;
+	font-size: 10px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Personal Profile
+/* -------------------------------- */
+
+.pp-name
+{ 
+	background: #eeeeee;
+	margin: 0px;
+	padding: 10px;
+}
+
+/* @group Personal Profile */
+
+.pp-name h3
+{
+	margin:0px;
+	padding:0px 0px 5px 0px;
+	font-size:24px;
+}
+
+.pp-header
+{ 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0px 0px 1px 0px; 
+	padding: 5px; 
+}
+
+.pp-title
+{
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.pp-datebox
+{
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #8e8e8e;
+	padding: 4px;
+	margin: 0px;
+	font-size:18px;
+	font-weight:bold;
+	line-height: 100%;
+	letter-spacing: -1px;
+	float:right;
+	width: auto;
+}
+
+.pp-datebox em
+{
+	color: #AAA;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.pp-contentbox-back
+{
+	background-color: #cacaca;
+	padding: 6px;
+}
+
+.pp-contentbox-entry,
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	background-color: #f7f7f7;
+	border: 1px solid #8e8e8e;
+	line-height: 140%;
+	padding: 8px;
+	margin-bottom: 6px;
+	height: 200px;
+	overflow: auto;
+	overflow-x: auto;
+}
+
+.pp-contentbox-entry-noheight-sel
+{
+	background-color:#FCECCD;
+}
+
+.pp-contentbox-entry-noheight-mod
+{
+	background-color:#FDF1DA;
+}
+
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	height: auto;
+	margin-bottom: 1px;
+}
+
+.pp-image-thumb-wrap,
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 27px;
+	height: 27px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap-floatright
+{
+	float:right;
+}
+
+.pp-tiny-text
+{
+	color: gray;
+	font-size: 10px;
+}
+
+.pp-mini-content-entry,
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #F5F9FD;
+	padding: 6px;
+	border-bottom: 1px dotted #555555;
+	clear:both;
+	width: auto;
+	height: 60px;
+}
+
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #E3DFE7;
+}
+
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	height: auto;
+}
+
+.pp-tabclear,
+.pp-maintitle
+{
+	font-size: 13px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.pp-tabclear
+{
+	border:0px;
+}
+
+.pp-tabon
+{
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	padding:8px;
+	float:left;
+	width:auto;
+	margin-top:1px;
+	font-size:11px;
+}
+
+.pp-taboff,
+.pp-tabshaded
+{
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	padding:8px;
+	float: left;
+	width: auto;
+	margin-top:1px;
+	font-size:11px;
+}
+
+.pp-tabshaded
+{
+	background-image: url(style_images/ip.boardpr/css_pp_tab_shaded.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #516795;
+	border-top: 1px solid #7f9BBC;
+	border-left: 1px solid #7f9BBC;
+	border-right: 1px solid #7f9BBC;
+}
+
+.pp-tabon a:link, 
+.pp-tabon a:visited, 
+.pp-tabon a:active
+{
+	text-decoration:none;
+}
+
+.pp-taboff a:link, 
+.pp-taboff a:visited, 
+.pp-taboff a:active,
+.pp-tabshaded a:link, 
+.pp-tabshaded a:visited, 
+.pp-tabshaded a:active
+{
+	text-decoration:none;
+}
+
+.pp-tabwrap
+{
+	height: 34px;
+	margin:0px;
+	padding:0px;
+}
+
+
+
+/* @end */
+
+/* Small blog fix */
+
+#myblogset-info .fieldwrap {
+	background: transparent;
+	border: 0px;
+	border-top: 0;
+    margin: 0px;
+	padding: 0;
+	text-align: left;
+}
+
+
+/* GALLERY STYLES */
+
+.gallery_block {
+	padding: 3px !important;
+	margin: 0px;
+}
+
+.gal_caption {
+	font-size: 14px;
+	padding-bottom: 5px;
+	font-weight: normal;
+}
+
+.gal_cat a {
+	text-decoration: none;
+}
+
+.gal_curr {
+}
+
+.gal_noncurr {
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap
+{
+	margin: 1px;
+	background-color: #fff;
+	border: 1px solid #8e8e8e !important;
+}
+
+.thumbwrapp{
+	border: 2px solid #660707;
+}
+
+.fullimagewrap{
+	background: #F5F9FD;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #DDE6F2;
+	border: 0 !important;
+	color: #5176B5; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	border-bottom: 0px !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	border-bottom: 0px !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #EFDFDF !important;
+	text-align: center !important;
+}
+
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #FFF url(style_images/ip.boardpr/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #424242;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+/* This is a little hack to fix the
+* scrollbar that appears in the emoticon
+* pane of the post screen */	
+#post_screen_hack table tr td {
+	padding: 0px !important;
+}
+</style>
+		<script type='text/javascript'>
+		function fix_linked_image_sizes_attach_thumb( attach_id, width, height, file_size )
+		{
+			return true;
+		}
+		</script>
+	</head>
+	<body>
+	<div id="print">
+		<h1>Версия для печати темы</h1>
+		<h2><a href="http://railway.kanaries.ru/index.php?s=aac31032053da3491adb9ac8e8695a2a&amp;showtopic=4769" title="Нажмите для просмотра темы">Нажмите сюда для просмотра этой темы в обычном формате</a></h2>
+		<h3>Форум работников железнодорожного транспорта _ Юридическая консультация по профвопросам _ Вознаграждение за преданность компании ОАО &quot;РЖД&quot;</h3><div class="printpost">
+			<h4>Автор: <b>Виталий191</b>  10.12.2010, 18:12</h4>
+			<p><img src="http://railway.kanaries.ru/style_emoticons/default/bc.gif" style="vertical-align:middle" emoid=":bc:" border="0" alt="bc.gif" /> Может ли начальник организации лишить сотрудника выплаты за преданность компании?
+			<br />
+			<!--IBF.ATTACHMENT_65366-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  10.12.2010, 20:29</h4>
+			<p><!--quoteo(post=65366:date=10.12.2010, 19&#58;12:name=Виталий191)--><div class='quotetop'>Цитата(Виталий191 &#064; 10.12.2010, 19&#58;12) <a href="index.php?act=findpost&amp;pid=65366"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><img src="http://railway.kanaries.ru/style_emoticons/default/bc.gif" style="vertical-align:middle" emoid=":bc:" border="0" alt="bc.gif" /> Может ли начальник организации лишить сотрудника выплаты за преданность компании?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Я думаю,что не может. Данная выплата-она как выслуга лет,а не как премиальные-её просто так вряд ли могут лишить.
+			<br />
+			<!--IBF.ATTACHMENT_65391-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Dispetcher</b>  10.12.2010, 20:42</h4>
+			<p>Тут не начальник решает, не он её выдает<br />а высшее руководство данную выплату производит и отменить её не имеет права. Она считается, как обязательная выплата
+			<br />
+			<!--IBF.ATTACHMENT_65392-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Виталий191</b>  11.12.2010, 12:03</h4>
+			<p><!--quoteo(post=65392:date=11.12.2010, 4&#58;42:name=Dispetcher)--><div class='quotetop'>Цитата(Dispetcher &#064; 11.12.2010, 4&#58;42) <a href="index.php?act=findpost&amp;pid=65392"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Тут не начальник решает, не он её выдает<br />а высшее руководство данную выплату производит и отменить её не имеет права. Она считается, как обязательная выплата<!--QuoteEnd--></div><!--QuoteEEnd--><br />А если просрочили эту выплату компенсация должна быть или нет?<br /><br /><!--quoteo(post=65391:date=11.12.2010, 4&#58;29:name=седой дятел)--><div class='quotetop'>Цитата(седой дятел &#064; 11.12.2010, 4&#58;29) <a href="index.php?act=findpost&amp;pid=65391"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Я думаю,что не может. Данная выплата-она как выслуга лет,а не как премиальные-её просто так вряд ли могут лишить.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Выслугу платили ежемесячно, за косяк могли лишить на один месяц, а вот за преданность выплата единовременная ее вроде не должны лишать даже если был косяк.
+			<br />
+			<!--IBF.ATTACHMENT_65427-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>rotveiler</b>  11.12.2010, 19:03</h4>
+			<p>могут лишить за нарушения,связанные с безопасностью движения и за прогул и за появление в нетрезвом виде,конкретней можно посмотреть в положении о начислении преданности.Но по большому счету,если ты еще работаешь,то выслугу получишь
+			<br />
+			<!--IBF.ATTACHMENT_65442-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Лёка</b>  12.12.2010, 9:58</h4>
+			<p><!--quoteo(post=65427:date=11.12.2010, 13&#58;03:name=Виталий191)--><div class='quotetop'>Цитата(Виталий191 &#064; 11.12.2010, 13&#58;03) <a href="index.php?act=findpost&amp;pid=65427"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->А если просрочили эту выплату компенсация должна быть или нет?<br /><br /><br />Выслугу платили ежемесячно, за косяк могли лишить на один месяц, а вот за преданность выплата единовременная ее вроде не должны лишать даже если был косяк.<!--QuoteEnd--></div><!--QuoteEEnd--><br />это раньше платили ежемесячно,а с 1.04.2007г. выплаты прекратили.теперь если у тебя подошёл срок,т.е. например 10июля стаж работы достиг 3,5,10,15,20 лет,то согласно колдоговора должны выплатиь N-кол-во окладов,но не думайте ,что это будет много так,как расчеты ведутся от 01.04.2007г.деньги выплатят в октябре( выплаты производятся в последующем квартале)И отношение  начальства тут не причем
+			<br />
+			<!--IBF.ATTACHMENT_65480-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Kevin</b>  13.12.2010, 19:25</h4>
+			<p>Не забываем что работодатель может заменить вам эту выплату прелестной санаторно-курортной путевкой, памятным подарком, перечислением вознаграждения на личный счет в обоссанный пенсионный фонд «Благосостояние».
+			<br />
+			<!--IBF.ATTACHMENT_65564-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>mashinist1999</b>  2.1.2011, 19:53</h4>
+			<p><!--quoteo(post=65564:date=13.12.2010, 22&#58;25:name=Kevin)--><div class='quotetop'>Цитата(Kevin &#064; 13.12.2010, 22&#58;25) <a href="index.php?act=findpost&amp;pid=65564"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Не забываем что работодатель может заменить вам эту выплату прелестной санаторно-курортной путевкой, памятным подарком, перечислением вознаграждения на личный счет в обоссанный пенсионный фонд «Благосостояние».<!--QuoteEnd--></div><!--QuoteEEnd--><br />а это где то прописано?
+			<br />
+			<!--IBF.ATTACHMENT_66889-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Yustas</b>  8.1.2011, 8:41</h4>
+			<p>У путейцев был такой случай: один мой родственник - по должности начальник участка умудрился словить выговор задним числом. Попросила его кадровичка расписаться за выговор, который якобы был ему объявлен год назад и пол года как уже снят, сначала по простоте душевной до него не дошло зачем всё это, но расписываться всё равно отказался. И вот совсем недавно узнаёт, что на основании этого самого выговора он лишён премии за преданность компании и даже подпись его на месте. Пытался разобраться, звонил на горячую линию, но всё бесполезно.
+			<br />
+			<!--IBF.ATTACHMENT_67357-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Ларьков Александр</b>  8.1.2011, 9:15</h4>
+			<p><!--quoteo(post=65366:date=10.12.2010, 19&#58;12:name=Виталий191)--><div class='quotetop'>Цитата(Виталий191 &#064; 10.12.2010, 19&#58;12) <a href="index.php?act=findpost&amp;pid=65366"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><img src="http://railway.kanaries.ru/style_emoticons/default/bc.gif" style="vertical-align:middle" emoid=":bc:" border="0" alt="bc.gif" /> Может ли начальник организации лишить сотрудника выплаты за преданность компании?<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Нет, не может&#33;<br /><br />Положение о выплате работникам ОАО «РЖД» единовременного вознаграждения за преданность компании Утверждено распоряжением ОАО «РЖД» от 20 июня 2008 года № 1310 р<br /><br /><br />1. Общие положения<br /><br /> <br /><br />1. Настоящее Положение, разработанное в целях обеспечения материальной заинтересованности работников открытого акционерного общества «Российские железные дороги» в повышении эффективности и качества работы, привлечения и закрепления профессионального кадрового состава, стимулирования непрерывной трудовой деятельности работников, определяет порядок выплаты единовременного вознаграждения за преданность компании.<br /><br /> <br /><br />Преданность компании определяется способностью работника организовывать свою профессиональную деятельность в соответствии с целями компании и повседневным трудом обеспечивать их достижение.<br /><br /> <br /><br />2. Вознаграждение за преданность компании выплачивается за продолжительную эффективную и качественную работу работникам ОАО «РЖД» (за исключением работников, оплата труда которых осуществляется в виде фиксированной заработной платы (денежного вознаграждения), а также работников непроизводственной сферы):<br /><br />работающим с полной трудовой отдачей;<br /><br /> <br /><br />обладающим необходимой профессиональной компетенцией и навыками, обусловленными соответствующим образованием, профессиональной подготовкой и достаточным опытом работы по специальности (должности);<br /><br />стремящимся к овладению новыми знаниями, профессиональному и карьерному росту;<br /><br />проявляющим инициативу в работе, организационные или творческие способности в профессиональной деятельности;<br /><br />соблюдающим трудовую, производственно-технологическую дисциплину, нормы корпоративной культуры и этики;<br /><br />пользующимся доверием и уважением в коллективе.<br /><br /> <br /><br />2. Порядок выплаты единовременного вознаграждения за преданность компании<br /><br /> <br /><br />3. Единовременное вознаграждение за преданность компании выплачивается единовременно работникам ОАО «РЖД», соответствующим требованиям, указанным в пункте 2 настоящего Положения, и проработавшим в ОАО «РЖД» непрерывно 3 года, 5 лет, 10 лет, 15 лет и далее через каждые 5 лет в следующих размерах:<br /><br /> <br /><br />2 месячные тарифные ставки (оклада) – при продолжительности работы 3 года;<br /><br /> <br /><br />3 месячные тарифные ставки (оклада) – при продолжительности работы 5 лет;<br /><br /> <br /><br />4 месячные тарифные ставки (оклада) – при продолжительности работы 10 лет;<br /><br /> <br /><br />5 месячных тарифных ставок (окладов) – при продолжительности работы 15 лет и далее через каждые 5 лет.<br /><br /> <br /><br />Размер месячной тарифной ставки (оклада) определяется на дату выплаты вознаграждения.<br /><br /> <br /><br />4. При продолжительности работы в ОАО «РЖД» более 5 лет размер единовременного вознаграждения работнику может увеличиваться до 50 процентов с учётом оценки эффективности его работы.<br /><br /> <br /><br />Оценка эффективности работы производится непосредственным руководителем по примерным ключевым показателям эффективности работы согласно приложению № 1 и отражается в листе оценки производственной деятельности работника по форме согласно приложению № 2.<br /><br /> <br /><br />Ежегодный мониторинг деятельности работника проводит отдел по управлению персоналом филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД».<br /><br /> <br /><br />Перечень ключевых показателей эффективности работы работников утверждается руководителем филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД» с учётом мнения соответствующего профсоюзного органа.<br /><br /> <br /><br />5. В случае возникновения разногласий между работником и его непосредственным руководителем по вопросу оценки эффективности работы окончательное решение принимает руководитель филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД».<br /><br /> <br /><br />6. Единовременное вознаграждение за преданность компании выплачивается в течение квартала после даты достижения установленной продолжительности работы в ОАО «РЖД» на основании приказа руководителя филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД» за счёт средств фонда заработной платы, предусмотренных на эти цели.<br /><br /> <br /><br />7. Единовременное вознаграждение за преданность компании может быть с согласия работника и по решению руководителя филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД» заменено памятным подарком, санаторно-курортной или иной путевкой, перечислением вознаграждения на личный счёт в негосударственный пенсионный фонд «Благосостояние», материальным поощрением в иной форме стоимостью в пределах суммы вознаграждения, определённой в соответствии с настоящим Положением.<br /><br /> <br /><br />8. Работникам, по вине которых в оценочном периоде допущены аварии, крушения, хищения грузов и имущества, появлявшимся на рабочем месте в нетрезвом виде и допускавшим прогулы, вознаграждение за преданность компании не выплачивается.<br /><br /> <br /><br />3. Порядок исчисления продолжительности работы в ОАО «РЖД» для определения размера единовременного вознаграждения за преданность компании<br /><br /> <br /><br />9. В продолжительность работы в ОАО «РЖД» включается время непрерывной работы в филиалах (структурных подразделениях филиала) и других структурных подразделениях ОАО «РЖД», аппарате управления ОАО «РЖД», в организациях федерального железнодорожного транспорта, имущество которых внесено в уставный капитал ОАО «РЖД», а также на освобождённых выборных и штатных должностях в первичных организациях профсоюза и органах Роспрофжела.<br /><br /> <br /><br />При переводе работника из филиала ОАО «РЖД» (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД», аппарата управления ОАО «РЖД» в другой филиал или структурное подразделение ОАО «РЖД» непрерывная продолжительность работы сохраняется.<br /><br /> <br /><br />10. Продолжительность работы (стаж работы) определяется на основании записей в трудовой книжке.<br /><br /> <br /><br />11. Стаж работы, дающий право на получение единовременного вознаграждения за преданность компании, не прерывается, но время перерывов в этот стаж не включается в следующих случаях:<br /><br /> <br /><br />а) при поступлении на работу в течение месяца после прекращения инвалидности или болезни, вызвавших увольнение из ОАО «РЖД» в соответствии с медицинским заключением, если работник вернулся на прежнее место работы либо поступил в другой филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «РЖД»;<br /><br /> <br /><br />б) при поступлении на работу в филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «РЖД» после увольнения из ОАО «РЖД» в связи с ликвидацией организации, сокращением численности или штата работников, если перерыв в работе не превышал трех месяцев;<br /><br /> <br /><br />в) при поступлении на работу в филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «РЖД» после увольнения из ОАО «РЖД» в связи с переводом мужа (жены) на работу в другую местность, если перерыв в работе не превышал трёх месяцев, не считая времени переезда к новому месту жительства;<br /><br /> <br /><br />г) при нахождении в отпуске по уходу за ребенком, предоставляемом женщинам до достижения ребёнком возраста трех лет;<br /><br /> <br /><br />д) при прохождении военной службы, если работник призывался из филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД» и возвратился на работу в ОАО «РЖД» в течение трех месяцев после увольнения с военной службы по призыву.<br /><br /> <br /><br />12. У работников, уволившихся по собственному желанию и вновь поступивших на работу в филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «Российские железные дороги», стаж, учитываемый для выплаты единовременного вознаграждения за преданность компании, прерывается.
+			<br />
+			<!--IBF.ATTACHMENT_67363-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Lily</b>  8.1.2011, 14:17</h4>
+			<p>У нас небыло таких случаев, что выплату заменяли каким либо подарком.<br />Из-за кризиса выплаты производят через 3-4 месяца после назначенного срока, но ее получают все.<br />У меня 09.08.2011 будет 10 лет как я тружусь на благо ж.д., а с 13 декабря нахожусь в декретном. Но даже это не будет препятствовать выплате за преданность компании. Так что свои денежки я получу.-)
+			<br />
+			<!--IBF.ATTACHMENT_67388-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>PlenniK</b>  11.1.2011, 22:45</h4>
+			<p><!--quoteo(post=67363:date=8.1.2011, 9&#58;15:name=Ларьков Александр)--><div class='quotetop'>Цитата(Ларьков Александр &#064; 8.1.2011, 9&#58;15) <a href="index.php?act=findpost&amp;pid=67363"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Нет, не может&#33;<br /><br />Положение о выплате работникам ОАО «РЖД» единовременного вознаграждения за преданность компании Утверждено распоряжением ОАО «РЖД» от 20 июня 2008 года № 1310 р<br /><br /><br />1. Общие положения<br /><br /> <br /><br />1. Настоящее Положение, разработанное в целях обеспечения материальной заинтересованности работников открытого акционерного общества «Российские железные дороги» в повышении эффективности и качества работы, привлечения и закрепления профессионального кадрового состава, стимулирования непрерывной трудовой деятельности работников, определяет порядок выплаты единовременного вознаграждения за преданность компании.<br /><br /> <br /><br />Преданность компании определяется способностью работника организовывать свою профессиональную деятельность в соответствии с целями компании и повседневным трудом обеспечивать их достижение.<br /><br /> <br /><br />2. Вознаграждение за преданность компании выплачивается за продолжительную эффективную и качественную работу работникам ОАО «РЖД» (за исключением работников, оплата труда которых осуществляется в виде фиксированной заработной платы (денежного вознаграждения), а также работников непроизводственной сферы):<br /><br />работающим с полной трудовой отдачей;<br /><br /> <br /><br />обладающим необходимой профессиональной компетенцией и навыками, обусловленными соответствующим образованием, профессиональной подготовкой и достаточным опытом работы по специальности (должности);<br /><br />стремящимся к овладению новыми знаниями, профессиональному и карьерному росту;<br /><br />проявляющим инициативу в работе, организационные или творческие способности в профессиональной деятельности;<br /><br />соблюдающим трудовую, производственно-технологическую дисциплину, нормы корпоративной культуры и этики;<br /><br />пользующимся доверием и уважением в коллективе.<br /><br /> <br /><br />2. Порядок выплаты единовременного вознаграждения за преданность компании<br /><br /> <br /><br />3. Единовременное вознаграждение за преданность компании выплачивается единовременно работникам ОАО «РЖД», соответствующим требованиям, указанным в пункте 2 настоящего Положения, и проработавшим в ОАО «РЖД» непрерывно 3 года, 5 лет, 10 лет, 15 лет и далее через каждые 5 лет в следующих размерах:<br /><br /> <br /><br />2 месячные тарифные ставки (оклада) – при продолжительности работы 3 года;<br /><br /> <br /><br />3 месячные тарифные ставки (оклада) – при продолжительности работы 5 лет;<br /><br /> <br /><br />4 месячные тарифные ставки (оклада) – при продолжительности работы 10 лет;<br /><br /> <br /><br />5 месячных тарифных ставок (окладов) – при продолжительности работы 15 лет и далее через каждые 5 лет.<br /><br /> <br /><br />Размер месячной тарифной ставки (оклада) определяется на дату выплаты вознаграждения.<br /><br /> <br /><br />4. При продолжительности работы в ОАО «РЖД» более 5 лет размер единовременного вознаграждения работнику может увеличиваться до 50 процентов с учётом оценки эффективности его работы.<br /><br /> <br /><br />Оценка эффективности работы производится непосредственным руководителем по примерным ключевым показателям эффективности работы согласно приложению № 1 и отражается в листе оценки производственной деятельности работника по форме согласно приложению № 2.<br /><br /> <br /><br />Ежегодный мониторинг деятельности работника проводит отдел по управлению персоналом филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД».<br /><br /> <br /><br />Перечень ключевых показателей эффективности работы работников утверждается руководителем филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД» с учётом мнения соответствующего профсоюзного органа.<br /><br /> <br /><br />5. В случае возникновения разногласий между работником и его непосредственным руководителем по вопросу оценки эффективности работы окончательное решение принимает руководитель филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД».<br /><br /> <br /><br />6. Единовременное вознаграждение за преданность компании выплачивается в течение квартала после даты достижения установленной продолжительности работы в ОАО «РЖД» на основании приказа руководителя филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД» за счёт средств фонда заработной платы, предусмотренных на эти цели.<br /><br /> <br /><br />7. Единовременное вознаграждение за преданность компании может быть с согласия работника и по решению руководителя филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД» заменено памятным подарком, санаторно-курортной или иной путевкой, перечислением вознаграждения на личный счёт в негосударственный пенсионный фонд «Благосостояние», материальным поощрением в иной форме стоимостью в пределах суммы вознаграждения, определённой в соответствии с настоящим Положением.<br /><br /> <br /><br />8. Работникам, по вине которых в оценочном периоде допущены аварии, крушения, хищения грузов и имущества, появлявшимся на рабочем месте в нетрезвом виде и допускавшим прогулы, вознаграждение за преданность компании не выплачивается.<br /><br /> <br /><br />3. Порядок исчисления продолжительности работы в ОАО «РЖД» для определения размера единовременного вознаграждения за преданность компании<br /><br /> <br /><br />9. В продолжительность работы в ОАО «РЖД» включается время непрерывной работы в филиалах (структурных подразделениях филиала) и других структурных подразделениях ОАО «РЖД», аппарате управления ОАО «РЖД», в организациях федерального железнодорожного транспорта, имущество которых внесено в уставный капитал ОАО «РЖД», а также на освобождённых выборных и штатных должностях в первичных организациях профсоюза и органах Роспрофжела.<br /><br /> <br /><br />При переводе работника из филиала ОАО «РЖД» (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД», аппарата управления ОАО «РЖД» в другой филиал или структурное подразделение ОАО «РЖД» непрерывная продолжительность работы сохраняется.<br /><br /> <br /><br />10. Продолжительность работы (стаж работы) определяется на основании записей в трудовой книжке.<br /><br /> <br /><br />11. Стаж работы, дающий право на получение единовременного вознаграждения за преданность компании, не прерывается, но время перерывов в этот стаж не включается в следующих случаях:<br /><br /> <br /><br />а) при поступлении на работу в течение месяца после прекращения инвалидности или болезни, вызвавших увольнение из ОАО «РЖД» в соответствии с медицинским заключением, если работник вернулся на прежнее место работы либо поступил в другой филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «РЖД»;<br /><br /> <br /><br />б) при поступлении на работу в филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «РЖД» после увольнения из ОАО «РЖД» в связи с ликвидацией организации, сокращением численности или штата работников, если перерыв в работе не превышал трех месяцев;<br /><br /> <br /><br />в) при поступлении на работу в филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «РЖД» после увольнения из ОАО «РЖД» в связи с переводом мужа (жены) на работу в другую местность, если перерыв в работе не превышал трёх месяцев, не считая времени переезда к новому месту жительства;<br /><br /> <br /><br />г) при нахождении в отпуске по уходу за ребенком, предоставляемом женщинам до достижения ребёнком возраста трех лет;<br /><br /> <br /><br />д) при прохождении военной службы, если работник призывался из филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД» и возвратился на работу в ОАО «РЖД» в течение трех месяцев после увольнения с военной службы по призыву.<br /><br /> <br /><br />12. У работников, уволившихся по собственному желанию и вновь поступивших на работу в филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «Российские железные дороги», стаж, учитываемый для выплаты единовременного вознаграждения за преданность компании, прерывается.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Вопрос такого типа&#33; после технаря в 2006 году устроился вна железку отработал год забрали в армию отслужил 1,5 года пришел обратно отработал на данный момент после армии еще 2 года. вопрос возникает сразу же так мне должны выплотить за з года в данный момент или как?<br /><br /><!--quoteo(post=65366:date=10.12.2010, 18&#58;12:name=Виталий191)--><div class='quotetop'>Цитата(Виталий191 &#064; 10.12.2010, 18&#58;12) <a href="index.php?act=findpost&amp;pid=65366"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><img src="http://railway.kanaries.ru/style_emoticons/default/bc.gif" style="vertical-align:middle" emoid=":bc:" border="0" alt="bc.gif" /> Может ли начальник организации лишить сотрудника выплаты за преданность компании?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Виталий в коллективном договоре черно по белому все написано что как почем&#33; а лишить тебя никто ничего не может&#33; ты главное не бойся&#33; мы же СИЛА&#33;
+			<br />
+			<!--IBF.ATTACHMENT_67718-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>хамза</b>  14.1.2011, 18:50</h4>
+			<p>Срок выплаты за преданность достигнут. В случае увольнения по собственному, будет ли произведена выплата?
+			<br />
+			<!--IBF.ATTACHMENT_68079-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Calomba7</b>  12.5.2011, 8:37</h4>
+			<p>Работаю на ЖД с 5.03.1991г то есть стаж 20 лет. премия &quot;за преданность...&quot; должна быть 5 окладов,но выплатили только 3,9 оклада,объяснив что она рассчитывается с 1.04.2007 года. то есть до пяти лет не хватает месяца. Правы они или нет? Привели какую то непонятную формулу,в которой я ровным счетом ничего не понял. Может кто сможет объяснить? С уважением.
+			<br />
+			<!--IBF.ATTACHMENT_78870-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>zabugorsky</b>  4.6.2011, 12:42</h4>
+			<p>И почему премия за три года больше чем за пять?
+			<br />
+			<!--IBF.ATTACHMENT_81050-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Гном</b>  4.6.2011, 13:36</h4>
+			<p><!--quoteo(post=65564:date=13.12.2010, 23&#58;25:name=Kevin)--><div class='quotetop'>Цитата(Kevin &#064; 13.12.2010, 23&#58;25) <a href="index.php?act=findpost&amp;pid=65564"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Не забываем что работодатель может заменить вам эту выплату прелестной санаторно-курортной путевкой, памятным подарком, перечислением вознаграждения на личный счет в обоссанный пенсионный фонд «Благосостояние».<!--QuoteEnd--></div><!--QuoteEEnd--><br />Где-то я читал, что эти замены работодатель может заменить, НО с согласия работника.<br />Найду документ, добавлю сюда.
+			<br />
+			<!--IBF.ATTACHMENT_81056-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>rotveiler</b>  4.6.2011, 19:17</h4>
+			<p><!--quoteo(post=81050:date=4.6.2011, 14&#58;42:name=zabugorsky)--><div class='quotetop'>Цитата(zabugorsky &#064; 4.6.2011, 14&#58;42) <a href="index.php?act=findpost&amp;pid=81050"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->И почему премия за три года больше чем за пять?<!--QuoteEnd--></div><!--QuoteEEnd--><br />потому,что за 5 лет полные выплаты пойдут только с 2012 года.Полную информацию вам может (обязан ) предоставить расчетчик по труду и заработной плате. Не стесняйтесь спрашивать -это их работа
+			<br />
+			<!--IBF.ATTACHMENT_81069-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Glyuk</b>  5.6.2011, 11:09</h4>
+			<p><!--quoteo(post=78870:date=12.5.2011, 10&#58;37:name=Calomba7)--><div class='quotetop'>Цитата(Calomba7 &#064; 12.5.2011, 10&#58;37) <a href="index.php?act=findpost&amp;pid=78870"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Работаю на ЖД с 5.03.1991г то есть стаж 20 лет. премия &quot;за преданность...&quot; должна быть 5 окладов,но выплатили только 3,9 оклада,объяснив что она рассчитывается с 1.04.2007 года. то есть до пяти лет не хватает месяца. Правы они или нет? Привели какую то непонятную формулу,в которой я ровным счетом ничего не понял. Может кто сможет объяснить? С уважением.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Все правильно, т.к. до 1.04.07г. выплачивалась выслуга, и этот период не учитывается, а с 1.04.07г. до 5.03.11г. прошло не пять полных лет, а 3,91(7) года, вот именно такое количество окладов и выплатили.
+			<br />
+			<!--IBF.ATTACHMENT_81094-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Shans</b>  14.8.2011, 7:51</h4>
+			<p><!--quoteo(post=65564:date=13.12.2010, 21&#58;25:name=Kevin)--><div class='quotetop'>Цитата(Kevin &#064; 13.12.2010, 21&#58;25) <a href="index.php?act=findpost&amp;pid=65564"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Не забываем что работодатель может заменить вам эту выплату прелестной санаторно-курортной путевкой, памятным подарком, перечислением вознаграждения на личный счет в обоссанный пенсионный фонд «Благосостояние».<!--QuoteEnd--></div><!--QuoteEEnd--><br />Согласен.Сам читал статью в &quot;Гудке&quot;,газету к сожалению не сохранил.Правда было написано по обоюдному согласию,но мы знаем что такое РЖД поэтому возможно нас и спрашивать никто не будет-дадут бесплатно путёвку в Сибирь-т.к денег нет.
+			<br />
+			<!--IBF.ATTACHMENT_84937-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Nurse</b>  14.8.2011, 20:40</h4>
+			<p><!--quoteo(post=78870:date=12.5.2011, 10&#58;37:name=Calomba7)--><div class='quotetop'>Цитата(Calomba7 &#064; 12.5.2011, 10&#58;37) <a href="index.php?act=findpost&amp;pid=78870"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Работаю на ЖД с 5.03.1991г то есть стаж 20 лет. премия &quot;за преданность...&quot; должна быть 5 окладов,но выплатили только 3,9 оклада,объяснив что она рассчитывается с 1.04.2007 года. то есть до пяти лет не хватает месяца. Правы они или нет? Привели какую то непонятную формулу,в которой я ровным счетом ничего не понял. Может кто сможет объяснить? С уважением.<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />вот тебе формула в ссылочке. подставь свой оклад и месяцы с 1.04.2007  и получишь сумму.<br /><br /><a href="http://railway.kanaries.ru/index.php?s=aac31032053da3491adb9ac8e8695a2a&amp;act=attach&amp;type=post&amp;id=8991" title="" target="_blank"><img src="http://railway.kanaries.ru/style_images/ip.boardpr/folder_mime_types/doc.gif" alt="" /></a>
+&nbsp;<a href="http://railway.kanaries.ru/index.php?s=aac31032053da3491adb9ac8e8695a2a&amp;act=attach&amp;type=post&amp;id=8991" title="" target="_blank">преданность_компании.rar</a> ( 4,48 килобайт )
+<span class="desc">: 366</span><br /><br /><br />файл сделан в экселе 2010, но сохранен под 97-2003. если коряво откроется, напиши.
+			<br />
+			<!--IBF.ATTACHMENT_85068-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>lehan</b>  17.8.2011, 15:30</h4>
+			<p>порадовал пункт 2<br /><br /><!--quoteo--><IDXSKIP><div class='quotetop'>Цитата</div></IDXSKIP><div class='quotemain'><!--quotec-->2. Вознаграждение за преданность компании выплачивается за продолжительную эффективную и качественную работу работникам ОАО «РЖД» (за исключением работников, оплата труда которых осуществляется в виде фиксированной заработной платы (денежного вознаграждения), а также работников непроизводственной сферы):<br /><br />работающим с полной трудовой отдачей;<br /><br /><br /><br />обладающим необходимой профессиональной компетенцией и навыками, обусловленными соответствующим образованием, профессиональной подготовкой и достаточным опытом работы по специальности (должности);<br /><br />стремящимся к овладению новыми знаниями, профессиональному и карьерному росту;<br /><br />проявляющим инициативу в работе, организационные или творческие способности в профессиональной деятельности;<br /><br />соблюдающим трудовую, производственно-технологическую дисциплину, нормы корпоративной культуры и этики;<br /><br />пользующимся доверием и уважением в коллективе.<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />приходишь за вознаграждением, а тебе говорят &quot;ты уважением не пользуешься, пшёл вон&quot;... &quot;инициативу вчера проявлял в работе? Нет? пшёл вон&quot;... &quot;у тебя какой класс? первый? карьерного роста нет? пшёл вон&quot;...
+			<br />
+			<!--IBF.ATTACHMENT_85483-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Кинолог</b>  20.8.2011, 16:58</h4>
+			<p><!--quoteo(post=85068:date=14.8.2011, 22&#58;40:name=Nurse)--><div class='quotetop'>Цитата(Nurse &#064; 14.8.2011, 22&#58;40) <a href="index.php?act=findpost&amp;pid=85068"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->вот тебе формула в ссылочке. подставь свой оклад и месяцы с 1.04.2007  и получишь сумму.<br /><br /><a href="http://railway.kanaries.ru/index.php?s=aac31032053da3491adb9ac8e8695a2a&amp;act=attach&amp;type=post&amp;id=8991" title="" target="_blank"><img src="http://railway.kanaries.ru/style_images/ip.boardpr/folder_mime_types/doc.gif" alt="" /></a>
+&nbsp;<a href="http://railway.kanaries.ru/index.php?s=aac31032053da3491adb9ac8e8695a2a&amp;act=attach&amp;type=post&amp;id=8991" title="" target="_blank">преданность_компании.rar</a> ( 4,48 килобайт )
+<span class="desc">: 366</span><br /><br /><br />файл сделан в экселе 2010, но сохранен под 97-2003. если коряво откроется, напиши.<!--QuoteEnd--></div><!--QuoteEEnd--><br /><b>количество месяцев работы с 1.04.2007 (в расчете на август 11 года)</b> - почему по всем пунктам стоит 50? <br />Если три года - 36, если пять и более - 50.
+			<br />
+			<!--IBF.ATTACHMENT_86021-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Gromozeka</b>  20.8.2011, 17:48</h4>
+			<p><!--quoteo(post=85068:date=14.8.2011, 22&#58;40:name=Nurse)--><div class='quotetop'>Цитата(Nurse &#064; 14.8.2011, 22&#58;40) <a href="index.php?act=findpost&amp;pid=85068"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->вот тебе формула в ссылочке. подставь свой оклад и месяцы с 1.04.2007  и получишь сумму.<br /><br /><a href="http://railway.kanaries.ru/index.php?s=aac31032053da3491adb9ac8e8695a2a&amp;act=attach&amp;type=post&amp;id=8991" title="" target="_blank"><img src="http://railway.kanaries.ru/style_images/ip.boardpr/folder_mime_types/doc.gif" alt="" /></a>
+&nbsp;<a href="http://railway.kanaries.ru/index.php?s=aac31032053da3491adb9ac8e8695a2a&amp;act=attach&amp;type=post&amp;id=8991" title="" target="_blank">преданность_компании.rar</a> ( 4,48 килобайт )
+<span class="desc">: 366</span><br /><br /><br />файл сделан в экселе 2010, но сохранен под 97-2003. если коряво откроется, напиши.<!--QuoteEnd--></div><!--QuoteEEnd--> Коэффициент - годы переведенные в месяцы 3года - 36 месяцев 5лет - 60 . <br />
+			<br />
+			<!--IBF.ATTACHMENT_86033-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>gulja</b>  21.10.2011, 23:47</h4>
+			<p>Получается на 1 августа 52 полных месяца. 9+36+7=52, так и на 1апреля 2012года выходит 58 месяцев. Странная какая-то арифметика.<br /> Понял, ступил. За апрель в мае, а за июль, сответственно, в августе. Вот 2 месяца и ушли.
+			<br />
+			<!--IBF.ATTACHMENT_90147-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>oksana_t</b>  14.1.2012, 11:07</h4>
+			<p>нет<br />
+			<br />
+			<!--IBF.ATTACHMENT_97899-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Mangust</b>  14.1.2012, 13:55</h4>
+			<p>Выплату за преданность компании никак не могу вытребовать с депо. Подходил к нормировщикам, на меня всё больше летит изделия макоронного типа. Звонит при мне в бугалтерию, там ей говарят что ведомости нету такой на меня. Начинают разбираться почему и куда... В конечном итоге говарят, что в сделущем месяце точно с зарплатой получиш свои законное приданное. Уже прошло пол года всё так же снимаю лапшу с ушей каждый месяц. Кто сталкивался с таким раз**айством что делать?  <img src="http://railway.kanaries.ru/style_emoticons/default/unsure.gif" style="vertical-align:middle" emoid=":unsure:" border="0" alt="unsure.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_97907-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Третьяков Виктор</b>  14.1.2012, 15:56</h4>
+			<p>На вопросы читателей отвечает начальник департамента по организации, оплате и мотивации труда ОАО «РЖД» Сергей Саратов. <br /><br />– Я поступила на работу летом 1994 года. То есть в 2009 году у меня наступает право выплаты пяти окладов за 15 лет стажа, но в бухгалтерии мне сказали, что выплатят деньги только за 27 месяцев. Могу ли я сейчас не получать эти выплаты «за преданность», а дождаться 2012 года и получить сразу пять окладов полностью? <br />Вера Ивановна Долбня <br />Тихорецк <br />– С 1 июля 2008 года в ОАО «РЖД» введено Положение о выплате работникам ОАО «РЖД» единовременного вознаграждения за преданность компании. Документ установил единый порядок выплат. <br /><br />Так вот, при выплате вознаграждения за преданность компании впервые его размер корректируется с учётом того обстоятельства, что работники ОАО «РЖД» до 1 апреля 2007 года имели право на вознаграждение за выслугу лет. Поэтому в июне 2009 года вам должны были выплатить единовременное вознаграждение за преданность компании с учётом корректировочного коэффициента. Следующее право на выплату единовременного вознаграждения за преданность компании у вас возникнет в 2014 году (при стаже непрерывной работы 20 лет), и размер вознаграждения составит пять месячных должностных окладов (тарифных ставок) на момент выплаты.<br /><br /><br />– Я проработала в Гипротранс-3 ОАО «РЖД» с 10 сентября 1969 года по 18 февраля 2009 года, то есть 39 лет и 5 месяцев, и ушла на пенсию по собственному желанию. При этом мне не было выплачено денежное вознаграждение за преданность, хотя в статье «Гудка» от 11 ноября 2008 года было сказано, что при выходе на пенсию выплата должна быть произведена. Помогите, пожалуйста, разобраться в этом вопросе. <br />Александра Евгеньевна Махоткина <br />Москва <br />– В Положении о выплате работникам ОАО «РЖД» единовременного вознаграждения за преданность компании указано, что оно выплачивается всем работникам филиалов ОАО «РЖД», за исключением работников, оплата труда которых осуществляется в виде фиксированной заработной платы (денежного вознаграждения). <br /><br />Дополнительным соглашением к трудовому договору от 01.02.2008 № 3/505, заключённым между вами и директором Гипротранстэи ОАО «РЖД», вам установлена фиксированная заработная плата. Таким образом, вы не имеете права на получение единовременного вознаграждения за преданность компании.<br /><br /><br />– Я работаю на заводе, который сейчас переходит из РЖД в дочернюю компанию «Желдорреммаш». Положено ли нам вознаграждение за преданность компании? У меня ситуация такая: отработал восемь лет, сейчас сходил в отпуск. При переходе из РЖД в ДЗО не получил расчёт, а также вознаграждение за преданность компании. <br />– Для работников, увольняемых из подразделений ОАО «РЖД» в порядке перевода, в том числе в дочерние зависимые общества, вознаграждение за преданность компании выплачивается на общих основаниях. <br /><br />Согласно соответствующему положению выплата вознаграждения осуществляется работникам, у которых стаж работы в компании достигает 3 года, 5 лет, 10 лет, 15 лет и далее через каждые 5 лет. <br /><br />Исключения из данного обязательного условия предусмотрены только в следующих случаях: <br />– при увольнении работника по собственному желанию в связи с достижением пенсионного возраста, если непрерывная продолжительность работы на момент увольнения составляет более трёх лет; <br />– при увольнении работника по сокращению штата или численности, по состоянию здоровья в соответствии с медицинским заключением, если непрерывная продолжительность работы на момент увольнения также составляет более трёх лет. <br /><br />Обратите внимание на пункт 8.3. положения: он предусматривает, что время работы в ДЗО не прерывает стаж, дающий право на получение вознаграждения, однако и не включается в него, если работник до и после перевода из дочернего общества работает в филиалах и структурных подразделениях ОАО «РЖД».<br />  ГУДОК  28.09.2009
+			<br />
+			<!--IBF.ATTACHMENT_97918-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>bibi</b>  29.2.2012, 13:51</h4>
+			<p>Всем добрый день&#33;<br />Кто знает как начисляется преданность если с 1.04.2007 по 01.11.2009г человек находился в отпуске по уходу за ребенком до 3-х лет. Непрерывный ж/д стаж с 01.02.1997г. т.е. 01.02.2012 г будет  15 лет, какое количество расчетных месяцев брать ? с 01.04.2007г брать к расчету - 58 месяц или выкидывать месяцы нахождения в отпуске по уходу за ребенком до 3-х лет (т.е. фактически считать с 01.11.2009г- 27 месяцев. И в каких документах прописан этот вопрос(методические рекомендации и т.п)<br />Спасибо.
+			<br />
+			<!--IBF.ATTACHMENT_103247-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Swart</b>  1.3.2012, 4:46</h4>
+			<p><!--quoteo(post=103247:date=29.2.2012, 15&#58;44:name=bibi)--><div class='quotetop'>Цитата(bibi &#064; 29.2.2012, 15&#58;44) <a href="index.php?act=findpost&amp;pid=103247"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Кто знает как начисляется преданность если с 1.04.2007 по 01.11.2009г человек находился в отпуске по уходу за ребенком до 3-х лет.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Столкнулся на примере жены.<br />Подошел срок-15 лет.Ждем.Бухгалтерия отвечает,что время,использованное по уходу за ребенком в расчет не берется.Ждите еще +10месяцев.<br />Буквально через неделю из управы приходит разъяснение,что это время(по уходу) считать для расчета.<br />Ответ бухгалтерии-в связи с тем,что время начисления просрочено-ждите следующего срока-20 лет стажа.<br />З.Ы.Как там ее называют-&quot;за преданность&quot;?
+			<br />
+			<!--IBF.ATTACHMENT_103386-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vredtech</b>  1.3.2012, 19:14</h4>
+			<p>Вот у меня как раз 10 лет для выплаты преданности накапало. Хотя работаю на линейном предприятии с 1993 (а стаж так вообще с 86), но в связи с увольнением по собственному в 2002 (перевод на другое предприятие нынешний гендир ПКБЦТ не дал, надеюсь - он сейчас икает  <img src="http://railway.kanaries.ru/style_emoticons/default/angry.gif" style="vertical-align:middle" emoid=":angry:" border="0" alt="angry.gif" /> ) - всё это предыдущее время я оказался кому-то не предан. <br /><br />Буду ждать, интересно сколько заплатят.
+			<br />
+			<!--IBF.ATTACHMENT_103500-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>bibi</b>  2.3.2012, 3:56</h4>
+			<p>сама рассчитываю преданность, и была дополнительная спец.телеграмма, что время нахождения в декретном отпуске включается в общий стаж, ну и пример был приведен, если выплатили преданность не включая в стаж время нахождения в декрете,  про то как пересчитать стаж  и выплаты за преданность. А вот разъяснения как платить, если в расчетные месяцы с момента начисления за преданность, нету. По логике- должны выкидываться из расчетных месяцев, а в общий стаж включаться. Так как преданность ведь заменила стажевые %. А раз ты не работал в это время, то как бы и стажевые не зарабатывал бы (если бы их не отменили, у нас при стаже выше 5 лет платили бы 30% ) . Но так как никаких разъяснений нету- то мы платим, ОАО РЖД не убудет, и так оно экономит на нас.<br /><br /><!--quoteo(post=103386:date=1.3.2012, 6&#58;39:name=Swart)--><div class='quotetop'>Цитата(Swart &#064; 1.3.2012, 6&#58;39) <a href="index.php?act=findpost&amp;pid=103386"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Столкнулся на примере жены.<br />Подошел срок-15 лет.Ждем.Бухгалтерия отвечает,что время,использованное по уходу за ребенком в расчет не берется.Ждите еще +10месяцев.<br />Буквально через неделю из управы приходит разъяснение,что это время(по уходу) считать для расчета.<br />Ответ бухгалтерии-в связи с тем,что время начисления просрочено-ждите следующего срока-20 лет стажа.<br />З.Ы.Как там ее называют-&quot;за преданность&quot;?<!--QuoteEnd--></div><!--QuoteEEnd--><br />должны за 15 лет заплатит, а еще и потребовать с них уплату процентов по ставке рефинансирования за каждый просроченный день уплаты. даже думаю по окладу на момент уплаты. Если на момент наступления был оклад 18000, а сейчас 22000, то должны уплатить из расчета 22000.<br />Обычно работники РЖД не ходят к трудовому инспектору и по прокуратурам, а наши работники (как бы мы не РЖД, а косвенно к ним относимся)- только шум стоит  по любому поводу, и платим , включая и ставку рефинансирования
+			<br />
+			<!--IBF.ATTACHMENT_103526-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Витя</b>  2.3.2012, 16:37</h4>
+			<p>Подскажите с какого года начали выдавать вознаграждение за преданность компании?
+			<br />
+			<!--IBF.ATTACHMENT_103647-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>ZAX1</b>  5.9.2012, 5:08</h4>
+			<p>ЕДИНОВРЕМЕННАЯ ВЫПЛАТА — 1) денежная сумма, выплачиваемая сразу целиком, а не частями; 2) форма денежного возмещения убытка; 3) страховое единовременно выплачиваемое пособие, например при выходе на пенсию, увольнении с работы (Райзберг Б. А., Лозовский Л. Ш., Стародубцева Е. Б. Современный экономический словарь. 5-е изд., перераб. и доп.).<br />ПОЭТОМУ ВЫПЛАТЫ ПО<br />&quot;Единовременное вознаграждение за преданность компании выплачивается единовременно работникам ОАО «ФПК, проработавшим в ОАО «ФПК» непрерывно 3 года, 5 лет, 10 лет, 15 лет и далее через каждые 5 лет в следующих размерах: 2 месячные тарифные ставки (оклада) - при продолжительности работы 3 года;<br />3 месячные тарифные ставки (оклада) - при продолжительности работы 5 лет;<br />4 месячные тарифные ставки (оклада) - при продолжительности работы 10 лет;<br />5 месячных тарифных ставок (окладов) - при продолжительности работы 15 лет и далее через каждые 5 лет&quot;<br />УЧИТЫВАЯ их ОПРЕДЕЛЁННУЮ  ПЕРИОДИЧНОСТЬ, и установленную зависимость от качества труда работника<br />нельзя отнести к <u>Единовременным</u> выплатам.<br /><br />2.	04.07.2012 ответчик перечислил на мой счёт 58 523.16 рублей в качестве единовременного вознаграждения за преданность компании, при этом указав суду ложный оклад в размере – 30 467.00 рублей и не начислил районный коэффициент 1.7.<br />Согласно - ПОСТАНОВЛЕНИЕ МИНТРУДА РФ ОТ 11.09.95 N 49 ОБ УТВЕРЖДЕНИИ РАЗЪЯСНЕНИЯ &quot;О ПОРЯДКЕ НАЧИСЛЕНИЯ ПРОЦЕНТНЫХ НАДБАВОК К ЗАРАБОТНОЙ ПЛАТЕ ЛИЦАМ, РАБОТАЮЩИМ В РАЙОНАХ КРАЙНЕГО СЕВЕРА, ПРИРАВНЕННЫХ К НИМ МЕСТНОСТЯХ, В ЮЖНЫХ РАЙОНАХ ВОСТОЧНОЙ СИБИРИ, ДАЛЬНЕГО ВОСТОКА (Текст документа с изменениями и дополнениями по состоянию на ноябрь 2007 года) МИНИСТЕРСТВО ТРУДА РОССИЙСКОЙ ФЕДЕРАЦИИ  ПОСТАНОВЛЕНИЕ от 11 сентября 1995 г. N 49  ОБ УТВЕРЖДЕНИИ РАЗЪЯСНЕНИЯ &quot;О ПОРЯДКЕ НАЧИСЛЕНИЯ         ПРОЦЕНТНЫХ НАДБАВОК К ЗАРАБОТНОЙ ПЛАТЕ ЛИЦАМ, РАБОТАЮЩИМ  В РАЙОНАХ КРАЙНЕГО СЕВЕРА, ПРИРАВНЕННЫХ К НИМ МЕСТНОСТЯХ,  В ЮЖНЫХ РАЙОНАХ ВОСТОЧНОЙ СИБИРИ, ДАЛЬНЕГО ВОСТОКА,     И КОЭФФИЦИЕНТОВ (РАЙОННЫХ, ЗА РАБОТУ В ВЫСОКОГОРНЫХ РАЙОНАХ, ЗА РАБОТУ В ПУСТЫННЫХ<br />И БЕЗВОДНЫХ МЕСТНОСТЯХ)&quot;<br />       В соответствии  с  Постановлением   Правительства   Российской<br />   Федерации  от  31 мая 1995 г.  N 537 &quot;О признании утратившими силу<br />   отдельных  положений  Постановления  Совета   Министров  РСФСР  от   22 октября 1990 г. N  458  &quot;Об упорядочении компенсаций гражданам,<br />   проживающим  в  районах  Севера&quot;  Министерство  труда   Российской<br />   Федерации постановляет:       Утвердить прилагаемое  разъяснение   &quot;О   порядке   начисления   процентных надбавок к заработной плате лицам, работающим в районах   Крайнего Севера,  приравненных к ним местностях,  в южных  районах   Восточной Сибири,  Дальнего Востока, и коэффициентов (районных, за   работу в высокогорных районах,  за работу в пустынных и  безводных   местностях)&quot;.   Министр труда РФ  Г.МЕЛИКЬЯН      Приложение   Утверждено  Постановлением      Министерства труда                                                 Российской Федерации      от 11 сентября 1995 г. N 49                                                    <br />РАЗЪЯСНЕНИЕ  от 11 сентября 1995 г. N 3  О ПОРЯДКЕ НАЧИСЛЕНИЯ ПРОЦЕНТНЫХ НАДБАВОК  К ЗАРАБОТНОЙ ПЛАТЕ ЛИЦАМ, РАБОТАЮЩИМ В РАЙОНАХ   КРАЙНЕГО СЕВЕРА, ПРИРАВНЕННЫХ К НИМ МЕСТНОСТЯХ,   В ЮЖНЫХ РАЙОНАХ ВОСТОЧНОЙ СИБИРИ, ДАЛЬНЕГО ВОСТОКА,  И КОЭФФИЦИЕНТОВ (РАЙОННЫХ, ЗА РАБОТУ В ВЫСОКОГОРНЫХ    РАЙОНАХ, ЗА РАБОТУ В ПУСТЫННЫХ И БЕЗВОДНЫХ МЕСТНОСТЯХ)<br />       «В связи  с  поступающими  обращениями  по  вопросу  применения<br />   Постановления Правительства Российской Федерации от 31 мая 1995 г.<br />   N 537 Министерство труда Российской Федерации разъясняет:<br />       1. Процентные надбавки к заработной плате лицам,  <u>работающим в<br />   районах Крайнего Севера</u>,  приравненных к ним местностях,  в  южных<br />   районах  Восточной  Сибири &lt;*&gt;,  Дальнего Востока,  и коэффициенты<br />   (районные, за работу в высокогорных районах, за работу в пустынных<br />   и  безводных местностях),  установленные к заработной плате лицам,<br />   работающим в местностях с неблагоприятными природно-климатическими   условиями,   начисляются   на   фактический   заработок,   <u>включая   вознаграждение   за   выслугу   лет</u>,   выплачиваемое   ежемесячно,<br />   ежеквартально или <u>единовременно</u>. … »<br />Согласно ответа ОАО «РЖД» работникам - Вознаграждение за преданность компании входит в расчёт среднего заработка для оплаты очередного отпуска и больничного листа, <br />и таким образом является частью фактического заработка истца.<br /><u>По целям и основаниям стимулирующая выплата Вознаграждение за преданность компании тождественна выплате Вознаграждения за выслугу лет, которое выплачивалось до 1 апреля 2007 года.</u><br />Кроме того, в «Порядке корректировки размера единовременного вознаграждения за преданность компании, выплачиваемого впервые» (Приложение к распоряжению ОАО «РЖД» от 20 июня 2008 №1310р) ответчик установил прямую зависимость размера единовременного вознаграждения за преданность компании от срока проработанного работником при получении им предыдущего Вознаграждения за выслугу лет, так как к примеру работник отработавший 5 лет, но имеющий небольшой стаж после 01.04.2007 получит минимальную выплату Вознаграждения за преданность компании в связи с тем, что уже получал аналогичную по сути выплату Вознаграждения за выслугу лет в течение большего периода из 5 лет.<br />Именно сама корректировка размера единовременного вознаграждения за преданность компании <u>в зависимости именно от срока работы работника в компании указывает, что срок работы (ВЫСЛУГА ЛЕТ) является основным критерием оценки при возникновении права работника на единовременное Вознаграждения за преданность компании.</u><br />В силу изложенного - <u>выплата единовременного Вознаграждение за преданность компании тождественна выплате Вознаграждения за выслугу лет</u> с той лишь разницей, что в первом локальном нормативном акте по сути – только иное название, а все существенные положения и основания соответствуют положениям и основаниям выплаты Вознаграждения за выслугу лет.<br />Поэтому, в силу того, что единовременное Вознаграждение за преданность компании является фактическим заработком истца, и единовременным вознаграждением за выслугу лет -  ответчик обязан начислить районный коэффициент 1.7 на сумму скорректированную выплату вознаграждения - 64 996.74 рубля.<br /><br /><br /><br />или ОБЪЯСНЕНИЕ -<br />ЕДИНОВРЕМЕННАЯ ВЫПЛАТА — 1) денежная сумма, выплачиваемая сразу целиком, а не частями; 2) форма денежного возмещения убытка; 3) страховое единовременно выплачиваемое пособие, например при выходе на пенсию, увольнении с работы (Райзберг Б. А., Лозовский Л. Ш., Стародубцева Е. Б. Современный экономический словарь. 5-е изд., перераб. и доп.).<br /> <br />&quot;Единовременное вознаграждение за преданность компании выплачивается единовременно работникам ОАО «ФПК, проработавшим в ОАО «ФПК» непрерывно 3 года, 5 лет, 10 лет, 15 лет и далее через каждые 5 лет в следующих размерах: 2 месячные тарифные ставки (оклада) - при продолжительности работы 3 года;<br />3 месячные тарифные ставки (оклада) - при продолжительности работы 5 лет;<br />4 месячные тарифные ставки (оклада) - при продолжительности работы 10 лет;<br />5 месячных тарифных ставок (окладов) - при продолжительности работы 15 лет и далее через каждые 5 лет&quot;<br />УЧИТЫВАЯ,<br />что указанная выплата согласно распоряжения ответчика №1310р от 20.06.2008 - для «стимулирования непрерывной трудовой деятельности»;<br />ясную и ОПРЕДЕЛЁННУЮ ПЕРИОДИЧНОСТЬ этой выплаты, <br />а также - установленную зависимость от качества и ценности труда, от деловых качеств работника,<br />то по сути - указанная выплата<br /> не единовременная, стимулирующая и поощрительная,<br />и эту выплату нельзя отнести к вознаграждению выплачиваемому единственный раз, <br />индивидуально на единичном основании, возникающем не периодически.<br />Поэтому - ответчик обязан начислить районный коэффициент 1.7 на сумму скорректированную выплату вознаграждения - 64 996.74 рубля.<br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_123151-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>vosexxx</b>  11.9.2012, 17:57</h4>
+			<p>подскажите пожалуйста&#33;  работаю проводником пас. вагонов почти 20 лет с 16.12.1992.в течении какого времени мне обязаны выплатить и когда за преданность?перерывов не было,сейчас я в оао ржд фпк.Да хотелось бы в конце декабря уволиться,понятно и деньги не потерять.
+			<br />
+			<!--IBF.ATTACHMENT_123786-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>bargest</b>  11.10.2012, 19:10</h4>
+			<p><!--quoteo(post=67363:date=8.1.2011, 11&#58;15:name=Ларьков Александр)--><div class='quotetop'>Цитата(Ларьков Александр &#064; 8.1.2011, 11&#58;15) <a href="index.php?act=findpost&amp;pid=67363"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Нет, не может&#33;<br /><br />Положение о выплате работникам ОАО «РЖД» единовременного вознаграждения за преданность компании Утверждено распоряжением ОАО «РЖД» от 20 июня 2008 года № 1310 р<br /><br /><br />3. Порядок исчисления продолжительности работы в ОАО «РЖД» для определения размера единовременного вознаграждения за преданность компании<br /><br /> 9. В продолжительность работы в ОАО «РЖД» включается время непрерывной работы в филиалах (структурных подразделениях филиала) и других структурных подразделениях ОАО «РЖД», аппарате управления ОАО «РЖД», в организациях федерального железнодорожного транспорта, имущество которых внесено в уставный капитал ОАО «РЖД», а также на освобождённых выборных и штатных должностях в первичных организациях профсоюза и органах Роспрофжела.<br /><br />При переводе работника из филиала ОАО «РЖД» (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД», аппарата управления ОАО «РЖД» в другой филиал или структурное подразделение ОАО «РЖД» непрерывная продолжительность работы сохраняется.<br /><b>10. Продолжительность работы (стаж работы) определяется на основании записей в трудовой книжке.</b>11. Стаж работы, дающий право на получение единовременного вознаграждения за преданность компании, не прерывается, но время перерывов в этот стаж не включается в следующих случаях:<br /><br /> <br /><br />а) при поступлении на работу в течение месяца после прекращения инвалидности или болезни, вызвавших увольнение из ОАО «РЖД» в соответствии с медицинским заключением, если работник вернулся на прежнее место работы либо поступил в другой филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «РЖД»;<br /><br /> <br /><br />б) при поступлении на работу в филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «РЖД» после увольнения из ОАО «РЖД» в связи с ликвидацией организации, сокращением численности или штата работников, если перерыв в работе не превышал трех месяцев;<br /><br /> <br /><br />в) при поступлении на работу в филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «РЖД» после увольнения из ОАО «РЖД» в связи с переводом мужа (жены) на работу в другую местность, если перерыв в работе не превышал трёх месяцев, не считая времени переезда к новому месту жительства;<br /><br /> <br /><br />г) при нахождении в отпуске по уходу за ребенком, предоставляемом женщинам до достижения ребёнком возраста трех лет;<br /><br /> <br /><br />д) при прохождении военной службы, если работник призывался из филиала (структурного подразделения филиала) или другого структурного подразделения ОАО «РЖД» и возвратился на работу в ОАО «РЖД» в течение трех месяцев после увольнения с военной службы по призыву.<br /><br /> <br /><br />12. У работников, уволившихся по собственному желанию и вновь поступивших на работу в филиал (структурное подразделение филиала) или другое структурное подразделение ОАО «Российские железные дороги», стаж, учитываемый для выплаты единовременного вознаграждения за преданность компании, прерывается.<!--QuoteEnd--></div><!--QuoteEEnd--><br /> В трудовой книжке запись об обучении в техническом училище (при поступлении официально было объявлено, что в стаж это время входит).  Сейчас мне говорят, что не входит (до этого четыре года в расчетном листе писали стаж с учетом этого времени).  Как правильно учитывать стаж?
+			<br />
+			<!--IBF.ATTACHMENT_127783-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Лекс Лексович</b>  10.6.2013, 8:17</h4>
+			<p>Здравствуйте&#33; Помогите разобраться в ситуации... Решил уволится по собственному желанию, в апреле было 3 года как отработал в РЖД, за преданность не получил, так как в положении написано в течении квартала. Решил поинтересоваться у расчетчиков когда мне произведут выплату, последовал такой ответ: - ни какой выплаты вам не будет, так как я должен отработать полнустью квартал&#33;&#33;&#33;
+			<br />
+			<!--IBF.ATTACHMENT_174759-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>alexcat</b>  10.6.2013, 8:49</h4>
+			<p>Чушь они городят. Три года полностью отработаны - обязаны заплатить.
+			<br />
+			<!--IBF.ATTACHMENT_174763-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Сургер</b>  8.10.2014, 17:02</h4>
+			<p>Помогите рассчитать преданность .  Стаж в 2014 году  35 лет.  тариф- 92,26. В бухгалтерии сказали  получать около  65 тыс. По-моему маловато.<br />
+			<br />
+			<!--IBF.ATTACHMENT_257752-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>23011967</b>  9.10.2014, 20:25</h4>
+			<p><!--quoteo(post=257752:date=8.10.2014, 18&#58;08:name=Сургер)--><div class='quotetop'>Цитата(Сургер &#064; 8.10.2014, 18&#58;08) <a href="index.php?act=findpost&amp;pid=257752"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Помогите рассчитать преданность .  Стаж в 2014 году  35 лет.  тариф- 92,26. В бухгалтерии сказали  получать около  65 тыс. По-моему маловато.<!--QuoteEnd--></div><!--QuoteEEnd--><br />5 окладов - максимум.
+			<br />
+			<!--IBF.ATTACHMENT_257939-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>ilkose</b>  10.10.2014, 3:49</h4>
+			<p>+50% если заранее определенные действия проводились.
+			<br />
+			<!--IBF.ATTACHMENT_257952-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Akkumulator60</b>  10.10.2014, 7:38</h4>
+			<p><!--quoteo(post=257939:date=9.10.2014, 21&#58;31:name=23011967)--><div class='quotetop'>Цитата(23011967 &#064; 9.10.2014, 21&#58;31) <a href="index.php?act=findpost&amp;pid=257939"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->5 окладов - максимум.<!--QuoteEnd--></div><!--QuoteEEnd--><br />или 5 месячных тарифных ставок.  Месяц берется средний, если не ошибаюсь - 168 часов норма. И пусть финансисты поправят, если что не так:<br /> 92.26 х 168 = 15499.68 месячная тарифная ставка. и умножаем на 5 = 77498,4 и минус 13% подоходный = 67423 р. <br />И вот ведь какая шняга получается -  устраивается молодой пацан сразу после армии на ставку 92.26 и через три года получает 2 тарифа: 30999,36р, проработав еще 2 года получает три тарифа: 46499,04р итого за первых 5 отработанных лет он получил 5 тарифов, или 77498.40 в рублях..... И где, скажите, тут &quot;преданность&quot;?  Отработавший 35 лет получает столько же, сколько получил только что устроившийся????<br /> Подачка это, а не преданность....
+			<br />
+			<!--IBF.ATTACHMENT_257959-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Twiks</b>  10.10.2014, 10:33</h4>
+			<p>за 15 лет тчм в сольвычегодске вроде за 100т получает.Но там система оценок и баллов
+			<br />
+			<!--IBF.ATTACHMENT_257968-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>саха</b>  10.10.2014, 11:17</h4>
+			<p><!--quoteo(post=257968:date=10.10.2014, 11&#58;39:name=Twiks)--><div class='quotetop'>Цитата(Twiks &#064; 10.10.2014, 11&#58;39) <a href="index.php?act=findpost&amp;pid=257968"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->за 15 лет тчм в сольвычегодске вроде за 100т получает.Но там система оценок и баллов<!--QuoteEnd--></div><!--QuoteEEnd--><br />Зависит как и везде,от оклада.У ТЧМ по 11 разряду около 25000 оклад
+			<br />
+			<!--IBF.ATTACHMENT_257971-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Алексей Д</b>  10.10.2014, 11:18</h4>
+			<p>получал за 10 лет 6 окладов <img src="http://railway.kanaries.ru/style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /> <br />2 оклада может добавить тчми поставя хорошие оценки.премия составила 149 т.р. при средней зарплате за норму 40-45т.р.только пол зарплаты налоги сожрали.
+			<br />
+			<!--IBF.ATTACHMENT_257972-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>фенечка</b>  6.12.2014, 18:58</h4>
+			<p>нахожусь в декрете. до декрета проработала полтора года,на следующий год у меня преданность компании 3 года. какую сумму я получу?
+			<br />
+			<!--IBF.ATTACHMENT_267332-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Андерс</b>  6.12.2014, 20:33</h4>
+			<p><!--quoteo(post=267332:date=6.12.2014, 18&#58;58:name=фенечка)--><div class='quotetop'>Цитата(фенечка &#064; 6.12.2014, 18&#58;58) <a href="index.php?act=findpost&amp;pid=267332"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->какую сумму я получу?<!--QuoteEnd--></div><!--QuoteEEnd--><br />2  месячные  тарифные  ставки  (оклада)
+			<br />
+			<!--IBF.ATTACHMENT_267351-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Twiks</b>  6.12.2014, 21:10</h4>
+			<p><!--quoteo(post=257972:date=10.10.2014, 11&#58;18:name=Алексей Д)--><div class='quotetop'>Цитата(Алексей Д &#064; 10.10.2014, 11&#58;18) <a href="index.php?act=findpost&amp;pid=257972"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->2 оклада может добавить тчми поставя хорошие оценки.<!--QuoteEnd--></div><!--QuoteEEnd--><br />чего никогда не бывает,либо по блату
+			<br />
+			<!--IBF.ATTACHMENT_267361-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>ilkose</b>  7.12.2014, 5:00</h4>
+			<p>В позапрошлом году была бумажка что минимум 1,5 оклада, в прошлом году что 1 оклад- так и давали. Нигде не видел документов по которым можно было бы требовать больше окладов за большую оценку. Если кто имеет подобные документы, просьба поделиться.
+			<br />
+			<!--IBF.ATTACHMENT_267386-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Gogy222</b>  7.12.2014, 6:43</h4>
+			<p>В 2011 году я получил 100 тыс. чистыми за 20 лет работы. Оценки были 3 и 4, потому что все это потом попадает на подпись начальнику, а он все пятерки зарубит, ибо не бывает ангелов-машинистов, чтоб на 5 работали.
+			<br />
+			<!--IBF.ATTACHMENT_267391-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DLP</b>  9.12.2014, 15:50</h4>
+			<p>вроде как с 2014 года преданность выплачивают с 5-ти до 10-ти лет один оклад, по новому кол. договору на 2014-2016 год
+			<br />
+			<!--IBF.ATTACHMENT_267853-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Карлсончик</b>  9.12.2014, 17:10</h4>
+			<p>DLP, то есть за 3 года уже не выплачивают?
+			<br />
+			<!--IBF.ATTACHMENT_267865-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>ilkose</b>  9.12.2014, 17:16</h4>
+			<p>Перепутал, думал про безаварийку разговор. Да, за большую оценку можно получить +50%
+			<br />
+			<!--IBF.ATTACHMENT_267867-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Akkumulator60</b>  9.12.2014, 17:27</h4>
+			<p><!--quoteo(post=267853:date=9.12.2014, 15&#58;50:name=DLP)--><div class='quotetop'>Цитата(DLP &#064; 9.12.2014, 15&#58;50) <a href="index.php?act=findpost&amp;pid=267853"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->вроде как с 2014 года преданность выплачивают с 5-ти до 10-ти лет один оклад, по новому кол. договору на 2014-2016 год<!--QuoteEnd--></div><!--QuoteEEnd--><br /><img src="http://railway.kanaries.ru/style_emoticons/default/ag.gif" style="vertical-align:middle" emoid=":ag:" border="0" alt="ag.gif" /> устроют экзамен - колдоговор читал - 3 оклада, не читал - 1 оклад....
+			<br />
+			<!--IBF.ATTACHMENT_267869-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DLP</b>  11.12.2014, 10:03</h4>
+			<p><!--quoteo(post=267865:date=9.12.2014, 18&#58;10:name=Карлсончик)--><div class='quotetop'>Цитата(Карлсончик &#064; 9.12.2014, 18&#58;10) <a href="index.php?act=findpost&amp;pid=267865"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->DLP, то есть за 3 года уже не выплачивают?<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />я так понял, что не выплачивают. от 5 до 10 лет-один оклад. Экономия  <img src="http://railway.kanaries.ru/style_emoticons/default/angry.gif" style="vertical-align:middle" emoid=":angry:" border="0" alt="angry.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_268174-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Twiks</b>  12.12.2014, 11:48</h4>
+			<p>всмысле?Что теперь за 3 года не платят?Может тем кто только,что устроился?Я в 11 году устроился....
+			<br />
+			<!--IBF.ATTACHMENT_268377-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Андерс</b>  12.12.2014, 13:15</h4>
+			<p><!--quoteo(post=267853:date=9.12.2014, 15&#58;50:name=DLP)--><div class='quotetop'>Цитата(DLP &#064; 9.12.2014, 15&#58;50) <a href="index.php?act=findpost&amp;pid=267853"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->вроде как с 2014 года преданность выплачивают с 5-ти до 10-ти лет один оклад, по новому кол. договору на 2014-2016 год<!--QuoteEnd--></div><!--QuoteEEnd--><br />&quot;вроде как&quot; - это из разряда &quot;одна бабка на базаре сказала&quot;. В кол.договоре нет ни слова про выплату вознаграждения за преданность  компании. Выплата регулируется Положением утвержденным распоряжением В.И.Якунина №1310р
+			<br />
+			<!--IBF.ATTACHMENT_268386-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Dani el</b>  12.12.2014, 21:12</h4>
+			<p><!--quoteo(post=268377:date=12.12.2014, 12&#58;48:name=Twiks)--><div class='quotetop'>Цитата(Twiks &#064; 12.12.2014, 12&#58;48) <a href="index.php?act=findpost&amp;pid=268377"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->всмысле?Что теперь за 3 года не платят?Может тем кто только,что устроился?Я в 11 году устроился....<!--QuoteEnd--></div><!--QuoteEEnd--><br />За 3 года должны платить, в нашем депо вывесили списки на получение данной выплаты в 2015году, те кто устроился в 2012 году - все в этом списке присутствуют
+			<br />
+			<!--IBF.ATTACHMENT_268453-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>jamworld</b>  4.1.2015, 13:58</h4>
+			<p><!--quoteo(post=268453:date=12.12.2014, 21&#58;12:name=Dani el)--><div class='quotetop'>Цитата(Dani el &#064; 12.12.2014, 21&#58;12) <a href="index.php?act=findpost&amp;pid=268453"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->За 3 года должны платить, в нашем депо вывесили списки на получение данной выплаты в 2015году, те кто устроился в 2012 году - все в этом списке присутствуют<!--QuoteEnd--></div><!--QuoteEEnd--><br />Но положительным моментом будет повышение этих зарплат в 2015 году. Согласно данным некоторых изданий запланировано повышение дважды в середине года на 14% и к концу года ещё на 29%. Помимо этого, руководством ОАО «РЖД» планируется большой перечень мероприятий, направленных на повышения статуса и заинтересованности работников компании. Одним из них будет установка специальной выплаты за верность компании, которую планируют выплачивать ежегодно сотрудникам, проработавшим не мене 3-х лет в РЖД и будет составлять примерно три оклада.<br /><br />P.S Тоесть если я устроился в середине декабря 2012 года я всё равно получу преданность за 3 года? (ремонт)
+			<br />
+			<!--IBF.ATTACHMENT_271841-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Akkumulator60</b>  4.1.2015, 16:20</h4>
+			<p><!--quoteo(post=271841:date=4.1.2015, 13&#58;58:name=jamworld)--><div class='quotetop'>Цитата(jamworld &#064; 4.1.2015, 13&#58;58) <a href="index.php?act=findpost&amp;pid=271841"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Но положительным моментом будет повышение этих зарплат в 2015 году. Согласно данным некоторых изданий запланировано повышение дважды в середине года на 14% и к концу года ещё на 29%. Помимо этого, руководством ОАО «РЖД» планируется большой перечень мероприятий, направленных на повышения статуса и заинтересованности работников компании. Одним из них будет установка специальной выплаты за верность компании, которую планируют выплачивать ежегодно сотрудникам, проработавшим не мене 3-х лет в РЖД и будет составлять примерно три оклада.<br /><br />P.S Тоесть если я устроился в середине декабря 2012 года я всё равно получу преданность за 3 года? (ремонт)<!--QuoteEnd--></div><!--QuoteEEnd--><br /><img src="http://railway.kanaries.ru/style_emoticons/default/ag.gif" style="vertical-align:middle" emoid=":ag:" border="0" alt="ag.gif" /> Вроде не первое апреля, а 4-е января....
+			<br />
+			<!--IBF.ATTACHMENT_271855-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Стивен</b>  4.1.2015, 16:48</h4>
+			<p><!--quoteo(post=271841:date=4.1.2015, 13&#58;58:name=jamworld)--><div class='quotetop'>Цитата(jamworld &#064; 4.1.2015, 13&#58;58) <a href="index.php?act=findpost&amp;pid=271841"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->P.S Тоесть если я устроился в середине декабря 2012 года я всё равно получу преданность за 3 года? (ремонт)<!--QuoteEnd--></div><!--QuoteEEnd--><br />Ремонт... А Вы уверенны, что еще работаете в ОАО РЖД? На сколько мне известно, ремонт уже совсем другая контора..
+			<br />
+			<!--IBF.ATTACHMENT_271857-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>jamworld</b>  4.1.2015, 19:20</h4>
+			<p><!--quoteo(post=271857:date=4.1.2015, 16&#58;48:name=Стивен)--><div class='quotetop'>Цитата(Стивен &#064; 4.1.2015, 16&#58;48) <a href="index.php?act=findpost&amp;pid=271857"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Ремонт... А Вы уверенны, что еще работаете в ОАО РЖД? На сколько мне известно, ремонт уже совсем другая контора..<!--QuoteEnd--></div><!--QuoteEEnd--><br />Кол.договор вообще то до 2016 года
+			<br />
+			<!--IBF.ATTACHMENT_271875-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Nemo</b>  4.1.2015, 19:28</h4>
+			<p>У нас ремонтное депо осталось. Правда штат человек 50 для содержания исправности зданий, оборудования и обслуживания приборов БД. Остальное ТМХ.<br />В итоге реформ РЖД: было одно депо, стало 3.
+			<br />
+			<!--IBF.ATTACHMENT_271877-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Akkumulator60</b>  4.1.2015, 20:35</h4>
+			<p><!--quoteo(post=271877:date=4.1.2015, 19&#58;28:name=Nemo)--><div class='quotetop'>Цитата(Nemo &#064; 4.1.2015, 19&#58;28) <a href="index.php?act=findpost&amp;pid=271877"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->У нас ремонтное депо осталось. Правда штат человек 50 для содержания исправности зданий, оборудования и обслуживания приборов БД. Остальное ТМХ.<br />В итоге реформ РЖД: было одно депо, стало 3.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Это еще вам повезло... У нас в итоге реформ, было одно депо - не осталось ни одного....
+			<br />
+			<!--IBF.ATTACHMENT_271891-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Эдикрафт</b>  4.1.2015, 23:49</h4>
+			<p><!--quoteo(post=271877:date=4.1.2015, 19&#58;28:name=Nemo)--><div class='quotetop'>Цитата(Nemo &#064; 4.1.2015, 19&#58;28) <a href="index.php?act=findpost&amp;pid=271877"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->У  РЖД: было одно депо, стало 3.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Фокусники да и только.
+			<br />
+			<!--IBF.ATTACHMENT_271915-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>dim8847</b>  5.1.2015, 4:11</h4>
+			<p><!--quoteo(post=271857:date=4.1.2015, 16&#58;48:name=Стивен)--><div class='quotetop'>Цитата(Стивен &#064; 4.1.2015, 16&#58;48) <a href="index.php?act=findpost&amp;pid=271857"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Ремонт... А Вы уверенны, что еще работаете в ОАО РЖД? На сколько мне известно, ремонт уже совсем другая контора..<!--QuoteEnd--></div><!--QuoteEEnd--><br />Дим коллдоговор рждешный действует в тмх до 2016года. что дальше будет - неизвестно.<br />интересовался потому как батя ушёл на пенсию из ремонта а потом их  в ТМХ перевели. хотел билет бесплатный взять - побрили. мотивировали что теперь не РЖД. вот я и разбирался
+			<br />
+			<!--IBF.ATTACHMENT_271921-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Арсен</b>  14.5.2015, 16:35</h4>
+			<p>Подскажите пожалуйста когда ждать выплату за 3 года? 10 марта 2015 было 3 года как работаю. И мед комиссию проходил годичную там было написано стаж 3 года.
+			<br />
+			<!--IBF.ATTACHMENT_293959-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Андерс</b>  14.5.2015, 17:53</h4>
+			<p><!--quoteo(post=293959:date=14.5.2015, 16&#58;35:name=Арсен)--><div class='quotetop'>Цитата(Арсен &#064; 14.5.2015, 16&#58;35) <a href="index.php?act=findpost&amp;pid=293959"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Подскажите пожалуйста когда ждать выплату за 3 года? 10 марта 2015 было 3 года как работаю. И мед комиссию проходил годичную там было написано стаж 3 года.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Скорей всего получите в июле в июньскую зарплату.<br /><!--quoteo--><IDXSKIP><div class='quotetop'>Цитата</div></IDXSKIP><div class='quotemain'><!--quotec-->6.  Единовременное  вознаграждение  за  преданность  компании выплачивается  в течение  квартала  после даты достижения  установленной продолжительности  работы  в  ОАО  «РЖД»  на  основании  приказа руководителя  филиала  (структурного  подразделения  филиала) или другого структурного  подразделения  ОАО  «РЖД» за счет  средств  фонда заработной платы, предусмотренных  на эти цели.<!--QuoteEnd--></div><!--QuoteEEnd-->
+			<br />
+			<!--IBF.ATTACHMENT_293973-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Арсен</b>  14.5.2015, 18:57</h4>
+			<p>Спасибо за ответ.
+			<br />
+			<!--IBF.ATTACHMENT_293987-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>denis-500</b>  1.3.2016, 16:05</h4>
+			<p>Всем доброго времени суток. Переехал с семьёй с ДВ на Юг на ПМЖ, переводом в депо не взяли, пришлось уволиться 3 июня 2015г и устроиться в новое депо 18 июня 2015г, по стажу у меня в сентябре 2016г будет 15лет, светит ли мне выплата за преданность компании ???<br />
+			<br />
+			<!--IBF.ATTACHMENT_333122-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Nordwest</b>  1.3.2016, 16:11</h4>
+			<p><!--quoteo(post=333122:date=1.3.2016, 16&#58;05:name=denis&#045;500)--><div class='quotetop'>Цитата(denis&#045;500 &#064; 1.3.2016, 16&#58;05) <a href="index.php?act=findpost&amp;pid=333122"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Всем доброго времени суток. Переехал с семьёй с ДВ на Юг на ПМЖ, переводом в депо не взяли, пришлось уволиться 3 июня 2015г и устроиться в новое депо 18 июня 2015г, по стажу у меня в сентябре 2016г будет 15лет, светит ли мне выплата за преданность компании ???<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Ага&#33; светит&#33; только в конце тоннеля и через 2,5 года вы к нему подберетесь. А про 15 лет забудьте&#33;
+			<br />
+			<!--IBF.ATTACHMENT_333123-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>denis-500</b>  1.3.2016, 16:47</h4>
+			<p><!--quoteo(post=333123:date=1.3.2016, 16&#58;11:name=Nordwest)--><div class='quotetop'>Цитата(Nordwest &#064; 1.3.2016, 16&#58;11) <a href="index.php?act=findpost&amp;pid=333123"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Ага&#33; светит&#33; только в конце тоннеля и через 2,5 года вы к нему подберетесь. А про 15 лет забудьте&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />По сути, стаж не прерывался, чем аргументируете, хотелось бы услышать юридически приправленные ответы?&#33;
+			<br />
+			<!--IBF.ATTACHMENT_333132-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Akkumulator60</b>  1.3.2016, 17:00</h4>
+			<p><!--quoteo(post=333132:date=1.3.2016, 16&#58;47:name=denis&#045;500)--><div class='quotetop'>Цитата(denis&#045;500 &#064; 1.3.2016, 16&#58;47) <a href="index.php?act=findpost&amp;pid=333132"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->По сути, стаж не прерывался, чем аргументируете?<!--QuoteEnd--></div><!--QuoteEEnd--><br /><img src="http://railway.kanaries.ru/style_emoticons/default/ag.gif" style="vertical-align:middle" emoid=":ag:" border="0" alt="ag.gif" /> по сути, может и не прерывался, а по факту -  разрыв. Срока пошел с момента трудоустройства на новом месте.
+			<br />
+			<!--IBF.ATTACHMENT_333133-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vredtech</b>  1.3.2016, 20:46</h4>
+			<p><!--quoteo(post=333122:date=1.3.2016, 16&#58;05:name=denis&#045;500)--><div class='quotetop'>Цитата(denis&#045;500 &#064; 1.3.2016, 16&#58;05) <a href="index.php?act=findpost&amp;pid=333122"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Всем доброго времени суток. Переехал с семьёй с ДВ на Юг на ПМЖ, переводом в депо не взяли, пришлось уволиться 3 июня 2015г и устроиться в новое депо 18 июня 2015г, по стажу у меня в сентябре 2016г будет 15лет, светит ли мне выплата за преданность компании ???<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Не светит, так как увольнение по собственному.<br /><br />Сам в аналогичной ситуации 8 лет стажа потерял для расчета преданности.
+			<br />
+			<!--IBF.ATTACHMENT_333166-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Андерс</b>  1.3.2016, 21:01</h4>
+			<p><!--quoteo(post=333132:date=1.3.2016, 16&#58;47:name=denis&#045;500)--><div class='quotetop'>Цитата(denis&#045;500 &#064; 1.3.2016, 16&#58;47) <a href="index.php?act=findpost&amp;pid=333132"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->По сути, стаж не прерывался, чем аргументируете, хотелось бы услышать юридически приправленные ответы?&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Распоряжение 1310р от 20 июня 2008г<br />О выплате работникам ОАО  «РЖД» единовременного вознаграждения за преданность  компании <br />12.  У  работников,  уволившихся  по  собственному  желанию  и  вновь поступивших  на работу  в  филиал  (структурное  подразделение  филиала) или другое  Стуктурное  подразделение  ОАО  «РЖД»,  стаж,  учитываемый  для выплаты  единовременного  вознаграждения  за  преданность  компании, <b>прерывается.</b>
+			<br />
+			<!--IBF.ATTACHMENT_333168-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Андерс</b>  1.3.2016, 21:57</h4>
+			<p><!--quoteo(post=333168:date=1.3.2016, 21&#58;01:name=Андерс)--><div class='quotetop'>Цитата(Андерс &#064; 1.3.2016, 21&#58;01) <a href="index.php?act=findpost&amp;pid=333168"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Распоряжение 1310р от 20 июня 2008г<!--QuoteEnd--></div><!--QuoteEEnd--><br />Прошу прощения. 1310 отменено. Действует новое, но суть та же.
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		<a href="http://railway.kanaries.ru/index.php?s=aac31032053da3491adb9ac8e8695a2a&amp;act=attach&amp;type=post&amp;id=23045" title="" target="_blank"><img src="http://railway.kanaries.ru/style_images/ip.boardpr/folder_mime_types/pdf.gif" alt="" /></a>
+&nbsp;<a href="http://railway.kanaries.ru/index.php?s=aac31032053da3491adb9ac8e8695a2a&amp;act=attach&amp;type=post&amp;id=23045" title="" target="_blank">Протокол_о_внесении_извенений_в_расп._преданности_компании_от_19.06.2015__24.pdf</a> ( 594,07 килобайт )
+<span class="desc">: 142</span><br /> 
+	</div>
+</div>
+<div>&nbsp;</div>
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>denis-500</b>  2.3.2016, 2:00</h4>
+			<p>Поганенько получается, 13 дней между трудоустройством и ты уже без преданности... юристы ржд крахоборы..
+			<br />
+			<!--IBF.ATTACHMENT_333196-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Кормчий</b>  2.3.2016, 6:48</h4>
+			<p><!--quoteo(post=333196:date=2.3.2016, 2&#58;00:name=denis&#045;500)--><div class='quotetop'>Цитата(denis&#045;500 &#064; 2.3.2016, 2&#58;00) <a href="index.php?act=findpost&amp;pid=333196"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->... юристы ржд крахоборы..<!--QuoteEnd--></div><!--QuoteEEnd--><br />При чём тут юристы?<br />РЖД само себе придумало положение о выплатах за преданность.<br />Вполне естественно желание заплатить поменьше.<br />Тем более, в Вашем случае - стаж всёж прервался.
+			<br />
+			<!--IBF.ATTACHMENT_333203-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Akkumulator60</b>  2.3.2016, 6:50</h4>
+			<p><!--quoteo(post=257959:date=10.10.2014, 7&#58;38:name=Akkumulator60)--><div class='quotetop'>Цитата(Akkumulator60 &#064; 10.10.2014, 7&#58;38) <a href="index.php?act=findpost&amp;pid=257959"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->или 5 месячных тарифных ставок.  Месяц берется средний, если не ошибаюсь - 168 часов норма. И пусть финансисты поправят, если что не так:<br /> 92.26 х 168 = 15499.68 месячная тарифная ставка. и умножаем на 5 = 77498,4 и минус 13% подоходный = 67423 р. <br />И вот ведь какая шняга получается -  устраивается молодой пацан сразу после армии на ставку 92.26 и через три года получает 2 тарифа: 30999,36р, проработав еще 2 года получает три тарифа: 46499,04р итого за первых 5 отработанных лет он получил 5 тарифов, или 77498.40 в рублях..... И где, скажите, тут &quot;преданность&quot;?  Отработавший 35 лет получает столько же, сколько получил только что устроившийся????<br /> Подачка это, а не преданность....<!--QuoteEnd--></div><!--QuoteEEnd--><br />не переживай. Я уже давно на цифрах проверил, что &quot;преданность&quot; не сильно теряешь, если увольняешься и вновь устраиваешься...
+			<br />
+			<!--IBF.ATTACHMENT_333204-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>maiki</b>  2.3.2016, 18:23</h4>
+			<p><!--quoteo(post=333122:date=1.3.2016, 16&#58;05:name=denis&#045;500)--><div class='quotetop'>Цитата(denis&#045;500 &#064; 1.3.2016, 16&#58;05) <a href="index.php?act=findpost&amp;pid=333122"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Всем доброго времени суток. Переехал с семьёй с ДВ на Юг на ПМЖ, переводом в депо не взяли, пришлось уволиться 3 июня 2015г и устроиться в новое депо 18 июня 2015г, по стажу у меня в сентябре 2016г будет 15лет, светит ли мне выплата за преданность компании ???<!--QuoteEnd--></div><!--QuoteEEnd--><br />По прежнему месту работы ПРИ УВОЛЬНЕНИИ должны были выплатить преданность за прошедшее время... Если нет, то Стивен поможет в составлении заявления. ИМХО...
+			<br />
+			<!--IBF.ATTACHMENT_333278-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Nordwest</b>  3.3.2016, 17:36</h4>
+			<p><!--quoteo(post=333132:date=1.3.2016, 16&#58;47:name=denis&#045;500)--><div class='quotetop'>Цитата(denis&#045;500 &#064; 1.3.2016, 16&#58;47) <a href="index.php?act=findpost&amp;pid=333132"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->По сути, стаж не прерывался, чем аргументируете, хотелось бы услышать юридически приправленные ответы?&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Ну вот Вам и аргументировали)))<br />Причем со всеми аргументами (постами) я полностью согласен )))))
+			<br />
+			<!--IBF.ATTACHMENT_333361-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Сделан в СССР</b>  3.3.2016, 19:09</h4>
+			<p><!--quoteo(post=333203:date=2.3.2016, 6&#58;48:name=Кормчий)--><div class='quotetop'>Цитата(Кормчий &#064; 2.3.2016, 6&#58;48) <a href="index.php?act=findpost&amp;pid=333203"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->При чём тут юристы?<br />РЖД само себе придумало положение о выплатах за преданность.<br />Вполне естественно желание заплатить поменьше.<br />Тем более, в Вашем случае - стаж всёж прервался.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Какая же это преданность?<br />Захотел - уволился, захотел - вернулся.<br />Понятно, на то были причины, но это беготня какая-то, а не преданность.
+			<br />
+			<!--IBF.ATTACHMENT_333367-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>denis-500</b>  4.3.2016, 7:29</h4>
+			<p><!--quoteo(post=333278:date=2.3.2016, 18&#58;23:name=maiki)--><div class='quotetop'>Цитата(maiki &#064; 2.3.2016, 18&#58;23) <a href="index.php?act=findpost&amp;pid=333278"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->По прежнему месту работы ПРИ УВОЛЬНЕНИИ должны были выплатить преданность за прошедшее время... Если нет, то Стивен поможет в составлении заявления. ИМХО...<!--QuoteEnd--></div><!--QuoteEEnd--><br />Так и есть, подошел к своему начальнику от.кадров, он тоже самое сказал...Буду дальше разбираться.
+			<br />
+			<!--IBF.ATTACHMENT_333407-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>denis-500</b>  4.3.2016, 7:37</h4>
+			<p><!--quoteo(post=333367:date=3.3.2016, 19&#58;09:name=Сделан в СССР)--><div class='quotetop'>Цитата(Сделан в СССР &#064; 3.3.2016, 19&#58;09) <a href="index.php?act=findpost&amp;pid=333367"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Какая же это преданность?<br />Захотел - уволился, захотел - вернулся.<br />Понятно, на то были причины, но это беготня какая-то, а не преданность.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Рыба ищет где глубже, а человек где лучше.Что ж мне корни пускать, и жизни не видеть кроме железки.<br />PS:Не не захотел вернуться, а хотел переводом, не получилось, пришлось через увольнение, компанию не предал, вновь устроился,перерыв 15 дней.
+			<br />
+			<!--IBF.ATTACHMENT_333409-->
+			</p>
+		</div><!--Copyright-->
+
+<p class="printcopy">Форум Invision Power Board (http://nulled.ws)<br />&copy; Invision Power Services (http://nulled.ws)</p>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,1831 @@
+ak-bars.ru/bars
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Официальный сайт хоккейного клуба "Барс". Главная страница</title>
+	<link rel="stylesheet" href="/theme/css/style.css?v=49" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'/>
+	<link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon" />
+	<link rel="icon" type="image/png" href="/theme/img/akbarsicon.png" />
+	<link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="alternate" type="application/rss+xml" title="Ак Барс, Барс и Ирбис. Вся лента новостей" href="/news/rss/akbars.rss" />
+	<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="/js/autoscaling-menu.js"></script>
+	<script type="text/javascript" src="/js/jquery.jscrollpane.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.simplemodal.1.4.4.min.js"></script>
+	<script type="text/javascript" src="/js/subscribe.js"></script>
+        
+		<script type="text/javascript" src="/js/projekktor/projekktor-1.3.08.min.js"></script>
+	<script type="text/javascript" src="/js/modalvideo.2.js"></script>
+	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/cluetip/jquery.cluetip.min.js"></script>
+	<script type="text/javascript" src="/js/highslide-full.packed.js"></script>
+	<link href="/js/projekktor/theme/maccaco/projekktor.style.css" rel="stylesheet" type="text/css" />
+	<link href="/js/cluetip/jquery.cluetip.css" rel="stylesheet" type="text/css" />
+	
+<link rel="stylesheet" type="text/css" href="/theme/highslide/highslide.css" />
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/theme/highslide/highslide-ie6.css" />
+<![endif]-->
+
+<style type="text/css">
+.highslide-header span {
+  display: none;
+}
+.highslide-heading {
+  border-bottom: 1px solid #dddddd;
+  padding: 0 20px 4px 0;
+}
+.close a {
+  display: block;
+  float: right;
+  background: url(/theme/highslide/graphics/closeX.png);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: relative;
+  right: -20px;
+}
+.close a:hover {
+  background-position: 0 16px;
+}
+.highslide-header {display: none}
+.news-hs-table {font-size: 12px}
+.news-hs-table tr {vertical-align: top}
+.news-hs-table td {padding: 2px}
+</style>
+
+<script type='text/javascript'>
+$(document).ready(function(){
+
+    set_game_tips();
+    $('a.playoff-results').cluetip({local:true,cluezIndex: 400,showTitle: false,cluetipClass: 'rounded', width: 300});
+  
+
+        window.news_tab=0;
+        window.news_cookie="ntab2";
+      
+   setTimeout(function() {
+     $(".subscribe-div").fadeIn(500);
+   }, 15000);
+
+});
+$(window).load(function(){
+if (window.top !== window.self){
+         document.write = "";
+         window.top.location = window.self.location;
+         setTimeout(function(){document.body.innerHTML="";},1);
+         window.self.onload=function(evt){document.body.innerHTML="";};
+        }
+
+  $('div.video-gallery a.next').trigger('click');
+  
+    setTimeout(function (){
+      (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));      
+    }, 1000);
+    setTimeout(function (){
+    jQuery.ajax({
+               url: "//vk.com/js/api/openapi.js?146",
+               dataType: "script",
+               cache: true,
+               crossDomain: true
+            }).done(function() {
+                VK.Widgets.Group("vk_groups", {mode: 0, width: "240", height: "400", color1: "303030", color2: "48C34A", color3: "357C49"}, 56643473);
+                VK.Widgets.CommunityMessages("vk_community_messages", 56643473, {expanded: "0",tooltipButtonText: "Есть вопрос? Задавайте, мы Вам поможем!"});
+            });
+    }, 1000);
+});
+    function set_game_tips(){
+      $('a.gametips').cluetip({cluetipClass: 'rounded', width: 340, cluezIndex: 400, showTitle: false, activation: 'click', sticky: true, 
+        closeText:'<div style="text-align: right"><img src="/theme/img/cross.png" alt="close" /></div>', closePosition: 'top'
+      });
+    }
+      var max_news_date = [];
+   max_news_date['bars-all'] = '20170123191600';
+  
+  function show_game_video(id, aspect_ratio){
+    show_modal_player('video-player', 'ma'+id, aspect_ratio);
+    return false;
+  }
+  
+
+  hs.graphicsDir = '/theme/highslide/graphics/';
+  //hs.transitions = ['expand', 'crossfade'];
+  //hs.restoreCursor = null;
+  hs.outlineType = 'rounded-white';
+  hs.wrapperClassName = 'colored-border';
+  hs.showCredits = false;
+  hs.headingId = 'close';
+  hs.cacheAjax = false;
+
+  hs.Expander.prototype.onAfterGetHeading = function (sender) {
+   if (sender.heading) {
+      sender.heading.innerHTML += this.a.title;
+   }
+}
+
+</script>
+        <script type="text/javascript">
+          function open_new(href){
+            var new_win = window.open();
+            new_win.opener = null;
+            new_win.location = href;
+            return false;
+          }
+		$(function(){
+			$('.scrollpane').jScrollPane({
+				verticalDragMinHeight:70,
+				verticalDragMaxHeight:70,
+				showArrows:true
+			});
+			
+		});
+                is_news_loading = false;
+                
+                function load_news(filter){
+                  if (is_news_loading) return false;
+                  is_news_loading = true;
+                  $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/news/load.php",
+                    data: {"filter": filter, "from": max_news_date[filter]},
+                    success: function (data) {
+                        $("#news-list-"+filter).append(data['news']);
+                        max_news_date[filter] = data['time'];
+                        $('.scrollpane').jScrollPane({
+				verticalDragMinHeight:70,
+				verticalDragMaxHeight:70,
+				showArrows:true
+			});
+                        is_news_loading = false;
+                    },
+                    error: function () {
+                      is_news_loading = false;
+                    }
+                  });
+                  return false;
+                }                
+                var calendar_month = 7;
+                var calendar_year = 2017;
+                var calendar_curr_year = calendar_year;
+                var calendar_team = 2;
+                var calendar_min_month = 1;
+                var calendar_min_year = 2013;
+                var calendar_max_month = 8;
+                var calendar_max_year = 2017;
+                var monthNames = [
+'январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'              ];
+                
+                function calendar_move(dir){
+                  var next_year = calendar_year;
+                  if(dir==1){
+                    var next_month = calendar_month+1;
+                    if(next_month>12){
+                      next_month=1; next_year++; 
+                    }
+                    $is_ok = (next_year<calendar_max_year) || (next_year==calendar_max_year && next_month<=calendar_max_month);
+                  }
+                  else{
+                    var next_month = calendar_month-1;
+                    if(next_month<1){
+                      next_month=12; next_year--; 
+                    }
+                    $is_ok = (next_year>calendar_min_year) || (next_year==calendar_min_year && next_month>=calendar_min_month);
+                  }
+                  if($is_ok){
+                    $.ajax({
+                       type: "POST", 
+                       url: "/calendar/loadtable.php",
+                       data: ({month: next_month, year: next_year, team: calendar_team}),
+                       success: function(data){
+                         $('.calendar table.datepicker-calendar').replaceWith(data);
+                         calendar_year = next_year;
+                         calendar_month = next_month;
+                         $('.calendar div.datepicker-title span').text(monthNames[calendar_month-1]+(calendar_year!=calendar_curr_year ? ' '+calendar_year:''));
+                         set_game_tips();
+                         return false;
+                       },
+                       error: function(XMLHttpRequest, textStatus, errorThrown){
+                         alert('Ошибка связи с сервером!');
+                         return false;
+                       }
+                    });                     
+                  }
+                  return false;
+                }
+	</script>
+	<script type="text/javascript" src="/js/jquery.main2.js"></script>
+	<!--[if lte IE 9]><script type="text/javascript" src="/js/pie.js"></script><![endif]-->
+        
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-2454689-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="http://www.khl.ru/navmenu/scripts/stmenu.js" charset="utf-8"></script>        
+</head>
+<body>
+<script type="text/javascript" src="http://www.khl.ru/navmenu/scripts/b_all_ru.js" charset="utf-8"></script>	<div class="w1">
+		<div id="wrapper">
+			<div id="header">
+<div class="header-holder">
+  <IDXSKIP><div class="header-image">
+    <a href="/news/14086.html" target="_blank"><img src="/theme/infoban/quest2017.jpg" width="800" height="105" alt="" /></a>  </div></IDXSKIP>
+  <div class="sector">
+  <IDXSKIP><div class="sponsor-block">
+    <img src="/theme/images/sponsors2017-4.png" border="0" width="420" height="70" usemap="#sponsormap" alt="" />
+    <map name="sponsormap">
+      <area alt="" title="Татнефть" href="http://www.tatneft.ru/" shape="rect" coords="0,2,189,68" style="outline:none;" target="_self" />
+	  <area alt="" title="Фонд содействия развитию физической культуры и спорта" shape="rect" coords="269,2,382,55" style="outline:none;" target="_self" />
+	  
+    </map>    
+  </div></IDXSKIP>
+<div class="enter-block">
+  <form action="http://www.ak-bars.ru/users/login.php" method="post" id="enter-form">
+		<fieldset>
+			<IDXSKIP><div class="block block01 active">
+				<div class="block-holder">
+					<div class="avatar">
+						<img src="/theme/images/icon01.png" width="22" height="20" alt="" />
+					</div>
+					<div class="link">
+						<a href="#" class="enter">Войти</a> / <a href="/users/registration.php">Зарегистрироваться</a>
+					</div>
+					<div class="holder">
+						<div class="open-link">
+							<a href="#"></a>
+						</div>
+					</div>
+				</div>
+			</div></IDXSKIP>
+			<div class="block block02">
+				<div class="block-holder">
+					<div class="table-block">
+						<IDXSKIP><div class="image">
+							<div class="avatar">
+								<img src="/theme/images/icon01.png" width="22" height="20" alt="" />
+							</div>
+						</div></IDXSKIP>
+						<div class="holder">
+							<IDXSKIP><div class="link-sector">
+								<div class="link">
+									Войти / <a href="/users/registration.php">Зарегистрироваться</a>
+								</div>
+								<div class="link-section">
+									<div class="open-link active">
+										<a href="#"></a>
+									</div>
+								</div>
+							</div></IDXSKIP>
+							<IDXSKIP><div class="inputs-col">
+								<div class="col01">
+									<div class="text01">
+										<input type="text" value="" name="nickname" placeholder="логин или email" />
+									</div>
+								</div>
+								<div class="col02">
+									<div class="text01">
+										<input type="password" value="" placeholder="Пароль" name="password" />
+									</div>
+								</div>
+							</div></IDXSKIP>
+							<div class="row">
+                                                            <IDXSKIP><span style="color: white; vertical-align: middle; margin: 3px 0"><input type="checkbox" name="savepassword" value="1" /> Сохранить пароль</span></IDXSKIP>
+								<IDXSKIP><a href="/users/remind.php" class="rel">Забыли пароль?</a></IDXSKIP>
+								<div class="button-holder">
+<div style="float: left"><span style="color: white">Войти через соцсеть:</span>        <a href="https://oauth.vk.com/authorize?client_id=5618036&redirect_uri=http://www.ak-bars.ru/users/auth/&response_type=code&scope=4194304&state=v00f92f50d323d5382bc8a8083a82358dad"><img src="/theme/img/social/1.png" width="22" height="22" alt="ВКонтакте" style="vertical-align: middle; margin: 2px" /></a></div>                                                                  <span><input class="button01" value="Войти" type="submit" /></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+                  <input type="hidden" name="cmd" value="enter" />
+		</fieldset>
+	</form>
+</div>
+</div>
+</div>
+<div class="header-frame">
+        <div class="logo-holder">
+                <IDXSKIP><h1 class="logo"><a href="/">барс</a></h1></IDXSKIP>
+                <div class="slogan">
+                        <IDXSKIP><p>Официальный сайт<br/>хоккейного клуба</p></IDXSKIP>
+                </div>
+        </div>
+        <div class="cup-gallery">
+                <ul class="gallery">
+                        <IDXSKIP><li>
+                                <div class="image">
+                                        <img src="/theme/images/cup_gagarin.png" width="95" height="136" alt="" />
+                                </div>
+                                <div class="holder">
+                                        <p>
+                                                Обладатель Кубка <br/>Гагарина 2009 и 2010                                        </p>
+                                </div>
+                        </li></IDXSKIP>
+                        <IDXSKIP><li>
+                                <div class="image">
+                                  <img src="/theme/images/cup_europe.png" width="95" height="136" alt="" />
+                                </div>
+                                <div class="holder3">
+                                        <p>
+                                                Обладатель<br/>Кубка Европейских<br/>чемпионов 2007                                        </p>
+                                </div>
+                        </li></IDXSKIP>
+                        <IDXSKIP><li>
+                                <div class="image">
+                                  <img src="/theme/images/cup_continent.png" width="95" height="136" alt="" />                                        
+                                </div>
+                                <div class="holder3">
+                                        <p>
+                                                Обладатель<br />Континентального<br />Кубка 2008                                        </p>
+                                </div>
+                        </li></IDXSKIP>
+                        <IDXSKIP><li>
+                                <div class="image">
+                                        <img src="/theme/images/cup_rf.png" width="95" height="136" alt="" />
+                                </div>
+                                <div class="holder">
+                                        <p>
+                                                Чемпион России<br />1998, 2006, 2009 и 2010                                        </p>
+                                </div>
+                        </li></IDXSKIP>
+                </ul>
+        </div>
+        <IDXSKIP><div class="header-section">
+                <div class="header-wrapper">                        <ul class="soc-list">
+                                <li>
+                                        <a href="/" title="На главную страницу">
+                                                <img src="/theme/images/soc01.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="/m/" title="Мобильная версия сайта">
+                                                <img src="/theme/images/mobile-icon.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>                          
+                                <li>
+                                        <a href="/news/rss/" title="RSS-подписка">
+                                                <img src="/theme/images/soc02.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="https://vk.com/hcakbars" onclick="return open_new(this);" title="ВКонтакте">
+                                                <img src="/theme/images/vk.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>                                
+                                <li>
+                                        <a href="https://www.facebook.com/hcakbars/" onclick="return open_new(this);" title="Facebook">
+                                                <img src="/theme/images/facebook.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="https://twitter.com/hcakbars" onclick="return open_new(this);" title="Твиттер">
+                                                <img src="/theme/images/soc03.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="http://instagram.com/hcakbars" onclick="return open_new(this);" title="Инстаграм">
+                                                <img src="/theme/images/soc04.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="http://www.youtube.com/hcakbars" onclick="return open_new(this);" title="Канал на Youtube">
+                                                <img src="/theme/images/soc05.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="/feedback/" title="Написать письмо">
+                                                <img src="/theme/images/soc06.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="/sitemap/" title="Карта сайта">
+                                                <img src="/theme/images/soc07.png" width="22" height="22" alt="" />
+                                        </a>
+                                </li>
+                        </ul>
+                        <div class="search-holder">
+                                <div class="search-block">
+                                        <form action="/search/" method="post">
+                                                <fieldset>
+                                                        <input type="submit" value="" class="button02" />
+                                                        <div class="text02">
+                                                                <input type="text" name="REQ" value="" placeholder="Поиск" />
+                                                        </div>
+                                                </fieldset>
+                                        </form>
+                                </div>
+                        </div>
+                </div>
+        </div></IDXSKIP>
+</div>
+<ul class="nav" id="main-nav">
+	<li><a href="/">АК БАРС</a>
+		<ul>
+			<li><a href="/news/archive/akbars-all/">Новости</a></li>
+			<li><a href="/team/">Состав</a></li>
+			<li><a href="/calendar/">Календарь</a></li>
+			<li><a href="/results/">Результаты</a></li>
+			<li><a href="/table/">Таблицы</a></li>
+			<li><a href="/statistics/">Статистика</a></li>
+			<li><a href="/playoff/">Плей-офф</a></li>
+			<li><a href="/reglament/">Регламент</a></li>
+		</ul>
+	</li>
+	<li class="active"><a href="/bars/">БАРС</a>
+		<ul>
+			<li><a href="/news/archive/bars-all/">Новости</a></li>
+			<li><a href="/team/2016-2.html">Состав</a></li>
+			<li><a href="/calendar/2.html">Календарь</a></li>
+			<li><a href="/results/2.html">Результаты</a></li>
+			<li><a href="/table/team02.html">Таблицы</a></li>
+			<li><a href="/statistics/02.html">Статистика</a></li>
+			<li><a href="/playoff/2016-2.html">Плей-офф</a></li>
+			<li><a href="/reglament/vhl.html">Регламент</a></li>
+		</ul>
+	</li>
+	<IDXSKIP><li><a href="/irbis/">ИРБИС</a>
+		<ul>
+			<li><a href="/news/archive/irbis-all/">Новости</a></li>
+			<li><a href="/team/2016-10.html">Состав</a></li>
+			<li><a href="/calendar/10.html">Календарь</a></li>
+			<li><a href="/results/10.html">Результаты</a></li>
+			<li><a href="/table/2016-10.html">Таблицы</a></li>
+			<li><a href="/statistics/10.html">Статистика</a></li>
+			<li><a href="/playoff/2016-10.html">Плей-офф</a></li>
+			<li><a href="/reglament/mhl.html">Регламент</a></li>
+		</ul>
+	</li></IDXSKIP>
+	<IDXSKIP><li><a href="/arena/">БИЛЕТЫ</a>
+		<ul>
+			<li><a href="/arena/">Купить билет</a></li>
+			<li><a href="/tickets/">Ценовая программа</a></li>
+			<li><a href="/tickets/sberbank.php">Терминалы Сбербанка</a></li>
+			<li><a href="/tickets/akbarsbank.php">Терминалы &quot;АК БАРС&quot; Банка</a></li>
+			<li><a href="http://www.tatneftarena.ru/bilety/kassy-ledovogo-dvortsa" target="_blank">Кассы</a></li>
+			<li><a href="/arena/vip.php">VIP-ложи</a></li>
+		</ul>
+	</li></IDXSKIP>
+	<IDXSKIP><li><a href="/school/about/">СДЮСШ</a>
+		<ul>
+			<li><a href="/school/about/">О школе</a></li>
+			<li><a href="/team/2016-7.html">Команды</a></li>
+		</ul>
+	</li></IDXSKIP>
+	<IDXSKIP><li><a href="/video/">МЕДИА</a>
+		<ul>
+			<li><a href="/photo/list.html">Фотогалерея</a></li>
+			<li><a href="/video/">Видео c матчей</a></li>
+			<li><a href="/video/archive.php">Видео ролики</a></li>
+			<li><a href="/video/archive.php?season=2016-2017&amp;kind=4">Комната фаната</a></li>
+			<li><a href="/programs/">Программки</a></li>
+			<li><a href="/download/">Скачать</a></li>
+		</ul>
+	</li></IDXSKIP>
+	<IDXSKIP><li><a href="http://shop.ak-bars.ru/">Магазин</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li><a href="http://www.ab-forum.ru/">ФАН-СЕКТОР</a>
+		<ul>
+			<li><a href="/gbook/">Гостевая книга</a></li>
+			<li><a href="http://www.ab-forum.ru/" target="_blank">Форум</a></li>
+			<li><a href="/toto/">Прогнозы</a></li>
+			<li><a href="/links/">Ссылки</a></li>
+			<li><a href="/vote/">Голосования</a></li>
+		</ul>
+	</li></IDXSKIP>
+	<IDXSKIP><li><a href="/users/card_rules.php">КАРТА БОЛЕЛЬЩИКА</a>
+		<ul>
+			<li><a href="/users/ordercard.php">Купить карту</a></li>
+			<li><a href="/users/regcard.php">Регистрация карты</a></li>
+			<li><a href="/users/card_rules.php">Правила акции</a></li>
+			<li><a href="/users/card_faq.php">Вопросы и ответы</a></li>
+		</ul>
+	</li></IDXSKIP>
+	<IDXSKIP><li><a href="/gbook/">ГОСТЕВАЯ</a>
+	</li></IDXSKIP>
+</ul>
+				
+			</div>
+			
+                  <div id="main">
+<div class="content-block top_gallery">
+	<div class="tabset">
+		<div class="wrapper-tab-control">			<ul class="tab-control">
+				<li class="active"><a href="#">Новости Барса</a></li>
+			</ul>
+				<a href="/news/archive/bars-all/" class="all_news">Архив новостей</a>
+		</div>
+<ul class="gallery">
+  <li>
+    <div class="image">
+      <a href="/news/14013.html"><img src="/news/preview2/14000/14013.jpg" width="596" height="436" alt="" /></a>
+    </div>
+    <div class="description">
+      <div class="description-holder">
+        <div class="topic">
+          <span class="date">15.05.2017</span>
+        </div>
+        <div class="link">
+          <a href="/news/14013.html">Утвержден план подготовки казанского «Барса» к новому Чемпионату ВХЛ</a>
+        </div>
+        <p>Руководством и тренерским составом хоккейной команды «Барс» утверждён план подготовки команды к новому Чемпионату ВХЛ</p>
+      </div>
+    </div>
+   </li>
+</ul>      		<div class="tab active" style="display:block;">
+    <div class="news-gallery">
+      <div class="scrollpane-holder">
+        <div class="scrollpane">
+          <ul class="switcher" id="news-list-bars-all">
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">20.05.2017</span>
+    <a href="/news/14029.html">Илья Голубев: Красно-бело-зеленые цвета навсегда в моем сердце</a>
+  </div>
+  <div class="holder">
+    <p>21-летний вратарь выступает за команды клубной системы с 2013 года // www.ak-bars.ru (724/<a href="/comments/1-14029.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">15.05.2017</span>
+    <a href="/news/14013.html">Утвержден план подготовки казанского «Барса» к новому Чемпионату ВХЛ</a>
+  </div>
+  <div class="holder">
+    <p>Руководством и тренерским составом хоккейной команды «Барс» утверждён план подготовки команды к новому Чемпионату ВХЛ // Пресс-служба ХК &quot;АК БАРС&quot; (1284/<a href="/comments/1-14013.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">09.03.2017</span>
+    <a href="/news/13728.html">Айрат Кадейкин: «Многие ребята в течение сезона добавили в тактическом и техническом плане»</a>
+  </div>
+  <div class="holder">
+    <p>Главный тренер казанского «Барса» в интервью «Ак Барс Инфо» поделился своей оценкой минувшего сезона // Пресс-служба ХК &quot;АК БАРС&quot; (1645/<a href="/comments/1-13728.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">19.02.2017</span>
+    <a href="/news/13640.html">Определились пары участников розыгрыша «Братины»</a>
+  </div>
+  <div class="holder">
+    <p>Завершившееся регулярное первенство ВХЛ определило всех участников предстоящего розыгрыша плей-офф // Пресс-служба ХК &quot;АК БАРС&quot; (994/<a href="/comments/1-13640.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">19.02.2017</span>
+    <a href="/news/13639.html">«Барс» потерпел самое крупное поражение за время выступлений в ВХЛ</a>
+  </div>
+  <div class="holder">
+    <p>«Динамо» (Санкт-Петербург) – «Барс» (Казань). 8:0 (2:0, 3:0, 3:0) // Пресс-служба ХК &quot;АК БАРС&quot; (1485/<a href="/comments/1-13639.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">17.02.2017</span>
+    <a href="/news/13629.html">«Барсы» уступили в Твери</a>
+  </div>
+  <div class="holder">
+    <p>ТХК (Тверь) – «Барс» (Казань). 2:1 (0:0, 1:0, 1:1) // Пресс-служба ХК &quot;АК БАРС&quot; (965/<a href="/comments/1-13629.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">15.02.2017</span>
+    <a href="/news/13619.html">«Барс» проиграл в Воскресенске</a>
+  </div>
+  <div class="holder">
+    <p>«Химик» (Воскресенск) – «Барс» (Казань). 2:0 (0:0, 1:0, 1:0) // Пресс-служба ХК &quot;АК БАРС&quot; (968/<a href="/comments/1-13619.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">13.02.2017</span>
+    <a href="/news/13611.html">Буллитное поражение в Подмосковье</a>
+  </div>
+  <div class="holder">
+    <p>«Динамо» (Балашиха) – «Барс» (Казань). 2:1 (0:1, 0:0, 1:0, 0:0, буллиты – 1:0) // Пресс-служба ХК &quot;АК БАРС&quot; (1071/<a href="/comments/1-13611.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">08.02.2017</span>
+    <a href="/news/13591.html">В последнем домашнем матче «Барс» потерял шансы на место в плей-офф</a>
+  </div>
+  <div class="holder">
+    <p>«Барс» (Казань) – «Торос» (Нефтекамск). 0:3 (0:1, 0:1, 0:1) // Пресс-служба ХК &quot;АК БАРС&quot; (1337/<a href="/comments/1-13591.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">07.02.2017</span>
+    <a href="/news/13585.html">Завтра: «Барс» против «Тороса»</a>
+  </div>
+  <div class="holder">
+    <p>Завтра, 8 февраля, «Барс» проведет свой очередной матч Чемпионата ВХЛ // Пресс-служба ХК &quot;АК БАРС&quot; (1074/<a href="/comments/1-13585.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">06.02.2017</span>
+    <a href="/news/13584.html">«Барс» впервые выиграл у «Ижстали»</a>
+  </div>
+  <div class="holder">
+    <p>«Барс» (Казань) – «Ижсталь» (Ижевск). 3:2 (0:0, 1:2, 1:0, 1:0) // Пресс-служба ХК &quot;АК БАРС&quot; (1282/<a href="/comments/1-13584.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">05.02.2017</span>
+    <a href="/news/13581.html">Завтра «Барс» встречается с «Ижсталью»</a>
+  </div>
+  <div class="holder">
+    <p>Завтра, 6 февраля, казанский «Барс» проведет очередной матч Чемпионата ВХЛ // Пресс-служба ХК &quot;АК БАРС&quot; (1004/<a href="/comments/1-13581.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">04.02.2017</span>
+    <a href="/news/13580.html">Результативная победа «Барса»</a>
+  </div>
+  <div class="holder">
+    <p>«Барс» (Казань) – «Молот-Прикамье» (Пермь). 5:4 (3:1, 1:1, 1:2) // Пресс-служба ХК &quot;АК БАРС&quot; (1325/<a href="/comments/1-13580.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">03.02.2017</span>
+    <a href="/news/13577.html">Завтра: «Барс» – «Молот-Прикамье»</a>
+  </div>
+  <div class="holder">
+    <p>Завтра, 4 февраля, «Барс» в очередном матче Чемпионата ВХЛ встречается с командой «Молот-Прикамье» (Пермь) // Пресс-служба ХК &quot;АК БАРС&quot; (1098/<a href="/comments/1-13577.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">02.02.2017</span>
+    <a href="/news/13575.html">«Барс» уступил «Спутнику»</a>
+  </div>
+  <div class="holder">
+    <p>«Барс» (Казань) – «Спутник» (Нижний Тагил). 1:3 (0:0, 0:1, 1:2) // Пресс-служба ХК &quot;АК БАРС&quot; (1034/<a href="/comments/1-13575.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">01.02.2017</span>
+    <a href="/news/13564.html">Завтра: «Барс» против «Спутника»</a>
+  </div>
+  <div class="holder">
+    <p>Завтра, 2 февраля, казанский «Барс» в очередном матче Чемпионата ВХЛ встречается с командой «Спутник» (Нижний Тагил) // Пресс-служба ХК &quot;АК БАРС&quot; (911/<a href="/comments/1-13564.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">29.01.2017</span>
+    <a href="/news/13554.html">Минорное завершение выездной серии</a>
+  </div>
+  <div class="holder">
+    <p>«Зауралье» (Курган) – «Барс» (Казань). 3:0 (0:0, 1:0, 2:0) // Пресс-служба ХК &quot;АК БАРС&quot; (969/<a href="/comments/1-13554.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">27.01.2017</span>
+    <a href="/news/13544.html">«Барс» берет реванш у «Рубина» за поражение в Казани</a>
+  </div>
+  <div class="holder">
+    <p>«Рубин» (Тюмень) – «Барс» (Казань). 3:4 (0:1, 2:0, 1:3) // Пресс-служба ХК &quot;АК БАРС&quot; (931/<a href="/comments/1-13544.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li class="
+even
+">
+  <div class="topic">
+    <span class="date">25.01.2017</span>
+    <a href="/news/13530.html">Поражение в Орске</a>
+  </div>
+  <div class="holder">
+    <p>«Южный Урал» (Орск) – «Барс» (Казань). 4:1 (1:0, 2:0, 1:1) // Пресс-служба ХК &quot;АК БАРС&quot; (864/<a href="/comments/1-13530.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+<li>
+  <div class="topic">
+    <span class="date">23.01.2017</span>
+    <a href="/news/13522.html">«Барс» проиграл, ведя в счёте весь матч</a>
+  </div>
+  <div class="holder">
+    <p>«Челмет» (Челябинск) – «Барс» (Казань). 6:5 (1:2, 2:1, 2:2. 1:0) // Пресс-служба ХК &quot;АК БАРС&quot; (1024/<a href="/comments/1-13522.html">0</a>)
+       
+    </p>
+  </div>
+</li>
+
+
+          </ul>
+          <div class="news-list-load">
+            <a href="#" onclick="return load_news('bars-all');">Загрузить еще новости...</a>
+          </div>
+        </div>
+      </div>  
+     </div>
+   </div>	</div>
+</div>
+				
+				<div class="wrapper-cols">
+					<div class="three-cols">
+						<div class="col01">
+<div class="content-block">
+	<div class="tabset02">
+		<div class="tabcontrol-holder calendar_left">
+			<ul class="tabcontrol">
+				<li class="active"><a rel="all_rez" href="#">Результаты</a></li>
+				<li><a rel="all_cal" href="#">Календарь</a></li>
+			</ul>
+			<div class="link">
+				<span class="all_rez"><a href="/results/2.html">все результаты</a></span>
+				<span class="all_cal"><a href="/calendar/2.html">весь календарь</a></span>
+			</div>
+		</div>
+		<div class="tab" style="display:block;">
+<table class="table01">
+<tr>
+        <th class="th01"></th>
+	<th class="th02"></th>
+	<th class="th03"></th>
+	<th></th>
+      </tr><tr class="title">
+<td colspan="3"><strong>18.04.2017</strong></td>
+<td></td>
+</tr>
+<tr><td class="align-right"><strong>Динамо (Балашиха)</strong></td>
+           <td class="align-center"><strong>—</strong></td>
+           <td class="align-left"><strong>Торпедо (Усть-Каменогорск)</strong></td>
+           <td class="last-td">
+           <span>2&nbsp;:&nbsp;1</span>
+           </td></tr><tr class="title">
+<td colspan="3"><strong>17.04.2017</strong></td>
+<td></td>
+</tr>
+<tr><td class="align-right"><strong>Динамо (Балашиха)</strong></td>
+           <td class="align-center"><strong>—</strong></td>
+           <td class="align-left"><strong>Торпедо (Усть-Каменогорск)</strong></td>
+           <td class="last-td">
+           <span>5&nbsp;:&nbsp;2</span>
+           </td></tr><tr class="title">
+<td colspan="3"><strong>14.04.2017</strong></td>
+<td></td>
+</tr>
+<tr><td class="align-right"><strong>Торпедо (Усть-Каменогорск)</strong></td>
+           <td class="align-center"><strong>—</strong></td>
+           <td class="align-left"><strong>Динамо (Балашиха)</strong></td>
+           <td class="last-td">
+           <span>1&nbsp;:&nbsp;3</span>
+           </td></tr><tr class="title">
+<td colspan="3"><strong>13.04.2017</strong></td>
+<td></td>
+</tr>
+<tr><td class="align-right"><strong>Торпедо (Усть-Каменогорск)</strong></td>
+           <td class="align-center"><strong>—</strong></td>
+           <td class="align-left"><strong>Динамо (Балашиха)</strong></td>
+           <td class="last-td">
+           <span>1&nbsp;:&nbsp;2</span>
+           </td></tr><tr class="title">
+<td colspan="3"><strong>07.04.2017</strong></td>
+<td></td>
+</tr>
+<tr><td class="align-right"><strong>Рубин (Тюмень)</strong></td>
+           <td class="align-center"><strong>—</strong></td>
+           <td class="align-left"><strong>Торпедо (Усть-Каменогорск)</strong></td>
+           <td class="last-td">
+           <span>1&nbsp;:&nbsp;5</span>
+           </td></tr></table>		</div>
+		<div class="tab">
+		</div>
+	</div>
+</div>
+<div class="content-block02">
+	<div class="content-title">
+		<strong>Фотогалерея</strong>
+	</div>
+	<div class="switch-gallery">
+		<div class="image-block">
+			<div class="image">
+				<a href="/photo/1178.html"><img src="/photo/preview/1178.jpg" width="420" height="275" alt="" /></a>
+			</div>
+			<div class="link">
+				<a href="/photo/1178.html">Динамо (Санкт-Петербург) - Барс</a>
+			</div>
+		</div>
+		<ul class="switcher">
+			<li>
+				<div class="image">
+					<a href="/photo/1174.html"><img src="/photo/preview/1174.jpg" width="150" height="100" alt="" /></a>
+				</div>
+				<div class="link">
+					<a href="/photo/1174.html">ТХК (Тверь) - Барс</a>
+				</div>
+			</li>
+			<li>
+				<div class="image">
+					<a href="/photo/1173.html"><img src="/photo/preview/1173.jpg" width="150" height="100" alt="" /></a>
+				</div>
+				<div class="link">
+					<a href="/photo/1173.html">Химик (Воскресенск) - Барс</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+    <div class="content-block02">
+        <div class="tabset02">
+                <div class="tabcontrol-holder">
+                        <ul class="tabcontrol">
+                                <li class="active"><a href="#">Билеты</a></li>
+                                <li><a href="#">Арена</a></li>
+                        </ul>
+                </div>
+                <div class="tab" style="display:block;">
+                        <div class="ticket-block">
+                                <div class="image">
+                                        <img src="/theme/images/img09.jpg" width="635" height="225" alt="" />
+                                </div>
+                                <div class="description">
+                                        <div class="link2">
+                                                <span>См. также</span> <a href="/tickets/">ценовую программу на сезон 2016-2017</a>
+                                        </div>
+                                        <span class="title01">Вы можете приобрести билеты на матчи:</span>
+                                        <ul class="simple-list">
+                                                <li>в кассах ледового дворца спорта</li>
+                                                <li>в терминалах <a href="/tickets/sberbank.php">Сбербанка</a></li>
+                                                <li>забронировать через интернет</li>
+                                                <li>приобрести электронный билет через интернет</li>
+                                        </ul>
+                                        <div class="link2">
+                                                <span>См. также</span> <a href="/reglament/doc/reg_2016-2017fans.pdf">правила поведения в спортсооружении</a>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="tab">
+                        <div class="ticket-block">
+                                <div class="image">
+                                        <img src="/theme/images/arena-bg.jpg" width="635" height="225" alt="" />
+                                </div>
+                                <div class="description">
+                                    <div class="tna"><a href="/arena/"><img style="" src="/theme/images/tna.png" width="251" height="213" alt="" /></a></div>
+                                        <span class="title01">ТАТНЕФТЬ-АРЕНА</span>
+                                        <div class="address">Адрес: 420126, Республика Татарстан, г.Казань,<br />ул.Чистопольская, д.42<br />
+                                        Сайт: <a href="http://www.tatneftarena.ru">www.tatneftarena.ru</a>
+                                        </div>
+                                        <div class="link2">
+                                                <span>См. также</span> <a href="/reglament/khl-fans.html">правила поведения в спортсооружении</a>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+    </div>      
+<div class="content-block">
+	<div class="tabset02">
+		<div class="tabcontrol-holder">
+			<ul class="tabcontrol">
+				<li class="active"><a rel="all_rez" href="#">Регулярный чемпионат</a></li>
+			</ul>
+		</div>
+		<div class="tab" style="display:block">
+<ul class="gamers-list2">	<li>
+		<span class="title04">Бомбардиры</span>		<div class="holder">			<div class="image">
+				<img src="/photo/players/155/392.jpg" width="155" height="170" alt="" />
+			</div>
+			<ul>
+				<li>
+					<span>Протапович Александр</span>
+					<strong>20</strong>
+				</li>
+				<li class="even">
+					<span>Голубев Денис</span>
+					<strong>16</strong>
+				</li>
+				<li>
+					<span>Галеев Рузаль</span>
+					<strong>15</strong>
+				</li>
+				<li class="even">
+					<span>Архипов Дмитрий</span>
+					<strong>12</strong>
+				</li>
+				<li>
+					<span>Ястребков Всеволод</span>
+					<strong>11</strong>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li>
+		<span class="title04">Снайперы</span>		<div class="holder">			<div class="image">
+				<img src="/photo/players/155/392.jpg" width="155" height="170" alt="" />
+			</div>
+			<ul>
+				<li>
+					<span>Протапович Александр</span>
+					<strong>11</strong>
+				</li>
+				<li class="even">
+					<span>Галеев Рузаль</span>
+					<strong>10</strong>
+				</li>
+				<li>
+					<span>Ястребков Всеволод</span>
+					<strong>8</strong>
+				</li>
+				<li class="even">
+					<span>Архипов Дмитрий</span>
+					<strong>6</strong>
+				</li>
+				<li>
+					<span>Бойко Владислав</span>
+					<strong>6</strong>
+				</li>
+			</ul>
+		</div>
+	</li>
+	<li>
+		<span class="title04">Ассистенты</span>		<div class="holder">			<div class="image">
+				<img src="/photo/players/155/341.jpg" width="155" height="170" alt="" />
+			</div>
+			<ul>
+				<li>
+					<span>Голубев Денис</span>
+					<strong>14</strong>
+				</li>
+				<li class="even">
+					<span>Протапович Александр</span>
+					<strong>9</strong>
+				</li>
+				<li>
+					<span>Марин Марк</span>
+					<strong>9</strong>
+				</li>
+				<li class="even">
+					<span>Савельев Антон</span>
+					<strong>9</strong>
+				</li>
+				<li>
+					<span>Ибрагимов Марат</span>
+					<strong>8</strong>
+				</li>
+			</ul>
+		</div>
+	</li>
+</ul><div class="statistic-link" style="margin: 0 10px 10px;">
+	<span><a href="/statistics/02.html">Вся статистика...</a></span>
+</div>
+		</div>
+	</div>
+</div>
+                                                
+						</div>
+						<div class="col02">
+<div class="content-block">
+	<span class="title02">Прошедший матч</span>
+      <div class="game-block">        <div class="game-date">
+          <span>19 февраля 17:00</span>
+          <span class="game-online"><a href="http://www.ak-bars.ru/online/33025.html">онлайн</a></span>
+        </div>        <div class="game-holder">
+          <div class="block">
+            <div class="image">
+              <img src="/theme/img/tlogo94/dinamo-spb-vhl.png" width="94" height="71" alt="" />
+            </div>
+            <strong>Динамо</strong>
+            <span>Санкт-Петербург</span>
+          </div>
+          <div class="block align-right">
+            <div class="image">
+              <img src="/theme/img/tlogo94/bars.png" width="94" height="71" alt="" />
+            </div>
+            <strong>Барс</strong>
+            <span>Казань</span>
+          </div>
+          <div class="score-big">
+            <span>8</span>:<span>0</span>
+          </div>
+          
+          
+        </div>		<div class="panel">
+			<ul class="options-list02">
+            <li>
+              <a href="/news/games/33025.html" class="game-block-news" onclick="return hs.htmlExpand(this, { objectType: 'ajax'} )" title="Новости">
+                <div class="icon">
+                  <img src="/theme/images/icon10.png" width="16" height="15" alt="" />
+                </div>
+              </a>
+              <span>Новости</span>
+            </li>            <li>
+              <a href="/protocol/33025-game.html"><div class="icon">
+                <img src="/theme/images/icon11.png" width="12" height="16" alt="" />
+              </div></a>
+              <span>Протокол</span>
+            </li>            <li>
+              <a href="/photo/1178.html"><div class="icon">
+                <img src="/theme/images/icon13.png" width="16" height="13" alt="" />
+              </div></a>
+              <span>Фото</span>
+            </li>			</ul>
+		</div>
+	</div>
+</div>
+<div class="content-block">
+	<span class="title02">Предыдущий матч</span>
+      <div class="game-block">        <div class="game-date">
+          <span>17 февраля 19:00</span>
+          <span class="game-online"><a href="http://www.ak-bars.ru/online/32910.html">онлайн</a></span>
+        </div>        <div class="game-holder">
+          <div class="block">
+            <div class="image">
+              <img src="/theme/img/tlogo94/thk.png" width="94" height="71" alt="" />
+            </div>
+            <strong>ТХК</strong>
+            <span>Тверь</span>
+          </div>
+          <div class="block align-right">
+            <div class="image">
+              <img src="/theme/img/tlogo94/bars.png" width="94" height="71" alt="" />
+            </div>
+            <strong>Барс</strong>
+            <span>Казань</span>
+          </div>
+          <div class="score-big">
+            <span>2</span>:<span>1</span>
+          </div>
+          
+          
+        </div>		<div class="panel">
+			<ul class="options-list02">
+            <li>
+              <a href="/news/games/32910.html" class="game-block-news" onclick="return hs.htmlExpand(this, { objectType: 'ajax'} )" title="Новости">
+                <div class="icon">
+                  <img src="/theme/images/icon10.png" width="16" height="15" alt="" />
+                </div>
+              </a>
+              <span>Новости</span>
+            </li>            <li>
+              <a href="/protocol/32910-game.html"><div class="icon">
+                <img src="/theme/images/icon11.png" width="12" height="16" alt="" />
+              </div></a>
+              <span>Протокол</span>
+            </li>            <li>
+              <a href="/photo/1174.html"><div class="icon">
+                <img src="/theme/images/icon13.png" width="16" height="13" alt="" />
+              </div></a>
+              <span>Фото</span>
+            </li>			</ul>
+		</div>
+	</div>
+</div>
+<div class="content-block">
+	<div class="tabset02">
+		<div class="tabcontrol-holder">
+			<ul class="tabcontrol">
+				<li class="active"><a href="#">Плей-офф</a></li>
+				<li><a href="#">ВХЛ</a></li>
+			</ul>
+		</div>
+		<div class="tab" style="display:block;">
+<table class="table02">
+	<tbody>
+		<tr>
+			<th class="title" colspan="2">ФИНАЛ</th>
+		</tr>
+		<tr>
+			<th style="text-align: center;">Команды</th>
+			<th><span>Счет</span></th>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span>Торпедо - Динамо Бал</span></td>
+			<td><a class="playoff-results" href="#total174-242-228" rel="#total174-242-228" onclick="return false;">0 : 4</a></td>
+		</tr>
+		<tr>
+			<th class="title" colspan="2">1/2 ФИНАЛА</th>
+		</tr>
+		<tr>
+			<th style="text-align: center;">Команды</th>
+			<th><span>Счет</span></th>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span>Торпедо - Рубин</span></td>
+			<td><a class="playoff-results" href="#total174-242-217" rel="#total174-242-217" onclick="return false;">4 : 2</a></td>
+		</tr>
+		<tr class="even">
+			<td style="text-align: center;"><span>Динамо Бал - Зауралье</span></td>
+			<td><a class="playoff-results" href="#total174-228-223" rel="#total174-228-223" onclick="return false;">4 : 0</a></td>
+		</tr>
+		<tr>
+			<th class="title" colspan="2">1/4 ФИНАЛА</th>
+		</tr>
+		<tr>
+			<th style="text-align: center;">Команды</th>
+			<th><span>Счет</span></th>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span>Торпедо - Динамо Спб</span></td>
+			<td><a class="playoff-results" href="#total174-242-253" rel="#total174-242-253" onclick="return false;">4 : 3</a></td>
+		</tr>
+		<tr class="even">
+			<td style="text-align: center;"><span>Сарыарка - Зауралье</span></td>
+			<td><a class="playoff-results" href="#total174-216-223" rel="#total174-216-223" onclick="return false;">2 : 4</a></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span>СКА-Нева - Рубин</span></td>
+			<td><a class="playoff-results" href="#total174-241-217" rel="#total174-241-217" onclick="return false;">3 : 4</a></td>
+		</tr>
+		<tr class="even">
+			<td style="text-align: center;"><span>Спутник - Динамо Бал</span></td>
+			<td><a class="playoff-results" href="#total174-218-228" rel="#total174-218-228" onclick="return false;">1 : 4</a></td>
+		</tr>
+		<tr>
+			<th class="title" colspan="2">1/8 ФИНАЛА</th>
+		</tr>
+		<tr>
+			<th style="text-align: center;">Команды</th>
+			<th><span>Счет</span></th>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span>Торпедо - Ижсталь</span></td>
+			<td><a class="playoff-results" href="#total174-242-214" rel="#total174-242-214" onclick="return false;">4 : 1</a></td>
+		</tr>
+		<tr class="even">
+			<td style="text-align: center;"><span>Сарыарка - Звезда</span></td>
+			<td><a class="playoff-results" href="#total174-216-239" rel="#total174-216-239" onclick="return false;">4 : 1</a></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span>Торос - Динамо Спб</span></td>
+			<td><a class="playoff-results" href="#total174-220-253" rel="#total174-220-253" onclick="return false;">2 : 4</a></td>
+		</tr>
+		<tr class="even">
+			<td style="text-align: center;"><span>ТХК - Рубин</span></td>
+			<td><a class="playoff-results" href="#total174-232-217" rel="#total174-232-217" onclick="return false;">0 : 4</a></td>
+		</tr>
+		<tr>
+			<td style="text-align: center;"><span>СКА-Нева - ХК Рязань</span></td>
+			<td><a class="playoff-results" href="#total174-241-229" rel="#total174-241-229" onclick="return false;">4 : 0</a></td>
+		</tr>
+		<tr class="even">
+			<td style="text-align: center;"><span>Спутник - Ермак</span></td>
+			<td><a class="playoff-results" href="#total174-218-219" rel="#total174-218-219" onclick="return false;">4 : 3</a></td>
+		</tr>
+		<tr>
+			<td rowspan="1" style="text-align: center;"><span>Динамо Бал. - Нефтяник</span></td>
+			<td><a class="playoff-results" href="#total174-228-159" rel="#total174-228-159" onclick="return false;">4 : 2</a></td>
+		</tr>
+		<tr class="even">
+			<td style="text-align: center;"><span>Зауралье - Сокол</span></td>
+			<td><a class="playoff-results" href="#total174-223-224" rel="#total174-223-224" onclick="return false;">4 : 3</a></td>
+		</tr>
+	</tbody>
+</table>
+<div id="total174-242-228" style="display: none">13.04.2017 Торпедо - <strong>Динамо</strong> - <strong>1 : 2</strong><br />14.04.2017 Торпедо - <strong>Динамо</strong> - <strong>1 : 3</strong><br />17.04.2017 <strong>Динамо</strong> - Торпедо - <strong>5 : 2</strong><br />18.04.2017 <strong>Динамо</strong> - Торпедо - <strong>2 : 1</strong><br /></div><div id="total174-242-217" style="display: none">28.03.2017 Торпедо - <strong>Рубин</strong> - <strong>0 : 1 ОТ</strong><br />29.03.2017 <strong>Торпедо</strong> - Рубин - <strong>4 : 1</strong><br />01.04.2017 Рубин - <strong>Торпедо</strong> - <strong>1 : 2 ОТ</strong><br />02.04.2017 Рубин - <strong>Торпедо</strong> - <strong>0 : 2</strong><br />05.04.2017 Торпедо - <strong>Рубин</strong> - <strong>2 : 4</strong><br />07.04.2017 Рубин - <strong>Торпедо</strong> - <strong>1 : 5</strong><br /></div><div id="total174-228-223" style="display: none">29.03.2017 <strong>Динамо</strong> - Зауралье - <strong>2 : 0</strong><br />30.03.2017 <strong>Динамо</strong> - Зауралье - <strong>2 : 1 ОТ</strong><br />02.04.2017 Зауралье - <strong>Динамо</strong> - <strong>1 : 3</strong><br />03.04.2017 Зауралье - <strong>Динамо</strong> - <strong>2 : 4</strong><br /></div><div id="total174-242-253" style="display: none">12.03.2017 Торпедо - <strong>Динамо</strong> - <strong>2 : 3</strong><br />13.03.2017 <strong>Торпедо</strong> - Динамо - <strong>3 : 2 ОТ</strong><br />16.03.2017 <strong>Динамо</strong> - Торпедо - <strong>5 : 1</strong><br />17.03.2017 Динамо - <strong>Торпедо</strong> - <strong>1 : 2 ОТ</strong><br />20.03.2017 <strong>Торпедо</strong> - Динамо - <strong>4 : 3</strong><br />22.03.2017 <strong>Динамо</strong> - Торпедо - <strong>4 : 3 ОТ</strong><br />24.03.2017 <strong>Торпедо</strong> - Динамо - <strong>5 : 2</strong><br /></div><div id="total174-216-223" style="display: none">12.03.2017 <strong>Сарыарка</strong> - Зауралье - <strong>3 : 1</strong><br />13.03.2017 Сарыарка - <strong>Зауралье</strong> - <strong>2 : 3 ОТ</strong><br />16.03.2017 <strong>Зауралье</strong> - Сарыарка - <strong>3 : 1</strong><br />17.03.2017 Зауралье - <strong>Сарыарка</strong> - <strong>0 : 3</strong><br />20.03.2017 Сарыарка - <strong>Зауралье</strong> - <strong>1 : 3</strong><br />22.03.2017 <strong>Зауралье</strong> - Сарыарка - <strong>3 : 2 ОТ</strong><br /></div><div id="total174-241-217" style="display: none">13.03.2017 <strong>СКА-Нева</strong> - Рубин - <strong>3 : 1</strong><br />14.03.2017 СКА-Нева - <strong>Рубин</strong> - <strong>0 : 2</strong><br />17.03.2017 <strong>Рубин</strong> - СКА-Нева - <strong>4 : 1</strong><br />18.03.2017 Рубин - <strong>СКА-Нева</strong> - <strong>1 : 3</strong><br />21.03.2017 СКА-Нева - <strong>Рубин</strong> - <strong>0 : 2</strong><br />23.03.2017 Рубин - <strong>СКА-Нева</strong> - <strong>2 : 3 ОТ</strong><br />25.03.2017 СКА-Нева - <strong>Рубин</strong> - <strong>3 : 4 ОТ</strong><br /></div><div id="total174-218-228" style="display: none">13.03.2017 Спутник - <strong>Динамо</strong> - <strong>1 : 4</strong><br />14.03.2017 Спутник - <strong>Динамо</strong> - <strong>4 : 6</strong><br />17.03.2017 Динамо - <strong>Спутник</strong> - <strong>2 : 4</strong><br />18.03.2017 <strong>Динамо</strong> - Спутник - <strong>3 : 2 ОТ</strong><br />21.03.2017 Спутник - <strong>Динамо</strong> - <strong>0 : 4</strong><br /></div><div id="total174-242-214" style="display: none">24.02.2017 <strong>Торпедо</strong> - Ижсталь - <strong>1 : 0</strong><br />25.02.2017 <strong>Торпедо</strong> - Ижсталь - <strong>3 : 2</strong><br />28.02.2017 <strong>Ижсталь</strong> - Торпедо - <strong>3 : 2</strong><br />01.03.2017 Ижсталь - <strong>Торпедо</strong> - <strong>1 : 2</strong><br />04.03.2017 <strong>Торпедо</strong> - Ижсталь - <strong>3 : 2</strong><br /></div><div id="total174-216-239" style="display: none">24.02.2017 <strong>Сарыарка</strong> - Звезда - <strong>6 : 0</strong><br />25.02.2017 Сарыарка - <strong>Звезда</strong> - <strong>0 : 4</strong><br />28.02.2017 Звезда - <strong>Сарыарка</strong> - <strong>0 : 1</strong><br />01.03.2017 Звезда - <strong>Сарыарка</strong> - <strong>2 : 3 ОТ</strong><br />04.03.2017 <strong>Сарыарка</strong> - Звезда - <strong>5 : 0</strong><br /></div><div id="total174-220-253" style="display: none">24.02.2017 <strong>Торос</strong> - Динамо - <strong>1 : 0</strong><br />25.02.2017 Торос - <strong>Динамо</strong> - <strong>0 : 1</strong><br />28.02.2017 <strong>Динамо</strong> - Торос - <strong>2 : 1</strong><br />01.03.2017 Динамо - <strong>Торос</strong> - <strong>3 : 4</strong><br />04.03.2017 Торос - <strong>Динамо</strong> - <strong>1 : 2 ОТ</strong><br />06.03.2017 <strong>Динамо</strong> - Торос - <strong>5 : 1</strong><br /></div><div id="total174-232-217" style="display: none">24.02.2017 ТХК - <strong>Рубин</strong> - <strong>2 : 3</strong><br />25.02.2017 ТХК - <strong>Рубин</strong> - <strong>3 : 7</strong><br />28.02.2017 <strong>Рубин</strong> - ТХК - <strong>4 : 2</strong><br />01.03.2017 <strong>Рубин</strong> - ТХК - <strong>2 : 1</strong><br /></div><div id="total174-241-229" style="display: none">25.02.2017 <strong>СКА-Нева</strong> - ХК Рязань - <strong>2 : 0</strong><br />26.02.2017 <strong>СКА-Нева</strong> - ХК Рязань - <strong>2 : 1 ОТ</strong><br />01.03.2017 ХК Рязань - <strong>СКА-Нева</strong> - <strong>2 : 3</strong><br />02.03.2017 ХК Рязань - <strong>СКА-Нева</strong> - <strong>2 : 3 ОТ</strong><br /></div><div id="total174-218-219" style="display: none">25.02.2017 <strong>Спутник</strong> - Ермак - <strong>2 : 1 ОТ</strong><br />26.02.2017 <strong>Спутник</strong> - Ермак - <strong>3 : 2 ОТ</strong><br />01.03.2017 Ермак - <strong>Спутник</strong> - <strong>3 : 4</strong><br />02.03.2017 <strong>Ермак</strong> - Спутник - <strong>3 : 2</strong><br />05.03.2017 Спутник - <strong>Ермак</strong> - <strong>2 : 5</strong><br />07.03.2017 <strong>Ермак</strong> - Спутник - <strong>2 : 1 ОТ</strong><br />09.03.2017 <strong>Спутник</strong> - Ермак - <strong>4 : 3</strong><br /></div><div id="total174-228-159" style="display: none">25.02.2017 <strong>Динамо</strong> - Нефтяник - <strong>6 : 3</strong><br />26.02.2017 Динамо - <strong>Нефтяник</strong> - <strong>1 : 2</strong><br />01.03.2017 Нефтяник - <strong>Динамо</strong> - <strong>2 : 3 ОТ</strong><br />02.03.2017 Нефтяник - <strong>Динамо</strong> - <strong>1 : 4</strong><br />05.03.2017 Динамо - <strong>Нефтяник</strong> - <strong>1 : 3</strong><br />07.03.2017 Нефтяник - <strong>Динамо</strong> - <strong>0 : 3</strong><br /></div><div id="total174-223-224" style="display: none">25.02.2017 <strong>Зауралье</strong> - Сокол - <strong>3 : 0</strong><br />26.02.2017 Зауралье - <strong>Сокол</strong> - <strong>1 : 2 ОТ</strong><br />01.03.2017 <strong>Сокол</strong> - Зауралье - <strong>3 : 0</strong><br />02.03.2017 Сокол - <strong>Зауралье</strong> - <strong>1 : 2</strong><br />05.03.2017 <strong>Зауралье</strong> - Сокол - <strong>3 : 2 ОТ</strong><br />07.03.2017 <strong>Сокол</strong> - Зауралье - <strong>3 : 2 ОТ</strong><br />09.03.2017 <strong>Зауралье</strong> - Сокол - <strong>2 : 0</strong><br /></div>		</div>
+    <div class="tab">
+      <table class="table02">
+      <tr>
+        <th class="th01 empty"></th>
+	<th class="th02 empty"></th>
+	<th class="th03 empty"></th>
+	<th class="th04 empty"></th>
+      </tr>      <tr>
+        <th class="title" colspan="4"><span>Таблица ВХЛ</span></th>
+      </tr>
+      <tr>
+        <th><span>Команда</span></th>
+        <th><span>И</span></th>
+        <th><span>+/-</span></th>
+        <th><span>О</span></th>
+      </tr>        <tr class="even">
+          <td><span>1. Торпедо (<em>Усть-Каменогорск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>160-100</span></td>
+          <td><span>109</span></td>
+        </tr>        <tr>
+          <td><span>2. СКА-Нева (<em>Санкт-Петербург</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>153-90</span></td>
+          <td><span>107</span></td>
+        </tr>        <tr class="even">
+          <td><span>3. Сарыарка (<em>Караганда</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>127-70</span></td>
+          <td><span>102</span></td>
+        </tr>        <tr>
+          <td><span>4. Спутник (<em>Нижний Тагил</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>130-104</span></td>
+          <td><span>94</span></td>
+        </tr>        <tr class="even">
+          <td><span>5. Торос (<em>Нефтекамск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>149-108</span></td>
+          <td><span>93</span></td>
+        </tr>        <tr>
+          <td><span>6. Динамо (<em>Балашиха</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>148-111</span></td>
+          <td><span>92</span></td>
+        </tr>        <tr class="even">
+          <td><span>7. ТХК (<em>Тверь</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>139-112</span></td>
+          <td><span>92</span></td>
+        </tr>        <tr>
+          <td><span>8. Зауралье (<em>Курган</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>120-107</span></td>
+          <td><span>88</span></td>
+        </tr>        <tr class="even">
+          <td><span>9. Сокол (<em>Красноярск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>113-101</span></td>
+          <td><span>87</span></td>
+        </tr>        <tr>
+          <td><span>10. Рубин (<em>Тюмень</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>131-112</span></td>
+          <td><span>85</span></td>
+        </tr>        <tr class="even">
+          <td><span>11. Нефтяник (<em>Альметьевск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>116-103</span></td>
+          <td><span>82</span></td>
+        </tr>        <tr>
+          <td><span>12. Динамо (<em>Санкт-Петербург</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>120-108</span></td>
+          <td><span>82</span></td>
+        </tr>        <tr class="even">
+          <td><span>13. Ермак (<em>Ангарск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>113-106</span></td>
+          <td><span>81</span></td>
+        </tr>        <tr>
+          <td><span>14. Звезда (<em>Чехов</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>126-121</span></td>
+          <td><span>79</span></td>
+        </tr>        <tr class="even">
+          <td><span>15. Ижсталь (<em>Ижевск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>108-123</span></td>
+          <td><span>75</span></td>
+        </tr>        <tr>
+          <td class="separator"><span>16. ХК Рязань (<em>Рязань</em>)</span></td>
+          <td class="separator"><span>50</span></td>
+          <td class="separator"><span>124-113</span></td>
+          <td class="separator"><span>75</span></td>
+        </tr>        <tr class="even">
+          <td><span>17. Молот-Прикамье (<em>Пермь</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>133-130</span></td>
+          <td><span>71</span></td>
+        </tr>        <tr>
+          <td><span>18. Челмет (<em>Челябинск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>133-147</span></td>
+          <td><span>70</span></td>
+        </tr>        <tr class="even">
+          <td><span>19. Дизель (<em>Пенза</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>119-133</span></td>
+          <td><span>68</span></td>
+        </tr>        <tr>
+          <td><span>20. ХК Саров (<em>Саров</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>103-118</span></td>
+          <td><span>64</span></td>
+        </tr>        <tr class="even">
+          <td><span>21. Южный Урал (<em>Орск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>99-127</span></td>
+          <td><span>59</span></td>
+        </tr>        <tr class="selected">
+          <td><span>22. Барс (<em>Казань</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>89-134</span></td>
+          <td><span>56</span></td>
+        </tr>        <tr class="even">
+          <td><span>23. Химик (<em>Воскресенск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>80-126</span></td>
+          <td><span>49</span></td>
+        </tr>        <tr>
+          <td><span>24. Ариада-НХ (<em>Волжск</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>99-183</span></td>
+          <td><span>40</span></td>
+        </tr>        <tr class="even">
+          <td><span>25. Буран (<em>Воронеж</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>88-184</span></td>
+          <td><span>28</span></td>
+        </tr>        <tr>
+          <td><span>26. Кристалл (<em>Саратов</em>)</span></td>
+          <td><span>50</span></td>
+          <td><span>48-97</span></td>
+          <td><span>22</span></td>
+        </tr>      </table>
+    </div>	</div>
+</div>
+                                                </div>
+                                          <div class="col03">
+      <div class="content-block02">
+        <div class="content-title">
+          <strong>ДНИ РОЖДЕНИЯ</strong>
+        </div>
+        <div class="table-holder">
+          <table class="table05">
+            <tr>
+              <th class="th01"></th>
+              <th></th>
+            </tr>            <tr>
+              <td>
+                <div class="image">
+                  <img src="/photo/players/80/748.jpg" width="40" height="50" alt="" class="birthday" />
+                </div>
+              </td>
+              <td>
+              <div class="holder">
+                <span>5 июля</span>
+                <div class="link">
+                  <a href="/player/748.html">Андрей Виноградов</a>
+                </div>
+              </div>
+            </td>
+          </tr>            <tr class="even">
+              <td>
+                <div class="image">
+                  <img src="/photo/staff/80/66.jpg" width="40" height="50" alt="" class="birthday" />
+                </div>
+              </td>
+              <td>
+              <div class="holder">
+                <span>7 июля</span>
+                <div class="link">
+                  <a href="/staff/66-2016.html">Айрат Кадейкин</a>
+                </div>
+              </div>
+            </td>
+          </tr>            <tr>
+              <td>
+                <div class="image">
+                  <img src="/photo/players/80/746.jpg" width="40" height="50" alt="" class="birthday" />
+                </div>
+              </td>
+              <td>
+              <div class="holder">
+                <span>12 июля</span>
+                <div class="link">
+                  <a href="/player/746.html">Константин Лучевников</a>
+                </div>
+              </div>
+            </td>
+          </tr>            <tr class="even">
+              <td>
+                <div class="image">
+                  <img src="/photo/staff/80/48.jpg" width="40" height="50" alt="" class="birthday" />
+                </div>
+              </td>
+              <td>
+              <div class="holder">
+                <span>27 июля</span>
+                <div class="link">
+                  <a href="/staff/48-2016.html">Артем Анисимов</a>
+                </div>
+              </div>
+            </td>
+          </tr>          </table>
+        </div>
+      </div>      <div class="content-block02">
+        <div class="r-block">
+          		<a href="/video/archive.php?season=2014-2015&amp;kind=1" target="_blank">			<img src="/theme/infoban/abinfo.jpg" width="240" height="275" alt="" /></a>
+        </div>
+      </div>      <div class="content-block02">
+        <div class="r-block">
+          		<a href="/users/card.php" target="_blank">			<img src="/theme/infoban/card2014.jpg" width="240" height="340" alt="" /></a>
+        </div>
+      </div>    <div class="content-block02">
+      <div class="r-block">
+        <div class="fb-page" data-href="https://www.facebook.com/hcakbars/" data-width="240" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/ofakbarskazan"><a href="https://www.facebook.com/ofakbarskazan">Хоккейный клуб Ак Барс</a></blockquote></div></div>
+      </div>
+    </div>
+    <div id="fb-root"></div>    <div class="content-block02">
+      <div class="r-block">
+        <div id="vk_groups" style="height: 400px; width: 240px;"></div>
+        <div id="vk_community_messages"></div>
+      </div>
+    </div>                                               
+						</div>
+                        <ul class="logo-list">
+						<li>
+							<img width="563" height="307" alt="" src="/theme/images/logo02.png" />
+						</li>
+						<li>
+							<img width="307" height="332" alt="" src="/theme/images/logo03.png" />
+						</li>
+						<li>
+							<img width="170" height="319" alt="" src="/theme/images/logo04.png" />
+						</li>
+					</ul>
+                                          
+					</div>
+				</div>
+            <span class="title06">Официальный интернет магазин <a href="http://shop.ak-bars.ru/">shop.ak-bars.ru</a></span>
+              <div class="products-gallery">
+                <a href="#" class="prev">prev</a>
+                  <a href="#" class="next">next</a>
+                    <div class="holder">
+                      <div class="gallery-frame">
+                        <ul class="gallery">                    <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/Woman/tshirtwooman/long/">
+                    <img src="/theme/img/shop/3049.jpg" alt="Лонгслив ЛС женский" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/Woman/tshirtwooman/long/">Лонгслив ЛС женский</a>
+                </div>
+                <span class="price">1700 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/suvenir/pennants/the-large-pennant-3b/">
+                    <img src="/theme/img/shop/3041.jpg" alt="Вымпел Ак Барс большой 33*22" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/suvenir/pennants/the-large-pennant-3b/">Вымпел Ак Барс большой 33*22</a>
+                </div>
+                <span class="price">450 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/suvenir/magnets/magnet-i-love-ak-bars/">
+                    <img src="/theme/img/shop/3040.jpg" alt="Магнит &quot;Ак Барс&quot; ПВХ люблю Ак Барс" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/suvenir/magnets/magnet-i-love-ak-bars/">Магнит &quot;Ак Барс&quot; ПВХ люблю Ак Барс</a>
+                </div>
+                <span class="price">180 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/atributika/besbolki/beisbolkaLC16/">
+                    <img src="/theme/img/shop/3051.jpg" alt="Бейсболка ЛС №16" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/atributika/besbolki/beisbolkaLC16/">Бейсболка ЛС №16</a>
+                </div>
+                <span class="price">1200 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/man/outerwearman/jacket-ak-bars-color/">
+                    <img src="/theme/img/shop/3036.jpg" alt="Куртка клубная мужская сув. цветная" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/man/outerwearman/jacket-ak-bars-color/">Куртка клубная мужская сув. цветная</a>
+                </div>
+                <span class="price">3500 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/Woman/tshirtwooman/futbolkazhenskayalskrasnyepolosy/">
+                    <img src="/theme/img/shop/3050.jpg" alt="Футболка женская LS (Красные полосы)" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/Woman/tshirtwooman/futbolkazhenskayalskrasnyepolosy/">Футболка женская LS (Красные полосы)</a>
+                </div>
+                <span class="price">1400 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/man/mansT-shirt/futbolsc/">
+                    <img src="/theme/img/shop/3047.jpg" alt="Футболка ЛС ( мужская серая фанат )" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/man/mansT-shirt/futbolsc/">Футболка ЛС ( мужская серая фанат )</a>
+                </div>
+                <span class="price">1400 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/atributika/besbolki/beisbolka12/">
+                    <img src="/theme/img/shop/3033.jpg" alt="Бейсболка Errea сувенирная Ак барс №12" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/atributika/besbolki/beisbolka12/">Бейсболка Errea сувенирная Ак барс №12</a>
+                </div>
+                <span class="price">1200 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/man/mansT-shirt/longm/">
+                    <img src="/theme/img/shop/3045.jpg" alt="Лонгслив ЛС мужской" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/man/mansT-shirt/longm/">Лонгслив ЛС мужской</a>
+                </div>
+                <span class="price">1700 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/atributika/besbolki/beisbolkalc20/">
+                    <img src="/theme/img/shop/3052.jpg" alt="Бейсболка ЛС №20 детская" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/atributika/besbolki/beisbolkalc20/">Бейсболка ЛС №20 детская</a>
+                </div>
+                <span class="price">1200 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/babyclothes/jkljhl/04C77BB9-1C8D-5A39-61D6-B957423F73F8/">
+                    <img src="/theme/img/shop/3035.jpg" alt="Толстовка с капюшоном детская сув." style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/babyclothes/jkljhl/04C77BB9-1C8D-5A39-61D6-B957423F73F8/">Толстовка с капюшоном детская сув.</a>
+                </div>
+                <span class="price">1900 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/man/outerwearman/hjkjlk/">
+                    <img src="/theme/img/shop/3037.jpg" alt="Брюки сувенирные черные (Errea)" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/man/outerwearman/hjkjlk/">Брюки сувенирные черные (Errea)</a>
+                </div>
+                <span class="price">2500 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/man/mansT-shirt/futbolkalc2/">
+                    <img src="/theme/img/shop/3046.jpg" alt="Футболка ЛС (мужская белый рисунок)" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/man/mansT-shirt/futbolkalc2/">Футболка ЛС (мужская белый рисунок)</a>
+                </div>
+                <span class="price">1400 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/suvenir/trinkets/keychain-quotcatquot/">
+                    <img src="/theme/img/shop/3042.jpg" alt="Брелок  Popobe" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/suvenir/trinkets/keychain-quotcatquot/">Брелок  Popobe</a>
+                </div>
+                <span class="price">350 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/suvenir/magnets/magnitlogo/">
+                    <img src="/theme/img/shop/3039.jpg" alt="Магнит &quot;Лого&quot;" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/suvenir/magnets/magnitlogo/">Магнит &quot;Лого&quot;</a>
+                </div>
+                <span class="price">150 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/sporttovari/kluhkazaryad/">
+                    <img src="/theme/img/shop/3038.jpg" alt="Клюшка &quot;Заряд&quot;зеленая" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/sporttovari/kluhkazaryad/">Клюшка &quot;Заряд&quot;зеленая</a>
+                </div>
+                <span class="price">4500 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/Woman/tshirtwooman/pologenlc/">
+                    <img src="/theme/img/shop/3048.jpg" alt="Поло ЛС женское" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/Woman/tshirtwooman/pologenlc/">Поло ЛС женское</a>
+                </div>
+                <span class="price">2000 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/accessories/for-car/manipuraka-souvenirs/">
+                    <img src="/theme/img/shop/3043.jpg" alt="Минифуфайка на присоске (бело-зеленая)" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/accessories/for-car/manipuraka-souvenirs/">Минифуфайка на присоске (бело-зеленая)</a>
+                </div>
+                <span class="price">350 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/AK-BARSlet/atributika60/fyfaikanovaiy/">
+                    <img src="/theme/img/shop/3032.jpg" alt="Фуфайка сувенирная юбилейная" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/AK-BARSlet/atributika60/fyfaikanovaiy/">Фуфайка сувенирная юбилейная</a>
+                </div>
+                <span class="price">2300 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/accessories/icon-ab/towel-ak-bars/">
+                    <img src="/theme/img/shop/3044.jpg" alt="Полотенце Ак Барс среднее 70*50" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/accessories/icon-ab/towel-ak-bars/">Полотенце Ак Барс среднее 70*50</a>
+                </div>
+                <span class="price">550 руб.</span>
+              </li>              <li>
+                <div class="image">
+                  <a href="http://shop.ak-bars.ru/shop/Woman/tshirtwooman/4632A7A7-6845-FFF5-4500-867244B89C54/">
+                    <img src="/theme/img/shop/3034.jpg" alt="Футболка женская ERREA" style="max-width: 145px; max-height: 145px" />
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="http://shop.ak-bars.ru/shop/Woman/tshirtwooman/4632A7A7-6845-FFF5-4500-867244B89C54/">Футболка женская ERREA</a>
+                </div>
+                <span class="price">1500 руб.</span>
+              </li>                        </ul>
+                      </div>
+                    </div>
+                  </div><div class="highslide-heading" id="close">
+<div class="close">
+    <a href="javascript:;" onclick="return hs.close(this)" title="Close"></a>
+</div>
+</div>
+<div id="video-modal" style="display: none;">
+ <div id="video-player" style="text-align: center">
+ </div>
+ <div style="margin: 10px 0 0 0; text-align: center">
+   <a href="#" class="simplemodal-close promo-close">Закрыть</a>
+ </div>
+</div>
+<div id="game_info" style="display: none;">
+ <div style="text-align: center">
+ </div>
+ <div style="margin: 10px 0 0 0; text-align: center">
+   <a href="#" class="simplemodal-close promo-close">Закрыть</a>
+ </div>
+</div>
+ 
+<div class="subscribe-div">
+  <img src="/theme/img/subsmail.png" width="43" height="28" class="subscribe-mailimg" onclick="subscribe_open();" />
+  <div class="subscribe-title">Получать рассылку<br />от ХК "Ак Барс"</div>
+  <input type="text" name="email1" id="email1" placeholder="Ваша электронная почта" class="subscribe-email1" />
+  <img src="/theme/img/subsbtn.png" width="36" height="36" class="subscribe-btn1 subscribe-scale1" onclick="subscribe(1);" title="Подписаться" />
+  <img src="/theme/img/loading.svg" width="36" height="36" class="subscribe-preload1" />
+  <img src="/theme/img/subsclose.png" width="20" height="20" class="subscribe-close subscribe-scale1" onclick="subscribe_close();" title="Закрыть" />
+</div>
+<div class="subscribe-hint1" id="subscribe-hint1"></div>
+                  
+                  </div>                  
+<div id="footer">
+	<div class="footer-holder">
+		<div class="footer-block">
+			<IDXSKIP><strong class="logo02"><a href="/">барс</a></strong></IDXSKIP>
+			<div class="holder">
+				<div class="text">
+					<IDXSKIP>Официальный сайт ООО «СКП "Татнефть - Ак Барс"». </IDXSKIP><IDXSKIP><span class="copyright">© 2000-2017 
+					<a href="http://www.ak-bars.ru">www.ak-bars.ru</a></span></IDXSKIP>
+                                </div>
+				<p><IDXSKIP>При использовании материалов сайта ссылка на источник обязательна</IDXSKIP></p>
+				<p><IDXSKIP>По вопросам размещения рекламы обращайтесь по тел/факс: +7 843 53-38-232</IDXSKIP></p>
+			</div>
+		</div>
+          
+		<div class="subscribe-hint2" id="subscribe-hint2"></div>
+		<IDXSKIP><div class="subscribe-form">
+			<input name="email2" id="email2" value="" placeholder="Ваша электронная почта" class="subscribe-email2" />
+			<a href="#" onclick="subscribe(2); return false;" class="subscribe-btn2">Подписаться на рассылку</a>
+			<img src="/theme/img/loading-white.svg" width="24" height="24" class="subscribe-preload2" />
+		</div></IDXSKIP>
+                
+		<IDXSKIP><div class="feedback-block">
+			<a href="/feedback/">Форма обратной связи</a> 
+		</div></IDXSKIP>
+	</div>
+</div>		</div>
+</div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter9871813 = new Ya.Metrika({id:9871813, enableAll: true, webvisor:true});
+        } catch(e) { }
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/9871813" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

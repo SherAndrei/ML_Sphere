@@ -1,0 +1,1104 @@
+forums.goha.ru/showthread_82_0_t1035643
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru">
+<head>
+<style type="text/css">
+#optnotice
+{
+	margin-bottom: 4px;
+	padding: 8px;
+	text-align: center;
+	background: #FFFFE1;
+	border: 1px solid #999;
+	color: #000;
+}
+
+#optnotice a
+{
+	color: #00F;
+}
+#optnotice a:hover
+{
+	color: #F00;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+var optvars = {
+	bburl:         "http://forums.goha.ru",
+	querystring:   "t=1035643",
+	userfile:      "showthread",
+	dstyleid:      "67",
+	mstyleid:      "82",
+	dlangid:       "3",
+	forumid:       "4299",
+	threadid:      "1035643",
+	feature:       "",
+
+	cookie: {
+		prefix:  "bb",
+		name:    "lflag",
+		value:   "bqeGcsK5",
+		timeout: parseInt("900", 10)
+	}
+};
+
+var lflag = 0;
+var uflag = 0;
+
+(function()
+{
+	var u;
+	var url = new String(window.location);
+	var cookie = optvars.cookie;
+
+	var dourl = function(url)
+	{
+		if (window.stop)
+		{
+			window.stop();
+		}
+		window.location = url;
+	};
+
+	var set_cookie = function(name, value, expires)
+	{
+		var cookieStr = name + '=' + escape(value) + '; path=/';
+
+		if (typeof expires == 'number' && expires > 0)
+		{
+			var date = new Date();
+				date.setTime(date.getTime() + expires * 1000);
+			cookieStr += '; expires=' + date.toGMTString();
+		}
+
+		document.cookie = cookieStr;
+	};
+
+	var fetch_cookie = function(name)
+	{
+		var m = document.cookie.match(new RegExp("(?:^|; )" + name.toString().replace(/(\+|\{|\}|\(|\)|\[|\]|\||\/|\?|\^|$|\\|\.|\=|\!|\<|\>|\:|\*)/g, "\$1") + "=([^;]*)"));
+		return m ? m[1] : null;
+	};
+
+	var intval = function(i)
+	{
+		return parseInt(i, 10) || 0;
+	};
+
+	if ((u = url.match(new RegExp(optvars.userfile + "_([0-9]+)_([0-9]+)(_([a-z0-9_]+))*", "i"))) || (optvars.userfile == "index"))
+	{
+		if (fetch_cookie(cookie.prefix + cookie.name) == cookie.value)
+		{
+			lflag = 1;
+			var qstr = (optvars.querystring ? '?' + optvars.querystring.replace(/&amp;/g, "&") : '');
+
+			if (optvars.feature.length > 0)
+			{
+				qstr += ((qstr.indexOf("?") == -1) ? "?" : "&") + optvars.feature;
+			}
+
+			//var s = u ? u[1] : 0;
+			//set_cookie(cookie.prefix + 'mobilestyleid', s, 0);
+			//set_cookie(cookie.prefix + 'styleid', s, (s != optvars.mstyleid) ? 365 * 86400 : 0);
+
+			dourl(optvars.bburl + "/" + optvars.userfile + ".php" + qstr);
+		}
+		else
+		{
+			var session = {
+				lastvisit: intval(fetch_cookie(cookie.prefix + 'lastvisit')),
+				forumid: intval(fetch_cookie(cookie.prefix + 'optforumid')),
+				threadid: intval(fetch_cookie(cookie.prefix + 'optthreadid')),
+				inside: intval(fetch_cookie(cookie.prefix + 'optinside'))
+			};
+
+			var timenow = Math.ceil((new Date().getTime()) / 1000);
+			var outdated = session.lastvisit < timenow - cookie.timeout;
+			if ((optvars.forumid != session.forumid) || (optvars.threadid != session.threadid) || outdated || !session.inside)
+			{
+				uflag = 1;
+
+				set_cookie(cookie.prefix + 'lastvisit', timenow, 0);
+				set_cookie(cookie.prefix + 'optforumid', optvars.forumid, 0);
+				set_cookie(cookie.prefix + 'optthreadid', optvars.threadid, 0);
+			}
+			set_cookie(cookie.prefix + 'optinside', 1, 0);
+
+			// check style/language
+			var s = u ? u[1] : 0;
+			var l = u ? u[2] : 0;
+			var styleid = 0;
+			var langid = 0;
+
+			if (s == "0")
+			{
+				styleid = (fetch_cookie(cookie.prefix + "mobilestyleid") || fetch_cookie(cookie.prefix + "styleid"));
+				if (!styleid)
+				{
+					var m, md;
+					if (m = fetch_cookie(cookie.prefix + "mobiledevice"))
+					{
+						md = (m == 1);
+					}
+					else
+					{
+						md = navigator.userAgent.match(/(mobi|android|iphone|opera mini|windows ce|ipad|ipod|blackberry|palm)+/i) ? true : false;
+						set_cookie(cookie.prefix + 'mobiledevice', md ? 1 : 2, 0);
+					}
+					if (md)
+					{
+						styleid = optvars.mstyleid;
+					}
+				}
+				if (styleid == optvars.dstyleid)
+				{
+					styleid = 0;
+				}
+			}
+			s = styleid || s || 0;
+
+			if (l == "0")
+			{
+				langid = fetch_cookie(cookie.prefix + "languageid");
+				if (langid == optvars.dlangid)
+				{
+					langid = 0;
+				}
+			}
+			l = langid || l || 0;
+
+			if (styleid > 0 || langid > 0)
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + "_" + s + "_" + l + ((u && u[4]) ? "_" + u[4] : ""));
+			}
+			else if (u && u[1] == 0 && u[2] == 0 && optvars.userfile == "index")
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + ".php");
+			}
+		}
+	}
+})();
+// -->
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="HandheldFriendly" content="true" />
+<script type="text/javascript">
+<!--
+var SESSIONURL = "s=26d31f0a77f37ff62d4955cc25ae24a4&";
+var SECURITYTOKEN = "guest";
+var IMAGESFOLDER = "images/mobilestyle";
+var DSTYLE_PERMANENT = parseInt("0", 10);
+function checkclick(str, docookie)
+{
+	if (confirm(str))
+	{
+		if (docookie)
+		{
+			document.cookie = 'bbmobilestyleid=67; path=/';
+
+			if (DSTYLE_PERMANENT == 1)
+			{
+				var expires = new Date();
+					expires.setTime(expires.getTime() + 86400 * 365 * 1000);
+			}
+			document.cookie = 'bbstyleid=67; path=/' + (typeof expires != 'undefined' ? '; expires=' + expires.toGMTString() : '');
+		}
+		return true;
+	}
+	return false;
+}
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="mobilestyle.css.php" />
+<script type="text/javascript" src="clientscript/mobilehelper.min.v30.js"></script>
+<!-- MOBILE CLEAN START HERE (header) -->
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:image" content="http://forums.goha.ru/images/goharu250x250.gif" />
+<meta property="og:title" content="Технические проблемы связанные с Counter Strike : Global Offensive и их решение" />
+<meta property="og:description" content="GoHa.Ru" />
+
+
+<title> Технические проблемы связанные с Counter Strike : Global Offensive и их решение - GoHa.Ru</title>
+
+
+</head>
+
+<body>
+<div class="bodywrapping">
+
+<div class="header">
+</div>
+
+
+
+
+<script type="text/javascript">
+<!--
+function fixImgs(b)
+{
+	var a = document.getElementsByTagName("img");
+	for (i = 0; i < a.length; i++)
+	{
+		if (w = a[i].width, h = a[i].height, w > b)
+		{
+			f = 1 - (w - b) / w, a[i].width = w * f, a[i].height = h * f
+		}
+	}
+}
+function addLoadEvent(b)
+{
+	var a = window.onload;
+	window.onload = typeof window.onload != "function" ? b : function(){a && a(); b()}
+}
+addLoadEvent(function(){fixImgs(240)});
+// -->
+</script>
+
+<div id="navbar-container">
+
+<div class="navbar" id="navbar">
+<ul>
+	<li><a href="http://forums.goha.ru/index_82_0">Домой</a></li>
+	
+
+	<li><a href="search.php?s=26d31f0a77f37ff62d4955cc25ae24a4">Поиск</a></li>
+	<li><a href="search.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=getdaily&amp;forumid=4299&amp;childforum=1">Новое</a></li>
+	
+	<li><a href="#" id="login-button" rel="nolabel"><strong>Вход</strong></a></li>
+
+</ul>
+</div>
+
+
+<div class="dropdownbox" id="login-box" style="display: none;">
+<form action="10gin.php" method="post">
+<input type="hidden" name="s" value="26d31f0a77f37ff62d4955cc25ae24a4" />
+<input type="hidden" name="securitytoken" value="guest" />
+<input type="hidden" name="do" value="login" />
+<input type="hidden" name="url" value="/showthread_82_0_t1035643" />
+<input type="hidden" name="vb_login_md5password" />
+<input type="hidden" name="vb_login_md5password_utf" />
+
+<div class="textarea-container">
+	<input type="text" name="vb_login_username" class="textarea shadow-inset corner-all" id="navbar_username" size="8" tabindex="1" value="" title="Имя пользователя" />
+</div>
+<div class="textarea-container">
+	<input type="password" name="vb_login_password" class="textarea shadow-inset corner-all" id="navbar_password" size="8" tabindex="1" value="" title="Пароль" />
+</div>
+<div class="selectors">
+	<fieldset class="fieldset">
+	<ul>
+		<li class="checkbox">
+			<label class="label-selector" for="cb_cookieuser">
+				<span><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser" tabindex="1" />Запомнить?</span>
+			</label>
+		</li>
+	</ul>
+	</fieldset>
+</div>
+<div><input type="submit" class="bigbutton-go bigbutton-shadow big-corner-all" value="Вход" tabindex="1" /></div>
+<div><a class="bigbutton bigbutton-shadow big-corner-all" href="register.php?s=26d31f0a77f37ff62d4955cc25ae24a4" tabindex="1">Регистрация</a></div>
+</form>
+</div>
+
+
+<div class="breadcrumb" id="breadcrumb_t">
+	
+	<div class="dropdownbox" id="breadcrumb_t-box" style="display: none;">
+		
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_3">
+			<span style="white-space: nowrap;">&bull; </span>
+			Форумы
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_4628">
+			<span style="white-space: nowrap;">&bull; &bull; </span>
+			Киберспорт
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_4299">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; </span>
+			CS: Global Offensive
+		</a>
+	</div>
+</div>
+
+
+	</div>
+	
+	<div class="breadcrumb-title">
+		<a class="breadcrumb-up" href="http://forums.goha.ru/forumdisplay_82_0_4299" rel="nofollow">
+			<img src="images/mobilestyle/bcup.png" alt="" border="0" />
+		</a>
+		<div class="breadcrumb-buttonbox">
+			<div id="breadcrumb_t-button">
+				
+	 Технические проблемы связанные с Counter Strike : Global Offensive и их решение
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+
+
+
+
+<div id="posts"><div class="postbit"><div class="windowbg2 postbit-head" id="post151875686">
+<a name="post151875686"></a>
+<span style="float: right; display: inline-block;">#1</span>
+
+<a href="member.php?userid=684598">DevilSoul</a> <span class="postbit-date">23.01.2015, 08:13</span>
+
+</div>
+<div class="postbit-message"><img src="http://sau.su/f421d45ba2c794fa98cf637b2a9dc5d5/csgo_logo_k.jpg" class="bbCodeImage" border="0" alt="" /><br />
+<div align="left"><b>Доброго времени суток господа, эту тему хотелось бы посвятить техническим проблемам Counter Strike : Global Offensive и их решению.</b></div><br />
+<b>Системные требования</b><br />
+<br />
+ОС: Windows XP / 7 / 8.<br />
+Процессор: Pentium 4 с тактовой частотой 3 ГГц или двух-ядерный от Intel с тактовой частотой 2 ГГц или AMD64X2 (или лучше).<br />
+Оперативная память: 2 ГБ.<br />
+Жесткий диск: не менее 7,6 ГБ свободного места.<br />
+Видеокарта: не менее 128 МБ видеопамяти, совместимая с DirectX 9.0 и поддержкой технологии Pixel Shader 2.0b (ATI Radeon X800 или лучше / NVIDIA GeForce 7600 или лучше / Intel HD Graphics 2000 или лучше).<br />
+Звуковая карта: совместимая с DirectX 9.0c.<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Не открывается консоль?&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>Заходим в настройки игры, открываем параметры игры, нажимаем &quot;Включить консоль разработчика&quot;. что-бы открыть ее нажимаем &quot;тильда&quot; &quot;~&quot; или буква &quot;ё&quot; на клавиатуре.
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">При входе на сервер - выкидывает с сообщением&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td><b>«Данный сервер использует более новый протокол»<br />
+<br />
+«Disconnect: Server uses different class tables»<br />
+<br />
+«Server is enforcing consistency for this file: particles\water_dx80.pcf»<br />
+<br />
+«Invalid Steam key length»<br />
+<br />
+«Client and server product versions do not match»<br />
+<br />
+«The server you are trying to connect to is running a newer version of the game»</b><br />
+<br />
+Cервера еще не успели обновится и, соответственно, версия вашего клиента и версия сервера не совпадают. Решение: дождитесь обновления серверов.<br />
+<br />
+Если не помогло необходимо удалить полностью CS:GO и установить заново. <br />
+Не устанавливая никаких новых моделей оружия, гранат и т.д. Всё должно быть стандартным.<br />
+
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Вовремя входа на сервер выбивает сообщение: &quot;connection failed after 4 retries&quot;&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>Это сообщение говорит о том, что вашему соединению с сервером что-то мешает. Вероятно это файрвол или возможно вообще отсутствует соединение с сервером на данные момент (например, ваш провайдер ремонт проводит). Пути решения:<br />
+1). Добавить все процессы связанные с hl2.exe в исключения в вашем файрволе.<br />
+2). Немного подождать и вероятно соединение будет восстановлено.<br />
+3). Подключить Интернет.<br />
+4). Cервера на профилактике.
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Монитор погас, появился черный экран и табличка &quot;Режим не поддержан.&quot; ?&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>Вы установили разрешение которое не поддерживает ваш монитор.<br />
+Пример :<br />
+\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\video.txt<br />
+&quot;setting.defaultres&quot;      &quot;1440&quot;<br />
+&quot;setting.defaultresheight&quot;      &quot;900&quot;<br />
+1440 на 900 это и есть установленное на данный момент разрешение экрана, меняем его вручную 
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Эта игра - в данный момент не доступна&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td><br />
+1. Перезапуск Steam.<br />
+2. Проверка целостности кэша игры.<br />
+3. Переход на бета-версию Steam в настройках.<br />
+4. Удаление файлов &quot;AppUpdateStats.blob&quot; и &quot;ClientRegistry.blob&quot; из корневой папки Steam.<br />
+5. Переустановка Steam.<br />
+6. Переустановка Windows.
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Приложение не было запущено, поскольку оно не корректно настроено.&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>ENG: «This application has to start because the application configuration is incorrect. Reinstalling the application may fix this problem.»<br />
+1) Если вы переустановите игру на ваш компьютер - это может помочь<br />
+2) Установите официальные библиотеки от Microsoft, необходимые для запуска приложений написанных с помощью Visual C++ 2008 (эмулятор написан на нем):<br />
+Microsoft Visual C++ 2008 SP1 Redistributable Package (x86) <br />
+Microsoft Visual C++ 2008 SP1 Redistributable Package (x64)
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Проблема со шрифтами в Counter-strike Global Offensive&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>(вместо текста квадраты)<br />
+Не совпадение шрифтов игры с шрифтами Windows. <br />
+Заходим в папку C:\WINDOWS\Fonts.Копируем на рабочий стол 2 файла Arial он же может называться Arial (TrueType) и второй файл Tahoma он может называться Tahoma (TrueType). После чего идем в D:\GAMES\Steam\steamapps\common\Counter-Strike Global Offensive\platform\vgui\fonts (Ваш адрес до этой папки может быть другим) и копируем эти 2 файла шрифтов в эту папку с заменой.
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Counter Strike - приглушает мой звук в программах Skype, Team Speak и.т.д.&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>Один клик правой кнопки мыши на значке &quot;динамики&quot; на панеле задач. В появившемся меню выбрать &quot;звуки&quot;- вкладка &quot;связь&quot; - поставить галочку на &quot;действие не требуется&quot;.
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Ошибка моделей &quot;model models/gibs/hgibs.mdl not found and models/error.mdl coldn't be loaded&quot;&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>1. Удаляем папку с игрой. Путь: Steam/steamapps/common/Counter-Strike Global Offensive.<br />
+2. Скачиваем игру в steam'e заново.
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Ставили не стандартный конфиг или изменяли настройки игры и сейчас ничего не работает? и вы хотите вернуть все настройки на стандартные&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>Для исправления настроек, запустите игру с параметром -autoconfig. Плюс можете удалить следующие ветки из реестра:<br />
+Для 32-битных систем: HKEY_CURRENT_USER\Software\Valve и HKEY_LOCAL_MACHINE\SOFTWARE\Valve<br />
+Для 64-битных систем: HKEY_CURRENT_USER\Software\Valve и HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Valve<br />
+Удалите файлы winui.gcf и platform.gcf из папки «SteamApps».
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Куда складывать новые карты для CS GO&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>В папку ..\Steam\SteamApps\common\Counter-Strike Global Offensive\csgo\maps.Или же через Workshop Find Game - Work Shop - View Workshop и выбираем их там просто куча, на понравившейся просто нажимаешь Subscribe и она добавляется к нам.<br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">1&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td><img src="http://sau.su/42f183dc61b6cd2000c7e8ea64b0b7b7/1.jpg" class="bbCodeImage" border="0" alt="" />
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">2&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td><img src="http://sau.su/a661dfd8d6b7c271594cf89dd4e9ee4b/2.jpg" class="bbCodeImage" border="0" alt="" />
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">При попытке войти на сервер &quot;Missing map *map_name*, disconnected&quot;&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>Проверить «Настройки» -&gt; «Сетевой режим» -&gt; «allow all custom files from server», удалить конфликтную карту из директории игры ...\Counter-Strike Global Offensive\csgo\maps\*название карты*<br />
+<br />
+<IDXSKIP>.
+</IDXSKIP></td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Ошибка &quot;Прекращена работа программы&quot; csgo.exe&quot;&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td><br />
+1) В файле video.txt нужно переключить &quot;Settings.mat_queue_mode&quot; &quot;-1&quot; / &quot;1&quot; или &quot;2&quot; на &quot;0&quot; или &quot;-2&quot;<br />
+<br />
+2) Иногда бывает после обновлений криво устанавливаются файлы. И начинаются проблемы.Многие люди переустанавливают Steam, CS:GO удалив через удаление или установка программ и потом заново устанавливают Steam, CS:GO.Это немного не правильно, так как Steam после всех удалений оставляет в реестре файлы (с настройками). Что нужно делать :<br />
+1. Удаляем CS:GO.<br />
+2. Удаляем Steam (если в C:\Program Files, осталась папка Steam &quot;удаляем&quot;).<br />
+3. Зайдите в меню Пуск/Выполнить... (или нажмите Win+R) и введите &quot;regedit&quot;.<br />
+4. В списке Вашего редактора реестра, перейдите к: HKEY_CURRENT_USER\Software\Valve, щелкните правой кнопкой мыши по подкаталогу Valve и выберите &quot;Удалить&quot;. <br />
+5. Так же само удалите подкаталог HKEY_LOCAL_MACHINE\SOFTWARE\Valve,для Windows x64: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Valve.<br />
+6. Перезагружаемся.<br />
+7. Чистим реестр какой нить прогой типа CCleaner (программа для очистки реестра).<br />
+8.  Устанавливаем Steam, CS:GO.
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Хотите сделать себе уникальный прицел?&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>Воспользуйтесь готовым chrosshair generator от ребят из NiP - <span class="linkexternal"><a href="http://csgocrosshair.dathost.net" target="_blank">http://csgocrosshair.dathost.net</a></span>
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Перестала работать мышка?&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>Это уже не проблемы CS GO, переустановите драйвера или возможно ваша мышь вовсе сломана.
+</td>
+</tr>
+</tbody>
+</table><br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">Выкидывает c сервера! И пишет &quot;Pure server:file (GAME)\pak01_012.vpk does not match the srver's file&quot;...&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td>Заходим в Steam --&gt; Steamapps --&gt; common --&gt; Counter-Strike Global Offensive --&gt; csgo<br />
+Найдите там файл &quot;pak01_012.vpk&quot; и удалите его. Затем зайдите в стим, откройте свойства Counter-Strike Global Offensive и выберите там &quot;Локальные файлы&quot;, сделайте проверку целостности кэша. Перезайдите в стим, зайдите в игру и попробуйте присоединиться к тому серверу.
+</td>
+</tr>
+</tbody>
+</table><br />
+<font color="Red"><font size="1">Данная тема будет обновляться.</font> </font> <font size="1"><span class="linkexternal"><a href="http://forum.navi-gaming.com/" target="_blank"><div align="right">Источник сбора информации</div></a></span></font><div align="right"> <font size="1">(с) DevilSoul <a href="http://www.goha.ru" target="_blank">www.GoHa.ru</a></font></div><br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=newreply&amp;p=151875686">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post151877206">
+<a name="post151877206"></a>
+<span style="float: right; display: inline-block;">#2</span>
+
+<a href="member.php?userid=710001">Tea_Maniac</a> <span class="postbit-date">23.01.2015, 12:28</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>DevilSoul</strong>:<br />
+Куда складывать новые карты для CS GO  <br />
+В папку ..\Steam\SteamApps\common\Counter-Strike Global Offensive\csgo\maps.</i></div>
+можно еще про добавление карт через воркшоп написать<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=newreply&amp;p=151877206">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post151877400">
+<a name="post151877400"></a>
+<span style="float: right; display: inline-block;">#3</span>
+
+<a href="member.php?userid=684598">DevilSoul</a> <span class="postbit-date">23.01.2015, 12:55</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>Tea_Maniac</strong>:<br />
+можно еще про добавление карт через воркшоп написать</i></div>
+добавил!<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=newreply&amp;p=151877400">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post152093599">
+<a name="post152093599"></a>
+<span style="float: right; display: inline-block;">#4</span>
+
+<a href="member.php?userid=56919">h0rr0r</a> <span class="postbit-date">27.02.2015, 09:17</span>
+
+</div>
+<div class="postbit-message">часто выкидывает с надписью что то типа того что анти чит меня выкинул. ( <br />
+Читов на компе нет для кс. То что пишет на странице после &quot;пинка&quot; делал.  Не помогает. Знакомый посоветовал удалить все апк файлы и заново переустановить.  После 3 карты опять выкинуло.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=newreply&amp;p=152093599">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post152095810">
+<a name="post152095810"></a>
+<span style="float: right; display: inline-block;">#5</span>
+
+<a href="member.php?userid=684598">DevilSoul</a> <span class="postbit-date">27.02.2015, 15:12</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>h0rr0r</strong>:<br />
+часто выкидывает с надписью что то типа того что анти чит меня выкинул. ( <br />
+Читов на компе нет для кс. То что пишет на странице после &quot;пинка&quot; делал.  Не помогает. Знакомый посоветовал удалить все апк файлы и заново переустановить.  После 3 карты опять выкинуло.</i></div>
+Возможно проблемы Windows, компьютер - свойства - быстродействие - предотвращение выполнения данных(служба DEP) проверить включена ли она, некоторых выкидывало из за того что она была отключена, лично у меня была такая проблема когда то.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=newreply&amp;p=152095810">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post152098528">
+<a name="post152098528"></a>
+<span style="float: right; display: inline-block;">#6</span>
+
+<a href="member.php?userid=56919">h0rr0r</a> <span class="postbit-date">28.02.2015, 00:20</span>
+
+</div>
+<div class="postbit-message">спс проверю<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=newreply&amp;p=152098528">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post155813874">
+<a name="post155813874"></a>
+<span style="float: right; display: inline-block;">#7</span>
+
+<a href="member.php?userid=1327326">bafomet12</a> <span class="postbit-date">26.04.2017, 10:47</span>
+
+</div>
+<div class="postbit-message">А можно в этой игре включить режим бога. Чтобы точно никто не убил)))<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=newreply&amp;p=155813874">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post155836283">
+<a name="post155836283"></a>
+<span style="float: right; display: inline-block;">#8</span>
+
+<a href="member.php?userid=1255417">Lanyaarva</a> <span class="postbit-date">02.05.2017, 13:56</span>
+
+</div>
+<div class="postbit-message">Спасибо, с прицелом отличная статейка<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=newreply&amp;p=155836283">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post155887795">
+<a name="post155887795"></a>
+<span style="float: right; display: inline-block;">#9</span>
+
+<a href="member.php?userid=1255405">Endorric</a> <span class="postbit-date">16.05.2017, 17:48</span>
+
+</div>
+<div class="postbit-message">нашел пару решений, спасибо)<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=26d31f0a77f37ff62d4955cc25ae24a4&amp;do=newreply&amp;p=155887795">Ответ</a>
+	</div>
+</div></div>
+</div>
+
+
+
+
+
+
+
+<div class="breadcrumb" id="breadcrumb_b">
+	
+	<div class="dropdownbox" id="breadcrumb_b-box" style="display: none;">
+		
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_3">
+			<span style="white-space: nowrap;">&bull; </span>
+			Форумы
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_4628">
+			<span style="white-space: nowrap;">&bull; &bull; </span>
+			Киберспорт
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_4299">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; </span>
+			CS: Global Offensive
+		</a>
+	</div>
+</div>
+
+
+	</div>
+	
+	<div class="breadcrumb-title">
+		<a class="breadcrumb-up" href="http://forums.goha.ru/forumdisplay_82_0_4299" rel="nofollow">
+			<img src="images/mobilestyle/bcup.png" alt="" border="0" />
+		</a>
+		<div class="breadcrumb-buttonbox">
+			<div id="breadcrumb_b-button">
+				
+	 Технические проблемы связанные с Counter Strike : Global Offensive и их решение
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+<div class="counter" id="cfleft">
+<!-- LiveInternet counter -->
+<script type="text/javascript">
+<!--
+document.write('<a href="http://www.liveinternet.ru/click" '+'target=_blank><img src="http://counter.yadro.ru/hit?t50.6;r'+escape(document.referrer)+((typeof(screen)=='undefined')?'':';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+';'+Math.random()+'" alt="" title="LiveInternet: показано число просмотров и посетителей за 24 часа" '+'border=0 width=31 height=31></a>');
+//-->
+</script>
+<!-- /LiveInternet -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1733792-37', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+<div class="counter" id="cfright">
+<img src="images/mobilestyle/18sign_mobile.png" alt="" border="0" width="30" height="33" />
+
+<!-- Rating@Mail.ru counter -->
+<a target="_top" href="http://top.mail.ru/jump?from=1059157">
+<img src="http://d9.c2.b0.a1.top.list.ru/counter?id=1059157;t=76" border="0" height="31" width="38" alt="Рейтинг@Mail.ru" /></a>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter20744278 = new Ya.Metrika({id:20744278,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/20744278" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</div>
+
+	<div id="cron" class="smallfont" align="center">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	</div>
+
+	<div class="footlinks">
+		<ul>
+			<li id="copyright">
+				<a class="footbtn" href="http://www.goha.ru">
+				
+					(c) GoHa.Ru 2003-2017
+				</a>
+			</li>
+			<li id="fullversion"><a class="footbtn" href="/showthread_0_0_t1035643" onclick="return checkclick('Переключиться на стиль \'GoHa.Ru\'?', true);">Полная версия</a></li>
+			
+			
+			<li id="lastchild"><a class="footbtn" href="register.php?s=26d31f0a77f37ff62d4955cc25ae24a4">Регистрация</a></li>
+			
+			
+		</ul>
+	</div>
+
+</div>
+
+
+<!-- MOBILE CLEAN START HERE (footer) -->
+
+
+
+
+
+</div>
+</body>
+</html>
+

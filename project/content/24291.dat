@@ -1,0 +1,787 @@
+myarena.ru/monitoring.php?mod=18
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=Windows-1251" />
+        <meta name="description" content="Хостинг Игровых Серверов, Аренда сервера Сounter Strike, Counter-Strike: Source, Counter-Strike: Source v34, HLTV, Call of Duty: Modern Warfare 3 и Minecraft." />
+        <meta name="keywords" content="аренда игровых серверов, хостинг игровых серверов, counter strike, cs 1.6, counter strike source, counter strike source v34, css, call of duty modern warfare 3, аренда сервера cs 1.6, игровые сервера, cs server, серваки контры, HLTV, condition zero, minecraft" />
+
+<link rel="stylesheet" type="text/css" href="/css/all.css?184">                    <title>MyArena.ru :: Хостинг игровых серверов - Мониторинг игровых серверов Counter-Strike: Source v34</title><link rel="stylesheet" type="text/css" href="/css/all.css?173"><script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script><script type="text/javascript" src="/js/jstorage.min.js"></script>
+<script type="text/javascript">
+<!--     
+function getCookie(name) {
+    var cookie = " " + document.cookie;
+    var search = " " + name + "=";
+    var setStr = null;
+    var offset = 0;
+    var end = 0;
+    if (cookie.length > 0) {
+        offset = cookie.indexOf(search);
+        if (offset != -1) {
+            offset += search.length;
+            end = cookie.indexOf(";", offset)
+            if (end == -1) {
+                end = cookie.length;
+            }
+            setStr = unescape(cookie.substring(offset, end));
+        }
+    }
+    return(setStr);
+}
+
+setTimeout(changefon,5000);
+
+function changefon()
+{
+    if (getCookie("myarena-fon")!="18")
+    {
+        var browserWindow = $(window);
+        var width = browserWindow.width();
+        if (width>1200)
+        {
+            $("#w1").animate({opacity: 0},500,function(){
+            document.cookie = "myarena-fon=18; path=/";
+            var $rnd=getRandomInt(1, 4);
+            document.cookie = "myarena-fon-rnd="+$rnd+"; path=/";
+            var img = new Image();
+            var src="/images/fon/18/18-" +$rnd+".jpg";
+            img.onload = function(){
+                $("#w1").css( "background-image", "url(" + src + ")" );
+                $("#w1").animate({opacity: 1},500);
+            }
+            img.src=src;
+            });
+        }
+    }
+}
+
+function getRandomInt(min, max)
+{
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+//-->                                                                                                                                                        
+</script><link rel="Shortcut Icon" href="/images/favicon.ico">
+    </head>
+    <body>
+
+<div id="w1"></div>
+    <div id="w2">
+        <div id="wrapper">
+            <IDXSKIP><div id="header">
+                <div class="logo"><a href="/">MYARENA</a></div>
+                <div class="contact-box">
+                    <div class="box">
+                        <div class="tel">+7(499) 707-7536</div>
+                        <div class="mail"><a href="mailto:info@myarena.ru">info@myarena.ru</a></div>
+                    </div>
+                </div>
+            </div></IDXSKIP>
+            <div id="main">
+                <div class="container">
+                    <div id="menu">
+ <ul id="menu-left">
+    <IDXSKIP><li class="home-icon">&nbsp;</li></IDXSKIP>
+    <IDXSKIP><li><a href="/"><p>Главная</p></a><span class="bc_separator"></span></li></IDXSKIP>
+    <IDXSKIP><li><a href="/home.php"><p>Панель управления</p></a><span class="bc_separator"></span></li></IDXSKIP>
+    <IDXSKIP><li><a href="/price.html"><p>Услуги</p></a><span class="bc_separator"></span></li></IDXSKIP>
+    <IDXSKIP><li><a href="http://www.myarena.ru/home.php?m=shop"><p>Магазин</p></a><span class="bc_separator"></span></li></IDXSKIP>
+    <IDXSKIP><li><a href="/monitoring.html"><p>Мониторинг</p></a><span class="bc_separator"></span></li></IDXSKIP>
+    <IDXSKIP><li><a href="http://wiki.myarena.ru/" target="_blank"><p>Википедия</p></a><span class="bc_separator"></span></li></IDXSKIP>
+    <IDXSKIP><li><a href="http://forum.myarena.ru" target="_blank"><p>Форум</p></a><span class="bc_separator"></span></li></IDXSKIP>
+    <IDXSKIP><li><a href="/about.html"><p>Компания</p></a><span class="bc_separator"></span></li></IDXSKIP>
+  </ul>
+                    </div>
+            		
+<noscript>
+<div class="message error">
+<IDXSKIP><strong>Отключен JavaScript</strong></IDXSKIP>
+<p><IDXSKIP>У вас отключен JavaScript. Некоторые возможности системы не будут работать. Пожалуйста, включите JavaScript для получения доступа ко всем функциям.</IDXSKIP></p>
+</div>
+<br>
+</noscript>
+		    <div id="empty"></div> 
+                    <div id="content">
+                        <script type="text/javascript">
+                          $(document).ready(function() {
+                            var page = window.location.hash.substring(1), gameId = '';
+                                                        gameId = '&mod=18';
+                                                        if (!page) page = 1;
+                            else updatePage();
+                            $( document ).ajaxStart(function() {
+                              $('.serverlist').append('<span class="loading"><img src="/images/ajax_loading.gif"></span>');
+                            });
+                            $(window).bind('hashchange', function() {
+                              page = window.location.hash.substring(1);
+                              updatePage();
+                            });
+                            $('.serverlist a').live('click', function() {
+                              page = $(this).attr('data-page');
+                              window.location.hash = page;
+                              return false;
+                            });
+                            function updatePage() {
+                              $.get('ajax_sitemonitoring.html?f=getNewPage&page_n='+page+gameId, function (data) {})
+                              .done(function(data) {
+                                $('.serverlist').html($(data).filter('#pagination').children());
+                                $('#userservers').html($(data).filter('#servera').children());
+                              });
+                            }
+                          });
+                        </script>
+                        <div id="contentheading_mt">
+                            <IDXSKIP><span class="pathway"><a href="/">Главная</a>&nbsp;</IDXSKIP><IDXSKIP><span style="color:#e77612;">&raquo;</span></IDXSKIP><IDXSKIP>&nbsp;<a href="/monitoring.html">Мониторинг</a></IDXSKIP></span><br/>
+                            <h1 class="tablecontents">Мониторинг игровых серверов</h1>
+                        </div>
+                        <div class="gamelist">
+                          <table width="100%" style="table-layout:fixed;" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td align="left" valign="top"><a href="/monitoring.html?mod=10"><span class="mon-g mon-g-10"></span><p><span class="name"> Counter-Strike</span><span class="note">Игроков на серверах: 1747</span></p></a><br/><a href="/monitoring.html?mod=12"><span class="mon-g mon-g-12"></span><p><span class="name"> Condition Zero</span><span class="note">Игроков на серверах: 27</span></p></a><br/><a href="/monitoring.html?mod=18" class="activemodid"><span class="mon-g mon-g-18"></span><p><IDXSKIP><span class="name">Counter-Strike: Source v34</span></IDXSKIP><span class="note">Игроков на серверах: 2730</span></p></a><br/><a href="/monitoring.html?mod=61"><span class="mon-g mon-g-61"></span><p><span class="name">Counter-Strike: Source</span><span class="note">Игроков на серверах: 1024</span></p></a><br/><a href="/monitoring.html?mod=71"><span class="mon-g mon-g-71"></span><p><IDXSKIP><span class="name">Counter-Strike: Global Offensive</span></IDXSKIP><span class="note">Игроков на серверах: 3699</span></p></a><br/></td><td align="left" valign="top"><a href="/monitoring.html?mod=70"><span class="mon-g mon-g-70"></span><p><span class="name">Minecraft</span><span class="note">Игроков на серверах: 224</span></p></a><br/><a href="/monitoring.html?mod=22"><span class="mon-g mon-g-22"></span><p><span class="name">Team Fortress 2</span><span class="note">Игроков на серверах: 175</span></p></a><br/><a href="/monitoring.html?mod=23"><span class="mon-g mon-g-23"></span><p><span class="name">Left 4 Dead</span><span class="note">Игроков на серверах: 39</span></p></a><br/><a href="/monitoring.html?mod=50"><span class="mon-g mon-g-50"></span><p><span class="name">Left 4 Dead 2</span><span class="note">Игроков на серверах: 181</span></p></a><br/><a href="/monitoring.html?mod=66"><span class="mon-g mon-g-66"></span><p><IDXSKIP><span class="name">GTA San Andreas Multiplayer</span></IDXSKIP><span class="note">Игроков на серверах: 1764</span></p></a><br/></td><td align="left" valign="top"><a href="/monitoring.html?mod=69"><span class="mon-g mon-g-69"></span><p><span class="name">GTA Multi Theft Auto</span><span class="note">Игроков на серверах: 1875</span></p></a><br/><a href="/monitoring.html?mod=75"><span class="mon-g mon-g-75"></span><p><span class="name">Day of Defeat: Source</span><span class="note">Игроков на серверах: 27</span></p></a><br/><a href="/monitoring.html?mod=65"><span class="mon-g mon-g-65"></span><p><span class="name">Garrys Mod</span><span class="note">Игроков на серверах: 1376</span></p></a><br/><a href="/monitoring.html?mod=83"><span class="mon-g mon-g-83"></span><p><span class="name">Hurtworld</span><span class="note">Игроков на серверах: 33</span></p></a><br/><a href="/monitoring.html?mod=77"><span class="mon-g mon-g-77"></span><p><span class="name">Rust</span><span class="note">Игроков на серверах: 40</span></p></a><br/></td><td align="left" valign="top"><a href="/monitoring.html?mod=81"><span class="mon-g mon-g-81"></span><p><span class="name">Arma 3</span><span class="note">Игроков на серверах: 8</span></p></a><br/><a href="/monitoring.html?mod=84"><span class="mon-g mon-g-84"></span><p><span class="name">Unturned</span><span class="note">Игроков на серверах: 247</span></p></a><br/><a href="/monitoring.html?mod=82"><span class="mon-g mon-g-82"></span><p><span class="name"> 
+	
+
+ARK: Survival Evolved </span><span class="note">Игроков на серверах: 18</span></p></a><br/></td>                            </tr>
+                          </table>
+                        </div>
+                                                <br/>
+                        <div class="testserver">
+                          <p style="padding: 10px 0 0 10px;"><IDXSKIP>Тестовые игровые сервера: </IDXSKIP><b>Counter-Strike: Source v34</b><IDXSKIP><span id="hidetest">[свернуть]</span></IDXSKIP></p>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=115"><img border="0" src="lgsl/images/maps/source/cstrike/de_piranesi.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=115">MyArena.ru тестовый [33tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: de_piranesi</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>0</b>/20</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.52.2:27331">46.174.52.2:27331</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=3156"><img border="0" src="lgsl/images/maps/source/cstrike/awp_lego_2b.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=3156">MyArena.ru тестовый [66tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: awp_lego_2b</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>5</b>/16</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/77.88.252.161:27203">77.88.252.161:27203</a><br/>
+                            <b>Украина, Киев</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=3876"><img border="0" src="lgsl/images/maps/source/cstrike/cs_militia.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=3876">MyArena.ru тестовый [66tick,1000fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: cs_militia</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>2</b>/10</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.48.30:27202">46.174.48.30:27202</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=4629"><img border="0" src="lgsl/images/maps/source/cstrike/cs_assault.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=4629">MyArena.ru тестовый [33tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: cs_assault</p>
+</p>
+                          </div>
+			 <IDXSKIP><div class="serverpro">&nbsp;</div></IDXSKIP>                          <IDXSKIP><div class="serverslot"><b>0</b>/18</div></IDXSKIP>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.49.24:27203">46.174.49.24:27203</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=4990"><img border="0" src="lgsl/images/maps/source/cstrike/cs_assault.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=4990">MyArena.ru тестовый [66tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: cs_assault</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>0</b>/20</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.52.2:27333">46.174.52.2:27333</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=5892"><img border="0" src="lgsl/images/maps/source/cstrike/cs_assault.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=5892">MyArena.ru тестовый [100tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: cs_assault</p>
+</p>
+                          </div>
+			 <IDXSKIP><div class="serverpro">&nbsp;</div></IDXSKIP>                          <div class="serverslot"><b>0</b>/20</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.52.2:27334">46.174.52.2:27334</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=6133"><img border="0" src="lgsl/images/maps/source/cstrike/cs_militia.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=6133">MyArena.ru тестовый [33tick,1000fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: cs_militia</p>
+</p>
+                          </div>
+			 <IDXSKIP><div class="serverpro">&nbsp;</div></IDXSKIP>                          <div class="serverslot"><b>1</b>/12</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.52.16:27217">46.174.52.16:27217</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=6382"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=6382">MyArena.ru тестовый [66tick,1000fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: de_dust</p>
+</p>
+                          </div>
+			 <IDXSKIP><div class="serverpro">&nbsp;</div></IDXSKIP>                          <div class="serverslot"><b>1</b>/20</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.52.16:27221">46.174.52.16:27221</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=6715"><img border="0" src="lgsl/images/maps/source/cstrike/cs_assault.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=6715">MyArena.ru тестовый [100tick,1000fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: cs_assault</p>
+</p>
+                          </div>
+			 <IDXSKIP><div class="serverpro">&nbsp;</div></IDXSKIP>                          <IDXSKIP><div class="serverslot"><b>0</b>/10</div></IDXSKIP>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.52.7:27233">46.174.52.7:27233</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=7134"><img border="0" src="lgsl/images/maps/source/cstrike/cs_assault.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=7134">MyArena.ru тестовый [66tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: cs_assault</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>0</b>/16</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.48.23:27236">46.174.48.23:27236</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=7351"><img border="0" src="lgsl/images/maps/source/cstrike/de_nuke.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=7351">MyArena.ru тестовый [100tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: de_nuke</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>0</b>/20</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.48.34:27212">46.174.48.34:27212</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=7361"><img border="0" src="lgsl/images/maps/source/cstrike/de_nuke.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=7361">MyArena.ru тестовый [33tick,1000fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: de_nuke</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>0</b>/18</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.50.34:27211">46.174.50.34:27211</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=7465"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=7465">MyArena.ru тестовый [100tick,1000fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: de_dust2</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>5</b>/12</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/46.174.49.32:27213">46.174.49.32:27213</a><br/>
+                            <b>Россия, Москва</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=7613"><img border="0" src="lgsl/images/maps/source/cstrike/cs_assault.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=7613">MyArena.ru тестовый [33tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: cs_assault</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>0</b>/12</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/77.88.252.161:27216">77.88.252.161:27216</a><br/>
+                            <b>Украина, Киев</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=7667"><img border="0" src="lgsl/images/maps/source/cstrike/de_nuke.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=7667">MyArena.ru тестовый [66tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: de_nuke</p>
+</p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                          <div class="serverslot"><b>0</b>/18</div>
+                          <div class="serverinfo">
+                            <a href="steam://connect/77.88.252.161:27232">77.88.252.161:27232</a><br/>
+                            <b>Украина, Киев</b>
+                          </div>
+                        </div>
+                                                <div class="servera testservers">
+                          <div class="serveraimg"><a href="/game-monitoring.html?game=7669"><img border="0" src="lgsl/images/maps/source/cstrike/de_nuke.jpg" width="50" height="38" /></a></div>
+                          <div class="serveraname">
+                            <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0;">
+                              <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                              <a href="/game-monitoring.html?game=7669">MyArena.ru тестовый [100tick,500fps]</a>
+                            </p>
+                            <p style="margin: 0;">
+Карта: de_nuke</p>
+</p>
+                          </div>
+			 <IDXSKIP><div class="serverpro">&nbsp;</div></IDXSKIP>                          <IDXSKIP><div class="serverslot"><b>0</b>/12</div></IDXSKIP>
+                          <div class="serverinfo">
+                            <a href="steam://connect/77.88.252.161:27248">77.88.252.161:27248</a><br/>
+                            <b>Украина, Киев</b>
+                          </div>
+                        </div>
+                                                <script type="text/javascript">
+                          var hideTest = $.jStorage.get('hideTest');
+                          var hideTestSpan = $('#hidetest');
+                          if (!hideTest) {
+                            hideTest = 0;
+                          } else {
+                            $('.testservers').slideToggle(0);
+                            $(hideTestSpan).text('[развернуть]');
+                          }
+                          $(hideTestSpan).click(function() {
+                            $('.testservers').slideToggle('fast');
+                            hideTest = 1 - hideTest;
+                            if (hideTest) {
+                              $(hideTestSpan).text('[развернуть]');
+                            } else {
+                              $(hideTestSpan).text('[свернуть]');
+                            }
+                            $.jStorage.set('hideTest', hideTest);
+                          });
+                        </script>
+                        <IDXSKIP><div class="serverborder">&nbsp;</div></IDXSKIP>
+                        			<div align="center" class="serverlist">
+			<a id="paginator_active" href="/monitoring.html?page_n=1&amp;mod=18" data-page="1">1</a><a href="/monitoring.html?page_n=2&amp;mod=18" data-page="2">2</a><a href="/monitoring.html?page_n=3&amp;mod=18" data-page="3">3</a><a href="/monitoring.html?page_n=4&amp;mod=18" data-page="4">4</a><a href="/monitoring.html?page_n=5&amp;mod=18" data-page="5">5</a><a href="/monitoring.html?page_n=6&amp;mod=18" data-page="6">6</a><a href="/monitoring.html?page_n=7&amp;mod=18" data-page="7">7</a><a href="/monitoring.html?page_n=8&amp;mod=18" data-page="8">8</a><a href="/monitoring.html?page_n=9&amp;mod=18" data-page="9">9</a><a href="/monitoring.html?page_n=10&amp;mod=18" data-page="10">10</a><a class="paginator" href="/monitoring.html?page_n=11&amp;mod=18" data-page="11">...</a><a class="paginator" href="/monitoring.html?page_n=2&amp;mod=18" data-page="2">вперед</a><a class="paginator" href="/monitoring.html?page_n=36&amp;mod=18" data-page="36">&raquo;</a>			</div>
+			<div style="clear: both;"></div> 
+                        <div class="testserver">
+                          <p style="padding: 10px 0 0 10px;"><IDXSKIP>Игровые сервера наших клиентов: </IDXSKIP><b>Counter-Strike: Source v34</b></p>
+                        </div>
+                        <div id="userservers">
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=409"><img border="0" src="lgsl/images/maps/source/cstrike/zm_super_mario_v3.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=409">[v34| Зомби Побег</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: zm_super_mario_v3</p>		    </p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                              <div class="serverslot"><b>38</b>/42</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.48.27:27777">46.174.48.27:27777</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=8264"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=8264">[v34] МЯСОРУБКА © 2017 In-Teri [Public] 18+</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_dust2</p>		    </p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                              <div class="serverslot"><b>37</b>/52</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.52.17:27251">46.174.52.17:27251</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=1984"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=1984">[v34]|ТИТАН|[Public] 18+</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_dust2</p>		    </p>
+                          </div>
+			 <div class="serverpro"><span>PRO</span></div>                              <div class="serverslot"><b>35</b>/64</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.50.178:55555">46.174.50.178:55555</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=545"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=545">Лихие братки 90-х | © Public 18+ | v34 |</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_dust2</p>		    </p>
+                          </div>
+			 <div class="serverpro"><span>PRO</span></div>                              <div class="serverslot"><b>34</b>/54</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.54.87:55555">46.174.54.87:55555</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=6274"><img border="0" src="lgsl/images/maps/source/cstrike/zm_cbglc_b3.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=6274">[v34| Зомби 2017 |In-Teri]</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: zm_cbglc_b3</p>		    </p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                              <div class="serverslot"><b>33</b>/42</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.52.15:27205">46.174.52.15:27205</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=662"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=662">[v34 ] |КИЛОБАЙТ| © 2017 Public_ HD 18+</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_dust2</p>		    </p>
+                          </div>
+			 <div class="serverpro"><span>PRO</span></div>                              <div class="serverslot"><b>30</b>/55</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.52.188:18888">46.174.52.188:18888</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=10908"><img border="0" src="lgsl/images/maps/source/cstrike/de_inferno.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=10908">METRO 2033 18+[PUBLIC] by KRATOS</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_inferno</p>		    </p>
+                          </div>
+			 <div class="serverpro"><span>PRO</span></div>                              <div class="serverslot"><b>30</b>/60</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.54.82:55555">46.174.54.82:55555</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=1383"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=1383">&lt;СТОЛИЧНЫЙ СЕРВЕР l DD2_Only l ОРУЖИЕ CS|GO&gt;&gt;&gt;&gt;&gt;</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_dust2</p>		    </p>
+                          </div>
+			 <div class="serverpro"><span>PRO</span></div>                              <div class="serverslot"><b>29</b>/64</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.50.249:27015">46.174.50.249:27015</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=5329"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=5329">[v34] [GENESIS] [DeathMatch] 18+</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_dust2</p>		    </p>
+                          </div>
+			 <div class="serverpro"><span>PRO</span></div>                              <div class="serverslot"><b>27</b>/64</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.55.194:55555">46.174.55.194:55555</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=4982"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=4982">[The Last] Public [v34 | DD2] 18+</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_dust2</p>		    </p>
+                          </div>
+			 <div class="serverpro"><span>PRO</span></div>                              <div class="serverslot"><b>27</b>/64</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.53.12:27015">46.174.53.12:27015</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=3570"><img border="0" src="lgsl/images/noimage.png" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=3570">|Эшелон|Zombie сервер||v34||!teleme|!panic|</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: ze_abfd_fix_labescape_vb6_v34</p>		    </p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                              <div class="serverslot"><b>27</b>/40</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.48.45:27230">46.174.48.45:27230</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=6094"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=6094">[v34] ТЕРАБАЙТ 163  [Public] 18+</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_dust2</p>		    </p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                              <div class="serverslot"><b>27</b>/51</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.52.15:27259">46.174.52.15:27259</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=1176"><img border="0" src="lgsl/images/noimage.png" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=1176">|v34| «FIRESHOT» © PUBLIC OS.tm</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_inferno_classic</p>		    </p>
+                          </div>
+			 <div class="serverpro"><span>PRO</span></div>                              <div class="serverslot"><b>26</b>/36</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.52.128:55555">46.174.52.128:55555</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=5069"><img border="0" src="lgsl/images/maps/source/cstrike/zm_two_home_aw0.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=5069">[v34| Зомби Легенда</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: zm_two_home_aw0</p>		    </p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                              <div class="serverslot"><b>25</b>/42</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.49.24:27777">46.174.49.24:27777</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                      <div class="servera">
+                              <div class="serveraimg"><a href="/game-monitoring.html?game=7459"><img border="0" src="lgsl/images/maps/source/cstrike/de_dust2.jpg" width="50" /></a></div>
+                              <div class="serveraname">
+                                <p style="color: #2f2f2f; font-size: 13px; font-weight: bold; margin: 0; overflow: hidden; height: 18px;">
+                                  <img src="lgsl/images/icons/source/cstrike.gif" alt="Counter-Strike: Source v34" title="Counter-Strike: Source v34" style="border: none; margin-top: -3px; vertical-align: middle;" />
+                                  <a href="/game-monitoring.html?game=7459">[v34] МЯСНОЙ [Public] 18+</a>
+                                </p>
+                                <p style="margin: 0;">
+Карта: de_dust2</p>		    </p>
+                          </div>
+			 <div class="serverpro">&nbsp;</div>                              <div class="serverslot"><b>24</b>/48</div>
+                              <div class="serverinfo">
+                                <a href="steam://connect/46.174.52.9:27259">46.174.52.9:27259</a><br/>
+                                <b>Россия, Москва</b>
+                              </div>
+                            </div>
+                                                  </div>
+                                                <IDXSKIP><div class="serverborder">&nbsp;</div></IDXSKIP>
+                        <div align="center" class="serverlist">
+                          <a id="paginator_active" href="/monitoring.html?page_n=1&amp;mod=18" data-page="1">1</a><a href="/monitoring.html?page_n=2&amp;mod=18" data-page="2">2</a><a href="/monitoring.html?page_n=3&amp;mod=18" data-page="3">3</a><a href="/monitoring.html?page_n=4&amp;mod=18" data-page="4">4</a><a href="/monitoring.html?page_n=5&amp;mod=18" data-page="5">5</a><a href="/monitoring.html?page_n=6&amp;mod=18" data-page="6">6</a><a href="/monitoring.html?page_n=7&amp;mod=18" data-page="7">7</a><a href="/monitoring.html?page_n=8&amp;mod=18" data-page="8">8</a><a href="/monitoring.html?page_n=9&amp;mod=18" data-page="9">9</a><a href="/monitoring.html?page_n=10&amp;mod=18" data-page="10">10</a><a class="paginator" href="/monitoring.html?page_n=11&amp;mod=18" data-page="11">...</a><a class="paginator" href="/monitoring.html?page_n=2&amp;mod=18" data-page="2">вперед</a><a class="paginator" href="/monitoring.html?page_n=36&amp;mod=18" data-page="36">&raquo;</a>                        </div>
+                    </div>
+	</div>
+          <div class="container_footer">
+            <div class="lins-block">
+              <div class="list">
+                <IDXSKIP><div class="title"><span class="t-f-gameservers t-footer">&nbsp;</span>Игровые сервера</div></IDXSKIP>
+                <ul>
+                  <IDXSKIP><li><a href="/game_cs.html">Counter-Strike 1.6</a></li></IDXSKIP>
+                  <IDXSKIP><li><a href="/game_css.html">Counter-Strike: Source</a></li></IDXSKIP>
+                  <IDXSKIP><li><a href="/game_css34.html">Counter-Strike: Source v34</a></li></IDXSKIP>
+                  <IDXSKIP><li><a href="/game_mc.html">Minecraft</a></li></IDXSKIP>
+                  <IDXSKIP><li><a href="/game_samp.html">GTA San Andreas Multiplayer</a></li></IDXSKIP>
+		  <IDXSKIP><li><a href="/game_mta.html">GTA Multi Theft Auto</a></li></IDXSKIP>
+                </ul>
+              </div>
+              <div class="list">
+                <IDXSKIP><div class="title"><span class="t-f-otherservices t-footer">&nbsp;</span>Другие услуги</div></IDXSKIP>
+                <ul>
+                                    <IDXSKIP><li><a href="/webhosting.html">Web-хостинг</a></li></IDXSKIP>
+                                    <IDXSKIP><li><a href="/ts3.html">TeamSpeak 3</a></li></IDXSKIP>
+                                    <IDXSKIP><li><a href="/mumble.html">Mumble</a></li></IDXSKIP>
+                                    <IDXSKIP><li><a href="/hltv.html">HLTV</a></li></IDXSKIP>
+                                    <IDXSKIP><li><a href="/eac.html">EasyAntiCheat</a></li></IDXSKIP>
+                                    <IDXSKIP><li><a href="http://www.myarena.ru/home.php?m=shop">Магазин игр</a></li></IDXSKIP>
+                </ul>
+              </div>
+              <div class="list">
+                <IDXSKIP><div class="title"><span class="t-f-info t-footer">&nbsp;</span>Инфо</div></IDXSKIP>
+                <ul>
+			    <IDXSKIP><li><a href="/about.html">Контакты</a></li></IDXSKIP>
+			    <IDXSKIP><li><a href="/fullnews.html">Новости</a></li></IDXSKIP>
+                            <IDXSKIP><li><a href="/paysystems.html">Способы оплаты</a></li></IDXSKIP>
+                            <IDXSKIP><li><a href="/equipment.html">Технологии</a></li></IDXSKIP>
+                            <IDXSKIP><li><a href="/jobs.html">Вакансии</a></li></IDXSKIP>
+                </ul>
+              </div>
+              <div class="list">
+                <IDXSKIP><div class="title"><span class="t-f-community t-footer">&nbsp;</span>Сообщество</div></IDXSKIP>
+                <IDXSKIP><ul>
+                  <li><a href="/monitoring.php">Мониторинг</a></li>
+                  <li><a href="http://wiki.myarena.ru" target=_blank>Wikipedia</a></li>
+                  <li><a href="http://forum.myarena.ru" target=_blank>Форум</a></li>
+                </ul></IDXSKIP>
+              </div>
+              <IDXSKIP><div class="list">
+                <div class="title">&nbsp;</div>
+<ul>
+                  <li><span style="color: #834d18; float: right;">ООО&nbsp;«PC-Медиа» © 2009-2017</span></li>
+
+<li style="padding: 5px 10px;float: right;"><a target=_blank href="http://vk.com/myarena"><img src="images/v.png" width="24" height="" alt="" /></a>&nbsp;<a target=_blank href="http://steamcommunity.com/groups/myarena_ru"><img src="images/s.png" width="24" height="" alt="" /></a></li>
+
+                </ul>
+              </div></IDXSKIP>
+            </div>
+          </div>
+        </div>
+
+
+<!-- Yandex.Metrika counter -->
+
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter24908501 = new Ya.Metrika({id:24908501,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,params:window.yaParams||{ }});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/24908501" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+
+      <IDXSKIP><div id="footer">
+        <div class="copyright">&nbsp;</div>
+      </div></IDXSKIP>
+    </div>
+  </div>
+</body>
+</html>

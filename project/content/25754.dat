@@ -1,0 +1,1630 @@
+mts.ua/ru/services/upravlenie-schetom/kontrol-rashodov/uznat-ostatok-v-paketah-uslug
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var csrfTokenName = 'YII_CSRF_TOKEN';
+var csrfToken = 'c9d34864301a6afc997a371271ffaf17a7059e9c';
+</script>
+ <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+ <meta http-equiv="x-ua-compatible" content="ie=edge">
+ <style type="text/css">
+/*<![CDATA[*/
+ .submenu{
+ display:none;
+ }
+ .open + .submenu{
+ display:block;
+ }
+/*]]>*/
+</style>
+<style type="text/css">
+/*<![CDATA[*/
+ #Review_phone_prefix-error,
+ #Review_phone-error {
+ display: none !important;
+ }
+/*]]>*/
+</style>
+<title> Узнать остаток в пакетах услуг ПрАО «ВФ УКРАИНА»</title>
+ <meta name="keywords" content="" />
+ <meta name="description" content="" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+ <meta property="og:image" content="http://mts.ua/images/logo-prat-mts-ukraine-ua-fb.png" />
+ <!--link type="image/x-icon" href="/favicon.ico" rel="shortcut icon"-->
+ <link href='/css/styles.css?1492771704' media='screen' rel='stylesheet'>
+ <!--[if IE 9]>
+ <link href='/css/styles_2.css?1446114452' media='screen' rel='stylesheet'>
+ <![endif]-->
+ <link href='/css/promo/banners/banner-techtoday.css?1444732002' rel='stylesheet' type='text/css'>
+ <link href='/css/print.css?1429864199' media='print' rel='stylesheet'>
+ <script src='/js/polyfills/respond.min.js'></script>
+ <script src='/js/modernizr.custom.js'></script>
+ <script src='/js/detectizr.js'></script>
+ <!--[if !IE 8]><!-->
+ <script>
+ // Picture element HTML5 shiv
+ document.createElement( "picture" );
+ </script>
+ <script src='/js/picturefill.min.js' async></script>
+ <!--<![endif]-->
+ <script>
+ // globals
+ var lang = 'ru';
+ window.lang = 'ru';
+ // jquery ui datepicker localization
+ var datepickerRegionalRu = {
+ closeText: 'Закрыть',
+ prevText: '',
+ nextText: '',
+ currentText: 'Сегодня',
+ monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+ monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 'Июл','Авг','Сен','Окт','Ноя','Дек'],
+ dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+ dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+ dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+ weekHeader: 'Не',
+ dateFormat: 'dd.mm.yy',
+ firstDay: 1,
+ isRTL: false,
+ showMonthAfterYear: false,
+ yearSuffix: ''
+ };
+ var datepickerRegionalUa = {
+ closeText: 'Закрити',
+ prevText: '',
+ nextText: '',
+ currentText: 'Сьогодні',
+ monthNames: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень' ],
+ monthNamesShort: ['січня', 'лютого', 'березня', 'квітня', 'травня', 'червня', 'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня' ],
+ dayNames: ['неділя','понеділок','вівторок','середа','четвер','п`ятниця','субота'],
+ dayNamesShort: ['ндл', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+ dayNamesMin: ['Нд', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+ weekHeader: 'Не',
+ dateFormat: 'dd.mm.yy',
+ firstDay: 1,
+ isRTL: false,
+ showMonthAfterYear: false,
+ yearSuffix: ''
+ };
+ // jquery validation messages
+ var validatorMessages = {
+ required: "Обязательное поле",
+ remote: "Недопустимое значение",
+ email: "Неверный формат email",
+ url: "Неверный формат URL",
+ date: "Неверный формат даты",
+ dateISO: "Неверный формат даты (ISO)",
+ number: "Неверный формат числа",
+ digits: "Только цифры",
+ creditcard: "Неверный формат номера кредитной карты",
+ equalTo: "Значения не совпадают",
+ accept: "Недопустимое расширение",
+ maxlength: "Введите не более {0} символов",
+ minlength: "Введите не менее {0} символов",
+ rangelength: "Введите количество символов в диапазоне от {0} до {1}",
+ range: "Введите значение в диапазоне от {0} до {1}",
+ max: "Введите значение не более {0}",
+ min: "Введите значение не менее {0}",
+ mobile: ""
+ };
+ </script>
+ <!--[if (gte IE 6)&(lte IE 8)]>
+ <script type="text/javascript" src="/js/ie/selectivizr.js"></script>
+ <![endif]-->
+ <script src='/js/lib/jquery.js'></script>
+ <!--[if (gte IE 7)&(lte IE 9)]>
+ <script type="text/javascript" src='/js/history.min.js'></script>
+ <script type="text/javascript" src="/js/polyfills/console.js"></script>
+ <![endif]-->
+ <script>
+ (function (d, w, c) {
+ (w[c] = w[c] || []).push(function() {
+ try {
+ w.yaCounter27966192 = new Ya.Metrika({id:27966192,
+ webvisor:true,
+ clickmap:true,
+ trackLinks:true,
+ accurateTrackBounce:true});
+ } catch(e) { }
+ });
+ var n = d.getElementsByTagName("script")[0],
+ s = d.createElement("script"),
+ f = function () { n.parentNode.insertBefore(s, n); };
+ s.type = "text/javascript";
+ s.async = true;
+ s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+ if (w.opera == "[object Opera]") {
+ d.addEventListener("DOMContentLoaded", f, false);
+ } else { f(); }
+ })(document, window, "yandex_metrika_callbacks");
+ </script>
+ <noscript><div><img src="//mc.yandex.ru/watch/27966192" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ </head>
+<body class=" mts">
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MF77P5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MF77P5');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PMWVF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5PMWVF');</script>
+<div class='site-container'>
+<header class='site-header'>
+<div class='site-header__top'>
+<div class='container clearfix'>
+<div class='site-header__sidebars'>
+<IDXSKIP><div class='site-header__sidebars__item site-header__sidebars__item_logo'>
+ <div class='site-header__logo'>
+ <a class='' href='/ru/'>
+ <img alt='ПрАО «МТС Украина»' class='site-logo-image' src='/images/icon_vf_home.jpg'>
+ </a>
+ </div>
+</div></IDXSKIP> 
+ <div class='site-header__sidebars__item'>
+ <div class='site-sections-nav-wrap'>
+ <div id='site-sections-nav' class='site-sections-nav'>
+ <IDXSKIP><div class='site-sections-nav__item current'>
+ <a class='site-sections-nav__item__link' href="http://mts.ua/ru">Частным клиентам</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='site-sections-nav__item '>
+ <a class='site-sections-nav__item__link' href="http://business.mts.ua/ru">Для бизнеса</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='site-sections-nav__item '>
+ <a class='site-sections-nav__item__link' href="http://company.mts.ua/ru">О компании</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ </div>
+<div class='site-header__sidebars__item'>
+ <div class='pull-right'>
+ <div id='base-user-nav' class='base-user-nav'>
+ <div class='base-user-nav__item base-user-nav__item_lang has-child'>
+ <div class='base-user-nav__item__link uppercase'>
+ <div class='base-user-nav__item__link__label'>
+ ru </div>
+ </div>
+ <div class='dropdown-container dropdown-container_attach-left'>
+ <div class="second-nav text-size-xs">
+ <div class="second-nav__item ws-nowrap line-height-one current">
+ <a class="second-nav__item__link" href="/ru/services/upravlenie-schetom/kontrol-rashodov/uznat-ostatok-v-paketah-uslug/">
+ Русский
+ </a>
+ </div>
+ <div class="second-nav__item ws-nowrap line-height-one">
+ <a class="second-nav__item__link" href="/ua/services/upravlenie-schetom/kontrol-rashodov/uznat-ostatok-v-paketah-uslug/">
+ Українська
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class='base-user-nav__item base-user-nav__item_location has-child' id="geo-regions-container">
+ <div class="regions-list-popover popover popover-geo popover_no-borders bottom fade in display-block" id="region-alert">
+ <div class="arrow"></div>
+ <div class="popover-content">
+ <div class="text-center">
+ <IDXSKIP>Вы действительно находитесь в </IDXSKIP><IDXSKIP><span class="ws-norap display-inline-block">Киевской области?</span></IDXSKIP>
+ <IDXSKIP><div class="regions-list-popover__options">
+ <div class="regions-list-popover__options__item">
+ <a class="popover-alert-link js-link-select-region" data-id="25" data-type="Region">
+ Да, все верно </a>
+ </div>
+ <div class="regions-list-popover__options__item">
+ <a id="change-region-link" class="popover-alert-link">
+ Нет, сменить регион </a>
+ </div>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class="popover-close">
+ <div class="popover-close__icon"></div>
+ <div class="popover-close__icon_mobile"></div>
+<!-- <div class="icon icon-close-xs on-hover-hide"></div>-->
+<!-- <div class="icon icon-close-xs_red on-hover-show"></div>-->
+ </div>
+ </div>
+ <IDXSKIP><div id="base-user-nav-location" class='base-user-nav__item__link base-user-nav__item__link_location on-hover'>
+ <div class='base-user-nav__item__link__icon'>
+ <div class='icon icon-region-marker on-hover-hide'></div>
+ <div class='icon icon-region-marker_dark on-hover-show'></div>
+ </div>
+ <div class="base-user-nav__item__link__label" id="geo-title" style="display:none">
+ Киевская область </div>
+ </div></IDXSKIP>
+ <div class='dropdown-container dropdown-container_attach-right'>
+ <div class='regions-list-wrapper'>
+ <div class='regions-list'>
+ <div class="scroll-pane-container">
+ <div class='regions-list__group'>
+ <IDXSKIP><div class='regions-list__group__head'>
+ Украина </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="24" data-type="Region" href='#'>Винницкая область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="22" data-type="Region" href='#'>Волынская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="21" data-type="Region" href='#'>Днепропетровская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="25" data-type="District" href='#'>Апостоловский район</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="26" data-type="District" href='#'>Верхнеднепровский район</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="27" data-type="District" href='#'>Днепродзержинск</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="28" data-type="District" href='#'>Кривой Рог</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="29" data-type="District" href='#'>Криничанский район</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="30" data-type="District" href='#'>Магдалиновский район</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="31" data-type="District" href='#'>Петриковский район</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="32" data-type="District" href='#'>Софиевский район</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="33" data-type="District" href='#'>Царичанский район</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="34" data-type="District" href='#'>Широковский район </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="4" data-type="Region" href='#'>Донецкая область</a>
+ </div></IDXSKIP>
+ <div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="1" data-type="District" href='#'><IDXSKIP>Мариуполь и побережье Донецкой области</IDXSKIP></a>
+ </div>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="6" data-type="Region" href='#'>Житомирская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="10" data-type="Region" href='#'>Закарпатская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="17" data-type="Region" href='#'>Запорожская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="13" data-type="Region" href='#'>Ивано-Франковская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item active'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="25" data-type="Region" href='#'>Киевская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="7" data-type="Region" href='#'>Кировоградская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="6" data-type="District" href='#'>Светловодский район</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="16" data-type="Region" href='#'>АР Крым</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="2" data-type="Region" href='#'>Луганская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="5" data-type="Region" href='#'>Львовская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="19" data-type="Region" href='#'>Николаевская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="9" data-type="Region" href='#'>Одесская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="15" data-type="Region" href='#'>Полтавская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="17" data-type="District" href='#'>Комсомольск</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item regions-list__group__item_sub'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="16" data-type="District" href='#'>Кременчуг</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="14" data-type="Region" href='#'>Ровненская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="1" data-type="Region" href='#'>Сумская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="11" data-type="Region" href='#'>Тернопольская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="8" data-type="Region" href='#'>Харьковская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="3" data-type="Region" href='#'>Херсонская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="20" data-type="Region" href='#'>Хмельницкая область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="12" data-type="Region" href='#'>Черкасская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="23" data-type="Region" href='#'>Черниговская область</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='regions-list__group__item'>
+ <a class='regions-list__group__item__link js-link-select-region' data-id="18" data-type="Region" href='#'>Черновицкая область</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class='base-user-nav__item base-user-nav__item_account has-child on-hover'>
+ <IDXSKIP><div class='base-user-nav__item__link'>
+ <div class='base-user-nav__item__link__icon'>
+ <div class='icon icon-login on-hover-hide'></div>
+ <div class='icon icon-login_dark on-hover-show'></div>
+ </div>
+ <div class="base-user-nav__item__link__label">
+ ИНТЕРНЕТ-ПОМОЩНИК </div>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='dropdown-container dropdown-container_attach-right'>
+ <div class='account-links reset-padding reset-background'>
+ <div class='account-links__list'>
+ <!--
+ <div class='account-links__list__item ts-hidden'>
+ <div class='account-links__list__item__label'>
+ <a class='btn btn-primary btn-full text-left' href='https://ihelper.mts.com.ua/'>
+ <div class='icon icon-pointer-right icon-pointer-right_at-left'></div>
+ контракт </a>
+ </div>
+ </div>
+ -->
+ <div class='account-links__list__item'>
+ <div class='account-links__list__item__label'>
+ <a class='btn btn-dark-gray btn-full text-left' href='https://ihelper-prp.mts.com.ua/'>
+ <div class='icon icon-pointer-right icon-pointer-right_at-left'></div>
+ контракт <!--
+ <sup>
+ new
+ </sup>
+ -->
+ </a>
+ </div>
+ </div>
+ <div class='account-links__list__item'>
+ <div class='account-links__list__item__label'>
+ <a class='btn btn-red btn-full text-left' href='http://my.mts.ua/'>
+ <div class='icon icon-pointer-right icon-pointer-right_at-left'></div>
+ Предоплата </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ </div>
+</div>
+<div class='site-header__sidebars__item site-header__sidebars__navbar-toggle'>
+ <button class="navbar-toggle pull-right" data-toggle="offcanvas" data-target="#nav-mobile" data-canvas="body">
+ <span class="navbar-toggle__inner"></span>
+ </button>
+</div>
+</div>
+</div>
+</div>
+<div class='site-header__bottom'>
+ <div class='container'>
+ <div class='site-header__sidebars'>
+ <div class='site-header__sidebars__item site-header__sidebars__item_logo'></div>
+ <div class='site-header__sidebars__item site-header__sidebars__item_nav'>
+ <nav class='main-nav-wrap'>
+ <div id='main-nav' class='main-nav'>
+ <div class='main-nav__item has-child'>
+ <IDXSKIP><a class='main-nav__item__link' href='/ru/mobile'>Мобильная связь</a></IDXSKIP>
+ <div class='dropdown-container'>
+ <div class='second-nav-list'>
+ <IDXSKIP><div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/296/origin.jpeg)'></div>
+ <div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/mobile/tariffs/archive'>Тарифы</a>
+ </div>
+ </div>
+ </div></IDXSKIP>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/301/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/services'>Услуги</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/services/category-dlya-ekonomii'>Для экономии</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/services/category-poleznye-servisy'>Полезные сервисы</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/services/category-razvlecheniya'>Развлечения</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/services/category-upravlenie-schetom'>Управление счетом</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/319/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/mobile/roaming/prepayment'>Роуминг</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/mobile/roaming/prepayment'>Тарифы и услуги</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/mobile/mezhdunarodnaya-svyaz/prepayment'>Международная связь</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/mobile/mezhdunarodnaya-svyaz/prepayment'>Тарифы и услуги</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <IDXSKIP><div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url()'></div>
+ <div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/mobile/fun'>Развлечения</a>
+ </div>
+ <div class='second-nav__item '>
+ <a class='second-nav__item__link' href='http://www.mts.ua/ru/mobile/fun/prepayment/129-good-ok'>GOOD’OK</a>
+ </div>
+ </div>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ </div>
+ <div class='main-nav__item has-child'>
+ <IDXSKIP><a class='main-nav__item__link' href='/ru/internet'>Интернет</a></IDXSKIP>
+ <div class='dropdown-container'>
+ <div class='second-nav-list'>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/331/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='http://www.mts.ua/ru/internet/smartphone/prepayment/tariffs'>Для смартфона</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/smartphone/prepayment/tariffs'>Тарифы</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/smartphone/prepayment'>Услуги</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/smartphone/prepayment/settings'>Настройки</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/partnerskye-programu/prepayment/tariffs'>Партнерские программы</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/468/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/internet/table/prepayment/tariffs'>Для планшета</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/table/prepayment/tariffs'>Тарифы</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/table/prepayment'>Услуги</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/table/prepayment/settings'>Настройки</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/336/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='http://www.mts.ua/ru/internet/for-laptop/3g-internet/prepayment/tariffs'>Для ноутбука</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/for-laptop/3g-internet/prepayment/tariffs'>3G CDMA Тарифы</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/for-laptop/3g-internet/prepayment'>3G CDMA Услуги</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/for-laptop/3g-internet/prepayment/coverage'>3G CDMA Покрытие</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='http://www.mts.ua/ru/internet/for-laptop/gprs-internet/prepayment/tariffs'>2G/3G Интернет</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class='main-nav__item has-child'>
+ <IDXSKIP><a class='main-nav__item__link' href='/ru/support'>Поддержка</a></IDXSKIP>
+ <div class='dropdown-container'>
+ <div class='second-nav-list'>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/369/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/support'>Справочная служба</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/services'>Тарифы и услуги</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='http://www.mts.ua/ru/support/faq/'>Инфо</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/settings'>Настройки</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='http://www.mts.ua/ru/support/control/'>Управление счётом</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/general'>Общие вопросы</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/faq/129-dokumentaciya'>Документация</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/faq/125-kursy-distancionnogo-obucheniya'>Курсы дистанционного обучения</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/370/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/support'>Частые вопросы и ответы</a>
+ </div></IDXSKIP>
+ <div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/control/114-kak-poluchit-detalizaciyu-rashodov'><IDXSKIP>— Как получить детализацию расходов?</IDXSKIP></a>
+ </div>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/general/115-kak-zablokirovat-sim-kartu'>— Как заблокировать SIM- карту?</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/services/63-usluga-rouminga'>— Как пользоваться роумингом?</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/services/116-kak-izmenit-tarif'>— Как изменить тариф?</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/general/20-esli-vash-nomer-zablokirovan-nevernym-vvedeniem-puk-koda'>— Как восстановить PIN/PUK код?</a>
+ </div></IDXSKIP>
+ <div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/faq/95-usloviya-polzovaniya-setyami-mobilnoj-svyazi'><IDXSKIP>— Условия пользования сетями мобильной связи</IDXSKIP></a>
+ </div>
+ </div>
+ </div>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/371/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='http://company.mts.ua/ua/company/coverage/feedback-form'>Служба поддержки</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/referral-service/salescenters'>Центры обслуживания абонентов</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='http://company.mts.ua/ua/company/coverage/feedback-form'>Форма обратной связи</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/support/services/128-wi-fi-ot-mts'>Wi-Fi</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class="second-nav-list__item pull-right">
+ <div class="feedback-info-banner-well">
+ <IDXSKIP><div class="text-size-base-lg margin-bottom-xs">
+ Контакт-центр </div></IDXSKIP>
+ <div class="feedback-info-banner feedback-info-banner_sm color-black">
+ <div class="feedback-info-banner__item">
+ <div class="feedback-info-banner__item__icon">
+ <div class="icon icon-call-center-landline_sm"></div>
+ </div>
+ <div class="feedback-info-banner__item__label">
+ <IDXSKIP><div class="feedback-info-banner__item__label__number">
+ 0 (800) 400-000
+ </div></IDXSKIP>
+ <IDXSKIP>Круглосуточная горячая линия </IDXSKIP></div>
+ </div>
+ <div class="feedback-info-banner__item">
+ <div class="feedback-info-banner__item__icon">
+ <div style="margin-top:2px;" class="icon icon-call-center-mobile_sm"></div>
+ </div>
+ <div class="feedback-info-banner__item__label">
+ <div class="feedback-info-banner__item__label__number feedback-info-banner__item__label__number_short ws-normal">
+ <IDXSKIP>111
+ <div class="feedback-info-banner__item__label__number__desc">
+ С мобильного телефона<br>
+ (бесплатно в сети ПрАО «МТС Украина»)
+ </div></IDXSKIP>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class='main-nav__item has-child'>
+ <IDXSKIP><a class='main-nav__item__link' href='/ru/my-mts'>ИНТЕРНЕТ-ПОМОЩНИК</a></IDXSKIP>
+ <div class='dropdown-container'>
+ <div class='second-nav-list'>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/347/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/my-mts/my-tariff'>Мой тариф</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/my-mts/my-tariff/service-management'>Управление услугами</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/my-mts/my-tariff/statistics'>Статистика</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/my-mts/my-tariff/tariff-management'>Управление тарифом</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class='second-nav-list__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head-image' style='background-image: url(/photos/menu/349/origin.jpeg)'></div>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/my-mts/my-account'>Мой счёт</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/my-mts/my-account/account-status'>Состояние счёта</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/my-mts/my-account/deposit-money'>Пополнить счёт</a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/my-mts/my-account/order-documents'>Заказ документов</a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class='second-nav-list__item pull-right'>
+ <div class="account-links">
+ <IDXSKIP><div class="account-links__head">
+ ИНТЕРНЕТ-ПОМОЩНИК </div></IDXSKIP>
+ <IDXSKIP><div class="account-links__list">
+ <!--
+ <div class="account-links__list__item">
+ <div class="account-links__list__item__label">
+ <a href="https://ihelper.mts.com.ua/" class="btn btn-primary btn-full text-left">
+ <div class="icon icon-pointer-right icon-pointer-right_at-left"></div>
+ контракт </a>
+ </div>
+ </div>
+ -->
+ <div class="account-links__list__item">
+ <div class="account-links__list__item__label">
+ <a href="https://ihelper-prp.mts.com.ua/" class="btn btn-dark-gray btn-full text-left">
+ <div class="icon icon-pointer-right icon-pointer-right_at-left"></div>
+ контракт <!--
+ <sup>
+ new
+ </sup>
+ -->
+ </a>
+ </div>
+ </div>
+ <div class="account-links__list__item">
+ <div class="account-links__list__item__label">
+ <a href="http://my.mts.ua/" class="btn btn-red btn-full text-left">
+ <div class="icon icon-pointer-right icon-pointer-right_at-left"></div>
+ Предоплата </a>
+ </div>
+ </div>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </nav>
+ </div>
+ <IDXSKIP><div class='site-header__sidebars__item site-header__sidebars__item_search'>
+ <div class='pull-right'>
+ <div class='search-form'>
+ <form action='/ru/search/'>
+ <input name="q" class='form-control search-form__field' placeholder='' type='text' value=''>
+ <button class='search-form__btn'>
+ <div class='icon icon-search'></div>
+ </button>
+ </form>
+ </div>
+ </div>
+ </div></IDXSKIP>
+ </div>
+ </div>
+</div>
+</header>
+ <div class='site-breadcrumb'>
+ <div class='container'>
+ <div class='breadcrumb'>
+ <IDXSKIP><div class='breadcrumb__item' itemscope itemtype='http://data-vocabulary.org/Breadcrumb'>
+ <a class='breadcrumb__item__link' href='/' itemprop='url'>
+ <div class='icon icon-home'></div>
+ <span itemprop="title">
+ Главная </span>
+ </a>
+ </div></IDXSKIP>
+ <div class='breadcrumb__item' itemscope itemtype='http://data-vocabulary.org/Breadcrumb'>
+ <a class="breadcrumb__item__link" itemprop="url" href="/ru/services"><span itemprop='title'>Услуги</span></a> </div>
+ <div class='breadcrumb__item' itemscope itemtype='http://data-vocabulary.org/Breadcrumb'>
+ <a class="breadcrumb__item__link" itemprop="url" href="/ru/services/category-upravlenie-schetom"><span itemprop='title'>Управление счетом</span></a> </div>
+ <div class='breadcrumb__item' itemscope itemtype='http://data-vocabulary.org/Breadcrumb'>
+ Узнать остаток в пакетах услуг </div>
+ </div> </div>
+</div>
+<div class='site-content' id="site_content">
+ <div class='container'>
+ <div class="page-header">
+ <div id="services-menu">
+ <div class='page-header'>
+ <div class='page-header__title page-header__title_has-nav'>
+ <div class='sidebars xsa-display-block'>
+ <div class='sidebars__item vertical-align-bottom padding-right-md xsa-display-block width-full'>
+ <h1 class='title-of-page'>
+ Управление счетом </h1>
+ </div>
+ <div class='sidebars__item vertical-align-bottom'>
+ <div class='clearfix'>
+ <div class='tabs-nav'>
+ <div class='tabs-nav__item active'>
+ <a class='tabs-nav__item__link on-hover non-follow' data-type="is_prepayment" href='/ru/services/upravlenie-schetom/kontrol-rashodov/uznat-ostatok-v-paketah-uslug'>
+ Предоплата </a>
+ </div>
+ <div class='tabs-nav__item '>
+ <a class='tabs-nav__item__link on-hover non-follow' data-type="is_contract" href='/ru/services/upravlenie-schetom/kontrol-rashodov/uznat-ostatok-v-paketah-uslug'>
+ Контракт </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+<!-- <div class='separator'></div>-->
+</div>
+<div class="styled-nav-wrap styled-nav-wrap_margin-bottom">
+ <div class='styled-nav'>
+ <div class='styled-nav__item '>
+ <a class='styled-nav__item__link non-follow' href='/ru/services/upravlenie-schetom/mobilnyj-bank/sms-banking' data-category="mobilnyj-bank" style='background-image: url(/upload/79/27/thumb_cache_213x80_79271424979260_320x70crop.jpg)'>
+ <div class='styled-nav__item__label'>
+ Дополнительные услуги </div>
+ </a>
+ </div>
+ <div class='styled-nav__item '>
+ <a class='styled-nav__item__link non-follow' href='/ru/services/upravlenie-schetom/zakonchilis-dengi/perevod-deneg' data-category="zakonchilis-dengi" style='background-image: url(/upload/92/40/thumb_cache_213x80_92401424979260_320x70crop.jpg)'>
+ <div class='styled-nav__item__label'>
+ Закончились деньги? </div>
+ </a>
+ </div>
+ <div class='styled-nav__item active'>
+ <a class='styled-nav__item__link non-follow' href='/ru/services/upravlenie-schetom/kontrol-rashodov/uznat-svoj-tarif' data-category="kontrol-rashodov" style='background-image: url(/upload/28/68/thumb_cache_213x80_28681424979260_320x70crop.jpg)'>
+ <div class='styled-nav__item__label'>
+ Контроль расходов </div>
+ </a>
+ </div>
+ <div class='styled-nav__item '>
+ <a class='styled-nav__item__link non-follow' href='/ru/services/upravlenie-schetom/mobilnye-platezhi/mobilnye-platezhi-sovmestno-s-portmone-mobile' data-category="mobilnye-platezhi" style='background-image: url(/upload/98/04/thumb_cache_213x80_98041424979260_320x70crop.jpg)'>
+ <div class='styled-nav__item__label'>
+ Мобильные платежи </div>
+ </a>
+ </div>
+ <div class='styled-nav__item '>
+ <a class='styled-nav__item__link non-follow' href='/ru/services/upravlenie-schetom/popolnit-schet/popolnit-schet-v-rouminge' data-category="popolnit-schet" style='background-image: url(/upload/57/56/thumb_cache_213x80_57561424979260_320x70crop.jpg)'>
+ <div class='styled-nav__item__label'>
+ Пополнить счет </div>
+ </a>
+ </div>
+ <div class='styled-nav__item '>
+ <a class='styled-nav__item__link non-follow' href='/ru/services/upravlenie-schetom/schet-v-rouminge/popolnit-schet-v-rouminge' data-category="schet-v-rouminge" style='background-image: url(/upload/78/96/thumb_cache_213x80_78961424979260_320x70crop.jpg)'>
+ <div class='styled-nav__item__label'>
+ Счет в Роуминге </div>
+ </a>
+ </div>
+ </div>
+ <div class="nav-tabs-toggle">
+ <div class="nav-tabs-toggle__inner"></div>
+ </div>
+</div> </div>
+<script>
+ $(document).on('click','.non-follow:not(.non-load)',function(){
+ var parent=$(this).parents(".tabs-nav");
+ var url=$(this).attr('href');
+ var alias=null;
+ if($(this).hasClass('styled-nav__item__link')){
+ parent=$(this).parents(".styled-nav");
+ }
+ if($(this).hasClass('side-nav__item__link') || parent.hasClass('page-menu')){
+ parent=$(this).parents(".side-nav");
+ alias=$(this).data('alias');
+ }
+ parent.find('.non-follow').parent().removeClass('active');
+ $(this).parent().addClass('active');
+ var filters={
+ alias:alias,type:$(".tabs-nav__item.active .non-follow").data('type'),
+ category:$(".styled-nav__item.active .non-follow").data('category'),
+ YII_CSRF_TOKEN: "c9d34864301a6afc997a371271ffaf17a7059e9c"
+ };
+ $.ajax({
+ url:url,
+ type:"POST",
+ data:filters,
+ success:function(result){
+ var data=$.parseJSON(result);
+ document.title=data.page_title;
+ $("#service_sidebar").html(data.sidebar);
+ $("#service_title").html(data.title);
+ $("#service_content").html(data.content);
+ if(data.url!=undefined) {
+// $('.icon-lang-ru').parent().attr('href', data.url.replace('ua', 'ru'));
+// $('.icon-lang-ua').parent().attr('href', data.url.replace('ru', 'ua'));
+ history.pushState(null, '',data.url);
+ }
+ }
+ })
+ return false;
+ })
+</script>
+ </div>
+ </div>
+ <div class='container'>
+ </div>
+ <div class='container'>
+ </div>
+ <div class='container'>
+ <div class="page-columns page-columns_has-left">
+ <div class="page-columns__left">
+ <div id="service_sidebar">
+ <div class='side-nav-wrap'>
+ <div class='side-nav'>
+ <div class='side-nav__item active'>
+ <a class='side-nav__item__link js-ajax-link' title=' Узнать остаток в пакетах услуг' data-alias="uznat-ostatok-v-paketah-uslug" href='/ru/services/upravlenie-schetom/kontrol-rashodov/uznat-ostatok-v-paketah-uslug'>
+ Узнать остаток в пакетах услуг </a>
+ </div>
+ <div class='side-nav__item '>
+ <a class='side-nav__item__link js-ajax-link' title='Баланс под контролем' data-alias="balans-pod-kontrolem" href='/ru/services/upravlenie-schetom/kontrol-rashodov/balans-pod-kontrolem'>
+ Баланс под контролем </a>
+ </div>
+ <div class='side-nav__item '>
+ <a class='side-nav__item__link js-ajax-link' title='Контент-ревизор' data-alias="kontent-revizor" href='/ru/services/upravlenie-schetom/kontrol-rashodov/kontent-revizor'>
+ Контент-ревизор </a>
+ </div>
+ <div class='side-nav__item '>
+ <a class='side-nav__item__link js-ajax-link' title='Контроль расходов' data-alias="kontrol-rashodov" href='/ru/services/upravlenie-schetom/kontrol-rashodov/kontrol-rashodov'>
+ Контроль расходов </a>
+ </div>
+ <div class='side-nav__item '>
+ <a class='side-nav__item__link js-ajax-link' title='Контроль счета' data-alias="kontrol-scheta" href='/ru/services/upravlenie-schetom/kontrol-rashodov/kontrol-scheta'>
+ Контроль счета </a>
+ </div>
+ <div class='side-nav__item '>
+ <a class='side-nav__item__link js-ajax-link' title='Мой МТС' data-alias="moj-mts" href='/ru/services/upravlenie-schetom/kontrol-rashodov/moj-mts'>
+ Мой МТС </a>
+ </div>
+ <div class='side-nav__item '>
+ <a class='side-nav__item__link js-ajax-link' title='Проверить пополнения ' data-alias="proverit-popolneniya" href='/ru/services/upravlenie-schetom/kontrol-rashodov/proverit-popolneniya'>
+ Проверить пополнения </a>
+ </div>
+ <div class='side-nav__item '>
+ <a class='side-nav__item__link js-ajax-link' title='Узнать свой тариф' data-alias="uznat-svoj-tarif" href='/ru/services/upravlenie-schetom/kontrol-rashodov/uznat-svoj-tarif'>
+ Узнать свой тариф </a>
+ </div>
+ </div>
+ <div class="nav-tabs-toggle">
+ <div class="nav-tabs-toggle__inner"></div>
+ </div>
+</div>
+</div>
+ <!--@content9-->
+ <!--@content10-->
+ <!--@content11-->
+ <!--@content12-->
+ <!--@content13-->
+ <!--@content14-->
+ </div>
+ <div class='page-columns__center'>
+ <div class="widget-wrapper">
+ <div class="content-block">
+ <h2 id="service_title"> Узнать остаток в пакетах услуг </h2>
+ <!-- <div class="separator"></div>-->
+ <div id="service_content" class="content-block">
+ <h3>Вы&nbsp;можете:</h3>
+<ul>
+<li>Проверять информацию об&nbsp;остатке пакетных&nbsp;денег.</li>
+<li>Узнавать остаток по&nbsp;пакетам&nbsp;минут.</li>
+<li>Узнавать остаток по&nbsp;пакетам&nbsp;SMS.</li>
+<li>Узнавать остаток по&nbsp;пакетам&nbsp;GPRS.</li>
+<li>Узнавать остаток по&nbsp;комбинированным пакетам из&nbsp;SMS, MMS&nbsp;и&nbsp;GPRS.</li>
+</ul>
+<h3>Пакеты SMS и GPRS</h3>
+<table class="single-table table-invert text-size-base-lg line-height-sm">
+<tbody>
+<tr class="reset-child-border reset-child-padding-top"><th class="text-size-h4">Услуга</th><th class="text-size-h4">Пакет</th><th class="text-size-h4">Подключение</th><th class="text-size-h4">Стоимость</th><th class="text-size-h4">Статус</th></tr>
+<tr>
+<td class="vertical-align-middle text-size-lg" rowspan="2">Пакеты SMS</td>
+<td class="vertical-align-middle text-size-lg">20 SMS</td>
+<td class="vertical-align-middle text-size-sm">&nbsp;&nbsp;&nbsp;
+<div class="text-marked margin-bottom-7" style="text-align: center;">&nbsp;&nbsp;&nbsp;*110*55#
+<div class="icon icon-call">&nbsp;</div>
+</div>
+</td>
+<td class="color-gray vertical-align-middle" style="text-align: center;"><span class="text-size-h2 color-red">6 <span class="text-size-base color-red">грн</span></span></td>
+<td class="vertical-align-middle text-size-sm" style="text-align: center;" rowspan="2">
+<div class="text-marked margin-bottom-7">*110*20#
+<div class="icon icon-call">&nbsp;</div>
+</div>
+<span class="text-size-base">или воспользуйтесь <a class="display-inline-block" href="https://ihelper-prp.mts.com.ua/SelfCareUA/Logon">Интернет-Помощником</a></span></td>
+</tr>
+<tr>
+<td class="vertical-align-middle text-size-lg">200 SMS</td>
+<td class="vertical-align-middle text-size-sm">&nbsp;&nbsp;&nbsp;
+<div class="text-marked margin-bottom-7" style="text-align: center;">*110*80#
+<div class="icon icon-call">&nbsp;</div>
+</div>
+</td>
+<td class="color-gray vertical-align-middle" style="text-align: center;"><span class="text-size-h2 color-red">20 <span class="text-size-base color-red">грн</span></span></td>
+</tr>
+<tr>
+<td class="text-size-lg vertical-align-middle" rowspan="5">Пакеты GPRS</td>
+<td class="vertical-align-middle text-size-lg">20 Mб</td>
+<td class="vertical-align-middle text-size-sm" rowspan="5">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+<div class="text-marked margin-bottom-7" style="text-align: center;">111
+<div class="icon icon-call">&nbsp;</div>
+</div>
+</td>
+<td class="color-gray vertical-align-middle" style="text-align: center;"><span class="text-size-h2 color-red">10 <span class="text-size-base color-red">грн</span></span></td>
+<td class="vertical-align-middle text-size-sm" style="text-align: center;" rowspan="4">
+<div class="text-marked margin-bottom-7">*110*20#
+<div class="icon icon-call">&nbsp;</div>
+</div>
+<span class="text-size-base">или воспользуйтесь <a class="display-inline-block" href="https://ihelper-prp.mts.com.ua/SelfCareUA/Logon">Интернет-Помощником</a></span></td>
+</tr>
+<tr>
+<td class="vertical-align-middle text-size-lg">100 Mб</td>
+<td class="color-gray vertical-align-middle" style="text-align: center;"><span class="text-size-h2 color-red">35 <span class="text-size-base color-red">грн</span></span></td>
+</tr>
+<tr>
+<td class="vertical-align-middle text-size-lg">1000 Mб</td>
+<td class="color-gray vertical-align-middle" style="text-align: center;"><span class="text-size-h2 color-red">65 <span class="text-size-base color-red">грн</span></span></td>
+</tr>
+<tr>
+<td class="vertical-align-middle text-size-lg">Ночной интернет 5000 Mб</td>
+<td class="color-gray vertical-align-middle" style="text-align: center;"><span class="text-size-h2 color-red">49 <span class="text-size-base color-red">грн</span></span></td>
+</tr>
+<tr>
+<td class="vertical-align-middle text-size-lg">Интернет безлимитный</td>
+<td class="color-gray vertical-align-middle" style="text-align: center;"><span class="text-size-h2 color-red">135 <span class="text-size-base color-red">грн</span></span></td>
+<td class="vertical-align-middle text-size-sm" rowspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="text-marked margin-bottom-7" style="text-align: center;">&nbsp; *101*999#
+<div class="icon icon-call">&nbsp;</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Тариф в&nbsp;гривнах с&nbsp;учетом НДС без ПФ. Дополнительно удерживается сбор в&nbsp;Пенсионный фонд в&nbsp;размере 7,5% от&nbsp;стоимости услуги без учета&nbsp;НДС.</p>
+<p>Детально об&nbsp;использовании SMS пакетов Вы&nbsp;можете узнать по&nbsp;<span href="#utility-service-16" data-toggle="modal">ссылке</span>.</p>
+<p>Детально об&nbsp;использовании GPRS пакетов Вы&nbsp;можете узнать по <a class="display-inline-block" href="http://www.mts.ua/ru/internet/for-laptop/gprs-internet/prepayment/internet-pakety-ot-mts-2/">ссылке</a>.</p>
+<h3>Комбинированные пакеты</h3>
+<p>Выберите свой пакет и&nbsp;получите дешевый и&nbsp;удобный доступ к&nbsp;сети&nbsp;Интернет.</p>
+<table class="single-table table-invert text-size-base-lg line-height-sm">
+<tbody>
+<tr class="reset-child-border reset-child-padding-top"><th class="text-size-h4">Пакет</th><th class="text-size-h4">SMS</th><th class="text-size-h4">MMS</th><th class="text-size-h4">MБ</th><th class="text-size-h4">Стоимость</th><th class="text-size-h4">Статус</th><th class="text-size-h4">Подключение</th></tr>
+<tr>
+<td class="vertical-align-middle text-size-lg">Пакет 25</td>
+<td class="vertical-align-middle text-size-lg">25</td>
+<td class="vertical-align-middle text-size-lg">25</td>
+<td class="vertical-align-middle text-size-lg">25</td>
+<td class="color-gray vertical-align-middle"><span class="text-size-h2 color-red">15 <span class="text-size-base color-red">грн</span></span></td>
+<td class="vertical-align-middle text-size-base" style="text-align: center;" rowspan="4">
+<div class="text-marked margin-bottom-7" style="text-align: center;">*110*20#
+<div class="icon icon-call">&nbsp;</div>
+</div>
+или воспользуйтесь <a class="display-inline-block" href="https://ihelper-prp.mts.com.ua/SelfCareUA/Logon">Интернет-Помощником</a></td>
+<td class="vertical-align-middle text-size-sm" rowspan="4">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="text-marked margin-bottom-7" style="text-align: center;">111
+<div class="icon icon-call">&nbsp;</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="vertical-align-middle text-size-lg">Пакет&nbsp;75</td>
+<td class="vertical-align-middle text-size-lg">75</td>
+<td class="vertical-align-middle text-size-lg">75</td>
+<td class="vertical-align-middle text-size-lg">75</td>
+<td class="color-gray vertical-align-middle"><span class="text-size-h2 color-red">30 <span class="text-size-base color-red">грн</span></span></td>
+</tr>
+<tr>
+<td class="vertical-align-middle text-size-lg">Пакет&nbsp;250</td>
+<td class="vertical-align-middle text-size-lg">250</td>
+<td class="vertical-align-middle text-size-lg">250</td>
+<td class="vertical-align-middle text-size-lg">250</td>
+<td class="color-gray vertical-align-middle"><span class="text-size-h2 color-red">45 <span class="text-size-base color-red">грн</span></span></td>
+</tr>
+<tr>
+<td class="vertical-align-middle text-size-lg">Пакет&nbsp;750</td>
+<td class="vertical-align-middle text-size-lg">750</td>
+<td class="vertical-align-middle text-size-lg">750</td>
+<td class="vertical-align-middle text-size-lg">750</td>
+<td class="color-gray vertical-align-middle"><span class="text-size-h2 color-red">75 <span class="text-size-base color-red">грн</span></span></td>
+</tr>
+</tbody>
+</table>
+<p>Тариф в&nbsp;гривнах с&nbsp;учетом НДС без ПФ. Дополнительно удерживается сбор в&nbsp;Пенсионный фонд в&nbsp;размере 7,5% от&nbsp;стоимости услуги без учета&nbsp;НДС.</p>
+<p>Срок действия пакета&nbsp;&mdash; с&nbsp;момента заказа и&nbsp;до последнего дня&nbsp;месяца.</p>
+<p>Детально о&nbsp;правилах использования комбинированных пакетов от&nbsp;ПрАО «МТС Украина»&nbsp;Вы&nbsp;можете узнать по&nbsp; <a class="display-inline-block" href="http://www.business.mts.ua/ru/services/category-optimizaciya-biznesa/kombinirovannye-pakety-uslug">ссылке</a><IDXSKIP>.</IDXSKIP></p>
+ <div class='modal fade' id='utility-service-16'>
+<div class='modal-dialog'>
+ <div class='modal-content'>
+<div class='modal-body'>
+ <h1 class='title-of-page'>SMS пакет</h1>
+ <div class='content-block'><p>Услуга SMS Пакеты позволяет Вам экономить на&nbsp;SMS общении, покупая SMS партиями 20, 50, 100&nbsp;и&nbsp;200&nbsp;сообщений, чем больше такая партия, тем ниже стоимость SMS. Так, например, заказав пакет из&nbsp;200&nbsp;SMS, за&nbsp;одно сообщение из&nbsp;этого пакета Вы&nbsp;заплатите всего 0,10&nbsp;грн. с&nbsp;НДС без ПФ, что составляет 16% от&nbsp;базовой стоимости SMS (0,60&nbsp;грн. с&nbsp;НДС без&nbsp;ПФ).</p>
+<p><strong>SMS пакеты для абонентов предоплаченной&nbsp;связи:</strong></p>
+<ul>
+<li><a class="display-inline-block" href="http://mts.ua/ru/services/pakety-dlya-ekonomii/sms/sms-paket-vnutri-seti-mts">Внутри сети&nbsp;МТС</a>.</li>
+<li><a class="display-inline-block" href="http://mts.ua/ru/services/pakety-dlya-ekonomii/sms/sms-paket-na-vse-seti1">На все&nbsp;сети</a>.</li>
+<li><a class="display-inline-block" href="http://mts.ua/ru/services/pakety-dlya-ekonomii/sms/sms-paket-za-rubezh1">За&nbsp;рубеж</a></li>
+</ul>
+<p><strong>SMS пакеты для контрактных абонентов:</strong></p>
+<ul>
+<li><a class="display-inline-block" href="http://mts.ua/ru/services/pakety-dlya-ekonomii/sms/sms-paket-na-vse-seti">На все&nbsp;сети</a>.</li>
+<li><a class="display-inline-block" href="http://mts.ua/ru/services/pakety-dlya-ekonomii/sms/sms-paket-za-rubezh">За&nbsp;рубеж</a>.</li>
+</ul></div>
+</div>
+<div class='icon-close-modal' data-dismiss='modal'></div>
+ </div>
+</div>
+ </div> 
+ </div>
+ </div>
+ </div>
+ <!--@content2-->
+ <!--@content3-->
+ <!--@content4-->
+ <!--@content5-->
+ <!--@content6-->
+ <!--@content7-->
+ </div>
+ </div>
+ </div>
+</div>
+ <div class='footer-pusher'></div>
+</div>
+<div class='container'>
+ <footer class='site-footer'>
+ <div class='site-footer__user-help'>
+ <div class="user-help-typo">
+ Если Вы заметили ошибку, выделите необходимый текст и нажмите <kbd>Ctrl+Enter</kbd> для Windows или <kbd>Command+Enter</kbd> для Mac, чтобы сообщить об этом администратору. </div>
+ <div class='modal fade' id='modal-review-form'>
+ <div class='modal-dialog'>
+ <div class='modal-content modal-content_has-tabs'>
+ <IDXSKIP><div class='modal-header'>
+ <h1>
+ Оставить отзыв </h1>
+ </div></IDXSKIP>
+ <div class='modal-body'>
+ <div id="review_form">
+ <div class='tabs-layer'>
+ <ul class='nav-tabs nav-tabs_style-1' role="tablist">
+ <li class="nav-tabs-toggle">
+ <div class="nav-tabs-toggle__inner"></div>
+ </li>
+ <IDXSKIP><li class='active'>
+ <a href='#step1' role="tab" data-toggle="tab">Шаг 1. Что Вы искали</a>
+ </li></IDXSKIP>
+ <IDXSKIP><li>
+ <a href='#step2' role="tab" data-toggle="tab">Шаг 2. Ваши предложения</a>
+ </li></IDXSKIP>
+ <IDXSKIP><li>
+ <a href='#step3' role="tab" data-toggle="tab">Шаг 3. Информация о Вас</a>
+ </li></IDXSKIP>
+ </ul>
+ <div class="nav-tabs-toggle">
+ <div class="nav-tabs-toggle__inner"></div>
+ </div>
+ </div>
+ <div class='tab-content'>
+ <div class='tab-pane fade in active' id='step1'>
+ <form class='form-horizontal' role='form' id="review-form-step1" onsubmit="return false;">
+ <div class='form-group form-group-lg'>
+ <label class='control-label col-sm-4' for='Review_url'>
+ Адрес страницы <span class="color-red">*</span>
+ </label>
+ <div class='col-sm-8'>
+ <input value="http://www.mts.ua/ru/services/upravlenie-schetom/kontrol-rashodov/uznat-ostatok-v-paketah-uslug" class='form-control input-lg' name="Review[url]" id='Review_url' required='required' type='hidden'>
+ <input value="http://www.mts.ua/ru/services/upravlenie-schetom/kontrol-rashodov/uznat-ostatok-v-paketah-uslug" disabled="true" class='form-control input-lg' type='text'>
+ </div>
+ </div>
+ <div class='form-group form-group-lg'>
+ <label class='control-label col-sm-4' for='Review_what_info'>
+ <IDXSKIP>Какую информацию Вы искали, но не смогли найти? </IDXSKIP><IDXSKIP><span class="color-red">*</span></IDXSKIP>
+ </label>
+ <div class='col-sm-8'>
+ <textarea required="required" class='form-control input-lg' name="Review[what_info]" id='Review_what_info'></textarea>
+ </div>
+ </div>
+ <IDXSKIP><div class='form-group form-group-lg'>
+ <div class='col-sm-4'></div>
+ <div class='col-sm-8'>
+ <button class='btn btn-lg btn-primary' onclick="toStep2();return false;">
+ Вперед </button>
+ </div>
+ </div></IDXSKIP>
+ </form>
+ </div>
+ <div class='tab-pane fade' id='step2'>
+ <form class='form-horizontal' role='form' id="review-form-step2" onsubmit="return false;">
+ <div class='form-group form-group-lg'>
+ <label class='control-label col-sm-4' for='Review_why_info'>
+ <IDXSKIP>Предложите Ваш формат подачи информации. </IDXSKIP></label>
+ <div class='col-sm-8'>
+ <textarea class='form-control input-lg' name="Review[why_info]" id='Review_why_info'></textarea>
+ </div>
+ </div>
+ <div class='form-group form-group-lg'>
+ <label class='control-label col-sm-4' for='Review_propose_info'>
+ <IDXSKIP>Почему Вы считаете, что именно здесь должна быть расположена эта информация? </IDXSKIP></label>
+ <div class='col-sm-8'>
+ <textarea class='form-control input-lg' name="Review[propose_info]" id='Review_propose_info'></textarea>
+ </div>
+ </div>
+ <IDXSKIP><div class='form-group form-group-lg'>
+ <div class='col-xs-6 col-sm-4'>
+ <button class='btn btn-lg btn-primary' onclick="toStep1();return false;">
+ Назад </button>
+ </div>
+ <div class='col-xs-6 col-sm-8'>
+ <button class='btn btn-lg btn-primary' onclick="toStep3();return false;">
+ Вперед </button>
+ </div>
+ </div></IDXSKIP>
+ </form>
+ </div>
+ <div class='tab-pane fade' id='step3'>
+ <form class='form-horizontal' role='form' id="review-form-step3" onsubmit="submitFormReview(); return false;">
+ <IDXSKIP><div class='form-group form-group-lg'>
+ <label class='control-label col-sm-4' for='Review_firstname'>
+ Имя <span class="color-red">*</span>
+ </label>
+ <div class='col-sm-8'>
+ <input class='form-control input-lg' name="Review[firstname]" id='Review_firstname' required='required'>
+ </div>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='form-group form-group-lg'>
+ <label class='control-label col-sm-4' for='Review_patronymic'>
+ Отчество </label>
+ <div class='col-sm-8'>
+ <input class='form-control input-lg' name="Review[patronymic]" id='Review_patronymic'>
+ </div>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='form-group form-group-lg'>
+ <label class='control-label col-sm-4' for='Review_lastname'>
+ Фамилия </label>
+ <div class='col-sm-8'>
+ <input class='form-control input-lg' name="Review[lastname]" id='Review_lastname'>
+ </div>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='form-group form-group-lg'>
+ <label class='control-label col-sm-4' for='Review_email'>
+ E-mail <span class="color-red">*</span>
+ </label>
+ <div class='col-sm-8'>
+ <input class='form-control input-lg' name="Review[email]" id='Review_email' required='required' type="email">
+ </div>
+ </div></IDXSKIP>
+ <div class='form-group form-group-lg'>
+ <IDXSKIP><div class='control-label col-sm-4'>
+ Абонент ПрАО «МТС Украина» <span class="color-red">*</span>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='col-sm-8'>
+ <label class='radio-inline'>
+ <input checked='checked' name='Review[is_abonent_mts]' required='required' type='radio' value='1'>
+ Абонент </label>
+ <label class='radio-inline'>
+ <input name='Review[is_abonent_mts]' required='required' type='radio' value='0'>
+ Нет </label>
+ </div></IDXSKIP>
+ </div>
+ <IDXSKIP><div class='form-group form-group-lg'>
+ <label class='control-label col-sm-4' for='Review_phone'>
+ Номер телефона <span class="color-red">*</span>
+ </label>
+ <div class='col-sm-8'>
+ <div class='form-group-phone'>
+ <div class='form-group-phone__code'>
+ <select class='form-control input-lg' name='Review[phone_prefix]' id='Review_phone_prefix' required='required'>
+ <option></option>
+ <option value="+38050">+38050</option>
+ <option value="+38066">+38066</option>
+ <option value="+38095">+38095</option>
+ <option value="+38099">+38099</option>
+ </select>
+ </div>
+ <div class='form-group-phone__number'>
+ <input required="required" class='form-control input-lg mask-phone' data-rule-mobile="true" name="Review[phone]" id='Review_phone' required='required' type='text'>
+ </div>
+ </div>
+ </div>
+ </div></IDXSKIP>
+ <div class='form-group form-group-lg'>
+ <div class='col-sm-4'></div>
+ <div class='col-sm-8'>
+ <IDXSKIP>Нажимая кнопку «Отправить», Вы соглашаетесь на обработку Ваших персональных данных и / или передачу их третьим лицам для целей, связанных с ее заполнением, а также маркетинговых целей </IDXSKIP><IDXSKIP><span href="#utility-service-8" data-toggle="modal">Подробнее</span></IDXSKIP>
+ <div class='modal fade' id='utility-service-8'>
+<div class='modal-dialog'>
+ <div class='modal-content'>
+<div class='modal-body'>
+ <h1 class='title-of-page'>Соглашение</h1>
+ <div class='content-block'><p><IDXSKIP>Заполнением этой регистрационной формы Абонент дает свое согласие на обработку его персональных данных и/или передачу их третьим лицам для целей, связанных с их хранением, а также маркетинговых целей (включая, без ограничений, получение вознаграждений и подарков по акциям и программам лояльности ПрАО &laquo;ВФ Украина&raquo;, получение рекламной информации от ПрАО &laquo;ВФ Украина&raquo; и/или партнеров с использованием указанных данных).</IDXSKIP></p>
+<p><IDXSKIP>Заполнением этой регистрационной формы Абонент дает согласие на обработку своих персональных данных с использованием средств автоматизации и/или без таких ПрАО &laquo;ВФ Украина&raquo; самостоятельно и/или распорядителем базы персональных данных по поручению ПрАО &laquo;ВФ Украина&raquo;, а также согласен, что ПрАО &laquo;ВФ Украина&raquo; может передавать мои персональные данные третьим лицам в соответствии с Законом или с содержанием этой регистрационной формы.</IDXSKIP></p>
+<p><IDXSKIP>Подтверждаю, что заполнив эту форму регистрации я проинформирован о внесении моих данных в базу персональных данных ПрАО &laquo;ВФ Украина&raquo;, а также о своих правах и лицах, которым передаются мои персональные данные в соответствии с&nbsp;</IDXSKIP><a href="http://zakon2.rada.gov.ua/laws/show/2297-17"><IDXSKIP>Законом Украины &laquo;О защите персональных данных&raquo;</IDXSKIP></a></p></div>
+</div>
+<div class='icon-close-modal' data-dismiss='modal'></div>
+ </div>
+</div>
+ </div> 
+ </div>
+ </div>
+ <IDXSKIP><div class='form-group form-group-lg margin-top-sm'>
+ <div class='col-xs-5 col-sm-4'>
+ <button class='btn btn-lg btn-primary' onclick="toStep2();return false;">
+ Назад </button>
+ </div>
+ <div class='col-xs-7 col-sm-8'>
+ <button id="Review-submit" class='btn btn-lg btn-primary btn-submit'>
+ Отправить </button>
+ </div>
+ </div></IDXSKIP>
+ </form>
+ </div>
+ </div>
+ </div>
+ <div id="review_form_info" style="display: none;padding-top: 20px;"></div>
+ <div class='icon-close-modal' data-dismiss='modal'></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="user-help-review">
+ <IDXSKIP>Если Вы искали информацию, но не нашли ее на этой странице, нажмите </IDXSKIP><IDXSKIP><a href="" data-toggle="modal" data-target="#modal-review-form">сюда</a></IDXSKIP> <IDXSKIP>и оставьте отзыв. Мы рассмотрим Ваше предложение по усовершенствованию сайта. </IDXSKIP></div>
+ </div>
+ <div class='site-footer__sidebars site-footer__sidebars_fixed-width'>
+ <IDXSKIP><div class='site-footer__sidebars__item'>
+ <div class='second-nav'>
+ <div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/mobile/tariffs/archive'>
+ Тарифы </a>
+ </div>
+ </div>
+ </div></IDXSKIP>
+ <div class='site-footer__sidebars__item'>
+ <div class='second-nav'>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/services'>
+ Услуги </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/services/category-dlya-ekonomii'>
+ Для экономии </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/services/category-poleznye-servisy'>
+ Полезные сервисы </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/services/category-razvlecheniya'>
+ Развлечения </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/services/category-upravlenie-schetom'>
+ Управление счетом </a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class='site-footer__sidebars__item'>
+ <div class='second-nav'>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/mobile/roaming/prepayment'>
+ Роуминг </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/mobile/roaming/prepayment'>
+ Тарифы и услуги </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='/ru/mobile/mezhdunarodnaya-svyaz/prepayment'>
+ Международная связь </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/mobile/mezhdunarodnaya-svyaz/prepayment'>
+ Тарифы и услуги </a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class='site-footer__sidebars__item'>
+ <div class='second-nav'>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ <a class='second-nav__item__link' href='http://www.mts.com.ua/ukr/internet.php'>
+ Интернет </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/smartphone/prepayment'>
+ Для смартфона </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/table/prepayment'>
+ Для планшета </a>
+ </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item '>
+ <a class='second-nav__item__link' href='/ru/internet/for-laptop/3g-internet/prepayment/tariffs'>
+ Для ноутбука </a>
+ </div></IDXSKIP>
+ </div>
+ </div>
+ <div class='site-footer__sidebars__item site-footer__sidebars__item_feedback'>
+ <div class='second-nav second-nav_feedback'>
+ <IDXSKIP><div class='second-nav__item second-nav__item_head'>
+ Обратная связь </div></IDXSKIP>
+ <IDXSKIP><div class='second-nav__item'>
+ <a class='second-nav__item__link' href='http://company.mts.ua/ru/company/coverage/feedback-form'>
+ Ваше мнение имеет значение </a>
+ </div></IDXSKIP>
+ <div class='second-nav__item second-nav__item_public-pages'>
+ <div class='public-pages'>
+ <div class='public-pages__item'>
+ <a class='public-pages__item__link' href='https://www.facebook.com/MTSUkraine' target='_blank'>
+ <div class='icon icon-social-facebook'></div>
+ </a>
+ </div>
+<!--
+ <div class='public-pages__item'>
+ <a class='public-pages__item__link' href='http://vk.com/mts_ukraine' target='_blank'>
+ <div class='icon icon-social-vk'></div>
+ </a>
+ </div>-->
+ <div class='public-pages__item'>
+ <a class='public-pages__item__link' href='https://twitter.com/mts_ukraine' target='_blank'>
+ <div class='icon icon-social-twitter'></div>
+ </a>
+ </div>
+ <!--
+ <div class='public-pages__item'>
+ <a class='public-pages__item__link' href='http://www.mts.com.ua/misc/export/news_rss.php' target='_blank'>
+ <div class='icon icon-social-rss'></div>
+ </a>
+ </div>
+ -->
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <IDXSKIP><div class="btn-consult-container">
+ <div class="btn-consult-animation">
+ <a href="#customerService" onclick="openChat('ru'); return false;" class="btn-consult">
+ <span class="btn-consult__icon">
+ <svg>
+ <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/sprite.svg#headphones" />
+ </svg>
+ </span>
+ <span class="btn-consult__title">Онлайн консультант</span>
+ </a>
+ </div>
+ </div></IDXSKIP>
+<script>
+function openChat(lang) {
+var pswo = "menubar=0,location=0,scrollbars=auto,resizable=1,status=0,width=650,height=680";
+var pswn = "pscw_" + ps_1582993862_n();
+var url = "https://messenger.providesupport.com/messenger/mtsua.html?ps_s=";
+var w = window.open('http://on-line.vodafone.ua/'+lang+'/messenger', pswn, pswo); 
+}
+ $(document).ready(function() {
+setTimeout(function() {
+$('.btn-consult-animation').addClass('active');
+}, 0);
+ });
+</script> <div class='site-footer__bottom'>
+ <div class='site-footer__bottom__item site-footer__bottom__copyright'>
+ <div class='site-copyright'>
+ <IDXSKIP>&copy; ПрАО &laquo;ВФ Украина&raquo;. Все права защищены.
+ </IDXSKIP></div>
+ </div>
+ <div class='site-footer__bottom__item site-footer__bottom__site-info'>
+ <div class='site-info'>
+ <IDXSKIP>Телефон службы поддержки: </IDXSKIP><IDXSKIP><span class="ws-nowrap">0 (800) 400-000</span></IDXSKIP> <IDXSKIP>(бесплатно во всех сетях связи Украины) или 111 </IDXSKIP><span class="ws-nowrap"><IDXSKIP>(бесплатно в сети ПрАО «ВФ Украина»)</IDXSKIP></span><IDXSKIP>.
+<br/></IDXSKIP>
+<br/>
+<IDXSKIP>Стоимость звонков указывается за первую секунду каждой минуты разговора, в стоимость которой включена каждая последующая секунда указанной минуты в рамках разговора. Тарификация происходит в первую секунду каждой минуты разговора.</IDXSKIP></div>
+ </div>
+<IDXSKIP><div>
+<div class='site-footer__bottom__item site-footer__bottom__extra-nav'>
+ <div class='extra-nav'>
+ <div class='extra-nav__item'>
+ <a class='extra-nav__item__link' href='http://company.mts.ua/ru/company/about/contacts'>
+ Контакты </a>
+ </div>
+ <div class='extra-nav__item'>
+ <a class='extra-nav__item__link' href='http://mts.ua/ru/sitemap'>
+ Карта сайта </a>
+ </div>
+ </div>
+ </div>
+ </div></IDXSKIP>
+ </footer>
+</div>
+<div class='go-top'>
+ <div class='go-top__inner container'></div>
+</div>
+<a class="offcanvas-backdrop"></a>
+<nav id="nav-mobile" class="navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation">
+ <div id="nav-mobile-inner" class="offcanvas__inner"></div>
+</nav>
+<script src='/js/app/modules/DomHelper.js'></script>
+<script>
+ window.mts = {
+ translates: {
+ speedTest: {
+ mbitSec: 'Мбит/сек',
+ kbitSec: 'Кбит/сек',
+ kbyteSec: 'Кбайт/сек',
+ recheckSpeed: 'Проверить скорость еще раз',
+ error: 'Проверить скорость не удалось'
+ }
+ }
+ }
+</script>
+<script src="/js/lib/require.js"></script>
+ <script>
+ // Load common code that includes config,
+ // then load the app logic for this page.
+ require(['/js/common.js?1433855787'], function (common) {
+ require(['/js/app/main.js']);
+ });
+ </script>
+<!--[if lt IE 10]>
+<script src='/js/polyfills/jquery.placeholder.js'></script>
+<script>
+ // Load common code that includes config,
+ // then load the app logic for this page.
+ require(['/js/common.js?1433855787'], function (common) {
+ require(['jquery'], function($){
+ $(function(){
+ $('input, textarea').placeholder();
+ })
+ });
+ });
+</script>
+<![endif]-->
+<script>
+ (function() {
+ window.chosen_translates = {
+ no_results_text: "Не найдено"
+ };
+ }).call(this);
+</script>
+<script>
+ // TODO: refactor
+ function wo(_wurl,_ww,_wh,_wscrl){
+ /***************
+ wurl: window URL
+ wh: window height
+ ww: window width
+ wsr: scrollbars 1 - yes, 0 - no
+ ***************/
+ if(screen.width){
+ var wpos_x = (screen.width-_ww)/2;
+ if (wpos_x < 0){
+ wpos_x = 0;
+ }
+ var wpos_y = (screen.height-_wh)/2;
+ if (wpos_y < 0){
+ wpos_y = 0;
+ }
+ } else {
+ wpos_x = 0;
+ wpos_y = 0;
+ }
+ // if(_wscrl==undefined){ _wscrl = 0;}
+ var wind_desc = window.open(_wurl,"","alwaysRaised=0,top="+wpos_y+",left="+wpos_x+",height="+_wh+",width="+_ww+",menubar=0,resizable=1,scrollbars="+_wscrl+",status=1");
+ wind_desc.focus();
+ }
+</script>
+<script type="text/javascript">
+/*<![CDATA[*/
+ $('.submenu .active').parents('.side-nav__item').find('>a').addClass('open');
+ function toStep1() {
+ $('a[href="#step1"]').tab('show');
+ }
+ function toStep2() {
+ $('a[href="#step2"]').tab('show');
+ }
+ function toStep3() {
+ $('a[href="#step3"]').tab('show');
+ }
+ function submitFormReview() {
+ if($('#review-form-step1').valid()) {
+ var data = $('#review-form-step1').serialize();
+ data+= '&' + $('#review-form-step2').serialize();
+ data+= '&' + $('#review-form-step3').serialize();
+ data+= '&YII_CSRF_TOKEN=c9d34864301a6afc997a371271ffaf17a7059e9c';
+ var lang = window.lang;
+ url = '/?r=site/reviewFrom&lang='+lang;
+ $.post(url, data, function(response){
+ if (response.success) {
+ $('#review_form_info').show().text(response.message);
+ $('#review_form').hide();
+ setTimeout(function(){
+ $('input:not([disabled]):not([readonly]), textarea:not([disabled]):not([readonly])', '#review_form').each(function(){
+ $(this).val('');
+ })
+ $('#review_form select:not([disabled]):not([readonly])').each(function(){
+ $('option:selected', this).removeAttr('selected');
+ $(this).trigger('chosen:updated');
+ })
+ $('#review_form_info').hide();
+ $('#review_form').show();
+ toStep1();
+ }, 4000)
+ } else {
+ $.each(response.errors, function(i,v) {
+ _errorId = 'Review_'+i+'-error';
+ _field = $('#Review_'+i);
+ _field.parents('.form-group').addClass('has-error');
+ if (_field.next().attr('id') == _errorId) {
+ _field.next().html(v);
+ } else {
+ _field.after('<span id="'+_errorId+'" class="help-block">'+v+'</span>');
+ }
+ $('#'+_errorId).show();
+ })
+ }
+ }, 'json');
+ } else {
+ $('#Review-submit').attr('disabled','disabled');
+ $('a[href="#step1"]').tab('show');
+ return false;
+ }
+ }
+ $('[name="Review[is_abonent_mts]"]').on('change', function(){
+ var _this = $(this),
+ value = _this.val(),
+ isAbonent = (value==1),
+ mask = (isAbonent) ? '?999-99-99' : '+38?(999)-999-99-99';
+ $('#Review_phone_prefix').toggleClass('ignore', !isAbonent); // ignore the validation or not
+ $('#Review_phone_prefix_chosen').parent().toggle( isAbonent ); // show/hide phone prefix
+ $('#Review_phone').val('').mask(mask);
+ })
+/*]]>*/
+</script>
+</body>
+</html>

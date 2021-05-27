@@ -1,0 +1,1250 @@
+pb.buhgalteria.ru/?prcampaign=weekend
+<!doctype html>
+<html lang="ru">
+	<head>
+<script type="text/javascript">
+			function ctSetCookie(c_name, value) {
+				document.cookie = c_name + "=" + encodeURIComponent(value) + "; path=/";
+			}
+
+			ctSetCookie("ct_ps_timestamp", Math.floor(new Date().getTime()/1000));
+			ctSetCookie("ct_fkp_timestamp", "0");
+			ctSetCookie("ct_pointer_data", "0");
+			ctSetCookie("ct_timezone", "0");
+
+			setTimeout(function(){
+				ctSetCookie("ct_checkjs", "f4030b409cd8a9d76c2e0165feef01d1");
+				ctSetCookie("ct_timezone", new Date().getTimezoneOffset()/60);
+			},1000);
+
+			//Stop observing function
+			function ctMouseStopData(){
+				if(typeof window.addEventListener == "function")
+					window.removeEventListener("mousemove", ctFunctionMouseMove);
+				else
+					window.detachEvent("onmousemove", ctFunctionMouseMove);
+				clearInterval(ctMouseReadInterval);
+				clearInterval(ctMouseWriteDataInterval);				
+			}
+
+			//Stop key listening function
+			function ctKeyStopStopListening(){
+				if(typeof window.addEventListener == "function"){
+					window.removeEventListener("mousedown", ctFunctionFirstKey);
+					window.removeEventListener("keydown", ctFunctionFirstKey);
+				}else{
+					window.detachEvent("mousedown", ctFunctionFirstKey);
+					window.detachEvent("keydown", ctFunctionFirstKey);
+				}			
+			}
+
+			var d = new Date(), 
+				ctTimeMs = new Date().getTime(),
+				ctMouseEventTimerFlag = true, //Reading interval flag
+				ctMouseData = "[",
+				ctMouseDataCounter = 0;
+				
+			//Reading interval
+			var ctMouseReadInterval = setInterval(function(){
+					ctMouseEventTimerFlag = true;
+				}, 300);
+				
+			//Writting interval
+			var ctMouseWriteDataInterval = setInterval(function(){ 
+					var ctMouseDataToSend = ctMouseData.slice(0,-1).concat("]");
+					ctSetCookie("ct_pointer_data", ctMouseDataToSend);
+				}, 3000);
+
+			//Logging mouse position each 300 ms
+			var ctFunctionMouseMove = function output(event){
+				if(ctMouseEventTimerFlag == true){
+					var mouseDate = new Date();
+					ctMouseData += "[" + event.pageY + "," + event.pageX + "," + (mouseDate.getTime() - ctTimeMs) + "],";
+					ctMouseDataCounter++;
+					ctMouseEventTimerFlag = false;
+					if(ctMouseDataCounter >= 100)
+						ctMouseStopData();
+				}
+			}
+			//Writing first key press timestamp
+			var ctFunctionFirstKey = function output(event){
+				var KeyTimestamp = Math.floor(new Date().getTime()/1000);
+				ctSetCookie("ct_fkp_timestamp", KeyTimestamp);
+				ctKeyStopStopListening();
+			}
+
+			if(typeof window.addEventListener == "function"){
+				window.addEventListener("mousemove", ctFunctionMouseMove);
+				window.addEventListener("mousedown", ctFunctionFirstKey);
+				window.addEventListener("keydown", ctFunctionFirstKey);
+			}else{
+				window.attachEvent("onmousemove", ctFunctionMouseMove);
+				window.attachEvent("mousedown", ctFunctionFirstKey);
+				window.attachEvent("keydown", ctFunctionFirstKey);
+			}
+		</script>
+		<meta name="author" content="buhgalteria.ru">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="http://pb.buhgalteria.ru/favicon.ico">
+		<link rel="stylesheet" href="/template/css/style.css">
+		<!--[if lte IE 8]><link rel="stylesheet" href="/template/css/ie.css"><![endif]-->
+		<style type='text/css'>@import "http://buhgalteria.ru/template/css/style.css";</style>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="robots" content="index, follow" />
+<link href="/bitrix/js/main/core/css/core.min.css?14471460162854" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/components/bitrix/form.result.new/error.css?1247038979163" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/news.list/beratochanges1-razdeli/style.css?1431434836150" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/news.list/last_items/style.css?1429596085449" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/js/fancybox/jquery.fancybox-1.3.1.css?14302959945264" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/system.auth.form/auth_20131008/style.css?14353067742278" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/search.title/pb-search-title/style.css?14347007182322" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/menu/menu/style.css?142959608451" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/.default/components/bitrix/news.list/beratochanges12/style.css?1431423083150" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/styles.css?14842279948567" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<link href="/bitrix/templates/buhgalteria2.0-PB_new_2015/template_styles.css?148422799412016" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BUH_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1493849791','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'1c6813b8b23bcc19457b0fb7a1153621'});</script>
+
+
+<script type="text/javascript" src="/bitrix/js/main/core/core.min.js?148041549773556"></script>
+<script type="text/javascript" src="/bitrix/js/main/rsasecurity.min.js?144714601513967"></script>
+<script type="text/javascript" src="/bitrix/js/main/utils.min.js?144714601519858"></script>
+<script type="text/javascript" src="/bitrix/js/main/core/core_ajax.min.js?147065665821031"></script>
+<script type="text/javascript" src="/bitrix/js/main/jquery/jquery-1.8.3.min.js?136500318293636"></script>
+
+
+<script type="text/javascript" src="/bitrix/templates/buhgalteria2.0-PB_new_2015/js/fancybox/jquery.fancybox-1.3.1.pack.js?143029599414799"></script>
+<script type="text/javascript" src="/bitrix/templates/buhgalteria2.0-PB_new_2015/components/bitrix/system.auth.form/auth_20131008/script.js?1429596085564"></script>
+<script type="text/javascript" src="/bitrix/components/bitrix/search.title/script.min.js?14804154566110"></script>
+<script type="text/javascript" src="/template/js/libs/jquery.jcarousel.min.js?133699645415650"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "332f12302faa34c96bfe86f1e127a860"]); _ba.push(["host", "pb.buhgalteria.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+				<script src="/template/js/libs/modernizr-2.0.6.min.js"></script>
+
+		<script type="text/javascript" src="/template/js/js.js"></script>
+		<script src="/template/js/libs/jquery-ui-1.8.19.min.js"></script>
+		<script src="/template/js/script.js"></script>
+
+		
+				<title>Практическая бухгалтерия</title>
+	</head>
+	<body>
+			<div id="wrapper">
+		<div class="pb_top_banner" id="pb_top_banner">
+			<!--'start_frame_cache_pb_top_banner'--><div id="default-1RrCSy">
+</div><!--'end_frame_cache_pb_top_banner'-->		</div>
+
+	<header id="header">
+	<nav class="header-tabs">
+		
+		
+<script type="text/javascript">
+top.BX.defer(top.rsasec_form_bind)({'formid':'system_auth_form6zOYVN','key':{'M':'vcySwUx2Yg0VrnHIi3Ufg+hvxeumUY2yl1WKNol8wZBvLEBxpkKf2PxS4T5WfUHwFwajxVsIcm0TpL2daxIWR9VYBSAtvuqZIQ6AiiCVqWaVkAP9pYqCZquNePP5YoGjxNFYElTQWAq56nzymlPmvk2lE5KxsvwrI41OV+LL+Lo=','E':'AQAB','chunk':'128'},'rsa_rand':'590a56bed77fb0.45201257','params':['USER_PASSWORD']});
+</script>
+<!--'start_frame_cache_iIjGFB'-->
+
+	<div id="login-form-window">
+	
+		<a class="close" href="javascript:void(0)" onclick="return CloseLoginForm()" title="Закрыть"></a>
+	
+			
+		<form method="post" target="_top" action="/index.php?login=yes&amp;prcampaign=weekend">
+			<input type="hidden" name="popup_window" value="Y" />
+							<input type="hidden" name="backurl" value="/index.php?prcampaign=weekend" />
+									<input type="hidden" name="AUTH_FORM" value="Y" />
+			<input type="hidden" name="TYPE" value="AUTH" />
+
+			<IDXSKIP><div class="login-title">
+				<span class="title">Вход</span>
+							</div></IDXSKIP>
+			
+			<IDXSKIP><div class="input-field">
+				<input class="login-f" type="text" name="USER_LOGIN" value="" maxlength="50" />
+			</div></IDXSKIP>
+			
+			<IDXSKIP><div class="input-field">
+				<input class="passwd-f" type="password" name="USER_PASSWORD" value="" maxlength="50" />
+			</div></IDXSKIP>
+			
+						
+			<IDXSKIP><div class="login-buttons">
+									<span>
+						<input class="remember" type="checkbox" id="USER_REMEMBER" name="USER_REMEMBER" value="Y" />
+						<label for="USER_REMEMBER"><span></span>Запомнить меня</label>
+					</span>
+									<span class="login-area">
+						<input class="login-submit" type="submit" name="Login" value="Войти" />
+					</span>
+			</div></IDXSKIP>
+			<div class="clear-both"></div>
+			
+			<div class="login-title">
+			<span class="registr"><a href="/auth/?forgot_password=yes&amp;backurl=%2Findex.php%3Fprcampaign%3Dweekend">Забыли свой пароль?</a></span>
+			</div>
+			<div class="clear-both"></div>
+		</form>
+	</div>
+
+	<div class="login-button">
+		<!--<a href="/auth/?register=yes&amp;register=yes&amp;backurl=%2Findex.php%3Fprcampaign%3Dweekend">
+					Зарегистрироваться
+					
+		</a>-->
+		 
+		<a href="/auth/?register=yes&amp;register=yes&amp;backurl=%2Findex.php%3Fprcampaign%3Dweekend" onclick="return ShowLoginForm();"><i class="icon bsignin"></i> Войти</a>
+	</div>
+
+
+<!--'end_frame_cache_iIjGFB'-->
+		<IDXSKIP><ul style="float:right;">
+			<li class="rounded">
+				<a href="http://www.buhgalteria.ru/beratorpb/?utm_source=akzia_dr2016&utm_medium=pb&utm_campaign=button&utm_content=top">
+				  Оформить подписку					
+				</a>
+			</li>
+		</ul></IDXSKIP>
+
+		<IDXSKIP><a href="http://buhgalteria.ru/" class="buhgalteria">Бухгалтерия<span>.ru</span></a></IDXSKIP>
+
+			</nav>
+		<div class="header-box rounded">
+			<IDXSKIP><a href="/" class="header-logo">Практическая бухгалтерия</a></IDXSKIP>
+				<IDXSKIP><div id="title-search" class="search-form">
+	<form class="header-search-form" action="/search/index.php" >
+		<input class="field" id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Поиск по сайту" /><input class="button" name="s" type="submit" value="" />
+	</form>
+	</div></IDXSKIP>
+<script type="text/javascript">
+var jsControl_047d514cb78d27614405030735c0b002 = new JCTitleSearch({
+	//'WAIT_IMAGE': '/bitrix/themes/.default/images/wait.gif',
+	'AJAX_PAGE' : '/?prcampaign=weekend',
+	'CONTAINER_ID': 'title-search',
+	'INPUT_ID': 'title-search-input',
+	'MIN_QUERY_LEN': 2
+});
+</script>
+			<nav class="header-menu">
+				
+
+<ul>
+
+						<IDXSKIP><li><a class="orange-item" href="/berator/">Бератор</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/uchetnye_resheniya/">Учет</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/ur_aspekt/">У юриста</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/kadry/">Зарплата</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/nalogovoe_planirovanie/">Налоги</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/proverki/">Проверки</a></li></IDXSKIP>
+			
+						<IDXSKIP><li class="orange-right"><a class="orange-item" href="/pr/">Проводки на примерах</a></li></IDXSKIP>
+			
+						<IDXSKIP><li class="orange-right"><a class="orange-item" href="/faq/">Ответы экспертов</a></li></IDXSKIP>
+			
+
+</ul>
+
+			</nav>
+		</div>
+								</header>
+	<!--header-->
+			<div class="berator">
+
+<h3>Что изменилось<br>в вашей работе</h3>
+
+		<div id="bx_3218110189_152325">
+		<a href="http://pb.buhgalteria.ru/berator/tax-audits/administrative-review/141797/" ><IDXSKIP>Как проходят проверки Роспотребнадзора?</IDXSKIP></a>
+	</div>
+	
+
+
+		<div id="bx_3218110189_152034">
+		<a href="http://pb.buhgalteria.ru/berator/intangible-assets/transport-tax/122604/" ><IDXSKIP>Как рассчитать сумму транспортного налога при перерегистрации ТС?</IDXSKIP></a>
+	</div>
+	
+
+
+		<div id="bx_3218110189_151952">
+		<a href="http://pb.buhgalteria.ru/berator/statements/general-requirements2/122257/" ><IDXSKIP>Как подтвердить полномочия бухгалтера при сдаче отчетности по ТКС?</IDXSKIP></a>
+	</div>
+	
+
+
+
+
+
+
+						<IDXSKIP><div class="show_all"><a href="/last_berator/">Смотреть все изменения</a></div></IDXSKIP>
+		</div>
+	
+<style>
+.example3 p {display: none;}
+</style>
+<script>
+
+</script>
+<script>
+
+$(document).ready(function(){
+window.onload = function () {
+document.getElementById('various2').click()
+}
+//$('#various2').click(function() { 
+// }); 
+$("#various2").fancybox({
+		'modal' : true,
+		'centerOnScroll' : true,
+		'width': 514,
+			'height': 520,
+			'padding':0,
+			'autoDimensions':false,
+			'overlayOpacity':0.5,
+});
+	
+	
+	});
+</script>
+<style>
+.header-menu {display: none;}
+
+.form-group2 {
+    padding: 10px 0px 5px 0;
+	margin: 0 auto;
+    width: 300px;
+}
+.btn-xl {
+    font-size: 14px;
+    padding: 14px 30px;
+    font-weight: 500;
+}
+.btn-primary {
+    background:#2EAADE;
+    border-color: #2EAADE;
+}
+.btn {
+	    width: 300px;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+	padding-bottom: 10px;
+}
+.form-control:hover, .form-control:focus {
+    border: 1px solid #ccc;
+    box-shadow: none;
+}
+.input-xl {
+    height: 53px;
+    padding: 15px 25px;
+    font-size: 14px;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+.form-control {
+    display: block;
+       width: 300px;
+	margin: 0 auto;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.btn:hover, .btn:focus { background:#FFA14A; border-color:#FFA14A; color:#fff }
+.btn {
+    border-radius: 0;
+    font-weight: 500;
+    color: #fff;
+    outline: none;
+}
+
+.reg {
+    height: 500px;
+    padding-top: 18px;
+    background: rgb(247, 247, 247);
+   
+
+}
+.reg h2 {text-align: center;}
+.reg p{font-size: 16px;line-height: 23px;font-family: arial;text-align: center;margin-top: 6px;}
+.error{width: 315px; margin: 0 auto;}
+.error p {text-align: left;font-size: 11px;line-height: 14px;}
+</style>
+
+
+<div class="example3">
+	<p><a id="various2" href="#popup">Открыть окошко</a>.</p>
+	
+	
+	<div style="display:none">
+		<div id="popup">
+			<div class="login-wrapper">
+<div class="reg">
+
+<h2 style="margin-top: 0px; font-size: 22px; color: rgb(29, 29, 29); padding-left: 0px;">ВЫХОДНЫЕ<br>с "Практической бухгалтерией"</h2>
+<p style="margin-bottom:6px">Доступ ко всем разделам электронного журнала.<br>Чтобы получить бесплатный доступ к сайту<br />«Практическая бухгалтерия» достаточно заполнить <br />форму регистрации.</p>
+<div id="comp_00639a1b70fdf06ed2ba0a8f34fced72">
+<form name="SIMPLE_FORM_weekend_na_pb" action="/?prcampaign=weekend" method="POST" enctype="multipart/form-data"><input type="hidden" name="bxajaxid" id="bxajaxid_00639a1b70fdf06ed2ba0a8f34fced72_8BACKi" value="00639a1b70fdf06ed2ba0a8f34fced72" /><input type="hidden" name="AJAX_CALL" value="Y" /><script type="text/javascript">
+function _processform_8BACKi(){
+	var obForm = top.BX('bxajaxid_00639a1b70fdf06ed2ba0a8f34fced72_8BACKi').form;
+	top.BX.bind(obForm, 'submit', function() {BX.ajax.submitComponentForm(this, 'comp_00639a1b70fdf06ed2ba0a8f34fced72', true)});
+	top.BX.removeCustomEvent('onAjaxSuccess', _processform_8BACKi);
+}
+if (top.BX('bxajaxid_00639a1b70fdf06ed2ba0a8f34fced72_8BACKi'))
+	_processform_8BACKi();
+else
+	top.BX.addCustomEvent('onAjaxSuccess', _processform_8BACKi);
+</script><input type="hidden" name="sessid" id="sessid" value="1c6813b8b23bcc19457b0fb7a1153621" /><input type="hidden" name="WEB_FORM_ID" value="54" /><input type="hidden" name="lang" value="ru" /><div style="line-height: 10px; width: 465px; padding-left: 10px; margin-bottom: 20px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"></div>
+ 
+<div class="inputText"> 
+  <div class="form-group2"> <input type="text" class="form-control input-xl" onfocus="if (this.value == 'Введите ФИО') this.value = '';" onblur="if (this.value == '') this.value = 'Введите ФИО';" name="form_text_568" value="Введите ФИО" size="0" /> </div>
+ 
+  <div class="form-group2"> <input type="text" class="form-control input-xl" onfocus="if (this.value == 'Введите E-mail') this.value = '';" onblur="if (this.value == '') this.value = 'Введите E-mail';" name="form_email_569" value="Введите E-mail" size="0" /> </div>
+ 
+  <div class="form-group2"> <input type="text" class="form-control input-xl" onfocus="if (this.value == 'Введите Телефон') this.value = '';" onblur="if (this.value == '') this.value = 'Введите Телефон';" name="form_text_570" value="Введите Телефон" size="0" /> </div>
+ 
+  <div class="form-group2"> <input type="text" id="chtpole222" style="visibility: hidden;" name="form_text_617" value="" size="0" /> </div>
+ </div>
+ 
+<div class="form-group2"><input  type="submit" name="web_form_submit" value="Заказать сейчас" class="btn btn-primary btn-xl btn-block" /></div>
+ 
+<br />
+ 
+<div style="line-height: 10px; width: 465px; padding-left: 10px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"></div>
+</form></div>				</div>
+</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!--day-theme-->
+<article id="day-theme_list">
+	<div class="main_item" id="bx_651765591_157037">
+		<a href="/articles/uchetnye_resheniya/157037/" class="img_block fff">
+					<img src="/upload/resize_cache/iblock/888/377_233_2/8886832287674e36e4f45341f4068ae6.jpg"/>
+				</a>
+		<div class="text_block">
+			<h3><a href="/articles/uchetnye_resheniya/157037/"> «Первичка» не поступила вовремя. Что делать?</a></h3>
+			<div class="date_block">
+									02.05.2017				&nbsp;
+				<a href="/articles/uchetnye_resheniya/">Учет</a>			</div>
+			<div class="preview_text_block">
+			<a href="/articles/uchetnye_resheniya/157037/">
+						Нередко первичные документы поступают в бухгалтерию несвоевременно, порой 
+со значительным опозданием. Как в таких условиях вести бухгалтерский и налоговый 
+учет без ошибок?			</a>
+			</div>
+		</div>
+		<div class="clear_block"></div>
+	</div>
+
+			<div class="item" id="bx_1373509569_157066">
+						<a href="/articles/uchetnye_resheniya/157066/" class="img_block">
+				<img src="/upload/resize_cache/iblock/64a/377_233_2/64a72d0f6c8ed603780e1458363f0064.jpg"/>
+			</a>
+						<div class="text_block">
+				<h3><a href="/articles/uchetnye_resheniya/157066/">Переговоры «вхолостую»: отражаем затраты</a></h3>
+				<div class="date_block">
+											03.05.2017					 
+					<a href="/articles/uchetnye_resheniya/">Учет</a>				</div>
+				<div class="preview_text_block">
+					<a href="/articles/uchetnye_resheniya/157066/">
+												Компания понесла определенные траты при подготовке к важным бизнес-переговорам. 
+Встреча на высоком уровне завершилась безрезультатно. Выгодного контракта 
+нет. Зато есть вопрос: как учитывать «вложения в пустоту»?					</a>
+				</div>
+			</div>
+		</div>
+	
+			<div class="item" id="bx_1373509569_157059">
+						<a href="/articles/proverki/157059/" class="img_block">
+				<img src="/upload/resize_cache/iblock/010/377_233_2/010186d1ece9ac7fa5049fe92cdcc9b0.jpg"/>
+			</a>
+						<div class="text_block">
+				<h3><a href="/articles/proverki/157059/">Как отстоять свою добросовестность</a></h3>
+				<div class="date_block">
+											03.05.2017					 
+					<a href="/articles/proverki/">Проверки</a>				</div>
+				<div class="preview_text_block">
+					<a href="/articles/proverki/157059/">
+												Зачастую инспекторы объявляют налоговую выгоду необоснованной по формальным 
+признакам, невзирая на реальных характер хозяйственных операций. В целях 
+защиты от необоснованных претензий ФНС рекомендует компаниям не жалеть усилий 
+на проверку контрагентов.					</a>
+				</div>
+			</div>
+		</div>
+	
+			<div class="item" id="bx_1373509569_156954">
+						<a href="/articles/kadry/156954/" class="img_block">
+				<img src="/upload/resize_cache/iblock/b0b/377_233_2/b0b00aa1713513a0e01382bcaaa27d80.jpg"/>
+			</a>
+						<div class="text_block">
+				<h3><a href="/articles/kadry/156954/">Выход на работу при открытом больничном</a></h3>
+				<div class="date_block">
+											02.05.2017					 
+					<a href="/articles/kadry/">Зарплата</a>				</div>
+				<div class="preview_text_block">
+					<a href="/articles/kadry/156954/">
+												В перечне сложных случаев начисления пособия по временной нетрудоспособности&nbsp;&nbsp;выход 
+сотрудника на работу в период болезни занимает далеко не последнее место. 
+А по «коварству» и неоднозначности так он и вовсе безусловный лидер.					</a>
+				</div>
+			</div>
+		</div>
+	</article>
+<!--/day-theme-->
+ <article id="bad-good-news" class="rounded">
+	<div class="bad-good-news-list">
+								<div class="bad-good-news-item good-news" id="bx_3485106786_156358">
+		<h3>Плохая новость</h3>					<h5><a href="/articles/good_bad_news/156356/"><IDXSKIP>Налоговики вправе «изымать» налоговые вычеты</IDXSKIP></a></h5>
+					<IDXSKIP><div class="date">03.04.2017&nbsp;&nbsp;</div></IDXSKIP>
+					<div class="preview_text"><a href="/articles/good_bad_news/156356/"><IDXSKIP>Конституционный суд РФ своим постановлением от 24.03.2017 № 9-П признал 
+за налоговиками право истребовать у граждан суммы, выплаченные в виде имущественных 
+налоговых вычетов, если вычет был рассчитан неправильно.</IDXSKIP></a></div>
+							</div>
+								<div class="bad-good-news-item bad-news" id="bx_3485106786_156357">
+		<h3>Хорошая новость</h3>					<h5><a href="/articles/good_bad_news/156355/"><IDXSKIP>За опоздание со сдачей квартальной отчетности счет не заблокируют</IDXSKIP></a></h5>
+					<IDXSKIP><div class="date">03.04.2017&nbsp;&nbsp;</div></IDXSKIP>
+					<div class="preview_text"><a href="/articles/good_bad_news/156355/"><IDXSKIP>У ИФНС нет права приостанавливать операции по банковскому счету компании, 
+нарушившей срок представления квартального расчета по налогу на прибыль. 
+Такой вывод следует из определения ВС РФ от 27.03.2017 № 305-КГ16-16245.</IDXSKIP></a></div>
+							</div>
+				<div class="clear_block"></div>
+	</div>
+</article>
+<!--bad-good-news-->
+
+
+
+<article id="experts">
+	<IDXSKIP><h3><a href="/faq/taxes/">Ответы экспертов</h3></IDXSKIP>
+	<div class="experts_block">
+			<div class="experts-item" id="bx_3099439860_157060">
+						<h5><a href="/faq/company-registration/157060/">Пособие по БиР &quot;напрямую&quot;</a></h5>
+			<IDXSKIP><div class="img_block">
+								<img src="/upload/resize_cache/main/5ef/91_91_2/5ef71bc2b00dee9842c049d847bc099f.jpg" width="91" height="91" />
+			</div></IDXSKIP>
+			<div class="answer_block">
+				<IDXSKIP><div class="name_prof">
+					Владимир  Хвориков<br />
+									</div></IDXSKIP>
+				<div class="answer">
+											Деньги поступят на счет, указанный в заявлении сотрудницы &#40;в реестре сведений&#41; или будут отправлены ей по почте.									</div>
+			</div>
+		</div>
+			<div class="experts-item" id="bx_3099439860_156801">
+						<h5><a href="/faq/taxes/156801/">НДС при аренде участка</a></h5>
+			<IDXSKIP><div class="img_block">
+								<img src="/upload/resize_cache/main/5ef/91_91_2/5ef71bc2b00dee9842c049d847bc099f.jpg" width="91" height="91" />
+			</div></IDXSKIP>
+			<div class="answer_block">
+				<IDXSKIP><div class="name_prof">
+					Владимир  Хвориков<br />
+									</div></IDXSKIP>
+				<div class="answer">
+											Для целей налогообложения НДС такая операция квалифицируется как передача имущественных прав. 									</div>
+			</div>
+		</div>
+</div>
+
+<!--<a href="/faq/add/" class="blue-button rounded">Задайте свой вопрос эксперту</a>-->
+	<!--'start_frame_cache_CpmJaV'-->
+<IDXSKIP><a href="/faq/add/" class="blue-button rounded">Задайте свой вопрос эксперту</a></IDXSKIP>
+
+<!--'end_frame_cache_CpmJaV'-->
+	<div class="clear_block"></div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".blue-button.rounded").fancybox({
+			'titlePosition'	:	'over',
+			'width': 400,
+			'height': 800,
+			'autoDimensions':false
+		});
+	});
+	</script>
+</article>
+<div class="clear_block"></div>
+<!--experts-->
+<script type="text/javascript">
+	$(function(){
+		$('.experts-slider').jcarousel({
+			//auto: 4,
+			//wrap: 'circular',
+			scroll: 1,
+			animation: 'slow',
+			initCallback: function(jc, state) {
+				if (state == 'init') {
+					jc.startAutoOrig = jc.startAuto;
+					jc.startAuto = function() {
+						if (!jc.paused) {
+							jc.startAutoOrig();
+						}
+					};
+					jc.pause = function() {
+						jc.paused = true;
+						jc.stopAuto();
+					};
+					jc.play = function() {
+						jc.paused = false;
+						jc.startAuto();
+					};
+					$('li.jcarousel-item').mouseover(function() {
+						jc.pause();
+					});
+					$('li.jcarousel-item').mouseout(function() {
+						jc.play();
+					});
+				}
+				jc.play();
+			}
+		});
+	});
+</script>
+<div class="menu_item">
+	<IDXSKIP><h3><a href="/articles/uchetnye_resheniya/">Учёт и отчётность</a></h3></IDXSKIP>
+	<div class="menu_item_block">
+		<div class="main_item" id="bx_565502798_157066">
+				<a class="image_block" href="/articles/uchetnye_resheniya/157066/">
+			<img src="/upload/resize_cache/iblock/64a/380_259_2/64a72d0f6c8ed603780e1458363f0064.jpg"/>
+		</a>
+				<h3><a href="/articles/uchetnye_resheniya/157066/">Переговоры «вхолостую»: отражаем затраты</a></h3>
+		<div class="date_block">03.05.2017</div>
+		<div class="preview_text_block"><a href="/articles/uchetnye_resheniya/157066/">
+				Компания понесла определенные траты при подготовке к важным бизнес-переговорам 
+с потенциальными контрагентами. Встреча на высоком уровне, такое случается, 
+завершилась безрезультатно. Выгодного контракта нет. Зато появился вопрос: 
+как учитывать «вложения в пустоту»?		</a></div>
+	</div>
+		<div class="all_items">
+				<div class="all_item" id="bx_1454625752_157037">
+								<a href="/articles/uchetnye_resheniya/157037/" class="img_block">
+					<img src="/upload/resize_cache/iblock/888/182_122_2/8886832287674e36e4f45341f4068ae6.jpg"/>
+				</a>
+								<div class="text_block">
+					<h3><a href="/articles/uchetnye_resheniya/157037/"> «Первичка» не поступила вовремя. Что делать?</a></h3>
+					<div class="date_block">02.05.2017</div>
+					<div class="preview_text_block"><a href="/articles/uchetnye_resheniya/157037/">
+										Нередко первичные документы поступают в бухгалтерию несвоевременно, порой 
+со значительным опозданием. Как в таких условиях вести бухгалтерский и налоговый 
+учет без ошибок?					</a></div>
+				</div>
+			</div>
+				<div class="all_item" id="bx_1454625752_156749">
+								<a href="/articles/uchetnye_resheniya/156749/" class="img_block">
+					<img src="/upload/resize_cache/iblock/dc9/182_122_2/dc9e2a728e67e062af7e42242e984bca.jpg"/>
+				</a>
+								<div class="text_block">
+					<h3><a href="/articles/uchetnye_resheniya/156749/">Малоценное ОС: купили, списали, модернизируем</a></h3>
+					<div class="date_block">18.04.2017</div>
+					<div class="preview_text_block"><a href="/articles/uchetnye_resheniya/156749/">
+										Компания приобрела полуразрушенное здание по цене менее 100 рублей, а затем 
+провела его реконструкцию на сумму 1 млн. рублей. Как отражать такой объект 
+в налоговом учете? К слову сказать - чиновники пересмотрели свою позицию.					</a></div>
+				</div>
+			</div>
+	</div>	</div>
+	<div class="berator">
+
+<h3>Смотрите в бераторе по этой теме:</h3>
+<div class="berator_list">
+		<div id="bx_3322728009_139702"><a href="/berator/sale/revenue-from-sales/122848/" >Как учесть вексель, полученный в обеспечение задолженности</a></div>
+	
+
+
+		<div id="bx_3322728009_140428"><a href="/berator/staff/vacation/122650/" >Что изменилось в расчете отчислений в резерв отпусков</a></div>
+	
+
+
+		<div id="bx_3322728009_139706"><a href="/berator/statements/revenue-and-cost-of-sales/122304/" ><IDXSKIP>Безвозмездное поступление ценных бумаг</IDXSKIP></a></div>
+	
+
+
+		<div id="bx_3322728009_146988"><a href="http://pb.buhgalteria.ru/berator/intangible-assets/tax-on-income-of-physical-persons/122542/index.php?bitrix_include_areas=Y&sphrase_id=577270&clear_cache=Y" >2-НДФЛ можно не заверять печатью</a></div>
+	
+
+
+
+</div>
+
+			</div>
+			
+<div class="main_page_last_items">
+	<IDXSKIP><h3><a href="http://pb.buhgalteria.ru/pr/chart-of-accounts/137331/" >Проводки на примерах:</a></h3></IDXSKIP>
+	<ul class="last-items-list">
+								<li class="last-items-item" id="bx_2970353375_140115">
+				<a href="/pr/non-current-assets/account-03-profitable-investments-in-material-values/134182/">Объект основных средств приобретен для сдачи в аренду</a>
+							</li>
+								<IDXSKIP><li class="last-items-item" id="bx_2970353375_140113">
+				<a href="http://pb.buhgalteria.ru/pr/non-current-assets/account-01-fixed-assets/134183/">Отражена недостача ОС (по остаточной стоимости)</a>
+							</li></IDXSKIP>
+								<IDXSKIP><li class="last-items-item" id="bx_2970353375_140116">
+				<a href="http://pb.buhgalteria.ru/pr/non-current-assets/account-04-intangible-assets/134184/">Нематериальный актив введен в эксплуатацию</a>
+							</li></IDXSKIP>
+			</ul>
+</div>
+<!--last-events-->
+			<div class="clear_block"></div>
+</div>
+<div class="menu_item">
+	<IDXSKIP><h3><a href="/articles/ur_aspekt/">У юриста</a></h3></IDXSKIP>
+	<div class="menu_item_block">
+		<div class="main_item" id="bx_719294866_156953">
+				<a class="image_block" href="/articles/ur_aspekt/156953/">
+			<img src="/upload/resize_cache/iblock/c8e/380_259_2/c8ecc483d1f12fbc3d80269cb48f32da.jpg"/>
+		</a>
+				<h3><a href="/articles/ur_aspekt/156953/">По просьбам трудящихся</a></h3>
+		<div class="date_block">02.05.2017</div>
+		<div class="preview_text_block"><a href="/articles/ur_aspekt/156953/">
+				Разнообразных «бумажек», которые сотрудник может попросить &#40;потребовать&#41; 
+у бухгалтера ему предоставить, довольно много. Статья поможет не допустить 
+ошибок по части того, что и в какие сроки нужно выдать, а чего выдавать 
+нельзя, поможет наша статья.		</a></div>
+	</div>
+		<div class="all_items">
+				<div class="all_item" id="bx_1574478084_156948">
+								<a href="/articles/ur_aspekt/156948/" class="img_block">
+					<img src="/upload/resize_cache/iblock/18c/182_122_2/18c6c73c5a2e1a45b2a3d187b828753f.jpg"/>
+				</a>
+								<div class="text_block">
+					<h3><a href="/articles/ur_aspekt/156948/">Раздробленный бизнес «объединили»</a></h3>
+					<div class="date_block">26.04.2017</div>
+					<div class="preview_text_block"><a href="/articles/ur_aspekt/156948/">
+										Оптимизация не терпит поверхностного исполнения. В противном случае она 
+рискует превратиться в «уклонистскую» схему, да еще и шитую белыми нитками. 
+Затраты же на устранение налоговых рисков «схемы» вряд ли окупятся.					</a></div>
+				</div>
+			</div>
+				<div class="all_item" id="bx_1574478084_156883">
+								<a href="/articles/ur_aspekt/156883/" class="img_block">
+					<img src="/upload/resize_cache/iblock/8da/182_122_2/8da8360ab1b447bc44c582038991cba2.jpg"/>
+				</a>
+								<div class="text_block">
+					<h3><a href="/articles/ur_aspekt/156883/">Факсимиле: как применять правильно</a></h3>
+					<div class="date_block">24.04.2017</div>
+					<div class="preview_text_block"><a href="/articles/ur_aspekt/156883/">
+										На каких документах можно применять факсимильную подпись, а на каких нельзя? 
+Обсудим этот вопрос с учетом позиций Минфина России и арбитражных судов. 
+А также разберемся, кто и на каком основании вправе использовать факсимиле.					</a></div>
+				</div>
+			</div>
+	</div>	</div>
+	<div class="berator">
+<h3>Смотрите в бераторе по этой теме:</h3>
+<div class="berator_list">
+		<div id="bx_3302092990_145677"><a href="http://pb.buhgalteria.ru/berator/staff/accrual-and-payment-of-salaries/121284/" >Работодатели обязаны оплачивать прогулы из-за невыплат зарплат</a></div>
+	
+
+
+		<IDXSKIP><div id="bx_3302092990_139757"><a href="/berator/reg-start-work/how-to-organise-the-work-to-the-cashier-s-office/120427/" >Прием и выдача наличных денег</a></div></IDXSKIP>
+	
+
+
+		<div id="bx_3302092990_151340"><a href="http://pb.buhgalteria.ru/berator/reg-start-work/state-registration/120210/" ><IDXSKIP>В каких случах налоговая инспекция может отказать в госрегистрации?</IDXSKIP></a></div>
+	
+
+
+		<IDXSKIP><div id="bx_3302092990_139759"><a href="/berator/reg-start-work/how-to-account-capital-contributions/120291/" >Вклады в уставный капитал</a></div></IDXSKIP>
+	
+
+
+
+</div>	</div>
+	
+<div class="main_page_last_items">
+	<IDXSKIP><h3><a href="/obzory/arb/" >Обзор арбитражной практики:</a></h3></IDXSKIP>
+	<ul class="last-items-list">
+								<li class="last-items-item" id="bx_3017195560_157063">
+				<a href="/obzory/arb/nalog_na_pribyl_organizatsiy/n157063">Возврат переплаты: 3 года с даты выдачи справки</a>
+							</li>
+								<li class="last-items-item" id="bx_3017195560_157061">
+				<a href="/obzory/arb/nds/n157061">НДС: рекламные материалы не облагаются</a>
+							</li>
+								<li class="last-items-item" id="bx_3017195560_156957">
+				<a href="/obzory/arb/nds/n156957">Счет-фактуру при возврате брака не выставляют</a>
+							</li>
+			</ul>
+</div>
+<!--last-events-->
+	<div class="clear_block"></div>
+</div>
+
+<div class="menu_item">
+	<IDXSKIP><h3><a href="/articles/kadry/">Зарплата</a></h3></IDXSKIP>
+	<div class="menu_item_block">
+		<div class="main_item" id="bx_766662027_156954">
+				<a class="image_block" href="/articles/kadry/156954/">
+			<img src="/upload/resize_cache/iblock/b0b/380_259_2/b0b00aa1713513a0e01382bcaaa27d80.jpg"/>
+		</a>
+				<h3><a href="/articles/kadry/156954/">Выход на работу при открытом больничном</a></h3>
+		<div class="date_block">02.05.2017</div>
+		<div class="preview_text_block"><a href="/articles/kadry/156954/">
+				В перечне сложных случаев начисления пособия по временной нетрудоспособности&nbsp;&nbsp;выход 
+сотрудника на работу в период болезни занимает далеко не последнее место. 
+А по «коварству», неоднозначности&nbsp;&nbsp;и непредсказуемости реагирования 
+на такие ситуации проверяющих и судей,&nbsp;&nbsp;так он и вовсе безусловный 
+лидер.		</a></div>
+	</div>
+		<div class="all_items">
+				<div class="all_item" id="bx_1521837341_156750">
+								<a href="/articles/kadry/156750/" class="img_block">
+					<img src="/upload/resize_cache/iblock/379/182_122_2/3797fa321b9a56dff5be668bcef5efa0.jpg"/>
+				</a>
+								<div class="text_block">
+					<h3><a href="/articles/kadry/156750/">Побыл главбухом? Пора в юристы!</a></h3>
+					<div class="date_block">19.04.2017</div>
+					<div class="preview_text_block"><a href="/articles/kadry/156750/">
+										Минтруд России обнародовал рейтинг самых востребованных профессий в 2017 
+году. Какое место заняли в нем бухгалтеры? Какие знания и умения придадут 
+бухгалтеру уверенность на рынке труда? - Эти вопросы волнуют многих наших 
+читателей.					</a></div>
+				</div>
+			</div>
+				<div class="all_item" id="bx_1521837341_156597">
+								<a href="/articles/kadry/156597/" class="img_block">
+					<img src="/upload/resize_cache/iblock/faf/182_122_2/faf16a3e0b4a78b3d3a3d5abb7e73483.jpg"/>
+				</a>
+								<div class="text_block">
+					<h3><a href="/articles/kadry/156597/">«Детские» -2017: странные рекомендации</a></h3>
+					<div class="date_block">11.04.2017</div>
+					<div class="preview_text_block"><a href="/articles/kadry/156597/">
+										Очевидно, что расчет Минтруда России не совпадает ни с законодательными 
+нормами, регулирующими порядок определения максимальной суммы ежемесячного 
+пособия по уходу за ребенком.					</a></div>
+				</div>
+			</div>
+	</div>	</div>
+	<div class="berator">
+
+<h3>Смотрите в бераторе по этой теме:</h3>
+<div class="berator_list">
+		<div id="bx_3283891367_151089"><a href="http://pb.buhgalteria.ru/berator/staff/vacation/122647/" ><IDXSKIP>В каком случае при изменении МРОТ нужно пересчитать &quot;декретные&quot;?</IDXSKIP></a></div>
+	
+
+
+		<div id="bx_3283891367_139776"><a href="/berator/staff/organization-of-work-of-the-personnel/121184/" >Как организовать учет рабочего времени</a></div>
+	
+
+
+		<div id="bx_3283891367_146001"><a href="http://pb.buhgalteria.ru/berator/staff/accrual-and-payment-of-salaries/121239/" >Увеличен до 350 тыс. руб порог дохода для предоставления стандартных налоговых вычетов</a></div>
+	
+
+
+		<div id="bx_3283891367_150915"><a href="http://pb.buhgalteria.ru/berator/staff/accrual-and-payment-of-salaries/121284/" ><IDXSKIP>Новые штрафы за невыплату и задержку зарплаты</IDXSKIP></a></div>
+	
+
+
+
+</div>	</div>
+	
+<div class="main_page_last_items">
+	<IDXSKIP><h3><a href="/forms/1200/" >Формы и бланки кадрового учёта:</a></h3></IDXSKIP>
+	<ul class="last-items-list">
+								<IDXSKIP><li class="last-items-item" id="bx_3032155185_48170">
+				<a href="/forms/1200/48170/">Акт о приеме работ, выполненных по срочному трудовому договору, заключенному на время выполнения определенной работы (форма № Т-73)</a>
+							</li></IDXSKIP>
+								<li class="last-items-item" id="bx_3032155185_48147">
+				<a href="/forms/1200/48147/">Приказ (распоряжение) о переводе работника на другую работу (форма № Т-5)</a>
+							</li>
+								<li class="last-items-item" id="bx_3032155185_48143">
+				<a href="/forms/1200/48143/">Личная карточка работника (форма № Т-2)</a>
+							</li>
+			</ul>
+</div>
+<!--last-events-->
+	<div class="clear_block"></div>
+</div>
+
+
+<div class="menu_item">
+	<IDXSKIP><h3><a href="/articles/nalogovoe_planirovanie/">Налоги</a></h3></IDXSKIP>
+	<div class="menu_item_block">
+		<div class="main_item" id="bx_604248480_156623">
+				<a class="image_block" href="/articles/nalogovoe_planirovanie/156623/">
+			<img src="/upload/resize_cache/iblock/bd6/380_259_2/bd6b6a604ec1118b731092e27849eda1.jpg"/>
+		</a>
+				<h3><a href="/articles/nalogovoe_planirovanie/156623/"><IDXSKIP>На «убыточные» комиссии больше не позовут</IDXSKIP></a></h3>
+		<IDXSKIP><div class="date_block">12.04.2017</div></IDXSKIP>
+		<div class="preview_text_block"><a href="/articles/nalogovoe_planirovanie/156623/">
+				Уточнены обязанности ФНС России по возврату или зачету налоговых платежей, 
+по предоставлению отсрочек и по сверке расчетов. Что касается «убыточных» 
+комиссий ИФНС, то они формально вообще остались без работы. Кстати, поо 
+новым правилам будут проходить и проверки ФСС.		</a></div>
+	</div>
+		<div class="all_items">
+				<div class="all_item" id="bx_1392716086_156552">
+								<IDXSKIP><a href="/articles/nalogovoe_planirovanie/156552/" class="img_block">
+					<img src="/upload/resize_cache/iblock/aed/182_122_2/aeddd09e76d177bcfd236b8c23c5ba4b.jpg"/>
+				</a></IDXSKIP>
+								<div class="text_block">
+					<IDXSKIP><h3><a href="/articles/nalogovoe_planirovanie/156552/">«Письма счастья» завтрашнего дня</a></h3></IDXSKIP>
+					<IDXSKIP><div class="date_block">10.04.2017</div></IDXSKIP>
+					<div class="preview_text_block"><a href="/articles/nalogovoe_planirovanie/156552/">
+										<IDXSKIP>Вам надоело каждый год, нервничая, дожидаться от налоговиков «писем счастья» 
+и вообще платить транспортный, квартирный и земельный налоги? Ну так&nbsp;&nbsp;и 
+не платите – такая возможность скоро появится. Правда, это вовсе не значит, 
+что вам не придется расставаться с деньгами.					</IDXSKIP></a></div>
+				</div>
+			</div>
+				<div class="all_item" id="bx_1392716086_156508">
+								<a href="/articles/nalogovoe_planirovanie/156508/" class="img_block">
+					<img src="/upload/resize_cache/iblock/927/182_122_2/927c737a44b8b0887405cac582a6b206.jpg"/>
+				</a>
+								<div class="text_block">
+					<h3><a href="/articles/nalogovoe_planirovanie/156508/"><IDXSKIP>«Заморозка»  счета по страховым основаниям </IDXSKIP></a></h3>
+					<div class="date_block">07.04.2017</div>
+					<div class="preview_text_block"><a href="/articles/nalogovoe_planirovanie/156508/">
+										Может ли ИФНС «заморозить» расчетный счет за несвоевременную сдачу расчета? 
+Минфин такую возможность исключил,&nbsp;&nbsp;ФНС&nbsp;&nbsp;– допустила.Разрешить 
+эту «правовую коллизию» предлагается, увы, не в пользу фирм.					</a></div>
+				</div>
+			</div>
+	</div>	</div>
+	<div class="berator">
+
+<h3>Смотрите в бераторе по этой теме:</h3>
+<div class="berator_list">
+		<div id="bx_32686673_150920"><a href="http://pb.buhgalteria.ru/berator/intangible-assets/insurance-contributions-to-non-budgetary-funds/122547/" ><IDXSKIP>Какие доходы облагаются страховыми взносами?</IDXSKIP></a></div>
+	
+
+
+		<div id="bx_32686673_139772"><a href="/berator/intangible-assets/state-duty/122592/" >Порядок и сроки уплаты госпошлины</a></div>
+	
+
+
+		<div id="bx_32686673_143184"><a href="http://pb.buhgalteria.ru/berator/intangible-assets/value-added-tax/122464/" ><IDXSKIP>Суммы страхового возмещения не облагаются НДС</IDXSKIP></a></div>
+	
+
+
+		<div id="bx_32686673_140416"><a href="/berator/staff/accrual-of-other-expenses/122572/" ><IDXSKIP>Уменьшаем НДФЛ на суммы компенсаций работникам</IDXSKIP></a></div>
+	
+
+
+
+</div>			</div>
+		
+<div class="main_page_last_items">
+	<IDXSKIP><h3><a href="/obzory/norm/" >Обзор нормативных документов:</a></h3></IDXSKIP>
+	<ul class="last-items-list">
+								<li class="last-items-item" id="bx_1995829959_157065">
+				<a href="/obzory/norm/n157065">Обзор нормативных актов с 27 апреля по 04 мая</a>
+							</li>
+								<li class="last-items-item" id="bx_1995829959_156959">
+				<a href="/obzory/norm/n156959">Обзор нормативных актов с 20 апреля по 27 апреля</a>
+							</li>
+								<li class="last-items-item" id="bx_1995829959_156807">
+				<a href="/obzory/norm/n156807">Обзор нормативных актов с 13 апреля по 20 апреля</a>
+							</li>
+			</ul>
+</div>
+<!--last-events-->
+
+	<div class="clear_block"></div>
+</div>
+
+
+<div class="menu_item">
+	<IDXSKIP><h3><a href="/articles/proverki/">Проверки</a></h3></IDXSKIP>
+	<div class="menu_item_block">
+		<div class="main_item" id="bx_4026311549_157059">
+				<a class="image_block" href="/articles/proverki/157059/">
+			<img src="/upload/resize_cache/iblock/010/380_259_2/010186d1ece9ac7fa5049fe92cdcc9b0.jpg"/>
+		</a>
+				<h3><a href="/articles/proverki/157059/"><IDXSKIP>Как отстоять свою добросовестность</IDXSKIP></a></h3>
+		<div class="date_block">03.05.2017</div>
+		<div class="preview_text_block"><a href="/articles/proverki/157059/">
+				Зачастую инспекторы объявляют налоговую выгоду необоснованной по формальным 
+признакам, невзирая на реальных характер хозяйственных операций. В целях 
+защиты от необоснованных претензий ФНС России рекомендует налогоплательщикам 
+не жалеть усилий на проверку контрагентов.		</a></div>
+	</div>
+		<div class="all_items">
+				<div class="all_item" id="bx_2566624235_156748">
+								<a href="/articles/proverki/156748/" class="img_block">
+					<img src="/upload/resize_cache/iblock/a16/182_122_2/a169151592c818cd8f0cfc1e8da1d38d.jpg"/>
+				</a>
+								<div class="text_block">
+					<h3><a href="/articles/proverki/156748/"><IDXSKIP>ИП вместо наемного работника: схема развенчана </IDXSKIP></a></h3>
+					<div class="date_block">18.04.2017</div>
+					<div class="preview_text_block"><a href="/articles/proverki/156748/">
+										Ваша фирма привлекает индивидуальных предпринимателей вместо наемных работников? 
+- Во всем надо знать меру. Верховный суд РФ поставил точку в споре компании, 
+которая чересчур увлеклась налоговой «оптимизацией».					</a></div>
+				</div>
+			</div>
+				<div class="all_item" id="bx_2566624235_156715">
+								<a href="/articles/proverki/156715/" class="img_block">
+					<img src="/upload/resize_cache/iblock/a8f/182_122_2/a8f8dc1d03d4714f7f0859362821c156.jpg"/>
+				</a>
+								<div class="text_block">
+					<h3><a href="/articles/proverki/156715/"><IDXSKIP>Расчет авансового платежа – не декларация? </IDXSKIP></a></h3>
+					<div class="date_block">17.04.2017</div>
+					<div class="preview_text_block"><a href="/articles/proverki/156715/">
+										При рассмотрении спора о блокировке счета ВС РФ пришел к выводу, что декларации 
+по налогу на прибыль за отчетный период следует рассматривать как расчеты 
+авансового платежа. Мы не спешим соглашаться с этой позицией.					</a></div>
+				</div>
+			</div>
+	</div>	</div>
+	<div class="berator">
+	<h3>Смотрите в бераторе по этой теме:</h3>
+<div class="berator_list">
+		<div id="bx_111085128_151719"><a href="http://pb.buhgalteria.ru/berator/tax-audits/field-tax-audits/124443/" >Как оформляются результаты выездной проверки?</a></div>
+	
+
+
+		<div id="bx_111085128_140695"><a href="http://pb.buhgalteria.ru/berator/reg-start-work/how-to-organise-the-work-to-the-cashier-s-office/120424/" >Когда лимит кассы можно превысить</a></div>
+	
+
+
+		<div id="bx_111085128_141183"><a href="/berator/intangible-assets/trading-fee/141177/" ><IDXSKIP>Кто освобожден от уплаты торгового сбора</IDXSKIP></a></div>
+	
+
+
+		<div id="bx_111085128_147091"><a href="http://pb.buhgalteria.ru/berator/financial-results/the-use-of-net-profit/122761/" >Увеличение УК должно быть нотариально заверено</a></div>
+	
+
+
+
+</div>			</div>
+		
+<div class="main_page_last_items">
+	<IDXSKIP><h3><a href="/shema/" >Бухгалтерия в схемах:</a></h3></IDXSKIP>
+	<ul class="last-items-list">
+								<IDXSKIP><li class="last-items-item" id="bx_1905800926_140186">
+				<a href="/shema/7/">Порядок возмещения НДС</a>
+							</li></IDXSKIP>
+								<IDXSKIP><li class="last-items-item" id="bx_1905800926_140185">
+				<a href="/shema/6/">Порядок проведения сверки расчетов по налогам</a>
+							</li></IDXSKIP>
+								<IDXSKIP><li class="last-items-item" id="bx_1905800926_140184">
+				<a href="/shema/5/">Расчет пособия по нетрудоспособности</a>
+							</li></IDXSKIP>
+			</ul>
+</div>
+<!--last-events-->
+	<div class="clear_block"></div>
+</div>
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter15969604 = new Ya.Metrika({
+                    id:15969604,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    ut:"noindex"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/15969604?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter24568064 = new Ya.Metrika({
+                    id:24568064,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    ut:"noindex"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/24568064?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->	
+
+
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter41691 = new Ya.Metrika({
+                    id:41691,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    ut:"noindex"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/41691?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+	new Image().src = "//counter.yadro.ru/hit;buhgalteria?r"+
+	escape(document.referrer)+((typeof(screen)=="undefined")?"":
+	";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+		screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+	";"+Math.random();//--></script><!--/LiveInternet-->
+
+<footer id="footer" class="rounded">
+	<nav class="footer-menu">
+		<div class="footer-menu-box">
+			<IDXSKIP><h5>РУБРИКИ</h5></IDXSKIP>
+			
+
+<ul>
+
+						<IDXSKIP><li><a href="/articles/uchetnye_resheniya/">Учет</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/ur_aspekt/">У юриста</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/kadry/">Зарплата</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/nalogovoe_planirovanie/">Налоги</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/proverki/">Проверки</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/articles/good_bad_news/">Плохая и хорошая новость</a></li></IDXSKIP>
+			
+
+</ul>
+
+		</div>
+		<div class="footer-menu-box">
+			<IDXSKIP><h5>В ПОМОЩЬ БУХГАЛТЕРУ</h5></IDXSKIP>
+			
+
+<ul>
+
+						<IDXSKIP><li class="orange-right"><a class="orange-item" href="/faq/">Вопрос-Ответ</a></li></IDXSKIP>
+			
+						<IDXSKIP><li class="orange-right"><a class="orange-item" href="/pr/">Проводки на примерах</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/samples/company-registration/">Примеры на практике</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/obzory/">Обзоры</a></li></IDXSKIP>
+			
+						<IDXSKIP><li><a href="/about/">О журнале</a></li></IDXSKIP>
+			
+
+</ul>
+
+		</div>
+	</nav>
+
+	<div class="footer_description_block">
+		<IDXSKIP>© 2001—2017 «Практическая бухгалтерия».<br />
+			Использование материалов возможно только с письменного разрешения </IDXSKIP><IDXSKIP><a href="mailto:admin@buhgalteria.ru"><ins>редакции сайта</ins></a></IDXSKIP><IDXSKIP>.<br />
+		Свидетельство о регистрации СМИ: ПИ № ФС77-28196</IDXSKIP></a>
+	</div>
+	<IDXSKIP><div class="counters-logo">
+		<span id="bx-composite-banner"></span>
+		<!--LiveInternet logo-->
+		<a href="http://www.liveinternet.ru/click" target="_blank" ><img src="//counter.yadro.ru/logo?44.6" title="LiveInternet" border="0" width="31" height="31" /></a>
+		<!--/LiveInternet-->
+	</div></IDXSKIP>
+</footer>
+<!--footer-->
+</div>
+	</body>
+</html>

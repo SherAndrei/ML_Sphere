@@ -1,0 +1,2672 @@
+railway.kanaries.ru/index.php?act=Print&client=printer&f=121&t=3359
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+		<title>Форум работников железнодорожного транспорта [Форум Invision Power Board]</title>
+		<style type="text/css">
+	/*~START CSS~*/
+
+/*  
+ * CSS for IP.Board 2.3.0
+ * Author: Rikki Tissier, original IP.Board CSS by James Mathias
+ * Copyright: 2005 IPS, Inc, all rights reserved 
+ *
+ * All style attributes in alpha-numeric order starting from 0
+ *
+ */
+
+/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+@import url(style_images/ip.boardpr/css_colors.css);
+
+/* ----------------------------------- */
+
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+}
+
+body{ 
+	font-family: Arial, Verdana, Tahoma, "Trebuchet MS", Sans-Serif, Georgia, Courier, "Times New Roman", Serif;
+	font-size: 12px;
+	line-height: 135%;
+	margin: 0px;
+	padding: 0px; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+}
+
+/* 
+ * ========================================
+ * Set up IPB table
+ * ========================================
+ */
+ 
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable
+{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #222;
+	font-size: 12px;
+	line-height: 135%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 5px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+/* Safari... */
+th
+{
+	text-align: left;
+}
+
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+
+img{
+	border: 0; /* makes sure linked images do not have a border */
+	vertical-align: middle;
+}
+
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #222;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+}
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+#ipbwrapper{ 
+	margin: 15px auto 20px auto; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	/* EDIT THIS TO CHANGE THE WIDTH OF THE BOARD -> 960px is a common fixed resolution size */
+	width: 98%;
+}
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+
+/* @group Pagination */
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: #d8d8d8;
+	padding: 2px 4px 2px 4px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #d8d8d8;
+}
+
+
+.pagecurrent{
+
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #C2CFDF;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+
+
+/* @end */
+
+/* fake button effect for some links */
+.fauxbutton{
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 11px; 
+	color: #666;
+	line-height: 135%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #FFF;
+	border: 3px solid #d7d7d7;
+	color: #000;
+	margin: 0px;
+	padding: 0px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 150%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #808080 url(style_images/ip.boardpr/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #808080;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood,
+.warnbad{ 
+	color: #0B9500;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #DD0000;
+}
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 28px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #000; 
+	font-size: 24px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+}
+
+/* @group User CP */
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #f3f3f3;
+	border: 1px solid #c4c4c4;
+	padding: 1px;
+	line-height: 150%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+
+
+/* @end */
+
+.activeuserstrip{ 
+	background: #BCD0ED;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #737373; 
+	font-size: 10px;
+	line-height: 150%;
+}
+
+.postdetails{ 
+	font-size: 11px;
+	line-height:140%;
+}
+
+.postcolor{ 
+	font-size: 13px; 
+	line-height: 160%;
+}
+
+.normalname{ 
+	color: #003;
+	font-size: 12px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 12px;
+}
+
+.post_head {
+}
+
+.post1,
+.bg1,
+.post2,
+.bg3,
+.post1.post_left,
+.post2.post_left
+{ 
+}
+
+.row2shaded,
+.post1shaded { background-color: #DEDBE4 }
+.row4shaded,
+.post2shaded { background-color: #E3DFE7 }
+
+.row1{ 
+}
+
+.row2{  
+}
+
+.ipbtable .row1,
+.ipbtable .row2 {
+}
+
+.rowhighlight{
+	background-color: #FFF9BA;
+}
+
+.darkrow1,
+.darkrow3{ 
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #f5f5f5;
+	border: 1px solid #345487;
+}
+
+.tablefill,
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: 1.5em;
+	width: 25%;
+}
+
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 11px; 
+}
+
+.lastaction
+{
+	font-size: 11px; 
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #FFF;
+	border-left: 0;
+	border-right: 0;
+	line-height: 150%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/* @group Calendar */
+
+.calmonths{ 
+	background: #eeeeee;
+	font-size: 18px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #e8e8e8;
+	color: #4b4b4b;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #AAA;
+	color: #222;
+	font-size: 14px;
+	padding: 6px;
+	text-align: center;
+}
+
+.celltodayshaded,
+.celldateshaded,
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #f5f5f5; 
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.celltodayshaded,
+.celldateshaded
+{
+	background: #E3DFE7;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #d1d1d1;
+}
+
+.celltoday,
+.celltodayshaded,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+
+.calranged
+{
+	border: 2px outset #C2CFDF;
+	background: #C2CFDF;
+	padding:4px;
+}
+
+.calitem
+{
+	border-bottom: 1px dotted #C2CFDF;
+	padding:4px;
+}
+
+
+
+/* @end */
+
+/* @group Input elements */
+
+.input-warn,
+.input-green,
+.input-checkbox,
+input,
+textarea,
+select{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 5px;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+select
+{
+	margin: 0px;
+}
+
+.input-checkbox
+{
+	border: none;
+}
+
+.input-warn,
+.input-warn-content
+{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content
+{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+
+.input-text
+{
+	color: #900;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+	cursor: pointer;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 0;
+	vertical-align: middle;
+	background: transparent;
+}
+
+
+
+/* @end */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+}
+
+.pformleft,
+.pformleftw {
+	background-color: #e4e6e9;
+}
+
+.pformright {
+	background-color: #eff1f3;
+}
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0px;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: #dcdcdc;
+	border: 1px solid #9FB9D4; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	border: 0;
+	color: #474747;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.formtable td.formstrip{
+	background: #DDE8F2;
+	border: 1px solid #9FB9D4;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	background: #E4EAF2 url(style_images/ip.boardpr/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #000;
+	border-bottom: 0;
+	border-left: 4px solid #8394B2;
+	color: #000;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 2px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: #FAFCFE;
+	border: 1px dotted #000;
+	border-left: 4px solid #8394B2;
+	border-top: 0;
+	color: #465584;
+	padding: 4px;
+	margin: 0 auto 0 auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	background: #FDDBCC url(style_images/ip.boardpr/css_img_code.gif) no-repeat right;
+	color: #000;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: #FAFCFE;
+	border: 1px dotted #000;
+	color: #465584;
+	font-family: Courier, "Courier New", Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+}
+
+/* 
+ * ========================================
+ * old school quote and code styles - backwards compatibility 
+ * ========================================
+ */
+
+#QUOTE,
+#CODE{  
+	background: #FAFCFE; 
+	border: 1px solid #000; 
+	color: #465584; 
+	font-family: Verdana, Arial; 
+	font-size: 11px; 
+	padding: 2px; 
+	white-space: normal;
+}
+
+#CODE{ 
+	font-family: Courier, "Courier New", Verdana, Arial;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+	background: #FFF;
+	padding: 1px; 
+	margin: 0px; 
+}
+
+.borderwrapm{
+	margin: 5px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	font-size: 13px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px 8px 8px 15px;
+}
+
+.maintitle td { 
+	font-size: 13px;
+	font-weight: bold;
+}
+
+
+.maintitlecollapse{
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	text-decoration: none;
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited, 
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active
+{ 
+	background: transparent;
+	text-decoration: none;
+}
+
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover
+{
+	
+}
+
+.borderwrap h4{
+	background: #DDE6F2;
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	border-top: 1px solid #5176B5;
+	color: #5176B5; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+
+td.formbuttonrow,
+.formbuttonrow,
+.pformstrip,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+
+td.formbuttonrow{
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.borderwrap p.formbuttonrow1{
+	background: #F9F9F9 !important;
+	border: 0;
+	border-top: 1px solid #CCC;
+}
+
+.bar,
+.barb,
+.barc{
+
+}
+
+.barc{
+	border-bottom: 0;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	font-size: 11px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	font-size: 1px;
+	height: 5px;
+}
+
+.newslink{
+	background: #eeeeee;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #222;
+	font-size: 11px;
+	padding: 5px 5px 5px 10px;
+}
+
+.newslink span{
+	background: transparent;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	vertical-align: middle;
+}
+
+.fieldwrap{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #EEE;
+	border: 1px solid #CCC;
+	border-left: 0;
+	border-right: 0;
+	color: #444; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap {
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+
+.errorwrap h4 {
+	background: #E3C0C0;
+	border: 1px solid #992A2A;
+	border-left: 0;
+	border-right: 0;
+	color: #992A2A; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap p {
+	background: transparent;
+	border: 0;
+	color: #992A2A;
+	margin: 0;
+	padding: 8px;
+}
+
+
+.ruleswrap{
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	color: #992A2A; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #FFF;
+	border: 1px solid #c4c4c4;
+	padding: 1px;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0; 
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+
+
+#gfooter{
+	margin: 5px 0 5px 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	font-size: 10px;
+	padding: 7px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+}
+
+#logostrip{ 
+	height: 68px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+#logographic{
+	background: transparent url(style_images/ip.boardpr/logo4.gif) no-repeat left;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+
+#submenu{ 
+	margin: 0;
+	height: 30px;
+	text-align: right;
+}
+
+	#submenu_left a {
+		float: left;
+	}
+	
+	#submenu_right a {
+		float: right;
+	}
+	
+	#submenu a {
+		display: block;
+		padding: 7px;
+		text-decoration: none;
+	}
+	
+		#submenu a:hover {
+		
+		}
+
+#userlinks,
+#userlinksguest{ 
+	margin: 0px 0 5px 0;
+	padding: 0 5px 0 5px;
+	clear: both;
+}
+
+#userlinksguest{ 
+	
+}
+
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 11px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0 !important;
+	padding: 7px 0 7px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#navstrip{ 
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 5px 0px 8px 0px; 
+}
+
+#navstrip a:link, 
+#navstrip  a:visited{ 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+ 
+}
+
+.toplinks{
+	background: transparent;
+	color: #565656;
+	margin: 0;
+	padding: 0 0 5px 0;
+	text-align: right;
+}
+
+.toplinks span{
+	color: #565656;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px;
+}
+
+.toplinks a {
+	color: #686868;
+}
+
+.copyright{ 
+	font-size: 11px; 
+	margin: 0 0 5px 0;
+	padding: 8px;
+}
+
+/* @group Print styles */
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+#print h4{
+	background: #F9F9F9;
+	font-size: 11px;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #000;
+	text-align: center;
+}
+
+.dny-edit-title
+{
+	border:0px;
+	padding:3px;
+	margin:0px;
+	background: #D1DCEB; 
+	color: #3A4F6C; 
+}
+
+
+
+/* @end */
+
+
+/* ======================================== */
+/* TABS
+/* ======================================== */
+
+.tabon
+{
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	padding:8px;
+	float:left;
+	width:auto;
+	margin-top:1px;
+	font-size:11px;
+}
+
+.taboff
+{
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	padding:8px;
+	float: left;
+	width: auto;
+	margin-top:1px;
+	font-size:11px;
+}
+
+.tabon a:link, 
+.tabon a:visited, 
+.tabon a:active
+{
+	text-decoration:none;
+}
+
+.taboff a:link, 
+.taboff a:visited, 
+.taboff a:active
+{
+	text-decoration:none;
+}
+
+.mya-back
+{
+	background: #eaeaea;
+	margin:1px;
+	padding: 1px;
+}
+
+.mya-content
+{
+	background: #FFF;
+	padding:8px;
+	margin: 1px;
+	border: 1px solid #777;
+}
+
+.mya-content-tbl
+{
+   background: #F0F5FA;
+   border: 1px solid #777;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   margin:1px;
+}
+
+.mya-fieldwrap
+{
+	background: transparent;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 4px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Create PM box defaults           */
+/* -------------------------------- */
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+
+
+/* -------------------------------- */
+/* Experimental                     */
+/* -------------------------------- */
+
+/* @group Popup Menus */
+
+.popupmenu,
+.popupmenu-new
+{
+   background: #f4f4f4;
+   border: 1px solid #989898;
+   text-align:left;
+   font-size:11px;
+   white-space:nowrap;
+   /*padding:3px 5px 3px 3px;*/
+   /*width:300px;*/
+}
+
+.popupmenu-item
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	border-bottom: 1px solid #d0d0d0;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popupmenu-item-last
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popmenubutton-new,
+.popmenubutton
+{
+	white-space:nowrap;
+	background-color: #f0f0f0;
+	border: 1px solid #adadad;
+	color: #30343b;
+	font-weight:bold;
+	float:right;
+	text-align:center;
+	margin:0px;
+	font-size:11px;
+	padding: 2px 8px 2px 8px;
+}
+
+.popmenubutton-new,
+.popmenubutton-new-out
+{
+	float:none;
+	width:auto;
+	text-align:left;
+	height:auto;
+	padding:4px;
+	font-weight:normal;
+	background-color:#f0f0f0;
+	background-image: url(style_images/ip.boardpr/menu_action_down-padded.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.popmenubutton-new-out
+{
+	padding: 4px;
+	background-color:#dce1e8;
+	border: 1px solid #a9b0bb;
+}
+
+
+.popupmenu-new
+{
+	background-color: #f4f4f4;
+}
+
+.maintitle .popmenubutton {
+	margin: -3px 0px -3px 5px;
+}
+
+.popmenubutton a:link, 
+.popmenubutton a:visited,
+.popmenubutton-new a:link, 
+.popmenubutton-new a:visited,
+.popmenubutton-new-out a:link,
+.popmenubutton-new-out a:visited,
+.popupmenu-item a:link, 
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link, 
+.popupmenu-item-last a:visited
+{ 
+	text-decoration: none;
+	-moz-outline: none;
+}
+
+.popmenubutton a:hover,
+.popmenubutton-new a:hover,
+.popupmenu-item a:hover, 
+.popupmenu-item-last a:hover
+{  
+	text-decoration: none;
+}
+
+.popupmenu-category
+{
+	background-color: #aaaaaa; 
+	color: #464646; 
+	font-size: 11px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+
+
+/* @end */
+
+/* -------------------------------- */
+/* Loading box
+/* -------------------------------- */
+
+#loading-layer-inner
+{
+	width:220px;
+	height:28px;
+	padding:18px 10px 10px 10px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#CCC #666 #666 #CCC;
+	background-color: #FCF8C7;
+}
+
+/* -------------------------------- */
+/* Message in a bo(x|ttle)
+/* -------------------------------- */
+
+#ipd-msg-wrapper
+{
+	display: none;
+	width: 220px;
+}
+
+#ipd-msg-inner
+{
+	width:100%;
+	height:45px;
+	padding: 6px 4px 4px 4px;
+	margin: 0px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#ccc #666 #666 #ccc;
+	background-color: #FCF8C7;
+	filter:alpha(opacity=75);
+	opacity:.75
+}
+
+#ipd-msg-title
+{
+	width: 100%;
+	height:20px;
+	margin: 0px;
+	padding: 6px 4px 4px 4px;
+	background: transparent url(style_images/ip.boardpr/css_pp_header.gif);
+	border: 1px solid #3A4F6C;
+	border-bottom: 0px;
+	color: #FFF;
+}
+
+.linked-image
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.resized-linked-image
+{
+	margin: 1px 0px 0px 0px;
+	padding: 0px;
+	background-color: #000;
+	border: 0px;
+	color: #FFF;
+	font-size: 10px;
+	width: auto;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+}
+
+.resized-linked-image-zoom
+{
+	width: 200px;
+	height: 30px;
+	filter:alpha(opacity=85);
+	opacity:.85;
+	background-color: #FFF;
+	padding-top: 6px;
+	padding-left: 5px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	display: none;
+}
+
+/* -------------------------------- */
+/* Edit post reason
+/* -------------------------------- */
+
+.post-edit-reason
+{
+	background: #E7EAEF;
+	margin-top: 9px;
+	margin-bottom: 0px;
+	padding: 4px;
+	color: #333;
+	font-size: 10px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Personal Profile
+/* -------------------------------- */
+
+.pp-name
+{ 
+	background: #eeeeee;
+	margin: 0px;
+	padding: 10px;
+}
+
+/* @group Personal Profile */
+
+.pp-name h3
+{
+	margin:0px;
+	padding:0px 0px 5px 0px;
+	font-size:24px;
+}
+
+.pp-header
+{ 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0px 0px 1px 0px; 
+	padding: 5px; 
+}
+
+.pp-title
+{
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.pp-datebox
+{
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #8e8e8e;
+	padding: 4px;
+	margin: 0px;
+	font-size:18px;
+	font-weight:bold;
+	line-height: 100%;
+	letter-spacing: -1px;
+	float:right;
+	width: auto;
+}
+
+.pp-datebox em
+{
+	color: #AAA;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.pp-contentbox-back
+{
+	background-color: #cacaca;
+	padding: 6px;
+}
+
+.pp-contentbox-entry,
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	background-color: #f7f7f7;
+	border: 1px solid #8e8e8e;
+	line-height: 140%;
+	padding: 8px;
+	margin-bottom: 6px;
+	height: 200px;
+	overflow: auto;
+	overflow-x: auto;
+}
+
+.pp-contentbox-entry-noheight-sel
+{
+	background-color:#FCECCD;
+}
+
+.pp-contentbox-entry-noheight-mod
+{
+	background-color:#FDF1DA;
+}
+
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	height: auto;
+	margin-bottom: 1px;
+}
+
+.pp-image-thumb-wrap,
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 27px;
+	height: 27px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap-floatright
+{
+	float:right;
+}
+
+.pp-tiny-text
+{
+	color: gray;
+	font-size: 10px;
+}
+
+.pp-mini-content-entry,
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #F5F9FD;
+	padding: 6px;
+	border-bottom: 1px dotted #555555;
+	clear:both;
+	width: auto;
+	height: 60px;
+}
+
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #E3DFE7;
+}
+
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	height: auto;
+}
+
+.pp-tabclear,
+.pp-maintitle
+{
+	font-size: 13px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.pp-tabclear
+{
+	border:0px;
+}
+
+.pp-tabon
+{
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	padding:8px;
+	float:left;
+	width:auto;
+	margin-top:1px;
+	font-size:11px;
+}
+
+.pp-taboff,
+.pp-tabshaded
+{
+	border-width: 1px 1px 0px 1px;
+	border-style: solid;
+	padding:8px;
+	float: left;
+	width: auto;
+	margin-top:1px;
+	font-size:11px;
+}
+
+.pp-tabshaded
+{
+	background-image: url(style_images/ip.boardpr/css_pp_tab_shaded.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #516795;
+	border-top: 1px solid #7f9BBC;
+	border-left: 1px solid #7f9BBC;
+	border-right: 1px solid #7f9BBC;
+}
+
+.pp-tabon a:link, 
+.pp-tabon a:visited, 
+.pp-tabon a:active
+{
+	text-decoration:none;
+}
+
+.pp-taboff a:link, 
+.pp-taboff a:visited, 
+.pp-taboff a:active,
+.pp-tabshaded a:link, 
+.pp-tabshaded a:visited, 
+.pp-tabshaded a:active
+{
+	text-decoration:none;
+}
+
+.pp-tabwrap
+{
+	height: 34px;
+	margin:0px;
+	padding:0px;
+}
+
+
+
+/* @end */
+
+/* Small blog fix */
+
+#myblogset-info .fieldwrap {
+	background: transparent;
+	border: 0px;
+	border-top: 0;
+    margin: 0px;
+	padding: 0;
+	text-align: left;
+}
+
+
+/* GALLERY STYLES */
+
+.gallery_block {
+	padding: 3px !important;
+	margin: 0px;
+}
+
+.gal_caption {
+	font-size: 14px;
+	padding-bottom: 5px;
+	font-weight: normal;
+}
+
+.gal_cat a {
+	text-decoration: none;
+}
+
+.gal_curr {
+}
+
+.gal_noncurr {
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap
+{
+	margin: 1px;
+	background-color: #fff;
+	border: 1px solid #8e8e8e !important;
+}
+
+.thumbwrapp{
+	border: 2px solid #660707;
+}
+
+.fullimagewrap{
+	background: #F5F9FD;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #DDE6F2;
+	border: 0 !important;
+	color: #5176B5; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	border-bottom: 0px !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	border-bottom: 0px !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #EFDFDF !important;
+	text-align: center !important;
+}
+
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #FFF url(style_images/ip.boardpr/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #424242;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+/* This is a little hack to fix the
+* scrollbar that appears in the emoticon
+* pane of the post screen */	
+#post_screen_hack table tr td {
+	padding: 0px !important;
+}
+</style>
+		<script type='text/javascript'>
+		function fix_linked_image_sizes_attach_thumb( attach_id, width, height, file_size )
+		{
+			return true;
+		}
+		</script>
+	</head>
+	<body>
+	<div id="print">
+		<h1>Версия для печати темы</h1>
+		<h2><a href="http://railway.kanaries.ru/index.php?s=0f8adc70c019a1e70b94a33164789db4&amp;showtopic=3359" title="Нажмите для просмотра темы">Нажмите сюда для просмотра этой темы в обычном формате</a></h2>
+		<h3>Форум работников железнодорожного транспорта _ Здоровье _ Правда и ложь об алкоголе</h3><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  9.4.2010, 10:59</h4>
+			<p>В нашей стране душевое потребление алкоголя ещё недавно оставалось достаточно низким по сравнению с некоторыми странами Европы и США, и такое положение держалось до шестидесятых годов ХХ века. Известно также, что трезвенников среди мужчин в России было больше, чем в любой другой стране. Что же касается женщин, то для большинства из них выпить глоток вина было &lt;стыд, и грех&gt;. Но в последние десятилетия активно распространяется ЛОЖЬ - в основном через СМИ. ЛОЖЬ: Алкоголь - пищевой продукт. ПРАВДА: &lt;Алкоголь - наркотик, подрывающий здоровье населения&gt;, это выписка из решения Всемирной Организации Здравоохранения (ВОЗ) 1975 г. Это положение находится в полном соответствии с научным определением алкоголя, которое дано в трудах выдающихся русских и мировых учёных. ЛОЖЬ: Умеренные дозы спиртного безвредны. ПРАВДА: Для алкоголя, как наркотика не существует безвредных доз, как и для морфия, героина и других наркотиков, назначаемых только врачами в очень малых дозах и на короткий срок, т.е. на 1 - 2 дня. Иначе, как и от алкоголя возникает наркотическая зависимость, человек станет наркоманом и не может жить без него, обрекая себя на гибель. ЛОЖЬ: Водка - лучшее средство от гриппа. Хорошая порция вина - и гриппа как не бывало. ПРАВДА: Французская Академия наук специально проверяла это народное поверье и доказала, что алкоголь никакого влияния на вирусы гриппа, как и на другие вирусы, не оказывает и не может служить лечебным средством. Наоборот, ослаКак я вас всех люблю&#33; организм, алкоголь способствует частым заболеваниям и тяжёлому течению любых инфекционных болезней. ЛОЖЬ: Небольшие дозы алкоголя, если концентрация его в крови не превышает такой-то уровень - не вредны и допустимы как на производстве, так и на транспорте. ПРАВДА: Исследования чехословацких учёных показали, что кружка пива, выпитая шофёром перед выездом, увеличивает количество аварий в 7 раз. При приёме 50 г водки - в 30 раз, а приём 200 г водки - в 130 раз по сравнению с трезвыми шофёрами. Эти данные говорят о том, что никакой &lt;допустимой&gt; концентрации спирта в крови, которая якобы не оказывает существенного влияния на частоту аварий на транспорте, не существует. ЛОЖЬ: Полезно выпить с &lt;устатку&gt;, для аппетита, при болях в желудке, язве и т.д. ПРАВДА: При приёме внутрь страдает, прежде всего желудок. И чем крепче алкогольные изделия, тем тяжелее протекает поражение. Под влиянием алкоголя происходят глубокие изменения во всём железистом аппарате пищеварительного канала. Железы, расположенные в стенке желудка и вырабатывающие желудочный сок, содержащий пепсин, соляную, кислоту и различные ферменты, необходимые для переваривания пищи, под влиянием раздражения сначала выделяют много слизи, а затем атрофируются. Возникает гастрит, который, если не устранить причину и не лечить, может перейти в рак желудка. ЛОЖЬ: Коньяк и водка расширяют сосуды; при болях в сердце - это лучшее средство. ПРАВДА: Поражение сердечно-сосудистой системы при употреблении спиртных напитков наблюдается в виде алкогольной гипертонии или в поражении миокарда. ЛОЖЬ: Если пить &quot;культурно&quot;, то в этом нет ничего плохого. ПРАВДА: Наоборот, в отказе от &quot;культурного&quot; винопития в первую очередь заключён ключ к разрешению всей алкогольной проблемы. Культура, разум, нравственность - всё это в основном физиологически функции мозга. И чтобы пояснить всю абсурдность предложения &quot;пить культурно&quot;, надо хотя бы вкратце вспомнить, как алкоголь действует на мозг. Более тонкое исследование мозга у погибшего от острого алкогольного опьянения показывает, что в нервных клетках наступили изменения в протоплазме и ядре, столь же резко выраженные, как и при отравлении, другими сильными ядами. При этом клетки коры головного мозга поражены гораздо больше, чем подкорковых частей, то есть алкоголь действует сильнее на клетки высших центров, чем низших. В головном мозгу отмечено сильное переполнение кровью, нередко с разрывом сосудов в мозговых оболочках и на поверхности мозговых извилин. В случаях острого алкогольного отравления, но не смертельного, в головном мозгу и в нервных клетках коры бывают те же изменения, что описаны выше, приводящие к глубоким изменениям деятельности и психики человека. Такие же изменения в головном мозгу имеют место у пьющих людей, смерть которых наступила от причин, не связанных с употреблением алкоголя. Описанные изменения в веществе головного мозга необратимы. Они оставляют после себя неизгладимый след в виде выпадения мелких и мельчайших структур мозга, что неизбежно сказывается на его функции. ЛОЖЬ: Всё зло, причиняемое спиртными изделиям, относится к алкоголикам. Это алкоголики страдают, у них все изменения, а те, кто пьёт умеренно, у тех этих изменений нет. ПРАВДА: попытки отнести вредное влияние алкоголя только к тем, кто признан алкоголиком, в корне не верны. Изменения, происходящие в мозгу под влиянием алкоголя, возникают при употреблении алкоголя в любых дозах. Степень этих изменений зависит от количества алкогольных напитков и от частоты их приёмов, вне зависимости от того, относится ли этот человек просто к так называемым &lt;пьющим&gt; или к алкоголикам. Специально проведёнными опытами и наблюдениями над человеком, выпившим среднюю дозу, то есть одну - полторы рюмки водки, установлено, что во всех без исключения случаях алкоголь действует одинаково, а именно: замедляет и затрудняет умственные процессы, двигательные же акты на первых порах ускоряет, а затем замедляет. При этом ранее всего страдают более сложные психические процессы и дольше сохраняются простейшие мыслительные функции, особенно те, которые связаны с двигательными представлениями. Что касается двигательных актов, то они ускоряются, но это ускорение зависит от расслабления тормозных импульсов, и в них уже сразу замечается неточность работы, а именно - явления преждевременной реакции. При повторном приёме алкоголя поражение высших центров мозговой деятельности продолжается от 8 до 20 дней. Если же алкоголь употреблять длительное время, то работа этих центров так и не восстанавливается.<br /><br />На основании научных данных доказано, что, прежде всего утрачиваются самые позднейшие, самые свежие достижения, добытые умственным напряжением, скажем, за последнюю неделю, месяц, и человек после приёма алкоголя возвращается к тому уровню умственного развития, который у него был неделю или месяц назад. Если алкогольное отравление происходит часто, то субъект остаётся неподвижным в умственном отношении, а мышление обычным и шаблонным. В дальнейшем наступает ослабление более старых, более прочных, окрепших ассоциаций и ослабление восприятий. В результате умственные процессы сужаются, лишаясь свежести и оригинальности. Наряду с поражением мыслительных функций коры головного мозга имеют место глубокие изменения нравственности. Как самые высшие и наиболее совершенные чувства, как венец в развитии функций мозга они страдают очень рано. И первое, что мы наблюдаем у пьющих людей, это равнодушие к нравственным интересам, которые появляются очень рано, в ту пору, когда ещё умственные и мыслительные акты остаются почти неизменными. Оно проявляется в форме нравственной частичной анестезии, в виде полной невозможности испытывать известное эмоциональное состояние. К числу неминуемых последствий падения нравственности принадлежит увеличение лжи или, по крайней мере, уменьшение искренности и правды. Утрату стыда и утрату правдивости народ связал в неразрывное логическое понятие &lt;бесстыдной лжи&gt;. Ложь поэтому и возрастает, что человек, потеряв стыд, утратил вместе с тем в своей совести и важнейший нравственный корректив правдивости. Способность испытывать чувство стыда утрачивается пьющими очень рано; паралич этого высокого человеческого чувства понижает человека в нравственном смысле гораздо больше, нежели любой психоз. ЛОЖЬ: Когда начинаешь убеждать, что потребление алкоголя ничего не приносит, кроме вреда, то многие, даже соглашаясь с основными положениями, что вино приносит вред, всё же выставляют такой аргумент: а как же можно не выпить, например, на свадьбе&#33;? ПРАВДА: Заключается в том, что именно на свадьбе потребление алкоголя особенно вредно и даже преступно. В тот день, когда образуется семья, начинается новая жизнь и происходит зарождение жизни будущего члена семьи - в это время потреблять спиртные напитки просто кощунство и тяжкое преступление. ЛОЖЬ: Вино снимает напряжение, поэтому в праздник и в день отдыха необходимо выпить. ПРАВДА: В смысле общественном, наиболее опасным и далеко идущим последствием употребления спиртных напитков является то, что они расслабляют и расстраивают привычку к труду и очень рано нарушается нормальная потребность трудиться. После употребления алкоголя сон не восстанавливает обычной бодрости и не даёт ощущения отдыха. ЛОЖЬ: От вина не умирают. В России уже тысячу лет пьют, а она всё расширяется. Народ не вымирает, а его становится больше. ПРАВДА: Доктор медицинских наук И.А.Гундаров и ряд учёных исследовали депопуляцию российского населения и определили, что Россия переживает не нормальный демографический переход, а деградацию, напоминающую по скорости эпидемию. Общая численность населения каждый год сокращается на 800-900 тыс. - до миллиона.
+			<br />
+			<!--IBF.ATTACHMENT_54200-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>NKspec</b>  9.4.2010, 17:54</h4>
+			<p>Пьяный человек-покорный человек. Или наше государство по другому думает? А сколько от этого сдохнет это нынче никого не волнует.
+			<br />
+			<!--IBF.ATTACHMENT_54219-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Viktor35</b>  11.4.2010, 4:45</h4>
+			<p><!--quoteo(post=54219:date=10.4.2010, 1&#58;54:name=NKspec)--><div class='quotetop'>Цитата(NKspec &#064; 10.4.2010, 1&#58;54) <a href="index.php?act=findpost&amp;pid=54219"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Пьяный человек-покорный человек. Или наше государство по другому думает? А сколько от этого сдохнет это нынче никого не волнует.<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Вот тут можно и пролететь... Пьяный - не всегда покорный&#33;&#33;&#33;&#33; Это палка о двух концах.
+			<br />
+			<!--IBF.ATTACHMENT_54345-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Боготол</b>  17.4.2010, 23:17</h4>
+			<p>Интересно,Седой Дятел,после ночной смены вы квас перед сном пьёте?
+			<br />
+			<!--IBF.ATTACHMENT_54743-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  18.4.2010, 8:18</h4>
+			<p><!--quoteo(post=54743:date=18.4.2010, 1&#58;17:name=Боготол)--><div class='quotetop'>Цитата(Боготол &#064; 18.4.2010, 1&#58;17) <a href="index.php?act=findpost&amp;pid=54743"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Интересно,Седой Дятел,после ночной смены вы квас перед сном пьёте?<!--QuoteEnd--></div><!--QuoteEEnd--><br />После ночной смены вместо сна я пью пиво,да и после дневной смены то-же......... <img src="http://railway.kanaries.ru/style_emoticons/default/ah.gif" style="vertical-align:middle" emoid=":ah:" border="0" alt="ah.gif" /> . Данную статью я перенёс с РЖД-шного форума,когда я её прочитал-мне аж &quot;употреблять&quot; расхотелось. Данное состояние у меня продолжалось в течении двадцати секунд,а потом я подумал:&quot; Фиг вам&#33;&#33;&#33;(автору статьи),врагу не сдаётся наш гордый варяг&#33;&#33;&#33;....&quot; <img src="http://railway.kanaries.ru/style_emoticons/default/az.gif" style="vertical-align:middle" emoid=":az:" border="0" alt="az.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_54762-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Боготол</b>  21.4.2010, 10:27</h4>
+			<p>Не знаю,как у вас,я после смены 150 если не выпью,не усну...А если усну,то во сне буду&quot;работать&quot;...
+			<br />
+			<!--IBF.ATTACHMENT_55029-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  21.4.2010, 12:33</h4>
+			<p><!--quoteo--><IDXSKIP><div class='quotetop'>Цитата</div></IDXSKIP><div class='quotemain'><!--quotec-->После ночной смены вместо сна я пью пиво,да и после дневной смены то-же.........<!--QuoteEnd--></div><!--QuoteEEnd--><br />А я после ночи пиво не пью, спится потом плохо, и всё время почему то хочется куда то сходить  <img src="http://railway.kanaries.ru/style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /><br /><br />А ещё есть такая пошлая поговорка: *пьяная баба .....  не хозяйка*<br />Так вот, я вам скажу, это недалеко от истины <img src="http://railway.kanaries.ru/style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_55030-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Viktor35</b>  21.4.2010, 14:14</h4>
+			<p><!--quoteo(post=55030:date=21.4.2010, 20&#58;33:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 21.4.2010, 20&#58;33) <a href="index.php?act=findpost&amp;pid=55030"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->А я после ночи пиво не пью, спится потом плохо, и всё время почему то хочется куда то сходить  <img src="http://railway.kanaries.ru/style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /><br /><br />А ещё есть такая пошлая поговорка: *пьяная баба .....  не хозяйка*<br />Так вот, я вам скажу, это недалеко от истины <img src="http://railway.kanaries.ru/style_emoticons/default/smile.gif" style="vertical-align:middle" emoid=":)" border="0" alt="smile.gif" /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /><br /> Пьяная баба - это даже не человек... ( извините, но практику не отнимешь)<br />
+			<br />
+			<!--IBF.ATTACHMENT_55034-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>elmech</b>  23.4.2010, 14:51</h4>
+			<p><!--quoteo(post=55034:date=21.4.2010, 16&#58;14:name=Viktor35)--><div class='quotetop'>Цитата(Viktor35 &#064; 21.4.2010, 16&#58;14) <a href="index.php?act=findpost&amp;pid=55034"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Пьяная баба - это даже не человек... ( извините, но практику не отнимешь)<!--QuoteEnd--></div><!--QuoteEEnd-->...В сравнении с тем мужиком, который её довёл до такого состояния?...
+			<br />
+			<!--IBF.ATTACHMENT_55130-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  23.4.2010, 19:33</h4>
+			<p><!--quoteo(post=55130:date=23.4.2010, 16&#58;51:name=elmech)--><div class='quotetop'>Цитата(elmech &#064; 23.4.2010, 16&#58;51) <a href="index.php?act=findpost&amp;pid=55130"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->...В сравнении с тем мужиком, который её довёл до такого состояния?...<!--QuoteEnd--></div><!--QuoteEEnd--><br />Баба без мужика?.. Нажраться не может, что ли?
+			<br />
+			<!--IBF.ATTACHMENT_55136-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>elmech</b>  24.4.2010, 8:21</h4>
+			<p><!--quoteo(post=55136:date=23.4.2010, 21&#58;33:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 23.4.2010, 21&#58;33) <a href="index.php?act=findpost&amp;pid=55136"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Баба без мужика?.. Нажраться не может, что ли?<!--QuoteEnd--></div><!--QuoteEEnd-->Самостоятельно, без посторонней помощи, &quot;нажраться&quot; до такого состояния - вряд ли. О больных и о &quot;душевных&quot; компаниях женщин не здесь. Полагаю, речь идёт о нормальном человеке? Тогда ответ в вашем тексте: <br /><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->А ещё есть такая пошлая поговорка: <b>*пьяная баба ..... не хозяйка*</b> Так вот, я вам скажу, это недалеко от истины<!--QuoteEnd--></div><!--QuoteEEnd-->Кому нужно то, что скрыто за вашим многоточием: &quot;.....&quot;, кто воспользуется создавшимся положением? Естественно, тот, кто наливает, инициатор попойки&#33; Поэтому повторюсь: если &quot;Пьяная баба - это даже не человек...&quot;, то с каким человеком это утверждение сопоставляется? Наверное с тем кто с ней рядом, кто довёл до этого.     <br />
+			<br />
+			<!--IBF.ATTACHMENT_55156-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>StrelochNIK3</b>  24.4.2010, 16:49</h4>
+			<p><!--quoteo(post=55034:date=21.4.2010, 16&#58;14:name=Viktor35)--><div class='quotetop'>Цитата(Viktor35 &#064; 21.4.2010, 16&#58;14) <a href="index.php?act=findpost&amp;pid=55034"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Пьяная баба - это даже не человек... ( извините, но практику не отнимешь)<!--QuoteEnd--></div><!--QuoteEEnd--><br />зачем вы так...пьяные женщины...они ПРИКОЛЬНЫЕ&#33;
+			<br />
+			<!--IBF.ATTACHMENT_55185-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  25.4.2010, 8:31</h4>
+			<p><!--coloro:#0000FF--><span style="color:#0000FF"><!--/coloro-->ПРЕДЛАГАЮ ВАШЕМУ ВНИМАНИЮ АЛКОГОЛЬНЫЙ ГОРОСКОП<!--colorc--></span><!--/colorc--> <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" /> <br />Овен всегда знает, чего он хочет. Надо сказать, что этим он себя часто ограничивает: однажды определившись с любимым напитком, он отрезает от себя весь &quot;волшебный мир&quot; алкоголя. Он не любит пробовать новое, и убеждать его бесполезно. Как сильная натура, Овен предпочитает крепкие напитки с сильным вкусом - такие, как виски или коньяк. В компании может выпить и водки. Овен часто увлекается. Может увлечься и выпивая - в таком состоянии он готов совершать любые безрассудные поступки. Чтобы избежать хождения по карнизу или похищения девушек, ему следовало бы заменить крепкий алкоголь на шампанское. Только не на красное вино с сыром: Овны часто страдают от мигреней, и такое сочетание может спровоцировать новый приступ.<br />Телец постоянен в своих вкусах. Как и в жизни, где он не любит менять привычки, в алкоголе он тоже предпочитает одно и то же: приходя в ресторан, он будет всегда заказывать то же, что когда-то понравилось ему. Но существует одна проблема. Телец обычно тонкий ценитель напитков, поэтому выбирает лучшее и очень престижное. Чаще всего это бывают дорогие французские вина определенной выдержки - вроде Chateau Margaux или Chateauneuf du Pape. И когда напиток этого года заканчивается (ведь ничто не вечно), Тельца это невероятно огорчает. Теперь ему снова придется многое пробовать, чтобы выбрать что-то надолго и удовлетворить свой придирчивый вкус. Если Телец вдруг выпивает слишком много, окружающим следует опасаться его. Ведь в нормальном состоянии Телец кажется невозмутимым, даже когда внутри он злится и кипит (такое случается, хоть и редко). Обычно он не показывает своего раздражения. Но если уж Телец выпьет, то может прийти в настоящую ярость.<br />Близнецы никогда не приходят на вечеринку с целью &quot;выпить&quot;. Им это неинтересно. Им нравится болтать, веселиться и общаться, держа в руке бокал. Чаще всего им даже неважно, что за напиток в этом бокале. У Близнецов нет особенных предпочтений в алкоголе, поэтому они легко экспериментируют и пробуют много новых напитков. Даже если им что-то нравится, они не будут задерживаться на своей привязанности надолго, ведь в баре еще столько всего интересного. Звезды же говорят, что лучше всего им подходят легкие сухие вина и мускаты. Впрочем, сколько бы Близнец ни выпил, количество принятого на грудь почти никогда не влияет на его настроение и поведение, а если влияет, то в сторону симпатичной общительности. Близнец прекрасный собутыльник. Особенно женщина.<br />Рак - это единственный знак зодиака, про который звезды говорят однозначно: алкоголь ему противопоказан. Потому что Раки легче всех впадают в алкогольную зависимость. Они слишком чувствительны и непредсказуемы. Они слишком подвержены влиянию окружающих - им очень важно находиться в окружении доброжелательных людей. А алкоголь расшатывает их жизненный иммунитет и с трудом приобретенный душевный комфорт. Так что Ракам нужно относиться с огромной осторожностью даже к пиву. Из-за нежного желудка им также совсем не стоит пить молодое вино. Свой выбор они могут остановить, к примеру, на вермуте. Молодых раков тошнит гораздо чаще, чем юных представителей других знаков.<br />Лев живет с размахом - он щедр и любит тратить деньги не только на себя, но и на окружающих. Разумеется, это его качество распространяется и на моменты, когда выпивают. Поэтому если Лев пьет вообще, то он пьет много, и преимущественно хорошие напитки. Ему нравятся сладкие вина или бурбон. В то время как многие считают бурбон слишком слащавым напитком со сглаженным, усредненным вкусом, Льву он нравится (да и название &quot;бурбон&quot; звучит, согласитесь, шикарно - для Льва внешние атрибуты напитка значат довольно много). Однако Львам стоит ограничивать себя и соблюдать меру. Во-первых, у них слабое сердце. А во-вторых, напившись, Львы могут наворотить разных дел, что может повлечь за собой пошатнувшийся авторитет и запятнанную репутацию. А для Льва это совершенно невыносимо. Кроме того, Львы всегда тяжело переносят похмелье. Поэтому им можно посоветовать напитки театральные и эффектные, которых к тому же много не выпьешь - такие, как граппа или анисовая водка самбука (ее подают с пламенем и зернышками кофе внутри).<br />Дева любит заботиться о своем здоровье. В связи с этим она редко злоупотребляет спиртным. Зато ей нравится все изящное и изысканное, поэтому и напитки она выбирает соответствующие. К примеру, дорогие коньяки или виски. Деве нравится осмысленность во всем, и она не станет пить абы что. Ей нравится доводить все до совершенства, поэтому, открыв для себя однажды какой-нибудь напиток, виски к примеру, она не остановится, не попробовав все сорта и не научившись различать на вкус года и страны. В те редкие случаи, когда Дева, забывшись, выпивает лишнего, алкоголь действует на нее крайне негативно. Часто это может закончиться расстройством желудка. Так что если Дева выбирает, что бы такого выпить, от чего не будет плохо, ей лучше остановить свой выбор на сухом вине.<br />У Весов хороший вкус и легкий характер. Благодаря этому им удается жить в окружении приятных людей. Может быть, Весы и небольшие любители выпить, но именно потому, что они всегда в компании, им приходится это делать. Однако необходимо помнить, что им нельзя много пить, организм у них не слишком выносливый. (Друзья Весов&#33; Вы тоже, пожалуйста, обратите на это внимание.) Звезды же рекомендуют Весам пить сливовое вино: оно как никакое другое настраивает их на поэтический лад. В небольших количествах Весам очень нравится пить ароматные напитки - кальвадос, коньяк. Кроме того, они часто бывают и поклонниками чего-то необычного, к примеру чилийских или новозеландских вин. Обычно подобная привязанность не длится долго: в глубине души Весы, как и все в общем-то люди, знают, что самые лучшие вина - французские, но им приятно пощеголять перед друзьями своей осведомленностью и нзабавнальным вкусом. В определенной степени это дань моде. Но выглядит всегда очень мило.<br />Скорпион в напитках ищет себе подобных - сильных, с насыщенным, агрессивным вкусом. Многие Скорпионы, к примеру, любят ликеры, причем не столько в коктейлях, сколько в чистом виде. Впрочем, это ликеры дорогих марок, с тонким вкусом, без излишней слащавости. Для здоровья же и для настроения Скорпионам лучше всего подходят столь же насыщенные игристые и мускатные вина. Выпивая в компании, Скорпион должен помнить о мере. Перебрав, он может потерять контроль над своими эмоциями и наговорить лишнего, а потом раскаиваться в своей несдержанности. От алкоголя у Скорпионов страдает в первую очередь половая система.<br />Стрелец в силу своей легкости любит легкие напитки - вина, брют, шампанское. Его игривый характер требует игривых напитков. Свободолюбивый Стрелец все делает с удовольствием, и пьет в том числе. А это опасно. Печень Стрельца плохо справляется с алкогольной нагрузкой, что может привести к серьезным заболеваниям. Но, не забывая об этом, Стрелец может смело наслаждаться ароматными хересом или портвейном. Кроме того, если Стрелец на вечеринке злоупотребляет напитками, это чревато тем, что он станет мрачным и весь его знаменитый оптимизм куда-то улетучится. Это может испортить вечер, ведь Стрельцы зачастую бывают душой компании.<br />Козерог - одиночка. Ему гораздо сложнее налаживать отношения с людьми, чем большинству других знаков зодиака. Поэтому алкоголь в случае с Козерогом может выступить в качестве мостика &quot;на другие берега&quot; - немного выпив на вечеринке, Козерог станет гораздо оживленнее. И не бойтесь, уважаемые Козероги, &quot;перебрать&quot;: перебор вам не грозит&#33; Вы ведь уже сами заметили, что алкоголь не доставляет вам такого уж большого удовольствия. Кроме того, бокал вина полезен и в прямом смысле: он активизирует вялое пищеварение Козерога. Козерог предпочитает строгие напитки, такие, как классическое виски, singlе-malt, хорошие французские вина. Этому знаку вообще нравятся напитки выдержанные и сдержанные.<br />Водолей чаще других прибегают к помощи алкоголя, чтобы снять стресс и нервное напряжение. Для этих целей лучше всего подходят шампанское и сладкие вина. Девушки-Водолеи вообще на все случаи жизни имеют про запас розовый брют. Среди Водолеев можно встретить и горячих поклонников калифорнийских вин - несмотря на то что многим другим эти вина кажутся чересчур приторными, Водолеям нравится их солнечный вкус, в котором ощущается также и настоящий привкус дубовой бочки. Этот аромат прекрасно успокаивает расшатанную нервную систему Водолеев. Правда, важно не забывать о том, что для нервной системы Водолеев алкоголь - это палка о двух концах. Если выпить слишком много даже самого прекрасного сладкого вина, это может вызвать у Водолеев с их такой противоречивой натурой чувство беспричинной тревоги.<br />Рыбы очень быстро привыкают к алкоголю. Они же мечтательницы, и, когда их мечты разбиваются в реальной жизни, они часто пытаются спастись от разочарования в крепких напитках. А крепкие напитки - это как раз то, что Рыбам противопоказано. Их организм очень чувствителен к алкогольным отравлениям, похмелье они переносят мучительно. Так что им как никому другому нужно помнить два правила - про &quot;повышение градуса&quot; и про &quot;красное с белым не мешать&quot;. Идеальным выбором для Рыб всегда может стать сухое вино.<br />
+			<br />
+			<!--IBF.ATTACHMENT_55214-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Viktor35</b>  25.4.2010, 18:02</h4>
+			<p><!--quoteo(post=55185:date=25.4.2010, 0&#58;49:name=StrelochNIK3)--><div class='quotetop'>Цитата(StrelochNIK3 &#064; 25.4.2010, 0&#58;49) <a href="index.php?act=findpost&amp;pid=55185"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->зачем вы так...пьяные женщины...они ПРИКОЛЬНЫЕ&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Ну, и в чом прикол? Смотреть со стороны?...Прикалывайся... <br />
+			<br />
+			<!--IBF.ATTACHMENT_55253-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>StrelochNIK3</b>  25.4.2010, 19:33</h4>
+			<p><!--quoteo(post=55253:date=25.4.2010, 20&#58;02:name=Viktor35)--><div class='quotetop'>Цитата(Viktor35 &#064; 25.4.2010, 20&#58;02) <a href="index.php?act=findpost&amp;pid=55253"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Ну, и в чом прикол? Смотреть со стороны?...Прикалывайся...<!--QuoteEnd--></div><!--QuoteEEnd--><br />Я-то прикалываюсь...а ты,смотрю,всё это на сердце ложишь...забей&#33;...
+			<br />
+			<!--IBF.ATTACHMENT_55261-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Viktor35</b>  27.4.2010, 14:15</h4>
+			<p><!--quoteo(post=55261:date=26.4.2010, 3&#58;33:name=StrelochNIK3)--><div class='quotetop'>Цитата(StrelochNIK3 &#064; 26.4.2010, 3&#58;33) <a href="index.php?act=findpost&amp;pid=55261"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Я-то прикалываюсь...а ты,смотрю,всё это на сердце ложишь...забей&#33;...<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /><br />Забить на всё - легко&#33; (самый простой вариант)... Но если &quot;забивать&quot; на всё и вся, то что в итоге?&#33;&#33; Кто это потом будет разгребать? Тот кто довёл до ЭТОГО, кто &quot;забивал&quot; на это, кому больше всех надо - нет&#33; Тот, кого это зацепит реально.
+			<br />
+			<!--IBF.ATTACHMENT_55378-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Riss</b>  8.5.2010, 7:45</h4>
+			<p>Почиталь... страшно стало...<br />http://www.samohin.ru/books/_health/uglov_alk_i_mozg.html<br />думаю..вообще бросить это дело...
+			<br />
+			<!--IBF.ATTACHMENT_55882-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Одинец</b>  15.11.2010, 15:30</h4>
+			<p>Я катался рефом с осени 89 года, а со 2го января 1992 года прекратил употребление алкогольных напитков. И по сей день изредка позволяю себе хорошее (не типа &quot;Стёпки&quot; или шильную бодягу типа &quot;Балтики-9&quot;) пиво, и не на улице, а под шашлыки на сабантуе, например. И не литрами. Не с целью напиться.<br />И это при том, что никогда не пил запоями, в молодости в нашей банде, когда мы в лес на неделю сваливали, первый день - суровая пьянка (все со стволами - никогда никаких ЧП), а если бы кто на утро спиртное оставил похмелиться - на него бы как на пи... (гомосексуалиста) посмотрели. И в ходе любой самой суровой пьянки всегда был &quot;бессменным вахтенным&quot;.<br />Когда я говорил, что спиртное не пью, многие не верили в существование непьющих рефов. Кстати, нас было не так уж и мало.<br />Ребята, о засыпании я могу рассказать много интересного. Достаточно вспомнить службу, учения &quot;Осень-88&quot;, когда я ОДИН, без смены ПЯТЬ суток на радиосети сидел (морзянка). Честно заслужил отпуск. Если вам не заснуть и вы пьёте спиртное - это то же самое, что для отдачи долга берёте кредит, для возврата кредита берёте следующий и так до бесконечности. Рано или поздно в лучшем случае медкомиссия зарубит...<br />Или когда в 92м отпустили цены, в 93м у многих поехала крыша и начали горе водкой заливать. Так вот, у нас тогда было более трёх тысяч поездников (я - один из них), и за год было 16 трупов. Кто работал тогда на Предпортовой, помнят гирлянду некрологов на дверях кассового зала. В поездке - полный набор: конташка, 380 в щите, под составом, под машиной при выходе в город, разбился об столб на ходу (пошёл к ДСП, не заметив, что состав с секцией следует по перегону&#33;). Для разнообразия один, находясь дома, выпал из окна 8го этажа. И НИ ОДНОГО ПО ТРЕЗВОМУ. ЧП по трезвянке - исчезающе малая величина, просто в России принято считать, что трезвый - это кило на рыло минус два стакана.<br />Спиртное на железке - это недруг. На секции я молчу про повышенную опасность, так тебя ещё и с грузом (качество) так подставить могли - и не мявкнешь при этом. А потом крайний... Плюс: почитал я тут разделы. Многие жалуются на кого-то выше, но мер не предпринимают. А ведь хватает народу, которые на себя сами дали компромат спиртным...
+			<br />
+			<!--IBF.ATTACHMENT_63449-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>StrelochNIK3</b>  15.11.2010, 21:57</h4>
+			<p><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->И по сей день изредка позволяю себе хорошее (не типа &quot;Стёпки&quot; или шильную бодягу типа &quot;Балтики-9&quot;) пиво,<!--QuoteEnd--></div><!--QuoteEEnd--><br />Нет ща &quot;хорошего&quot; пива в рашке,(за очень редким исключением)...Вода+спирт(в пропорции);краситель;ароматизатор,идентичный натуральному;консервант(на ГОД&#33;)-вот состав народного пива.Экстрат листьев коки иль другая химия(для быстрого привыкания)-поверте,присутствует,мож не везде...Не пейте эту дрянь......Спирт(проверенный)+родниковая вода...дальше очистка марганцовкой и настой на...кедровый орех,лимон,перепонки грецкого ореха,Алтайский бальзам и пр.Удачи и здоровья,главное не лениться...<br />Ну а это насчёт привыкания и вреда...думайте сами и слушайте свой организм...
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		
+<table style='width:auto;display:inline;' id='ipb-attach-table-5995-0-32862200-1497007193' cellspacing='0' cellpadding='0'>
+<tr>
+ <td>
+	<div id='ipb-attach-div-5995-0-32862200-1497007193'>
+		<div id='ipb-attach-ct-5995-0-32862200-1497007193'></div>
+		<a id='ipb-attach-url-5995-0-32862200-1497007193' href="http://railway.kanaries.ru/index.php?s=0f8adc70c019a1e70b94a33164789db4&amp;act=attach&amp;type=post&amp;id=5995" title="1209.jpg -  35,9 килобайт,  122" target="_blank"><img src="http://railway.kanaries.ru/uploads/monthly_11_2010/post-7500-1289850850_thumb.jpg" id='ipb-attach-img-5995-0-32862200-1497007193' style='width:100;height:100' class='attach' width="100" height="100" alt="" /></a>
+		<div id='ipb-attach-cb-5995-0-32862200-1497007193' style='margin:0px'></div>
+	</div>
+ </td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+	fix_linked_image_sizes_attach_thumb( "5995-0-32862200-1497007193", parseInt("500"), parseInt("500"), "35,9 килобайт" );
+//]]>
+</script> 
+	</div>
+</div>
+<div>&nbsp;</div>
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>специалист</b>  6.12.2010, 18:07</h4>
+			<p>Все пили, пьют и будут пить. <img src="http://railway.kanaries.ru/style_emoticons/default/al.gif" style="vertical-align:middle" emoid=":al:" border="0" alt="al.gif" />  Уж такой мы народ.  <img src="http://railway.kanaries.ru/style_emoticons/default/bi.gif" style="vertical-align:middle" emoid=":bi:" border="0" alt="bi.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_65074-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  6.12.2010, 21:35</h4>
+			<p><!--quoteo(post=65074:date=6.12.2010, 19&#58;07:name=специалист)--><div class='quotetop'>Цитата(специалист &#064; 6.12.2010, 19&#58;07) <a href="index.php?act=findpost&amp;pid=65074"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Все пили, пьют и будут пить. <img src="http://railway.kanaries.ru/style_emoticons/default/al.gif" style="vertical-align:middle" emoid=":al:" border="0" alt="al.gif" />  Уж такой мы народ.  <img src="http://railway.kanaries.ru/style_emoticons/default/bi.gif" style="vertical-align:middle" emoid=":bi:" border="0" alt="bi.gif" /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Будем то будем, только вот никакой культуры, к сожалению. Да и окружающая действительность тому способствует. Бухло везде. И всегда. Только <b>качественным</b> бухлом это назвать нельзя. То есть, <b>бухлом</b> можно, а вот <b><u>алкоголь</b></u> у нас как таковой похоже, отсутствует вообще. А если и есть, настоящий в смысле, то за такие деньги, что ещё подумаешь, пить или нет. Вот поэтому и пьют у нас всякую дешёвую дрянь, убивая себя, и своё здоровье. Я не против выпить, но просто нечего и буквально <b>некуда</b> пойти&#33; Либо дорого, либо атмосфера не нравится. Ну либо ещё что нибудь.
+			<br />
+			<!--IBF.ATTACHMENT_65096-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  1.1.2011, 13:03</h4>
+			<p>Меня очень порадовала надпись на бутылке виски &quot;Белая лошадь&quot;,которую я уговорил в новогоднюю ночь: &quot;Потребление алкоголя требует меры и ответственности&quot;. Кратенько и лаконично......
+			<br />
+			<!--IBF.ATTACHMENT_66817-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  1.1.2011, 13:14</h4>
+			<p><!--quoteo(post=65096:date=6.12.2010, 22&#58;35:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 6.12.2010, 22&#58;35) <a href="index.php?act=findpost&amp;pid=65096"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Я не против выпить, но просто нечего и буквально <b>некуда</b> пойти&#33; Либо дорого, либо атмосфера не нравится. Ну либо ещё что нибудь.<!--QuoteEnd--></div><!--QuoteEEnd--><br />А мне не нравятся эти общепиты и общелитры. Лучше на природе, даже зимой,  о теплых временах года и не говорю ...
+			<br />
+			<!--IBF.ATTACHMENT_66819-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>dimik</b>  10.1.2011, 11:25</h4>
+			<p>Курить буду, но пить...не брошу
+			<br />
+			<!--IBF.ATTACHMENT_67550-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  10.1.2011, 11:31</h4>
+			<p><!--quoteo(post=67550:date=10.1.2011, 12&#58;25:name=dimik)--><div class='quotetop'>Цитата(dimik &#064; 10.1.2011, 12&#58;25) <a href="index.php?act=findpost&amp;pid=67550"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Курить буду, но пить...не брошу<!--QuoteEnd--></div><!--QuoteEEnd--><br />Если не пить-то можно свихнуться или настолько расшатать нервную систему.... Алкоголь для тех кто работает на железке-незаменимый антидепресант и антистресс в одном флаконе&#33;
+			<br />
+			<!--IBF.ATTACHMENT_67551-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  11.1.2011, 18:19</h4>
+			<p>Причем настолько, подчас, необходимый, что как молоко за вредность должны выдавать &quot;наркомовские 100 грамм&quot;.
+			<br />
+			<!--IBF.ATTACHMENT_67680-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  14.1.2011, 0:06</h4>
+			<p>Народ, кто пьет, можете считать себя лишним населением. Я думаю все знают, что нагрузка человечества на биосферу слишком велика, чтобы ее снизить применяют оружие геноцида и др. виды оружия. Не буду вам тут лекцию о вреде и о том как и на что влияет алкоголь и табак писать, кому надо узнают пдробнее в Концепции Общественной Безопасности. Сам не пью не курю, занимаюсь спортом, закаливанием, качество жизни на высоком уровне. Всем советую&#33; Пьющим быдлом легче управлять, эта истина уже давно используется знающими людьми. Заметьте, большинство управленцев высокого ранга не пьют&#33;
+			<br />
+			<!--IBF.ATTACHMENT_68008-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  14.1.2011, 4:56</h4>
+			<p><!--quoteo(post=68008:date=14.1.2011, 1&#58;06:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 14.1.2011, 1&#58;06) <a href="index.php?act=findpost&amp;pid=68008"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->качество жизни на высоком уровне<!--QuoteEnd--></div><!--QuoteEEnd--><br />Опаньки&#33;<br />Сколько же Вы зарабатываете? Сколько у Вас детей? Какой доход на члена семьи? Сколько кв. метров жилья на члена семьи?
+			<br />
+			<!--IBF.ATTACHMENT_68016-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  14.1.2011, 16:19</h4>
+			<p><!--quoteo(post=68008:date=14.1.2011, 1&#58;06:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 14.1.2011, 1&#58;06) <a href="index.php?act=findpost&amp;pid=68008"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Заметьте, большинство управленцев высокого ранга не пьют&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />К примеру Ельцин, Старостенко......... <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_68061-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  14.1.2011, 18:07</h4>
+			<p><!--quoteo(post=68008:date=14.1.2011, 1&#58;06:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 14.1.2011, 1&#58;06) <a href="index.php?act=findpost&amp;pid=68008"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Народ, кто пьет, можете считать себя лишним населением. Пьющим быдлом легче управлять,<!--QuoteEnd--></div><!--QuoteEEnd--><br />Молодой человек&#33; Попрошу выбирать выражения&#33;&#33;&#33; Понюхай жизни с наше, спортсмен, а потом советуй. Жаль, что через монитор &quot;накадака иппон кэн&quot; не прокатит.
+			<br />
+			<!--IBF.ATTACHMENT_68077-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>StrelochNIK3</b>  14.1.2011, 22:54</h4>
+			<p><!--quoteo(post=68016:date=14.1.2011, 5&#58;56:name=Репин)--><div class='quotetop'>Цитата(Репин &#064; 14.1.2011, 5&#58;56) <a href="index.php?act=findpost&amp;pid=68016"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Опаньки&#33;<br />Сколько же Вы зарабатываете? Сколько у Вас детей? Какой доход на члена семьи? Сколько кв. метров жилья на члена семьи?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Репин,я понял твою мысль...но посмотри на него на аватаре-жизнерадостный  молодой человек с правильным образом жизни,спортивный,неотравленный алкоголем организм...и сравни свою аватару&#33; <img src="http://railway.kanaries.ru/style_emoticons/default/ai.gif" style="vertical-align:middle" emoid=":ai:" border="0" alt="ai.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_68116-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  15.1.2011, 0:00</h4>
+			<p><!--quoteo(post=68116:date=14.1.2011, 23&#58;54:name=StrelochNIK3)--><div class='quotetop'>Цитата(StrelochNIK3 &#064; 14.1.2011, 23&#58;54) <a href="index.php?act=findpost&amp;pid=68116"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Репин,я понял твою мысль...но посмотри на него на аватаре-жизнерадостный  молодой человек с правильным образом жизни,спортивный,неотравленный алкоголем организм...и сравни свою аватару&#33; <img src="http://railway.kanaries.ru/style_emoticons/default/ai.gif" style="vertical-align:middle" emoid=":ai:" border="0" alt="ai.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Не суди и не судим будешь.  <img src="http://railway.kanaries.ru/style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" /> <br /><br /><br />http://railway.kanaries.ru/uploads/av-7500.gif<br /><br /><img src="http://railway.kanaries.ru/style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":D" border="0" alt="biggrin.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_68126-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  15.1.2011, 6:10</h4>
+			<p><!--quoteo(post=68016:date=14.1.2011, 5&#58;56:name=Репин)--><div class='quotetop'>Цитата(Репин &#064; 14.1.2011, 5&#58;56) <a href="index.php?act=findpost&amp;pid=68016"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Опаньки&#33;<br />Сколько же Вы зарабатываете? Сколько у Вас детей? Какой доход на члена семьи? Сколько кв. метров жилья на члена семьи?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Как и все работяги немного. Но мне хватает. Главное не тратить деньги на ДПП (Деградационно Паразитарные Потребности)-Алкоголь, Табак, Наркотики, Клубы и все такое, а только на ДОП(Демографически Обусловленные), Рис, Геркулес, Фрукты, Овощи ну вы меня поняли.<br /><br /><!--quoteo(post=68077:date=14.1.2011, 19&#58;07:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 14.1.2011, 19&#58;07) <a href="index.php?act=findpost&amp;pid=68077"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Молодой человек&#33; Попрошу выбирать выражения&#33;&#33;&#33; Понюхай жизни с наше, спортсмен, а потом советуй. Жаль, что через монитор &quot;накадака иппон кэн&quot; не прокатит.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Что Ты думаешь, я не нюхаю эту жизнь? Живу без отца, сам тяну всю семью, но не сдаюсь и не позволяю себе всяких гадостей. Если начинаешь топить проблему в вине, то никогда ее не решишь.<br /><br /><!--quoteo(post=68061:date=14.1.2011, 17&#58;19:name=седой дятел)--><div class='quotetop'>Цитата(седой дятел &#064; 14.1.2011, 17&#58;19) <a href="index.php?act=findpost&amp;pid=68061"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->К примеру Ельцин, Старостенко......... <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Эти люди были поставлены, чтобы развалить. Смотрите на других управленцев, их немного, но они есть.<br /><br /><!--quoteo(post=68116:date=14.1.2011, 23&#58;54:name=StrelochNIK3)--><div class='quotetop'>Цитата(StrelochNIK3 &#064; 14.1.2011, 23&#58;54) <a href="index.php?act=findpost&amp;pid=68116"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Репин,я понял твою мысль...но посмотри на него на аватаре-жизнерадостный  молодой человек с правильным образом жизни,спортивный,неотравленный алкоголем организм...и сравни свою аватару&#33; <img src="http://railway.kanaries.ru/style_emoticons/default/ai.gif" style="vertical-align:middle" emoid=":ai:" border="0" alt="ai.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Спасибо.
+			<br />
+			<!--IBF.ATTACHMENT_68145-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>elmech</b>  15.1.2011, 11:44</h4>
+			<p><!--quoteo(post=68008:date=14.1.2011, 1&#58;06:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 14.1.2011, 1&#58;06) <a href="index.php?act=findpost&amp;pid=68008"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Народ, кто пьет, можете считать себя лишним населением. Я думаю все знают, что нагрузка человечества на биосферу слишком велика, чтобы ее снизить применяют оружие геноцида и др. виды оружия. Не буду вам тут лекцию о вреде и о том как и на что влияет алкоголь и табак писать, кому надо узнают пдробнее в Концепции Общественной Безопасности. Сам не пью не курю, занимаюсь спортом, закаливанием, качество жизни на высоком уровне. Всем советую&#33; Пьющим быдлом легче управлять, эта истина уже давно используется знающими людьми. Заметьте, большинство управленцев высокого ранга не пьют&#33;<!--QuoteEnd--></div><!--QuoteEEnd-->С удовольствием размещу эту цитату в своём посте&#33;&#33;&#33; Правильные и, главное, нужные слова услышать от молодого человека, по сегодняшним меркам, редкость (хотя мне, на седьмом десятке, все вы здесь молодые)))&#33; Вместо того чтобы поддержать в теме позитив, некоторые &quot;высокостоящие&quot; товарищи ( из администрации) пытаются аргументировать своё нетрезвое состояние домыслами людей уже задетых алкоголизмом... О возрасте своём упомянул с единственной целью, чтобы не возникало желание у профессионалов со стажем упрекать молодёжь: &quot;...Понюхай жизни с наше, спортсмен, а потом советуй...&quot; Сам я не курю лет 25, хотя до этого имел такой же стаж курильщика, могу себе позволить двадцать грамм хоть каждый вечер, однако, не тянет))) Спортом активно не занимаюсь, но в день километров 5-6 пешком выходит. Каждый, кто ещё способен мыслить, анализировать понимает вредность этих пагубных привычек, старайтесь не создавать рекламу этим порокам&#33; Уверяю вас, стоит начать вам осуждать так называемый нетрезвый образ жизни  - начнёт меняться и ваше поведение и ваша жизнь&#33; <br />Успехов, удачи и трезвого рассудка&#33;
+			<br />
+			<!--IBF.ATTACHMENT_68163-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  15.1.2011, 11:54</h4>
+			<p><!--quoteo(post=66819:date=1.1.2011, 14&#58;14:name=Репин)--><div class='quotetop'>Цитата(Репин &#064; 1.1.2011, 14&#58;14) <a href="index.php?act=findpost&amp;pid=66819"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->А мне не нравятся эти общепиты и общелитры. Лучше на природе, даже зимой,  о теплых временах года и не говорю ...<!--QuoteEnd--></div><!--QuoteEEnd--><br />Нее, на природе зимой холодновато... Да и попробуй, собери кого нибудь с нашей работой&#33;
+			<br />
+			<!--IBF.ATTACHMENT_68164-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  15.1.2011, 15:33</h4>
+			<p><!--quoteo(post=68164:date=15.1.2011, 12&#58;54:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 15.1.2011, 12&#58;54) <a href="index.php?act=findpost&amp;pid=68164"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Нее, на природе зимой холодновато...<!--QuoteEnd--></div><!--QuoteEEnd--><br />Рыбалка&#33;<br />Но мы там не наливаем и пьём, а ловим и чуток выпиваем.<br /><!--quoteo(post=68164:date=15.1.2011, 12&#58;54:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 15.1.2011, 12&#58;54) <a href="index.php?act=findpost&amp;pid=68164"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Да и попробуй, собери кого нибудь с нашей работой&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Даааа, трудно. Пробовал собрать, иногда получалось. Но слушать разговоры о железке на рыбалке мне надоело.<br />Теперь катаюсь на рыбалку с работниками других профессий. Что удивительно, они на рыбалке о работе не вспоминают. <br />
+			<br />
+			<!--IBF.ATTACHMENT_68178-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  15.1.2011, 16:29</h4>
+			<p><!--quoteo(post=68145:date=15.1.2011, 7&#58;10:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 15.1.2011, 7&#58;10) <a href="index.php?act=findpost&amp;pid=68145"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Что <u>Ты</u><b></b> думаешь, я не нюхаю эту жизнь? Живу без отца, сам тяну всю семью, но не сдаюсь и не позволяю себе всяких гадостей. Если начинаешь топить проблему в вине, то никогда ее не решишь.<!--QuoteEnd--></div><!--QuoteEEnd--><br />No comment.<br />А вот это <b>Вы</b><u></u> читали, наимудрейший?<br /><!--quoteo(post=67551:date=10.1.2011, 12&#58;31:name=седой дятел)--><div class='quotetop'>Цитата(седой дятел &#064; 10.1.2011, 12&#58;31) <a href="index.php?act=findpost&amp;pid=67551"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Если не пить-то можно свихнуться или настолько расшатать нервную систему.... Алкоголь для тех кто работает на железке-незаменимый антидепресант и антистресс в одном флаконе&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Делая вывод по этим словам, да и по моим тоже, что писали алкаши и лишнее население, да ещё с таким пренебрежением и чувством собственного превосходства, <u>ты</u><b></b> ... ладно, не буду, а то трудно подобрать приличные выражения.<br /><br /><!--quoteo(post=68163:date=15.1.2011, 12&#58;44:name=elmech)--><div class='quotetop'>Цитата(elmech &#064; 15.1.2011, 12&#58;44) <a href="index.php?act=findpost&amp;pid=68163"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->О возрасте своём упомянул с единственной целью, чтобы не возникало желание у профессионалов со стажем упрекать молодёжь: &quot;...Понюхай жизни с наше, спортсмен, а потом советуй...&quot; Сам я не курю лет 25, хотя до этого имел такой же стаж курильщика, могу себе позволить двадцать грамм хоть каждый вечер, однако, не тянет))) ...  Каждый, кто ещё способен мыслить, анализировать понимает вредность этих пагубных привычек, старайтесь не создавать рекламу этим порокам&#33; Уверяю вас, стоит начать вам осуждать так называемый нетрезвый образ жизни  - начнёт меняться и ваше поведение и ваша жизнь&#33; <br />Успехов, удачи и трезвого рассудка&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />При всём своём уважении к Вам и Вашему возрасту, позволю себе Вам заметить, что ещё способен мыслить, анализировать и понимаю вредность этих пагубных привычек, однако лучше выпить 150 гр. и успокоиться, чем дома рассказывать, почему у тебя такой вид. Вам, как эл/механику, доводилось людей сбивать?<br />Как говорится, &quot;давайте спорить ... с теми, кто их ел&quot;.
+			<br />
+			<!--IBF.ATTACHMENT_68180-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>elmech</b>  15.1.2011, 18:25</h4>
+			<p><!--quoteo(post=68180:date=15.1.2011, 17&#58;29:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 15.1.2011, 17&#58;29) <a href="index.php?act=findpost&amp;pid=68180"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->...Вам, как эл/механику, доводилось людей сбивать?<br />Как говорится, &quot;давайте спорить ... с теми, кто их ел&quot;.<!--QuoteEnd--></div><!--QuoteEEnd-->Напрасно вы, уважаемый <b>Vasiliy</b>, так ставите вопрос&#33; С электромехаником навряд ли такое произойдёт, это понятно, но если так рассуждать, то нас с вами быть не должно, после той последней войны... все бы спились&#33; Тяжёлая участь тех кто людей сбивал. Но зачем усугублять? Нет желания ввязываться в дискуссию по этому вопросу, но смею заметить, тема называется &quot;Правда и ложь об алкоголе&quot; и не надо &quot;мешать грешное с праведным&quot;.<br />
+			<br />
+			<!--IBF.ATTACHMENT_68191-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  15.1.2011, 19:46</h4>
+			<p>Потому, что тема &quot;Правда и ложь об алкоголе&quot;, я и настаиваю, что алкоголь иногда просто необходим, т.к. у нас нет практики хождения по психам, как на западе, и обращаясь к психиатру, ты &quot;сам признаёшься&quot;, что шизик и последствия очевидны. К тому же, Вы упускаете из виду, что и врачи иногда (в исключительных случаях) признают необходимость &quot;ста грамм&quot;.<br />Защищая позицию strel1988k примером ВОВ, Вы что, соглашаетесь, что 100 гр. перед атакой сделали из солдат &quot;лишнее население&quot; и &quot;пьющее быдло?&quot;. Здесь strel1988k бросил прямое оскорбление множеству работяг, ставя на одну доску и умеренно выпивающих (к примеру Вы в Новый Год или День рожденья 20 гр. принимаете?) и опустившихся на дно общества.
+			<br />
+			<!--IBF.ATTACHMENT_68196-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>elmech</b>  15.1.2011, 21:17</h4>
+			<p>Вы или не поняли, или умышленно передёргиваете... Если бы моему отцу, командиру орудия, прошедшему от Буга до Волги и от Сталинграда до Будапешта, и моей матери, ефрейтору взвода разведки ПВО, прошедшей на передовой всю войну, до конца, начать заливать свою память о павших товарищах, о бесконечно трудных, тяжёлых днях войны водкой, не было бы ни меня, ни братьев, ни сестёр... И сто грамм не все выпивали, те кто послабее...
+			<br />
+			<!--IBF.ATTACHMENT_68205-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  15.1.2011, 22:49</h4>
+			<p>Поверьте, что Вас я понял правильно, и приношу свои извинения, если невольно задел Ваши чувства, но позволю себе процитировать себя:<!--quoteo(post=68196:date=15.1.2011, 20&#58;46:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 15.1.2011, 20&#58;46) <a href="index.php?act=findpost&amp;pid=68196"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Здесь strel1988k бросил прямое оскорбление множеству работяг, ставя на одну доску и умеренно выпивающих (к примеру Вы в Новый Год или День рожденья 20 гр. принимаете?) и опустившихся на дно общества.<!--QuoteEnd--></div><!--QuoteEEnd-->
+			<br />
+			<!--IBF.ATTACHMENT_68213-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 0:11</h4>
+			<p><!--quoteo(post=68213:date=15.1.2011, 23&#58;49:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 15.1.2011, 23&#58;49) <a href="index.php?act=findpost&amp;pid=68213"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Поверьте, что Вас я понял правильно, и приношу свои извинения, если невольно задел Ваши чувства, но позволю себе процитировать себя:<!--QuoteEnd--></div><!--QuoteEEnd--><br />Я С Вами не спорю и не оскорбляю никого, а говорю Вам как есть <img src="http://railway.kanaries.ru/style_emoticons/default/bf.gif" style="vertical-align:middle" emoid=":bf:" border="0" alt="bf.gif" /> .  Это такая-же простая истина, как и то, что Земля круглая и вращается вокруг Солнца.  <img src="http://railway.kanaries.ru/style_emoticons/default/ap.gif" style="vertical-align:middle" emoid=":ap:" border="0" alt="ap.gif" /> Я работаю ТЧМП В Москве и Подмосковье, поверьте у нас травматизма тут каждый день бывает по несколько случаев и что теперь спиться? Многие спиваются, но это не есть выход. Не пейте люди, ищите правду&#33;<br /><br /><!--quoteo(post=68205:date=15.1.2011, 22&#58;17:name=elmech)--><div class='quotetop'>Цитата(elmech &#064; 15.1.2011, 22&#58;17) <a href="index.php?act=findpost&amp;pid=68205"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Вы или не поняли, или умышленно передёргиваете... Если бы моему отцу, командиру орудия, прошедшему от Буга до Волги и от Сталинграда до Будапешта, и моей матери, ефрейтору взвода разведки ПВО, прошедшей на передовой всю войну, до конца, начать заливать свою память о павших товарищах, о бесконечно трудных, тяжёлых днях войны водкой, не было бы ни меня, ни братьев, ни сестёр... И сто грамм не все выпивали, те кто послабее...<!--QuoteEnd--></div><!--QuoteEEnd--><br />Вы правы&#33; Я благодарен Защитникам Родины, они прошли через такой ужас, но выстояли, если бы они пили, нашу родину бы оккупировали. Слова Гитлера- «Необходимо свести славян до языка жестов. Никакой гигиены. Только водка и табак в неограниченных количествах»<br /><br />Кому интересно выкладываю информационный материал &quot; Приоритеты обобщенных средств управления обществом. Как видите Алкоголь и др. являются 5 приоритетом. Т.Е. это имеет еще большие последствия чем горячая война с танками и самолетами, но по быстродействию медленнее. <br /><img src="http://img11.nnm.ru/0/d/6/3/6/ef310258e928fc851e4eb9aef3c.png" border="0" class="linked-image" /><br /><br />Мощность оружия в таблице считается сверху вниз.
+			<br />
+			<!--IBF.ATTACHMENT_68217-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  16.1.2011, 0:13</h4>
+			<p><!--quoteo(post=68217:date=16.1.2011, 1&#58;01:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 1&#58;01) <a href="index.php?act=findpost&amp;pid=68217"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Многие спиваются, но это не есть выход. Не пейте люди, ищите правду&#33;<!--QuoteEnd--></div><!--QuoteEEnd-->Зачем же спиваться? С какого такого перепугу Вы бросаетесь в крайности?<br />Мой дядька (ему 75 лет) ежедневно выпивает рюмку виски, что в этом плохого?
+			<br />
+			<!--IBF.ATTACHMENT_68219-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 0:17</h4>
+			<p><!--quoteo(post=68219:date=16.1.2011, 1&#58;13:name=Репин)--><div class='quotetop'>Цитата(Репин &#064; 16.1.2011, 1&#58;13) <a href="index.php?act=findpost&amp;pid=68219"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Зачем же спиваться? С какого такого перепугу Вы бросаетесь в крайности?<br />Мой дядька (ему 75 лет) ежедневно выпивает рюмку виски, что в этом плохого?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Многие спиваются, сначала являясь культурно пьющими. Не все могут как Ваш Дядя. Уже очень много Наших людей полегло на полях этой невидимой войны
+			<br />
+			<!--IBF.ATTACHMENT_68220-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  16.1.2011, 0:19</h4>
+			<p><!--quoteo(post=68217:date=16.1.2011, 1&#58;01:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 1&#58;01) <a href="index.php?act=findpost&amp;pid=68217"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Я С Вами не спорю и не оскорбляю никого, а говорю Вам как есть <img src="http://railway.kanaries.ru/style_emoticons/default/bf.gif" style="vertical-align:middle" emoid=":bf:" border="0" alt="bf.gif" /> .  Это такая-же простая истина, как и то, что Земля круглая и вращается вокруг Солнца.  <img src="http://railway.kanaries.ru/style_emoticons/default/ap.gif" style="vertical-align:middle" emoid=":ap:" border="0" alt="ap.gif" /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Кроме &quot;чёрное&quot; и &quot;белое&quot; в жизни имеется множество оттенков. Это такая-же простая истина, как и то, что Земля шаровидная и приплюснутая с полюсов, вращается вокруг своей оси, двигаясь по эллиптической орбите около Солнца.
+			<br />
+			<!--IBF.ATTACHMENT_68221-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 0:22</h4>
+			<p>Если Вы откажитесь от этих Наркотиков(Алко, Табак), Обстоятельства Вашей жизни изменятся до неузнаваемости в лучшую сторону. Бросьте, начните обливаться холодной водой, правильно питайтесь, это будет полезно для Вас и для нашего общества.
+			<br />
+			<!--IBF.ATTACHMENT_68222-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  16.1.2011, 0:23</h4>
+			<p><!--quoteo(post=68220:date=16.1.2011, 1&#58;17:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 1&#58;17) <a href="index.php?act=findpost&amp;pid=68220"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Многие спиваются, сначала являясь культурно пьющими.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Многие, но не большинство.<br />А Вас похоже кто-то по жизни напугал...<br />Соглашусь с Василием, для Вас оттенков не существует.
+			<br />
+			<!--IBF.ATTACHMENT_68223-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  16.1.2011, 0:27</h4>
+			<p>Никого не оскорбляешь? А как же это:<br /><!--quoteo(post=68008:date=14.1.2011, 1&#58;06:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 14.1.2011, 1&#58;06) <a href="index.php?act=findpost&amp;pid=68008"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><u>Народ, кто пьет, можете считать себя лишним населен</u><b></b>ием. Я думаю все знают, что нагрузка человечества на биосферу слишком велика, чтобы ее снизить применяют оружие геноцида и др. виды оружия. Не буду вам тут лекцию о вреде и о том как и на что влияет алкоголь и табак писать, кому надо узнают пдробнее в Концепции Общественной Безопасности. Сам не пью не курю, занимаюсь спортом, закаливанием, качество жизни на высоком уровне. Всем советую&#33; <u>Пьющим быдлом </u><b></b>легче управлять, эта истина уже давно используется знающими людьми. Заметьте, большинство управленцев высокого ранга не пьют&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Я в Новогоднюю ночь выпил рюмку водки и бокал шампанского.<br />Репин, нам его не убедить, так что как пел Высоцкий: &quot;пусть жизнь рассудит&quot;.
+			<br />
+			<!--IBF.ATTACHMENT_68224-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 0:38</h4>
+			<p><!--quoteo(post=68223:date=16.1.2011, 1&#58;23:name=Репин)--><div class='quotetop'>Цитата(Репин &#064; 16.1.2011, 1&#58;23) <a href="index.php?act=findpost&amp;pid=68223"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Многие, но не большинство.<br />А Вас похоже кто-то по жизни напугал...<br />Соглашусь с Василием, для Вас оттенков не существует.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Этого достаточно. Нет никто не пугал, сам адаптируюсь. Да верно либо пьешь, либо нет. Если мало пьешь, то зачем тогда вообще пить? 1 рюмка шампанского лишает Вас творческой деятельности на 12-14 дней.<br /><!--quoteo(post=68224:date=16.1.2011, 1&#58;27:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 16.1.2011, 1&#58;27) <a href="index.php?act=findpost&amp;pid=68224"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Никого не оскорбляешь? А как же это:<br /><br />Я в Новогоднюю ночь выпил рюмку водки и бокал шампанского.<br />Репин, нам его не убедить, так что как пел Высоцкий: &quot;пусть жизнь рассудит&quot;.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Никого не оскорбляю, называю вещи своими именами. Алкоголь лишает человека свободы воли, данной ему богом, человек без воли это не человек, а животное, но тут тоже есть казус, даже животное себя не отравляет сознательно ядами, получается, что пьющий человек ниже животного, получаем тип строя психики &quot;Опущенный ниже животного&quot;.
+			<br />
+			<!--IBF.ATTACHMENT_68225-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  16.1.2011, 0:37</h4>
+			<p><!--quoteo(post=68225:date=16.1.2011, 1&#58;32:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 1&#58;32) <a href="index.php?act=findpost&amp;pid=68225"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->1 рюмка шампанского лишает Вас творческой деятельности на 12-14 дней.<!--QuoteEnd--></div><!--QuoteEEnd--><br />А Владимир Семёнович пил сильно, но это не помешало ему сниматься в кино, играть в театре, давать концерты и написать около тысячи &#33;&#33;&#33; песен.
+			<br />
+			<!--IBF.ATTACHMENT_68226-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 0:39</h4>
+			<p><!--quoteo(post=68226:date=16.1.2011, 1&#58;37:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 16.1.2011, 1&#58;37) <a href="index.php?act=findpost&amp;pid=68226"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->А Владимир Семёнович пил сильно, но это не помешало ему сниматься в кино, играть в театре, давать концерты и написать около тысячи &#33;&#33;&#33; песен.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Если по человечески рассудить, о чем были некоторые его песни? И от чего он умер?
+			<br />
+			<!--IBF.ATTACHMENT_68227-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  16.1.2011, 0:44</h4>
+			<p>Как горохом об стену... Даже не понял, о чём битый час толкуем. Всё, заканчиваю бесполезную дискуссию.
+			<br />
+			<!--IBF.ATTACHMENT_68228-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 0:45</h4>
+			<p><!--quoteo(post=68228:date=16.1.2011, 1&#58;44:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 16.1.2011, 1&#58;44) <a href="index.php?act=findpost&amp;pid=68228"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Как горохом об стену... Даже не понял, о чём битый час толкуем. Всё, заканчиваю бесполезную дискуссию.<!--QuoteEnd--></div><!--QuoteEEnd--><br />О чем толкуем?
+			<br />
+			<!--IBF.ATTACHMENT_68229-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  16.1.2011, 0:48</h4>
+			<p><!--quoteo(post=68224:date=16.1.2011, 1&#58;27:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 16.1.2011, 1&#58;27) <a href="index.php?act=findpost&amp;pid=68224"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Никого не оскорбляешь? А как же это:<br /><br />Я в Новогоднюю ночь выпил рюмку водки и бокал шампанского.<br />Репин, нам его не убедить, так что как пел Высоцкий: &quot;пусть жизнь рассудит&quot;.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Знаешь кого он мне напоминает?<br /><br />Свидетеля Иегова.<br />Эти свидетели частенько приходят в дом, обзванивают все квартиры и начинают нести народу свою заученную, как они считают - правильную мысль.<br />Если есть время, общаюсь с ними ...<br />Достают евангелие с закладками и пытаются донести до меня истину.<br />Пару раз просил у них их Новый Завет, беру в руки книгу, вынимаю закладки, отдаю книгу, отдаю закладки  и говорю: &quot;Так что вы говорили?&quot;<br />Свидетели в шоке, даже  про вино с трудом найти могут ...   <br /><br /><br /><br /><br /><br /><!--quoteo(post=68227:date=16.1.2011, 1&#58;39:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 1&#58;39) <a href="index.php?act=findpost&amp;pid=68227"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->И от чего он умер?<!--QuoteEnd--></div><!--QuoteEEnd-->От передоза.<br />
+			<br />
+			<!--IBF.ATTACHMENT_68230-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 0:52</h4>
+			<p><!--quoteo(post=68230:date=16.1.2011, 1&#58;47:name=Репин)--><div class='quotetop'>Цитата(Репин &#064; 16.1.2011, 1&#58;47) <a href="index.php?act=findpost&amp;pid=68230"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Знаешь кого он мне напоминает?<br /><br />Свидетеля Иегова.<br />Эти свидетели частенько приходят в дом, обзванивают все квартиры и начинают нести народу свою заученную, как они считают - правильную мысль.<br />Если есть время, общаюсь с ними ...<br />Достают евангелие с закладками и пытаются донести до меня истину.<br />Пару раз просил у них их Новый Завет, беру в руки книгу, вынимаю закладки, отдаю книгу, отдаю закладки  и говорю: &quot;Так что вы говорили?&quot;<br />Свидетели в шоке, даже  про вино с трудом найти могут ...<!--QuoteEnd--></div><!--QuoteEEnd--><br />Жесть сектанты что-ли? У нас тоже ходят я их посылаю куда подальше. Оболваненные люди, что еще скажешь про них. Считайте в информационной войне мы их потеряли ранеными или убитыми. ПС посмотрите я выложил картинку ОСУ обществом, В СПБГУ разработана. Секты относятся к 3 приоритету ОСУ.<br /><br /><!--quoteo(post=68230:date=16.1.2011, 1&#58;48:name=Репин)--><div class='quotetop'>Цитата(Репин &#064; 16.1.2011, 1&#58;48) <a href="index.php?act=findpost&amp;pid=68230"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->От передоза.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Верно дипсомания.
+			<br />
+			<!--IBF.ATTACHMENT_68232-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  16.1.2011, 0:56</h4>
+			<p>http://railway.kanaries.ru/index.php?s=&amp;showtopic=3225&amp;view=findpost&amp;p=68218<br /><br />Спасибо, напомнили.<br /><br /><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->26 И когда они ели, Иисус взял хлеб и, благословив, преломил и,<br />раздавая ученикам, сказал: приимите, ядите: сие есть Тело Мое.<br />      27 И, <b>взяв чашу</b> и благодарив, подал им и сказал: <b>пейте из нее<br />все,</b><br />      28 ибо сие есть Кровь Моя Нового Завета, за многих изливаемая<br />во оставление грехов.<br />      29 Сказываю же вам, что отныне не буду пить <b>от плода сего<br />виноградного</b> до того дня, когда буду пить с вами новое вино в<br />Царстве Отца Моего.<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /><br /><br /><!--quoteo(post=68228:date=16.1.2011, 1&#58;44:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 16.1.2011, 1&#58;44) <a href="index.php?act=findpost&amp;pid=68228"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Как горохом об стену... Даже не понял, о чём битый час толкуем. Всё, заканчиваю бесполезную дискуссию.<!--QuoteEnd--></div><!--QuoteEEnd--><br /> <img src="http://railway.kanaries.ru/style_emoticons/default/az.gif" style="vertical-align:middle" emoid=":az:" border="0" alt="az.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_68233-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 1:10</h4>
+			<p>Все священные писания оболганы и дополнены власть имущими, думаю не стоит это воспринимать всерьез.<br /><br /><!--quoteo(post=68233:date=16.1.2011, 1&#58;56:name=Репин)--><div class='quotetop'>Цитата(Репин &#064; 16.1.2011, 1&#58;56) <a href="index.php?act=findpost&amp;pid=68233"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><img src="http://railway.kanaries.ru/style_emoticons/default/az.gif" style="vertical-align:middle" emoid=":az:" border="0" alt="az.gif" /><!--QuoteEnd--></div><!--QuoteEEnd--><br /> <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" /> Прально ребята, не парьтесь, все ок&#33;<br /><br /><!--quoteo(post=68224:date=16.1.2011, 1&#58;27:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 16.1.2011, 1&#58;27) <a href="index.php?act=findpost&amp;pid=68224"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Никого не оскорбляешь? А как же это:<!--QuoteEnd--></div><!--QuoteEEnd--><br />Я ж понимаю, что неприятно, но как еще скажешь, если они нас такими считают. Народу много на Земле развелось, паразитов, ребята думали, думали как избавляться от населения и оставить общество толпо-элитарным, вот и придумали.
+			<br />
+			<!--IBF.ATTACHMENT_68234-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>StrelochNIK3</b>  16.1.2011, 8:38</h4>
+			<p><!--quoteo(post=68234:date=16.1.2011, 2&#58;10:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 2&#58;10) <a href="index.php?act=findpost&amp;pid=68234"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Все священные писания оболганы и дополнены власть имущими, думаю не стоит это воспринимать всерьез.<br /><br /><br /> <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" /> Прально ребята, не парьтесь, все ок&#33;<br /><br /><br />Я ж понимаю, что неприятно, но как еще скажешь, если они нас такими считают. Народу много на Земле развелось, паразитов, ребята думали, думали как избавляться от населения и оставить общество толпо-элитарным, вот и придумали.<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /><br />...плюс Генная Модификация Организма,низкая зарплата,АНТинародные законы,закрытие детсадов,Очереди на жильё,политика(&quot;питерским&quot;евреям и хачам не нужнО славянское вечнопьяное быдло).....много нас,мешаем мы им...
+			<br />
+			<!--IBF.ATTACHMENT_68241-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  16.1.2011, 8:40</h4>
+			<p><!--quoteo(post=68145:date=15.1.2011, 7&#58;10:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 15.1.2011, 7&#58;10) <a href="index.php?act=findpost&amp;pid=68145"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Рис, Геркулес, Фрукты, Овощи ну вы меня поняли.<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /><!--quoteo(post=68217:date=16.1.2011, 1&#58;11:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 1&#58;11) <a href="index.php?act=findpost&amp;pid=68217"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Слова Гитлера- «Необходимо свести славян до языка жестов. Никакой гигиены. Только водка и табак в неограниченных количествах»<!--QuoteEnd--></div><!--QuoteEEnd--><br /><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->Уинстон Черчилль ежедневно съедал стейк с кровью, выкуривал несколько крепчайших сигар, выпивал бутылку коньяка или виски,  дожил до 92 лет. <br />Сталин был большим любителем грузинских вин, всю жизнь курил трубку и дожил до 73. <br />      <br />       <br />Гитлер был непьющим, некурящим вегетарианцем. К чему это привело - всем известно.<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_68242-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 9:54</h4>
+			<p>Дополняю Вас: однако Россия теряет в год 1млн200тыс коренного населения из-за сердечно-сосудистых заболеваний.
+			<br />
+			<!--IBF.ATTACHMENT_68247-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  16.1.2011, 12:54</h4>
+			<p><!--quoteo(post=68234:date=16.1.2011, 2&#58;10:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 2&#58;10) <a href="index.php?act=findpost&amp;pid=68234"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Я ж понимаю, что неприятно, но как еще скажешь, если они нас такими считают. <b>Народу много на Земле развелось, паразитов</b><u></u>, ребята думали, думали как избавляться от населения и оставить общество толпо-элитарным, вот и придумали.<!--QuoteEnd--></div><!--QuoteEEnd--><br />No comment.
+			<br />
+			<!--IBF.ATTACHMENT_68258-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  16.1.2011, 13:24</h4>
+			<p>Если уж на то пошло, что то не там <b>они</b> копают...
+			<br />
+			<!--IBF.ATTACHMENT_68260-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 15:01</h4>
+			<p><!--quoteo(post=68260:date=16.1.2011, 14&#58;24:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 16.1.2011, 14&#58;24) <a href="index.php?act=findpost&amp;pid=68260"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Если уж на то пошло, что то не там <b>они</b> копают...<!--QuoteEnd--></div><!--QuoteEEnd--><br />Везде где надо. Африка тоже не так много потребляет, однако их тоже морят голодом и травят различными вирусами. <img src="http://img.lenta.ru/articles/2006/05/17/starsell/picture.jpg" border="0" class="linked-image" />
+			<br />
+			<!--IBF.ATTACHMENT_68266-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  16.1.2011, 15:03</h4>
+			<p><!--quoteo(post=68266:date=16.1.2011, 16&#58;01:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 16&#58;01) <a href="index.php?act=findpost&amp;pid=68266"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Везде где надо. Африка тоже не так много потребляет, однако их тоже морят голодом и травят различными вирусами.<!--QuoteEnd--></div><!--QuoteEEnd--><br />И во всём конечно виноваты злые американцы&#33;
+			<br />
+			<!--IBF.ATTACHMENT_68267-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 16:50</h4>
+			<p><!--quoteo(post=68267:date=16.1.2011, 16&#58;03:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 16.1.2011, 16&#58;03) <a href="index.php?act=findpost&amp;pid=68267"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->И во всём конечно виноваты злые американцы&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Америка лишь инструмент в руках тех, кто управляет. Вы слышали такое понятие &quot;Глобализация&quot;?
+			<br />
+			<!--IBF.ATTACHMENT_68283-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  16.1.2011, 16:50</h4>
+			<p><!--quoteo(post=68283:date=16.1.2011, 17&#58;50:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 17&#58;50) <a href="index.php?act=findpost&amp;pid=68283"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Америка лишь инструмент в руках тех, кто управляет. Вы слышали такое понятие &quot;Глобализация&quot;?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Не слышал.
+			<br />
+			<!--IBF.ATTACHMENT_68285-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 17:51</h4>
+			<p><!--quoteo(post=68285:date=16.1.2011, 17&#58;50:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 16.1.2011, 17&#58;50) <a href="index.php?act=findpost&amp;pid=68285"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Не слышал.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Процесс концентрации управления производительными силами человечества. Когда-то в древности Японцы не знали, что через пролив от них живут Русские, Индейцы не знали где живет Колумб который откроет Америку, короче вы меня поняли, естественно этим процессом управляли. Но с развитием, люди начали объединяться в племена открывать новые Земли. Так создавались княжества потом государства и т.д. Сейчас процесс Глобализации практически завершен. Все страны представляют собой отсеки подводной лодки, Испания-мировой курорт, Америка-мировой полицейский, Япония-новые технологии, Россия-сырьевой придаток. Технологии развились до таких высот, что более чем 80% рабочих мест можно автоматизировать. Естественно в таких условиях 6-7 миллиардов человек никому ненужны, они считают, что достаточно будет 2-3 миллиарда, тем более, что нагрузка на биосферу очень высока, мы все сейчас видим, что климат очень сильно меняется. Вот поэтому они нас потихонечку давят. Как Вы считаете История носит управляемый характер?
+			<br />
+			<!--IBF.ATTACHMENT_68295-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  16.1.2011, 22:04</h4>
+			<p><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->Вот поэтому они нас потихонечку давят.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Они - это кто?<br /><br /><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->Как Вы считаете История носит управляемый характер?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Эсли позволять собой управлять, то конечно будет управляемый.
+			<br />
+			<!--IBF.ATTACHMENT_68318-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 22:23</h4>
+			<p><!--quoteo(post=68318:date=16.1.2011, 23&#58;04:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 16.1.2011, 23&#58;04) <a href="index.php?act=findpost&amp;pid=68318"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Они - это кто?<br /><br /><br />Эсли позволять собой управлять, то конечно будет управляемый.<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Это люди которые имеют высшую власть. Концептуальную власть. Есть внутренняя политика, есть внешняя, а есть глобальная, так вот это люди которые управляют глобальной политикой. Их не показывают по тв.Политика от греч. Поли-много, Тикос-интересов.
+			<br />
+			<!--IBF.ATTACHMENT_68324-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  16.1.2011, 22:28</h4>
+			<p><!--quoteo(post=68324:date=16.1.2011, 23&#58;23:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 16.1.2011, 23&#58;23) <a href="index.php?act=findpost&amp;pid=68324"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Это люди которые имеют высшую власть. Концептуальную власть. Есть внутренняя политика, есть внешняя, а есть глобальная, так вот это люди которые управляют глобальной политикой. Их не показывают по тв.Политика от греч. Поли-много, Тикос-интересов.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Ужас ужас... Бедные россияне... Их травят алкоголем, их выкуривают табаком, у них китайцы воруют лес, американцы нефть... а они всё живут и живут&#33;&#33;&#33;
+			<br />
+			<!--IBF.ATTACHMENT_68326-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 23:06</h4>
+			<p><!--quoteo(post=68326:date=16.1.2011, 23&#58;28:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 16.1.2011, 23&#58;28) <a href="index.php?act=findpost&amp;pid=68326"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Ужас ужас... Бедные россияне... Их травят алкоголем, их выкуривают табаком, у них китайцы воруют лес, американцы нефть... а они всё живут и живут&#33;&#33;&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Да, говорю Вам секрет, мы выстоим. Россия будет от Тихого до Атлантического океана.
+			<br />
+			<!--IBF.ATTACHMENT_68328-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  16.1.2011, 23:13</h4>
+			<p><!--quoteo(post=68328:date=17.1.2011, 0&#58;06:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 17.1.2011, 0&#58;06) <a href="index.php?act=findpost&amp;pid=68328"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Да, говорю Вам секрет, мы выстоим. Россия будет от Тихого до Атлантического океана.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Конечно выстоим. Сколько там их было таких... Однако же живём&#33; Через одно место правда всё, но живём ведь&#33; <br /><br />Кстати, а откуда все эти россказни о глобализации?
+			<br />
+			<!--IBF.ATTACHMENT_68329-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 23:25</h4>
+			<p><!--quoteo(post=68329:date=17.1.2011, 0&#58;13:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 17.1.2011, 0&#58;13) <a href="index.php?act=findpost&amp;pid=68329"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Конечно выстоим. Сколько там их было таких... Однако же живём&#33; Через одно место правда всё, но живём ведь&#33; <br /><br />Кстати, а откуда все эти россказни о глобализации?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Дедушка моего лучшего друга(соседа по даче) работает в СПБГУ на факультете прикладной математики-процессов управления. Преподает достаточно общую теорию управления. Он рассказывал нам много об этом. И еще рассказывал, что они 20 лет назад разработали Концепцию по выводу России и мира из кризиса, и еще сказал, что многие люди об этом знают у нас в стране и вся интеллигенция о ней знает, но бояться эту концепцию, потому-что она против толпо-элитаризма, а они готовы удавится за свое богатство.
+			<br />
+			<!--IBF.ATTACHMENT_68330-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  16.1.2011, 23:26</h4>
+			<p>А ему на ушко нашептал Самый Главный Глобализатор (только - тссс, секрет&#33;)
+			<br />
+			<!--IBF.ATTACHMENT_68331-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 23:39</h4>
+			<p><!--quoteo(post=68331:date=17.1.2011, 0&#58;26:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 17.1.2011, 0&#58;26) <a href="index.php?act=findpost&amp;pid=68331"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->А ему на ушко нашептал Самый Главный Глобализатор (только - тссс, секрет&#33;)<!--QuoteEnd--></div><!--QuoteEEnd--><br />Нет, вы что, он рассказывал, что они еще в 60-х годах поняли, что с родиной что-то не то творится, дефицит необоснованый и все такое и сплотились в группу, потом информационными разработками занимались, аналитикой происходящего и сами дошли до этого. В группу входили офицеры, учителя, ученые и другие интеллигентные люди
+			<br />
+			<!--IBF.ATTACHMENT_68332-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  16.1.2011, 23:45</h4>
+			<p><!--quoteo(post=68332:date=17.1.2011, 0&#58;39:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 17.1.2011, 0&#58;39) <a href="index.php?act=findpost&amp;pid=68332"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Нет, вы что, он рассказывал, что они еще в 60-х годах поняли, что с родиной что-то не то творится, дефицит необоснованый и все такое и сплотились в группу, потом информационными разработками занимались, аналитикой происходящего и сами дошли до этого. В группу входили офицеры, учителя, ученые и другие интеллигентные люди<!--QuoteEnd--></div><!--QuoteEEnd--><br />И что? Узнали кто это так всем гадит?
+			<br />
+			<!--IBF.ATTACHMENT_68333-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 23:54</h4>
+			<p><!--quoteo(post=68333:date=17.1.2011, 0&#58;45:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 17.1.2011, 0&#58;45) <a href="index.php?act=findpost&amp;pid=68333"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->И что? Узнали кто это так всем гадит?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Да, конечно узнали, чтобы наши люди не узнали. Они утверждают, что глобальной политикой управляют владельцы транснациональных банков и корпораций. 3000 лет назад во времена Фараонов в Египте потомки этих руководителей выбрали Евреев для того чтобы сделать их Своим управленческим инструментом и увели племя в пустыню на 42 года, хотя эту пустыню можно было пройти за две недели. Вот их там водили, водили 42 года, они не работали их кормили, за 42 года сменилось несколько поколений. Новые поколения рассказов стариков уже не слышали, т.к. старики в тяжелых условиях погибали, вот так они создали Еврейство, которое сейчас ставится во все высокие управленческие должности. Ввели обряд обрезания на 8 день. Обрезание на 8 день меняет структуру головного мозга, такие люди легко программируются в обход сознания. Получается робот на живой элементной базе.
+			<br />
+			<!--IBF.ATTACHMENT_68334-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  16.1.2011, 23:55</h4>
+			<p><!--quoteo(post=68334:date=17.1.2011, 0&#58;54:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 17.1.2011, 0&#58;54) <a href="index.php?act=findpost&amp;pid=68334"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Да, конечно узнали, чтобы наши люди не узнали. Они утверждают, что глобальной политикой управляют владельцы транснациональных банков и корпораций. 3000 лет назад во времена Фараонов в Египте потомки этих руководителей выбрали Евреев для того чтобы сделать их Своим управленческим инструментом и увели племя в пустыню на 42 года, хотя эту пустыню можно было пройти за две недели. Вот их там водили, водили 42 года, они не работали их кормили, за 42 года сменилось несколько поколений. Новые поколения рассказов стариков уже не слышали, т.к. старики в тяжелых условиях погибали, вот так они создали Еврейство, которое сейчас ставится во все высокие управленческие должности. Ввели обряд обрезания на 8 день. Обрезание на 8 день меняет структуру головного мозга, такие люди легко программируются в обход сознания. Получается робот на живой элементной базе.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Ладно, а они их сами то видели?
+			<br />
+			<!--IBF.ATTACHMENT_68335-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  16.1.2011, 23:57</h4>
+			<p>Здесь коротко трудно рассказать. Вы мне помогайте вопросами, если вам интересно конечно это.
+			<br />
+			<!--IBF.ATTACHMENT_68336-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  17.1.2011, 0:01</h4>
+			<p><!--quoteo(post=68336:date=17.1.2011, 0&#58;57:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 17.1.2011, 0&#58;57) <a href="index.php?act=findpost&amp;pid=68336"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Здесь коротко трудно рассказать. Вы мне помогайте вопросами, если вам интересно конечно это.<!--QuoteEnd--></div><!--QuoteEEnd--><br />У меня скептический подход к данному вопросу.
+			<br />
+			<!--IBF.ATTACHMENT_68337-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  17.1.2011, 0:05</h4>
+			<p><!--quoteo(post=68335:date=17.1.2011, 0&#58;55:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 17.1.2011, 0&#58;55) <a href="index.php?act=findpost&amp;pid=68335"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Ладно, а они их сами то видели?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Незнаю. Он сказал, что Они нигде не светятся, но их фамилии известны. Ротшильды, Морганы, Рокфеллеры и т.д. всего примерно 250-300 кланов, которые управляют бесструктурным способом всем миром. У них высшая Концептуальная власть. Но дедушка сказал, что наша концепция сильнее ихней и либо наша концепция, либо Биосфера уничтожит человечество.<br /><br /><!--quoteo(post=68337:date=17.1.2011, 1&#58;01:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 17.1.2011, 1&#58;01) <a href="index.php?act=findpost&amp;pid=68337"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->У меня скептический подход к данному вопросу.<!--QuoteEnd--></div><!--QuoteEEnd--> <br />Естественно, совершенно нормальный подход. У меня такой-же был сначала, со временем я больше убеждался в том, о чем тут написал. Просто понимаете  могу чего то не правильно вам рассказать, дедушка друга то профессионал а я нет, поэтому не судите строго&#33;
+			<br />
+			<!--IBF.ATTACHMENT_68338-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  17.1.2011, 0:46</h4>
+			<p><!--quoteo(post=68333:date=17.1.2011, 0&#58;45:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 17.1.2011, 0&#58;45) <a href="index.php?act=findpost&amp;pid=68333"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->И что? Узнали кто это так всем гадит?<!--QuoteEnd--></div><!--QuoteEEnd--><br />Как кто? Самый Главный Буржуин и Мальчиш Плохиш.<br /><br /><!--quoteo(post=68334:date=17.1.2011, 0&#58;54:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 17.1.2011, 0&#58;54) <a href="index.php?act=findpost&amp;pid=68334"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->во времена <u>Фараонов</u><b></b> в Египте потомки этих руководителей выбрали <u>Евреев</u><b></b> для того чтобы сделать их <u>Своим </u><b></b>управленческим инструментом <br />за 42 года сменилось несколько поколений.<br />Обрезание на 8 день меняет структуру головного мозга, такие люди легко программируются в обход сознания. Получается робот на живой элементной базе.<!--QuoteEnd--></div><!--QuoteEEnd--><br />1. Что за новые правила русского языка?<br />2. Сколько нужно было лет людям (3000 лет назад), чтобы нескольким поколениям достигнуть половой зрелости, родить детей и умереть, не слыша рассказов, за 42 года? 42 г.: на 3 поколения = 14 лет. Вот это темпы жизни - 14 лет пожил и хватит.<br />3. Кто Вам обрезание мозгов сделал?<br /><br /><!--quoteo(post=68338:date=17.1.2011, 1&#58;05:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 17.1.2011, 1&#58;05) <a href="index.php?act=findpost&amp;pid=68338"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Незнаю. Он сказал, что <u>Они</u><b></b> нигде не светятся, но их фамилии известны. <u>Ротшильды</u><b></b>, <u>Морганы</u><b></b>, <u>Рокфеллеры</u><b></b> и т.д. всего примерно 250-300 кланов, которые управляют бесструктурным способом всем миром. У них высшая <u>Концептуальная</u><b></b> власть. Но дедушка сказал, что наша концепция сильнее ихней и либо наша концепция, либо <u>Биосфера</u><b></b> уничтожит человечество.<br /> <br />Естественно, совершенно нормальный подход. У меня такой-же был сначала, со временем я больше убеждался в том, о чем тут написал. Просто понимаете  могу чего то не правильно вам рассказать, <u>дедушка друга то профессионал </u><b></b>а я нет, поэтому не судите строго&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />1. Поделитесь Великой Тайной Заглавных Букв.<br />2. Вот и разгадка того, кто лапшу на уши и шоры на глаза навесил - дедушка&#33;
+			<br />
+			<!--IBF.ATTACHMENT_68341-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>StrelochNIK3</b>  17.1.2011, 11:24</h4>
+			<p><!--quoteo(post=68331:date=17.1.2011, 0&#58;26:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 17.1.2011, 0&#58;26) <a href="index.php?act=findpost&amp;pid=68331"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Глобализатор<!--QuoteEnd--></div><!--QuoteEEnd--><br />Правильно-глобалист.<br /><br />http://ru.wikipedia.org/wiki/%D0%93%D0%BB%D0%BE%D0%B1%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0
+			<br />
+			<!--IBF.ATTACHMENT_68358-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>vbifyz</b>  17.1.2011, 11:48</h4>
+			<p><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->Они - это кто?<!--QuoteEnd--></div><!--QuoteEEnd-->Наверное из списка журнала Forbes:Самые влиятельные люди планеты.<!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->дедушка&#33;<!--QuoteEnd--></div><!--QuoteEEnd-->Кажется я знаю фамилию этого дедушки. <img src="http://railway.kanaries.ru/style_emoticons/default/af.gif" style="vertical-align:middle" emoid=":af:" border="0" alt="af.gif" />И кстати сам Моисей прожил кажется 120 лет-вот такой темп жизни.
+			<br />
+			<!--IBF.ATTACHMENT_68360-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  17.1.2011, 14:52</h4>
+			<p><!--quoteo(post=68341:date=17.1.2011, 1&#58;46:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 17.1.2011, 1&#58;46) <a href="index.php?act=findpost&amp;pid=68341"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Как кто? Самый Главный Буржуин и Мальчиш Плохиш.<br /><br /><br />1. Что за новые правила русского языка?<br />2. Сколько нужно было лет людям (3000 лет назад), чтобы нескольким поколениям достигнуть половой зрелости, родить детей и умереть, не слыша рассказов, за 42 года? 42 г.: на 3 поколения = 14 лет. Вот это темпы жизни - 14 лет пожил и хватит.<br />3. Кто Вам обрезание мозгов сделал?<br /><br /><br />1. Поделитесь Великой Тайной Заглавных Букв.<br />2. Вот и разгадка того, кто лапшу на уши и шоры на глаза навесил - дедушка&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Сменилось несколько поколений, в пустыне были тяжелые условия. Там были люди разного возраста, ваши подсчеты неверны 42/3=14.<br /><br /><!--quoteo(post=68358:date=17.1.2011, 12&#58;24:name=StrelochNIK3)--><div class='quotetop'>Цитата(StrelochNIK3 &#064; 17.1.2011, 12&#58;24) <a href="index.php?act=findpost&amp;pid=68358"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Правильно-глобалист.<br /><br />http://ru.wikipedia.org/wiki/%D0%93%D0%BB%D0%BE%D0%B1%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0<!--QuoteEnd--></div><!--QuoteEEnd--><br />Нет тут он прав, именно Глобализатор. Глобалист-это хороший человек.
+			<br />
+			<!--IBF.ATTACHMENT_68371-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Репин</b>  17.1.2011, 17:38</h4>
+			<p><!--quoteo(post=68326:date=16.1.2011, 23&#58;28:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 16.1.2011, 23&#58;28) <a href="index.php?act=findpost&amp;pid=68326"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Ужас ужас... Бедные россияне... Их травят алкоголем, их выкуривают табаком, у них китайцы воруют лес, американцы нефть... а они всё живут и живут&#33;&#33;&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Живут. Но их количество оказывается уменьшается. <img src="http://railway.kanaries.ru/style_emoticons/default/blink.gif" style="vertical-align:middle" emoid=":blink:" border="0" alt="blink.gif" /> <br />http://www.argumenti.ru/society/2011/01/90714/<br /><br /><br />Не уверен, что виной всему алкоголь.
+			<br />
+			<!--IBF.ATTACHMENT_68387-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  17.1.2011, 18:32</h4>
+			<p><!--quoteo(post=68371:date=17.1.2011, 15&#58;52:name=strel1988k)--><div class='quotetop'>Цитата(strel1988k &#064; 17.1.2011, 15&#58;52) <a href="index.php?act=findpost&amp;pid=68371"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Сменилось несколько поколений, в пустыне были тяжелые условия. Там были люди разного возраста, ваши подсчеты неверны 42/3=14.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Так, подсчитаю поточнее... <img src="http://railway.kanaries.ru/style_emoticons/default/dm.gif" style="vertical-align:middle" emoid=":dm:" border="0" alt="dm.gif" /> 42/3=14,01027095    <img src="http://railway.kanaries.ru/style_emoticons/default/dr.gif" style="vertical-align:middle" emoid=":dr:" border="0" alt="dr.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_68397-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>strel1988k</b>  18.1.2011, 6:11</h4>
+			<p><!--quoteo(post=68397:date=17.1.2011, 19&#58;32:name=Vasiliy)--><div class='quotetop'>Цитата(Vasiliy &#064; 17.1.2011, 19&#58;32) <a href="index.php?act=findpost&amp;pid=68397"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Так, подсчитаю поточнее... <img src="http://railway.kanaries.ru/style_emoticons/default/dm.gif" style="vertical-align:middle" emoid=":dm:" border="0" alt="dm.gif" /> 42/3=14,01027095    <img src="http://railway.kanaries.ru/style_emoticons/default/dr.gif" style="vertical-align:middle" emoid=":dr:" border="0" alt="dr.gif" /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Не, Не. Как бы объяснить. Средний возраст женщины рожающей ребенка 25 лет. Получается смена поколений происходит каждые 25 лет. Но в пустыню пошли люди разного возраста, кому было 70 лет, а кому-то и 10. Там сменилось порядка 3-х поколений. Те кто это устроил, решили, что именно 42 года надо водить, это не просто так цифра.
+			<br />
+			<!--IBF.ATTACHMENT_68471-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Юррик</b>  18.1.2011, 15:33</h4>
+			<p>а тема называлась &quot;Правда и ложь об алкоголе&quot;.
+			<br />
+			<!--IBF.ATTACHMENT_68536-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  18.1.2011, 16:25</h4>
+			<p><!--quoteo(post=68536:date=18.1.2011, 16&#58;33:name=Юррик)--><div class='quotetop'>Цитата(Юррик &#064; 18.1.2011, 16&#58;33) <a href="index.php?act=findpost&amp;pid=68536"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->а тема называлась &quot;Правда и ложь об алкоголе&quot;.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Юр,самое интересное в этой теме все проявили активность именно после окончания новогодней недели&#33; К чему бы это....... <img src="http://railway.kanaries.ru/style_emoticons/default/smile3.gif" style="vertical-align:middle" emoid=":smile3:" border="0" alt="smile3.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/bj.gif" style="vertical-align:middle" emoid=":bj:" border="0" alt="bj.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_68546-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>vbifyz</b>  18.1.2011, 19:30</h4>
+			<p>Не помню,может уже  было...У каждого пьянства свой запах особый:<br />Ликёр пахнет тайных фантазий свободой.<br />Шампанское пахнет кокетством и флиртом.<br />Разбитая морда - разбавленным спиртом.<br />Развратом и страстностью пахнет коньяк.<br />Взрывным позитивом - абсент натощак.<br />Вино отдаёт дорогим рестораном.<br />От вермута пахнет хихиканьем пьяным.<br />Коктейлями пахнут дебош и кураж.<br />Закваской хмельною воняет алкаш.<br />Утратой способности двигаться - водка.<br />Стремленьем по бабам пройтись - виски стопка.<br />Джин пахнет желаньем нажраться красиво.<br />Желаньем отлить отличается пиво.<br />Похмельем тяжёлым с утра - арманьяк...<br /><br />И только лишь трезвость не пахнет никак <br />P.S.Чрезмерное употребление алкоголя вредит Вашему здоровью. <img src="http://railway.kanaries.ru/style_emoticons/default/ab.gif" style="vertical-align:middle" emoid=":ab:" border="0" alt="ab.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_68575-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  26.1.2011, 21:08</h4>
+			<p>Интересную статью на просторах Интернета я тут обнаружил. Представляю её на Ваш суд. Сей опус написал генерал-майор милиции,начальник крымского института Василий Бирюков.... Советую прочитать,она меня улыбнула.....
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		<a href="http://railway.kanaries.ru/index.php?s=0f8adc70c019a1e70b94a33164789db4&amp;act=attach&amp;type=post&amp;id=6734" title="" target="_blank"><img src="http://railway.kanaries.ru/style_images/ip.boardpr/folder_mime_types/doc.gif" alt="" /></a>
+&nbsp;<a href="http://railway.kanaries.ru/index.php?s=0f8adc70c019a1e70b94a33164789db4&amp;act=attach&amp;type=post&amp;id=6734" title="" target="_blank">Книга_об_алкоголе.doc</a> ( 161 килобайт )
+<span class="desc">: 240</span><br /> 
+	</div>
+</div>
+<div>&nbsp;</div>
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  27.1.2011, 0:27</h4>
+			<p><!--quoteo(post=69340:date=26.1.2011, 22&#58;08:name=седой дятел)--><div class='quotetop'>Цитата(седой дятел &#064; 26.1.2011, 22&#58;08) <a href="index.php?act=findpost&amp;pid=69340"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Интересную статью на просторах Интернета я тут обнаружил. Представляю её на Ваш суд. Сей опус написал генерал-майор милиции,начальник крымского института Василий Бирюков.... Советую прочитать,она меня улыбнула.....<!--QuoteEnd--></div><!--QuoteEEnd--><br /><b>7. Если после всех принятых восстановительных мер всё же оста­ётся невмоготу, если позволяет обстановка, можно опохмелиться. Для опохмеления допускается одноразовая доза спиртного. Оптимально 30-50 грамм коньяка или до 100 грамм водки в разовой дозе. При этом не следует забывать, что это – опохмеление, а не продолжение пьянки.</b><br /><br />Вот это просто шедевр&#33;&#33;&#33;<br />Над этим опусом я просто смеялся, чтобы не заплакать.
+			<br />
+			<!--IBF.ATTACHMENT_69368-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>StrelochNIK3</b>  27.1.2011, 10:39</h4>
+			<p><!--quoteo(post=69368:date=27.1.2011, 1&#58;27:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 27.1.2011, 1&#58;27) <a href="index.php?act=findpost&amp;pid=69368"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Над этим опусом я просто смеялся, чтобы не заплакать.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Ничего смешного...Люди умирают,несумев опохмелиться и разгоняются по новой,неправильно опохмелившись...<br />
+			<br />
+			<!--IBF.ATTACHMENT_69400-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Vasiliy</b>  9.2.2011, 14:34</h4>
+			<p>Как-то смотрел передачу &quot;История всероссийского обмана&quot; по ТВ, тема о алкоголе. Ставили опыты на добровольцах. Много чего было интересного, но хочу выделить тот факт, что приём 50 гр. коньяка улучшает меткость. При Союзе, когда не было допинг-контроля, биатлонисты через трубочку потягивали коньячок. Результаты были прекрасные. Вот так вот.
+			<br />
+			<!--IBF.ATTACHMENT_70596-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  19.2.2011, 22:41</h4>
+			<p>В начале 90-х годов в почтовые ящики моего района,там где я и поныне живу кидали бесплатную газету &quot;Московская окраина&quot;,это была газета Северо-Восточного округа Москвы. Газеты уже давно не существует,но у меня сохранилось пара экземпляров,хотя речь сей-час не об этом. В одном из номеров был опубликован рассказ автора под псевдонимом Иван Думкин &quot;Пивной рай для интеллигентных мужчин&quot;. Довольно таки интересный рассказ,он у меня навивает лёгкую ностальгию по навсегда ушедшим временам. Представляю данный рассказ на Ваш суд.
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		<a href="http://railway.kanaries.ru/index.php?s=0f8adc70c019a1e70b94a33164789db4&amp;act=attach&amp;type=post&amp;id=7100" title="" target="_blank"><img src="http://railway.kanaries.ru/style_images/ip.boardpr/folder_mime_types/doc.gif" alt="" /></a>
+&nbsp;<a href="http://railway.kanaries.ru/index.php?s=0f8adc70c019a1e70b94a33164789db4&amp;act=attach&amp;type=post&amp;id=7100" title="" target="_blank">Пивной_рай_для_интеллегентных_мужчин.doc</a> ( 144,5 килобайт )
+<span class="desc">: 317</span><br /> 
+	</div>
+</div>
+<div>&nbsp;</div>
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  19.2.2011, 23:12</h4>
+			<p>Ну вот, пора бы написать эссе совсем о другой струе...
+			<br />
+			<!--IBF.ATTACHMENT_71400-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Александр/БВ</b>  20.2.2011, 8:26</h4>
+			<p>А я 15 февраля бросил пить <img src="http://railway.kanaries.ru/style_emoticons/default/cw.gif" style="vertical-align:middle" emoid=":cw:" border="0" alt="cw.gif" /> . Ляпота&#33;
+			<br />
+			<!--IBF.ATTACHMENT_71409-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>resurs</b>  20.2.2011, 11:58</h4>
+			<p>Алкоголь это яд. Кто не умеет тот пусть не пьет.
+			<br />
+			<br />
+<div>
+	<strong><span class="edit"></span></strong>
+	<div>
+		
+<table style='width:auto;display:inline;' id='ipb-attach-table-7101-0-32888300-1497007193' cellspacing='0' cellpadding='0'>
+<tr>
+ <td>
+	<div id='ipb-attach-div-7101-0-32888300-1497007193'>
+		<div id='ipb-attach-ct-7101-0-32888300-1497007193'></div>
+		<a id='ipb-attach-url-7101-0-32888300-1497007193' href="http://railway.kanaries.ru/index.php?s=0f8adc70c019a1e70b94a33164789db4&amp;act=attach&amp;type=post&amp;id=7101" title="Все_пьют.jpg -  25,68 килобайт,  211" target="_blank"><img src="http://railway.kanaries.ru/uploads/monthly_02_2011/post-655-1298195915_thumb.jpg" id='ipb-attach-img-7101-0-32888300-1497007193' style='width:100;height:52' class='attach' width="100" height="52" alt="" /></a>
+		<div id='ipb-attach-cb-7101-0-32888300-1497007193' style='margin:0px'></div>
+	</div>
+ </td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+	fix_linked_image_sizes_attach_thumb( "7101-0-32888300-1497007193", parseInt("450"), parseInt("232"), "25,68 килобайт" );
+//]]>
+</script> 
+	</div>
+</div>
+<IDXSKIP><div>&nbsp;</div></IDXSKIP>
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  20.2.2011, 22:31</h4>
+			<p><!--quoteo(post=71409:date=20.2.2011, 9&#58;26:name=Александр/БВ)--><div class='quotetop'>Цитата(Александр/БВ &#064; 20.2.2011, 9&#58;26) <a href="index.php?act=findpost&amp;pid=71409"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->А я 15 февраля бросил пить <img src="http://railway.kanaries.ru/style_emoticons/default/cw.gif" style="vertical-align:middle" emoid=":cw:" border="0" alt="cw.gif" /> . Ляпота&#33;<!--QuoteEnd--></div><!--QuoteEEnd--><br />Сань,я тоже пол-года был в завязке и даже чтоб не вильнуло Пропотен принимал..... А потом чувствую-так продолжаться не может,я злой стал... Раньше стресс после работы купировал пивом, а вот когда отказался от этого универсального антидепрессанта (пусть и разрушающего здоровье),вот тут всё и началось.... По мне лучше квакнуть кружечку другую после работы и снять тем самым негатив,чем вообще не употреблять и потом на людей кидаться по незначительному поводу.... Всё равно-сколько Свыше нам отпущено-столько и проживём на этом белом свете и ни минутой больше.....
+			<br />
+			<!--IBF.ATTACHMENT_71454-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Александр/БВ</b>  21.2.2011, 5:04</h4>
+			<p>Если хочешь, по м-агенту скину тебе кое что чтобы бросить. Если только не побоишься))).
+			<br />
+			<!--IBF.ATTACHMENT_71455-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Sky-Clad</b>  21.2.2011, 15:29</h4>
+			<p><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->Всё равно-сколько Свыше нам отпущено-столько и проживём на этом белом свете и ни минутой больше.....<!--QuoteEnd--></div><!--QuoteEEnd--><br />Позволю себе с тобой не согласиться. Мы сами себя на тот свет усиленно тащим.
+			<br />
+			<!--IBF.ATTACHMENT_71483-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Александр/БВ</b>  21.2.2011, 20:21</h4>
+			<p><!--quoteo(post=71483:date=21.2.2011, 16&#58;29:name=Sky&#045;Clad)--><div class='quotetop'>Цитата(Sky&#045;Clad &#064; 21.2.2011, 16&#58;29) <a href="index.php?act=findpost&amp;pid=71483"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Позволю себе с тобой не согласиться. Мы сами себя на тот свет усиленно тащим.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Позволю себе с тобой согласиться&#33;
+			<br />
+			<!--IBF.ATTACHMENT_71504-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>resurs</b>  21.2.2011, 20:47</h4>
+			<p>Такую бурду у нас в России продают пить вообще не чего.
+			<br />
+			<!--IBF.ATTACHMENT_71509-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  21.2.2011, 20:54</h4>
+			<p><!--quoteo(post=71455:date=21.2.2011, 6&#58;04:name=Александр/БВ)--><div class='quotetop'>Цитата(Александр/БВ &#064; 21.2.2011, 6&#58;04) <a href="index.php?act=findpost&amp;pid=71455"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Если хочешь, по м-агенту скину тебе кое что чтобы бросить. Если только не побоишься))).<!--QuoteEnd--></div><!--QuoteEEnd--><br />Сань,спасибо тебе за заботу,но не хочу... Меня пока всё устраивает.
+			<br />
+			<!--IBF.ATTACHMENT_71513-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Александр/БВ</b>  21.2.2011, 20:59</h4>
+			<p><!--quoteo(post=71513:date=21.2.2011, 21&#58;54:name=седой дятел)--><div class='quotetop'>Цитата(седой дятел &#064; 21.2.2011, 21&#58;54) <a href="index.php?act=findpost&amp;pid=71513"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->не хочу... Меня пока всё устраивает.<!--QuoteEnd--></div><!--QuoteEEnd--><br />Не поверишь, но наркоманов тоже ВСЁ устраивает...
+			<br />
+			<!--IBF.ATTACHMENT_71514-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>седой дятел</b>  21.2.2011, 21:32</h4>
+			<p><!--quoteo(post=71514:date=21.2.2011, 21&#58;59:name=Александр/БВ)--><div class='quotetop'>Цитата(Александр/БВ &#064; 21.2.2011, 21&#58;59) <a href="index.php?act=findpost&amp;pid=71514"><img src='http://railway.kanaries.ru/style_images/ip.boardpr/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec-->Не поверишь, но наркоманов тоже ВСЁ устраивает...<!--QuoteEnd--></div><!--QuoteEEnd--><br />И закоренелых холостяков-то же&#33;...... <img src="http://railway.kanaries.ru/style_emoticons/default/ah.gif" style="vertical-align:middle" emoid=":ah:" border="0" alt="ah.gif" />  <img src="http://railway.kanaries.ru/style_emoticons/default/ag.gif" style="vertical-align:middle" emoid=":ag:" border="0" alt="ag.gif" />
+			<br />
+			<!--IBF.ATTACHMENT_71519-->
+			</p>
+		</div><!--Copyright-->
+
+<p class="printcopy">Форум Invision Power Board (http://nulled.ws)<br />&copy; Invision Power Services (http://nulled.ws)</p>
+
+	</div>
+</body>
+</html>

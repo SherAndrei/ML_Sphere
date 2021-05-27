@@ -1,0 +1,784 @@
+eboopo.jeunesse-global.net/c7016bf-skachat-mod-s-avtomaticheskoy-ustanovkoy-gta-5-d3db54f409
+<!DOCTYPE html>
+<html ng-app="anexApp" ng-controller="anexCtrl">
+<head>
+    
+    <title>Скачать мод с автоматической установкой gta 5</title>
+ 
+    
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|PT+Sans|PT+Sans+Narrow|Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+    <link href="http://www.anextour.com/grunt-minify/css-core.min.css?v=47" rel="stylesheet" />
+
+    
+</head>
+<body class="no-admin">
+    <nav class="navbar navbar-anex navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown" ng-repeat="(key, value) in topMenuItems | where:{ ParentId: 0 }">
+                    
+                    <ul class="dropdown-menu" ng-show="(topMenuItems | filter:{'ParentId': value.Id}).length > 0">
+                        <li ng-repeat="(key, value) in topMenuItems | where:{ ParentId: value.Id }">
+                            
+                            <ul class="dropdown-menu" ng-show="(topMenuItems | filter:{'ParentId': value.Id}).length > 0">
+                                <li ng-repeat="(key, value) in topMenuItems | where:{ ParentId: value.Id }">
+                                    
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    
+                    <ul class="dropdown-menu dropdown-menu-multi-ul">
+                        <li>
+                            <div class="row">
+                                <ul class="list-unstyled destination-dropdown-menu">
+                                    <li ng-repeat="destination in Destinations">
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right m-r-0">
+                <li>
+                    
+                </li>
+                <li>
+                    
+
+                </li>
+                <li ng-show="$root.Market.Market == 'ANEXRU' || $root.Market.Market == 'ANEXUK'">
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+    <div class="page-wrapper" popup-banner>
+    <div class="owl-wrapper" style="min-height: 120px;">
+    <div class="owl-carousel owl-theme js-main-owl-carousel" main-sliders>
+        
+    </div>
+</div>
+    <div class="page-body-wrapper"> </div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                        <div class="col-xs-2 smart-search  search-inputs">
+                            <input type="text" id="smartSearch"
+                                   ng-model="ms.SmartSearchSelected"
+                                   placeholder="   "
+                                   uib-typeahead="smartsearch for smartsearch in ms.SmartSearch($viewValue)"
+                                   typeahead-template-url="customTemplate.html"
+                                   ng-model-options="ms.SmartSearchOptions"
+                                   typeahead-input-formatter="ms.formatLabel($model)"
+                                   typeahead-min-length="2"
+                                   ng-focus="ms.SmartSearchFocus($event);"
+                                   ng-blur="ms.SmartSearchBlur($event);"
+                                   typeahead-on-select="ms.SelectedSmartSearch($item, $model, $label, $event);"
+                                   ng-style="{'border-color': MiniSearchMessage && '#f00'}"
+                                   class="form-control">
+                        </div>
+                        <div class="col-xs-2 search-inputs input-flight-days">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="flight-days" placeholder="">
+                                <span class="input-group-addon"><i class="fa fa-plane"></i></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 search-inputs input-nights">
+                            <ui-select ng-model="ms.SelectedNights.selected" theme="bootstrap">
+                                <ui-select-match placeholder="">{{$select.selected.Nights}}</ui-select-match>
+                                <ui-select-choices repeat="item in ms.Nights  | filter: $select.search">
+                                    <div ng-bind-html="item.Nights "></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                        <div class="col-xs-1 search-inputs input-nights">
+                            <ui-select ng-model="ms.SelectedNightsTo.selected" theme="bootstrap">
+                                <ui-select-match placeholder="">{{$select.selected.Nights}}</ui-select-match>
+                                <ui-select-choices repeat="item in ms.NightsTo | filter: $select.search">
+                                    <div ng-bind-html="item.Nights "></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+
+                        <div class="col-xs-1 search-inputs input-category-board">
+                            <select selectpicker="{noneSelectedText: ''}" multiple
+                                    ng-model="ms.SelectedStars"
+                                    ng-options="opt.Inc as opt.Name for opt in ms.Stars" class="category" data-size="5"></select>
+                        </div>
+                        <div class="col-xs-1 search-inputs input-category-board">
+                            <select selectpicker="{noneSelectedText: ''}" multiple
+                                    ng-options="opt.Inc as opt.Name for opt in ms.Meals"
+                                    ng-model="ms.SelectedMeals" data-size="5"></select>
+                        </div>
+                        <div class="col-xs-1 search-inputs input-adult-child">
+                            <div class="dropdown adult-dropdown">
+                                <div class="dropdown-toggle">
+                                    <input type="text" class="form-control" readonly role="button"
+                                           ng-value="SelectedAdult.selected.adult + SelectedChild.selected.child + ' '" />
+                                </div>
+                                <div class="dropdown-menu adult-dropdown-menu"> </div>
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
+                                    <div class="xs-p-10"> </div>
+                                            </ui-select-choices>
+                                        </ui-select>
+                                    </div>
+                                    <div class="xs-p-10" ng-show="SelectedChild.selected.child ></div>
+                                            </ui-select-choices>
+                                        </ui-select>
+                                        <div ng-show="SelectedChild.selected.child ><a href="/4372282/61159bd6b-ati-radeon-hd-4870-512mb-skachat-drayver-16631d1">2130939781</a> <a href="/f31fa5e38-skachat-torrent-pisayut-skrytaya-kamera-46633b2be0">писают камера скрытая Скачать торрент</a>  # <a href="/7aac4-ventcel-teoriya-veroyatnostey-11-izdanie-skachat-071db9a">73a627567ca18ff36f76e1</a>  &lt;&lt; <a href="/350054/752163/9c92de1e-skachat-realplayer-android-3f84c6057">Скачать андроид realplayer</a>  : <a href="/38e4876177-skachat-mp3-pesni-60-godov-ddecf7">1137132406</a> <a href="/147d9-malinin-net-puti-nazad-skachat-besplatno-1b7db8ced">ba39771d9bd2066b82d1a33</a>  &gt;&gt;&gt; <a href="/3d20c1-skachat-snayper-2-2013-cherez-torrent-f57d15">2 2013 через снайпер торрент Скачать</a>  --- <a href="/89b91a3-skachat-pesnyu-serdce-bet-3d3d55e50">сердце песню бьет Скачать</a>  &gt;&gt; <a href="/428b016293-skachat-igru-na-telefon-nokia-501-37234d">19b577c4ffd84835335f76686</a>  ??? <a href="/6268e791-skachat-knigu-trifonova-dom-na-naberezhnoy-d97d4">6c06f0b</a>  __ <a href="/2647575/67f63d1ef-eroticheskie-igry-na-pk-2017-skachat-torrent-6835cd">пк 2017 игры на скачать Эротические торрент</a>  &amp;&amp;&amp; <a href="/6592499/547287/696f560b9-aleksandr-malinin-skachat-torrent-06e5a7">торрент скачать Александр малинин</a>  &gt;&gt; <a href="/2747288/8053600/a7b06ba7b-skachat-left-4-dead-2-rutor-7e0919">47de949b1</a>  ## <a href="/4348805/4951850/2262a-new-tribute-kings-skachat-f458f7df">New tribute kings скачать</a>  &amp;&amp;&amp; <a href="/7297327/8b39148f-skachat-kak-pravilno-pisat-slova-b75749b72">1636157453</a> <a href="/d780e4e680-skachat-prezentaciyu-na-temu-ippp-5683f">презентацию иппп Скачать на тему</a>  ___ <a href="/8238324/80cc49-coil-skachat-mp3-6c1080f5da">01860f9008f7e367d73eb84</a>  - <a href="/1313680/3331910/9a42c-skachat-igru-vtoroe-prishestvie-cherez-torrent-681fd9a84">213679402</a> <a href="/2260855/87f95-skachat-mod-galacticraft-dlya-maynkraft-17-2-115daee9">Скачать мод galacticraft для майнкрафт 1.7 2</a>  &gt; <a href="/fba1b220a-radeon-6290-skachat-drayver-cb170">7046e6833dd38001d</a>  &amp;&amp;&amp; <a href="/4c482-kniga-remont-suzuki-grand-vitara-skachat-debca4c3">Книга ремонт сузуки гранд витара скачать</a>  # <a href="/7173796/8875261/edd4a3ad86-irvin-yalom-skachat-audioknigi-290ec952d">1108314506</a>   1" class="xs-mt-5">
+                                            <ui-select ng-model="SelectedChildAge2.selected" theme="bootstrap" search-enabled="false">
+                                                <ui-select-match>{{$select.selected.age}}</ui-select-match>
+                                                <ui-select-choices repeat="item in ChildAges">
+                                                    <div ng-bind-html="item.age "></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                        <div ng-show="SelectedChild.selected.child >651be99a58cc3e8d1fb76</div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-1 search-inputs input-search-button">
+                            
+                        </div>
+                        <div class="quick-select-countries" ng-class="{'qs-opened': ms.showQuickSelectHolder}" @*ng-show="ms.showQuickSelectHolder" *@>
+                            <ul>
+                                <li ng-repeat="item in ms.quickSelectCountries" ng-click="quickSearchSelectItemClick(item);" style="z-index: 99999;">
+                                    <span class="flag-icon flag-icon-{{item.countryCode | lowercase}}"></span>
+                                    <span ng-bind="item.name"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="mini-flights">
+
+        </div>
+    </div>
+</div>
+
+
+        <div class="home-layout-holder">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                        
+<div data-zoneid="z1" class="zone-container" data-zone="true">
+            <div data-widgetid="293" data-widgetname="HomeLastMinute">
+                
+<div class="last-minute" last-minute>
+    <div class="row">
+        <div class="panel-group">
+            <div class="col-sm-3 xs-pr-5">
+                <div class="panel panel-default">
+                    
+                    <div class="last-minute-destinations" scrollable>
+                        <div id="action_country_{{destination.SamoId}}" ng-repeat="destination in StatesByTown" class="last-minute-destinations-item"
+                             role="button" ng-click="SelectLastMinute(destination.SamoId);"
+                             ng-class="{active: destination.SamoId === SelectedLastMinuteDestination.SamoId}">
+                            <span class="flag-icon flag-icon-{{destination.CountryCode | lowercase}}"></span> <span ng-bind="destination.Name"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 xs-pl-5 xs-pr-5">
+                <div class="panel panel-default last-minute-view"
+                     ng-style="lastMinuteBackgroundImage()" scrollable>
+                    <div class="background-pattern">
+                        <div class="panel-body" ng-repeat="item in LastMinuteActions">
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-4 xs-pl-0 last-minute-right">
+                <div class="row">
+                    <div class="col-sm-12 news-tabs">
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active">
+                                
+                            </li>
+                            <li role="presentation" class="">
+                                
+                            </li>
+                            <li role="presentation" class="last-child">
+                                
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="important-information" news-list="{type: 'information', take: 5}" ng-style="Marketheight(Market.Market)">
+                                <div class="tab-pane-content" ng-style="Marketheight(Market.Market)">
+                                    <div class="list-group" ng-style="Marketheight(Market.Market)" scrollable>
+                                        
+                                    </div>
+                                    <div class="all-content-link">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="company-news" news-list="{type: 'news', take: 5}" ng-style="Marketheight(Market.Market)">
+                                <div class="tab-pane-content" ng-style="Marketheight(Market.Market)">
+                                    <div class="list-group" ng-style="Marketheight(Market.Market)" scrollable>
+                                        
+                                    </div>
+                                    <div class="all-content-link">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="company-events" news-list="{type: 'companyevent', take: 5}" ng-style="Marketheight(Market.Market)">
+                                <div class="tab-pane-content" ng-style="Marketheight(Market.Market)">
+                                    <div class="list-group" ng-style="Marketheight(Market.Market)" scrollable>
+                                        
+                                    </div>
+                                    <div class="all-content-link">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <ul class="services-links" services-links>
+                            <li class="ru-market" ng-show="$root.Market.Market == 'ANEXRU'">
+                                
+                            </li>
+                            <li class="ru-market" ng-show="$root.Market.Market == 'ANEXRU' || $root.Market.Market == 'ANEXKZ'">
+                                
+                                </a>
+                            </li>
+                            <li class="ru-market" ng-show="$root.Market.Market == 'ANEXRU' || $root.Market.Market == 'ANEXKZ'">
+                                
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+            </div>
+            <div data-widgetid="490" data-widgetname="HomePromoPrice">
+                
+<div ng-show="PromoPriceList.length" promo-price>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel-group" style="margin-top: 0;">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        
+                        <div owl-carousel="PromoPriceList" owl-options="LastMinuteSliderOptions" owl-model="PromoPriceList" class="promo-price owl-theme equal">
+                            <div class="item">
+                                <div class="panel panel-default">
+                                    <div class="background-img owl-lazy" style="height: 200px;" data-src="{{lastMinuteSliderImage(item.HotelInc) | trustAsResourceUrl}}">
+                                        
+                                    </div>
+                                    <div class="panel-body">
+                                        <p class="hotel-name">
+                                            
+                                            <span class="category" ng-bind="item.StarName"></span>
+                                        </p>
+
+                                    </div>
+                                    <div class="panel-footer">
+                                        <p class="text-muted">
+                                            <span ng-bind="LastMinuteView.Name | toFirstUpper"></span> &raquo;
+                                            <span ng-bind="item.RegionName | toFirstUpper"></span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+</div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                        <div class="col">
+                            
+<div data-zoneid="z2" class="zone-container" data-zone="true">
+</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <div class="col">
+                            
+<div data-zoneid="z3" class="zone-container" data-zone="true">
+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+                        
+<div data-zoneid="z4" class="zone-container" data-zone="true">
+</div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xs-12 col-sm-12">
+                        
+<div data-zoneid="z5" class="zone-container" data-zone="true">
+</div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+                        
+<div data-zoneid="z6" class="zone-container" data-zone="true">
+</div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
+                        
+<div data-zoneid="z7" class="zone-container" data-zone="true">
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="footer">
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-sm-8">
+
+                    <div class="m-t-45" ng-show="$root.Market.Market == 'ANEXRU'">
+                        
+                        </a>
+                        
+                        </a>
+                        
+                        </a>
+                        
+                        </a>
+                        
+                        </a>
+                    </div>
+
+
+                    <div class="m-t-45" ng-show="$root.Market.Market == 'ANEXUK'">
+                        
+                        </a>
+                        
+                        </a>
+                        
+                        </a>
+
+                        
+                        </a>
+                        
+                        </a>
+                    </div>
+
+                    <div class="m-t-45" ng-show="$root.Market.Market == 'ANEXKZ'" >
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="col-sm-4">64cb95a</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row xs-mt-15">
+                <div class="col-sm-12 text-right xs-mb-10">
+                    
+                    <div currency class='currency-wrapper'><div style='display: inline-block; cursor: pointer;' ng-click='cm.CurrencyModal.open()'><strong class='xs-mr-5'>30.03.2017</strong> <i class='fa fa-usd'></i> : <span class='currency-rate'>58.45</span> <span>|</span> <i class='fa fa-eur'></i> : <span class='currency-rate'>63.07</span></div></div>
+                </div>
+            </div>
+            <div class="row">30e07b</div>
+                <div class="col-sm-7"><div   >
+		
+		
+		
+			
+		
+		<div   >
+			
+	            <b>Данный мод требует:</b> <br>
+	            <br>
+	        
+			<p >
+				Данный мод позволяет спавнить любые объекты, начиная от персонажей, транспорта и вещей, до различных объектов. Вы также можете задавать координаты где именно объект должен появиться.<br><br>Управление:F8 — чтобы открыть меню, NumPad чтобы выбирать<br>Функцию "назад" или "выход" из меню мода выполняет кнопка num0<br>Чтобы заспавненный транспорт ехал, нужно в настройках мода (extras settings) отключить параметр freeze on spawn.
+			</p>
+			<br>
+			
+		</div>
+	</div><div  ><p>Для GTA 5, как и для других частей GTA, существуют моды с автоматической установкой. Они не требуют вашего вмешательства и устанавливаются с помощью обычного лаунчера. Вам достаточно выбрать путь и способ установки, после чего начнется загрузка модов, плагинов, моделей , катеров, лодок, вертолетов и других дополнений.</p>
+<p>Они в автоматическом режиме будут внедрены в игру. Вам будет достаточно перезагрузить компьютер для того, чтобы изменения в игре вступили в силу. Чаще всего этого не требуется. Вы спокойно, после установки, можете заходить и играть.</p>
+
+<p>GTA V Mod Manager — облегчает установку дополнений. Делает процесс практически автоматическим. Представлена последняя версия. Все инструкции ниже.</p>
+
+<p><strong>Что потребуется? (Все программы должны быть актуальных версий!)</strong></p>
+<p> (rpf, объединение xml файлов в rpf)</p>
+<p> (для asi)</p>
+<p> (lua)</p>
+<p> (dll/cs)</p>
+
+<p><span>Всегда создавайте резервные копии заменяемых файлов!</span></p>
+<p>Если у вас уже есть установленные .rpf или другие моды вручную, без использования этой программы, то перед тем, как вы соберетесь зайти в GTA:Online они будут удалены в целях безопасности вашего аккаунта. Их стоит заранее перенести, в другую папку, перед тем как играть в онлайн версию.</p>
+
+<p><strong>Особенности:</strong></p>
+<ul>
+<li>Хранится отдельно от основной папки</li>
+<li>Все дополнения устанавливаются автоматически</li>
+<li>Удалять и устанавливать модели можно через саму программу (Работает перетаскивание). При этом, хранятся они не постоянно в папке с игрой, а только, когда активируете</li>
+<li>Расположение модов в списке можно менять</li>
+<li>Модификация сама защищает Вас от бана в Rockstar, блокирует gtav.exe по средствам брандмауэра</li>
+<li>Social Club отключается автоматически в случае необходимости</li>
+<li><span>Есть множество способов настройки, например, отключать моды, когда выходите на рабочий стол</span></li>
+<li>Гибкий config, изменяется непосредственно в самом приложении</li>
+<li>Хотите изменить название? Нажмите 2 раза</li>
+<li>Можно легко настроить высокий приоритет для gtav.exe</li>
+<li>Режим ГТА 5 Онлайн отключает все моды перед входом в онлайн версию</li>
+<li>Извещения об обновлениях</li>
+<li>Предупреждение пользователя об удалении всех дополнений при входе в Grand Theft Auto V по Интернету (если не отключили их) и другие полезные функции для новичков (Nanny mod)</li>
+</ul>
+<p><!--QuoteBegin--><div ><!--QuoteEBegin--><strong>FAQ</strong><br>  <br> <strong>Получаете ошибку с ScriptHookV?</strong><br> Скачайте актуальную версию , поместите <em>scripthookv.dll</em> и <em>dinput8.dll</em> в <em>GTA V Mods</em>. Затем нажмите "<em>Reload Mods</em>".<br>  <br> <strong>У меня вредоносное оповещение о "gtav-hashes.no-ip.net"</strong><br> Этот вебсайт информирует Вас об обновлениях сфота. Он безопасен. Можете заблокировать его, но вы не сможете получать актуальную информацию о новых версиях программы.<br>  <br> <strong>Выскакивает сообщение "Your game is corrupt"?</strong><br> Это происходит, так как вы установили модификатор RPF файлов и не активировали <em>OpenIV.asi</em>. Активируйте его или восстановите RPF из резервной копии.<br>  <br> <strong>Моды с XML расширением устанавливаются через этот менеджер?</strong><br> Прежде нужно объединить их в RPF с помощью . Смотрите инструкцию к моду, как это делать.<br>  <br> <strong>Получаю ошибку, игра запущена не с помощью "Steam". Что делать?</strong><br> Зайдите в настройки (шестеренка) и выберите "<em>Setup Wizard</em>". Убедитесь, что игра установлена в Steam, а не в Rockstar Warehouse. Нажмите "<em>Apply</em>".<br>  <br> <strong>Rockstar Launcher пытается скачать исходные файлы RPF при установке. Как остановить это?</strong><br> Убедитесь, что у вас новая . Так же в настройках можно отключить проверку SC файлов.<br>  <br> <strong>При включении модов через программу, они не появляются в папке с игрой. Почему?</strong><br> Убедитесь, что ваш жесткий диск отформатирован в NTFS системе, моды и игра находятся на одном носителе. Хотите обойти эти ограничения? В настройках измените "Symlink mode" на "File Copy Mode". Установка модов будет занимать больше времени.<br>  <br> <strong>Не показываются модификации в списке.</strong><br> Установите  (для ASI модов). Если хотите иметь LUA модификации, установите расширение . DLL/CS в прямой зависимости от .  rpf и xml.<span> Все лаунчеры должны быть последних версий.</span><br>  <br> <strong>Как удалить GTA V Mod Manager?</strong><br> Нажмите онлайн ГТА. Затем удалите исполняемый файл.<!--QuoteEnd--></div><!--QuoteEEnd--></p>
+
+<p><strong>Источник:</strong> gta5-mods.com/tools/gtav-mod-manager</p></div><section   >
+    
+    
+    <div >
+        <div >
+            <div >
+                <div ><img  src="https://cs2.gtavicecity.ru/attachments/2015-03/small-fit/d399152dc846b4255806b91eced2c17812c601a2/3067-gta-4-mods.jpg" alt="Моды для GTA 4 - скачать бесплатно с автоматической установкой" title="Моды для GTA 4 - скачать бесплатно с автоматической установкой"></div>В этом разделе нашего сайта вы можете бесплатно скачать моды для GTA 4 - различные надстройки для улучшения графики и крутые эффекты, загрузочные экраны и меню, новые текстуры, объекты и целые трассы. В этой категории сайта нет машин и мотоциклов, скинов и оружия - если вы ищите такие модификации, то воспользуйтесь соответствующим пунктом меню для перехода в нужный раздел.<br>
+<br>
+Большинство модов для GTA 4 в этом разделе добавлены нашими пользователями и имеют достаточно подробное описание, из которого вы сразу поймёте для чего предназначена модификация. На странице каждого мода вы найдёте красочные скриншоты из игры, а в комментариях ниже сможете узнать мнение игроков и высказать своё.<br>
+<br>
+Абсолютно все модификации на нашем сайте (не только моды для GTA 4) снабжены уникальным автоматическим установщиком для быстрой и лёгкой установки в игру. Вам больше не нужно копировать файлы, искать и изменять какие-то настройки: авто-установщик сделает это за вас! Но на нашем сайте есть возможность скачать и простой ZIP-архив модификации с подробными инструкциями в ReadMe.txt, если вы желаете проделать всё вручную.            </div>
+        </div>
+            </div>
+    <dfn data-></dfn>
+    
+    <!--noindex-->
+    
+    <!--/noindex-->
+    
+<noscript>
+    
+</noscript>
+    <p >
+        Бесплатные моды и модификации, скачиваемые с нашего сайта для GTA 4, найденные с использованием фильтра и устанавливаемые удивительным автоматическим установщиком, созданным, несомненно, гениальным программистом, привнесут в GTA IV новые модели, заменят надоевшие аспекты игры, создадут новый игровой опыт, разнообразят мир занятными текстурами.    </p>
+</section><div   >
+        <p >
+            Топ лучших        </p>
+        <p >
+            <select  >
+                <option value="karma">по рейтингу</option>
+                <option value="mods">по модам</option>
+                <option value="comments">по комментариям</option>
+            </select>
+        </p>
+    </div><div   >
+
+
+					
+					<p></p>
+<p>В GTA 5, особенно в последнее время, для нас предлагается всё большее и большее количество модов самых разнообразных автомобилей, которые мы успешно можем добавить в игровой мир, разнообразив его. Но каждый раз мы заморачивались с установкой, копируя и перемещая какие-то папки, теперь же для нас доступна специальная программа <b>Vehicle Installer</b> для автоматической установки модов на машины в GTA 5.<span ></span></p>
+<p>Да, вы абсолютно правильно поняли, нам не понадобится теперь , потому что устанавливать машины для ГТА 5 с автоматической установкой окажется гораздо быстрее и комфортнее для нас, лишь выбрав несколько параметров программы, указав необходимый путь и предоставив файлы для замены, об этом более подробно и поговорим далее.</p>
+
+<p>На самом деле, пользоваться программой Vehicle Installer для автоматической установки машин в GTA 5 очень просто, для этого лишь необходимо скачать саму программу с нашего сайта, у вас появится архив:</p>
+<p></p>
+<p>Который необходимо будет распаковать:</p>
+<p></p>
+<p>Получаем папку:</p>
+<p></p>
+<p>Заходим в неё и запускаем программу кликом по следующему ярлыку:</p>
+<p></p>
+<p>И перед нами запускается окно программы:</p>
+<p></p>
+<p>Затем уже начинается сам процесс инсталляции мода автомобиля с помощью программы <strong>Vehicle Installer для GTA 5</strong><IDXSKIP>.</IDXSKIP></p>
+<p>Для того, чтобы установить мод, вам необходимо сделать следующие шаги, а для большей наглядности демонстрация установки мода будет показана на примере мода :</p>
+<p></p>
+<p>Все  имеют инструкцию по установке, в ней прописана директория, в которую мы должны перекинуть файлы:</p>
+<p></p>
+<p>Стрелка <b>№1</b> указывает на поле выбора папки для инсталляции мода <b>Install in x64e</b> (<b>main folder</b>) или <b>Install in update folder</b>, что означает в переводе на русский язык: установка в основную папку или в папку обновлений.</p>
+<p>В данном случае выбираем первый вариант, для автоматической установки других машин в ГТА 5 может понадобится выбор второго варианта.</p>
+<p>Стрелка <b>№2</b> указывает на поле, в котором необходимо указать расположение установленной игры GTA 5.</p>
+<p>Стрелка <b>№3</b> указывает на поле, в котором располагается файл мода, выбрать его можем нажав на кнопку <b>Browse.</b></p>
+<p>Обращаем ваше внимание на то, что на данный момент доступно лишь расширение <b>ZIP-архива</b>, а другие расширения возможно будут добавлены в последующих версиях программы <b>Vehicle Installer для GTA 5</b>, если у вас другой формат преобразуйте его в <b>ZIP</b> для успешной установки мода.</p>
+<p>После проделанных действий остаётся нажать кнопку <b>INSTALL</b>, на которую указывает 4-я стрелка.</p>
+<p>В результате появляется уведомление об успешном завершении операции!</p>
+
+<p>Если даже после прочтения инструкции у вас остались какие-то вопросы, то рекомендуем просмотреть видео автоматической установки машин в GTA 5, где по описанным пунктам продемонстрирован полный процесс установки мода автомобиля в ГТА 5!</p>
+
+<p><noindex></noindex></p>
+
+
+<!--noindex--><br><!--/noindex-->
+
+
+
+
+
+</div><div   ><div ><noindex></noindex></div><div   ><p><strong>Vehicle Installer — автоматическая установка машин в GTA 5 —</strong> данная программа позволяет в автоматическом режиме устанавливать в игру модели . Для установки вам необходимо всего лишь указать нужный путь.</p><p>Пример работы программы продемонстрирован в видео ниже:</p></div><div ><p >Видео</p><ul ><li> </li></ul></div><br><p >Нерабочая ссылка или проблемы с модом? Нажмите Ctrl + Enter и сообщите о проблеме!</p></div><div   >
+<p>Я смотрю помагают тут всем, вах просто.</p></div><div   >
+		<div >
+            
+            
+<!-- ÐÐ´Ð°Ð¿Ñ. loadgta (Ð²ÐµÑÑ) -->
+
+
+            
+            <br><div><img src="/uploads/posts/2016-07/1467727418_bezymyannyy.png" alt="Автоматическая установка машин в GTA 5" title="Автоматическая установка машин в GTA 5"></div>
+            
+            <br>Теперь процесс установки транспорта в GTA 5 займет считанные секунды. 
+		</div>
+		
+        
+      
+        
+         
+        
+		<p>Процесс установки скачанного нового транспорта для GTA 5 превращался в рутину, особенно если вы устанавливали очень большое количество авто. Теперь с данной программой Vehicle Installer 2.0 этот процесс будет полностью автоматизирован! Для этого просто указываете путь к папке с файлами автомобиля. Есть поддержка установки авто в качестве новых, не заменяя старые.</p>
+
+<p><b>Как пользоваться?</b></p>
+<p>Распаковываем программу куда-нибудь на рабочий стол, запускаем. Далее просто указываем путь к папке с новым авто и жмем install! </p>
+<p>После завершения установки вы будете оповещены, закрываем программу и идем проверять машину в игре. </p>
+		<br>
+		
+        
+        
+<!-- ÐÐ´Ð°Ð¿ÑÐ¸Ð²Ð½ÑÐ¹ Ð´Ð»Ñ loadgta -->
+
+
+        
+        
+        
+ 
+
+    
+    
+
+
+    
+            <span ></span>
+	</div><div   >
+  
+ <p >
+
+
+Мир Лос-Сантоса и его предместий, созданный Rockstar в GTA 5, это поистине удивительное место. Сюда хочется возвращаться даже просто, чтобы провести время, не беспокоясь о миссиях, богатстве, деньгах и прочем материализме. Ты просто садишься на любимую тачку, врубаешь любимую музыку и катаешься все ночь, слушая болтовню ведущего, примечая случайные встречи и наслаждаешься видами. И это лишь один из способов, как проводить время в GTA 5. Эта игра включает огромное количество занятий, как в одиночку, так и с товарищами или случайными игроками. А еще, если проявить инициативу, то в GTA 5 вы можете стать тем, кем в оригинале быть не предусмотрено — копом, офицером полиции, тем, кто в обычной игре только мешается.
+ </p> 
+</div><div   >
+
+<p >Описание: TinyMP для GTA 5 - очередной мод мультиплеера для одиночного режима GTA 5. Данный мод основан на GTACoOp, поддержка которого, к сожалению, была...</p>
+</div><div   >
+<p >Рейтинг</p>
+
+</div><div   ><p>Vehicle Installer — автоматическая установка машин в GTA 5 — данная программа позволяет в автоматическом режиме устанавливать в игру модели машин для GTA 5. Для установки вам необходимо всего лишь указать нужный путь.</p></div><div   >
+
+<p>Здесь вы найдете самые разные машины для игры Grand Theft Auto 4. Кто-то предпочитает суперкары, а кому-то, напротив, больше по душе родные русские ВАЗы, ГАЗы, КАМАЗы и другие шедевры российского и советского автопрома. Самое главное, что и те, и другие будут довольны, так как на сайте ru-gta.ru можно найти любой автомобиль для игры ГТА 4 с автоматической установкой. Воспользуйтесь возможностью <strong>скачать машины для GTA 4</strong>, и вы будете очень довольны.<br>Хоть стандартных машин в Grand Theft Auto 4 достаточно много, все равно иногда хочется погонять на излюбленной «Девятке» или же прокатиться на самой дорогой и быстрой машине на свете – Bugatti Veyron. Я уверен, что в нашем каталоге автомобилей вы найдете множество моделей, на которых вам захочется прокатиться, тем более что это можно сделать совершенно бесплатно. Стоит также отметить, что все представленные на сайте машины для игры ГТА 4 проработаны во всех деталях. А это значит, что они ломаются и в их корпусе остаются дырки от пуль. От всей души желаю вам найти именно то авто для GTA 4, которое вы искали.</p>
+</div><div   >
+
+<!-- gta-gaming_links -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+<p>Конечно, игра gta 4 довольно-таки интересная, возможность freeplay делает её ещё в разы интереснее, однако какой бы ни была игра, она всё равно рано или поздно надоест. Вам захочется чего-то нового, абсолютно нового, но как это сделать? Ваше решение - <strong>моды для gta 4</strong>. Найти вы их можете, на нашем сайте, в соответствующей категории. 
+</p><p>Для тех кто не знает: моды - это такие файлы, которые вносят в вашу игру какие-то изменения, например, вы можете добавить новое оружие, новую машину или даже новое здание или дом. 
+</p><p>Помимо таких - простых модов, есть также моды, которые вносят дополнительные квесты, с новым сюжетом и не похожими заданиями, кроме обычных, одноразовых квестов, можно также скачать моды с сюжетом, где будет целая цепь событий, разных, интригующих, может даже скучноватых. Конечно, то, что будет разработано автором мода, не будет так хорошо сделано, как создателями игры, но помимо самодельных модов, существуют ещё и официальные, которые были выпущены создателями игры, их вы также найдёте на нашем сайте. 
+</p><p>Дабы вам было легче и проще понять суть самого мода, вы можете прочитать наше грамотно расписанное описание, в котором всё поставлено на свои места, а быстрое и бесплатное скачивание ускорит время до долгожданной установки мода. Каждый мод мы проверяем и добавляем только рабочие <em>моды для gta 4</em>. Также, чтобы правильно установить мод, вы можете прочитать статьи в соответствующем разделе на нашем сайте.</p>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+</div><div   >
+      
+      <p>Выберите одну из следующих категорий, чтобы начать просматривать последние моды для GTA 5 на ПК:</p>
+    </div><div   >
+		
+              
+  
+<p>Все моды устанавливаются только для одиночного режима игры Grand Theft Auto 5. Использование модификаций в Online запрещено.<br>
+Для GTA 5 есть несколько типов дополнений – скрипты, моды с автоматической установкой и моды, вносящие изменения в файлы игры.</p>
+<h3><span ></span>Установка скриптов при помощи Script Hook</h3>
+<p>Все скрипты запускаются только при наличии актуальной версии дополнения Script Hook V (необходимая библиотека для запуска). Стандартный формат скриптов – .asi. Копируется в корневой каталог (туда же, где расположен инсталляционный файл GTA5.exe).</p>
+<ul>
+<li>Установите последнюю версию <strong></strong></li>
+<li>Скопируйте файлы скрипта в корневой каталог игры (со скриптом .asi может предоставляться и конфигурационный файл .ini. Копируется туда же).</li>
+<li>Стандартный путь в Steam-версии — R:\SteamLibrary\steamapps\common\Grand Theft Auto V. У вас будет отличаться только буква локального диска</li>
+<li>Запускайте игру, и проверяйте работоспособность скрипта</li>
+</ul>
+
+<p>Все скрипты написаны на языке семейства .Net, поэтому <strong>требуется наличие следующих установленных программ</strong> на вашем компьютере:</p>
+<ul>
+<li>Net.Framework 4.0 или выше.</li>
+<li>Microsoft Visual C++ Redistributable Package для Visual Studio 2013 x64</li>
+</ul>
+<p>Если хоть одна из программ будет отсутствовать, скрипты не будут работать!</p>
+<ul>
+<li>Установите актуальную версию <strong></strong> (нужна во всех случаях)</li>
+<li>Установите последнюю версию <strong></strong></li>
+<li>Перенесите все файлы из архива с ScriptHook.Net</li>
+<li>У вас появится папка scripts – сюда переносите все скрипты, которые написаны на базе языков .Net (форматы net.dll, ini, cs, dll)</li>
+<li>Зайдите в игру, и нажмите клавишу <strong>Insert</strong> для обновления конфигурационного файла</li>
+</ul>
+
+<ul>
+<li>Загрузите последнюю версию <strong></strong></li>
+<li>Загрузите Lua Plugin (специальная библиотека, которая расширяет возможности Script Hook V благодаря языку lua)</li>
+<li>Файлы скриптов переносите в папку addins. Ее путь будет следующий R:\SteamLibrary\steamapps\common\Grand Theft Auto V\scripts\addins</li>
+<li>Зайдите в игру, и нажмите клавишу <strong>Insert</strong> для обновления конфигурации</li>
+</ul>
+<p>Вместе с скриптом lua может быть конфигурационный файл .ini. Его скидывайте туда же! Для Lua Plugin все скрипты имеют формат .lua, и иногда .cs.</p>
+
+<p>Все дополнения, которые вносят изменения в файлы игры GTA 5, редактируются программой OpenIV.</p>
+<p>Вы просто заменяете оригинальные файлы на те, которые находятся в архиве. На сайте для каждого такого мода описаны полные пути, по которым нужно проследовать в каталоге, и файлы, которые нужно заменить.</p>
+
+<p>Устанавливаются моды с этим дополнением только в том случае, если написаны на основе движка Rage. Скидываются в папку plugins. Она создается после копирования файлов из архива с <strong></strong>. Используется крайне редко!</p>
+
+<p>Это универсальная программа для управления вашими модами. По ссылке ниже можете посмотреть полную инструкцию по установке, управлению, и описанию программы. <strong></strong><IDXSKIP>!</IDXSKIP></p>
+
+
+           	 
+	
+
+</div><div   >
+<p >
+<select  >
+<option value="karma">por valoraci&#xF3;n</option>
+<option value="mods">por n&#xFA;mero de mod</option>
+<option value="comments">por el comentario conteo</option>
+</select>
+</p>
+</div>
+          
+                    <p class="text-right" ng-show="$root.Market.Market == 'ANEXRU'">
+                        <span class="footer-list-item">     :</span>
+                        
+                        
+                        
+                        
+                    </p>
+                    <p class="text-right" ng-show="$root.Market.Market == 'ANEXUK'">
+                        <span class="footer-list-item">     :</span>
+                        
+                        
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+    
+
+
+
+
+
+
+    
+
+
+
+    
+    
+    
+    
+
+
+
+    
+
+    
+    
+    
+    
+
+
+    
+<div id="om-b2tl9l2odpwy9wcy-holder"></div><script>var b2tl9l2odpwy9wcy,b2tl9l2odpwy9wcy_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){b2tl9l2odpwy9wcy_poll(function(){if(window["om_loaded"]){if(!b2tl9l2odpwy9wcy){b2tl9l2odpwy9wcy=new OptinMonsterApp();return b2tl9l2odpwy9wcy.init({"u":"13439.534107","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmstr.com/app/js/api.min.js",o.async=true,o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;b2tl9l2odpwy9wcy=new OptinMonsterApp();b2tl9l2odpwy9wcy.init({"u":"13439.534107","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script></body>
+</html>
+

@@ -1,0 +1,808 @@
+pontin.ru/technical/windows/securety/zablokirovat-dovstup-internet
+<!DOCTYPE HTML>
+<html prefix="og: http://ogp.me/ns#" lang="ru-ru" dir="ltr"  data-config='{"twitter":0,"plusone":0,"facebook":0,"style":"paper"}'>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="https://pontin.ru/technical/windows/securety/zablokirovat-dovstup-internet" />
+	<meta name="keywords" content="заблокировать, доступ в интернет, ipsec, закрыть доступ в интернет" />
+	<meta name="title" content="Заблокировать доступ в интернет" />
+	<meta property="og:url" content="https://pontin.ru/technical/windows/securety/zablokirovat-dovstup-internet" />
+	<meta property="og:title" content="Заблокировать доступ в интернет" />
+	<meta property="og:type" content="article" />
+	<meta property="og:description" content="Как заблокировать доступ к интернет ресурсам, используя встроенные в Windows средства IPSec в качестве межсетевого экрана" />
+	<meta name="description" content="Как заблокировать доступ к интернет ресурсам, используя встроенные в Windows средства IPSec в качестве межсетевого экрана" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Заблокировать доступ в интернет</title>
+	<link href="https://pontin.ru/component/search/?Itemid=335&amp;id=75:zablokirovat-dovstup-internet&amp;format=opensearch" rel="search" title="Искать pontin.ru" type="application/opensearchdescription+xml" />
+	<link href="/templates/yoo_peak/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/media/k2/assets/css/magnific-popup.css?v2.7.1" rel="stylesheet" type="text/css" />
+	<link href="/media/k2/assets/css/k2.fonts.css?v2.7.1" rel="stylesheet" type="text/css" />
+	<link href="/components/com_k2/css/k2.css?v2.7.1" rel="stylesheet" type="text/css" />
+	<link href="/components/com_jcomments/tpl/default/style.css?v=3002" rel="stylesheet" type="text/css" />
+	<link href="/media/template/widgetkit-04696832-04c5851e.css" rel="stylesheet" type="text/css" />
+	<script src="/media/template/jquery.min-014d511f.js?fe1658ab96be96a0eb83b2a88b98076b" type="text/javascript"></script>
+	<script src="/media/template/jquery-noconflict-f91fd73c.js?fe1658ab96be96a0eb83b2a88b98076b" type="text/javascript"></script>
+	<script src="/media/template/jquery-migrate.min-060a0594.js?fe1658ab96be96a0eb83b2a88b98076b" type="text/javascript"></script>
+	<script src="/media/k2/assets/js/jquery.magnific-popup.min.js?v2.7.1" type="text/javascript"></script>
+	<script src="/media/k2/assets/js/k2.frontend.js?v2.7.1&amp;sitepath=/" type="text/javascript"></script>
+	<script src="/components/com_jcomments/js/jcomments-v2.3.js?v=12" type="text/javascript"></script>
+	<script src="/components/com_jcomments/libraries/joomlatune/ajax.js?v=4" type="text/javascript"></script>
+	<script src="/media/template/widgetkit-05771d8e-90221051.js" type="text/javascript"></script>
+	<script src="/media/template/bootstrap.min-3261fbec.js?fe1658ab96be96a0eb83b2a88b98076b" type="text/javascript"></script>
+
+<link rel="apple-touch-icon-precomposed" href="/templates/yoo_peak/apple_touch_icon.png">
+<link rel="stylesheet" href="/media/template/bootstrap-bbb26cf0.css">
+<link rel="stylesheet" href="/media/template/theme-ccdc7666.css">
+<script src="/media/template/theme-a0b1f7e4.js"></script>
+</head>
+
+<body class="tm-sidebar-a-right tm-sidebars-1 tm-noblog">
+        <div class="tm-sidebar-fixed tm-sidebar-togglebar">
+    <div class="tm-sidebar uk-visible-large">
+
+        
+                <nav class="tm-sidebar-nav">
+            <ul class="uk-navbar-nav uk-hidden-small"><IDXSKIP><li><a href="/"><i class="uk-icon-home"></i> ГЛАВНАЯ</a></li></IDXSKIP><IDXSKIP><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="/hobby"><i class="uk-icon-film"></i> ХОББИ</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li class="uk-parent"><a href="/hobby/amv"><i class="uk-icon-youtube-play"></i> AMV</a><ul class="uk-nav-sub"><li><a href="/hobby/amv/my-amv">МОИ КЛИПЫ</a></li><li><a href="/hobby/amv/other-amv">ЧУЖИЕ КЛИПЫ</a></li></ul></li><li class="uk-parent"><a href="/hobby/games"><i class="uk-icon-gamepad"></i> ИГРЫ</a><ul class="uk-nav-sub"><li><a href="/hobby/games/rf-online">RF-online</a></li><li><a href="/hobby/games/call-of-duty-4">Call of Duty 4</a></li><li><a href="/hobby/games/aion">AION</a></li></ul></li><li><a href="/hobby/kino"><i class="uk-icon-video-camera"></i> КИНО</a></li><li><a href="/hobby/pc"><i class="uk-icon-desktop"></i> КОМПЬЮТЕРЫ</a></li></ul></div></div></div></li></IDXSKIP><li class="uk-parent uk-active" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="/technical"><i class="uk-icon-cog"></i> ТЕХНИЧЕСКАЯ</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li class="uk-parent uk-active"><a href="/technical/windows"><i class="uk-icon-windows"></i> WINDOWS</a><ul class="uk-nav-sub"><li class="uk-active"><a href="/technical/windows/securety">Безопасность</a></li></ul></li><li class="uk-parent"><a href="/technical/linux"><i class="uk-icon-linux"></i> LINUX</a><ul class="uk-nav-sub"><li><a href="/technical/linux/pfsense">Pfsense (интернет-шлюз)</a></li></ul></li><li><a href="/technical/android"><i class="uk-icon-android"></i> ANDROID</a></li><li><a href="/technical/firmware"><i class="uk-icon-cogs"></i> ПРОШИВКИ</a></li><li><a href="/technical/instructions"><i class="uk-icon-life-saver"></i> ИНСТРУКЦИИ</a></li><li class="uk-parent"><a href="/technical/web"><i class="uk-icon-globe"></i> WEB</a><ul class="uk-nav-sub"><li><a href="/technical/web/joomla">Joomla</a></li><li><a href="/technical/web/wordpress">WordPress</a></li><li><a href="/technical/web/virtuemart">VirtueMart</a></li></ul></li><li><a href="/technical/bat">BAT</a></li><li><a href="/technical/mail">MAIL</a></li></ul></div></div></div></li><IDXSKIP><li><a href="/gallery"><i class="uk-icon-image"></i> ГАЛЛЕРЕЯ</a></li></IDXSKIP><IDXSKIP><li><a href="/funny"><i class="uk-icon-smile-o"></i> ЮМОР</a></li></IDXSKIP><IDXSKIP><li><a href="/site-map"><i class="uk-icon-sitemap"></i> Карта сайта</a></li></IDXSKIP></ul>        </nav>
+        
+        
+        <i class="tm-toggle-icon"></i>
+
+    </div>
+    
+    <div class="tm-page">
+
+        <div class="uk-container uk-container-center">
+
+            
+                        <div class="tm-block ">
+                <div class="tm-headerbar uk-clearfix uk-visible-large">
+
+                                        <a class="tm-logo uk-float-left" href="https://pontin.ru">
+	<img src="/images/pon_logo.png" alt="pon logo"/></a>
+                    
+                                        <div class="tm-search uk-float-right">
+                        
+<form id="search-95" class="uk-search" action="/technical/windows/securety" method="post" role="search" data-uk-search="{'source': '/component/search/?tmpl=raw&amp;type=json&amp;ordering=&amp;searchphrase=all', 'param': 'searchword', 'msgResultsHeader': 'Результаты поиска', 'msgMoreResults': 'Показать все результаты', 'msgNoResults': 'Ничего не найдено!', flipDropdown: 1}">
+	<input class="uk-search-field" type="search" name="searchword" placeholder="поиск...">
+	<input type="hidden" name="task"   value="search">
+	<input type="hidden" name="option" value="com_search">
+	<input type="hidden" name="Itemid" value="335">
+</form>                    </div>
+                    
+                    
+                </div>
+
+                                <a href="#offcanvas" class="uk-navbar-toggle uk-navbar-flip uk-hidden-large" data-uk-offcanvas></a>
+                
+                                <a class="tm-logo-small uk-hidden-large" href="https://pontin.ru">
+	<img class="uk-responsive-height" alt="Pon-logo" src="/images/pon_logo.png"></img></a>
+                
+            </div>
+            
+                        <nav class="tm-block tm-navbar uk-navbar">
+                <ul class="uk-navbar-nav uk-hidden-small"><li class="uk-parent uk-active" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="/technical/windows"><i class="uk-icon-windows"></i> WINDOWS</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li class="uk-active"><a href="/technical/windows/securety">Безопасность</a></li></ul></div></div></div></li><IDXSKIP><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="/technical/linux"><i class="uk-icon-linux"></i> LINUX</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li><a href="/technical/linux/pfsense">Pfsense (интернет-шлюз)</a></li></ul></div></div></div></li></IDXSKIP><IDXSKIP><li><a href="/technical/android"><i class="uk-icon-android"></i> ANDROID</a></li></IDXSKIP><IDXSKIP><li><a href="/technical/firmware"><i class="uk-icon-cogs"></i> ПРОШИВКИ</a></li></IDXSKIP><IDXSKIP><li><a href="/technical/instructions"><i class="uk-icon-life-saver"></i> ИНСТРУКЦИИ</a></li></IDXSKIP><IDXSKIP><li class="uk-parent" data-uk-dropdown="{'preventflip':'y'}" aria-haspopup="true" aria-expanded="false"><a href="/technical/web"><i class="uk-icon-globe"></i> WEB</a><div class="uk-dropdown uk-dropdown-navbar uk-dropdown-width-1"><div class="uk-grid uk-dropdown-grid"><div class="uk-width-1-1"><ul class="uk-nav uk-nav-navbar"><li class="uk-parent"><a href="/technical/web/joomla">Joomla</a><ul class="uk-nav-sub"><li><a href="/technical/web/joomla/securety">Безопасность</a></li><li><a href="/technical/web/joomla/templates">Шаблоны</a></li></ul></li><li><a href="/technical/web/wordpress">WordPress</a></li><li><a href="/technical/web/virtuemart">VirtueMart</a></li></ul></div></div></div></li></IDXSKIP><IDXSKIP><li><a href="/technical/bat">BAT</a></li></IDXSKIP><IDXSKIP><li><a href="/technical/mail">MAIL</a></li></IDXSKIP></ul>            </nav>
+            
+            
+            
+            
+                        <div class="tm-block ">
+                <div class="tm-middle uk-grid" data-uk-grid-match data-uk-grid-margin>
+
+                                        <div class="tm-main uk-width-medium-3-4">
+
+                        
+                                                <main class="tm-content">
+
+                                                        <ul class="uk-breadcrumb"><IDXSKIP><li><a href="/">Главная</a></li></IDXSKIP><IDXSKIP><li><a href="/technical">ТЕХНИЧЕСКАЯ</a></li></IDXSKIP><IDXSKIP><li><a href="/technical/windows">WINDOWS</a></li></IDXSKIP><li><a href="/technical/windows/securety">Безопасность</a></li><li class="uk-active"><span>Заблокировать доступ в интернет</span></li></ul>
+
+	<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus"></div>                            
+                            <div id="system-message-container">
+</div>
+<!-- Start K2 Item Layout -->
+<span id="startOfPageId75"></span>
+
+<div id="k2Container" class="itemView">
+
+	<!-- Plugins: BeforeDisplay -->
+	
+	<!-- K2 Plugins: K2BeforeDisplay -->
+	
+	<div class="itemHeader">
+
+	
+		<!-- Item title -->
+	<h2 class="itemTitle">
+		
+		Заблокировать доступ в интернет
+			</h2>
+	
+	
+	</div>
+
+	<!-- Plugins: AfterDisplayTitle -->
+	
+	<!-- K2 Plugins: K2AfterDisplayTitle -->
+	
+		<div class="itemToolbar">
+		<ul>
+						<!-- Font Resizer -->
+			<IDXSKIP><li>
+				<span class="itemTextResizerTitle">размер шрифта</span>
+				<a href="#" id="fontDecrease">
+					<span>уменьшить размер шрифта</span>
+				</a>
+				<a href="#" id="fontIncrease">
+					<span>увеличить размер шрифта</span>
+				</a>
+			</li></IDXSKIP>
+			
+						<!-- Print Button -->
+			<li>
+				<a class="itemPrintLink" rel="nofollow" href="/technical/windows/securety/zablokirovat-dovstup-internet?tmpl=component&amp;print=1" onclick="window.open(this.href,'printWindow','width=900,height=600,location=no,menubar=no,resizable=yes,scrollbars=yes'); return false;">
+					<span>Печать</span>
+				</a>
+			</li>
+			
+						<!-- Email Button -->
+			<li>
+				<a class="itemEmailLink" rel="nofollow" href="/component/mailto/?tmpl=component&amp;template=yoo_peak&amp;link=6c87beed612de4df937378df9507df0ca4e25c44" onclick="window.open(this.href,'emailWindow','width=400,height=350,location=no,menubar=no,resizable=no,scrollbars=no'); return false;">
+					<span>Эл. почта</span>
+				</a>
+			</li>
+			
+			
+			
+			
+					</ul>
+		<div class="clr"></div>
+	</div>
+	
+		<!-- Item Rating -->
+	<div class="itemRatingBlock">
+		<span>Оцените материал</span>
+		<div class="itemRatingForm">
+			<ul class="itemRatingList">
+				<li class="itemCurrentRating" id="itemCurrentRating75" style="width:40%;"></li>
+				<li><a href="#" data-id="75" title="1 звезда из 5" class="one-star">1</a></li>
+				<li><a href="#" data-id="75" title="2 звезды из 5" class="two-stars">2</a></li>
+				<li><a href="#" data-id="75" title="3 звезды из 5" class="three-stars">3</a></li>
+				<li><a href="#" data-id="75" title="4 звезды из 5" class="four-stars">4</a></li>
+				<li><a href="#" data-id="75" title="5 звезд из 5" class="five-stars">5</a></li>
+			</ul>
+			<div id="itemRatingLog75" class="itemRatingLog">(1 Голосовать)</div>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+	</div>
+	
+	<div class="itemBody">
+
+		<!-- Plugins: BeforeDisplayContent -->
+		
+		<!-- K2 Plugins: K2BeforeDisplayContent -->
+		
+		
+		
+				<!-- Item introtext -->
+		<div class="itemIntroText">
+			<div class="uk-badge uk-badge-success">
+<h3><IDXSKIP>Как заблокировать доступ к интернет ресурсам, используя встроенные в Windows XP и Windows 2003 средства. </IDXSKIP><IDXSKIP><strong>IPSec</strong></IDXSKIP> <IDXSKIP>в качестве межсетевого экрана:</IDXSKIP></h3>
+</div>
+<p><IDXSKIP>Для блокировки доступа в интернет используются межсетевые экраны - так называемые файрволы или брандмауэры. Начиная с линейки </IDXSKIP><IDXSKIP><strong>Windows XP/Windows 2003</strong></IDXSKIP><IDXSKIP>, Microsoft стала встраивать программные межсетевые экраны в свои операционные системы. Однако, реализация брандмауэров Windows, очень далека от совершенства. Его ограниченная функциональность заставляет использовать для обеспечения безопасности продукты других разработчиков.</IDXSKIP></p>
+<p><IDXSKIP>В данной статье будет рассмотрен вариант использования </IDXSKIP><IDXSKIP><strong>IPSec</strong></IDXSKIP> <IDXSKIP>для реализации межсетевого экрана. IPSec&nbsp;позволяет реализовать множество задач, выполняемых «продвинутым файрволлом» используя штатные средства ОС Windows.</IDXSKIP></p>
+		</div>
+		
+				<!-- Item fulltext -->
+		<div class="itemFullText">
+			
+<h4>Задача №1 - запрещаем весь Интернет-трафик на локальной машине</h4>
+<p>Необходимо создать политику <strong>IPSec</strong>, запрещающую весь обмен данными по протоколам <strong>HTTP</strong> и <strong>HTTPS</strong>.</p>
+<div class="s5_graybox">
+<div class="point">Изображения диалоговых окон и последовательность действий будет показана на примере использования ОС <strong>Windows 2003</strong>. Для <strong>Windows XP</strong> и <strong>Windows 2000</strong> отличия будут не значительны.</div>
+</div>
+<p>Необходимо открыть консоль <strong>MMC:</strong></p>
+<p><strong>Пуск - Выполнить - mmc</strong></p>
+<p>В меню выбрать команду:</p>
+<p><strong>Консоль</strong>, <strong>Добавить или удалить оснастку</strong>.</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Добавить или удалить оснастку" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/mmc.png" alt="Добавить или удалить оснастку" height="320" width="454" /></p>
+<p>В открывшемся диалоге выбрать:</p>
+<p><strong>Добавить</strong>, <strong>Управление политикой безопасности IP</strong> .</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Управление политикой безопасности IP" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/mmcadd.png" alt="Управление политикой безопасности IP" height="491" width="496" /></p>
+<p>В следующем диалоговом окне выбора компьютера указать:</p>
+<p><strong>Локальный компьютер</strong>.</p>
+<p>Последовательно закрыть окна, нажимая кнопки</p>
+<p><strong>Готово</strong>, <strong>Закрыть</strong>, <strong>ОК</strong>.</p>
+<p>В левой панели консоли появился узел <strong>Политики безопасности IP на ‘Локальный компьютер'</strong>.</p>
+<p>После нажатия правой кнопкой мыши, выберать команду <strong>Управление списками IP-фильтра</strong>...</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Управление списками IP-фильтра" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/ipsec_filters.png" alt="Управление списками IP-фильтра" height="325" width="467" /></p>
+<p>В открывшемся диалоге нажать кнопку <strong>Добавить</strong>.</p>
+<p>Следующим диалоговым окном будет - <strong>Список фильтров</strong>.</p>
+<p>Для удобства работы со списком фильтров нужно заполнить в поле <strong>Имя.</strong> Например, <strong>HTTP, HTTPS</strong>.</p>
+<p>Нажать кнопку <strong>Добавить</strong> для&nbsp; создания фильтра. Если вы не снять флажок <strong>Использовать мастер</strong>, то процесс создания будет сопровождаться мастером создания фильтра.</p>
+<p>Его первую страницу можно пропустить, нажав <strong>Далее</strong>. На второй странице необходимо указать описание фильтра. Один фильтр может состоять из множества других. Целесообразно последовательно создать два фильтра - один для <strong>HTTP</strong>, другой для <strong>HTTPS</strong>. Объединяющий фильтр будет состоять из этих двух фильтров.Для этого:</p>
+<p>Указать в поле описания <strong>HTTP</strong>. Флажок <strong>Отраженный</strong> оставить включенным - это позволит распространить правила фильтра как в одну сторону пересылки пакетов, так и в обратную с теми же параметрами. Нажимаем <strong>Далее</strong>.</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Мастер IP-фильтров" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/ipsource.png" alt="Мастер IP-фильтров" height="415" width="515" /></p>
+<p>В следующем диалоге необходимо указать адрес источника IP-трафика. Возможность выбора адреса довольно широка.</p>
+<p>В данном случае необходимо указать <strong>Мой IP-адрес</strong> и нажать <strong>Далее</strong>.</p>
+<p>В следующем окне задаётся адрес назначения.</p>
+<p>Выбрать <strong>Любой IP-адрес</strong> и нажать <strong>Далее</strong>.</p>
+<p>Затем указывается тип протокола.</p>
+<p>Выбрать из списка <strong>TCP</strong>.</p>
+<p>Затем задаётся номера портов.</p>
+<p>Верхний переключатель оставить в положении <strong>Пакеты из любого порта</strong>, а нижним в режим <strong>Пакеты на этот порт</strong> и в поле ввести значение HTTP-порта - <strong>80</strong>.</p>
+<p>Нажать <strong>Готово</strong>, закрыв мастер.</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Установка порта для протокола IP" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/portnumering.png" alt="Установка порта для протокола IP" height="191" width="214" /></p>
+<p>&nbsp;</p>
+<p>В нижнем окне списка появился созданный фильтр.</p>
+<p>Проделать теже операции для порта HTTPS - <strong>443</strong>. Результат на снимке ниже:</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Список фильтров IP" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/filterslist.png" alt="Список фильтров IP" height="396" width="495" /></p>
+<p>Нажать кнопку <strong>ОК</strong>. Фильтр создан.</p>
+<p>Необходимо определить действия, которые он будет производить.</p>
+<p>Переключиться на закладку <strong>Управление действиями фильтра</strong> и нажать кнопку <strong>Добавить</strong>.</p>
+<p>Снова откроется диалог мастера - нажать <strong>Далее</strong>.</p>
+<p>Указать имя, например <strong>Block</strong>, и&nbsp;нажать <strong>Далее</strong>.</p>
+<p>В качестве действия выбрать переключатель <strong>Блокировать</strong>, нажать <strong>Далее</strong> и <strong>Готово</strong>.</p>
+<p>Теперь необходимо создать политику и назначить ее.</p>
+<p>В окне консоли MMC нажать правой кнопкой мыши узел <strong>Политики безопасности IP</strong> и выбрать команду <strong>Создать политику безопасности IP</strong>.</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Создать политику безопасности IP" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/createpolicy.png" alt="Создать политику безопасности IP" height="329" width="469" /></p>
+<p>В открывшемся окне мастера нажать <strong>Далее</strong>, затем указать имя для политики. Например - <strong>Block Web</strong>. Нажать <strong>Далее</strong>.</p>
+<p>Снять флажок <strong>Использовать правило по умолчанию</strong>, нажать <strong>Далее</strong> и <strong>Готово</strong>.</p>
+<p>В окне свойств политики нажать кнопку <strong>Добавить</strong>.</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Свойства политики Block Web" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/policypropeties.png" alt="Свойства политики Block Web" height="323" width="428" /></p>
+<p>Нажать <strong>Далее</strong>, оставив переключатель в положении <strong>Это правило не определяет туннель</strong>.</p>
+<p>Тип сети - указать <strong>Все сетевые подключения</strong> и нажать <strong>Далее</strong>.</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Мастер правил безопасности" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/f_list.png" alt="Мастер правил безопасности" height="414" width="510" /></p>
+<p>Выбрать созданный фильтр <strong>HTTP, HTTPS</strong> (слева должна появится точка в кружке) и нажать кнопку <strong>Далее</strong>.</p>
+<p>Таким же образом выбрать действие для фильтра - <strong>Block Web</strong>, нажать <strong>Далее</strong> и <strong>Готово</strong>.</p>
+<p>В правой панели консоли MMC появится созданная политика с именем <strong>BlockWeb</strong>.</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Назначение политики" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/assignpolicy.png" alt="Назначение политики" height="332" width="473" /></p>
+<p>Для включения политики - нажать правый кнопкой мыши на названии и выбрать команду <strong>Назначить</strong>.</p>
+<p>Для проверки запустить браузер. Если все было сделано правильно, картина должна быть такой:</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Сайт заблокирован в проводнике" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/restrictweb.png" alt="Сайт заблокирован в проводнике" height="352" width="449" /></p>
+<h4>Задача №2 - добавляем разрешенные зоны</h4>
+<p>Чтобы добавить возможность посещения некоторых сайтов необходимо добавть фильтр в созданную политику.</p>
+<p>Например, необходимо разрешить браузеру просмотр узла <a href="http://www.pontin.ru"><strong>www.pontin.ru</strong></a>.</p>
+<p>Для этого в консоли MMC дважды щелкнуть название политики <strong>BlockWeb</strong>.</p>
+<p>В окне свойств нажать кнопку <strong>Добавить</strong>, затем двойным щелчком выбрать фильтр <strong>HTTP, HTTPS</strong>.</p>
+<p>На вкладке <strong>Список фильтров</strong> нажать кнопку <strong>Добавить</strong>.</p>
+<p>Указать имя для нового фильтра, например, <strong>pontin.ru</strong>.</p>
+<p>Нажать <strong>Добавить</strong>, <strong>Далее</strong>, и качестве источника пакетов оставить <strong>Мой IP-адрес</strong>.</p>
+<p>Нажать кнопку <strong>Далее</strong>. В качестве адреса назначения выбрать строку <strong>Определенное DNS-имя</strong>, а в поле <strong>Имя узла</strong> ввести <a href="http://www.pontin.ru"><strong>www.pontin.ru</strong></a>. Нажать <strong>Далее</strong>.</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Разрешающий фильтр для сайта" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/warning.png" alt="Разрешающий фильтр для сайта" height="481" width="514" /></p>
+<p>Появится предупреждение о том, что в фильтре вместо DNS-имени&nbsp;www.pontin.ru будет использован IP-адрес 83.222.31.146. Согласиться, нажав кнопку <strong>Да</strong>.</p>
+<p>Затем указат тип протокола - <strong>TCP</strong>, выбрать переключатель <strong>На этот порт</strong> и указать его номер - <strong>80</strong>.</p>
+<p>Нажать <strong>Далее</strong>, <strong>Готово</strong> и <strong>ОК</strong>.</p>
+<p>Затем необходимо определить действие фильтра - перейти на одноименную закладку и выбрать параметр <strong>Разрешить</strong><IDXSKIP>.</IDXSKIP></p>
+<p>Теперь политика состоит из двух фильтров - один запрещает весь http-трафик, другой разрешает соединения с определенным IP-адресом. Все это выглядит примерно так:</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Свойство политики безопасности IP" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/rules.png" alt="Свойство политики безопасности IP" height="346" width="427" /></p>
+<p>Осталось закрыть все диалоговые окна и проверить фильтрацию.</p>
+<p><img style="margin-right: 6px; margin-left: 6px;" title="Сайт разрешён фильтром" src="http://www.windowsfaq.ru/images/stories/articles/net/ipsec/allowedweb.png" alt="Сайт разрешён фильтром" height="430" width="517" /></p>
+<p>Теперь, при переходе на&nbsp;<a href="http://www.pontin.ru">www.pontin.ru</a> (и только!) браузер должен отобразить содержание этого узла.</p>
+<div class="s5_bluebox">
+<div class="point">Обратите внимание, что ресурсы, расположенные на другом хосте (например, рекламные баннеры), не отображаются - они также фильтруются примененной политикой IPSec.</div>
+</div>
+<p>Подобным же образом можно создать собственные необходимые фильтры и применить их.</p>
+<p>Для написания данной статьи использовался следующий источник: <a href="http://www.windowsfaq.ru/content/view/661/90/" target="_blank">http://www.windowsfaq.ru/content/view/661/90/</a></p>
+<p>{jcomments on}</p>		</div>
+		
+		
+		<div class="clr"></div>
+
+		
+		
+		<!-- Plugins: AfterDisplayContent -->
+		
+		<!-- K2 Plugins: K2AfterDisplayContent -->
+		
+		<div class="clr"></div>
+
+	</div>
+
+	
+		<div class="itemLinks">
+
+				<!-- Item category -->
+		<div class="itemCategory">
+			<span>Опубликовано в</span>
+			<a href="/technical/windows/securety">Безопасность</a>
+		</div>
+		
+				<!-- Item tags -->
+		<div class="itemTagsBlock">
+			<IDXSKIP><span>Теги</span></IDXSKIP>
+			<ul class="itemTags">
+								<li><a href="/technical/windows/securety/tag/заблокировать">заблокировать</a></li>
+								<li><a href="/technical/windows/securety/tag/доступ%20в%20интернет">доступ в интернет</a></li>
+								<li><a href="/technical/windows/securety/tag/ipsec">ipsec</a></li>
+								<li><a href="/technical/windows/securety/tag/закрыть%20доступ%20в%20интернет">закрыть доступ в интернет</a></li>
+							</ul>
+			<div class="clr"></div>
+		</div>
+		
+		
+		<div class="clr"></div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="clr"></div>
+
+	
+	
+	
+	<!-- Plugins: AfterDisplay -->
+	
+	<!-- K2 Plugins: K2AfterDisplay -->
+	
+		<!-- K2 Plugins: K2CommentsBlock -->
+	<script type="text/javascript">
+<!--
+var jcomments=new JComments(75, 'com_k2','/component/jcomments/');
+jcomments.setList('comments-list');
+//-->
+</script>
+<div id="jc">
+<h4>Добавить комментарий</h4>
+<a id="addcomments" href="#addcomments"></a>
+<form id="comments-form" name="comments-form" action="javascript:void(null);">
+<IDXSKIP><p>
+	<span>
+		<input id="comments-form-name" type="text" name="name" value="" maxlength="20" size="22" tabindex="1" />
+		<label for="comments-form-name">Имя (обязательное)</label>
+	</span>
+</p></IDXSKIP>
+<IDXSKIP><p>
+	<span>
+		<input id="comments-form-email" type="text" name="email" value="" size="22" tabindex="2" />
+		<label for="comments-form-email">E-Mail (обязательное)</label>
+	</span>
+</p></IDXSKIP>
+<p>
+	<span>
+		<textarea id="comments-form-comment" name="comment" cols="65" rows="8" tabindex="5"></textarea>
+	</span>
+</p>
+<p>
+	<span>
+		<input class="checkbox" id="comments-form-subscribe" type="checkbox" name="subscribe" value="1" tabindex="5" />
+		<label for="comments-form-subscribe"><IDXSKIP>Подписаться на уведомления о новых комментариях</IDXSKIP></label><br />
+	</span>
+</p>
+<p>
+	<span>
+		<img class="captcha" onclick="jcomments.clear('captcha');" id="comments-form-captcha-image" src="/component/jcomments/captcha/88323" width="121" height="60" alt="Защитный код" /><br />
+		<span class="captcha" onclick="jcomments.clear('captcha');">Обновить</span><br />
+		<input class="captcha" id="comments-form-captcha" type="text" name="captcha_refid" value="" size="5" tabindex="6" /><br />
+	</span>
+</p>
+<IDXSKIP><div id="comments-form-buttons">
+	<div class="btn" id="comments-form-send"><div><a href="#" tabindex="7" onclick="jcomments.saveComment();return false;" title="Отправить (Ctrl+Enter)">Отправить</a></div></div>
+	<div class="btn" id="comments-form-cancel" style="display:none;"><div><a href="#" tabindex="8" onclick="return false;" title="Отменить">Отменить</a></div></div>
+	<div style="clear:both;"></div>
+</div></IDXSKIP>
+<div>
+	<input type="hidden" name="object_id" value="75" />
+	<input type="hidden" name="object_group" value="com_k2" />
+</div>
+</form>
+<script type="text/javascript">
+<!--
+function JCommentsInitializeForm()
+{
+	var jcEditor = new JCommentsEditor('comments-form-comment', true);
+	jcEditor.addButton('b','Жирный','Введите текст для форматирования');
+	jcEditor.addButton('i','Курсив','Введите текст для форматирования');
+	jcEditor.addButton('u','Подчеркнутый','Введите текст для форматирования');
+	jcEditor.addButton('s','Зачеркнутый','Введите текст для форматирования');
+	jcEditor.addButton('url','Ссылка','Введите полный URL ссылки');
+	jcEditor.addButton('quote','Цитата','Введите текст цитаты');
+	jcEditor.initSmiles('/components/com_jcomments/images/smilies/');
+	jcEditor.addSmile(':D','laugh.gif');
+	jcEditor.addSmile(':lol:','lol.gif');
+	jcEditor.addSmile(':-)','smile.gif');
+	jcEditor.addSmile(';-)','wink.gif');
+	jcEditor.addSmile('8)','cool.gif');
+	jcEditor.addSmile(':-|','normal.gif');
+	jcEditor.addSmile(':-*','whistling.gif');
+	jcEditor.addSmile(':oops:','redface.gif');
+	jcEditor.addSmile(':sad:','sad.gif');
+	jcEditor.addSmile(':cry:','cry.gif');
+	jcEditor.addSmile(':o','surprised.gif');
+	jcEditor.addSmile(':-?','confused.gif');
+	jcEditor.addSmile(':-x','sick.gif');
+	jcEditor.addSmile(':eek:','shocked.gif');
+	jcEditor.addSmile(':zzz','sleeping.gif');
+	jcEditor.addSmile(':P','tongue.gif');
+	jcEditor.addSmile(':roll:','rolleyes.gif');
+	jcEditor.addSmile(':sigh:','unsure.gif');
+	jcomments.setForm(new JCommentsForm('comments-form', jcEditor));
+}
+
+setTimeout(JCommentsInitializeForm, 100);
+//-->
+</script>
+<div id="comments"></div>
+<IDXSKIP><div id="comments-footer" align="center"><a href="http://www.joomlatune.ru" title="JComments" target="_blank">JComments</a></div></IDXSKIP>
+</div>	
+	
+		<div class="itemBackToTop">
+		<a class="k2Anchor" href="/technical/windows/securety/zablokirovat-dovstup-internet#startOfPageId75">
+			Наверх		</a>
+	</div>
+	
+	<div class="clr"></div>
+
+</div>
+<!-- End K2 Item Layout -->
+
+<!-- JoomlaWorks "K2" (v2.7.1) | Learn more about K2 at http://getk2.org -->
+                        </main>
+                        
+                        
+                    </div>
+                    
+                                                                                                    <aside class="tm-sidebar-a uk-width-medium-1-4"><div class="uk-panel uk-panel-box">
+	<h4>Рекомендую ;)</h4>
+<IDXSKIP><p><a href="http://beget.ru?id=108311" target="_blank">Мой хостинг-провайдер BeGet.ru</a></p></IDXSKIP></div></aside>
+                                        
+                </div>
+            </div>
+            
+            
+                        <div class="tm-block ">
+                <section class="tm-bottom-b uk-grid" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
+<div class="uk-width-1-1 uk-width-medium-1-3"><div class="uk-panel uk-panel-box"><h3 class="uk-panel-title">Свежие материалы</h3>
+<div id="k2ModuleBox138" class="k2ItemsBlock">
+
+	
+	  <ul>
+        <IDXSKIP><li class="even">
+
+      <!-- Plugins: BeforeDisplay -->
+      
+      <!-- K2 Plugins: K2BeforeDisplay -->
+      
+      
+            <a class="moduleItemTitle" href="/technical/windows/windows-8-1-safe-mode">Запуск Windows 8.1 в безопасном режиме</a>
+      
+      
+      <!-- Plugins: AfterDisplayTitle -->
+      
+      <!-- K2 Plugins: K2AfterDisplayTitle -->
+      
+      <!-- Plugins: BeforeDisplayContent -->
+      
+      <!-- K2 Plugins: K2BeforeDisplayContent -->
+      
+      
+      
+      <div class="clr"></div>
+
+      
+      <div class="clr"></div>
+
+      <!-- Plugins: AfterDisplayContent -->
+      
+      <!-- K2 Plugins: K2AfterDisplayContent -->
+      
+      
+            в <a class="moduleItemCategory" href="/technical/windows">Windows</a>
+      
+      
+      
+			
+			
+			
+      <!-- Plugins: AfterDisplay -->
+      
+      <!-- K2 Plugins: K2AfterDisplay -->
+      
+      <div class="clr"></div>
+    </li></IDXSKIP>
+        <IDXSKIP><li class="odd">
+
+      <!-- Plugins: BeforeDisplay -->
+      
+      <!-- K2 Plugins: K2BeforeDisplay -->
+      
+      
+            <a class="moduleItemTitle" href="/technical/instructions/using-snpch">Особенности использования СНПЧ</a>
+      
+      
+      <!-- Plugins: AfterDisplayTitle -->
+      
+      <!-- K2 Plugins: K2AfterDisplayTitle -->
+      
+      <!-- Plugins: BeforeDisplayContent -->
+      
+      <!-- K2 Plugins: K2BeforeDisplayContent -->
+      
+      
+      
+      <div class="clr"></div>
+
+      
+      <div class="clr"></div>
+
+      <!-- Plugins: AfterDisplayContent -->
+      
+      <!-- K2 Plugins: K2AfterDisplayContent -->
+      
+      
+            в <a class="moduleItemCategory" href="/technical/instructions">Инструкции</a>
+      
+      
+      
+			
+			
+			
+      <!-- Plugins: AfterDisplay -->
+      
+      <!-- K2 Plugins: K2AfterDisplay -->
+      
+      <div class="clr"></div>
+    </li></IDXSKIP>
+        <IDXSKIP><li class="even">
+
+      <!-- Plugins: BeforeDisplay -->
+      
+      <!-- K2 Plugins: K2BeforeDisplay -->
+      
+      
+            <a class="moduleItemTitle" href="/technical/linux/web-server-ubuntu">Создание WEB сервера на основе UBUNTU</a>
+      
+      
+      <!-- Plugins: AfterDisplayTitle -->
+      
+      <!-- K2 Plugins: K2AfterDisplayTitle -->
+      
+      <!-- Plugins: BeforeDisplayContent -->
+      
+      <!-- K2 Plugins: K2BeforeDisplayContent -->
+      
+      
+      
+      <div class="clr"></div>
+
+      
+      <div class="clr"></div>
+
+      <!-- Plugins: AfterDisplayContent -->
+      
+      <!-- K2 Plugins: K2AfterDisplayContent -->
+      
+      
+            в <a class="moduleItemCategory" href="/technical/linux">LINUX</a>
+      
+      
+      
+			
+			
+			
+      <!-- Plugins: AfterDisplay -->
+      
+      <!-- K2 Plugins: K2AfterDisplay -->
+      
+      <div class="clr"></div>
+    </li></IDXSKIP>
+        <IDXSKIP><li class="odd">
+
+      <!-- Plugins: BeforeDisplay -->
+      
+      <!-- K2 Plugins: K2BeforeDisplay -->
+      
+      
+            <a class="moduleItemTitle" href="/technical/firmware/kak-proshit-bios-asus-bupdater">Как прошить BIOS ASUS (утилита BUPDATER)</a>
+      
+      
+      <!-- Plugins: AfterDisplayTitle -->
+      
+      <!-- K2 Plugins: K2AfterDisplayTitle -->
+      
+      <!-- Plugins: BeforeDisplayContent -->
+      
+      <!-- K2 Plugins: K2BeforeDisplayContent -->
+      
+      
+      
+      <div class="clr"></div>
+
+      
+      <div class="clr"></div>
+
+      <!-- Plugins: AfterDisplayContent -->
+      
+      <!-- K2 Plugins: K2AfterDisplayContent -->
+      
+      
+            в <a class="moduleItemCategory" href="/technical/firmware">Прошивки</a>
+      
+      
+      
+			
+			
+			
+      <!-- Plugins: AfterDisplay -->
+      
+      <!-- K2 Plugins: K2AfterDisplay -->
+      
+      <div class="clr"></div>
+    </li></IDXSKIP>
+        <IDXSKIP><li class="even lastItem">
+
+      <!-- Plugins: BeforeDisplay -->
+      
+      <!-- K2 Plugins: K2BeforeDisplay -->
+      
+      
+            <a class="moduleItemTitle" href="/technical/instructions/boot-usb">Создание загрузочной флешки (простой способ)</a>
+      
+      
+      <!-- Plugins: AfterDisplayTitle -->
+      
+      <!-- K2 Plugins: K2AfterDisplayTitle -->
+      
+      <!-- Plugins: BeforeDisplayContent -->
+      
+      <!-- K2 Plugins: K2BeforeDisplayContent -->
+      
+      
+      
+      <div class="clr"></div>
+
+      
+      <div class="clr"></div>
+
+      <!-- Plugins: AfterDisplayContent -->
+      
+      <!-- K2 Plugins: K2AfterDisplayContent -->
+      
+      
+            в <a class="moduleItemCategory" href="/technical/instructions">Инструкции</a>
+      
+      
+      
+			
+			
+			
+      <!-- Plugins: AfterDisplay -->
+      
+      <!-- K2 Plugins: K2AfterDisplay -->
+      
+      <div class="clr"></div>
+    </li></IDXSKIP>
+        <li class="clearList"></li>
+  </ul>
+  
+	
+	
+</div>
+</div></div>
+
+<div class="uk-width-1-1 uk-width-medium-1-3"><div class="uk-panel uk-panel-box"><h3 class="uk-panel-title">Полезные ссылки</h3>
+	<ul class="weblinks">
+					<IDXSKIP><li>
+								<a href="/component/weblinks/?task=weblink.go&amp;catid=28:full&amp;id=1:hosting-to-joomla" target="_blank" rel="follow">Хостинг для Joomla (подбор)</a>
+													
+							</li></IDXSKIP>
+					<IDXSKIP><li>
+								<a href="/component/weblinks/?task=weblink.go&amp;catid=28:full&amp;id=2:autoinstall-windows" rel="follow">Автоматическая установка Windows</a>
+													
+							</li></IDXSKIP>
+					<IDXSKIP><li>
+								<a href="/component/weblinks/?task=weblink.go&amp;catid=28:full&amp;id=3:baza-znanij-aion" target="_blank" rel="follow">База знаний AION</a>
+													
+							</li></IDXSKIP>
+					<IDXSKIP><li>
+								<a href="/component/weblinks/?task=weblink.go&amp;catid=28:full&amp;id=7:zashchita-joomla-i-drugie-poleznosti" rel="follow">Защита Joomla и другие полезности</a>
+													
+							</li></IDXSKIP>
+					<IDXSKIP><li>
+								<a href="/component/weblinks/?task=weblink.go&amp;catid=28:full&amp;id=15:sozdanie-i-nastrojka-universalnogo-servera-na-linux" rel="follow">Создание и настройка универсального сервера на Linux</a>
+													
+							</li></IDXSKIP>
+			</ul>
+</div></div>
+
+<div class="uk-width-1-1 uk-width-medium-1-3"><div class="uk-panel uk-panel-box"><h3 class="uk-panel-title">Дружественные сайты</h3>
+	<ul class="weblinks">
+					<IDXSKIP><li>
+								<a href="/component/weblinks/?task=weblink.go&amp;catid=33:my-work&amp;id=29:folklornyj-teatr-etno" rel="follow">Фольклорный театр Этно</a>
+									<p><img src="/images/etno-spb-logo.png" alt="etno spb logo" />Организация и проведение интерактивных спектаклей и мероприятий в в вольклорном русском стиле.</p>				
+							</li></IDXSKIP>
+					<IDXSKIP><li>
+								<a href="/component/weblinks/?task=weblink.go&amp;catid=33:my-work&amp;id=5:sveta-site" rel="follow">В помощь воспитателю и родителю</a>
+									<p><img src="/images/lana-logo.png" alt="lana logo" />упражнения и занятия с детьми, конспекты НОД</p>				
+							</li></IDXSKIP>
+			</ul>
+</div></div>
+</section>
+            </div>
+            
+                        <div class="tm-block ">
+                <footer class="tm-footer">
+
+                    <IDXSKIP><div class="uk-panel">
+	<table style="height: 20px; ; width: 260px;" border="0">
+<tbody>
+<tr>
+<td>
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'bg': 'transparent', 'publicname': 'Yandex Site Search #2094000', 'target': '_self', 'language': 'ru', 'suggest': true, 'tld': 'ru', 'site_suggest': true, 'action': 'http://pontin.ru/index.php?option=com_content&view=article&id=49&Itemid=203', 'webopt': false, 'fontsize': 12, 'arrow': false, 'fg': '#000000', 'searchid': '2094000', 'logo': 'rb', 'websearch': false, 'type': 2}"><form action="http://yandex.ru/sitesearch" method="get" target="_self"><input type="hidden" name="searchid" value="2094000" /><input type="hidden" name="l10n" value="ru" /><input type="hidden" name="reqenc" value="" /><input type="text" name="text" value="" /><input type="submit" value="Найти" /></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;(' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1&&(e.className+=' ya-page_js_yes');s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</td>
+</tr>
+</tbody>
+</table>
+</div></IDXSKIP>
+<IDXSKIP><div class="uk-panel">
+	<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=21879586&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/21879586/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:21879586,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer --></div></IDXSKIP>
+<div class="uk-panel">
+	<p><IDXSKIP>По всем вопросам, связанным с сайтом просьба обращаться на e-mail: </IDXSKIP><IDXSKIP><a href="mailto:pontin@mail.ru">pontin@mail.ru</a></IDXSKIP></p></div>
+                                        <a class="tm-totop-scroller" data-uk-smooth-scroll href="#"></a>
+                    
+                </footer>
+            </div>
+            
+            <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter21879586 = new Ya.Metrika({id:21879586,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/21879586" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42674837-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+                        <div id="offcanvas" class="uk-offcanvas">
+                <div class="uk-offcanvas-bar uk-offcanvas-bar-flip"><div class="uk-panel">
+<form id="search-117" class="uk-search" action="/technical/windows/securety" method="post" role="search" >
+	<input class="uk-search-field" type="search" name="searchword" placeholder="поиск...">
+	<input type="hidden" name="task"   value="search">
+	<input type="hidden" name="option" value="com_search">
+	<input type="hidden" name="Itemid" value="335">
+</form></div>
+<ul class="uk-nav uk-nav-offcanvas"><IDXSKIP><li><a href="/"><i class="uk-icon-home"></i> ГЛАВНАЯ</a></li></IDXSKIP><IDXSKIP><li class="uk-parent"><a href="/hobby"><i class="uk-icon-film"></i> ХОББИ</a><ul class="uk-nav-sub"><li class="uk-parent"><a href="/hobby/amv"><i class="uk-icon-youtube-play"></i> AMV</a><ul><li class="uk-parent"><a href="/hobby/amv/my-amv">МОИ КЛИПЫ</a><ul><li><a href="/hobby/amv/my-amv/have-to-run">Первый клип</a></li><li><a href="/hobby/amv/my-amv/naruto-uma2rman">Второй клип</a></li><li><a href="/hobby/amv/my-amv/leningrad-samurai">Смешной клип</a></li><li><a href="/hobby/amv/my-amv/unit">Последний клип</a></li></ul></li><li class="uk-parent"><a href="/hobby/amv/other-amv">ЧУЖИЕ КЛИПЫ</a><ul><li class="uk-parent"><a href="/hobby/amv/other-amv/short-and-nice">Коротко и красиво</a><ul><li class="level5"><a href="/hobby/amv/other-amv/short-and-nice/006">акын2006</a></li><li class="level5"><a href="/hobby/amv/other-amv/short-and-nice/don-t-stop">Не дай себя остановить</a></li></ul></li><li class="uk-parent"><a href="/hobby/amv/other-amv/original">Оригинальные</a><ul><li class="level5"><a href="/hobby/amv/other-amv/original/grievous">Everything (Grievous)</a></li></ul></li><li class="uk-parent"><a href="/hobby/amv/other-amv/flights">Полёты</a><ul><li class="level5"><a href="/hobby/amv/other-amv/flights/it-s-smoky-today">It's smoky today</a></li><li class="level5"><a href="/hobby/amv/other-amv/flights/poryashchij-na-vetru">Порящий на ветру</a></li></ul></li><li class="uk-parent"><a href="/hobby/amv/other-amv/naruto">Наруто</a><ul><li class="level5"><a href="/hobby/amv/other-amv/naruto/hit-the-floor">Hit The Floor</a></li><li class="level5"><a href="/hobby/amv/other-amv/naruto/phenomenon">Phenomenon (Open Your Soul)</a></li><li class="level5"><a href="/hobby/amv/other-amv/naruto/whisper-of-the-beast">Whisper Of The Beast</a></li></ul></li><li class="uk-parent"><a href="/hobby/amv/other-amv/mics-best">Лучшие миксы</a><ul><li class="level5"><a href="/hobby/amv/other-amv/mics-best/jihaku">Jihaku</a></li><li class="level5"><a href="/hobby/amv/other-amv/mics-best/live">Live</a></li></ul></li></ul></li></ul></li><li class="uk-parent"><a href="/hobby/games"><i class="uk-icon-gamepad"></i> ИГРЫ</a><ul><li><a href="/hobby/games/rf-online">RF-online</a></li><li><a href="/hobby/games/call-of-duty-4">Call of Duty 4</a></li><li><a href="/hobby/games/aion">AION</a></li></ul></li><li><a href="/hobby/kino"><i class="uk-icon-video-camera"></i> КИНО</a></li><li><a href="/hobby/pc"><i class="uk-icon-desktop"></i> КОМПЬЮТЕРЫ</a></li></ul></li></IDXSKIP><li class="uk-parent uk-active"><a href="/technical"><i class="uk-icon-cog"></i> ТЕХНИЧЕСКАЯ</a><ul class="uk-nav-sub"><li class="uk-parent uk-active"><a href="/technical/windows"><i class="uk-icon-windows"></i> WINDOWS</a><ul><li class="uk-active"><a href="/technical/windows/securety">Безопасность</a></li></ul></li><li class="uk-parent"><a href="/technical/linux"><i class="uk-icon-linux"></i> LINUX</a><ul><li><a href="/technical/linux/pfsense">Pfsense (интернет-шлюз)</a></li></ul></li><li><a href="/technical/android"><i class="uk-icon-android"></i> ANDROID</a></li><li><a href="/technical/firmware"><i class="uk-icon-cogs"></i> ПРОШИВКИ</a></li><li><a href="/technical/instructions"><i class="uk-icon-life-saver"></i> ИНСТРУКЦИИ</a></li><li class="uk-parent"><a href="/technical/web"><i class="uk-icon-globe"></i> WEB</a><ul><li class="uk-parent"><a href="/technical/web/joomla">Joomla</a><ul><li><a href="/technical/web/joomla/securety">Безопасность</a></li><li><a href="/technical/web/joomla/templates">Шаблоны</a></li></ul></li><li><a href="/technical/web/wordpress">WordPress</a></li><li><a href="/technical/web/virtuemart">VirtueMart</a></li></ul></li><li><a href="/technical/bat">BAT</a></li><li><a href="/technical/mail">MAIL</a></li></ul></li><IDXSKIP><li><a href="/gallery"><i class="uk-icon-image"></i> ГАЛЛЕРЕЯ</a></li></IDXSKIP><IDXSKIP><li><a href="/funny"><i class="uk-icon-smile-o"></i> ЮМОР</a></li></IDXSKIP><IDXSKIP><li><a href="/site-map"><i class="uk-icon-sitemap"></i> Карта сайта</a></li></IDXSKIP></ul></div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,3563 @@
+forum.nashnet.ua/index.php?showtopic=4660&st=40
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+<link rel="shortcut icon" href="favicon.ico" />
+<title>Помоему он читер - NashNet forum</title>
+ 
+<style type="text/css">
+	/* 
+ * Cascading Style Sheet(CSS 467), for Invision Power Board 2.1.0
+ * Author: James A. Mathias, admin@leihu.com, http://www.1lotus.com 
+ * Copyright: 2005 Invision Power Services, all rights reserved 
+ *
+ * All style attributes in alpha-numeric order starting from 0
+ *
+ */
+
+/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+}
+
+body{ 
+	background: #FFF;
+	color: #222;
+	font-family: Verdana, Tahoma, Arial, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	font-size: 11px;
+	line-height: 135%;
+	margin: 0px;
+	padding: 0px; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+}
+
+/* 
+ * ========================================
+ * Set up IPB table
+ * ========================================
+ */
+ 
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable
+{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #222;
+	font-size: 11px;
+	line-height: 135%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 5px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+
+img{
+	border: 0; /* makes sure linked images do not have a border */
+	vertical-align: middle;
+}
+
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #222;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+	color: #7B5806;
+}
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+#ipbwrapper{ 
+	margin: 5px auto 10px auto; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	/* EDIT THIS TO CHANGE THE WIDTH OF THE BOARD -> 750px is a common fixed resolution size */
+	width: 99%;
+}
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+ 
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: #F0F5FA;
+	border: 1px solid #072A66;
+	padding: 1px 3px 1px 3px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #DFE6EF;
+}
+
+
+.pagecurrent{
+	background: #FFC9A5;
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #C2CFDF;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+/* fake button effect for some links */
+.fauxbutton{
+	background: #BFCDE0 url(style_images/test/folder_rte_images/rte_tile.gif);
+	border: 1px solid #072A66;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	color: #222 !important;
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 10px; 
+	color: #666;
+	line-height: 135%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #FFF;
+	border: 1px solid #072A66;
+	color: #000;
+	margin: 0px;
+	padding: 1px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 150%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #808080 url(style_images/test/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #808080;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap{
+	border: 1px solid #072A66;
+	margin: 2px;
+}
+
+.thumbwrapp{
+	border: 2px solid #660707;
+}
+
+.fullimagewrap{
+	background: #F5F9FD;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #DDE6F2;
+	border: 0 !important;
+	border-bottom: 1px solid #5176B5 !important;
+	color: #5176B5; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	background: #EEF2F7 !important;
+	border: 0 !important;
+	border-top: 1px solid #5176B5 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	background: #DFE6EF !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #EFDFDF !important;
+	text-align: center !important;
+}
+	
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #FFF url(style_images/test/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #072A66;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood,
+.warnbad{ 
+	color: #0B9500;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #DD0000;
+}
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 28px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #000; 
+	font-size: 24px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+} 
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #F5F1EB;
+	border: 1px solid #345487;
+	line-height: 150%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+.activeuserstrip{ 
+	background: #BCD0ED;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #339; 
+	font-size: 10px;
+	line-height: 150%;
+}
+
+.postdetails{ 
+	font-size: 10px;
+	line-height:140%;
+}
+
+.postcolor{ 
+	font-size: 12px; 
+	line-height: 160%;
+}
+
+.normalname{ 
+	color: #003;
+	font-size: 12px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 12px;
+}
+
+.post1,
+.bg1{ 
+	background: #FBF9F7;
+}
+
+.post2,
+.bg3{ 
+	background: #FBF9F7;
+}
+
+.row2shaded,
+.post1shaded { background-color: #DEDBE4 }
+.row4shaded,
+.post2shaded { background-color: #E3DFE7 }
+
+.row1{ 
+	background: #eef3f8;
+}
+
+.row2{ 
+	background: #eef3f8;
+}
+
+.darkrow1{ 
+	background: #d5dde5;
+	color: #1C3753;
+}
+
+.darkrow3{ 
+	background: #eef3f8;
+	color: #000;
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #F5F9FD;
+	border: 1px solid #345487;
+}
+
+.tablefill,
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: 1.5em;
+	width: 25%;
+}
+
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 11px; 
+	color: #434951;
+}
+
+.lastaction
+{
+	font-size: 10px; 
+	color: #434951;
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #FFF;
+	border-left: 0;
+	border-right: 0;
+	line-height: 150%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+/* 
+ * ========================================
+ * calendar styles 
+ * ========================================
+ */
+	
+.calmonths{ 
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	font-size: 18px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #DFE6EF;
+	color: #666;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #AAA;
+	color: #222;
+	font-size: 14px;
+	padding: 6px;
+	text-align: center;
+}
+
+.celltodayshaded,
+.celldateshaded,
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #EEF2F7; 
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.celltodayshaded,
+.celldateshaded
+{
+	background: #E3DFE7;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #C2CFDF;
+}
+
+.celltoday,
+.celltodayshaded,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+
+.calranged
+{
+	border: 2px outset #C2CFDF;
+	background: #C2CFDF;
+	padding:4px;
+}
+
+.calitem
+{
+	border-bottom: 1px dotted #C2CFDF;
+	padding:4px;
+}
+
+/* 
+ * ========================================
+ * form styles 
+ * ========================================
+ */
+
+.input-warn,
+.input-green,
+input,
+textarea,
+select{
+	background: #FFF;
+	border: 1px solid #4C77B6;
+	color: #000;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 5px;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+.input-warn,
+.input-warn-content
+{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content
+{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+
+.input-text
+{
+	color: #900;
+}
+
+select{
+	border: 0;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	background: #FFF;
+	border: 1px solid #4C77B6;
+	color: #000;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+	background: #eef3f8;
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 1px #072A66;
+	vertical-align: middle;
+}
+
+/* 
+ * class.formtable 
+ *
+ * used for tabled forms 
+ * technically tables should not be used for form display 
+ * but, in the case of IPB a table is easier to work with
+ * for the average webmaster, who has little to no CSS knowledge.
+ *
+ */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	background: #F8F8F8;
+	border: 1px solid #C2CFDF;
+	border-bottom: 0;
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+} 
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0px;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: #d5dde5;
+	border: 1px solid #9FB9D4; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	color: #1C3753;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.formtable td.formstrip{
+	background: #DDE8F2;
+	border: 1px solid #9FB9D4;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	background: #F0E8DD url(style_images/test/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #000;
+	border-bottom: 0;
+	border-left: 4px solid #C09F72;
+	color: #000;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 8px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: #FFFFFF;
+	border: 1px dotted #000;
+	border-left: 4px solid #C09F72;
+	border-top: 0;
+	color: #465584;
+	padding: 4px;
+	margin: 0 auto 8px auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	background: #FAE7C0 url(style_images/test/css_img_code.gif) no-repeat right;
+	color: #000;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+	width: 98%;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: #FFFFFF;;
+	border: 1px dotted #000;
+	color: #465584;
+	font-family: Courier, Courier New, Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+	width: 98%;
+}
+
+/* 
+ * ========================================
+ * old school quote and code styles - backwards compatibility 
+ * ========================================
+ */
+
+#QUOTE,
+#CODE{  
+	background: #FAFCFE; 
+	border: 1px solid #000; 
+	color: #465584; 
+	font-family: Verdana, Arial; 
+	font-size: 11px; 
+	padding: 2px; 
+	white-space: normal;
+}
+
+#CODE{ 
+	font-family: Courier, Courier New, Verdana, Arial;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+	background: #FFF; 
+	border: 1px solid #072A66;
+	padding: 0px; 
+	margin: 0px; 
+}
+
+.borderwrapm{
+	margin: 5px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	background: #072A66 url(style_images/test/tile_cat.gif);
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.maintitle td {
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+.maintitlecollapse{
+	border: 1px solid #FFF;
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	color: #FFF;
+	text-decoration: none; 
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+	color: #F1F1F1;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	background: transparent url(style_images/test/tile_sub.gif);
+	border-bottom: 1px solid #5176B5;
+	color: #3A4F6C; 
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited, 
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active,
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover{ 
+	background: transparent;
+	color: #3A4F6C;
+	text-decoration: none; 
+}
+
+.borderwrap h4{
+	background: #DDE6F2;
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	border-top: 1px solid #5176B5;
+	color: #F2AD0D;
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+td.formbuttonrow,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	background: #E4EBF3 !important;
+	border: 1px solid #FFF;
+	border-top: 1px solid #5176B5;
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+
+td.formbuttonrow{
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.borderwrap p.formbuttonrow1{
+	background: #F9F9F9 !important;
+	border: 0;
+	border-top: 1px solid #CCC;
+}
+
+.bar,
+.barb,
+.barc{
+	background: #eef3f8;
+	border: 1px solid #FFF;
+}
+
+.barc{
+	border-bottom: 0;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	color: #222;
+	font-size: 11px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	background: #99A4AF;
+	color: #000;
+	font-size: 1px;
+	height: 5px;
+}
+
+.newslink{
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #222;
+	font-size: 10px;
+	padding: 5px 5px 5px 10px;
+}
+
+.newslink span{
+	background: transparent;
+	color: #072A66;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	background: #FFF;
+	border: 1px solid #999;
+	color: #072A66;
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	vertical-align: middle;
+}
+
+.fieldwrap{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #EEE;
+	border: 1px solid #CCC;
+	border-left: 0;
+	border-right: 0;
+	color: #444; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap {
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+
+.errorwrap h4 {
+	background: #E3C0C0;
+	border: 1px solid #992A2A;
+	border-left: 0;
+	border-right: 0;
+	color: #992A2A; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap p {
+	background: transparent;
+	border: 0;
+	color: #992A2A;
+	margin: 0;
+	padding: 8px;
+}
+
+
+.ruleswrap{
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	color: #992A2A; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #eff3ff;
+	border: 1px solid #27497F;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	background: #d6dfe7;
+	border-bottom: 1px solid #27497F;
+	color: #3A4F6C;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	background: #d6dfe7;
+	border-top: 1px solid #27497F;
+	text-align: center;
+}
+
+
+#gfooter{
+	background: #355E93 url(style_images/test/tile_cat.gif);
+	border: 1px solid #27497F;
+	margin: 5px 0 5px 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	color: #FFF;
+	font-size: 10px;
+	padding: 4px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+	color: #FFF;
+}
+
+#logostrip{ 
+	background: #3860BB url(style_images/test/tile_back.gif);
+	border: 1px solid #FFF;
+	height: 109px;
+	margin: 0;
+	padding: 0;
+}
+
+#logographic{
+	background: transparent url(style_images/test/logo4.gif) no-repeat left;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+
+#submenu{ 
+	background: transparent url(style_images/test/tile_sub.gif);
+	border: 1px solid #FFF;
+	border-top: 0;
+	color: #1C3753;
+	margin: 0; 
+}
+
+#userlinks,
+#userlinksguest{ 
+	background: #d5dde5;
+	border: 1px solid #5C7CA7;
+	margin: 5px 0 5px 0;
+	padding: 0 5px 0 5px;
+}
+
+#userlinksguest{ 
+	background: #d5dde5;
+	border: 1px solid #5C7CA7;
+}
+
+#submenu p,
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0 !important;
+	padding: 7px 0 7px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#submenu p.home,
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#submenu a:link, 
+#submenu  a:visited{ 
+	background: transparent; 
+	color: #3A4F6C; 
+	padding: 0 6px 0 6px;
+	text-decoration: none;
+}
+
+#submenu a:hover, 
+#submenu a:active{
+	background: transparent; 
+	color: #7B5806;
+}
+
+#navstrip{ 
+	background: transparent;
+	color: #999;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 14px 0px 8px 0px; 
+}
+
+#navstrip a:link, 
+#navstrip  a:visited{ 
+	background: transparent; 
+	color: #222; 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+	background: transparent; 
+	color: #7B5806;
+}
+
+.toplinks{
+	background: transparent;
+	color: #000;
+	margin: 0;
+	padding: 0 0 5px 0;
+	text-align: right;
+}
+
+.toplinks span{
+	background: #eff3ff;
+	border: 1px solid #5C7CA7;
+	border-bottom: 0;
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+	padding: 5px;
+}
+
+.copyright,
+.copyright a:link,
+.copyright a:visited,
+.copyright a:active{ 
+	background: #FFF;
+	font-size: 10px; 
+	color: #666;
+}
+
+/* 
+ * ========================================
+ * print page styles 
+ * ========================================
+ */
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+#print h4{
+	background: #F9F9F9;
+	font-size: 11px;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #000;
+	text-align: center;
+}
+
+/* ============================================================== */
+/* RTE STYLES
+/* ============================================================== */
+
+.rteimage {
+	background: transparent;
+	border: 1px solid transparent;
+	cursor: pointer;
+	cursor: hand;
+	padding:1px;
+}
+
+.rteImageRaised {
+	background: transparent;
+	border: 1px solid transparent;
+	cursor: pointer;
+	cursor: hand;
+	padding:1px;
+}
+
+.rteImageLowered {
+	background: transparent;
+	border: 1px solid transparent;
+	cursor: pointer;
+	cursor: hand;
+	padding:1px;
+}
+
+.rteimage:hover {
+	background: #FFF;
+	border: 1px solid;
+	cursor: pointer;
+	cursor: hand;
+	padding:1px;
+}
+
+.rteVertSep {
+	margin: 0 4px 0 4px;
+}
+
+.rteBack {
+	background: #D3D3D3;
+	border: 1px outset;
+	letter-spacing: 0;
+	padding: 2px;
+}
+
+/* used in ips_rte.js - do not remove */
+.rtebottombutton
+{
+	font-size:10px;
+	border:1px solid #777;
+	border-top:0px;
+	padding:3px;
+	margin:0px;
+	background-color: #EBEBEB;
+}
+
+/* used in ips_rte.js - do not remove */
+.rtebottombuttonon
+{
+	font-size:10px;
+	border:1px solid #777;
+	border-top:0px;
+	padding:3px;
+	margin:0px;
+	background-color: #D3D3D3;
+}
+
+.rtebuttonbar1 {
+	/*background: #D3D3D3;*/
+	background-image: url(style_images/test/folder_rte_images/rte_tile.gif);
+	border: 1px solid gray;
+	border-bottom:0px;
+	letter-spacing: 0;
+	padding: 2px;
+	height:26px;
+}
+
+.rtebuttonbar2 {
+	/*background: #D3D3D3;*/
+	background-image: url(style_images/test/folder_rte_images/rte_tile.gif);
+	border: 1px solid gray;
+	border-top:1px solid gray;
+	letter-spacing: 0;
+	padding: 2px;
+	height:26px;
+}
+
+.rtebuttonbar1 tbody tr td,
+.rtebuttonbar1 tr td,
+.rtebuttonbar2 tbody tr td,
+.rtebuttonbar2 tr td,
+.rteBack tbody tr td,
+.rteBack tr td
+{
+	/*background: #D3D3D3;*/
+	padding: 0;
+}
+
+.rteDiv {
+	display: block;
+	position: relative;
+	padding:0px;
+	margin:0px;
+}
+
+.rteiframe
+{
+	border:1px solid #777;
+	background-color:#FFF;
+}
+
+.rteselectbox
+{
+	font-size:11px;
+}
+
+
+.dny-edit-title
+{
+	border:0px;
+	padding:3px;
+	margin:0px;
+	background: #D1DCEB; 
+	color: #3A4F6C; 
+}
+
+
+/* ======================================== */
+/* TABS
+/* ======================================== */
+
+.tabon
+{
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+	background-color:#FFF;
+	padding:8px;
+	padding-bottom:9px;
+	font-size:10px;
+	float:left;
+	width:auto;
+	margin-top:3px;
+}
+
+.taboff
+{
+	border-top: 1px solid #777;
+	border-left: 1px solid #777;
+	border-right: 1px solid #777;
+	background-color: #B5C3D9;
+	color: #333;
+	padding: 8px;
+	font-size:10px;
+	float: left;
+	width: auto;
+	margin-top:3px;
+}
+
+.tabon a:link, 
+.tabon a:visited, 
+.tabon a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.taboff a:link, 
+.taboff a:visited, 
+.taboff a:active
+{
+	text-decoration:none;
+	color: #333;
+}
+
+.mya-back
+{
+	background: #072A66;
+	margin:1px;
+}
+
+.mya-content
+{
+	background: #FFF;
+	padding:8px;
+	margin:1px;
+	border: 1px solid #777;
+}
+
+/* -------------------------------- */
+/* Create PM box defaults           */
+/* -------------------------------- */
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	filter:alpha(opacity=0);
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+
+
+/* -------------------------------- */
+/* Experimental                     */
+/* -------------------------------- */
+
+.popupmenu
+{
+   background: #eff3ff;
+   border: 1px solid #3A4F6C;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   /*padding:3px 5px 3px 3px;*/
+   /*width:300px;*/
+}
+
+.popupmenu-item
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	border-bottom: 1px solid #C2CFDF;
+}
+
+.popupmenu-item-last
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+}
+
+.popmenubutton
+{
+	width:120px;
+	white-space:nowrap;
+	background-image: url(style_images/test/folder_rte_images/rte_tile.gif);
+	border:1px solid #3A4F6C;
+	color: #3A4F6C;
+	font-weight:bold;
+	float:right;
+	height:18px;
+	text-align:center;
+	margin:0px;
+	font-size:11px;
+	padding:3px;
+}
+
+
+.popmenubutton a:link, 
+.popmenubutton a:visited,
+.popupmenu-item a:link, 
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link, 
+.popupmenu-item-last a:visited
+{ 
+	color: #000; 
+	text-decoration: none;
+}
+
+.popmenubutton a:hover, 
+.popupmenu-item a:hover, 
+.popupmenu-item-last a:hover
+{ 
+	color: #7B5806; 
+	text-decoration: none;
+}
+
+.popupmenu-category
+{ 
+	background: transparent url(style_images/test/folder_rte_images/rte_tile.gif);
+	border-top: 1px solid #5176B5;
+	border-bottom: 1px solid #5176B5;
+	color: #000; 
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+.sp-wrap      { background: #E9E9E6; margin: 8px auto; width: 97%; clear: both;}
+.sp-head-wrap { padding: 1px 6px 2px; border: solid #C3CBD1; border-width: 1px 1px 1px 2px; clear: both;}
+.sp-head      { font-size: 11px; padding: 1px 14px 3px; margin-left: 6px; line-height: 15px; }
+.sp-body      { display: none; font-weight: normal; background: #F5F5F5; padding: 1px 6px 2px;; border: solid #C3CBD1; border-width: 1px 1px 1px 2px; clear: both; border-top-width: 0; }
+.clickable { cursor: pointer; }
+.folded { display: block; background: transparent url(style_images/icon_plus_1.gif) no-repeat left center; padding-left: 14px; }
+.unfolded { display: block; background: transparent url(style_images/icon_minus_1.gif) no-repeat left center; padding-left: 14px; }
+</style> 
+ 
+</head> 
+<body>
+<div id="ipbwrapper">
+<!--ipb.javascript.start-->
+<script type="text/javascript">
+ //<![CDATA[
+ var ipb_var_st            = "40";
+ var ipb_lang_tpl_q1       = "Введите номер страницы, на которую желаете перейти";
+ var ipb_var_s             = "a4e46c1e7faac4056ef05cadf9474544";
+ var ipb_var_phpext        = "php";
+ var ipb_var_base_url      = "https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&";
+ var ipb_var_image_url     = "style_images/test";
+ var ipb_input_f           = "14";
+ var ipb_input_t           = "4660";
+ var ipb_input_p           = "";
+ var ipb_var_cookieid      = "";
+ var ipb_var_cookie_domain = "";
+ var ipb_var_cookie_path   = "/";
+ var ipb_md5_check         = "880ea6a14ea49e853634fbdc5015a024";
+ var ipb_new_msgs          = 0;
+ var use_enhanced_js       = 0;
+ var use_charset       = "windows-1251";
+var ipb_myass_chars_lang = "";
+ //]]>
+</script>
+<script type="text/javascript" src='jscripts/ipb_global.js'></script>
+<script type="text/javascript" src='jscripts/ips_menu.js'></script>
+<script type="text/javascript" src='style_images/test/folder_js_skin/ips_menu_html.js'></script>
+<script type="text/javascript" src='jscripts/expand.js'></script>
+<!--ipb.javascript.end-->
+<div class="borderwrap">
+	<div id="logostrip"><a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;'><!--ipb.logo.start--><img src='/style_images/test/arobase.jpg' style='vertical-align:top' alt='IPB' border='0' /><!--ipb.logo.end--></a></div>
+	<div id="submenu">
+		<IDXSKIP><p class="home"><!--ipb.leftlinks.start--><a href="https://www.nashnet.ua">NashNet</a><!--IBF.RULES--><!--ipb.leftlinks.end--></p></IDXSKIP>
+		<p><!--ipb.rightlinks.start-->
+
+	<a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Help">Помощь</a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Search&amp;f=14">Поиск</a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Members">Участники</a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=calendar">Календарь</a>
+		<!--ipb.rightlinks.end--></p>
+	</div>
+</div><!-- / End board header -->
+<div id="userlinksguest">
+	<p class="pcen"><IDXSKIP><b>Здравствуйте Гость</b></IDXSKIP> ( <a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Login&amp;CODE=00">Вход</a> | <a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Reg&amp;CODE=00">Регистрация</a> <IDXSKIP>)	</IDXSKIP></p>
+</div>
+<div id="navstrip"><img src='style_images/test/nav.gif' border='0'  alt='gb310376215' />&nbsp;<a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=idx'>NashNet forum</a>&nbsp;>&nbsp;<a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showforum=3'>Развлечения</a>&nbsp;>&nbsp;<a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showforum=12'>Игры</a>&nbsp;>&nbsp;<a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showforum=14'>Counter-Strike</a></div>
+<!--IBF.NEWPMBOX-->
+<script type="text/javascript">
+<!--
+var ipb_lang_tt_prompt = "Копирование прямой ссылки этого сообщения, для сохранения в буфере обмена";
+var ipb_lang_js_del_1  = "Вы действительно хотите удалить это сообщение?";
+var ipb_lang_js_del_2  = "Не хотите, как хотите :)";
+var addquotebutton     = "style_images/test/p_mq_add.gif";
+var removequotebutton  = "style_images/test/p_mq_remove.gif";
+var unselectedbutton = "style_images/test/topic_unselected.gif";
+var selectedbutton   = "style_images/test/topic_selected.gif";
+var lang_gobutton    = "С отмеченными";
+var lang_suredelete  = "Вы действительно хотите удалить эти сообщения?";
+var js_error_no_permission = "";
+-->
+</script>
+<script type="text/javascript" src="jscripts/ipb_topic.js"></script>
+<a name="top"></a>
+<table class='ipbtable' cellspacing="0">
+	<tr>
+		<td style='padding-left:0px' width="40%" valign="middle" nowrap="nowrap"><div><span class="pagelink" id='page-jump'>9 Страницы <img src='style_images/test/menu_action_down.gif' alt='V' title='Открыть меню' border='0' /></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=20" title="">&lt;</a></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=0" title="1">1</a></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=20" title="2">2</a></span>&nbsp;<span class="pagecurrent">3</span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=60" title="4">4</a></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=80" title="5">5</a></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=60" title="Следующая страница">&gt;</a></span>&nbsp;<span class="pagelinklast"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=160" title="На последнюю страницу">&raquo;</a></span><IDXSKIP>&nbsp;
+</IDXSKIP><script type="text/javascript">
+//<![CDATA[
+ipb_pages_shown++;
+var pgjmp = document.getElementById( 'page-jump' );
+pgjmp.id  = 'page-jump-'+ipb_pages_shown;
+ipb_pages_array[ ipb_pages_shown ] = new Array( 'https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660', 20, 174 );
+menu_build_menu(
+	pgjmp.id,
+	new Array(  "--NODIV--<div onmouseover='pages_st_focus("+ipb_pages_shown+")' class='popupmenu-category' align='center'>Перейти к странице</div>",
+				"<input type='text' size='5' name='st' id='st-"+ipb_pages_shown+"' /> <input type='button' class='button' onclick='do_multi_page_jump("+ipb_pages_shown+");' value='ок' />" ) );
+//]]>
+</script><IDXSKIP>&nbsp;</IDXSKIP><!--
+	( <a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=ST&amp;f=14&amp;t=4660&amp;view=getnewpost">К первому непрочитанному сообщению</a> )
+--></div></td>
+		<td class='nopad' style='padding:0px 0px 5px 0px' align="right" width="60%" valign="middle"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=reply_post&amp;f=14&amp;t=4660"><img src='style_images/test/t_reply.gif' border='0'  alt='Reply to this topic' /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=00&amp;f=14" title="Создание новой темы"><img src='style_images/test/t_new.gif' border='0'  alt='Start new topic' /></a></td>
+	</tr>
+</table><div class="borderwrap">
+	<div class="maintitle" style='padding:4px'>
+	<!-- TABLE FIX FOR MOZILLA WRAPPING-->
+	<table width='100%' style='padding:0px' cellspacing='0' cellpadding='0'>
+	<tr>
+	 <td width='1%' nowrap='nowrap'><div><img src='style_images/test/nav_m.gif' border='0'  alt='&gt;' width='8' height='8' />&nbsp;<b>Помоему он читер</b>, Пишем кто на вашу мысль читер</div></td>
+	 <IDXSKIP><td width='99%' align='right'>
+	    <div class='popmenubutton' id='topicmenu-options'><a href='#topicoptions'>Опции</a> <img src='style_images/test/menu_action_down.gif' alt='V' title='Открыть меню' border='0' /></div>	 </td></IDXSKIP>
+	</tr>
+  </table>
+	 
+ </div>
+ <!--{IBF.POLL}-->
+<script type="text/javascript">
+  menu_build_menu(
+  "topicmenu-options",
+  new Array( img_item + " <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=usercp&amp;CODE=start_subs&amp;method=topic&amp;tid=4660'>Подписка на тему</a>",
+  			 img_item + " <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Forward&amp;f=14&amp;t=4660'>Сообщить другу</a>",
+  			 img_item + " <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Print&amp;client=printer&amp;f=14&amp;t=4660'>Версия для печати</a>",
+  			 img_item + " <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=usercp&amp;CODE=start_subs&amp;method=forum&amp;fid=14'>Подписка на этот форум</a>",
+  			 "--NODIV--<div class='popupmenu-category' align='center'>Display Modes</div>",
+  			 img_item + " <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;mode=threaded'>Переключится на: Каскадный</a>",
+  			 img_item + " <strong><em><a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;mode=linear'>Стандартный</a></em></strong>",
+  			 img_item + " <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;mode=linearplus'>Переключится на: Линейный</a>"
+		    ) );
+ </script><!--Begin Msg Number 79160-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79160"></a><span class="unreg">reSpect1k</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 17 2008, 09:01</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79160); return false;">#41</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-79160'>
+			<!-- THE POST 79160 -->
+			<div class="postcolor" id='post-79160'><!--quoteo(post=79155:date=Apr 17 2008, 09&#58;46 AM:name=mzF)--><div class='quotetop'>QUOTE(mzF &#064; Apr 17 2008, 09&#58;46 AM) <a href="index.php?act=findpost&amp;pid=79155"><img src='style_images/test/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />бляТь мне типо нефиг делать писать на всех демо, мне пох читерят админы или нет, просто когда на админов гнали другие игроки, йа не верил, что админы на этом серве могут читерить, но в скорем времени сам убедился........вот приведу просто пример, Трэйн, было кинуто две дымовухи за вагонами, у мну тогда стояло 16 бит, йа ничего не видел через дым, стоял с АВП, шагов не делал, тут опа, через дым с двух выстрелов с 3.2 мне Ронин вещает хэд....потом нэкст раунд, меня убили, думаю надо глянуть за тем чуваком, сначала он подписался под другим ником....смотрю в спектах с ВХ за ним....в одну сторону направил авп, снес игрока, потом в другую снес, потом в третью снес и через вх видно было куда идут игроки и по этому в его мего интуицию йа не верю, слушал в ушах, слышно ничего не было, та и растояние было большое......так же было и на Инферно.......йа конечно не спорю, что он мего папка и играет в 30 раз лучше меня, но бля это тоже не смешно.....<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Если тибе &quot;типо нефиг делать писать демо&quot; так закрой рот и без доказательств нечего тут обвинять, темболее админов, я тебя только уже за твои слова могу забанить на сервере. А если видеш что АДМИН читерит - пиши демо...Обвинение в читерстве приравниваю к оскорблению, пока усное предупреждения...так что задумайсяя, перед  тем как что-то сказать</div>
+			<!--IBF.ATTACHMENT_79160-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79160); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79160" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79160" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79160',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79160&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79160, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79161-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79161"></a><span class="unreg">AHre/I u3 PA9I&#33;</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 17 2008, 09:08</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79161); return false;">#42</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-79161'>
+			<!-- THE POST 79161 -->
+			<div class="postcolor" id='post-79161'>Играл я против Ронина никогда читов за ним незамечал средний скилл, иногда поставить может ГГ <img src="style_emoticons/default/cool.gif" style="vertical-align:middle" emoid=":cool2:" border="0" alt="cool.gif" /></div>
+			<!--IBF.ATTACHMENT_79161-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79161); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79161" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79161" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79161',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79161&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79161, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79168-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79168"></a><span class="unreg">troy</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 17 2008, 10:30</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79168); return false;">#43</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-79168'>
+			<!-- THE POST 79168 -->
+			<div class="postcolor" id='post-79168'><!--quoteo(post=79060:date=Apr 16 2008, 12&#58;12 AM:name=Sensor)--><div class='quotetop'>QUOTE(Sensor &#064; Apr 16 2008, 12&#58;12 AM) <a href="index.php?act=findpost&amp;pid=79060"><img src='style_images/test/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br /><b>ухаха...ржунимагу :)))<br />Я только сейчас это прочитал :)) <br />Меня это улыбнуло&#33; :)  <img src="style_emoticons/default/laugh.gif" style="vertical-align:middle" emoid=":laugh:" border="0" alt="laugh.gif" /> <br />Демка есть? Я бы посмотрел как я раньше шпилил :))<br />ссори за оффтоп :) не выдержал :)</b><br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />шо ты ржёшь&#33; на то время я не умел демо писать&#33; щас уже умею..попался бы ты мне....</div>
+			<!--IBF.ATTACHMENT_79168-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79168); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79168" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79168" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79168',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79168&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79168, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79256-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79256"></a><span class="unreg">Sensor</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"><img src="style_images/test/folder_post_icons/icon6.gif" alt="" /> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 18 2008, 10:32</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79256); return false;">#44</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-79256'>
+			<!-- THE POST 79256 -->
+			<div class="postcolor" id='post-79256'><!--quoteo(post=79168:date=Apr 17 2008, 10&#58;30 AM:name=troy)--><div class='quotetop'>QUOTE(troy &#064; Apr 17 2008, 10&#58;30 AM) <a href="index.php?act=findpost&amp;pid=79168"><img src='style_images/test/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />шо ты ржёшь&#33; на то время я не умел демо писать&#33; щас уже умею..попался бы ты мне....<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br /><b>слушай друг, на меня много раз писали дэмки , как я толкьо начал играть на этом серваке я был в топе 3 , причём долгое время&#33;Меня банили пернаментом, когда я на шару делал - 10 с дигла меня тоже банили, и потом админ извенился передо мной&#33; Мне пох что там думают чит я или нет&#33; Было время когда с под моего ника играл какойто х*й , и читерил, хорошо что есть админы знакомые которые пропасли его IP и он оказался с Киева, а я с Николаева&#33; Мне просто на мнение обычных игроков насрать, пусть говорят что я читер, нет демки , сосите ноги  <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":biggrin:" border="0" alt="biggrin.gif" /> <br />Было время на серваке играла моя сестра, ник AH9I_MK , иногда я вместо неё играл, и разрывал очень даже не плохо, так вы орали что мля девочка так не может играть в бан её и т.д. обзывали её но дэмки так никто и не показал&#33; Так что ребята утихомиртесь и нечего тут всем расказывать какие все плохие&#33; Я с читами не играю , ваше не играю, верите вы или нет, у меня их на тачке нет, мне не в прикол с ними бегать :)<br />А по поводу MK , я уверен на 100% что Mawa_MK не чит , это Piter только под другим ником  <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":biggrin:" border="0" alt="biggrin.gif" /> , <br />TaH9I_MK не чит, это Screamer под дргуим ником , TranceMaster_MK не чит за них я полностью уверен, про других я хз , других я ваше не знаю&#33;<br />Короче нечего всех тут х*ями крыть, демку показывайте и тогда уже что-то будем думать, а так вы мне толкьо репутацию делаете :)</b></div>
+			<!--IBF.ATTACHMENT_79256-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79256); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79256" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79256" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79256',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79256&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79256, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79259-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79259"></a><span class="unreg">solid</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 18 2008, 11:36</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79259); return false;">#45</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-79259'>
+			<!-- THE POST 79259 -->
+			<div class="postcolor" id='post-79259'>ни Sensor ни Ron1n они не чатики,ронина давно знаю,сенсора пару месяцов но знаю что не читаки........</div>
+			<!--IBF.ATTACHMENT_79259-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79259); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79259" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79259" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79259',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79259&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79259, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79414-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79414"></a><span class="unreg">zubek</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 21 2008, 12:02</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79414); return false;">#46</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-79414'>
+			<!-- THE POST 79414 -->
+			<div class="postcolor" id='post-79414'>Обращаюсь до Админов: забанте, пожалуйста, читера который напротяжении не скольких часов не давал нормально играть 21.04.2008 Ник - TELO.<br /><a href="http://www.freespace.com.ua/file/43796/69e7ed33/TELO.html" target="_blank">Ссылка на демку.</a></div>
+			<!--IBF.ATTACHMENT_79414-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79414); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79414" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79414" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79414',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79414&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79414, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79418-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79418"></a><span class="unreg">zubek</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 21 2008, 14:07</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79418); return false;">#47</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-79418'>
+			<!-- THE POST 79418 -->
+			<div class="postcolor" id='post-79418'>Вот еще один герой под ником milan:<br /><a href="http://www.freespace.com.ua/file/43836/98544284/milan.html" target="_blank">Демка</a></div>
+			<!--IBF.ATTACHMENT_79418-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79418); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79418" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79418" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79418',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79418&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79418, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79427-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79427"></a><span class="unreg">The Be&#036;T Boy PRO</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 21 2008, 15:10</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79427); return false;">#48</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-79427'>
+			<!-- THE POST 79427 -->
+			<div class="postcolor" id='post-79427'>та понту с того?&#33;....ну записал ты демо?, что дальше??админы скажут, что мол увидим забаним...а они его я даю гарантию на 100 процентов неувидят...вывод какой?- забить на это всё&#33;</div>
+			<!--IBF.ATTACHMENT_79427-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79427); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79427" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79427" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79427',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79427&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79427, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79428-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79428"></a><span class="unreg">reSpect1k</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 21 2008, 15:21</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79428); return false;">#49</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-79428'>
+			<!-- THE POST 79428 -->
+			<div class="postcolor" id='post-79428'><!--quoteo(post=79427:date=Apr 21 2008, 04&#58;10 PM:name=The Be&#036;T Boy PRO)--><div class='quotetop'>QUOTE(The Be&#036;T Boy PRO &#064; Apr 21 2008, 04&#58;10 PM) <a href="index.php?act=findpost&amp;pid=79427"><img src='style_images/test/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />та понту с того?&#33;....ну записал ты демо?, что дальше??админы скажут, что мол увидим забаним...а они его я даю гарантию на 100 процентов неувидят...вывод какой?- забить на это всё&#33;<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Вот смотри...ты просилса в админы, а тут ты говориш &quot;забить на всё&quot; - не хорошо. Парень записал демо, выложил, за это ему +1. А вот ты что зделал для того что б на сервере меньше читаков стало??? <br />P.S. Лично я, если увижу <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":biggrin:" border="0" alt="biggrin.gif" /> , забаню.</div>
+			<!--IBF.ATTACHMENT_79428-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79428); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79428" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79428" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79428',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79428&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79428, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79436-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79436"></a><span class="unreg">DonMax</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 21 2008, 16:46</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79436); return false;">#50</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-79436'>
+			<!-- THE POST 79436 -->
+			<div class="postcolor" id='post-79436'><!--quoteo(post=79428:date=Apr 21 2008, 04&#58;21 PM:name=reSpect1k)--><div class='quotetop'>QUOTE(reSpect1k &#064; Apr 21 2008, 04&#58;21 PM) <a href="index.php?act=findpost&amp;pid=79428"><img src='style_images/test/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Вот смотри...ты просилса в админы, а тут ты говориш &quot;забить на всё&quot; - не хорошо. Парень записал демо, выложил, за это ему +1. А вот ты что зделал для того что б на сервере меньше читаков стало??? <br />P.S. Лично я, если увижу <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":biggrin:" border="0" alt="biggrin.gif" /> , забаню.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />А лично я уже забанил <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":tongue:" border="0" alt="tongue.gif" /></div>
+			<!--IBF.ATTACHMENT_79436-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79436); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79436" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79436" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79436',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79436&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79436, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79444-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79444"></a><span class="unreg">zubek</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 21 2008, 17:32</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79444); return false;">#51</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-79444'>
+			<!-- THE POST 79444 -->
+			<div class="postcolor" id='post-79444'><!--quoteo(post=79436:date=Apr 21 2008, 06&#58;46 PM:name=DonMax)--><div class='quotetop'>QUOTE(DonMax &#064; Apr 21 2008, 06&#58;46 PM) <a href="index.php?act=findpost&amp;pid=79436"><img src='style_images/test/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />А лично я уже забанил <img src="style_emoticons/default/tongue.gif" style="vertical-align:middle" emoid=":tongue:" border="0" alt="tongue.gif" /><br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Спасибо&#33;&#33;&#33;</div>
+			<!--IBF.ATTACHMENT_79444-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79444); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79444" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79444" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79444',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79444&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79444, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 79453-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry79453"></a><span class="unreg">The Be&#036;T Boy PRO</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> Apr 21 2008, 18:44</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(79453); return false;">#52</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-79453'>
+			<!-- THE POST 79453 -->
+			<div class="postcolor" id='post-79453'><!--quoteo(post=79428:date=Apr 21 2008, 04&#58;21 PM:name=reSpect1k)--><div class='quotetop'>QUOTE(reSpect1k &#064; Apr 21 2008, 04&#58;21 PM) <a href="index.php?act=findpost&amp;pid=79428"><img src='style_images/test/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Вот смотри...ты просилса в админы, а тут ты говориш &quot;забить на всё&quot; - не хорошо. Парень записал демо, выложил, за это ему +1. А вот ты что зделал для того что б на сервере меньше читаков стало??? <br />P.S. Лично я, если увижу <img src="style_emoticons/default/biggrin.gif" style="vertical-align:middle" emoid=":biggrin:" border="0" alt="biggrin.gif" /> , забаню.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />да, просился....и ничего я просто процетировал,такой был ваш ответ на мои демо, те, что я писал....<br />молодец что написал, молодец что забанили...типочек как-то спалился, или адм нашлы способ выкупить ай-пи после выхода игрока из Кс....Респект=)</div>
+			<!--IBF.ATTACHMENT_79453-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(79453); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_79453" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=79453" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-79453',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=79453&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(79453, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 80429-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry80429"></a><span class="unreg">Assault</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> May 6 2008, 22:40</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(80429); return false;">#53</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-80429'>
+			<!-- THE POST 80429 -->
+			<div class="postcolor" id='post-80429'>банить всю команду Headshot ()- Reason :зае***и с читами...только зайдут нах.. сразу бан</div>
+			<!--IBF.ATTACHMENT_80429-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(80429); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_80429" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=80429" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-80429',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=80429&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(80429, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 80452-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry80452"></a><span class="unreg">NoMoreSorrow</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> May 7 2008, 16:06</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(80452); return false;">#54</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-80452'>
+			<!-- THE POST 80452 -->
+			<div class="postcolor" id='post-80452'>Прошу забанить IIJlOxou* Mouse<br />Reason: Неадекват + 4итерство<br />играет в данный момент</div>
+			<!--IBF.ATTACHMENT_80452-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(80452); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_80452" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=80452" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-80452',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=80452&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(80452, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 80800-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry80800"></a><span class="unreg">zubek</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> May 13 2008, 17:51</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(80800); return false;">#55</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-80800'>
+			<!-- THE POST 80800 -->
+			<div class="postcolor" id='post-80800'>Вот хитрый читер  - [Bony4i HocKu]&lt;---4ClubberS---&#62;<br />Демка:<br /><a href="http://www.freespace.com.ua/file/48980/4400d34c/noski.html" target="_blank"><img src="http://www.freespace.com.ua//images/downloadPublic.gif" border="0" alt="IPB Image" /></a><br />Хорошо видно в начале демки и в конце когда через дым хад делает.</div>
+			<!--IBF.ATTACHMENT_80800-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(80800); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_80800" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=80800" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-80800',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=80800&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(80800, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 81126-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry81126"></a><span class="unreg">zubek</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> May 19 2008, 12:38</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(81126); return false;">#56</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-81126'>
+			<!-- THE POST 81126 -->
+			<div class="postcolor" id='post-81126'>Вот наглый читер под ником .::P.S::.*r1kzak <br />Использовал весь набор:AIM+WH+SPEED<br />Демка где все прекрасно видно:<br /><a href="http://www.freespace.com.ua/file/50159/7eb54542/rizak.html" target="_blank"><img src="http://www.freespace.com.ua//images/downloadPublic.gif" border="0" alt="IPB Image" /></a></div>
+			<!--IBF.ATTACHMENT_81126-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(81126); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_81126" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=81126" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-81126',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=81126&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(81126, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 81128-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry81128"></a><span class="unreg">Sensor</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> May 19 2008, 13:05</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(81128); return false;">#57</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-81128'>
+			<!-- THE POST 81128 -->
+			<div class="postcolor" id='post-81128'>простите за оффтоп, но сейчас наверно будут тут писать что Electrofucker :) чит :)))))<br />Ребята, это мой второй ник&#33; Lam3rok , ты ж не первый год играешь в кс, и наверное прохавал прострелы , если каждый будет говорить при простреле чит прикинь что с этого выйдет :)<br /><br />ЗЫ: жаль ты демку не писал когда я ток начал раздавать, я ыб на мув вставил&#33; ;)<br /><br />ещё раз простите за оффтоп&#33; :)</div>
+			<!--IBF.ATTACHMENT_81128-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(81128); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_81128" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=81128" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-81128',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=81128&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(81128, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 81197-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry81197"></a><span class="unreg">Sensor</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> May 20 2008, 15:54</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(81197); return false;">#58</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-81197'>
+			<!-- THE POST 81197 -->
+			<div class="postcolor" id='post-81197'><b>мдааа...вот собственно то про что я вчера писал&#33;&#33;&#33;<br /><br />Толкьо что играю себе, на Classical+ map de_dust2 , ну так по среднему играл, нереалов вроде не вешал никому, начали писать что я чит, директор сразу же за спектов, я ещё пару раз раздал, и сразу же бан&#33; на неделю за читы&#33;&#33; я в шоке, народ, учитесь играть&#33; Ник Electrofucker :) . <br />Я ничего против админов не имею, но народ, думайте что вы делаете&#33; <br />Прошу меня разбанить как можно скорее &#33;<br />Даже есть демка , пусть е посмотрит нормальный админ, Sky , KiLL или Presojke &#33;&#33;&#33; </b></div>
+			<!--IBF.ATTACHMENT_81197-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(81197); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_81197" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=81197" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-81197',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=81197&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(81197, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 81204-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry81204"></a><span class="unreg">reSpect1k</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> May 20 2008, 18:45</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(81204); return false;">#59</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post2">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post2" id='post-main-81204'>
+			<!-- THE POST 81204 -->
+			<div class="postcolor" id='post-81204'><!--quoteo(post=81197:date=May 20 2008, 04&#58;54 PM:name=Sensor)--><div class='quotetop'>QUOTE(Sensor &#064; May 20 2008, 04&#58;54 PM) <a href="index.php?act=findpost&amp;pid=81197"><img src='style_images/test/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br /><b>нормальный админ <!--coloro:#FF0000--><span style="color:#FF0000"><!--/coloro-->Presojke<!--colorc--></span><!--/colorc--> &#33;&#33;&#33; </b><br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Ржу нимагу)))</div>
+			<!--IBF.ATTACHMENT_81204-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(81204); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_81204" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=81204" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-81204',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=81204&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(81204, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!--Begin Msg Number 81218-->
+<table class='ipbtable' cellspacing="1">
+	<tr>
+		
+
+               <td valign="middle" class="row2" width="1%">
+
+<!--if="->member['icq_number'] != "0""-->
+<!--a href=http://wwp.icq.com/ target='_blank'><img src=http://status.icq.com/online.gif?icq=&img=5 border=0 width=18 height=18></a-->
+</if>
+
+<a name="entry81218"></a><span class="unreg">Sensor</span>
+
+<!--if="author['field_2'] != """><img src="style_images/flags/.gif" border='0'></if-->
+</td>
+		<td class="row2" valign="top" width="99%">
+			<!-- POSTED DATE DIV -->
+			<div style="float: left;">
+				<span class="postdetails"><img src="style_images/test/folder_post_icons/icon10.gif" alt="" /> <img src='style_images/test/to_post_off.gif' alt='post' border='0' style='padding-bottom:2px' /> May 20 2008, 22:01</span>
+			</div>
+			<!-- REPORT / DELETE / EDIT / QUOTE DIV -->
+			<div align="right">
+				<span class="postdetails"> Отправлено
+					<a title="Ссылка этого сообщения" href="#" onclick="link_to_post(81218); return false;">#60</a>				</span>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<IDXSKIP><td valign="top" class="post1">
+        	<span class="postdetails">
+        		
+                 <br /><br />
+        		Незарегитрирован<br />
+        		<br /><br />
+        		<br />
+        		<br />
+        		
+        		<br />
+        		<br />
+        		 
+        	</span><br />
+        	<img src="style_images/test/spacer.gif" alt="" width="160" height="1" /><br /> 
+       </td></IDXSKIP>
+       <if="author['mgroup'] == '4'">
+       <td width="100%" valign="top" class="post1" id='post-main-81218'>
+			<!-- THE POST 81218 -->
+			<div class="postcolor" id='post-81218'><!--quoteo(post=81204:date=May 20 2008, 06&#58;45 PM:name=reSpect1k)--><div class='quotetop'>QUOTE(reSpect1k &#064; May 20 2008, 06&#58;45 PM) <a href="index.php?act=findpost&amp;pid=81204"><img src='style_images/test/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Ржу нимагу)))<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Саша, шютки не уместын , разбань лучше ;)  <img src="style_emoticons/default/cool.gif" style="vertical-align:middle" emoid=":cool2:" border="0" alt="cool.gif" /></div>
+			<!--IBF.ATTACHMENT_81218-->
+			
+			<!-- THE POST -->		
+		</td>
+	</tr>
+	<tr>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<div style='text-align:left'><!----></div>
+		</td>
+		<td class="formbuttonrow" nowrap="nowrap">
+			<!-- PM / EMAIL / WWW / MSGR -->
+			<div style="float: left;">
+				<a href="javascript:scroll(0,0);"><img src='style_images/test/p_up.gif' border='0'  alt='Go to the top of the page' /></a>
+			</div>
+			<!-- REPORT / UP -->
+         	<div align="right">
+         		<a href="#" onclick="multiquote_add(81218); return false;" title="Добавить к многочисленным цитатам"><img src="style_images/test/p_mq_add.gif" name="mad_81218" alt="+" /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=02&amp;f=14&amp;t=4660&amp;qpid=81218" title="Ответить прямо в этом сообщении"><img src='style_images/test/p_quote.gif' border='0'  alt='Quote Post' /></a>
+         	</div>
+         </td>
+	</tr><tr>
+	<td class="catend" colspan="2">
+	<!-- no content -->
+	</td>
+</tr>
+</table>
+<script type='text/javascript'>
+//<![CDATA[
+if ( ajax_loaded && use_enhanced_js )
+{
+menu_build_menu( 'edit-but-81218',
+	new Array(  img_item + " <a title='Full edit screen with all options' href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=edit_post&amp;f=14&amp;t=4660&amp;p=81218&amp;st=40'>Полная правка</a>",
+				img_item + " <a href='#' title='Edit this post in place with basic options' onclick='return ajax_prep_for_edit(81218, event);'>Быстрая правка</a>" ) );
+}
+//]]>
+</script><!-- END TABLE --><!-- TABLE FOOTER -->
+<div class="barc">
+	<div style="float: right; padding: 5px 5px 0 0;"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;view=old" style='text-decoration:none'>&laquo; Предыдущая тема</a>
+	&middot; <a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showforum=14" style='font-weight: bold;text-decoration:none'>Counter-Strike</a>
+	&middot; <a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;view=new" style='text-decoration:none'>Следующая тема &raquo;</a></div>
+	<div>
+		<form action="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;" method="post" name="search">
+			<input type="hidden" name="forums" value="14" />
+			<input type="hidden" name="topic" value="4660" />
+			<input type="hidden" name="act" value="Search" />
+			<input type="hidden" name="CODE" value="searchtopic" />
+			<input type="text" size="25" name="keywords" class="searchinput" value="Введите ключевое слово" onfocus="this.value = '';" />&nbsp;
+			<input type="submit" value="Искать в теме" class="button" />
+		</form>
+	</div>
+</div>
+</div>
+<br /><table class='ipbtable' cellspacing="0">
+	<tr>
+		<td style='padding-left:0px' width="30%" nowrap="nowrap" valign="middle"><div><span class="pagelink" id='page-jump'>9 Страницы <img src='style_images/test/menu_action_down.gif' alt='V' title='Открыть меню' border='0' /></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=20" title="">&lt;</a></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=0" title="1">1</a></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=20" title="2">2</a></span>&nbsp;<span class="pagecurrent">3</span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=60" title="4">4</a></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=80" title="5">5</a></span>&nbsp;<span class="pagelink"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=60" title="Следующая страница">&gt;</a></span>&nbsp;<span class="pagelinklast"><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;st=160" title="На последнюю страницу">&raquo;</a></span><IDXSKIP>&nbsp;
+</IDXSKIP><script type="text/javascript">
+//<![CDATA[
+ipb_pages_shown++;
+var pgjmp = document.getElementById( 'page-jump' );
+pgjmp.id  = 'page-jump-'+ipb_pages_shown;
+ipb_pages_array[ ipb_pages_shown ] = new Array( 'https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660', 20, 174 );
+menu_build_menu(
+	pgjmp.id,
+	new Array(  "--NODIV--<div onmouseover='pages_st_focus("+ipb_pages_shown+")' class='popupmenu-category' align='center'>Перейти к странице</div>",
+				"<input type='text' size='5' name='st' id='st-"+ipb_pages_shown+"' /> <input type='button' class='button' onclick='do_multi_page_jump("+ipb_pages_shown+");' value='ок' />" ) );
+//]]>
+</script></div></td>
+		<td class='nopad' style='padding:5px 0px 5px 0px' align="right" width="70%"><!--IBF.QUICK_REPLY_CLOSED--><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=post&amp;do=reply_post&amp;f=14&amp;t=4660"><img src='style_images/test/t_reply.gif' border='0'  alt='Reply to this topic' /></a><a href="https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Post&amp;CODE=00&amp;f=14" title="Создание новой темы"><img src='style_images/test/t_new.gif' border='0'  alt='Start new topic' /></a><!----></td>
+	</tr>
+</table>
+<div class="borderwrap">
+	<div class="formsubtitle" style="padding: 4px;"><IDXSKIP>1 чел. читают эту тему (1 Гостей и 0 Скрытых Пользователей)</IDXSKIP></div>
+	<IDXSKIP><div class="row1" style="padding: 4px;">0 Пользователей: </div></IDXSKIP>
+</div>
+
+<!--IBF.QUICK_REPLY_OPEN-->
+<br />
+<div class="borderwrap">
+	<div class="row2" style="padding: 5px;">
+		
+		<div align="right"><form onsubmit="if(document.jumpmenu.f.value == -1){return false;}" action='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=SF' method='get' name='jumpmenu'>
+			             <input type='hidden' name='act' value='SF' />
+<input type='hidden' name='s' value='a4e46c1e7faac4056ef05cadf9474544' />
+			             <select name='f' onchange="if(this.options[this.selectedIndex].value != -1){ document.jumpmenu.submit() }" class='dropdown'>
+			             <optgroup label="Перейти на сайт">
+			              <option value='sj_home'>Главная страница форума</option>
+			              <option value='sj_search'>Поиск</option>
+			              <option value='sj_help'>Помощь</option>
+			             </optgroup>
+			             <optgroup label="Перейти в форум"><option value="4">Общие интересы.</option>
+<option value="25">&nbsp;&nbsp;&#0124;-- Общалка</option>
+<option value="26">&nbsp;&nbsp;&#0124;-- Несерьезно</option>
+<option value="28">&nbsp;&nbsp;&#0124;-- В мире животных</option>
+<option value="30">&nbsp;&nbsp;&#0124;-- Железо &amp; софт</option>
+<option value="43">&nbsp;&nbsp;&#0124;---- Интернет</option>
+<option value="44">&nbsp;&nbsp;&#0124;---- - media server-</option>
+<option value="49">&nbsp;&nbsp;&#0124;---- КПК</option>
+<option value="50">&nbsp;&nbsp;&#0124;---- ОчУмелые ручки или домашняя лаборатория</option>
+<option value="52">&nbsp;&nbsp;&#0124;---- Что нам стоит дом построить</option>
+<option value="76">&nbsp;&nbsp;&#0124;---- Инвайты</option>
+<option value="3">Развлечения</option>
+<option value="7">&nbsp;&nbsp;&#0124;-- Юмор</option>
+<option value="8">&nbsp;&nbsp;&#0124;-- Бульвар капуцинов</option>
+<option value="54">&nbsp;&nbsp;&#0124;---- Синема-клуб</option>
+<option value="62">&nbsp;&nbsp;&#0124;------ Палата пироманов</option>
+<option value="55">&nbsp;&nbsp;&#0124;------ Комната смеха</option>
+<option value="56">&nbsp;&nbsp;&#0124;------ Комната страха</option>
+<option value="57">&nbsp;&nbsp;&#0124;------ Комната слез</option>
+<option value="61">&nbsp;&nbsp;&#0124;------ Комната грез</option>
+<option value="64">&nbsp;&nbsp;&#0124;------ Камера №13</option>
+<option value="58">&nbsp;&nbsp;&#0124;------ Детская комната</option>
+<option value="66">&nbsp;&nbsp;&#0124;------ Kарандашик</option>
+<option value="60">&nbsp;&nbsp;&#0124;------ Чуланчик</option>
+<option value="59">&nbsp;&nbsp;&#0124;------ Спаленка</option>
+<option value="65">&nbsp;&nbsp;&#0124;------ Чердак</option>
+<option value="67">&nbsp;&nbsp;&#0124;------ Задний двор</option>
+<option value="73">&nbsp;&nbsp;&#0124;------ Комната VIP</option>
+<option value="75">&nbsp;&nbsp;&#0124;------ Сериалы</option>
+<option value="23">&nbsp;&nbsp;&#0124;---- Интересненькое</option>
+<option value="21">&nbsp;&nbsp;&#0124;---- Обсерватория</option>
+<option value="68">&nbsp;&nbsp;&#0124;---- Гримерка</option>
+<option value="69">&nbsp;&nbsp;&#0124;---- Подвальчик старого киномеханика</option>
+<option value="70">&nbsp;&nbsp;&#0124;------ Кинозал</option>
+<option value="71">&nbsp;&nbsp;&#0124;------ Смотрим дома</option>
+<option value="72">&nbsp;&nbsp;&#0124;------ Монтажная</option>
+<option value="9">&nbsp;&nbsp;&#0124;-- Музыка</option>
+<option value="10">&nbsp;&nbsp;&#0124;-- Встречи</option>
+<option value="11">&nbsp;&nbsp;&#0124;-- Спорт</option>
+<option value="17">&nbsp;&nbsp;&#0124;---- Футбол</option>
+<option value="18">&nbsp;&nbsp;&#0124;---- Баскетбол</option>
+<option value="19">&nbsp;&nbsp;&#0124;---- Вело</option>
+<option value="53">&nbsp;&nbsp;&#0124;---- Общий для остальных видов спорта</option>
+<option value="12">&nbsp;&nbsp;&#0124;-- Игры</option>
+<option value="14" selected="selected">&nbsp;&nbsp;&#0124;---- Counter-Strike</option>
+<option value="15">&nbsp;&nbsp;&#0124;---- WOW</option>
+<option value="24">&nbsp;&nbsp;&#0124;---- Разное</option>
+<option value="13">&nbsp;&nbsp;&#0124;-- Творчество</option>
+<option value="48">&nbsp;&nbsp;&#0124;---- Литература</option>
+<option value="74">&nbsp;&nbsp;&#0124;---- Kартотека</option>
+<option value="5">Барахолка</option>
+<option value="29">&nbsp;&nbsp;&#0124;-- Купля&#092;продажа</option>
+<option value="32">&nbsp;&nbsp;&#0124;---- Куплю</option>
+<option value="33">&nbsp;&nbsp;&#0124;---- Продам</option>
+<option value="31">&nbsp;&nbsp;&#0124;-- Работа</option>
+<option value="34">&nbsp;&nbsp;&#0124;---- Ищу</option>
+<option value="35">&nbsp;&nbsp;&#0124;---- Предлагаю</option>
+</optgroup>
+</select>&nbsp;<input type='submit' value='ок' class='button' /></form></div>
+	</div>
+</div>
+<br />
+<!-- NON JS STUFF -->
+<div id='topicoptionsjs'>
+ <a name='topicdisplay'></a>
+ <div class='borderwrap'>
+  <div class="bar" style="padding: 5px;text-align:center">
+  <IDXSKIP><strong>Тип отображения:</strong></IDXSKIP> <strong><em><a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;mode=linear'>Стандартный</a></em></strong> &middot;
+  <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;mode=linearplus'>Переключится на: Линейный</a> &middot;
+  <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;showtopic=4660&amp;mode=threaded'>Переключится на: Каскадный</a>
+  </div>
+ </div>
+ <br />
+ <a name='topicoptions'></a>
+ <div class='borderwrap'>
+  <div class="bar" style="padding: 5px;text-align:center">
+  <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=usercp&amp;CODE=start_subs&amp;method=topic&amp;tid=4660'>Подписка на тему</a> &middot;
+  <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Forward&amp;f=14&amp;t=4660'>Сообщить другу</a> &middot;
+  <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=Print&amp;client=printer&amp;f=14&amp;t=4660'>Версия для печати</a> &middot;
+  <a href='https://forum.nashnet.ua/index.php?s=a4e46c1e7faac4056ef05cadf9474544&amp;act=usercp&amp;CODE=start_subs&amp;method=forum&amp;fid=14'>Подписка на этот форум</a>
+  </div>
+ </div>
+ <br /></div>
+<script type='text/javascript'>
+//<![CDATA[
+ document.getElementById('topicoptionsjs').style.display = 'none';
+ 
+ // Scroll to PID?
+ topic_scroll_to_post( parseInt("") );
+//]]>
+</script>
+<table cellspacing="0" id="gfooter">
+	<tr>
+		<td width="45%"> </td>
+		<td width="10%" align="center" nowrap="nowrap"><a href="lofiversion/index.php/t4660.html"><b>Упрощённая версия</b></a></td>
+		<IDXSKIP><td width="45%" align="right" nowrap="nowrap">Сейчас: 28th June 2017 - 18:05</td></IDXSKIP>
+	</tr>
+</table>
+<!--
+Important !
+-->
+<IDXSKIP><div align='center' class='copyright'>NashNet:  <a href="http://www.nashnet.ua/abon_resources.shtml" style='text-decoration:none' target="_blank">ресурсы</a></div></IDXSKIP>
+<script type='text/javascript'>
+//<![CDATA[
+menu_do_global_init();
+initSpoilers('body');//]]>
+</script>
+ 
+</div>
+		<!-- / Copyright -->
+</div>
+</body> 
+</html>

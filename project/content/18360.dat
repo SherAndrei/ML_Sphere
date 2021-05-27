@@ -1,0 +1,1097 @@
+pstgu.ru/news/smi/2014/03/08/51589
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Дух и символ</title>
+<link rel="stylesheet" type="text/css" href="/templates/slidemenu_data/slidemenu.css">
+</script><script src="/templates/js/common.js"></script>
+
+<script src="/jquery/jquery.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/JQUERYPLAGINS/prettyPhoto/css/prettyPhoto.css">
+
+<script type="text/javascript" src="/JQUERYPLAGINS/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+
+
+ $('img.sh, img.sh_new').each(function () {
+ //var i_w=$(this).css("width"); 
+ //var i_h=$(this).css("height");
+ var i_align=$(this).attr("align");
+ 
+ var i_title=$(this).attr("title");
+ var i_podp=$(this).attr("alt");
+
+ var i_src=$(this).attr('src');
+ 
+
+ 
+  var img_replece ='<a onclick="return hs.expand(this)" href="'+ i_src.replace('_.','.')+'" target="_blank" >'+
+ '<div><img alt="Увеличить изображение" title="'+i_title+'"  src="'+ i_src+'" class="image"    /></div>'+
+ '</a>';
+ 
+ $(this).replaceWith(img_replece);
+});
+
+
+$('img.video').each(function () { 	
+	
+ var v_w=$(this).css("width"); 
+ var v_h=$(this).css("height");
+ var v_align=$(this).attr("align");
+ 
+ var video_real='<object width="'+v_w+'" height="'+v_h+'" data="http://pstgu.ru/player/uppod.swf" type="application/x-shockwave-flash" id="videoplayer5107">'+
+ '<param value="true" name="allowFullScreen">'+
+ '<param value="always" name="allowScriptAccess">'+
+ '<param value="transparent" name="wmode">'+
+ '<param value="http://pstgu.ru/player/uppod.swf" name="movie">';
+
+ var url_video=$(this).attr("alt"); 
+ var title_video=$(this).attr("title"); 
+
+ var video_real_url='<param value="comment='+title_video+'&st=http://pstgu.ru/player/styles/video56-1376.txt&file='+url_video+'" name="flashvars"></object>';
+
+ $(this).replaceWith('<table width="'+v_w+'" height="'+v_h+'" align="'+v_align+'" ><tr><td><div class="video_real">'+video_real+video_real_url+'</div></td></tr></table>');	
+  
+});
+
+
+
+$('img.audio').each(function () { 	
+
+ var a_w=$(this).css("width"); 
+ var a_h=$(this).css("height"); 
+ var a_align=$(this).attr("align");
+
+ var audio_real='<object width="'+a_w+'" height="'+a_h+'" data="http://pstgu.ru/player/uppod.swf" type="application/x-shockwave-flash" id="audioplayer1977">'+
+ '<param value="always" name="allowScriptAccess">'+
+ '<param value="transparent" name="wmode">'+
+ '<param value="http://pstgu.ru/player/uppod.swf" name="movie">';
+
+ var url_audio=$(this).attr("alt"); 
+ var title_audio=$(this).attr("title");
+ 
+ var audio_real_url=' <param value="comment='+title_audio+'&st=http://pstgu.ru/player/styles/audio56-957.txt&file='+url_audio+'" name="flashvars"></object>';
+
+ $(this).replaceWith('<table width="'+a_w+'" height="'+a_h+'" align="'+a_align+'" ><tr><td><div class="audio_real">'+audio_real+audio_real_url+'</div></td></tr></table>');
+
+});
+
+
+
+
+/*
+ $('img.sh_new').each(function () {
+ var i_w=$(this).css("width"); 
+ var i_h=$(this).css("height");
+ var i_align=$(this).attr("align");
+ 
+ var i_title=$(this).attr("title");
+ var i_podp=$(this).attr("alt");
+       		    	      var img_replece ='<a  href="'+$('.sh_new').attr('src').replace('_.','.')+'" rel="prettyPhoto[gallery]" title="'+i_title+'" target="_blank" >'+
+     		    	      '<img width="'+i_w+'"  alt="Увеличить изображение" title="'+i_title+'"  src="'+$('.sh_new').attr('src')+'" class="image" style="padding:0px; margin:0px;"    />'+
+     		    	      '</a>';
+
+
+ $(this).replaceWith(img_replece);
+});
+
+
+
+                        var settings = {
+
+            					opacity: 0.6,
+            					animationSpeed: 'normal',
+            					slideshow: 4000,
+            					show_title: false,
+            					hideflash: true
+
+            				};
+            		    $("a[rel^='prettyPhoto']").prettyPhoto(settings);
+*/
+
+});
+
+
+</script>
+
+
+<script type="text/javascript" src="/templates/marki/highslide.js"></script>
+<script language="javascript" type="text/javascript">
+
+        hs.graphicsDir = '/templates/marki/graphics/';
+        hs.outlineType = 'rounded-white';
+        hs.numberOfImagesToPreload = 0;
+        hs.showCredits = false;
+        hs.dimmingOpacity = 0.60;
+        hs.lang = {
+                loadingText :     'Загрузка...',
+                playTitle :       'Просмотр слайдшоу (пробел)',
+                pauseTitle:       'Пауза',
+                previousTitle :   'Предыдущее изображение',
+                nextTitle :       'Следующее изображение',
+                moveTitle :       'Переместить',
+                closeTitle :      'Закрыть (Esc)',
+                fullExpandTitle : 'Развернуть до полного размера',
+                restoreTitle :    'Кликните для закрытия картинки, нажмите и удерживайте для перемещения',
+                focusTitle :      'Сфокусировать',
+                loadingTitle :    'Нажмите для отмены'
+        };
+
+        hs.align = 'center';
+        hs.transitions = ['expand', 'crossfade'];
+        hs.addSlideshow({
+                interval: 4000,
+                repeat: false,
+                useControls: true,
+                fixedControls: 'fit',
+                overlayOptions: {
+                        opacity: .75,
+                        position: 'bottom center',
+                        hideOnMouseOut: true
+                }
+        });
+//
+</script>
+
+<style type="text/css" media="all">
+@import url(/templates/css/engine.css);
+</style>
+
+
+
+</head>
+
+<body topmargin="0px" leftmargin="0" rightmargin="0" bottommargin="0" onLoad="slideMenu.build('sm',125,10,10,1);MM_preloadImages('/templates/images/b2.gif','/templates/images/b4.gif','/templates/images/b6.gif','/templates/images/b8.gif')">
+
+<table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <IDXSKIP><tr>
+    <td height="187" colspan="2" background="/templates/images/01.jpg" style="background-repeat:repeat-x;"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="265">
+<a href="/"><img src="/templates/images/kuzneci_in.jpg" width="265" height="187" alt="на главную"></a></td>
+        <td><table width="100%" height="188" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="100%" align="left" valign="top"><table width="100%" height="187" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="76" align="left" valign="bottom">
+<img src="/templates/images/pstgu.gif" alt="Православный Свято-Тихоновский университет" width="473" height="60"></td>
+                </tr>
+                <tr>
+                  <td height="80" align="center" valign="middle" background="/templates/images/19.jpg" style="background-repeat:no-repeat; background-position:left;"><table width="70%" border="0">
+                    <tr>
+                      <td align="center" valign="middle">
+<script type="text/javascript" src="/templates/marki/marki.js"></script>
+
+<!--<TABLE height=* cellSpacing=0 cellPadding=0 
+                              width="100%" border=0 valign="top">
+                                <TBODY>
+                                <TR>
+                                <TD align=center><ads:main_1><a href="http://pstgu.ru/service/locate.php?id=21&href=http://pravolimp.ru/" target="_blank"><img src="http://pstgu.ru/pic/advertising/b1.png" alt="" width="63" height="67"  border="0"><div class="adstext"></div></a></ads:main_1></TD>
+                                <TD vAlign=top align=center><ads:main_2><a href="http://pstgu.ru/service/locate.php?id=22&href=http://do.pstgu.ru/" target="_self"><img src="http://pstgu.ru/pic/advertising/b3.png" alt="" width="63" height="67"  border="0"><div class="adstext"></div></a></ads:main_2></TD>
+                                <TD vAlign=bottom align=center><ads:main_3><a href="http://pstgu.ru/service/locate.php?id=23&href=http://en.pstgu.ru/rusver" target="_blank"><img src="http://pstgu.ru/pic/advertising/b5.gif" alt="" width="63" height="67"  border="0"><div class="adstext"></div></a></ads:main_3></TD>
+                               <TD vAlign=top align=center><ads:main_4><a href="http://pstgu.ru/service/locate.php?id=24&href=/forums/" target="_self"><img src="http://pstgu.ru/pic/advertising/b7.png" alt="" width="63" height="67"  border="0"><div class="adstext"></div></a></ads:main_4></TD></TR>
+                                
+</TBODY></TABLE>--></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td height="32" align="left" valign="middle" background="/templates/images/18.jpg" style="background-repeat:no-repeat; background-position:right;">
+<a href="/about_university/documents/"><img src="/templates/images/svidetelstvo.gif" alt="Свидетельство о Государственной аккредитации" width="417" height="32"></a></td>
+                </tr>
+            </table></td>
+            <td align="right">
+<script type="text/javascript" src="/templates/slidemenu_data/slidemenu.js"></script>
+
+<ul id="sm" class="sm">
+<li><a href="http://lib.pstgu.ru/" target="_blank"><img src="/templates/slidemenu_data/2.jpg" alt="" border="0" /></a></li>
+            <li><a href="/scientific/periodicals/bulletin/"><img src="/templates/slidemenu_data/1.jpg" alt="" border="0" /></a></li>
+            <li><a href="http://icons.pstgu.ru/"><img src="/templates/slidemenu_data/1_1.jpg" alt="" border="0" /></a></li>
+            <li><a href="http://pstgu.ru/service/locate.php?id=14&href=http://kuz3.pstbi.ru/bin/code.exe/frames/m/ind_oem.html/ans"><img src="/templates/slidemenu_data/3.jpg" alt="" border="0" /></a></li>
+            <li><a href="/library/"><img src="/templates/slidemenu_data/4.jpg" alt="" border="0" /></a></li>
+        </ul></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr></IDXSKIP>
+  <tr>
+    <IDXSKIP><td width="279" height="31" align="left" valign="top" background="/templates/images/03.jpg" style="background-repeat:repeat-x;">
+<img src="/templates/images/02_in.jpg" width="265" height="31" usemap="#Map" />
+<map name="Map" id="Map">
+<area shape="rect" coords="45,7,78,27" href="/en/" />
+<area shape="rect" coords="83,7,116,27" href="/de/" />
+<area shape="rect" coords="161,9,176,23" href="/it/" />
+<area shape="rect" coords="200,8,215,22" href="/teleph_dir/" />
+<area shape="rect" coords="240,8,255,22" href="/sitemap/" />
+</map>
+</td></IDXSKIP>
+    <td align="left" valign="middle" background="/templates/images/03.jpg" style="background-repeat:repeat-x;"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center" valign="middle" class="title-1">
+<table cellpadding="0" cellspacing="0" class="moduletable">
+          <tr>
+            <td><script type="text/javascript" src="/templates/slidemenu_data/transmenu_Packed.js"></script>
+
+                <style type='text/css'>
+<!--
+.transMenu {
+ position:absolute ;
+ overflow:hidden;
+ left:-1000px;
+ top:-1000px;
+}
+.transMenu .content {
+ position:absolute  ;
+}
+.transMenu .items {
+ width: 120px; border: 0px none #FFFFFF ;
+ position:relative ;
+ left:0px; top:0px;
+ z-index:2;
+}
+.transMenu  td
+{
+ padding: 5px 5px 5px 5px !important;
+ font-size: 11px !important ;
+ font-family: Arial, Helvetica, sans-serif !important ;
+ text-align: left !important ;
+ font-weight: bold !important ;
+ color: #4A595C !important ;
+}
+#subwrap
+{
+ text-align: left ;
+}
+.transMenu  .item.hover td
+{
+ color: #FFFFFF !important ;
+}
+.transMenu .item {
+ text-decoration: none ;
+ cursor:pointer;
+ cursor:hand;
+}
+.transMenu .background {
+ background-color: #ffffff !important ;
+ position:absolute ;
+ left:0px; top:0px;
+ z-index:1;
+ opacity:0.85;
+ filter:alpha(opacity=85)
+}
+.transMenu .shadowRight {
+ position:absolute ;
+ z-index:3;
+ top:3px; width:2px;
+ opacity:0.85;
+ filter:alpha(opacity=85)
+}
+.transMenu .shadowBottom {
+ position:absolute ;
+ z-index:1;
+ left:3px; height:2px;
+ opacity:0.85;
+ filter:alpha(opacity=85)
+}
+.transMenu .item.hover {
+ background-color: #CCCCCC !important ;
+}
+.transMenu .item img {
+ margin-left:10px !important ;
+}
+table.menu {
+ top: 0px;
+ left: 0px;
+ position:relative ;
+ margin:0px !important ;
+ border: 0px none #0 ;
+ z-index: 1;
+}
+table.menu a{
+ margin:0px !important ;
+ padding: 6px 25px 5px 25px !important ;
+ display:block !important;
+ position:relative !important ;
+}
+div.menu a,
+div.menu a:visited,
+div.menu a:link {
+ font-size: 11px !important ;
+ font-family: Verdana, Arial, Helvetica, sans-serif !important ;
+ text-align: center !important ;
+ font-weight: bolder !important ;
+ color: #ffffff !important ;
+ text-decoration: none !important ;
+ margin-bottom:0px !important ;
+ display:block !important;
+ white-space:nowrap ;
+}
+div.menu td {
+ border-bottom: 1px none #0 ;
+ border-top: 1px none #0 ;
+ border-left: 1px none #0 ;
+ background-color: #0 !important ;
+}
+div.menu td.last {
+ border-right: 1px none #0 ;
+}
+#trans-active a{
+ color: #4A595C !important ;
+ background-color: #0 !important ;
+}
+#menu a.hover   {
+ color: #4A595C !important ;
+ background-color: #0 !important ;
+}
+#menu span {
+ display:none;
+}
+
+-->
+
+
+          </style>
+                <div id="wrap" class="menu" align="center">
+                  <table cellspacing="0" cellpadding="0" border="0" id="menu" class="menu" width="550">
+                    <tr>
+                      <!-- td align="center" valign="middle"><a href="/" >ГЛАВНАЯ</a></td>
+					  <td align="center" valign="middle"><img src="/templates/images/17.jpg" width="6" height="6"></td -->
+					   <IDXSKIP><td align="center" valign="middle"><a id="menu_1" href="#" >АБИТУРИЕНТАМ</a></td></IDXSKIP>
+
+					  <IDXSKIP><td align="center" valign="middle"><img src="/templates/images/17.jpg" width="6" height="6"></td></IDXSKIP>
+                      <IDXSKIP><td align="center" valign="middle"><a id="menu_7" href="#" >СТУДЕНТАМ</a> </td></IDXSKIP>
+					  <IDXSKIP><td align="center" valign="middle"><img src="/templates/images/17.jpg" width="6" height="6"></td></IDXSKIP>
+                      <IDXSKIP><td align="center" valign="middle"><a id="menu_23" href="#" >ПРЕПОДАВАТЕЛЯМ</a></td></IDXSKIP>
+					  <IDXSKIP><td align="center" valign="middle"><img src="/templates/images/17.jpg" width="6" height="6"></td></IDXSKIP>
+                      <!-- td align="center" valign="middle"><a id="menu_36" href="/forums/index.php" >ФОРУМ</a> </td -->
+
+                    </tr>
+                  </table>
+                </div>
+              <div id="subwrap">
+                  <script type="text/javascript">
+<!--
+if (TransMenu.isSupported()) {
+var ms = new TransMenuSet(TransMenu.direction.down, 20,0, TransMenu.reference.bottomLeft);
+var menu_1 = ms.addMenu(document.getElementById("menu_1"));
+ menu_1.addItem("Поступление в университет", "/abiturient/postuplenie_v_universitet/", "0");
+ menu_1.addItem("Дни открытых дверей", "/abiturient/dni_otkrytyh_dverej/", "0");
+ menu_1.addItem("Подготовительные курсы", "/abiturient/podgotovitelnye_kursy/", "0");
+ menu_1.addItem("Олимпиада ПСТГУ «Аксиос»", "/entrance/olympiad/", "0");
+ menu_1.addItem("Вопросы и ответы", "/forums/index.php?showforum=11", "0");
+
+var menu_7 = ms.addMenu(document.getElementById("menu_7"));
+ menu_7.addItem("Дистанционное обучение", "http://pstgu.ru/online/", "0");
+menu_7.addItem("Поступление в аспирантуру", "/abiturient/aspirantura/", "0");
+menu_7.addItem("Отдел по социальной работе со студентами", "http://pstgu.ru/soc/about/", "0");
+menu_7.addItem("Расписание богослужений БФ", "/faculties/theological/liturg/", "0");
+menu_7.addItem("Студентам-иностранцам", "/about_university/int/intstd/", "0");
+menu_7.addItem("Добровольческий корпус", "/soc/dobrovol_korp2/", "0");
+var menu_23 = ms.addMenu(document.getElementById("menu_23"));
+menu_23.addItem("Научные конференции", "/scientific/conferences/", "0");
+menu_23.addItem("Электронный каталог библиотеки ПСТГУ", "http://lib.pstgu.ru/cgi-bin/irbis64r_opak71/cgiirbis_64.exe?C21COM=F&I21DBN=IBIS&P21DBN=IBIS", "0");
+menu_23.addItem("Периодические издания", "/scientific/periodicals/", "0");
+menu_23.addItem("Конкурс на замещение должностей НПР", "/about_university/rector/konkurs_dnpr/", "0");
+function init() {
+if (TransMenu.isSupported()) {
+TransMenu.initialize();
+menu_1.onactivate = function() {document.getElementById("menu_1").className = "hover"; };
+ menu_1.ondeactivate = function() {document.getElementById("menu_1").className = ""; };
+ menu_7.onactivate = function() {document.getElementById("menu_7").className = "hover"; };
+ menu_7.ondeactivate = function() {document.getElementById("menu_7").className = ""; };
+ menu_23.onactivate = function() {document.getElementById("menu_23").className = "hover"; };
+ menu_23.ondeactivate = function() {document.getElementById("menu_23").className = ""; };
+ document.getElementById("menu_36").onmouseover = function() {
+ms.hideCurrent();
+this.className = "hover";
+}
+document.getElementById("menu_36").onmouseout = function() { this.className = ""; }
+
+
+ }}
+TransMenu.dingbatSize = 0;
+TransMenu.spacerGif = "";
+TransMenu.dingbatOn = "";
+TransMenu.dingbatOff = "";
+TransMenu.sub_indicator = false;
+TransMenu.menuPadding = 0;
+TransMenu.itemPadding = 0;
+TransMenu.shadowSize = 2;
+TransMenu.shadowOffset = 3;
+TransMenu.shadowColor = "#888";
+TransMenu.shadowPng = "img/grey-40.png";
+TransMenu.backgroundColor = "#E4E4E4";
+TransMenu.backgroundPng = "img/white-90.png";
+TransMenu.hideDelay = 600;
+TransMenu.slideTime = 300;
+TransMenu.selecthack = 0;
+TransMenu.renderAll();
+if ( typeof window.addEventListener != "undefined" )
+window.addEventListener( "load", init, false );
+else if ( typeof window.attachEvent != "undefined" ) {
+window.attachEvent( "onload", init);
+}else{
+if ( window.onload != null ) {
+var oldOnload = window.onload;
+window.onload = function ( e ) {
+oldOnload( e );
+init();
+}
+}else
+window.onload = init();
+}
+}
+-->
+          </script>
+                </div>
+              <!--End swMenuFree menu module-->
+            </td>
+
+          </tr>
+        </table>
+        </td>
+        <IDXSKIP><td width="210">
+<FORM action="/search/" method="get" ><TABLE height=30px cellSpacing=0 cellPadding=0 width="100%" border=0><TBODY>
+<TR><TD class=log01><INPUT class=pole type=text style="width:190px; height:18px; display:none" name=keywords value=""></TD><TD class=log02 align=left valign=top cellSpacing=0 cellPadding=0><INPUT type=image height=30 width=14 src="/templates/images/03_.jpg" border=0 name=imageField class=".no_img_margins" style="margin-top:-1px; display:none"></TD></TR></TBODY></TABLE></FORM>
+
+
+
+</td></IDXSKIP>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="279" align="left" valign="top"><table width="279" height="100%" border="0" cellpadding="0" cellspacing="0">
+      <IDXSKIP><tr>
+        <td width="14" height="77" align="left" valign="top"><table width="265" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="77" background="/templates/images/04.jpg" style="background-repeat:repeat-x;" align=center valign=middle>
+ <FORM 
+
+                                           method=post>
+		<input type="hidden" name="logout" value="0">
+		<input type="hidden" name="formname" value="authform">
+<table width="260" border="0">
+              <tr>
+                <td rowspan=2>
+                <table width="158" border=0>
+                              <tr>
+                                <td width="62"><img src="/templates/images/14.jpg" width="64" height="19"></td>
+                                <td width="75"><input name="login" type="text" class="inputbox" style="width:75px; height:18px;"></td>
+                                <td width="11"> </td>
+                              </tr>
+                              <tr>
+                                <td><img src="/templates/images/15.jpg" width="64" height="19"></td>
+                                <td><input name="password" type="password" class="inputbox" style="width:75px; height:18px;"></td>
+                                <td align="center" valign="middle"><INPUT
+                                                type=image height=13 width=13
+                                                src="/templates/images/16.jpg"
+                                                border=0 name=imageField><INPUT type=hidden
+                                                value=24
+                                                name=sss></td>
+                              </tr>
+                              </table></form></td>
+                <td width="90" align="left" valign="middle" class="rightcol-text"><A href="/register/" >Регистрация</a></td>
+              </tr>
+              <tr>
+                <td align="left" valign="middle" class="rightcol-text"><A href="/register/restore/" target="_blank">Забыли пароль?</a></td>
+              </tr>
+</table>
+              </td>
+            </tr></IDXSKIP>
+            <IDXSKIP><tr>
+              <td><img src="/templates/images/05.jpg" width="265" height="31" /></td>
+            </tr></IDXSKIP>
+            <tr>
+              <td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding-left:10px;"> </td>
+                </tr>
+                <tr>
+                  <td style="padding-left:10px;"><p class="leftmenu">
+<div class="mainmenu">
+<ul class="mainmenu_l1">
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/about_university/">Сведения об образовательной организации </a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/rector_pstgu/">Ректор ПСТГУ</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/abiturient/">Абитуриент 2017</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/theology/">Теология</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/___pstbi/">Богословский институт (ПСТБИ)</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/online/">Институт дистанционного образования</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/faculties/">Факультеты и отделения</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/dopolnitelnoe_professionalnoe_ob/">Дополнительное образование</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/scientific/">Научная работа</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/mezhdunarodnoe_sotrudnichestvo/">Международное сотрудничество</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/soc/">Отдел по социальной работе со студентами</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/medievistika/">Медиевистика в ПСТГУ</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/Disser_divinity_church/">Диссертационный совет</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/rlibrary/">Библиотека ПСТГУ</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/publishing/">Издательская деятельность</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/missionary/">Миссионерские поездки</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/svTikhon/">Небесный покровитель Университета</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/support/">Для благотворителей</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/intern_docs/">Правовая информация</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/e_resources/">Электронные ресурсы</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/advertisement/">Объявления и вакансии</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/Art_workshops/">Художественные мастерские</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/museum/">Церковно-археологический музей</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/teleph_dir/">Телефонный справочник</a></li></IDXSKIP>
+<IDXSKIP><li class="mainmenu_l1"><a href="http://pstgu.ru/banners/">Баннеры ПСТГУ</a></li></IDXSKIP>
+
+<IDXSKIP><li class="mainmenu_l1"><A href="/forums/index.php">Форум</A></li></IDXSKIP>
+</ul>
+</div> </p></td>
+                </tr>
+                <tr>
+                  <td>
+<!-- table border=0><tbody>
+         <tr>
+            <td align="center" valign="top" class="title" colspan=2><u>Горячие линии</u></td>
+         </tr>
+         <tr>
+            <td class="title-3" colspan=2><p>Приемная комиссия</p></td>
+         </tr>
+         <tr>
+            <td width="184" class="content-text">Ответственный секретарь:</td>
+            <td width="69" align="right" valign="middle" class="content-text"><p align="right" style="font-size:11px;"><b>951-67-84</b></p></td>
+         </tr>
+         <tr>
+            <td class="content-text">Справочная:</td>
+            <td align="right" valign="middle" class="content-text"><p align="right" style="font-size:11px;"><b>951-67-84</b></p></td>
+         </tr>
+         <tr>
+            <td class="title-3" colspan=2>Юридический отдел</td>
+         </tr>
+         <tr>
+            <td width="184" class="content-text">Начальник отдела:</td>
+            <td width="69" align="right" valign="middle" class="content-text"><p align="right" style="font-size:11px;"><b>953-07-00</b></p></td>
+         </tr>
+         <tr>
+            <td class="content-text">Юрисконсульт:</td>
+            <td align="right" valign="middle" class="content-text"><p align="right" style="font-size:11px;"><b>953-07-00</b></p></td>
+         </tr>
+         <tr>
+            <td class="title-3" colspan=2>Секретариат</td>
+         </tr>
+         <tr>
+            <td width="184" class="content-text">Секретари:</td>
+            <td width="69" align="right" valign="middle" class="content-text"><p align="right" style="font-size:11px;"><b>953-22-89</b></p></td>
+         </tr>
+         <tr>
+            <td class="content-text">Старшие инспекторы:</td>
+            <td align="right" valign="middle" class="content-text"><p align="right" style="font-size:11px;"><b>953-07-00</b></p></td>
+         </tr>
+</tbody></table -->
+</td>
+                </tr>
+                <tr>
+                  <td height="30" align="center" valign="middle"><table width="90%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+                    <tr>
+                      <td height="3"></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td>
+<script>
+  (function() {
+    var cx = '011249281682791374956:5s7-ag54bmi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+
+
+<script language="JavaScript">
+
+function check(){
+if (document.feedback.Name.value=='' || document.feedback.Question.value==''){
+alert ("Поля, отмеченные *, обязательны для заполнения.");
+return false;exit;}
+var pat=/^[a-zA-Z][a-zA-Z_.-d-]*@[a-zA-Z_.-d-]+.[a-zA-Z]{2,4}$/;
+if(!pat.test(document.feedback.Email.value) && document.feedback.Email.value!='')	{
+ 		alert("Введите корректный Email");
+return false;exit;
+}
+return true;
+}
+
+</script>
+
+<!--
+
+<div class="title-3" style="margin-left:12px;">Поиск по сайту</div>
+<gcse:search></gcse:search>
+-->
+<div style="margin-left:12px;">
+<div class="feedback_left">
+<form name="feedback" action="http://pstgu.ru/news/smi/2014/03/08/51589/" method="POST" onSubmit="return check()">
+<p class="content-text"></p>
+<table border="0">
+      <IDXSKIP><tr>
+         <td class="title-3"> Задать вопрос</td>
+      </tr></IDXSKIP>
+      <tr>
+         <td class="content-text"><IDXSKIP><p>  Имя *<br>
+                    <input type="text" size="30" class="inputbox" style="width:70%;" name="Name" value="">
+                    </p></IDXSKIP>
+                     <p>  <IDXSKIP>E-mail (если Вы не заполните это <br>
+                          поле, мы не сможем Вам ответить)<br></IDXSKIP>
+                        <input type="text" size="30" class="inputbox" style="width:70%;" name="Email" value="">
+                      </p> 
+                    <IDXSKIP><p>  Сообщение * <br>
+                       
+<textarea  cols="30" rows="5" class="inputbox" name="Question"></textarea><br />
+<div align=right><a href="" onclick="if (check()) document.feedback.submit(); return false;"><img src="/templates/images/b_send.gif" alt="Отправить" /></a></div></IDXSKIP>
+</td></tr>
+</table></form>
+<div class="content-text"><IDXSKIP>Поля, отмеченные *, являются обязательными для заполнения</IDXSKIP></div>
+</div>
+</div></td>
+                </tr>
+                <tr>
+                  <td> </td>
+                </tr>
+              </table></td>
+            </tr>
+        </table></td>
+        <td width="14" align="left" valign="top" background="/templates/images/shad.jpg" style="background-repeat:repeat-y;"></td>
+      </tr>
+    </table></td>
+
+
+    <td align="left" valign="top"><table width="100%" border="0">
+      <tr>
+        <td align="left" valign="top"><table width="100%" border="0">
+          <IDXSKIP><tr>
+            <td align="left"><span class="title_big">
+Мониторинг СМИ
+            </span></td>
+          </tr></IDXSKIP>
+          <tr>
+            <td align="left"><span class="title"><h1>
+Дух и символ</h1>
+            </span></td>
+         </tr>
+          <tr>
+            <td align="left" valign="top">
+<div class="content-text"><p>
+</p><div style="float:left; margin-right:12px;" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h90_1557_.jpg" class="sh_new" title=" " alt="" align="left" border="1px">
+</div>
+<p>Николай Александрович Бердяев для нас по-прежнему великий незнакомец.
+ Для одних он теоретик «русской идеи», подведший итоги споров 
+славянофилов и западников, разобравшийся в тезисах историков и проектах 
+философов истории. Для других он, наоборот, пророк, апологет, моралист, 
+создавший новый стиль разговора о христианской жизни и о предназначении 
+христианства, мыслитель, напрямую вмешивающийся в развитие христианской 
+социальной мысли. Так кто он – кабинетный ученый, добросовестно и 
+остроумно подводящий итоги былым открытиям и заблуждениям, прозрениям и 
+рутинным соображениям, – или мирянин, деятельно признающий вселенское 
+измерение христианства?Попробуем ответить на этот вопрос, рассмотрев 
+одно словоупотребление в его книге «Дух и реальность» (1937). В этой 
+книге, в которой философ старается не злоупотреблять физическими 
+терминами, поднявшись на трибуну убедительного для русского уха языка, 
+неожиданно встречается понятие «консистенция»:</p>
+<p>«История самого термина «дух» (<i>pneuma</i> и <i>nous</i>) может 
+пролить свет на существо духа. История эта сложная. Лишь постепенно и 
+медленно происходила спиритуализация в понимании духа. В Священном 
+писании дух есть термин основной. Но первоначально дух (по-гречески <i>pneuma</i>, по-древнееврейски <i>rouakh</i>) имел физический смысл, значил ветер, дуновение. <i>Pneuma</i> эфирна. <i>Rouakh</i>
+ значит тоже легкое, не имеющее консистенции, неуловимое. Оно значит 
+также дуновение Бога, дар жизни, полученный от Бога. Жизнь зависит от 
+Бога, человек сам не обладает жизнью».</p>
+<p>Что означает в данном употреблении слово «консистенция»? Означает ли 
+оно устойчивость, способность остановиться на одном месте – и тогда это 
+описываются свойства движения? Или значение здесь близко физическому 
+значению «консистенция» жидкости как степень подвижности, и тогда 
+описываются свойства материи?</p>
+<p>Консистенцию жидкости можно измерять, если есть предназначенный к 
+тому сосуд. Тогда сотрясая этот сосуд, можно по возникающим вихрям 
+определить, насколько данная материя жидкая. Но дух, по Бердяеву, 
+консистенции не имел даже тогда, когда его считали еще 
+грубо-материальным, и более того, началом любой жизни. Под 
+«неуловимостью» имеется в виду свойство жизни всякий раз заявлять о 
+себе, обманывая готовые расчеты.</p>
+<p>Получается, что «легкость» ощущается нами изнутри, а «неуловимость» 
+снаружи. Мы можем чувствовать легкость собственного дыхания, можем 
+ощущать себя живыми, и тогда жизнь – это то, что позволяет нам ощущать в
+ себе особую легкость, ощущать, что мы не пленены обстоятельствами, уже 
+наложившими на нас руку, как на имущество. Понять, что означает тогда 
+«неуловимость», помогает психологическое описание из Тургенева, «Дневник
+ лишнего человека»:</p>
+<p>День уже склонялся к вечеру. Я находился тогда в самом разгаре первой
+ любви (не более двух недель прошло со времени нашего знакомства), в том
+ состоянии страстного и внимательного обожания, когда вся ваша душа 
+невинно и невольно следит за каждым движением любимого существа, когда 
+вы не можете насытиться его присутствием, наслушаться его голоса, когда 
+вы улыбаетесь и смотрите выздоровевшим ребенком, и несколько опытный 
+человек на сто шагов с первого взгляда должен узнать, что с вами 
+происходит.</p>
+<p>В этом описании опыта влюбленности есть три составляющих этого опыта:
+ неуловимость любимого существа, когда каждое новое наблюдение только 
+усиливает чувство любви, это нескончаемое насыщение, которое не делает 
+ненасытным, но напротив, дарит улыбку бесконечного удовлетворения, и это
+ легкость, с которой любой внешний наблюдатель распознает симптомы 
+влюбленности. Схема, зеркальная бердяевской генеалогии духа – если 
+Тургенев говорит о детстве любовного чувства, то Бердяев – о детстве 
+человечества, и то понимание, в котором влюбленный имеет уже союзников, 
+находясь в лоне романной культуры чувств, для Бердяева только впервые 
+создается и впервые вырабатывается. Поэтому влюбленный глядит на себя 
+изнутри, тогда как древний человек, впервые осознающий собственный дух, 
+только постепенно приходит к этому внутреннему взгляду. Но механизмы 
+осознания духа как нематериального начала все те же, что и в осознании 
+влюбленности как далекого от материальных привычек состояния.</p>
+<p>Бердяевская «легкость» духа – это вовсе не легкость и 
+легкомысленность самоощущения, а именно умение видеть свое состояние с 
+любого расстояния, замечать его даже тогда, когда оно кажется самым 
+мелким и незначительным. Материальный человек погружен в готовые заботы и
+ готовые предметы, он пленен косностью мирского существования, и потому 
+не знает никаких расстояний – вещи воздействуют в его мире механически, 
+вызывая столь же косные мысли. При этом, как и у Тургенева, позиция 
+«опытного человека», способного видеть с любого расстояния, 
+противопоставлена позиции неопытного человека, нуждающегося в символах. В
+ отличие от символистов, для которых символ обладал особой реальностью, 
+способной эмпатически объединить различные понятия, вызывать «симпатию» 
+между ними как областями реальности, для Бердяева символ не больше чем 
+очки, которые могут иногда помочь глазомеру, но скорее приучают к тому, 
+чтобы видеть вещи в порядке обыденного существования. Как в очках для 
+нас привычен быт, где мы заранее знаем, за какое устройство нужно 
+ухватиться, чтобы произвести нужное действие, так и символ приучает нас к
+ тому, чтобы воспринимать чины и звания не как «небосвод» звезд, «разных
+ во славе», но как некоторый набор заранее известных хозяйственных 
+инструментов:</p>
+<p>«Формы, ордена, условные обращения – символичны, а не реалистичны. 
+Царь – символ, генерал – символ, папа, митрополит, епископ – символы, 
+всякий иерархический чин – символ. В отличие от этого реальны святой, 
+пророк, гениальный творец, социальный реформатор, реальна иерархия 
+человеческих качеств. Вся моральная жизнь, кристаллизующаяся в нравах, 
+основана на символике, а не на реальном преображении людей».</p>
+<p>Только при поверхностном чтении мы можем увидеть здесь 
+противопоставление авторитета «институтов» и авторитета «харизмы». Речь 
+здесь совсем о другом: о том, что если мы видим чины и звания как 
+символы, то они переходят в категорию «всяких». «Всякое» не обладает той
+ реальностью, которой обладает качество, «всякое» выглядит как 
+неразбериха в качествах, «кристаллизация нравов», в которой расстояния 
+заменены оценками. Но оценки всегда не точны, и преображение становится 
+невозможно в этом механизме бесконечного оценивания. За это Бердяев 
+бранит современную ему экзистенциальную мысль, в которой он видит 
+всматривание в «глубину бытия» без нахождения тех расстояний, 
+позволяющих даже издали усмотреть само бытие:</p>
+<p>Метафизическое для Ясперса есть символ. Через символ существование 
+смотрит в глубину бытия. Сознание делается зрячим через чтение символов.
+ Только через трансцендирование человек вполне есть. Это символическая 
+философия духа. Вместо бытия онтологии у Ясперса шифры, символы.</p>
+<p>Философ экзистенциального склада для Бердяева не имеет «бытия 
+онтологии», или как сказал бы Тургенев, способности «сразу узнать, что 
+происходит». «Бытие онтологии» и расшифровывается как «соображение о 
+бытии», то есть способность догадываться о нем там, где есть бытие. 
+Трансцендирование, нарочитое погружение в бытие, для Бердяева чуждо 
+настоящей любви к бытию, это для него есть погружение в глубину, где как
+ раз и есть «консистенция».</p>
+<p>«Неуловимость» духа, понятная даже древнему наивному материалисту, 
+тоже не есть просто непостижимость духа, но как раз выражение 
+«страстного и внимательного обожания, когда вся ваша душа невинно и 
+невольно следит за каждым движением любимого существа». «Страстное» в 
+системе Бердяева превратилось в независимость от внешнего, 
+«внимательность» – в умение всматриваться одинаково в глубину и высоту, 
+умение смотреть в бездну, не падая в нее, и в небо, находя социальную 
+программу спасения. И эта программа состоит в том, чтобы вспомнить о 
+«небесном» роде всего человечества, о том, что человек не должен 
+зависеть от земных замыслов:</p>
+<p>Дух есть внутреннее по отношению к внешнему, ко всему зависящему от 
+внешнего. Внутреннее есть символ духа. Дух одинаково может 
+характеризоваться пространственными символами глубины и высоты. Дух есть
+ бездонная глубина и небесная высота. Нельзя, как то делает М. Шелер, 
+отнять от духа активность и сообщить активность лишь жизни. Именно дух 
+есть активность, жизнь же в биологическом смысле слова пассивна. Но 
+Шелер глубоко понимает, что дух не есть эпифеномен жизненного процесса, 
+что он не может быть виталистически понят. Дух есть прорыв в этом 
+отяжелевшем мире, динамика, творчество, полет. Пико делла Мирандола 
+говорит, что дух человека небесного рода, т.&nbsp;е. он происходит не из 
+природного мира.</p>
+<p>В таком случае, «невинно» и «невольно» тоже находят свое 
+соответствие: невинность есть отрыв от биологической жизни, именно 
+потому что она пассивна, а пассивность – это в системе Бердяева тяжесть 
+от чувства вины. Следовательно, принятие жизни как дара счастья и есть 
+«невинность». А «невольно» для Бердяева, певца свободы, превращается в 
+прорыв, в «динамику, творчество, полет». Если в языке русской литературы
+ невольность – это прорыв за пределы обычного душевного состояния к 
+настоящей судьбоносной событийности, «лить невольные слёзы», «невольно 
+порадоваться в трудную минуту», – то в языке Бердяева такой прорыв 
+оказывается вовсе не «неволей», а творческой динамикой. Так как о 
+творчестве и динамике трудно говорить без помпезности, то Бердяев, 
+конечно, взывал к читателю, впитавшему в себя весь дух классической 
+русской литературы.</p>
+<p>Тогда понятно, что значит «не иметь консистенции». Это не значит быть
+ далеким от закономерностей материального мира, как-то презирать его или
+ недооценивать. Это означает совсем другое – не пользоваться знанием о 
+мире как очками, но всякий раз быть в нем «как выздоровевший ребенок». 
+Отсутствие консистенции – это отсутствие какого-то окончательного 
+насыщения, какого-то довольства, которое и превращает душу в некоторую 
+тяжесть и отвращение для самой себя. Отсутствие консистенции (буквально 
+«состояния») и есть та неотвратительность души самой себе, которая 
+достигается, когда дух тождествен любви. Так апология веры незримо 
+становится апологией вселенской любви.</p><p><b>Александр Марков</b><br></p><div style="overflow: hidden; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); text-align: left; text-decoration: none; border: medium none;"><a href="http://www.pravmir.ru/dux-i-simvol/">Православие и мир</a><br></div></div>
+<div class="content-text" style="text-align:right;">08 марта 2014 г.</div>
+
+<p style="margin-top: 20px; clear: both;"><IDXSKIP><strong>Разместить ссылку на материал</strong></IDXSKIP></p -->
+<table cellpadding="2" cellspacing="0">
+	<tbody><!-- tr><td>
+		HTML код для сайта или блога<br>
+		<textarea cols="80" rows="3" readonly="readonly" onfocus="this.select();" onclick="this.select();" style="font-size: 10px">
+&lt;table style="margin:20px;" border=0 cellspacing=0 cellpadding=0&gt;&lt;tr&gt;&lt;td style="font-family:Arial;font-size:13px;padding:30px 30px 20px 30px;border:1px solid #cccccc;background:#ffffff;"&gt;&lt;a href="http://pstgu.ru/news/smi/2014/03/08/51589/" style="color:black;text-decoration:none;border:none;" target="_blank"&gt;&lt;strong style="display:block;font-size:17px;text-transform:uppercase;text-decoration:underline;"&gt;Дух и символ&lt;/strong&gt;&lt;br /&gt;&lt;span style="display:block;padding:5px 0px 10px 0px;"&gt;&lt;/span&gt;&lt;span style="display:block;padding:5px 0px 10px 0px;"&gt;&lt;div style="float:left; margin-right:12px;" class="style_simg0"&gt;
+&lt;img style="height:80px" src="http://pstgu.ru/image_w150_h90_1557_.jpg" class="sh_new" title=" " alt="" align="left" border="1px" &gt;
+&lt;/div&gt;
+Этюд к 140-летию со дня рождения Николая Бердяева.&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+</textarea>
+	</td></tr -->
+	  <tr>
+	    <td><div style="float:right; width:585px; text-align:right !important; margin-top:10px;">
+<script src="http://pstgu.ru/templates/js/ok4.js" type="text/javascript"></script>
+</div></td>
+	    </tr>
+	</tbody>
+</table>
+</div>
+
+
+<IDXSKIP><div style="clear: both"><a href="http://pstgu.ru/news/smi/" style="font-family: Arial; font-size: 11px"><img src="/templates/pic/arrl.gif" style="margin-right: 5px; margin-top: 2px" width="7" height="7" align="left" alt="Вернуться к другим новостям">Вернуться к другим новостям</a></div></IDXSKIP>
+
+<IDXSKIP><div style="float: right">
+<table border=0 align=right width=*><tr><td><a href="/news/subscription/" style="font-family: Arial; font-size: 11px">Подписаться на рассылку<br />  новостей<br /><img src="/templates/images/subs.jpg" style="margin-right: 5px; margin-bottom: 5px" align="right" alt="Подписаться на рассылку новостей"></a>
+</td></tr></table></div></IDXSKIP>
+            </td>
+          </tr>
+        </table></td>
+        <td width="3" background="/templates/images/09.jpg" style="background-repeat:repeat-y;"></td>
+        <td width="230" valign=top>
+<div class="newslist_right"><TABLE class="newslist_right">
+<TBODY>
+<IDXSKIP><TR><TD class="newsdate_right">18 апреля 2017 г.</span></TD></TR></IDXSKIP>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/04/18/70793/" class="newstitle_right"><IDXSKIP>Команда ПСТГУ на практике в Касимове (ВИДЕО)</IDXSKIP></a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/18/70793/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/18/70793/">
+<IDXSKIP><div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h100_20470_.jpg" title=" " alt=" " align="left" border="1px">
+<div style="font-size:11px;  WORD-WRAP:BREAK-WORD;"> </div>
+</div></IDXSKIP><IDXSKIP>Студенты богословского факультета уже четыре года ездят в г. Касимов Рязанской области на педагогическую практику. </IDXSKIP></a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr><IDXSKIP><TR><TD class="newsdate_right">10 апреля 2017 г.</span></TD></TR></IDXSKIP>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/04/10/70730/" class="newstitle_right"><IDXSKIP>Выпускники ПСТБИ рассказывают, что для них значит служение Церкви (ВИДЕО)</IDXSKIP></a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/10/70730/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/10/70730/"><IDXSKIP><div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h70_20404_.jpg" class="sh_new" title=" " alt="" align="left" border="1px">
+</div></IDXSKIP>
+<IDXSKIP>В 2015 году Святейший Патриарх Кирилл благословил рукополагать выпускников ПСТБИ по линии Учебного Комитета Русской Православной Церкви. Первые пять выпускников, которые были рукоположены во диаконы главой Учебного комитета Евгением, архиепископом Верейским, рассказывают, что для них значит служение Церкви. </IDXSKIP></a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr><IDXSKIP><TR><TD class="newsdate_right">10 апреля 2017 г.</span></TD></TR></IDXSKIP>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/04/10/70729/" class="newstitle_right"><IDXSKIP>ВИДЕО "К 20-летию миссионерских поездок ПСТГУ"</IDXSKIP></a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/10/70729/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/10/70729/"><IDXSKIP><div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h70_20403_.jpg" class="sh_new" title=" " alt="" align="left" border="1px">
+</div></IDXSKIP>
+<IDXSKIP>Фильм протоиерея Андрея Близнюка рассказывает о более чем 20-летнем миссионерском труде ПСТГУ в разных уголках нашей страны. В этих поездках студенты приобщаются к опыту бескорыстного служения, опыту ответственности за Церковь.</IDXSKIP></a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr><IDXSKIP><TR><TD class="newsdate_right">10 апреля 2017 г.</span></TD></TR></IDXSKIP>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/04/10/70727/" class="newstitle_right"><IDXSKIP>И.А. Красовицкий прочитал лекцию "Богослужение Страстной седмицы" на православных просветительских курсах</IDXSKIP></a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/10/70727/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/10/70727/"><IDXSKIP><div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h100_20398_.jpg" title=" " alt=" " align="left" border="1px">
+<div style="font-size:11px;  WORD-WRAP:BREAK-WORD;"> </div>
+</div></IDXSKIP><IDXSKIP>22-я лекция «Богослужение Страстной седмицы» в рамках Православных просветительских курсов «ПРАВОСЛАВИЕ», проводимых Сретенским монастырем и Сретенской духовной семинарией, была прочитана Ильей Александровичем Красовицким.</IDXSKIP></a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr><TR><TD class="newsdate_right">06 апреля 2017 г.</span></TD></TR>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/04/06/70713/" class="newstitle_right">Священник Александр Мазырин: «Украинство» сегодня, по сути, стало религией</a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/06/70713/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/06/70713/">
+<div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h99_20385_.jpg" class="sh_new" title=" " alt=" " align="left" border="1px">
+<div style="font-size:11px;  WORD-WRAP:BREAK-WORD;"> </div>
+</div>Так называемый Киевский Патриархат изначально создавался как феномен политический, а не церковный, напомнил профессор ПСТГУ, доктор церковной истории, кандидат исторических наук, священник Александр Мазырин в ходе видеобеседы в пресс-центре «Парламентской газеты».</a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr><TR><TD class="newsdate_right">03 апреля 2017 г.</span></TD></TR>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/04/03/70673/" class="newstitle_right">Конференция «История страны в судьбах узников лагерей» пройдет на Соловецких островах</a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/03/70673/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/04/03/70673/">
+<div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h99_20273_.jpg" class="sh_new" title=" " alt=" " align="left" border="1px">
+<div style="font-size:11px;  WORD-WRAP:BREAK-WORD;"> </div>
+</div>Конференция «История страны в судьбах узников лагерей» пройдет на Соловецких островах с 5 по 9 июля 2017 года. В этом году форум посвящен памяти соловецких заключенных, расстрелянных во время репрессий 1937-38 годов. </a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr><TR><TD class="newsdate_right">14 марта 2017 г.</span></TD></TR>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/03/14/70462/" class="newstitle_right">И.А. Красовицкий прочел лекцию о богослужении Великого поста на православных просветительских курсах</a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/03/14/70462/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/03/14/70462/"><div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h112_19815_.jpg" class="sh_new" title=" " alt=" " border="1px" align="left">
+<div style="font-size:11px;  WORD-WRAP:BREAK-WORD;"> </div>
+</div>8-я лекция «Богослужение Великого поста» в рамках Православных просветительских курсов «ПРАВОСЛАВИЕ», проводимых Сретенским монастырем и Сретенской духовной семинарией, была прочитана Ильей Александровичем Красовицким. </a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr><TR><TD class="newsdate_right">08 марта 2017 г.</span></TD></TR>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/03/08/70356/" class="newstitle_right">Свящ. Андрей Постернак о посвящении в диакониссы патриархом Александрийским Феодором II </a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/03/08/70356/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/03/08/70356/"><div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h98_19743_.jpg" class="sh_new" title=" " alt=" " border="1px" align="left">
+<div style="font-size:11px;  WORD-WRAP:BREAK-WORD;"> </div>
+</div>Впервые за много столетий в Православной Церкви было совершено посвящение женщин на церковное служение. И это произошло в Африке. «Русская Планета» попросила прокомментировать это событие священника Андрея Постернака, декана Исторического факультета, доцента кафедры Всеобщей истории Православного Свято-Тихоновского гуманитарного университета и ответить на ряд вопросов.</a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr><TR><TD class="newsdate_right">08 марта 2017 г.</span></TD></TR>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/03/08/70355/" class="newstitle_right">Свящ. Филипп Ильяшенко: Как поститься молодым? </a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/03/08/70355/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/03/08/70355/"><div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h99_19742_.jpg" class="sh_new" title=" " alt=" " border="1px" align="left">
+<div style="font-size:11px;  WORD-WRAP:BREAK-WORD;"> </div>
+</div>Между привычкой к комфорту и жаждой подвигов. Молодежь — это особый народ: они способны отдать себя без остатка тому, в кого верят, и с юношеским максимализмом готовы взяться за любые подвиги, если они вдохновятся целью, — но если они не имеют веры, то насильно их не заставишь делать ничего. Как и чем можно убедить молодых людей совершить подвиг поста? И что нужно делать молодому человеку, чтобы правильно провести Великий пост, если он все же решится на подвиг? На эти вопросы отвечает проректор по воспитательной работе Свято-Тихоновского университета, заместитель декана исторического факультета ПСТГУ, председатель епархиальной комиссии по делам молодежи города Москвы, священник Филипп Ильяшенко. </a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr><TR><TD class="newsdate_right">02 марта 2017 г.</span></TD></TR>
+<TR><TD><a href="http://pstgu.ru/news/smi/2017/03/02/70309/" class="newstitle_right">Презентация книги преподавателя факультета церковных художеств профессора А.Л. Баталова прошла в Российской академии художеств</a></TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/03/02/70309/"></a></DIV>
+</TD></TR>
+<TR><TD>
+<DIV class="newsstext_right"><a href="http://pstgu.ru/news/smi/2017/03/02/70309/">
+<div style="float:left; margin-right:12px; text-align:left" class="style_simg0">
+<img src="http://pstgu.ru/image_w150_h112_19676_.jpg" class="sh_new" title=" " alt=" " border="1px" align="left">
+<div style="font-size:11px;  WORD-WRAP:BREAK-WORD;"> </div>
+</div>7 февраля 2017 года в 16.00 Белом зале Российской академии художеств состоялась презентация монографии А.Л. Баталова «Собор Покрова Богородицы на Рву: История и иконография архитектуры»</a></DIV>
+</TD></TR>
+<tr>
+   <td align=center valign=middle height=10><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/templates/images/09-h.jpg" style="background-repeat:repeat-x">
+          <tr>
+             <td height="3"></td>
+          </tr>
+   </table></td>
+</tr>
+</TBODY>
+</TABLE></div>
+<IDXSKIP><div style="padding: 15px; line-height: 13px">
+<table border=0 align=right width=*><tr><td><a href="/news/subscription/" style="font-family: Arial; font-size: 11px">Подписаться на рассылку<br />  новостей<br /><img src="/templates/images/subs.jpg" style="margin-right: 5px; margin-bottom: 5px" align="right" alt="Подписаться на рассылку новостей"></a>
+</td></tr></table></div></IDXSKIP></td>
+      </tr></table></td>
+
+
+  </tr>
+  <IDXSKIP><tr>
+    <td height="33" align="left" valign="top" bgcolor="#6F7E81"><table width="279" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="265"> </td>
+        <td width="181">
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-455058-1";
+urchinTracker();
+</script>
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script><!--/LiveInternet-->
+
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22541740 = new Ya.Metrika({id:22541740, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true, ut:"noindex"}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22541740?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --></td>
+      </tr>
+    </table></td>
+    <td align="right" bgcolor="#6F7E81">
+<!-- © 2005–2010, ПСТГУ  тел. (495) 953-22-89 email: <script>email('info','pstgu.ru','')</script> -->
+<img src="/templates/images/06.jpg" width="395" height="33"></td>
+  </tr></IDXSKIP>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,1440 @@
+eva.ru/static/forums/117/2006_3/585340.html
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head lang="ru-RU"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="language" content="ru"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="cache-control" content="max-age=0"> 
+  <meta http-equiv="cache-control" content="no-cache"> 
+  <meta http-equiv="expires" content="0"> 
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"> 
+  <meta http-equiv="pragma" content="no-cache"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/eva/css/normalize.css" rel="stylesheet"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/vendors/social/bootstrap-social.css" rel="stylesheet" media="screen"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/eva/css/eva.css?3.2.026" rel="stylesheet"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/fonts/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/vendors/switch/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet"> 
+  <title>        Планирование участка    </title>
+ </head>
+ <body>
+  <nav class="navbar navbar-fixed-top hidden" id="nav-scrolled" role="navigation"> 
+   <div class="container"> 
+    <ul class="nav navbar-nav"> 
+     <IDXSKIP><li> <a href="/forum.htm">Форумы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/news.htm">Новости</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/polls.htm">Опросы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/contests.htm">Конкурсы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/do.htm">Объявления</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/photoalbum/index.htm">Фотозалы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/top5.htm">Топ 5</a> </li></IDXSKIP> 
+     <li class="dropdown pull-right hidden-xs"> <a class="dropdown-toggle" data-toggle="dropdown">Войти<span class="caret"></span></a> 
+      <div class="dropdown-menu login-menu"> 
+       <form class="form" id="frmLogin" action="/login.htm"> 
+        <input type="hidden" name="action" value="login"> 
+        <input type="hidden" name="successRedirect" value=":start"> 
+        <input type="hidden" name="errorRedirect" value=":user-forget-password"> 
+        <div class="form-group"> 
+         <div class="input-group"> 
+          <span class="input-group-addon"><i class="fa fa-user"></i></span> 
+          <input class="form-control" type="text" required="true" title="Введите логин" data-valid-min="2" pattern="^[a-z,A-Z,0-9,_]{6,15}$" size="15" placeholder="Логин или @" id="username" name="username"> 
+         </div> 
+        </div> 
+        <div class="form-group clearfix"> 
+         <div class="pull-left"> 
+          <div class="input-group"> 
+           <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+           <input class="form-control" type="password" required="true" title="Введите пароль" placeholder="Пароль" id="password" size="15" name="password"> 
+          </div> 
+         </div> 
+         <button id="btnLogin" class="btn-eva-login btn btn-default pull-right"> <i class="fa fa-sign-in"></i>&nbsp; </button> 
+        </div> 
+        <div> 
+         <a class="btn btn-vk btn-sm btn-block btn-social" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i> Зайти через VK</a> 
+         <a class="btn btn-facebook btn-sm btn-block btn-social" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook"><i class="fa fa-facebook"></i> Зайти через Facebook</a> 
+         <a class="btn btn-openid btn-sm btn-block" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; Зайти через Одноклассников</a> 
+        </div> 
+       </form> 
+      </div> </li> 
+     <li class="pull-right"> 
+      <form role="form" action="http://yandex.ru/sitesearch" class="search form-inline"> 
+       <input type="hidden" name="searchid" value="153288"> 
+       <input type="text" name="text" class="form-control" placeholder="Найти на Еве.Ру" style="width:200px"> 
+       <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i> </button> 
+      </form> </li> 
+    </ul> 
+   </div>
+  </nav>
+  <div class="eva container"> 
+   <header> 
+    <div class="hat-xs visible-xs-block clearfix"> 
+     <div class="pull-left"> 
+      <a href="/" title="Ева.Ру"><img src="https://cloudstatic.eva.ru/design/eva3//eva/images/logo2.png" alt="Ева.Ру">EVA.RU</a> 
+     </div> 
+     <form role="form" action="http://yandex.ru/sitesearch" class="form-inline"> 
+      <input type="hidden" name="searchid" value="153288"> 
+      <button type="submit" class="btn btn-sm btn-danger">Поиск</button> 
+      <input type="text" name="text" class="input-sm form-control" placeholder="Найти на Еве.Ру"> 
+     </form> 
+    </div> 
+    <div class="hat-non-logged"> 
+     <IDXSKIP><div class="additional visible-xs-block"> 
+      <a class="reg" href="/registration.htm" title="Зарегистрироваться">Регистрация</a> 
+     </div></IDXSKIP> 
+     <div class="clearfix"> 
+      <IDXSKIP><div class="logo pull-left hidden-xs"> 
+       <a href="/" title="Ева.Ру"><img class="hidden-xs" src="https://cloudstatic.eva.ru/design/eva3//eva/images/logo.png" alt="Ева.Ру"></a> 
+      </div></IDXSKIP> 
+      <ul class="list-unstyled pull-right"> 
+       <li> 
+        <form class="form-login-inline" id="frmLogin" action="/login.htm"> 
+         <input type="hidden" name="action" value="login"> 
+         <input type="hidden" name="successRedirect" value=":start"> 
+         <input type="hidden" name="errorRedirect" value=":user-forget-password"> 
+         <input class="form-control input-sm" type="text" required="true" title="Введите логин" data-valid-min="2" pattern="^[a-z,A-Z,0-9,_]{6,15}$" size="15" placeholder="Логин или @" id="username" name="username"> 
+         <input class="form-control input-sm" type="password" required="true" title="Введите пароль" placeholder="Пароль" id="password" size="15" name="password"> 
+         <button id="btnLogin" class="btn-eva-login btn-sm btn btn-default"> <i class="fa fa-sign-in"></i>&nbsp; </button> 
+        </form> </li> 
+       <li class="hidden-xs"> 
+        <div class="clearfix"> 
+         <a class="btn btn-danger btn-sm" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook">&nbsp;<i class="fa fa-facebook"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники">&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; </a> 
+         <a class="reg pull-right" href="/registration.htm" title="Зарегистрироваться">Регистрация</a> 
+        </div> </li> 
+      </ul> 
+      <ul class="list-unstyled pull-right visible-xs-inline"> 
+       <li> 
+        <div class="clearfix "> 
+         <a class="btn btn-danger btn-sm" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook">&nbsp;<i class="fa fa-facebook"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники">&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; </a> 
+        </div> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </header> 
+   <nav class="navbar navbar-static-top clearfix" role="navigation"> 
+    <ul class="nav navbar-nav"> 
+     <IDXSKIP><li> <a href="/forum.htm">Форумы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/news.htm">Новости</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/polls.htm">Опросы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/contests.htm">Конкурсы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/do.htm">Объявления</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/photoalbum/index.htm">Фотозалы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/top5.htm">Топ 5</a> </li></IDXSKIP> 
+     <li class="dropdown visible-xs-inline"> <a class="dropdown-toggle" data-toggle="dropdown">Разделы <span class="caret"></span></a> 
+      <ul class="dropdown-menu"> 
+       <li><a href="/beauty/index.htm"> <small>Красота</small> </a></li> 
+       <li><a href="/pregnancy/index.htm"> <small>Беременность</small> </a></li> 
+       <li><a href="/kids/index.htm"> <small>Дети</small> </a></li> 
+       <li><a href="/house-and-hobby/index.htm"> <small>Дом</small> </a></li> 
+       <li><a href="/health/index.htm"> <small>Здоровье</small> </a></li> 
+       <li><a href="/animals/index.htm"> <small>Звери</small> </a></li> 
+       <li><a href="/travel/index.htm"> <small>Отдых</small> </a></li> 
+       <li><a href="/recipes/index.htm"> <small>Рецепты</small> </a></li> 
+       <li><a href="/love/index.htm"> <small>Любовь</small> </a></li> 
+       <li><a href="/eva-life/index.htm"> <small>LIFE</small> </a></li> 
+      </ul> </li> 
+     <li class="pull-right"> 
+      <form role="form" action="http://yandex.ru/sitesearch" class="search form-inline"> 
+       <input type="hidden" name="searchid" value="153288"> 
+       <input type="text" name="text" class="form-control" placeholder="Найти на Еве.Ру" style="width:200px"> 
+       <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i> </button> 
+      </form> </li> 
+    </ul> 
+   </nav> 
+   <div class="row"> 
+    <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12"> 
+     <div id="mainContent"> 
+      <h1> Планирование участка </h1> 
+      <hr> 
+      <div id="archivedContent">
+        
+       <table border="0" width="100%"> 
+        <tbody> 
+         <tr> 
+          <td width="70%" valign="middle"> <b><a href="/static/forums" style="color:cc3333;">Список всех форумов (версия для печати) </a></b><br><br> <b><a href="/static/forums/117" style="color:cc3333;">Помесячная карта форума Дом &gt; Загородная жизнь (версия для печати) </a></b><br><br> <b><a href="/static/forums/117/2006_3" style="color:cc3333;">Все темы форума Дом &gt; Загородная жизнь за 2006 Март (версия для печати) </a></b><br><br><br> <b><font style="color:999999;font-size:14px">Список сообщений топика "Планирование участка" форума Дом &gt; Загородная жизнь</font><br> <br><br> </b></td> 
+         </tr> 
+         <tr> 
+          <td> 
+           <table border="0" cellpadding="0" cellspacing="2"> 
+            <tbody> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18446502.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 11:36 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Голова крУгом идет, поначиталась книг и вообще каша - что где разместить, что куда посадить, как сделать участок красивым. Может у кого есть идеи на это счет? Фотку плана участка выложила в паспорт http://www.eva.ru/albumpage/47134/2.html&lt;BR&gt;Хочу клумбочки с цветами, деревья, кусты, газон, место для отдыха и жарки шашлыков (перед домом?), где-то нужно сделать колодец, чтобы вода и в дом поступала и в баню, пару-тройку грядок и плодовых деревьев. Наверное сарай? Что еще нужно? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18448828"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18448828.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18446502">сообщение 18446502</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 12:36 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Ссылка у меня не открылась. Сначал определитесь с колодцем, его копать надо. На плане для себя определите, где какая зона: шашлыки, хоз.зона, грядки, деревья, клумбы. А уже потом думайте, что именно сажать. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18452978"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18452978.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18446502">сообщение 18446502</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 14:34 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> От ворот к дому что идет? Мощение, бетон? Какова ширина подъездной зоны? Ширина отмостки вокруг дома? Из чего она? Проложены ли на участке дорожки или где их планируете? Огорожен ли участок? Если да, то чем? Без этой информации затруднительно сразу советовать. И еще. По каким сторонам участка есть соседи (видно ли их дома). Виден ли лес?&lt;BR&gt;Хозблок можно было бы объединить с баней. Все зависит от того, что Вы в нем будете хранить и как часто использовать. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18454331"></a></td> 
+              <td width="99%" colspan="9"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18454331.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18452978">сообщение 18452978</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 15:09 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Мда, некоторые слова для меня загадка :mda &lt;BR&gt;Попробую ответить. Участок новый, из себя представляет кусок бывшего поля в деревне рядом с проселочной дорогой, деревьев и посадок нет. Дорога идет там, где ворота (т.е. вдоль участка), за дорогой лес. Мощения, бетона, дорожек нет. Ширина подъездной зоны? Не поняла, что это, по всей видимости ширина ворот? &lt;BR&gt;Отмостка - слово незнакомое для меня, по крайней мере ничего подобного в своей деревне не набюдала.&lt;BR&gt;Участок огорожен рабицой, будем делать забор, но не в этом году. Соседи есть с одной стороны, слева.&lt;BR&gt;Дорожки хотелось бы, как и куда - пока не знаю, вероятнее всего от ворот к дому, к бане.&lt;BR&gt;Надо наверное добавить, что я не претендую на загородный дом с ландшафтным дизайном и шикарными прибамбасами. Мой дом - просто дача. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18455202"></a></td> 
+              <td width="99%" colspan="8"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18455202.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18454331">сообщение 18454331</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 15:32 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Это просто минимальная информация, чтобы сориентироватья. Отмостка - это место по периметру дома. Его иногда используют для прохода, как дорожку. Она бывает разной ширины, чаще бетонная. Если ее нет, то прямо рядом со стенами дома можно сажать растения. Это не выпендреж, а чтобы под дом вода не попадала. Если этого излишества нет, то по стенам дома и веранде можно пустить вьющиеся растения.&lt;BR&gt;Подъездная зона - место, где обычно ставят автомобиль. То есть сажать там ничего нельзя, только по ее краям. Поэтому я и спрашивала про ширину.&lt;BR&gt;В дом и в баню Вы планируете трубы под землей прокладывать? В колодце будет поверхностный насос?&lt;BR&gt;Колодец дело хлопотное. Мне тоже предстоит. Там ведь по уму надо бетонные кольца класть, а они тяжелые. Их до будущего колодца дотащить надо. И землю при рытье колодца надо куда-то девать. То есть будет хождение по участку взад и вперед. На этом месте тоже пока лучше ничего не сажать.&lt;BR&gt;Еще забыла спросить, где север-юг.&lt;BR&gt;Грядки, конечно лучше делать не в тени (скажем от бани или от забора). Поэтому и про стороны света. Могу предложить перед банькой посадить кусты (опять же не знаю, где вход в баню) метрах в 2 от входа и таким образом отгородить грядки.&lt;BR&gt;Про место для шашлыка ничего не могу сказать. Это уже Ваш выбор. ИМХО, чтобы было удобно, в случае дождя, укрыться в доме, или в бане, или где Вы считаете нужным.&lt;BR&gt;Плодовых деревьев много сажать не надо, замучаетесь с вредителем за урожай бороться. Где? будем решать дальше. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18456649"></a></td> 
+              <td width="99%" colspan="7"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18456649.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18455202">сообщение 18455202</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 16:08 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Блин, писала, писала, а Ева вылетела и ничего не сохранилось.&lt;BR&gt;Отмостки нет. Если рядом с домом посадить вьющиеся растения, то достаточно ли им будет света (тень от дома не будет падать?) и не нужна ли будет дополнительная опора?&lt;BR&gt;Подъездная зона по всей видимости будет слева сразу около ворот, шириной на 2-3 машины.м&lt;BR&gt;Трубы в баню будем под землей прокладывать, еще и в дом планирую тоже проложить. Один колодец у меня есть, остался от прошлых хозяев, но там 3 кольца и вода плохая (он справа внизу), новый нужно делать так, чтобы и до дома, и до бани с минимальными трудозатратами воду качать. А насос будет самый простой, маломощный, т.к. проблемы с электричеством - мало его у нас.&lt;BR&gt;Грядки хотела около забора справа, что-то я про тень от него не подумала совсем. А куда? Ну не пихать же их по середине участка? Мне там максимум зеленюшку, огурчики, кабачки посадить.&lt;BR&gt;Про стороны света могу только очень приблизительно сказать, слева ближе к нижнему углу восток, справа ближе к верхнему углу запад, соотвественно нижний правый угол север, а верхний левый юг. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18457058"></a></td> 
+              <td width="99%" colspan="6"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18457058.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18456649">сообщение 18456649</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 16:20 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Грядки отлично получаютя у баньки. И, чтобы всем не демонстрировать огурцы с морковкой, посадить кусты (какие - решим позже). И удобно с поливом будет из старого колодца, кстати.&lt;BR&gt;Вьющимся растениям достаточно для опоры натянутой проволоки или специальной сетки (продается). Темно им, вроде, не должно быть. &lt;BR&gt;От стены дома (где написано 11м) сколько до забора? Я правильно поняла, что перед воротами входа в дом нет? А окна там есть? Сколько от ворот до дома, будет ли место для посадок? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18459885"></a></td> 
+              <td width="99%" colspan="5"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18459885.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18457058">сообщение 18457058</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:47 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> От забора до стены дома примерно метра 3-4, столько же с других сторон от дома до забора. Дом стоит вообще неудачно как-то, окна со стороны ворот есть. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18462296"></a></td> 
+              <td width="99%" colspan="4"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18462296.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18459885">сообщение 18459885</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 19:04 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> У стены дома в этом проходе сделать цветник (конкретнее чуть позже). У забора посадить кусты, пока рабица - прикроет от соседей, может и забор не понадобится. И дорожка для прохода от ворот. Лучше не банально прямая, а чуть извилистая, но это на Ваш вкус. Дорожку можно сделать гравийную.&lt;BR&gt;Перед окнами напротив ворот тоже цветник. Не пугайтесь, это не одни ноготки будут. А можно и завить эту стену девичьим виноградом.&lt;BR&gt;Площадку для отдыха, в т.ч. шашлыков, можно сделать у правой стороны дома. Небольшая площадка, мангал, стульчики, несколько хвойников и невысоких кустиков.&lt;BR&gt;Напротив крыльца можно совсем небольшое мощение клинкером, можно даже простым кирпичом (это и самому сделать просто), форма произвольная. В правом верхнем углу хорошо бы посадить растение, которое со временем вырастет достаточно большим. Например, барбарис оттавский с красной листвой. И к нему еще парочку кустиков. Дело в том, что деревья растут медленнее кустарников, а покупать большое дорого. Рядом с этой группой растений (между мощением и забором) небольшой газон. На газоне тоже можно что-нибудь посадить. Те же барбарисы (их великое множество) или хвойники некрупные. Можно вместо газона изобразить композицию из камней и растений (не путать с альпийской горкой - это тоже можно, но хлопотно).&lt;BR&gt;Про дорожки. Одна уже намечена (от ворот к крыльцу и в обход дома). Идем к бане. Чаще всего Вы будете ходить от дома, а не от ворот, поэтому от ворот в эту сторону дорожка не обязательна (но на Ваше усмотрение). По левую сторону от этой виртуальной дорожки можно уже посадить и плодовы деревья (расстояние между растениями не меньше 5 метров, а то и 6). Вы от крыльца смотрите на баню, этот вид надо украсить. Правильно, цветник или композиция у стены бани. По правую сторону тоже можно плодовые, но без фанатизма (по количеству).&lt;BR&gt;Огород. Если Вы будете сажать плодовые кустарники, лучше это сделать там. И градки прикроете и ухаживать за этим хозяйством проще, когда все рядом.&lt;BR&gt;Смотрим от ворот в сторону бани. Плодовые имеются. Хотя их можно посадить и ближе к забору справа. И газон.&lt;BR&gt;Попробуйте схематично это нарисовать и будем думать дальше.&lt;BR&gt;Про хозблок забыла. Какого примерно размера хотите? У мена 4х2,5, так там ночевать можно. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18464442"></a></td> 
+              <td width="99%" colspan="3"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18464442.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18462296">сообщение 18462296</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 20:22 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 28 фев 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> попробую нарисовать схему и выложить завтра :-) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18478299"></a></td> 
+              <td width="99%" colspan="8"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18478299.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18454331">сообщение 18454331</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/88802.html">Black Angels</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 11:11 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Можно я вмешаюсь? Я про ваши слова "Мой дом - просто дача" Когда то когда мы только купили дачу, я тоже думала, куплю шезлонг и буду отдыхать, но впоследствии увлеклась ландшафтным дизайном, прочитала кучу книг по этому поводу и теперь у меня участок на зависть соседям... Глаз радуется глядя на все что я сама придумала и сделала... А совет дам такой (просто сама была в подобной ситуации) сначала кидалась делать несколько дел одновременно и ничего не получалось... Сначала спланируйте строения (сарай, баня и др), сделайте дорожки, а потом сами поймете где лучше клумбу сделать где плодовые деревья посадить... Если рабица то сразу посадите вдоль забора живую изгородь и красиво и от чужих глаз закрывает... </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18479087"></a></td> 
+              <td width="99%" colspan="7"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18479087.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18478299">сообщение 18478299</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 11:35 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Муж смеется уже надо мной, типа говорила, что ничего там делать не будешь, а теперь "совет в Филях" собираешь :-).&lt;BR&gt;Хочется уже в этом году начать что-то делать, озеленять в смысле, а то там такая жуткая пижма растет, что если ничего не посадить, то ужас будет. А самые ранние работы на участке, как я понимаю, именно посадки.&lt;BR&gt;А по поводу рабицы была идея ее заменить на красивый забор, там в принципе соседей-то и нет особо, только с одной стороны, но у них свой забор высокий стоит. А теперь вот не знаю - может действительно около нее кустики красивые посадить или виноград как вариант? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18479437"></a></td> 
+              <td width="99%" colspan="6"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18479437.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18479087">сообщение 18479087</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/88802.html">Black Angels</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 11:44 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Мой тоже по началу смеялся, а потом когда увидел результаты моих трудов, сказал вау... У нас тоже рабица, но на дорогу выходит, я 3 года билась, чтобы живую изгородь вырастить, вроде сейчас хоть наполовину выросла... А виноград это вещь стремная, у него такие тяжелые ветки вырастают, запросто рабицу повалить могут, я уже в прошлом году прореживала... Я все думала, может опору какую для него придумать, да муж вроде сказал, что будем нормальный забор ставить, может совсем тогда виноград выкорчуем... </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18486540"></a></td> 
+              <td width="99%" colspan="5"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18486540.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18479437">сообщение 18479437</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/34481.html">Звезда!</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 14:45 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Мужья все время ржут, мой тоже хохотал в голос, когда я на ватмане чертила план. В этом году один угол сделали, так как спланировала, теперь тоже ходит гордится. Чего говорит жона, в этом году мутить будем с участком? Я согласна с тем, что сначала надо по максимуму построить что залпанировали а оттуда уже плясать. Увидите, гдде у вас будет тень, где солнца больше, в зависимости от этого и оптимальней подберете растения. Изгородь можно разную, можно цветущую кусты буддлея, спирея, чубушник, боярышник (он повыше будет, чем кусты), та же калина, сирень. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18492664"></a></td> 
+              <td width="99%" colspan="4"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18492664.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18486540">сообщение 18486540</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/39309.html">remych</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:24 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Будллея не прокатит-вымерзнет:( Чтоб не лез никто калючек насадить, тот же баярошник. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18515899"></a></td> 
+              <td width="99%" colspan="4"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18515899.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18486540">сообщение 18486540</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/46092.html">kulinarka</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 13:16 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 02 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Можно вопрос? Из какого материала у вас грядка фигурная сделана? На детской площадке у вас бадан? Клематис долго выращивали? Очень красив, что за сорт? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18517257"></a></td> 
+              <td width="99%" colspan="3"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18517257.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18515899">сообщение 18515899</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/34481.html">Звезда!</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 13:54 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 02 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Грядка пластмассовая садовый конструктор, он бывает разный под камень например, продается повсеместно, я покупала в Газонокосильщике, удовольствие не из дешевых, надо сказать. Бадан на площадке очень живучий, сын по нему все время норовит проехаться на велосипеде:) Сорт клематиса к сожалению вам не скажу, он нам достался от прежних хозяев (му купили дачу 2 года назад всего). Но цветет он на побегах текущего года, поэтому я его обрезаю под корень уже вторую весну, то что на фотке выросло за сезон. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18552543"></a></td> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18552543.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18517257">сообщение 18517257</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/46092.html">kulinarka</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 15:07 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 03 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Не дешевое удовольствие - это сколько?&lt;BR&gt;А бадан - отличный! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18561622"></a></td> 
+              <td width="99%" colspan="1"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18561622.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18552543">сообщение 18552543</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/34481.html">Звезда!</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 19:49 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 03 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Спасибо - у меня их несколько:) Грядка в один ярус обошлась в 1800 - для нас это недешевое удовольствие:) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18480477"></a></td> 
+              <td width="99%" colspan="6"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18480477.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18479087">сообщение 18479087</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 12:12 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Лучше кустики. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18492364"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18492364.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18446502">сообщение 18446502</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/39309.html">remych</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:16 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> А стороны света укажите. Есть ли дети малые? Если есть, то плащадку надо делать так, что б все время были в зоне видимости из дома. Плащадку для шашлыка можно сделать не далеко от бани. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18495041"></a></td> 
+              <td width="99%" colspan="9"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18495041.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18492364">сообщение 18492364</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:33 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Стороны света я там выше написала, дите имеется, для дет площадки один вариант - около входа, там окно и вроде солнышко бывает. В зоне видимости других окон места нет, увы. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18496763.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 19:28 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Ну вот примерно нарисовала, смотрите http://www.eva.ru/albumpage/47134/2.html. Кстати, там и фотку дома выложила, на ней видно, где соседи, какое примерно расстояние до них. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18499204"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18499204.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18496763">сообщение 18496763</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 20:58 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Это у меня фигня или что? Не вижу-:((( </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18499555"></a></td> 
+              <td width="99%" colspan="9"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18499555.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18499204">сообщение 18499204</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 21:12 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> В моем паспорте в разделе участок. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18500849"></a></td> 
+              <td width="99%" colspan="8"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18500849.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18499555">сообщение 18499555</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 21:56 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 01 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Очень здоровско! По забоу справа от ворот (но со стороны улицы) можно посадить рябину из леса, она хорошо приживается и не очень растет вширь, но забор закроет. А если ей не давать расти в один ствол и стричь, то будут здоровые кусты. Ранним летом цветут, осенью ягоды. В этом же месте, но со стороны участка можно посадить дёрен белый. Растет без проблем, только стричь, а зимой красиво смотрятся бордовые ветви. &lt;BR&gt;Слева от ворот по дороге к дому вдоль забора (штакетник что ли, или я тупая) можно посадить девичий виноград (вьющееся). Кстати, в какое время суток Вы снимали фотку?&lt;BR&gt;ИМХО дорожки экономичнее прокладывать по месту пролегания труб. Все равно ямы копать. Плодородный слой - на грядки. Трубы закопали, песок насыпали, утрамбовали - дальше как полагается.&lt;BR&gt;Тем же девичьим виноградом можно завить террасу. Он очень хорош!&lt;BR&gt;Для малявки не будете делать тент-зонтик от солнца? У моих песочница была под яблоней.&lt;BR&gt;Надо еще продумать, что будет по правую руку, когда войдешь в ворота. Думаю, получится.&lt;BR&gt;Какой у Вас район М.О.? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18573486"></a></td> 
+              <td width="99%" colspan="7"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18573486.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18500849">сообщение 18500849</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 10:40 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 04 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> не было инета 2 дня, только вот подключилась.&lt;BR&gt;Это дни еще раздумывала на планом, мне кажется, что будет пусто, т.к место под газон огромное. Как разделитьна зоны и при этом, чтобы вытянутость участка снять - ума не приложу, уже что толко не рисовала - фигня какая-тополучается. &lt;BR&gt;Снимок сделан летом где-то в районе 3 часов дня.&lt;BR&gt;Зонтик или тень для малышни нужен обязательно, идеальный вариант - дерево, но где ж его взять такое большое? Если сейчас посадить, то вырастет в большое как раз в малявкиной свадьбе ;-). Наверное буду зонтом обходится.&lt;BR&gt;А дом у меня во Владимирской области. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18579649"></a></td> 
+              <td width="99%" colspan="6"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18579649.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18573486">сообщение 18573486</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:10 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 04 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Вытянутость и "голость" участка можно сократить с помощью вертикалей. Соорудить решетки, трельяжи, по которым будут виться растения: клематисы (как Вам советовали), плетистые розы, жимолость каприфоль, да те же летники (душ.горошек, ипомея, фасоль огненно-красная) для скорости. Только общая протяженность этих конструкций должна быть не менее 2-3м и в плоскости, перпендикулярной длинной стороне забора. Можно решетки скрепить под углом 90гр., и два таких угла развернуть, как Вам больше понравится. Можно поставить арки (я покупала в "Ашане" из зеленых металлических трубок, было по 90 руб.).&lt;BR&gt;На большом газоне можно посадить деревья, кусты. Елочку не забудьте (мы вокруг хоровод водим на НГ) или сразу три (расстояние не менее 5м). Можно сделать акцент на садовой скамейке с соответствующим оформлением (та же одиночная решетка с вьющимися, хвойник, кустики - крупные и помельче, мощение, гравий). Можно сделать розарий (одна роза фирмы Meilland-Франция стоит 200-250 руб.). У меня растут на газоне (плавно изогнутая линия) 10 ярко-красных роз (у них развесисто-поникающий куст, и расстояние между ними 1м). &lt;BR&gt;Это уже лишнее, но расскажу. Можно сделать баскеты. Это участки (чаще квадратной формы) произвольного размера (предположим, 4кв.м), огороженные стриженной низкорослой живой изгородью (можно и не стриженной, но из низких растений - герань кроваво-красная, манжетка мягкая, лаванда) из сортовой полыни (размножается элементарно), карликовой бирючины (форма aurea), снежноягодника (с розовыми плодами), котовник, шалфей. Посередины баскеты посадить красивое одиночное растение, ту же розу (высотой не менее 1,5м) или тую-кипарисовик-можжевельник. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18583424"></a></td> 
+              <td width="99%" colspan="5"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18583424.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18579649">сообщение 18579649</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 21:16 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 04 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Надо все это сохранять в ворде что ли, я ни за что в жизни не запомню все это!&lt;BR&gt;В этом году настраиваюсь сделать по минимуму, но основное. Всего мне не успеть! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18591590"></a></td> 
+              <td width="99%" colspan="4"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18591590.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18583424">сообщение 18583424</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/84434.html">кыся123</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 11:22 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 05 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> А все сразу и не надо. В процессе работы станет понятно, что нужно, что нет. Придут хорошие мысли. У Вас все получится! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18518224"></a></td> 
+              <td width="99%" colspan="8"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18518224.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18499555">сообщение 18499555</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/34481.html">Звезда!</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 14:19 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 02 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Дом чудесный, очень теплое ощущение:) От соседей однозначно закрываться большими кустами типа сирени, боярышника итд. Есть вопрос чисто за ради интереса - Зачем вам 2 колодца? Над планом надо еще думать, конечно, на мой взгляд очень голо и открыто, не разделено на зоны. Очень большой кусок на газон - неплохо было этот газон разделить арками с вьющимися растениями -клематисом, розами, зона отдыха очень близко к дому и к детплощадке, или ее оттуда уносить или делать еще пару уголков отдыха в другом месте. Гриль площадку рядом с детской вообще не рекомендуется - когда малочь играет - ни к чему мелочи дым в глазки запускать, а также искра может отлететь и вообще огонь подальше от детей. Если деть спит - зачем зона отдыха близко к дому, ни к чему детю мешать полуночными разговорами по душам под стаканчик вина. Участок удачный - вытянутый. Попробуйте разметить его немного по-другому на 3 участка разбейте до дома и в этих маленьких квадратах вам будет удобней размещать зоны. Деревья обозначенные уже там есть или только планируются посадки? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18573571"></a></td> 
+              <td width="99%" colspan="7"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18573571.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18518224">сообщение 18518224</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 10:45 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 04 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Спасибо за комплимент. Веранда только весь сид портит, номы ее переделывать будем обязательно, очень уж она грубо смотрится.&lt;BR&gt;Колодец, который сейчас у меня на участке, в 3 кольца и вода там плохая, ни пить, ни мыться нельзя. Есть вариант его углубить, но мне сказали, что с этим возиться никтоне будет, поэтому из него планирую поливать грядки. А второй соотвествено для бытовых нужд и бани.&lt;BR&gt;Про голость и открытость Вы прям мои мысли читаете. Детскую площадку мощу рядом с домом по причине видимости из окна ребенка во ремя игр, а мангал и зону отдыха - по причине веранды, на которой заседания проходят. Два этих мероприятия мало совместимы, увы. Надо подумать над тем, чтобы все пьянки-гулянки в вечернее время проходили в другом месте, иначе спать однозначно мешать будем.&lt;BR&gt;Деревья только примерно обозначены, с посадками не опеределилась. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18616689"></a></td> 
+              <td width="99%" colspan="6"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18616689.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18573571">сообщение 18573571</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/34481.html">Звезда!</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 13:27 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 06 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Повезло (это я про 2 колодца) из нового можно будет водопровод и в баню и в дом протянуть. Я в этом году собираюсь заняться водопроводом. Про участок еще ваш скажу - проведите на плане несколько вертикальных линий и одну горизонтальную пополам - вот у вас получатся зоны. И немаловажный вопрос - вы определились какой вы хотите сад? Как вы видите свой участок, что вам именно ближе - вам и семейству? Это сад=хайтек, японский, сельский романтичный, средиземноморский, будет ли у вас на участке водоем, альпийские горки, розарий? Когда вы определитесь со стилем сада - вам просто удобнее будет зоны делить и расписывать сразу растения. Мое ИМХО на даче нужно отдыхать, поэтому с самого начала надо делать так, чтобы уход за садом занимал минимум времени и усилий, но в то же время чтобы участок не выглядел заброшенным. Поэтому план самое главное и не надо торопиться. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18622492"></a></td> 
+              <td width="99%" colspan="5"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18622492.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18616689">сообщение 18616689</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 16:28 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 06 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> По колодцам именно так и планировала. Водопровод хочу сделать из нового.&lt;BR&gt;По стилю сада - это пока сложный вопрос для меня,я еще не могу представить как выглядит ни один из перечисенных Вами. Водоем хочу сделать, но не тут. Дело в том, что мы планирует присоединить соседний пустой участок, в следующем году там буду проводить работы и делать водоем и возможно бассеин. По поводу отдыха - согласна на все 100%. Сейчас сижу рисую еще варианты планов, в ближайшие дни выложу, будет что обсуждать :-) . </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18625901"></a></td> 
+              <td width="99%" colspan="4"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18625901.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18622492">сообщение 18622492</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/34481.html">Звезда!</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:13 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 06 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> в японском саде преобладают гравийные покрытия (а не кора например как сельской идилии), сад камней, обязательно водоем. В деревенском запущенном саде извилистые дорожки, нарочито запущенные цветники, рабатки и проч, водоем в природном стиле, в оформлении можно использовать бордюры-плетни, дерево или металл (обелиски, арки) только такие, знаете, с патиной. Английские сады очень строгие (если они одновременно не запущенные:), как и хай-тек, строгие прямоугольные формы, строгие линии, самшитовые ограждения, так называемые баскеты, топиарное искусство. Растения тоже все соответствующие. В романтичном саду преобладает розовый, и некая пестрота растения (как в бабушкином саду), в японском большое внимание уделяется зеленому цвету, они играют на разнообразии листьев, ну итд... </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18628371"></a></td> 
+              <td width="99%" colspan="3"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18628371.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18625901">сообщение 18625901</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 19:37 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 06 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Тогда скорее романтичный, садик сельского типа. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18553602.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/45225.html">Тихая Сапа</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 15:40 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 03 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Мне нра. Только считается, что детская площадка должна просматриваться изо всех частей сада. А у вас она в углу, за домом (видимо). Т.е. с севера не видна. &lt;BR&gt;Если я правильно поняла. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18573581"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18573581.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18553602">сообщение 18553602</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 10:46 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 04 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Нет, она у меня перед домом получается, там как раз вход. Никак не получается ее разместить так. чтобы видно отовсюду, в том числе и из дома. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18595346.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/31100.html">OlechkaV</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 14:51 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 05 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Класно ты все напланировала. Что-то из комментариев выше и себе применю:), тоже сочу облагородить участок (решили все-таки не продавать и довести участок до ума). </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18597832"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18597832.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18595346">сообщение 18595346</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/48223.html">Рыжий Катёнок</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:13 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 05 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> - </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18599200"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18599200.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18595346">сообщение 18595346</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:31 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 05 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Это правильно! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18597837.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/48223.html">Рыжий Катёнок</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:13 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 05 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Очень не плохо! А главное много места для отдыха! :) И домик у вас такой душевный, уютно смотрится!&lt;BR&gt;Всё таки с вытянутыми участками сложнее планировать </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message18599182"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 18599182.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message18597837">сообщение 18597837</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/47134.html">Юся (Yusia)</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Корифей &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:31 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 05 мар 2006 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Да, вытянутый участок обязывает его вытянутость замаскировать. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+            </tbody> 
+           </table> </td> 
+         </tr> 
+         <tr> 
+          <td> <a href="/main/forum" style="color:cc3333;">Перейти к динамической версии форумов </a> </td> 
+         </tr> 
+        </tbody> 
+       </table>
+       <div class="clearfix"></div>
+<!-- Яндекс.Директ -->
+<div id="yandex_ad"></div>
+<script type="text/javascript">
+(function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+        Ya.Direct.insertInto(50948, "yandex_ad", {
+            ad_format: "direct",
+            font_size: 0.9,
+            type: "horizontal",
+            border_type: "ad",
+            limit: 4,
+            title_font_size: 3,
+            links_underline: false,
+            site_bg_color: "FFFFFF",
+            header_bg_color: "FFFFFF",
+            border_color: "FFCCCC",
+            title_color: "CC0000",
+            url_color: "000000",
+            text_color: "000000",
+            hover_color: "0066FF",
+            favicon: true,
+            no_sitelinks: true
+        });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.src = "//an.yandex.ru/system/context.js";
+    s.type = "text/javascript";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+})(window, document, "yandex_context_callbacks");
+</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+     <center>
+<!-- R-50948-2 Яндекс.RTB-блок  -->
+<div id="yandex_ad_R-50948-2"></div>
+<script type="text/javascript">
+    (function (w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function () {
+            Ya.Context.AdvManager.render({blockId: "R-50948-2", renderTo: "yandex_ad_R-50948-2", async: true});
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+<iframe id='a6296f44' name='a6296f44' src='http://ad.eva.ru/ad/adframe.php?n=a6296f44&amp;what=zone:989' framespacing='0' frameborder='no' scrolling='no' width='240' height='140'><a href='http://ad.eva.ru/ad/adclick.php?n=a6296f44' target='_blank'><img src='http://ad.eva.ru/ad/adview.php?what=zone:989&amp;n=a6296f44' border='0' alt=''></a></iframe>
+</center>
+    </div> 
+   </div> 
+  </div>
+  <footer> 
+   <div class="container"> 
+    <div class="row clearfix"> 
+     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">О проекте</h5></IDXSKIP> 
+      <hr> 
+      <p class="text-justify"> <small> Все права на материалы, размещенные на сайте, защищены законодательством об авторском праве и смежных правах и не могут быть воспроизведены или каким либо образом использованы без письменного разрешения правообладателя и проставления активной ссылки на главную страницу портала Ева.Ру (www.eva.ru) рядом с использованными материалами.<br> За содержание рекламных материалов редакция ответственности не несет. Свидетельство о регистрации СМИ Эл № ФС77-36354 от 22 мая 2009 г. v.3.2.026 </small> </p> 
+     </div> 
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+      <h5 class="text-uppercase">Мы в соцсетях</h5> 
+      <hr> 
+      <ul class="list-inline"> 
+       <li><a class="btn btn-vk" target="_blank" href="http://vk.com/evato4karu"><span class="hidden-sm hidden-xs">&nbsp;</span><i class="fa fa-vk fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;</span></a></li> 
+       <li> <a class="btn btn-facebook" target="_blank" href="https://www.facebook.com/evato4karu"><span class="hidden-sm hidden-xs">&nbsp;&nbsp;</span><i class="fa fa-facebook fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;&nbsp;</span></a> </li> 
+       <li> <a class="btn btn-instagram" target="_blank" href="https://instagram.com/eva__ru/"><span class="hidden-sm hidden-xs">&nbsp;</span><i class="fa fa-instagram fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;</span></a> </li> 
+      </ul> 
+     </div> 
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">Контакты</h5></IDXSKIP> 
+      <hr> 
+      <ul class="list-unstyled"> 
+       <IDXSKIP><li><a href="/articles/peopleeva.htm">Контакты</a></li></IDXSKIP> 
+       <IDXSKIP><li><a href="/articles/reklama.htm">Реклама на сайте</a></li></IDXSKIP> 
+       <IDXSKIP><li><a href="/articles/payforum.htm">Реклама в форумах</a></li></IDXSKIP> 
+      </ul> 
+     </div> 
+    </div> 
+    <hr> 
+    <p> <span class="btn btn-circle btn-danger btn-sm">18+</span> © Eva.ru 2002-2015 <a href="http://top100.rambler.ru/top100/"><img src="https://cloudstatic.eva.ru/design/eva/images/rambler-w7.gif" alt="Rambler's Top100" width="88" height="31" border="0"></a> <a href="http://www.liveinternet.ru/click" target="_blank"><img src="https://cloudstatic.eva.ru/design/eva/images/liveinternet-logo.gif" title="LiveInternet:" border="0" width="88" height="15"></a> <script type="text/javascript">                var img = new Image();                img.src = 'http://www.tns-counter.ru/V13a***R>' + document.referrer.replace(/\*/g, '%2a') + '*eva_ru/ru/UTF-8/tmsec=eva_total/' + Math.round(Math.random() * 1000000000);            </script> 
+     <noscript> 
+      <img src="http://www.tns-counter.ru/V13a****eva_ru/ru/UTF-8/tmsec=eva_total/" width="1" height="1"> 
+     </noscript> <script type="text/javascript">            var _gaq = _gaq || [];            _gaq.push(['_setAccount', 'UA-20593733-1']);            _gaq.push(['_trackPageview']);            (function () {                var ga = document.createElement('script');                ga.type = 'text/javascript';                ga.async = true;                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';                var s = document.getElementsByTagName('script')[0];                s.parentNode.insertBefore(ga, s);            })();        </script> <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script> <script type="text/javascript">try {            var yaCounter132528 = new Ya.Metrika(132528);        } catch (e) {        }</script> 
+     <noscript> 
+     </noscript></p>
+    <div style="position: absolute;">
+     <img src="//mc.yandex.ru/watch/132528">
+    </div>  
+    <script type="text/javascript">(function () {            function c() {                if (!g) {                    g = !0;                    var d = a.createElement(e);                    d.type = "text/java" + e;                    var b;                    b = "?rnd=" + (100 * ((new Date).getTime() % 1E7) + h.round(99 * h.random()));                    b += a.referrer ? "&r=" + encodeURIComponent(a.referrer) : "";                    b += "&t=" + (new Date).getTime();                    b += '&https=' + ('https:' == window.location.protocol ? 1 : 0);                    "undefined" !== typeof __lx__target && (b += "&trg=" + encodeURIComponent(__lx__target));                    d.src = ("https:" == document.location.protocol ? "https://ssl." : "http://") + "luxup.ru/tr_js/" + j + "/24673/" + b;                    "undefined" != typeof d && a.getElementsByTagName(e)[0].parentNode.appendChild(d)                }            }            var j = 737, g = !1, a = document, i = a.documentElement, h = Math, f = window, e = "script";            a.addEventListener ? a.addEventListener("DOMContentLoaded", c, !1) : a.attachEvent ? (i.doScroll && f == f.top && function () {                try {                    i.doScroll("left")                } catch (a) {                    setTimeout(arguments.callee, 0);                    return                }                c()            }(), a.attachEvent("onreadystatechange", function () {                "complete" === a.readyState && c()            })) : f.onload = c        })();</script> 
+    <a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?592288" width="0" height="0" border="0"></a> 
+    <script type="text/javascript">            document.write("<img style='float:left;' src='http://counter.yadro.ru/hit?r" + escape(document.referrer) + ((typeof(screen) == "undefined") ? "" : ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) + ";" + Math.random() + "' width=1 height=1 alt=''>");        </script> 
+    <p></p> 
+   </div>
+  </footer>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/scrollup/dist/jquery.scrollUp.min.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/plugins/tooltip.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/eva/js/functions.js?jsv=3.2.026"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/jquery-cookie/src/jquery.cookie.js"></script>
+  <script type="text/javascript">    function setScrollUpRight() {        var right = $(window).width() - $('div.eva').width();        if (right > 150) {            $('#scrollUp').css('right', (Math.round(right / 2) + 10) + 'px');        }        else {            $('#scrollUp').css('right', '10px');        }    }    $(function () {        $("[data-toggle='tooltip']").tooltip();        $.scrollUp({            scrollText: 'Наверх',            zIndex: 200,            topDistance: '300',            topSpeed: 300,            animation: 'fade',            animationInSpeed: 200,            animationOutSpeed: 200        });        setScrollUpRight();        $(window).on('resize', function () {            setScrollUpRight();        });        var orgElementPos = $('.navbar-static-top').offset();        if (orgElementPos) {            var orgElementTop = orgElementPos.top;            $(window).scroll(function () {                if ($(window).scrollTop() > orgElementTop) {                    $('#nav-scrolled').removeClass('hidden');                } else {                    $('#nav-scrolled').addClass('hidden');                }            });        }    });</script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/eva/js/profile.js?jsv=3.2.026"></script>
+ </body>
+</html>

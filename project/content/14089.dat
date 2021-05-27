@@ -1,0 +1,1277 @@
+steamcommunity.com/sharedfiles/filedetails/?id=480156325
+<!DOCTYPE html>
+<html class=" responsive" lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="theme-color" content="#171a21">
+		<title>Сообщество Steam :: Руководство :: Rust - Создание и настройка своего сервера</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+	<link href="http://community.edgecast.steamstatic.com/public/shared/css/motiva_sans.css?v=Sd0odMs2NjL1" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/shared/css/buttons.css?v=FMXZx9fv9yp_" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/shared/css/shared_global.css?v=aXnR3BCCrqcR" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/css/globalv2.css?v=3X1Hz39cVBqV" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/shared/css/apphub.css?v=DzqCiCjyS0fo" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/css/skin_1/modalContent.css?v=.vXD4gU69vdZP" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/css/skin_1/forums.css?v=iPsBtN1FPvNU" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/css/skin_1/workshop.css?v=1DNa2hIDI6yu" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/css/skin_1/workshop_itemdetails.css?v=cwIO5OEYdOQv" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/css/skin_1/sharedfiles_guide.css?v=qIdbapFLn-Bw" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/shared/css/shared_responsive.css?v=Dm6dKxyudx2Y" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/shared/css/apphub_images.css?v=_Jkkz7lYZ1o7" rel="stylesheet" type="text/css" >
+<link href="http://community.edgecast.steamstatic.com/public/css/skin_1/header.css?v=tZYBxDBV1D4c" rel="stylesheet" type="text/css" >
+			<script>
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+						(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-33779068-1', 'auto', {
+					'sampleRate': 0.4				});
+				ga('set', 'dimension1', false );
+				ga('set', 'dimension2', 'External' );
+				ga('set', 'dimension3', 'sharedfiles' );
+				ga('set', 'dimension4', "sharedfiles\/filedetails" );
+				ga('send', 'pageview');
+
+			</script>
+			<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/javascript/prototype-1.7.js?v=.55t44gwuwgvw" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/javascript/scriptaculous/_combined.js?v=9XVsa_Ni33oN&amp;l=russian&amp;load=effects,controls,slider,dragdrop" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/javascript/global.js?v=zMP2IW09Vk23&amp;l=russian" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/javascript/jquery-1.11.1.min.js?v=.isFTSRckeNhC" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/shared/javascript/tooltip.js?v=.gcRSUfx-SLlh" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/shared/javascript/shared_global.js?v=fvYT3A4EKZIa&amp;l=russian" ></script>
+<script type="text/javascript">$J = jQuery.noConflict();
+if ( typeof JSON != 'object' || !JSON.stringify || !JSON.parse ) { document.write( "<scr" + "ipt type=\"text\/javascript\" src=\"http:\/\/community.edgecast.steamstatic.com\/public\/javascript\/json2.js?v=pmScf4470EZP&amp;l=russian\" ><\/script>\n" ); };
+</script><script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/javascript/modalv2.js?v=dfMhuy-Lrpyo&amp;l=russian" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/javascript/modalContent.js?v=F99z3bacgsj-&amp;l=russian" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/javascript/workshop_functions.js?v=nyRGH4uyjYqa&amp;l=russian" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/javascript/sharedfiles_functions_logged_out.js?v=.Wz1ehgfXPz3Q" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/javascript/sharedfiles_guide_functions.js?v=vvDgbnZobKqJ&amp;l=russian" ></script>
+<script type="text/javascript" src="http://community.edgecast.steamstatic.com/public/shared/javascript/shared_responsive_adapter.js?v=WjJCaa3zP6ai&amp;l=russian" ></script>
+
+						<meta name="Description" content="В данном руководстве вы узнаете/научитесь создавать свой сервер в Rust.
+Для новой версии Rust....">
+			
+						<meta property="fb:app_id" content="105386699540688">
+					<meta property="og:description" content="В данном руководстве вы узнаете/научитесь создавать свой сервер в Rust.
+Для новой версии Rust....">
+			
+	
+			<link rel="image_src" href="https://steamuserimages-a.akamaihd.net/ugc/364029569321627790/E7F78C01EA02F1A13C75EC49AA6C1E4C109A4C24/">
+		<meta property="og:image" content="https://steamuserimages-a.akamaihd.net/ugc/364029569321627790/E7F78C01EA02F1A13C75EC49AA6C1E4C109A4C24/">
+			
+	
+	
+	</head>
+<body class="apphub_blue responsive_page">
+
+<div class="responsive_page_frame with_header">
+
+						<div class="responsive_page_menu_ctn mainmenu">
+				<div class="responsive_page_menu"  id="responsive_page_menu">
+										<div class="mainmenu_contents">
+						<div class="mainmenu_contents_items">
+															<a class="menuitem" href="https://steamcommunity.com/login/home/?goto=sharedfiles%2Ffiledetails%2F%3Fid%3D480156325">
+									Войти								</a>
+							
+								<IDXSKIP><a class="menuitem supernav" href="http://store.steampowered.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_store">
+		Магазин	</a></IDXSKIP>
+	<div class="submenu_store" style="display: none;" data-submenuid="store">
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/">Популярное</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/explore/">Введение</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/curators/">Кураторы</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/my/wishlist/">Список желаемого</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/news/">Новости</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/stats/">Статистика</a></IDXSKIP>
+	</div>
+
+
+	<IDXSKIP><a class="menuitem supernav" style="display: block" href="http://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_community">
+		Сообщество	</a></IDXSKIP>
+	<div class="submenu_community" style="display: none;" data-submenuid="community">
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/">Главная</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/discussions/">Обсуждения</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/workshop/">Мастерская</a></IDXSKIP>
+					<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/greenlight/">Greenlight</a></IDXSKIP>
+				<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/market/">Торговая площадка</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/?subsection=broadcasts">Трансляции</a></IDXSKIP>
+					</div>
+
+	
+
+	
+	
+	<IDXSKIP><a class="menuitem" href="https://help.steampowered.com/ru/">
+		Поддержка	</a></IDXSKIP>
+
+							<div class="minor_menu_items">
+																<IDXSKIP><div class="menuitem change_language_action">
+									Изменить язык								</div></IDXSKIP>
+																									<IDXSKIP><div class="menuitem" onclick="Responsive_RequestDesktopView();">
+										Полная версия									</div></IDXSKIP>
+															</div>
+						</div>
+						<div class="mainmenu_footer_spacer"></div>
+						<div class="mainmenu_footer">
+							<IDXSKIP><div class="mainmenu_footer_logo"><img src="http://community.edgecast.steamstatic.com/public/shared/images/responsive/logo_valve_footer.png"></div></IDXSKIP>
+							<IDXSKIP>© Valve Corporation. Все права защищены. Все торговые марки являются собственностью соответствующих владельцев в США и других странах.							</IDXSKIP><span class="mainmenu_valve_links">
+								<IDXSKIP><a href="http://store.steampowered.com/privacy_agreement/" target="_blank">Privacy Policy</a></IDXSKIP>
+								<IDXSKIP>&nbsp;| &nbsp;<a href="http://www.valvesoftware.com/legal.htm" target="_blank">Legal</a></IDXSKIP>
+								<IDXSKIP>&nbsp;| &nbsp;<a href="http://store.steampowered.com/subscriber_agreement/" target="_blank">Steam Subscriber Agreement</a></IDXSKIP>
+								<IDXSKIP>&nbsp;| &nbsp;<a href="http://store.steampowered.com/steam_refunds/" target="_blank">Refunds</a></IDXSKIP>
+							</span>
+						</div>
+					</div>
+									</div>
+			</div>
+		
+		<div class="responsive_local_menu_tab">
+
+		</div>
+
+		<div class="responsive_page_menu_ctn localmenu">
+			<div class="responsive_page_menu"  id="responsive_page_local_menu">
+				<div class="localmenu_content">
+				</div>
+			</div>
+		</div>
+
+
+
+					<IDXSKIP><div class="responsive_header">
+				<div class="responsive_header_content">
+					<div id="responsive_menu_logo">
+						<img src="http://community.edgecast.steamstatic.com/public/shared/images/responsive/header_menu_hamburger.png" height="100%">
+											</div>
+					<div class="responsive_header_logo">
+						<img src="http://community.edgecast.steamstatic.com/public/shared/images/responsive/header_logo.png" height="36" border="0" alt="STEAM">
+					</div>
+				</div>
+			</div></IDXSKIP>
+		
+		<div class="responsive_page_content_overlay">
+
+		</div>
+
+		<div class="responsive_fixonscroll_ctn nonresponsive_hidden ">
+		</div>
+	
+	<div class="responsive_page_content">
+
+		<div id="global_header">
+	<div class="content">
+
+		<IDXSKIP><div class="logo">
+			<span id="logo_holder">
+				<a href="http://store.steampowered.com/">
+					<img src="http://community.edgecast.steamstatic.com/public/shared/images/header/globalheader_logo.png?t=962016" width="176" height="44">
+				</a>
+			</span>
+			<!--[if lt IE 7]>
+			<style type="text/css">
+				#logo_holder img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+				#logo_holder { display: inline-block; width: 176px; height: 44px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://community.edgecast.steamstatic.com/public/images/v5/globalheader_logo.png'); }
+			</style>
+			<![endif]-->
+		</div></IDXSKIP>
+
+			<div class="supernav_container">
+	<IDXSKIP><a class="menuitem supernav" href="http://store.steampowered.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_store">
+		МАГАЗИН	</a></IDXSKIP>
+	<div class="submenu_store" style="display: none;" data-submenuid="store">
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/">Популярное</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/explore/">Введение</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/curators/">Кураторы</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/my/wishlist/">Список желаемого</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/news/">Новости</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://store.steampowered.com/stats/">Статистика</a></IDXSKIP>
+	</div>
+
+
+	<IDXSKIP><a class="menuitem supernav" style="display: block" href="http://steamcommunity.com/" data-tooltip-type="selector" data-tooltip-content=".submenu_community">
+		СООБЩЕСТВО	</a></IDXSKIP>
+	<div class="submenu_community" style="display: none;" data-submenuid="community">
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/">Главная</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/discussions/">Обсуждения</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/workshop/">Мастерская</a></IDXSKIP>
+					<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/greenlight/">Greenlight</a></IDXSKIP>
+				<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/market/">Торговая площадка</a></IDXSKIP>
+		<IDXSKIP><a class="submenuitem" href="http://steamcommunity.com/?subsection=broadcasts">Трансляции</a></IDXSKIP>
+					</div>
+
+	
+
+	
+			<IDXSKIP><a class="menuitem" href="http://store.steampowered.com/about/">
+			О STEAM		</a></IDXSKIP>
+	
+	<IDXSKIP><a class="menuitem" href="https://help.steampowered.com/ru/">
+		ПОДДЕРЖКА	</a></IDXSKIP>
+	</div>
+	<script type="text/javascript">
+		jQuery(function($) {
+			$('.tooltip').v_tooltip();
+			$('#global_header .supernav').v_tooltip({'location':'bottom', 'tooltipClass': 'supernav_content', 'offsetY':-4, 'offsetX': 1, 'horizontalSnap': 4, 'tooltipParent': '#global_header .supernav_container', 'correctForScreenSize': false});
+		});
+	</script>
+
+		<div id="global_actions">
+			<div id="global_action_menu">
+				<IDXSKIP><div class="header_installsteam_btn header_installsteam_btn_green">
+					<div class="header_installsteam_btn_leftcap"></div>
+					<div class="header_installsteam_btn_rightcap"></div>
+					<a class="header_installsteam_btn_content" href="http://store.steampowered.com/about/">
+						Загрузить Steam					</a>
+				</div></IDXSKIP>
+
+				
+														<a class="global_action_link" href="https://steamcommunity.com/login/home/?goto=sharedfiles%2Ffiledetails%2F%3Fid%3D480156325">войти</a>
+					<IDXSKIP>&nbsp;|&nbsp;
+					<span class="pulldown global_action_link" id="language_pulldown" onclick="ShowMenu( this, 'language_dropdown', 'right' );">язык</span></IDXSKIP>
+					<div class="popup_block_new" id="language_dropdown" style="display: none;">
+						<div class="popup_body popup_menu">
+																																	<a class="popup_menu_item tight" href="?l=bulgarian&id=480156325" onclick="ChangeLanguage( 'bulgarian' ); return false;">Български (болгарский)</a>
+																										<a class="popup_menu_item tight" href="?l=czech&id=480156325" onclick="ChangeLanguage( 'czech' ); return false;">Čeština (чешский)</a>
+																										<a class="popup_menu_item tight" href="?l=danish&id=480156325" onclick="ChangeLanguage( 'danish' ); return false;">Dansk (датский)</a>
+																										<a class="popup_menu_item tight" href="?l=dutch&id=480156325" onclick="ChangeLanguage( 'dutch' ); return false;">Nederlands (нидерландский)</a>
+																										<a class="popup_menu_item tight" href="?l=english&id=480156325" onclick="ChangeLanguage( 'english' ); return false;">English (английский)</a>
+																										<a class="popup_menu_item tight" href="?l=finnish&id=480156325" onclick="ChangeLanguage( 'finnish' ); return false;">Suomi (финский)</a>
+																										<a class="popup_menu_item tight" href="?l=french&id=480156325" onclick="ChangeLanguage( 'french' ); return false;">Français (французский)</a>
+																										<a class="popup_menu_item tight" href="?l=german&id=480156325" onclick="ChangeLanguage( 'german' ); return false;">Deutsch (немецкий)</a>
+																										<a class="popup_menu_item tight" href="?l=greek&id=480156325" onclick="ChangeLanguage( 'greek' ); return false;">Ελληνικά (греческий)</a>
+																										<a class="popup_menu_item tight" href="?l=hungarian&id=480156325" onclick="ChangeLanguage( 'hungarian' ); return false;">Magyar (венгерский)</a>
+																										<a class="popup_menu_item tight" href="?l=italian&id=480156325" onclick="ChangeLanguage( 'italian' ); return false;">Italiano (итальянский)</a>
+																										<a class="popup_menu_item tight" href="?l=japanese&id=480156325" onclick="ChangeLanguage( 'japanese' ); return false;">日本語 (японский)</a>
+																										<a class="popup_menu_item tight" href="?l=koreana&id=480156325" onclick="ChangeLanguage( 'koreana' ); return false;">한국어 (корейский)</a>
+																										<a class="popup_menu_item tight" href="?l=norwegian&id=480156325" onclick="ChangeLanguage( 'norwegian' ); return false;">Norsk (норвежский)</a>
+																										<a class="popup_menu_item tight" href="?l=polish&id=480156325" onclick="ChangeLanguage( 'polish' ); return false;">Polski (польский)</a>
+																										<a class="popup_menu_item tight" href="?l=portuguese&id=480156325" onclick="ChangeLanguage( 'portuguese' ); return false;">Português (португальский)</a>
+																										<a class="popup_menu_item tight" href="?l=brazilian&id=480156325" onclick="ChangeLanguage( 'brazilian' ); return false;"><IDXSKIP>Português-Brasil (бразильский португальский)</IDXSKIP></a>
+																										<a class="popup_menu_item tight" href="?l=romanian&id=480156325" onclick="ChangeLanguage( 'romanian' ); return false;">Română (румынский)</a>
+																																			<a class="popup_menu_item tight" href="?l=schinese&id=480156325" onclick="ChangeLanguage( 'schinese' ); return false;">简体中文 (упрощенный китайский)</a>
+																										<a class="popup_menu_item tight" href="?l=spanish&id=480156325" onclick="ChangeLanguage( 'spanish' ); return false;">Español (испанский)</a>
+																										<a class="popup_menu_item tight" href="?l=swedish&id=480156325" onclick="ChangeLanguage( 'swedish' ); return false;">Svenska (шведский)</a>
+																										<a class="popup_menu_item tight" href="?l=tchinese&id=480156325" onclick="ChangeLanguage( 'tchinese' ); return false;">繁體中文 (традиционный китайский)</a>
+																										<a class="popup_menu_item tight" href="?l=thai&id=480156325" onclick="ChangeLanguage( 'thai' ); return false;">ไทย (тайский)</a>
+																										<a class="popup_menu_item tight" href="?l=turkish&id=480156325" onclick="ChangeLanguage( 'turkish' ); return false;">Türkçe (турецкий)</a>
+																										<a class="popup_menu_item tight" href="?l=ukrainian&id=480156325" onclick="ChangeLanguage( 'ukrainian' ); return false;">Українська (украинский)</a>
+																						<IDXSKIP><a class="popup_menu_item tight" href="http://translation.steampowered.com" target="_blank">Помогите нам с переводом Steam</a></IDXSKIP>
+						</div>
+					</div>
+							</div>
+					</div>
+			</div>
+</div>
+<script type="text/javascript">
+	g_sessionID = "781c894f31420cf644468047";
+	g_steamID = false;
+
+	// We always want to have the timezone cookie set for PHP to use
+	setTimezoneCookies();
+
+	$J( function() {
+
+		InitMiniprofileHovers();
+		InitEmoticonHovers();
+		window.BindCommunityTooltip = function( $Selector ) { $Selector.v_tooltip( {'tooltipClass': 'community_tooltip', 'dataName': 'communityTooltip' } ); };
+		BindCommunityTooltip( $J('[data-community-tooltip]') );
+	});
+
+	$J( function() { InitEconomyHovers( "http:\/\/community.edgecast.steamstatic.com\/public\/css\/skin_1\/economy.css?v=lMsOsN-xd6Nr", "http:\/\/community.edgecast.steamstatic.com\/public\/javascript\/economy_common.js?v=tsXdRVB0yEaR&l=russian", "http:\/\/community.edgecast.steamstatic.com\/public\/javascript\/economy.js?v=ARdzFkH_N675&l=russian" );});</script>
+		<div class="responsive_page_template_content">
+
+			<script type="text/javascript">
+	var publishedfileid = '480156325';
+	var currentSectionID = '0';
+	var searchText = "";
+
+	addEvent( window, "scroll", CheckForVisibleYouTubeVideos, false);
+	addEvent( window, "scroll", OnScrollChangeGuideSection, false);
+
+	$J( function()
+	{
+		if ( window.parent && window.parent !== window && window.parent.OnModalContentLoaded )
+			window.parent.OnModalContentLoaded();
+
+				// fix the table of contents if the user tries to scroll past it
+		new FixedElementOnScrollWrapper( 'GuideTableOfContents', 60, true, 130, { fixedClass: 'fixed_in_scroll' } );
+
+		new FixedElementOnScrollWrapper( 'ScrollingItemControls', 0, false, 0, {fixedClass: 'fixed_in_scroll'} );
+		
+		// set the current selection
+		if ( location.hash.length > 1 )
+		{
+			SelectGuideSection( location.hash.substring( 1 ), 'scrollTo' );
+		}
+		else
+		{
+			var guideSection = GetGuideSection( publishedfileid );
+			if ( guideSection != null )
+			{
+				SelectGuideSection( guideSection, 'changeHash' );
+			}
+			else
+			{
+				var firstElem = $( "guideSectionSelection_0" );
+				firstElem.addClassName( 'selected' );
+			}
+		}
+
+		CheckForVisibleYouTubeVideos();
+	} );
+
+	function GetGuideSection( publishedfileid )
+	{
+		var sections = WebStorage.GetLocal('GuideSections');
+		if( sections && sections.length > 0 )
+		{
+			for( var i=0; i<sections.length; i++)
+			{
+				var section = sections[i];
+				if( section.id == publishedfileid )
+					return section.section;
+			}
+		}
+		return null;
+	}
+
+	function SaveGuideSection( publishedfileid, strSectionName )
+	{
+		var sections = WebStorage.GetLocal('GuideSections');
+		if( sections == null )
+			sections = [];
+
+		if( sections && sections.length > 0 )
+		{
+			for( var i=0; i<sections.length; i++)
+			{
+				var section = sections[i];
+				if( section.id == publishedfileid )
+				{
+					section.section = strSectionName;
+					WebStorage.SetLocal('GuideSections', sections );
+					return;
+				}
+			}
+		}
+		// Evict an item from the object to make room
+		if( sections.length > 25 )
+			sections.shift();
+
+		sections.push({ id: publishedfileid, section: strSectionName });
+		WebStorage.SetLocal('GuideSections', sections );
+	}
+
+	function onModalHidden()
+	{
+		// stop any videos
+		if (  typeof ytplayer != 'undefined' && ytplayer  )
+		{
+			ytplayer.stopVideo();
+		}
+	}
+
+	function ToggleSectionVisibility( browseBar, elementID )
+	{
+		if ( $(elementID).visible() )
+		{
+			$(browseBar).className = "rightSectionBrowseBar";
+			$(elementID).hide();
+		}
+		else
+		{
+			$(browseBar).className = "rightSectionBrowseBar toggled";
+			$(elementID).show();
+		}
+	}
+
+	Event.observe(window, 'dom:loaded', function() {
+		if ( searchText )
+		{
+			HighlightSearchText( searchText, $('highlightContent') );
+
+			var rgSections = $$('div.subSection' );
+			for ( var i = 0; i < rgSections.length; ++i )
+			{
+				var section = rgSections[i];
+				HighlightSearchText( searchText, section );
+			}
+		}
+	});
+
+</script>
+<script type="text/javascript">
+	$J( function() {
+		var strCookie = 'age_gate_252490';
+		if ( !WebStorage.GetLocal( strCookie, true ) )
+		{
+			var bResponsivePage = $J('html.responsive' ).length;
+
+
+			var $Content = $J('<div/>');
+			$Content.append( $Header );
+			$Content.append( "<div class=\"adult_content_age_gate\">\r\n\t\t\t<img class=\"adult_content_age_gate_header\" src=\"http:\/\/cdn.edgecast.steamstatic.com\/steam\/apps\/252490\/header.jpg?t=1494858747\">\r\n\t\t<p>\u041a\u043e\u043d\u0442\u0435\u043d\u0442, \u0441\u043e\u0437\u0434\u0430\u043d\u043d\u044b\u0439 \u0441\u043e\u043e\u0431\u0449\u0435\u0441\u0442\u0432\u043e\u043c \u0434\u043b\u044f \u044d\u0442\u043e\u0433\u043e \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0430, \u043c\u043e\u0436\u0435\u0442 \u043d\u0435 \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442\u044c \u0432\u0441\u0435\u043c \u0432\u043e\u0437\u0440\u0430\u0441\u0442\u0430\u043c, \u0430 \u0435\u0433\u043e \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043d\u0430 \u0440\u0430\u0431\u043e\u0442\u0435 \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u043d\u0435\u0434\u043e\u043f\u0443\u0441\u0442\u0438\u043c.<\/p>\r\n\t<div class=\"adult_content_age_gate_buttons\">\r\n\t\t<div class=\"btn_grey_white_innerfade btn_medium\" id=\"age_gate_btn_cancel\">\r\n\t\t\t<span>\u041e\u0442\u043c\u0435\u043d\u0438\u0442\u044c<\/span>\r\n\t\t<\/div>\r\n\t\t&nbsp;\r\n\t\t<div class=\"btn_grey_white_innerfade btn_medium\" id=\"age_gate_btn_continue\">\r\n\t\t\t<span>\u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u044c<\/span>\r\n\t\t<\/div>\r\n\t<\/div>\r\n<\/div>\r\n" );
+
+			var fnCleanup = null;
+
+			if ( bResponsivePage )
+			{
+				var $TemplateContent = $J('.responsive_page_template_content' ).hide();
+				var $Footers = $J('#footer_spacer, #footer' ).hide();
+				$TemplateContent.parent().append( $Content );
+				fnCleanup = function() {
+					$TemplateContent.show();
+					$Footers.show();
+				};
+			}
+			else
+			{
+				var $Header = $J('#global_header');
+				$Header.wrap('<center/>');
+				var $HeaderWrapper = $Header.parent();
+				$Header.detach();
+
+				var $VisiblePageElements = $J('body > :visible')
+				$VisiblePageElements.hide();
+
+				$J(document.body).append( $Content );
+
+				fnCleanup = function() {
+					$HeaderWrapper.append( $Header );
+					$VisiblePageElements.show();
+				};
+			}
+
+			$Content.find('#age_gate_btn_cancel').click( function() {
+				window.history.back();
+
+								window.setTimeout( function() {
+					window.location = 'http://steamcommunity.com';
+				}, 1000 );
+			});
+			$Content.find('#age_gate_btn_continue').click( function() {
+				$Content.remove();
+				fnCleanup();
+				WebStorage.SetLocal( strCookie, true, true );
+
+				// the apphub layout may be broken if it was hidden while this dialog was shown
+				// (or if the user resized while this dialog was up) - just trigger a recalc
+				$J(window ).trigger('resize');
+			});
+		}
+	});
+</script><div class="apphub_HomeHeaderContent">
+
+
+	
+	<div class="apphub_HeaderTop">
+		<div class="apphub_OtherSiteInfo responsive_hidden">
+										<a style="position: relative; z-index: 1;" class="btnv6_blue_hoverfade btn_medium" href="http://store.steampowered.com/app/252490">
+					<span>Страница в магазине</span>
+				</a>
+					</div>
+		<div class="apphub_AppIcon"><img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/apps/252490/820be4782639f9c4b64fa3ca7e6c26a95ae4fd1c.jpg"><div class="overlay"></div></div>
+		<div class="apphub_AppName ellipsis">Rust</div>
+		<div style="clear: both"></div>
+				<div class="apphub_sectionTabs responsive_hidden">
+				
+	<a href="http://steamcommunity.com/app/252490" class="apphub_sectionTab  "><span>Все</span></a>
+		
+	<a href="http://steamcommunity.com/app/252490/discussions/" class="apphub_sectionTab  "><span>Обсуждения</span></a>
+		
+	<a href="http://steamcommunity.com/app/252490/screenshots/" class="apphub_sectionTab  "><span>Скриншоты</span></a>
+		
+	<a href="http://steamcommunity.com/app/252490/images/" class="apphub_sectionTab  "><span>Иллюстрации</span></a>
+		
+	<a href="http://steamcommunity.com/app/252490/broadcasts/" class="apphub_sectionTab  "><span>Трансляции</span></a>
+		
+	<a href="http://steamcommunity.com/app/252490/videos/" class="apphub_sectionTab  "><span>Видео</span></a>
+		
+	<a href="http://steamcommunity.com/app/252490/workshop/" class="apphub_sectionTab  "><span>Мастерская</span></a>
+		
+	<a href="http://steamcommunity.com/app/252490/allnews/" class="apphub_sectionTab  "><span>Новости</span></a>
+		
+	<a href="http://steamcommunity.com/app/252490/guides/" class="apphub_sectionTab active "><span>Руководства</span></a>
+		
+	<a href="http://steamcommunity.com/app/252490/reviews/" class="apphub_sectionTab  "><span>Обзоры</span></a>
+				<div style="clear: left"></div>
+		</div>
+
+		<div class="nonresponsive_hidden responsive_tab_ctn sharedfiles_responsive_tab">
+			<div class="responsive_tab_control">
+				<div class="responsive_tab_control_inner">
+										<select class="responsive_tab_select" id="responsive_tab_select593cfcb360ea6">
+													<option value="http://steamcommunity.com/app/252490" >
+								Все							</option>
+													<option value="http://steamcommunity.com/app/252490/discussions/" >
+								Обсуждения							</option>
+													<option value="http://steamcommunity.com/app/252490/screenshots/" >
+								Скриншоты							</option>
+													<option value="http://steamcommunity.com/app/252490/images/" >
+								Иллюстрации							</option>
+													<option value="http://steamcommunity.com/app/252490/broadcasts/" >
+								Трансляции							</option>
+													<option value="http://steamcommunity.com/app/252490/videos/" >
+								Видео							</option>
+													<option value="http://steamcommunity.com/app/252490/workshop/" >
+								Мастерская							</option>
+													<option value="http://steamcommunity.com/app/252490/allnews/" >
+								Новости							</option>
+													<option value="http://steamcommunity.com/app/252490/guides/" selected>
+								Руководства							</option>
+													<option value="http://steamcommunity.com/app/252490/reviews/" >
+								Обзоры							</option>
+											</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="responsive_tab_baseline nonresponsive_hidden"></div>
+	<div class="apphub_sectionTabsHR responsive_hidden"></div>
+
+
+	<!-- these elements are used to populate the local menu on responsive pages -->
+	<div style="display: none;">
+		<div class="responsive_local_menu apphub_responsive_menu">
+			<h3 class="ellipsis apphub_responsive_menu_title">Rust</h3>
+			<div class="apphub_ResponsiveMenuCtn">
+									<a style="position: relative; z-index: 1;" class="btnv6_blue_hoverfade btn_medium" href="http://store.steampowered.com/app/252490">
+						<span>Страница в магазине</span>
+					</a>
+											</div>
+								</div>
+	</div>
+	<!-- end responsive menu -->
+
+	
+</div>
+
+	<div class="apphub_HeaderBottomBG_ctn">
+		<div class="apphub_HeaderBottomBG"></div>
+	</div>
+	<div class="breadcrumbs">
+							<a href="http://steamcommunity.com/app/252490">Rust</a>
+					&gt;&nbsp;<a href="http://steamcommunity.com/app/252490/guides/">Руководства</a>
+					&gt;&nbsp;<a href="http://steamcommunity.com/id/toprash/myworkshopfiles/?section=guides&appid=252490">Руководства Rash</a>
+						</div>
+
+<div id="ig_bottom" class="nobg mediaBody">
+
+			<div class="bannedNotification" id="bannedNotification" style="display: none" >
+			<IDXSKIP>Этот файл был заблокирован, так как он нарушает условия использования Steam. Только вы можете видеть его. Если вы уверены, что ваш файл был заблокирован по ошибке, пожалуйста, свяжитесь со </IDXSKIP><IDXSKIP><a href="http://support.steampowered.com/">службой поддержки Steam</a></IDXSKIP><IDXSKIP>.					</IDXSKIP></div>
+		<div class="incompatibleNotification" id="incompatibleNotification" style="display: none" >
+							Этот предмет несовместим с Rust. Пожалуйста, прочитайте <a href="https://github.com/Facepunch/RustWorkshop/wiki/Creating-a-skin">справочную статью</a>, почему этот предмет может не работать в Rust.								</div>
+
+		
+		
+		
+		
+		<div class="visibilityNotification" id="visibilityNotificationPrivate" style="display: none" >
+			<IDXSKIP><div class="currentVisibility">Доступность:&nbsp;скрытый</div></IDXSKIP>
+			<IDXSKIP><div class="vertical_divider_container"><img class="vertical_divider" src="http://community.edgecast.steamstatic.com/public/images/trans.gif"></div></IDXSKIP>
+			<div class="visibilityDesc"><IDXSKIP>Этот предмет виден только вам, администраторам и тем, кто будет отмечен как создатель.</IDXSKIP></div>
+			<div style="clear:left"></div>
+		</div>
+		<div class="visibilityNotification" id="visibilityNotificationFriendsOnly" style="display: none" >
+			<IDXSKIP><div class="currentVisibility">Доступность:&nbsp;только для друзей</div></IDXSKIP>
+			<IDXSKIP><div class="vertical_divider_container"><img class="vertical_divider" src="http://community.edgecast.steamstatic.com/public/images/trans.gif"></div></IDXSKIP>
+			<div class="visibilityDesc"><IDXSKIP>В результатах поиска этот предмет сможете видеть только вы, ваши друзья и администраторы.</IDXSKIP></div>
+			<div style="clear:left"></div>
+		</div>
+
+		
+	<div class="guideTop">
+		<div id="detailsHeaderRight">
+			<!-- top level info -->
+							<div class="ratingSection">
+					<div class="fileRatingDetails"><img src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/5-star_large.png?v=2" /></div>
+											<div class="numRatings">Оценок: 276</div>
+									</div>
+					</div>
+		<div class="guideTopContent">
+			<div class="guidePreviewImage">
+				<img src="https://steamuserimages-a.akamaihd.net/ugc/364029569321627790/E7F78C01EA02F1A13C75EC49AA6C1E4C109A4C24/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|128:128&composite-to%3D%2A%2C%2A%7C128%3A128&background-color=black"/>
+			</div>
+			<div class="workshopItemTitle">Rust - Создание и настройка своего сервера</div>
+			<div class="guideAuthors">От Rash</div>
+			<div class="dotHR"></div>
+			<div style="clear: left"></div>
+			<div class="guideTopDescription" id="highlightContent">В данном руководстве вы узнаете/научитесь создавать свой сервер в Rust.<br>Для новой версии Rust.</div>
+		</div>
+		<div class="workshopItemControlsCtn" id="ScrollingItemControls">
+				<div class="workshopItemControls" id="ItemControls">
+
+					<IDXSKIP><div class="workshopItemControlCtn right">
+				&nbsp;<span onclick="ReportItem();" id="ReportItemBtn" class="general_btn report tooltip " data-tooltip-content="Сообщить о нарушении норм поведения в Steam"></span>
+			</div></IDXSKIP>
+		
+		
+		<div class="workshopItemControlCtn">
+										<span onclick="VoteUp(480156325);" id="VoteUpBtn" class="general_btn voteUp ">Оценить</span>
+				<span onclick="VoteDown(480156325);" id="VoteDownBtn" class="general_btn voteDown ">&nbsp;</span>
+				<div class="vertical_divider_container"><img class="vertical_divider" src="http://community.edgecast.steamstatic.com/public/images/trans.gif"></div>
+					</div>
+
+		
+		<div class="workshopItemControlCtn">
+
+			<IDXSKIP><span onclick="FavoriteItem();" id="FavoriteItemBtn" class="general_btn favorite tooltip " data-tooltip-content="Вы с легкостью найдете это позже">
+				<div class="favoriteText">
+					<div id="FavoriteItemOptionAdd" class="favoriteOption addfavorite selected">В избранное</div>
+					<div id="FavoriteItemOptionFavorited" class="favoriteOption favorited ">В избранном</div>
+					<div class="favoriteOption removefavorite">Удалить</div>
+				</div>
+			</span></IDXSKIP>
+
+			
+			<div class="share_controls">
+				<span onclick="ShowSharePublishedFilePopup( '480156325', '252490' );" id="ShareItemBtn" class="general_btn share tooltip" data-tooltip-content="Рассказать об этом в Steam или любимой социальной сети">Поделиться</span>
+			</div>
+		</div>
+
+		
+		
+				<IDXSKIP><span id="action_wait" style="display: none;">
+			<img src="http://community.edgecast.steamstatic.com/public/images/login/throbber.gif">
+		</span></IDXSKIP>
+		<div style="clear:both;"></div>
+	</div>
+
+	
+	<div style="clear:both"></div>
+
+	<div id="JustFavorited" class="just_added_to_list" style="display: none">
+		<div class="just_added_favorite_icon"></div>
+		<div class="just_added_text"><IDXSKIP>Этот предмет был добавлен в </IDXSKIP><a href="http://steamcommunity.com/my/myworkshopfiles/?section=guides&browsefilter=myfavorites">избранное</a><IDXSKIP>.</IDXSKIP></div>
+		<IDXSKIP><div class="close_notification"><span onclick="CloseNotification( 'JustFavorited' );" class="close"><img src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/ico_dialogue_close.png"></span></div></IDXSKIP>
+		<div style="clear:both"></div>
+	</div>		</div>
+		<div style="clear: both"></div>
+	</div>
+
+	<!-- right side contents -->
+	<div id="rightContents" class="responsive_local_menu">
+		<div class="sidebar">
+			<!-- created by -->
+			<div class="panel">
+				
+<IDXSKIP><div class="rightSectionTopTitle condensed">Создатели:</div></IDXSKIP>
+<div class="rightDetailsBlock">
+	<div class="creatorsBlock">
+				<div class="friendBlock persona online" data-miniprofile="60636611" >
+						<a class="friendBlockLinkOverlay" href="http://steamcommunity.com/id/toprash"></a>
+															<div class="playerAvatar online">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/6f/6f7d2d3e10c3dfc7d2d25d89a7a50f7a19ae6df9_medium.jpg">
+			</div>
+			<div class="friendBlockContent">
+				Rash<br>
+				<span class="friendSmallText">
+		В сети
+				</span>
+			</div>
+		</div>
+			</div>
+</div>
+
+
+				<div class="hr padded"></div>	<div class="rightDetailsBlock">
+	<div class="workshopTags"><span class="workshopTagsTitle">Категория:&nbsp;</span><a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Achievements">Achievements</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Characters">Characters</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Classes">Classes</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Co-op">Co-op</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Crafting">Crafting</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Game+Modes">Game Modes</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Gameplay+Basics">Gameplay Basics</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Loot">Loot</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Maps+or+Levels">Maps Or Levels</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Modding+or+Configuration">Modding Or Configuration</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Multiplayer">Multiplayer</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Secrets">Secrets</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Story+or+Lore">Story Or Lore</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Trading">Trading</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Walkthroughs">Walkthroughs</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Weapons">Weapons</a>, <a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Workshop">Workshop</a></div><div class="workshopTags"><span class="workshopTagsTitle">Languages:&nbsp;</span><a href="http://steamcommunity.com/app/252490/guides/?browsesort=trend&filetype=11&requiredtags%5B%5D=Russian">Russian</a></div>	</div>
+
+				<div class="hr padded"></div>
+
+				<div class="rightDetailsBlock">
+					<div class="detailsStatsContainerLeft">
+						<div class="detailsStatLeft">Добавлен</div>
+												<div class="detailsStatLeft">Изменен</div>
+											</div>
+					<div class="detailsStatsContainerRight">
+						<div class="detailsStatRight">25 ноя. 2015 в 7:32</div>
+												<div class="detailsStatRight">13 апр в 5:55</div>
+											</div>
+					<div style="clear:left"></div>
+				</div>
+			</div>
+
+				<div class="panel">
+			<table class="stats_table">
+								<tr>
+					<td>7,439</td>
+					<td>уникальных посетителей</td>
+				</tr>
+												<tr>
+					<td>388</td>
+					<td>добавили в избранное</td>
+				</tr>
+			</table>
+	</div>
+			<!-- favorited by -->
+			
+			<div class="panel responsive_OnClickDismissMenu" id="GuideTableOfContents">
+				<div class="rightSectionTopTitle">Оглавление руководства</div>
+
+				<div class="hr smallpadded"></div>
+
+				<div class="guideSubSectionSelection" id="guideSectionSelection_0">
+					<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+					<div class="guideSubSectionSelectionLink ellipsis">
+						<a href="javascript:SelectGuideSection( '0', 'changeHash' )">Обзор</a>
+					</div>
+				</div>
+				<div class="hr smallpadded"></div>
+
+										<div class="guideSubSectionSelection" id="guideSectionSelection_717599">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '717599', 'changeHash' )">Заглавие</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_951996">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '951996', 'changeHash' )">Видеоруководства</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_885757">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '885757', 'changeHash' )">Сервер и его запуск (с готовой сборки) (обновлён 29.01.16)</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_885984">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '885984', 'changeHash' )">Плагины и их описание</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_894234">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '894234', 'changeHash' )">Картинка, описание и веб-страница</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_885806">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '885806', 'changeHash' )">Заходим на свой сервер</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_717601">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '717601', 'changeHash' )">Настройка сервера</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_1109602">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '1109602', 'changeHash' )">Буквенный IP-адрес для сервера</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_885922">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '885922', 'changeHash' )">Изменение карты на сервере</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_885961">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '885961', 'changeHash' )">Администрирование сервера с Rusty</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_885972">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '885972', 'changeHash' )">Админ/модер и комманды</a>&nbsp;
+							</div>
+						</div>
+												<div class="guideSubSectionSelection" id="guideSectionSelection_885941">
+							<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+							<div class="guideSubSectionSelectionLink ellipsis">
+								<a href="javascript:SelectGuideSection( '885941', 'changeHash' )">Предупреждение!</a>&nbsp;
+							</div>
+						</div>
+						
+				<div class="hr smallpadded"></div>
+				<div class="guideSubSectionSelection" id="guideSectionSelection_-1">
+					<img class="browseOptionImage" src="http://community.edgecast.steamstatic.com/public/images/sharedfiles/filterselect_blue.png?v=1">
+					<div class="guideSubSectionSelectionLink ellipsis">
+						<a href="javascript:SelectGuideSection( '-1', 'changeHash' )">Комментарии</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="profileBlock" class="clearfix">
+
+		<div class="guide subSections">
+								<div class="subSection detailBox" id="717599">
+						<div class="subSectionTitle">
+							Заглавие													</div>
+						<div class="subSectionDesc">
+							Добро пожаловать на страницу моего руководства!<br>Здесь вы узнаете о том, как создать свой сервер в Rust. Если у вас будут вопросы, задавайте их в комментариях или пишите мне в ЛС. Спасибо что вы читаете и поддерживаете меня!<br><br>Данное руководство ещё очень сырое, много недоработок, так-что всё будет дорабатываться постепенно. Вступайте в наше сообщество в Вконтакте, там периодически будут выкладываться плагины, сборки серверов и т.д.<br><br><table class="bb_table">    <tr>        <th><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=https://vk.com/facepunch_rust" target="_blank" rel="noreferrer" >Наша группа в Вконтакте</a><span class="bb_link_host">[vk.com]</span></th>        <th><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru" target="_blank" rel="noreferrer" >Наш сайт</a><span class="bb_link_host">[rustexact.ru]</span></th>    </tr></table>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="951996">
+						<div class="subSectionTitle">
+							Видеоруководства													</div>
+						<div class="subSectionDesc">
+							Это видеоролики, в которых показан процесс создания сервер с нуля. Видео выходят постепенно и добавляются так же в эту колонку. Примерно 2-3 видео в неделю.<br><table class="bb_table">    <tr>        <td><div class="sharedFilePreviewYouTubeVideo sizeThumb floatLeft" id="RhNfPL9xHCA"></div></td>        <td>Описывается как создать сервер с нуля, в ручную и установка мода Oxide.</td>    </tr>    <tr>        <td><div class="sharedFilePreviewYouTubeVideo sizeThumb floatLeft" id="9mBDgbQViww"></div></td>        <td>Показан процесс донастраивания сервера до конца, как прописывать себе права админа/модера, и что такое Permissions.</td>    </tr></table>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="885757">
+						<div class="subSectionTitle">
+							Сервер и его запуск (с готовой сборки) (обновлён 29.01.16)													</div>
+						<div class="subSectionDesc">
+							<ul class="bb_ul"><li>Для начала вам требуется скачать сам сервер:<br><table class="bb_table">    <tr>        <th>Сервер</th>        <th>Яндекс Диск</th>        <th>Google Диск</th>    </tr>    <tr>        <td>Чистый с модом Oxide 2</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=https://vk.com/facepunch_rust?w=wall-72345107_521" target="_blank" rel="noreferrer" >Скачать</a><span class="bb_link_host">[vk.com]</span></td>        <td><a class="bb_link" href="https://drive.google.com/open?id=0ByI8KzEuBMvAUjdfdmM2Y0o0UFE" target="_blank" rel="noreferrer" >Скачать</a></td>    </tr>    <tr>        <td>С плагинами и модом Oxide 2</td>        <td></td>        <td></td>    </tr></table><br></li><li>После распаковываете архив с сервером и заходим туда.<br></li><li>Чтоб запустить сервер, требуется запустить файл <b>Server_run</b>.<br></li><li>Сервер может загружаться от пол минуты, до двух минут и более.<br><a href="https://steamuserimages-a.akamaihd.net/ugc/400056003574854862/11805B15E8C93B685C5E88EE630081F8B956350C/" class="modalContentLink" data-modal-content-popup-url="http://steamcommunity.com/sharedfiles/displayimageformodaldialog/?imageurl=https%3A%2F%2Fsteamuserimages-a.akamaihd.net%2Fugc%2F400056003574854862%2F11805B15E8C93B685C5E88EE630081F8B956350C%2F"><img src="https://steamuserimages-a.akamaihd.net/ugc/400056003574854862/11805B15E8C93B685C5E88EE630081F8B956350C/" class="sharedFilePreviewImage sizeThumb inline" alt="" title=""></a></li></ul>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="885984">
+						<div class="subSectionTitle">
+							Плагины и их описание													</div>
+						<div class="subSectionDesc">
+							Чтобы установить плагин, требуется его скачать, и закинуть в папку <b>plugins</b> - <br><b>сервер\server\my_server_identity\oxide\plugins</b>.<br>Все плагины я беру с сайта <a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://oxidemod.org/plugins/categories/rust.24/" target="_blank" rel="noreferrer" >Oxide mod</a><span class="bb_link_host">[oxidemod.org]</span>, но выкладываю только те, который перевёл на русский язык (на сайте все плагины на английском).<br><br><br><div class="bb_h1"><b>Список плагинов, которые переведены на русский язык лично мной, и выложены на мой сайт:</b></div><table class="bb_table">    <tr>        <th>Плагин</th>        <th>Скачать/подробнее</th>        <th>Описание</th>    </tr>    <tr>        <td>Kits</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/kits.28/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>С помощью данного плагина можно выдавать/получать наборы, которые содержат определённые предметы.</td>    </tr>    <tr>        <td>LustyMap</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/lustymap.41/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>Интерактивная карта прямо в игре!</td>    </tr>    <tr>        <td>N-Teleportation</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/n-teleportation.40/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>Даёт игрокам право телепортироваться друг к другу, сохранять дома, чтобы делать быстрое перемещение к ним.</td>    </tr>    <tr>        <td>BetterChat</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/betterchat.32/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>Настройка цвета чата, префикс и многое другое.</td>    </tr>    <tr>        <td>Clans</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/clans.30/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>Позволяет игрокам создавать собственные кланы.</td>    </tr>    <tr>        <td>Friends API</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/friends-api.46/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>Позволяет добавлять\удалять друзей.</td>    </tr>    <tr>        <td>FriendlyFire</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/friendlyfire.45/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>Позволяет включить\выключить урон по друзьям.</td>    </tr>    <tr>        <td>BlueprintSystem</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/blueprintsystem.49/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>Возвращает систему чертежей на сервер!</td>    </tr>    <tr>        <td>HeliControl</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/helicontrol.50/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>Позволяет настроить вертолет так как вам необходимо.</td>    </tr>    <tr>        <td>QuickSort</td>        <td><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?resources/quicksort.31/" target="_blank" rel="noreferrer" >Перейти</a><span class="bb_link_host">[rustexact.ru]</span></td>        <td>Быстрая сортировка ресурсов.</td>    </tr></table>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="894234">
+						<div class="subSectionTitle">
+							Картинка, описание и веб-страница													</div>
+						<div class="subSectionDesc">
+							<div class="sharedFilePreviewYouTubeVideo sizeFull" id="fRGrtEuu1JQ"></div>При присоединении к серверу появляется окно с изображением, описанием и кнопкой с веб-страницей данного сервера. Тут я опишу как это изменяется.<br><a href="https://steamuserimages-a.akamaihd.net/ugc/400056371819820771/874A05BE1102DBD3F327E09E039E088C7E7F27DE/" class="modalContentLink" data-modal-content-popup-url="http://steamcommunity.com/sharedfiles/displayimageformodaldialog/?imageurl=https%3A%2F%2Fsteamuserimages-a.akamaihd.net%2Fugc%2F400056371819820771%2F874A05BE1102DBD3F327E09E039E088C7E7F27DE%2F"><img src="https://steamuserimages-a.akamaihd.net/ugc/400056371819820771/874A05BE1102DBD3F327E09E039E088C7E7F27DE/" class="sharedFilePreviewImage sizeThumb inline" alt="" title=""></a><br><ul class="bb_ul"><li>Заходим в папку с нашим сервером, находим файл server_run.<br></li><li>Нам требуется его открыть с помощью текстового редактора (желательно Notepad++).<br></li><li>В самом конце текста мы находим следующие строчки:<br><div class="bb_code">+server.description &quot;Welcome!&quot; 
++server.headerimage <a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://&quot;https://pp.vk.me/c629315/v629315923/2108e/TzSkSdqRWmk.jpg&quot;" target="_blank" rel="noreferrer" >&quot;https://pp.vk.me/c629315/v629315923/2108e/TzSkSdqRWmk.jpg&quot;</a> 
++server.url <a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://&quot;https://vk.com/facepunch_rust&quot;" target="_blank" rel="noreferrer" >&quot;https://vk.com/facepunch_rust&quot;</a></div><b>server.decription</b> - отвечает за описание сервера,<br><b>server.headerimage</b> - отвечает за изображение сервера,<br><b>server.url</b> - отвечает за веб-страницу сервера.<br><br><div class="bb_h1"><b>1. Изменяем изображение сервера:</b></div></li><li>Создаём саму картинку <b>(обязательно размером 512x256)</b>.<br></li><li>Нам потребуется какой-нибуть фотохостинг, можно воспользоваться фотоальбомом в нашей группе ВК, заливаем туда нашу картинку.<br></li><li>Копируем адрес картинки и редактируя наш <b>server_run</b>, где значение <b>+server.headerimage</b>, заменяем ссылку на свою.<br></li><li>Готово! Далее заходим в игру, в раздел &quot;история&quot; либо &quot;локальная сеть&quot;, находим там свой сервер и любуемся новой картинке.<br><br><div class="bb_h1"><b>2. Изменяем описание сервера:</b></div></li><li>Так-же открываем <b>server_run</b> с помощью текстового редактора и находим значение <b>+server.decription</b>.<br></li><li>В кавычках изменяете текст на свой.<br>Почему-то на русском языке мне не удалось сделать описание, при отображении там показывались каракули, если кто-то знает решение проблемы, сообщите мне.<br><br><div class="bb_h1"><b>3. Изменяем веб-страницу сервера:</b></div></li><li>Открываем <b>server_run</b> с помощью текстового редактора и находим значение <b>+server.url</b>.<br></li><li>В кавычках изменяете ссылку на свою, это может быть ваш: сайт, группа в ВК и прочие интернет страницы.</li></ul>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="885806">
+						<div class="subSectionTitle">
+							Заходим на свой сервер													</div>
+						<div class="subSectionDesc">
+							Перед редактированием настроек сервера и прочего, требуется зайти на него, чтобы проверить его работоспособность на вашем компьютере.<br><br><div class="bb_h1">Данные способы не будут работать, если сама игра и сервер будут запущены на разных компьютерах.</div><b>Существует два способа:</b><br><div class="bb_h1">Первый способ:</div><a href="https://steamuserimages-a.akamaihd.net/ugc/400056003574884289/794D673C15FFA6C66E677FDE7A7245A4B330DE75/" class="modalContentLink" data-modal-content-popup-url="http://steamcommunity.com/sharedfiles/displayimageformodaldialog/?imageurl=https%3A%2F%2Fsteamuserimages-a.akamaihd.net%2Fugc%2F400056003574884289%2F794D673C15FFA6C66E677FDE7A7245A4B330DE75%2F"><img src="https://steamuserimages-a.akamaihd.net/ugc/400056003574884289/794D673C15FFA6C66E677FDE7A7245A4B330DE75/" class="sharedFilePreviewImage sizeThumb inline" alt="" title=""></a><br>В главном меню игры перейти во вкладку <b>&quot;ИГРАТЬ&quot;</b>, в списке выбрать <b>&quot;Локальная сеть&quot;</b>. Там должен отображаться сервер, в крайнем случае обновить список, либо убедиться, что сервер полностью загрузился.<br><br><div class="bb_h1">Второй способ:</div><a href="https://steamuserimages-a.akamaihd.net/ugc/400056003574916623/5C25A92622E87128BEE55EB3FE21408D672C8579/" class="modalContentLink" data-modal-content-popup-url="http://steamcommunity.com/sharedfiles/displayimageformodaldialog/?imageurl=https%3A%2F%2Fsteamuserimages-a.akamaihd.net%2Fugc%2F400056003574916623%2F5C25A92622E87128BEE55EB3FE21408D672C8579%2F"><img src="https://steamuserimages-a.akamaihd.net/ugc/400056003574916623/5C25A92622E87128BEE55EB3FE21408D672C8579/" class="sharedFilePreviewImage sizeThumb inline" alt="" title=""></a><br>Находясь в игре, открываем консоль (на F1), и вписываем комманду: <div class="bb_code">connect 127.0.0.1:27015</div> <b>(где 27015, это порт. Он может отличается на других серверах, но в моих сборках он именно такой)</b>.<br>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="717601">
+						<div class="subSectionTitle">
+							Настройка сервера													</div>
+						<div class="subSectionDesc">
+							Для редактирования файлов больше всего подойдёт Notepad++, так-что рекомендую скачать.<br>Заходим в папку с сервером, нажимаем правой кнопкой по <b>Server_run</b> и изменить:<br>Описываться будут только самые нужные параметры!<br><div class="bb_code"><b>+server.port 27015 - порт сервера (желательно не трогать).<br>+rcon.port 27016 - rcon порт (обязан быть на единицу больше порта сервера).<br>+rcon.password &quot;33683210&quot; - пароль администратора.<br>+server.maxplayers 150 - максимально-доступное кол-во игроков на сервере.<br>+server.hostname &quot;Server by <a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://Rash|vk.com/toprash&quot;" target="_blank" rel="noreferrer" >Rash|vk.com/toprash&quot;</a> - то, что в кавычках, название сервера (писать только на английском языке!).<br>+server.identity &quot;my_server_identity&quot; <br>+server.level &quot;Procedural Map&quot; - карта сервера (другие смотреть ниже).<br>+server.seed 12345 <br>+server.worldsize 4000 <br>+server.saveinterval 300 - интервал автосохранения.<br>+server.globalchat true - глобальный чат (true - вкл, false - выкл).<br>+server.description &quot;Welcome!&quot; - описание сервера.<br>+server.headerimage <a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://&quot;https://pp.vk.me/c629315/v629315923/2108e/TzSkSdqRWmk.jpg&quot;" target="_blank" rel="noreferrer" >&quot;https://pp.vk.me/c629315/v629315923/2108e/TzSkSdqRWmk.jpg&quot;</a> - изображение сервера.<br>+server.url <a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://&quot;https://vk.com/facepunch_rust&quot;" target="_blank" rel="noreferrer" >&quot;https://vk.com/facepunch_rust&quot;</a> - страница/сайт сервера.</b></div>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="1109602">
+						<div class="subSectionTitle">
+							Буквенный IP-адрес для сервера													</div>
+						<div class="subSectionDesc">
+							Текстовое руководство на нашем сайте - <a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rustexact.ru/forum/index.php?threads/bukvennyj-ip-adres-dlja-svoego-servera.59/" target="_blank" rel="noreferrer" >Перейти на сайт</a><span class="bb_link_host">[rustexact.ru]</span><br><div class="sharedFilePreviewYouTubeVideo sizeFull" id="https://youtu.be/WQR12INNFVs"></div>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="885922">
+						<div class="subSectionTitle">
+							Изменение карты на сервере													</div>
+						<div class="subSectionDesc">
+							Редактируя файл Server_run, нужно найти конфигурацию +server.level. В кавычках будет название используемой в данный момент карты. Снизу вам предоставлены две карты (всего их 3). Выберите нужную карту, скопировав значение под картинками, заменив их в Server_run.<br><table class="bb_table">    <tr>        <th><a href="https://steamuserimages-a.akamaihd.net/ugc/400056003575185092/9BF3FE470D239A7D12C0F4888D306032FEA7E58E/" class="modalContentLink" data-modal-content-popup-url="http://steamcommunity.com/sharedfiles/displayimageformodaldialog/?imageurl=https%3A%2F%2Fsteamuserimages-a.akamaihd.net%2Fugc%2F400056003575185092%2F9BF3FE470D239A7D12C0F4888D306032FEA7E58E%2F"><img src="https://steamuserimages-a.akamaihd.net/ugc/400056003575185092/9BF3FE470D239A7D12C0F4888D306032FEA7E58E/" class="sharedFilePreviewImage sizeThumb floatLeft" alt="" title=""></a></th>        <th><a href="https://steamuserimages-a.akamaihd.net/ugc/400056003575185075/6E1B6F4F82953B806FA549296866C11E6F259D79/" class="modalContentLink" data-modal-content-popup-url="http://steamcommunity.com/sharedfiles/displayimageformodaldialog/?imageurl=https%3A%2F%2Fsteamuserimages-a.akamaihd.net%2Fugc%2F400056003575185075%2F6E1B6F4F82953B806FA549296866C11E6F259D79%2F"><img src="https://steamuserimages-a.akamaihd.net/ugc/400056003575185075/6E1B6F4F82953B806FA549296866C11E6F259D79/" class="sharedFilePreviewImage sizeThumb floatLeft" alt="" title=""></a></th>    </tr>    <tr>        <td>Procedural map (Стандартная карта)</td>        <td>Hapis island</td>    </tr>    <tr>        <td>Значение: +server.level &quot;Procedural Map&quot;</td>        <td>Значение: +server.level &quot;HapisIsland&quot;</td>    </tr></table>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="885961">
+						<div class="subSectionTitle">
+							Администрирование сервера с Rusty													</div>
+						<div class="subSectionDesc">
+							<div class="sharedFilePreviewYouTubeVideo sizeFull" id="dRC6nCe1YgQ"></div>С помощью программы Rusty можно следить, управлять своим сервером Rust.<br><a class="bb_link" href="https://steamcommunity.com/linkfilter/?url=http://rusty.trackthedead.com/download/Rusty.zip" target="_blank" rel="noreferrer" >Скачать</a><span class="bb_link_host">[rusty.trackthedead.com]</span><br><br>1) Запустите свой сервер.<br>2) Запустите Rusty.<br>3) Перейдите во вкладку &quot;Settings&quot;.<br>4) &quot;Config name&quot; - не трогаем.<br>5) &quot;IP&quot; - если ваш сервер стоит у вас на компьютере, то вам нужно ввести туда <b>127.0.0.1</b><br>6) &quot;Port&quot; - Пишите туда тот порт, который у вас указан в <b>Server_run.bat</b>.<br>7) &quot;Query Port&quot; - Впишите туда тот же самый порт, но на еденицу больше, был 27015, написал 27016.<br>8) &quot;Password&quot; - Rcon пароль или пароль администратора.<br>9) Save password - поставьте &quot;On&quot;<br>10) Нажмите кнопку &quot;Save&quot;<br>11) Нажмите кнопку &quot;Connect&quot; в нижнем правом углу экрана.<br>12) Если вы всё сделали правильно, то в нижнем правом углу экрана лампочка загорится зелёным цветом.<br><a href="https://steamuserimages-a.akamaihd.net/ugc/400056003575306868/20D818AD1956807D4DBFAB1FA7F2E71BB4F389D9/" class="modalContentLink" data-modal-content-popup-url="http://steamcommunity.com/sharedfiles/displayimageformodaldialog/?imageurl=https%3A%2F%2Fsteamuserimages-a.akamaihd.net%2Fugc%2F400056003575306868%2F20D818AD1956807D4DBFAB1FA7F2E71BB4F389D9%2F"><img src="https://steamuserimages-a.akamaihd.net/ugc/400056003575306868/20D818AD1956807D4DBFAB1FA7F2E71BB4F389D9/" class="sharedFilePreviewImage sizeThumb floatLeft" alt="" title=""></a>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="885972">
+						<div class="subSectionTitle">
+							Админ/модер и комманды													</div>
+						<div class="subSectionDesc">
+							<div class="sharedFilePreviewYouTubeVideo sizeFull" id="xUsF8bn8rsc"></div><div class="bb_h1">Как добавить админа:</div>Заходим в консоль сервера (не консоль игры), там прописываем следующие комманды:<br><div class="bb_code">ownerid стим_ид_пользователя &quot;ник игрока&quot; - Администратор
+moderatorid стим_ид_пользователя &quot;ник игрока&quot;- Модератор</div><b>например: ownerid 76561198020902339 &quot;Rash&quot;</b><br>и после этого требуется в этой же консоли прописать <b>writecfg</b>. Готово!<br><br><div class="bb_h1">Команды администратора/модератора:</div><div class="bb_code">ban &quot;player name&quot; &quot;reason&quot; - забанить игрока по нику
+banid &lt;steamid64&gt; &quot;player name&quot; &quot;reason&quot; - забанить игрока по steamid и нику
+banlist - список забаненых игроков
+banlistex - список забаненых с указанием причины
+kick &lt;steamid64&gt; &quot;player name&quot; &quot;reason&quot; - кикнуть игрока с указанием причины
+kickall &lt;invalid parameter, just put &quot;&quot;&gt; &quot;reason&quot; - кикнуть всех игроков с указанием причины
+listid &lt;steamid64&gt; - список забаненых с указанием steamid
+moderatorid &lt;steamid64&gt; &quot;player name&quot; &quot;reason&quot; - добавление игрока в список модераторов (reason 1)
+ownerid &lt;steamid64&gt; &quot;player name&quot; &quot;reason&quot; - добавление игрока в список администрации (reason 2)
+removemoderator &lt;steamid64&gt; - удалить игрока из списка модераторов
+removeowner &lt;steamid64&gt; - удалить игрока из списка администраторов
+unban &lt;steamid64&gt; - разбанить игрока</div>							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+										<div class="subSection detailBox" id="885941">
+						<div class="subSectionTitle">
+							Предупреждение!													</div>
+						<div class="subSectionDesc">
+							<b>Внимание!</b> Копирование данного текста строго запрещено, даже с указанной ссылкой на оригинал! Пожалуйста, уважайте чужой труд.							<div style="clear: both"></div>
+						</div>
+					</div>
+					<div style="clear: both"></div>
+							</div>
+
+		<div id="-1">
+			<div class="detailBox"><script type="text/javascript">
+	$J( function() {
+		InitializeCommentThread( "PublishedFile_Public", "PublishedFile_Public_76561198020902339_480156325_0", {"feature":"480156325","feature2":0,"owner":"76561198020902339","total_count":198,"start":0,"pagesize":10,"has_upvoted":0,"upvotes":0,"votecountid":null,"voteupid":null,"commentcountid":null,"subscribed":false,"extended_data":"{\"contributors\":[\"76561198020902339\",\"76561198020902339\"],\"appid\":252490,\"sharedfile\":{\"m_parentsDetails\":null,\"m_parentBundlesDetails\":null,\"m_bundledChildren\":[],\"m_ownedBundledItems\":[]}}"}, 'http://steamcommunity.com/comment/PublishedFile_Public/', 40 );
+	} );
+</script>
+<div class="commentthread_area"  id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_area">
+	<div class="commentthread_header">
+		<div class="commentthread_paging " id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_pagecontrols">
+						<a id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_pagebtn_prev" href="javascript:void(0);" class="pagebtn">&lt;</a>
+			<span id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_pagelinks" class="commentthread_pagelinks"></span>
+			<span id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_pagedropdown" class="commentthread_pagedropdown"></span>
+			<a id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_pagebtn_next" href="javascript:void(0);" class="pagebtn">&gt;</a>
+		</div>
+		<div class="commentthread_count">
+			<span class="ellipsis commentthread_count_label">
+									Комментариев: <span id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_totalcount">198</span>							</span>
+					</div>
+		<div style="clear: both;"></div>
+	</div>
+				<!-- 21 -->
+				<div class="commentthread_comment_container" id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_postcontainer">
+			<div class="commentthread_comments" id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_posts">
+						<div class="commentthread_comment responsive_body_text  " id="comment_2741975115070050779" style="">
+				<div class="commentthread_comment_avatar playerAvatar in-game">
+			<a href="http://steamcommunity.com/id/611488274" data-miniprofile="406401128">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/11/115e36b97545e4b7a2e71c965488dd10a1ddd83b.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/11/115e36b97545e4b7a2e71c965488dd10a1ddd83b.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/11/115e36b97545e4b7a2e71c965488dd10a1ddd83b_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/611488274"  data-miniprofile="406401128">
+					<bdi>smash2323</bdi></a>
+				
+				
+				
+				
+				<span class="commentthread_comment_timestamp" title="13 мая 2017 в 6:31:52 PDT" data-timestamp="1494682312">
+					13 мая в 6:31&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_2741975115070050779">
+				Плагин на зеркало и на накрутку людей давай<br>			</div>
+								</div>
+			</div>
+		<div class="commentthread_comment responsive_body_text  " id="comment_135512931349300515" style="">
+				<div class="commentthread_comment_avatar playerAvatar online">
+			<a href="http://steamcommunity.com/id/toprash" data-miniprofile="60636611">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/6f/6f7d2d3e10c3dfc7d2d25d89a7a50f7a19ae6df9.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/6f/6f7d2d3e10c3dfc7d2d25d89a7a50f7a19ae6df9.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/6f/6f7d2d3e10c3dfc7d2d25d89a7a50f7a19ae6df9_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/toprash"  data-miniprofile="60636611">
+					<bdi>Rash</bdi></a>
+				
+				
+				<span class="commentthread_workshop_authorbadge">&nbsp;[автор]</span>
+				
+				<span class="commentthread_comment_timestamp" title="29 марта 2017 в 11:38:10 PDT" data-timestamp="1490812690">
+					29 мар в 11:38&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_135512931349300515">
+				Сервер старой версии, заходи на Rustexact.ru, идёшь в раздел &quot;Ресурсы&quot; и качаешь &quot;Установщик сервера Rust&quot;			</div>
+								</div>
+			</div>
+		<div class="commentthread_comment responsive_body_text  " id="comment_135512931348708969" style="">
+				<div class="commentthread_comment_avatar playerAvatar online">
+			<a href="http://steamcommunity.com/id/prepare_your" data-miniprofile="91439258">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/ce/ce5fef9843feb2900a42623160fbd967ec8f0093.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/ce/ce5fef9843feb2900a42623160fbd967ec8f0093.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/ce/ce5fef9843feb2900a42623160fbd967ec8f0093_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/prepare_your"  data-miniprofile="91439258">
+					<bdi>Leeroy Jenkins</bdi></a>
+				
+				
+				
+				
+				<span class="commentthread_comment_timestamp" title="29 марта 2017 в 8:14:33 PDT" data-timestamp="1490800473">
+					29 мар в 8:14&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_135512931348708969">
+				гугл диск не открывает, а на ссылку на яндекс открывает группу в вк, где уже 3 день висит заявка на вступление...<img src="http://community.edgecast.steamstatic.com/economy/emoticon/steambored" class="emoticon">			</div>
+								</div>
+			</div>
+		<div class="commentthread_comment responsive_body_text  " id="comment_135511913384342101" style="">
+				<div class="commentthread_comment_avatar playerAvatar offline">
+			<a href="http://steamcommunity.com/id/8800553535" data-miniprofile="194422115">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/8e/8e294a19f949ea7b8b99b44114f415dd3008021e.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/8e/8e294a19f949ea7b8b99b44114f415dd3008021e.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/8e/8e294a19f949ea7b8b99b44114f415dd3008021e_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/8800553535"  data-miniprofile="194422115">
+					<bdi>Twitch ツ</bdi></a>
+				
+				
+				
+				
+				<span class="commentthread_comment_timestamp" title="17 марта 2017 в 23:18:45 PDT" data-timestamp="1489817925">
+					17 мар в 23:18&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_135511913384342101">
+				Открываю сервер (У меня windows 7 x64) но консоль открывается x32 и я немгу себе выдать не админа не модератора,что делать?			</div>
+								</div>
+			</div>
+		<div class="commentthread_comment responsive_body_text  " id="comment_143388132204381463" style="">
+				<div class="commentthread_comment_avatar playerAvatar offline">
+			<a href="http://steamcommunity.com/id/like_his22" data-miniprofile="170438359">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/fe/fe5e21ceaf40419aec705065d3063caa531c5e45.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/fe/fe5e21ceaf40419aec705065d3063caa531c5e45.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/fe/fe5e21ceaf40419aec705065d3063caa531c5e45_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/like_his22"  data-miniprofile="170438359">
+					<bdi>Dolby5.1</bdi></a>
+				
+				
+				
+				
+				<span class="commentthread_comment_timestamp" title="21 января 2017 в 9:10:01 PDT" data-timestamp="1485018601">
+					21 янв в 9:10&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_143388132204381463">
+				я создал буквеный ip но к серверу не подключится			</div>
+								</div>
+			</div>
+		<div class="commentthread_comment responsive_body_text  " id="comment_154644349174856636" style="">
+				<div class="commentthread_comment_avatar playerAvatar offline">
+			<a href="http://steamcommunity.com/id/marrove" data-miniprofile="207977748">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/ba/bafba2e01abfb05651576f775a0fd755187ed067.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/ba/bafba2e01abfb05651576f775a0fd755187ed067.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/ba/bafba2e01abfb05651576f775a0fd755187ed067_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/marrove"  data-miniprofile="207977748">
+					<bdi>MAЯЯOVΞ</bdi></a>
+				
+				
+				
+				
+				<span class="commentthread_comment_timestamp" title="22 декабря 2016 в 3:12:32 PDT" data-timestamp="1482405152">
+					22 дек. 2016 в 3:12&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_154644349174856636">
+				Rusty не запускается (висит в ДЗ несколько секунд и завершает работу без ошибок). Windows 7 Ultimate x64			</div>
+								</div>
+			</div>
+		<div class="commentthread_comment responsive_body_text  " id="comment_154642901285806373" style="">
+				<div class="commentthread_comment_avatar playerAvatar offline">
+			<a href="http://steamcommunity.com/id/DARKMAGIN" data-miniprofile="327434420">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/9a/9acfb1c814063007b32ce25092d14bcca18cd0bf.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/9a/9acfb1c814063007b32ce25092d14bcca18cd0bf.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/9a/9acfb1c814063007b32ce25092d14bcca18cd0bf_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/DARKMAGIN"  data-miniprofile="327434420">
+					<bdi>Darkmagin</bdi></a>
+				
+				
+				
+				
+				<span class="commentthread_comment_timestamp" title="6 декабря 2016 в 6:48:50 PDT" data-timestamp="1481035730">
+					6 дек. 2016 в 6:48&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_154642901285806373">
+				Помогите пожалуйста, я создал сервер обновил, всё как в описании. Сам на него спокойно захожу и через консоль и через в меню лок. сеть<br>А вот друг не может зайти (сидим от одного wifi), ничего у него не видно в лок. сети, и через консоль не может загрузиться.<br>Кароч вопрос такой: Как подключаться другу ко мне.			</div>
+								</div>
+			</div>
+		<div class="commentthread_comment responsive_body_text  " id="comment_154642447923147155" style="">
+				<div class="commentthread_comment_avatar playerAvatar offline">
+			<a href="http://steamcommunity.com/id/KV-2" data-miniprofile="161629524">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/3c/3c3c775a27d50d5c2a65a4e3df01f8b2ec879a16.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/3c/3c3c775a27d50d5c2a65a4e3df01f8b2ec879a16.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/3c/3c3c775a27d50d5c2a65a4e3df01f8b2ec879a16_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/KV-2"  data-miniprofile="161629524">
+					<bdi>Rudy[ETS2MODS.RU],IosivStalin</bdi></a>
+				
+				
+				
+				
+				<span class="commentthread_comment_timestamp" title="2 декабря 2016 в 12:35:01 PDT" data-timestamp="1480710901">
+					2 дек. 2016 в 12:35&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_154642447923147155">
+				У кого была такая проблема,что в локальном поиске не отображается.Собираемся с другом играть,но ни у него ,ни у меня такого значения нет,используется локальная сеть.И для чего нужно там команда в bat-нике server.ip 0.0.0.0 ? ,вот этого я не понимаю			</div>
+								</div>
+			</div>
+		<div class="commentthread_comment responsive_body_text  " id="comment_340412628172228495" style="">
+				<div class="commentthread_comment_avatar playerAvatar online">
+			<a href="http://steamcommunity.com/id/675435324" data-miniprofile="78781515">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/e0/e063e4be2a08f0db3c2c23603789ce3f331b55ea.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/e0/e063e4be2a08f0db3c2c23603789ce3f331b55ea.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/e0/e063e4be2a08f0db3c2c23603789ce3f331b55ea_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/675435324"  data-miniprofile="78781515">
+					<bdi>Lakichuk</bdi></a>
+				
+				
+				
+				
+				<span class="commentthread_comment_timestamp" title="24 октября 2016 в 14:02:12 PDT" data-timestamp="1477342932">
+					24 окт. 2016 в 14:02&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_340412628172228495">
+				Не могу зайти на сервер, пишет commection attempt failed. Сервер обновляла. Что делать?			</div>
+								</div>
+			</div>
+		<div class="commentthread_comment responsive_body_text  " id="comment_350542683212372869" style="">
+				<div class="commentthread_comment_avatar playerAvatar offline">
+			<a href="http://steamcommunity.com/id/gohackme_csonly" data-miniprofile="356289119">
+				<img src="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/d5/d5e39892200d9e2e09a75f39fd3c700ce8d6a9ff.jpg" srcset="http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/d5/d5e39892200d9e2e09a75f39fd3c700ce8d6a9ff.jpg 1x, http://cdn.edgecast.steamstatic.com/steamcommunity/public/images/avatars/d5/d5e39892200d9e2e09a75f39fd3c700ce8d6a9ff_medium.jpg 2x">			</a>
+		</div>
+		<div class="commentthread_comment_content">
+			<div class="commentthread_comment_author">
+				<a class="hoverunderline commentthread_author_link" href="http://steamcommunity.com/id/gohackme_csonly"  data-miniprofile="356289119">
+					<bdi>GoHacKMe</bdi></a>
+				
+				
+				
+				
+				<span class="commentthread_comment_timestamp" title="27 сентября 2016 в 11:28:53 PDT" data-timestamp="1475000933">
+					27 сен. 2016 в 11:28&nbsp;
+				</span>
+							</div>
+			<div class="commentthread_comment_text"  id="comment_content_350542683212372869">
+				Ребят, у меня некуда плагины кидать, нету папки оксайд и плугинс.<br>подскажите хост пожалуйста дешевый))			</div>
+								</div>
+			</div>
+			</div>
+		</div>
+		<div class="commentthread_footer">
+			<div class="commentthread_paging" id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_fpagecontrols">
+				<a id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_fpagebtn_prev" href="javascript:void(0);" class="pagebtn">&lt;</a>
+				<span id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_fpagelinks" class="commentthread_pagelinks"></span>
+				<span id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_fpagedropdown" class="commentthread_pagedropdown"></span>
+				<a id="commentthread_PublishedFile_Public_76561198020902339_480156325_0_fpagebtn_next" href="javascript:void(0);" class="pagebtn">&gt;</a>
+			</div>
+			<div style="clear: both;"></div>
+		</div>
+	</div></div> 		</div>
+	</div>
+
+
+	<div style="clear: both;"></div>
+</div>
+
+<IDXSKIP><div id="previewImageEnlarged" class="modal_frame_image" style="display:none;">
+	<div class="modal_box_preview_image">
+		<div class="modal_close_image"><a onclick="hideModal( 'previewImageEnlarged' );"><img src="http://community.edgecast.steamstatic.com/public/images/x9x9.gif" width="9" height="9" border="0" alt="Закрыть" /></a></div>
+		<div><img id="enlargedImage" src="http://community.edgecast.steamstatic.com/public/images/trans.gif"></div>
+	</div>
+</div></IDXSKIP>
+
+<div id="ShareOnSteamDialog" style="display: none">
+	<div id="ShareOnSteamDialogContents"></div>
+</div>
+
+<IDXSKIP><div id="SharePopup" style="display: none">
+	<div>
+		<a class="share_controls_steam" onclick="ShareOnSteam();">
+			<span>Поделиться в Steam</span>
+		</a>
+		<div class="share_controls_other">
+			<div class="shareItemLink"><a class="btn_grey_black btn_medium" id="SharePopupLink_Facebook" href="" title="Поделиться в Facebook"><span><img src="http://community.edgecast.steamstatic.com/public/images//social/facebook.gif"></span></a></div>
+			<div class="shareItemLink"><a class="btn_grey_black btn_medium" id="SharePopupLink_Twitter" href="" title="Поделиться в Твиттере"><span><img src="http://community.edgecast.steamstatic.com/public/images//social/twitter.gif"></span></a></div>
+			<div class="shareItemLink"><a class="btn_grey_black btn_medium" id="SharePopupLink_Reddit" href="" title="Поделиться на Reddit"><span><img src="http://community.edgecast.steamstatic.com/public/images//social/reddit.gif"></span></a></div>
+			<div class="shareItemLink"><a class="btn_grey_black btn_medium" id="SharePopupLink_Digg" href="" title="Поделиться в Digg"><span><img src="http://community.edgecast.steamstatic.com/public/images//social/digg.gif"></span></a></div>
+		</div>
+		<div style="clear: left"></div>
+	</div>
+	<div class="share_controls_divider"></div>
+	<div class="share_controls_page_link">
+		<form onsubmit="return false;">
+			URL:&nbsp;<input type="input" id="SharePopupInput" value="" readonly="readonly" >
+		</form>
+	</div>
+</div></IDXSKIP>	<div id="NotLoggedInWarning" class="modal_frame" style="display: none">
+		<div class="modal_box">
+			<div class="modal_box_ctn">
+				<div class="notLoggedInText"><IDXSKIP>Для этого вам нужно войти в систему или создать аккаунт.</IDXSKIP></div>
+				<div class="notLoggedInButtons">
+					<a class="btn_green_white_innerfade btn_medium" href="https://steamcommunity.com/login/home/?goto=sharedfiles%2Ffiledetails%2F%3Fid%3D480156325%26insideModal%3D0%26requirelogin%3D1"><span>Войти</span></a>
+					<a class="btn_green_white_innerfade btn_medium" href="http://store.steampowered.com/join"><span>Создать аккаунт</span></a>
+					<a class="btn_grey_black btn_medium" onclick="hideModal( 'NotLoggedInWarning' )"><span>Отмена</span></a>
+					<div style="clear: left"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<div id="PromptModal" class="modal_frame_tags" style="display:none;">
+	<div class="modal_top_band">
+		<div class="modal_close"><a onclick="hideModal( 'PromptModal' )"><img src="http://community.edgecast.steamstatic.com/public/images/x9x9.gif" width="9" height="9" border="0" alt="Закрыть" /></a></div>
+	</div>
+	<div class="modal_box">
+		<div class="updateKVTagsForm" id="PromptModalFormDiv">
+			<script>
+				function UpdateKVTagsSingle()
+				{
+					$('PromptModalForm').submit();
+				}
+			</script>
+			<form class="smallForm" method="POST" name="KVTagsUpdateFormSingle" id="PromptModalForm" action="http://steamcommunity.com/workshop/updatekvtags/" >
+				<input type="hidden" name="id" value="480156325" />
+				<input type="hidden" name="sessionid" value="781c894f31420cf644468047" />
+
+				<div class="box">
+					<div class="itemBulletArrow"></div>
+					<div class="title" id="PromptTitle"></div>
+					<p class="description" id="PromptDescription"></p>
+					<input type="text" class="titleField" name="value" id="PromptValue">
+				</div>
+
+
+				<a class="btn_green_white_innerfade btn_medium button" href="javascript:UpdateKVTagsSingle();"><span>Обновить</span></a>
+
+				<div style="clear:both"></div>
+			</form>
+		</div>
+	</div>
+</div>
+		</div>	<!-- responsive_page_legacy_content -->
+
+			<div id="footer_spacer"></div>
+	<div id="footer_responsive_optin_spacer"></div>
+	<div id="footer">
+		<div class="footer_content">
+			<IDXSKIP><span id="footerLogo"><img src="http://community.edgecast.steamstatic.com/public/images/skin_1/footerLogo_valve.png?v=1" width="96" height="26" border="0" alt="Логотип Valve" /></span></IDXSKIP>
+			<span id="footerText">
+				<IDXSKIP>&copy; Valve Corporation. Все права защищены. Все торговые марки являются собственностью соответствующих владельцев в США и других странах. Часть географических сведений на этом сайте предоставлена </IDXSKIP><IDXSKIP><a href="https://steamcommunity.com/linkfilter/?url=http://www.geonames.org" target="_blank" rel="noreferrer">geonames.org</a></IDXSKIP><IDXSKIP>.				<br></IDXSKIP>
+									<span class="valve_links">
+						<IDXSKIP><a href="http://store.steampowered.com/privacy_agreement/" target="_blank">Privacy Policy</a></IDXSKIP>
+						<IDXSKIP>&nbsp; | &nbsp;<a href="http://www.valvesoftware.com/legal.htm" target="_blank">Legal</a></IDXSKIP>
+						<IDXSKIP>&nbsp;| &nbsp;<a href="http://store.steampowered.com/subscriber_agreement/" target="_blank">Steam Subscriber Agreement</a></IDXSKIP>
+					</span>
+							</span>
+		</div>
+					<IDXSKIP><div class="responsive_optin_link">
+				<div class="btn_medium btnv6_grey_black" onclick="Responsive_RequestMobileView()">
+					<span>Мобильная версия</span>
+				</div>
+			</div></IDXSKIP>
+			</div>
+	
+	</div>	<!-- responsive_page_content -->
+
+</div>	<!-- responsive_page_frame -->
+</body>
+</html>

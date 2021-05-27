@@ -1,0 +1,1167 @@
+abia-spb.ru/poliklinika/index.php?nomer=262
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Что показывает клинический анализ крови и его основные показатели: СОЭ, гемоглобин, эритроциты, лейкоциты и лейкоцитарная формула</title>
+<meta name="keywords" content="Что показывает клинический анализ крови и его основные показатели: СОЭ, гемоглобин, эритроциты, лейкоциты и лейкоцитарная формула">
+<meta name="description" content="Что показывает клинический анализ крови и его основные показатели: СОЭ, гемоглобин, эритроциты, лейкоциты и лейкоцитарная формула">
+
+<link rel="stylesheet" type="text/css" href="css2.css?v=11" />
+<link rel="stylesheet" type="text/css" href="css/themes/base/jquery.ui.all.css" />
+<link rel="stylesheet" type="text/css" href="css/reveal.css" />
+<link rel="stylesheet" type="text/css" href="css/ddimgtooltip.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" />
+<link rel="stylesheet" type="text/css" href="css/selectbox.css" />
+<!-- link rel="stylesheet" type="text/css" href="css/calendar.css" / -->
+<!--[if IE]> 
+  <link href="ie.css" type="text/css" rel="stylesheet"> 
+<![endif]-->
+
+<link rel="icon" type="image/png" href="http://abia-spb.ru/favicon.png" />
+<!--<link rel="shortcut icon" href="http://abia-spb.ru/poliklinika/favicon.ico" type="image/x-icon">  -->
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?31"></script>
+
+<script src='js/jquery-1.7.2.min.js'></script>
+<script src='js/jquery-ui-1.8.9.custom.min.js'></script>
+<script src='js/cycle.js'></script>
+<script src='js/jquery.reveal.js'></script>
+<script src='js/ddimgtooltip.js?v=1'></script>
+<script src='js/calc.js?v=17'></script>
+<script src='js/jquery.selectbox.min.js'></script>
+<script src='https://www.google.com/recaptcha/api.js?hl=ru'></script>
+
+<style>
+
+</style>
+
+<!--[if lte IE 8]>
+ 
+<style type="text/css">
+ 
+.r_button 
+{
+   display: inline;
+   height:10px;
+   weight:10px;
+}
+
+.r_button + label
+{
+    display: inline;
+    cursor: pointer;
+    padding: 1px 0 0 4px;
+    margin: 0px 0;
+    background: white
+}
+
+.r_button:checked + label 
+{
+   background: white
+}
+ 
+</style>
+<![endif]-->
+
+  
+
+
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="js/jquery-ui-sliderAccess.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-timepicker-addon.css" />
+
+<script>
+
+function call_me_send()
+{
+    var tel_valid = false;
+    
+    if ( ($('#call_me_tel').val() != '') & ($('#call_me_name').val() != '') & ($('#call_me_note').val() != '') )
+    {
+      var tel     = parseInt($('#call_me_tel').val().replace(/\D+/g,""));       
+      var tel_str = tel.toString();
+
+      if (tel_str.length == 11) //79219480139, 89219480139
+      if ((tel_str[0] == '7') || (tel_str[0] == '8'))
+        tel_valid = true;
+
+      if ((tel_str.length == 10) || (tel_str.length == 7)) //9219480139, 9480139
+        tel_valid = true;
+
+      if (tel_valid)
+      {
+        $('#title_call_me_box').text('Спасибо за обращение');
+        $('#call_me_box').css('height', '208px');
+        $('#call_me_data').hide();
+        $('#call_me_buy').show();
+
+        $.get('/poliklinika/call_me.php', {name: $('#call_me_name').val(), tel: $('#call_me_tel').val(), note: $('#call_me_note').val()}, function(data)
+        {
+        });
+
+      } else
+      {
+        $('#call_me_tel').css('border', '2px solid red');   
+      }  
+    } else
+    {
+        if ($('#call_me_tel').val() == '') $('#call_me_tel').css('border', '2px solid red');
+        if ($('#call_me_name').val() == '') $('#call_me_name').css('border', '2px solid red');
+        if ($('#call_me_note').val() == '') $('#call_me_note').css('border', '2px solid red');
+    };    
+}
+
+function addAnaliz(id)
+{
+  if ( $("#analiz_"+id).is(':checked') )
+  {
+    $.post('analiz.php', {'action':'add_analiz', 'id': id}, function(data) 
+    {
+      $('#calc').html(data);
+    }); 
+  } else
+  {
+    del_analizer(id);
+  }  
+
+};
+
+function send_fio()
+{
+  $.post('analiz.php', {'action':'send', 'fio': $('#fio_s').val()}, function(data) 
+  {
+    $('#fio').hide();
+    $('#fio_u').show();
+  });  
+
+};
+
+
+
+function del_analizer(id)
+{
+  $("#analiz_" + id).prop( "checked", false);
+  $.post('analiz.php', {'action':'del_analiz', 'id': id}, function(data) 
+  {
+      $('#calc').html(data);
+  }); 
+
+};
+
+function OpenCalc()
+{
+    $('.select_calc2').selectbox();
+    $('#fancybox1').show();
+};
+
+function changePolik()
+    {
+        if($('#r_1').is(':checked'))
+        {
+            $('#kids_polik').hide();
+            $('#adult_polik').show();
+            $("#adult_polik :nth-child(1)").attr("selected", "selected");
+        } else
+        {
+            $('#adult_polik').hide();
+            $('#kids_polik').show();
+            $("#kids_polik :nth-child(1)").attr("selected", "selected");
+        }
+    };
+
+function changeData()    
+{
+  if ($('#data').val() == '31.12.1899 утром')
+  {
+    $('#data').val('');
+  }
+    
+}
+
+function OpenCallMe()
+{
+  $('#call_me').click();
+}
+
+function searchMenu(query, group)
+{
+  if (query.length > 1)
+  {
+    $.get('/poliklinika/search_menu.php', {query: query, group: group}, function(data)
+    {
+      $('#search_result_'+group).html('<table>' + data + '</table>');
+      $('#search_result_'+group).show();
+    });
+  } else{
+    $('#search_result').hide();
+  }  
+
+}
+
+function setCookie(name, value, seconds)
+    {
+        var expires;
+        if (seconds)
+        {
+          var date = new Date();
+          date.setTime(date.getTime() + (seconds * 1000));
+          expires = "; expires=" + date.toGMTString();
+        }
+      else
+        {
+          expires = "";
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    };
+
+    function getCookie(name)
+    {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++)
+        {
+          var c = ca[i];
+          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    };
+
+
+function WindowResize()
+{
+    w = $('#center_column').css('width');
+    w = w.replace('px', '');
+    w = Number (w) + 282 - 33;
+
+    if ( (window.innerWidth - w) > 49 )
+    {
+       $('#nav_up').css('left', w + 'px');
+    } else
+    {
+       $('#nav_up').css('left', '');
+       $('#nav_up').css('right', '10px');
+    };  
+}
+
+function openPole()
+{
+  $.post('pole.php', {'action': 'get'}, function(data) 
+    {
+        $('body').append(data);
+        $('#vote_send').hide();
+  $('#vote_bye').hide();
+  $('#pole_exit').hide();
+  $('#pole_route').show();
+    $('#fancybox_pole').show();
+    $('#pole_route_1').show();
+    $('#pole_exit').show();
+    }); 
+}
+
+
+function sub1open()
+{
+  $('.sub_menu1').toggle();
+}
+
+function sub2open()
+{
+  $('.sub_menu2').toggle();
+}
+
+function sub3open()
+{
+  $('.sub_menu3').toggle();
+}
+
+function sub4open()
+{
+  $('.sub_menu4').toggle();
+}
+
+function sub5open()
+{
+  $('.sub_menu5').toggle();
+}
+
+function sub6open()
+{
+  $('.sub_menu6').toggle();
+}
+
+function sub7open()
+{
+  $('.sub_menu7').toggle();
+}
+
+function sub8open()
+{
+  $('.sub_menu8').toggle();
+}
+
+$(document).ready(function(){
+
+    $('#nav_up').click(
+        function (e) 
+        {
+            $('html, body').animate({scrollTop: '0px'}, 800);
+        }
+    );
+
+    $('[data_view="toggle"]').click(function(e) 
+    {
+        id = $(this).attr('data_id');
+        $('[data_ch="'+id+'"]').toggle();
+
+        
+    }); 
+
+
+    $('#call_me').click(function(e) 
+    {
+        
+        $('#call_me_box').css('height', '335px');
+        $('#call_me_tel').css('border', '1px solid #cacaca');
+        $('#title_call_me_box').text('Заказать обратный звонок');
+        $('#call_me_data').show();
+        $('#call_me_buy').hide();
+        $('#call_me').hide();
+        $('#call_me_box').show();
+
+        //$('#call_me_box').reveal({animation: 'none'});
+        //$('#call_me_box').position({ my: 'center', at: 'center', of: window, collision: 'none'});
+    });
+    
+  window.onscroll = function ()
+    {
+        var html = document.documentElement;
+        var body = document.body;
+        var scrollTop = html.scrollTop || body && body.scrollTop || 0;
+        scrollTop -= html.clientTop;
+
+
+        if (scrollTop < 300)
+        {
+            $('#nav_up').hide()
+        }    
+        else
+        {
+            $('#nav_up').show();
+        };    
+    }
+
+    window.onresize = function(event) 
+    {
+        WindowResize();
+    };
+
+    $('#photoshow').show();
+
+    $.datepicker.regional['ru'] = {
+    closeText: 'Закрыть',
+    prevText: '&#x3c;Пред',
+    nextText: 'След&#x3e;',
+    currentText: 'Сегодня',
+    yearRange: "1911:2013",
+    showYearNavigation:true,
+    monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+    'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+    monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+    'Июл','Авг','Сен','Окт','Ноя','Дек'],
+    dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+    dayNamesShort: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+    dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+    dateFormat: 'dd.mm.yy', firstDay: 1,
+    changeYear: true,
+    readonly:true,
+    //minDate: new Date(),
+    isRTL: false};
+    
+  $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+    $.timepicker.regional['ru'] = {
+    timeOnlyTitle: 'Выберите время',
+    timeText: 'Время',
+    hourText: 'Часы',
+    minuteText: 'Минуты',
+    secondText: 'Секунды',
+    millisecText: 'Миллисекунды',
+    timezoneText: 'Удобное время',
+    currentText: 'Сейчас',
+    closeText: 'Закрыть',
+    timeFormat: 'HH:mm',
+    amNames: ['AM', 'A'],
+    pmNames: ['PM', 'P'],
+    isRTL: false
+};
+$.timepicker.setDefaults($.timepicker.regional['ru']);
+
+  //$("#data").datepicker({minDate: "0"});
+
+  if (!getCookie('call_me'))
+  {
+    setTimeout(OpenCallMe, 30000);
+    setCookie('call_me', 'true', 60*30);
+  };  
+
+
+  $(".navigation_2").hide();
+  
+  $("#nav li").hover(function(){
+    var cls = $(this).attr("class");
+    $(this).attr("id", cls);
+    
+    $(this).addClass("active");
+      
+    $(".active #navtwo").show();
+    
+    
+    $(".active").removeClass("active");
+  },function(){
+    $(this).addClass("active");
+    
+    //var cls = $(this).attr("class");
+    $(this).attr("id", "");
+    
+    $(".active #navtwo").hide();
+    
+    $(".active").removeClass("active");
+  });
+  
+  $(".captcha .reload").click(function (e) {
+    e.preventDefault();
+    var img_id = ".captcha img";
+    var timestamp = new Date().getTime();
+    var img_src = $(img_id).attr("src").split("?")[0] + "?" + timestamp;
+    $.ajax({
+      type: "GET",
+      url: img_src,
+      success: function(msg){$(img_id).attr('src',img_src);}
+    });
+  });
+  /*before('<div id="nav" class="nav">').*/
+  $('.photoshow').cycle({
+        fx:     'fade',
+    speed:  'slow'
+        /* pager:  '#nav',*/
+       /* before: function() { if (window.console) console.log(this.src); }*/
+    });
+
+
+
+  $('#data_otziv').datepicker({buttonImageOnly: true, defaultDate: 0, timeFormat: 'z', dateFormat: 'dd.mm.yy', timezone: 'MT'});
+
+    
+    //$('#data_otziv').datepicker('setDate', new Date());
+
+
+//$('#data').datetimepicker();
+
+
+$('#data').datetimepicker({
+    dateFormat: 'dd.mm.yy',
+    timeFormat: 'z',
+    timezone: 'MT',
+    minDate: 0,
+    defaultDate: 0,
+    timezoneList: [ 
+            { value: 'утром', label: 'утром'}, 
+            { value: 'днем', label: 'днем' }, 
+            { value: 'вечером', label: 'вечером' }
+        ]
+});
+
+
+
+/*
+    $('#data').datepicker().bind('click keyup', function() {
+    if ($('#ui-datepicker-div :last-child').is('table'))
+        $('#ui-datepicker-div').append('<p></p>');
+});
+*/
+    
+
+});
+</script>
+</head>
+<body>
+
+  
+
+<IDXSKIP><table width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="50%" height="100%" valign="top" align="left" >
+      <div class='mimg'><img src="images/logo_main7.png" border="0" usemap="#Map2" /></div> 
+    </td>
+    <td width="50%" valign="top" align="right" style=''>
+        <div class='photoshow' id="photoshow" style="z-index:1600;display:none;">
+          <a href="http://www.abia-spb.ru/poliklinika/index.php"><img src="img/header_photos/fas01s.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4693"><img src="img/header_photos/b_sh.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=186"><img src="img/header_photos/helik2_sh.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=199"><img src="img/header_photos/04sh.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/news.php?new_id=187&page="><img src="img/header_photos/plastika_credit.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=84"><img src="img/header_photos/01_sovremennoe_oborudovanie.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=199"><img src="img/header_photos/fv2100_b.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=81"><img src="img/header_photos/05_Hirurgiya.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=326"><img src="img/header_photos/flebolog_2sh.jpg"></a><img src='img/header_photos/33.jpg'><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=207"><img src="img/header_photos/qs_sh.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=199"><img src="img/header_photos/skidka_vtoromu_s.jpg"></a><img src='img/header_photos/42 copy.jpg'><img src='img/header_photos/02-kachesvennaya _medicina.jpg'><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=105"><img src="img/header_photos/cos_pl_sh.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=279"><img src="img/header_photos/eyes_sh.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=434"><img src="img/header_photos/d_p_sh.jpg"></a><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=141"><img src="img/header_photos/rodinki_2sh.jpg"></a><img src='img/header_photos/43.jpg'><img src='img/header_photos/39.jpg'>        </div>
+    </td>
+  </tr>
+</table></IDXSKIP>
+
+<table class="allpart" width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+
+  <tr>
+    <td colspan="3" ></td>
+  </tr>
+  <tr>
+   <td colspan="3">
+  
+  <ul id="nav">
+  <IDXSKIP><li class='i1'><a href="http://www.abia-spb.ru/poliklinika/index.php" title="" >О клинике</a>
+      <ul id="navtwo" class='navigation_2'>  
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=204"  class="butmenu" title="">График приема</a></li>
+              <li  class="topmenu"><a href="index.php?nomer=202"  class="butmenu" title="">Наши специалисты</a></li>
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=10"  class="butmenu" title="">Фотогалерея</a></li>
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/otziv.php"  class="butmenu" title="">Отзывы</a></li>
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4755" class="butmenu" title="">Опрос по качеству обслуживания</a></li>
+              <li class="topmenu"><a class="butmenu" href="http://www.abia-spb.ru/poliklinika/index.php?nomer=48" title="">Лицензии</a></li>
+              <li class="topmenu"><a class="butmenu" href="http://www.abia-spb.ru/poliklinika/index.php?nomer=55" title="">Компании ДМС<br>и Наши партнеры</a></li>
+              <li class="topmenu"><a class="butmenu" href="http://www.abia-spb.ru/poliklinika/index.php?nomer=368" title="">Нам требуются</a></li>
+        </ul>
+  </li></IDXSKIP>
+  
+  <IDXSKIP><li class='line'><img src='img/line.jpg'></li></IDXSKIP>
+  <IDXSKIP><li class='i2'><a href="index.php?nomer=300" title="">Детская клиника</a>
+    <ul id="navtwo" class='navigation_2'>  
+      <li  class="topmenu" style="width: 800px;background: #006600;">
+        <table class="menu_table">
+          <tr>
+            <td class="butmenu">
+              <input type="text" onkeyup="searchMenu($(this).val(), '1');" class="search_menu" VALUE="ПОИСК НАПРАВЛЕНИЯ" onclick="if ($(this).val() == 'ПОИСК НАПРАВЛЕНИЯ') {$(this).val('')};">
+              <div id="search_result_1" style="display:none;position: absolute;width: 229px;top: 38px;left: 1px;height: auto;background: white;"></div>
+            </td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=308">ПЕДИАТР</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=404">ВРАЧ НА ДОМ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=310">НЕВРОЛОГ</a></td>
+          </tr>
+          <tr>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=312">ХИРУРГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=314">ЛОР-ВРАЧ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=472">ВРАЧ УЗИ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4793">ЛОГОПЕД</a></td>  
+          </tr>  
+          <tr> 
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=313">ОРТОПЕД-ТРАВМАТОЛОГ</a></td>
+            <!--<td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=337">ПУЛЬМОНОЛОГ</a></td>-->
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4522">КАРДИОЛОГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4616">УРОЛОГ</a></td>  
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=351">ДЕРМАТОЛОГ</a></td>
+          </tr>  
+          <tr>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=311">ОФТАЛЬМОЛОГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=357">ЭНДОКРИНОЛОГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=420">НЕФРОЛОГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=366">АЛЛЕРГОЛОГ</a></td>
+          </tr>
+          <tr>     
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=353">ГАСТРОЭНТЕРОЛОГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=320">ГИНЕКОЛОГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4668">РЕВМАТОЛОГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4527">МАНУАЛЬНЫЙ ТЕРАПЕВТ</a></td>
+          </tr>  
+          <tr>  
+            <td class="butmenu"><a href="http://abia-spb.ru/poliklinika/index.php?nomer=4606">РЕАБИЛИТОЛОГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4651">ИНФЕКЦИОНИСТ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4669">ДИЕТОЛОГ</a></td>
+            <td class="butmenu"><a href="http://abia-spb.ru/poliklinika/index.php?nomer=4526">ФИЗИОТЕРАПИЯ</a></td>                         
+          </tr>  
+          <tr>              
+            <td class="butmenu"><a href="http://abia-spb.ru/poliklinika/index.php?nomer=301">МАССАЖ И ЛФК</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=214">РЕНТГЕН</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4664">ОСТЕОПАТ</a></td>
+            <td class="butmenu"><a href="http://abia-spb.ru/poliklinika/index.php?nomer=422">ВАКЦИНАЦИЯ</a></td>            
+          </tr>    
+          <tr>  
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4569">ФУНКЦИОНАЛЬНАЯ<br>ДИАГНОСТИКА</a></td>
+            <td class="butmenu"><a href="http://abia-spb.ru/poliklinika/index.php?nomer=163">ФГДС</a></td>
+            <td class="butmenu"><a href="http://abia-spb.ru/poliklinika/index.php?nomer=382">ПСИХОЛОГ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=432">ПРОФИЛАКТИЧЕСКИЕ<br>ОСМОТРЫ</a></td>
+          </tr>
+          <tr>              
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=421">ЛОГОПЕДИЧЕСКАЯ<br>КОМИССИЯ</a></td>
+            <td class="butmenu"><a href="http://abia-spb.ru/poliklinika/index.php?nomer=4632">КОЛОНОСКОПИЯ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=25">СДАТЬ АНАЛИЗЫ</a></td>
+            <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4590">ЭЭГ</a></td>
+          </tr>  
+          <tr>           
+          <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=434">ПРОГРАММЫ НАБЛЮДЕНИЯ</a></td>
+          <td class="butmenu"><a href="http://abia-spb.ru/poliklinika/index.php?nomer=81">ОПЕРАТИВНОЕ ЛЕЧЕНИЕ</a></td>
+          <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=419">МЕДКАРТА РЕБЕНКА 026У</a></td>
+            <td class="butmenu"></td>
+          </tr>  
+          
+        </table>
+        
+      </li>
+    </ul>
+  </li></IDXSKIP>
+ <IDXSKIP><li class='line'><img src='img/line.jpg'></li></IDXSKIP>
+  <IDXSKIP><li class='i2'><a href="index.php?nomer=202" title="">Взрослая клиника</a>
+    <ul id="navtwo" class='navigation_2'>  
+      <li  class="topmenu" style="width: 743px;background: #006600;">
+
+<table class="menu_table">
+<tr>
+  <td class="butmenu">
+    <input type="text" onkeyup="searchMenu($(this).val(), '2');" class="search_menu" VALUE="ПОИСК НАПРАВЛЕНИЯ" onclick="if ($(this).val() == 'ПОИСК НАПРАВЛЕНИЯ') {$(this).val('')};">
+    <div id="search_result_2" style="display:none;position: absolute;width: 229px;top: 38px;left: 1px;height: auto;background: white;"></div>
+  </td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=127">ВРАЧ НА ДОМ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=14">ГИНЕКОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=34">УРОЛОГ</a></td>
+</tr>
+<tr>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=132">ЭНДОКРИНОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=125">ТЕРАПЕВТ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4693">ВЕДЕНИЕ БЕРЕМЕННОСТИ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4761">НЕФРОЛОГ</a></td>
+</tr>
+<tr>  
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=118">КАРДИОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=387">АЛЛЕРГОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=408">ПРОКТОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=85">НЕВРОЛОГ</a></td>
+</tr>
+<tr>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4668">РЕВМАТОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=133">ГАСТРОЭНТЕРОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=47">ОФТАЛЬМОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4590">ЭЭГ</a></td>
+</tr>
+<tr>  
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=51">ДЕРМАТОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4651">ИНФЕКЦИОНИСТ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4733">ГЕПАТОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=323">ПУЛЬМОНОЛОГ</a></td>
+</tr>
+<tr>    
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=214">РЕНТГЕН</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=326">ФЛЕБОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4740">ЛИМФОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=453">МАММОЛОГ</a></td>
+</tr>
+<tr> 
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=84">ЛОР-ВРАЧ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=213">МАССАЖ И ЛФК</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=35">РЕФЛЕКСОТЕРАПЕВТ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=54">ВРАЧ УЗИ</a></td>
+</tr>
+<tr> 
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=194">ХИРУРГ</a></td> 
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=148">ТРИХОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4664">ОСТЕОПАТ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=336">ФИЗИОТЕРАПЕВТ</a></td>
+</tr>
+<tr>    
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=216">ТРАВМАТОЛОГ-ОРТОПЕД</a></td>  
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=448">ПЕРЕСАДКА ВОЛОС</a></td> 
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4527">МАНУАЛЬНЫЙ ТЕРАПЕВТ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4606">РЕАБИЛИТОЛОГ</a></td>
+</tr>
+<tr>    
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=81">ОПЕРАТИВНОЕ ЛЕЧЕНИЕ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4569">ФУНКЦИОНАЛЬНЫЙ ДИАГНОСТ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=265">ПЛАСТИЧЕСКИЙ ХИРУРГ</a></td> 
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=105">КОСМЕТОЛОГ</a></td>  
+</tr>
+<tr>  
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4638">ГИДРОКОЛОНОТЕРАПИЯ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4669">ДИЕТОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4660">БАРИАТРИЯ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=28">ПСИХОТЕРАПЕВТ</a></td>
+</tr>
+<tr>  
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4618">ЭНДОСКОПИСТ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4683">ГИРУДОТЕРАПЕВТ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4600">ТРАНСФУЗИОЛОГ</a></td>
+  <td class="butmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=25">СДАТЬ АНАЛИЗЫ</a></td>
+</tr>
+</table>
+
+
+      </li>
+    </ul>
+  </li></IDXSKIP>
+
+  
+  
+  
+  <IDXSKIP><li class='line'><img src='img/line.jpg'></li></IDXSKIP>
+  <IDXSKIP><li class='i2'><a onclick="return false;" style="cursor:default;" href="#" title="">Сдать анализы</a>
+    <ul id="navtwo" class='navigation_2'> 
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=25"  class="butmenu" title="">Лаборатория</a></li> 
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4687"  class="butmenu" title="">Комплексные программы</a></li>
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=209"  class="butmenu" title="">Цены на анализы</a></li>
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4688"  class="butmenu" title="">Правила подготовки</a></li>
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4592"  class="butmenu" title="">Рекомендованное время для сдачи анализов</a></li>
+    </ul></IDXSKIP>
+  <IDXSKIP><li class='line'><img src='img/line.jpg'></li></IDXSKIP>
+  <IDXSKIP><li class='i4'><a href="#" onclick="return false;" style="cursor:default;" title="">Прейскурант</a>
+    <ul id="navtwo" class='navigation_2'> 
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=8"  class="butmenu" title="">Цены</a></li> 
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=199"  class="butmenu" title="">Акции и скидки</a></li>
+              <!-- <li  class="topmenu" style="width: 262px;"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4589"  class="butmenu" title="">Стоимость операции</a></li> -->
+    </ul>
+  </li></IDXSKIP>
+  <IDXSKIP><li class='line'><img src='img/line.jpg'></li></IDXSKIP>
+  <IDXSKIP><li class='i6'><a href="#" onclick="return false;" style="cursor:default;" title="">Контакты</a>
+  <ul id="navtwo" class='navigation_2'>  
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=46"  class="butmenu" title="">Наш адрес</a></li>
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/zapis.php"  class="butmenu" title="">Запись на прием</a></li>
+              <li  class="topmenu"><a href="#" onclick="OpenCallMe();return false;"  class="butmenu" title="">Заказать звонок</a></li>
+              <li  class="topmenu"><a href="http://www.abia-spb.ru/poliklinika/vopros.php" class="butmenu" title="">Задать вопрос</a></li>
+              
+    </ul></li></IDXSKIP>
+  
+    <IDXSKIP><form class='search' method='post' action="search.php">
+      <input type='text' class='searchtext' name='searchtext'>&nbsp;<input type="submit" class='start' value='Поиск'>
+    </form></IDXSKIP>
+  
+  </ul>
+
+</td>
+  </tr>
+
+
+
+  <tr>
+   
+    <td valign="top" class="menu_root_td1" >
+
+
+    <IDXSKIP><table class="menu_root_td" border="0" cellspacing="0" cellpadding="0" >
+      <th class="nap" style="text-align: left;padding-bottom: 5px;"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=300">ДЕТСКАЯ КЛИНИКА</a></th>
+
+      <tr id="tr_search" style="display:none;">
+        
+      </tr>
+
+          </TABLE></IDXSKIP>    
+    
+    <table class="menu_root_td" border="0" cellspacing="0" cellpadding="0" STYLE="margin-top: 18px;" ><IDXSKIP><th class="nap" style="text-align: left;padding-bottom: 14px;"><a href="http://www.abia-spb.ru/poliklinika/">ВЗРОСЛАЯ КЛИНИКА</a></th></IDXSKIP> 
+        <IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=14" class="menu_a">Гинекологическое отделение</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4693" class="menu_a">Ведение беременности</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=34" class="menu_a">Урологическое отделение</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4761" class="menu_a">Нефрология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=51" class="menu_a">Дерматология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=54" class="menu_a">УЗИ</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=84" class="menu_a">ЛОР-врач</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=408" class="menu_a">Проктология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=194" class="menu_a">Хирургия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=216" class="menu_a">Травматология, ортопедия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=125" class="menu_a">Терапия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=323" class="menu_a">Пульмонология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=85" class="menu_a">Неврология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=295" class="menu_a">Снижение веса</a></td>
+                        </tr></IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4660" class="menu_a"><IDXSKIP>Установка внутрижелудочных баллонов</IDXSKIP></a></td>
+                        </tr><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=118" class="menu_a">Кардиология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4668" class="menu_a">Ревматология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4569" class="menu_a">Функциональная диагностика</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=326" class="menu_a">Флебология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4740" class="menu_a">Лимфология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=133" class="menu_a">Гастроэнтерология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4618" class="menu_a">Эндоскопия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4651" class="menu_a">Инфектология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4733" class="menu_a">Гепатология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=387" class="menu_a">Аллергология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=132" class="menu_a">Эндокринология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=453" class="menu_a">Маммология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4669" class="menu_a">Диетология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=47" class="menu_a">Офтальмология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=214" class="menu_a">Рентген</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=336" class="menu_a">Физиотерапия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=35" class="menu_a">Рефлексотерапия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4683" class="menu_a">Гирудотерапия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4606" class="menu_a">Реабилитология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=213" class="menu_a">Массаж и ЛФК</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4664" class="menu_a">Остеопатия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4527" class="menu_a">Мануальная терапия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=4638" class="menu_a">Гидроколонотерапия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=105" class="menu_a">Медицинская косметология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=265" class="menu_a">Пластическая хирургия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=148" class="menu_a">Трихология</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=448" class="menu_a">Пересадка волос</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=28" class="menu_a">Психотерапия</a></td>
+                        </tr></IDXSKIP><IDXSKIP><tr>
+                          <td class="menu_td"><a href="index.php?nomer=109" class="menu_a">Независимая экспертиза</a></td>
+                        </tr></IDXSKIP>    </table>
+    
+    <!-- <div class="butone"><p><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=204">график работы</a></p>
+    <p><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=46">Контакты</a></p>
+
+    </div>
+    -->
+
+    <IDXSKIP><div style="margin-left: -10px;padding-top: 17px;"><img src="/poliklinika/upload/banner.jpg"></div></IDXSKIP>
+    <div class="butone"style="margin-top: -34px;"><IDXSKIP><p style="padding-top: 35px;font-family: Arial, Helvetica, sans-serif;font-size: 15px;color: #FFF;font-weight: bold;text-transform: uppercase;text-shadow: 0px 1px 1px #2f5a25;">Нас рекомендуют</p></IDXSKIP></div>
+                
+  <div class="vop"><IDXSKIP><p><a href="vopros.php">Задать вопрос специалисту</a></p></IDXSKIP>
+    </div>
+        
+
+        
+        <font-size="11"><div class="vo">
+          <p><p><span style="font-size: medium;"><span style="font-family: Verdana;"><IDXSKIP>Стоимость услуг для медкомиссии ребенка</IDXSKIP></span></span></p></p>
+          
+        </div>
+          <div class="vo">
+          <p><IDXSKIP><p><span style="font-size: medium;"><span style="font-family: Verdana;">Операция по хирургии стопы</span></span></p></IDXSKIP></p>
+          
+        </div>
+          </font>
+    <div class="div"><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t57.16;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet--> </div></td>
+    <td valign="top" class="text_td" id="center_column">
+      <h1>Что показывает клинический анализ крови и его основные показатели: СОЭ, гемоглобин, эритроциты, лейкоциты и лейкоцитарная формула</h1><p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana">Пациенты часто задаются вопросом: &laquo;почему практически каждый визит к терапевту заканчивается направлением на клинический анализ крови?&raquo;. Все дело в том, что клинический (общий) анализ крови, а именно его показатели, - это один из важнейших диагностических инструментов в руках опытного <a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=125"><span style="color: #006600">врача-терапевта</span></a>. Кроме того, клинический анализ крови помогает врачу контролировать ход лечения и стабильность результата. Клинический анализ крови, выполняемый с профилактической целью один раз в год, позволяет выявить многие заболевания на ранней стадии, т.е. когда вас еще ничего не беспокоит.</span></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="color: #006600"><strong><span style="font-family: Verdana">О том, как на основании данных клинического анализа крови можно поставить предварительный диагноз или сузить круг диагностического поиска рассказывают врачи-терапевты Клиники &laquo;АБИА&raquo;.</span></strong></span></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana">Наиболее важное значение для оценки состояния здоровья обследуемого имеют такие показатели, как количество эритроцитов, содержание в них гемоглобина, скорость оседания эритроцитов (СОЭ), количество клеточных элементов крови. </span></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="color: #006600"><span style="font-size: medium"><strong><span style="font-family: Verdana">Скорость оседания эритроцитов:</span></strong></span></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana">Наибольшее диагностическое значение имеет<span style="color: red"> </span><strong><span style="color: black; mso-themecolor: text1">повышение СОЭ</span></strong>. Причинами этого могут быть:</span></span><span style="font-family: "><font size="3"><o:p></o:p></font></span></p>
+<ul>
+    <li><span style="font-size: medium"><span style="font-family: Verdana">гнойные и септические заболевания</span></span><span style="font-family: "><font size="3"><o:p></o:p></font></span></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana">злокачественные новообразования (саркомы, карциномы).</span></span><span style="font-family: "><font size="3"><o:p></o:p></font></span></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana">заболевания печени (гепатит, цирроз печени).</span></span><span style="font-family: "><font size="3"><o:p></o:p></font></span></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana">заболевания соединительной ткани &ndash; коллагенозы (ревматизм, системная красная волчанка, склеродермия, ревматоидный артрит).</span></span><span style="font-family: "><font size="3"><o:p></o:p></font></span></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana">заболевания крови (лейкозы, лимфогранулематоз, миелома - СОЭ до 80 мм/ час)</span></span><span style="font-family: "><font size="3"><o:p></o:p></font></span></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana">заболевания почек</span></span><span style="font-family: "><font size="3"><o:p></o:p></font></span></li>
+</ul>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana">Причины </span><strong><span style="font-family: Verdana">снижения СОЭ:</span></strong></span></p>
+<ul>
+    <li><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Эритремия</span></span></span></strong><span style="font-family: " new="" times=""><o:p></o:p></span></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Вирусный гепатит, </span></strong></span></span><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">механическая желтуха</span></span></span></strong></li>
+</ul>
+<p><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""><span style="color: #006600"><span style="font-size: medium"><strong><span style="font-family: Verdana">Гемоглобин:</span></strong></span></span></span></span></span></p>
+<p><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">В норме </span><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">содержание гемоглобина </span><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">в эритроците у взрослого мужчины 132-164 г/л, у женщины 120-145 г/л. </span><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Если уровень </span><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">гемоглобина падает ниже 120г/л необходимо углубленное обследование пациента. </span></span></span></strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Снижение гемоглобина</span></span></span><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""> является характерным признаком анемий. Анемия &ndash; всегда серьезный симптом и требует углубленного обследования пациента для выяснения причин её развития. Снижение гемоглобина ниже 60 г/л считается опасным для жизни. Возникновение анемии требует, в первую очередь, исключения кровотечений из органов желудочно-кишечного тракта (язвенная болезнь<span style="mso-spacerun: yes">&nbsp; </span>желудка, луковицы 12-перстной кишки, кишечника); злокачественных новообразований.<span style="mso-spacerun: yes">&nbsp;&nbsp;</span></span></span></span></strong></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></span></strong><span style="font-family: " new="" times=""><o:p></o:p></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Уровень гемоглобина в крови повышается при некоторых тяжелых заболеваниях крови - лейкозах, при &laquo;сгущении крови&raquo;, например, при обезвоживании, у людей в условиях высокогорья.</span></span></span></strong></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""><span style="color: #006600"><span style="font-size: medium"><strong><span style="font-family: Verdana">Эритроциты:</span></strong></span></span></span></span></span></strong></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">В норме у здорового взрослого мужчины количество эритроцитов 4,0 &ndash;5,0 х 10<sup>12</sup>/л, у женщин &ndash; 3,7 &ndash; 4,7 х 10 <sup>12</sup>/л. Снижение <span style="mso-spacerun: yes">&nbsp;</span>эритроцитов в крови, так же как и гемоглобина, <span style="mso-spacerun: yes">&nbsp;</span>один из критериев анемии. Степень снижения эритроцитов крови при различных анемиях разная. При железодефицитной анемии на почве хронической кровопотери количество </span></span></span></strong><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">эритроцитов может быть в норме или немного снижено до 3,0 - 3,6 х10<sup>12</sup>/л. При острой кровопотере, В-12дефицитной анемии, гипопластической анемии может резко снижаться уровень эритроцитов до 1,0 &ndash; 1,6 х10<sup>12</sup>/л, что является показанием для проведения неотложных лечебных мероприятий.</span></strong></span></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Повышение</span></span></span></strong><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""> количества эритроцитов (эритроцитоз), может быть проявлением серьезного заболевания &ndash; эритремии (полицитемии). Эритремия - это одна из форм лейкоза, частым осложнением которой являются тромбозы и эмболии сосудов головного мозга, печени,<span style="mso-spacerun: yes">&nbsp; </span>селезенки, нижних конечностей, инфаркты сердца. Наряду с тромбозами отмечаются кровотечения, язвы желудочно-кишечного тракта.</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Существует группа вторичных эритроцитозов, вызванные гипоксией:</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></p>
+<ul>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Хронические обструктивные болезни легких (бронхиальная астма, хронический <span style="mso-spacerun: yes">&nbsp;</span>обструктивный бронхит, обструктивная эмфизема легких).<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Пороки сердца</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Поликистоз почек</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Злокачественные новообразования (г</span></strong></span></span><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">ипернефроидный рак почек,</span></strong></span></span>&nbsp;<span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">первичный рак печени, </span></strong></span></span><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">опухоли надпочечников, гипофиза)</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+</ul>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Вторичный относительный<span style="mso-spacerun: yes">&nbsp; </span>эритроцитоз может быть вызван уменьшением объема плазмы при обильной рвоте, диарее, ожогах, алкоголизме, курении.</span></strong></span></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""><span style="color: #006600"><span style="font-size: medium"><strong><span style="font-family: Verdana">Лейкоциты:</span></strong></span></span></span></span></span></strong></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Основная функция лейкоцитов -&nbsp;защита организма от чужеродных агентов. </span></strong></span></span><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">В норме у взрослого человека количество лейкоцитов 4,0 &ndash; 8,8 х10<sup>9</sup>/л. Повышение уровня лейкоцитов называется лейкоцитозом; <span style="mso-spacerun: yes">&nbsp;</span>им сопровождаются:</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></p>
+<ul>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Инфекции</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Воспалительные заболевания</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Злокачественные опухоли</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Лейкозы</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+</ul>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><strong><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Снижение</span></span></span></strong><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""> уровня лейкоцитов &ndash; лейкопения. При выявлении лейкопении необходимо обследование для исключения таких заболеваний как:</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></p>
+<ul>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Острый лейкоз</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Заболевания костного мозга (аплазия и гипоплазия)</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Воздействие ионизирующего излучения (радиации)</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Плазмоцитома (миелома)</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Метастазах новообразований в костный мозг</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">При некоторых инфекционных заболеваниях (брюшной тиф, грипп, корь) </span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+</ul>
+<p style="margin: 0cm 0cm 6pt" class="MsoNormal"><span style="font-size: medium"><span style="font-family: Verdana"><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""><span style="color: #006600"><span style="font-size: medium"><strong><span style="font-family: Verdana">Лейкоцитарная формула крови:</span></strong></span></span></span></span></span></p>
+<p style="margin: 0cm 0cm 6pt" class="MsoNormal"><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Это процентное соотношение разных видов лейкоцитов в мазке крови.</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong><br />
+<br />
+<span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Например, повышение количества </span><u><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">эозинофилов</span></u><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""> (эозинофилия), может быть при:</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></p>
+<ul>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Глистной инвазии</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Аллергических заболеваниях</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Опухолях (острые лейкозы, эритремия, лимфомы и пр.)</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Болезнях соединительной ткани (ревматоидный артрит и др.)</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+</ul>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><u><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Лимфоциты</span></strong></span></span></u><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times=""> &ndash; это главный клеточный элемент иммунной системы. Повышение количества лимфоцитов &ndash; лимфоцитоз. Это нормальная адекватная реакция на острую вирусную инфекцию, острый вирусный гепатит. Кроме того лимфоцитоз часто выявляется при гипотиреозе, хронической лучевой болезни, В-12дефицитной анемии, хроническом лимфолейкозе.</span></strong></span></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Уменьшение количества лимфоцитов (лимфопения) возникает при тяжелом течении вирусных заболеваний, иммунодефицитных состояниях, злокачественных новообразованиях, почечной недостаточности.</span></strong></span></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing">&nbsp;</p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Увеличение количества <u>моноцитов</u> (моноцитоз) сопровождает целый ряд заболеваний:</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></p>
+<ul>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Туберкулез (доказательство активного туберкулезного процесса)</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Сифилис, саркоидоз, язвенный колит</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Инфекции</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Болезни крови (лейкозы, лимфогранулематоз)</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+    <li><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Коллагенозы (системная красная волчанка, ревматоидный артрит, узелковый периартериит)</span></strong></span></span><strong><span style="font-family: " new="" times=""><o:p></o:p></span></strong></li>
+</ul>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing"><span style="font-size: medium"><span style="font-family: Verdana"><strong><span style="font-weight: normal; mso-bidi-font-family: " new="" times="">Уменьшение моноцитов в крови встречается при нарушениях кроветворения.</span></strong></span></span></p>
+<p style="margin: 0cm 0cm 0pt" class="MsoNoSpacing">&nbsp;</p></td>
+               
+    <td valign="top"  class="news_td" id="left_column">
+    
+
+
+    <!-- <div style="margin-left: 10px;padding-top: 12px;"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4535"><img src="/poliklinika/upload/banner3.jpg"></a></div> -->
+
+                  </div>
+                
+                <IDXSKIP><div class="block_b1"><a href="/poliklinika/index.php?nomer=81"><div style="width: 189px;margin-left: 0px;line-height: 24px;">Взрослая и детская хирургия</div></a></div></IDXSKIP>
+                <IDXSKIP><div class="block_b2"><a href="/poliklinika/index.php?nomer=25"><div style="margin-top: 2px;">Сдать<br>анализы</div></a></div></IDXSKIP>
+
+                <div class="block_b4"><a href="/poliklinika/index.php?nomer=4661"><div style="margin-top: -8px;"><IDXSKIP>ЭСТЕТИЧЕСКАЯ ХИРУРГИЯ И КОСМЕТОЛОГИЯ</IDXSKIP></div></a></div>
+
+                <IDXSKIP><div class="block_b3"><a href="/poliklinika/index.php?nomer=4600"><div style="margin-top: -2px;margin-left: 0px;line-height: 24px;">Центр<br>трансфузиологии</div></a></div></IDXSKIP>
+                <IDXSKIP><div class="detblock"><a href="/poliklinika/index.php?nomer=300">Детская поликлиника</a></div></IDXSKIP>
+                
+          
+        
+           <!-- <div class="otdblock1"><a href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4589">Узнай стоимость операции</a> -->
+            </div>
+    
+    <IDXSKIP><h3 style="padding-top: 20px;"><a href='news.php'>Наши новости</a></h3></IDXSKIP>
+        <div class="div">
+                                                        <div><a href="news.php?new_id=207"><IDXSKIP><span class="news_green">07 июня 2017.</span></IDXSKIP><br> <IDXSKIP><span style="color: #006600; font-size:medium;">Беременность - это не болезнь</span></IDXSKIP></a></div>
+                                                        </div><div class="div">
+                                                        <div><a href="news.php?new_id=206"><IDXSKIP><span class="news_green">05 июня 2017.</span></IDXSKIP><br> <span style="color: #006600; font-size:medium;"><IDXSKIP>Врач-дерматокосметолог Филиппова Инна Михайловна о лечении гиперпигментации</IDXSKIP></span></a></div>
+                                                        </div><IDXSKIP><div class="div">
+                                                        <div><a href="news.php?new_id=204"><span class="news_green">20 апреля 2017.</span><br> <span style="color: #006600; font-size:medium;">Медсестра на дом</span></a></div>
+                                                        </div></IDXSKIP><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                </table>
+
+
+        
+<div style="display:none;">          
+<IDXSKIP><h3><a href='news2.php'>Новости медицины</a></h3></IDXSKIP>
+        <IDXSKIP><div class="div">
+                                                        <div><a href="news2.php?new_id=410"><span class="news_green">02 февраля 2016.</span><br> <span style="color: #006600; font-size:medium;">Курение и бесплодие </span></a></div>
+                                                        </div></IDXSKIP><div class="div">
+                                                        <div><a href="news2.php?new_id=408"><IDXSKIP><span class="news_green">20 октября 2015.</span></IDXSKIP><br> <span style="color: #006600; font-size:medium;"><IDXSKIP>Наш психолог Ольга Алексеевна Шорохова дала интервью газете "Невское время"</IDXSKIP></span></a></div>
+                                                        </div><div class="div">
+                                                        <div><a href="news2.php?new_id=409"><IDXSKIP><span class="news_green">12 октября 2015.</span></IDXSKIP><br> <span style="color: #006600; font-size:medium;"><IDXSKIP>Заведующий оперблоком, врач-хирург, колопроктолог Клиники "АБИА" Волков Г.В. принял участие в XII Съезде хирургов России</IDXSKIP></span></a></div>
+                                                        </div>        
+</div>
+
+
+
+
+                 <IDXSKIP><center>
+
+                    <div style="margin-top: 18px;font-size: 16px;margin-left: -4px;padding: 4px;width: 210px;border: 1px solid #7dcd46;border-bottom: none;text-decoration:none;"><h3 style="text-decoration:none;margin-left: 0px;">ПРИСОЕДИНЯЙТЕСЬ!</h3></div>
+
+<div id="vk_groups" style="margin-left: -4px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-style: none solid solid; border-right-color: #7dcd46; border-bottom-color: #7dcd46; border-left-color: #7dcd46; padding: 2px; margin-bottom: 25px; height: 250px; width: 214px; background-image: none; background-position: initial initial; background-repeat: initial initial;"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 0, width: "214", height: "250", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 13543579);
+</script>
+                  </center></IDXSKIP>
+
+
+
+
+
+
+
+
+
+
+            </td>
+  </tr>
+ 
+
+  
+</table>
+ <div class="bottom">
+  <hr class="lin">
+  <center>
+  <table style='width:94%' cellpadding="0" cellspacing="0"><tr><td ></td>
+  <td align="center"><img src="/poliklinika/images/visa.jpg"><br><IDXSKIP>© 2017 Клиника “АБИА”. Санкт-Петербург, Приморский район, пр. Королева, д. 48, корп. 7<br> 
+Телефон +7 (812) 306-11-11. E-mail: </IDXSKIP><IDXSKIP><a href='mailto:info@abia-spb.ru' class='info'>info@abia-spb.ru</a></IDXSKIP> <IDXSKIP><a class='info' href="http://www.abia-spb.ru/poliklinika/index.php?nomer=4707">Сведения о клинике </a></IDXSKIP> <IDXSKIP><a class='info' href='news2.php'>Новости медицины</a></IDXSKIP> <IDXSKIP><a class='info' href="http://www.abia-spb.ru/poliklinika/index.php?nomer=469">Политика конфиденциальности</a></IDXSKIP> <br> 
+<IDXSKIP>Методы лечения и диагностики имеют противопоказания.<br>
+Пожалуйста, не забудьте предварительно проконсультироваться с врачом.<br>Сайт содержит информацию, не рекомендованную для лиц, не достигших совершеннолетнего возраста (18 лет).  </IDXSKIP><IDXSKIP><a href="map.php" class='info' style="font-size:12px;">Карта сайта</a></IDXSKIP>
+</td>
+<IDXSKIP><td align="right">&nbsp;</td></IDXSKIP>
+</tr>
+<tr>
+<td colspan=3 class="bottext"><!-- Методы лечения и диагностики имеют противопоказания. Пожалуйста, не забудьте предварительно проконсультироваться с врачом. --></td>
+</tr>
+</table>
+</center>
+
+  </div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter21609031 = new Ya.Metrika({id:21609031,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/21609031" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+
+
+
+
+<IDXSKIP><map name="Map2">
+  <area shape="rect" coords="6,17,476,111" href="/index.php">
+</map></IDXSKIP>
+
+<div style="display:none;height: 50px;width: 42px;position: fixed;right: 16%;z-index: 100000;bottom: 10%;background: url(http://abia-spb.ru/img/button-up.png) no-repeat;cursor: pointer;opacity: 1;" id="nav_up"></div>
+<div style="height: 181px;width: 42px;position: fixed;left:0px;z-index: 100000;top: 40%;background: url(http://abia-spb.ru/poliklinika/images/button--zakaz-zvonka.png) no-repeat;cursor: pointer;opacity: 1;" id="call_me"></div>
+
+<div id="call_me_box" class="" style="display:none; height: 333px; position: fixed;border: 1px solid rgb(227, 129, 77);;z-index: 10000;left: 0px;top: 40%;background: #F7F3F3;border-radius:00px 10px 10px 0px;">
+    <div id="title_call_me_box"></div>
+    <IDXSKIP><a class="close-reveal-modal" style="float: right;margin-right: 15px;margin-top: -28px;cursor: pointer;color: white;" onclick="$('#call_me_box').hide();$('#call_me').show();">&#215;</a></IDXSKIP>
+    <form method="post" id="call_me_form" class="form">
+    <div id="call_me_data">
+    <table style="margin-top: 0px;margin-left: 27px;font-size: 20px;width:350px;">
+        <tr>
+            <td colspan=2 style="padding-top: 7px;font-size:10px;"><div style="margin-bottom:10px;width: 320px;"><IDXSKIP>Если у Вас появились вопросы или хотите записаться на приём, оставьте свой номер, и мы в ближайшее время свяжемся с Вами.</IDXSKIP></div></td>
+        </tr>
+        <IDXSKIP><tr>
+            <td style="width: 90px;">Имя</td>
+            <td><input type="text" value="" id="call_me_name" class="fio" style="padding-left: 5px;height: 22px;width: 230px;"/></td>
+        </tr></IDXSKIP>
+        <IDXSKIP><tr>
+            <td style="width: 90px;">Телефон</td>
+            <td style="padding-top: 7px;"><input type="text" value="" id="call_me_tel" class="fio" style="padding-left: 5px;height: 22px;width: 230px;"/></td>
+        </tr></IDXSKIP>
+        <IDXSKIP><tr>
+            <td colspan=2 style="padding-top: 7px;">Причина обращения<br><textarea id="call_me_note" class="fio" style="width:316px;height:47px;"></textarea></td>
+        </tr></IDXSKIP>
+        <IDXSKIP><tr>
+            <td colspan=2><input type="button" class="thx" value="Спасибо, не надо"  style="float:left;margin: 10px 0px 10px 0px;border: none;" onclick="$('#call_me_box').hide();$('#call_me').show();return false;" > <input type="button" class="submit" value="Отправить" id="btn_call_me" style="float:left;margin: 10px 0px 0px 28px;" onclick="call_me_send();return false;" ></td>
+        </tr></IDXSKIP>
+        <tr>
+            <td colspan=2><div style="margin-bottom:10px;width: 315px;font-size: 13px;"><IDXSKIP>Услуга распространяется только на Санкт-Петербург и Ленинградскую область</IDXSKIP></div></td>
+        </tr>        
+    </table>
+</div>
+<div id="call_me_buy" style="display:none;width: 350px;margin-top: 62px;padding-left: 11px;font-size: 15px;text-align: center;">
+     <IDXSKIP>Мы свяжемся с Вами в ближайшее время.
+     <input type="button" class="submit" value="ОК" style="margin: 47px 0px 0px 0px;" onclick="$('.close-reveal-modal').click();return false;" ></IDXSKIP>
+</div>
+</form>
+    
+</div>
+
+<div id="fancybox1" style="display:none;">
+    <div id="fancybox-overlay" style="display:block;opacity: 0.7; cursor: pointer; height: 1743px; background-color: rgb(119, 119, 119);"></div>
+    <div id="fancybox-wrap" style="display:block;width: 670px; height: auto; top: 220px; left: 619px;">  
+        <div id="fancybox-outer" style="border: 2px solid #e9e7e7;"> 
+            <div id="fancybox-content" style="border-width: 10px; width: 650px; height: auto;overflow: visible;">
+                <div style="width:auto;height:auto;overflow: visible;position:relative;">
+                    <div style="width:605px;height:auto;margin-bottom: 15px;">
+                        <div style="background: url(images/calculator.png) 0px -1px no-repeat;font-weight: bold;font-size: 16px;height: 20px;margin-top: 0px;margin-bottom: 10px;padding-left: 22px;color: #006600;font-family: 'Verdana';"><IDXSKIP>Ориентировочный расчет стоимости операции</IDXSKIP></div>
+                        <div style="width: 490px;border-bottom: 2px solid #e9e7e7;;margin-top: 0px;margin-bottom: 19px;"></div>
+                        <IDXSKIP><div style="font-size: 14px;font-weight: bold;padding-top: 6px;padding-right: 13px;color: #006600;float: left;font-family: 'Verdana';">Направление</div></IDXSKIP>
+                        <div style="clear:both;"></div>
+
+                        <div style="margin-left: 119px;margin-top: -18px;float: left;width: 226px;margin-bottom: 20px;">
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" checked="checked" type="radio"  value="2" />Гинекология</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3"  type="radio" value="3" />Урология</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3"  type="radio" value="4" />Проктология</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3"  type="radio" value="8" />Травматология</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3"  type="radio" value="15" />Флебология</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="7" />Хирургия</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="1" />Хирургия ЛОР-органов</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="16" />Эндоскопия под наркозом</label></IDXSKIP>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="17" />Бариатрия</label></IDXSKIP>
+                        </div>
+                        <div style="margin-left: 10px;margin-top: -39px;float: left;width: 250px;margin-bottom: 20px;">
+                            <IDXSKIP><div style="margin-bottom: 4px;font-size: 15px !important;font-family: 'Verdana';color: rgb(111, 111, 111);">Пластическая хирургия</div></IDXSKIP>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="5" />Пластика носа</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="6" />Пластика груди</label></IDXSKIP> <br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="9" />Пластика век</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="10" />Подтяжка лица</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="11" />Пластика живота</label></IDXSKIP><br>
+
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="18" />Пластика тела</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="19" />Пластика ушей</label></IDXSKIP><br>
+
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="14" />Комбинированные операции</label></IDXSKIP><br>
+                            <IDXSKIP><label style="font-size:15px;font-family: 'Verdana';"><input class="p3" style="width: 16px; height: 16px; margin: 3px 3px 0px 0px;" name="p3" type="radio" value="13" />Иные операции</label></IDXSKIP>
+                        </div>
+
+                        <div style="clear:both;height: 12px;"></div>
+                        <IDXSKIP><div style="font-size: 14px;font-weight: bold;color: #006600;float: left;padding-top: 7px;padding-right: 57px;font-family: 'Verdana', 'Arial';">Операция</div></IDXSKIP>
+                        <select id="p4" class="select_calc2" style="width: 483px;height: 30px;font-size: 14px;"> <option value="0">Выберите операцию</option></select>
+                        <div id="result1"></div>
+                    </div>
+                </div>
+            </div>
+            <a id="fancybox-close" onclick="$('#fancybox1').hide();return false;" style="display: inline;"></a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+

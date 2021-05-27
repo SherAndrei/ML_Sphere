@@ -1,0 +1,791 @@
+zaborivorota.ru/page/profnastil-tehnologii-montaja.html
+<!DOCTYPE html public "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>Профнастил - технологии монтажа</TITLE>
+<META http-equiv="Content-Type" content="text-html; charset=windows-1251">
+<META name="description" content="">
+<META name="keywords" content="">
+<META content="General" name="rating">
+<LINK rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<LINK rel="icon" href="favicon.ico" type="image/x-icon">
+<LINK href="/phpshop/templates/zaborivorota/style.css" type="text/css" rel="stylesheet">
+<SCRIPT language="JavaScript" src="/java/java2.js"></SCRIPT>
+<SCRIPT language="JavaScript" src="/java/cartwindow.js"></SCRIPT>
+<SCRIPT language="JavaScript" src="/phpshop/lib/Subsys/JsHttpRequest/Js.js"></SCRIPT>
+<SCRIPT language="JavaScript" type="text/javascript" src="/java/tabpane.js"></SCRIPT>
+<SCRIPT language="JavaScript" type="text/javascript" src="/java/jquery.js"></SCRIPT>
+<script type="text/javascript" src="/java/highslide/highslide-p.js"></script>
+<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="/phpshop/templates/zaborivorota/images/anim/AC_RunActiveContent.js" language="javascript"></script>
+
+
+
+
+
+
+
+
+
+<!-- Add jQuery library -->
+  <script type="text/javascript" src="/java/lib/jquery-1.10.1.min.js"></script>
+
+  <!-- Add mousewheel plugin (this is optional) -->
+  <script type="text/javascript" src="/java/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+  <!-- Add fancyBox main JS and CSS files -->
+  <script type="text/javascript" src="/java/source/jquery.fancybox.js?v=2.1.5"></script>
+  <link rel="stylesheet" type="text/css" href="/java/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+  <!-- Add Button helper (this is optional) -->
+  <link rel="stylesheet" type="text/css" href="/java/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+  <script type="text/javascript" src="/java/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+  <!-- Add Thumbnail helper (this is optional) -->
+  <link rel="stylesheet" type="text/css" href="/java/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+  <script type="text/javascript" src="/java/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+  <!-- Add Media helper (this is optional) -->
+  <script type="text/javascript" src="/java/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      /*
+       *  Simple image gallery. Uses default settings
+       */
+
+      $('.fancybox').fancybox();
+
+      /*
+       *  Different effects
+       */
+
+      // Change title type, overlay closing speed
+      $(".fancybox-effects-a").fancybox({
+        helpers: {
+          title : {
+            type : 'outside'
+          },
+          overlay : {
+            speedOut : 0
+          }
+        }
+      });
+
+      // Disable opening and closing animations, change title type
+      $(".fancybox-effects-b").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+
+        helpers : {
+          title : {
+            type : 'over'
+          }
+        }
+      });
+
+      // Set custom style, close if clicked, change title type and overlay color
+      $(".fancybox-effects-c").fancybox({
+        wrapCSS    : 'fancybox-custom',
+        closeClick : true,
+        openEffect : 'none',
+
+        helpers : {
+          title : {
+            type : 'inside'
+          },
+          overlay : {
+            css : {
+              'background' : 'rgba(238,238,238,0.85)'
+            }
+          }
+        }
+      });
+
+      // Remove padding, set opening and closing animations, close if clicked and disable overlay
+      $(".fancybox-effects-d").fancybox({
+        padding: 0,
+
+        openEffect : 'elastic',
+        openSpeed  : 150,
+
+        closeEffect : 'elastic',
+        closeSpeed  : 150,
+
+        closeClick : true,
+
+        helpers : {
+          overlay : null
+        }
+      });
+
+      /*
+       *  Button helper. Disable animations, hide close button, change title type and content
+       */
+
+      $('.fancybox-buttons').fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+
+        prevEffect : 'none',
+        nextEffect : 'none',
+
+        closeBtn  : false,
+
+        helpers : {
+          title : {
+            type : 'inside'
+          },
+          buttons : {}
+        },
+
+        afterLoad : function() {
+          this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+        }
+      });
+
+
+      /*
+       *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+       */
+
+      $('.fancybox-thumbs').fancybox({
+        prevEffect : 'none',
+        nextEffect : 'none',
+
+        closeBtn  : false,
+        arrows    : false,
+        nextClick : true,
+
+        helpers : {
+          thumbs : {
+            width  : 50,
+            height : 50
+          }
+        }
+      });
+
+      /*
+       *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+      */
+      $('.fancybox-media')
+        .attr('rel', 'media-gallery')
+        .fancybox({
+          openEffect : 'none',
+          closeEffect : 'none',
+          prevEffect : 'none',
+          nextEffect : 'none',
+
+          arrows : false,
+          helpers : {
+            media : {},
+            buttons : {}
+          }
+        });
+
+      /*
+       *  Open manually
+       */
+
+      $("#fancybox-manual-a").click(function() {
+        $.fancybox.open('1_b.jpg');
+      });
+
+      $("#fancybox-manual-b").click(function() {
+        $.fancybox.open({
+          href : 'iframe.html',
+          type : 'iframe',
+          padding : 5
+        });
+      });
+
+      $("#fancybox-manual-c").click(function() {
+        $.fancybox.open([
+          {
+            href : '1_b.jpg',
+            title : 'My title'
+          }, {
+            href : '2_b.jpg',
+            title : '2nd title'
+          }, {
+            href : '3_b.jpg'
+          }
+        ], {
+          helpers : {
+            thumbs : {
+              width: 75,
+              height: 50
+            }
+          }
+        });
+      });
+
+
+    });
+  </script>
+  <style type="text/css">
+    .fancybox-custom .fancybox-skin {
+      box-shadow: 0 0 50px #222;
+    }
+    .fancybox-lock {
+      margin-right:17px !important;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<SCRIPT language="JavaScript" type="text/javascript">var send_calc=0;</SCRIPT>
+
+<link rel="stylesheet" type="text/css" href="/java/highslide/highslide.css"/>
+    
+<script type="text/javascript">
+hs.registerOverlay({
+  html: '<div class="closebutton" onclick="return hs.close(this)" title="Закрыть"></div>',
+  position: 'top right',
+  fade: 2 // fading the semi-transparent overlay looks bad in IE
+});
+
+
+hs.graphicsDir = '/java/highslide/graphics/';
+hs.wrapperClassName = 'borderless';
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#searchblock').hover(
+        function(){
+            $('#searchh').removeClass('in_h').addClass('in_h_2');
+            $('#searchsbm').addClass('but_2');
+            $('#advsearchlilnk').addClass('search_l_2');
+        },
+        function(){
+            $('#searchh').removeClass('in_h_2').addClass('in_h');
+            $('#searchsbm').removeClass('but_2');
+            $('#advsearchlilnk').removeClass('search_l_2');
+        }
+        );
+        $('#cartblock').hover(
+        function(){
+            $('#carth').removeClass('in_h').addClass('in_h_2');
+            $('#cartsbm').removeClass('but2').addClass('but2_2');
+            $('#cartsbm2').removeClass('but').addClass('but_2');
+            $('#checkordst').addClass('search_l_2');
+            $('#basket_t').addClass('basket_t_2');
+            $('#basket_t').attr('id','basket_t_2');
+        },
+        function(){
+            $('#carth').removeClass('in_h_2').addClass('in_h');
+            $('#cartsbm').removeClass('but2_2').addClass('but2');
+            $('#cartsbm2').removeClass('but_2').addClass('but');
+            $('#checkordst').removeClass('search_l_2');
+            $('#basket_t_2').attr('id','basket_t');
+        }
+        );
+        $('.newslink').click(function(){
+            var tid = $(this).attr('id');
+
+            $('#short-'+tid).slideUp('slow');
+            $('#full-'+tid).slideDown('slow');
+        });
+        $('.newslinksd').click(function(){
+            var tid = $(this).attr('id');
+
+            $('#short-n'+tid).slideDown('slow');
+            $('#full-n'+tid).slideUp('slow');
+        });
+        $(document).ready(function(){
+        $('.newsblock').hover(
+        function(){
+            var tid = $(this).attr('id');
+            $('#ttl-'+tid).removeClass('news_tema').addClass('news_tema_2');
+        },
+        function(){
+            var tid = $(this).attr('id');
+            $('#ttl-'+tid).removeClass('news_tema_2').addClass('news_tema');
+        }
+        );
+    });
+    });
+  
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16632226-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+ /*document.oncontextmenu = function() {
+    return false;
+    }*/
+
+</script>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
+<script type="text/javascript">
+  VK.init({apiId: 4084503, onlyWidgets: true});
+</script>
+
+<script src='http://connect.facebook.net/ru_RU/all.js#xfbml=1'></script>
+<script type="text/javascript" src="/phpshop/templates/zaborivorota/js/scripts.js"></script>
+
+</HEAD>
+<BODY onLoad="NavActive('profnastil-tehnologii-montaja'); pressbutt_load('13','/phpshop/templates/zaborivorota','false','false');LoadPath('');">
+
+<table width="1004" cellpadding="0" cellspacing="0" align="center">
+<tr>
+  <td>
+<IDXSKIP><div id="cartwindow" style="position:absolute;left:0px;top:0px;bottom:0px;right:0px;visibility:hidden;"> 
+<table width="100%" height="100%">
+<tr>
+    <td width="40" vAlign=center>
+    <img src="/phpshop/templates/zaborivorota/images/shop/i_commercemanager_med.gif" alt="" width="32" height="32" border="0" align="absmiddle">
+    </td>
+    <td><b>Внимание...</b><br>Товар добавлен к корзину</td>
+</tr>
+</table>
+</div></IDXSKIP> 
+
+
+<div id="comparewindow" style="position:absolute;left:0px;top:0px;bottom:0px;right:0px;visibility:hidden;"> 
+<table width="100%" height="100%">
+<tr>
+    <IDXSKIP><td width="40" vAlign=center>
+    <img src="/phpshop/templates/zaborivorota/images/shop/i_compare_med.gif" alt="" width="32" height="32" border="0" align="absmiddle">
+    </td></IDXSKIP>
+    <td><IDXSKIP><b>Внимание...</b></IDXSKIP><br><IDXSKIP>Товар добавлен в сравнение</IDXSKIP></td>
+</tr>
+</table>
+</div> 
+<table align="center" width="980" border="0" cellspacing="0" cellpadding="0">
+  <IDXSKIP><tr>
+    <td valign="top" id="header_1"><table width="980" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="266"><a href="/"><img src="/phpshop/templates/zaborivorota/images/logo.gif" alt="" width="266" height="85" border="0"></a></td>
+    <td width="714" valign="top" ><div id="phone"><u>+7-<strong>495</strong></u> 532-87-75<br><u>+7-925</u> 82-787-82<br><u>+7-926</u> 49-292-94</div></td>
+  </tr>
+</table>
+</td>
+  </tr></IDXSKIP>
+  <tr>
+    <td id="header_1_1"><table id="t_bg" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+ <IDXSKIP><td height="21" id="about" valign="top"><a href="http://www.zaborivorota.ru/about/?cat=20" class="navigation"  >О компании</a></td></IDXSKIP>
+    	<IDXSKIP><td ><img src="/phpshop/templates/zaborivorota/images/spacer.gif" height="21" width="1" style="background:#fff" alt="" /></td></IDXSKIP>
+ <IDXSKIP><td height="21" id="services" valign="top"><a href="/" class="navigation"  >УСЛУГИ/ЦЕНЫ</a></td></IDXSKIP>
+
+	<IDXSKIP><td ><img src="/phpshop/templates/zaborivorota/images/spacer.gif" height="21" width="1" style="background:#fff" alt="" /></td></IDXSKIP>
+ <IDXSKIP><td height="21" id="calc" valign="top"><a href="/page/calc.html" class="navigation"  >КАЛЬКУЛЯТОР ЗАБОРОВ</a></td></IDXSKIP>
+
+	<IDXSKIP><td ><img src="/phpshop/templates/zaborivorota/images/spacer.gif" height="21" width="1" style="background:#fff" alt="" /></td></IDXSKIP>
+ <IDXSKIP><td height="21" id="page4" valign="top"><a href="/page/page4.html" class="navigation"  >ОПЛАТА И ДОСТАВКА</a></td></IDXSKIP>
+
+	<IDXSKIP><td ><img src="/phpshop/templates/zaborivorota/images/spacer.gif" height="21" width="1" style="background:#fff" alt="" /></td></IDXSKIP>
+ <IDXSKIP><td height="21" id="page5" valign="top"><a href="/page/page5.html" class="navigation"  >КАК СДЕЛАТЬ ЗАКАЗ</a></td></IDXSKIP>
+
+	<IDXSKIP><td ><img src="/phpshop/templates/zaborivorota/images/spacer.gif" height="21" width="1" style="background:#fff" alt="" /></td></IDXSKIP>
+ <IDXSKIP><td height="21" id="article" valign="top"><a href="/page/article.html" class="navigation"  >СТАТЬИ</a></td></IDXSKIP>
+
+	<IDXSKIP><td ><img src="/phpshop/templates/zaborivorota/images/spacer.gif" height="21" width="1" style="background:#fff" alt="" /></td></IDXSKIP>
+ <IDXSKIP><td height="21" id="portfolio" valign="top"><a href="/portfolio/?cat=19" class="navigation"  >ФОТО ЗАБОРОВ</a></td></IDXSKIP>
+
+	<IDXSKIP><td ><img src="/phpshop/templates/zaborivorota/images/spacer.gif" height="21" width="1" style="background:#fff" alt="" /></td></IDXSKIP>
+ <IDXSKIP><td height="21" id="contacts" valign="top"><a href="/contacts/?cat=1" class="navigation"  >КОНТАКТЫ</a></td></IDXSKIP>
+
+
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+    <td valign="top"><table style="margin-top:5px" width="980" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="237" valign="top"><IDXSKIP><div class="in_h">ИНТЕРНЕТ-МАГАЗИН:</div></IDXSKIP>
+     
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  active_cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_256.html'  >ИНТЕРНЕТ- МАГАЗИН</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_1.html'  >ЗАБОРЫ ДЛЯ ДАЧИ</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_9.html'  >ВОРОТА И КАЛИТКИ</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_659.html'  >СТРОИТЕЛЬНЫЕ ОГРАЖДЕНИЯ</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_22.html'  >ГАЗОННЫЕ ОГРАЖДЕНИЯ</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_586.html'  >РЕШЕТЧАТЫЕ ДВЕРИ</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_37.html'  >РЕШЕТКИ НА ОКНА</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_115.html'  >СТАВНИ НА ОКНА</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_43.html'  >НАВЕСЫ ДЛЯ АВТОМОБИЛЕЙ</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_791.html'  >ТЕПЛИЦЫ</a></div></IDXSKIP><div style='height:20px;'></div>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_436.html'  >ФУНДАМЕНТ ДЛЯ ЗАБОРА</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_503.html'  >ТРОТУАРНАЯ ПЛИТКА ДЛЯ ДАЧИ</a></div></IDXSKIP>
+    	<IDXSKIP><div  style='width:100%; text-indent:10px;' class='cat  '  onmouseover="this.id='td_hover'" onmouseout="this.id='td_hover2'">
+    	<a href='/shop/CID_116.html'  >КОВАНЫЕ ЛЮСТРЫ</a></div></IDXSKIP>
+  
+     
+     <!--h2 class="in_h" style="margin-top:10px">1</h2-->
+<IDXSKIP><div style="padding:10px 0px;">
+<div class="left_text"><div class="left_text1"><ul><li onmouseout="this.id='td_hover2'" onmouseover="this.id='td_hover'" id="td_hover2"><a href="http://www.zaborivorota.ru/newtip/"><strong>НОВИНКИ</strong></a><br></li><li onmouseout="this.id='td_hover2'" onmouseover="this.id='td_hover'" id="td_hover2"><a href="http://www.zaborivorota.ru/spec/"><strong>СПЕЦПРЕДЛОЖЕНИЯ</strong></a><br></li><li onmouseout="this.id='td_hover2'" onmouseover="this.id='td_hover'"><a href="http://www.zaborivorota.ru/newprice/"><strong>РАСПРОДАЖА</strong></a><br></li></ul></div></div>
+</div></IDXSKIP>
+<!--h2 class="in_h" style="margin-top:10px">2</h2-->
+<div style="padding:10px 0px;">
+<IDXSKIP><p><a href="http://www.zaborivorota.ru/shop/UID_5.html" target="_self"><img alt="" src="http://www.zaborivorota.ru/UserFiles/Image/SLEVA/betonnyj-blok-dlja-zabora-prestizh-2.jpg" border="0" width="100" height="74" align="left"></a></p></IDXSKIP><div><i><a href="http://www.zaborivorota.ru/shop/CID_501.html"><font style="" size="2"><IDXSKIP>Заборный блок "Престиж" с фактурой под колотый камень заменяет 12 кирпичей!</IDXSKIP></font></a><br><br></i></div><br><IDXSKIP><a href="http://www.zaborivorota.ru/shop/CID_708.html"><img alt="Красивые кованые ворота STALRUZ" src="http://www.zaborivorota.ru/UserFiles/Image/SLEVA/krasivye-kovanye-zabory-stalruz-5.jpg" border="0" align="left"></a></IDXSKIP><br><br><br><br><br><br><br><br><br><br>
+
+<div style="PADDING-TOP: 15px">
+<div><IDXSKIP><p style="CLEAR: both"><br></p></IDXSKIP><i></i><IDXSKIP><p style="CLEAR: both"><a href="http://www.zaborivorota.ru/shop/UID_2190.html" target="_self"><img alt="" src="http://www.zaborivorota.ru/UserFiles/Image/SLEVA/trotuarnaja-plitka-penek-pod-derevo-2.jpg" border="0" width="87" height="61" align="left"></a></p></IDXSKIP><i><a href="http://www.zaborivorota.ru/shop/CID_652.html"><font size="2"><IDXSKIP>Тротуарная плитка «Пеньки» с фактурой натурального дерева! </IDXSKIP></font></a><br><br></i></div></div><br><IDXSKIP><a href="http://www.zaborivorota.ru/shop/CID_621.html"><img alt="Купить металлический штакетник" src="/UserFiles/Image/ZABOR/SHTAKET/evroshtaketnik-kupit.jpg" border="0" width="240" height="425" align="left"></a></IDXSKIP><br><br><br>
+<div style="PADDING-TOP: 15px">
+<p style="CLEAR: both"></p><div><i></i><IDXSKIP><p style="CLEAR: both"><br></p></IDXSKIP><IDXSKIP><a href="http://www.zaborivorota.ru/shop/CID_581.html" target="_self"><img alt="" src="http://www.zaborivorota.ru/UserFiles/Image/SLEVA/zabornaja-doska-strogannaja-2.jpg" border="0" width="92" height="70" align="left"></a></IDXSKIP><i><a href="http://www.zaborivorota.ru/shop/CID_618.html"><font size="2"><IDXSKIP>Доска заборная строганная для деревянных заборов в ассортименте!</IDXSKIP></font></a></i><IDXSKIP><i><br><br></i></IDXSKIP></div></div>
+<div style="CLEAR: both">
+<script language="javascript">
+//<![CDATA[
+if (AC_FL_RunContent == 0) {
+  alert("This page requires AC_RunActiveContent.js.");
+ } else {
+  AC_FL_RunContent(
+   'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0',
+   'width', '240',
+   'height', '400',
+   'src', 'banner7',
+   'quality', 'high',
+   'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+   'align', 'middle',
+   'play', 'true',
+   'loop', 'true',
+   'scale', 'showall',
+   'wmode', 'window',
+   'devicefont', 'false',
+   'id', 'banner7',
+   'bgcolor', '#ffffff',
+   'name', 'banner7',
+   'menu', 'true',
+   'allowFullScreen', 'false',
+   'allowScriptAccess','sameDomain',
+   'movie', '/phpshop/templates/zaborivorota/images/anim/banner7',
+   'salign', ''
+   ); //end AC code
+ }
+//]]>
+</script>
+</div><br>
+<IDXSKIP><p style="CLEAR: both"><a href="http://www.zaborivorota.ru/page/page171.html" target="_self"><img alt="" src="/UserFiles/Image/SLEVA/burenie-jam-2.jpg" border="0" width="79" height="68" align="left"></a></p></IDXSKIP>
+<div><i><a href="http://www.zaborivorota.ru/page/page171.html"><font size="2"><IDXSKIP>Аренда ямобура, бурение ям и отверстий под столбы фундаментов и заборов! </IDXSKIP></font></a><br><br><br></i></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    
+  
+    </td>
+    <IDXSKIP><td width="25"><img src="/phpshop/templates/zaborivorota/images/spacer.gif" alt="" width="25" height="1"></td></IDXSKIP>
+    <td width="718" valign="top"><table width="718" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="247" valign="top"><a class="block_1" ><script type="text/javascript">
+    $(document).ready(function(){
+        $('#authblock').hover(
+        function(){
+            $('#authh').removeClass('in_h').addClass('in_h_2');
+            $('#authsbm').addClass('but_2');
+        },
+        function(){
+            $('#authh').removeClass('in_h_2').addClass('in_h');
+            $('#authsbm').removeClass('but_2');
+        }
+        );
+    });
+</script>
+<div id="authblock">
+<IDXSKIP><div class="in_h" id="authh" style="padding-left:8px" >Авторизация:</div></IDXSKIP>
+
+<IDXSKIP><div style="width:222px;background:#ccc" id="authdiv">
+<table align="center" >
+<form method="post" name="user_forma">
+<tr>
+    <td class="white">логин:</td>
+   </tr>
+<tr>
+    <td><input type="text" name="login" value="" style="width:209px; color:#c9695d;  height:20px;"></td>
+
+</tr>
+<tr>
+    <td class="white">пароль:</td>
+</tr>
+<tr>
+    <td><input type="password" name="password" value="" style="width:209px;color:#c9695d;  height:20px;"></td>
+</tr>
+<tr>
+    <td  ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+   
+ <td width="25"><input type="checkbox" style="margin:0PX; padding: 0px; width:20px; height:20px	" value="1" name="safe_users" ></td> 
+ <td class="white"> Запомнить</td>   
+ <td align="right">  <input type="button" value="войти" onclick="ChekUserForma()" class="but" id="authsbm">
+    <input type="hidden" value="1" name="user_enter"></td>
+  </tr>
+</table>
+
+
+  
+ 
+    </td>
+</tr>
+</form>
+</table>
+</div></IDXSKIP>
+</div>
+</a></td>
+    <td valign="top" width="255"> 
+        <IDXSKIP><div class="in_h" style="padding-left:0px" id="searchh">Поиск по сайту</div></IDXSKIP>
+    <div id="searchblock">
+     <IDXSKIP><FORM method="post" name="forma_search" action="/search/" onSubmit="return SearchChek()">
+<table border="0" cellspacing="0" cellpadding="0" >
+           
+          
+<tr>
+    <td width="187" ><input name="words" class="search" maxLength=30 onFocus="this.value=''" value="Я ищу..."></td>
+    <td ><input type="submit" value="поиск" class="but" style="width:45px;" id="searchsbm"></td>
+</tr>
+<tr>
+   <td style="padding-top:5px;" valign="top" >
+       <a href="/search/" id="advsearchlilnk">расширенный поиск</a>   </td>
+</tr>
+
+</table>
+</FORM></IDXSKIP>
+
+
+
+<IDXSKIP><table width="100%" style="margin-top:20px"  border="0" cellspacing="0"  cellpadding="0">
+    <tr>
+    <td valign="top" style="padding-bottom:5px" > <a href="/users/sendpassword.html">напомнить пароль?</a></td>
+  </tr>
+  <tr>
+    <td><a href="/users/register.html" >регистрация</a></td>
+    </tr>
+</table></IDXSKIP>
+</div>
+</td>
+    <td valign="top"> <IDXSKIP><div class="in_h" style="padding-left:0px" id="carth">Корзина:</div></IDXSKIP>
+        <div id="cartblock">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <IDXSKIP><tr>
+    <td width="56">   <FORM method="post" name="forma_search" action="/order/" onSubmit="">
+ <input type="submit" value="" class="but2" id="cartsbm"></FORM>
+ </td>
+    <td valign="top" align="right" style="padding-right:0px" ><a href="/users/order.html" id="checkordst">проверка заказа on-line</a>
+     <div id="compare" style="display:none;padding-top:6px;" class="header_bg_2_up_compare">
+     <table align="right"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td ><FORM method="post" name="forma_search" action="/compare/" onSubmit="">
+ <input type="submit" value="Сравнить" style="width:92px" class="but" id="cartsbm2"></FORM></td>
+    <td width="40" align="right"><DIV class="style2" id="numcompare" style="DISPLAY: inline; FONT-WEIGHT: bold; font-size:12px"> --</DIV> шт. </td>
+  </tr>
+</table>
+</div></td>
+  </tr></IDXSKIP>
+  <tr>
+      <td colspan="2"><table width="100%" style="margin-top:14px" id="basket_t"   border="0" cellspacing="0"  cellpadding="0">
+    <IDXSKIP><tr>
+    <td valign="top" style="padding-bottom:5px" >выбрано товаров:  <DIV class="style2" id="num" style="DISPLAY: inline; FONT-WEIGHT: bold">    --</DIV> шт.  </td>
+  </tr></IDXSKIP>
+  <IDXSKIP><tr>
+    <td>на сумму: <DIV class="style2" id="sum" style="DISPLAY: inline; FONT-WEIGHT: bold"> 0 </DIV>рублей</td>
+    </tr></IDXSKIP>
+</table></td>
+  </tr>
+</table>
+
+    </div>
+    </td>
+  </tr>
+</table>
+
+<div id=allspec><a href="/">Главная</a> / Профнастил - технологии монтажа</div>
+</div>
+<table cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td >
+    
+	</td>
+</tr>
+</table>
+
+<div style="padding:5px 0px 5px 0px"><div class='page-class1'><DIV><B><FONT color=#000000 size=2>ПРОФНАСТИЛ – ТЕХНОЛОГИИ МОНТАЖА</FONT></B></DIV>
+<DIV><FONT color=#000000 size=2>Профнастил - это стальные холодногнутые металлические листы, которые изготавливаются из высококачественной оцинкованной стали. Благодаря своему пластичному качеству <A href="http://www.zaborivorota.ru/shop/CID_93.html" target=_self>профнастил</A> может принимать любые размеры и формы. Поэтому он очень часто используется при покрытии кровель, облицовке стен и потолков, &nbsp;так же профнастил находит широкое применение в устройстве заборов. Профнастил обладает массой превосходных качеств. Во-первых, он долговечен и не подвержен коррозии. Во-вторых, не требует особого ухода и цвет его полимерного покрытия не тускнеет и не выгорает на солнце. В-третьих, при толщине всего 0,5мм профнастил достаточно прочен, но через забор из профнастила практически нельзя перебраться. В-четвертых, профнастил -это экологически чистый материал, не содержащий вредных примесей. Профнастил прекрасно подходит для любого&nbsp;экстерьера благодаря обширной палитре цветов и достаточном количестве конфигурации профилей. Легкость установки заборов из профнастила сделала его самым популярным материалом для устройства кровли, заборов и обшивки стен зданий.</FONT></DIV>
+<DIV><B><FONT size=2></FONT></B><FONT color=#000000>&nbsp;</FONT></DIV>
+<DIV><B><FONT color=#000000 size=2>Монтаж стенового профнастила.</FONT></B></DIV>
+<DIV><FONT color=#000000 size=2>Монтаж стенового профнастила бывает трех типов: утепление имеющейся стены, внутренняя и наружная облицовка стен профнастилом и профнастил, выполняющий функции стены.</FONT></DIV>
+<DIV><B><FONT color=#000000 size=2>1. Утепление стены здания производится следующим образом:</FONT></B></DIV>
+<DIV><FONT color=#000000 size=2>При утеплении фасада здания к его несущей стене крепятся кронштейны, а после их установки производится монтаж плит утеплителя. Плиты утеплителя крепятся к основанию полиамидными дюбелями тарельчатого типа. Для того, чтобы защитить утеплитель от воздействия ветра, применяются ветровлагозащитная пленка. К кронштейнам крепятся П-образные вертикальные направляющие, крепление которых производится при помощи заклепок. При помощи этих направляющих выполняется выравнивание стены. Между ветрозащитной плёнкой и направляющими создаётся воздушный зазор. К вертикальным направляющим также крепятся и горизонтальные П-образные профили с тем шагом который необходим для надежного закрепления профнастила. Стеновой профнастил закрепляется саморезами с уплотнительными резиновыми прокладками. Профнастил не только помогает улучшить теплотехнические свойства стены, но и выступает в качестве облицовки. В итоге получается хорошо утепленная стена с презентабельным внешним видом.</FONT></DIV>
+<DIV><B><FONT color=#000000 size=2>2. Внутренняя и наружная облицовка.</FONT></B></DIV>
+<DIV><FONT color=#000000 size=2>Этот вариант утеплённой панели, в котором в качестве внешней и внутренней облицовки применяются листы профнастила. В начале выполняется горизонтальная гидроизоляция фундамента уложенным в 2 слоя рубероидом. К фундаменту универсальными анкерными шурупами крепят нижний направляющий профиль, в который вертикально устанавливаются и закрепляются стойки. Таким образом, из стоечных термопрофилей и направляющих панели собираются каркас.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Далее горизонтальными слоями монтируется пароизоляционная пленка с закреплением её саморезами с потайной головкой на внутреннюю сторону панели. В каркас из термопрофилей укладывается утеплитель. Он фиксируется от проседания перемычками панели, дополнительное его крепление к стойкам панелей не производится по той причине, что утеплитель держится за счет своих упругих свойств. Горизонтальными полосами снизу вверх с вертикальными и горизонтальными нахлёстами к стеновой панели крепят ветрозащитную мембрану.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Шляпный профиль монтируется поверх пленки, прижимая её к стеновой панели, закрепляясь к стойкам панели саморезами. Профнастил крепится через одну волну в нижний прогиб самосверлящими болтами с уплотнительной резиновой прокладкой, а вертикальные стыки закрепляются заклепками.</FONT></DIV>
+<DIV><B><FONT color=#000000 size=2>3. Профнастил, использующийся в качестве стены.</FONT></B></DIV>
+<DIV><FONT color=#000000 size=2>В тех случаях, когда зданию не требуется утепление, профнастил выступает в качестве стены, которая защищает внутреннее пространство от воздействия ветра и атмосферных осадков. Такой вид установки профнастила подойдет для сараев, временных сооружений и прочих подобных конструкций, где стены выполняют защитную, а не несущую функцию. Здесь все просто:&nbsp; профнастил крепится самосверлящими болтами с уплотнительной прокладкой к стеновым ригелям каркаса. Крепление профнастила<B> </B>производится так же, как и в предыдущих случаях - через одну волну в нижний прогиб, а стыки профлистов с шагом 300мм скрепляются заклепками.</FONT></DIV>
+<DIV><B><FONT size=2></FONT></B><FONT color=#000000>&nbsp;</FONT></DIV>
+<DIV><B><FONT color=#000000 size=2>Монтаж кровли из профнастила.</FONT></B></DIV>
+<DIV><FONT color=#000000 size=2>Перед началом укладки листов профнастила необходимо подготовить обрешетку из стальных прогонов или из деревянных брусков, которые обработаны антисептиком. Высота гофры профнастила должна быть не менее 50 мм. На гидроизоляционную подкровельную пленку по стропилам прибиваются планки толщиной 40-50 мм, а уже к ним прибиваются доски обрешетки. Следующим шагом становится паро- и гидроизоляция кровли, которая предотвращает появление плесени, образование конденсата, увлажнение обрешетки и стропил, промерзание крыши и тому подобные проблемы.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>В качестве гидроизоляционного подкровельного материала может быть использован пергамин, рубероид и толь. Гидроизоляция укладывается поверх обрешетки. Между гидроизоляционной пленкой и обрешеткой необходимо оставлять зазор в 40-50 мм для вентиляции подкровельного пространства.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Для предупреждения проникновения влаги под кровлю при ее монтаже обязательно создаются вентиляционные зазоры, а так же производится укладка гидроизоляционной паропропускаемой пленки. Нахлест пленки не должен&nbsp;быть менее 100-150 мм, а между стропилами необходим провис пленки в 20 мм. Пленка герметично соединяется внахлест, а ее стыки обязательно проклеиваются клейкой лентой.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Для свободного перемещения через конек кровли потока воздуха гидроизоляционная пленка&nbsp;должна располагаться на расстоянии примерно 40-50 мм от конька. Между уплотнителем конька и коньком должен быть предусмотрен зазор.</FONT></DIV>
+<IDXSKIP><DIV><FONT color=#000000 size=2>&nbsp;</FONT></DIV></IDXSKIP>
+<DIV><FONT color=#000000 size=2>Для обустройства крыши профнастил подбирается так, чтобы длина его была не меньше длины ската кровли. Это исключает поперечные стыки, и тем самым снижается трудоемкость изготовления кровли и повышает ее влагозащитные качества. Если же скат кровли длиннее листа профнастила, то его монтаж осуществляется порядной укладкой профнастила в горизонтальном направлении от нижнего ряда к верхнему, начиная либо с правого, либо с левого нижнего угла. Стыки профнастила по скату делаются внахлест с не менее чем 200мм перехлестом и заполняются герметиком.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Между верхним кровельным листом и теплоизоляцией должен быть вентилируемый воздушный зазор высотой от 20 до 40мм. Крепление профнастила к обрешетке производится с помощью самонарезающих винтов с диаметрами 4,8, 5,5 и 6,3мм, длиной от 19 до 250мм. Так же могут использоваться шурупы с плоской или шестигранной головкой, под которую обязательно подкладывают пластиковую или резиновую шайбу. Самонарезающий винт подбирается с запасом, длина цилиндрической резьбовой части винта должна быть не менее чем на 3 мм длиннее соединяемого пакета. Обычно на 1м&#178; покрытия приходится 6-8 штук саморезов.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Профнастил всегда крепится к обрешетке в месте прилегания волны. При таком способе крепления рычаг между точкой крепления и точкой приложения усилий к саморезу отсутствует. Листы профнастила крепятся к верхней и нижней обрешеточным доскам в каждую волну, так как наибольшие ветровые нагрузки приходятся на этот край. Крепление листов к промежуточным обрешетинам допускается через волну. Шаг крепления настила в продольных стыках не должен превышать 500 мм. Со стороны ветровой планки профнастил должен крепится в каждую обрешетину. Желательно, для лучшего прилегания соседних листов профнастила сместить центры крепежа в стыкуемых волнах на 5 мм, центр верхнего листа сместить в сторону нахлеста, а центр нижнего от него, при этом нижний лист должен прижиматься к верхнему. Профлисты обычно соединяются между собой крайними полками при помощи комбинированных заклепок. Диаметр заклепок может быть от 3,2 до 6,5 мм. Процесс соединения профнастила заклепками осуществляется при помощи ручных пистолетов односторонней клепки.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>При продольном стыковании листов профнастила более узкие крайние полки располагаются на более широких крайних полках, стыкуемых профилей внахлест. Для повышения гидроизолирующих свойств кровли в процессе монтажа в места стыковки прокладывается слой силиконового герметика (для кровель с углом уклона менее 10° в особенности).</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Неправильное завинчивание или перекос уплотнителя самореза могут привести к образованию сквозного отверстия в кровле, поэтому саморезы должны завинчиваться строго перпендикулярно обрешетине, так как лист профнастила должен вплотную притягивается к обрешетине. В связи с возможным отрывом листов профнастила под воздействием ветра крепление профнастила с помощью гвоздей не допускается. Также не допускается сварка профлистов, газовая резка и образование, таким образом, отверстий в листах профнастила. В тех местах, где листы профнастила примыкают к вертикальным поверхностям, например, к стене или трубе, к ним рекомендуется устанавливать планки стыков. Элемент конька в верхней части кровли также с использованием самонарезающих винтов и герметика должен быть надежно закреплен к обрешетке. Укладка конька должна начинаться со стороны, которая противоположна направлению преобладания ветров и дождей. Конек укладывается с нахлестом от 150 до 200мм, его крепление к обрешетке производится в верхней гофре при помощи саморезов соответствующей длины с шагом крепления конька примерно 200-300мм.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>При небольшом угле наклона кровли, рекомендуется применение уплотнительной прокладки на коньке. Уплотнительный материал прокладки защищает конек от попадания под него воды даже при сильном дожде и ветре. Между уплотнительной прокладкой и коньком обязательно оставляется вентиляционный зазор.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>В том случае, если размеры листов профнастила не соответствуют размеру кровли или если есть необходимость сделать какие-либо вырезы, то для этих целей используются вырубные электроножницы или электролобзик. Так же допускается резка профнастила циркулярной пилой с крупными победитовыми зубьями. А вот применение отрезных кругов нежелательно, по той причине, что раскаленные частички металла разлетаются и могут повредить полимерное покрытие листа. Применение обычных ножниц по металлу тоже возможно, но только для продольного разреза листа, потому что если их использовать для поперечного реза они «сомнут» профиль. А выправка профиля занятие достаточно тяжелое и даже очень тщательно выправленный лист может стать причиной не состыковки при укладке.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>При установке профнастила толщиной менее 0,7 мм рекомендуется использовать «лыжи», деревянные подмостки и другие средства, которые помогут предохранить профили от образования вмятин и других повреждений. По окончании монтажа профнастила &nbsp;с его поверхности удаляются стружки и прочий мусор, подкрашиваются места царапин и отрезов для предохранения листов профнастила от кромочной коррозии.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Через три месяца должна быть выполнена протяжка саморезов потому что есть риск ослабления крепления, что может понизить защитные свойства кровли.</FONT></DIV>
+<IDXSKIP><DIV><FONT color=#000000 size=2>&nbsp;</FONT></DIV></IDXSKIP>
+<DIV><B><FONT color=#000000 size=2>Монтаж забора из листов профнастила.</FONT></B></DIV>
+<DIV><FONT color=#000000 size=2>Первый этап монтажа забора из профнастила начинается с разметки территории и установке опорных столбов. От длины используемых листов зависит расстояние между столбами, чаще всего это расстояние равно 2,5 – 3,0м. При этом обязательно учитывается и зазор, который необходим для снижения ветровой нагрузки.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Столбы могут изготавливаться из различных материалов, это могут быть деревянные опоры, металлические опоры и опоры из железобетона. Очень хорошо подходят для профнастила опоры из специальной профильной трубы. Стандартный размер такого столба - 60х60мм и длина порядка 3 метров.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Сверху, для защиты от осадков, к столбу приваривается заглушка из листового металла. Она не только защищает столб от осадков, но и увеличивает жесткость конструкции. Под каждую опору сверлится отверстие глубиной 1 м. В него устанавливается столб, после чего для надёжной фиксации заливается бетоном. Более простым и дешевым способ установки столбов для забора из профнастила является забивка столбов в грунт.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Следующий этап монтажа забора из профнастила это - установка поперечных прожилин (лаг, перемычек). Для поперечных прожилин обычно применяются специальные профильные трубы размером 20х40 мм, оптимальная длина таких труб 3 метра.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>При помощи сварки прожилины фиксируются к столбам. При стандартной высоте забора 2,0 метра перемычки рекомендуется устанавливать в 2 ряда на одинаковом расстоянии друг от друга для обеспечения повышенной жесткости забора. Количество перемычек напрямую зависит от высоты забора. Для ограждения свыше 2,0 метров их количество должно быть не менее 3 штук.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>После окончания установки несущих столбов и поперечных планок наступает этап монтажа листов профнастила. Монтируются листы крепёжными заклёпками по металлу или саморезами под цвет профнастила. Такие саморезы очень удобны тем, что они не требуют предварительного просверливания отверстий, что экономит время установки и трудозатраты.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Листы обычно устанавливаются внахлёст на 1 волну. Для защиты от талой весенней воды при установке листов от земли отступают на 10-15 см.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>Профнастил крепится через волну. Для закрепления одного листа профнастила используется примерно 12-15 саморезов, это оптимальное количество, которое обеспечивает необходимую прочность конструкции.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>После установки листов профнастила производится установка заборной планки, эта процедура необходима для сглаживания горизонтальной линии забора и маскировки мелких неровностей. Так же профнастил может быть использован в качестве листа для заполнения ворот и калитки.</FONT></DIV>
+<IDXSKIP><DIV><FONT color=#000000 size=2>&nbsp;</FONT></DIV></IDXSKIP>
+<DIV><FONT color=#000000 size=2>Компания ZABORIVOROTA специализируется на установке заборов, облицовке стен профнастилом, так как это доступный недорогой и надежный материал. Презентабельный внешний вид, надежность и безопасность вашего жилища - всем этим качествам отвечают кровли, стены, заборы и ворота, установленные нашей компанией. Наши специалисты произведут все необходимые работы от чертежа до готового забора или кровли качественно и в короткие сроки. Наша компания работает в Московской, Рязанской, Тульской, Калужской, Смоленской, Тверской, Владимирской, Ярославской, Ивановской областях. Мы выполняем «под ключ» любые строительные и отделочные работы - от забора до дома. На все выполненные работы компания ZABORIVOROTA дает гарантию сроком 12 месяцев.</FONT></DIV>
+<DIV><FONT color=#000000 size=2>&nbsp;</FONT></DIV>
+<DIV><I><FONT color=#000000 size=2>Даниил Андрев, Zaborivorota-info.</FONT></I></DIV>
+<DIV><FONT color=#000000 size=2>&nbsp;</FONT></DIV></div></div>
+	<div id=allspec>
+    
+	</div>
+	
+    
+<!--noindex-->
+<IDXSKIP><div class='likes'>
+<script type="text/javascript" src="//yandex.st/share/share.js"
+charset="utf-8"></script>
+<div class="yashare-auto-init" data-yashareL10n="ru"
+ data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div>
+	<div class='goo-plus'>
+		<div class='g-plusone' data-width='120'></div>
+		<script type='text/javascript'>
+  window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+	</div>
+ <br class='clear' />
+</div></IDXSKIP>
+<!--/noindex-->
+
+
+</td>
+  </tr>
+</table>
+</td>
+  </tr>
+  <tr>
+<td valign="top" id="footer">
+
+  <table width="980" border="0" cellspacing="0" cellpadding="0" style="background:#003366;">
+    <tr>
+    <td width="980"><div style="float:left; width:80%;"><IDXSKIP>© 2010 Интернет-магазин </IDXSKIP><IDXSKIP><a class="a_class1" href="http://www.zaborivorota.ru">ZABORIVOROTA.RU</a></IDXSKIP><IDXSKIP>. Все права защищены. Все материалы сайта являются объектами авторского права.<br />Запрещается копирование, распространение или любое иное использование информации и объектов сайта.
+            </IDXSKIP></div><IDXSKIP><div style="width:19%; float:right; text-align:right;"><a href="/map/">карта сайта</a><br /><a href="http://www.zaborivorota.ru/about/?cat=2">контакты</a></div></IDXSKIP>
+    </td>
+    </tr>
+  </table>
+  <IDXSKIP><table width="980" border="0" cellspacing="0" cellpadding="0"><tr><div style="text-align:right; padding: 5px 5px 0px 0px;">
+<noindex> 
+  <!--Rating@Mail.ru counter-->
+<a target="_top" rel="nofollow" href="http://top.mail.ru/jump?from=2062674">
+<img src="http://d9.c7.bf.a1.top.mail.ru/counter?id=2062674;t=56" 
+border="0" height="31" width="88" alt="Рейтинг@Mail.ru"></a>
+<!--// Rating@Mail.ru counter--><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a rel='nofollow' href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t16.11;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+</noindex>
+</div></tr></table></IDXSKIP>
+  
+</td>
+  </tr>
+
+</table>
+</td>
+</tr>
+</table>
+
+<!-- БД 18 запроса ~ 0.1962  6434.02 Kb, Сборка 3100020000000 --><!-- Use compress gzip -->

@@ -1,0 +1,557 @@
+ru.savefrom.net/savefrom-helper-for-google-chrome.php
+<!doctype html>
+<!--[if lte IE 7]> <html lang="ru" class="ru no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html lang="ru" class="ru no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]> <html lang="ru" class="ru no-js ie9"> <![endif]-->
+<!--[if !(IE)]><!--> <html lang="ru" class="ru no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Скачать и установить помощник SaveFrom.net для Google Chrome</title>
+  <meta name="description" content="SaveFrom.net позволяет скачивать видео, музыку с Youtube, Вконтакте, Однокласников и др. Для того чтобы установить SaveFrom.net помощник в браузер Google Chrome, необходимо добавить расширение Chameleon. Следуйте инструкции, это займет не более 2 минут!">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lte IE 8]><script src="/js/libs/es5-shim.min.js"></script><![endif]-->
+  <script src="/js/libs/modernizr-2.8.3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="/js/scripts_1.16.js?v=1"></script>
+
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="image_src" href="/img/icon_100.png">
+
+  <link rel="stylesheet" href="/css/styles.css?v=1.101">
+
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="/css/ie_1.1.css?v=2">
+  <![endif]-->
+
+  <meta name="verify-v1" content="ub1H7kYJnwqYG8F1I+HOcbvOZ1ZorzzYgei/UVDCJkY=">
+
+  <meta name="yandex-verification" content="747050caf9aca482" />
+
+<script>
+  'use strict';
+
+  window._sf = {
+    lang: 'ru',
+    cookieDomain: '.savefrom.net',
+    openxHost: "78.138.126.253",
+    openxEnabled: true,
+    openxAutorun: true,
+    gaTrackers: {
+      televzrIos: {id: 'UA-7055055-41', sendPageview: true},
+      televzrAndroid: {id: 'UA-7055055-42', sendPageview: true}
+    }
+  };
+
+  (function(){
+    var _sf = window._sf;
+
+    _sf.uaParser = new UAParser();
+    _sf.ua = _sf.uaParser.getUA();
+    _sf.browser = _sf.uaParser.getBrowser() || {};
+    _sf.device = _sf.uaParser.getDevice() || {};
+    _sf.os = _sf.uaParser.getOS() || {};
+
+    var supportPlatforms = [
+      'Android',
+      'Bada',
+      'BlackBerry',
+      'Firefox OS',
+      'iOS',
+      'MeeGo',
+      'Sailfish',
+      'Series40',
+      'Symbian',
+      'Tizen',
+      'WebOS',
+      'Windows Phone'
+    ];
+
+    if(!_sf.device.type && _sf.os.name) {
+      if(supportPlatforms.indexOf(_sf.os.name) > -1) {
+        _sf.device.type = 'mobile';
+      }
+    }
+
+    if(_sf.device.type) {
+      if(_sf.device.type == 'tablet') {
+        _sf.mobile = true;
+        $('html').addClass('tablet');
+      }
+      else if(_sf.device.type == 'mobile' || _sf.device.type == 'wearable') {
+        _sf.mobile = true;
+        $('html').addClass('mobile');
+      }
+    }
+
+          _sf.country = "ru"    
+    if (_sf.country) {
+      _sf.country = _sf.country.toLowerCase();
+    }
+
+    _sf.user = {
+      loggedIn: cookie.get('logged_in')
+    };
+
+    if (_sf.user.loggedIn && _sf.user.loggedIn != '0') {
+      _sf.user.loggedIn = true;
+    }
+    else {
+      _sf.user.loggedIn = false;
+    }
+
+    _sf.applications = ["sf-android","televzr"];
+
+    _sf.stats = {
+      uid: ''
+    };
+
+          _sf.stats.uid = "b174da8c4f9b3ab8";
+      })();
+</script>
+
+  <script>
+    $(function(){
+      $('input[placeholder], textarea[placeholder]').placeholder();
+
+      setTooltipHandler('.tooltip[title]');
+      setTooltipHandler('.tooltip-err[title]', {className: 'err'});
+
+      // menu
+      $('nav li').on('mouseenter', function(){
+        if($(this).children('ul').is('ul'))
+        {
+          $(this).addClass('hover').on('mouseleave', function(){
+            $(this).removeClass('hover');
+          });
+        }
+      });
+
+      $('body').on('click', 'header .menu-btn', function(){
+        $('#nav_top').toggleClass('active');
+      });
+
+      $('body').on('click', '.spoiler-title', function(){
+        var $this = $(this).toggleClass('open');
+        var $box = $this.parent().children('.spoiler-box');
+
+        if($this.hasClass('open'))
+          $box.slideDown();
+        else
+          $box.slideUp();
+
+        return false;
+      });
+
+      var thumbnail_rel = [];
+      $('a.thumbnail').each(function(){
+        var rel = $(this).attr('rel');
+        if(rel && !thumbnail_rel[rel])
+        {
+          thumbnail_rel[rel] = 1;
+          $("a[rel='" + rel + "']").fancybox();
+        }
+      });
+
+      $('body').on('click', 'img.thumbnail', function(){
+        this.src = this.src.replace(/(\w\w)\.([a-z]{3,4})(?:\?|$)/i, function(s, p1, p2){
+          if(p1 == '_t')
+            return '.' + p2;
+
+          return p1 + '_t.' + p2;
+        });
+      });
+
+      var clipboard = new Clipboard('.clipboard-btn');
+      clipboard.on('success', function(e){
+        e.clearSelection();
+        jAlert('Скопировано');
+      });
+      clipboard.on('error',function(e){
+        jAlertErr('Не удалось скопировать');
+      });
+    });
+
+
+    function setTooltipHandler(selector, options)
+    {
+      var opts = {
+        fade: true,
+        opacity: 1,
+        delayIn: 300,
+        delayOut: 500,
+        hoverHold: true,
+        html: true,
+        gravity: 's',
+        offset: 5,
+        live: true,
+        title: function(){
+          if (window.ga && $(this).hasClass('ga_track_events')) {
+            var data = $(this).data('tooltip-ga-event');
+            if (data) {
+              data = data.replace(/;+$/, '');
+              data = data.split(';');
+              if(data.length < 2)
+                return;
+
+              data.unshift('send', 'event');
+              ga.apply(null, data);
+            }
+          }
+
+          return $(this).attr('original-title');
+        }
+      };
+
+      if(options)
+        opts = $.extend({}, opts, options);
+
+      $(selector).tipsy(opts);
+    }
+
+    function jAlert(message, sticky, theme, position)
+    {
+      $.jGrowl.defaults.closer = false;
+      $.jGrowl.defaults.closeTemplate	= '&times;';
+
+      var options = {
+        sticky: sticky ? true : false,
+        life: 5000
+      };
+
+      if(theme)
+        options['theme'] = theme;
+
+      if(position)
+        options.position = position;
+
+      $.jGrowl(message, options);
+    }
+
+    function jAlertErr(message, sticky, position)
+    {
+      if(sticky === undefined)
+        sticky = true;
+
+      jAlert(message, sticky, 'err', position);
+    }
+
+    function showMessage(message, onCloseClick, onBtnClick)
+    {
+      if(!message)
+        return;
+
+      $('.top-message-bar').remove();
+
+      var $panel = $('<div class="top-message-bar"/>').hide();
+      $panel.append('<div class="content-box">' +
+        '<div class="message-box">' + message + '</div>' +
+        '<div class="close-btn"></div>' +
+        '</div>'
+      );
+
+      $panel.prependTo('body').slideDown();
+
+      $panel.on('click', '.close-btn', function(){
+        if(onCloseClick) {
+          onCloseClick();
+        }
+        $panel.fadeOut(function(){
+          $panel.remove();
+        });
+      });
+
+      if(onBtnClick) {
+        $panel.on('click', '.button', onBtnClick);
+      }
+    }
+  </script>
+
+  <!-- Bing pixel -->
+<script>
+  (function() {
+    var sf = window._sf;
+
+    if (sf && sf.os && sf.os.name === 'Mac OS') {
+      (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105693"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+    }
+  })();
+</script>
+<!-- End Bing pixel -->
+<!-- Facebook Pixel Code -->
+<script>
+  (function() {
+    var sf = window._sf;
+
+    if (sf && sf.os && sf.os.name === 'Mac OS') {
+
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '978059908934144');
+      fbq('track', "PageView");
+    }
+  })();
+</script>
+<!-- End Facebook Pixel Code -->
+
+  <meta property="og:title" content="SaveFrom.net помощник">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://ru.savefrom.net/savefrom-helper-for-google-chrome.php">
+  <meta property="og:image" content="http://savefrom.net/img/extension/icon_128.png">
+  <meta property="og:site_name" content="SaveFrom.net">
+
+<link rel="alternate" hreflang="de" href="http://de.savefrom.net/savefrom-helper-for-google-chrome.php">
+<link rel="alternate" hreflang="en" href="http://en.savefrom.net/savefrom-helper-for-google-chrome.php">
+<link rel="alternate" hreflang="es" href="http://es.savefrom.net/savefrom-helper-for-google-chrome.php">
+<link rel="alternate" hreflang="fr" href="http://fr.savefrom.net/savefrom-helper-for-google-chrome.php">
+<link rel="alternate" hreflang="id" href="http://id.savefrom.net/savefrom-helper-for-google-chrome.php">
+<link rel="alternate" hreflang="it" href="http://it.savefrom.net/savefrom-helper-for-google-chrome.php">
+<link rel="alternate" hreflang="pt" href="http://pt.savefrom.net/savefrom-helper-for-google-chrome.php">
+<link rel="alternate" hreflang="ru" href="http://ru.savefrom.net/savefrom-helper-for-google-chrome.php">
+<link rel="alternate" hreflang="tr" href="http://tr.savefrom.net/savefrom-helper-for-google-chrome.php">
+<link rel="alternate" hreflang="uk" href="http://uk.savefrom.net/savefrom-helper-for-google-chrome.php">
+
+</head>
+<body class="page_theme_chameleon">
+<!--Error message for IE 6-->
+<!--[if lt IE 7]>
+<p class=chromeframe>Ваш браузер <strong>устарел!</strong> <a href="http://browsehappy.com/">Перейдите на современный браузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">установите Google Chrome Frame</a> для получения доступа к этому сайту.</p>
+<![endif]-->
+<!--/Error message for IE 6-->
+<div style="position: absolute; left: -100px; top: -100px;">
+  <!--LiveInternet counter-->
+  <script type="text/javascript"><!--
+    document.write("<img src='//counter.yadro.ru/hit?r" +
+    escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+    ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+        screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+    ";h" + escape(document.title.substring(0, 80)) + ";" + Math.random() +
+    "' width=1 height=1 alt=''>")//--></script>
+  <!--/LiveInternet-->
+</div>
+
+
+  <!--Header-->
+  <header class="header header_v2">
+    <div class="page-width-inner g-row_inline">
+      <div class="header__left g-col c3">
+        <span class="menu-btn menu-btn_v2"></span>
+        <a name="logo" class="logo" href="//ru.savefrom.net/">Savefrom.net</a>
+      </div>
+              <IDXSKIP><div id="nav_top" class="g-col c9">
+          <div class="nav-top-2 right">
+            <a href="/user.php?vid=387" class="nav-top-2__item">Установить</a><a href="/webmaster.php" class="nav-top-2__item">Вебмастерам</a><a href="/faq.php" class="nav-top-2__item">Помощь</a>          </div>
+        </div></IDXSKIP>
+          </div>
+  </header>
+        
+<div id="main" class="main-block main-block_v2">
+  <noscript>
+    <div class="wrapper"><p class="javascript-error"><IDXSKIP>SaveFrom.net использует JavaScript для отображения информации. Пожалуйста, включите JavaScript и обновите эту страницу.</IDXSKIP></p></div>
+  </noscript>
+    <!--content-->
+    <div class="wrapper">
+
+        <!--start info-->
+        <div class="chameleon">
+          <div class="wrapper">
+            <article class="article-2">
+              <h1 class="chameleon__title"><span class="chameleon__title-inner">Как правильно установить SaveFrom.net помощник<br> в браузер Google Chromе</span></h1>
+
+<!-- #1 -->
+<div class="chameleon-item">
+  <div class="chameleon-item__number"><span class="chameleon-item__number-text">1</span></div>
+  <h4 class="chameleon-item__title">Добавьте бесплатное расширение Chameleon из <span class="chameleon-item__mark">WebStore</span><a href="https://chrome.google.com/webstore/detail/chameleon/dmpojjilddefgnhiicjcmhbkjgbbclob" target="_blank" class="chameleon-item__button">Добавить сейчас</a></h4>
+  <div class="chameleon-item__text">Оно необходимо для работы SaveFrom.net помощника. Для установки нажмите на кнопку «Add to Chrome» и следуйте инструкциям.
+  </div>
+  <img class="chameleon-item__image" src="/img/extension/chameleon-1.jpg" />
+</div>
+
+<!-- #2 -->
+<div class="chameleon-item">
+  <div class="chameleon-item__number"><span class="chameleon-item__number-text">2</span></div>
+  <h4 class="chameleon-item__title">Для работы Savefrom.net helper в Google Chrome, установите наше расширение из магазина Opera add-ons<a href="https://addons.opera.com/ru/extensions/details/savefromnet-helper/?display=ru" target="_blank" class="chameleon-item__button">Установить сейчас</a></h4>
+  <div class="chameleon-item__text">Для этого нажмите на кнопку «Add to Chameleon»
+  </div>
+  <img class="chameleon-item__image" src="/img/extension/chameleon-2.jpg" />
+</div>
+
+<!-- #3 -->
+<div class="chameleon-item">
+  <div class="chameleon-item__number"><span class="chameleon-item__number-text">3</span></div>
+  <h4 class="chameleon-item__title">Savefrom.net помощник установлен</h4>
+  <div class="chameleon-item__text">Теперь вы можете скачивать файлы легко и просто!</div>
+  <img class="chameleon-item__image" src="/img/extension/chameleon-3.jpg" />
+</div>
+            </article>
+          </div>
+        </div>
+        <!--end info-->
+
+    </div>
+    <!--/content-->
+</div> <!--/main-->
+
+
+  <!--Footer-->
+  <footer class="footer_v2">
+    <div class="wrapper clearfix">
+      <IDXSKIP><p class="copyright">© 2008-2017, SaveFrom.net</p></IDXSKIP>
+      <div class="lang-box" tabindex="2" style="z-index:1000;"><div>
+          <ul class="lang">
+            
+<script>
+$(function(){function d(){b.removeClass(e);$("body").off(f)}function i(){b.addClass(e);c=$("li.active",b);$("body").off(f).on("click"+f,function(){d()}).on("keydown"+f,function(a){switch(a.which){case 27:d();break;case 13:case 32:$(".active",b).removeClass("active");c.addClass("active").removeClass(g);d();if(a=$("li.active a",b).attr("href"))location.href=a;break;case 38:h(c.prev("li"));break;case 40:h(c.next("li"));break;case 36:h($("li",b).first());break;case 35:h($("li",b).last());break;default:return!0}return!1})}
+function h(a){a[0]&&!a.hasClass(g)&&(c.removeClass(g),a.addClass(g),c=a)}var b=$(".lang-box"),e="active",g="current",f=".langbox",c;b.on("click",function(a){if("A"!=a.target.tagName)return b.hasClass(e)?d():i(),!1}).on("keydown",function(a){if(b.hasClass(e))return!0;switch(a.which){case 13:case 32:i();break;default:return!0}return!1})});
+</script>
+<li><a href="http://en.savefrom.net/savefrom-helper-for-google-chrome.php" class="lang-en">English</a></li><IDXSKIP><li class="active"><span class="lang-ru">Русский</span></li></IDXSKIP><li><a href="http://de.savefrom.net/savefrom-helper-for-google-chrome.php" class="lang-de">Deutsch</a></li><li><a href="http://es.savefrom.net/savefrom-helper-for-google-chrome.php" class="lang-es">Español</a></li><li><a href="http://fr.savefrom.net/savefrom-helper-for-google-chrome.php" class="lang-fr">‪Français</a></li><li><a href="http://id.savefrom.net/savefrom-helper-for-google-chrome.php" class="lang-id">Bahasa Indonesia‬</a></li><li><a href="http://it.savefrom.net/savefrom-helper-for-google-chrome.php" class="lang-it">‪Italiano‬</a></li><li><a href="http://pt.savefrom.net/savefrom-helper-for-google-chrome.php" class="lang-br">Português (Brasil)</a></li><li><a href="http://tr.savefrom.net/savefrom-helper-for-google-chrome.php" class="lang-tr">Türkçe‬</a></li><li><a href="http://uk.savefrom.net/savefrom-helper-for-google-chrome.php" class="lang-uk">Українська‬</a></li>          </ul>
+          <i></i></div></div>
+      <div class="clearfix"></div>
+      <ul class="f-nav f-nav_v2">
+        <li><a href="/">Главная</a></li><IDXSKIP><li><a href="/faq.php">FAQ</a></li></IDXSKIP><IDXSKIP><li><a href="/user.php?vid=388">Установить</a></li></IDXSKIP><IDXSKIP><li><a href="/webmaster.php">Вебмастерам</a></li></IDXSKIP><IDXSKIP><li><a href="/contact.php">Обратная связь</a></li></IDXSKIP><IDXSKIP><li><a href="/advertising.php">Реклама</a></li></IDXSKIP><IDXSKIP><li><a href="/terms.html">Terms of Service</a></li></IDXSKIP><IDXSKIP><li><a href="/EULA.html">EULA</a></li></IDXSKIP><IDXSKIP><li><a href="/privacy-policy.html">PP</a></li></IDXSKIP>      </ul>
+    </div>
+  </footer>
+
+
+<script>
+  $('.spoiler-box:not(.open)').hide();
+</script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','_ga');
+
+      (function(){
+        window.gaHandler = {
+          trackers: {},
+
+          stringToArray: function(str, delimiter)
+          {
+            delimiter = delimiter || ';';
+            var re = new RegExp(delimiter + '+$');
+            str = str.replace(re, '');
+            return str.split(delimiter);
+          },
+
+          checkTracker: function(data) {
+            if($.isArray(data) && data.length >= 2)
+            {
+              var tName = this.getTrackerName(data[0]);
+              if(tName && !this.trackers[tName])
+              {
+                if (_sf.gaTrackers[tName] && _sf.gaTrackers[tName].id) {
+                  var parameters = _sf.gaTrackers[tName].parameters || {};
+
+                  ga('create', _sf.gaTrackers[tName].id, 'savefrom.net', tName, parameters);
+                  this.trackers[tName] = tName;
+
+                  if (_sf.gaTrackers[tName].sendPageview) {
+                    ga(tName + '.send', 'pageview');
+                  }
+                }
+                else {
+                  data[0] = data[0].substr(tName.length + 1);
+                }
+              }
+
+              return true;
+            }
+
+            return false;
+          },
+
+          track: function(data)
+          {
+            if(typeof(data) == 'string')
+              data = this.stringToArray(data);
+
+            if (this.checkTracker(data)) {
+              ga.apply(null, data);
+            }
+          },
+
+          trackNode: function(node, attr)
+          {
+            attr = attr || 'data-ga-event';
+            var data = $(node).attr(attr);
+            if(data)
+              this.track(data);
+          },
+
+          getTrackerName: function(command)
+          {
+            var i = command ? command.indexOf('.') : -1;
+            if(i <= 0)
+              return;
+
+            return command.substr(0, i);
+          }
+        };
+
+        $('body').on('click sendstats', 'a.ga_track_events', function(event){
+          gaHandler.trackNode(this);
+        });
+     })();
+
+     window.ga = function() {
+      var args = Array.prototype.slice.call(arguments, 0);
+
+      if (window.gaHandler.trackers['events'] &&
+        args[0] == 'send' && args[1] == 'event') {
+          args[0] = 'events.send';
+      }
+      else {
+        window.gaHandler.checkTracker(args);
+      }
+
+              window._ga.apply(window, args);
+          }
+
+    
+      if (_sf.app) {
+        ga('create', 'UA-7055055-17', 'savefrom.net', {'userId': _sf.stats.uid});
+      }
+      else {
+        ga('create', 'UA-7055055-1', 'savefrom.net',
+          {'sampleRate': 10, 'userId': _sf.stats.uid});
+
+        ga('create', 'UA-7055055-19', 'savefrom.net',
+          {'name': 'events', 'sampleRate': 10, 'userId': _sf.stats.uid});
+        window.gaHandler.trackers['events'] = 'events';
+      }
+
+      ga('create', 'UA-7055055-7', 'savefrom.net',
+        {'name': 't2', 'userId': _sf.stats.uid});
+
+      window.gaHandler.trackers['t2'] = 'test';
+
+    
+      ga('require', 'displayfeatures');
+
+      if (window.gaqTrackPageview) {
+        ga('send', 'pageview', gaqTrackPageview);
+      }
+      else {
+        ga('send', 'pageview');
+      }
+    </script>
+
+
+
+</body>
+</html>
+
+
+

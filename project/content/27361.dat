@@ -1,0 +1,1200 @@
+sociate.ru/help/spots_search
+<!DOCTYPE html>
+<html lang="ru"
+xmlns:og="http://ogp.me/ns#"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <title>Sociate.ru — биржа рекламы в группах ВКонтакте, Одноклассники, Инстаграм</title>
+    <meta name="description" content="Sociate.ru — эффективная реклама в сообществах ВКонтакте. Биржа рекламы ВКонтакте, Одноклассники, Инстаграм. Таргетированная реклама ВКонтакте.">
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" id="document-viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property='og:title' content='Sociate.ru — биржа рекламы в группах ВКонтакте, Одноклассники, Инстаграм' />
+<meta property='og:image' content='https://sociate.ru/static/images/vk_share_sociate.png?1374269348' />
+<meta property='og:description' content='Sociate.ru — эффективная реклама в сообществах ВКонтакте. Биржа рекламы ВКонтакте, Одноклассники, Инстаграм. Таргетированная реклама ВКонтакте.' />
+<meta property='og:type' content='website' />
+<meta property='og:site_name' content='Sociate.ru' />
+
+<meta name="google-site-verification" content="3Kc566JqDXySvAEiubMrr9Pqkg5axRy8eVlWijXABK0" />
+
+<link rel="shortcut icon"  type="image/ico" href="/favicon.ico">
+
+<script type="text/javascript">
+    (function() {
+        var BASE_WIDTH = 480;
+
+        if (window.innerWidth < BASE_WIDTH) {
+            var scale = window.innerWidth / BASE_WIDTH;
+            document.getElementById("document-viewport").setAttribute("content",
+                    'width=device-width, initial-scale=' + scale + ', maximum-scale=' + scale);
+        }
+    })();
+</script>
+    
+        
+    
+    
+    
+    
+        
+
+
+<script type="text/javascript">
+(function(w, d) {
+   // GA UA
+   var pvOpts = {};
+   
+   
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(w,d,'script','https://www.google-analytics.com/analytics.js','__gaTracker');
+        __gaTracker('create', 'UA-31047775-1', 'sociate.ru');
+        __gaTracker('require', 'displayfeatures');
+        __gaTracker('require', 'linkid', 'linkid.js');
+       
+            __gaTracker('set', 'dimension1', '0');
+       
+   
+   w.__gaPVOpts = pvOpts;
+})(window, document);
+</script>
+        
+
+
+
+<script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+
+    
+    
+    
+<style>
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(/static/fonts/opensanslight.woff) format('woff')
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(/static/fonts/opensans.woff) format('woff')
+}
+</style><link href="https://static.sociate.ru/static/compressed/css/fonts.350a7ab80bfa.css" rel="stylesheet" type="text/css" /><link href="https://static.sociate.ru/static/compressed/css/base_vendor.c75f652bd294.css" rel="stylesheet" type="text/css" /><!--[if lte IE 9]><link type="text/css" rel="stylesheet" href="https://static.sociate.ru/static/ace_admin-1.3.3/css/ace-ie.min.css" /><![endif]--><link href="https://static.sociate.ru/static/compressed/css/base_sociate.4d1041981cd7.css" rel="stylesheet" type="text/css" /><style type="text/css">
+    @media (min-resolution: .001dpcm) {
+        _:-o-prefocus, body { /* стиль только для Opera 12.00+ */
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        };
+    }
+</style><script type="text/javascript" src="https://static.sociate.ru/static/ace_admin-1.3.3/js/ace-extra.min.js"></script><!--[if lte IE 8]><script type="text/javascript" src="https://static.sociate.ru/static/ace_admin-1.3.3/js/html5shiv.min.js"></script><![endif]--><script type="text/javascript">
+    Sociate = {};
+    Sociate.debug = false;
+    
+        Sociate.user = null;
+    
+    Sociate.SH = {}; 
+    
+    
+    Sociate.urls = {
+        notifications_unread: '/notify/feed/unread_events/',
+        orders_advertiser_active_list: '/orders/advertiser/active/',
+        on_signup_track: '/accounts/on_signup_track/',
+        on_new_ga_session: '/accounts/on_new_ga_session/'
+    };
+    Sociate.settings = {
+        CSRF_COOKIE_NAME: '_soccsrf',
+        WEBSOCKETS_HOST: 'sociate.ru',
+        INSTAGRAM_IMAGE_MIN_ASPECT_RATIO: 0,
+        INSTAGRAM_IMAGE_MAX_ASPECT_RATIO: 0
+    };
+    Sociate.const = {};
+    Sociate.SITE_DOMAIN = 'sociate.ru';
+</script>
+    
+    
+</head>
+<body class="no-skin">
+    
+        
+
+
+
+
+
+
+
+
+<div class="page-top-navbar navbar navbar-inverse navbar-static-top">
+    <div class="container main-layout">
+        <IDXSKIP><div class="navbar-header">
+            <button type="button"
+                class="navbar-toggle menu-toggler pull-left" id="menu-toggler"
+                data-target="#sidebar"
+            >
+                <span class="sr-only">Toggle sidebar</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand sociate-brand">
+                <img src="https://static.sociate.ru/static/images/sociate_logo.png" alt="Sociate" width="117" height="45"/>
+            </a>
+        </div></IDXSKIP>
+
+        <div class="navbar-buttons navbar-header pull-left">
+            <ul class="nav ace-nav hidden-xs">
+                
+                    <IDXSKIP><li class="light-blue visible-md visible-lg">
+                        <a href="/about">О системе</a>
+                    </li></IDXSKIP>
+                    <IDXSKIP><li class="light-blue visible-md visible-lg">
+                        <a href="/reviews">Отзывы</a>
+                    </li></IDXSKIP>
+                    <IDXSKIP><li class="light-blue visible-md visible-lg">
+                        <a href="/news">Новости</a>
+                    </li></IDXSKIP>
+                    <IDXSKIP><li class="light-blue visible-md visible-lg">
+                        <a href="/contacts">Контакты</a>
+                    </li></IDXSKIP>
+                    <IDXSKIP><li class="light-blue visible-md visible-lg">
+                        <a href="/faq">Помощь</a>
+                    </li></IDXSKIP>
+                
+                
+                    <IDXSKIP><li class="light-blue hidden-xs">
+                        <a href="/targeting/">Таргетинг</a>
+                    </li></IDXSKIP>
+                
+
+                
+            </ul>
+        </div>
+
+        
+
+            
+            <IDXSKIP><div class="navbar-buttons navbar-header pull-right">
+                <ul class='nav ace-nav visible-md visible-lg'>
+                    <li>
+                        
+                            <a class="js-toggle-signin-modal" data-toggle="modal" href="#signinModal">Войти</a>
+                        
+                    </li>
+                    <li>
+                        <a class="js-toggle-signup-modal" data-toggle="modal" href="#signupModal">Зарегистрироваться</a>
+                    </li>
+                </ul>
+                <ul class='nav ace-nav hidden-md hidden-lg'>
+                    <li>
+                        
+                            <a class="js-toggle-signin-modal" data-toggle="modal" href="#signinModal">Вход</a>
+                        
+                    </li>
+                </ul>
+            </div></IDXSKIP>
+
+        
+    </div>
+</div>
+    
+
+    <div id="main-container" class='main-container container main-layout  ' style="height: 100%;">
+
+        
+        <div id="sidebar" class="sidebar responsive hidden-md hidden-lg tablet-menu">
+            
+    
+
+
+
+    
+
+    <ul class="nav nav-list sidebar-nav">
+        <IDXSKIP><li >
+            <a href="/about">
+                <i class="menu-icon fa fa-info-circle"></i>
+                <span class="menu-text">О Системе</span>
+            </a>
+        </li></IDXSKIP>
+        <IDXSKIP><li >
+            <a href="/spots/view/">
+                <i class="menu-icon fa fa-list"></i>
+                <span class="menu-text">Площадки</span>
+            </a>
+        </li></IDXSKIP>
+        <IDXSKIP><li >
+            <a href="/news/">
+                <i class="menu-icon fa fa-info-circle"></i>
+                <span class="menu-text">Новости</span>
+            </a>
+        </li></IDXSKIP>
+        <IDXSKIP><li >
+            <a href="/contacts">
+                <i class="menu-icon fa fa-info-circle"></i>
+                <span class="menu-text">Контакты</span>
+            </a>
+        </li></IDXSKIP>
+        <IDXSKIP><li >
+            <a href="/faq">
+                <i class="menu-icon fa fa-info-circle"></i>
+                <span class="menu-text">Помощь</span>
+            </a>
+        </li></IDXSKIP>
+        <IDXSKIP><li>
+            <a href="/target/help/about/">
+                <i class="menu-icon fa fa-info-circle"></i>
+                <span class="menu-text">О Sociate.Targeting</span>
+            </a>
+        </li></IDXSKIP>
+    </ul>
+
+    <div class="sidebar-group-cnt visible-md visible-lg">
+        <br/>Групп для рекламы: <b>68226</b><br/>
+    </div>
+
+
+
+<!-- VK Widget -->
+<IDXSKIP><div class="vk-groups-widget-container">
+    <br/><br/>
+    <div id="vk_groups"></div>
+</div></IDXSKIP>
+
+        </div>
+        
+
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+
+        
+
+
+            <div id="main-content" class="main-content" style="background-color: #FFFFFF; height: 100%;">
+                
+                <div id="page-content" class="page-content ">
+                    <!-- setting box goes here if needed -->
+
+                    <div class="row">
+                        <div id="inner-content" class="col-xs-12">
+                            
+    <div class="row">
+        <div class="col-sm-3">
+            <br/>
+            <div style="border-right: 1px solid #dfdfdf">
+                <ul class="nav nav-list">
+                    <li><a href="/faq/">FAQ</a></li>
+                    <li class="nav-header" style="padding: 10px 0 10px 7px; font-size: 15px; background: none repeat scroll 0 0 #666666; font-weight: normal; color: #FFF;">Как работает Sociate: рекламодателю</li>
+
+                    <li><a href="/help/create_post/">Создаем пост</a>
+                    <li><a href="/help/create_post/text/" style="padding-left: 20px;">1. Текст</a></li>
+                    <li><a href="/help/create_post/images/" style="padding-left: 20px;">2. Изображения</a></li>
+                    <li><a href="/help/create_post/links/" style="padding-left: 20px;">3. Ссылки</a></li>
+                    <li><a href="/help/create_post/video/" style="padding-left: 20px;">4. Видеозаписи</a></li>
+                   
+                    <li><a href="/help/create_repost/">Создаем репост</a>
+                    <li><a href="/help/spots_search/">Подбираем площадки</a></li>
+                    <li><a href="/help/create_order/">Размещаем заказ</a></li>
+                    <li><a href="/help/create_proposals/">Размещаем открытое задание</a></li>
+           
+                    <li><a href="/help/efficiency/inprogress/" >В работе: статусы заказов</a></li>
+                    <li><a href="/help/efficiency/stat/" >Статистика заказов</a></li>
+                    <li><a href="/help/efficiency/export/">Отчеты по рекламным кампаниям</a></li>
+                    
+
+                    <li class="nav-header" style="padding: 10px 0 10px 7px; font-size: 15px; background: none repeat scroll 0 0 #666666; font-weight: normal; color: #FFF;">Как работает Sociate: администратору</li>
+
+                    <li><a href="/help/add_spot/">Добавляем площадку</a>
+                    <li><a href="/help/what_is_my_cpm/">Создаем тестовое задание</a></li>
+                    <li><a href="/help/orders_new/">Рассматриваем заявку</a></li>
+                    <li><a href="/help/publish/">Публикуем заявку</a></li>
+                    <li><a href="/help/schedule/">Расписание размещений</a></li>
+
+                    <li class="nav-header" style="padding: 10px 0 10px 7px; font-size: 15px; background: none repeat scroll 0 0 #666666; font-weight: normal; color: #FFF;">Агентский аккаунт</li>
+                    <li><a href="/help/agency/create_agency/">Создание агентства</a>
+                    <li><a href="/help/agency/staff/">Роли сотрудников</a>
+                    <li><a href="/help/agency/manage_clients/">Управление клиентами агентства</a>
+                    <li><a href="/help/agency/budget/">Бюджет агентства</a>
+
+                    <li class="nav-header" style="padding: 10px 0 10px 7px; font-size: 15px; background: none repeat scroll 0 0 #666666; font-weight: normal; color: #FFF;">Дополнительные материалы</li>
+                    <li><a href="/help/articles/">Подборки статей о рекламе</a></li>
+                    <li><a href="/help/cases/">Возможности и кейсы Sociate</a></li>
+                    <li><a href="/terms/">Правила размещения рекламы </a></li>
+                    <li><a href="/contacts/">Контакты</a></li>
+                </ul>
+
+                <script type="text/javascript">
+                    (function () {
+                        'use strict';
+
+                        var path = location.pathname;
+                        path += path[path.length - 1] === '/' ? '' : '/';
+                        var el = document.querySelector('ul.nav-list li a[href="' + path + '"]');
+
+                        if (el && el.parentNode) {
+                            el = el.parentNode;
+                            el.classList ? el.classList.add('active') : el.className += ' active';
+                        }
+                    })();
+                </script>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            
+
+    <style>
+    #flatpage-body{min-height: 400px;}
+    #flatpage-body img {
+        max-width: 600px;
+        text-align: center;
+        display: block;
+        margin: 10px 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+    </style>
+
+    <div id="flatpage-body">
+    <h2>Подбираем площадки</h2>
+
+    <p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><span style="background-color: transparent; vertical-align: baseline; white-space: pre-wrap;"><br>Сначала определите свою целевую аудиторию, чтобы максимально точно настроить параметры для поиска сообществ. <br>К</span><span style="vertical-align: baseline; white-space: pre-wrap;">лючевой вопрос &mdash; &laquo;Кто приобретает продукт? Кому интересно мое сообщество?&raquo;. <br><br>Портрет целевой аудитории можно описать по нескольким характеристикам:<br><br></span></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 14.6667px; font-family: Arial; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; white-space: pre-wrap; font-family: 'Open Sans'; color: #000000;">социально-демографические (пол, возраст, семейное положение, уровень образования, род занятий и должность, уровень дохода)</span></p>
+</li>
+<li style="list-style-type: disc; font-size: 14.6667px; font-family: Arial; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; white-space: pre-wrap; font-family: 'Open Sans'; color: #000000;">география (страна, города) </span></p>
+</li>
+<li style="list-style-type: disc; font-size: 14.6667px; font-family: Arial; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; white-space: pre-wrap; font-family: 'Open Sans'; color: #000000;">интересы, увлечения, задачи и проблемы аудитории (тематики сообществ, ключевые слова)</span></p>
+</li>
+</ul>
+<span style="color: #000000;"><br></span><br><span style="color: #000000;"><span style="font-size: 16px; font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap;">Большинство этих данных пользователи указывают в своих профилях соцсетей, и мы можем получить их в статистике сообщества. <br><br></span><span style="font-size: 16px;"><span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap;">Рассмотрим поиск и подбор площадок для каждой социальной сети.</span></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left; padding-left: 60px;" dir="ltr"><span style="color: #000000;"><span style="font-size: 18px; font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap;">&nbsp;</span></span></p>
+<span><a style="font-family: 'Open Sans'; font-size: 18px;" href="#vk-ok">Подбор площадок ВКонтакте и Одноклассники &gt;<br></a></span><br><span><a style="font-family: 'Open Sans'; font-size: 18px;" href="#ig">Подбор площадок Instagram &gt;<br></a></span><br><span style="font-size: 18px;"><a style="font-family: 'Open Sans'; font-size: 18px;" href="#tel">Подбор площадок Telegram &gt;</a></span>&nbsp;<span style="font-size: 18px;"><a style="font-family: 'Open Sans'; font-size: 18px;" href="#tel"><br></a></span><br><a style="font-family: 'Open Sans'; font-size: 18px;" href="#condition"><span style="font-size: 18px;">Дополнительные фильтры и настройки в поиске по площадкам &gt;</span><br><br><br></a>
+<div class="alert alert-success" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px;">При выборе сообществ для размещения помните: <br></span>
+<ul>
+<li><span style="font-size: 16px;">Поиск площадок по вашей тематике поможет быстро найти целевую аудиторию.&nbsp;</span></li>
+</ul>
+<ul>
+<li><span style="font-size: 16px;">Адаптация контента под тематику сообщества &mdash; интересный способ рассказать о своем продукте другой аудитории из абсолютно другой тематики.&nbsp;</span></li>
+</ul>
+<ul>
+<li><span><span style="font-size: 16px;">Используйте как можно больше различных параметров в фильтре по площадкам. Это поможет найти максимально подходящие сообщества для размещения. </span><span style="font-family: Verdana, Arial, Helvetica, sans-serif;">&nbsp;</span></span></li>
+</ul>
+</div>
+<h1 id="vk-ok"><span style="font-family: 'Open Sans'; font-size: 18px; color: #000000;"><strong><span style="vertical-align: baseline; white-space: pre-wrap;"><br>Подбор площадок ВКонтакте и Одноклассники</span></strong></span></h1>
+<div style="text-align: center;"><span style="color: #000000; font-size: 16px;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br><br></span></span> <iframe src="https://www.youtube.com/embed/zEFDY076XVo" width="640" height="360" allowfullscreen="" frameborder="0"></iframe></span><br><br><br><br>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Зайдите в раздел <a href="https://sociate.ru/spots/view/" target="_blank"><span>Площадки</span></a> и выберите в фильтре нужную социальную сеть &mdash; ВКонтакте или Одноклассники. <br><br>Поиск для сообществ этих соц. сетей работает по следующим параметрам:</span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><span style="background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Тематика сообщества &mdash; этот &nbsp;</span><span style="background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">параметр помогает определить содержание контента группы.</span></span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong id="docs-internal-guid-88fb51cc-83a7-b316-b9b9-06bd04e71f21" style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Социально-демографические и географические характеристики &mdash; пол, возраст, страна, города.</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Число участников &mdash; сколько пользователей состоит в сообществе.</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; color: #000000;">&nbsp;</span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.6667px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; text-align: left;" dir="ltr"><span style="font-size: 16px; color: #000000;"><span style="font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Охват рекламы &mdash; число участников сообщества, которые увидят ваш рекламный пост в сообществе. Эта цифра, как правило, в несколько раз отличается от числа уча</span><span style="font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">стников. &nbsp;</span><span style="font-family: 'Open Sans'; white-space: pre-wrap;">Охват рекламы рассчитывается на основе ранее размещенных заказов.</span></span></li>
+</ul>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">СРМ &nbsp;&mdash; стоимость 1000 показов на площадке. Рассчитывается по формуле CPM = (Стоимость размещения / Охват рекламы) * 1000</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong id="docs-internal-guid-88fb51cc-83aa-961a-5e5c-1d04b25128cd" style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Посещения в день &nbsp;&mdash; число пользователей, которые заходят в сообщество в течение суток.</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Охват в день &nbsp;&mdash; число пользователей, которые видят посты из этого сообщества в своей ленте новостей в течение суток. </span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Цена &nbsp;&mdash; стоимость размещения одного рекламного поста в сообществе.</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; color: #000000;"><span style="font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Внешние ссылки разрешены &mdash; настройка, которую указал Администратор сообщества, чтобы размещать посты с внешними ссылками.</span><span style="font-family: 'Open Sans'; white-space: pre-wrap;">Если вы планируете размещать пост с ссылкой на внешний сайт, важно отфильтровать площадки, готовые публиковать такие посты.</span></span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; color: #000000;">&nbsp;</span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Исключить закрытые сообщества &mdash; фильтр убирает из результатов поиска закрытые сообщества, в которых контент видят только подписчики.</span></span></li>
+</ul>
+<br><br>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Под фильтром площадок отображаются сами сообщества. У каждой группы можно посмотреть условия размещения, подробную статистику и другую дополнительную информацию.</span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong id="docs-internal-guid-88fb51cc-83ac-7468-1ebb-484af4a21169" style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Название сообщества</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><span style="background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Кликните по названию, чтобы перейти в само сообщество. Обращайте внимание на качество контента, количество постов в день, количество рекламных постов и активность пользователей в группе </span><span style="background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">(количество лайков, репостов и комментариев к последним постам).</span></span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 15.333333333333332px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Тематика сообщества и метки</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Тематика площадки задается администратором сообщества. </span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Если площадка вам подходит, добавьте для нее уникальную метку. При следующем поиске площадок просто выберите эту метку в фильтре и запустите поиск. </span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 15.333333333333332px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Статистика сообщества</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Участники сообщества, охват рекламы, подробная статистика по посещениям, охвату и демографии.</span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 15.333333333333332px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Стоимость размещения и СРМ</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">В поиске вы видите конечную стоимость размещения рекламы с учетом НДС. </span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap; color: #000000;">СРМ (Cost-Per-Millennium) &mdash; это показатель средней стоимости размещения рекламы за 1000 показов. &nbsp;</span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Рассчитывается по формуле&nbsp;<strong>CPM = (Стоимость размещения / Охват рекламы) * 1000</strong></span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-weight: bold; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Условия размещения<br><br></span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Время рекламного размещения делится на два периода. <strong>П</strong><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans';"><strong>ервое место</strong> &mdash; время, в течение которого ваш пост/репост будет висеть на первом месте в группе. На протяжении этого времени в группе не публикуются другие новости. <strong>Г</strong></span><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans';"><strong>арантированное время размещения</strong> &mdash; общее время размещения поста в группе. После размещения на первом месте пост продолжает висеть в группе, но смещается вниз. По истечении времени гарантии пост может быть удален.</span></span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">В "Дополнительно" администратор может написать о дополнительных условиях или времени размещения. </span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Ответ &mdash; среднее время, в течение которого администратор рассматривает заявки рекламодателей. Подсчитывается автоматически.<br><br> </span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Успех &mdash; процент успешно выполненных заказов. Расчет идет от общего числа размещенных на площадке заказов. </span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="color: #000000;"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans';">В расписании размещений&nbsp;</span><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans';">отображается уже занятое время для размещения рекламных постов.</span></span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<h1 id="ig" style="text-align: left;"><span style="font-size: 18px; color: #000000;"><span style="font-family: 'Open Sans';"><strong><span style="vertical-align: baseline; white-space: pre-wrap;">Подбор площадок </span></strong></span><span style="font-weight: bold; vertical-align: baseline; font-family: 'Open Sans';">Instagram</span></span></h1>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-weight: bold; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">&nbsp;</span></p>
+<span style="font-size: 16px; color: #000000;"><iframe src="https://www.youtube.com/embed/qONJQHGvDqk" width="640" height="360" allowfullscreen="" frameborder="0"></iframe> <span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;"><br><br style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; text-align: center;"><br style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; text-align: center;"></span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Зайдите в раздел&nbsp;<a href="https://sociate.ru/spots/view/" target="_blank"><span>Площадки</span></a>&nbsp;и выберите в фильтре нужную социальную сеть &mdash;&nbsp;Instagram.&nbsp;<br><br></span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Для профилей Instagram фильтр работает по другим параметрам:</span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><span style="background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Тематика профиля &mdash; этот &nbsp;</span><span style="background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">параметр помогает определить содержание контента профиля.</span></span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong id="docs-internal-guid-88fb51cc-8402-bcae-3520-9d4225bf4215" style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Число подписчиков &mdash; сколько пользователей подписано на этот профиль.</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Тип блога &mdash; тематический или блогер. В тематическом профиле все посты публикуются по одной выбранной теме. Блогер же в своем профиле публикует посты о событиях из собственной жизни.</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><strong style="font-weight: normal;">&nbsp;</strong></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.666666666666666px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Пол, страна и город &nbsp;&mdash; можно задать для типа профиля блоггер, чтобы отфильтровать профили по полу и географии их владельцев.</span></p>
+</li>
+</ul>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="color: #000000;">&nbsp;</span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 14.6667px; font-family: Arial; color: #000000; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; text-align: left;" dir="ltr"><span style="font-size: 16px; font-family: 'Open Sans'; background-color: #ffffff; font-weight: 400; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; color: #000000;">Цена &nbsp;&mdash; стоимость размещения одного рекламного поста в профиле.</span></li>
+</ul>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Под фильтром площадок отображаются сами профили. У каждого профиля можно посмотреть условия размещения, статистику, галерею и дополнительную информацию. </span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-weight: bold; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Условия размещения<br><br></span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="color: #000000;"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans';">Время рекламного размещения делится на два периода.&nbsp;</span><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans';"><strong>Первое место</strong> &mdash; время, в течение которого ваш пост будет висеть на первом месте в профиле. На протяжении этого времени в профиле не публикуются другие посты.&nbsp;</span><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans';"><strong>Гарантированное время размещения</strong> &mdash; общее время размещения поста в профиле. После размещения на первом месте пост продолжает висеть в профиле, но смещается вниз. По истечении времени гарантии пост может быть удален.</span></span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">В &ldquo;Дополнительно&rdquo; администратор может написать о дополнительных условиях или времени размещения. </span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">&nbsp;</span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Ответ &mdash; среднее время, в течение которого администратор рассматривает заявки рекламодателей. Подсчитывается автоматически.<br><br> </span></p>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Успех &mdash; процент успешно выполненных заказов. Расчет идет от общего числа размещенных на площадке заказов. </span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="color: #000000;"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans';">В расписании размещений&nbsp;</span><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans';">отображается уже занятое время для размещения рекламных постов.</span></span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<h1 id="tel" style="text-align: left;"><span style="font-size: 18px; color: #000000;"><span style="font-family: 'Open Sans';"><strong><span style="vertical-align: baseline; white-space: pre-wrap;">Подбор площадок </span></strong></span><span style="font-weight: bold; vertical-align: baseline; font-family: 'Open Sans';">Telegram</span></span></h1>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-weight: bold; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;"><br><br></span></p>
+<span style="font-size: 16px; color: #000000;"><iframe src="https://www.youtube.com/embed/PBSNkRJWxuE" width="640" height="360" allowfullscreen="" frameborder="0"></iframe> <span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="color: #000000;"><span style="font-family: 'Open Sans'; font-size: 16px;"><span style="vertical-align: baseline;"><br><br></span></span><span style="font-family: 'Open Sans'; font-size: 16px;"><span style="vertical-align: baseline;">Зайдите в раздел&nbsp;</span></span><span style="font-family: 'Open Sans'; font-size: 16px;"><span style="vertical-align: baseline;"><a href="https://sociate.ru/spots/view/" target="_blank"><span>Площадки</span></a>&nbsp;и выберите в фильтре нужную социальную сеть &mdash; Telegram.<br></span></span><span style="font-family: 'Open Sans';"><span style="vertical-align: baseline;"><br></span></span></span></p>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.6667px; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; color: #000000;"><span style="vertical-align: baseline;">Тематика канала &mdash; этот &nbsp;</span><span style="vertical-align: baseline;">параметр помогает определить содержание контента канала.</span></span></p>
+</li>
+</ul>
+<span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap;"><span style="vertical-align: baseline; white-space: pre-wrap;"><br></span></span></span>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.6667px; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; color: #000000;">Число участников &mdash; сколько пользователей подписано на канал.</span></p>
+</li>
+</ul>
+<span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap;"><span style="vertical-align: baseline; white-space: pre-wrap;"><br></span></span></span>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.6667px; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; color: #000000;">Охват рекламы &mdash; число подписчиков канала, которые увидят ваш рекламный пост. Эта цифра, как правило, в несколько раз отличается от числа участников. &nbsp;Охват рекламы рассчитывается на основе ранее размещенных заказов.</span></p>
+</li>
+</ul>
+<span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap;"><span style="vertical-align: baseline; white-space: pre-wrap;"><br></span></span></span>
+<ul style="margin-top: 0pt; margin-bottom: 0pt; text-align: left;">
+<li style="list-style-type: disc; font-size: 14.6667px; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;" dir="ltr"><span style="font-size: 16px; color: #000000;"><span style="vertical-align: baseline;">СРМ &nbsp;&mdash; стоимость 1000 показов на площадке. </span>Рассчитывается по формуле&nbsp;<strong style="font-size: 16px; white-space: normal;">CPM = (Стоимость размещения / Охват рекламы) * 1000</strong></span></p>
+</li>
+</ul>
+<span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap;"><span style="vertical-align: baseline; white-space: pre-wrap;"><br></span></span></span>
+<ul style="margin-top: 0pt; margin-bottom: 0pt;">
+<li style="list-style-type: disc; font-size: 14.6667px; vertical-align: baseline;" dir="ltr">
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; color: #000000;">Цена &nbsp;&mdash; стоимость размещения одного рекламного поста на канале.</span></p>
+</li>
+</ul>
+<span style="font-family: 'Open Sans'; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; font-weight: bold; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;"><span style="font-weight: normal; white-space: pre-wrap;">Под фильтром площадок отображаются сами каналы. У каждого канала можно посмотреть условия размещения, статистику и дополнительную информацию.<br></span><br>Условия размещения</span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><span style="vertical-align: baseline;">Время рекламного размещения </span><span style="vertical-align: baseline;">&mdash; </span><span style="vertical-align: baseline;">24 часа. &nbsp;</span></span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">В Дополнительно администратор может написать о дополнительных условиях или времени размещения. </span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;">Успех &mdash; процент успешно выполненных заказов. Расчет идет от общего числа размещенных на площадке заказов. </span></p>
+<h1 id="condition" style="text-align: left;"><span style="font-size: 16px; font-weight: bold; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;"><br><span style="font-size: 18px;">Дополнительные фильтры и настройки в поиске по площадкам</span></span></h1>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;"><strong>Метки</strong> &mdash; инструмент для быстрого поиска площадок, которые Вы подбирали ранее. Если площадка Вам подходит, добавьте для нее уникальную метку. При следующем поиске площадок просто выберите эту метку в фильтре и запустите поиск. Функция поможет при подготовке к рекламной кампании, когда необходимо подобрать список площадок под определенный бюджет.</span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;"><strong>Новые площадки</strong> &mdash; фильтр, который показывает площадки, добавленные за последнюю неделю или за последний месяц. Если Вы регулярно размещаете рекламу, фильтр поможет отследить появление новых площадок для размещения. </span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-family: 'Open Sans'; font-size: 16px; color: #000000;"><span style="vertical-align: baseline;"><strong>Исключить &ldquo;сонь&rdquo;</strong> &mdash; способ исключить сообщества, Администраторы которых &ldquo;просыпали&rdquo; присланные им задания и никак на них не реагировали. &ldquo;Соней&rdquo; становится Администратор сообщества, который &ldquo;проспал&rdquo; более 60% заявок, отправленных ему Рекламодателем.</span></span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;"><strong>Показывать группы 18+</strong> &mdash; фильтр, который выводит в поиске площадки &ldquo;для взрослых&rdquo;. По умолчанию площадки с такой тематикой скрыты из поиска. </span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;"><strong>Моё избранное</strong> &mdash; функция для фильтрации площадок, которые Вы добавили в Избранное. Поможет быстро найти понравившиеся Вам площадки. </span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br></span></span>
+<p style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt; text-align: left;" dir="ltr"><span style="font-size: 16px; vertical-align: baseline; font-family: 'Open Sans'; color: #000000;"><strong>Черный список</strong> &nbsp;&mdash; функция для фильтрации площадок, которые Вы добавили в Черный список. После добавления площадки в черный список она не будет отображаться в поиске. Для отображения этих площадок в фильтре поиска выберите &ldquo;Черный список&rdquo;.</span></p>
+<span style="font-size: 16px; font-family: Arial; vertical-align: baseline; white-space: pre-wrap; color: #000000;"><span style="font-family: Arial; vertical-align: baseline; white-space: pre-wrap;"><br><br></span></span></div>
+
+    </div>
+    <hr/>
+    
+
+
+        </div>
+    </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+    <div class="copyright-block">
+<div class="row">
+    <div class="col-sm-6">
+        <div style="margin: 20px;"><!-- begin WebMoney Transfer : accept label -->
+        <!-- end WebMoney Transfer : attestation label -->
+        <IDXSKIP><a href="/about">О системе</a></IDXSKIP><br/>
+        <IDXSKIP><a href="/reviews">Отзывы</a></IDXSKIP><br/>
+        <IDXSKIP><a href="/news">Новости</a></IDXSKIP><br/>
+        <IDXSKIP><a href="/contacts">Контакты</a></IDXSKIP><br/>
+        <IDXSKIP>Обратная связь: </IDXSKIP><IDXSKIP><a href="mailto:support@sociate.ru">support@sociate.ru</a></IDXSKIP><br/>
+        <IDXSKIP>Используя sociate.ru, пользователь принимает </IDXSKIP><IDXSKIP><a href ="/terms"> правила пользования системой</a></IDXSKIP> <IDXSKIP>и
+            <a href="/oferta" target="_blank">договор-оферту</a></IDXSKIP>
+        <!-- end WebMoney Transfer : accept label -->
+        <br/>
+        <IDXSKIP><a href="/mobile/">мобильная версия</a></IDXSKIP><br/>
+        <IDXSKIP><a href="/mobileapps/">Мобильные приложения</a></IDXSKIP><br/>
+
+        
+        
+            <script type="text/javascript" src="https://yandex.st/share/share.js" charset="utf-8"></script>
+            <script type="text/javascript">
+            new Ya.share({
+            element: 'social-share-icons',
+                elementStyle: {
+                    'type': 'none',
+                    'border': true,
+                    'quickServices': ['vkontakte', 'facebook', 'twitter', 'odnoklassniki', 'moimir']
+                },
+                link: 'https://sociate.ru/',
+                title: 'Sociate',
+                description: 'Sociate.ru — биржа рекламы в группах ВКонтакте, Одноклассники, Инстаграм',
+                image: 'https://sociate.ru/static/images/vk_share_sociate.png?1374269347',
+                serviceSpecific: {
+                    twitter: {
+                        title: '#Sociate.ru — биржа рекламы в группах ВКонтакте, Одноклассники, Инстаграм'
+                   }
+                }
+            });
+            </script>
+            <div id="social-share-icons"></div>
+        
+
+        <IDXSKIP><p class="extra-copyright">
+            <a href="http://www.flaticon.com/" target="_blank">Icons designed by Freepik</a>
+        </p></IDXSKIP>
+        <IDXSKIP><p class="mt4">&copy; Sociate.ru 2017</p></IDXSKIP>
+        </div>
+    </div>
+
+    <div class="col-sm-6 hidden-xs">
+        <div>
+            <IDXSKIP><p class="mt14">
+                <a class="mr4" style="text-decoration: none;" href="http://www.megastock.ru/" target="_blank">
+                    <img src="https://static.sociate.ru/static/images/main_page/payments_img/wm.png" alt="www.megastock.ru" border="0">
+                </a>
+                <!-- begin WebMoney Transfer : attestation label -->
+                <a class="mr4" style="text-decoration: none;" href="https://passport.webmoney.ru/asp/certview.asp?wmid=329479050045" target="_blank">
+                    <img src="https://static.sociate.ru/static/images/main_page/payments_img/wm_att.png" alt="Здесь находится аттестат нашего WM идентификатора 000000000000" border="0" />
+                </a>
+                <a class="mr4" style="text-decoration: none;" href="https://money.yandex.ru" target="_blank">
+                    <img src="https://static.sociate.ru/static/images/main_page/payments_img/yandex_money.gif" alt="Я принимаю Яндекс.Деньги" title="Я принимаю Яндекс.Деньги" border="0" width="88" height="31"/>
+                </a>
+                <a class="mr4" style="text-decoration: none;" href="https://www.qiwi.ru" target="_blank">
+                    <img src="https://static.sociate.ru/static/images/main_page/payments_img/Qiwi.gif" alt="Я работаю с QIWI Wallet" title="Я работаю с QIWI Wallet" border="0" width="88" height="52" />
+                </a>
+                <a class="mr4" style="text-decoration: none;" href="https://www.onlinedengi.ru/" target="_blank">
+                    <img style="padding-top: 14px;" src="https://static.sociate.ru/static/images/main_page/payments_img/dengionline.png" alt="Я работаю с Деньги Online" title="Я работаю с Деньги Online" border="0" width="110" />
+                </a>
+                <br />
+            </p></IDXSKIP>
+        </div>
+        <IDXSKIP><div class="our-partners-block pull-right">
+            <div class="opb-caption">
+                Официальный партнер:
+            </div>
+            <div>
+                <img src="https://static.sociate.ru/static/images/main_page/partners/wp_logo.png" style="">
+            </div>
+        </div></IDXSKIP>
+    </div>
+</div></div>
+
+                
+            </div>
+        
+    </div>
+    
+
+
+
+<script type="text/javascript" src="https://static.sociate.ru/static/compressed/js/shims.e77074ae8f85.js" charset="utf-8"></script>
+
+
+
+<script src="https://yastatic.net/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://static.sociate.ru/static/outer/jquery-1.10.2.min.js">\x3C/script>')</script>
+
+<script src="https://yastatic.net/jquery-ui/1.10.3/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write('<script src="https://static.sociate.ru/static/outer/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js">\x3C/script>')</script>
+
+
+<script src="https://yastatic.net/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<script>$.fn.modal || document.write('<script src="https://static.sociate.ru/static/ace_admin-1.3.3/js/bootstrap.min.js">\x3C/script>')</script>
+
+<script type="text/javascript" src="https://static.sociate.ru/static/compressed/js/base_libs.570b3e5bdfd9.js" charset="utf-8"></script>
+
+
+<script src="https://yastatic.net/angularjs/1.3.0/angular.min.js"></script>
+
+<script>window.angular || document.write('<script src="https://static.sociate.ru/static/angular-1.3.0/angular.js">\x3C/script>')</script>
+
+<script type="text/javascript" src="https://static.sociate.ru/static/compressed/js/libs.d068836c83b1.js" charset="utf-8"></script>
+
+
+<script>
+    ZeroClipboard.config( { swfPath: "https://static.sociate.ru/static/zeroclipboard-2.1.6/ZeroClipboard.swf" } );
+</script>
+
+<script type="text/javascript">Highcharts.setOptions({
+    lang: {
+        months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        weekdays: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+        shortMonths: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июнь',
+            'Июль', 'Авг', 'Сент', 'Окт', 'Ноя', 'Дек']
+    }
+});
+</script>
+
+<script type="text/javascript" src="https://static.sociate.ru/static/compressed/js/ace_admin.7aba3401e46d.js" charset="utf-8"></script>
+    
+    
+
+
+<div class="modal" id="maintenance-modal" style="z-index: 10000;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <IDXSKIP><div class="modal-header text-center">
+                <a class="close" data-dismiss="modal">×</a>
+                <h4 class="fs16">Технические работы</h4>
+            </div></IDXSKIP>
+            <div class="modal-body">
+                <div class="fs16 text-center">
+                    <p style="margin: 0 0 50px 0; line-height: 1.5; font-size: 120%;">
+                        <IDXSKIP>Мы производим важное обновление.<br>
+                        Попробуйте перезагрузить страницу через пару минут.
+                    </IDXSKIP></p>
+                    <p>
+                        <IDXSKIP>Если у вас есть вопросы - вы всегда можете задать их в нашей </IDXSKIP><IDXSKIP><a href="https://vk.com/sociate" target="_blank">группе</a></IDXSKIP> <IDXSKIP>и по email поддержки - </IDXSKIP><IDXSKIP><a href="mailto:support@sociate.ru">support@sociate.ru</a></IDXSKIP><IDXSKIP>.
+                    </IDXSKIP></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://static.sociate.ru/static/compressed/js/sociate_base.4b96fce17035.js" charset="utf-8"></script>
+
+
+    <script src="https://static.sociate.ru/static/outer/vk-async.js"></script>
+
+
+<script type="text/javascript">
+    Sociate.user_amount = parseFloat("0.0".replace(",", "."));
+    Sociate.tags_of_user = _.map(JSON.parse("[]"), _.escape);
+    Sociate.tags_shared_json = _.map(JSON.parse("[]"), _.escape);
+    $.mask.definitions['#']='[012]';
+    $.mask.definitions['*']='[012345]';
+
+    PNotify.prototype.options.styling = 'fontawesome';
+    PNotify.prototype.options.width = '320px';
+    PNotify.prototype.options.delay = 3000;
+    PNotify.prototype.options.stack = {
+		dir1: 'down',
+		dir2: 'left',
+		push: 'bottom',
+		spacing1: 25,
+		spacing2: 25,
+        firstpos1: 60,
+        firstpos2: 25,
+		context: $('body')
+	};
+
+    $(document).ready(function(){
+        $('.masked-integer-only').mask('9?9999');
+        $('.masked-sms-code').mask('999999', {placeholder: ''});
+        $('.masked-percent').mask('9?9');
+        $('.masked-input-time').mask('#9:*9');
+    });
+
+    Sociate.advCounters = {
+        'advertiser_new_count': 0,
+        'advertiser_discussed_count': 0,
+        'advertiser_accepted_count': 0,
+        'advertiser_checking_count': 0,
+        'advertiser_declined_hand_count': 0,
+        'advertiser_declined_auto_count': 0
+    };
+
+    // Events configuration
+    Sociate.events_unread_count = 0;
+
+    Sociate.get_campaign_slug = '/tasks/get_campaign_slug/';
+
+</script>
+
+
+    <script type="text/javascript">
+        VK_async.ready(function () {
+            VK.init({apiId: 2909087});
+        });
+
+        
+            
+                VK_async.ready(function () {
+                    if (!$('#vk_groups').length) { return; }
+                    VK.Widgets.Group("vk_groups", {mode: 2, width: "199", height: "290"}, 38496818);
+                });
+            
+
+            VK_async.ready(function () {
+                VK.Widgets.CommunityMessages("vk_community_messages", 38496818, {disableButtonTooltip: 1});
+            });
+        
+    </script>
+
+
+
+    <div class="modal" id="signinModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <IDXSKIP><div class="modal-header text-center">
+                <a class="close" data-dismiss="modal">×</a>
+                <h4 class="fs16">Войти или <a class="tdn" rel="nofollow"
+                                              href="#"
+                                              id="signup-link">зарегистрироваться</a>
+                </h4>
+            </div></IDXSKIP>
+            <form action="/accounts/login/" id="signin-password-form" method="post"
+                  class="form-inline signin-form">
+                <div class="modal-body">
+                    <input type="hidden" name="remember_me" value="1">
+                    <input type="hidden" name="next"
+                           value="/help/spots_search/">
+                    <input type="hidden" name="target_initial_tariff">
+                    <input type="hidden" name="target_initial_plan">
+
+                    <div class="form-group">
+                        <label class="fs13 control-label"
+                               for="form-field-1">Email/логин</label>
+
+                        <div class="controls">
+                            <input id="id_identification" maxlength="75" name="identification" type="text" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="fs13 control-label"
+                               for="form-field-2">Пароль</label>
+
+                        <div class="controls">
+                            <input id="id_password" name="password" type="password" />
+                        </div>
+                    </div>
+                </div>
+                <IDXSKIP><div id="id-signin-modal-footer" class="tac modal-footer">
+                    <div class="form-group signin-control">
+                        <button id="signin-link" type=""
+                                class="signin-link pull-left btn btn-success btn-sm">Войти
+                        </button>
+                        <a class="tdn pull-right mr4" rel="nofollow"
+                           id="reset-pass-link" href="#">Забыли пароль?</a>
+                    </div>
+                </div></IDXSKIP>
+            </form>
+            <form action="/accounts/login/token/" id="signin-token-form" method="post"
+                  class="form-inline signin-form hidden">
+                <div class="modal-body">
+                    <input type="hidden" name="next"
+                           value="/help/spots_search/">
+                    <input type="hidden" name="target_initial_tariff">
+                    <input type="hidden" name="target_initial_plan">
+
+                    <div class="form-group">
+                        <label class="fs13 control-label"
+                               for="form-field-1">Токен из приложения</label>
+
+                        <div class="controls">
+                            <input id="id_otp_token" max="999999" min="1" name="otp_token" type="number" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tac modal-footer signin-modal-footer">
+                    <div class="form-group signin-control">
+                        <IDXSKIP><button id="signin-token-link" type=""
+                                class="signin-link pull-left btn btn-success btn-sm">Войти
+                        </button></IDXSKIP>
+                        <IDXSKIP><a href="#" class="signin-link signin-switch-to-backup pull-right">Ввести резервный код</a></IDXSKIP>
+                    </div>
+                </div>
+            </form>
+            <form action="/accounts/login/backup_token/" id="signin-token-backup-form" method="post"
+                  class="form-inline signin-form" style="display: none;">
+                <div class="modal-body">
+                    <input type="hidden" name="next"
+                           value="/help/spots_search/">
+                    <input type="hidden" name="target_initial_tariff">
+                    <input type="hidden" name="target_initial_plan">
+
+                    <div class="form-group">
+                        <label class="fs13 control-label"
+                               for="form-field-1">Резервный код</label>
+
+                        <div class="controls">
+                            <input id="id_otp_token" name="otp_token" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tac modal-footer signin-modal-footer">
+                    <div class="form-group signin-control">
+                        <IDXSKIP><button id="signin-token-backup-link" type=""
+                                class="signin-link pull-left btn btn-success btn-sm">Войти
+                        </button></IDXSKIP>
+                        <IDXSKIP><a href="#" class="signin-link signin-switch-to-app pull-right">Ввести код из приложения</a></IDXSKIP>
+                    </div>
+                </div>
+            </form>
+            <IDXSKIP><div id="id-signin-modal-footer-vk" class="tac modal-footer">
+        <span class="social-login-block" id="social-login">
+            <a id="vk_login" class="vk_login btn btn-sm btn-vk"
+               href="/login/vkontakte-oauth2/?next=">
+                Войти через ВКонтакте
+            </a>
+        </span>
+            </div></IDXSKIP>
+        </div>
+    </div>
+</div>
+    <div class="modal" id="signupModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <IDXSKIP><div class="modal-header">
+                <a class="close" data-dismiss="modal">×</a>
+                <h4 class="modal-title fs16">Регистрация</h4>
+            </div></IDXSKIP>
+            <form action="/accounts/signup/" id="signupForm" method="post">
+                <div class="modal-body">
+                    <input type="hidden" name="target_initial_tariff">
+                    <input type="hidden" name="target_initial_plan">
+                    <fieldset class="textbox">
+                        <IDXSKIP><label class="username">
+                            <input class="required" id="id_username" maxlength="30" name="username" type="text" />
+                        </label></IDXSKIP>
+                        <IDXSKIP><label class="email">
+                            <input class="required" id="id_email" maxlength="75" name="email" type="text" />
+                        </label></IDXSKIP>
+                        <IDXSKIP><label class="password">
+                            <input class="required" id="id_password1" name="password1" type="password" />
+                        </label></IDXSKIP>
+                        <IDXSKIP><label class="confirm_password" id="confirm_password">
+                            <input class="required" id="id_password2" name="password2" type="password" />
+                        </label></IDXSKIP>
+                        <IDXSKIP><label class="user_role " id="user_role">
+                            Вы: &nbsp; <select id="id_user_role" name="user_role">
+<option value="1">Администратор</option>
+<option value="2">Рекламодатель</option>
+</select>
+                        </label></IDXSKIP>
+                        <div class="checkbox">
+                            <label>
+                                <input id="id_accept_terms" name="accept_terms" type="checkbox" />
+                                <IDXSKIP>Я прочитал(-а) и и принимаю </IDXSKIP><IDXSKIP><a href="/oferta" target="_blank">договор-оферту</a></IDXSKIP>
+                            </label>
+                        </div>
+                        <div class="alert alert-danger js-errors hidden"></div>
+                    </fieldset>
+                </div>
+                <div id="id-signup-modal-footer" class="modal-footer">
+                    <IDXSKIP><a style="line-height: 30px;" href="#" rel='nofollow'
+                       class="tdn pull-left back-to-signin-form-link">Войти</a></IDXSKIP>
+                    <IDXSKIP><button id="signup-button" type="submit"
+                            class="btn btn-sm btn-success">Зарегистрироваться
+                    </button></IDXSKIP>
+                </div>
+                <IDXSKIP><div id="id-signin-modal-footer-vk" class="tac modal-footer">
+        <span class="social-login-block" id="social-register">
+            <a id="vk_register" class="vk_login btn btn-sm btn-vk"
+               href="/login/vkontakte-oauth2/?next=">
+                Регистрация через ВКонтакте
+            </a>
+        </span>
+                </div></IDXSKIP>
+            </form>
+        </div>
+    </div>
+</div>
+    <div class="modal" id="forgotPassModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <IDXSKIP><div class="modal-header">
+                <a class="close" data-dismiss="modal">×</a>
+                <h4 class="modal-title fs16">Восстановление пароля</h4>
+            </div></IDXSKIP>
+            <form action="/accounts/password/reset/"
+                  id="forgotPassForm" method="post">
+                <IDXSKIP><div class="modal-body">
+                    <fieldset class="textbox">
+                        <label class="email">
+                            <input class="required" id="id_email" maxlength="75" name="email" type="text" />
+                        </label>
+
+                        <div class="hidden alert alert-success msg-placeholder"></div>
+                    </fieldset>
+                </div></IDXSKIP>
+                <div id="id-forgot-pass-modal-footer" class="modal-footer">
+                    <IDXSKIP><a href="#" style="line-height: 30px;" rel='nofollow'
+                       class="tdn pull-left back-to-signin-form-link">
+                        Назад
+                    </a></IDXSKIP>
+                    <IDXSKIP><button id="id-send-pass-btn" type="submit"
+                            class="btn btn-sm btn-success">
+                        Сбросить пароль
+                    </button></IDXSKIP>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal" id="manual-placement-warning">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <IDXSKIP><div class="modal-header">
+                <a class="close" data-dismiss="modal">×</a>
+
+                <h3 class="modal-title">Предупреждение</h3>
+            </div></IDXSKIP>
+            <div class="modal-body">
+                <p><IDXSKIP>Если задание размещается вручную - статистика рекламного поста не будет собрана.</IDXSKIP></p>
+
+                <p style="font-weight: bold;">
+                    <IDXSKIP>Группы без статистики не будут показаны в поиске по площадкам с сортировкой по CPM -
+                    </IDXSKIP><IDXSKIP><a href="https://sociate.ru/spots/view/?ordering=cpm">https://sociate.ru/spots/view/?ordering=cpm</a></IDXSKIP>
+                </p>
+            </div>
+            <IDXSKIP><div class="modal-footer">
+                <button class='btn' data-dismiss='modal'>Закрыть</button>
+            </div></IDXSKIP>
+        </div>
+    </div>
+</div>
+
+<IDXSKIP><div class="modal" id="msg-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal">×</a>
+
+                <h3 class="modal-title js-title"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="js-message alert">
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class='btn' data-dismiss='modal'>Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div></IDXSKIP>
+
+
+
+
+    <script type="text/javascript">
+    
+    
+    
+        
+
+        __gaTracker('send', 'pageview', window.__gaPVOpts);
+    </script>
+
+    
+
+<script type="text/javascript">
+    PageTour.opts.debug = false;
+    PageTour.opts.tour.fetchUrl = '/tour/get/';
+    PageTour.opts.hint.text = 'Показать подсказки';
+    PageTour.opts.hint.showDisable = true;
+    PageTour.opts.callbacks.onHintClick = function(tour) {
+        Sociate.trackGAEvent(
+            true, 'page_tour', 'hint_click', tour.tourTag
+        );
+    };
+    PageTour.opts.callbacks.onHintDisableClick = function(tour) {
+        Sociate.trackGAEvent(
+            true, 'page_tour', 'disable_hints'
+        );
+    };
+</script>
+
+    
+        
+        
+            <!-- Yandex.Metrika counter -->
+            
+<script type="text/javascript">
+
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter = new Ya.Metrika({
+                    id:14759578,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+
+</script>
+            
+
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/14759578" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+
+            <!-- /Yandex.Metrika counter -->
+            
+
+
+
+<script type="text/javascript">
+if (window.google_trackConversion) {
+window.google_trackConversion({
+    google_conversion_id: 982921876,
+    google_custom_params: {},
+    google_remarketing_only: true
+});
+}
+</script>
+
+        
+    
+
+    
+        <IDXSKIP><div id="top-link">
+            <a href="#top" class="top-link-anchor">
+                <i class="ace-icon fa fa-arrow-up"></i>
+                <span class="text">Наверх</span>
+            </a>
+        </div></IDXSKIP>
+    
+    
+    <script type="text/javascript">
+        VK_async.ready(function () {
+            VK.Widgets.Comments('vk_comments', {width: 500, limit: 15});
+            VK.Widgets.Like('vk_like', {width: 500, limit: 15});
+        })
+    </script>
+
+
+    <!-- VK Widget -->
+    <div id="vk_community_messages" class="visible-lg"></div>
+    <!-- VK Widget end -->
+
+</body>
+</html>

@@ -1,0 +1,678 @@
+pcabc.ru/basic/bas01.html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+
+
+
+  
+  <meta content="text/html; charset=windows-1251" http-equiv="content-type"><title>Самоучитель персонального компьютера</title>
+  
+
+  
+  
+  <link rel="stylesheet" href="style5.css" type="text/css">
+
+  
+  <meta content="Косцов" name="author">
+
+  
+  <meta content="программирование языке бейсик Basic" name="description"></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);" alink="#00b1ff" link="#00b1ff" vlink="#00b1ff">
+<table style="text-align: left; width: 100%; background-color: rgb(203, 239, 255);" border="1" cellpadding="7" cellspacing="5">
+
+  <tbody>
+    <tr>
+      <td class="b1" colspan="2" rowspan="1" style="vertical-align: top;">
+      <div style="text-align: center; background-color: rgb(203, 239, 255);"><img style="width: 767px; height: 362px;" alt="" src="logo2.jpg"><br>
+      </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" rowspan="1" class="b2" style="vertical-align: top; width: 123px;">
+      <div style="text-align: center;"><big><big><a href="http://www.pcabc.ru/"><img style="border: 0px solid ; width: 120px; height: 65px;" alt="" src="rk41.png"></a><br>
+      <a href="http://www.pcabc.ru/forum/"><img style="border: 0px solid ; width: 123px; height: 66px;" alt="" src="rk42.png"></a><br>
+      <a href="http://www.pcabc.ru/avtor/"><img style="border: 0px solid ; width: 122px; height: 66px;" alt="" src="rk43.png"></a><br>
+      <a href="http://www.pcabc.ru/contact/"><img style="border: 0px solid ; width: 122px; height: 66px;" alt="" src="rk44.png"></a><br>
+      <a href="http://www.pcabc.ru/article"><img style="border: 0px solid ; width: 122px; height: 66px;" alt="" src="rk45.png"></a><br>
+      </big></big></div>
+      <big><big><br>
+      <script type="text/javascript"><!--
+google_ad_client = "ca-pub-5376924806235897";
+
+google_ad_slot = "3335204127";
+google_ad_width = 120;
+google_ad_height = 600;
+//-->
+      </script>
+      <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script><br>
+      <script type="text/javascript"><!--
+google_ad_client = "ca-pub-5376924806235897";
+
+google_ad_slot = "1660161997";
+google_ad_width = 120;
+google_ad_height = 240;
+//-->
+      </script>
+      <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script><br>
+      </big></big>&nbsp; <br>
+      </td>
+      <td class="b2" colspan="1" rowspan="1" style="vertical-align: top;">
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; text-indent: 14.2pt; line-height: normal;" align="center"><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+      
+      <table style="text-align: left; width: 100%;" cellpadding="2" cellspacing="2">
+      </table>
+      <table style="text-align: left; width: 100%;" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top; text-align: center;"><b style="font-family: Helvetica,Arial,sans-serif;"><span style="font-size: 24pt;">программирование на языке бейсик</span></b><br>
+</td>
+            <td style="vertical-align: top; width: 150px;"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
+      <table style="width: 95%; text-align: left; margin-left: auto; margin-right: auto;">
+
+					<tbody><tr>
+									<td>&nbsp;
+            <h1 class="western" lang="ru-RU"><font style="font-family: Helvetica,Arial,sans-serif;" size="5">Знакомство с языком <span lang="en-US">QBasic</span></font></h1>
+
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Все
+действия, которые совершает компьютер, выполняются на основе
+инструкций. Для того, чтобы их написать, программист пишет программу.
+Однако, в силу того, что в инструкциях довольно трудно разобраться, был
+придуман язык Ассемблер, где вместо чисел пишутся мнемонические коды
+программы, которые легче запомнить и в них разобраться. Язык Ассемблер
+является языком низкого уровня, то есть максимально приближенным к
+машинным командам и является довольно сложным языком для
+программирования. Например, чтобы запрограммировать вывод на экран
+операции «<font face="Arial, sans-serif">2*8+<span lang="en-US">Sin</span>(1.2)</font>» требуется выполнение несколько десятков операций. </font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Поэтому
+для облегчения труда программиста были разработаны языки
+программирования высокого уровня, в которых для выполнения указанной
+операции требуется одна строчка, например, «<font face="Arial, sans-serif"><span lang="en-US">PRINT</span></font> <font face="Arial, sans-serif">2*8+<span lang="en-US">SIN</span>(1.2)</font>».
+Программы, написанные для языка Ассемблер, имеют преимущества в том,
+что они меньше требуют памяти и быстрее выполняются. А языки высокого
+уровня, несмотря на то, что их легче написать и отладить, требуют
+больше памяти и времени для выполнения. Поэтому на языках низкого
+уровня пишутся программы, критичные к быстродействию, например,
+драйверы устройств, к которым происходит частое обращение, а на языках
+высокого уровня - большинство остальных программ. Достаточно сказать,
+что некоторые модули системы Windows и пакеты программ <span lang="en-US">Microsoft</span> <span lang="en-US">Office</span> были выполнены на языке Паскаль.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">В
+настоящее время в общеобразовательных школах существуют разные
+программы по информатике, которые содержат две части: знакомство с
+системой Windows и началами программирования. </font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">При этом, как правило, происходит знакомство с одним из языков программирования: <span lang="en-US">Qbasic</span>, <span lang="en-US">Visual</span> <span lang="en-US">Basic</span> и <span lang="en-US">Turbo</span> <span lang="en-US">Pascale</span>.
+Выбор языка производится по решению учителя. Иногда возникает вопрос:
+какой из языков лучше? Все они обладают своими достоинствами и
+недостатками, однако, переход от одного языка к другому происходит
+довольно просто, так как принципы, в них заложенные одинаковы. Поэтому
+основной задачей при изучении программирования является знакомство с
+общими принципами ее работы.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">В данной главе дается описание основ с началами программирования на языке <span lang="en-US">QBasic</span>.
+Этот язык выбран потому, что он достаточно прост и его можно легко
+установить на компьютере, так как он находится в составе системы <span lang="en-US">Ms</span> <span lang="en-US">DOS</span>.
+Описание языка проиллюстрируем большим количеством примеров, по мере
+описания которых будут вводиться основные понятия программирования. На
+практике такой подход позволяет достаточно быстро и в увлекательной
+форме изучать язык программирования. Далее вместо названия <span lang="en-US">Qbasic</span> будем писать просто Бейсик.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Существует несколько видов данного языка. Это <span lang="en-US">GW</span>-<span lang="en-US">Basic</span>, <span lang="en-US">TurboBasic</span>, <span lang="en-US">Qbasic</span>
+и так далее. Работа с этими версиями очень похожи друг на друга
+принципами построения, базовыми наборами операторов и конструкциями.
+Поэтому, изучив один вариант, легко перейти к другому.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Перед практической работой с языком <u>рекомендуется создать новую директорию</u> под названием «Бейсик», «<span lang="en-US">Qbasic</span>» или дать аналогичное наименование, куда переместить два файла: <span lang="en-US">Qbasic</span>.<span lang="en-US">exe</span> и <span lang="en-US">Qbasik</span>.<span lang="en-US">hlp</span>.
+В первом файле находится программа, при помощи которой можно набрать
+исходный текст программы, во втором находится справочное описание
+операторов языка. Кроме того, в данную директорию следует поместить
+программу, которая позволит вводить русские символы (кириллицу).
+Подобных программ имеется довольно много и каждая из них позволяет
+переходить к кириллице и обратно на латинский язык при помощи своей
+последовательности горячих клавиш. Желательно иметь такую программу,
+сочетание клавиш которой не совпадает с горячими клавишами самого
+пакета, так как при нажатии на эти клавиши будет выполнена какая-либо
+команда из меню Бейсика и произойдет переход на кириллицу. Например,
+если переход на кириллицу происходит с помощью клавиш <span lang="en-US"><i>Shift</i></span><i>+</i><span lang="en-US"><i>Alt</i></span>,
+то при нажатии на них одновременно курсор перейдет в верхнее меню и
+произойдет переход на кириллицу. Поэтому в данном случае следует выйти
+из верхнего меню, нажав клавишу <span lang="en-US"><i>Esc</i></span><i>,</i> и продолжить работу.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">В
+данной директории можно также разместить файлы с исходными текстами
+программ, которые будут создаваться в процессе практической работы.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Для <b>запуска программы в системе ДОС</b> желательно использовать программу <span lang="en-US">Norton</span> <span lang="en-US">Commander</span>. Для того, чтобы применять при работе мышку, нужно иметь в файле <span lang="en-US">Autoexec</span>.<span lang="en-US">bat</span> строчку типа: «<font face="Arial, sans-serif"><span lang="en-US">C</span>:\<span lang="en-US">UTIL</span>\<span lang="en-US">Mouse</span></font>», где «<font face="Arial, sans-serif"><span lang="en-US">C</span>:\<span lang="en-US">UTIL</span></font>» - название директории, где находится программа «<font face="Arial, sans-serif"><span lang="en-US">Mouse</span></font>».
+Кроме того, требуется выполнить программу установки драйвера перехода
+из латинского языка на кириллицу и обратно, что также можно включить в
+файл <span lang="en-US">Autoexec</span>.<span lang="en-US">bat</span>. Краткие сведения о том, как работать в системе ДОС описано в отдельной главе. Для запуска программы <span lang="en-US">Qbasic</span>, нужно в панели <span lang="en-US">Norton</span> <span lang="en-US">Commander</span> найти файл с названием «<font face="Arial, sans-serif"><span lang="en-US">Qbasic</span>.<span lang="en-US">exe</span></font>», установить на нем курсор и нажать на клавишу <span lang="en-US"><i>Enter</i></span>. </font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Для <u>запуска программы в системе Windows</u> следует войти в режим эмуляции системы ДОС (<font face="Arial, sans-serif">Пуск </font>&#61662;<font face="Arial, sans-serif">Программы </font>&#61662;<font face="Arial, sans-serif">Сеанс <span lang="en-US">Ms</span>-ДОС</font>), вызвать программу <span lang="en-US">Norton</span> <span lang="en-US">Commander</span>,
+выполнить программу установки драйвера перехода из латинского языка на
+кириллицу (нажав на соответствующий значок), после чего войти в
+директорию, где находится файл с Бейсиком, подвести курсор к названию «<font face="Arial, sans-serif"><span lang="en-US">Qbasic</span>.<span lang="en-US">exe</span></font>» и нажать на клавишу <span lang="en-US"><i>Enter</i></span>. </font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Д<img style="border: 0px solid ; width: 728px; height: 428px;" alt="Окно программы для работы с языком QBasic" src="b02_html_m41a01f35.png" name="Объект1" align="left" hspace="12"></font> </p>
+
+      
+            <p class="western" style="margin-top: 0.21cm;" lang="ru-RU"><br></p>
+
+      
+            <div style="text-align: justify;"><font size="5">ля того, чтобы вызвать программу «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">Qbasic</span></font><font size="5">» из любой директории, а не только оттуда, где она находится, нужно установить команду </font><font face="Arial, sans-serif" size="5"><span lang="en-US">Path</span></font><font size="5"> в файле </font><font face="Arial, sans-serif" size="5"><span lang="en-US">Autoexec</span>.<span lang="en-US">bat</span></font><font size="5">, где указать имя директории с программой. Например, «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">Path</span></font><font size="5"> </font><font face="Arial, sans-serif" size="5"><span lang="en-US">C</span>:\<span lang="en-US">Qbasic</span></font><font size="5">», где «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">C</span>:\<span lang="en-US">Qbasic</span>»</font><font size="5"> - имя директории, где находится программа. Если в файле <span lang="en-US">Autoexec</span>.<span lang="en-US">bat</span>
+уже имеется данная команда, но с другими именами директорий, то
+необходимо добавить новое название директории через точку с запятой.
+Например, если была строчка «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">Path</span></font><font size="5"> </font><font face="Arial, sans-serif" size="5"><span lang="en-US">C</span>:\<span lang="en-US">Windows</span></font><font size="5">», то следует ввести «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">Path</span></font><font size="5"> </font><font face="Arial, sans-serif" size="5"><span lang="en-US">C</span>:\<span lang="en-US">Windows</span>;<span lang="en-US">C</span>:\<span lang="en-US">Qbasic</span></font><font size="5">». Это может быть полезным, когда на компьютере работает несколько пользователей, каждый из которых имеет свою директорию.</font></div>
+ 
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">После
+вызова программы на экране появится окно, показанное на рисунке выше.
+Оно содержит верхнее меню с названиями групп режимов (<font face="Arial, sans-serif"><span lang="en-US">File</span>, <span lang="en-US">Edit</span>, <span lang="en-US">View</span>, <span lang="en-US">Search</span>, <span lang="en-US">Run</span>, <span lang="en-US">Debug</span>, <span lang="en-US">Options</span></font> и <font face="Arial, sans-serif"><span lang="en-US">Help</span></font>),
+основное поле, где находится текст программы и внизу статусную строчку.
+Далее эти компоненты будут рассмотрены более подробно, а в конце главы
+приведен краткий список режимов верхнего меню.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">После нажатия на клавишу <span lang="en-US"><i>Enter</i></span> произойдет переход в справочную систему программы, а при нажатии на клавишу <span lang="en-US"><i>Esc</i></span>
+окно очистится и можно начать вводить исходный текст программы. Если на
+экране появилась справочная система, то выйти из нее можно также нажав
+на клавишу <span lang="en-US"><i>Esc</i></span><i>.</i></font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Более
+подробно команды главного меню и основные операторы кратко будут
+описаны далее, а сейчас перейдем к написанию небольших пробных программ.</font></p>
+
+      
+            <h2 class="western" lang="ru-RU"><a class="mozTocH2" name="mozTocId713720"></a><font style="font-family: Helvetica,Arial,sans-serif;" size="5">УРОК 1. Первые программы</font></h2>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><img style="border: 0px solid ; width: 293px; height: 94px;" alt="Привер на языке Qbasic" src="b02_html_1e4b06c7.png" name="Объект2" align="left" hspace="12"></font> </p>
+
+      
+            <p class="western" style="margin-top: 0.21cm;" lang="ru-RU"><br></p>
+            <div style="text-align: justify;">
+&nbsp; <font size="5">Наберем в окне текст «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">Print</span></font><font size="5"> “</font><font face="Arial, sans-serif" size="5">Первая программа</font><font size="5">”». Эта программа содержит всего один оператор, который выводит на экран текст, указанный в кавычках. Это оператор «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">PRINT</span>»,</font><font size="5">
+позволяющий вывести на экран текст, который после названия оператора
+заключен в кавычки. Для введения текста используются клавиши
+клавиатуры, а для перехода с латинского языка на кириллицу применяется
+сочетание клавиш, которое зависит от установленной программы. После
+набора строчки следует нажать на клавишу <span lang="en-US"><i>Enter</i></span>. В результате выполнения этой программы на экране появится текст: «Первая программа» (см. рис. выше).</font></div>
+ 
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Вывод информации в <span lang="en-US">Qbasic</span>
+производится в двух режимах: текстовом и графическом, причем текстовой
+режим установлен автоматически, по умолчанию. Для того, чтобы выводить
+графику на экран дисплея, используются другие операторы. В самом начале
+работы мы рассмотрим работу с текстовыми представлениями, а затем
+перейдем к описанию работы с графикой.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><img style="border: 0px solid ; width: 155px; height: 63px;" alt="" src="b02_html_m4f870749.png" name="Объект3" align="left" hspace="12"></font> </p>
+
+      
+            <p class="western" style="margin-top: 0.21cm;" lang="ru-RU">&nbsp;<br></p>
+
+      
+            <div style="text-align: justify;"><font size="5">Каким
+образом происходит ввод символов? На экране в основном окне имеется
+курсор, который представлен в виде мигающей горизонтальной черточки,
+как это показано на рисунке слева. Курсор определяет место, куда будет
+вставлен текст при нажатии на клавишу с символом. Для перемещения
+курсора используются клавиши со стрелками. Также для его перемещения
+можно использовать мышь, для чего следует установить курсор мыши на
+новом месте текста и щелкнуть кнопкой мыши. Далее, говоря «щелкнуть
+мышью», мы имеем в виду, что действие это производится левой кнопкой
+мыши, которую нужно нажать и отпустить. Если щелкнуть правой кнопкой
+мыши по названию оператора, то на экране появится окно со справкой о
+данном операторе. Итак, после того, как курсор установлен в нужном
+месте, можно вводить текст. </font></div>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Для <u>ввода символов текста</u>
+используется клавиатура, которая напоминает клавиатуру пишущей машинки,
+описание клавиш дано в начале книги. Как правило, в самом начале работы
+при нажатии на клавишу с символом произойдет ввод строчного
+(маленького) символа, при этом вводимый символ появится на экране. </font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Ввод текста происходит путем набора символов клавишами клавиатуры. В конце строки нужно нажать на клавишу <i>Enter</i>.
+Это действие воспринимается системой как особый символ, который обычно
+не выводится на экран, при этом курсор перейдет на начало следующей
+строки.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">После
+нажатия на данную клавишу программа проверит синтаксис набранного на
+строке текста. Что произойдет, когда будет введена строка с ошибкой?
+Допустим, мы ввели строчку: «<font face="Arial, sans-serif"><span lang="en-US">PRINT</span></font> “” <font face="Arial, sans-serif"><span lang="en-US">TO</span></font>», в которой находится непонятное для интерпретатора слово «<font face="Arial, sans-serif">ТО</font>». В этом случае на экране появится сообщение об ошибке, как это показано на рисунке. Нажмите на <font face="Arial, sans-serif">ОК</font>
+и исправьте оператор, курсор при этом будет находиться либо на месте
+ошибки, либо правее ее. Если требуется продолжить набор программы, то
+можно воспользоваться клавишей со стрелкой вниз для перехода на
+следующую строчку. Однако, при запуске программы на выполнение в
+строчке, имеющей ошибку, будет выдано сообщение так же, как это было
+сделано при наборе текста.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Можно ввести опе<img style="border: 0px solid ; width: 583px; height: 151px;" alt="" src="b02_html_m26a546ac.png" name="Объект4" align="left" hspace="12">ратор «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">PRINT</span></font><font size="5">» как «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">Print</span></font><font size="5">», «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">print</span></font><font size="5">», «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">pRinT</span></font><font size="5">» и так далее, но п осле нажатия на клавишу <span lang="en-US"><i>Enter</i></span>, на экране появится название оператора прописными символами («</font><font face="Arial, sans-serif" size="5"><span lang="en-US">PRINT</span></font><font size="5">»).
+Для того, чтобы легче читать программу, имена переменных лучше набирать
+маленькими (строчными) символами или весь текст, за исключением того,
+который находится в кавычках. Программа сама установит большие
+(заглавные) символы там, где находятся ключевые слова.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><br></font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Для объединения двух строк можно установить курсор в конце первой строки (правее самого правого символа) и нажать на клавишу <i>Del</i> или установить в начале следующей строки и нажать на <i>Backspace</i>.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Чтобы <u>ввести прописные (большие или заглавные) символы,</u> нажмите на клавишу <i>Shift</i>
+и, не отпуская ее, нажмите на нужный символ. Когда возникает
+необходимость набора большого количества заглавных символов, нажмите на
+клавишу <i>Caps Lock</i> и отпустите ее, при этом на клавиатуре
+загорится лампочка-индикатор с тем же названием. После этого введите
+нужное число символов, которые будут большими. Для отмены этого режима
+и перехода в режим ввода строчных (маленьких) символов, снова нажмите
+на ту же клавишу (<i>Caps Lock</i>), при этом индикатор погаснет.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Можно также использовать <b>выделение текста</b>.
+Поместите курсор перед первым символом текста, который нужно выделить,
+нажмите на левую клавишу мыши и, не отпуская ее, переместите курсор на
+конец текста, после чего отпустите клавишу мыши. При этом символы будут
+выведены на экране синим цветом, а фон станет серым, то есть произойдет
+инверсия цвета на противоположный, как это показано на примере: <font color="#ffffff" face="Arial, sans-serif"><span style="background: rgb(0, 0, 0) none repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">Это предложение выделено</span></font>.<font color="#ffffff"> </font>Выделение можно производить не только с начала текста, но и с его конца. После выделения текст можно удалить, нажав на клавишу <span lang="en-US"><i>Del</i></span>.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Для
+того, чтобы выделить текст при помощи клавиатуры, вначале установите
+курсор в то место, где должно быть начало выделения и нажмите на
+комбинацию <span lang="en-US"><i>Shift</i></span>+&#61614;. Для того, чтобы уменьшить выделение, можно воспользоваться клавишами <span lang="en-US"><i>Shift</i></span>+&#61612;. Для выделения нескольких строк - <span lang="en-US"><i>Shift</i></span>+&#61615; или <span lang="en-US"><i>Shift</i></span>+&#61613;.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Выделив текст, его можно поместить в буфер обмена, для чего воспользуйтесь режимом <font face="Arial, sans-serif"><span lang="en-US">Edit</span></font> &#61662;<font face="Arial, sans-serif"><span lang="en-US">Copy</span></font>. При помощи режима <font face="Arial, sans-serif"><span lang="en-US">Edit</span></font> &#61662;<font face="Arial, sans-serif"><span lang="en-US">Cut</span></font>
+текст вырезается и помещается в буфер обмена. Для того, чтобы вставить
+содержимое буфера обмена сначала установите курсор в место, где его
+нужно вставить и воспользуйтесь режимом <font face="Arial, sans-serif"><span lang="en-US">Edit</span></font> &#61662;<font face="Arial, sans-serif"><span lang="en-US">Paste</span></font>.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Если перед выделением текста нажать на кнопку - <img src="b02_html_741fc4f4.png" name="Объект5" align="absmiddle" border="0" height="12" width="12">,
+то выделенный текст также можно поместить в буфер обмена для
+использования его в текущем и другом приложении. Для этого используется
+кнопка - <img src="b02_html_m73766fcc.png" name="Объект6" align="absmiddle" border="0" height="13" width="14">, а для того, чтобы вставить содержимое из буфера обмена, нужно нажать на кнопку - <img src="b02_html_5F256c6f19.png" name="Объект7" align="absmiddle" border="0" height="12" width="12">.
+При помощи буфера обмена можно копировать текст в другое место
+программы или даже в другую программу. Отметим, что буфер, который
+используется при помощи режимов меню <font face="Arial, sans-serif"><span lang="en-US">File</span></font> и при помощи кнопки <img src="b02_html_741fc4f4.png" name="Объект8" align="absmiddle" border="0" height="12" width="12"> - это разные буфера и их содержимое разное также.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Чтобы <u>снять выделение</u>, следует щелкнуть кнопкой мыши в произвольном месте текста.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">При вводе текста часто возникает необходимость удаления и корректировки символов. Для <u>удаления символа</u> установите курсор перед уничтожаемым символом и нажмите на клавишу <i>Del</i>. Если курсор поставлен после необходимого символа, то нажмите на клавишу <i>Backspace</i>. Для <u>удаления фрагмента текста</u> требуется выделить текст и нажать на клавишу <i>Del</i> .</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">При работе с текстами применяют два режима: вставки и корректировки. Для <u>вставки символов</u>
+необходимо установить курсор в место, где следует вставить текст.
+Наберите при помощи клавиатуры символ, при этом существующий текст
+раздвинется и появятся введенные символы.<sup> </sup>Для <u>корректировки символов</u> требуется сначала нажать на клавишу <i>Ins</i>,
+затем набрать текст, при этом курсор превратится из черточки в
+прямоугольник, а программа перейдет в режим замены символов. При
+нажатии на клавишу символ над курсором пропадет и на его месте появится
+введенный символ. При повторном нажатии на клавишу <i>Ins</i> произойдет переход в режим вставки.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><b>Перемещение изображения на экране</b>. <u>При помощи мыши</u>.
+Для этого нажмите на левую кнопку мыши и, не отпуская ее, переместите
+курсор до границы окна и немного дальше, при этом изображение начинает
+перемещается. Например, если подвести курсор при нажатой клавише мыши к
+нижней границе окна и чуть дальше, на линию прокрутки, то изображение
+начнет перемещаться вверх. При пустом экране это видно по масштабной
+линейке, которая находится справа на экране. Можно также использовать
+кнопки прокрутки, например, если нужно просмотреть текст, который
+находится ниже. Для этого нажмите на квадрат со стрелкой, острие
+которой направлено вниз и находящейся внизу вертикальной полосы
+прокрутки. Держите левую кнопку мыши нажатой до тех пор, пока не
+появится нужный текст. Можно нажать в любом месте линии прокрутки,
+текст при этом будет перемещаться. </font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><u>При помощи клавиш.</u> Для этого используйте стандартные клавиши клавиатуры: &#61612;, &#61613;, &#61614;, &#61615;, <i>Page</i> <i>down, Page up, End, Home</i>. </font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><font face="Arial, sans-serif"><u><b>Работа с мышью</b></u></font><u><b>.</b></u> При работе с текстом часто используется мышь. Рассмотрим такие действия подробнее.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><u>Перемещение по тексту</u>.
+Для перемещения текстового курсора установите курсор мыши на нужное
+место на экране, нажмите и отпустите левую кнопку мыши. При этом на
+выбранном месте появится текстовой курсор в виде черточки.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><u>Работа с верхними группами режимов.</u>
+Чтобы вызвать необходимый режим, следует подвести курсор либо на нужную
+пиктограмму, либо на имя в главном меню и нажать на левую клавишу мыши.
+При этом на экране раскроется подменю, в котором необходимо выбрать
+нужный режим. Подведя к нему курсор, нажмите на левую кнопку мыши.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Существует разница между двойным нажатием и двумя нажатиями на левую кнопку мыши. <u>Двойное нажатие мыши</u>
+отличается от двух нажатий временем, которое проходит между ними. При
+коротком интервале система воспринимает это действие как двойное
+нажатие, при длительном – как два нажатия. Этот интервал можно изменить
+командами системы Windows или в пакете <span lang="en-US">Norton</span> <span lang="en-US">Utilities</span>.
+Двойное нажатие дает иной эффект, нежели одинарное. Например, если
+нажать на слове в тексте, то на месте нажатия установится курсор, если
+сделать двойное нажатие - слово выделится. </font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Для того, чтобы <u>вызвать команду</u> из режима верхнего меню, подведите курсор мыши к названию группы, например, <font face="Arial, sans-serif"><span lang="en-US">File</span>.</font>
+Нажмите и отпустите левую кнопку мыши. В результате появится
+ниспадающее меню, в котором находятся названия режимов. Подведите
+курсор к нужному режиму и щелкните левой кнопкой мыши. Чтобы
+воспользоваться <u>режимом с кнопкой</u>, подведите курсор мыши на
+изображение кнопки, нажмите и отпустите левую кнопку мыши. Если
+подвести курсор к кнопке и ничего не нажимать в течение нескольких
+секунд, то около курсора появится подсказка с кратким описанием
+соответствующего режима, вызываемого такой кнопкой.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><img style="border: 0px solid ; width: 488px; height: 120px;" alt="Верхнее меню программы работы с QBasic" src="b02_html_m2e082d4a.png" name="Объект9" align="left" hspace="12"> </p>
+
+      
+            <div style="text-align: justify;"><font size="5">Для того, чтобы просмотреть результат выполнения программы, нужно воспользоваться режимом <font face="Arial, sans-serif"><span lang="en-US">Run</span></font> &#61662;<font face="Arial, sans-serif"><span lang="en-US">Start</span></font>. Для этого подведите курсор мыши к названию «<font face="Arial, sans-serif"><span lang="en-US">Run</span>» </font>в
+верхнем меню и щелкните левой кнопкой мыши. На экране появится панно с
+режимами, как это показано на рисунке слева, после чего щелкните по
+названию <span lang="en-US">«</span><font face="Arial, sans-serif"><span lang="en-US">Start Shift+F5</span></font><span lang="en-US">». </span>После этого на экране появится окно, в котором можно увидеть действие программы, как это показано на рисунке ниже. </font></div>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><img style="border: 0px solid ; width: 518px; height: 410px;" alt="" src="b02_html_4cc04ad0.png" name="Объект10" align="left" hspace="12"></font> </p>
+
+      
+            <div style="text-align: justify;">&nbsp;&nbsp; <font size="5">Результат выполнения находится внизу экрана, который состоит из надписи «</font><font face="Arial, sans-serif" size="5">Первая программа</font><font size="5">». Строчки выше показывают, какие программы были выполнены ранее. В нашем примере выполнялась программа <span lang="en-US">Qbasic</span>.<span lang="en-US">exe</span>. Вверху окна находятся сообщения от программы, которая устанавливает символы кириллицы. В самом низу окна имеется сообщение: «</font><font face="Arial, sans-serif" size="5"><span lang="en-US">Press</span></font><font size="5"> </font><font face="Arial, sans-serif" size="5"><span lang="en-US">any</span></font><font size="5"> </font><font face="Arial, sans-serif" size="5"><span lang="en-US">key</span></font><font size="5"> </font><font face="Arial, sans-serif" size="5"><span lang="en-US">to</span></font><font size="5"> </font><font face="Arial, sans-serif" size="5"><span lang="en-US">continue</span></font><font size="5">» (Нажмите любую клавишу для продолжения работы). Нажав любую клавишу, мы снова попадем в главное окно программы.</font></div>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Что означает надпись: «<font face="Arial, sans-serif"><span lang="en-US">Start</span></font> <font face="Arial, sans-serif"><span lang="en-US">Shift</span>+<span lang="en-US">F</span>5</font>»? Первое слово (<font face="Arial, sans-serif"><span lang="en-US">Start</span></font>)
+соответствует названию данного режима и обозначает начало выполнения
+программы после того, как по этим наименованиям щелкнуть левой кнопкой
+мыши. Далее следует комбинация клавиш (<font face="Arial, sans-serif"><span lang="en-US">Shift</span>+<span lang="en-US">F</span>5</font>),
+при помощи которой также можно выполнить данный режим. То есть набрав
+программу, и не входя в верхнее меню, нажмите на эти клавиши
+клавиатуры. На экране появится окно, в котором показан результат
+выполнения программы. Данные клавиши называются «<u>горячими</u>»
+(другое название «быстрые»), а их список можно увидеть, открывая разные
+панно верхнего меню. Кроме того, их список приведен в конце этой главы.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">При
+изучении программирования многие авторы обучают сначала принципам
+построения алгоритма, а затем показывают, как создавать первые
+программы. Однако алгоритмы на практике пишутся при большом количестве
+операторов и разветвлений в программе. При простых действиях, которые
+приведены в данной главе текст программы прост и понятен, а потому не
+требует составления алгоритма.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Теперь наберем другой оператор «<font face="Arial, sans-serif"><span lang="en-US">PRINT</span></font> <font face="Arial, sans-serif">2+6*7</font>». Для того, чтобы просмотреть результат, снова воспользуемся режимом <font face="Arial, sans-serif"><span lang="en-US">Run</span></font> &#61662;<font face="Arial, sans-serif"><span lang="en-US">Start</span></font>, и в полученном окне появится результат арифметической операции - <font face="Arial, sans-serif">44</font>.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Как видно, в операторе <font face="Arial, sans-serif"><span lang="en-US">PRINT</span></font> могут содержаться разного вида значения: в кавычках и цифры без кавычек. Текст в кавычках называется <u>символами</u>, а цифры без кавычек для вычисления - <u>числами</u>. Что будет, если ввести цифры в кавычках, например, «“<font face="Arial, sans-serif">2+6*7”»</font>? Это также будут символы и результат операции «<font face="Arial, sans-serif"><span lang="en-US">PRINT</span></font> “<font face="Arial, sans-serif">2+6*7</font>”» будет не 44, а появление на экране набора символов <font face="Arial, sans-serif">2+6*7</font>. Указанное выше, а именно «“<font face="Arial, sans-serif">Первая программа</font>”», «<font face="Arial, sans-serif">2»</font>, <font face="Arial, sans-serif">«6»</font>, <font face="Arial, sans-serif">«7»</font>, «“<font face="Arial, sans-serif">2+6*7</font>”» являются константами, то есть не изменяемыми во время работы программы величинами.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">В программе существуют также переменные, содержимое которых меняется во время работы программы. Приведем пример: </font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="en-US"><font face="Arial, sans-serif" size="5">i% = 1</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="en-US"><font face="Arial, sans-serif" size="5">PRINT i%</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><font face="Arial, sans-serif"><span lang="en-US">i%</span></font> <font face="Arial, sans-serif">= 4</font></font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><font face="Arial, sans-serif"><span lang="en-US">PRINT</span></font> <font face="Arial, sans-serif"><span lang="en-US">i</span>%</font></font><font face="Arial, sans-serif" size="5"><img src="b02_html_2022535.png" name="Объект11" align="left" border="0" height="47" hspace="12" width="106"></font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">В данном примере в первом операторе находится оператор присваивания, при помощи которого в переменную <font face="Arial, sans-serif"><span lang="en-US">i</span>%</font>
+заносится значение единица. В этом операторе слева находится имя
+переменной, в которую заносится правая часть. В правой части может
+находиться не только определенное значение, но и арифметическое
+выражение, например, «2+3», которое равно пяти и это значение будет
+занесено в переменную. В операторе <font face="Arial, sans-serif"><span lang="en-US">i</span>%=1 + 2 * 3</font> в переменную <font face="Arial, sans-serif"><span lang="en-US">i</span>%</font>
+будет занесено значение 7. Это происходит потому, что в переменной
+хранится только одно значение, поэтому сначала вычисляется выражение,
+которое находится в правой части, а затем оно помещается в переменную.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Приведем примеры правильных операций присваивания: <span lang="en-US">i</span>1%=3+5, <span lang="en-US">i</span>2%=<span lang="en-US">i</span>1%+3*5. Приведем примеры неверных операций: <span lang="en-US">i</span>1%+2=3 (выражение в левой части, а не в правой), <span lang="en-US">i</span>1%+3+5*6 (нет оператора присваивания, знака равенства), <span lang="en-US">i</span>1%=<span lang="en-US">i</span>2%=4 (два оператора присваивания).</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Запустим программу на выполнение при помощи режима <font face="Arial, sans-serif"><span lang="en-US">Run</span></font> &#61662;<font face="Arial, sans-serif"><span lang="en-US">Start</span></font>
+и получим два значения 1 и 4. В следующих примерах, когда будем
+указывать «запустим программу» больше не будем упоминать о том, что
+данное действие вызывается при помощи режима <font face="Arial, sans-serif"><span lang="en-US">Run</span></font> &#61662;<font face="Arial, sans-serif"><span lang="en-US">Start</span></font>,
+подразумевая это. Здесь и далее, справа от исходного текста программы
+показывается результат ее работы. При этом на рисунке будет изображен
+не весь экран, а только его часть, которая относится к результатам. На
+экране текст выводится светлыми символами на черном фоне, но мы для
+наглядности будем выводить черные символы на сером фоне, что позволяет
+сделать оператор «<font face="Arial, sans-serif"><span lang="en-US">COLOR</span></font> <font face="Arial, sans-serif">0, 7</font>», который установлен вначале программы.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Символы «<span lang="en-US">i</span>%»
+обозначают числовую переменную, для которой в первом операторе
+присваивается значение 1, во втором - выводится значение переменной на
+экран монитора, которое она содержит в данный момент, в третьем
+операторе присваивается значение 4 и в четвертом – это значение
+выводится на экран.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">Иногда
+требуется вывести на экран двойные кавычки. Однако, так как они
+используются для выделения текста и имеют специальное назначение, то
+для их вывода применяют оператор <font face="Arial, sans-serif"><span lang="en-US">Chr</span>$(34)</font>. Например, для вывода строчки: "Текст", нужно воспользоваться следующей записью: <font face="Arial, sans-serif"><span lang="en-US">PRINT</span></font> <font face="Arial, sans-serif"><span lang="en-US">CHR</span>$(34)+”Текст”+<span lang="en-US">CHR</span>$(34)</font>.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5"><b>Задачи.</b> Выведите на экран следующие значения:</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">1. текст «<font face="Arial, sans-serif">Это наш первый урок</font>».</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">2. результат вычисления 3*8.</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">3. текст «<font face="Arial, sans-serif">6+4</font>»</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">4. результат вычислений 4+5+7+8+11</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">5. текст «<font face="Arial, sans-serif">изучаем программирование</font>»</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">6. результат 2*3*4*5</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">7. результат 1-6-9-11-20</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">8. тексты «<font face="Arial, sans-serif">Сидоров - двоечник</font>», «<font face="Arial, sans-serif">Иванов – отличник</font>»</font></p>
+
+      
+            <p class="western" style="text-indent: 0.6cm; margin-bottom: 0cm;" align="justify" lang="ru-RU"><font size="5">9. на первой строчке текст «<font face="Arial, sans-serif">Количество учеников в нашем классе</font>». На второй сточке – «<font face="Arial, sans-serif">Число учеников соседнего класса</font>».</font></p>
+</td>
+					</tr>
+		</tbody>
+      </table>
+      <br>
+<table style="text-align: left; width: 100%;" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top; text-align: center;"><a href="bas02.html"><span style="font-size: 18pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">(переход
+на следующую страницу)</span></a></td>
+<td style="vertical-align: top; width: 150px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+<IDXSKIP><p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify; text-indent: 14.2pt; line-height: normal;">&nbsp;</p></IDXSKIP>
+<table style="text-align: left; width: 100%;" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top; text-align: center; color: rgb(0, 177, 255);">
+<p class="MsoNormal"><span style="font-size: 18pt; line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;;"><IDXSKIP>О&#8601;О&#8600;О&#8601;О&#8600;О&#8601;О&#8600;О&#8601;О&#8600;О&#8601;О&#8600;О&#8601;О&#8600;О&#8601;О&#8600;О&#8601;О&#8600;О</IDXSKIP></span></p>
+</td>
+<IDXSKIP><td style="vertical-align: top; width: 120px;"><br>
+</td></IDXSKIP>
+</tr>
+</tbody>
+</table>
+<IDXSKIP><table style="text-align: left; width: 100%;" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;"><br>
+</td>
+<td class="b3" style="vertical-align: top; height: 15px; width: 728px; text-align: center;">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5376924806235897";
+/* ссылки */
+google_ad_slot = "6128538277";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br>
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+<td style="vertical-align: top; width: 124px;"><br>
+</td>
+</tr>
+</tbody>
+</table></IDXSKIP>
+<br>
+<IDXSKIP><table style="text-align: left; width: 100%;" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;"><br>
+</td>
+<td class="b3" style="vertical-align: top; height: 60px; width: 234px; text-align: center;">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5376924806235897";
+/* малбан2 */
+google_ad_slot = "9896589879";
+google_ad_width = 234;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br>
+</td>
+<td style="vertical-align: top;"><br>
+</td>
+<td style="vertical-align: top; width: 124px;"><br>
+</td>
+</tr>
+</tbody>
+</table></IDXSKIP><p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify; text-indent: 14.2pt; line-height: normal;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><IDXSKIP>Информация
+данного сайта предназначена для бесплатного изучения персонального
+компьютера. Можно копировать, передавать материалы другим лицам.</IDXSKIP></span><span style="font-size: 12pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: justify; text-indent: 19.85pt; line-height: 150%;"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><IDXSKIP>Запрещается
+использовать материалы для получения личной финансовой выгоды, а также
+размещать на сайтах в интернете.</IDXSKIP></span><o:p> </o:p><span style="font-size: 18pt; line-height: 150%; font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;"><o:p></o:p></span></p>
+      </td>
+    </tr>
+    <IDXSKIP><tr>
+      <td class="b2" colspan="2" style="vertical-align: top;">
+      
+      <table style="text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top; width: 25px;"><br>
+            </td>
+            <td style="vertical-align: top;">&nbsp;
+            <script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+            <script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+            <script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+            <script language="javascript1.3"><!--
+js=13;//--></script>
+            <script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=2085564" target="_top">'+
+'<img src="http://d2.cd.bf.a1.top.mail.ru/counter?id=2085564;t=56;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="31" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script><noscript><a target="_top" href="http://top.mail.ru/jump?from=2085564"><img src="http://d2.cd.bf.a1.top.mail.ru/counter?js=na;id=2085564;t=56" alt="Рейтинг@Mail.ru" border="0" height="31" width="88"></a></noscript>
+            <script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script><br>
+            </td>
+            <td style="vertical-align: top;">&nbsp;
+            <script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2535174"></script><noscript><a href="http://top100.rambler.ru/navi/2535174/"> <img src="http://counter.rambler.ru/top100.cnt?2535174" alt="Rambler'sTop100" border="0"></a> </noscript><br>
+            </td>
+            <td style="vertical-align: top;">&nbsp;<span id="openstat2198101"></span>
+            <script type="text/javascript">
+var openstat = { counter: 2198101, image: 87, color: "8f46b9", next: openstat, track_links: "all" };
+(function(d, t, p) {
+var j = d.createElement(t); j.async = true; j.type = "text/javascript";
+j.src = ("https:" == p ? "https:" : "http:") + "//openstat.net/cnt.js";
+var s = d.getElementsByTagName(t)[0]; s.parentNode.insertBefore(j, s);
+})(document, "script", document.location.protocol);
+            </script><br>
+            </td>
+            <td colspan="1" rowspan="1" style="vertical-align: top;"><a href="http://metrika.yandex.ru/stat/?id=10474312&amp;from=informer" target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/10474312/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="border: 0pt none ; width: 88px; height: 31px;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:10474312,type:0,lang:'ru'});return false}catch(e){}"></a>
+            <div style="display: none;">
+            <script type="text/javascript">
+(function(w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter10474312 = new Ya.Metrika({id:10474312, enableAll: true});
+}
+catch(e) { }
+});
+})(window, "yandex_metrika_callbacks");
+            </script></div>
+            <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script> <noscript>
+            <div><img src="//mc.yandex.ru/watch/10474312" style="position: absolute; left: -9999px;" alt=""></div>
+            </noscript><br>
+            <br>
+            </td>
+            <td style="vertical-align: top;"><a href="http://list.mail.ru"><img src="http://list.mail.ru/img/listru-a21.gif" alt="Каталог@MAIL.RU - каталог ресурсов интернет" border="0" height="31" width="88"></a><br>
+            </td>
+            <td style="vertical-align: top; width: 28px;"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr></IDXSKIP>
+  </tbody>
+</table>
+
+</body></html>

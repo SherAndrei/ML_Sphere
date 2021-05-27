@@ -1,0 +1,1010 @@
+emtrek.org/viewtopic.php?t=28662
+﻿<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+<title>ABViewer Enterprise 10.0.0.9 [2014, Multi/Ru] (32bit/64bit) :: Bit-Torrent Трекер Emtrek.org</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="http://emtrek.org/templates/default/css/main.css?v=3" type="text/css">
+<link rel="icon" type="image/png" href="http://emtrek.org/images/logo/logo_big.png" />
+<link rel="shortcut icon" href="http://emtrek.org/favicon.ico" type="image/x-icon">
+<link rel="search" type="application/opensearchdescription+xml" href="http://emtrek.org/opensearch_desc.xml" title="Bit-Torrent Трекер Emtrek.org (Forum)" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://emtrek.org/opensearch_desc_bt.xml" title="Bit-Torrent Трекер Emtrek.org (Tracker)" />
+
+<script type="text/javascript" src="http://emtrek.org/misc/js/jquery.pack.js?v=3"></script>
+<script type="text/javascript" src="http://emtrek.org/misc/js/main.js?v=3"></script>
+<script type="text/javascript" src="http://emtrek.org/misc/js/xenforo.js?v=3"></script>
+<script type="text/javascript" src="http://emtrek.org/misc/js/discussion_list.js?v=3"></script>
+
+<script type="text/javascript" src="./misc/js/xenforo.js?v=3"></script>
+<script type="text/javascript" src="./misc/js/discussion_list.js?v=3"></script>
+
+ <!-- fancybox -->
+    <link rel="stylesheet" type="text/css" href="http://emtrek.org/misc/js/fancybox2/jquery.fancybox-1.3.4.css" media="screen" /> 
+    <script type="text/javascript" src="http://emtrek.org/misc/js/fancybox2/jquery.easing-1.3.js"></script> 
+    <script type="text/javascript" src="http://emtrek.org/misc/js/fancybox2/jquery.fancybox-1.3.4.js"></script> 
+ <script type="text/javascript"> 
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script> 
+<!-- fancybox  конец-->
+
+
+
+<script type="text/javascript" src="http://emtrek.org/misc/js/bbcode.js?v=3"></script>
+<script type="text/javascript">
+var postImg_MaxWidth = screen.width - 202;
+var postImgAligned_MaxWidth = Math.round(screen.width/3);
+var attachImg_MaxWidth = screen.width - 280;
+var ExternalLinks_InNewWindow = '1';
+var hidePostImg = false;
+
+function copyText_writeLink(node)
+{
+	if (!is_ie) return;
+	document.write('<p style="float: right;"><a class="txtb" onclick="if (ie_copyTextToClipboard('+node+')) alert(\'Код скопирован в буфер обмена\'); return false;" href="#">скопировать в буфер обмена</a></p>');
+}
+function initPostBBCode(context)
+{
+	$('span.post-hr', context).html('<hr align="left" />');
+	initQuotes(context);
+	initExternalLinks(context);
+	initPostImages(context);
+	initSpoilers(context);
+	initMedia(context);
+}
+function initQuotes(context)
+{
+	$('div.q', context).each(function(){
+		var $q = $(this);
+		var name = $(this).attr('head');
+		var q_title = (name ? '<b>'+name+'</b> писал(а):' : '<b>Цитата</b>');
+		if ( quoted_pid = $q.children('u.q-post:first').text() ) {
+			var on_this_page = $('#post_'+quoted_pid).length;
+			var href = (on_this_page) ? '#'+ quoted_pid : './viewtopic.php?p='+ quoted_pid +'#'+ quoted_pid;
+			q_title += ' <a href="'+ href +'" title="Перейти к цитируемому сообщению"><img src="http://emtrek.org/templates/default/images/icon_latest_reply.gif" class="icon2" alt="" /></a>';
+		}
+		$q.before('<div class="q-head">'+ q_title +'</div>');
+	});
+}
+function initPostImages(context)
+{
+	if (hidePostImg) return;
+	var $in_spoilers = $('div.sp-body var.postImg', context);
+	$('var.postImg', context).not($in_spoilers).each(function(){
+		var $v = $(this);
+		var src = $v.attr('title');
+		var $img = $('<img src="'+ src +'" class="'+ $v.attr('class') +'" alt="pic" />');
+		$img = fixPostImage($img);
+		var maxW = ($v.hasClass('postImgAligned')) ? postImgAligned_MaxWidth : postImg_MaxWidth;
+		$img.bind('click', function(){ return imgFit(this, maxW); });
+		if (user.opt_js.i_aft_l) {
+			$('#preload').append($img);
+			var loading_icon = '<a href="'+ src +'" target="_blank"><img src="http://emtrek.org/images/pic_loading.gif" alt="" /></a>';
+			$v.html(loading_icon);
+			if ($.browser.msie) {
+				$v.after('<wbr>');
+			}
+			$img.one('load', function(){
+				imgFit(this, maxW);
+				$v.empty().append(this);
+			});
+		}
+		else {
+			$img.one('load', function(){ imgFit(this, maxW) });
+			$v.empty().append($img);
+			if ($.browser.msie) {
+				$v.after('<wbr>');
+			}
+		}
+	});
+}
+function initSpoilers(context)
+{
+	$('div.sp-body', context).each(function(){
+		var $sp_body = $(this);
+		var name = $.trim(this.title) || 'Скрытый текст';
+		this.title = '';
+		var $sp_head = $('<div class="sp-head folded clickable">'+ name +'</div>');
+		$sp_head.insertBefore($sp_body).click(function(e){
+			if (!$sp_body.hasClass('inited')) {
+				initPostImages($sp_body);
+				var $sp_fold_btn = $('<div class="sp-fold clickable">[Свернуть]</div>').click(function(){
+					$.scrollTo($sp_head, { duration:200, axis:'y', offset:-200 });
+					$sp_head.click().animate({opacity: 0.1}, 500).animate({opacity: 1}, 700);
+				});
+				$sp_body.prepend('<div class="clear"></div>').append('<div class="clear"></div>').append($sp_fold_btn).addClass('inited');
+			}
+			if (e.shiftKey) {
+				e.stopPropagation();
+				e.shiftKey = false;
+				var fold = $(this).hasClass('unfolded');
+				$('div.sp-head', $($sp_body.parents('td')[0])).filter( function(){ return $(this).hasClass('unfolded') ? fold : !fold } ).click();
+			}
+			else {
+				$(this).toggleClass('unfolded');
+				$sp_body.slideToggle('fast');
+			}
+		});
+	});
+}
+function initExternalLinks(context)
+{
+  	var context = context || 'body';
+  	if (ExternalLinks_InNewWindow) {
+  		$("a.postLink:not([href*='"+ window.location.hostname +"/'])", context).attr({ target: '_blank' });
+  		//$("a.postLink:not([@href*='"+ window.location.hostname +"/'])", context).replaceWith('<span style="color: red;">Ссылки запрещены</span>');
+  	}
+}
+function fixPostImage ($img)
+{
+	var banned_image_hosts = /imagebanana|hidebehind/i;  // imageshack
+	var src = $img[0].src;
+	if (src.match(banned_image_hosts)) {
+		$img.wrap('<a href="'+ this.src +'" target="_blank"></a>').attr({ src: "http://emtrek.org/images/tr_oops.gif", title: "Прочтите правила размещения скриншотов!" });
+	}
+	return $img;
+}
+function initMedia(context)
+{
+	var apostLink = $('a.postLink', context);
+	for (var i = 0; i < apostLink.length; i++) {
+		var link = apostLink[i];
+		if (typeof link.href != 'string') {
+			continue;
+		}
+		if (/^http(?:s|):\/\/www.youtube.com\/watch\?(.*)?(&?v=([a-z0-9\-_]+))(.*)?|http:\/\/youtu.be\/.+/i.test(link.href)) {
+			var a = document.createElement('span');
+			a.className = 'YTLink';
+			a.innerHTML = '<span title="Начать проигрывание на текущей странице" class="YTLinkButton">&#9658;</span>';
+			window.addEvent(a, 'click', function (e) {
+				var vhref = e.target.nextSibling.href.replace(/^http(?:s|):\/\/www.youtube.com\/watch\?(.*)?(&?v=([a-z0-9\-_]+))(.*)?|http:\/\/youtu.be\//ig, "http://www.youtube.com/embed/$3");
+				var text  = e.target.nextSibling.innerText != "" ? e.target.nextSibling.innerText : e.target.nextSibling.href;
+				$('#Panel_youtube').remove();
+				ypanel('youtube', {
+					title: '<b>' + text + '</b>',
+					resizing: 0,
+					width: 862,
+					height: 550,
+					content: '<iframe width="853" height="510" frameborder="0" allowfullscreen="" src="' + vhref + '?wmode=opaque"></iframe>'
+				});
+			});
+			link.parentNode.insertBefore(a, link);
+			a.appendChild(link);
+		}
+	}
+}
+$(document).ready(function(){
+  	$('div.post_wrap, div.signature').each(function(){ initPostBBCode( $(this) ) });
+});
+</script>
+<script type="text/javascript">
+var BB_ROOT       = "./";
+var cookieDomain  = ".emtrek.org";
+var cookiePath    = "/";
+var cookieSecure  = 0;
+var cookiePrefix  = "bb_";
+var LOGGED_IN     = 0;
+var InfoWinParams = 'HEIGHT=510,resizable=yes,WIDTH=780';
+
+var user = {
+  	opt_js: {},
+
+  	set: function(opt, val, days, reload) {
+  		this.opt_js[opt] = val;
+  		setCookie('opt_js', $.toJSON(this.opt_js), days);
+  		if (reload) {
+  			window.location.reload();
+  		}
+  	}
+}
+$(document).ready(function(){
+  	$("div.jumpbox").html('\
+  		<span id="jumpbox-container"> \
+  		<select id="jumpbox"> \
+  			<option id="jumpbox-title" value="-1">&nbsp;&raquo;&raquo; Выберите форум для перехода &nbsp;</option> \
+  		</select> \
+  		</span> \
+  		<input id="jumpbox-submit" type="button" class="lite" value="Перейти" /> \
+  	');
+  	$('#jumpbox-container').one('click', function(){
+  		$('#jumpbox-title').html('&nbsp;&nbsp; Загружается… ... &nbsp;');
+  		var jumpbox_src = './ajax/html/' + (0 ? 'jumpbox_user.html' : 'jumpbox_guest.html');
+  		$(this).load(jumpbox_src);
+  		$('#jumpbox-submit').click(function(){ window.location.href='./viewforum.php?f='+$('#jumpbox').val(); });
+  	});
+});
+
+var ajax = new Ajax('http://emtrek.org/ajax.php', 'POST', 'json');
+
+function getElText (e)
+{
+  	var t = '';
+  	if (e.textContent !== undefined) { t = e.textContent; } else if (e.innerText !== undefined) { t = e.innerText; } else { t = jQuery(e).text(); }
+  	return t;
+}
+function escHTML (txt)
+{
+  	return txt.replace(/</g, '&lt;');
+}
+</script>
+
+<!--[if lte IE 6]><script type="text/javascript">
+$(ie6_make_clickable_labels);
+
+$(function(){
+	$('div.menu-sub').prepend('<iframe class="ie-fix-select-overlap"></iframe>'); // iframe for IE select box z-index issue
+	Menu.iframeFix = true;
+});
+</script><![endif]-->
+
+
+<!--[if gte IE 7]><style type="text/css">
+input[type="checkbox"] { margin-bottom: -1px; }
+</style><![endif]-->
+
+<!--[if lte IE 6]><style type="text/css">
+.forumline th { height: 24px; padding: 2px 4px; }
+.menu-sub iframe.ie-fix-select-overlap { display: none; display: block; position: absolute; z-index: -1; filter: mask(); }
+</style><![endif]-->
+
+<!--[if IE]><style type="text/css">
+.post-hr { margin: 2px auto; }
+.fieldsets div > p { margin-bottom: 0; }
+</style><![endif]-->
+
+<style type="text/css">
+	.menu-sub, #ajax-loading, #ajax-error, var.ajax-params, .sp-title, .q-post { display: none; }
+</style>
+
+<!-- Стрелка вверх -->
+<script type="text/javascript" src="http://emtrek.org/misc/js/gotop.js"></script>
+<!-- Стрелка вверх конец -->
+
+<meta name="wot-verification" content="9c9c9b26269732a404f9"/>
+
+</head>
+
+<body>
+
+
+<div id="ajax-loading"></div><div id="ajax-error"></div>
+<div id="preload" style="position: absolute; overflow: hidden; top: 0; left: 0; height: 1px; width: 1px;"></div>
+
+<div id="body_container">
+
+<!--******************-->
+<!--======-->
+
+<a name="top"></a>
+
+<!--Шапка-->
+<div style="background: url(/templates/default/images/shapka.png); width: 100%; top: 0; left: 0; height: 205px; position:absolute"></div>
+<!--Шапка конец-->
+
+<!--page_container-->
+<div id="page_container">
+
+<!--page_header-->
+<div id="page_header">
+
+
+
+<!--logo-->
+<IDXSKIP><div id="logo">
+		    <a href="./index.php"><img src="images/logo/logo_gold.png" alt="На трекер фрилич" title="На трекер фрилич. Скачанное не учитывается" /></a>
+		
+</div></IDXSKIP>
+
+<IDXSKIP><div style="position: absolute; top: 10px; right: 2%;">
+		<a href="http://emtrek.org/viewtopic.php?t=42559" target="_blank"><img src="./images/777.png" alt="/"></a>
+</div></IDXSKIP>
+<!--/logo-->
+
+<!--main_nav-->
+<div id="main-nav">
+	<table width="100%" cellpadding="0" cellspacing="0">
+	<tr>
+		<td class="nowrap">
+			<IDXSKIP><a href="./index.php">Главная</a></IDXSKIP>			<IDXSKIP><a href="tracker.php">Трекер</a></IDXSKIP>						<IDXSKIP><a href="search.php">Поиск</a></IDXSKIP>			 <IDXSKIP><a href="viewtopic.php?t=35282">Правила</a></IDXSKIP> 
+			<IDXSKIP><a href="faq.php">FAQ</a></IDXSKIP>			<IDXSKIP><a href="groupcp.php">Группы</a></IDXSKIP>			<IDXSKIP><a href="memberlist.php">Пользователи</a></IDXSKIP><IDXSKIP><a href="/mytop.php" class="navLinks">Доска почета</a></IDXSKIP> 			
+			
+		</td>
+		<td class="nowrap" align="right" style="float:right;">
+					</td>
+	</tr>
+	</table>
+</div>
+<!--/main_nav-->
+
+
+<!--login form-->
+<div class="topmenu">
+   <table width="100%" cellpadding="0" cellspacing="0">
+   <tr>
+        <td class="tCenter pad_2">
+            <IDXSKIP><a href="profile.php?mode=register" id="register_link"><b>Регистрация</b></a></IDXSKIP> <IDXSKIP>&#0183;
+                <form action="./login.php" method="post">
+                    Имя: <input type="text" name="login_username" size="12" tabindex="1" accesskey="l" />
+                    Пароль: <input type="password" name="login_password" size="12" tabindex="2" />
+                    <label title="Автоматически входить при каждом посещении"><input type="checkbox" name="autologin" value="1" tabindex="3" checked="checked" />Запомнить</label>&nbsp;
+                    <input type="submit" name="login" value="Вход" tabindex="4" />
+                </form></IDXSKIP> <IDXSKIP>&#0183;
+            <a href="profile.php?mode=sendpassword">Забыли пароль?</a></IDXSKIP>
+        </td>
+    </tr>
+    </table>
+</div>
+<!--/login form-->
+
+
+</div>
+<!--/page_header-->
+
+<!--menus-->
+
+
+
+<!--/menus-->
+
+<IDXSKIP><div class="spacer">&nbsp;</div></IDXSKIP>
+<div align="center">
+    <font style="color: #ff7800;"<b><img src="./images/tor_gold.gif" alt="" width="15" height="15" /> <IDXSKIP>Золотые дни идет свободное скачивание без начисления Download <img src="./images/tor_gold.gif" alt="" width="15" height="15" /></IDXSKIP></b></font>
+</div>
+
+<!-- Проголосуй на roi.ru -->
+
+
+<!-- Конец Проголосуй на roi.ru -->
+
+
+
+
+
+
+
+
+<!--page_content-->
+<div id="page_content">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+ <tr>
+<!--main_content-->
+    <td id="main_content">
+    <div id="main_content_wrap">
+    
+
+<!--=======================-->
+<!--***********************-->
+
+
+
+<!-- page_header.tpl END -->
+<!-- module_xx.tpl START -->
+
+<div class="breadBoxTop">
+    	<div class="topCtrl">
+         <a href="posting.php?mode=reply&amp;t=28662" class="callToAction"><span>Ответить на тему</span></a>
+		</div>
+      <nav>
+        <fieldset class="breadcrumb">
+          <span class="crumbs">
+            <IDXSKIP><span class="crust">
+              <a href="./index.php" class="crumb">
+                <span>Главная</span>
+              </a></IDXSKIP>
+              <span class="arrow">
+                <span></span>
+              </span>
+            </span>
+                         <span class="crust">
+              <a href="viewforum.php?f=27" class="crumb">
+                <span>Создание и редактирование мультимедиа и 3D контента</span>
+              </a>
+              <span class="arrow">
+                <span></span>
+              </span>
+            </span>
+                        <span class="crust">
+              <a href="viewforum.php?f=111" class="crumb">
+                <span>Графические редакторы</span>
+              </a>
+              <span class="arrow">
+                <span></span>
+              </span>
+            </span>
+          </span>
+        </fieldset>
+      </nav>
+</div>
+<div class="scrollContainer">
+<div class="titleBar">
+
+<script type="text/javascript" src="./misc/js/glossy/glossy.js?v=1"></script> 
+<script type="text/javascript" src="./misc/js/glossy/cvi_glossy_lib.js?v=1"></script>
+
+     <h3 class="maintitle">
+	<a class="tt-text" href="viewtopic.php?t=28662">ABViewer Enterprise 10.0.0.9 [2014, Multi/Ru] (32bit/64bit<wbr>)</a>
+</h3>
+</div>
+
+<div class="pageNavLinkGroup">
+ 	<div class="linkGroup"></div>
+    </div>
+
+
+
+<table class="w100 border bw_TRL" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="cat pad_2">
+
+	<table cellspacing="0" cellpadding="0" class="borderless w100">
+	<tr>
+
+		
+		<td class="small bold nowrap tRight" width="100%">
+			&nbsp;
+					</td>
+
+		<td class="nowrap" style="padding: 0px 4px 2px 4px;">
+			<form action="search.php?t=28662&amp;dm=1&amp;s=1" method="post">
+				<input id="search-text" type="text" name="nm" class="hint" style="width: 150px;" placeholder="Искать в теме…" required />
+				<input type="submit" class="bold" value="&raquo;" style="width: 30px;" />
+			</form>
+		</td>
+	</tr>
+	</table>
+
+	</td>
+</tr>
+</table>
+
+
+<table cellpadding="0" cellspacing="0" id="topic_main">
+
+<table>
+<tbody id="post_109349">
+<tr>
+	<td class="poster_info td1"><a name="109349"></a><div class="messageUserInfo">
+	<div class="messageUserBlock">
+    		<IDXSKIP><div id="ts">
+			<img src="templates/default/images/tc.gif" title="Автор" class="Tooltip">
+		</div></IDXSKIP>
+    	
+        <div class="avatarHolder">
+		<IDXSKIP><p class="avatar"><img src="images/avatars/28565725154662c9d1f19f.gif" alt="" border="0"  /></p></IDXSKIP>		<IDXSKIP><span class="new_offline">Офлайн</span></IDXSKIP>        </div>
+		
+		
+
+        <h3 class="userText">
+				<IDXSKIP><p class="nick"><span title="Правильные пацаны" class="colorGroup">O.S.A.</span></p></IDXSKIP>
+		        			<IDXSKIP><p class="rank_img"><img src="images/ranks/Prav_pacan.gif" alt="" title="" border="0" /></p></IDXSKIP>        </h3>
+        <div class="extraUserInfo">
+		<dl class="pairsInline"><dt>Стаж:</dt><dd>6 лет 8 месяцев</dd></dl>		<dl class="pairsInline"><dt>Сообщений:</dt><dd>9418</dd></dl>        </div>
+        <span class="arrow">
+ 		  <span></span>
+		</span>
+	    </div>
+	</div>
+	<IDXSKIP><p><img src="http://emtrek.org/images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+		<div class="post_body">
+			<div class="post_wrap">
+            				    <span id="pp_109349"><span class="post-align" style="text-align: center;"><span style="color: #006699;"><span style="font-size: 21px; line-height: normal;"><span class="post-b"><span style="font-family: Georgia;">ABViewer Enterprise 10.0.0.9</span></span></span></span></span><IDXSKIP><span class="post-hr">-</span></IDXSKIP><var class="postImg postImgAligned img-right" title="http://i.imgur.com/WAbT6C4.jpg">&#10;</var><span style="font-size: 14px; line-height: normal;"><span style="font-family: Georgia;"><span class="post-b">Год выпуска:</span> 2014<br />
+<IDXSKIP><span class="post-b">Версия программы:</span></IDXSKIP> 10.0.0.9<br />
+<IDXSKIP><span class="post-b">Официальный сайт:</span></IDXSKIP> <a href="https://href.li/?http://cadsofttools.ru/products/abviewer/" class="postLink"><span style="font-family: Georgia;">Софт Голд</span></a><br />
+<span class="post-b">Платформа:</span> 32bit/64bit<br />
+<IDXSKIP><span class="post-b">Язык интерфейса:</span></IDXSKIP> Русский, Английский и другие<IDXSKIP><span class="post-br"><br /></span></IDXSKIP><IDXSKIP><span class="post-b">Лечение:</span></IDXSKIP> в комплекте<br />
+<span class="post-b">Тип лекарства:</span> кейген<span class="post-br"><br /></span><IDXSKIP><span class="post-b">Системные требования:</span></IDXSKIP></span></span>
+<ul>
+<li>Microsoft Windows 2000 / XP / Vista / Win7/Win8<br /></li>
+<li>Microsoft Windows Server 2000/2003/2008<br /></li>
+<li>Процессор: 533 MHz (Рекомендуется: от 1.33 GHz)<br /></li>
+<li>Оперативная память: 512 MB (Рекомендуется: от 1Гб, для просмотра 3D файлов - от 2Гб)<br /></li>
+<li>200 MВ свободного пространства на жестком диске</li>
+</ul>
+<IDXSKIP><span class="post-b">Описание:</span></IDXSKIP> ABViewer 10 - программный продукт для просмотра графических файлов с функционалом профессионального векторного редактора. Поддерживает более 50-ти растровых и векторных форматов файлов и форматов 3D изображений. Позволяет выполнять создание и редактирование чертежей с дальнейшим их сохранением в формат AutoCAD DXF и ряд других векторных и растровых форматов. Обладает многофункциональной системой печати и обеспечивает конвертирование группы файлов. ABViewer является лёгким и удобным в использовании просмотрщиком. Пользовательский интерфейс предоставляет быстрый доступ к настройкам визуализации отображаемого файла, его масштабированию и перемещению, предусмотрен полноэкранный режим просмотра. Осуществлена поддержка SHX шрифтов. Многофункциональная система печати позволяет выводить на печать большие изображения на принтерах малых форматов. Для этого изображение разбивается на множество листов с сохранением пропорций, которые после завершения печати могут быть склеены в один большой лист.<IDXSKIP><span class="post-hr">-</span></IDXSKIP>
+<div class="sp-wrap">
+<div class="sp-body" title="Обзор возможностей&amp;#58;">
+<h3 class="sp-title">Обзор возможностей&amp;#58;</h3>
+<div style="margin-left: 2em">ABViewer - это универсальное и экономичное приложение для просмотра 2D чертежей, растровых форматов и 3D моделей. Является полнофункциональной CAD-платформой для редактирования файлов DWG и других форматов. К основным возможностям программы можно отнести:
+<div style="margin-left: 2em"><span class="post-b">Поддерживаемые форматы САПР:</span>
+<ul>
+<li style="list-style: none">AutoCAD™:
+<ul>
+<li>DWG - все версии (с 2.5 по 2013 включительно)<br /></li>
+<li>DXF ASCII все версии<br /></li>
+<li>Файлы шаблонов: DWT<br /></li>
+<li>Autodesk Design Web Format: DWF</li>
+</ul>
+</li>
+<li>Hewlett-Packard HPGL: PLT, HGL, HG, HPG, PLO, HP, HP1, HP2, HPGL, HPGL2, GL2, PRN, SPL<br /></li>
+<li>Масштабируемая векторная графика: SVG<br /></li>
+<li>Метафайл компьютерной графики: CGM<br /></li>
+<li>Adobe Acrobat Document: PDF<br /></li>
+<li>Encapsulated PostScript File: EPS<br /></li>
+<li>Adobe Post Script: PS<br /></li>
+<li>Поддерживаемые растровые изображения:<br /></li>
+<li>Битовые карты: BMP, RLE, DIB<br /></li>
+<li>Значки: ICO<br /></li>
+<li>Изображения JPEG: JPG, JPEG<br /></li>
+<li>Compuserve GIF: GIF<br /></li>
+<li>Изображения Arts &amp; Letters thumbnail: GED<br /></li>
+<li>Изображения Autodesk: CEL, PIC<br /></li>
+<li>CALS Raster: CAL<br /></li>
+<li>Изображения Dr. Halo: CUT, PAL<br /></li>
+<li>Изображения GFI fax: FAX<br /></li>
+<li>Изображения Kodak Photo-CD: PCD<br /></li>
+<li>Изображения Paintshop Pro: PSP<br /></li>
+<li>Изображения Photoshop: PSD, PDD<br /></li>
+<li>Изображения Portable network graphic: PNG<br /></li>
+<li>Изображения Portable pixel/gray map: PPM, PGM, PBM<br /></li>
+<li>Изображения SGI: BW, RGB, RGBA, SGI<br /></li>
+<li>Изображения SGI Wavefront: RLA, RPF<br /></li>
+<li>Изображения TIFF: TIF, TIFF<br /></li>
+<li>Изображения Truevision: TGA, VST, VDA, WIN<br /></li>
+<li>Изображения ZSoft Paintbrush: PCX<br /></li>
+<li>Поддерживаемые векторные изображения:<br /></li>
+<li>Метафайлы: WMF<br /></li>
+<li>Расширенные метафайлы: EMF</li>
+</ul>
+<span class="post-b">Поддерживаемые 3D форматы (3D Viewers)</span>
+<ul>
+<li>AutoCAD™: DWG<br /></li>
+<li>Drawing Exchange Format: DXF<br /></li>
+<li>3DStudio (и другие): 3DS<br /></li>
+<li>Stereolithography: STL (STL Viewer)<br /></li>
+<li>Initial Graphics Exchange Specification: IGES/IGS1 (IGES Viewer)<br /></li>
+<li>Standard for the Exchange of Product model data: STEP/STP1 (STEP Viewer)<br /></li>
+<li>WaveFront и другие: OBJ<br /></li>
+<li>GNU Triangulated Surface: GTS<br /></li>
+<li>Triangular Irregular Network: TIN<br /></li>
+<li>ASCI Scene Export: ASE<br /></li>
+<li>Blitz 3D: B3D<br /></li>
+<li>Ghoul2 (GLM): GLM, GLX, GLA<br /></li>
+<li>Pulsar Studio LMTS: LMTS<br /></li>
+<li>Lightwave3D object file (6.0 и выше): LWO<br /></li>
+<li>Nurbs surfaces: NURBS<br /></li>
+<li>NormalMapper: NMF<br /></li>
+<li>FSRad OCT: OCT<br /></li>
+<li>Stanford Triangle Format: PLY<br /></li>
+<li>Virtual Reality Modeling Language: VRML<br /></li>
+<li>MDC files: MDC<br /></li>
+<li>Quake2: MD2<br /></li>
+<li>Quake3: MD3<br /></li>
+<li>Doom3: MD5<br /></li>
+<li>Half-Life: SMD<br /></li>
+<li>Quake3: BSP</li>
+</ul>
+</div>
+<div style="margin-left: 2em"><span class="post-b">Работа с фрагментами чертежа:</span>
+<ul>
+<li>Возможность копирования частей чертежа в буфер обмена как в растровом (BMP), так и в векторном (EMF) формате.<br /></li>
+<li>Выделенная область может быть распечатана отдельно от остального чертежа.<br /></li>
+<li>Выделенная область может быть сохранена в отдельный файл (DXF, PDF, BMP и другие форматы).</li>
+</ul>
+<span class="post-b">Редактирование чертежей:</span>
+<ul>
+<li>ABViewer позволяет редактировать не только стандартные САПР форматы, такие как DWG и DXF, но и векторные файлы: PLT, SVG, CGM. В программе присутствуют все инструменты профессионального редактора, что даёт возможность работать в ABViewer также, как в «тяжелых» редакторах, например AutoCAD ™ или «Компас».</li>
+</ul>
+<span class="post-b">Возможности конвертирования:</span>
+<ul>
+<li>Копирование в буфер обмена данных в формате BMP, EMF/WMF.<br /></li>
+<li>Экспорт чертежей в растровые форматы BMP, JPEG, GIF, TIFF с удобными настройками.<br /></li>
+<li>Сохранение векторных данных при экспорте в форматы PDF, DXF, PLT, SVG, CGM, SWF, WMF, EMF.<br /></li>
+<li>! Важно: при использовании инструмента Обрезающий Прямоугольник конвертация будет произведена только для соответствующей части чертежа.</li>
+</ul>
+<span class="post-b">Пакетное конвертирование и печать</span>
+<ul>
+<li>Если у Вас есть множество файлов, которые необходимо перевести в другой формат или распечатать, то не обязательно тратить на это массу времени. ABViewer имеет возможность одновременной конвертации и печати в «пакетном» режиме - с применением одних и тех же настроек для всех файлов.</li>
+</ul>
+<span class="post-b">Быстрая загрузка и масштабирование больших черно-белых растровых файлов:</span>
+<ul>
+<li>В ABViewer используется ноу-хау для работы с 1-битными (черно-белыми) растровыми форматами. Огромные файлы размерами 20 на 15 тысяч пикселей грузятся менее чем за секунду и почти мгновенно масштабируются, что очень удобно при работе со сканированными чертежами в TIFF формате.</li>
+</ul>
+<span class="post-b">Инструменты для снятия размеров:</span>
+<ul>
+<li>Возможность быстрой наглядной настройки масштабного коэффициента для снятия измерений – больше нет дополнительных вычислений на калькуляторе!<br /></li>
+<li>Изменение длин, площадей и периметров.</li>
+</ul>
+<span class="post-b">Работа с САПР файлами</span>
+<ul>
+<li>Скрыть все размеры или тексты можно одним нажатием мыши<br /></li>
+<li>Удобное переключение между файлами<br /></li>
+<li>Привязка к объектам имеет большое количество настроек и действует не только при редактировании чертежей, но и при использовании «линеек»<br /></li>
+<li>Измерение расстояний на чертеже, включая настройку масштабного коэффициента.<br /></li>
+<li>Просмотр и редактирование в 3D режиме<br /></li>
+<li>Просмотр в шести ортогональных проекциях и четырех изометрических видах.<br /></li>
+<li>Автоматический поворот загружаемого файла САПР на заданный угол.<br /></li>
+<li>Работа со слоями<br /></li>
+<li>Цветной и черно-белый режимы для файлов САПР<br /></li>
+<li>Настройка цвета фона<br /></li>
+<li>DWG/DXF/SVG/CGM Дуги и Окружности могут отрисовываться как гладкие кривые и сохраняться в EMF как Дуги и Эллипсы Метафайлов, что дает возможность масштабировать их без потери качества<br /></li>
+<li>Настройка количества линейных сегментов при отрисовке окружности, дуги, эллипса и сплайна<br /></li>
+<li>Объединение чертежей в один файл.<br /></li>
+<li>Возможность просмотра структуры САПР файлов.<br /></li>
+<li>Поддержка SHX-шрифтов, включая UNICODE и BIGFONTS.</li>
+</ul>
+<span class="post-b">Поиск файлов</span>
+<ul>
+<li>Панели Закладки и Проводник обеспечивают быструю навигацию по файлам. Подпрограмма «Эскизы» даёт возможность просмотреть все файлы в каталоге до их открытия, включая просмотр DXF, PLT и других файлов, не показываемых Windows или обычнами просмоторщиками. Перемещаться по открытым в ABViewer файлам можно очень быстро благодаря современной организации документов в вкладках.</li>
+</ul>
+<span class="post-b">Навигация по файлу</span>
+<ul>
+<li>Динамическое масштабирование чертежа с помощью колеса «мыши», аналогичное AutoCAD™ Функции поиска текста и точки быстро переместят Вас к нужной части чертежа. Если Вам необходим только контур детали в чертеже, то убрать все тексты или размеры можно по нажатию одной клавиши – теперь для этой операции не нужно открывать слои и менять видимость.</li>
+</ul>
+<span class="post-b">Редлайн</span>
+<ul>
+<li>Режим «Редлайн» или комментарии к чертежу представляет собой дополнительную информацию, которая накладывается на изображение чертежа, но не затрагивает базовый файл. В этом режиме можно использовать все элементы редактора. Комментарии вместе с базовым файлом могут быть распечатаны или сконвертированы в другой формат. К одному базовому файлу может прилагаться множество файлов-комментариев. Дополнительные возможности этого режима позволяют выбрать путь сохранения к файлам пометок и обеспечить автоматическую их загрузку.</li>
+</ul>
+<span class="post-b">Печать</span>
+<ul>
+<li>Функция печати имеет очень большие возможности. Можно напечатать как один файл, так и группу файлов с заданными настройками. В диалоговом окне «Предварительный просмотр» находится большое количество настроек, к примеру настроить ширину линий цвет и слои DWG/DXF, определить значения нулевой ширины. Печать «Мозаикой» позволяет выводить изображения на любое количество страниц различного формата с требуемым масштабом, к примеру очень большие изображения (А0, А1 и т.п.) могут быть разбиты на множество меньших страниц различного формата для последующей склейки в единое полотно. Любой элемент «мозаики» может печататься независимо от других. Таким образом, если одна страница окажеться поврежденной (например, из-за проблем с принтером), Вы сможете перепечатать эту страницу отдельно. Помимо печати всего файла, имеется возможность печати выделенной области (Инструмент «Обрезающий прямоугольник» позволяет выделить необходимую область для вывода ее на печать) и печати видимого пространства. Цветные чертежи можно печатать с хорошим качеством на черно белом-принтере (без серых полутонов). Имеется набор рамок для вставки при печати.<br /></li>
+<li>Предопределенные размеры для стандартных форматов (ISO-A; DIN: A4, A3, A2, A1, A0; US: A, B, C, D, E).</li>
+</ul>
+<span class="post-b">Экспорт в форматы</span>
+<ul>
+<li>Adobe Acrobat Document (*.pdf)<br /></li>
+<li>Adobe Flash (*.swf)<br /></li>
+<li>AutoCAD™ DXF (R2000): (*.dxf)<br /></li>
+<li>Bitmap Files: (*.bmp)<br /></li>
+<li>Computer Graphics Metafile: (*.cgm)<br /></li>
+<li>GIF (*.gif)<br /></li>
+<li>Hewlett-Packard HPGL: (*.plt)<br /></li>
+<li>JPEG: (*.jpg)<br /></li>
+<li>TIFF (*.tiff)<br /></li>
+<li>Scalable Vector Graphics: (*.svg)<br /></li>
+<li>Windows Metafiles: (*.wmf)<br /></li>
+<li>Windows Enhanced Metafiles: (*.emf)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sp-wrap">
+<div class="sp-body" title="Что нового в ABViewer 10&amp;#58;">
+<h3 class="sp-title">Что нового в ABViewer 10&amp;#58;</h3>
+<ul>
+<li>Удобная навигация в 3D режиме при просмотре 3D моделей<br /></li>
+<li>Копирование с базовой точкой<br /></li>
+<li>Внедрение файлов внешних ссылок в текущий чертеж.<br /></li>
+<li>Удаление сегментов одним кликом мыши с внутренней или внешней стороны указанного контура.<br /></li>
+<li>Быстрый доступ к настройкам САПР файла, слоям и параметрам листа из окна Групповая печать.<br /></li>
+<li>Окно Структура файла полностью переработано, добавлен поиск и доступ к свойствам.<br /></li>
+<li>Экспорт в форматы 3D файлов: STL, OBJ, OBJF, NMF, LMTS<br /></li>
+<li>Сохранение в DXF 2007<br /></li>
+<li>Экспорт растровых форматов в DWG и DXF в окне Групповая обработка.<br /></li>
+<li>Команда Преобразовать в полилинию преобразует выбранный объект в полилинию.<br /></li>
+<li>Команда Показать выполняет масштабирование выбранных объектов по экрану рабочей области программы.<br /></li>
+<li>Команды Взорвать все и Взорвать все вхождения блока разрывают связи между всеми составными объектами в чертеже.<br /></li>
+<li>Добавлена настройка Показывать контуры комплексных объектов, которая включает показ контуров объектов при перемещении комплексных объектов.<br /></li>
+<li>Улучшено редактирование полилинии, теперь возможно параллельное перемещение линейных сегментов.<br /></li>
+<li>Опция Сопряжение для полилинии, которая позволяет создавать дуговые сегменты предустановленного радиуса.<br /></li>
+<li>Добавлена возможность фильтрации в окне Слои.<br /></li>
+<li>Улучшена командная строка, добавлены системные переменные.</li>
+</ul>
+</div>
+</div>
+<div class="sp-wrap">
+<div class="sp-body" title="Процедура лечения&amp;#58;">
+<h3 class="sp-title">Процедура лечения&amp;#58;</h3>
+<ul>
+<li>Установить программу. Не запускать!<br /></li>
+<li>Скопировать патч в папку с установленной программой и применить (от имени администратора)</li>
+</ul>
+</div>
+</div>
+<IDXSKIP><span class="post-hr">-</span></IDXSKIP><span class="post-align" style="text-align: center;"><span style="font-size: 16px; line-height: normal;"><span style="color: DarkBlue;"><span style="font-family: Georgia;"><IDXSKIP><span class="post-b">Скриншоты:</span></IDXSKIP></span></span></span><IDXSKIP><span class="post-br"><br /></span></IDXSKIP><a href="http://i.imgur.com/waQSb72.jpg" class="postLink"><var class="postImg" title="http://i.imgur.com/zxlNDQZ.jpg">&#10;</var></a><a href="http://i.imgur.com/YRT3NTP.jpg" class="postLink"><var class="postImg" title="http://i.imgur.com/TKyWt2e.jpg">&#10;</var></a><a href="http://i.imgur.com/1fbkouS.jpg" class="postLink"><var class="postImg" title="http://i.imgur.com/Akkim8F.jpg">&#10;</var></a><a href="http://i.imgur.com/jeAJcTO.jpg" class="postLink"><var class="postImg" title="http://i.imgur.com/iMmgTkq.jpg">&#10;</var></a><a href="http://i.imgur.com/AYta2EC.jpg" class="postLink"><var class="postImg" title="http://i.imgur.com/Qz0qprs.jpg">&#10;</var></a></span><IDXSKIP><span class="post-hr">-</span></IDXSKIP></span>
+				<span id="pe_109349"></span>
+				<span id="pc_109349"></span>
+				  
+<div>
+	<fieldset class="attach">
+		<IDXSKIP><legend>Скачать</legend></IDXSKIP>
+		<h1 class="attach_link"><a href="profile.php?mode=register" style="color: brown;"><IDXSKIP>Скачать бесплатно и на максимальной скорости!</IDXSKIP></a></h1>
+		<p id="guest-dl-tip" class="attach_comment med">
+			<IDXSKIP><a href="viewtopic.php?t=1" class="med"><b>Как скачивать?</b></a></IDXSKIP> <IDXSKIP>&middot; 
+			<a href="viewtopic.php?t=2" class="med"><b>Что такое торрент?</b></a></IDXSKIP> <IDXSKIP>&middot; 
+			<a href="viewtopic.php?t=3" class="med"><b>Рейтинг и ограничения</b></a></IDXSKIP><br />
+		</p>
+	</fieldset>
+</div>
+			</div><!--/post_wrap-->
+			<div class="signature"><br /><IDXSKIP>_________________<br /></IDXSKIP><IDXSKIP><a href="http://emtrek.org/tracker.php?rid=2694#results" class="postLink"><var class="postImg" title="http://s020.radikal.ru/i722/1305/12/93fde0aec5e4.png">&#10;</var></a></IDXSKIP><br />
+<IDXSKIP>===============================<br /></IDXSKIP>
+<IDXSKIP><span class="post-b">IGNOSCITO SAEPE ALTERI, NUNQUAM TIBI</span></IDXSKIP></div>					</div><!--/post_body-->
+		<div>
+			<p style="float: left;  padding-top: 5px;">
+				<a style="color:#0080a0;"  class="crumb" href="./viewtopic.php?p=109349#109349" title="Линк на это сообщение">12-Сен-2014 10:10</a>
+				                			</p>
+						<p style="float: right; padding: 1px 6px 2px;" class="post_btn_1">
+				<a class="txtb" href="" onclick="ajax.exec({ action: 'posts', post_id: 109349, type: 'reply'}); return false;"><img src="./templates/default/images/lang_russian/icon_quote.gif" alt="[Цитировать]" title="Ответить с цитатой" /></a>																			</p>
+			<div class="clear"></div>
+			
+			
+						
+			
+						
+		</div>
+	</td>
+</tr>
+<IDXSKIP><tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 3px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=2694"><img src="./templates/default/images/lang_russian/icon_profile.gif" alt="[Профиль]" title="Посмотреть профиль" /></a>			<a class="txtb" href="./privmsg.php?mode=post&amp;u=2694"><img src="./templates/default/images/lang_russian/icon_pm.gif" alt="[ЛС]" title="Отправить ЛС" /></a>		</div>
+	
+	</td>
+</tr></IDXSKIP>
+</tbody>
+
+
+</table><!--/topic_main-->
+
+
+<!--/pagination-->
+
+
+<table class="topic" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="catBottom med">
+	<form method="post" action="viewtopic.php?t=28662&amp;start=0">
+		Показать сообщения: 
+<select  name="postdays" id="postdays">
+		<option selected="selected"  value="0">&nbsp;все сообщения&nbsp;</option>
+		<option value="1">&nbsp;за последний день&nbsp;</option>
+		<option value="7">&nbsp;за последние 7 дней&nbsp;</option>
+		<option value="14">&nbsp;за последние 2 недели&nbsp;</option>
+		<option value="30">&nbsp;за последний месяц&nbsp;</option>
+		<option value="90">&nbsp;за последние 3 месяца&nbsp;</option>
+		<option value="180">&nbsp;за последние 6 месяцев&nbsp;</option>
+		<option value="364">&nbsp;за последний год&nbsp;</option>
+</select>
+&nbsp;
+		
+<select  name="postorder" id="postorder">
+		<option selected="selected"  value="asc">&nbsp;Начиная со старых&nbsp;</option>
+		<option value="desc">&nbsp;Начиная с новых&nbsp;</option>
+</select>
+&nbsp;
+		<input type="submit" value="Перейти" class="lite" name="submit" />
+	</form>
+	</td>
+</tr>
+</table>
+
+</div>
+
+
+    <div class="breadBoxTop">
+    	<div class="topCtrl">
+         <a href="posting.php?mode=reply&amp;t=28662" class="callToAction"><span>Ответить на тему</span></a>
+		</div>
+      <nav>
+        <fieldset class="breadcrumb">
+          <span class="crumbs">
+            <IDXSKIP><span class="crust">
+              <a href="./index.php" class="crumb">
+                <span>Главная</span>
+              </a></IDXSKIP>
+              <span class="arrow">
+                <span></span>
+              </span>
+            </span>
+                         <span class="crust">
+              <a href="viewforum.php?f=27" class="crumb">
+                <span>Создание и редактирование мультимедиа и 3D контента</span>
+              </a>
+              <span class="arrow">
+                <span></span>
+              </span>
+            </span>
+                        <span class="crust">
+              <a href="viewforum.php?f=111" class="crumb">
+                <span>Графические редакторы</span>
+              </a>
+              <span class="arrow">
+                <span></span>
+              </span>
+            </span>
+          </span>
+        </fieldset>
+      </nav>
+    </div>
+
+	
+<!--bottom_info-->
+<div class="bottom_info">
+
+	<div class="jumpbox"></div>
+
+	<div id="timezone">
+		<p></p>
+		<p>Текущее время: <span class="tz_time">Сегодня 22:22</span></p>
+		<IDXSKIP><p>Часовой пояс: <span class="tz_time">GMT + 3</span></p></IDXSKIP>
+	</div>
+	<div class="clear"></div>
+
+</div><!--/bottom_info-->
+
+<table width="100%">
+<tr>
+	<td width="40%" valign="top" nowrap="nowrap"><span class="small"></span><br />
+	<div class="small">
+		<br clear="all" />
+		<div style="float: left;"><IDXSKIP>Вы <b>не можете</b></IDXSKIP> <IDXSKIP>начинать темы<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>отвечать на сообщения<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>редактировать свои сообщения<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>удалять свои сообщения<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>голосовать в опросах<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>прикреплять файлы к сообщениям<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>скачивать файлы<br /></IDXSKIP></div>
+	</div>
+	</td>
+</tr>
+</table>
+	</div><!--/main_content_wrap-->
+	</td><!--/main_content-->
+
+	
+	</tr></table>
+	</div>
+	<!--/page_content-->
+
+	<div class="copyright tCenter">
+		<IDXSKIP><b style="color:rgb(204,0,0);">!ВНИМАНИЕ!</b></IDXSKIP><br />
+		<IDXSKIP>Сайт не предоставляет электронные версии произведений, а занимается лишь коллекционированием и каталогизацией ссылок, присылаемых и публикуемых на форуме нашими читателями. Если вы являетесь правообладателем какого-либо представленного материала и не желаете, чтобы ссылка на него находилась в нашем каталоге, свяжитесь с нами, и мы незамедлительно удалим её. Файлы для обмена на трекере предоставлены пользователями сайта, и администрация не несёт ответственности за их содержание. Просьба не заливать файлы, защищенные авторскими правами, а также файлы нелегального содержания!	</IDXSKIP></div>
+
+	<!--/page_footer -->
+
+	</div>
+	<!--/page_container -->
+
+<footer>
+  <div class="footer">
+      <div class="pageContent">
+        <dl class="choosers">
+                    <IDXSKIP><dd>
+           <a href="misc.php?do=info&show=user_agreement" onclick="window.open(this.href, '', InfoWinParams); return false;">Пользовательское соглашение</a>
+          </dd></IDXSKIP>
+                              <IDXSKIP><dd>
+            <a href="misc.php?do=info&show=copyright_holders" onclick="window.open(this.href, '', InfoWinParams); return false;">Для правообладателей</a>
+          </dd></IDXSKIP>
+                              <IDXSKIP><dd>
+            <a href="misc.php?do=info&show=advert" onclick="window.open(this.href, '', InfoWinParams); return false;">Реклама на сайте</a>
+          </dd></IDXSKIP>
+                    
+        </dl>
+        <ul class="footerLinks">
+		<li></li>
+          <li></li>
+          <li></li>
+    
+        </ul>
+		
+		
+        <span class="helper"></span>
+      </div>
+  </div>
+  <div class="footerLegal">
+    <div class="pageWidth">
+      <div class="pageContent">
+        <div id="copyright">
+          <IDXSKIP>Powered by <a target="_blank" href="http://torrentpier.me">TorrentPier II</a></IDXSKIP> <IDXSKIP>&copy; Meithar, TorrentPier II Team          </IDXSKIP></div>
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	<IDXSKIP><div id="page_footer_banner">
+    <div id="banner_footer">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  
+  
+	<td width="0%">
+	<table width="100%" border="0" cellspacing="2" cellpadding="2" class="banner_mini">
+
+	</table>
+  </td>
+  
+ 
+  
+  <td width="1%">
+	<table width="100%" border="0" cellspacing="2" cellpadding="2" class="banner_mini">
+
+	
+	</table>
+  </td>
+  
+  
+
+  
+  	
+  
+   	<td width="1%">
+	<table width="100%" border="0" cellspacing="2" cellpadding="2" class="banner_mini">
+
+
+	</table>
+  </td>
+  
+  
+  
+  	<td width="1%">
+	<table width="100%" border="0" cellspacing="2" cellpadding="2" class="banner_mini">
+<!-- Yandex.Metrika informer -->
+<a href="http://metrika.yandex.ru/stat/?id=5247523&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/5247523/3_1_20B4FFFF_0094FFFF_1_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" /></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter5247523 = new Ya.Metrika(5247523);
+             yaCounter5247523.clickmap(true);
+             yaCounter5247523.trackLinks(true);
+        
+        } catch(e) { }
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/5247523" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	</table>
+  </td>
+  
+  	<td width="2%">
+	<table width="100%" border="0" cellspacing="2" cellpadding="2" class="banner_mini">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t11.11;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+
+	
+	</table>
+			</td>
+			</tr>
+	</table>	
+	</div>
+</div></IDXSKIP>
+	
+	
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div><!--/body_container-->
+
+	</body>
+	</html>
+

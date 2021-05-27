@@ -1,0 +1,1491 @@
+underverse.me/viewtopic.php?t=74070
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+
+<meta name="author" content="Underverse.me" />
+<meta name="keywords" content="кунг-фу, панда, kung, panda, алессандро, карлони, alessandro, carloni, дженнифер, jennifer, yuh, nelson, мультфильм, боевик, комедия, приключения, семейный, bdrip, xdub, rus, торрент, трекер, торрент трекер, торрент трекер без регистрации, торренты, торент, битторрент, тракер, torrent, torrents, tracker, скачать, download, бесплатно, utorrent, bittorrent, underverse" />
+<meta name="description" content="Скачать торрент Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения, семейный, BDRip] 2xDub (Rus, Ukr) + Original (Eng) + Sub (Rus, Ukr, Eng) с торрент трекера Underverse.me бесплатно, на высокой скорости и без ограничений любым bit-torrent клиентом" />
+
+<meta name="google-site-verification" content="nUlEHTKeaQZhYuVqErCeafIFxuzma2mPPjHgdA1Iz3E" />
+<meta name='yandex-verification' content='69b16cdda5a2d495' />  
+
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+
+<link rel="stylesheet" href="./min/index.php?f=templates/default/css/main.css,templates/default/css/alertbtn.css,templates/default/css/rater.css,templates/default/css/fancybox.css&amp;20" type="text/css" />
+<script type="text/javascript" src="./min/index.php?f=misc/js/jquery.pack.js,misc/js/jquery.common.js,misc/js/noty/jquery.noty.js,misc/js/noty/layouts/bottomRight.js,misc/js/noty/themes/default.js,misc/js/main.js,misc/js/jquery.rater.js,misc/js/bbcode.js,misc/js/jquery.mousewheel.pack.js,misc/js/jquery.fancybox.pack.js,misc/js/share42.js&amp;19"></script>
+
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?52"></script>
+
+<script type="text/javascript">
+var postImg_MaxWidth = screen.width - 202;
+var postImgAligned_MaxWidth = Math.round(screen.width/3);
+var attachImg_MaxWidth = screen.width - 280;
+var ExternalLinks_InNewWindow = '1';
+var hidePostImg = false;
+
+function copyText_writeLink(node)
+{
+	if (!is_ie) return;
+	document.write('<p style="float: right;"><a class="txtb" onclick="if (ie_copyTextToClipboard('+node+')) alert(\'Код скопирован в буфер обмена\'); return false;" href="#">скопировать в буфер обмена</a></p>');
+}
+function initPostBBCode(context)
+{
+	initSpoilers(context);
+	initExternalLinks(context);
+	initPostImages(context);
+}
+
+function initPostImages(context)
+{
+	if (hidePostImg) return;
+	var $in_spoilers = $('div.sp-body var.postImg', context);
+	$('var.postImg', context).not($in_spoilers).each(function(){
+		var $v = $(this);
+		var src = $v.attr('title');
+		var $img = $('<img src="'+ src +'" class="'+ $v.attr('class') +'" alt="pic" />');
+		
+		if ($v.parents('div.signature').length == 0) {
+			$img = fixPostImage($img);
+		}
+		
+		var maxW = ($v.hasClass('postImgAligned')) ? postImgAligned_MaxWidth : postImg_MaxWidth;
+		$img.bind('click', function(){ return imgFit(this, maxW); });
+		if (user.opt_js.i_aft_l) {
+			$('#preload').append($img);
+			var loading_icon = '<a href="'+ src +'" target="_blank"><img src="images/pic_loading.gif" alt="" /></a>';
+			$v.html(loading_icon);
+			if ($.browser.msie) {
+				$v.after('<wbr/>');
+			}
+			$img.one('load', function(){
+				imgFit(this, maxW);
+				$v.empty().append(this);
+			});
+		}
+		else {
+			$img.one('load', function(){ imgFit(this, maxW) });
+			$v.empty().append($img);
+			if ($.browser.msie) {
+				$v.after('<wbr/>');
+			}
+		}
+	});
+}
+
+function initSpoilers(context)
+{
+	$('div.sp-body', context).each(function(){
+		var $sp_body = $(this);
+		var name = this.title || 'скрытый текст';
+		this.title = '';
+
+		var $sp_head = $('<div class="sp-head folded clickable">'+ name +'</div>');
+
+		$sp_head.insertBefore($sp_body).click(function(e){
+			if (!$sp_body.hasClass('inited')) {
+				initPostImages($sp_body);
+
+				var $sp_fold_btn = $('<div class="sp-fold clickable">[свернуть]</div>').click(function(){
+					$.scrollTo($sp_head, { duration:200, axis:'y', offset:-200 });
+					$sp_head.click().animate({opacity: 0.1}, 500).animate({opacity: 1}, 700);
+				});
+				$sp_body.prepend('<div class="clear"></div>').append('<div class="clear"></div>').append($sp_fold_btn).addClass('inited');
+
+			}
+			if (e.shiftKey) {
+				e.stopPropagation();
+				e.shiftKey = false;
+				var fold = $(this).hasClass('unfolded');
+				$('div.sp-head', $($sp_body.parents('td')[0])).filter( function(){ return $(this).hasClass('unfolded') ? fold : !fold } ).click();
+			}
+			else {
+				$(this).toggleClass('unfolded');
+				$sp_body.slideToggle('fast');
+			}
+		});
+	});
+}
+
+function initExternalLinks(context)
+{
+	$("a.postLink:not([href*='"+ window.location.hostname +"/'])", context).attr({ target: '_blank' });
+}
+
+function fixPostImage ($img)
+{
+	// var banned_image_hosts = /ipicture|imageban/i;
+//	var allowed_image_hosts = /underverse|imdb|kinopoisk|power-club|gametracker.com/i;
+	
+//	var src = $img[0].src;
+//	var i    = 0;
+//	var bn   = [];
+//	bn[i] = 'hostban1'; i++;
+//	bn[i] = 'hostban2'; i++;
+	
+	// ban_picture_hosts
+//	if (!src.match(allowed_image_hosts)) {
+//		$img.attr({ src: "./images/"+bn[Math.round(Math.random()*(bn.length-1))]+".png", 
+//					title: "Прочтите правила оформления релизов!" }).addClass('clickable').bind('click', function(){ 
+//						return !window.open("./viewtopic.php?t=106"); });
+//	}
+	return $img;
+}
+
+function getImgSize(ref)
+{
+	var newImg = new Image();
+	newImg.src = ref;
+	var height = newImg.height;
+	var width = newImg.width;
+	return 'Размер: '+width+' x '+height;
+}
+
+$(document).ready(function(){
+
+	$("a.zoomable").fancybox({
+		'overlayOpacity'	:	0.8,
+		'SpeedIn'		    :	500,
+		'SpeedOut'  		:	500,
+		'title'             :   'Размер: 000 x 000',
+		'onComplete'		:   function() { 
+									$("#fancybox-title-float-main").html(getImgSize($("#fancybox-img").attr('src'))); 
+									$("#fancybox-title-float-main").css('cursor','hand');
+									$("#fancybox-title-float-main").click(function() {
+											window.open($("#fancybox-img").attr('src'),'',''); 
+									});
+								}
+	});
+
+    $("a.zoomplayer").fancybox({
+    	'type'              :   'ajax',
+        'overlayOpacity'    :   0.8,
+        'SpeedIn'           :   500,
+        'transitionOut'     :   'none',
+        'scrolling'         :   'no',
+        'onComplete'        :   function() { 
+                                }
+    });
+	
+	$('div.post_wrap, div.signature').each(function(){ initPostBBCode( $(this) ) });
+});
+
+</script>
+
+<script type="text/javascript">
+var BB            = {};
+var BB_ROOT       = "./";
+var cookieDomain  = ".underverse.me";
+var cookiePath    = "/";
+var cookieSecure  = 0;
+var cookiePrefix  = "bb_";
+var LOGGED_IN     = 0;
+var InfoWinParams = 'HEIGHT=510,resizable=yes,WIDTH=780';
+
+var user = {
+	opt_js: {},
+
+	set: function(opt, val, days, reload) {
+		this.opt_js[opt] = val;
+		setCookie('opt_js', $.toJSON(this.opt_js), days);
+		if (reload) {
+			window.location.reload();
+		}
+	}
+}
+
+$(document).ready(function(){
+	$("div.jumpbox").html('\
+		<span id="jumpbox-container"> \
+		<select id="jumpbox"> \
+			<option id="jumpbox-title" value="-1">&nbsp;&raquo;&raquo; Выберите форум для перехода &nbsp;</option> \
+		</select> \
+		</span> \
+		<input id="jumpbox-submit" type="button" class="lite" value="Перейти" /> \
+	');
+	$('#jumpbox-container').one('click', function(){
+		$('#jumpbox-title').html('&nbsp;&nbsp; Загружается... ... &nbsp;');
+		var jumpbox_src = './ajax/html/' + (0 ? 'jumpbox_user.html' : 'jumpbox_guest.html');
+		$(this).load(jumpbox_src);
+		$('#jumpbox-submit').click(function(){ window.location.href='./viewforum.php?f='+$('#jumpbox').val(); });
+	});
+});
+
+$(document).ready(function(){
+	$('div.post_body wbr').after('<wbr />');
+});
+
+$(document).ready(function(){
+    var n = noty({
+        text: '<u>Зарегистрированным пользователям</u> доступно для скачки больше релизов и расширенный функционал трекера, <b>а также они не видят большую часть рекламы</b>. Вы желаете <u>зарегистрироваться</u>?',
+        type: 'alert',
+        dismissQueue: true,
+        layout: 'bottomRight',
+        theme: 'defaultTheme',
+        buttons: [
+          {addClass: 'btn btn-primary', text: 'Да, прямо сейчас!', onClick: function($noty) {
+              $noty.close();
+              noty({dismissQueue: true, force: true, layout: 'bottomRight', theme: 'defaultTheme', text: 'Перенаправление на страницу регистрации...', type: 'success'});
+              window.location.href = 'profile.php?mode=register';
+            }
+          },
+          {addClass: 'btn btn-danger', text: 'Нет, спасибо', onClick: function($noty) {
+              $noty.close();
+              noty({dismissQueue: true, force: true, layout: 'bottomRight', theme: 'defaultTheme', text: 'Ну, не хотите, как хотите!', type: 'error'});
+            }
+          }
+        ]
+      });
+});
+
+var ajax = new Ajax('./ajax.php', 'POST', 'json');
+
+<!-- VK Widget -->
+VK.init({apiId: 3113708, onlyWidgets: true});
+<!-- /VK Widget -->
+
+
+</script>
+
+
+<!-- Opera hack -->
+<script type="text/javascript">
+    if(window.opera) {
+             document.write('<style type="text/css">input[type="button"],input[type="submit"],input[type="reset"] { padding: 1px 7px 2px 7px !important; }</style>');
+    }
+</script>
+<!-- end of -->
+
+<!--[if lt IE 7]><script type="text/javascript">
+$(document).ready(ie6_make_clickable_labels);
+
+$(document).ready(function(){
+	$('div.menu-sub').prepend('<iframe class="ie-fix-select-overlap"></iframe>'); // iframe for IE select box z-index issue
+	Menu.iframeFix = true;
+});
+</script><![endif]-->
+
+<!--[if gte IE 7]><style type="text/css">
+input[type="checkbox"] { margin-bottom: -1px; }
+</style><![endif]-->
+
+<!--[if lte IE 6]><style type="text/css">
+.forumline th { height: 24px; padding: 2px 4px; }
+#logo { margin-top: -2px; }
+.topmenu  { margin: -10px 4px 0 !important; }
+</style><![endif]-->
+
+<!--[if IE]><style type="text/css">
+.code-copy { display: block; }
+.post-hr   { margin: 2px auto; }
+.sf_title { white-space: normal !important; }
+</style><![endif]-->
+
+
+<style type="text/css">
+.menu-sub, #ajax-loading, #ajax-error, var.ajax-params { display: none; }
+
+/* temp */
+
+
+/* temp end */
+</style>
+
+<title>Скачать торрент Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения, семейный, BDRip] 2xDub (Rus, Ukr) + Original (Eng) + Sub (Rus, Ukr, Eng) :: торрент трекер underverse.me</title>
+
+
+<!--[if lt IE 7]>
+<script type="text/javascript">
+var isIE6 = true;
+</script>
+<![endif]-->
+<!--[if IE 7]>
+<script type="text/javascript">
+var isIE7 = true;
+</script>
+<![endif]-->
+
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+
+
+<noindex>
+<div id="ad-101" align="center"><script type="text/javascript">(function(){var f=false,b=document,c=b.documentElement,e=window;function g(){var a="";a+="rt="+(new Date).getTime()%1E7*100+Math.round(Math.random()*99);a+=b.referrer?"&r="+escape(b.referrer):"";return a}function h(){var a=b.getElementsByTagName("head")[0];if(a)return a;for(a=c.firstChild;a&&a.nodeName.toLowerCase()=="#text";)a=a.nextSibling;if(a&&a.nodeName.toLowerCase()!="#text")return a;a=b.createElement("head");c.appendChild(a);return a}function i(){var a=b.createElement("script");a.setAttribute("type","text/javascript");a.setAttribute("src","http"+("https:"==e.location.protocol?"s":"")+"://c.luxup.ru/t/lb207816_1.js?"+g());typeof a!="undefined"&&h().appendChild(a)}function d(){if(!f){f=true;i()}};if(b.addEventListener)b.addEventListener("DOMContentLoaded",d,false);else if(b.attachEvent){c.doScroll&&e==e.top&&function(){try{c.doScroll("left")}catch(a){setTimeout(arguments.callee,0);return}d()}();b.attachEvent("onreadystatechange",function(){b.readyState==="complete"&&d()})}else e.onload=d})();</script>
+<div id="lx_601163"></div></div><!--/ad-100-->
+</noindex>
+ 
+
+<IDXSKIP><table id="ajax-loading" cellpadding="0" cellspacing="0"><tr><td class="icon"></td><td>Loading...</td></tr></table></IDXSKIP>
+<IDXSKIP><table id="ajax-error" cellpadding="0" cellspacing="0"><tr><td>Error</td></tr></table></IDXSKIP>
+
+<div id="preload" style="position: absolute; overflow: hidden; top: 0; left: 0; height: 1px; width: 1px;"></div>
+ 
+<div id="body_container">
+
+<!--************************************************************************-->
+<!--========================================================================-->
+
+<!--page_container-->
+<div id="page_container">
+<a name="top"></a>
+
+<!--page_header-->
+<div id="page_header">
+
+<!--main_nav-->
+<div id="main-nav" style="height: 32px;">
+<div id="main-nav-wrapper">
+<div id="menu">
+<ul class="menu">
+	<IDXSKIP><li><a href="tracker.php" class="parent"><span><b>Трекер</b></span></a></li></IDXSKIP>
+	<IDXSKIP><li><a href="#"><span style="color: #ff9f9f;"><b>Новичку!</b></span></a>
+    <ul>
+        <li><a href="viewtopic.php?p=63579#63579"><span>Как себя вести?</span></a></li>
+        <li><a href="viewtopic.php?p=809#809"><span>Ну и как же тут качать?</span></a></li>
+        <li><a href="viewtopic.php?p=169276#169276"><span><b style="color: #aaffaa;">Чем мы лучше других?</b></span></a></li>
+        <li><a href="#" class="parent"><span><b>Я лентяй! Хочу сразу...</b></span></a>
+        <ul>
+            <li><a href="index.php?c=2"><span><b>Фильмы</b> в обычном качесте!</span></a></li>
+            <li><a href="index.php?c=9"><span><b>Фильмы</b> в HD качестве!</span></a></li>
+            <li><a href="index.php?c=11"><span>К черту фильмы, давай <b>MP3!</b></span></a></li>
+            <li><a href="index.php?c=12"><span>Э нее, давай-ка <b>Lossless!</b></span></a></li>
+            <li><a href="index.php?c=13"><span><b>Игры</b> хочу! Геймер я!</span></a></li>
+            <li><a href="index.php?c=16"><span><b>Софтинку</b> скачать надо!</span></a></li>
+            <li><a href="index.php?c=19"><span><b>Книжку</b>бы почитать!</span></a></li>
+            <li><a href="tracker.php"><span>Да не знаю я, что я хочу!!!</span></a></li>
+        </ul>
+        </li>
+        <li><a href="faq.php"><span>Общее FAQ по форуму.</span></a></li> 
+    </ul>
+    </li></IDXSKIP>
+		</ul>
+</div>
+</div>
+</div>
+<!--/main_nav-->
+
+<!--logo-->
+<div id="logo">
+	<a href="./">
+	<div style="background: transparent url(templates/default/images/av/logo_left.jpg); width: 630px; height:141px; position:relative;">
+	</div>
+	</a>
+		<div style="position: absolute; top: 48px; right: 2%;">
+	<table class="w100" style="height: 100%;">
+	<tr><td style="padding: 0px;">
+	<noindex>
+	<div id="ad-100" style="padding-top: 8px;"><script src="http://admited.letysheeps.ru/b72195be6c3398b1bb5c/src.js"></script></div><!--/ad-100-->
+	</noindex>
+	</td></tr>
+	</table>
+	</div>
+	
+
+</div>
+<!--/logo-->
+
+<IDXSKIP><div style="position: absolute; top: 6px; right: 16px;">
+	<form id="quick-search" action="" method="post" onsubmit="
+		$(this).attr('action', $('#search-action').val());
+		var txt=$('#search-text').val(); return !(txt=='поиск...' || !txt);
+	">
+		<input type="hidden" name="max" value="1" />
+		<input type="hidden" name="to" value="1" />
+		<input id="search-text" type="text" name="nm" onfocus="if(this.value=='поиск...') this.value='';" onblur="if(this.value=='') this.value='поиск...';" value="поиск..." class="hint" style="width: 200px;" />
+		<select id="search-action">
+			<option value="tracker.php#results" selected="selected"> по трекеру </option>
+			<option value="search.php"> по форуму </option>
+					</select>
+		<input type="submit" class="med bold" value="&raquo;" style="width: 30px;" />
+	</form>                                     
+</div></IDXSKIP>
+
+
+<!--login form-->
+<div class="topmenu no-new-pm">
+   <table width="100%" cellpadding="0" cellspacing="0">
+   <tr>
+      <td class="tCenter pad_2">
+         <IDXSKIP><a href="profile.php?mode=register" id="register_link"><span style="color:#e1504d;"><span class="bold">Регистрация</span></span></a></IDXSKIP>
+         <IDXSKIP>&nbsp;&#0183;&nbsp;
+         </IDXSKIP><IDXSKIP><form action="./login.php" method="post">
+            Логин: <input type="text" name="login_username" size="12" tabindex="1" accesskey="l" />
+            Пароль: <input type="password" name="login_password" size="12" tabindex="2" />
+            <label title="Автоматически входить при каждом посещении"><input type="checkbox" name="autologin" value="1" tabindex="3" /> Автовход</label>&nbsp;
+            <input type="submit" name="login" value="Вход" tabindex="4" />
+         </form></IDXSKIP>
+         <IDXSKIP>&nbsp;&#0183;&nbsp;
+         </IDXSKIP><IDXSKIP><a href="profile.php?mode=sendpassword">Восстановить пароль</a></IDXSKIP>
+      </td>
+   </tr>
+   </table>
+</div>
+
+<!--/login form-->
+
+
+<!--breadcrumb-->
+<!--<div id="breadcrumb"></div>-->
+<!--/breadcrumb-->
+
+
+</div>
+<!--/page_header-->
+
+<!--menus-->
+
+
+<!--/menus-->
+
+
+
+<!--page_content-->
+<div id="page_content">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;"><tr>
+
+
+<!--main_content--> 
+<td id="main_content"> 
+<div id="main_content_wrap">
+<!-- #IF LOGGED_IN -->
+<table cellspacing="0" cellpadding="0" style="width:100%;">
+<tr>
+<td> 
+  </td>
+</tr>
+</table>
+<!-- #ENDIF -->
+
+<!--========================================================================-->
+<!--************************************************************************-->
+
+
+
+<!-- page_header.tpl END -->
+<!-- module_xx.tpl START -->
+
+<!--  to be moved -->
+<link rel="stylesheet" href="/templates/default/css/jquery.cluetip.css" type="text/css">
+<script src="/misc/js/jquery.hoverIntent.js" type="text/javascript"></script>
+<script src="/misc/js/jquery.cluetip.js" type="text/javascript"></script>
+<script src="/misc/js/jquery.bgiframe.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('img.award_tip').cluetip({
+        splitTitle: '|', 
+        arrows: true, 
+        dropShadow: false, 
+        cluetipClass: 'jtip'}
+    );
+});
+</script>
+<!-- end of -->
+
+
+
+<div class="spacer_6"></div>
+
+<h1 class="maintitle" itemprop="name">Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения,<wbr /> семейный, BDRip] 2xDub (Rus, Ukr) + Original (Eng) + Sub (Rus, Ukr, Eng)</h1>
+
+<table cellpadding="0" class="w100">
+<tr>
+		<td class="nav w100"  itemprop="breadcrumb">
+		<IDXSKIP><a href="./">Торрент трекер underverse.me</a></IDXSKIP>
+		 <IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=7">Мультфильмы</a>		<IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=41">Зарубежные мультфильмы</a>
+	</td>
+	<td class="nowrap">
+            <!-- dj_maxx: add social sharing -->
+            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+            <div style="width:290px;" class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,gplus"></div> 
+            <!-- end of -->
+    </td>
+	
+</tr>
+</table>
+
+<!-- TRAFZONA WAS HERE -->
+
+<noindex>
+<table class="forumline dl_list">
+
+<col class="row1">
+<col class="row1">
+
+<IDXSKIP><tr>
+	<td colspan="2" class="catTitle">Статистика раздачи</td>
+</tr></IDXSKIP>
+
+
+
+<tr>
+	<td colspan="2" class="borderless bCenter pad_8">
+			Размер:&nbsp; <b>2,19&nbsp;GB</b><IDXSKIP>&nbsp; &nbsp;|&nbsp; &nbsp;
+			Зарегистрирован:&nbsp; </IDXSKIP><b>4 месяца 17 дней</b><IDXSKIP>&nbsp; &nbsp;|&nbsp; &nbsp;
+			Скачан:&nbsp; </IDXSKIP><b>4 раза</b>
+	</td>	
+</tr>
+
+
+
+	
+		<tr>
+			<td colspan="2" class="row2 pad_2">
+
+								<p class="mrg_10" id="noseeds"><IDXSKIP>Полного источника не было: </IDXSKIP><b>1 месяц 1 день</b></p>
+				
+				<div class="mrg_4">
+				<table cellpadding="4" class="borderless bCenter">
+				<tr>
+				<IDXSKIP><span class="seed"><b>Сидов:&nbsp; </b>
+				[&nbsp; <b id="seed_count">0</b> &nbsp;|&nbsp; 0 KB/s &nbsp;]</span></IDXSKIP> <IDXSKIP>&nbsp;
+				<span class="leech"><b>Личеров:&nbsp; </b>
+				[&nbsp; <b id="leech_count">0</b> &nbsp;|&nbsp; 0 KB/s &nbsp;]</span></IDXSKIP>
+				</tr>
+				</table>
+				</div>
+
+				<IDXSKIP><p class="gensmall">* - сиды/пиры с внешних источников</p></IDXSKIP>
+							</td>
+		</tr>
+
+	
+<IDXSKIP><tr>
+	<td colspan="2" class="pad_4 dl_bg">
+	&nbsp;
+		&nbsp;
+	</td>
+</tr></IDXSKIP>
+
+</table>
+<div class="spacer_6"></div>
+</noindex>
+
+<table class="w100 border bw_TRL" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="cat pad_2">
+
+	<table cellspacing="0" cellpadding="0" class="borderless w100">
+	<tr>
+
+				<td class="small bold nowrap tRight" width="100%">
+			&nbsp;
+					</td>
+		<td class="nowrap" style="padding: 2px 4px 2px 4px;">
+			<form action="search.php?t=74070&amp;dm=1&amp;s=1" method="post" onsubmit="var txt=$('#search-text').val(); return !(txt=='искать в теме...' || !txt);">
+				<input id="search-text" type="text" name="nm" value="искать в теме..." class="hint" style="width: 150px;" />
+				<input type="submit" class="bold" value="&raquo;" style="width: 30px;" />
+			</form>
+		</td>
+
+	</tr>
+	</table>
+
+	</td>
+</tr>
+</table>
+
+
+<table class="topic" id="topic_main" cellpadding="0" cellspacing="0">
+<IDXSKIP><tr>
+	<th class="thHead td1">Автор</th>
+	<th class="thHead td2">
+		Сообщение	</th>
+</tr></IDXSKIP>
+
+<tbody id="post_232365" class="row1">
+<tr>
+	<td class="poster_info td1"><a name="232365"></a>
+					<IDXSKIP><p class="nick"><span class="colorMod">90ytr90</span>&nbsp;</p></IDXSKIP>
+				
+		        <!-- end of -->
+
+		
+	
+
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="120" border="0" alt="" /></p></IDXSKIP>
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding-top: 5px;">
+						<span clas="small">18-Дек-2016 17:37</span>
+						</p>
+
+			
+			<p style="float: right; padding: 2px 6px 0px;" class="post_btn_1">
+																
+								
+					
+				
+			</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body" itemprop="mainContentOfPage"><div style="text-align: center;"><span style="font-family: Georgia"><span style="font-style: italic;"><span style="font-weight: bold;"><span style="color: #006699;"><span style="font-size: 26px; line-height: normal;">Кунг-фу Панда 3 / Kung Fu Panda 3 </span> <div></div> «Притяженья больше нет»</span></span></span></span></div> <hr /><var class="postImg postImgAligned img-right" title="http://img.underverse.me/t/235869/160201113725235869_f0_0.jpg">&#10;</var><IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/country.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Страна:</span></IDXSKIP> США, Китай <div></div> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/date.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Год выпуска:</span></IDXSKIP> 2016 <div></div> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/genre.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Жанр:</span></IDXSKIP>  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=мультфильм&s=0&o=10#results">мультфильм</a>,  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=боевик&s=0&o=10#results">боевик</a><IDXSKIP>,  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=комедия&s=0&o=10#results">комедия</a></IDXSKIP>,  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=приключения&s=0&o=10#results">приключения</a>,  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=семейный&s=0&o=10#results">семейный</a>  <div></div> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/duration.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Продолжительность:</span></IDXSKIP> 01:34:54 <div></div> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/atrack.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Озвучивание:</span></IDXSKIP><ul> <div></div> <li> профессиональное (полное дублирование) [русский (BD CEE)]  <div></div> <li> профессиональное (полное дублирование) [украинский]  <div></div> <li> оригинальная звуковая дорожка [английский] </ul> <hr /><IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/author.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Режиссёр:</span></IDXSKIP>  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=Алессандро Карлони&s=0&o=10#results">Алессандро Карлони</a> /  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=Alessandro Carloni&s=0&o=10#results">Alessandro Carloni</a>,  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=Дженнифер Ю&s=0&o=10#results">Дженнифер Ю</a> /  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=Jennifer Yuh Nelson&s=0&o=10#results">Jennifer Yuh Nelson</a> (as Jennifer Yuh)  <br /><br /> <div style="text-align: justify;"><IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/actors.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">В ролях:</span></IDXSKIP> Джек Блэк (Po, озвучка), Брайан Крэнстон (Li, озвучка), Дастин Хоффман (Shifu, озвучка), Анджелина Джоли (Tigress, озвучка), Дж.К. Симмонс (Kai, озвучка), Джеки Чан (Monkey, озвучка), Сет Роген (Mantis, озвучка), Люси Лью (Viper, озвучка), Дэвид Кросс (Crane, озвучка), Кейт Хадсон (Mei Mei, озвучка), Джеймс Хонг (Mr. Ping, озвучка), Рэндолл Дак Ким (Oogway, озвучка)</div> <br /><br /> <div style="text-align: justify;"><IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/desc.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Сюжет фильма: <div></div> </span></IDXSKIP> Воссоединившись со своим давно потерянным отцом, По отправляется в тайный рай для панд, где его ожидает встреча с множеством веселых сородичей. Однако вскоре злодей Кай начинает зачистку — он уничтожает кунг-фу мастеров по всему Китаю. По предстоит сделать невозможное — обучить боевому искусству деревню, полную его веселых, неуклюжих собратьев, и тем самым превратить их в отряд кунг-фу панд. </div> <hr /><span style="color: gray;"><ul><li><span style="font-weight: bold;">Дата мировой премьеры:</span> 16 января 2016 <div></div> <li><span style="font-weight: bold;">Дата российской премьеры:</span> 28 января 2016, «Двадцатый Век Фокс СНГ» 3D <div></div> </ul></span><IDXSKIP>&nbsp; &nbsp; &nbsp; &nbsp; </IDXSKIP><a href="/go.php?http%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt2267968%2F"" class="postLink" target="_blank"><var class="postImg" title="http://underverse.su/imdb/imdb_tt2267968.gif">&#10;</var></a>&nbsp; &nbsp; <a href="/go.php?http%3A%2F%2Fwww.kinopoisk.ru%2Flevel%2F1%2Ffilm%2F692865%2F"" class="postLink" target="_blank"><var class="postImg" title="http://underverse.su/kinopoisk/kp_2_692865.jpg">&#10;</var></a> <hr /><IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/video.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Качество видео:</span></IDXSKIP>  <a style="padding:0px 1px 1px;border-bottom: 1px dashed silver; text-decoration: none !important;" href="tracker.php?nm=BDRip&s=0&o=10#results">BDRip</a> [BD Remux / 1080p]  <div></div> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/info.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Формат:</span></IDXSKIP> <IDXSKIP>AVI <div></div></IDXSKIP> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/vtrack.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Видео:</span></IDXSKIP> XviD, 720x304 (2.37:1), ~1936 kbps, 23.976 fps, 0.37 bit/pixel  <div></div> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/atrack.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Аудио #1:</span></IDXSKIP> AC3, ~448 kbps, 6 ch, 48 kHz, Dub [Russian]  <div></div> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/atrack.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Аудио #2:</span></IDXSKIP> AC3, ~448 kbps, 6 ch, 48 kHz, Dub [Ukrainian]  <div></div> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/atrack.png">&#10;</var></IDXSKIP> <span style="font-weight: bold;">Аудио #3:</span> AC3, ~448 kbps, 6 ch, 48 kHz, Original [English]  <div></div> <IDXSKIP><var class="postImg" title="http://underverse.me/images/wiz/desc.png">&#10;</var></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Субтитры:</span></IDXSKIP> Russian (full), Ukrainian (full), English (full, SDH) (отдельно.srt)  <br /><br /> <var class="postImg" title="http://underverse.me/images/wiz/info.png">&#10;</var> <span style="font-weight: bold;">Rip by</span> Seven <div></div> <br clear="all" /><div style="text-align: center;"> <br /><br /> <a class="zoomable" href="http://img.underverse.me/t/113383/161218203526113383_2_0.png" rel="P8brd1oX"><img src="http://img.underverse.me/t/113383/thumbs/161218203526113383_2_0.png" class="postImg imgThumb" alt="pic" /></a> <a class="zoomable" href="http://img.underverse.me/t/113383/161218203526113383_2_1.png" rel="P8brd1oX"><img src="http://img.underverse.me/t/113383/thumbs/161218203526113383_2_1.png" class="postImg imgThumb" alt="pic" /></a> <a class="zoomable" href="http://img.underverse.me/t/113383/161218203526113383_2_2.png" rel="P8brd1oX"><img src="http://img.underverse.me/t/113383/thumbs/161218203526113383_2_2.png" class="postImg imgThumb" alt="pic" /></a>  <div></div> <span style="color: gray;"><span style="font-style: italic;"><IDXSKIP>Для увеличения картинки щелкните мышкой по превью</IDXSKIP></span></span> <br /><br /> </div> <div class="sp-wrap">	<div class="sp-body" title='скриншоты'><div style="text-align: center;"><br clear="all" /><a href="/go.php?http%3A%2F%2Fimageban.ru%2Fshow%2F2016%2F12%2F18%2Faa5fefbe50a01a4abc1d19fc3af7b68a%2Fpng"" class="postLink" target="_blank"><var class="postImg" title="http://i2.imageban.ru/thumbs/2016.12.18/aa5fefbe50a01a4abc1d19fc3af7b68a.png">&#10;</var></a> <a href="/go.php?http%3A%2F%2Fimageban.ru%2Fshow%2F2016%2F12%2F18%2Fdc7ed76d2a9384b7757ffd44b0d82a77%2Fpng"" class="postLink" target="_blank"><var class="postImg" title="http://i5.imageban.ru/thumbs/2016.12.18/dc7ed76d2a9384b7757ffd44b0d82a77.png">&#10;</var></a> <a href="/go.php?http%3A%2F%2Fimageban.ru%2Fshow%2F2016%2F12%2F18%2F8809b030cbb1b04237564f039417472c%2Fpng"" class="postLink" target="_blank"><var class="postImg" title="http://i6.imageban.ru/thumbs/2016.12.18/8809b030cbb1b04237564f039417472c.png">&#10;</var></a> <a href="/go.php?http%3A%2F%2Fimageban.ru%2Fshow%2F2016%2F12%2F18%2Fdcb452d52510385e7e21b53fe4862466%2Fpng"" class="postLink" target="_blank"><var class="postImg" title="http://i2.imageban.ru/thumbs/2016.12.18/dcb452d52510385e7e21b53fe4862466.png">&#10;</var></a> <a href="/go.php?http%3A%2F%2Fimageban.ru%2Fshow%2F2016%2F12%2F18%2Fb395963e711249dca78e6af0fc633c41%2Fpng"" class="postLink" target="_blank"><var class="postImg" title="http://i6.imageban.ru/thumbs/2016.12.18/b395963e711249dca78e6af0fc633c41.png">&#10;</var></a> <a href="/go.php?http%3A%2F%2Fimageban.ru%2Fshow%2F2016%2F12%2F18%2Fc21cbb4b9517a25e0a76402d77feb859%2Fpng"" class="postLink" target="_blank"><var class="postImg" title="http://i5.imageban.ru/thumbs/2016.12.18/c21cbb4b9517a25e0a76402d77feb859.png">&#10;</var></a></div> 	</div><!--/spoiler-body--></div><!--/spoiler-wrap--> <noindex>
+<div class="clear"></div>
+<div class="spacer_8"></div>
+
+<!-- dj_maxx: add ratio discount -->
+<div class="clear"></div>
+<div class="spacer_12"></div>
+<!-- /dj_maxx -->
+
+
+
+
+
+
+
+
+
+</noindex>
+<noindex>
+<div class="clear"></div>
+<div class="spacer_8"></div>
+
+<!-- dj_maxx: add ratio discount -->
+<div class="clear"></div>
+<div class="spacer_12"></div>
+<!-- /dj_maxx -->
+
+
+
+
+
+
+
+
+
+
+
+
+<table id="tor_blocked" class="error">
+    <tr><td><p class="error_msg"><IDXSKIP>Этот торрент недоступен для скачивания без </IDXSKIP><IDXSKIP><a href="profile.php?mode=register"><b>регистрации</b></a></IDXSKIP><IDXSKIP>, однако доступен по </IDXSKIP><IDXSKIP><b>публичной magnet-ссылке</b></IDXSKIP> <IDXSKIP>(источники с публичных трекеров). Перед использованием ссылки прочтите, пожалуйста </IDXSKIP><IDXSKIP><a href="misc.php?do=info&amp;show=user_agreement" onclick="window.open(this.href, null, InfoWinParams); return false;"><b>Пользовательское соглашение</b></a></IDXSKIP><IDXSKIP>, а также как можно дольше оставайтесь на раздаче! Для того, чтобы скачать сам </IDXSKIP><IDXSKIP><b>торрент-файл</b></IDXSKIP> <IDXSKIP>(который видит больше источников), а также для того, чтобы поблагодарить релизера, вам необходимо </IDXSKIP><IDXSKIP><a href="profile.php?mode=register"><b>зарегистрироваться</b></a></IDXSKIP><IDXSKIP>. Если регистрироваться лень - вы можете также попробовать скачать релиз по нашим партнерским ссылкам ниже.</IDXSKIP></p></td></tr>
+</table>
+<div class="spacer_12"></div>
+
+
+	<!-- MediaGet kostyl' edition -->
+		<div id='ba6bed9ad6'></div>
+	<script type='text/javascript' src='//onedrive.su/code/bshow.php?id=4555&dimension=500x250&new_dimension=600x200' data-cfasync='false'></script>
+	<div class="spacer_12"></div>
+		<!-- end of -->
+
+<table class="attach bordered med">
+	<tr class="row3">
+		<th colspan="4" class="genmed">[underverse.su].t75724.torrent</th>
+	</tr>
+	<tr class="row1">
+		<IDXSKIP><td width="15%">Трекер:</td></IDXSKIP>
+		<td width="70%">
+			<IDXSKIP>Зарегистрирован &nbsp;
+			[ </IDXSKIP><span title="4 месяца 17 дней">18.12.2016 17:37</span> <IDXSKIP>] &nbsp; 		</IDXSKIP></td>
+				        <td width="8%" rowspan="5" class="tCenter pad_6 nodecor">
+						<!-- MediaGet (kostyl' edition) -->
+			<!-- end of MediaGet (kostyl' edition) -->
+            <a href="magnet:?xt=urn:btih:a0e459433fb05acb7fc75abf4c9d6ce4be5a2d96&dn=[underverse.su].t75724.torrent&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=http%3A%2F%2Fretracker.local/announce&tr=http%3A%2F%2Funderverse.me%2Ffree%2Fannounce">
+            <IDXSKIP><p><img src="./templates/default/images/magnet.png" alt="" border="0" title="Magnet" /></p></IDXSKIP></a>
+			        </td>
+        	</tr>
+	<tr class="row1">
+		<IDXSKIP><td>Статус:</td></IDXSKIP>
+		<td><span id="VA75724">
+									<b><span style="color: green;">&radic;</span> <a href="viewtopic.php?t=16212">проверено</a></b>			
+									
+																		<span>(by <a href=./profile.php?mode=viewprofile&u=113383>90ytr90</a> at 18.12.2016 17:39)</span>
+			</span>
+				</td>
+	</tr>
+
+	
+	<tr class="row1">
+		<IDXSKIP><td>Поблагодарили:</td></IDXSKIP>
+		<IDXSKIP><td><span class="vMiddle">пока никто не поблагодарил...</td></IDXSKIP>
+	</tr>
+	
+	<tr clas="row1">
+		<IDXSKIP><td>Тип торрента: </td></IDXSKIP>
+		<td><IDXSKIP><span style="color:green;"><b>публичный</b></span></IDXSKIP> <IDXSKIP>- доступные источники с открытых трекеров:&nbsp;</IDXSKIP><span id="scraper" class="loading-1" title="Шкряб-шкряб..."></span></td>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#scraper').boo('a0e459433fb05acb7fc75abf4c9d6ce4be5a2d96');
+		});
+		</script>
+			</tr>
+
+	<tr class="row1">
+		<IDXSKIP><td>Размер:</td></IDXSKIP>
+		<td>2,19&nbsp;GB (занимает 0,5 DVDR, для записи нужно 1 болванка DVDR/RW)</td>
+	</tr>
+		<IDXSKIP><tr class="row33 tCenter">
+		<td colspan="4">
+				&nbsp;
+				</td>
+	</tr></IDXSKIP>
+</table>
+
+
+<!-- <div class="spacer_12"></div> -->
+<IDXSKIP><div id="ad-300" class="bCenter tCenter" style="width: 95%;">&nbsp;</div></IDXSKIP><!--/ad-300-->
+<!-- MediaGet (kostyl' edition) -->
+<!-- end of MediaGet (kostyl' edition) -->
+
+
+<!-- dj_maxx: add torrent filelist -->
+<script type="text/javascript">
+function humn_size (size) {
+  var i = 0;
+  var units = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+  while ((size/1024) >= 1) {
+    size = size/1024;
+    i++;
+  }
+  size = new String(size);
+  if (size.indexOf('.') != -1) {
+    size = size.substring(0, size.indexOf('.') + 3);
+  }
+  return size + ' ' + units[i];
+}
+BB.tor_filelist_loaded = false;
+function show_filelist()
+{
+    if (BB.tor_filelist_loaded) {
+      $('#tor-fl-wrap').toggle();
+      return false;
+    }
+    $('#tor-fl-wrap').show();
+    $('#tor-filelist').load('torinfo.php', {a: 75724}, function(){
+      $('#tor-filelist > ul.tree-root').treeview({
+        control: "#tor-fl-treecontrol"
+      });
+
+      $('#tor-filelist li.collapsable').each(function(){
+        var $li = $(this);
+        var dir_size = 0;
+        $('i', $li).each(function(){ dir_size += parseInt(this.innerHTML.replace(/\D/g, '')) });
+        $('span.b:first', $li).append(' &middot; <s><b>' + humn_size(dir_size) + '</b></s>');
+      });                                             
+      $('#tor-filelist i').each(function(){
+        var size_bytes = this.innerHTML.replace(/\D/g, '');
+        $(this).prepend('<s>'+ humn_size(size_bytes) +'</s> ');
+      });
+     BB.tor_filelist_loaded = true;     
+    });
+    $('#tor-fl-treecontrol a').click(function(){ this.blur(); });
+    return false;
+}
+</script>
+<style type="text/css">
+#tor-fl-wrap { margin: 12px auto 0; width: 95%; border: 1px solid #A5AFB4; background: #F8F8F8; display: none; }
+#fl-tbl-wrap { margin: 2px 14px 16px 14px; }
+#tor-fl-wrap td { background: #F8F8F8;; }
+#tor-filelist { margin: 0 2px; padding: 8px 6px; border: 1px solid #B5BEC4; background: #F4F4F4; max-height: 284px; overflow: auto; }
+#tor-filelist i { color: #7A7A7A; padding-left: 4px; }
+#tor-filelist s { color: #ff5555; text-decoration: none; }
+#tor-filelist .b { 
+  padding-left: 20px;
+  background: transparent url('images/folder.gif') no-repeat 3px 50%;
+}
+#tor-filelist ul li span { 
+  padding-left: 20px;
+  background: transparent url('images/page.gif') no-repeat 3px 50%;
+}
+#tor-filelist .b > s { color: #800000; }
+#tor-filelist .tor-root-dir { font-size: 13px; font-weight: bold; line-height: 12px; padding-left: 4px; }
+#tor-fl-treecontrol { padding: 2px 0 4px; }
+#tor-fl-treecontrol a { padding: 0 8px; font-size: 11px; text-decoration: none; }
+#tor-fl-bgn { width: 200px; height: 300px; margin-right: 6px; border: 1px solid #B5BEC4;}
+.hide { height: 11px; }
+.tor-fl-hide { height: 12px; }
+</style>
+<div id="tor-fl-wrap">
+<div id="fl-tbl-wrap">
+  <table class="w100 borderless" cellspacing="0" cellpadding="0">
+  <tr>
+    <td></td>
+    <td><div id="tor-fl-treecontrol"><IDXSKIP><a href="#">Свернуть директории</a></IDXSKIP><IDXSKIP>&middot;<a href="#">Развернуть</a></IDXSKIP><IDXSKIP>&middot;<a href="#">Переключить</a></IDXSKIP></div></td>
+  </tr>
+  <IDXSKIP><tr>
+    <td class="vTop">
+     <div id="tor-fl-bgn">
+      
+     </div>
+    </td>
+    <td class="vTop" style="width: 100%;"><div id="tor-filelist" class="med"><span class="loading-1">Загрузка...</span></div></td>
+  </tr></IDXSKIP>
+  </table>
+</div>
+</div>
+<!-- dj_maxx: end of add torrent filelist -->
+
+<div class="spacer_12"></div>
+
+</noindex>
+</div><!--/post_body-->
+			<!-- dj_maxx: add similar topics -->
+									    <div class="spacer_12"></div>
+				<table class="attach bordered med w95">
+				<thead>
+				<IDXSKIP><tr>
+				<th colspan="8">Похожие темы</th>
+				</tr></IDXSKIP>
+				<tr>
+                    <th></th>
+                    <th></th>
+					<IDXSKIP><th class="genmed" width="20%">Форум</th></IDXSKIP>
+					<IDXSKIP><th class="genmed" width="70%">Тема</th></IDXSKIP>
+                    <IDXSKIP><th class="genmed" width="5%">Автор</th></IDXSKIP>    
+                    <IDXSKIP><th class="genmed" width="5%">Торрент</th></IDXSKIP>
+                    <IDXSKIP><th class="genmed" width="5%">Отв.</th></IDXSKIP>    
+					<IDXSKIP><th class="genmed" width="5%">Посл. сооб.</th></IDXSKIP>
+				</tr>
+				</thead>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=41">Зарубежные мультфильмы</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-фу Панда 2 / Kung Fu Panda 2 (Дженнифер Ю ) [2011 г., мультфильм, боевик, комедия, приключения, семейный, HDRip]" href="viewtopic.php?t=17360">Кунг-фу Панда 2 / Kung Fu Panda 2 (Дженнифер Ю ) [2011 г., мультфильм, боевик, комедия, приключения,<wbr /> семейный, HDRip]</a></span>
+					</td>
+
+                    <td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=63512">МУХА~</a></td>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>0</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>0</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=15879" class="small" style="text-decoration: none">1,37&nbsp;GB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">3</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">954</span>
+                    </p>
+                                        <p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>68</b>
+                    </p>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>30.10.2011 12:29</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=41">Зарубежные мультфильмы</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения, семейный, BDRip-AVC] Dub + Original (Eng) + Sub (Rus, Ukr, Eng)" href="viewtopic.php?t=69919">Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения,<wbr /> семейный, BDRip-AVC] Dub + Original...</a></span>
+					</td>
+
+                    <IDXSKIP><td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=113383">90ytr90</a></td></IDXSKIP>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>5</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>0</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=71475" class="small" style="text-decoration: none">2,18&nbsp;GB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">0</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">689</span>
+                    </p>
+                                        <p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>9</b>
+                    </p>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>23.10.2016 09:47</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=41">Зарубежные мультфильмы</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения, семейный, BDRip-AVC] Dub + Sub (Rus)" href="viewtopic.php?t=69918">Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения,<wbr /> семейный, BDRip-AVC] Dub + Sub (Rus)</a></span>
+					</td>
+
+                    <IDXSKIP><td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=113383">90ytr90</a></td></IDXSKIP>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>2</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>0</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=71474" class="small" style="text-decoration: none">1,46&nbsp;GB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">0</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">609</span>
+                    </p>
+                                        <IDXSKIP><p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>2</b>
+                    </p></IDXSKIP>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>23.10.2016 09:40</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=41">Зарубежные мультфильмы</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения, семейный, BDRip] Dub" href="viewtopic.php?t=66584">Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения,<wbr /> семейный, BDRip] Dub</a></span>
+					</td>
+
+                    <IDXSKIP><td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=113383">90ytr90</a></td></IDXSKIP>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>1</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>0</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=68026" class="small" style="text-decoration: none">1,45&nbsp;GB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">0</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">609</span>
+                    </p>
+                                        <p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>9</b>
+                    </p>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>12.07.2016 18:13</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=41">Зарубежные мультфильмы</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения, семейный, BDRip-AVC] Dub + Original (Eng) + Sub (Rus, Ukr, Eng)" href="viewtopic.php?t=66594">Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения,<wbr /> семейный, BDRip-AVC] Dub + Original...</a></span>
+					</td>
+
+                    <IDXSKIP><td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=113383">90ytr90</a></td></IDXSKIP>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>11</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>2</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=68036" class="small" style="text-decoration: none">2,58&nbsp;GB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">0</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">661</span>
+                    </p>
+                                        <IDXSKIP><p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>5</b>
+                    </p></IDXSKIP>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>12.07.2016 19:40</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=41">Зарубежные мультфильмы</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения, семейный, HDRip] Dub" href="viewtopic.php?t=66595">Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения,<wbr /> семейный, HDRip] Dub</a></span>
+					</td>
+
+                    <IDXSKIP><td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=113383">90ytr90</a></td></IDXSKIP>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>9</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>0</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=68037" class="small" style="text-decoration: none">745&nbsp;MB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">0</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">664</span>
+                    </p>
+                                        <p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>7</b>
+                    </p>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>12.07.2016 19:51</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=42">Мультсериалы</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-Фу Панда: Удивительные легенды / Kung-Fu Panda: Legends of Awesomeness | Сезон: 1 / Серии: 1-26 (26) (Джим Шуманн) [2011 г., Мультфильм, боевик, комедия, семейный, WEB-DLRip] Dub + Eng" href="viewtopic.php?t=17517">Кунг-Фу Панда: Удивительные<wbr /> легенды / Kung-Fu Panda: Legends of Awesomeness | Сезон: 1 / Серии: 1-26 (26) (Джим Шуманн) [2011 г., Мультфильм, боевик, комедия, семейный, WEB-DLRip] Dub + Eng</a></span>
+					</td>
+
+                    <td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=63512">МУХА~</a></td>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>2</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>0</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=23693" class="small" style="text-decoration: none">11,7&nbsp;GB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">6</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">2783</span>
+                    </p>
+                                        <IDXSKIP><p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>23</b>
+                    </p></IDXSKIP>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>26.04.2013 21:54</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=1023">Мультфильмы [DVD / HDDVD / BD / Remux]</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-фу Панда / Kung Fu Panda (Марк Осборн / Mark Osborne) [2008, мультфильм, боевик, комедия, приключения, BDRemux 1080p] DUB + DVO (Гланц) + 2хAVO (Гаврилов, Королёв) + UKR + ENG + Sub (rus, eng, ukr)" href="viewtopic.php?t=35611">Кунг-фу Панда / Kung Fu Panda (Марк Осборн / Mark Osborne) [2008, мультфильм, боевик, комедия, приключения,<wbr /> BDRemux 1080p] DUB + DVO (Гланц) + 2хAVO (Гаврилов, Королёв) + UKR + ENG + Sub (rus, eng,...</a></span>
+					</td>
+
+                    <td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=5740">uzi2009</a></td>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>12</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>1</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=35227" class="small" style="text-decoration: none">21,88&nbsp;GB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">0</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">1511</span>
+                    </p>
+                                        <p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>4</b>
+                    </p>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>14.01.2014 21:57</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=1024">Мультфильмы [HDDVDRip / BDRip / WEB-DL / HDTV 1080/720р]</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-фу Панда 2 / Kung Fu Panda 2 (Дженнифер Ю) [2011 г., мультфильм, боевик, комедия, приключения, семейный, BDRip]" href="viewtopic.php?t=17408">Кунг-фу Панда 2 / Kung Fu Panda 2 (Дженнифер Ю) [2011 г., мультфильм, боевик, комедия, приключения,<wbr /> семейный, BDRip]</a></span>
+					</td>
+
+                    <td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=43932">kirikk</a></td>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>0</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>0</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=15920" class="small" style="text-decoration: none">6,37&nbsp;GB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">9</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">1070</span>
+                    </p>
+                                        <p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>4</b>
+                    </p>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>29.07.2012 18:32</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								<tr class="tCenter ">
+				    <IDXSKIP><td class="row1 topic_id"><img class="topic_icon" src="./templates/default/images/folder_dl.gif" /></td></IDXSKIP>
+				    <IDXSKIP><td class="row1">
+				                                            <b><span title="проверено" style="color: green;">&radic;</span></b>                    
+                                                            
+                       
+                                                            					                    </td></IDXSKIP>
+					<td class="row1"><a class="genmed" href="viewforum.php?f=1024">Мультфильмы [HDDVDRip / BDRip / WEB-DL / HDTV 1080/720р]</a></td>    
+					<td class="row1 tLeft">
+					<span class="topictitle"><a title="Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения, семейный, BDRip 720p] 2xDub (Rus, Ukr) + Original (Eng) + Subs" href="viewtopic.php?t=66587">Кунг-фу Панда 3 / Kung Fu Panda 3 (Алессандро Карлони / Alessandro Carloni, Дженнифер Ю / Jennifer Yuh Nelson) [2016 г., мультфильм, боевик, комедия, приключения,<wbr /> семейный, BDRip 720p] 2xDub (Rus,...</a></span>
+					</td>
+
+                    <IDXSKIP><td class="row1"><a class="genmed" href="profile.php?mode=viewprofile&amp;u=113383">90ytr90</a></td></IDXSKIP>
+
+                    <td class="tCenter nowrap" style="padding: 2px 4px;">
+                                        <div title="Скачать .torrent">
+                    <div><span class="seedmed" title="Seeders"><b>5</b></span><span class="med"> | </span><span class="leechmed" title="Leechers"><b>0</b></span></div>
+                    <div style="padding-top: 2px" class="small"><a href="./download.php?id=68029" class="small" style="text-decoration: none">6,63&nbsp;GB</a></div>
+                    </div>
+                                        </td>
+                    
+                    <td class="row1 tCenter small nowrap" style="padding: 3px 4px 2px;">
+                    <p>
+                        <span title="Ответов">0</span>
+                        <span class="small"> | </span>
+                        <span title="Просм.">563</span>
+                    </p>
+                                        <p style="padding-top: 2px" class="med" title="Скачан">
+                        <b>0</b>
+                    </p>
+                                         </td>
+
+                    <td class="tCenter small nowrap">
+                    <div style="position: relative; padding: 3px 6px 2px;">
+                    <p>12.07.2016 18:33</p>
+                                        </div>  
+                    </td>
+
+				</tr>
+								</table>
+				<div class="spacer_12"></div>
+									<!-- /dj_maxx: add similar topics -->
+												
+            <!-- old social sharing was here -->
+
+		</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+	
+	</td>
+</tr>
+</tbody>
+
+
+</table><!--/topic_main-->
+
+
+<table id="pagination" class="topic" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="nav pad_6 row2">
+		<IDXSKIP><p style="float: left">Страница <span class="bold">1</span> из <span class="bold">1</span></p></IDXSKIP>
+		<p style="float: right"></p>
+	</td>
+</tr>
+</table><!--/pagination-->
+
+
+
+
+<table cellpadding="0" class="w100" style="padding-top: 2px;">
+<tr>
+		<td class="nav w100" >
+		<IDXSKIP><a href="./">Торрент трекер underverse.me</a></IDXSKIP>
+		 <IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=7">Мультфильмы</a>		<IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=41">Зарубежные мультфильмы</a>
+	</td>
+</tr>
+</table>
+
+<!--bottom_info-->
+<div class="bottom_info">
+
+	<div class="jumpbox"></div>
+</div><!--/bottom_info-->
+
+
+
+	</div><!--/main_content_wrap-->
+	</td><!--/main_content-->
+
+		
+	</tr></table>
+	</div>
+	<!--/page_content-->
+
+	<!--page_footer-->
+	<div id="page_footer">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+	<td class="med" align="center">
+
+        
+
+	</td>
+</tr>
+</table>		
+		
+		
+		<div class="clear"></div>
+
+				<div class="med" align="center">
+
+			
+						
+		</div>
+				<br />
+
+				<div class="med bold tCenter">
+			<IDXSKIP><a href="misc.php?do=info&amp;show=user_agreement" onclick="window.open(this.href, '', InfoWinParams); return false;">Пользовательское Соглашение</a></IDXSKIP>
+									<IDXSKIP><span class="normal">&nbsp;|&nbsp;</span></IDXSKIP>
+			<IDXSKIP><a href="misc.php?do=info&amp;show=advert" onclick="window.open(this.href, '', InfoWinParams); return false;">Реклама на сайте</a></IDXSKIP>
+					</div>
+		<br />
+		
+		
+		<noindex>
+		<div class="copyright tleft" align="center">
+			<IDXSKIP>Powered by TorrentPier &copy; Created by Meithar. Mods by RoadTrain, Pandora, dj_maxx. 
+			Design by floatrx. Logo by floatrx<br />
+			Hosted somewhere beyond the Void ;)
+		</IDXSKIP></div>
+		</noindex>
+
+	</div> <!--/page_footer -->
+
+	<br/>
+
+	<!-- easter egg -->
+	<script type="text/javascript">
+	$("#parser").mouseenter(function() {
+ 		$( this ).find( "span" ).html("<b>Сп@#$ить</b>");
+	});
+	$("#parser").mouseleave(function() {
+		$( this ).find( "span" ).html("<b>Спарсить</b>");
+	});
+	</script>
+	<!-- end of -->
+
+	<noindex>
+	<!-- счетчики -->
+	
+	<IDXSKIP><div id="counters" align="center">
+
+    <!-- Yandex.Metrika informer -->
+    <a href="https://metrika.yandex.ru/stat/?id=24131215&amp;from=informer"
+    target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/24131215/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+    style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:24131215,lang:'ru'});return false}catch(e){}"/></a>
+    <!-- /Yandex.Metrika informer -->
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                        try {
+                            w.yaCounter24131215 = new Ya.Metrika({id:24131215,
+                                webvisor:true,
+                                clickmap:true,
+                                trackLinks:true,
+                                accurateTrackBounce:true});
+                            } catch(e) { }
+                            });
+
+            var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+            })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="//mc.yandex.ru/watch/24131215" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+	<!--LiveInternet counter--><script type="text/javascript"><!--
+	document.write("<a href='http://www.liveinternet.ru/click' "+
+	"target=_blank rel='nofollow'><img src='http://counter.yadro.ru/hit?t16.3;r"+
+	escape(document.referrer)+((typeof(screen)=="undefined")?"":
+	";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+	screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+	";"+Math.random()+
+	"' alt='' title='LiveInternet: показано число просмотров за 24"+
+	" часа, посетителей за 24 часа и за сегодня' "+
+	"border='0' width='88' height='31'><\/a>")
+	//--></script><!--/LiveInternet-->
+
+	<!-- I.UA counter --><a href="http://underverse.su/go.php?http://www.i.ua/" target="_blank" rel="nofollow" onclick="this.href='http://i.ua/r.php?45026';" title="Rated by I.UA">
+	<script type="text/javascript" language="javascript"><!--
+	iS='<img src="http://r.i.ua/s?u45026&p66&n'+Math.random();
+	iD=document;iD.cookie="iua=1";if(iD.cookie)iS+='&c1';
+	iS+='&d'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)
+	+"&w"+screen.width+'&h'+screen.height;
+	iT=iD.referrer.slice(7);iH=window.location.href.slice(7);
+	((iI=iT.indexOf('/'))!=-1)?(iT=iT.substring(0,iI)):(iI=iT.length);
+	if(iT!=iH.substring(0,iI))iS+='&f'+escape(iD.referrer.slice(7));
+	iS+='&r'+escape(iH);
+	iD.write(iS+'" border="0" width="88" height="31" />');
+	//--></script></a><!-- End of I.UA counter -->
+
+    <img width="88" border="0" height="31" alt="powered by Sphinx" src="images/sphinx_black.gif">
+
+	</div></IDXSKIP>  <!-- /счетчики -->
+
+	<br/>
+	<br/>
+	
+	<div class="disclaimer" align="center">
+
+	<IDXSKIP><b style="color:#006699;">В Н И М А Н И Е</b></IDXSKIP>
+
+	<br /><IDXSKIP>Сайт не распространяет и не хранит электронные версии произведений, а лишь бесплатно и без коммерческой выгоды (не требуя взамен платы,<br />
+	SMS и т.д.) предоставляет доступ к создаваемому пользователями каталогу ссылок на </IDXSKIP><IDXSKIP><a href="http://underverse.su/go.php?http://ru.wikipedia.org/wiki/BitTorrent#.D0.A4.D0.B0.D0.B9.D0.BB_.D0.BC.D0.B5.D1.82.D0.B0.D0.B4.D0.B0.D0.BD.D0.BD.D1.8B.D1.85" rel="nofollow">торрент-файлы</a></IDXSKIP><IDXSKIP>, которые содержат только списки </IDXSKIP><IDXSKIP><a href="http://underverse.su/go.php?http://ru.wikipedia.org/wiki/Хеш-сумма" rel="nofollow">хеш-сумм</a></IDXSKIP><IDXSKIP>.
+	<br />Убедительная просьба с жалобами обращаться напрямую к пользователю, разместившему торрент файл.
+	</IDXSKIP></div>
+	
+	</noindex>	
+	
+	<br/>
+
+    <!-- scroll to top button -->
+	<IDXSKIP><p id="back-top">
+	<a href="#top"><span></span>Вверх</a>
+	</p></IDXSKIP>
+
+	</div>
+	<!--/page_container -->
+
+	<script type="text/javascript">
+
+		$(window).scroll(function () {
+ 			if ($(window).scrollTop() > 1000) {
+ 				$('#back-top').fadeTo(0, 0.6);
+			} else {
+ 				$('#back-top').fadeTo(0, 0.0);
+ 			}
+		});
+
+		// scroll body to 0px on click
+		$('#back-top a').click(function () {
+			
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800 );
+			return false;
+		});
+		
+	</script>
+	
+
+
+    <noindex>
+    <!-- init script for top banner (obsolete) -->
+
+    <!-- guest banner -->
+
+    </noindex>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'ru'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+
+
+
+
+	</div><!--/body_container-->
+
+	</body>
+	</html>
+

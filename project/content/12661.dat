@@ -1,0 +1,2069 @@
+patriot4x4.ru/forum/index.php?act=Print&client=printer&f=46&t=12090
+<html>
+	<head>
+		<title>Форум Клуба PATRIOT 4x4 [Русская версия Invision Power Board]</title>
+		<style type="text/css">
+	/* 
+ * Cascading Style Sheet(CSS 467), for Invision Power Board 2.1.0
+ * Author: James A. Mathias, admin@leihu.com, http://www.1lotus.com 
+ * Copyright: 2005 Invision Power Services, all rights reserved 
+ *
+ * All style attributes in alpha-numeric order starting from 0
+ *
+ */
+
+/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+}
+
+body{ 
+	background: #FFF;
+	color: #222;
+	font-family: Verdana, Tahoma, Arial, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	font-size: 11px;
+	line-height: 135%;
+	margin: 0px;
+	padding: 0px; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+}
+
+/* 
+ * ========================================
+ * Set up IPB table
+ * ========================================
+ */
+ 
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable
+{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #222;
+	font-size: 11px;
+	line-height: 135%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 5px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+
+img{
+	border: 0; /* makes sure linked images do not have a border */
+	vertical-align: middle;
+}
+
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #222;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+	color: #34498B;
+}
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+#ipbwrapper{ 
+	margin: 20px auto 20px auto; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	/* EDIT THIS TO CHANGE THE WIDTH OF THE BOARD -> 750px is a common fixed resolution size */
+	width: 98%;
+}
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+ 
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: #F0F5FA;
+	border: 1px solid #072A66;
+	padding: 1px 3px 1px 3px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #DFE6EF;
+}
+
+
+.pagecurrent{
+	background: #FFC9A5;
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #C2CFDF;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+/* fake button effect for some links */
+.fauxbutton{
+	background: #BFCDE0;
+	border: 1px solid #072A66;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	color: #222 !important;
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 10px; 
+	color: #666;
+	line-height: 135%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #FFF;
+	border: 1px solid #072A66;
+	color: #000;
+	margin: 0px;
+	padding: 1px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 150%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #808080 url(style_images/1/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #808080;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap{
+	border: 1px solid #072A66;
+	margin: 2px;
+}
+
+.thumbwrapp{
+	border: 2px solid #660707;
+}
+
+.fullimagewrap{
+	background: #F5F9FD;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #DDE6F2;
+	border: 0 !important;
+	border-bottom: 1px solid #5176B5 !important;
+	color: #5176B5; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	background: #EEF2F7 !important;
+	border: 0 !important;
+	border-top: 1px solid #5176B5 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	background: #DFE6EF !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #EFDFDF !important;
+	text-align: center !important;
+}
+	
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #FFF url(style_images/1/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #072A66;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood,
+.warnbad{ 
+	color: #0B9500;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #DD0000;
+}
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 28px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #000; 
+	font-size: 24px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+} 
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #F5F9FD;
+	border: 1px solid #345487;
+	line-height: 150%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+.activeuserstrip{ 
+	background: #BCD0ED;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #339; 
+	font-size: 10px;
+	line-height: 150%;
+}
+
+.postdetails{ 
+	font-size: 10px;
+	line-height:140%;
+}
+
+.postcolor{ 
+	font-size: 12px; 
+	line-height: 160%;
+}
+
+.normalname{ 
+	color: #003;
+	font-size: 12px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 12px;
+}
+
+.post1,
+.bg1{ 
+	background: #F5F9FD;
+}
+
+.post2,
+.bg3{ 
+	background: #EEF2F7;
+}
+
+.row2shaded,
+.post1shaded { background-color: #DEDBE4 }
+.row4shaded,
+.post2shaded { background-color: #E3DFE7 }
+
+.row1{ 
+	background: #DFE6EF; 
+}
+
+.row2{ 
+	background: #E4EAF2; 
+}
+
+.darkrow1{ 
+	background: #BCD0ED;
+	color: #3A4F6C; 
+}
+
+.darkrow3{ 
+	background: #D1DCEB; 
+	color: #3A4F6C; 
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #F5F9FD;
+	border: 1px solid #345487;
+}
+
+.tablefill,
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: 1.5em;
+	width: 30%;
+}
+
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 11px; 
+	color: #434951;
+}
+
+.lastaction
+{
+	font-size: 10px; 
+	color: #434951;
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #FFF;
+	border-left: 0;
+	border-right: 0;
+	line-height: 150%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+/* 
+ * ========================================
+ * calendar styles 
+ * ========================================
+ */
+	
+.calmonths{ 
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	font-size: 18px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #DFE6EF;
+	color: #666;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #AAA;
+	color: #222;
+	font-size: 14px;
+	padding: 6px;
+	text-align: center;
+}
+
+.celltodayshaded,
+.celldateshaded,
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #EEF2F7; 
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.celltodayshaded,
+.celldateshaded
+{
+	background: #E3DFE7;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #C2CFDF;
+}
+
+.celltoday,
+.celltodayshaded,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+
+.calranged
+{
+	border: 2px outset #C2CFDF;
+	background: #C2CFDF;
+	padding:4px;
+}
+
+.calitem
+{
+	border-bottom: 1px dotted #C2CFDF;
+	padding:4px;
+}
+
+/* 
+ * ========================================
+ * form styles 
+ * ========================================
+ */
+
+.input-warn,
+.input-green,
+input,
+textarea,
+select{
+	background: #FFF;
+	border: 1px solid #4C77B6;
+	color: #000;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 5px;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+.input-warn,
+.input-warn-content
+{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content
+{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+
+.input-text
+{
+	color: #900;
+}
+
+select{
+	border: 0;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	background: #FFF;
+	border: 1px solid #4C77B6;
+	color: #000;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+	background: #DFE6EF;
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 0;
+	vertical-align: middle;
+}
+
+/* 
+ * class.formtable 
+ *
+ * used for tabled forms 
+ * technically tables should not be used for form display 
+ * but, in the case of IPB a table is easier to work with
+ * for the average webmaster, who has little to no CSS knowledge.
+ *
+ */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	background:#F5F9FD;
+	border: 1px solid #C2CFDF;
+	border-bottom: 0;
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+} 
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0px;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: #D1DCEB;
+	border: 1px solid #9FB9D4; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	border: 0;
+	color: #3A4F6C;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.formtable td.formstrip{
+	background: #DDE8F2;
+	border: 1px solid #9FB9D4;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	background: #E4EAF2 url(style_images/1/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #000;
+	border-bottom: 0;
+	border-left: 4px solid #8394B2;
+	color: #000;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 8px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: #FAFCFE;
+	border: 1px dotted #000;
+	border-left: 4px solid #8394B2;
+	border-top: 0;
+	color: #465584;
+	padding: 4px;
+	margin: 0 auto 8px auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	background: #FDDBCC url(style_images/1/css_img_code.gif) no-repeat right;
+	color: #000;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+	width: 98%;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: #FAFCFE;
+	border: 1px dotted #000;
+	color: #465584;
+	font-family: Courier, Courier New, Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+	width: 98%;
+}
+
+/* 
+ * ========================================
+ * old school quote and code styles - backwards compatibility 
+ * ========================================
+ */
+
+#QUOTE,
+#CODE{  
+	background: #FAFCFE; 
+	border: 1px solid #000; 
+	color: #465584; 
+	font-family: Verdana, Arial; 
+	font-size: 11px; 
+	padding: 2px; 
+	white-space: normal;
+}
+
+#CODE{ 
+	font-family: Courier, Courier New, Verdana, Arial;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+	background: #FFF; 
+	border: 1px solid #072A66;
+	padding: 0px; 
+	margin: 0px; 
+}
+
+.borderwrapm{
+	margin: 5px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	background: url(style_images/1/tile_cat.gif);
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.maintitle td {
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+.maintitlecollapse{
+	border: 1px solid #FFF;
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	color: #FFF;
+	text-decoration: none; 
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+	color: #F1F1F1;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	background: transparent url(style_images/1/tile_sub.gif);
+	border-bottom: 1px solid #5176B5;
+	color: #3A4F6C; 
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited, 
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active,
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover{ 
+	background: transparent;
+	color: #3A4F6C;
+	text-decoration: none; 
+}
+
+.borderwrap h4{
+	background: #DDE6F2;
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	border-top: 1px solid #5176B5;
+	color: #5176B5; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+td.formbuttonrow,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	background: #D1DCEB !important; 
+	border: 1px solid #FFF;
+	border-top: 1px solid #5176B5;
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+
+td.formbuttonrow{
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.borderwrap p.formbuttonrow1{
+	background: #F9F9F9 !important;
+	border: 0;
+	border-top: 1px solid #CCC;
+}
+
+.bar,
+.barb,
+.barc{
+	background: #DFE6EF;
+	border: 1px solid #FFF;
+}
+
+.barc{
+	border-bottom: 0;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	color: #222;
+	font-size: 11px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	background: #8394B2;
+	color: #000;
+	font-size: 1px;
+	height: 5px;
+}
+
+.newslink{
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #222;
+	font-size: 10px;
+	padding: 5px 5px 5px 10px;
+}
+
+.newslink span{
+	background: transparent;
+	color: #072A66;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	background: #FFF;
+	border: 1px solid #999;
+	color: #072A66;
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	vertical-align: middle;
+}
+
+.fieldwrap{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #EEE;
+	border: 1px solid #CCC;
+	border-left: 0;
+	border-right: 0;
+	color: #444; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap {
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+
+.errorwrap h4 {
+	background: #E3C0C0;
+	border: 1px solid #992A2A;
+	border-left: 0;
+	border-right: 0;
+	color: #992A2A; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap p {
+	background: transparent;
+	border: 0;
+	color: #992A2A;
+	margin: 0;
+	padding: 8px;
+}
+
+
+.ruleswrap{
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	color: #992A2A; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	background: #D0DDEA;
+	border-bottom: 1px solid #C2CFDF;
+	color: #3A4F6C;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	background: #E3EBF4;
+	border-top: 1px solid #C2CFDF;
+	text-align: center;
+}
+
+
+#gfooter{
+	background: #8394B2;
+	margin: 5px 0 5px 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	color: #FFF;
+	font-size: 10px;
+	padding: 4px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+	color: #FFF;
+}
+
+#logostrip{ 
+	background: #3860BB url(style_images/1/tile_back.gif);
+	border: 1px solid #FFF;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+
+#logographic{
+	background: transparent url(style_images/1/logo4.gif) no-repeat left;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+
+#submenu{ 
+	background: transparent url(style_images/1/tile_sub.gif);
+	border: 1px solid #FFF;
+	border-top: 0;
+	color: #3A4F6C; 
+	margin: 0; 
+}
+
+#userlinks,
+#userlinksguest{ 
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	margin: 5px 0 5px 0;
+	padding: 0 5px 0 5px;
+}
+
+#userlinksguest{ 
+	background: #F4E7EA;
+	border: 1px solid #986265;
+}
+
+#submenu p,
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0 !important;
+	padding: 7px 0 7px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#submenu p.home,
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#submenu a:link, 
+#submenu  a:visited{ 
+	background: transparent; 
+	color: #3A4F6C; 
+	padding: 0 6px 0 6px;
+	text-decoration: none;
+}
+
+#submenu a:hover, 
+#submenu a:active{
+	background: transparent; 
+	color: #5176B5; 
+}
+
+#navstrip{ 
+	background: transparent;
+	color: #999;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 14px 0px 8px 0px; 
+}
+
+#navstrip a:link, 
+#navstrip  a:visited{ 
+	background: transparent; 
+	color: #222; 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+	background: transparent; 
+	color: #5176B5; 
+}
+
+.toplinks{
+	background: transparent;
+	color: #000;
+	margin: 0;
+	padding: 0 0 5px 0;
+	text-align: right;
+}
+
+.toplinks span{
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	border-bottom: 0;
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+	padding: 5px;
+}
+
+.copyright{ 
+	background: #EEE;
+	font-size: 11px; 
+	margin: 0 0 5px 0;
+	padding: 8px;
+}
+
+/* 
+ * ========================================
+ * print page styles 
+ * ========================================
+ */
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+#print h4{
+	background: #F9F9F9;
+	font-size: 11px;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #000;
+	text-align: center;
+}
+
+/* ============================================================== */
+/* RTE STYLES
+/* ============================================================== */
+
+.rteimage {
+	/*background: #D3D3D3;*/
+	/*border: 1px outset transparent*/;
+	cursor: pointer;
+	cursor: hand;
+	padding:1px;
+}
+
+.rteImageRaised {
+	/*background: #D3D3D3;*/
+	border: 1px outset;
+	cursor: pointer;
+	cursor: hand;
+	padding:0px;
+}
+
+.rteImageLowered {
+	/*background: #D3D3D3;*/
+	border: 1px inset;
+	cursor: pointer;
+	cursor: hand;
+	padding:0px;
+}
+
+.rteimage:hover {
+	background: #EBEBEB;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.rteVertSep {
+	margin: 0 4px 0 4px;
+}
+
+.rteBack {
+	background: #D3D3D3;
+	border: 1px outset;
+	letter-spacing: 0;
+	padding: 2px;
+}
+
+/* used in ips_rte.js - do not remove */
+.rtebottombutton
+{
+	font-size:10px;
+	border:1px solid #777;
+	border-top:0px;
+	padding:3px;
+	margin:0px;
+	background-color: #EBEBEB;
+}
+
+/* used in ips_rte.js - do not remove */
+.rtebottombuttonon
+{
+	font-size:10px;
+	border:1px solid #777;
+	border-top:0px;
+	padding:3px;
+	margin:0px;
+	background-color: #D3D3D3;
+}
+
+.rtebuttonbar1 {
+	/*background: #D3D3D3;*/
+	background-image: url(style_images/1/folder_rte_images/rte_tile.gif);
+	border: 1px solid gray;
+	border-bottom:0px;
+	letter-spacing: 0;
+	padding: 2px;
+	height:26px;
+}
+
+.rtebuttonbar2 {
+	/*background: #D3D3D3;*/
+	background-image: url(style_images/1/folder_rte_images/rte_tile.gif);
+	border: 1px solid gray;
+	border-top:1px solid gray;
+	letter-spacing: 0;
+	padding: 2px;
+	height:26px;
+}
+
+.rtebuttonbar1 tbody tr td,
+.rtebuttonbar1 tr td,
+.rtebuttonbar2 tbody tr td,
+.rtebuttonbar2 tr td,
+.rteBack tbody tr td,
+.rteBack tr td
+{
+	/*background: #D3D3D3;*/
+	padding: 0;
+}
+
+.rteDiv {
+	display: block;
+	position: relative;
+	padding:0px;
+	margin:0px;
+}
+
+.rteiframe
+{
+	border:1px solid #777;
+	background-color:#FFF;
+}
+
+.rteselectbox
+{
+	font-size:11px;
+}
+
+
+.dny-edit-title
+{
+	border:0px;
+	padding:3px;
+	margin:0px;
+	background: #D1DCEB; 
+	color: #3A4F6C; 
+}
+
+
+/* ======================================== */
+/* TABS
+/* ======================================== */
+
+.tabon
+{
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+	background-color:#FFF;
+	padding:8px;
+	padding-bottom:9px;
+	font-size:10px;
+	float:left;
+	width:auto;
+	margin-top:3px;
+}
+
+.taboff
+{
+	border-top: 1px solid #777;
+	border-left: 1px solid #777;
+	border-right: 1px solid #777;
+	background-color: #B5C3D9;
+	color: #333;
+	padding: 8px;
+	font-size:10px;
+	float: left;
+	width: auto;
+	margin-top:3px;
+}
+
+.tabon a:link, 
+.tabon a:visited, 
+.tabon a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.taboff a:link, 
+.taboff a:visited, 
+.taboff a:active
+{
+	text-decoration:none;
+	color: #333;
+}
+
+.mya-back
+{
+	background: #072A66;
+	margin:1px;
+}
+
+.mya-content
+{
+	background: #FFF;
+	padding:8px;
+	margin:1px;
+	border: 1px solid #777;
+}
+
+/* -------------------------------- */
+/* Create PM box defaults           */
+/* -------------------------------- */
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	filter:alpha(opacity=0);
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+
+
+/* -------------------------------- */
+/* Experimental                     */
+/* -------------------------------- */
+
+.popupmenu
+{
+   background: #F0F5FA;
+   border: 1px solid #3A4F6C;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   /*padding:3px 5px 3px 3px;*/
+   /*width:300px;*/
+}
+
+.popupmenu-item
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	border-bottom: 1px solid #C2CFDF;
+}
+
+.popupmenu-item-last
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+}
+
+.popmenubutton
+{
+	width:120px;
+	white-space:nowrap;
+	background-color: #C2CFDF;
+	border:1px solid #3A4F6C;
+	color: #3A4F6C;
+	font-weight:bold;
+	float:right;
+	height:18px;
+	text-align:center;
+	margin:0px;
+	font-size:11px;
+	padding:3px;
+}
+
+
+.popmenubutton a:link, 
+.popmenubutton a:visited,
+.popupmenu-item a:link, 
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link, 
+.popupmenu-item-last a:visited
+{ 
+	color: #3A4F6C; 
+	text-decoration: none;
+}
+
+.popmenubutton a:hover, 
+.popupmenu-item a:hover, 
+.popupmenu-item-last a:hover
+{ 
+	color: #5176B5; 
+	text-decoration: none;
+}
+
+.popupmenu-category
+{ 
+	background: transparent url(style_images/1/tile_sub.gif);
+	border-top: 1px solid #5176B5;
+	border-bottom: 1px solid #5176B5;
+	color: #3A4F6C; 
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+</style>
+	</head>
+	<body>
+	<div id="print">
+		<h1>Версия для печати темы</h1>
+		<h2><a href="http://www.patriot4x4.ru/forum/index.php?act=ST&amp;f=46&amp;t=12090" title="Нажмите для просмотра темы">Нажмите сюда для просмотра этой темы в обычном формате</a></h2>
+		<h3>Форум Клуба PATRIOT 4x4 _ Кузов/салон _ Кузов 4 года спустя. Машина выпуска февраль 2006 года</h3><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  15.7.2010, 8:45</h4>
+			<p>Как то давно я не делился своими положительными эмоциями по поводу патриотизма.<br />Так получилось, что я пока в леса не выездной (ну наверное до ноября), поэтому подумалось, дайка потревожу ржавчинку...<br />потревожил.<br />Теперь понятно, что надо будет красить почти весь кузов.<br />Ну по порядку:<br />1. Проемы задних окон выглядят так. Это произошло потому, что резинка протерла краску.<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6269.jpg' border='0' alt='IPB Image' /><br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6274.jpg' border='0' alt='IPB Image' /><br />2. Снимаем задние расширители арок.<br />Вид слева<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6270.jpg' border='0' alt='IPB Image' /><br />вид справа<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6276.jpg' border='0' alt='IPB Image' /><br />3. А что у нас за бампером. А за бампером все как везде (плюс кузов лопнул снизу, в месте сварки рундука и боковины. А также хочется послать особый &quot;луч поноса&quot; тем, кто придумал так приварить крепеж брызговика<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6271.jpg' border='0' alt='IPB Image' /><br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6273.jpg' border='0' alt='IPB Image' /><br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6275.jpg' border='0' alt='IPB Image' /><br />4. Ну и закончу эту часть рассказа о складе земли, из всех мест. где мы со Слоном побывали. А склад располагается под резинками на подножках. Хотя к слову сказать, крепеж этих резинок - единственное, что сделано правильно.<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6272.jpg' border='0' alt='IPB Image' /><br /><br /><br />Так кто там еще хочет купить патриота? а ОНО вам надо? вы хорошо подумайте.<br />PS: своего продавать не буду, прикипел :)
+			<br />
+			<!--IBF.ATTACHMENT_236273-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: DIV</b>  15.7.2010, 8:51</h4>
+			<p>А пробег сколько? И много ли по бездорожью? Спасибо.
+			<br />
+			<!--IBF.ATTACHMENT_236276-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  15.7.2010, 8:52</h4>
+			<p><!--quoteo(post=236276:date=15.7.2010, 9&#58;51:name=DIV)--><div class='quotetop'>Цитата(DIV &#064; 15.7.2010, 9&#58;51) <a href="index.php?act=findpost&amp;pid=236276"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />А пробег сколько? И много ли по бездорожью? Спасибо.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />общий пробег 170 ткм.<br />по бездорожью - наверное четверть.<br />Бездорожье было разное :)<br /><br />Правда я не понимаю, как связан пробег и состояние кузова....
+			<br />
+			<!--IBF.ATTACHMENT_236279-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: kineskop</b>  15.7.2010, 9:12</h4>
+			<p><!--quoteo(post=236279:date=15.7.2010, 9&#58;52:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 15.7.2010, 9&#58;52) <a href="index.php?act=findpost&amp;pid=236279"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />общий пробег 170 ткм.<br />по бездорожью - наверное четверть.<br />Бездорожье было разное :)<br /><br />Правда я не понимаю, как связан пробег и состояние кузова....<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Не, просто надо было сновья разбирать и антикорить, не полагаясь на сервисменов. У меня уже в октябре будет 3 года. Недавно заглядывал в &quot;потайные места&quot;. Т.т. 3 раза- пока все ОК. Осенью еще разок пройдусь антикором для большей уверенности  <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo-->
+			<br />
+			<!--IBF.ATTACHMENT_236286-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: DIV</b>  15.7.2010, 9:30</h4>
+			<p><!--quoteo(post=236279:date=15.7.2010, 9&#58;52:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 15.7.2010, 9&#58;52) <a href="index.php?act=findpost&amp;pid=236279"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br /><br /><br />Правда я не понимаю, как связан пробег и состояние кузова....<br /><!--QuoteEnd--></div><!--QuoteEEnd--> <br />С нашими мерами борьбы с гололёдом пробег и состояние взаимосвязаны.<br />
+			<br />
+			<!--IBF.ATTACHMENT_236294-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Тёмный Волк</b>  15.7.2010, 10:37</h4>
+			<p>у меня января 2006-го производства, куплена в марте...<br />пробег 148<br /><br />состояние - тьфу-тьфу-тьфу - получше.... но под пластик я не лазил :)
+			<br />
+			<!--IBF.ATTACHMENT_236321-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: s1702erg</b>  15.7.2010, 10:43</h4>
+			<p><!--quoteo(post=236321:date=15.7.2010, 11&#58;37:name=Тёмный Волк)--><div class='quotetop'>Цитата(Тёмный Волк &#064; 15.7.2010, 11&#58;37) <a href="index.php?act=findpost&amp;pid=236321"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />у меня января 2006-го производства, куплена в марте...<br />пробег 148<br /><br />состояние - тьфу-тьфу-тьфу - получше.... но под пластик я не лазил :)<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />А я залез как купил машину и все закрасил битумной мастикой.Как то пришлось тут скидывать пластик на правой стороне-чистота.
+			<br />
+			<!--IBF.ATTACHMENT_236324-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: kineskop</b>  15.7.2010, 10:49</h4>
+			<p><!--quoteo(post=236294:date=15.7.2010, 10&#58;30:name=DIV)--><div class='quotetop'>Цитата(DIV &#064; 15.7.2010, 10&#58;30) <a href="index.php?act=findpost&amp;pid=236294"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />С нашими мерами борьбы с гололёдом пробег и состояние взаимосвязаны.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Я бы сказал даже не пробег, а годы, даже месяцы...
+			<br />
+			<!--IBF.ATTACHMENT_236327-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: neal</b>  15.7.2010, 11:24</h4>
+			<p><!--quoteo(post=236273:date=15.7.2010, 12&#58;45:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 15.7.2010, 12&#58;45) <a href="index.php?act=findpost&amp;pid=236273"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Как то давно я не делился своими положительными эмоциями по поводу патриотизма.<br />Так получилось, что я пока в леса не выездной (ну наверное до ноября), поэтому подумалось, дайка потревожу ржавчинку...<br />потревожил.<br /><br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />У меня 2005-го года, вчера проантикорил 0.5-1 см вокруг отверстий крепежа накладок порога. Ну и под рамкой лобового под краской очаг коррозии отметил, пока всё.
+			<br />
+			<!--IBF.ATTACHMENT_236347-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: kineskop</b>  15.7.2010, 11:42</h4>
+			<p><!--quoteo(post=236347:date=15.7.2010, 12&#58;24:name=neal)--><div class='quotetop'>Цитата(neal &#064; 15.7.2010, 12&#58;24) <a href="index.php?act=findpost&amp;pid=236347"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />У меня 2005-го года, вчера проантикорил 0.5-1 см вокруг отверстий крепежа накладок порога. Ну и под рамкой лобового под краской очаг коррозии отметил, пока всё.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />И это правильно. Вообще, отметил то, что даже антикор по Москве выдерживает максимум 2 года, потом лоскутами, как чулок, особенно с мостов, балок и т.п.  <!--emo&:blink:--><img src='style_emoticons/default/blink.gif' border='0' style='vertical-align:middle' alt='blink.gif' /><!--endemo-->
+			<br />
+			<!--IBF.ATTACHMENT_236355-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: neal</b>  15.7.2010, 12:36</h4>
+			<p><!--quoteo(post=236355:date=15.7.2010, 15&#58;42:name=kineskop)--><div class='quotetop'>Цитата(kineskop &#064; 15.7.2010, 15&#58;42) <a href="index.php?act=findpost&amp;pid=236355"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />И это правильно. Вообще, отметил то, что даже антикор по Москве выдерживает максимум 2 года, потом лоскутами, как чулок, особенно с мостов, балок и т.п.  <!--emo&:blink:--><img src='style_emoticons/default/blink.gif' border='0' style='vertical-align:middle' alt='blink.gif' /><!--endemo--><br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Дак антикор - не волшебное средство - высыхает и отваливается. Ржу замазал свежепридуманным составом - битум в соляре развёл. Думаю что про эти места можно забыть навсегда.<br />Надо ещё попробовать состав на основе бензина, где не надо глубокой пропитки, чтобы сохло побыстрее :)
+			<br />
+			<!--IBF.ATTACHMENT_236387-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: sasha_nik</b>  15.7.2010, 22:47</h4>
+			<p>У меня есть антикор, машине 2 года 3 месяца, днище в порядке, рама тоже не сильно ржавая, а вот на порогах уже сколы краски обнаружил. В общем, мой рецепт - снимать нафиг весь обвес (бампера, локера, подножки) раз в 2 года, летом в сухую погоду, и обрабатывать. Тогда корпус долго прослужит. А иначе через обозначенные заводом 7 лет эксплуатации автомобиля будут сквозные дырки.
+			<br />
+			<!--IBF.ATTACHMENT_236541-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: fregat</b>  19.7.2010, 9:19</h4>
+			<p><!--quoteo(post=236279:date=15.7.2010, 9&#58;52:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 15.7.2010, 9&#58;52) <a href="index.php?act=findpost&amp;pid=236279"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />общий пробег 170 ткм.<br />по бездорожью - наверное четверть.<br />Бездорожье было разное :)<br /><br />Правда я не понимаю, как связан пробег и состояние кузова....<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Сам не понимаю как, но связан.<br />У меня за 2.5 года пробег около 100тык.<br />Так состояние кузова резко хуже чем у сверстников по возрасту, но идентично - по пробегу.<br />Чудеса но факт.
+			<br />
+			<!--IBF.ATTACHMENT_236972-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  19.7.2010, 9:29</h4>
+			<p>Если соберетесь антикорить, предлагаю пристально обратить внимание на вот этот участок кузова<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6276.jpg' border='0' alt='IPB Image' /><br />после удара кулаком в это место, выяснилось, что металла там нет (от лючка бензобака, до низа).<br />Более того, это глухая, замкнутая полость, и которая напрямую ни с улицей, ни с салоном не сообщается&#33;<br />Для того, чтобы туда налить антикор,нужно сверлить отверстие (например со стороны двери).<br /><br />Как то так.<br /><br />PS: снял ржавчину под окном. Металла осталось с гулькин нос.<br />Думаю, что вариант обрезать все а окно заварить листом близок :(<br /><br />чтобы не забыть<br />Крыло УАЗ-3162 заднее левое ОАО УАЗ 31622-5401083<br />Крыло УАЗ-3162 заднее правое ОАО УАЗ 31622-5401082
+			<br />
+			<!--IBF.ATTACHMENT_236975-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: hc2hunter</b>  19.7.2010, 14:08</h4>
+			<p>у меня машина 2006 года. пробег 65000.<br />недавно разбирал все обозначенные места, снимал пластик и т.п.<br />состояние несравненно лучше.<br /><br />может дело в пробеге... хотя живет машина круглогодично улице под открытым небом.
+			<br />
+			<!--IBF.ATTACHMENT_237071-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  19.7.2010, 14:17</h4>
+			<p><!--quoteo(post=237071:date=19.7.2010, 15&#58;08:name=hc2hunter)--><div class='quotetop'>Цитата(hc2hunter &#064; 19.7.2010, 15&#58;08) <a href="index.php?act=findpost&amp;pid=237071"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />состояние несравненно лучше.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />не поленись, просверли отверстие... там изнутри гниет :(
+			<br />
+			<!--IBF.ATTACHMENT_237082-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: hc2hunter</b>  19.7.2010, 14:42</h4>
+			<p><!--quoteo(post=237082:date=19.7.2010, 15&#58;17:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 19.7.2010, 15&#58;17) <a href="index.php?act=findpost&amp;pid=237082"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />не поленись, просверли отверстие... там изнутри гниет :(<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />сверлил. ибо как раз арки резал и пороги.<br />все там нормально.<br /><br />у меня единственное больное место - под стеклом задней двери краска слегка вспучилась. буду заниматься.
+			<br />
+			<!--IBF.ATTACHMENT_237105-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: kineskop</b>  19.7.2010, 15:16</h4>
+			<p><!--quoteo(post=237082:date=19.7.2010, 15&#58;17:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 19.7.2010, 15&#58;17) <a href="index.php?act=findpost&amp;pid=237082"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />не поленись, просверли отверстие... там изнутри гниет :(<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Изнутри гниет потому, что после покупки в собачнике надо было снять облицовку. Там в полу эти гады сделали отверстия, я так понял для слива воды из собачника. Так вот я перед их заделкой сначала в них дрыснул антикором, а затем залепил силиконом. Скорее всего потому и с арками пока порядок.<br />Ну и стояние под открытым небом как ни пародоксально, продлевает жизнь кузова, если только не на трассе где поливают Лужковский антиоблЯделитель. <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo-->
+			<br />
+			<!--IBF.ATTACHMENT_237122-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Worm</b>  19.7.2010, 15:39</h4>
+			<p>Вы передний бампер ещё снимите. На выходным имел счастье видеть. Полный пипец, живого места нет. У кого стоит кондей- особое внимание ресиверу, который стоит примерно за номерным знаком под бампером. У меня дно у него практически сгнило- того и гляди хладоген рванёт <!--emo&:crazy:--><img src='style_emoticons/default/crazy.gif' border='0' style='vertical-align:middle' alt='crazy.gif' /><!--endemo-->
+			<br />
+			<!--IBF.ATTACHMENT_237134-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: PrAV</b>  5.8.2010, 14:31</h4>
+			<p>Моему почти три года, по сравнению с твоим у меня он идеаллен :)
+			<br />
+			<!--IBF.ATTACHMENT_240727-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Diman_089</b>  5.8.2010, 20:33</h4>
+			<p><!--quoteo(post=240727:date=5.8.2010, 15&#58;31:name=PrAV)--><div class='quotetop'>Цитата(PrAV &#064; 5.8.2010, 15&#58;31) <a href="index.php?act=findpost&amp;pid=240727"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Моему почти три года, по сравнению с твоим у меня он идеаллен :)<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Где он живет?
+			<br />
+			<!--IBF.ATTACHMENT_240756-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  7.9.2010, 10:21</h4>
+			<p>Продолжим про кузов. Часть гнили срезана и вот что мы там видим:<br />Крыло заднее снято:<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6280.jpg' border='0' alt='IPB Image' /><br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6279.jpg' border='0' alt='IPB Image' /><br /><br />А что у нас внутри порогов? А ничего хорошего :)<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6277.jpg' border='0' alt='IPB Image' /><br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6278.jpg' border='0' alt='IPB Image' /><br /><br />Предлагаю обратить внимание, что сварочные швы все ржавые, а вы рамка номера, рамка номера :)
+			<br />
+			<!--IBF.ATTACHMENT_245706-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Worm</b>  7.9.2010, 11:06</h4>
+			<p>Снял на выходных весь пластик.  <!--emo&:suicide:--><img src='style_emoticons/room6/suicide.gif' border='0' style='vertical-align:middle' alt='suicide.gif' /><!--endemo--> Переднее крыло левое в утиль, заднее левое в районе порога- в утиль. А ведь антикор и всё такое делался за 3 года 2 раза <!--emo&:shok:--><img src='style_emoticons/default/shok.gif' border='0' style='vertical-align:middle' alt='shok.gif' /><!--endemo-->
+			<br />
+			<!--IBF.ATTACHMENT_245719-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  7.9.2010, 11:10</h4>
+			<p><!--quoteo(post=245719:date=7.9.2010, 12&#58;06:name=Worm)--><div class='quotetop'>Цитата(Worm &#064; 7.9.2010, 12&#58;06) <a href="index.php?act=findpost&amp;pid=245719"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />заднее левое в районе порога- в утиль. <br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />welcom to the club
+			<br />
+			<!--IBF.ATTACHMENT_245722-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Мудрый хакас</b>  7.9.2010, 11:15</h4>
+			<p><!--quoteo(post=236273:date=15.7.2010, 8&#58;45:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 15.7.2010, 8&#58;45) <a href="index.php?act=findpost&amp;pid=236273"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Как то давно я не делился своими положительными эмоциями по поводу патриотизма.<br />Так получилось, что я пока в леса не выездной (ну наверное до ноября), поэтому подумалось, дайка потревожу ржавчинку...<br />потревожил.<br />Теперь понятно, что надо будет красить почти весь кузов.<br />Ну по порядку:<br />1. Проемы задних окон выглядят так. Это произошло потому, что резинка протерла краску.<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6269.jpg' border='0' alt='IPB Image' /><br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6274.jpg' border='0' alt='IPB Image' /><br />2. Снимаем задние расширители арок.<br />Вид слева<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6270.jpg' border='0' alt='IPB Image' /><br />вид справа<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6276.jpg' border='0' alt='IPB Image' /><br />3. А что у нас за бампером. А за бампером все как везде (плюс кузов лопнул снизу, в месте сварки рундука и боковины. А также хочется послать особый &quot;луч поноса&quot; тем, кто придумал так приварить крепеж брызговика<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6271.jpg' border='0' alt='IPB Image' /><br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6273.jpg' border='0' alt='IPB Image' /><br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6275.jpg' border='0' alt='IPB Image' /><br />4. Ну и закончу эту часть рассказа о складе земли, из всех мест. где мы со Слоном побывали. А склад располагается под резинками на подножках. Хотя к слову сказать, крепеж этих резинок - единственное, что сделано правильно.<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6272.jpg' border='0' alt='IPB Image' /><br />Так кто там еще хочет купить патриота? а ОНО вам надо? вы хорошо подумайте.<br />PS: своего продавать не буду, прикипел :)<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Я такое только в кино про войну видел&#33;&#33;&#33;&#33;&#33;&#33;&#33; Всё таки видимо климат и химикалии на дорогах. У нас УАЗкам по 20 лет и даже задние крылья не отгнивают&#33;
+			<br />
+			<!--IBF.ATTACHMENT_245725-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Серега82</b>  12.9.2010, 11:36</h4>
+			<p>моему 2 года с хвостиком, я парюсь за пару сколов и царапин, а тут такое...
+			<br />
+			<!--IBF.ATTACHMENT_246672-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: KIYOI</b>  12.9.2010, 22:00</h4>
+			<p><!--quoteo(post=246672:date=12.9.2010, 12&#58;36:name=Серега82)--><div class='quotetop'>Цитата(Серега82 &#064; 12.9.2010, 12&#58;36) <a href="index.php?act=findpost&amp;pid=246672"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />моему 2 года с хвостиком, я парюсь за пару сколов и царапин, а тут такое...<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Судя по исцарапаному кузову человек просто убивает автомобиль(надо было купить буханку а не патриот)
+			<br />
+			<!--IBF.ATTACHMENT_246736-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  14.9.2010, 16:17</h4>
+			<p><!--quoteo(post=246736:date=12.9.2010, 23&#58;00:name=KIYOI)--><div class='quotetop'>Цитата(KIYOI &#064; 12.9.2010, 23&#58;00) <a href="index.php?act=findpost&amp;pid=246736"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Судя по исцарапаному кузову человек просто убивает автомобиль(надо было купить буханку а не патриот)<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Вопрос не в бровь, а в глаз: что значит убивает? Я просто использую его там, для чего он предназначен: на дороге и вне ее. А для езды ТОЛЬКО по асфальту и ПИКНИКОВ около речки есть более подходящие авто.<br /><br />Но это лирика, а по теме вопроса. Кто либо понимает в покраске и подготовке поверхностей?<br />Хочу жить вечно, или как продлить агонию<br />Ситуация в следующем: пытаюсь починять кузов патриота путем замены гнилой кузовщины на новую.<br />Вопрос в том, как правильно готовить скрытые полости, а именно пока для себя нарисовал такую схему:<br />1. чистим поверхности<br />2. покрываем травящим (реактивным) грунтом<br />3. покрываем обычным грунтом.<br />4. красим или нет? (например внутренние поверхности порогов) насколько я понял в оригинале они просто загрунтованы.<br />Далее вопрос: как уменьшить сгорание грунта или краски при сварке?<br /><br />Ну вот сварили, покрасили.<br />Чем пролить?<br />1. Ruststop - говорят смывается быстро<br />2. Tectyl Zink - чой то к нему доверия нет особого...<br />3. что -то еще?<br /><br />В общем не дайте пропасть... может кто даст дельный совет?<br /><br />PS: в части марки для грунтов и красок решил выбрать Novol
+			<br />
+			<!--IBF.ATTACHMENT_247040-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: 9val</b>  14.9.2010, 19:51</h4>
+			<p>[quote name=&#39;Polonus T. Rat&#39; date=&#39;14.9.2010, 20:17&#39; post=&#39;247040&#39;]<br />Вопрос не в бровь, а в глаз: что значит убивает? Я просто использую его там, для чего он предназначен: на дороге и вне ее. А для езды ТОЛЬКО по асфальту и ПИКНИКОВ около речки есть более подходящие авто.<br /><br />Но это лирика, а по теме вопроса. Кто либо понимает в покраске и подготовке поверхностей?<br />Хочу жить вечно, или как продлить агонию<br />Ситуация в следующем: пытаюсь починять кузов патриота путем замены гнилой кузовщины на новую.<br />Вопрос в том, как правильно готовить скрытые полости, а именно пока для себя нарисовал такую схему:<br />1. чистим поверхности<br />2. покрываем травящим (реактивным) грунтом<br />3. покрываем обычным грунтом.<br />4. красим или нет? (например внутренние поверхности порогов) насколько я понял в оригинале они просто загрунтованы.<br />Далее вопрос: как уменьшить сгорание грунта или краски при сварке?<br /><br />Ну вот сварили, покрасили.<br />Чем пролить?<br />1. Ruststop - говорят смывается быстро<br />2. Tectyl Zink - чой то к нему доверия нет особог<br />3. что -то еще?<br /><br />В общем не дайте пропасть... может кто даст дельный совет?<br /><br />1. Ruststop - говорят смывается быстро<br />Херушки чем его смоешь, год после обработки автомобиля как он увидит воду так и ползёт за ней сантимов по десять вверх или вниз, на гравитацию ему точно чихать. Очень ловко проникает в сварные швы и видимо там подолгу задерживается, видел я у кореша битую десятку облитую Ruststop 4 года эгоу, так по стыкам панелей вся в этом масле. Себе делал этот антикор сам, так по началу не понял, вроде он весь на землю стёк, а фиги, только помыл машину, смотришь а по задней двери он снова из нижних дырок за водой до запаски долез. Странный он но действует неплохо. Это о составе &quot;А&quot;, про &quot;В&quot;  пока ничего сказать ни хорошего ни плохого не могу.
+			<br />
+			<!--IBF.ATTACHMENT_247065-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Ветка</b>  14.9.2010, 20:10</h4>
+			<p><b>Polonus T. Rat</b><br />Браза, (ниче что фамильярно?) а может нет в этом никакого смысла? Может лучше стоит сдать его за сколько возьмут, а там уж решить, как быть и с чем быть дальше? Стоит овчинка выделки то? <br />Фотки твои &quot;комментить&quot; разум не позволяет - не мыслимо.
+			<br />
+			<!--IBF.ATTACHMENT_247069-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  15.9.2010, 0:27</h4>
+			<p><!--quoteo(post=247069:date=14.9.2010, 21&#58;10:name=Ветка)--><div class='quotetop'>Цитата(Ветка &#064; 14.9.2010, 21&#58;10) <a href="index.php?act=findpost&amp;pid=247069"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br /><b>Polonus T. Rat</b><br />Браза, (ниче что фамильярно?) а может нет в этом никакого смысла? Может лучше стоит сдать его за сколько возьмут, а там уж решить, как быть и с чем быть дальше? Стоит овчинка выделки то? <br />Фотки твои &quot;комментить&quot; разум не позволяет - не мыслимо.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Да не намана  <!--emo&:russian_ru:--><img src='style_emoticons/default/russian_ru.gif' border='0' style='vertical-align:middle' alt='russian_ru.gif' /><!--endemo-->  <!--emo&:bomb:--><img src='style_emoticons/default/bomb.gif' border='0' style='vertical-align:middle' alt='bomb.gif' /><!--endemo--> <br />а по остальному...<br />Видишь ли в чем дело: бюджет восстановления кузова (собственными силами да в охотку) выходит около 3-4 килобаксов. Мосты перебраны, раздатка новая с нормальной пониженной. В моторчик надо будет влезть, все таки 180тыр пора уж (да и изначально с завода он был с косяком: вкладыши на колене были перетянуты). Ну пусть на круг будет 5 килобаксов. Ну продать его как есть это еще 5-6 килобаксов. Итого получается около 10-11 кило зелени.<br /><br />Все, до чего можно дотянуться и юзать на убой начинается в стоке от 20 кило зелени да плюс набежит: обвес, лебедки, свет, колеса, подвеска и прочая... т.е. смело можно еще доложить червонец.<br />Соотвественно без муля рублей и думать неча.<br />А муль рублей потратить есть куда и без машины.<br />А так - 5 килобаксов и еще на три-пять лет игрушка в строю будет.
+			<br />
+			<!--IBF.ATTACHMENT_247089-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: kineskop</b>  15.9.2010, 8:47</h4>
+			<p><!--quoteo(post=247089:date=15.9.2010, 1&#58;27:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 15.9.2010, 1&#58;27) <a href="index.php?act=findpost&amp;pid=247089"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Да не намана  <!--emo&:russian_ru:--><img src='style_emoticons/default/russian_ru.gif' border='0' style='vertical-align:middle' alt='russian_ru.gif' /><!--endemo-->  <!--emo&:bomb:--><img src='style_emoticons/default/bomb.gif' border='0' style='vertical-align:middle' alt='bomb.gif' /><!--endemo--> <br />а по остальному...<br />Видишь ли в чем дело: бюджет восстановления кузова (собственными силами да в охотку) выходит около 3-4 килобаксов. Мосты перебраны, раздатка новая с нормальной пониженной. В моторчик надо будет влезть, все таки 180тыр пора уж (да и изначально с завода он был с косяком: вкладыши на колене были перетянуты). Ну пусть на круг будет 5 килобаксов. Ну продать его как есть это еще 5-6 килобаксов. Итого получается около 10-11 кило зелени.<br /><br />Все, до чего можно дотянуться и юзать на убой начинается в стоке от 20 кило зелени да плюс набежит: обвес, лебедки, свет, колеса, подвеска и прочая... т.е. смело можно еще доложить червонец.<br />Соотвественно без муля рублей и думать неча.<br />А муль рублей потратить есть куда и без машины.<br />А так - 5 килобаксов и еще на три-пять лет игрушка в строю будет.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Вообще в качестве антикора замечательно работает сурик. А если найдешь морской сурик, то вообще сносу не будет- им днища кораблей красят и ведь ходит годами  <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo-->
+			<br />
+			<!--IBF.ATTACHMENT_247111-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Ветка</b>  15.9.2010, 11:03</h4>
+			<p><b>Polonus T. Rat</b><br />Логично...<br />А может быт,ь стоит приобрести новый кузов в минимальной комплектации? <br />Никто не знает, сколько он может стоить?
+			<br />
+			<!--IBF.ATTACHMENT_247140-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  15.9.2010, 11:29</h4>
+			<p><!--quoteo(post=247140:date=15.9.2010, 12&#58;03:name=Ветка)--><div class='quotetop'>Цитата(Ветка &#064; 15.9.2010, 12&#58;03) <a href="index.php?act=findpost&amp;pid=247140"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Никто не знает, сколько он может стоить?<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />знает  <!--emo&:crazy:--><img src='style_emoticons/default/crazy.gif' border='0' style='vertical-align:middle' alt='crazy.gif' /><!--endemo--> <br />в МСК по знакомству каркас крашеный около 160 тыр
+			<br />
+			<!--IBF.ATTACHMENT_247147-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Алекс 047</b>  15.9.2010, 11:33</h4>
+			<p>про антикор я на авто ру отписал. Повторю и здесь - супра щит.
+			<br />
+			<!--IBF.ATTACHMENT_247148-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: mogull</b>  23.9.2010, 11:40</h4>
+			<p>Щаз разбирал двери...по вопросу фиксатора дверей...выскочил из гнезда....заодно сделал лёгкую , так сказать шумоизоляцию...между дверью и декоративной накладкой проставил тонкий строительный теплоизолятор с фольгой...<br />Ладно суть не в этом....<br />Когда рассматривал дверь в районе заводской шумки...то увидел одну гадость....<br />Оказывается эти умники клеят эту шумку на не грунтованную дверь...а потом уже слегка красят поверху всё вместе...<br />Результат оказывается гадкий....ёхняя шумка клеится не сплошным поклеечным покрытием а канавками...<br />местами отошла и стало видно там где клей прилип нормально а в полосках-пустотах сплошная ржавчина...конденсат туда затекает...благо грунта нет ...чистое железо...вот ржа под шумкой прекрасно и процветает....<br />Залил где мог и куда мог , пока отработки....<br />Нужно будет серьезно подойти...ободрать ту дебильную шумку прокрасить и поклеить новую... <!--emo&:blink:--><img src='style_emoticons/default/blink.gif' border='0' style='vertical-align:middle' alt='blink.gif' /><!--endemo--> <br />Машина 08 года....
+			<br />
+			<!--IBF.ATTACHMENT_248605-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Серега82</b>  23.9.2010, 19:37</h4>
+			<p>у меня 08 года норм
+			<br />
+			<!--IBF.ATTACHMENT_248668-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: dmiva</b>  23.9.2010, 22:14</h4>
+			<p><!--quoteo(post=248605:date=23.9.2010, 12&#58;40:name=mogull)--><div class='quotetop'>Цитата(mogull &#064; 23.9.2010, 12&#58;40) <a href="index.php?act=findpost&amp;pid=248605"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Нужно будет серьезно подойти...ободрать ту дебильную шумку прокрасить и поклеить новую... <!--emo&:blink:--><img src='style_emoticons/default/blink.gif' border='0' style='vertical-align:middle' alt='blink.gif' /><!--endemo--> <br />Машина 08 года....<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />То же самое на 2006. сдирал шпателем, предварительно прогрев термофеном. Потом заклеил СТП и облил растстопом, надеюсь что навечно )))<br /><br />В тему ржи - снял левое переднее крыло  <!--emo&:crazy:--><img src='style_emoticons/default/crazy.gif' border='0' style='vertical-align:middle' alt='crazy.gif' /><!--endemo--> <br />по итогам вскрытия - полный ппц, ржа везде где можно. вывод - антикорить и очень хорошо антикорить, можно без глобального вскрытия (но лучше с ним) ,сняв только расширитель и локер. Особенное внимание обратить на переднюю стойку и порог, туда льется вся вода с лобовухи и там антикора нет.<br />Еще одно проблемное место - стык внутреннего крыла и внешнего, там автопластилин, под ним вода со ржой <br />
+			<br />
+			<!--IBF.ATTACHMENT_248705-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: SAN</b>  23.9.2010, 23:14</h4>
+			<p>и еще один баг):. удалить..
+			<br />
+			<!--IBF.ATTACHMENT_248717-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: SAN</b>  23.9.2010, 23:13</h4>
+			<p>сори,баг какой-то): удалите.
+			<br />
+			<!--IBF.ATTACHMENT_248718-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: SAN</b>  23.9.2010, 23:17</h4>
+			<p><!--quoteo(post=247147:date=15.9.2010, 12&#58;29:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 15.9.2010, 12&#58;29) <a href="index.php?act=findpost&amp;pid=247147"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />знает  <!--emo&:crazy:--><img src='style_emoticons/default/crazy.gif' border='0' style='vertical-align:middle' alt='crazy.gif' /><!--endemo--> <br />в МСК по знакомству каркас крашеный около 160 тыр<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Ярослав, скажу как жестянщик в прошлом - хорошо(чем лучше, тем дольше проходит) чисть ржу, потом преобразователем, потом грунт(по вкусу...) потом сварка...в идеале после этого надо опять грунтом (развести пожиже) пройти из шланга-распылителя(ну как гастроскоп, тока круговой распыл на конце) сами швы и потом очень много и суперобильно МОВИЛЕМ(беда в том, что купить сейчас хороший трудно... <!--emo&:sad:--><img src='style_emoticons/default/sad.gif' border='0' style='vertical-align:middle' alt='sad.gif' /><!--endemo--> ) под хорошим давлением (минимум 4). так делал своим и ходило долго. ну енто изнутри... а снаружи - всем чем хошь(да, свинцовый сурик-круто, ровно как и пуш-сало... но дико гиморно <!--emo&:suicide:--><img src='style_emoticons/room6/suicide.gif' border='0' style='vertical-align:middle' alt='suicide.gif' /><!--endemo--> ) главное в ентом деле тщательность...да поможет тебе Всевышний <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo-->
+			<br />
+			<!--IBF.ATTACHMENT_248719-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: s1702erg</b>  24.9.2010, 7:49</h4>
+			<p><!--quoteo(post=248719:date=24.9.2010, 0&#58;17:name=SAN)--><div class='quotetop'>Цитата(SAN &#064; 24.9.2010, 0&#58;17) <a href="index.php?act=findpost&amp;pid=248719"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />  пройти из шланга-распылителя(ну как гастроскоп, тока круговой распыл на конце) сами швы и потом очень много и суперобильно МОВИЛЕМ(беда в том, что купить сейчас хороший трудно... <!--emo&:sad:--><img src='style_emoticons/default/sad.gif' border='0' style='vertical-align:middle' alt='sad.gif' /><!--endemo--> ) под хорошим давлением (минимум 4). так делал своим и ходило долго. ну енто изнутри... <br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Мовиль можно заменить Тектилом.Баллоны по 700 мл., к ним в комплекте идут два шланга (один короткий другой длинный-на всю дверь хватает) так же идет наконечник с насадкой кругового распыления и заглушки для дырок, если сверлить где-то дырки для обработки будешь..Четыре года в моих дверях и порогах залит-ржавчины нет.Езжу всю зиму.<br />P.S. на две двери и порог достаточно одного флакона
+			<br />
+			<!--IBF.ATTACHMENT_248740-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: alex 097</b>  24.9.2010, 8:24</h4>
+			<p>[quote name=&#39;Polonus T. Rat&#39; date=&#39;15.7.2010, 9:45&#39; post=&#39;236273&#39;]<br />Как то давно я не делился своими положительными эмоциями по поводу патриотизма.<br />Так получилось, что я пока в леса не выездной (ну наверное до ноября), поэтому подумалось, дайка потревожу ржавчинку...<br />потревожил.<br />Теперь понятно, что надо будет красить почти весь кузов.<br /> я тут иосидел подумал ... и вот что на меня нашло видел както ланд крузер желтого цвета понравилось.. и думаю теперь перекрасит патрика в жёлтый ... народ каквы думаете клёво будет аль нет???
+			<br />
+			<!--IBF.ATTACHMENT_248745-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: s1702erg</b>  24.9.2010, 8:38</h4>
+			<p>Если Вы считаете что на желтом фоне ржавчина будет менее заметна-то ошибаетесь.
+			<br />
+			<!--IBF.ATTACHMENT_248747-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: SAN</b>  24.9.2010, 17:02</h4>
+			<p><!--quoteo(post=248740:date=24.9.2010, 8&#58;49:name=s1702erg)--><div class='quotetop'>Цитата(s1702erg &#064; 24.9.2010, 8&#58;49) <a href="index.php?act=findpost&amp;pid=248740"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br /><br />P.S. на две двери и порог достаточно одного флакона<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Я все двери и обивки багажника разбирал, лил оттуда, а в пороги, арки и все скрытые полости лил через кучу насверленных(и заглушенных потом <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo--> )отверстий...<br />влил 30 бутылок мовиля 2(по 0,5 л.)  <!--emo&:crazy:--><img src='style_emoticons/default/crazy.gif' border='0' style='vertical-align:middle' alt='crazy.gif' /><!--endemo--> правда потом вытекала месяца два изо всех щелей...например разобрав дверь, фигачил вверх даже в рамку двери так, что мовиль не тока с другой стороны рамки тек ручьем, но и сочился по всему периметру в месте закатки краев... <!--emo&:tease:--><img src='style_emoticons/room6/tease.gif' border='0' style='vertical-align:middle' alt='tease.gif' /><!--endemo--> и так везде... да, прилипал потом ходил оч долго.
+			<br />
+			<!--IBF.ATTACHMENT_248815-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Fisher</b>  7.10.2010, 13:02</h4>
+			<p>Чтобы не заводить новую тему, стукнусь в эту. Собрался перед зимой проантикорить машинку (3 года, антикорена тектилом в салоне под моим контролем, таких ужасов как на фото в этой ветке нет). Соответственно вопрос, что применять: Супра-щит, Раст-стоп, или проантикорить на WAXOYLе? У Раст-стопа и Супра-щита есть пара недостатков: 1. не совместимы с другими немаслянными антикорами, если потом захотеть перейти с них на другой антикор. 2. Разъедают резину и некоторые виды пластика - соответственно надо бдить за проводами в дверях, тормозными шлангами на раме и тп. Зато достоинство - модифицируют ржу и останавливают коррозию. WAXOYL - обычный пленочный антикор, но дают гарантию на 7 лет (при ежегодной бесплатной проверке). Кто что посоветует? <br />ЗЫ Город Москва.<br />
+			<br />
+			<!--IBF.ATTACHMENT_251112-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: kineskop</b>  7.10.2010, 13:12</h4>
+			<p><!--quoteo(post=251112:date=7.10.2010, 14&#58;02:name=Fisher)--><div class='quotetop'>Цитата(Fisher &#064; 7.10.2010, 14&#58;02) <a href="index.php?act=findpost&amp;pid=251112"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Чтобы не заводить новую тему, стукнусь в эту. Собрался перед зимой проантикорить машинку (3 года, антикорена тектилом в салоне под моим контролем, таких ужасов как на фото в этой ветке нет). Соответственно вопрос, что применять: Супра-щит, Раст-стоп, или проантикорить на WAXOYLе? У Раст-стопа и Супра-щита есть пара недостатков: 1. не совместимы с другими немаслянными антикорами, если потом захотеть перейти с них на другой антикор. 2. Разъедают резину и некоторые виды пластика - соответственно надо бдить за проводами в дверях, тормозными шлангами на раме и тп. Зато достоинство - модифицируют ржу и останавливают коррозию. WAXOYL - обычный пленочный антикор, но дают гарантию на 7 лет (при ежегодной бесплатной проверке). Кто что посоветует? <br />ЗЫ Город Москва.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />По Москве каждый год обрабатываю тектилом и антигравием днище. Из опыта по соболю- через год практически любой антикор с &quot;лужковской&quot; солью превращается в гумно и хлам.  <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo-->
+			<br />
+			<!--IBF.ATTACHMENT_251116-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Годик</b>  7.10.2010, 15:11</h4>
+			<p><!--quoteo(post=251112:date=7.10.2010, 14&#58;02:name=Fisher)--><div class='quotetop'>Цитата(Fisher &#064; 7.10.2010, 14&#58;02) <a href="index.php?act=findpost&amp;pid=251112"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />У Раст-стопа и Супра-щита есть пара недостатков: 1. не совместимы с другими немаслянными антикорами, если потом захотеть перейти с них на другой антикор. 2. Разъедают резину и некоторые виды пластика <br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Какая несусветная неосведомленность. Пользую его со времен 2105 - это с 1997г. Уже на трех машинах<br />испытал и ничего не разъело, ни одной резиночки. Если бы было так, его не предлагали к профессиональ-<br />ному использованию. На счет несовместимости такая же дезинформация:<br />http://www.cosmeticauto.ru/preobraz.html<br />http://catalog.autodela.ru/good/view/885<br />Правда после него можно ли делать другим антикором, не оговаривается, но я делал мовилем и ничего.<br />Да после таких качеств Раст-Стопа и не захочется (самая полная инфа):<br />http://fordexplorer.narod.ru/ruststop.html<br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_251161-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Fisher</b>  7.10.2010, 15:42</h4>
+			<p>Я вообще-то спрашивал про антикор, а не про свой образовательный уровень <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo--> . По поводу &quot;несусветной неосведомленности&quot; вот: http://www.pickupclub.ru/forum/archive/index.php/t-12956.html , сообщения от Long<br />&quot;30-09-2008, 08:31<br />Тут такая фигня....если раст стопом раз покрыл, то потом другими антикорами(с гарантией ) никто делать не берётся.Говорят на него ничего не ложится...&quot;<br /><br />и от Sahen<br />&quot;30-09-2008, 10:18<br />С Растопом поаккуратее&#33;<br />Я имел некоторое отношение к нему.<br />Так мастера которые занимались обработкой меняли обувь очень часто..и резинки на подьемнике аналогично.Вывод сам напрашивается.Растоп очень ядовит для резиновых изделий.Проверено(не электроникой)...&quot;<br /><br />Ну и еще недостаток Раст-стопа это необходимость ежегодного повтора обработки (жидкий, незастывающий - стекает или вымывается). Waxoyl же на 7 лет гарантию дает.<br /><br />Повторяю вопрос, чем и где лучше проантикорить 3-х летнего Патрикея? Раст-стоп, Супра-щит, waxoyl, может  еще кто что-нибудь посоветует.
+			<br />
+			<!--IBF.ATTACHMENT_251171-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Годик</b>  7.10.2010, 16:07</h4>
+			<p><!--quoteo(post=251171:date=7.10.2010, 16&#58;42:name=Fisher)--><div class='quotetop'>Цитата(Fisher &#064; 7.10.2010, 16&#58;42) <a href="index.php?act=findpost&amp;pid=251171"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Тут такая фигня....если раст стопом раз покрыл, то потом другими антикорами(с гарантией ) никто делать не берётся.Говорят на него ничего не ложится...&quot;<br />Ну и еще недостаток Раст-стопа это необходимость ежегодного повтора обработки (жидкий, незастывающий - стекает или вымывается). <br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />Да не обижайся, извини, коль так.<br />1. Проверю специально, но я в скрытые полости делал, посмотрю ,что будет сверху.<br />2. Да, проскакивала рекомендация снимать щетки стеклоочистителя (&quot;из-за некачественной резины могут<br />    расползтись&quot;). Ну так из-за некачественной или мягкой. Вон от Патра 2005г некоторые резинки до сих<br />    пор валяются неразъеденые.<br />3. Единственный раз (первый) на 2105 делал в сервисе, дали красивую памятку в ней: раз в два года.<br />    Пусть стекает, не зря требуют, чтоб после обработки маха стояла не менее 3-х суток, пропитывалась.<br />    Про 7 лет для тектила тоже не верю, хоть и пишут.<br />4. Где можно сделать не знаю, делаю сам, сейчас правда компрессор кончился. Ежели тока в яндексе<br />    глянуть.<br />Удачи, еще раз извиняй, коль обидел.<br />
+			<br />
+			<!--IBF.ATTACHMENT_251190-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Fisher</b>  7.10.2010, 17:02</h4>
+			<p>Да я не обижался, даже смайлик <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo--> поставил. Спасибо за информацию&#33; Меня именно это и интересует, типа &quot; Делал это, в этом месте, стоило в таком то году столько, понравилось&#092;не понравилось, достоинства такие, недостатки такие)&quot;. Просто я уже достаточно давно по разным автофорумам ищу инфу о разных антикорах, вот меня и интересует мнение соклубников.
+			<br />
+			<!--IBF.ATTACHMENT_251198-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: dmiva</b>  8.10.2010, 9:05</h4>
+			<p><!--quoteo(post=251171:date=7.10.2010, 16&#58;42:name=Fisher)--><div class='quotetop'>Цитата(Fisher &#064; 7.10.2010, 16&#58;42) <a href="index.php?act=findpost&amp;pid=251171"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />и от Sahen<br />&quot;30-09-2008, 10:18<br />С Растопом поаккуратее&#33;<br />Я имел некоторое отношение к нему.<br />Так мастера которые занимались обработкой меняли обувь очень часто..и резинки на подьемнике аналогично.Вывод сам напрашивается.Растоп очень ядовит для резиновых изделий.Проверено(не электроникой)...&quot;<!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Только что полил патрика растстопом, резинки немного коробятся, но через пару дней приходят в норму.<br /><br /><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec--><br />Ну и еще недостаток Раст-стопа это необходимость ежегодного повтора обработки (жидкий, незастывающий - стекает или вымывается). Waxoyl же на 7 лет гарантию дает.<br /><br />Повторяю вопрос, чем и где лучше проантикорить 3-х летнего Патрикея? Раст-стоп, Супра-щит, waxoyl, может  еще кто что-нибудь посоветует.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Я так думаю, что существуют принципиально 2 вида антикоров для новой машины и для неновой.<br />На любой старой машине существует ржа, под ней лежит влага. соответственно нужен антикор, которые пролезет во все щелочки и вытеснит эту влагу. Для того чтобы он туда пролез - он обязан быть текучий, что гарантирует его вытекание  через какое-то время <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo--> и соответственно ежегодную обработку. Как-то не вериться в антикор для строй машины, который будет держаться 7 лет на ржавчине. За растстоп не убеждаю, но думаю что любой состав для скрытых полостей рано или поздно из них выльется, что потребует новой обработки.<br /><br /><br /><br />
+			<br />
+			<!--IBF.ATTACHMENT_251340-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  22.11.2010, 11:31</h4>
+			<p>Было принято решение, что попробуем сделать этот кузов...<br />собственно два вопроса:<br />1. Где взять ПОЛНЫЙ каталог кузовных деталей на патриот?<br />2. Где в мск максимальный выбор кузовни?
+			<br />
+			<!--IBF.ATTACHMENT_262667-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: dMk</b>  22.11.2010, 12:24</h4>
+			<p><!--quoteo(post=262667:date=22.11.2010, 11&#58;31:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 22.11.2010, 11&#58;31) <a href="index.php?act=findpost&amp;pid=262667"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />1. Где взять ПОЛНЫЙ каталог кузовных деталей на патриот?<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />а что, есть неполный?  <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo--> <br />насколько мне известно, существует лишь &quot;Каталог деталей и сборочных единиц&quot; под номером КД 05808600.029-2005 (Издание второе) выпуска 2007 года - он же где-то есть и на нашем форуме.
+			<br />
+			<!--IBF.ATTACHMENT_262690-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  22.11.2010, 12:27</h4>
+			<p><!--quoteo(post=262690:date=22.11.2010, 12&#58;24:name=dMk)--><div class='quotetop'>Цитата(dMk &#064; 22.11.2010, 12&#58;24) <a href="index.php?act=findpost&amp;pid=262690"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />а что, есть неполный?  <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo--> <br />насколько мне известно, существует лишь &quot;Каталог деталей и сборочных единиц&quot; под номером КД 05808600.029-2005 (Издание второе) выпуска 2007 года - он же где-то есть и на нашем форуме.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />В этом каталоге нет 50% кузовных деталей...<br />кста, а есть кто из Ульяновска? а то надо кое какую кузовню купить и сюда отправить
+			<br />
+			<!--IBF.ATTACHMENT_262691-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: dMk</b>  22.11.2010, 13:21</h4>
+			<p><!--quoteo(post=262691:date=22.11.2010, 12&#58;27:name=Polonus T. Rat)--><div class='quotetop'>Цитата(Polonus T. Rat &#064; 22.11.2010, 12&#58;27) <a href="index.php?act=findpost&amp;pid=262691"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />В этом каталоге нет 50% кузовных деталей...<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />тогда извини.. что касается магазинов - видел в интернете магазин http://www.autopatriot.ru/katalog_2.html - там вроде есть кое-что по кузовне<br />
+			<br />
+			<!--IBF.ATTACHMENT_262715-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  28.11.2010, 23:32</h4>
+			<p>Мужчины.... где бы купить вот такую детальку<br /><img width='600' height='450' src='http://content.foto.mail.ru/mail/jkamys/6263/i-6287.jpg' border='0' alt='IPB Image' /><br />или поиметь ее номер...<br />это продолжении арки крыла...
+			<br />
+			<!--IBF.ATTACHMENT_264897-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Годик</b>  29.11.2010, 8:40</h4>
+			<p>Немного не ясно. Ракурс фото неудачен. Какого крыла? Может здесь, что подойдет:<br />http://www.autopatriot.ru/katalog_2.html<br />
+			<br />
+			<!--IBF.ATTACHMENT_264937-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Polonus T. Rat</b>  29.11.2010, 13:41</h4>
+			<p><!--quoteo(post=264937:date=29.11.2010, 8&#58;40:name=Годик)--><div class='quotetop'>Цитата(Годик &#064; 29.11.2010, 8&#58;40) <a href="index.php?act=findpost&amp;pid=264937"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Немного не ясно. Ракурс фото неудачен. Какого крыла? Может здесь, что подойдет:<br />http://www.autopatriot.ru/katalog_2.html<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br />1. Арка состоит из двух частей:<br />первая часть (если смотреть сзади, будем поглядет на правую сторону)<br /><img width='640' height='480' src='http://www.3160.ru/published/publicdata/ARH3160WBS/attachments/SC/products_pictures/DSC08734.JPG' border='0' alt='IPB Image' /><br />а потом идет как раз та часть, что я сфотографировал<br />2. продавцы по ссылке очень любят деньги....<br />
+			<br />
+			<!--IBF.ATTACHMENT_265051-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Годик</b>  29.11.2010, 14:12</h4>
+			<p>Ка-бы знать, как она называется, то можно стукнуться сюда в прайс по УАЗ:                            http://autoars.ru/page/px16.html<br />
+			<br />
+			<!--IBF.ATTACHMENT_265073-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Voldemar73</b>  6.1.2011, 1:08</h4>
+			<p>Это больше не в машине, а в хозяине дело... так запустить машину....<br />На кол такого посадить...
+			<br />
+			<!--IBF.ATTACHMENT_275324-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: PA3UJIb</b>  10.1.2011, 21:43</h4>
+			<p>А я наоборот порадоваться хочу за такого хозяина, что не выкинул машину, а наоборот, трудится над приведением ее в божеский вид.<br /><!--quoteo--><div class='quotetop'>Цитата</div><div class='quotemain'><!--quotec-->&quot;Все равно его не брошу, потому что он хороший&quot;<!--QuoteEnd--></div><!--QuoteEEnd-->
+			<br />
+			<!--IBF.ATTACHMENT_276237-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: ccc26</b>  11.1.2011, 0:25</h4>
+			<p>Глядя на такие картинки <!--emo&:shok:--><img src='style_emoticons/default/shok.gif' border='0' style='vertical-align:middle' alt='shok.gif' /><!--endemo--> , я уже почти начинаю думать, а нахрена я брал Патриота <!--emo&:suicide:--><img src='style_emoticons/room6/suicide.gif' border='0' style='vertical-align:middle' alt='suicide.gif' /><!--endemo-->  а не 10-ти летнего Патруля. Там до такого состояния кузова лет 30-ть надо ездить.
+			<br />
+			<!--IBF.ATTACHMENT_276327-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Voldemar73</b>  11.1.2011, 0:44</h4>
+			<p><!--quoteo(post=276327:date=11.1.2011, 0&#58;25:name=ccc26)--><div class='quotetop'>Цитата(ccc26 &#064; 11.1.2011, 0&#58;25) <a href="index.php?act=findpost&amp;pid=276327"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Глядя на такие картинки <!--emo&:shok:--><img src='style_emoticons/default/shok.gif' border='0' style='vertical-align:middle' alt='shok.gif' /><!--endemo--> , я уже почти начинаю думать, а нахрена я брал Патриота <!--emo&:suicide:--><img src='style_emoticons/room6/suicide.gif' border='0' style='vertical-align:middle' alt='suicide.gif' /><!--endemo-->  а не 10-ти летнего Патруля. Там до такого состояния кузова лет 30-ть надо ездить.<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Ну смотря в каких условиях эксплуатировать.<br />Да и в каких руках он. Видел машины и старше возрастом, ТАКОГО, не было не на одной.
+			<br />
+			<!--IBF.ATTACHMENT_276336-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: ccc26</b>  11.1.2011, 1:12</h4>
+			<p>Зато завод пиарил свою немецкую покрасочную камеру в которой красят Патриота, что яко бы в такой же камере Мерсы красят. А говножелезо хоть в какой камере крась, если оно го..но ржа из под краски прёт. С нормальной иномаркой( анусы и акценты и им подобные которые к тому же делают у нас , не в счёт) за 5-ть лет хоть какой эксплуатации ( хоть в рассоле держи) такого не случится, потаму что из нормального железа. А тут вообще жесть. Патриотизма становится всё меньше и меньше.
+			<br />
+			<!--IBF.ATTACHMENT_276340-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: vvs</b>  11.1.2011, 1:17</h4>
+			<p>Какие вы категоричные. <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo--> <br />&quot;Не видел&quot; - не значит &quot;не бывает&quot;. <!--emo&:big_boss:--><img src='style_emoticons/default/big_boss.gif' border='0' style='vertical-align:middle' alt='big_boss.gif' /><!--endemo--> <br />А &quot;на кол посадить&quot;, так даже если сам хозяин будет СВОЮ машину кислотой поливать каждый день, Вам-то какое дело до ЕГО машины? <!--emo&:angry:--><img src='style_emoticons/default/angry.gif' border='0' style='vertical-align:middle' alt='angry.gif' /><!--endemo--> Загляните в свою машину и сами сядьте на кол. <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo-->
+			<br />
+			<!--IBF.ATTACHMENT_276342-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: Voldemar73</b>  11.1.2011, 1:25</h4>
+			<p><!--quoteo(post=276342:date=11.1.2011, 1&#58;17:name=vvs)--><div class='quotetop'>Цитата(vvs &#064; 11.1.2011, 1&#58;17) <a href="index.php?act=findpost&amp;pid=276342"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Какие вы категоричные. <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo--> <br />&quot;Не видел&quot; - не значит &quot;не бывает&quot;. <!--emo&:big_boss:--><img src='style_emoticons/default/big_boss.gif' border='0' style='vertical-align:middle' alt='big_boss.gif' /><!--endemo--> <br />А &quot;на кол посадить&quot;, так даже если сам хозяин будет СВОЮ машину кислотой поливать каждый день, Вам-то какое дело до ЕГО машины? <!--emo&:angry:--><img src='style_emoticons/default/angry.gif' border='0' style='vertical-align:middle' alt='angry.gif' /><!--endemo--> Загляните в свою машину и сами сядьте на кол. <!--emo&:biggrin:--><img src='style_emoticons/default/biggrin.gif' border='0' style='vertical-align:middle' alt='biggrin.gif' /><!--endemo--><br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /><br />Следовательно вопрос, нахрена покупать наши машины раз вы их все так поливаете говном?
+			<br />
+			<!--IBF.ATTACHMENT_276345-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: vvs</b>  11.1.2011, 1:34</h4>
+			<p><!--quoteo(post=276345:date=11.1.2011, 1&#58;25:name=Voldemar73)--><div class='quotetop'>Цитата(Voldemar73 &#064; 11.1.2011, 1&#58;25) <a href="index.php?act=findpost&amp;pid=276345"><img src='style_images/1/post_snapback.gif' alt='*' border='0' /></a></div><div class='quotemain'><!--quotec--><br />Следовательно вопрос, нахрена покупать наши машины раз вы их все так поливаете говном?<br /><!--QuoteEnd--></div><!--QuoteEEnd--><br /> <!--emo&:shok:--><img src='style_emoticons/default/shok.gif' border='0' style='vertical-align:middle' alt='shok.gif' /><!--endemo--> А кто их поливает-то? Просто, ездим везде, где нам надо. Чиним, когда сломается. Делимся опытом с другими. <br />Я вот в прошлом году раздатку себе САМ порвал. Можно мне на кол сесть? <!--emo&:lol:--><img src='style_emoticons/default/lol.gif' border='0' style='vertical-align:middle' alt='lol.gif' /><!--endemo--> Или Вы мне посоветуете купить авто с неубиваемой раздаткой? <br />
+			<br />
+			<!--IBF.ATTACHMENT_276347-->
+			</p>
+		</div><!--Copyright--><p class="printcopy">Русская версия Invision Power Board (http://www.invisionboard.com)<br />&copy; Invision Power Services (http://www.invisionpower.com)</p>	</div>

@@ -1,0 +1,580 @@
+uhta24.ru/forum/?id=6024&page=1
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
+<head>
+<title>Объединение лоджии с квартирой. Ухта Форум</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="description" content="" />
+<meta name="keywords" content="ухта, республика коми, телефон, адрес, погода ухта, г ухта, гостиницы ухты, справочник, гостиница, фирма, услуга, город ухта, ухта сайт, погода г ухта, магазины ухты, фото ухты, прогноз ухта, расписание ухта, клубы ухты, недвижимость, поезда, форумы ухты, рф" />
+<link rel="stylesheet" type="text/css" href="/main.css" />
+<meta name="robots" content="index,follow" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="alternate" type="application/rss+xml" title="Новости Ухты на Uhta24.ru" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Объявления Ухты на Uhta24.ru" href="/feed/ob/" />
+</head>
+<script  type="text/javascript" src="/lib/jshttprequest.js"></script>
+<script type="text/javascript"  src="/lib/dropdown.js" ></script>
+<script type="text/javascript"  src="/lib/insertflash.js"></script>
+<script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="/lib/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/lib/jquery.easing.min.js"></script>
+<script type="text/javascript" src="/lib/jquery.scrollup.js"></script>
+<script type="text/javascript" src="/lib/jquery.lazyload.min.js"></script>
+
+<script>
+
+// Parse URL Queries Method
+	(function($){
+		$.getQuery = function( query ) {
+			query = query.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+			var expr = "[\\?&]"+query+"=([^&#]*)";
+			var regex = new RegExp( expr );
+			var results = regex.exec( window.location.href );
+			if( results !== null ) {
+				return results[1];
+				return decodeURIComponent(results[1].replace(/\+/g, " "));
+			} else {
+				return false;
+			}
+		};
+	})(jQuery);
+
+	$(function () {
+    $.scrollUp({
+        scrollName: 'scrollUp', // Element ID
+        scrollDistance: 2000, // Distance from top/bottom before showing element (px)
+        scrollFrom: 'top', // 'top' or 'bottom'
+        scrollSpeed: 300, // Speed back to top (ms)
+        easingType: 'easeOutExpo', // Scroll to top easing (see http://easings.net/)
+        animation: 'fade', // Fade, slide, none
+        animationInSpeed: 200, // Animation in speed (ms)
+        animationOutSpeed: 200, // Animation out speed (ms)
+        scrollText: 'Наверх', // Text for element, can contain HTML
+        scrollTitle: false, // Set a custom <a> title if required. Defaults to scrollText
+        scrollImg: false, // Set true to use image
+        activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+        zIndex: 992147483647 // Z-Index for the overlay
+    });
+});
+</script>
+
+
+<body >
+<script language="JavaScript">
+<!--
+function lcpy()
+{
+var txt = document.location.href+window.getSelection().toString();
+var ud =0;
+ var reqs = new JsHttpRequest();
+    // Code automatically called on load finishing.
+    reqs.onreadystatechange = function() {
+   if (reqs.readyState == 4) {
+          	//alert(reqs.responseText);
+    }
+    }
+    // Prepare request object (automatically choose GET or POST).
+    reqs.open(null, '/lib/usersf.php', true);
+    // Send data to backend.
+    reqs.send( {  id:ud, tlxpy:txt}  );
+    
+return false;
+}
+-->
+</script>
+
+<a name='top'></a>  
+<div id="wrapper">
+<div id="wrapper-bottom">
+<div id="wrapper-top">
+<div id="poisk-form"><div id="poisk-form1">
+<script language="JavaScript">
+
+var so;
+var sid;
+var resultready;
+
+
+function makeSearch1(obj)
+{
+so = [1,4,6,9,10,11,12];
+sid=0;
+resultready=0;
+
+searchstring=obj.pstr.value;
+searchoblast=obj.gdeiskat.value;
+searchplus=0;
+
+cctext="";
+
+if(searchoblast==0)
+{
+for (i in so) {
+      cctext=cctext+'<div id="search'+so[i]+'"><img src=/images/loading.gif></div>';
+   }
+}
+else
+{
+cctext=cctext+'<div id="search'+searchoblast+'"></div>';
+}
+
+
+document.getElementById('centrcol').innerHTML = cctext;
+
+
+if(searchoblast==0)
+{
+	onsearchresult();
+        doSearch1(searchstring,so[sid],searchplus,0);
+
+}
+else
+{
+	doSearch1(searchstring,searchoblast,searchplus,0);
+}
+
+return false;
+}
+
+
+
+
+
+function doSearch1(searchstring,searchoblast,searchplus,searchpage){
+//alert(2);
+
+divsearch='search'+searchoblast;
+
+     
+   reqs = new JsHttpRequest();
+    
+   reqs.onreadystatechange = function() {
+   if (reqs.readyState == 4) {
+      document.getElementById(divsearch).innerHTML = reqs.responseText;
+	resultready=1;
+        }
+    }
+   
+    reqs.open(null, '/poisk/poisklikeall.php?searchoblast='+searchoblast, true);
+    reqs.send( { q: searchstring, g:searchoblast, dop:searchplus, nstr:searchpage } );
+   
+   // document.getElementById(divsearch).innerHTML = "<img src=/images/loading.gif>Подождите, идёт поиск";
+
+
+return false;
+
+}
+
+
+
+
+function onsearchresult(){
+if(resultready==1){
+	clearTimeout(codeTimer);
+	//alert(so[sid]);
+	resultready=0;
+	sid=sid+1;
+	onsearchresult();
+	doSearch1(searchstring,so[sid],searchplus,0);
+
+	}else
+	{
+	//alert(so[sid]);
+	var codeTimer = setTimeout("onsearchresult()",1000);
+	}
+}
+
+
+
+
+</script>
+
+
+
+<form method="post" name="formcheck1" onsubmit="return makeSearch1(this);return false;" >
+<br><input type=text name=pstr size=30 style="width:220px"> <input type=submit value="Найти" id="nayti"> <br>
+<select name=gdeiskat style="color:#666666" >
+<option value="0">Везде</option>
+<option value="1">В справочнике</option>
+<option value="4">В объявлениях</option>
+<option value="6">В новостях</option>
+<option value="9">На форуме</option>
+<option value="10">В фотографиях</option>
+<option value="11">В видео</option>
+<option value="12">В блогах</option>
+</select>
+</form>
+
+
+<div id="login-form">
+ <a href="/auth/?destination=/forum/?id=6024&page=1">войти</a> &nbsp;<a href="/auth/?register=yes">зарегистрироваться</a>
+</div></div></div>
+
+<div id="head-block">
+<IDXSKIP><div id="head-about"><a href=http://www.uhta24.ru/spravka/spravkaotzyv.php?id=1860>о проекте</a> <a href=http://www.uhta24.ru/reklama/ style="margin-left:10px;">реклама</a> <a href=http://www.uhta24.ru/forum/?id=232&page=1 style="margin-left:10px;">правила</a></div></IDXSKIP>
+<div id="head-left">
+<IDXSKIP><a style="color:#6c6c6c;text-decoration:none;font-size:9px;" href="http://m.uhta24.ru/"><img src="/images/pda.gif" title="PDA версия"> КПК-версия</a></IDXSKIP><IDXSKIP><p>
+
+<div id="informer-switch"><a id="swpogoda" href=# onClick="switchpogoda(); return false;" class=current>t&deg;</a> <a id="swkurs" href=# onClick="switchkursvalut(); return false;" class="">$</a> <a href=http://www.uhta24.ru/goroskop/>&#8776;</a></div></IDXSKIP><IDXSKIP><p>
+<div id="informer-block">
+
+
+<img src="http://www.meteoinfo.ru/informer/informer.php?ind=23606&type=1&color=215" alt="Гидрометцентр России" border="0" height="100" width="100">
+
+</div></IDXSKIP>
+
+</div>
+<IDXSKIP><table cellpadding=0 cellsapcing=0 border=0 valign=bottom><tr><td><a href="http://www.uhta24.ru"><img src=/images/logo.gif title="Ухта 24 "></a></td><td><div class="lb"><br />
+<br />
+&nbsp; &nbsp;<a href="http://uhtaprint.ru/" target="_blank"><img alt="Ухтинская полиграфия" src="/userfiles1/images/poligrafia3(1).jpg" style="width: 140px; height: 40px; float: right;" /></a><br />
+</div></td></tr></table></IDXSKIP><p>
+
+
+
+<div id="head-menu" ><IDXSKIP><a href="http://www.uhta24.ru/"> Главная </a></IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/spravka/"> Справочник </a></IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/karta/"> Карта </a></IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/novost/?page=1"> Новости </a></IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/obyavlenia/"> Объявления </a></IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/foto/"> Фото </a></IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/video/"> Видео </a></IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/avto"> Авто </a></IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/forum/"> Форум </a></IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/blogs/"> Блоги </a></IDXSKIP>
+
+</div>
+
+</div>
+
+<div style="clear:both"></div>
+
+<div id="inner">
+
+
+<p>
+<table cellpadding=0 cellspacing=0 border=0 width=100%>
+<tr>
+
+<td width=220 valign=top>
+
+
+
+<p>
+
+<div class=lb>
+<div class=comment>
+<h3>Последние комментарии</h3><p>
+электрик:    #1-    https://plus...<br><a href="http://www.uhta24.ru/forum/?id=15265">Сколько дней можно не есть?  (11)</a><p>А.Е.: Президент сайта. Стыдн...<br><a href="http://www.uhta24.ru/forum/?id=15264">Портрет Президента (12)</a><p>бабка Сороке: поднятие тарифов хоть ...<br><a href="http://www.uhta24.ru/forum/?id=15251">Чем хуже, тем дороже?  Не первоа (12)</a><p>Zinka-G: если судить по его тви...<br><a href="http://www.uhta24.ru/forum/?id=15255">Мужик пристаёт к мальчикам (52)</a><p>А.Е.: Что такое гту? Газотур...<br><a href="http://www.uhta24.ru/forum/?id=15254">В офисе коммерческой организации (56)</a><p>Розалия: Спасибо!...<br><a href="http://www.uhta24.ru/forum/?id=15262">Вопрос по пасхальной ярмарке (12)</a><p>Ещё Та: а мы от УК1 избавиться...<br><a href="http://www.uhta24.ru/forum/?id=15263">Бегом от "Ухтажилфонда"! (9)</a><p>сантехник: Я понимаю что ничего н...<br><a href="http://www.uhta24.ru/forum/?id=15008">"Добровольные" взносы к 9 мая! (84)</a><p>Zinka-G: 
+	Есть 1900 бонусов, ...<br><a href="http://www.uhta24.ru/forum/?id=6717">Бонусы Спортмастер (24)</a><p><IDXSKIP><p>
+<a href="/forum/comments.php" style="color:#ee581f;">Все комментарии</a><br></IDXSKIP>
+</div>
+</div>
+
+<IDXSKIP><div class="lb"><a href="https://vk.com/provodka_uhta?ad_id=17459572" target="_blank"><img alt="Замена проводки в Ухте" src="/userfiles1/images/provodka_uhta.gif" style="width: 200px; height: 120px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;" /></a><br />
+</div></IDXSKIP><div class="lb"><a href="https://vk.com/gurmaniya.ukhta" target="_blank"><img alt="Гурмания. Ухта. Роллы, суши, пицца" src="/userfiles1/images/Gurmania15.gif" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; height: 120px; width: 200px;" /></a><br />
+</div><p><div  class=metkiforumall style="text-align:center;text-transf33orm:capitalize;line-height:18px;">
+
+<a href="http://www.uhta24.ru/forum/?page=1&metka=3g&w=0.50377833753149" class=metki1 style="height:18px;">3g</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=a%E4%EC%E8%ED%FB&w=1.7632241813602" class=metki1 style="height:18px;">aдмины</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=iphone&w=2.7707808564232" class=metki1 style="height:18px;">iphone</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=it&w=4.2821158690176" class=metki1 style="height:18px;">it</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%E2%E8%E0&w=1.2594458438287" class=metki1 style="height:18px;">авиа</a><IDXSKIP>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%E2%F2%EE&w=100" class=metki3 style="height:18px;">авто</a></IDXSKIP>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%E2%F2%EE%E1%F3%F1&w=11.586901763224" class=metki1 style="height:18px;">автобус</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%E2%F2%EE%EC%EE%E1%E8%EB%E8%F1%F2%FB&w=8.816120906801" class=metki1 style="height:18px;">автомобилисты</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%E2%F2%EE%EC%EE%E9%EA%E0&w=1.5113350125945" class=metki1 style="height:18px;">автомойка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%E2%F2%EE%F1%E0%EB%EE%ED&w=2.2670025188917" class=metki1 style="height:18px;">автосалон</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%E2%F2%EE%F1%E5%F0%E2%E8%F1&w=13.60201511335" class=metki1 style="height:18px;">автосервис</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%E2%F2%EE%F1%F2%EE%FF%ED%EA%E8&w=4.0302267002519" class=metki1 style="height:18px;">автостоянки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%E2%F2%EE%F8%EA%EE%EB%E0&w=2.7707808564232" class=metki1 style="height:18px;">автошкола</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%EB%EA%EE%E3%EE%EB%FC&w=6.2972292191436" class=metki1 style="height:18px;">алкоголь</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%EF%F2%E5%EA%E0&w=1.5113350125945" class=metki1 style="height:18px;">аптека</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%EF%F2%E5%EA%E8&w=0.50377833753149" class=metki1 style="height:18px;">аптеки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%F0%E5%ED%E4%E0&w=3.2745591939547" class=metki1 style="height:18px;">аренда</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%F0%EC%E8%FF&w=1.007556675063" class=metki1 style="height:18px;">армия</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%F2%E5%EB%FC%E5&w=0.50377833753149" class=metki1 style="height:18px;">ателье</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%F4%E8%F8%E0&w=5.0377833753149" class=metki1 style="height:18px;">афиша</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E0%FD%F0%EE%EF%EE%F0%F2&w=0.50377833753149" class=metki1 style="height:18px;">аэропорт</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E1%E0%EB%EA%EE%ED&w=3.0226700251889" class=metki1 style="height:18px;">балкон</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E1%E0%ED%EA%E8&w=15.617128463476" class=metki1 style="height:18px;">банки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E1%E0%ED%FF&w=0.75566750629723" class=metki1 style="height:18px;">баня</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E1%E5%ED%E7%E8%ED&w=0.50377833753149" class=metki1 style="height:18px;">бензин</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E1%E8%E7%ED%E5%F1&w=24.433249370277" class=metki2 style="height:18px;">бизнес</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E1%E8%EB%E5%F2%FB&w=4.0302267002519" class=metki1 style="height:18px;">билеты</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E1%EB%E0%E3%EE%F2%E2%EE%F0%E8%F2%E5%EB%FC%ED%EE%F1%F2%FC&w=9.3198992443325" class=metki1 style="height:18px;">благотворительность</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E2%E0%EA%E0%ED%F1%E8%E8&w=0.50377833753149" class=metki1 style="height:18px;">вакансии</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E2%E5%EB%EE%F1%E8%EF%E5%E4&w=4.7858942065491" class=metki1 style="height:18px;">велосипед</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E2%E5%F2%EB%EE%F1%FF%ED&w=0.50377833753149" class=metki1 style="height:18px;">ветлосян</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E2%E8%E4%E5%EE&w=1.007556675063" class=metki1 style="height:18px;">видео</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E2%EB%E0%F1%F2%FC&w=47.607052896725" class=metki2 style="height:18px;">власть</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E2%EE%E4%E0&w=9.0680100755668" class=metki1 style="height:18px;">вода</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E2%EE%E4%ED%FB%E9&w=1.2594458438287" class=metki1 style="height:18px;">водный</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E2%F3%EA%F2%FB%EB&w=0.50377833753149" class=metki1 style="height:18px;">вуктыл</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E2%FB%E1%EE%F0%FB&w=4.0302267002519" class=metki1 style="height:18px;">выборы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%E0%E4%E0%EB%EA%E0&w=0.50377833753149" class=metki1 style="height:18px;">гадалка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%E0%E7&w=1.007556675063" class=metki1 style="height:18px;">газ</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%E0%E7%EF%F0%EE%EC&w=1.007556675063" class=metki1 style="height:18px;">газпром</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%E0%E9%E7%E5%F0&w=0.75566750629723" class=metki1 style="height:18px;">гайзер</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%E0%F0%E0%E6&w=1.007556675063" class=metki1 style="height:18px;">гараж</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%E8%E1%E4%E4&w=10.831234256927" class=metki1 style="height:18px;">гибдд</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%EE%EB%EE%EB%E5%E4&w=0.75566750629723" class=metki1 style="height:18px;">гололед</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%EE%F1%F2%E8%ED%E8%F6%E0&w=0.50377833753149" class=metki1 style="height:18px;">гостиница</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%F0%E0%F4%F4%E8%F2%E8&w=1.007556675063" class=metki1 style="height:18px;">граффити</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%F0%E8%E1%FB&w=1.7632241813602" class=metki1 style="height:18px;">грибы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%F0%F3%E7%EE%EF%E5%F0%E5%E2%EE%E7%EA%E8&w=1.2594458438287" class=metki1 style="height:18px;">грузоперевозки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E3%F0%F3%E7%EE%EF%F0%E5%E2%EE%E7%EA%E8&w=0.75566750629723" class=metki1 style="height:18px;">грузопревозки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%E0%EB%FC%ED%E8%E9&w=0.75566750629723" class=metki1 style="height:18px;">дальний</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%E0%F2%E0&w=1.007556675063" class=metki1 style="height:18px;">дата</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%E0%F7%E0&w=39.546599496222" class=metki2 style="height:18px;">дача</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%E2%E5%F0%E8&w=8.816120906801" class=metki1 style="height:18px;">двери</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%E2%EE%F0&w=2.2670025188917" class=metki1 style="height:18px;">двор</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%E2%EE%F0%E5%F6&w=0.75566750629723" class=metki1 style="height:18px;">дворец</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%E5%F2%E8&w=56.423173803526" class=metki3 style="height:18px;">дети</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%E5%F2%F1%EA%E8%E9+%F1%E0%E4&w=11.083123425693" class=metki1 style="height:18px;">детский сад</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%E8%E7%E0%E9%ED&w=0.75566750629723" class=metki1 style="height:18px;">дизайн</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%EE%EA%F3%EC%E5%ED%F2%FB&w=11.335012594458" class=metki1 style="height:18px;">документы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%EE%EC&w=5.7934508816121" class=metki1 style="height:18px;">дом</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%EE%EC+%E8+%E1%FB%F2&w=27.455919395466" class=metki2 style="height:18px;">дом и быт</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%EE%EC%EE%F4%EE%ED&w=0.50377833753149" class=metki1 style="height:18px;">домофон</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%EE%F0%EE%E3%E8&w=30.730478589421" class=metki2 style="height:18px;">дороги</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%EE%F0%EE%E6%ED%FB%E5+%E7%ED%E0%EA%E8&w=1.2594458438287" class=metki1 style="height:18px;">дорожные знаки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%EE%F1%F2%E0%E2%EA%E0&w=2.2670025188917" class=metki1 style="height:18px;">доставка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%EE%F1%F3%E3&w=2.7707808564232" class=metki1 style="height:18px;">досуг</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E4%F2%EF&w=1.7632241813602" class=metki1 style="height:18px;">дтп</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E5%E4%E0&w=16.624685138539" class=metki1 style="height:18px;">еда</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E6%E4&w=6.0453400503778" class=metki1 style="height:18px;">жд</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E6%E5%ED.%EA%EE%ED%F1%F3%EB%FC%F2%E0%F6%E8%FF&w=1.2594458438287" class=metki1 style="height:18px;">жен.консультация</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E6%E8%E2%EE%F2%ED%FB%E5&w=37.027707808564" class=metki2 style="height:18px;">животные</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E6%E8%E7%ED%FC&w=0.50377833753149" class=metki1 style="height:18px;">жизнь</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E6%EA%F5&w=60.705289672544" class=metki3 style="height:18px;">жкх</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E7%E0%E2%E5%E4%E5%ED%E8%FF&w=20.654911838791" class=metki2 style="height:18px;">заведения</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E7%E0%EA%EE%ED&w=5.2896725440806" class=metki1 style="height:18px;">закон</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E7%E0%EF%F0%E0%E2%EA%E8&w=0.50377833753149" class=metki1 style="height:18px;">заправки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E7%E0%F0%F3%E1%E5%E6%EE%EC&w=0.75566750629723" class=metki1 style="height:18px;">зарубежом</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E7%E4%EE%F0%EE%E2%FC%E5&w=80.100755667506" class=metki3 style="height:18px;">здоровье</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E7%E5%EC%EB%FF&w=3.5264483627204" class=metki1 style="height:18px;">земля</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E7%E5%F0%FE%ED%EE%E2%E0&w=0.50377833753149" class=metki1 style="height:18px;">зерюнова</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E7%E8%EC%E0&w=4.5340050377834" class=metki1 style="height:18px;">зима</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E7%ED%E0%EA%EE%EC%F1%F2%E2%E0&w=1.007556675063" class=metki1 style="height:18px;">знакомства</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E8%E3%F0%F3%F8%EA%E8&w=3.5264483627204" class=metki1 style="height:18px;">игрушки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E8%EC%E5%ED%E0&w=2.5188916876574" class=metki1 style="height:18px;">имена</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E8%ED%F1%F2%F0%F3%EC%E5%ED%F2&w=0.50377833753149" class=metki1 style="height:18px;">инструмент</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E8%ED%F2%E5%F0%ED%E5%F2&w=32.493702770781" class=metki2 style="height:18px;">интернет</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E8%ED%F2%E5%F0%ED%E5%F2%EC%E0%E3%E0%E7%E8%ED&w=5.0377833753149" class=metki1 style="height:18px;">интернетмагазин</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E8%F1%F2%EE%F0%E8%FF&w=2.5188916876574" class=metki1 style="height:18px;">история</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%E8%F9%F3+%F2%E5%E1%FF&w=0.75566750629723" class=metki1 style="height:18px;">ищу тебя</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%E0%E7%E0%F0%F6%E5%E2&w=0.75566750629723" class=metki1 style="height:18px;">казарцев</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%E0%ED%F6%F2%EE%E2%E0%F0%FB&w=0.50377833753149" class=metki1 style="height:18px;">канцтовары</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%E0%F2%EE%EA&w=1.007556675063" class=metki1 style="height:18px;">каток</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%E0%F4%E5&w=1.007556675063" class=metki1 style="height:18px;">кафе</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%E8%ED%EE&w=9.823677581864" class=metki1 style="height:18px;">кино</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%E8%F0%EE%E2&w=2.5188916876574" class=metki1 style="height:18px;">киров</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%ED%E8%E3%E8&w=2.5188916876574" class=metki1 style="height:18px;">книги</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%EE%EC%EF%E0%ED%E8%E8&w=0.75566750629723" class=metki1 style="height:18px;">компании</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%EE%EC%EF%FC%FE%F2%E5%F0&w=15.617128463476" class=metki1 style="height:18px;">компьютер</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%EE%ED%F6%E5%F0%F2&w=1.2594458438287" class=metki1 style="height:18px;">концерт</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%EE%F0%F0%F3%EF%F6%E8%FF&w=0.75566750629723" class=metki1 style="height:18px;">коррупция</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%F0%E0%F1%EE%F2%E0&w=16.372795969773" class=metki1 style="height:18px;">красота</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%F0%E5%E4%E8%F2&w=8.816120906801" class=metki1 style="height:18px;">кредит</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%F0%E8%E7%E8%F1&w=1.007556675063" class=metki1 style="height:18px;">кризис</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%F0%F3%E6%EA%E8&w=1.7632241813602" class=metki1 style="height:18px;">кружки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%F3%EB%FC%F2%F3%F0%E0&w=11.586901763224" class=metki1 style="height:18px;">культура</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%F3%F0%E5%ED%E8%E5&w=2.7707808564232" class=metki1 style="height:18px;">курение</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%F3%F0%F1%FB&w=0.75566750629723" class=metki1 style="height:18px;">курсы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EA%F3%F5%ED%FF&w=1.7632241813602" class=metki1 style="height:18px;">кухня</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EB%E5%E4%E8&w=31.738035264484" class=metki2 style="height:18px;">леди</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EB%E5%EE%ED%EE%E2&w=1.7632241813602" class=metki1 style="height:18px;">леонов</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EB%E5%F2%EE&w=1.5113350125945" class=metki1 style="height:18px;">лето</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EB%E8%F4%F2&w=0.50377833753149" class=metki1 style="height:18px;">лифт</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EB%EE%E3%EE%EF%E5%E4&w=0.75566750629723" class=metki1 style="height:18px;">логопед</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EB%FB%E6%E8&w=0.75566750629723" class=metki1 style="height:18px;">лыжи</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EB%FC%E3%EE%F2%FB&w=0.50377833753149" class=metki1 style="height:18px;">льготы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%2B%E6&w=1.2594458438287" class=metki1 style="height:18px;">м+ж</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%E0%E3%E0%E7%E8%ED%FB&w=27.959697732997" class=metki2 style="height:18px;">магазины</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%E0%F0%EA%E5%F2&w=57.178841309824" class=metki3 style="height:18px;">маркет</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%E0%F0%EA%E5%F2%E8%ED%E3&w=0.50377833753149" class=metki1 style="height:18px;">маркетинг</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%E5%E1%E5%EB%FC&w=14.609571788413" class=metki1 style="height:18px;">мебель</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%E8%EB%E8%F6%E8%FF&w=0.75566750629723" class=metki1 style="height:18px;">милиция</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%EE%E1%E8%EB%FC%ED%FB%E9&w=12.342569269521" class=metki1 style="height:18px;">мобильный</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%EE%EB%EE%E4%E5%E6%FC&w=1.007556675063" class=metki1 style="height:18px;">молодежь</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%EE%F8%E5%ED%ED%E8%F7%E5%F1%F2%E2%EE&w=2.5188916876574" class=metki1 style="height:18px;">мошенничество</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%F2%F1&w=2.5188916876574" class=metki1 style="height:18px;">мтс</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EC%F3%E7%FB%EA%E0&w=7.5566750629723" class=metki1 style="height:18px;">музыка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%ED%E0%EB%EE%E3&w=4.5340050377834" class=metki1 style="height:18px;">налог</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%ED%E0%EB%EE%E3%E8&w=0.50377833753149" class=metki1 style="height:18px;">налоги</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%ED%E0%F0%EA%EE%F2%E8%EA%E8&w=0.50377833753149" class=metki1 style="height:18px;">наркотики</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%ED%E0%F8+%E3%EE%F0%EE%E4&w=9.823677581864" class=metki1 style="height:18px;">наш город</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%ED%E5%E4%E2%E8%E6%E8%EC%EE%F1%F2%FC&w=84.130982367758" class=metki3 style="height:18px;">недвижимость</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%ED%EE%E2%EE%F1%F2%E8&w=2.5188916876574" class=metki1 style="height:18px;">новости</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%ED%EE%E2%EE%F1%F2%F0%EE%E9&w=1.5113350125945" class=metki1 style="height:18px;">новострой</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%ED%EE%E2%FB%E9+%E3%EE%E4&w=4.7858942065491" class=metki1 style="height:18px;">новый год</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%ED%F3%E6%ED%E0+%EF%EE%EC%EE%F9%FC&w=0.75566750629723" class=metki1 style="height:18px;">нужна помощь</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%E1%F0%E0%E7%EE%E2%E0%ED%E8%E5&w=32.241813602015" class=metki2 style="height:18px;">образование</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%E1%F0%E0%F9%E5%ED%E8%E5&w=10.831234256927" class=metki1 style="height:18px;">обращение</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%E1%F0%E0%F9%E5%ED%E8%FF&w=1.007556675063" class=metki1 style="height:18px;">обращения</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%E1%F3%E2%FC&w=6.0453400503778" class=metki1 style="height:18px;">обувь</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%E1%F9%E5%F1%F2%E2%EE&w=2.0151133501259" class=metki1 style="height:18px;">общество</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%E4%E5%E6%E4%E0&w=11.83879093199" class=metki1 style="height:18px;">одежда</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%EA%ED%E0&w=6.8010075566751" class=metki1 style="height:18px;">окна</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%EB%E8%EC%EF%E8%E0%E4%E0&w=2.0151133501259" class=metki1 style="height:18px;">олимпиада</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%F0%F3%E6%E8%E5&w=1.007556675063" class=metki1 style="height:18px;">оружие</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%F1%E2%E5%F9%E5%ED%E8%E5&w=1.7632241813602" class=metki1 style="height:18px;">освещение</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%F2%E4%E0%EC%2F%EF%F0%EE%E4%E0%EC%2F%EA%F3%EF%EB%FE&w=0.75566750629723" class=metki1 style="height:18px;">отдам/продам/куплю</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%F2%E4%FB%F5&w=29.974811083123" class=metki2 style="height:18px;">отдых</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%F2%EE%EF%EB%E5%ED%E8%E5&w=4.0302267002519" class=metki1 style="height:18px;">отопление</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%F2%EF%F3%F1%EA&w=36.775818639798" class=metki2 style="height:18px;">отпуск</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EE%F5%EE%F2%E0&w=2.0151133501259" class=metki1 style="height:18px;">охота</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%E0%F0%EA&w=1.7632241813602" class=metki1 style="height:18px;">парк</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%E0%F1%EF%EE%F0%F2&w=0.75566750629723" class=metki1 style="height:18px;">паспорт</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%E0%F1%F1%E0%E6&w=0.50377833753149" class=metki1 style="height:18px;">пассаж</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%E5%ED%F1%E8%FF&w=3.7783375314861" class=metki1 style="height:18px;">пенсия</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%E5%F0%E5%E5%E7%E4&w=8.5642317380353" class=metki1 style="height:18px;">переезд</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%E5%F0%E5%EF%EB%E0%ED%E8%F0%EE%E2%EA%E0&w=2.0151133501259" class=metki1 style="height:18px;">перепланировка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%E5%F0%F1%EE%ED%FB&w=0.75566750629723" class=metki1 style="height:18px;">персоны</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%E5%F8%E5%F5%EE%E4%FB&w=0.50377833753149" class=metki1 style="height:18px;">пешеходы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%E8%E2%EE&w=1.2594458438287" class=metki1 style="height:18px;">пиво</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%E1%E5%E4%E0&w=3.0226700251889" class=metki1 style="height:18px;">победа</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%E3%EE%E4%E0&w=2.0151133501259" class=metki1 style="height:18px;">погода</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%E4%E0%F0%EA%E8&w=2.7707808564232" class=metki1 style="height:18px;">подарки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%E4%E0%F0%EE%EA&w=0.50377833753149" class=metki1 style="height:18px;">подарок</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%E4%FA%E5%E7%E4&w=1.007556675063" class=metki1 style="height:18px;">подъезд</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%E6%E0%F0&w=2.5188916876574" class=metki1 style="height:18px;">пожар</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%EB&w=4.0302267002519" class=metki1 style="height:18px;">пол</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%EB%E8%F2%E8%EA%E0&w=4.5340050377834" class=metki1 style="height:18px;">политика</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%EB%E8%F6%E8%FF&w=3.5264483627204" class=metki1 style="height:18px;">полиция</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%F2%EE%EB%EA%E8&w=2.0151133501259" class=metki1 style="height:18px;">потолки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%F2%F0%E5%E1%E8%F2%E5%EB%FE&w=1.5113350125945" class=metki1 style="height:18px;">потребителю</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%F5%EE%F0%EE%ED%FB&w=0.50377833753149" class=metki1 style="height:18px;">похороны</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%EE%F7%F2%E0&w=0.75566750629723" class=metki1 style="height:18px;">почта</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%F0%E0%E7%E4%ED%E8%EA&w=24.433249370277" class=metki2 style="height:18px;">праздник</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%F0%E0%E7%E4%ED%E8%EA%E8&w=0.50377833753149" class=metki1 style="height:18px;">праздники</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%F0%E5%E4%EF%F0%E8%FF%F2%E8%FF&w=6.2972292191436" class=metki1 style="height:18px;">предприятия</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%F0%E8%F0%EE%E4%E0&w=5.2896725440806" class=metki1 style="height:18px;">природа</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%F0%EE%E1%EB%E5%EC%E0&w=7.5566750629723" class=metki1 style="height:18px;">проблема</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%F0%EE%E4%F3%EA%F2%FB&w=18.387909319899" class=metki1 style="height:18px;">продукты</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%F0%EE%E8%F1%F8%E5%F1%F2%E2%E8%FF&w=29.219143576826" class=metki2 style="height:18px;">происшествия</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%EF%F0%EE%EA%E0%F2&w=3.2745591939547" class=metki1 style="height:18px;">прокат</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F0%E0%E1%EE%F2%E0&w=43.828715365239" class=metki2 style="height:18px;">работа</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F0%E0%E4%E8%EE&w=0.75566750629723" class=metki1 style="height:18px;">радио</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F0%E5%EA%EB%E0%EC%E0&w=5.5415617128463" class=metki1 style="height:18px;">реклама</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F0%E5%EB%E8%E3%E8%FF&w=4.7858942065491" class=metki1 style="height:18px;">религия</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F0%E5%EC%EE%ED%F2&w=43.828715365239" class=metki2 style="height:18px;">ремонт</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F0%E5%EF%E5%F2%E8%F2%EE%F0&w=0.75566750629723" class=metki1 style="height:18px;">репетитор</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F0%E5%EF%E5%F2%E8%F2%EE%F0%FB&w=2.5188916876574" class=metki1 style="height:18px;">репетиторы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F0%E8%E5%EB%F2%EE%F0%FB&w=2.0151133501259" class=metki1 style="height:18px;">риелторы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F0%FB%E1%E0%EB%EA%E0&w=4.0302267002519" class=metki1 style="height:18px;">рыбалка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%E0%EC%EE%EB%E5%F2&w=1.2594458438287" class=metki1 style="height:18px;">самолет</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%E0%EC%EE%EE%E1%EE%F0%EE%ED%E0&w=0.75566750629723" class=metki1 style="height:18px;">самооборона</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%E0%ED%E3%EE%F0%EE%E4%EE%EA&w=0.50377833753149" class=metki1 style="height:18px;">сангородок</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%E0%ED%F3%E7%E5%EB&w=1.2594458438287" class=metki1 style="height:18px;">санузел</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%E2%E0%E4%FC%E1%E0&w=7.5566750629723" class=metki1 style="height:18px;">свадьба</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%E2%E5%F2&w=2.7707808564232" class=metki1 style="height:18px;">свет</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%E2%FF%E7%FC&w=0.75566750629723" class=metki1 style="height:18px;">связь</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%E5%EC%FC%FF&w=16.876574307305" class=metki1 style="height:18px;">семья</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%E8%E3%ED%E0%EB%E8%E7%E0%F6%E8%FF&w=1.007556675063" class=metki1 style="height:18px;">сигнализация</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EA%E8%E4%EA%E0&w=0.50377833753149" class=metki1 style="height:18px;">скидка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EA%E8%E4%EA%E8&w=0.75566750629723" class=metki1 style="height:18px;">скидки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EB%F3%F5%E8&w=0.75566750629723" class=metki1 style="height:18px;">слухи</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EC%E8&w=12.594458438287" class=metki1 style="height:18px;">сми</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EC%FB%F1%EB&w=0.75566750629723" class=metki1 style="height:18px;">смысл</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%ED%E5%E3%EE%F5%EE%E4&w=0.50377833753149" class=metki1 style="height:18px;">снегоход</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%ED%FF%F2%FC+%E6%E8%EB%FC%E5&w=1.7632241813602" class=metki1 style="height:18px;">снять жилье</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EE%E1%E0%EA%E8&w=1.7632241813602" class=metki1 style="height:18px;">собаки</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EE%F1%E5%E4%E8&w=8.5642317380353" class=metki1 style="height:18px;">соседи</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EE%F1%ED%EE%E3%EE%F0%F1%EA&w=1.2594458438287" class=metki1 style="height:18px;">сосногорск</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EE%F6%E8%F3%EC&w=74.55919395466" class=metki3 style="height:18px;">социум</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EFo%F0%F2&w=9.5717884130982" class=metki1 style="height:18px;">спoрт</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EF%EE%F0%F2&w=21.158690176322" class=metki2 style="height:18px;">спорт</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%EF%F0%E0%E2%EA%E0&w=3.2745591939547" class=metki1 style="height:18px;">справка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%F2%E8%F5%E8&w=0.75566750629723" class=metki1 style="height:18px;">стихи</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%F2%EE%EC%E0%F2%EE%EB%EE%E3%E8%FF&w=5.5415617128463" class=metki1 style="height:18px;">стоматология</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%F2%F0%E0%F5%EE%E2%EA%E0&w=2.7707808564232" class=metki1 style="height:18px;">страховка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%F2%F0%EE%E9%EA%E0&w=10.831234256927" class=metki1 style="height:18px;">стройка</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%F3%E2%E5%ED%E8%F0%FB&w=1.7632241813602" class=metki1 style="height:18px;">сувениры</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%F3%E4&w=1.2594458438287" class=metki1 style="height:18px;">суд</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F1%FB%EA%F2%FB%E2%EA%E0%F0&w=1.7632241813602" class=metki1 style="height:18px;">сыктывкар</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F2%E0%EA%F1%E8&w=5.0377833753149" class=metki1 style="height:18px;">такси</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F2%E0%ED%F6%FB&w=0.50377833753149" class=metki1 style="height:18px;">танцы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F2%E5%EB%E5%E2%E8%E4%E5%ED%E8%E5&w=8.5642317380353" class=metki1 style="height:18px;">телевидение</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F2%E5%EF%EB%EE&w=2.0151133501259" class=metki1 style="height:18px;">тепло</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F2%E5%F5%ED%E8%EA%E0&w=42.317380352645" class=metki2 style="height:18px;">техника</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F2%E8%EC%E0%ED%F1%EA%E0%FF&w=2.0151133501259" class=metki1 style="height:18px;">тиманская</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F2%F0%E0%ED%F1%EF%EE%F0%F2&w=24.685138539043" class=metki2 style="height:18px;">транспорт</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F2%F1%E6&w=1.2594458438287" class=metki1 style="height:18px;">тсж</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F2%F3%F0%E8%E7%EC&w=0.50377833753149" class=metki1 style="height:18px;">туризм</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F3%E3%F2%F3&w=2.2670025188917" class=metki1 style="height:18px;">угту</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F3%EA%F0%E0%E8%ED%E0&w=2.2670025188917" class=metki1 style="height:18px;">украина</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F3%F1%EB%F3%E3%E8&w=35.012594458438" class=metki2 style="height:18px;">услуги</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F3%F7%E5%E1%ED%E8%EA%E8&w=0.50377833753149" class=metki1 style="height:18px;">учебники</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F4%E8%ED%E0%ED%F1%FB&w=19.899244332494" class=metki1 style="height:18px;">финансы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F4%EE%F0%F3%EC&w=0.75566750629723" class=metki1 style="height:18px;">форум</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F4%EE%F2%EE&w=7.808564231738" class=metki1 style="height:18px;">фото</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F4%F3%F2%E1%EE%EB&w=3.0226700251889" class=metki1 style="height:18px;">футбол</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F5%EE%E1%E1%E8&w=7.3047858942065" class=metki1 style="height:18px;">хобби</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F5%F0%E0%EC&w=1.7632241813602" class=metki1 style="height:18px;">храм</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F6%E2%E5%F2%FB&w=1.7632241813602" class=metki1 style="height:18px;">цветы</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F6%E5%ED%FB&w=1.007556675063" class=metki1 style="height:18px;">цены</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F6%EE%EA&w=0.50377833753149" class=metki1 style="height:18px;">цок</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F8%EA%EE%EB%E0&w=31.486146095718" class=metki2 style="height:18px;">школа</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F8%F3%E1%E0&w=1.5113350125945" class=metki1 style="height:18px;">шуба</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%F8%F3%E4%E0%FF%E3&w=0.50377833753149" class=metki1 style="height:18px;">шудаяг</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%FD%EA%EE%EB%EE%E3%E8%FF&w=3.0226700251889" class=metki1 style="height:18px;">экология</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%FD%EA%EE%ED%EE%EC%E8%EA%E0&w=2.2670025188917" class=metki1 style="height:18px;">экономика</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%FD%EB%E5%EA%F2%F0%E8%F7%E5%F1%F2%E2%EE&w=0.75566750629723" class=metki1 style="height:18px;">электричество</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%FE%EC%EE%F0&w=3.7783375314861" class=metki1 style="height:18px;">юмор</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%FE%F0%E8%F1%F2&w=6.0453400503778" class=metki1 style="height:18px;">юрист</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%FF%F0%E5%E3%E0&w=2.7707808564232" class=metki1 style="height:18px;">ярега</a>&nbsp; &nbsp;<a href="http://www.uhta24.ru/forum/?page=1&metka=%FF%F0%EC%E0%F0%EA%E0&w=0.50377833753149" class=metki1 style="height:18px;">ярмарка</a><IDXSKIP>&nbsp; &nbsp;</IDXSKIP></div>
+<p>
+
+
+
+
+
+</td>
+<td valign=top>
+<table width=100% cellpadding="7" border=0>
+	<tr>
+	<td>
+<div id=centrcol>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tbody>
+		<tr>
+			<IDXSKIP><td>
+				&nbsp;</td></IDXSKIP>
+			<IDXSKIP><td style="text-align: right">
+				&nbsp;</td></IDXSKIP>
+			<td style="text-align: right">
+				<table align="right" border="0" cellpadding="0" cellspacing="0">
+					<tbody>
+						<tr>
+							<IDXSKIP><td>
+								&nbsp;</td></IDXSKIP>
+							<IDXSKIP><td>
+								&nbsp;</td></IDXSKIP>
+							<td style="vertical-align: middle;">
+								<span style="color:#008000;"><IDXSKIP><a class="ba" href="http://www.uhta24.ru/forum//text/?id=189"><span style="color:#808080;"><u>Правила форума</u></span></a></IDXSKIP><IDXSKIP>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</IDXSKIP></span></td>
+						</tr>
+					</tbody>
+				</table>
+				<IDXSKIP>&nbsp; &nbsp; &nbsp;</IDXSKIP></td>
+		</tr>
+	</tbody>
+</table>
+<IDXSKIP><table width=100% cellpadding=0 cellspacing=0 border=0><tr><td class="sprav" width=300>Форум&nbsp;&nbsp;</td><td valign=middle align=right><table><tr><td ><a href="/forum/" class="addb">Все&nbsp;темы&nbsp;форума</a></td><td><img src=/images/forum.gif></td></tr></table></td></tr></table></IDXSKIP>
+	
+<br><div id=metkirub class=metkiforum>
+<IDXSKIP><span class=metkirforum>главные метки</span></IDXSKIP><p>
+<IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=A%E4%EC%E8%ED%FB" class=metki1>Aдмины</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%C1%E8%E7%ED%E5%F1" class=metki1>Бизнес</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%C2%EB%E0%F1%F2%FC" class=metki1>Власть</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%C4%E0%F7%E0" class=metki1>Дача</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%C4%E5%F2%E8" class=metki1>Дети</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%C6%E8%E2%EE%F2%ED%FB%E5" class=metki1>Животные</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%C6%CA%D5" class=metki1>ЖКХ</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%C7%E4%EE%F0%EE%E2%FC%E5" class=metki1>Здоровье</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CA%EE%EC%EF%FC%FE%F2%E5%F0" class=metki1>Компьютер</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CA%F3%EB%FC%F2%F3%F0%E0" class=metki1>Культура</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CB%E5%E4%E8" class=metki1>Леди</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CC%E0%F0%EA%E5%F2" class=metki1>Маркет</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CD%E0%F8+%E3%EE%F0%EE%E4" class=metki1>Наш город</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CD%E5%E4%E2%E8%E6%E8%EC%EE%F1%F2%FC" class=metki1>Недвижимость</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CE%E1%F0%E0%E7%EE%E2%E0%ED%E8%E5" class=metki1>Образование</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CE%F2%E4%FB%F5" class=metki1>Отдых</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CF%F0%E5%E4%EF%F0%E8%FF%F2%E8%FF" class=metki1>Предприятия</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CF%F0%E8%F0%EE%E4%E0" class=metki1>Природа</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CF%F0%EE%E1%EB%E5%EC%E0" class=metki1>Проблема</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%CF%F0%EE%E8%F1%F8%E5%F1%F2%E2%E8%FF" class=metki1>Происшествия</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%D0%E0%E1%EE%F2%E0" class=metki1>Работа</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%D0%E5%EC%EE%ED%F2" class=metki1>Ремонт</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%D1%CC%C8" class=metki1>СМИ</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%D1%EE%F6%E8%F3%EC" class=metki1>Социум</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%D1%EFo%F0%F2" class=metki1>Спoрт</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%D1%EF%F0%E0%E2%EA%E0" class=metki1>Справка</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%D2%E5%F5%ED%E8%EA%E0" class=metki1>Техника</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%D2%F0%E0%ED%F1%EF%EE%F0%F2" class=metki1>Транспорт</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%D4%E8%ED%E0%ED%F1%FB" class=metki1>Финансы</a></IDXSKIP> <IDXSKIP><a href="http://www.uhta24.ru/forum/?page=1&metka=%DE%EC%EE%F0" class=metki1>Юмор</a></IDXSKIP> </div>
+
+<p><p>Тема: <span style="font-size:14px;font-weight:bold;color:#4a4d4e">Объединение лоджии с квартирой.</span><p><div  class=cou1><div class=couimg><img  width=24  vspace=1  src=/auth/userfoto/th/10188.jpg></div><div ><table border=0 cellpadding=2 cellspacing=2><tr><td><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b> </a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 07:23</span></td><td width=50>&nbsp;&nbsp;&nbsp;</td></tr><tr><td >Уважаемые форумчане, кто-нибудь совершал сие действие в своей квартире? Справляется ли существующее отопление с новой нагрузкой - не холоднее ли зимой стало? Сколько утеплителя закладывали, что с остеклением делали?</td><td></td></tr></table></div></div><p style="clear:both;"></p><div style="clear:both;">
+<style>
+
+a.pha
+{
+padding:5px;margin:5px;border:1px solid #cccccc;width:100px;height:115px;text-align:center;
+text-decoration:none;
+}
+a:hover.pha
+{
+background:#eeeeee;
+}
+</style>
+
+<div class=phbox><a class=pha href="/foto/foto.php?id=23230&id_tema=6024"><img src=http://www.uhta24.ru/foto/files/th/23230.jpg></a></div>
+<div class=phbox><a class=pha href="/foto/foto.php?id=23229&id_tema=6024"><img src=http://www.uhta24.ru/foto/files/th/23229.jpg></a></div>
+<div class=phbox><a class=pha href="/foto/foto.php?id=23228&id_tema=6024"><img src=http://www.uhta24.ru/foto/files/th/23228.jpg></a></div>
+
+ <IDXSKIP><p>&nbsp;</p></IDXSKIP><IDXSKIP><p>&nbsp;</p></IDXSKIP><IDXSKIP><p>&nbsp;</p></IDXSKIP>
+&nbsp;&nbsp;<a href="/foto/list.php?id_tema=6024" style="color:#ee581f;">все фото</a><p>&nbsp;&nbsp;<a href="/foto/add.php?id_tema=6024" style="color:#ee581f;">добавить фото</a><br>
+</div>
+
+<p style="clear:both;"></p>
+<p>
+<p><div style="font-size:9px;color:#666666;padding-top:2px;"><img src=/images/posetiteli.gif alt=""> Посетителей:<span style="color:#3172a8">4310</span></div><br>&nbsp;
+<div style="display:block;padding:4px;border:1px solid #cccccc;float:left;color:#547e9b" id="cself6024">Общая оценка темы <span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528" title="+2  -1">&nbsp;1</span>&nbsp;<img src=/images/best_gray.gif alt="Хорошая" title="Хорошая">&nbsp;<img src=/images/bad_gray.gif alt="Плохая" title="Плохая"></div><br style="clear:both;"/><br><div id=notifyd  style="color:#666666"></div><IDXSKIP><p style="clear:both;">&nbsp;</p></IDXSKIP><p><a name=commentblocktop></a><div class="coh"><img src="/images/otziv.gif" alt=""> <IDXSKIP>Комментарии:&nbsp;</IDXSKIP><span style="font-size:9px;color:#3172a8">40</span><IDXSKIP>&nbsp;&nbsp;&nbsp;<span style="font-size:9px;color:#666666;padding-left:10px;">Сортировка по дате:</span></IDXSKIP><img src="/images/strelka_vniz_s.gif"><a href="?id=6024&sort=st"><img src="/images/strelka_verh.gif"></a><IDXSKIP>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</IDXSKIP><IDXSKIP><a href="#commentblock1" style="font-size:11px;color:#ee581f;font-weight:normal">#Комментировать</a></IDXSKIP></div><IDXSKIP><div class="yashare">
+<div>
+Поделиться:
+</div>
+<script type="text/javascript"src="//yandex.st/share/share.js"
+charset="utf-8">
+</script>
+<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none"
+data-yashareQuickServices="vkontakte,facebook,odnoklassniki,twitter,gplus">
+</div>
+</div></IDXSKIP>
+<p>
+<table  border=0 cellpadding=3 cellspacing=0 class=pageb><tr><td>Страницы:&nbsp;&nbsp;<a class="curp" href="?id=6024&cpage=1#commentblocktop">1</a>&nbsp; </td></tr></table><p><script language="JavaScript">
+<!--
+function showcomment(obj,idcom)
+{
+obj.style.visibility = 'hidden'; 
+obj.style.display = 'none'; 
+document.getElementById(idcom).style.visibility = 'visible'; 
+document.getElementById(idcom).style.display = 'block'; 
+}
+function QAotvet(idvopros)
+{
+//document.getElementById('idprrnt').value=idvopros;
+document.commentform3.id_parrent.value=idvopros; //error if not log in
+//window.location.href="#commentblock1";
+document.getElementById('cf3').scrollIntoView(true);
+iddivc="t"+idvopros;
+document.getElementById('vpr3').innerHTML=document.getElementById(iddivc).innerHTML;
+document.getElementById('ted').innerHTML="Комментировать:";
+}
+
+//-->
+
+</script>
+
+<a name=c748595></a><div id="sc748595"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/6664.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=6664" class=ltu><b>Serj</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 08:52</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748595#c748595">#1</a> </div></td><td  width=45><div style="width:50px;" id="c748595"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748595>Медведь, а ты не боишься несущую стену сносить?</div></td><td></td></tr></table></div><br><a name=c748599></a><div id="sc748599"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 08:57</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748599#c748599">#2</a> </div></td><td  width=45><div style="width:50px;" id="c748599"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;1</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748599>)))Несущая стена не трогается, просто убирается дверь и окно между лоджией и комнатой, лоджия утепляется. В Ухте знаю мнго так делали уже люди.</div></td><td></td></tr></table></div><br><a name=c748609></a><div id="sc748609"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/3571.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=3571" class=ltu><b>bomb13</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 09:31</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748609#c748609">#3</a> </div></td><td  width=45><div style="width:50px;" id="c748609"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;3</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748609>отопление справляется если хорошо утеплить. Но если хорошо (толсто) утеплить то нет смысла так как нет выигрыша площади. Да и вообще гемора много и по моему яйцо не стоит выделки!!
+ Не забудьте в БТИ сгонять за разрешением.</div></td><td></td></tr></table></div><br><a name=c748612></a><div id="sc748612"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/4189.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=4189" class=ltu><b>Брюс</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 10:05</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748612#c748612">#4</a> </div></td><td  width=45><div style="width:50px;" id="c748612"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748612>Отопление трубу надо выносить на балкон</div></td><td></td></tr></table></div><br><a name=c748615></a><div id="sc748615"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 10:15</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748615#c748615">#5</a> </div></td><td  width=45><div style="width:50px;" id="c748615"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;1</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748615><p>Мнение советчиков которые данного действия не делали я не спрашивал. БТИ тут не причем, другая инстанция разрешение на это дело выдает, так что не умничайте пожалуйста. На счет площади - сейчас постараюсь фото подобных лоджий добавить.</p></div></td><td></td></tr></table></div><br><a name=c748616></a><div id="sc748616"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/9537.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=9537" class=ltu><b>Пoнчик</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 10:17</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748616#c748616">#6</a> </div></td><td  width=45><div style="width:50px;" id="c748616"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;3</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748616>фактически изменение жилой площади, БТИ должно в паспорте на квартиру это отразить, не?</div></td><td></td></tr></table></div><br><a name=c748618></a><div id="sc748618"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 10:22</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748618#c748618">#7</a> </div></td><td  width=45><div style="width:50px;" id="c748618"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748618>Да должно. Отопление меня не интересует, т.к. поквартирное и хуже никому не станет.</div></td><td></td></tr></table></div><br><a name=c748619></a><div id="sc748619"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/9537.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=9537" class=ltu><b>Пoнчик</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 10:24</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748619#c748619">#8</a> </div></td><td  width=45><div style="width:50px;" id="c748619"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748619>тепловой счётчик?</div></td><td></td></tr></table></div><br><a name=c748626></a><div id="sc748626"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 10:33</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748626#c748626">#9</a> </div></td><td  width=45><div style="width:50px;" id="c748626"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748626>Само собой.</div></td><td></td></tr></table></div><br><a name=c748627></a><div id="sc748627"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/4189.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=4189" class=ltu><b>Брюс</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 10:34</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748627#c748627">#10</a> </div></td><td  width=45><div style="width:50px;" id="c748627"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;2</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748627>Мне вариант с компом понравился. Так же сделаю. Гаситься от людей. </div></td><td></td></tr></table></div><br><a name=c748630></a><div id="sc748630"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/9537.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=9537" class=ltu><b>Пoнчик</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 10:38</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748630#c748630">#11</a> </div></td><td  width=45><div style="width:50px;" id="c748630"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748630>с компом - там балкон. На правом фото рама на месте. Что хочет Медведь?</div></td><td></td></tr></table></div><br><a name=c748643></a><div id="sc748643"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 11:08</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748643#c748643">#12</a> </div></td><td  width=45><div style="width:50px;" id="c748643"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748643>10 Вариантов очень много я еще лучше встречал., ройте интернет.<br />
+11 Мне убрать раму надо, на лоджии скорее всего тоже кабинетик с компом будет , размеры позволяют как на картинке сделать. Кстати можно и кирпичную кладку под окном разобрать - эта часть стены не несущая.</div></td><td></td></tr></table></div><br><a name=c748652></a><div id="sc748652"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/6445.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=6445" class=ltu><b>kos-anna</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 11:53</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748652#c748652">#13</a> </div></td><td  width=45><div style="width:50px;" id="c748652"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;5</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748652>Утеплитель закладывается по всему объему лоджии, тоесть пол, потолок и все стены, кроме между комнатой и самой лоджией. Также на полу устраиваются теплые полы и стеклопакет заменяется.
+Чтобы данный момент перепланировки узаконить берете тех условия в соотв. организациях: 1- в управл.компании (или ЖЭУ), на общестроительные работы (слом стен), 2- там же на замену радиаторов отопления, так как будет перенос радиатора с подоконного простенка, 3 - там же на электрооборудование квартиры ( так как возможен запрос на увеличение мощности потребления электроэнергии при монтаже теплых полов, необходим соотв. расчет). Далее делаете проект  по данным разделам + справки собираете  и идете в УЖКХ (дзержинского, 24) к Крестниковой Т.И. и оформляете проект перепланировки, после чего вам выдадут постановления, подпишут акты и вы зарегистрируете данную перепланировку в своей квартире в БТИ.</div></td><td></td></tr></table></div><br><a name=c748659></a><div id="sc748659"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 12:35</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748659#c748659">#14</a> </div></td><td  width=45><div style="width:50px;" id="c748659"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748659><p>&#1042;се я это прекрасно знаю, сейчас еще требуют согласие жильцов собрать на это дело.&#160;<br />&#160;Меня интересует комфортно ли жить после такой "перепланировки", т.е как температурный режим ведет себя, нет ли запотеваний, облединений. Теплый пол может и не обязатльно закладывать.</p></div></td><td></td></tr></table></div><br><a name=c748662></a><div id="sc748662"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/8735.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=8735" class=ltu><b>Hardsoft</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 12:46</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748662#c748662">#15</a> </div></td><td  width=45><div style="width:50px;" id="c748662"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748662><p>14 Делайте без сноса подоконной перегородки, это не потребует согласований и переноса радиаторов. Оконную раму можете снять, потоконник станет столом, пол лоджии поднимите до уровня квартиры. Остекление лоджии соответственно двойным стеклопакетом. Теплый пол крайне желателен, квартирный радиатор не справится, все равно придется догреваться &#160;эл-вом. Стержневой подойдет под стяжку, отдельный кабель крайне желателен, провод можно пустить и по плинтусу, 2,5 мм должно хватить на 4 кВт.</p></div></td><td></td></tr></table></div><br><a name=c748674></a><div id="sc748674"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/2358.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=2358" class=ltu><b>макешка</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 13:16</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748674#c748674">#16</a> </div></td><td  width=45><div style="width:50px;" id="c748674"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748674>у меня похожая ситуация. только в этом случае балкон. его сейчас будем утеплять, но теряется площадь. вот я хотела увеличить площадь балкона за счёт зала. Подскажите как лучше это сделать. Я думаю "столбики" оставить по бокам, а стенку где подоконник убрать. Можно ли так сделать,чтобы не нарушить конструкцию дома?</div></td><td></td></tr></table></div><br><a name=c748675></a><div id="sc748675"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 13:17</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748675#c748675">#17</a> </div></td><td  width=45><div style="width:50px;" id="c748675"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748675>15 У Вас самого такая квартира? С теплым полом боюсь, что на электричество разоришься, хотя можно сделать инфракрасный, он немного вроде ест.</div></td><td></td></tr></table></div><br><a name=c748680></a><div id="sc748680"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 13:21</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748680#c748680">#18</a> </div></td><td  width=45><div style="width:50px;" id="c748680"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748680><p>16.Кирпичную кладку под подоконником можно убирать свободно. Если у вас стеновая панель, то ее трогать нельзя, точнее можно, но администрация не пропустит такое решение (есть постановление о том, что панели трогать нельзя).<br /> Стены которые не под подоконником несущие и их тоже лучше не трогать. Сейчас УК в техусловиях везде пишут, что несущие конструкцие трогать запрещается.</p></div></td><td></td></tr></table></div><br><a name=c748684></a><div id="sc748684"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/2358.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=2358" class=ltu><b>макешка</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 13:32</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748684#c748684">#19</a> </div></td><td  width=45><div style="width:50px;" id="c748684"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748684>#18 дом кирпичный. под подоконником скорее всего тоже из кирпича. увеличить на пол метра где то. а в зале из гипсокартона сделать стену. правильно будет вызвать мастера и что он скажет.</div></td><td></td></tr></table></div><br><a name=c748687></a><div id="sc748687"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/2929.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=2929" class=ltu><b>Manuel Calavera</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 13:41</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748687#c748687">#20</a> </div></td><td  width=45><div style="width:50px;" id="c748687"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748687>Можно установить пластиковую раму от пола до потолка, при этом ограждающая стенка не убирается. В раму в ровень со стенкой вставляются непрозрачные сендвичи а сверху стеклопакеты. В итоге вверху обычное пластиковое окно, а снизу по слоям следующее: улица/кирпич/утеплитель/пластик/утеплитель/гипсокартон. Видел такое тут в Ухте: тепло, сухо и места много не "съедает". Вот только насчет батарей и теплых полов не помню.</div></td><td></td></tr></table></div><br><a name=c748689></a><div id="sc748689"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/6445.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=6445" class=ltu><b>kos-anna</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 13:45</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748689#c748689">#21</a> </div></td><td  width=45><div style="width:50px;" id="c748689"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748689>Если заложите соответствующий утеплитель, его количество согласно расчетам, без изъянов произведут монтаж стеклопакетов, то жить в таком помещении комфортно,  ничем не отличимо от других помещений квартиры...</div></td><td></td></tr></table></div><br><a name=c748690></a><div id="sc748690"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/8735.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=8735" class=ltu><b>Hardsoft</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 13:47</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748690#c748690">#22</a> </div></td><td  width=45><div style="width:50px;" id="c748690"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#eb7648">-1</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748690>17 Приемлимые затраты -&nbsp;http://www.unimat.su/how/energy/</div></td><td></td></tr></table></div><br><a name=c748693></a><div id="sc748693"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 13:55</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748693#c748693">#23</a> </div></td><td  width=45><div style="width:50px;" id="c748693"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748693><p>Посчитал из расчета 3 рубля за к&#1042;т на 10 кв.м. получается около 70 р. в сутки. Дороговато выходит.</p><p>20 Да, не плохое решени кстати. </p></div></td><td></td></tr></table></div><br><a name=c748695></a><div id="sc748695"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/2358.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=2358" class=ltu><b>макешка</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 13:57</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748695#c748695">#24</a> </div></td><td  width=45><div style="width:50px;" id="c748695"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748695>балкончик я делаю для своих льсых)) можно сказать отдельную комнату для них. хотела постелить там (на балконе) теплые полы. а вдруг эти теплые полы навернутся. и тогда у меня появятся не сфинксы,а окорочка (( что делать фиг знает. батарею туда выводить,а вдруг в мороз замёрзнет.</div></td><td></td></tr></table></div><br><a name=c748700></a><div id="sc748700"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/8735.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=8735" class=ltu><b>Hardsoft</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 14:05</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748700#c748700">#25</a> </div></td><td  width=45><div style="width:50px;" id="c748700"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748700>23 Ширше мыслите! 3-тарифник. стяжка толстая, аккумулирующая, регулятор умный - с контролем заданной температуры. Работать постоянно он будет только в сороковники, это максимум 2-3 недели в год. &nbsp;Если солнечная сторона - тоже в учет берите.<br />
+Для зимы приемлимые затраты за возможность сидеть на балконе в пижаме в окружении цветущих орхидей. Неплохо, кстати, сразу спроектировать теплообменник вентиляционный. И сплит-систему для межсезонья. Ну это так - без учета бюджета.</div></td><td></td></tr></table></div><br><a name=c748703></a><div id="sc748703"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/8735.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=8735" class=ltu><b>Hardsoft</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 14:07</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748703#c748703">#26</a> </div></td><td  width=45><div style="width:50px;" id="c748703"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748703>24 При нормальном утеплении катастрофы не случится, догреетесь эл-вом. Стержневой - надежный пол.</div></td><td></td></tr></table></div><br><a name=c748710></a><div id="sc748710"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/2358.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=2358" class=ltu><b>макешка</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 14:21</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748710#c748710">#27</a> </div></td><td  width=45><div style="width:50px;" id="c748710"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748710>#26 как я понимаю стержневой- это электрический? а он не навернется?</div></td><td></td></tr></table></div><br><a name=c748712></a><div id="sc748712"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/8735.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=8735" class=ltu><b>Hardsoft</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 14:22</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748712#c748712">#28</a> </div></td><td  width=45><div style="width:50px;" id="c748712"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748712>27 Да. Нет.</div></td><td></td></tr></table></div><br><a name=c748713></a><div id="sc748713"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/2358.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=2358" class=ltu><b>макешка</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 14:27</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748713#c748713">#29</a> </div></td><td  width=45><div style="width:50px;" id="c748713"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748713>#28 спасибо))</div></td><td></td></tr></table></div><br><a name=c748716></a><div id="sc748716"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 14:33</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748716#c748716">#30</a> </div></td><td  width=45><div style="width:50px;" id="c748716"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748716>19 правильней будет обратиться к проектировщикам.</div></td><td></td></tr></table></div><br><a name=c748742></a><div id="sc748742"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/8735.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=8735" class=ltu><b>Hardsoft</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 15:26</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748742#c748742">#31</a> </div></td><td  width=45><div style="width:50px;" id="c748742"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748742><p>Минусер (ортодокс) - Вы 15 пост забыли, его тоже надо отметить, а то не так смешно будет. И этот тоже, для порядку.</p></div></td><td></td></tr></table></div><br><a name=c748778></a><div id="sc748778"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/774.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=774" class=ltu><b>АП</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 16:57</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748778#c748778">#32</a> </div></td><td  width=45><div style="width:50px;" id="c748778"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;2</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748778>Я такой решила сделать. Обратилась в ООО Компания Евроокна. Там пришли, все замерили, сказали, что сделают в кратчайшие сроки, взяли предоплату 50 % и.... ПРОПАЛИ... Теперь деньги никак не могу вернуть...</div></td><td></td></tr></table></div><br><a name=c748808></a><div id="sc748808"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/1147.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=1147" class=ltu><b>Piligrim</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 19:59</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748808#c748808">#33</a> </div></td><td  width=45><div style="width:50px;" id="c748808"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748808>В кирпичном доме еще такое можно провернуть, в панельном категорически запрещено, если только не боитесь самосуда жильцов :)</div></td><td></td></tr></table></div><br><a name=c748828></a><div id="sc748828"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/1692.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=1692" class=ltu><b>Милана</b></a>&nbsp;&nbsp;<span class=ltl>25 июня 2012, 20:43</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748828#c748828">#34</a> </div></td><td  width=45><div style="width:50px;" id="c748828"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748828>С такими сложностями ( соседи, финансы, надежность ) не лучше ли купить квартиру на одну комнату больше?</div></td><td></td></tr></table></div><br><a name=c748929></a><div id="sc748929"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>26 июня 2012, 08:12</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748929#c748929">#35</a> </div></td><td  width=45><div style="width:50px;" id="c748929"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;1</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748929>Толком никто своим впечатлением о такой переплпнировке не поделился, хотя немало кто так делал. </div></td><td></td></tr></table></div><br><a name=c748955></a><div id="sc748955"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/7477.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=7477" class=ltu><b>Вадим Владимирович</b></a>&nbsp;&nbsp;<span class=ltl>26 июня 2012, 09:50</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748955#c748955">#36</a> </div></td><td  width=45><div style="width:50px;" id="c748955"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;1</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748955>Лично видел как такую вещь осуществили - могу сказать -замечательно! всё просто отлично! Но- нельзя скупиться на мастеров и материалы!  Оконный пакет поставьте пошире ,будет до поздней осени даже без доп подогрева отлично ,если стены, пол и потолок утеплить.</div></td><td></td></tr></table></div><br><a name=c748957></a><div id="sc748957"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/10188.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=10188" class=ltu><b>Meдвeдь</b></a>&nbsp;&nbsp;<span class=ltl>26 июня 2012, 09:52</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=748957#c748957">#37</a> </div></td><td  width=45><div style="width:50px;" id="c748957"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t748957>Надо найти тройной стеклопакет с заполнением Аргоном между стекол. Вроде есть еще теплоотражающие пленки.</div></td><td></td></tr></table></div><br><a name=c770350></a><div id="sc770350"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/8263.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=8263" class=ltu><b>stefil1</b></a>&nbsp;&nbsp;<span class=ltl>19 июля 2012, 21:31</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=770350#c770350">#38</a> </div></td><td  width=45><div style="width:50px;" id="c770350"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#afb1b2">&nbsp;0</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t770350>Компания 11 регион мне в прошлом году утепляла лоджию на первом этаже, полы электро сделали, там теперь у меня столик с ноутбуком. Красота!!!!!!!!!!
+"Вопрос балкона" называется еще. </div></td><td></td></tr></table></div><br><a name=c770392></a><div id="sc770392"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/3039.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=3039" class=ltu><b>Nord-West</b></a>&nbsp;&nbsp;<span class=ltl>19 июля 2012, 21:56</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=770392#c770392">#39</a> </div></td><td  width=45><div style="width:50px;" id="c770392"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;2</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t770392>Фотку балкона, столика и ноута в студию! Оценим красоту.</div></td><td></td></tr></table></div><br><a name=c770504></a><div id="sc770504"  ><table cellpadding=1 cellspacing=0 border=0 width=100%><tr><td rowspan=2 valign=top width=24><div style="display:inline-block;width:24px;height:34px;background:url(/auth/userfoto/th/725.jpg);background-repeat: no-repeat"></div></td><td><div  class=cou><a href="/auth/showuser.php?id=725" class=ltu><b>igorgn</b></a>&nbsp;&nbsp;<span class=ltl>19 июля 2012, 22:40</span>&nbsp;&nbsp;&nbsp;<a href="/forum/?id=6024&ccomment=770504#c770504">#40</a> </div></td><td  width=45><div style="width:50px;" id="c770504"><span style="vertical-align:top;font-weight:bold;padding:0px;margin:0px;color:#62d528">&nbsp;1</span>&nbsp;<img src=/images/plus_ser.gif alt="Хороший комменарий" title="Хороший комменарий">&nbsp;<img src=/images/minus_ser.gif alt="Плохой комменарий" title="Плохой комменарий"></div></td></tr><tr><td><div id=t770504>Так добровольно лишаем себя балкона в том виде, как он должен быть. Дело вкуса. Но я зимой на утеплённый балкон выхожу покурить. Туда можно временно из хлама что-то поставить. А тут получается просто увеличенная комната. О балконе даже затрутся воспоминания.</div></td><td></td></tr></table></div><br><p style="clear:both;"></p>
+<table  border=0 cellpadding=3 cellspacing=0 class=pageb><tr><td>Страницы:&nbsp;&nbsp;<a class="curp" href="?id=6024&cpage=1#commentblocktop">1</a>&nbsp; </td></tr></table><p><p style="clear:both;"></p><IDXSKIP>&nbsp;</IDXSKIP><IDXSKIP><p>
+<div id=ted><strong>Комментировать:</strong></div>
+
+<a name=commentblock1></a>
+<div id="vpr3"></div></IDXSKIP>
+<p><font style="font-size:11px;color:#6c6c6c"><IDXSKIP>Оставлять сообщения могут только зарегистрированные пользователи</IDXSKIP></font><br><a href="/auth/?destination=/forum/?id=6024&page=1">войти</a><IDXSKIP>&nbsp;&nbsp;&nbsp;<a href="/auth/?register=yes">зарегистрироваться</a></IDXSKIP>
+
+
+
+</div>
+</td>
+</tr>
+</table>
+
+</td>
+<!-- Правая колонка -->
+<td width=220 valign=top>
+
+<div id=rightcol>
+
+<p>
+<IDXSKIP><div class="lb"><a href="http://uhta24.ru/spravka/spravkaotzyv.php?id=814"><img alt="Ухтинская типография" border="0" height="120" src="/files/tipo.gif" width="220" /></a><br />
+</div></IDXSKIP><IDXSKIP><div class="lb"><a href="http://www.uhta24.ru/spravka/spravkaotzyv.php?id=3376" target=""><img alt="Тайский массаж. Ухта" src="/userfiles1/images/tay14.jpg" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; width: 220px; height: 121px;" /></a><br />
+</div></IDXSKIP><IDXSKIP><div class="lb"><a href="https://vk.com/englishinterclubukhta" target="_blank"><img alt="Английский для детей и взрослых, Ухта" src="/userfiles1/images/Английский_клуб-14.gif" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; width: 220px; height: 120px;" /></a><br />
+</div></IDXSKIP><div class=lb><IDXSKIP><h5>Рейтинг форума за месяц
+</h5></IDXSKIP>
+<a class="ba" href="http://www.uhta24.ru/forum/?id=15216">Страшно на улицу выйти</a><p><a class="ba" href="http://www.uhta24.ru/forum/?id=15054">Лукойл закрывает НПЗ в Ухте ... Что, правда?!</a><p><a class="ba" href="http://www.uhta24.ru/forum/?id=15183">МИСС УГТУ 2015 конкурс</a><p><a class="ba" href="http://www.uhta24.ru/forum/?id=15199">Литература.</a><p><a class="ba" href="http://www.uhta24.ru/forum/?id=15070">Непорядочные агентства недвижимости</a><p></div>
+
+
+<IDXSKIP><div class="lb"><a href="https://vk.com/kulikovakurs" target="_blank"><img alt="Курсы кройки и шитья. Ухта" src="/userfiles1/images/курсы_шитья.gif" style="width: 220px; height: 120px;" /></a><br />
+</div></IDXSKIP><IDXSKIP><div class="lb"><a href="https://vk.com/verapavlin" target="_blank"><img alt="Дизайн-студия Павлин. Ухта" src="http://www.uhta24.ru/userfiles1/images/studiya.gif" style="width: 220px; height: 120px;" /></a><br />
+</div></IDXSKIP><IDXSKIP><div class="lb"><br />
+&nbsp;&nbsp;<script type="text/javascript">
+    google_ad_client = "ca-pub-3834468791401997";
+    google_ad_slot = "3899543463";
+    google_ad_width = 200;
+    google_ad_height = 200;
+</script><!-- Квадрат 200х200 --><script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div></IDXSKIP><div class="lb"><table border="0" cellpadding="5" cellspacing="2" width="220">
+	<tbody>
+		<IDXSKIP><tr>
+			<td bgcolor="#fefeb2" valign="middle">
+				<strong><img alt="" height="28" src="/files/forum1(2).gif" width="22" />&nbsp;Постоянные темы форума</strong></td>
+		</tr></IDXSKIP>
+		<tr>
+			<td bgcolor="#fefeb2">
+				<IDXSKIP><p>
+					&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=14129">А что у вас на ужин?</a></p></IDXSKIP>
+				<IDXSKIP><p>
+					&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=158">Расскажи анекдот :)</a></p></IDXSKIP>
+				<IDXSKIP><p>
+					&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=1453">Поздравления</a></p></IDXSKIP>
+				<IDXSKIP><p>
+					&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=3339">Животные. Поиск. Помощь</a></p></IDXSKIP>
+				<p>
+					<IDXSKIP>&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=220">Отдам даром вещи. Приму в дар</a></IDXSKIP><br />
+					<br />
+					<IDXSKIP>&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=3216">Бюро находок</a></IDXSKIP></p>
+				<IDXSKIP><p>
+					&nbsp;&nbsp;<a class="ba" href="https://www.uhta24.ru/forum/?id=9526">Дайте денег на ремонт дорог</a></p></IDXSKIP>
+				<IDXSKIP><p>
+					&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=858">Обстановка на дороге</a></p></IDXSKIP>
+				<p>
+					<IDXSKIP>&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=1790">Довезу</a></IDXSKIP><br />
+					<br />
+					<IDXSKIP>&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=249">Ссылки на интересные &nbsp;&nbsp;материалы</a></IDXSKIP></p>
+				<IDXSKIP><p>
+					&nbsp;&nbsp;<a class="ba" href="http://www.uhta24.ru/forum/?id=323">Вопросы админам</a></p></IDXSKIP>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>			</div>
+		</td>
+</tr>
+</table>
+<IDXSKIP><p>&nbsp;</IDXSKIP><p>
+
+<hr>
+<table cellpadding=0 cellspacing=0 border=0 width=100%>
+<tr><td width=400>
+<IDXSKIP><a href="http://www.uhta24.ru/spravka/spravkaotzyv.php?id=1860" class="dd">Обратная связь</a></IDXSKIP><IDXSKIP>&nbsp;&nbsp;
+<a href="/proekt/index.php" class="dd">Контакты</a></IDXSKIP><IDXSKIP>&nbsp;&nbsp;<a href="/reklama/index.php" class="dd">Реклама</a></IDXSKIP><IDXSKIP>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</IDXSKIP><IDXSKIP><a href="https://twitter.com/uhta24ru" target="_blank"><img alt="Твиттер Ухта24" src="/userfiles1/images/tv(2).jpg" style="width: 18px; height: 18px;" /></a></IDXSKIP><IDXSKIP>&nbsp;&nbsp;<a href="https://vk.com/uhta24ru" target="_blank"><img alt="Ухта24 ВКонтакте" src="/userfiles1/images/vk(3).jpg" style="width: 18px; height: 18px;" /></a></IDXSKIP>
+
+</td>
+<tr>
+<td class=cop1><IDXSKIP>&nbsp;</IDXSKIP><p><IDXSKIP>&copy;2007 <a href="http://lunastudio.uhta24.ru">Студия "Луна"</a></IDXSKIP><br><IDXSKIP>При использовании материалов сайта обязательна&nbsp;</IDXSKIP><IDXSKIP><a href="http://www.uhta24.ru/">ссылка</a></IDXSKIP><IDXSKIP>&nbsp;на&nbsp;источник.<br>
+Администрация не несет ответственность за  информацию, размещенную  пользователями сайта.<br>Ответственность за содержание рекламных материалов несет рекламодатель.
+<br>Предложения по работе сайта присылайте на е-майл </IDXSKIP><IDXSKIP><a href="mailto:info@uhta24.ru">info@uhta24.ru</a></IDXSKIP>
+<br><IDXSKIP>Погода от <a target="_blank" href="http://meteoinfo.ru/">Гидрометцентр России</a></IDXSKIP>
+
+</td>
+<IDXSKIP><td align=right>
+<!--Rating@Mail.ru counter-->
+<script language="javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1974778" target="_top">'+
+'<img src="http://d1.c2.be.a1.top.mail.ru/counter?id=1974778;t=216;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="31" width="88"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script>
+<noscript><a target="_top" href="http://top.mail.ru/jump?from=1974778">
+<img src="http://d1.c2.be.a1.top.mail.ru/counter?js=na;id=1974778;t=216" 
+height="31" width="88" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//--></script>
+<!--// Rating@Mail.ru counter-->
+
+&nbsp;&nbsp;
+
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<div style="display:none;"><script type="text/javascript">
+try { var yaCounter1085935 = new Ya.Metrika(1085935); } catch(e){}
+</script></div>
+<noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1085935" alt="" /></div></noscript>
+<!-- /Yandex.Metrika -->
+
+
+<!-- Начало кода счетчика УралWeb -->
+<script language="JavaScript" type="text/javascript">
+<!--
+  uralweb_d=document;
+  uralweb_a='';
+  uralweb_a+='&r='+escape(uralweb_d.referrer);
+  uralweb_js=10;
+//-->
+</script>
+<script language="JavaScript1.1" type="text/javascript">
+<!--
+  uralweb_a+='&j='+navigator.javaEnabled();
+  uralweb_js=11;
+//-->
+</script>
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+  uralweb_s=screen;
+  uralweb_a+='&s='+uralweb_s.width+'*'+uralweb_s.height;
+  uralweb_a+='&d='+(uralweb_s.colorDepth?uralweb_s.colorDepth:uralweb_s.pixelDepth);
+  uralweb_js=12;
+//-->
+</script>
+<script language="JavaScript1.3" type="text/javascript">
+<!--
+  uralweb_js=13;
+//-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+uralweb_d.write('<a href="http://www.uralweb.ru/rating/go/uhta24">'+
+'<img border="0" src="http://hc.uralweb.ru/hc/uhta24?js='+
+uralweb_js+'&amp;rand='+Math.random()+uralweb_a+
+'" width="88" height="31" alt="УралWeb"><'+'/a>');
+//-->
+</script>
+
+<noscript>
+<a href="http://www.uralweb.ru/rating/go/uhta24">
+<img border="0" src="http://hc.uralweb.ru/hc/uhta24?js=0" width="88" height="31" alt="УралWeb"></a>
+</noscript>
+<!-- конец кода счетчика УралWeb -->
+
+&nbsp;&nbsp;
+
+
+<!--LiveInternet counter--><script type="text/javascript">document.write("<a href='http://www.liveinternet.ru/click' target=_blank><img src='http://counter.yadro.ru/hit?t44.1;r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u" + escape(document.URL) +";i" + escape("Жж"+document.title.substring(0,80)) + ";" + Math.random() + "' border=0 width=31 height=31 alt='' title='LiveInternet'><\/a>")</script><!--/LiveInternet-->
+
+
+
+3</td></IDXSKIP>
+</tr>
+</table>
+
+
+
+</div>
+
+</div></div></div>
+<IDXSKIP><span id="down">&nbsp;</span></IDXSKIP>
+<script>
+function get_referrer()
+{
+v=2;
+}
+function setcookie(name,value,day)
+{
+v=2;
+}
+</script>
+</body>
+</html>
+1.7674670219421id=6024&page=1.uhta24.ru

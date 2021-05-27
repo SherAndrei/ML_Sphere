@@ -1,0 +1,325 @@
+csdot.ru/counter_strike_global_offensive/karty
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html itemscope itemtype="http://schema.org/TechArticle">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title>Скачать карты для CS:GO. Качай бесплатно отличные карты для Counter-Strike: Global Offensive.</title>
+<meta name="keywords" content="карты для кс го, карты cs go, скачать карты для кс го, counter strike global offensive карти">
+
+
+<meta name="description" content="Большой каталог карт для игры в Counter-Strike: Global Offensive для одиночной игры и сервера. Скачать бесплатные карты для CS:GO быстрей торрента без СМС и регистрации."><link type="text/css" rel="stylesheet" href="/css/style.css"><link type="text/css" rel="stylesheet" href="/css/prettyPhoto/prettyPhoto.css">
+<link type="text/css" rel="stylesheet" href="/css/star_vote/style.css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/jscript/jquery.blockUI.js"></script>
+<script type="text/javascript" src="/jscript/jquery.cookie.js"></script>
+<script type="text/javascript" src="/jscript/functions_select.js"></script>
+<script type="text/javascript" src="/jscript/prettyPhoto/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="/jscript/share/share42.js"></script>
+
+<script type="text/javascript" src="http://vk.com/js/api/share.js?11" charset="windows-1251"></script>
+<script type="text/javascript" src="http://vk.com/js/api/openapi.js?95"></script>
+<script type="text/javascript">
+VK.init({apiId: 3198522, onlyWidgets: true});
+</script>
+
+<script type="text/javascript">(function(){var j=161022,f=false,b=document,c=b.documentElement,e=window;function g(){var a="";a+="rt="+(new Date).getTime()%1E7*100+Math.round(Math.random()*99);a+=b.referrer?"&r="+escape(b.referrer):"";return a}function h(){var a=b.getElementsByTagName("head")[0];if(a)return a;for(a=c.firstChild;a&&a.nodeName.toLowerCase()=="#text";)a=a.nextSibling;if(a&&a.nodeName.toLowerCase()!="#text")return a;a=b.createElement("head");c.appendChild(a);return a}function i(){var a=b.createElement("script");a.setAttribute("type","text/javascript");a.setAttribute("src","http://s.luxadv.com/t/lb"+j+"_3.js?"+g());typeof a!="undefined"&&h().appendChild(a)}function d(){if(!f){f=true;i()}};if(b.addEventListener)b.addEventListener("DOMContentLoaded",d,false);else if(b.attachEvent){c.doScroll&&e==e.top&&function(){try{c.doScroll("left")}catch(a){setTimeout(arguments.callee,0);return}d()}();b.attachEvent("onreadystatechange",function(){b.readyState==="complete"&&d()})}else e.onload=d})();</script><meta name="verify-admitad" content="b737b2e19b" /><script type="text/javascript">
+$(document).ready(function() {
+
+$('#filtr_clear').click(function() {
+	$.cookie("fltr", '', {path: "/"});
+});
+
+$("#partdropdown").change(function() {
+	var partvalue = $("#partdropdown option:selected").val();
+	if (partvalue == '') {clearlist();}
+	getcategory();
+});
+
+$(function(){$("a[rel^='prettyPhoto']").prettyPhoto({theme: 'light_rounded'});});
+
+var rating		=	0;
+var starsAll	=	0;
+var voteAll		=	0;
+var idContent	=	69;
+var typeContent	=	2;
+var starWidth	=	17;
+
+rating = Math.round(rating * 100)/100;
+if(isNaN(rating)){
+	rating = 0;
+}
+var ratingResCss = rating * starWidth; 
+$("#ratDone").css("width", ratingResCss);
+$("#ratStat").html("Рейтинг: <strong>"+rating+"</strong> Голосов: <strong>"+voteAll+"</strong>");
+var coords;
+var stars;
+var ratingNew;
+
+$("#rating").mousemove(function(e){
+	var offset = $("#rating").offset();
+	coords = e.clientX - offset.left;
+	stars = Math.ceil(coords/starWidth); 
+	starsCss = stars*starWidth;
+	$("#ratHover").css("width", starsCss).attr("title", stars+" из 10");
+});
+$("#rating").mouseout(function(){
+	$("#ratHover").css("width", 0);
+});
+$("#rating").click(
+	function(){
+		starsNew	= stars + starsAll;
+		voteAll		+= 1;
+		var ratingNew	= Math.round(starsNew/voteAll*100)/100;
+		var razn		= Math.abs(Math.round((rating - ratingNew)*200));
+		var total		= Math.round(ratingNew*starWidth);
+		$.ajax({
+			type: "POST",
+			url: "/pscript/action_vote_star.php",
+			data: {"typeContent": typeContent, "idContent": idContent, "rating": stars},
+			cache: false,
+			success:
+			function(response){
+				if(response==1){
+					var newRat = response+"px";
+					$("#ratHover").css("display", "none");
+					$("#ratDone").animate({width: total}, razn);
+					$("#ratBlocks").show();
+					$("#ratStat").html("Рейтинг: <strong>"+ratingNew+"</strong> Голосов: <strong>"+voteAll+"</strong>");
+				} else {
+					$("#ratStat").text(response);
+				}
+			}
+		});
+		return false;
+	});	
+});
+
+function getcategory() {
+
+	var partvalue = $("#partdropdown option:selected").val();
+	var category = $("#categorydropdown");
+	
+	if (partvalue == 0) {
+		$("#categorydropdown").empty();
+		category.attr("disabled",true);
+	} else {
+		category.attr("disabled",false);
+		category.load('/pscript/select_chld.php',{part : partvalue, type_content : 77});
+	}
+}
+
+function clearlist() {
+	$("#partdropdown").empty();
+	$("#categorydropdown").empty();
+}
+</script>
+</head>
+
+<body>
+<div class="container_site">
+<div class="container_head">
+<div class="head_logo"><a href="/"><img src="/files/template/counter_strike_1.6_source_go.png" alt="Counter-Strike: 1.6 source go" title="Counter-Strike: 1.6 source go"></a></div>
+<div class="head_top_right"><div id="block_top_right"></div> <a href="/" rel="sidebar" onClick="return createBookmark('')">запомнить сайт</a></div><div class="head_bot_right"><script type="text/javascript">
+    google_ad_client = "ca-pub-7133303528431132";
+    google_ad_slot = "2588321199";
+    google_ad_width = 728;
+    google_ad_height = 90;
+</script>
+<!-- csdot_728x90_08.12.2014_top -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div></div>
+<div itemscope itemtype="http://schema.org/WebPage" class="container_breadcrumb">
+<span itemprop="breadcrumb" class="breadcrumb_links">
+<a href="/">главная</a>
+ | <a href="http://www.csdot.ru/counter_strike_global_offensive/">counter strike g. o.</a> | <a href="http://www.csdot.ru/counter_strike_global_offensive/karty/">карты cs:go</a></span>
+
+</div>
+
+<table align="center" width="1100" cellpadding="0" cellspacing="0">
+
+<tr><td align="left" valign="top" width="250"></td><td align="left" valign="top" rowspan="2"><div class="container_content"><h1 itemprop="name">Скачать карты для CS:GO</h1><div class="share42init"></div><ul class="content_list_teg_shrt"><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/1hp/"><strong>1HP</strong> (1)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/35hp/"><strong>35HP</strong> (4)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/achievement/"><strong>Achievement</strong> (1)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/aim/"><strong>AIM</strong> (8)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp/"><strong>AWP</strong> (13)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/cs_hostage_rescue/"><strong>CS</strong> (7)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/de_bomb_defuse/"><strong>De</strong> (20)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/dr_deathrun/"><strong>DeathRun</strong> (1)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/dm_deathmatch/"><strong>DM</strong> (1)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/fy_fight_yard/"><strong>Fy</strong> (5)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/ka_knife/"><strong>KA</strong> (2)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/kz/"><strong>KZ</strong> (2)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/mg_mini_games/"><strong>Mini Game</strong> (9)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/surf/"><strong>Surf</strong> (8)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/ze_zombie_escape/"><strong>ZE</strong> (7)</a></li><li><a href="http://www.csdot.ru/counter_strike_global_offensive/karty/zm_zombie_mod/"><strong>ZM</strong> (5)</a></li></ul><ul class="content_list_content">
+<li><img title="Карта cs_Motel" src="http://www.csdot.ru/files/upload_gallery/pv_skrin_karty_cs_motel.jpg" alt="Карта cs_Motel" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/cs_motel/">Карта cs_motel</a>
+<p>Карта cs_motel спроектированна на подобии придорожного мотеля. Качественное исполнение cs_motel понравится игрокам на серверах Counter-Strike: Global Offensive.</p>
+<div title="добавлено" class="meta_date">12.11.2014</div>
+<div title="просмотров" class="meta_view">6735</div>
+<div title="комментариев" class="meta_coment">0</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/cs_motel/">подробно</a>
+</li>
+<li><img title="Карта awp_dust_sky_se" src="http://www.csdot.ru/files/upload_gallery/pv_awp_dust_sky_se_ks_1.6.jpg" alt="Карта awp_dust_sky_se" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_dust_sky_se/">Карта awp_dust_sky_se</a>
+<p>Map - awp_dust_sky_se для Контер Страйк 1.6. Cкачать map awp_dust_sky_se для серверной игры.</p>
+<div title="добавлено" class="meta_date">12.11.2014</div>
+<div title="просмотров" class="meta_view">4544</div>
+<div title="комментариев" class="meta_coment">0</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_dust_sky_se/">подробно</a>
+</li>
+<li><img title="Карта awp_warzone" src="http://www.csdot.ru/files/upload_gallery/pv_screenshot_awp_warzone_ks_1.6.jpg" alt="Карта awp_warzone" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_warzone/">Карта awp_warzone</a>
+<p>Map - awp_warzone для Counter-Strike 1.6. Загрузить map awp_warzone на любую карту.</p>
+<div title="добавлено" class="meta_date">12.11.2014</div>
+<div title="просмотров" class="meta_view">4672</div>
+<div title="комментариев" class="meta_coment">0</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_warzone/">подробно</a>
+</li>
+<li><img title="Карта de_tuscan_fixes_csgo" src="http://www.csdot.ru/files/upload_gallery/pv_de_tuscan_fixes_csgo_cs_1.6.jpg" alt="Карта de_tuscan_fixes_csgo" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/de_tuscan_fixes_csgo/">Карта de_tuscan_fixes_csgo</a>
+<p>Отличный карта de_tuscan_fixes_csgo. Карта de_tuscan_fixes_csgo для игры в контр страйк 1.6.</p>
+<div title="добавлено" class="meta_date">12.11.2014</div>
+<div title="просмотров" class="meta_view">3394</div>
+<div title="комментариев" class="meta_coment">0</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/de_tuscan_fixes_csgo/">подробно</a>
+</li>
+<li><img title="Карта aim_100hp" src="http://www.csdot.ru/files/upload_gallery/pv_skrin_karty_aim_100hp.jpg" alt="Карта aim_100hp" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/aim_100hp/">Карта aim_100hp</a>
+<p>Карта - aim_100hp для КС 1.6. Отличный карта aim_100hp для серверной игры.</p>
+<div title="добавлено" class="meta_date">12.11.2014</div>
+<div title="просмотров" class="meta_view">6311</div>
+<div title="комментариев" class="meta_coment">0</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/aim_100hp/">подробно</a>
+</li>
+<li><img title="Карта de_kabul2_csgo" src="http://www.csdot.ru/files/upload_gallery/pv_zagruzit_kartu_de_kabul2_csgo.jpg" alt="Карта de_kabul2_csgo" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/de_kabul2_csgo/">Карта de_kabul2_csgo</a>
+<p>Map - de_kabul2_csgo для Контр Страйк 1.6. Отличный map de_kabul2_csgo для игры в.</p>
+<div title="добавлено" class="meta_date">12.11.2014</div>
+<div title="просмотров" class="meta_view">3036</div>
+<div title="комментариев" class="meta_coment">0</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/de_kabul2_csgo/">подробно</a>
+</li>
+<li><img title="Карта awp_india_nav72" src="http://www.csdot.ru/files/upload_gallery/pv_awp_india_nav72_skrin_cs_1.6.jpg" alt="Карта awp_india_nav72" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_india_nav72/">Карта awp_india_nav72</a>
+<p>Карта - awp_india_nav72 КС ГО. Переделанная карта awp_india для игры Counter-Strike: Global Offensive.</p>
+<div title="добавлено" class="meta_date">12.11.2014</div>
+<div title="просмотров" class="meta_view">4000</div>
+<div title="комментариев" class="meta_coment">0</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_india_nav72/">подробно</a>
+</li>
+<li><img title="Карта awp_india_csgo" src="http://www.csdot.ru/files/upload_gallery/pv_awp_india_csgo_skachat.jpg" alt="Карта awp_india_csgo" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_india_csgo/">Карта awp_india_csgo</a>
+<p>Одна из версий старой AWP карты на КС 1.6. Awp_india_csgo подходит к игровым серверам и одиночной игры Counter-Strike: Global Offensive.</p>
+<div title="добавлено" class="meta_date">12.11.2014</div>
+<div title="просмотров" class="meta_view">4816</div>
+<div title="комментариев" class="meta_coment">0</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_india_csgo/">подробно</a>
+</li>
+<li><img title="Карта awp_india_cs16" src="http://www.csdot.ru/files/upload_gallery/pv_awp_india_cs16_screenshot.jpg" alt="Карта awp_india_cs16" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_india_cs16/">Карта awp_india_cs16</a>
+<p>Бесплатный карта awp_india_cs16 - аналог карты CS 1.6. Карта awp_india_cs16 адаптирована на CS:GO и подойдёт для онлайн сервера.</p>
+<div title="добавлено" class="meta_date">12.11.2014</div>
+<div title="просмотров" class="meta_view">4871</div>
+<div title="комментариев" class="meta_coment">1</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_india_cs16/">подробно</a>
+</li>
+<li><img title="Карта awp_tower_lego" src="http://www.csdot.ru/files/upload_gallery/pv_skachat_awp_tower_lego_konter_strayk_1.6.jpg" alt="Карта awp_tower_lego" width="200" height="150">
+<a class="title" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_tower_lego/">Карта awp_tower_lego</a>
+<p>Скачать карту awp_tower_lego для CS:GO. Крутая awp карта в стиле конструктора awp_tower_lego версия игры Counter-Strike: Global Offensive.</p>
+<div title="добавлено" class="meta_date">24.10.2014</div>
+<div title="просмотров" class="meta_view">6157</div>
+<div title="комментариев" class="meta_coment">0</div>
+<a class="meta_next" href="http://www.csdot.ru/counter_strike_global_offensive/karty/awp_tower_lego/">подробно</a>
+</li></ul><div class="number_buttons">    <span class="number_buttons current">1</span> <a rel="nofollow" href="http://www.csdot.ru/counter_strike_global_offensive/karty/2/">2</a> <a rel="nofollow" href="http://www.csdot.ru/counter_strike_global_offensive/karty/3/">3</a> <a rel="nofollow" href="http://www.csdot.ru/counter_strike_global_offensive/karty/4/">4</a> <a title="следущая" rel="nofollow" href="http://www.csdot.ru/counter_strike_global_offensive/karty/2/">></a> <a title="последняя страница" rel="nofollow" href="http://www.csdot.ru/counter_strike_global_offensive/karty/10/">>></a></div><div class="advert_content_under"><script type="text/javascript">
+    google_ad_client = "ca-pub-7133303528431132";
+    google_ad_slot = "5635830227";
+    google_ad_width = 336;
+    google_ad_height = 280;
+</script>
+<!-- csdot_pages_336x280 -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div><div class="content_text" itemprop="articleBody"><h2>Карты для Counter-Strike: Global Offensive</h2> <p><strong>CS:GO</strong> &ndash; это самая новая и последняя версия знаменитой игры. Улетная графика делает <strong>карты для CS:GO</strong> интересными и захватывающими, с различными спецэффектами и не встречающейся до этого ни в одной из игр физикой игроков и предметов. У нас можно скачать карту для КС ГО из большого каталога абсолютно бесплатно.</p> <p>Представлены не только старые и пользующиеся популярностью карты, но и совершенно новые. К каждой карте есть подробное описание и скриншоты, а также вы можете почитать отзывы тех, кто в нее играл, узнать различные секреты и особенности карты.&nbsp;</p></div></div></td><td valign="top" align="left" width="250"></td></tr><tr><td valign="top" align="left"><div class="container_side_bar">
+<IDXSKIP><div class="title">Меню Counter-Strike</div></IDXSKIP><ul class="menu_list"><IDXSKIP><li><a  href="/counter_strike_1.6/">Counter Strike 1.6</a></li></IDXSKIP><IDXSKIP><li><a  href="/counter_strike_source/">Counter Strike Source</a></li></IDXSKIP><IDXSKIP><li><a  class="active" href="/counter_strike_global_offensive/">Counter Strike G. O.</a></li></IDXSKIP><IDXSKIP><li><ul class="menu_list_sub"><li><a  class="active" href="/counter_strike_global_offensive/karty/">Карты CS:GO</a></li></ul></li></IDXSKIP><IDXSKIP><li><a  href="/steam/">Steam</a></li></IDXSKIP></ul><IDXSKIP><div class="title">Игровые Серверы CS</div></IDXSKIP><ul class="menu_list"><IDXSKIP><li><a  href="/monitoring_serverov/">Мониторинг серверов</a></li></IDXSKIP><IDXSKIP><li><a  href="/hosting_serverov_cs/">Хостинг серверов CS</a></li></IDXSKIP><IDXSKIP><li><a  href="/servery/">Серверы Counter Strike</a></li></IDXSKIP></ul><IDXSKIP><div class="title">Сервисы для игроков</div></IDXSKIP><ul class="menu_list"><IDXSKIP><li><a  href="/download/">Скачать Counter-Strike</a></li></IDXSKIP><IDXSKIP><li><a  href="/katalog_saytov/">Каталог сайтов</a></li></IDXSKIP><IDXSKIP><li><a  href="/krasivye_bukvy/">Красивые буквы</a></li></IDXSKIP><IDXSKIP><li><a  href="/niki/">Никнеймы</a></li></IDXSKIP><IDXSKIP><li><a  href="/obmen_ssylkami/">Обмен ссылками</a></li></IDXSKIP><IDXSKIP><li><a  href="/oformlenie_nikov/">Украшения и оформления ников</a></li></IDXSKIP></ul><IDXSKIP><div class="title">Реклама</div></IDXSKIP><IDXSKIP><div><a href="http://www.myarena.ru/?idp=181406"><img style="margin:5px 50px;" src="http://www.myarena.ru/images/partner/partner_myarena_e1.png"></a></div></IDXSKIP><IDXSKIP><div class="title">Реклама</div></IDXSKIP><div style="margin:5px 45px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- csdot_left_160x600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-7133303528431132"
+     data-ad-slot="2930349812"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<IDXSKIP><div class="title">Реклама</div></IDXSKIP><div id='e8abc57157'></div>
+
+<script type='text/javascript'>document.write("<sc"+"ript type='text/javascript' src='//barbys.ru/endicon.asp?3976'></sc"+"ript>");</script>
+</div></td><IDXSKIP><td valign="top" align="left"><div class="container_side_bar">
+<div class="title">&nbsp;</div>
+<a href="/monitoring_serverov/dobavit/"><img style="margin:5px;" title="Добавить игровой сервер CS в мониторинг" src="/files/template/custom/dobavit_server_monitoring.png" alt="Добавить сервер CS в мониторинг" width="240" height="60"></a>
+<div id="block_vk"></div></div></td></IDXSKIP></tr></table>
+<div class="container_bottom">
+<div class="bottom_box">
+<ul>
+<IDXSKIP><li><a href="/" title="Сайт CS">Сайт CS</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/counter_strike_1.6/sprei/" title="Спреи CS 1.6">Спреи CS 1.6</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/counter_strike_source/sprei/" title="Спреи CS:Source">Спреи CS:Source</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/counter_strike_1.6/karty/" title="Карты CS 1.6">Карты CS 1.6</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/counter_strike_source/karty/" title="Карты CS:Source">Карты CS:Source</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/counter_strike_global_offensive/karty/" title="Карты CS:GO">Карты CS:GO</a></li></IDXSKIP>
+</ul>
+<ul>
+<IDXSKIP><li><a href="/monitoring_serverov/dobavit/" title="Добавить сервер CS">Добавить сервер CS</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/monitoring_serverov/" title="Мониторинг серверов">Мониторинг серверов</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/steam/nayti_id/" title="Определить STEAM ID">Определить STEAM ID</a></li></IDXSKIP>
+<IDXSKIP><li><a href="/hosting_serverov_cs/" title="Купить игровой сервер CS">Купить игровой сервер CS</a></li></IDXSKIP>
+</ul>
+
+<IDXSKIP><ul>
+<li><a href="/contacts/" title="Контакты Администрации">Контакты</a></li>
+</ul></IDXSKIP>
+</div>
+<IDXSKIP><div class="bottom_box_center">
+<a href="/"><img title="Портал Counter-Strike" src="/files/template/bot_csdot_counter_strike.png" alt="Портал Counter-Strike"></a>
+</div></IDXSKIP>
+<div class="bottom_box">
+<p><IDXSKIP><a href="/" title="Сайт CS - CSDot.RU"><strong>Сайт CSDot.RU</strong></a></IDXSKIP> <IDXSKIP>- сайт о игре Counter-Strike 1.6, Source, Global Offensive. На сайте много удобных сервисов: мониторинг серверов CS 1.6, CSS, CS:GO, определение STEAM ID. Для фанатов представлены обзоры провайдеров хостинга игровых серверов CS, каталог ников, спреев (лого) для игры на онлайн-сервере. Владельцы серверов КС найдут карты, моды и инструкции как сделать ту или иную настройку.</IDXSKIP></p>
+</div>
+<div class="bottom_box_copy">
+<p><IDXSKIP>| <a href="/" title="Главная">ГЛАВНАЯ</a></IDXSKIP> <IDXSKIP>| 
+<a href="/counter_strike_1.6/" title="Игра CS 1.6">CS 1.6</a></IDXSKIP> <IDXSKIP>| 
+<a href="/counter_strike_source/" title="Игра CS SOURCE">CS SOURCE</a></IDXSKIP> <IDXSKIP>| 
+<a href="/counter_strike_global_offensive/" title="Игра CS G.O.">CS G.O.</a></IDXSKIP> <IDXSKIP>|<br>Copyright © 2012 - 2014 All Rights Reserved. Копирование материалов запрещено.</IDXSKIP></p><!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter23581825 = new Ya.Metrika({id:23581825,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    ut:"noindex"});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/23581825?ut=noindex" style="position:absolute; left:-9999px;" alt=""></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter --><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t25.5;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border='0' width='88' height='15'><\/a>")
+//--></script><!--/LiveInternet--></div>
+</div></div>
+<script type="text/javascript" src="/jscript/functions.js"></script>
+<script type="text/javascript" src="/jscript/vote_thumbs/script.js"></script>
+</body>
+</html>

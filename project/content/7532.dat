@@ -1,0 +1,529 @@
+eva.ru/static/forums/80/2008_1/1208844.html
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head lang="ru-RU"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="language" content="ru"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="cache-control" content="max-age=0"> 
+  <meta http-equiv="cache-control" content="no-cache"> 
+  <meta http-equiv="expires" content="0"> 
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"> 
+  <meta http-equiv="pragma" content="no-cache"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/eva/css/normalize.css" rel="stylesheet"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/vendors/social/bootstrap-social.css" rel="stylesheet" media="screen"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/eva/css/eva.css?3.2.026" rel="stylesheet"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/fonts/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/vendors/switch/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet"> 
+  <title>        поделитесь    </title>
+ </head>
+ <body>
+  <nav class="navbar navbar-fixed-top hidden" id="nav-scrolled" role="navigation"> 
+   <div class="container"> 
+    <ul class="nav navbar-nav"> 
+     <IDXSKIP><li> <a href="/forum.htm">Форумы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/news.htm">Новости</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/polls.htm">Опросы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/contests.htm">Конкурсы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/do.htm">Объявления</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/photoalbum/index.htm">Фотозалы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/top5.htm">Топ 5</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="dropdown pull-right hidden-xs"> <a class="dropdown-toggle" data-toggle="dropdown">Войти<span class="caret"></span></a> 
+      <div class="dropdown-menu login-menu"> 
+       <form class="form" id="frmLogin" action="/login.htm"> 
+        <input type="hidden" name="action" value="login"> 
+        <input type="hidden" name="successRedirect" value=":start"> 
+        <input type="hidden" name="errorRedirect" value=":user-forget-password"> 
+        <div class="form-group"> 
+         <div class="input-group"> 
+          <span class="input-group-addon"><i class="fa fa-user"></i></span> 
+          <input class="form-control" type="text" required="true" title="Введите логин" data-valid-min="2" pattern="^[a-z,A-Z,0-9,_]{6,15}$" size="15" placeholder="Логин или @" id="username" name="username"> 
+         </div> 
+        </div> 
+        <div class="form-group clearfix"> 
+         <div class="pull-left"> 
+          <div class="input-group"> 
+           <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+           <input class="form-control" type="password" required="true" title="Введите пароль" placeholder="Пароль" id="password" size="15" name="password"> 
+          </div> 
+         </div> 
+         <button id="btnLogin" class="btn-eva-login btn btn-default pull-right"> <i class="fa fa-sign-in"></i>&nbsp; </button> 
+        </div> 
+        <div> 
+         <a class="btn btn-vk btn-sm btn-block btn-social" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i> Зайти через VK</a> 
+         <a class="btn btn-facebook btn-sm btn-block btn-social" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook"><i class="fa fa-facebook"></i> Зайти через Facebook</a> 
+         <a class="btn btn-openid btn-sm btn-block" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; Зайти через Одноклассников</a> 
+        </div> 
+       </form> 
+      </div> </li></IDXSKIP> 
+     <IDXSKIP><li class="pull-right"> 
+      <form role="form" action="http://yandex.ru/sitesearch" class="search form-inline"> 
+       <input type="hidden" name="searchid" value="153288"> 
+       <input type="text" name="text" class="form-control" placeholder="Найти на Еве.Ру" style="width:200px"> 
+       <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i> </button> 
+      </form> </li></IDXSKIP> 
+    </ul> 
+   </div>
+  </nav>
+  <div class="eva container"> 
+   <header> 
+    <IDXSKIP><div class="hat-xs visible-xs-block clearfix"> 
+     <div class="pull-left"> 
+      <a href="/" title="Ева.Ру"><img src="https://cloudstatic.eva.ru/design/eva3//eva/images/logo2.png" alt="Ева.Ру">EVA.RU</a> 
+     </div> 
+     <form role="form" action="http://yandex.ru/sitesearch" class="form-inline"> 
+      <input type="hidden" name="searchid" value="153288"> 
+      <button type="submit" class="btn btn-sm btn-danger">Поиск</button> 
+      <input type="text" name="text" class="input-sm form-control" placeholder="Найти на Еве.Ру"> 
+     </form> 
+    </div></IDXSKIP> 
+    <div class="hat-non-logged"> 
+     <IDXSKIP><div class="additional visible-xs-block"> 
+      <a class="reg" href="/registration.htm" title="Зарегистрироваться">Регистрация</a> 
+     </div></IDXSKIP> 
+     <div class="clearfix"> 
+      <IDXSKIP><div class="logo pull-left hidden-xs"> 
+       <a href="/" title="Ева.Ру"><img class="hidden-xs" src="https://cloudstatic.eva.ru/design/eva3//eva/images/logo.png" alt="Ева.Ру"></a> 
+      </div></IDXSKIP> 
+      <IDXSKIP><ul class="list-unstyled pull-right"> 
+       <li> 
+        <form class="form-login-inline" id="frmLogin" action="/login.htm"> 
+         <input type="hidden" name="action" value="login"> 
+         <input type="hidden" name="successRedirect" value=":start"> 
+         <input type="hidden" name="errorRedirect" value=":user-forget-password"> 
+         <input class="form-control input-sm" type="text" required="true" title="Введите логин" data-valid-min="2" pattern="^[a-z,A-Z,0-9,_]{6,15}$" size="15" placeholder="Логин или @" id="username" name="username"> 
+         <input class="form-control input-sm" type="password" required="true" title="Введите пароль" placeholder="Пароль" id="password" size="15" name="password"> 
+         <button id="btnLogin" class="btn-eva-login btn-sm btn btn-default"> <i class="fa fa-sign-in"></i>&nbsp; </button> 
+        </form> </li> 
+       <li class="hidden-xs"> 
+        <div class="clearfix"> 
+         <a class="btn btn-danger btn-sm" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook">&nbsp;<i class="fa fa-facebook"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники">&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; </a> 
+         <a class="reg pull-right" href="/registration.htm" title="Зарегистрироваться">Регистрация</a> 
+        </div> </li> 
+      </ul></IDXSKIP> 
+      <IDXSKIP><ul class="list-unstyled pull-right visible-xs-inline"> 
+       <li> 
+        <div class="clearfix "> 
+         <a class="btn btn-danger btn-sm" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook">&nbsp;<i class="fa fa-facebook"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники">&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; </a> 
+        </div> </li> 
+      </ul></IDXSKIP> 
+     </div> 
+    </div> 
+   </header> 
+   <nav class="navbar navbar-static-top clearfix" role="navigation"> 
+    <ul class="nav navbar-nav"> 
+     <IDXSKIP><li> <a href="/forum.htm">Форумы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/news.htm">Новости</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/polls.htm">Опросы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/contests.htm">Конкурсы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/do.htm">Объявления</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/photoalbum/index.htm">Фотозалы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/top5.htm">Топ 5</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="dropdown visible-xs-inline"> <a class="dropdown-toggle" data-toggle="dropdown">Разделы <span class="caret"></span></a> 
+      <ul class="dropdown-menu"> 
+       <li><a href="/beauty/index.htm"> <small>Красота</small> </a></li> 
+       <li><a href="/pregnancy/index.htm"> <small>Беременность</small> </a></li> 
+       <li><a href="/kids/index.htm"> <small>Дети</small> </a></li> 
+       <li><a href="/house-and-hobby/index.htm"> <small>Дом</small> </a></li> 
+       <li><a href="/health/index.htm"> <small>Здоровье</small> </a></li> 
+       <li><a href="/animals/index.htm"> <small>Звери</small> </a></li> 
+       <li><a href="/travel/index.htm"> <small>Отдых</small> </a></li> 
+       <li><a href="/recipes/index.htm"> <small>Рецепты</small> </a></li> 
+       <li><a href="/love/index.htm"> <small>Любовь</small> </a></li> 
+       <li><a href="/eva-life/index.htm"> <small>LIFE</small> </a></li> 
+      </ul> </li></IDXSKIP> 
+     <IDXSKIP><li class="pull-right"> 
+      <form role="form" action="http://yandex.ru/sitesearch" class="search form-inline"> 
+       <input type="hidden" name="searchid" value="153288"> 
+       <input type="text" name="text" class="form-control" placeholder="Найти на Еве.Ру" style="width:200px"> 
+       <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i> </button> 
+      </form> </li></IDXSKIP> 
+    </ul> 
+   </nav> 
+   <div class="row"> 
+    <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12"> 
+     <div id="mainContent"> 
+      <h1> поделитесь </h1> 
+      <hr> 
+      <div id="archivedContent">
+        
+       <table border="0" width="100%"> 
+        <tbody> 
+         <tr> 
+          <td width="70%" valign="middle"> <b> <a href="/static/forums" style="color:#cc3333;"><IDXSKIP>Список всех форумов (версия для печати) </IDXSKIP></a> </b> <br><br> <b> <a href="/static/forums/80" style="color:#cc3333;">Помесячная карта форума Красота, здоровье, отдых &gt; Медицина и здоровье(версия для печати) </a> </b> <br><br> <b> <a href="/static/forums/80/2008_1" style="color:#cc3333;">Все темы форума Красота, здоровье, отдых &gt; Медицина и здоровье за 2008 Январь (версия для печати) </a> </b> <br><br><br> <b> <font style="color:999999;font-size:14px">Список сообщений топика "поделитесь" форума Красота, здоровье, отдых &gt; Медицина и здоровье</font> </b> <br><br><br> </td> 
+         </tr> 
+         <tr> 
+          <td> 
+           <table border="0" cellpadding="0" cellspacing="2"> 
+            <tbody> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="4"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34339298.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> <IDXSKIP>Anonymous &nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>анонимный пользователь&nbsp; &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 02:51 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 16 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> читала, слышала, что по состоянию кожи лица, по состоянию ногтям, волос и т.д. можно быстро определить что не в порядке в организме. Поделитесь ссылками на такие статьи,сайты, плиз!!! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"> <a name="Message34364848"></a> </td> 
+              <td width="99%" colspan="3"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34364848.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:#B2B2B2" href="#Message34339298">сообщение 34339298</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/42769.html">Rina_LM</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 03:16 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> 1000 немелочей. Диагностика по коже<br><br>ПО СОСТОЯНИЮ кожи можно довольно точно судить о нарушениях функций внутренних органов и желез. Так, бледность лица обычно свидетельствует о пониженном давлении, анемии, периферийных нарушениях кровообращения, почечной недостаточности. Чрезвычайная бледность лица указывает на не вполне здоровые легкие и тяжелые нарушения пищеварения. <br>Желтоватый оттенок кожи лица говорит о нарушениях функций печени или желчного пузыря, а красный цвет - о повышенном давлении, предрасположенности к сильному сердцебиению, апоплексии. Периодическое покраснение лица может быть вызвано приливом крови, обусловленным климаксом, а также злокачественным образованием в тонкой кишке или опухолью мозгового вещества надпочечника. <br><br>Чересчур шелковистая кожа - признак предрасположенности к ревматизму, подагре, заболеваниям почек и мочевого пузыря. Сухая, шероховатая кожа указывает на предрасположенность к горячке и кожным болезням. Холодная и влажная кожа - сигнал о предрасположенности к заболеваниям печени. Сморщенная кожа лица в молодом и среднем возрасте говорит о заболевании поджелудочной железы. <br><br>Если кожа лица имеет бронзовую окраску, то это признак поражения надпочечников. Внезапное пожелтение кожи лица - сигнал о нарушении функций селезенки. Зеленоватый цвет лица может появляться при раке. Если щеки имеют сине-красную окраску, то можно говорить о сердечной недостаточности. <br><br>Бледность кожи лба - признак пониженного давления. Общая бледность, сопровождающаяся потом на лбу, указывает на прободение язвы желудка или на аппендицит. При чрезмерном поступлении протеина в организм и потреблении жареного могут появиться родимые, так называемые печеночные пятна. Длительные нарушения пищеварения приводят к появлению прыщей на коже. <br><br>Паутинка кровеносных сосудов на коже, как и коричневые пятна у корней волос, - признак повышенной нагрузки на печень. Белые пятна на коже говорят о нарушениях обмена веществ.<br><br>Расширение сосудов на коже около рта указывает на гастрит, гастроколит. (Источник: АИФ)<br><br>Какие болезни «написаны» на лице<br> Внешний вид человека может рассказать опытному клиницисту практически все - от физического до психического здоровья. Вот 25 безусловных, подтвержденных врачебной практикой проявлений разных болезней на лице.<br><br>Много поперечных морщин на лбу (лоб гармошкой), манера поднимать как бы удивленно брови - характерна для людей, склонных к алкоголизму.<br><br>«Горькая» складка между бровей (особенно в сочетании с крепко сжатыми губами) говорит о том, что человек длительно страдает от какого-то хронического болевого синдрома.<br><br>Блестящие глаза слегка навыкате, которые привлекают и сводят с ума, - признак заболеваний щитовидной железы.<br><br>Желтизна склер глаз говорит о больной печени.<br><br>Длинные, загнутые, красивейшие, пушистые ресницы - примета легочного больного или человека, склонного к легочным патологиям и астме.<br><br>Мешки, темные круги под глазами - больные почки или мочевой пузырь.<br><br>Усиленное выпадение волос - симптом серьезного снижения иммунитета после или на фоне тяжелой болезни.<br><br>Амимичное, маскообразное лицо, мимика не соответствует происходящим событиям - симптом тяжелого психического заболевания, особенно шизофрении.<br><br>Морщинистое лицо даже у молодого человека - эндокринные расстройства.<br><br>Красные прожилки в склерах - сигнал нервного истощения, хронической усталости.<br><br>Упругая кожа лица - признак здоровья. А дряблость говорит о преждевременном старении кожи. Это случается при болезнях обмена веществ и желудочно-кишечного тракта.<br><br>Общая одутловатость лица - больное сердце.<br><br>Землистый цвет лица, «опущенное» лицо - признак развития опухолевого заболевания.<br><br>Капиллярная сеточка на щеках - сигнал повышенного давления и склонности к инсульту - апоплексический тип.<br><br>Светлая пятнистая пигментация на лице у женщины - признак беременности.<br><br>Появление желтовато-коричневатых пигментных пятен на лице говорит о почечной патологии.<br><br>Розовые, красные щеки и при этом синеватые губы - митральный порок сердца.<br><br>Синеватая бледность лица - симптом анемии или легочной патологии. Восковая бледность - признак туберкулеза.<br><br>Кокетливо приоткрытый рот - признак аденоидов, гайморита.<br><br>Опущенные углы рта и глаз - внешнее проявление депрессии.<br><br>Нижняя губа западает, объем верхней губы становится больше - признак онкологии.<br><br>Сухие губы с заедами в уголках сигналят о гастрите или язве желудка.<br><br>Ломкие волосы - обменная недостаточность, авитаминоз.<br><br>Жирные, паклей висящие волосы - признак эндокринных проблем, заболеваний желудка и кишечника.<br><br>Характерные бурые пятна - «медвежья» шкура - в радужке - признак предрасположенности к онкологии.<br><br> О чем врачу расскажут кожа, ногти и лицо?<br> ...Мне приходилось слышать, что китайские врачи могут сказать, чем болен человек, всего лишь пощупав пульс или посмотрев на его язык. Неужели это действительно возможно? Если да, то расскажите, пожалуйста, на страницах газеты о наиболее интересных способах восточной диагностики.<br>Александра Кузнецова, г. Самара.<br><br>Диагностика по-восточному - особое, очень древнее врачебное искусство, которое формировалось тысячелетиями. Сегодня о некоторых способах узнать состояние здоровья человека нам рассказывает врач-рефлексотерапевт, специалист по китайской и тибетской медицине Борис Гезенцвей.<br><br>Диагностика по пульсу<br><br>Эта диагностика, как утверждают, по плечу очень немногим европейским специалистам - восточная медицина различает аж 27 видов пульса! Каждое отклонение от нормы соответствует каким-либо заболеваниям. Также врач принимает во внимание возраст пациента, его пол, конституционные особенности, эмоциональное состояние, время года, суток и многое другое.<br><br>Например, пульс тем быстрее, чем моложе человек. У женщин пульсовой удар легче и быстрей, чем у мужчин. У мускулистых людей высокого роста пульс реже и глубже. Худощавые люди имеют обычно пульс с поверхностным расположением, полные - глубоко лежащий пульс.<br><br>Кстати, мужчинам измеряют пульс на правой руке, женщинам - на левой.<br><br>По результатам обследования врач сможет сказать вам, звучание какой музыки, запах ароматов, вкус пищи и даже цветовая гамма одежды в данный момент дадут вам оздоровительный эффект.<br><br>...по ногтям<br><br>Китайцы считают, что каждый палец имеет связь с определенным органом. Большой палец связан с мозгом, указательный - с легкими, средний - с кишечником, безымянный - с почками, а мизинец - с сердцем. Ногти же на пальцах - настоящее зеркало всего организма.<br><br>Цвет ногтей. Бледные ногти бывают при анемии, чрезмерно розовые - у гипертоников, синеватые ногти говорят о болезнях сердца, а желтоватые - печени. Полоски на ногте указывают на заболевания селезенки и тонкого кишечника, а белые крапинки на ногтевой пластине - недостаток цинка или кальция.<br><br>Форма ногтей. При врожденных заболеваниях дыхательной системы ноготь плоский и искривленный, а при сахарном диабете - удлиненный, при болезнях позвоночника и спинного мозга ноготь бывает треугольной формы. Обгрызенные ногти означают неврозы, гастриты, глистные инвазии, половые дисфункции у женщин.<br><br>Поверхность. Плоский или вогнутый ноготь говорит о недостатке железа. Волнистая поверхность ногтей указывает на нарушение усвоения пищи и запущенные заболевания.<br><br>...по лицу<br><br>Считается, что на лице имеется около 600 биологически-активных точек, и состояние здоровья сразу отражается на чертах лица. Так, губы и язык являются «зеркалом» пищеварительного тракта, глаза - печени, уши - почек и мочеотделения, нос - дыхательной системы.<br><br>Цвет лица. Желтоватый оттенок кожи выдает хронического курильщика и болезни печени, сероватый - болезни сердца, бессонницу или онкологию, красное лицо выдает гипертоника. Изменение окраски носа и щек в форме бабочки говорит о болезни почек или о нарушении пищеварения и усваивания железа и фолиевой кислоты.<br><br>Морщины. Между бровями с правой стороны - подавление ваших эмоций сказывается на печени. Такая же складка слева - на неполадки с селезенкой.<br><br>Форма щек. Люди с замедленным обменом веществ обычно имеют пухлые щеки, с чрезмерно ускоренным - вялые и запавшие.<br><br>...по запахам<br><br>Врач прислушивается к запахам от больного: запах изо рта, запах пота, гноя и т. д. Иногда обращают внимание на запахи мокроты, мочи, кала.<br><br>Например, при диабетической коме или анорексии у больного изо рта пахнет ацетоном, при уремической коме - мочой, при абсцессе или раке легкого дыхание пахнет разложением. Диагносты различают множество запахов и их нюансов, соответствующих различным заболеваниям.<br><br>...по языку<br><br>По теории китайской медицины, язык делится на четыре участка: кончик, средняя часть, корень и края. На кончике языка проявляются болезни сердца и легких. В средней части - болезни селезенки и желудка. Корень соответствует почкам, а края - печени и желчному пузырю.<br><br>Специалист внимательно рассматривает язык пациента и отмечает цвет, влажность, поверхность, вены, состояние сосочков языка и на основании этого ставит диагноз.<br><br>...по моче<br><br>В тибетской медицине считается, что до полуночи моча идет «от пищи», а после полуночи - «от болезни», именно ее и исследует врач рано утром. Рассматривают мочу трижды: первый раз - пока она горячая, второй раз - после исчезновения пара, третий раз - после остывания.<br><br>Моча здорового человека имеет не очень интенсивный запах, пары идут со всей поверхности сосуда с мочой равномерно, осадок также выпадает ровно, пена и пузыри покрывают всю поверхность сосуда. После исчезновения пара моча прозрачна и имеет светло-желтый цвет. Каждое отклонение от нормы говорит о наличии той или иной патологии в организме.<br><br>Еще про самодиагностику <br>О некоторых, порой экзотических, способах диагностики человеческого организма, идущих из глубокой древности, рассказывает врач-рефлексотерапевт, специалист по китайской и тибетской медицине Борис Гезенцвей<br><br> Диагностика... по звукам<br><br>Специалист уделяет особое внимание звуку дыхания (часто или редко дышит больной, легко или с затруднениями, испытывает ли он трудности, вдыхая и выдыхая воздух). Если пациент кашляет - определяет, есть ли свист и клокотание мокроты. Икота, отрыжка, урчание в животе, голос человека и даже его интонации указывают знающему диагносту на определенные «неполадки» в организме.<br><br>...по губам и зубам<br><br>Зубы тоже могут рассказать многое о нашем здоровье. Считается, резцы показывают состояние желудка, премоляры - кишечника, моляры - сердца.<br><br>Размер, форма, поверхность, цвет и очертание губ тоже о многом говорит диагносту. Например, на линию губ проецируется толстый кишечник. Тонкие, плотно сжатые губы говорят о хроническом колите и запорах. Если губы трескаются или появляются заеды - гиповитаминоз, проблемы с почками. Сухость и шершавость губ указывает на обезвоживание организма или стресс. При анемии губы бледные, при болезнях печени - желтоватые, у «сердечников» - синеватые. Если на губах много светло-коричневых крапинок, значит, у человека плохое пищеварение или имеются паразиты в толстой кишке.<br><br>...по глазам<br><br>Симптомы нездоровья также отражаются на состоянии наших глаз. Значение имеет все - состояние век, ресниц, склеры, радужной оболочки. Вот некоторые из них.<br><br>Нижние веки полные и припухлые указывают на нарушения в работе почек. Нависающее верхнее веко или частое мигание - на хроническую тревогу и депрессию. Блестящие и чувствительные к свету глаза бывают у близоруких людей. Глаза навыкате говорят о проблемах с щитовидной железой.<br><br>Если конъюнктива глаз бледная, это указывает на анемию, если желтая - на болезни печени. Маленькая радужная оболочка указывает на слабость суставов. Белый круг вокруг радужки говорит о избытке солей в организме, если это кольцо выдается сильно - хрупкость и перерождение суставов, артриты. Коричневато-темные точки на радужной оболочке указывают на то, что кишечник плохо усваивает железо.<br><br>...по животу<br><br>Живот сначала осматривают снаружи, а потом прощупывают более глубокие слои. При этом обращают внимание на форму живота, состояние кожи, толщину брюшной стенки, ее подвижность при дыхании, напряженность и эластичность мышц, их защитную сокращаемость, шум движения жидкости, наличие плотных узлов в брюшной полости и т. д. Отклонения от нормы могут говорить о многих заболеваниях внутренних органов и болезнях обмена веществ. (Источник: "Комсомольская правда")<br><br> Я боль твою узнаю по походке! <br><br>15 признаков различных недугов, которые можно распознать по внешнему виду человека <br>Есть такое понятие - картина болезни. Многие внутренние недомогания буквально прорисовываются на нашей внешности - иногда грубыми мазками, иногда тонкими полутонами. И оценка того, как человек выглядит, двигается, какая у него походка, осанка, манера сидеть и стоять, во многом помогает специалисту поставить верный диагноз, а потом подкрепить его различными исследованиями. <br>Ну что, приступим?<br><br>При ходьбе плечи согнуты вперед, как бы защищая грудную клетку и живот, голова немного втянута (как у нахохлившегося воробышка), манера сцеплять руки в замок на животе - признак заболеваний желудочно-кишечного тракта: хронического гастрита, язвы желудка, двенадцатиперстной кишки.<br><br>Когда человек стоит или сидит, он часто меняет позу, ерзает - знак проблемы со спиной: остеохондроза или межпозвонковой грыжи.<br><br>Идет, как на протезах, стараясь как можно меньше сгибать ноги в коленях, делает мелкие шажки, ему приходится прикладывать усилия, чтобы сесть и особенно встать, - проблемы с суставами: артроз, артрит.<br><br>Человек идет, держа голову, как хрустальную вазу, поворачивает не шею, а весь корпус - шейный остеохондроз. В сочетании с общей бледностью - сильные головные боли, мигрень. Если же при этом голова склонена слегка набок, речь может идти о миозите - воспалении шейных мышц.<br><br>Человек держится чрезмерно прямо, наклоняется всем туловищем, не сгибая спины, - признак болезни Бехтерева.<br><br>Неуверенная походка, как бы постоянный поиск опоры, свойственна тем, кто страдает головокружениями при проблемах с давлением, вегетососудистой дистонией.<br><br>Шаркающая походка вкупе с опущенными плечами и головой - симптом глубокой депрессии.<br><br>Нервная, как на шарнирах, походка, чрезмерная жестикуляция даже при спокойном разговоре - признак неврозов, психопатии.<br><br>Заторможенность движений, малая подвижность, скованность рук - признак серьезного психического расстройства, вплоть до шизофрении.<br><br>Даже едва заметное дрожание головы говорит об атеросклерозе сосудов головного мозга либо неврологических проблемах (у молодых это часто посттравматический паркинсонизм). Подрагивание рук говорит скорее о сосудистой патологии.<br><br>Несложно «вычислить» человека, перенесшего микроинсульт, по припадающей на одну сторону походке и характерным движениям: рука прижата к телу, нога отведена в сторону.<br><br>Осторожная походка, боязнь задеть что-либо, руки прижаты к телу - какой-либо хронический болевой синдром.<br><br>Подрагивающая походка, как будто человек ступает по горячим углям, - признак подагры или полиартрита.<br><br>Человек ходит, расставляя ноги, как на ходулях, сидит преимущественно боком - признак геморроя. <br>Источник: Комсомольская правда <br><br>Покажите язык. Самодиагностика организма <br>Как по языку узнать о сбоях в работе позвоночника, желудка, печени и предотвратить их? Рассказывает доктор медицинских наук, профессор ЦНИИ стоматологии Геннадий Владимирович БАНЧЕНКО.<br><br>- Язык - зеркало внутреннего состояния организма. На нем оставляют следы различные заболевания. Внешне они проявляются на языке по-разному: это и налет, и покраснение, и увеличение различных зон, искривление складки, слущивание сосочков. <br>- А можно ли самостоятельно по своему языку определить, какие органы не в порядке?<br><br>- Можно. Каждая зона языка связана с определенным органом. Складка, например, говорит о здоровье позвоночника.<br><br>ИСКРИВЛЕНИЕ СКЛАДКИ У КОНЧИКА ЯЗЫКА сигнализирует о шейном остеохондрозе. Скорее всего, это результат сидячего образа жизни, долгой работы с компьютером или за письменным столом.<br><br>ИЗГИБ СКЛАДКИ В СЕРЕДИНЕ ЯЗЫКА - поясничный остеохондроз, им обычно страдают профессиональные водители и люди, проводящие много времени за рулем. Чтобы избежать остеохондроза, нужно регулярно делать разминку: несколько приседаний, вращение головой - простые, но очень полезные упражнения.<br><br>ПОКРАСНЕНИЕ КОНЧИКА ЯЗЫКА - признак слабой сердечной деятельности, начинающейся ишемической болезни. О болезнях легочной системы можно судить по изменениям у краев языка, ближе к кончику. Заболеваниями сердца и легких чаще всего страдают курильщики, поэтому подобные изменения на языке - серьезный повод бросить курить.<br><br>ЖЕЛТИЗНА НА ЯЗЫКЕ И НЕБЕ говорит о болезнях печени, хроническом холецистите.<br><br>ПО НАЛЕТУ У ОСНОВАНИЯ ЯЗЫКА судят о нарушениях в работе желудочно-кишечного тракта и почек.<br><br>ОТПЕЧАТКИ ЗУБОВ НА ЯЗЫКЕ - признак дисбактериоза, зашлаковки организма. В этом случае стоит изменить режим питания, поменьше есть жирного и жареного. Для приведения в порядок организма можно принимать разные настои трав. Например, заварить 1 стаканом кипятка 1 столовую ложку зверобоя, настоять в тепле 30 минут. Принимать по 1/3 стакана 3 раза в день перед едой в течение 2-3 недель.<br><br>ДРОЖАНИЕ ЯЗЫКА - проявление неврастенического синдрома. Здесь совет такой: постараться улучшить психологическую обстановку дома, на работе, изменить образ жизни.<br><br>ТРЕЩИНКИ НА ЯЗЫКЕ могут говорить о различных болезнях крови, эндокринной системы, патологии почек. Здесь надо проверяться наиболее серьезно. Признак сбоев в организме - снижение вкусовых ощущений. На языке есть зоны, отвечающие за реакцию на сладкое, кислое, соленое, горькое. Если человек перестает ощущать какой-то из этих вкусов, то речь может идти о заболеваниях нервной, эндокринной систем. <br><br>Передозировка лекарств, особенно антибиотиков, также вызывает реакцию организма, которая проявляется на языке. Это так называемая "лекарственная болезнь". Поэтому не стоит злоупотреблять самолечением.<br><br>- Через какое время на языке отражаются изменения?<br><br>- По-разному - в зависимости от иммунной системы, от уравновешенности характера человека, от других факторов. Основной катализатор появления болезни или отдельных симптомов - стресс.<br><br>- Итак, человек по языку определил, что с ним что-то не в порядке. К какому врачу нужно обратиться?<br><br>- К сожалению, у нас нет такой врачебной специальности - слизистолог. Но некоторые специалисты довольно точно ставят диагноз и по языку. Гастроэнтерологи обычно смотрят на налет языка. Гематологи по слущиванию сосочков могут определить болезни крови, а онкологи - диагностировать раковые заболевания.<br><br>Однако диагностика иногда затруднена. Есть скрытые болезни с долгим инкубационным периодом, при котором анализы ничего не показывают. Сегодня ее не будет, но завтра выскочит. Поэтому лучше почаще смотреть на язык и вовремя принимать меры, если что не так.<br><br>- А как должен выглядеть здоровый язык?<br><br>- Цвет бледно-розовый, правильных очертаний, с ровной складкой и с хорошо выраженными сосочками.<br><br>- Бережное отношение к языку помогает в профилактике заболеваний?<br><br>- Безусловно. За языком нужно тщательно ухаживать. При ежедневной чистке зубов желательно очищать и язык.<br><br>Кроме того, для профилактики советую использовать полоскания, лучше - настоями разных трав и растений: малины, подорожника, крапивы, одуванчика. Они продаются в аптеках. Улучшить состояние рта можно свежими ягодами земляники или полосканиями рта лимонным соком, разведенным с водой. Полезны также полоскания капустным, свекольным, морковным соками.<br><br>Напоминаем<br>Если своевременно реагировать на сигналы организма, то можно вовремя ухватить еще пока скрытое заболевание. Евгений ГАРЦЕВ (Источник: "Женское здоровье")<br><br>Прыщик на лбу - проблемы внутри?<br>Ирина, я слышала, что прыщики на лице как-то связаны с проблемами внутренних органов. Правда ли это?<br>Наталия Н а з а р о в а, Башкирия <br>ТАКАЯ гипотеза действительно существует. Считается, что зоны лица - это проекция внутренних органов, а прыщик - сигнал о неполадках. <br><br>Зона лба - проекция тонкой кишки. <br><br>Виски - желчного пузыря. <br><br>Верхняя губа и щеки - толстого кишечника. <br><br>Угол нижней челюсти (от уха до подбородка) - мочеполовой системы. <br><br>Подбородок (боковая часть) - гинекология. <br><br>Подбородок (центральная часть) - проекция щитовидной железы. <br><br>Крылья носа и переход к щекам - поджелудочной железы. <br><br>А вот прыщик на кончике носа (согласно приметам) говорит о том, что в вас кто-то влюбился. <br><br>Ирина КРУГЛОВА, косметолог Медицинского женского центра (АИФ-Здоровье) <br><br>Наши болезни написаны на лице<br>Когда с нашим здоровьем что-то не так, мы обычно бежим к врачу и начинаем сдавать кучу всевозможных анализов. Или, наоборот, обходим поликлинику как можно дальше, не придавая значения появляющимся сбоям в организме. Авось пронесет! Но, оказывается, хотя бы предварительный диагноз можно поставить и самостоятельно, просто взглянув на собственное отражение в зеркале. Правда, для этого вам понадобятся некоторые специальные знания.<br><br> Все это, в общем-то, не ново. Физиогномикой или наукой о лице занимался еще великий Аристотель. Некоторые люди имеют врожденные навыки быстро определять по лицу, что у нас «за душой». Мы удивляемся, когда гадалка на улице быстро и почти безошибочно определяет наше эмоциональное состояние, а порой, даже угадывает болезни, которыми мы страдаем. Главной «подсказкой» ей в этом занятии является наше собственное лицо. С эмоциональным состоянием все более или менее понятно. Представители круглого, продолговатого, квадратного, треугольного и трапециевидного лица имеют вполне конкретные особенности характера и известно это с незапамятных времен. Но как по чертам лица можно диагностировать болезни?<br>Оказывается, и заболевания оставляют свой неизгладимый отпечаток на лице больного. В свое время Н.И. Пирогов даже составил атлас «Лицо больного». Он утверждал, что практически каждое заболевание оставляет свой характерный след на лице человека. Однако особое распространение метод диагностики по лицу получил в странах Востока (особенно в Китае и Корее). Ни один опытный врач, обученный тибетской медицине, не поставит диагноз без тщательнейшего изучения лица пациента. С тех пор появилось немало последователей физиогномики.<br>Начнем с самых распространенных сейчас заболеваний сердца и сосудов. По чертам лица можно, например, предсказать инфаркт миокарда. Самым надежным диагностическим признаком возможной сердечной «катастрофы» является нарушение чувствительности, вплоть до онемения кожной зоны между подбородком и нижней губой. Если из этой зоны подняться выше, то наличие глубокой морщины между губой и носом говорит о дефекте сердечного клапана. Начинающаяся сердечная недостаточность проявляется на лице периодическим посинением губ. Если вы заметили за собой подобное, – это серьезный повод для обращению к доктору.<br>Важным признаком повышенной нагрузки на сердце и органы кровообращения является глубокая и удлиненная носогубная складка с обеих сторон. О неврозе сердца свидетельствует узкая спинка носа.<br>Красный бугристый нос с прожилками кровеносных сосудов говорит о высоком уровне артериального давления. Низкое же артериальное давление зачастую проявляется сине-красной окраской носа.<br>О сердечных заболеваниях напоминают крылья носа, имеющие сине-красную окраску, а о нарушении кровообращения, - бледность ушных раковин с характерным восковым оттенком.<br>Важная диагностическая зона - виски. Выступающая под кожей изогнутая височная артерия с резкими контурами в сочетании с периодическим покраснением лица указывают на частое и резкое повышение артериального давления. У таких людей высока вероятность гипертонического криза.<br>Одним из признаков сердечных проблем могут служить щеки. При впалости левой щеки можно заподозрить сердечное заболевание. Косвенным признаком раннего нарушения кровообращения в молодом возрасте является преждевременное поседение волос.<br>На предрасположенность к заболеваниям сердца указывает короткая шея. Кроме проблем с сердцем, для обладателя короткой шеи вполне реальна угроза раннего склероза сосудов головного мозга.<br>О серьезных проблемах со здоровьем могут свидетельствовать и многочисленные, так называемые, «косметические» недостатки на лице.<br>Так, например, мешки под глазами, а также отечность лица в целом говорят о возможных проблемах с почками или же с щитовидной железой.<br>О целом комплексе заболеваний могут «рассказать» и внезапно появившиеся и долго не проходящие темные круги под глазами.<br>Самые банальные прыщи – это вообще настоящая «карта» болезней, расположенная на нашем лице. В зависимости от их месторасположения можно диагностировать как заболевания половой системы, так и проблемы с желудочно-кишечным трактом, нервной и эндокринной системами, а также множество других нарушений.<br>Но и это далеко не все! Опытный врач может оценить здоровье пациента даже по состоянию его кожи (ее оттенок, степень сухости и т. д.).<br>Но все же по лицу больше всего можно «вычислить» заболеваний центральной нервной системы. Американские исследователи недавно разработали для этого специальную программу, способную распознавать заболевания и генетические синдромы. Компьютер, анализируя черты лица пациента, помогает врачам с малым опытом работы ставить диагноз. Используя фотографии больных, компьютер обучили распознавать такие редкие патологии, как синдром Корнелии де Ланге, синдром ломкой хромосомы и синдром Уильямса-Бойрена.<br>Новая программа представляет лицо в виде схемы из 48 точек. Сравнивая положение этих точек и расстояние между ними с информацией из базы данных, компьютер распознает патологии.<br>Первые попытки дали верный диагноз в 60% случаев. Когда были внесены коррективы, и программа стала обращать большее внимание на глаза, нос, рот и подбородок, результативность повысилась до 76%. Предыдущие работы же оказались менее удачными - уделялось недостаточное внимание оценке параметров лица в совокупности.<br>Очень важно то, что новая программа позволяет ставить предварительный диагноз задолго до появления других клинических проявлений заболевания. А это в случае генетических патологий очень важно. Ведь можно своевременно провести медикаментозное вмешательство, которое значительно облегчит течение заболевания пациента в будущем.<br>Кстати, немецкие ученые провели независимую экспертизу нового компьютерного метода диагностики. «Для опознания» программе были предложены 55 фотографий людей с различными патологиями. Точный диагноз был поставлен в 76% случаев.<br>Новая программа поможет выяснить ученым, какими недугами страдали древние египтяне. Для этого недавно были исследованы несколько сохранившихся рисунков. Изучали цветные портреты, найденные в древнейших захоронениях мумий, которые хранятся теперь в Британском музее в Лондоне и в нью-йоркском музее Метрополитен. На многих портретах изображены люди, страдающие прогрессирующей лицевой гемиатрофией - болезнью, при которой искажаются черты лица. Автор: Владимир Щербаков (Beautytime.ru) <br><br>ГДЕ ТВОЕ «СЛАБОЕ ЗВЕНО»?<br><br>Комментирует Лидия ТОЛСТОНОГОВА:<br><br>Синеватая тень во внутреннем углу глаз: слабое место организма - почки.<br><br>«Мешки» под глазами: может быть, не в порядке мочевыделительная система.<br><br>Нижняя часть лица (с губами) сигналит о состоянии сердечно-сосудистой и дыхательной систем.<br><br>То, как выглядят скулы и нос, зависит от желудочно-кишечного тракта.<br><br>Зона вокруг глаз сигналит о болезнях мочеполовой системы.<br><br>Темные круги под глазами: вполне возможно, что перегружена печень. Но иногда это может быть следствием очень тонкой кожи, через которую просвечивают капилляры.<br><br>Шелушение, особенно у носа, может иметь несколько причин.<br><br>1. Сходит загар.<br><br>2. Летом часто меняется тип кожи и нормальная становится сухой, шелушится.<br><br>3. У мужчин - возможно, предпосылка к псориазу.<br><br>Ранний второй подбородок, дряблая кожа: вероятны проблемы с эндокринной системой.<br><br>Одутловатость над скулами: возможны неполадки в лимфатической системе желудочно-кишечного тракта. У мужчин это иногда может быть признаком частого «возлияния». Высыпания на висках: есть вероятность проблем с желчным пузырем.<br><br>Коричневые пятна. Пигментация часто возникает из-за ультрафиолета и сама по себе уже не пройдет. Убрать пятна можно только у дерматолога. У мужчин еще они могут говорить о наличии гормональных проблем.<br><br>Мелкие белые точки. Возможно нарушение обмена веществ, но чаще возникают от плохого очищения кожи и закупорки сальных желез.<br><br>Красные бесформенные пятна. Аллергическая реакция на пищу, косметику или одежду; иногда возникают на фоне длительных стрессов или после затяжных простуд.<br><br>Пожелтение. Почти всегда говорит о проблемах с печенью и желчным пузырем - необходимо срочно обратиться к врачу.<br><br>Красная сосудистая сетка. Чаще всего это следствие резкого перепада температур, но иногда говорит о плохом состоянии сосудов во всем организме; понаблюдайте за артериальным давлением!<br><br>Угревая сыпь. В молодом возрасте угри возникают из-за незрелости эндокринной системы, а в более зрелом (после 25 - 28 лет) - из-за плохого очищения кожи. Мужчины могут занести инфекцию при бритье.<br><br>Белые пятна. Обычно они появляются не на лице, а на шее, груди, плечах и называются витилиго. Откуда эта болезнь берется и как лечится, медики пока точно не знают, но большинство врачей считают витилиго проявлением нервного перенапряжения. (Источник: "Комсомольская правда")<br><br>Диагностика по носу<br>Ваш нос далек от идеального? Не отчаивайтесь. Если верить восточной медицине, то обладатели аккуратненького маленького носика вовсе не счастливцы, поскольку этот их орган свидетельствует о возможных проблемах с сердцем.<br><br>Прожилки кровеносных сосудов на носу появляются не только при заболеваниях сердца, но и при повышенном артериальном давлении.<br><br>Сине-красная окраска носа зачастую свидетельствует о низком артериальном давлении.<br><br>Если вокруг носа появилась сеточка кровеносных сосудов, возможно ухудшение кровообращения и воспаление вен.<br><br>Утолщение или побледнение крыльев носа характеризует заболевания легких.<br><br>Белый кончик носа сигнализирует о нарушении кровообращения или о язвенной болезни.<br><br>Периодическая или постоянная краснота носа может предупреждать о хроническом заболевании желудка.<br><br>Лопнувшие сосуды на коже около носа свидетельствуют о застойных явлениях в организме.<br><br>Поперечная морщина на переносице указывает на гипофункцию щитовидной железы, а утолщение кончика носа -- на расширение желудка.<br><br>Даже незначительная припухлость в области переносицы может говорить о воспалительном процессе в носу, в том числе наличии полипов.<br><br>Читаем по глазам<br>Если внимательно заглянуть в наше «зеркало души», можно безошибочно распознать не только настроение и истинные намерения, но и признаки разных неполадок в организме. <br><br>Желтоватые склеры (белки) глаз «сигналят» о проблемах с печенью. Если это возникло внезапно, сочетается с общей желтушностью кожи, температурой и мочой бурого цвета, это почти на 100% гепатит A (желтуха). Срочно в больницу!<br><br>Если же глаза желтые постоянно, значит, печень не справляется с нагрузкой. Это бывает при хронических воспалениях печени и желчного пузыря, циррозе. Нужно сдать анализы крови - общий и биохимию, а также сделать печеночные пробы.<br><br>Слезятся глаза при воспалительных заболеваниях век (блефарит, конъюнктивит), при инфекции придаточных пазух носа (гайморит). Слезотечение из одного глаза и припухание области вокруг него может быть признаком запущенного пульпита (воспаление мягких тканей зуба). <br><br>Тугие мешки на нижних веках - признак сердечной недостаточности или проблем с почками.<br><br>Большие и дряблые мешки с синеватыми прожилками выдают заядлого выпивоху.<br><br>Набрякшие верхние веки могут быть одним из внешних симптомов склероза сосудов головного мозга.<br><br>Глаза навыкате (двусторонний экзофтальм) - яркий знак проблем с щитовидкой, в том числе и проявление базедовой болезни.<br><br>Если глазное яблоко выпячивается с одной стороны, речь может идти о гайморокисте или образовании опухоли.<br><br>Узкие зрачки при нормальном освещении сигналят о том, что человек страдает от какой-то сильной боли. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"> <a name="Message34364861"></a> </td> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34364861.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:#B2B2B2" href="#Message34364848">сообщение 34364848</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/126117.html">Фeмида</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 03:20 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> БРАВО :)! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"> <a name="Message34364992"></a> </td> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34364992.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:#B2B2B2" href="#Message34364848">сообщение 34364848</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/57324.html">СолнышКо</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> CELEBRITY BRONZE &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 03:54 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Вот это даааааа, а сколько я себе диагнозов то поставила :-))) но косвенно ;-) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"> <a name="Message34364868"></a> </td> 
+              <td width="99%" colspan="3"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34364868.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:#B2B2B2" href="#Message34339298">сообщение 34339298</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/42769.html">Rina_LM</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 03:22 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Я боль твою узнаю по походке!<br><br>15 признаков различных недугов, которые можно распознать по внешнему виду человека <br>Есть такое понятие - картина болезни. Многие внутренние недомогания буквально прорисовываются на нашей внешности - иногда грубыми мазками, иногда тонкими полутонами. И оценка того, как человек выглядит, двигается, какая у него походка, осанка, манера сидеть и стоять, во многом помогает специалисту поставить верный диагноз, а потом подкрепить его различными исследованиями. <br>Ну что, приступим?<br><br>При ходьбе плечи согнуты вперед, как бы защищая грудную клетку и живот, голова немного втянута (как у нахохлившегося воробышка), манера сцеплять руки в замок на животе - признак заболеваний желудочно-кишечного тракта: хронического гастрита, язвы желудка, двенадцатиперстной кишки.<br><br>Когда человек стоит или сидит, он часто меняет позу, ерзает - знак проблемы со спиной: остеохондроза или межпозвонковой грыжи.<br><br>Идет, как на протезах, стараясь как можно меньше сгибать ноги в коленях, делает мелкие шажки, ему приходится прикладывать усилия, чтобы сесть и особенно встать, - проблемы с суставами: артроз, артрит.<br><br>Человек идет, держа голову, как хрустальную вазу, поворачивает не шею, а весь корпус - шейный остеохондроз. В сочетании с общей бледностью - сильные головные боли, мигрень. Если же при этом голова склонена слегка набок, речь может идти о миозите - воспалении шейных мышц.<br><br>Человек держится чрезмерно прямо, наклоняется всем туловищем, не сгибая спины, - признак болезни Бехтерева.<br><br>Неуверенная походка, как бы постоянный поиск опоры, свойственна тем, кто страдает головокружениями при проблемах с давлением, вегетососудистой дистонией.<br><br>Шаркающая походка вкупе с опущенными плечами и головой - симптом глубокой депрессии.<br><br>Нервная, как на шарнирах, походка, чрезмерная жестикуляция даже при спокойном разговоре - признак неврозов, психопатии.<br><br>Заторможенность движений, малая подвижность, скованность рук - признак серьезного психического расстройства, вплоть до шизофрении.<br><br>Даже едва заметное дрожание головы говорит об атеросклерозе сосудов головного мозга либо неврологических проблемах (у молодых это часто посттравматический паркинсонизм). Подрагивание рук говорит скорее о сосудистой патологии.<br><br>Несложно «вычислить» человека, перенесшего микроинсульт, по припадающей на одну сторону походке и характерным движениям: рука прижата к телу, нога отведена в сторону.<br><br>Осторожная походка, боязнь задеть что-либо, руки прижаты к телу - какой-либо хронический болевой синдром.<br><br>Подрагивающая походка, как будто человек ступает по горячим углям, - признак подагры или полиартрита.<br><br>Человек ходит, расставляя ноги, как на ходулях, сидит преимущественно боком - признак геморроя. <br><br>Самодиагностика организма по языку<br>Как по языку узнать о сбоях в работе позвоночника, желудка, печени и предотвратить их?<br><br>ИСКРИВЛЕНИЕ СКЛАДКИ У КОНЧИКА ЯЗЫКА сигнализирует о шейном остеохондрозе. Скорее всего, это результат сидячего образа жизни, долгой работы с компьютером или за письменным столом.<br><br>ИЗГИБ СКЛАДКИ В СЕРЕДИНЕ ЯЗЫКА - поясничный остеохондроз, им обычно страдают профессиональные водители и люди, проводящие много времени за рулем. Чтобы избежать остеохондроза, нужно регулярно делать разминку: несколько приседаний, вращение головой - простые, но очень полезные упражнения.<br><br>ПОКРАСНЕНИЕ КОНЧИКА ЯЗЫКА - признак слабой сердечной деятельности, начинающейся ишемической болезни. О болезнях легочной системы можно судить по изменениям у краев языка, ближе к кончику. Заболеваниями сердца и легких чаще всего страдают курильщики, поэтому подобные изменения на языке - серьезный повод бросить курить.<br><br>ЖЕЛТИЗНА НА ЯЗЫКЕ И НЕБЕ говорит о болезнях печени, хроническом холецистите.<br><br>ПО НАЛЕТУ У ОСНОВАНИЯ ЯЗЫКА судят о нарушениях в работе желудочно-кишечного тракта и почек.<br><br>ОТПЕЧАТКИ ЗУБОВ НА ЯЗЫКЕ - признак дисбактериоза, зашлаковки организма. В этом случае стоит изменить режим питания, поменьше есть жирного и жареного. Для приведения в порядок организма можно принимать разные настои трав. Например, заварить 1 стаканом кипятка 1 столовую ложку зверобоя, настоять в тепле 30 минут. Принимать по 1/3 стакана 3 раза в день перед едой в течение 2-3 недель.<br><br>ДРОЖАНИЕ ЯЗЫКА - проявление неврастенического синдрома. Здесь совет такой: постараться улучшить психологическую обстановку дома, на работе, изменить образ жизни.<br><br>ТРЕЩИНКИ НА ЯЗЫКЕ могут говорить о различных болезнях крови, эндокринной системы, патологии почек. Здесь надо проверяться наиболее серьезно. Признак сбоев в организме - снижение вкусовых ощущений. На языке есть зоны, отвечающие за реакцию на сладкое, кислое, соленое, горькое. Если человек перестает ощущать какой-то из этих вкусов, то речь может идти о заболеваниях нервной, эндокринной систем. <br><br>Прыщик на лбу и самодиагностика<br>Считается, что зоны лица - это проекция внутренних органов, а прыщик - сигнал о неполадках. <br><br>Зона лба - проекция тонкой кишки. <br>Виски - желчного пузыря. <br>Верхняя губа и щеки - толстого кишечника. <br>Угол нижней челюсти (от уха до подбородка) - мочеполовой системы. <br>Подбородок (боковая часть) - гинекология. <br>Подбородок (центральная часть) - проекция щитовидной железы. <br>Крылья носа и переход к щекам - поджелудочной железы. <br>А вот прыщик на кончике носа (согласно приметам) говорит о том, что в вас кто-то влюбился. <br>Ирина КРУГЛОВА<br><br>Наши болезни написаны на лице<br>Когда с нашим здоровьем что-то не так, мы обычно бежим к врачу и начинаем сдавать кучу всевозможных анализов. Или, наоборот, обходим поликлинику как можно дальше, не придавая значения появляющимся сбоям в организме. Авось пронесет! Но, оказывается, хотя бы предварительный диагноз можно поставить и самостоятельно, просто взглянув на собственное отражение в зеркале. Правда, для этого вам понадобятся некоторые специальные знания.<br><br>Все это, в общем-то, не ново. Физиогномикой или наукой о лице занимался еще великий Аристотель. Некоторые люди имеют врожденные навыки быстро определять по лицу, что у нас «за душой». Мы удивляемся, когда гадалка на улице быстро и почти безошибочно определяет наше эмоциональное состояние, а порой, даже угадывает болезни, которыми мы страдаем. Главной «подсказкой» ей в этом занятии является наше собственное лицо. С эмоциональным состоянием все более или менее понятно. Представители круглого, продолговатого, квадратного, треугольного и трапециевидного лица имеют вполне конкретные особенности характера и известно это с незапамятных времен. Но как по чертам лица можно диагностировать болезни?<br>Оказывается, и заболевания оставляют свой неизгладимый отпечаток на лице больного. В свое время Н.И. Пирогов даже составил атлас «Лицо больного». Он утверждал, что практически каждое заболевание оставляет свой характерный след на лице человека. Однако особое распространение метод диагностики по лицу получил в странах Востока (особенно в Китае и Корее). Ни один опытный врач, обученный тибетской медицине, не поставит диагноз без тщательнейшего изучения лица пациента. С тех пор появилось немало последователей физиогномики.<br>Начнем с самых распространенных сейчас заболеваний сердца и сосудов. По чертам лица можно, например, предсказать инфаркт миокарда. Самым надежным диагностическим признаком возможной сердечной «катастрофы» является нарушение чувствительности, вплоть до онемения кожной зоны между подбородком и нижней губой. Если из этой зоны подняться выше, то наличие глубокой морщины между губой и носом говорит о дефекте сердечного клапана. Начинающаяся сердечная недостаточность проявляется на лице периодическим посинением губ. Если вы заметили за собой подобное, - это серьезный повод для обращению к доктору.<br>Важным признаком повышенной нагрузки на сердце и органы кровообращения является глубокая и удлиненная носогубная складка с обеих сторон. О неврозе сердца свидетельствует узкая спинка носа.<br>Красный бугристый нос с прожилками кровеносных сосудов говорит о высоком уровне артериального давления. Низкое же артериальное давление зачастую проявляется сине-красной окраской носа.<br>О сердечных заболеваниях напоминают крылья носа, имеющие сине-красную окраску, а о нарушении кровообращения, - бледность ушных раковин с характерным восковым оттенком.<br>Важная диагностическая зона - виски. Выступающая под кожей изогнутая височная артерия с резкими контурами в сочетании с периодическим покраснением лица указывают на частое и резкое повышение артериального давления. У таких людей высока вероятность гипертонического криза.<br>Одним из признаков сердечных проблем могут служить щеки. При впалости левой щеки можно заподозрить сердечное заболевание. Косвенным признаком раннего нарушения кровообращения в молодом возрасте является преждевременное поседение волос.<br>На предрасположенность к заболеваниям сердца указывает короткая шея. Кроме проблем с сердцем, для обладателя короткой шеи вполне реальна угроза раннего склероза сосудов головного мозга.<br>О серьезных проблемах со здоровьем могут свидетельствовать и многочисленные, так называемые, «косметические» недостатки на лице.<br>Так, например, мешки под глазами, а также отечность лица в целом говорят о возможных проблемах с почками или же с щитовидной железой.<br>О целом комплексе заболеваний могут «рассказать» и внезапно появившиеся и долго не проходящие темные круги под глазами.<br>Самые банальные прыщи - это вообще настоящая «карта» болезней, расположенная на нашем лице. В зависимости от их месторасположения можно диагностировать как заболевания половой системы, так и проблемы с желудочно-кишечным трактом, нервной и эндокринной системами, а также множество других нарушений.<br>Но и это далеко не все! Опытный врач может оценить здоровье пациента даже по состоянию его кожи (ее оттенок, степень сухости и т. д.).<br>Но все же по лицу больше всего можно «вычислить» заболеваний центральной нервной системы. Американские исследователи недавно разработали для этого специальную программу, способную распознавать заболевания и генетические синдромы. Компьютер, анализируя черты лица пациента, помогает врачам с малым опытом работы ставить диагноз. Используя фотографии больных, компьютер обучили распознавать такие редкие патологии, как синдром Корнелии де Ланге, синдром ломкой хромосомы и синдром Уильямса-Бойрена.<br>Новая программа представляет лицо в виде схемы из 48 точек. Сравнивая положение этих точек и расстояние между ними с информацией из базы данных, компьютер распознает патологии.<br>Первые попытки дали верный диагноз в 60% случаев. Когда были внесены коррективы, и программа стала обращать большее внимание на глаза, нос, рот и подбородок, результативность повысилась до 76%. Предыдущие работы же оказались менее удачными - уделялось недостаточное внимание оценке параметров лица в совокупности.<br>Очень важно то, что новая программа позволяет ставить предварительный диагноз задолго до появления других клинических проявлений заболевания. А это в случае генетических патологий очень важно. Ведь можно своевременно провести медикаментозное вмешательство, которое значительно облегчит течение заболевания пациента в будущем.<br>Кстати, немецкие ученые провели независимую экспертизу нового компьютерного метода диагностики. «Для опознания» программе были предложены 55 фотографий людей с различными патологиями. Точный диагноз был поставлен в 76% случаев.<br>Новая программа поможет выяснить ученым, какими недугами страдали древние египтяне. Для этого недавно были исследованы несколько сохранившихся рисунков. Изучали цветные портреты, найденные в древнейших захоронениях мумий, которые хранятся теперь в Британском музее в Лондоне и в нью-йоркском музее Метрополитен. На многих портретах изображены люди, страдающие прогрессирующей лицевой гемиатрофией - болезнью, при которой искажаются черты лица. Автор: Владимир Щербаков (Beautytime.ru) <br><br>Самодиагностика: симптомы болезней на лице<br>Синеватая тень во внутреннем углу глаз: слабое место организма - почки.<br><br>«Мешки» под глазами: может быть, не в порядке мочевыделительная система.<br><br>Нижняя часть лица (с губами) сигналит о состоянии сердечно-сосудистой и дыхательной систем.<br><br>То, как выглядят скулы и нос, зависит от желудочно-кишечного тракта.<br><br>Зона вокруг глаз сигналит о болезнях мочеполовой системы.<br><br>Темные круги под глазами: вполне возможно, что перегружена печень. Но иногда это может быть следствием очень тонкой кожи, через которую просвечивают капилляры.<br><br>Шелушение, особенно у носа, может иметь несколько причин<br><br>1. Сходит загар.<br><br>2. Летом часто меняется тип кожи и нормальная становится сухой, шелушится.<br><br>3. У мужчин - возможно, предпосылка к псориазу.<br><br>Ранний второй подбородок, дряблая кожа: вероятны проблемы с эндокринной системой.<br><br>Одутловатость над скулами: возможны неполадки в лимфатической системе желудочно-кишечного тракта. У мужчин это иногда может быть признаком частого «возлияния». Высыпания на висках: есть вероятность проблем с желчным пузырем.<br><br>Коричневые пятна. Пигментация часто возникает из-за ультрафиолета и сама по себе уже не пройдет. Убрать пятна можно только у дерматолога. У мужчин еще они могут говорить о наличии гормональных проблем.<br><br>Мелкие белые точки. Возможно нарушение обмена веществ, но чаще возникают от плохого очищения кожи и закупорки сальных желез.<br><br>Красные бесформенные пятна. Аллергическая реакция на пищу, косметику или одежду; иногда возникают на фоне длительных стрессов или после затяжных простуд.<br><br>Пожелтение. Почти всегда говорит о проблемах с печенью и желчным пузырем - необходимо срочно обратиться к врачу.<br><br>Красная сосудистая сетка. Чаще всего это следствие резкого перепада температур, но иногда говорит о плохом состоянии сосудов во всем организме; понаблюдайте за артериальным давлением!<br><br>Угревая сыпь. В молодом возрасте угри возникают из-за незрелости эндокринной системы, а в более зрелом (после 25 - 28 лет) - из-за плохого очищения кожи. Мужчины могут занести инфекцию при бритье.<br><br>Белые пятна. Обычно они появляются не на лице, а на шее, груди, плечах и называются витилиго. Откуда эта болезнь берется и как лечится, медики пока точно не знают, но большинство врачей считают витилиго проявлением нервного перенапряжения.<br><br>Лидия ТОЛСТОНОГОВА<br><br>Диагностика по носу<br>Ваш нос далек от идеального? Не отчаивайтесь. Если верить восточной медицине, то обладатели аккуратненького маленького носика вовсе не счастливцы, поскольку этот их орган свидетельствует о возможных проблемах с сердцем.<br><br>Прожилки кровеносных сосудов на носу появляются не только при заболеваниях сердца, но и при повышенном артериальном давлении.<br><br>Сине-красная окраска носа зачастую свидетельствует о низком артериальном давлении.<br><br>Если вокруг носа появилась сеточка кровеносных сосудов, возможно ухудшение кровообращения и воспаление вен.<br><br>Утолщение или побледнение крыльев носа характеризует заболевания легких.<br><br>Белый кончик носа сигнализирует о нарушении кровообращения или о язвенной болезни.<br><br>Периодическая или постоянная краснота носа может предупреждать о хроническом заболевании желудка.<br><br>Лопнувшие сосуды на коже около носа свидетельствуют о застойных явлениях в организме.<br><br>Поперечная морщина на переносице указывает на гипофункцию щитовидной железы, а утолщение кончика носа - на расширение желудка.<br><br>Даже незначительная припухлость в области переносицы может говорить о воспалительном процессе в носу, в том числе наличии полипов.<br><br>Диагностика по глазам<br>Если внимательно заглянуть в наше «зеркало души», можно безошибочно распознать не только настроение и истинные намерения, но и признаки разных неполадок в организме. <br><br>Желтоватые склеры (белки) глаз «сигналят» о проблемах с печенью. Если это возникло внезапно, сочетается с общей желтушностью кожи, температурой и мочой бурого цвета, это почти на 100% гепатит A (желтуха). Срочно в больницу!<br><br>Если же глаза желтые постоянно, значит, печень не справляется с нагрузкой. Это бывает при хронических воспалениях печени и желчного пузыря, циррозе. Нужно сдать анализы крови - общий и биохимию, а также сделать печеночные пробы.<br><br>Слезятся глаза при воспалительных заболеваниях век (блефарит, конъюнктивит), при инфекции придаточных пазух носа (гайморит). Слезотечение из одного глаза и припухание области вокруг него может быть признаком запущенного пульпита (воспаление мягких тканей зуба). <br><br>Тугие мешки на нижних веках - признак сердечной недостаточности или проблем с почками.<br><br>Большие и дряблые мешки с синеватыми прожилками выдают заядлого выпивоху.<br><br>Набрякшие верхние веки могут быть одним из внешних симптомов склероза сосудов головного мозга.<br><br>Глаза навыкате (двусторонний экзофтальм) - яркий знак проблем с щитовидкой, в том числе и проявление базедовой болезни.<br><br>Если глазное яблоко выпячивается с одной стороны, речь может идти о гайморокисте или образовании опухоли.<br><br>Узкие зрачки при нормальном освещении сигналят о том, что человек страдает от какой-то сильной боли.<br><br>Также суженные зрачки характерны для наркоманов, употребляющих производные опиума.<br><br>Разноцветные глаза (например, один голубой, другой карий) - врожденное нарушение пигментации. Это просто пикантная особенность, которая на зрение не влияет.<br><br>Оба зрачка бывают равномерно широкими при некоторых формах близорукости. Такая ее реакция возможна при гипертоническом кризе.<br><br>Очень широкие зрачки, почти не реагирующие на свет, типичны при употреблении наркотиков на основе атропина.<br><br>Подергивание глаз - нервный тик - признак развивающегося невроза.<br><br>Также это может говорить о невралгии лицевых нервов.<br><br>Односторонний тик часто бывает при мигренях.<br><br>Кое-что о здоровье могут поведать ресницы. Например, очень длинные и пушистые говорят о врожденной склонности к бронхолегочным заболеваниям, в том числе туберкулезу и бронхиальной астме.<br><br>Выпадение ресниц сигналит об общем снижении иммунитета и нехватке витаминов группы В.<br><br>Если глаза краснеют и слезы начинают литься в три ручья, как только человек понюхает цветочек или погладит кошку, то смело можно говорить об аллергической реакции.<br><br>Опущенные уголки глаз - знак затяжной депрессии.<br><br>Частое мигание - симптом невроза (особенно часто это встречается у детей).<br><br>Немигающий взгляд, направленный как бы сквозь собеседника, - отличительная черта серьезного нервно-психического расстройства, связанного с апатией и «уходом в себя».<br><br>Покраснение глазных яблок вкупе с воспаленными веками выдают человека, страдающего хронической бессонницей.<br><br>Сосудики в глазах лопаются при перенапряжении глазных мышц, а также при перепадах внутричерепного давления<br><a target="_blank" href="http://www.prosvetlenie.org/razum/1/50.htmll">http://www.prosvetlenie.org/razum/1/50.htmll</a> </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"> <a name="Message34364998"></a> </td> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34364998.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:#B2B2B2" href="#Message34364868">сообщение 34364868</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/57324.html">СолнышКо</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> CELEBRITY BRONZE &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 03:57 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Млин, так хорошо начали :-( и вот тебе на :-( ссылка в конце совсем меня расстроила :-(<br>Ну не люблю я подобные сайты :-( особенно с рекламой на разного рода штучки-дрючки от всех болезней :-( </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"> <a name="Message34365384"></a> </td> 
+              <td width="99%" colspan="1"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34365384.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:#B2B2B2" href="#Message34364998">сообщение 34364998</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/6864.html">АS</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> CELEBRITY BRONZE &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 07:42 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Да уж... начал автор за здравие, а закончил за упокой. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"> <a name="Message34370202"></a> </td> 
+              <td width="99%" colspan="1"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34370202.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:#B2B2B2" href="#Message34364998">сообщение 34364998</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/126117.html">Фeмида</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 12:13 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Ага :(... </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="4"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34371463.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/93916.html">Ni/ka</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Корифей &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 12:49 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> По моему,это всё ерунда.У меня есть подруга,у которой с детства хронический пиелонефрит,цистит и гастрит,но при этом у неё всю жизнь идеальная кожа на лице.А ей уже 37 лет.Или она просто исключение из правил? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"> <a name="Message34371639"></a> </td> 
+              <td width="99%" colspan="3"> 
+               <div style="text-align:left;;font-weight:normal;color:#B2B2B2">
+                 Сообщение 34371639.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:#B2B2B2" href="#Message34371463">сообщение 34371463</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="/passport/126117.html">Фeмида</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 12:55 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 Jan 2008 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Ну вот именно поэтому подобная информация должна просто приниматься к сведению - не более того. На её основании нельзя поставить окончательный диагноз и нельзя отменять назначенное врачами лечение, обследования и т.д. <br>Это должно быть "для общего развития" :) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+            </tbody> 
+           </table> </td> 
+         </tr> 
+         <tr> 
+          <td> <a href="/main/forum" style="color:#cc3333;"><IDXSKIP>Перейти к динамической версии форумов </IDXSKIP></a> </td> 
+         </tr> 
+        </tbody> 
+       </table>
+       <div class="clearfix"></div>
+<!-- Яндекс.Директ -->
+<div id="yandex_ad"></div>
+<script type="text/javascript">
+(function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+        Ya.Direct.insertInto(50948, "yandex_ad", {
+            ad_format: "direct",
+            font_size: 0.9,
+            type: "horizontal",
+            border_type: "ad",
+            limit: 4,
+            title_font_size: 3,
+            links_underline: false,
+            site_bg_color: "FFFFFF",
+            header_bg_color: "FFFFFF",
+            border_color: "FFCCCC",
+            title_color: "CC0000",
+            url_color: "000000",
+            text_color: "000000",
+            hover_color: "0066FF",
+            favicon: true,
+            no_sitelinks: true
+        });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.src = "//an.yandex.ru/system/context.js";
+    s.type = "text/javascript";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+})(window, document, "yandex_context_callbacks");
+</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+     <center>
+<!-- R-50948-2 Яндекс.RTB-блок  -->
+<div id="yandex_ad_R-50948-2"></div>
+<script type="text/javascript">
+    (function (w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function () {
+            Ya.Context.AdvManager.render({blockId: "R-50948-2", renderTo: "yandex_ad_R-50948-2", async: true});
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+<iframe id='a6296f44' name='a6296f44' src='http://ad.eva.ru/ad/adframe.php?n=a6296f44&amp;what=zone:989' framespacing='0' frameborder='no' scrolling='no' width='240' height='140'><a href='http://ad.eva.ru/ad/adclick.php?n=a6296f44' target='_blank'><img src='http://ad.eva.ru/ad/adview.php?what=zone:989&amp;n=a6296f44' border='0' alt=''></a></iframe>
+</center>
+    </div> 
+   </div> 
+  </div>
+  <footer> 
+   <div class="container"> 
+    <div class="row clearfix"> 
+     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">О проекте</h5></IDXSKIP> 
+      <hr> 
+      <p class="text-justify"> <small> <IDXSKIP>Все права на материалы, размещенные на сайте, защищены законодательством об авторском праве и смежных правах и не могут быть воспроизведены или каким либо образом использованы без письменного разрешения правообладателя и проставления активной ссылки на главную страницу портала Ева.Ру (www.eva.ru) рядом с использованными материалами.<br> За содержание рекламных материалов редакция ответственности не несет. Свидетельство о регистрации СМИ Эл № ФС77-36354 от 22 мая 2009 г. v.3.2.026 </IDXSKIP></small> </p> 
+     </div> 
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">Мы в соцсетях</h5></IDXSKIP> 
+      <hr> 
+      <IDXSKIP><ul class="list-inline"> 
+       <li><a class="btn btn-vk" target="_blank" href="http://vk.com/evato4karu"><span class="hidden-sm hidden-xs">&nbsp;</span><i class="fa fa-vk fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;</span></a></li> 
+       <li> <a class="btn btn-facebook" target="_blank" href="https://www.facebook.com/evato4karu"><span class="hidden-sm hidden-xs">&nbsp;&nbsp;</span><i class="fa fa-facebook fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;&nbsp;</span></a> </li> 
+       <li> <a class="btn btn-instagram" target="_blank" href="https://instagram.com/eva__ru/"><span class="hidden-sm hidden-xs">&nbsp;</span><i class="fa fa-instagram fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;</span></a> </li> 
+      </ul></IDXSKIP> 
+     </div> 
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">Контакты</h5></IDXSKIP> 
+      <hr> 
+      <ul class="list-unstyled"> 
+       <IDXSKIP><li><a href="/articles/peopleeva.htm">Контакты</a></li></IDXSKIP> 
+       <IDXSKIP><li><a href="/articles/reklama.htm">Реклама на сайте</a></li></IDXSKIP> 
+       <IDXSKIP><li><a href="/articles/payforum.htm">Реклама в форумах</a></li></IDXSKIP> 
+      </ul> 
+     </div> 
+    </div> 
+    <hr> 
+    <IDXSKIP><p> <span class="btn btn-circle btn-danger btn-sm">18+</span> © Eva.ru 2002-2015 <a href="http://top100.rambler.ru/top100/"><img src="https://cloudstatic.eva.ru/design/eva/images/rambler-w7.gif" alt="Rambler's Top100" width="88" height="31" border="0"></a> <a href="http://www.liveinternet.ru/click" target="_blank"><img src="https://cloudstatic.eva.ru/design/eva/images/liveinternet-logo.gif" title="LiveInternet:" border="0" width="88" height="15"></a> <script type="text/javascript">                var img = new Image();                img.src = 'http://www.tns-counter.ru/V13a***R>' + document.referrer.replace(/\*/g, '%2a') + '*eva_ru/ru/UTF-8/tmsec=eva_total/' + Math.round(Math.random() * 1000000000);            </script> 
+     <noscript> 
+      <img src="http://www.tns-counter.ru/V13a****eva_ru/ru/UTF-8/tmsec=eva_total/" width="1" height="1"> 
+     </noscript> <script type="text/javascript">            var _gaq = _gaq || [];            _gaq.push(['_setAccount', 'UA-20593733-1']);            _gaq.push(['_trackPageview']);            (function () {                var ga = document.createElement('script');                ga.type = 'text/javascript';                ga.async = true;                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';                var s = document.getElementsByTagName('script')[0];                s.parentNode.insertBefore(ga, s);            })();        </script> <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script> <script type="text/javascript">try {            var yaCounter132528 = new Ya.Metrika(132528);        } catch (e) {        }</script> 
+     <noscript> 
+     </noscript></p></IDXSKIP>
+    <IDXSKIP><div style="position: absolute;">
+     <img src="//mc.yandex.ru/watch/132528">
+    </div></IDXSKIP>  
+    <script type="text/javascript">(function () {            function c() {                if (!g) {                    g = !0;                    var d = a.createElement(e);                    d.type = "text/java" + e;                    var b;                    b = "?rnd=" + (100 * ((new Date).getTime() % 1E7) + h.round(99 * h.random()));                    b += a.referrer ? "&r=" + encodeURIComponent(a.referrer) : "";                    b += "&t=" + (new Date).getTime();                    b += '&https=' + ('https:' == window.location.protocol ? 1 : 0);                    "undefined" !== typeof __lx__target && (b += "&trg=" + encodeURIComponent(__lx__target));                    d.src = ("https:" == document.location.protocol ? "https://ssl." : "http://") + "luxup.ru/tr_js/" + j + "/24673/" + b;                    "undefined" != typeof d && a.getElementsByTagName(e)[0].parentNode.appendChild(d)                }            }            var j = 737, g = !1, a = document, i = a.documentElement, h = Math, f = window, e = "script";            a.addEventListener ? a.addEventListener("DOMContentLoaded", c, !1) : a.attachEvent ? (i.doScroll && f == f.top && function () {                try {                    i.doScroll("left")                } catch (a) {                    setTimeout(arguments.callee, 0);                    return                }                c()            }(), a.attachEvent("onreadystatechange", function () {                "complete" === a.readyState && c()            })) : f.onload = c        })();</script> 
+    <IDXSKIP><a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?592288" width="0" height="0" border="0"></a></IDXSKIP> 
+    <script type="text/javascript">            document.write("<img style='float:left;' src='http://counter.yadro.ru/hit?r" + escape(document.referrer) + ((typeof(screen) == "undefined") ? "" : ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) + ";" + Math.random() + "' width=1 height=1 alt=''>");        </script> 
+    <p></p> 
+   </div>
+  </footer>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/scrollup/dist/jquery.scrollUp.min.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/plugins/tooltip.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/eva/js/functions.js?jsv=3.2.026"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/jquery-cookie/src/jquery.cookie.js"></script>
+  <script type="text/javascript">    function setScrollUpRight() {        var right = $(window).width() - $('div.eva').width();        if (right > 150) {            $('#scrollUp').css('right', (Math.round(right / 2) + 10) + 'px');        }        else {            $('#scrollUp').css('right', '10px');        }    }    $(function () {        $("[data-toggle='tooltip']").tooltip();        $.scrollUp({            scrollText: 'Наверх',            zIndex: 200,            topDistance: '300',            topSpeed: 300,            animation: 'fade',            animationInSpeed: 200,            animationOutSpeed: 200        });        setScrollUpRight();        $(window).on('resize', function () {            setScrollUpRight();        });        var orgElementPos = $('.navbar-static-top').offset();        if (orgElementPos) {            var orgElementTop = orgElementPos.top;            $(window).scroll(function () {                if ($(window).scrollTop() > orgElementTop) {                    $('#nav-scrolled').removeClass('hidden');                } else {                    $('#nav-scrolled').addClass('hidden');                }            });        }    });</script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/eva/js/profile.js?jsv=3.2.026"></script>
+ </body>
+</html>

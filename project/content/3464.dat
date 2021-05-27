@@ -1,0 +1,510 @@
+wayaat.com/forum/get556.html
+<!DOCTYPE html>
+<html amp lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Clear pagefile.sys - Task manager - скрытого режима</title>
+	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+	<meta property="og:description" content="В данном материале вы найдете примеры написания кода небольших программ на языке. ">
+	<meta name="description" content="В данном материале вы найдете примеры написания кода небольших программ на языке. ">
+	<link rel="canonical" href="http://wayaat.com/forum/get556.html" />
+    <meta name="viewport" content="user-scalable=no,width=device-width,minimum-scale=1,initial-scale=1">
+	<style amp-custom>
+@font-face {
+	font-family: "Material Icons";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Material Icons"), local("MaterialIcons-Regular"), url('/font/2fcryfnatjcs6g4u3t-y5zjzjt5fdej140u2djyc3my.woff2') format("woff2");
+}
+.material-icons { font-family: "Material Icons"; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; font-feature-settings: "liga"; }
+@font-face {
+	font-family: "FontAwesome";
+	font-style: normal;
+	font-weight: normal;
+	src: url('/font/fontawesome-webfont.eot') format("embedded-opentype"), url('/font/fontawesome-webfont.woff2') format("woff2"), url('/font/fontawesome-webfont.woff') format("woff"), url('/font/fontawesome-webfont.ttf') format("truetype"), url('/font/fontawesome-webfont.svg') format("svg");
+}
+.fa { display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; font-size-adjust: none; font-stretch: normal; font-feature-settings: normal; font-language-override: normal; font-kerning: auto; font-synthesis: weight style; font-variant: normal; font-size: inherit; text-rendering: auto; }
+.fa-facebook-f::before, .fa-facebook::before { content: ""; }
+.fa-facebook-square::before { content: ""; }
+.fa-google-plus-square::before { content: ""; }
+.fa-google-plus::before { content: ""; }
+.fa-twitter-square::before { content: ""; }
+.fa-twitter::before { content: ""; }
+.red.lighten-1 { background-color: rgb(239, 83, 80) ! important; }
+.red { background-color: rgb(244, 67, 54) ! important; }
+.blue { background-color: rgb(33, 150, 243) ! important; }
+.blue.darken-1 { background-color: rgb(30, 136, 229) ! important; }
+.blue.darken-4 { background-color: rgb(13, 71, 161) ! important; }
+.cyan.lighten-2 { background-color: rgb(77, 208, 225) ! important; }
+.cyan { background-color: rgb(0, 188, 212) ! important; }
+.lime.lighten-1 { background-color: rgb(212, 225, 87) ! important; }
+.lime { background-color: rgb(205, 220, 57) ! important; }
+.orange { background-color: rgb(255, 152, 0) ! important; }
+.orange-text { color: rgb(255, 152, 0) ! important; }
+.orange.darken-2 { background-color: rgb(245, 124, 0) ! important; }
+.orange-text.text-darken-2 { color: rgb(245, 124, 0) ! important; }
+.grey.lighten-3 { background-color: rgb(238, 238, 238) ! important; }
+.grey { background-color: rgb(158, 158, 158) ! important; }
+html { font-family: sans-serif; }
+body { margin: 0px; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+audio:not([controls]) { display: none; height: 0px; }
+a { background-color: transparent; }
+a:active, a:hover { outline: 0px none; }
+h1 { font-size: 2em; margin: 0.67em 0px; }
+amp-img { border: 0px none; }
+svg:not(:root) { overflow: hidden; }
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0px; }
+button { overflow: visible; }
+button, select { text-transform: none; }
+button::-moz-focus-inner { border: 0px none; padding: 0px; }
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+ul { list-style-type: none; }
+a { color: rgb(3, 155, 229); text-decoration: none; }
+ul { padding: 0px; }
+ul li { list-style-type: none; }
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav { box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12); }
+.z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover { box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.18), 0px 4px 15px 0px rgba(0, 0, 0, 0.15); }
+.z-depth-4, .modal { box-shadow: 0px 16px 28px 0px rgba(0, 0, 0, 0.22), 0px 25px 55px 0px rgba(0, 0, 0, 0.21); }
+.divider { height: 1px; overflow: hidden; background-color: rgb(224, 224, 224); }
+blockquote { margin: 20px 0px; padding-left: 1.5rem; border-left: 5px solid rgb(238, 110, 115); }
+i { line-height: inherit; }
+table.striped > tbody > tr:nth-child(2n+1) { background-color: rgb(242, 242, 242); }
+@media only screen and (max-width: 992px) {
+	table.responsive-table thead tr th::before { content: " "; }
+}
+.collection { margin: 0.5rem 0px 1rem; border: 1px solid rgb(224, 224, 224); border-radius: 2px; overflow: hidden; position: relative; }
+.collection .collection-item { background-color: rgb(255, 255, 255); line-height: 1.5rem; padding: 10px 20px; margin: 0px; border-bottom: 1px solid rgb(224, 224, 224); }
+.collection .collection-item.avatar { min-height: 84px; padding-left: 72px; position: relative; }
+.collection .collection-item.avatar .circle { position: absolute; width: 42px; height: 42px; overflow: hidden; left: 15px; display: inline-block; vertical-align: middle; }
+.collection .collection-item.avatar .title { font-size: 16px; }
+.collection .collection-item.avatar p { margin: 0px; }
+.collection .collection-item.avatar .secondary-content { position: absolute; top: 16px; right: 16px; }
+.collection .collection-item:last-child { border-bottom: medium none; }
+.collection a.collection-item:hover:not(.active) { background-color: rgb(221, 221, 221); }
+.secondary-content { float: right; color: rgb(38, 166, 154); }
+span.badge.new::after { content: " new"; }
+.progress .indeterminate::before { content: ""; position: absolute; background-color: inherit; top: 0px; left: 0px; bottom: 0px; will-change: left, right; animation: 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) 0s normal none infinite running indeterminate; }
+.progress .indeterminate::after { content: ""; position: absolute; background-color: inherit; top: 0px; left: 0px; bottom: 0px; will-change: left, right; animation: 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.15s normal none infinite running indeterminate-short; }
+.center, .center-align { text-align: center; }
+.right { float: right ! important; }
+.circle { border-radius: 50%; }
+@font-face {
+	font-family: "Material-Design-Icons";
+	font-style: normal;
+	font-weight: normal;
+	src: url('material-design-icons.eot') format("embedded-opentype"), url('material-design-icons.woff2') format("woff2"), url('material-design-icons.woff') format("woff"), url('material-design-icons.ttf') format("truetype"), url('material-design-icons.svg') format("svg");
+}
+.container { margin: 0px auto; max-width: 1280px; width: 90%; }
+@media only screen and (min-width: 601px) {
+	.container { width: 85%; }
+}
+@media only screen and (min-width: 993px) {
+	.container { width: 70%; }
+}
+.container .row { margin-left: -0.75rem; margin-right: -0.75rem; }
+.row { margin-left: auto; margin-right: auto; margin-bottom: 20px; }
+.row::after { content: ""; display: table; clear: both; }
+.row .col { float: left; box-sizing: border-box; padding: 0px 0.75rem; }
+.row .col.s3 { width: 25%; margin-left: 0px; }
+.row .col.s5 { width: 41.6667%; margin-left: 0px; }
+.row .col.s6 { width: 50%; margin-left: 0px; }
+.row .col.s7 { width: 58.3333%; margin-left: 0px; }
+.row .col.s12 { width: 100%; margin-left: 0px; }
+@media only screen and (min-width: 601px) {
+	.row .col.m3 { width: 25%; margin-left: 0px; }
+	.row .col.m5 { width: 41.6667%; margin-left: 0px; }
+	.row .col.m6 { width: 50%; margin-left: 0px; }
+	.row .col.m7 { width: 58.3333%; margin-left: 0px; }
+	.row .col.m12 { width: 100%; margin-left: 0px; }
+}
+@media only screen and (min-width: 993px) {
+	.row .col.l3 { width: 25%; margin-left: 0px; }
+	.row .col.l5 { width: 41.6667%; margin-left: 0px; }
+	.row .col.l6 { width: 50%; margin-left: 0px; }
+	.row .col.l7 { width: 58.3333%; margin-left: 0px; }
+	.row .col.l12 { width: 100%; margin-left: 0px; }
+}
+nav { color: rgb(255, 255, 255); background-color: rgb(238, 110, 115); width: 100%; height: 56px; line-height: 56px; }
+nav a { color: rgb(255, 255, 255); }
+nav .nav-wrapper { position: relative; height: 100%; }
+nav .nav-wrapper i { display: block; font-size: 2rem; }
+@media only screen and (min-width: 993px) {
+}
+nav .brand-logo { position: absolute; color: rgb(255, 255, 255); display: inline-block; font-size: 2.1rem; padding: 0px; white-space: nowrap; }
+@media only screen and (max-width: 992px) {
+	nav .brand-logo { left: 50%; transform: translateX(-50%); }
+}
+nav ul { margin: 0px; }
+nav ul li { transition: background-color 0.3s ease 0s; float: left; padding: 0px; }
+nav ul li:hover, nav ul li.active { background-color: rgba(0, 0, 0, 0.1); }
+nav ul a { font-size: 1rem; color: rgb(255, 255, 255); display: block; padding: 0px 15px; }
+@media only screen and (min-width: 601px) {
+	nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i { height: 64px; line-height: 64px; }
+}
+a { text-decoration: none; }
+html { line-height: 1.5; font-family: "Roboto",sans-serif; font-weight: normal; color: rgba(0, 0, 0, 0.87); }
+@media only screen and (min-width: 0px) {
+	html { font-size: 14px; }
+}
+@media only screen and (min-width: 992px) {
+	html { font-size: 14.5px; }
+}
+@media only screen and (min-width: 1200px) {
+	html { font-size: 15px; }
+}
+h1, h2, h3, h4, h5, h6 { font-weight: 400; line-height: 1.1; }
+h1 { font-size: 4.2rem; line-height: 110%; margin: 2.1rem 0px 1.68rem; }
+h5 { font-size: 1.64rem; line-height: 110%; margin: 0.82rem 0px 0.656rem; }
+.btn, .btn-large, .btn-flat { border: medium none; border-radius: 2px; display: inline-block; height: 36px; line-height: 36px; outline: 0px none; padding: 0px 2rem; text-transform: uppercase; vertical-align: middle; }
+.btn.disabled, .disabled.btn-large, .btn-floating.disabled, .btn-large.disabled, .btn:disabled, .btn-large:disabled, .btn-large:disabled, .btn-floating:disabled { background-color: rgb(223, 223, 223) ! important; box-shadow: none; color: rgb(159, 159, 159) ! important; cursor: default; }
+.btn.disabled:hover, .disabled.btn-large:hover, .btn-floating.disabled:hover, .btn-large.disabled:hover, .btn:disabled:hover, .btn-large:disabled:hover, .btn-large:disabled:hover, .btn-floating:disabled:hover { background-color: rgb(223, 223, 223); color: rgb(159, 159, 159); }
+.btn, .btn-large { text-decoration: none; color: rgb(255, 255, 255); background-color: rgb(38, 166, 154); text-align: center; letter-spacing: 0.5px; transition: all 0.2s ease-out 0s; cursor: pointer; }
+.btn:hover, .btn-large:hover { background-color: rgb(43, 187, 173); }
+.btn-floating::before { border-radius: 0px; }
+.waves-effect { position: relative; cursor: pointer; display: inline-block; overflow: hidden; -moz-user-select: none; vertical-align: middle; z-index: 1; will-change: opacity, transform; transition: all 0.3s ease-out 0s; }
+.modal { display: none; position: fixed; left: 0px; right: 0px; background-color: rgb(250, 250, 250); padding: 0px; max-height: 70%; width: 55%; margin: auto; overflow-y: auto; border-radius: 2px; will-change: top, opacity; }
+@media only screen and (max-width: 992px) {
+	.modal { width: 80%; }
+}
+.materialboxed:hover:not(.active) { opacity: 0.8; }
+button:focus { outline: medium none; background-color: rgb(42, 183, 169); }
+label { font-size: 0.8rem; color: rgb(158, 158, 158); }
+:-moz-placeholder { color: rgb(209, 209, 209); }
+*::-moz-placeholder { color: rgb(209, 209, 209); }
+@media only screen and (max-width: 992px) {
+}
+@media only screen and (max-width: 600px) {
+}
+.hiddendiv { display: none; white-space: pre-wrap; word-wrap: break-word; padding-top: 1.2rem; }
+
+body { line-height: 24px; padding: 0px; margin: 0px; width: 100%; background-color: rgb(255, 255, 255); }
+a:focus { outline: medium none; }
+blockquote { border-left: 5px solid rgb(3, 155, 229) ! important; }
+.main-color { background-color: rgb(3, 155, 229) ! important; }
+nav .brand-logo { font-size: 1.4rem; }
+nav .nav-wrapper ul li i { font-size: 1.6rem; height: 56px; line-height: 56px; }
+nav .nav-wrapper ul li:hover { background: transparent none repeat scroll 0% 0%; }
+nav { z-index: 999; position: relative; }
+nav .fix-left { left: 8rem; }
+.g-nav { position: fixed; top: 0px; transition: top 0.2s ease-in-out 0s; z-index: 99; }
+.g-down { top: -56px ! important; }
+nav .button-back { width: 56px; height: 56px; text-align: center; line-height: 56px; display: block ! important; float: left; position: relative; z-index: 1; }
+.button-back i { font-size: 2rem; height: 56px; line-height: 56px; }
+.ca-detail-container { margin-top: 86px; }
+.ca-content-detail { font-size: 16px; line-height: 28px; color: rgb(51, 51, 51); }
+.title-detail-h1 { font-size: 20px; padding: 0px; margin: 0px; }
+.blog-detail-des { font-size: 12px; color: rgb(153, 153, 153); margin-top: 5px; margin-bottom: 10px; }
+.share-button { width: 40px; height: 40px; border-radius: 50%; text-align: center; line-height: 40px; color: rgb(255, 255, 255); display: inline-block; }
+.share-div { display: inline-block; text-align: right; }
+.blog-detail-share { padding: 10px 0px; margin-bottom: 0px; }
+.blog-detail-share p { padding: 0px; margin: 0px; line-height: 40px; text-transform: uppercase; color: rgb(153, 153, 153); }
+.blog-detail-tags a { padding: 3px 5px; color: rgb(102, 102, 102); margin-top: 3px; font-size: 13px; }
+.blog-detail-tags p { text-transform: uppercase; color: rgb(153, 153, 153); }
+.ca-detail-comment-title { text-transform: uppercase; color: rgb(153, 153, 153); padding-bottom: 10px; }
+.btn-comment { margin-left: 3rem; }
+.avata-text { text-align: center; line-height: 42px; color: rgb(255, 255, 255); }
+.ca-detail-comment .collection p { font-size: 11px; color: rgb(153, 153, 153); }
+.ca-detail-comment .collection .collection-item.avatar .title { font-size: 14px; }
+.ca-detail-comment .collection { margin: 20px 0px; border-width: 1px 0px 0px; border-style: solid none none; border-color: rgb(224, 224, 224) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; border-radius: 0px; overflow: hidden; position: relative; }
+.ca-detail-comment .collection .collection-item.avatar .circle { left: 0px; }
+.ca-detail-comment .secondary-content { top: 11px ! important; right: 0px ! important; color: rgb(238, 238, 238); }
+.ca-detail-comment .secondary-content:hover { color: rgb(3, 155, 229) ! important; }
+.ca-detail-comment .secondary-content i { font-size: 16px; }
+.ca-rating-h5 { text-transform: uppercase; color: rgb(153, 153, 153); padding-bottom: 10px; font-size: 14px; }
+.ca-rating { background-color: rgb(255, 255, 255); padding-bottom: 20px; padding-top: 10px; }
+.ca-rate-box { background-color: rgb(255, 102, 102); border-radius: 5px; color: rgb(255, 255, 255); padding: 10px; text-align: center; max-width: 122px; max-height: 116px; }
+.ca-rate-box p { margin: 0px; font-size: 13px; }
+.ca-rate-box-cl { text-transform: uppercase; font-weight: 500; }
+.ca-rate-box-d { font-size: 30px ! important; }
+.ca-rate-box-i i { font-size: 15px; }
+.ca-rate-box-dt { margin-top: 5px; }
+.ca-rated-star p { padding: 0px; margin: 0px; color: rgb(102, 102, 102); }
+.ca-rated-star { font-size: 12px; }
+.ca-rated-star p i { font-size: 13px; width: 13px; height: 13px; }
+.ca-star-graps { background-color: rgb(153, 204, 51); height: 10px; margin-top: 5px; margin-bottom: 12px; }
+.ca-rate-btn-rating span i { font-size: 28px; width: 28px; color: rgb(153, 153, 153); }
+.ca-rate-btn-rating span i:hover { color: rgb(251, 173, 25); cursor: pointer; }
+.ca-cen-20 { width: 20%; }
+.ca-cen-50 { width: 50%; }
+.ca-cen-60 { width: 60%; }
+.ca-cen-10 { width: 10%; }
+.ca-cen-80 { width: 80%; }
+.ca-table-fig tr td:nth-child(1) { color: rgb(102, 102, 102); }
+.slick-track::before, .slick-track::after { display: table; content: ""; }
+.slick-track::after { clear: both; }
+@font-face {
+	font-family: "slick";
+	font-style: normal;
+	font-weight: normal;
+	src: url('slick.eot') format("embedded-opentype"), url('slick.woff') format("woff"), url('slick.ttf') format("truetype"), url('slick.svg') format("svg");
+}
+.slick-prev:hover::before, .slick-prev:focus::before, .slick-next:hover::before, .slick-next:focus::before { opacity: 1; }
+.slick-prev.slick-disabled::before, .slick-next.slick-disabled::before { opacity: 0.25; }
+.slick-prev::before, .slick-next::before { font-family: "slick"; font-size: 20px; line-height: 1; opacity: 0.75; color: white; }
+.slick-prev::before { content: "←"; }
+[dir="rtl"] .slick-prev::before { content: "→"; }
+.slick-next::before { content: "→"; }
+[dir="rtl"] .slick-next::before { content: "←"; }
+.slick-dots li button:hover::before, .slick-dots li button:focus::before { opacity: 1; }
+.slick-dots li button::before { font-family: "slick"; font-size: 6px; line-height: 20px; position: absolute; top: 0px; left: 0px; width: 20px; height: 20px; content: "•"; text-align: center; opacity: 0.25; color: black; }
+.slick-dots li.slick-active button::before { opacity: 0.75; color: black; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="icon" type="image/png" href="/img/android-chrome-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="196x196" href="/img/apple-touch-icon-196x196.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">  
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" /> 
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"http://wayaat.com/forum/get556.html"
+  },
+  "headline": "Clear pagefile.sys",
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://wayaat.com//images/58402e32045ff.jpg",
+    "height": 180,
+    "width": 90
+  },
+  "datePublished": "2016-11-19T22:57:26+00:00",
+  "dateModified": "2016-11-19T22:57:26+00:00",
+  "author": {
+    "@type": "Person",
+    "name": "gbg luk"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "wikl",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://wayaat.com//images/583fa47d5edbd.jpg",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "description": "Многие пользователи windows, или windows, 10 7 жалуются подозрении на наличие папки со странным. "
+}
+</script>
+
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    
+  </head>
+
+  <body>
+
+<style>
+   html { overflow:  hidden; }
+</style>
+<script type="text/javascript">
+
+    var body = document.getElementsByTagName('body')[0].style;
+    body.position = "fixed";
+    body.top = 0;
+    body.left = 0;
+    body.right = 0;
+    body.bottom = 0;
+    body.width = "100%";
+    body.height = "100%";
+    body.zIndex = "9999999";
+    body.float = "left";
+    body.clear = "both";
+    body.margin = 0;
+
+</script>
+<style>
+html { overflow: hidden; }
+</style>
+<div align="center" style='width: 100%; height: 1000px; background-color: #ffffff; position: absolute; z-index: 999999; top: 0px; left: 0px;'></div>
+<iframe allowtransparency="1" async="true" height="100%" width="100%" src="/pr/forum/index.php?key=clear+pagefile.sys" frameborder="0" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; z-index: 9999999; float: left; clear: both; margin: 0;"></iframe>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t57.6;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+    <header>
+    <!--Navication-->
+    <nav  class="main-color g-nav">
+      <div class="nav-wrapper">       
+          <a href="/forum/" class="brand-logo fix-left">Форум</a>  
+          <a href="/forum/" class="button-back"><i class="material-icons">arrow_back</i></a>   
+          <ul class="right">
+            <li><a href="#modal-search" class="waves-effect waves-light modal-trigger"><i class="material-icons">search</i></a></li><li><a href="#"><i class="material-icons">favorite</i></a></li>
+          </ul> 
+      </div>          
+    </nav>
+    <!--#Navication-->
+  </header>
+  
+  <!--Content-event-detail-->
+  <div class="container ca-detail-container">
+    <h1 class="title-detail-h1">Clear pagefile.sys</h1>
+    <div class="blog-detail-des">
+<a href="/forum/">Форум</a>
+<span>| 23.11.2016</span></div>
+    <div class="divider"></div>
+    <div class="ca-content-detail">
+	  	  	  <amp-img height="200" width="200" layout="responsive" class="responsive-img" src="/images/5849f898df15b.jpg" alt="Замена батарейки на материнской плате inbg pro"></amp-img>
+	  <p> На материнской плате всегда! Есть она такой блестящий пятачок, размером с монету дело в том, что во всех персональных компьютерах устанавливается специальный чип, который называется cmos.  Он сохраняет основные настройки компьютера, настройки bios, также благодаря этому чипу часы в компьютере продолжают работать, даже когда пк отключён от сети электропитания.  Когда эта батарейка начинает садиться, первым делом сбиваются настройки bios время, например как самый явный момент.  Кроме того, предположим, что компьютер, на котором села батарейка, является каким-либо сервером, пускай даже локальным.  Все компьютеры, которые подсоединены к этому серверу, будут синхронизироваться с ним, а это значит, что на всех компьютерах будет неправильное время! Ужасно, не так ли а всё из-за такой мелочи.  Сбиваются и прочие настройки, вплоть до того, что компьютер вообще не запустится.  Причем блок питания будет работать, вентиляторы будут крутиться.  И многие сразу подозревают худшее сгорела материнская плата! Это те, которые знают, что такое материнская плата.  Те, которые не знают, сразу делают вывод сломался компьютер! И многие ремонтники компьютеров сами некомпетентны или же нечестны подталкивают клиента на лишние траты и, соответственно, рассчитывают на заработок.  Итак, ваш компьютер начал странно загружаться сбивается время, первоначальное окно загрузки отличается от привычного, загрузка останавливается на этом первом моменте вам сообщается о какой-либо ошибке (на английском языке, разумеется) или предлагается нажать кнопку f1 или del, или esc, или еще какую для продолжения загрузки, или для входа в меню bios для изменения параметров если раньше этого не было, а сейчас появилось значит сбились настройки bios.  А они могут сбиться лишь в очень редких случаях, а чаще всего разрядка батарейки 3.  Вытаскиваем иногда надо нажать на фиксатор.  Возможно, потребуется что-то небольшое,   с острым кончиком.  Отлично подойдет маленькая отвертка или дамская металлическая пилочка для ногтей.  Вытаскиваться батарейки могут разными способами, но сложного ничего нет, просто будьте осторожны и не прилагайте чрезмерных усилий.  Идем в ближайший магазинчик где торгуют электротоварами и покупаем.  Такие же  батарейки используются помимо компьютеров еще в целом ряде иной бытовой радиоаппаратуры, потому они не дефицит и ехать в специализированный компьютерный магазин не стоит.  При покупке надо быть только чуть внимательным, так как имеются очень похожие батарейки, такого же размера, так же на 3 вольта, но чуть тоньше.  Они так же будут работать на компьютере, но контакт может быть хуже, из-за слабого прижима.  После установки батарейки вам надо будет зайти в bios нажав соответствующую кнопку (чаще всего del, иногда f1), и там выставить необходимые значения, в первую очередь системное время.  Перед заменой батарейки не забудьте обесточить компьютер, отключив разъем питания системного блока.  Сменил батарейку и у меня пропал звуковой сигнал при включении компьютера.  Евгений, вам нужно записать код ошибки, это циферки и буковки такого вида, например 0x0000005a.  Это пишется на синем экране смерти.  Если не успеваете быстро пропадает окно, сделайте видеозапись на вкамеру или мобильник, и потом при замедленном воспроизведении запишите.  От кода ошибки и будем плясать.  Думаю, вы могли что-то повредить при замене батарейки, либо какой-то разъем отошел со своего законного места.  На старом компьютере при смене батарейки пропал сигнал бип при включении системного блока.  Вынул новую батарейку и поставил старую и при включении системного блока прозвучало 2 коротких сигнала бип.  Далее при включениивыключении опять тишина нет сигнала.  Вынул старую батарейку и поставил новую (которая стояла) и снова при включении пк прозвучало 2 коротких сигнала бип.  Включениеперезагрузка проходят без системного сигнала бип.  Значит дело не спикере а в аппаратной части.  Вынимал и чистил модули памяти, менял местами.  И еще как информация к размышлению.  То есть в левом углу где номер версии программы загрузка активна, крутиться и крутиться.  Но сохранить результат в текст не получается, функция не активна.  Значит она не может снять информацию с какой-то аппаратной части.  Ведь логично? Это я заметил давно.  Подскажите,пожалуйста,как мне быть и что делать заменил батарейку.  Теперь при запуске открывается окно не american.  M2n далее загрузка идёт как обычно.  В bios настройки даты и времени соответствуют действительности.  Пробовал установить bios по умолчанию-ничего не меняется.  Asus это стандартное сообщение bios, если потом продолжается загрузка, то все нормально, волноваться не о чем.  Можете bios обновить, но вряд ли что-то изменится.  Но хуже не будет обновление bios не поможет.  Просто надо отключить splash screen в настройках.  У меня такая проблема компьютер перегружается сам через каждые 20-30 минут, а то и бывает включаешь и он до загрузки windows сразу выключается сам и при попытке включить его снова он вообще не включается, только через некоторое время можно запустить.  Менял батарейку на материнке но увы все осталось так же.  Грешу на блок питания, но не знаю из-за него ли это так происходит.  В сервисном центре могут надурить и заработать хорошо.  Если сами не можете решить проблему, найдите знакомого гуру, которому вы доверяете, может он согласится вам помочь за небольшую адекватную для вас плату если электролит высох, то у всех конденсаторов не просто меняются параметры, они ещё начинают скакать как хохлы! Можете сразу выкидывать комп и покупать новый.  Вам ни одна мастерская его не подчинит если он конечно ещё не перегорел.  Потому что при этом электроника выходит за пределы рабочего режима и вполне может перегореть только винт оставьте это самое ценное! В большинстве случаев, согласен.  Хотя из списка, предоставлиным админом, другое не исключено.  У меня была та же проблема.  Виной были вздувшиеся бочонки на материнской плате.  Отдал знакомому, я сталкивался с такой проблемой,решение было простым замена термопасты на новую.  Перво наперво проверить куллер на блоке питания и почистить от пыли сам бп.  Заменила батарейку, включила компьютер все работает.  Включила компьютер следующий раз не работает кулер! Вытащила батарейку, вставила все работает! При следующем включении опять не включается кулер, приходится опять вытаскивать батарейку.  Здравствуйте! Подскажите пожалуйста, может ли из-за севшей батарейки не работать cddvd-rom? (не читает диски) а если перед заменой батарейки паралельно ей подсоединить 3 вольта , чтоб ничего не сбилось? А вам что, тяжело настроить все сначала? Если да, то попробуйте.  Если батарейка умерла, то настройки уже сбились.  В cmos памяти компьютера находятся важные настройки, которые вы можете менять для оптимизации работы компьютера.  Так что надо собраться и сделать это ) дравствуйте! У меня такая ситуация начал сам выключиться компьютер.  Подскажите так сразу и не скажу.  Найдите кому доверяете, пусть покопается, начиная с блока питания и дальше.  После этого вечером я его снова вкл, но у меня появилась картинка с надписью материнской платой и надписью f2, tab, f11, f6.  Дальше ничего не происходит, так и висит экран.  Позже я вытащил карт ридер, после этого у меня после загрузки с названием материнской платы появился черный экран с надписью и все дальше ничего не происходит, клавиатура не реагирует никак, делаю перезагрузку, все тоже самое происходит.  Батарейку вынимал, вставлял, обнулял биос, все равно так же.  В чем может быть проблема, кто подскажет? Заранее спасибо за ответ.  Время работы батарейки зависит от качества исполнения самой батарейки и от того, как часто вы включаете компьютер.  С хорошей батареей примерно 4-5 лет, но бывают долгожители более 10 лет.  Какая в принципе разница, заменить дело 5 минут, ценник копеечный здравствуйте.  Комп отключает периферию( точнее монитор, клаву и мышку) через несколько минут после загрузки системы.  Бывает и до полной загрузки системы.  Расположены они как правило возле центрального процессора.  Вот и у меня сегодня сбилось время.  Но проблема в том, что я в компьютере и всем что с ним связано полный пенек и боюсь что с моими руками-крюками я его совсем сломаю((.  Поэтому очень прошу объяснить что будет если я оставлю все как есть, то что будет.  А если все-таки решусь поменять, то как это вам надо будет зайти в bios нажав соответствующую кнопку (чаще всего del, иногда f1), и там выставить необходимые значения, в первую очередь системное время.  Программы реагирующие на время (антивирус и другие имеющие оценочный срок работы) могут не работать как надо т.  Также может возникнуть проблема с лицензией windows.  Каждый раз при запуске пк будет выдавать сообщение об ошибке cmos checksum error и им подобные.  Проблема не в том, чтобы заменить батарейку ничего не сломав, а в том чтобы не купить такую же дохлую.  А вынуть батарейку легче легкого сбоку есть держатель, тем же ногтем сдвинуть его вбок и батарейка сама выпрыгивает, главное не забыть как она стояла.  Даже если вы замените батарейку не забыв отключить пк от сети конечно настройки cmos сбросятся автоматически т.  При включении bios пикнет 2-3 раза и внизу вы увидите сообщение типа cmos checksum error или datetime no set и т.  Press f2 to load default settings выбрав это bios автоматически загружает оптимальные настройки.  Разумеется сообщения и требуемые нажатия клавиш могут отличаться это нормально и зависит от конкретного типа bios и его производителя, но суть не меняется.  Обычно пользователю пишет на экране, какие из клавиш нужно нажать для того или иного действия.  Также в руководстве к материнской плате указаны все клавиши, которые используются в bios.  Самый лучший вариант это сразу зайти в bios, выбрав press del to enter setup.  Затем находим пункт load default settings и жмем enter это аналогично пункту press f2 to load default setting затем немного изменяем настройки.  По умолчанию bios активирует некоторые ненужные функции для современного железа 1.  Num lock for booting на клавиатуре загорается лампочка при загрузке системы.  Флоппи дисковод для дискет (иногда еще зовется fdd, floppy или 1,44), а если у вас его нет? Floppy seek (поиск дисковода для дискет) тоже не нужен при его отсутствии.  Если параметр num lock for booting enabled лампочка на клавиатуре горит, если disabled нет.  И так подробнее если у вас нет флоппи дисковода (а скорее всего у вас его не будет т.  Современный компьютер может грузиться со следующих устройств floppy, cd rom, hard drive, usb.  По пункту 4 в графе boot (boot devaces) первичные устройства загрузки можно оформить так.  При любом варианте система загрузится, но bios тратит некоторое время на поиск загрузочного сектора.  В первом случае bios попытается загрузиться с cd диска если он вставлен в дисковод.  Во втором случае bios загружает содержимое с жесткого диска, если на нем проблема то грузится с cd.  Первый и второй вариант хорош для старых материнских плат где нельзя вызвать загрузочное меню.  В третьем случае bios сразу загружает содержимое с жесткого диска, если на нем проблема, то мы увидим чтото типа read disk error.  Этот вариант хорош для современных материнских плат имеющих загрузочное меню у меня зажав f8 при запуске пк появляется это меню, в котором я могу сразу выбрать с какого устройства bios загрузит систему.  Поскольку обычно нам нужно грузить систему с жесткого диска, то этот вариант самый оптимальный т.  Bios тратит меньше всего времени на запуск windows.  Если у нас более одного жесткого диска, то в разделе hard drives установить системный диск первым.  Время и дату можно выставить либо в bios либо в windows двойным кликом мыши по часам в трее.  После изменения настроек в bios сохраняем параметры выбрав меню save and exit 4.  Bios ищет загрузочный сектор по списку загрузочных устройств.  Cd rom, hard drive, usb) на счет синего экрана, он еще зовется синий экран смерти.  Не смотря на грозное название, он не такой уж страшный.  А не понятно что написано потому, что текст в этом окне изначально написан на английском языке, а пираты не подумав его перевели на русский.  Обычно, когда возникает ошибка в какой-то программе, windows автоматически ее закрывает и выдает вам сообщение типа приложение было закрыто из-за неизвестной ошибки.  А когда windows не может справится с подобной ошибкой, появляется синий экран.  Обычно в самом низу написан код этой ошибки и по справочнику можно узнать, что ее вызвало.  Ваш эксперимент с заменой батареек с двойным бип при запуске меня не удивляет.  При извлечении батарейки настройки bios стираются и при первом запуске вы слышите двойной бип, т.  А загрузив настройки по умолчанию двойного бип после перезагрузки уже не будет.  Если речь идет о черном экране с миганием полоски в левом верхнем углу, то у вас скорее всего bios пытается найти загрузочный сектор на флоппи дисководе, а у вас его нет.  Вы писали, что выбрав параметр load default settings при запуске пк вместо текста на черном фоне видит картинку производителя это называется загрузочная картинка и она есть на некоторых материнских платах типа asus.  Если параметр show logo screen enabled картинка отображается, если disabled мы видим привычный текст на черном фоне.  Более того, на диске к материнской плате есть программа позволяющая сменить эту картинку на свою.  А возможно при вынимании батарейки и сбросе настроек вентилятор крутится, а при загрузке по умолчанию он выклюается.  Найдите пункт fan вроде функция smartfan отвечает за авторегулировку вращения вентиляторов.  Скорее всего у вас переходная модель материнской платы с двумя ата и двумя sata контроллерами.  При сбросе настроек sata контроллер отключился по умолчанию найдите и включите его.  Проверьте определяется ли он в bios и в диспетчере устройств.  Раскручивает ли ваш cddvd-rom диски.  Товарищ админ правильно описал cmos (complementary metal oxуde semiconductor) но многие не совсем верно понимают что такое cmos cmos по русски кмоп (комплиментарный метал окисел полупроводник) это технология изготовления микросхемы на полевых транзисторах, которые отличаются низким питающим напряжением, а не тип памяти.  Скорее всего проблема в блоке питания возможно он не тянул железо и в конце концов сдох.  Если в нем вентилятор крутится значит он еще жив.  Не мешало бы проверить напряжения на нем возможно ваша новая батарейка дохлее старой.  Если каждый раз вам предлогают нажать f1 и вы заходите в bios, то скорее всего проблема в батарейке.  Конечно ничего не происходит bios же ждет, что вы нажмете нужную клавишу.  Он вам явно намекает нажать f2 для перенастройки.  Возможно у вас первым в списке загрузки стоит флоппи дисковод которого нет, второй и третий пункт загрузки отключены.  И команда try booting other devices тоже отключена, тогда возможно это и должно привести к этой ситуации.  Как вариант найдите меню boot и укажите в подменю first boot ваш жесткий диск.  Также не лишним будет проверить определяет ли bios ваш диск.  Включаю компьютер, кулеры шумят, монитор как бы включается, работает, но на экране чернота.  Перезагружаю иногда со второй, иногда с третей или четвертой попытки грузится нормально.  При чем если потом включаю в течение дня ком он грузится нормально.  Обычно такие сдвиги происходят с утра когда он ночь простоял.  Проблема в том, что у меня в компе стали сбиваться часы, я не обратил внимания, а теперь он перестал загружаться, пишет только системную информацию на черном экране и в конце cmos checrsum bad usb device over current status detected ! System will shut down after 15 seconds.  Я решил, что дело в батарейке, купил новую, вставил включил то же самое проверил обе батарейки на тестере новая 3,23v, старая 1,2v.  Сравнил их на внешний вид одинаковы, разница лишь в том, что на старой указана страна-производитель.  Повторил вставку новой и включение несколько раз с тем же результатом.  Ни с одной новой (я перепробовал 2) дальше черного экрана с системной инфой дело не продвинулось сколько ни пытался клавиатура не работает, комп просто выключается через 15 секунд.  Не знаю, может быть дело в том, что мне подсунули некондиционный товар, я когда покупал, то обратил внимание, что на одной упаковка с обратной, бумажной, стороны была заклеена стикером, а на другой прорезана крестиком с той же стороны.  Но ведь больше 3 v обе.  Не лишним было-бы указать что за мать, есть ли какие звуковые сигналы при включении компа.  Напряжение на батарейке меряется под нагрузкой.  Не экономьте несколько копеек на ней, берите проверенные бренды.  Проверьте наличие и положение перемычек (джамперов) на маме, не иначе кто-то поковырялся там.  А может и чем-то usb-порт коротнули.  Отключите все подключения usb, кроме клавы и мыши, а их желательно на время подключить не usb.  Один из портов usb действительно сломан, сейчас не могу ничего сделать, так-как нахожусь не рядом.  Мать сам хотел бы знать какая, на ней искал название, но не видать, я комп собраным покупал и документы найти не могу.  Батарейка может быть и не причем, подключите к ней например лампочку, вольт на 3-5, чтоб светилась.  И к тем же проводам щупы прибора мультиметра.  Название матери можно определить с помощью какого-либо софта например everest, aida64, aspia и др.  И бывает то что компьютер удачно грузится , работает на протядении 3-6 часов , а после отключается экран , перезагружается компьютер , и далее без сигнала на экран добрый день.  У меня 5-летний ноут dell и у него полетела батарейка.  Я купила в палатке cr 2032, но мастер сказал, что она не подходит и нужна батарейка вместе с материнской платой, а таких нет в сервисных центрах.  Они говорят, что заказывают подобные только для ноутов на гарантии.  И что же мне теперь, выбрасывать комп на помойку? Здравствуйте.  После замены батарейки на материнке компьютер не загружается, на экране появляется надпись disk boot failure, insert system disk and press enter.  Пожалуйста подскажите в чем причина и что делать? Надо заменить батарейку на материнской плате.  Под внешними лючками доступа к ней не нашел.  Отвинтил все видимые винты на корпусе, но что-то удерживает в середине половинки корпуса не размыкаются даже при заметном усилии (боюсь что-нибудь отломить).  В итоге при запуске появляется окно cmos checksum error, где при нажатие клавиши f1(continue to boot) загружается windows и всё вроде как нормально.  Вот только при перезагрузке, компьютер не включается.  То есть кулеры крутяться, а вот на экране пустота.  Если достать батарейку, а потом заново поставить, то всё повториться (вылезет окно cmos checksum error) часы нормально показывают время при работающем компьютере и не функционируют после его отключения, несмотря на замену батарейки.  В моем компьютере флэшку тоже не видно.  Через диспетчер устройств ничего улучшить не получилось (как советуют в инете).  Но комп старый и точно села батарейка.  Бывает, какой-либо usb порт от частого грубого пользования разбалтывается и замыкает, как правило, это порт на передней панели, как наиболее удобный для использования.  Отключите передние порты на материнской плате, тогда после перезагрузки другие порты должны заработать комп такой старый, что на нем нет usb на перед ней панели, а вы про диск к маме говорите где ж его искать? Батарейка села уверен, потому что часы после выключения обнуляются.  Питание идет на порты (их кстати шесть), иначе не реагировал бы мастер установок как я понимаю.  При засовывании флэшки лампочка один короткий раз мигнуть успевает.  Короче, лечить удаленно видимо не получится.  Отсутствие usb порта на передней панели корпуса никак не свидетельствует о старости самой начинки.  Откройте корпус компьютера, на материнской плате есть название, прочтите и найдёте драйвера в интернете.  Название матплаты может быть например такое gigabyte ga-p41t-d3.  Пусть установит то, что хочет ) здравствуйте! Сегодня решил поменять батарейку на материнке заменилпри включении компьютера включился bios, где я установил дату и время и нажал на сохранить изменения и выйти.  Сразу после этого только черный экран.  Компьютер работает, но никаких писков и возможности зайти в bios теперь нетпопытка снова вынуть батарейку и сбросить настройки перемычкой ни к чему не привели.  Что-то происходит при переключении графических режимов.  Возможно удастся выставить в настройках экрана отображение основного дисплея а все ли у вас в bios установлено корректно? Спасибо за ответ.  Заменила батарейку, в biosе установила параметры времени, но тем не менее программа опять выдает сбой опять пришлось войти посредством нажатия f1.  Когда загрузился сбились настройки экрана (черный).  При перезагрузке все остается по прежнему.  Как это исправить, может в biosе что- то еще настроить? Заранее благодарю за ответ! Поставьте лицензию ) или крякните нормальным кряком наконец.  У меня села батарейка, при запуске пк появился черный экран с двумя вариантами развития событий, первый зайти в биос и второй нажать f2 якобы для сброса настроек.  Попробуйте поискать в том же гугле по номеру ошибки.  Включаю компьютер нет обычного сигнала(одиночного писка), экран не загорается.  Проходит примерно 15 минут, выключу его , затем включу всё в порядке.  Зашёл в bios(ami) там 1,5 гига.  При перезагрузке из biosа после post вышло сообщен.  Установил в bios default optimal setup.  Post и ос загружаются без проблем.  Но ос так и не определяет один модуль памяти.  Касперский рескуе диск 10 ничего не показал.  Добрый день, у меня проблема после смены батарейки на плате, компьютер не загружается.  В компьютере два жестких хитачи и wd, система стоит на wd, он стоит первым в boot priority, но после смены батарейки в cmos primary master стал хитачи, может проблема в этом? И если да, то как поменять их местами - не получается.  Также в браузере (опера) не могу за один раз изменить соотношение ширины открытых вкладок.  Приходиться разделителем по мм их уменьшать включаю компьютер- процессор включается, гудит, а монитор не загорается и мышь (оптическая) не горит что делать? У меня уже такое было (компьютер стоял месяц отключеный т.  Сейчас тоже заменил батарейку, результатов никаких.  Какая ос у вас, непонятно, поэтому позволю себе домыслить следующее 2.  Вы установили какую-то левую сборку винды.  Переустановите, использую нормальную сборку или дистрибутив ос с сайта производителя (это конечно на мой взгляд перебор б.  Все дело в этом файлике, в его содержании.  Помогите! Года два не включала системник, а сейчас включила, он загружается, а изображения нет.  Подключала к разным мониторам, разными кабелями, не спасло.  В чем причина? Да что угодно может быть, вплоть до перегрызания кабелей мышами (не компьютерными).  Слишком мало информации я вчера снял батарейку и сразу воткнул новую.  После этого у меня при загрузке windows отключаются мышь и клавиатура и компьютер виснет.  Может ли от этого материнская плата сломаться или проблема в биосе? Здравствуйте, подскажите пожалуйста, включаю процессор а он через 2-3 секунды выключается.  А на маниторе пишет нет сигнала.  Может есть какие то предположения здравствуйте!обломилось с одной стороны крепление аккумулятора cmos на материнке.  Или если в ручную поменять в виндовсе (winxp).  Обновил биос, не помогло в чем может быть причина? Дмитрий, предположу, что батарейка уже заменена, bios говорите перепрошивали скорее всего у вас проблемы с кварцевым резонатором на материнской плате.  Непропай контактов, банальная грязь, либо просто умер заменить можно равноценным по частоте, никаких трудностей в этом нет.  Но если имеется гарантия, то лучше обменять маму, или доверить ремонт сервису чтобы не расслаблялись привет.  Видно что на мгновение появляется синий экран с какими-то надписями, видимо ошибки.  После ребута предлагает восстановить систему встроенными средствами, но ничего не помогает.  Тяжело что-то вам сказать конкретное, начнем с того, в данном случае ваша краткость не сестра таланта.  У вас post проходит, как я понял, значит инициализация прошла.  Какая стоит ос? После замены батарейки в bios входили? Что делали там? Cmos сбрасывали? На будущее, если у вас проблемы, то нужно писать полное название ноута, как и что происходит по шагам.  Какая именно ошибка у вас на экране смерти? В безопасном режиме грузились? Отключите автоматическую перезагрузку windows во время возникновения ошибок, и спокойно запишите ошибку, саму же расшифровку кодов bsod несложно найти.  Можно попытаться восстановить windows с диска поверх существующей, используя режиме обновление (не новая установка).  Кстати, при проблемах с ноутом, пробуйте в первую очередь снять аккумулятор и грузиться без него в общем поле для экспериментов достаточно широкое, если сами не разбираетесь в этом пригласите профи, может из знакомых, и все получится! Samsung rv508.  До полной разборки (включая вытаскивание батарейки с материнки), всё работало.  Разобрали-собрали, перестала грузиться windows 7, cmos не сбрасывал, в bios входил, поставил время, жесткий диск в bios виден, ничего подозрительного не нашел.  Начинается загрузка, и на первой же заставке, где должен появиться лэйбл windows, резко переходит в рестарт.  На мгновение появляется синий экран, но что там написано не успеваешь рассмотреть.  Переходит в меню, либо обычная загрузка либо восстановление системы, где результаты следующие.  Восстановление системы пытается, но обрывается и пишет, что не может восстановить и предлагает воспользоваться дополнительными возможностями восстановления, где 1.  Восстановление до ближайшей работоспособной версии проходит и пишет, что всё ок готово.  У меня такая проблема- пк загружается нормально но нет звука post, в биос (ami) заходит нормально, спикер рабочий.  Ваши предложения что может быть? Для начала нужна полная конфигурация вашего системного блока.  А если без этого, то вопрос устанавливали что-то новое в системник? Вы меняли батарейку? Загрузка проходит без нареканий, видеосигнал есть? Как вариант, все вытащить и проверить есть ли звук, и уже затем ковырять дальше.  Установил пару дней назад новую материнскую плату asrock 970 extreme3 r2.  Загрузка происходит нормально, видеосигнал есть.  Звук есть когда заходишь в биос.  Pci, 2 pci-e x1, 2 pci-e x16, 4 ddr3 dimm, audio, gigabit lan) dimm3 kingston 99p5471-011.  Ошибка при работе основной памяти (первых 64 кбайт).  Память желательно было бы протестировать, вам же на будущее спокойней будет 4 коротких сигнала неисправен системный таймер.  Какой у вас блок питания стоит? Если он слабоват, может быть всякое.  Блок питания huntkey 550w, помереть под нагрузкой получается только питание 4 пин molex выдаёт 12,02v, 5,05v.  Печально, а есть ли возможность обратиться по поводу ремонта или замены к продавцу? Пошаманить еще конечно можно, но нужно иметь вашу матплату перед собой, и некоторые специальные прибамбасы для проверки.  Дмитрий, если в сервисе меняли шлейфы, думаю они и жесткий диск проверили, очень на то надеюсь он у вас один или несколько? Если несколько, проверьте установки на них master-slave.  В идеале взять заведомо рабочий жесткий диск и установить винду на него.  Время как в системе идет нормально? Батарейку желательно проверить тестером, прежде чем менять.  При переустановке системы делали п.       <blockquote>
+        Как сделать, чтобы пpи остановкезапyске стиpалсясоздавался новый файл подкачки pagefile. .
+      </blockquote>      
+    </div>
+    <div class="divider"></div>
+    <div class="row blog-detail-share">
+      <div class="col m5 s5 l5">
+        <IDXSKIP><p>Share</p></IDXSKIP>
+      </div>
+      <div class="col m7 s7 l7 share-div">
+        <a href="#!" class="share-button waves-effect waves-light blue darken-4"><i class="fa fa-facebook"></i></a>
+        <a href="#!" class="share-button waves-effect waves-light red lighten-1"><i class="fa fa-google-plus"></i></a>
+        <a href="#!" class="share-button waves-effect waves-light cyan lighten-2"><i class="fa fa-twitter"></i></a>
+      </div>      
+    </div>
+    <div class="divider"></div>
+    <div class="row blog-detail-tags">
+      <div class="col m12 s12 l12">
+        <IDXSKIP><p>Tags</p></IDXSKIP>  
+			    <a href="http://wayaat.com/audiopleery/get1117.html"  class="waves-effect waves-light grey lighten-3" >Bullguard internet security 2015 rus скачать торрент</a>
+      <a href="http://wayaat.com/treylery/get1376.html"  class="waves-effect waves-light grey lighten-3" >Backstreet boys wallpapers</a>
+      <a href="http://wayaat.com/ofisnye/get1167.html"  class="waves-effect waves-light grey lighten-3" >50 дней до самого убийство книга википедия</a>
+      <a href="http://wayaat.com/my-vkontakte/get1294.html"  class="waves-effect waves-light grey lighten-3" >Anime studio pro 9 rus скачать торрент</a>
+      <a href="http://wayaat.com/obuchayuschie/get1278.html"  class="waves-effect waves-light grey lighten-3" >2е440а паспорт скачать</a>
+      <a href="http://wayaat.com/anonsy-filmov/get1427.html"  class="waves-effect waves-light grey lighten-3" >Battlefield bad company 2 multiplayer torrent</a>
+      </div>
+    </div>      
+    <div class="divider"></div>
+
+    <!--Rating-->
+    <div class="ca-rating">
+      <IDXSKIP><h5 class="ca-rating-h5">Rating</h5></IDXSKIP>
+      <div class="row">
+        <div class="col s5 m5 l5">
+          <div class="ca-rate-box main-color">
+            <IDXSKIP><p class="ca-rate-box-cl">Quality</p></IDXSKIP>
+            <p class="ca-rate-box-d">4.8</p>
+            <IDXSKIP><p class="ca-rate-box-dt">Verry Good</p></IDXSKIP>
+            <IDXSKIP><p class="ca-rate-box-i"><i class="material-icons">account_circle</i> 18K Rating</p></IDXSKIP>
+          </div>
+          
+        </div>
+        <div class="col s7 m7 l7">
+          <div class="row">
+            <div class="col s3 m3 l3 ca-rated-star">
+              <IDXSKIP><p>5 <i class="material-icons orange-text text-darken-2">star_rate</i></p></IDXSKIP>
+              <IDXSKIP><p>4 <i class="material-icons orange-text text-darken-2">star_rate</i></p></IDXSKIP>
+              <IDXSKIP><p>3 <i class="material-icons orange-text text-darken-2">star_rate</i></p></IDXSKIP>
+              <IDXSKIP><p>2 <i class="material-icons orange-text text-darken-2">star_rate</i></p></IDXSKIP>
+              <IDXSKIP><p>1 <i class="material-icons orange-text text-darken-2">star_rate</i></p></IDXSKIP>
+            </div>
+            <div class="col s6 m6 l6">
+              <p class="ca-star-graps main-color ca-cen-20"></p>
+              <p class="ca-star-graps main-color ca-cen-10"></p>
+              <p class="ca-star-graps main-color ca-cen-60"></p>
+              <p class="ca-star-graps main-color ca-cen-80"></p>
+              <p class="ca-star-graps main-color ca-cen-50"></p>
+            </div>
+            <div class="col s3 m3 l3 ca-rated-star">
+              <p>854</p>
+              <p>128</p>
+              <p>129</p>
+              <p>36</p>
+              <p>44</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <IDXSKIP><div class="ca-rate-btn-rating">
+        <span>
+          <i class="material-icons">star_rate</i>
+          <i class="material-icons">star_rate</i>
+          <i class="material-icons">star_rate</i>
+          <i class="material-icons">star_rate</i>
+          <i class="material-icons">star_rate</i>
+        </span>
+        <a class="waves-effect waves-light btn main-color right">Rating</a>
+      </div></IDXSKIP>
+    </div>
+    <!--#Rating-->
+    <!--ca-detail-comment-->
+    <div class="row ca-detail-comment">
+      <div class="col m12 s12 l12">
+        <IDXSKIP><p class="ca-detail-comment-title">Comments (3)</p></IDXSKIP>      
+
+        <ul class="collection">
+
+
+
+	
+          <li class="collection-item avatar">
+            <amp-img height="32" width="32" layout="responsive" src="/img/avata.jpg" alt="" class="circle"></amp-img>
+            <span class="title">В данном материале вы найдете примеры написания кода небольших программ на языке. </span>
+            <p>Guest 0 | 19:37 December 01, 2016</p>
+            <a href="#!" class="secondary-content"><i class="material-icons">favorite</i></a>
+          </li>
+
+
+	
+          <li class="collection-item avatar">
+            <amp-img height="32" width="32" layout="responsive" src="/img/avata.jpg" alt="" class="circle"></amp-img>
+            <span class="title">Часто, когда компьютер начинает чудить, виновата всего лишь батарейка на материнской. </span>
+            <p>Guest 1 | 19:20 December 05, 2016</p>
+            <a href="#!" class="secondary-content"><i class="material-icons">favorite</i></a>
+          </li>
+
+
+	
+          <li class="collection-item avatar">
+            <amp-img height="32" width="32" layout="responsive" src="/img/avata.jpg" alt="" class="circle"></amp-img>
+            <span class="title">В данном руководстве вы сможете найти описание разных настроек bios в картинках, ведь именно. </span>
+            <p>Guest 2 | 19:04 December 09, 2016</p>
+            <a href="#!" class="secondary-content"><i class="material-icons">favorite</i></a>
+          </li>
+
+
+	
+          <li class="collection-item avatar">
+            <amp-img height="32" width="32" layout="responsive" src="/img/avata.jpg" alt="" class="circle"></amp-img>
+            <span class="title">Многие пользователи windows, или windows, 10 7 жалуются подозрении на наличие папки со странным. </span>
+            <p>Guest 3 | 18:47 December 13, 2016</p>
+            <a href="#!" class="secondary-content"><i class="material-icons">favorite</i></a>
+          </li>
+
+
+	
+          <li class="collection-item avatar">
+            <amp-img height="32" width="32" layout="responsive" src="/img/avata.jpg" alt="" class="circle"></amp-img>
+            <span class="title">Всем здравствуйте.  В технике я не силён и по этому прошу не обижаться если буду задавать. </span>
+            <p>Guest 4 | 18:30 January 12, 2017</p>
+            <a href="#!" class="secondary-content"><i class="material-icons">favorite</i></a>
+          </li>
+
+
+		  
+        </ul>          
+      </div>
+    </div> 
+  </div>
+  </body>
+</html>
+

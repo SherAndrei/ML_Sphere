@@ -1,0 +1,940 @@
+dotennis.ru/articles/layf_stavki_na_tennis_strahovka.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ставки. Страховка</title>
+    <meta name="keywords" content="Ставки на теннис, лайс ставки на теннис, страховка в ставках">
+    <meta name="description" content="Лайф ставки на теннис: Страховка">
+    <meta name='yandex-verification' content='4adeaf3ccf2e6bcc' />
+    <meta name="msvalidate.01" content="EBADE32A040FA56FF489331D840F8E39" />
+    <meta name='wmail-verification' content='6f007d1f449cd02d' />
+    <meta name="w1-verification" content="139143819769" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+    <link href="/css/vendor-styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <script src="/ckeditor/ckeditor.js"></script>
+    <script src="/js/vendor-js.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="https://vk.com/js/api/openapi.js" type="text/javascript" charset="windows-1251"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <IDXSKIP><div class="logo col-xs-5 col-sm-3 col-md-2">
+                    <a href="/"><img src="/images/logo2.png" alt=""></a>
+                </div></IDXSKIP>
+                <div class="col-xs-7 col-md-4 slogan">
+                    <IDXSKIP><p>Высокоточные прогнозы на теннис.</p></IDXSKIP>
+                    <IDXSKIP><p>Аналитика и статьи</p></IDXSKIP>
+                </div>
+                
+<div class="subscribe col-xs-12 col-md-6 ">
+    <div class="row">
+        <div class="subscribe_inner pull-right">
+            <div class="triangle"></div>
+            <div class="dib dib_mob">
+                <IDXSKIP><p class="premium">Премиум подписка</p></IDXSKIP>
+            </div>
+            <IDXSKIP><div class="dib">
+                <form class="payment-form" action="https://wl.walletone.com/checkout/checkout/Index" accept-charset="UTF-8" method="post" target="_blank">
+                    <input name="type" value="premium" type="hidden" class="w1-fields">
+                    <input name="tarif" value="p1m" type="hidden" class="w1-fields">
+                    <input name="scode" value="" type="hidden" class="w1-fields">
+                    <input name="WMI_CULTURE_ID" value="ru-RU" type="hidden" class="w1-fields">
+                    <input name="WMI_CURRENCY_ID" value="840" type="hidden" class="w1-fields">
+                    <input name="WMI_DESCRIPTION" value="BASE64:0J7Qv9C70LDRgtCwINC/0L7QtNC/0LjRgdC60Lgg0L3QsCDQv9GA0LXQvNC40YPQvCDRgdGC0LDRgtGM0Lgg0Lgg0L3QvtCy0L7RgdGC0Lgu" type="hidden" class="w1-fields">
+                    <input name="WMI_FAIL_URL" value="https://dotennis.ru/payment/fail/" type="hidden" class="w1-fields">
+                    <input name="WMI_MERCHANT_ID" value="139143819769" type="hidden" class="w1-fields">
+                    <input name="WMI_PAYMENT_AMOUNT" value="5.00" type="hidden" class="w1-fields">
+                    <input name="WMI_PAYMENT_NO" value="" type="hidden" class="w1-fields">
+                    <input name="WMI_SUCCESS_URL" value="https://dotennis.ru/payment/success/" type="hidden" class="w1-fields">
+                    <input name="WMI_SIGNATURE" value="" type="hidden" class="w1-fields">
+                    <input class="field w1-fields" type="text" placeholder="Введите e-mail" name="email">
+                    <input type="submit" value="Купить">
+                </form>
+                <script>
+                    $(document).ready(function() {
+                        $('.payment-form').submit(function() {
+                            var form =  $(this),
+                                emailInput = form.find('input[name="email"]'),
+                                email = emailInput.val(),
+                                re = /\S+@\S+\.\S+/;
+
+                            if (!re.test(email)) {
+                                emailInput.css('border', '1px solid red');
+                                emailInput.focus();
+                                return false;
+                            } else {
+                                emailInput.css('border', '1px solid #575757');
+                                form.find('input[name="WMI_CUSTOMER_EMAIL"]').val(email);
+
+                                var filelds = {};
+                                form.find('.w1-fields').each(function () {
+                                    if ($(this).attr('name') != 'WMI_SIGNATURE') {
+
+                                        filelds[$(this).attr('name')] = $(this).val();
+
+                                    }
+                                });
+
+                                $.ajax({
+                                    url: '/payment/signature',
+                                    type: 'POST',
+                                    contentType: 'application/json',
+                                    dataType: 'json',
+                                    async: false,
+                                    data: JSON.stringify(filelds),
+                                    success: function(response) {
+                                        form.find('input[name="WMI_SIGNATURE"]').val(response.signature);
+                                        form.find('input[name="WMI_PAYMENT_NO"]').val(response.paymentNo);
+                                        form.find('input[name="scode"]').val(response.scode);
+                                    }
+                                });
+
+                                return true;
+                            }
+                        });
+
+                    });
+                </script>
+            </div></IDXSKIP>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<hr class="top_hr">
+
+
+<div class="container">
+    <div class="row">
+        <IDXSKIP><ul class="nav navbar-nav navbar-right">
+                            <li><a href="/users">Вход</a></li>
+                                </ul></IDXSKIP>
+        <nav class="navbar navbar-default">
+            <div class="">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <IDXSKIP><div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="menu_tex">Меню</span>
+                        <span class="menu_burg">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </span>
+                    </button>
+                </div></IDXSKIP>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="/">Новости</a></li>
+                        <IDXSKIP><li class=""><a href="/statistic">Статистика прогнозов</a></li></IDXSKIP>
+                        <li class="active"><a href="/articles" >Статьи</a></li>
+                        <IDXSKIP><li class=""><a href="/faq">FAQ</a></li></IDXSKIP>
+                        <IDXSKIP><li class=""><a href="/payment">Платные прогнозы</a></li></IDXSKIP>
+                        <IDXSKIP><li class=""><a href="/payment/premium">Премиум подписка</a></li></IDXSKIP>
+                                            </ul>
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+
+<div class="container-fluid gradient">
+    <div class="row"></div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <script type="text/javascript">
+  VK.init({
+    apiId: 3909557,
+    onlyWidgets: true
+  });
+</script>
+
+
+<div class="text-page ">
+            <img src="/images/news/8a519df9b326027d6e5de58d72b53c64.jpg" alt="">
+        <h3 class="main">Лайф ставки на теннис: Страховка</h3>
+        <div class="news_info">
+            <span class="comments"><i class="glyphicon glyphicon-comment"></i> <a href="#comments">Комментарии: 0</a></span>
+        </div>
+        <p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Меня часто спрашивают, что такое страховка в ставках? Чтобы раз и навсегда ответить на этот вопрос, решил написать эту статью. Первая статья посвящена выбору <a href="http://dotennis.ru/articles/liniya_stavok_kak_pravilno_vybrat.html" target="_blank">линии.</a></span></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Страховка &ndash; это обратная ставка вашей первоначальной ставки по более высокому коэффициенту. Ничего не понятно?)) Объясню на примере.</span></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif"><img alt="Джокович Надаль" src="http://cs607621.vk.me/v607621218/6244/uIRehijrod0.jpg" style="float:left; height:209px; margin:5px; width:316px" />Возьмем, к примеру, матч Джокович &ndash; Надаль, где на победу Джоковича или Надаля дают кф 1,95. Вы считаете, что выиграет Джокович, поэтому ставите на него, скажем, 100$. Иными словами, если выиграет Джокович вы зарабатываете 95$.&nbsp;Начинается матч, Джокович выигрывает первый сет. В лайф ставках коэффициент на Надаля поднимается с первоначального 1,95 до 3,2. В этой ситуации довольно выгодно поставить часть потенциально заработанных денег на Джоковиче ( 95$) на Надаля. Вы делаете ставку в 45$ на Надаля под 3,2, что позволит Вам заработать 100$. Иными словами, сделав такую ставку вне зависимости как закончится матч, Вы ничего на этом матче не потеряете, а в случае победы Джоковича заработаете 50$.</span></span></p>
+
+<p><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Когда же интересно использовать страховку?</span></span></p>
+
+<p style="margin-left:36pt"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">1.Первый вариант, когда вы предполагаете что один из теннисистов более свежий и сможет как минимум в начале игры навязать борьбу оппоненту, а за тем вполне может проиграть ввиду плохой физ. подготовки. Особенно часто это происходит на БШ, где идет игра в трех сетах или на грунте, где игра имеет более сложный сточки зрения физики акцент.</span></span></p>
+
+<p style="margin-left:36pt"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Пример: матч финал Уимблдона 2013 Маррей &ndash; Джокович. Мы предполагали что Маррей в свойственной ему манере будет тащить все мячи Джока и умрет, но первый сет вытащит. Хватит ли его на дальнейший матч, мы были не уверены. По этому мы выбрали следующий план на эту игру, берем победу Маррея, а затем перестраховываем это событие победой Джока.</span></span></p>
+
+<p style="margin-left:36pt"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">2.Второй вариант. Явный провал в начале матча одного из оппонентов, но только в случае если оппоненты равны или провалился фаворит. В противном случае вы можете не увидеть нормального страховочного коэффициента.</span></span></p>
+
+<p style="margin-left:36pt"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Пример: Бастад 2013, 2 раунд Альмагро &ndash; Гарсия &ndash;Лопес. Там мы увидели явный провал в игре Альмагро в первом сете. Скорее всего, связанный с тем, что это его первый матч, и он еще не втянулся или еще какая-то дрянь. Но можно констатировать однозначно, Альманро может играть сильнее и коэф. на его в этот момент был 3,2, что вполне по шансам.</span></span></p>
+
+<p style="margin-left:36pt; text-align:center"><a href="http://dotennis.ru/payment/premium"><span style="color:#006400"><font face="arial, helvetica, sans-serif"><span style="font-size:16px"><strong>Матчи с кф. 3,0 и более</strong></span></font></span></a></p>
+
+<p style="margin-left:36pt"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">3.Явная недооценка андердога. Часто бк в виду разных причин очень сильно недооценивают андердогов, а выбрать линию сложно, вы не уверены в плюсовой форе и тотале. Тогда имеет смысл брать победу андерога с последующей страховкой, если вы понимаете что матч ему не взять.</span></span></p>
+
+<p style="margin-left:36pt"><span style="font-size:16px"><span style="font-family:arial,helvetica,sans-serif">Пример: четверть финал Уимлдона матч Вердаско- Маррей. Перед началом матча кф на Вердаско был 16, под который я с удовольствием выставился. После того как Вердаско повел 2:0 по сетам, кф на Маррея был 2,1. В этом случае Вы можете поставить 50% от потенциально выигрышной ставки с Вердаско на Маррея, что в итоге дает 750% прибыли со ставки вне зависимости от конечного результата матча.</span></span></p>
+
+<p style="margin-left:36pt"><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube.com/embed/I5FoJ1I_E4Q" width="500"></iframe></p>
+    </div>
+
+
+<div class="guarantee_baner">
+    <div class="box_guarantee">
+        <h4><IDXSKIP><span>ГАРАНТИЯ</span></IDXSKIP><IDXSKIP>: увеличение банка на 20% в месяц!</IDXSKIP></h4>
+        <p><IDXSKIP>Мы настолько уверены в высокой проходимости наших прогнозов, что можем гарантировать вам роста банка </IDXSKIP><IDXSKIP><b>+20%</b></IDXSKIP> <IDXSKIP>в месяц</IDXSKIP></p>
+        <IDXSKIP><form class="payment-form" action="https://wl.walletone.com/checkout/checkout/Index" accept-charset="UTF-8" method="post" target="_blank">
+            <input name="type" value="tarif" type="hidden" class="w1-fields">
+            <input name="tarif" value="t30" type="hidden" class="w1-fields">
+            <input name="scode" value="" type="hidden" class="w1-fields">
+            <input name="WMI_CULTURE_ID" value="ru-RU" type="hidden" class="w1-fields">
+            <input name="WMI_CURRENCY_ID" value="840" type="hidden" class="w1-fields">
+            <input name="WMI_CUSTOMER_EMAIL" value="" type="hidden" class="w1-fields">
+            <input name="WMI_DESCRIPTION" value="BASE64:0J7Qv9C70LDRgtCwINC/0L7QtNC/0LjRgdC60Lgg0L3QsCDQv9C70LDRgtC90YvQtSDQv9GA0L7Qs9C90L7Qt9GLLg==" type="hidden" class="w1-fields">
+            <input name="WMI_FAIL_URL" value="https://dotennis.ru/payment/fail/" type="hidden" class="w1-fields">
+            <input name="WMI_MERCHANT_ID" value="139143819769" type="hidden" class="w1-fields">
+            <input name="WMI_PAYMENT_AMOUNT" value="99.00" type="hidden" class="w1-fields">
+            <input name="WMI_PAYMENT_NO" value="" type="hidden" class="w1-fields">
+            <input name="WMI_SUCCESS_URL" value="https://dotennis.ru/payment/success/" type="hidden" class="w1-fields">
+            <input name="WMI_SIGNATURE" value="" type="hidden" class="w1-fields">
+
+            <input class="field grop_boot w1-fields" type="text" placeholder="Введите ваш email" name="email">
+            <input class="yellow_butt small_butt grop_boot" type="submit" value="Купить подписку">
+        </form></IDXSKIP>
+        <script>
+            $(document).ready(function() {
+                $('.payment-form').submit(function() {
+                    var form =  $(this),
+                        emailInput = form.find('input[name="email"]'),
+                        email = emailInput.val(),
+                        re = /\S+@\S+\.\S+/;
+
+                    if (!re.test(email)) {
+                        emailInput.css('border', '1px solid red');
+                        emailInput.focus();
+                        return false;
+                    } else {
+                        emailInput.css('border', '1px solid #575757');
+                        form.find('input[name="WMI_CUSTOMER_EMAIL"]').val(email);
+
+                        var filelds = {};
+                        form.find('.w1-fields').each(function () {
+                            if ($(this).attr('name') != 'WMI_SIGNATURE') {
+
+                                filelds[$(this).attr('name')] = $(this).val();
+
+                            }
+                        });
+
+                        $.ajax({
+                            url: '/payment/signature',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            dataType: 'json',
+                            async: false,
+                            data: JSON.stringify(filelds),
+                            success: function(response) {
+                                form.find('input[name="WMI_SIGNATURE"]').val(response.signature);
+                                form.find('input[name="WMI_PAYMENT_NO"]').val(response.paymentNo);
+                                form.find('input[name="scode"]').val(response.scode);
+                            }
+                        });
+
+                        return true;
+                    }
+                });
+
+            });
+        </script>
+    </div>
+</div>
+
+<IDXSKIP><div class="social-like-buttons">
+    <div class="tw">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ru">Твитнуть</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+    <div class="vk">
+        <div id="vk_like"></div>
+        <script type="text/javascript">
+            VK.Widgets.Like("vk_like", {type: "button"});
+        </script>
+    </div>
+</div></IDXSKIP>
+
+    <div class="read_on">
+        <h2>ЧИТАЙТЕ ПО ТЕМЕ</h2>
+                    <p><a href="stavki_na_tennis__luchshiy_vid_sporta_dlya_igry_protiv_bk.html">Ставки на теннис - лучший вид спорта для игры против бк</a></p>
+                    <p><a href="kak_zarabotat_na_stavkah_na_sport.html">Как заработать на ставках на спорт</a></p>
+                    <p><a href="osobennosti_igry_na_otkrytom_harde_stavki_na_tennis.html">Особенности игры на открытом харде. Ставки на теннис</a></p>
+                    <p><a href="plyusovaya_i_minusovaya_fora_v_stavkah_na_tennis.html">Плюсовая и минусовая фора в ставках на теннис</a></p>
+                    <p><a href="osobennosti_igry_na_trave_stavki_na_tennis.html">Особенности игры на траве. Ставки на теннис</a></p>
+            </div>
+
+<div class="free_delivery free_delivery_big">
+    <h3>Бесплатная рассылка</h3>
+    <p><IDXSKIP>Оцените качество наших материалов: прогнозы и подробная аналитика матчей
+    </IDXSKIP></p>
+    <IDXSKIP><form action="/users/subscribe" method="post">
+        <div class="wid_lab">
+            <label class="" for="">Ваше имя</label>
+            <input class="field grop_boot input_small" type="text" placeholder="Как к вам обращаться" name="name">
+        </div>
+
+        <div class="wid_lab">
+            <label class="" for="">Ваш e-mail</label>
+            <input class="field grop_boot input_small" type="text" placeholder="На него придут прогнозы" name="email">
+        </div>
+
+        <input class="yellow_butt small_butt grop_boot" type="submit" value="Получить">
+    </form></IDXSKIP>
+</div>
+
+<div id="vk_comments"></div>
+<script type="text/javascript">
+    VK.Widgets.Comments('vk_comments');
+</script>
+
+
+<div class="matter_form comm_plus">
+    <div class="triangle"></div>
+    <div class="matter_mini_box">
+        <h4>Добавить комментарий</h4>
+                <form action="" method="post">
+            <IDXSKIP><label for="">Ваше имя</label></IDXSKIP>
+            <input class="field" type="text" name="name" placeholder="Как к вам обращаться" value="">
+            <IDXSKIP><label for="">Ваш e-mail</label></IDXSKIP>
+            <input class="field" type="email" name="email" value="">
+            <IDXSKIP><label for="">Сообщение</label></IDXSKIP>
+            <textarea class="field" name="comment" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+            <img id="captcha-img" src="/users/captcha" />
+            <img id="refresh-captcha" src="/images/refresh-icon.png" title="Обновить картинку с текстом" />
+            <IDXSKIP><label for="">Текст с картинки</label></IDXSKIP>
+            <input class="field" type="text" placeholder="Текст с картинки" name="captcha">
+            <input class="yellow_butt" type="submit" value="Отправить">
+        </form>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  $('#refresh-captcha').click(function() {
+    $('#captcha-img').attr('src', $('#captcha-img').attr('src')+'/?'+Math.random());
+  });
+
+  $('.delete').click(function() {
+    var confirmDecision = confirm("Вы уверены?");
+
+    if (confirmDecision) {
+      var commentId = $(this).attr('comment_id');
+
+      $('#comment-' + commentId).remove();
+
+      $.ajax({
+        url: "/articles/deletecomment",
+        type: "POST",
+        data: {comment_id: commentId}
+      });
+    }
+  });
+});
+</script>
+        </div>
+
+        <!-- sidebar -->
+        
+<div class="col-xs-12 col-md-4 ">
+    <div class="free_delivery">
+        <h3>Бесплатная рассылка</h3>
+        <p><IDXSKIP>Оцените качество наших материалов: <br> прогнозы и подробная аналитика матчей
+        </IDXSKIP></p>
+        <form class="subscribe-mail-form" action="/users/subscribe" method="post">
+            <IDXSKIP><label for="">Ваше имя</label></IDXSKIP>
+            <input class="field" type="text" placeholder="Как к вам обращаться" name="name">
+            <IDXSKIP><label for="">Ваш e-mail</label></IDXSKIP>
+            <input class="field" type="text" placeholder="На него будут приходить прогнозы" name="email">
+            <input class="yellow_butt" type="submit"  value="Получить">
+            <IDXSKIP><p class="subscriber">Подписчиков: 4600+</p></IDXSKIP>
+        </form>
+    </div>
+    <IDXSKIP><a class="complaint white-black-link" href="https://bookmaker-ratings.ru/help-homepage/add-kapper-complaint/">Оставить жалобу</a></IDXSKIP>
+            <div class="last_comments">
+            <h4>Последние комментарии</h4>
+                            <a href="/news/obzor_nekotoryh_matchey_hertogenbos_shtutgart_2017_4.html">
+                    <div class="last_comment">
+                        <IDXSKIP><p class="last_comment_name">AlenRoize</IDXSKIP></a> <IDXSKIP><span>15 Июн 00:52</span></IDXSKIP></p>
+                        <p class="news_cont"><IDXSKIP>Вот не пойму,  на Карловича 2-0 по сетам, кф 1.69, а фора по сетам -1.5 кф 1.86.  Для кого сделан первый Кф?</IDXSKIP></p>
+                    </div>
+                </a>
+                            <a href="/news/obzor_nekotoryh_matchey_hertogenbos_shtutgart_2017_3.html">
+                    <div class="last_comment">
+                        <IDXSKIP><p class="last_comment_name">dotennis</IDXSKIP></a> <IDXSKIP><span>14 Июн 23:32</span></IDXSKIP></p>
+                        <p class="news_cont"><IDXSKIP>По матчу Хаас - Миша. Хаас выдал отличный теннис, поймал кураж, но может быть спад. Да день отдыха, но все же у Томи возраст и уже второй подряд сложный трехсетовик....</IDXSKIP></p>
+                    </div>
+                </a>
+                            <a href="/news/obzor_nekotoryh_matchey_hertogenbos_shtutgart_2017_3.html">
+                    <div class="last_comment">
+                        <IDXSKIP><p class="last_comment_name">VersusMarketBet</IDXSKIP></a> <IDXSKIP><span>14 Июн 22:26</span></IDXSKIP></p>
+                        <p class="news_cont"><IDXSKIP>Плюсовая фора на Хааса хорошо смотрится. Народ прогрузит Мишу, +3 +4 можно пробовать если кэфы будут нормальные</IDXSKIP></p>
+                    </div>
+                </a>
+                            <a href="/news/obzor_nekotoryh_matchey_hertogenbos_shtutgart_2017_3.html">
+                    <div class="last_comment">
+                        <IDXSKIP><p class="last_comment_name">1337</IDXSKIP></a> <IDXSKIP><span>14 Июн 22:19</span></IDXSKIP></p>
+                        <p class="news_cont"><IDXSKIP>Миша в отличие от Федерера будет хотя бы ПРИНИМАТЬ. Да и куда уж 40-летнему в полуфинал... чудеса должны тут закончиться, без всяких сомнений. </IDXSKIP></p>
+                    </div>
+                </a>
+                            <a href="/news/obzor_nekotoryh_matchey_hertogenbos_shtutgart_2017_3.html">
+                    <div class="last_comment">
+                        <IDXSKIP><p class="last_comment_name">VersusMarketBet</IDXSKIP></a> <IDXSKIP><span>14 Июн 22:17</span></IDXSKIP></p>
+                        <p class="news_cont"><IDXSKIP>А по Мише Звереву я бы не торопился. Теперь вкусный кэф на Хааса. Он может нормально сыграть и можно будет что-то с ним придумать.</IDXSKIP></p>
+                    </div>
+                </a>
+                    </div>
+    
+    </div>
+
+<script>
+    $(document).ready(function() {
+        $('.subscribe-mail-form').submit(function() {
+            var form =  $(this),
+                emailInput = form.find('input[name="email"]'),
+                email = emailInput.val(),
+                nameInput = form.find('input[name="name"]'),
+                name = nameInput.val(),
+                re = /\S+@\S+\.\S+/,
+                isError = false;
+
+            if (name === '') {
+                nameInput.css('border', '1px solid red');
+                nameInput.focus();
+                isError = true;
+            } else if (!re.test(email)) {
+                nameInput.css('border', '1px solid #d1d3d4');
+                emailInput.css('border', '1px solid red');
+                emailInput.focus();
+                isError = true;
+            }
+
+            if (!isError) {
+                emailInput.css('border', '1px solid #d1d3d4');
+                window._fbq.push(['track', '6021342409767', {'value':'0.00','currency':'USD'}]);
+                return true;
+            } else {
+                return false;
+            }
+        });
+    });
+</script>
+
+<!-- Facebook Conversion Code for Оформление заказов - Dotennis Dotennis 1 -->
+<script>(function() {
+        var _fbq = window._fbq || (window._fbq = []);
+        if (!_fbq.loaded) {
+            var fbds = document.createElement('script');
+            fbds.async = true;
+            fbds.src = '//connect.facebook.net/en_US/fbds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(fbds, s);
+            _fbq.loaded = true;
+        }
+    })();
+    window._fbq = window._fbq || [];
+</script>
+<IDXSKIP><noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6021342409767&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript></IDXSKIP>    </div>
+</div>
+
+<!-- преимущества -->
+<div class="container hidden-xs">
+    <div class="benefits">
+        <div class="triangle"></div>
+        <div class="row spec_pad">
+            <div class="col-xs-12 col-md-3">
+                <div class="benefits_mini_box">
+                    <h4>doTennis</h4>
+                    <p class="fon_w_20"><IDXSKIP>— только качественная аналитика и хорошие прогнозы</IDXSKIP></p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-9">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 spec_hei">
+                        <IDXSKIP><div class="benefits_img">
+                            <img src="/images/icon-like.png" alt="">
+                        </div></IDXSKIP>
+                        <div class="benefits_info">
+                            <IDXSKIP><h5>ЧЕСТНЫЕ СТАВКИ</h5></IDXSKIP>
+                            <p><IDXSKIP>Матчи верифицированы через блогабет.</IDXSKIP></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 spec_hei">
+                        <IDXSKIP><div class="benefits_img">
+                            <img src="/images/icon-people.png" alt="">
+                        </div></IDXSKIP>
+                        <div class="benefits_info">
+                            <IDXSKIP><h5>ТЕННИСНОЕ СООБЩЕСТВО</h5></IDXSKIP>
+                            <p><IDXSKIP>На сайте есть не только команда
+                                doTennis, но и много других людей интересных людей, которые делятся с нами своим мнением и общаются.
+                            </IDXSKIP></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 spec_hei">
+                        <IDXSKIP><div class="benefits_img">
+                            <img src="/images/icon-pennant.png" alt="">
+                        </div></IDXSKIP>
+                        <div class="benefits_info">
+                            <IDXSKIP><h5>ГАРАНТИИ</h5></IDXSKIP>
+                            <p><IDXSKIP>Мы стараемся выполнять нашу работу
+                                максимально качественно и полностью берем ответственность за её результат.</IDXSKIP></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 spec_hei">
+                        <IDXSKIP><div class="benefits_img">
+                            <img src="/images/icon-magnifier.png" alt="">
+                        </div></IDXSKIP>
+                        <div class="benefits_info">
+                            <IDXSKIP><h5>КАЧЕСТВЕННАЯ АНАЛИТИКА</h5></IDXSKIP>
+                            <p><IDXSKIP>Теннис для нас — это работа. Мы смотрим теннис круглые сутки, читаем все теннисные и околотеннисные новости.</IDXSKIP></p>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-md-6 spec_hei">
+                        <IDXSKIP><div class="benefits_img">
+                            <img src="/images/icon-hat.png" alt="">
+                        </div></IDXSKIP>
+                        <div class="benefits_info">
+                            <IDXSKIP><h5>ОБУЧЕНИЕ БЕТТИНГУ</h5></IDXSKIP>
+                            <p><IDXSKIP>На сайте вы найдете статьи о том как и где ставить, атакже более профессиональная информация о ставках именно на теннис.</IDXSKIP></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 spec_hei">
+                        <IDXSKIP><div class="benefits_img">
+                            <img src="/images/icon-tube.png" alt="">
+                        </div></IDXSKIP>
+                        <div class="benefits_info">
+                            <IDXSKIP><h5>УМНАЯ РАБОТА</h5></IDXSKIP>
+                            <p><IDXSKIP>Мы вкладываем много «ума» в наши прогнозы и вы можете не только сравнивать свои мысли с нашими, но и учиться думать правильно принимать решения</IDXSKIP></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <IDXSKIP><p class="nas_kol">Нас уже более <b>4 000</b>!</p></IDXSKIP>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- популярные материалы -->
+    <div class="container popular">
+        <div class="row">
+            <IDXSKIP><div class="col-xs-12">
+                <h3>Популярные материалы</h3>
+            </div></IDXSKIP>
+            <div class="col-xs-12">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                                            <div class="item">
+                            <IDXSKIP><a href="/articles/layv_stavki_osobennosti_stavok_na_tennis_v_rezhime_layv.html" class="">
+                                <img src="/images/news/83889534a89a1d75a4816de05f80beec.jpg" alt="">
+                            </a></IDXSKIP>
+                            <h3 class="main">
+                                <a href="/articles/layv_stavki_osobennosti_stavok_na_tennis_v_rezhime_layv.html"><IDXSKIP>Лайв ставки. Особенности ставок на теннис в режиме лайв</IDXSKIP></a>
+                            </h3>
+                        </div>
+                                            <div class="item">
+                            <IDXSKIP><a href="/articles/algoritm_analiza__tennisnyh_matchey.html" class="">
+                                <img src="/images/news/ac4d7ccd18b0ae52a62e1a372f75c097.jpg" alt="">
+                            </a></IDXSKIP>
+                            <h3 class="main">
+                                <a href="/articles/algoritm_analiza__tennisnyh_matchey.html"><IDXSKIP>Алгоритм анализа  теннисных матчей.</IDXSKIP></a>
+                            </h3>
+                        </div>
+                                            <div class="item">
+                            <IDXSKIP><a href="/articles/kak_rasschityvaetsya_reyting_atp_muzhskaya_tennisnaya_associaciya.html" class="">
+                                <img src="/images/news/6fdd27a6546d0ae11fc7a7628890a96f.jpg" alt="">
+                            </a></IDXSKIP>
+                            <h3 class="main">
+                                <a href="/articles/kak_rasschityvaetsya_reyting_atp_muzhskaya_tennisnaya_associaciya.html"><IDXSKIP>Как рассчитывается рейтинг ATP. Мужская теннисная ассоциация</IDXSKIP></a>
+                            </h3>
+                        </div>
+                                            <div class="item">
+                            <IDXSKIP><a href="/articles/statistika_v_tennise_kak_davat_prognozy_na_tennis_osnovyvayas_na_statistike.html" class="">
+                                <img src="/images/news/e650e0f0ac2124c2884ae2c22db7e1f2.jpg" alt="">
+                            </a></IDXSKIP>
+                            <h3 class="main">
+                                <a href="/articles/statistika_v_tennise_kak_davat_prognozy_na_tennis_osnovyvayas_na_statistike.html"><IDXSKIP>Статистика в теннисе. Как давать прогнозы на теннис основываясь на статистике</IDXSKIP></a>
+                            </h3>
+                        </div>
+                                            <div class="item">
+                            <IDXSKIP><a href="/articles/na_kakie_kf_nuzhno_stavit_v_muzhskom_ture_atp_poisk_potenciala_v_razmere_koefficientov.html" class="premium">
+                                <img src="/images/news/ae72c9682d15aac28837c440c9cbd6c0.jpg" alt="">
+                            </a></IDXSKIP>
+                            <h3 class="main">
+                                <a href="/articles/na_kakie_kf_nuzhno_stavit_v_muzhskom_ture_atp_poisk_potenciala_v_razmere_koefficientov.html"><IDXSKIP>На какие кф. нужно ставить в мужском туре ATP. Поиск потенциала в размере коэффициентов.</IDXSKIP></a>
+                            </h3>
+                        </div>
+                                            <IDXSKIP><div class="item">
+                            <a href="/articles/kak_zarabotat_na_stavkah_na_sport.html" class="">
+                                <img src="/images/news/94f241ba13b3e55b4ad697ce5c9c33f1.jpg" alt="">
+                            </a>
+                            <h3 class="main">
+                                <a href="/articles/kak_zarabotat_na_stavkah_na_sport.html">Как заработать на ставках на спорт</a>
+                            </h3>
+                        </div></IDXSKIP>
+                                            <div class="item">
+                            <IDXSKIP><a href="/articles/kak_obygrat_bukmekerskuyu_kontoru_pravila_vedeniya_banka_vybor_bk.html" class="">
+                                <img src="/images/news/13fa68083a0ce97e3dc759f170b0d544.jpg" alt="">
+                            </a></IDXSKIP>
+                            <h3 class="main">
+                                <a href="/articles/kak_obygrat_bukmekerskuyu_kontoru_pravila_vedeniya_banka_vybor_bk.html"><IDXSKIP>Как обыграть букмекерскую контору. Правила ведения банка, выбор бк</IDXSKIP></a>
+                            </h3>
+                        </div>
+                                            <IDXSKIP><div class="item">
+                            <a href="/articles/psihologiya_v_stavkah_na_sport.html" class="">
+                                <img src="/images/news/2ee7c5e807e67088e55ed4f86d233192.jpg" alt="">
+                            </a>
+                            <h3 class="main">
+                                <a href="/articles/psihologiya_v_stavkah_na_sport.html">Психология в ставках на спорт</a>
+                            </h3>
+                        </div></IDXSKIP>
+                                    </div>
+            </div>
+        </div>
+    </div>
+
+<!-- платные прогнозы и премиум подписка -->
+<div class="container">
+    <div class="goal_actions">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 bord_r">
+                <div class="forecast">
+                    <h3>Платные прогнозы</h3>
+                    <p><IDXSKIP>Честная статистика, верификация всех ставок
+                        «Гарантия» роста банка + 20% в месяц</IDXSKIP></p>
+                    <IDXSKIP><a href="/payment" class="yellow_butt">Получить</a></IDXSKIP>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="forecast">
+                    <h3>Премиум подписка</h3>
+                    <p><IDXSKIP>Премиум материалы,
+                        Обзоры матчей (10 – 12 матчей в день)</IDXSKIP></p>
+                    <IDXSKIP><a href="/payment/premium" class="yellow_butt">Получить</a></IDXSKIP>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="big_hr">
+
+<!-- слайдер отзывов -->
+    <div class="container reviews">
+        <div class="row">
+            <IDXSKIP><div class="col-xs-12"><h3>Отзывы о нашей работе</h3></div></IDXSKIP>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="false">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                                                                <div class="item active">
+                            <div class="recall">
+                                <div class="recall_img">
+                                                                            <img src="/images/news/Игорь Жданов.jpg" alt="" />
+                                                                        <IDXSKIP><p><b>Игорь Жданов</b></p></IDXSKIP>
+                                </div>
+                                <div class="recall_info">
+                                    <h4>Соблюдайте мани менеджмент, никаких вабанков!!!</h4>
+                                    <p><IDXSKIP>За три месяца сотрудничества с DoTennis я довольно неплохо увеличил свой банк! Главное - это придерживаться своей системы ставок, я ставлю 10% от банка в день и радуюсь увеличению счета.
+Конечно, бывают и просадки, но без них никакой настоящий каппер не обходится, пророков в этом мире нет) 
+ПС. Всем совет соблюдайте мани менеджмент, никаких вабанков!!!</IDXSKIP></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                    <div class="item ">
+                            <div class="recall">
+                                <div class="recall_img">
+                                                                            <img src="/images/news/Александр Осипишен.jpg" alt="" />
+                                                                        <IDXSKIP><p><b>Александр Осипишен</b></p></IDXSKIP>
+                                </div>
+                                <div class="recall_info">
+                                    <h4>С такими людьми я пойду в разведку!</h4>
+                                    <p><IDXSKIP>При проигранных ставках, которые дают сайты, разобрав проигрыш и убедившись, что каппер действительно не доглядел или схалявил с прогнозом, я не могу не написать  им,  что об этом всем думаю.  Благодаря моему нетерпению, мне заблокировали доступ такие сайты как -Onliwin- и 24 win-, даже не вернув деньги.  Все это я пишу к тому, мне если что не нравится, я не сук-а , напишу и все выложу!  Когда я подписался на Ваш сайт и начал получать прогнозы, они сразу мне очень понравились, тем что сбывались, потом очень полное , подробное обоснование, прочитав которое больше становишься разбираться в том или ином игроке. Не могу сдержаться и признаюсь, что написал про Вас на другой сайт, такие слова: "Люди дают положительные прогнозы, с подробным описанием после которого хочется ставить и ставить!" Да , со времени мой подписки были проигрышные серии , но положительных результатов куда больше.  
+Если человек дал ставку и готов ее сопровождать до конца матча, это говорит, что мы имеем дело с ответственными людьми, готовыми ответить за свою работу и за полученные деньги! С такими людьми я пойду в разведку!</IDXSKIP></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                    <div class="item ">
+                            <div class="recall">
+                                <div class="recall_img">
+                                                                            <img src="/images/news/Борис Хисин.jpg" alt="" />
+                                                                        <IDXSKIP><p><b>Борис Хисин</b></p></IDXSKIP>
+                                </div>
+                                <div class="recall_info">
+                                    <h4>Прогнозы обоснованные, видно что люди разбираются в  теме</h4>
+                                    <p><IDXSKIP>За рассылкой слежу с августа  2013, подписался с сентября 2013. Прогнозы обоснованные, видно что люди разбираются в  теме, все матчи просматривают, не ставят чисто по статистики. Нравится, что прогнозы даются за 5-8 часов до матча, есть время самому все проанализировать и принять решение. В общем, по теннису, из тех кого я знаю, они одни из самых компетентных.</IDXSKIP></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                    <div class="item ">
+                            <div class="recall">
+                                <div class="recall_img">
+                                                                            <img src="/images/news/m_sotnikova.png" alt="" />
+                                                                        <IDXSKIP><p><b>Марина  Сотникова</b></p></IDXSKIP>
+                                </div>
+                                <div class="recall_info">
+                                    <h4>Я ЦЕНЮ КОМПЕТЕНТНОСТЬ, ЧЕСТНОСТЬ И СТАБИЛЬНОСТЬ</h4>
+                                    <p><IDXSKIP>Все выше  указанные качества, необходимые для сотрудничества, я нашла на сервисе DOTENNIS.  Моё знакомство с этими замечательными и грамотными ребятами началось 5 месяцев назад. Тогда по семейным обстоятельствам я стала домохозяйкой и захотелось совмещать приятное с полезным - найти занятие приносящее и удовольствие и деньги). Надо сказать – большой теннис всегда был для меня любимым видом спорта. Сначала я приобрела подписку на неделю, «приподняла» банк до необходимой суммы и продолжила сотрудничество с DOTENNIS уже на постоянной долговременной основе. Добавлю, что умело управляя банком  и играя по стратегии (не только флетом), можно уверенно иметь приличный дополнительный доход. С прогнозами, которые предлагает сервис – это безусловная реальность. Интересные статьи и новости проекта довершают его качество и  серьёзный подход к делу. Ни одной претензии за 5 месяцев сотрудничества предъявить, при всём желании, не смогу)) Продолжаем работать)</IDXSKIP></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                    <div class="item ">
+                            <div class="recall">
+                                <div class="recall_img">
+                                                                            <img src="/images/news/fe725ba1a718e99112e84ff508969ea3.jpg" alt="" />
+                                                                        <IDXSKIP><p><b>Alexander Burdakov</b></p></IDXSKIP>
+                                </div>
+                                <div class="recall_info">
+                                    <h4>Уверенность в инвестициях!</h4>
+                                    <p><IDXSKIP>Четвертый месяц сотрудничества с dotenis продолжает укреплять уверенность, что инвестиции в них - дело прибыльное. 
+Выделенный под прогнозы команды банк - уверенно растет, прогнозы качественные, ребята знают свои силы и присылают только качественные прогнозы, не гонясь за количеством.
+Немного растроило увеличение цены, но если ваш банк больше 500 евро - смело покупайте подписку - и через год с dotenis в ваш банк будет уже гораздо солиднее!</IDXSKIP></p>
+                                </div>
+                            </div>
+                        </div>
+                                                            </div>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="rewi_ss"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="rewi_sss"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <div class="foot">
+        <div class="container foot_big">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 row-item">
+                    <div class="foot_s">
+                        <IDXSKIP><a href="/">doTENNIS</a></IDXSKIP>
+                        <IDXSKIP>© 2016 Прогнозы на теннис
+                    </IDXSKIP></div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 row-item">
+                    <ul class="foot_menu">
+                        <IDXSKIP><li><a href="/statistic">Статистика</a></li></IDXSKIP>
+                        <IDXSKIP><li><a href="/">Новости</a></li></IDXSKIP>
+                        <IDXSKIP><li><a href="/articles">Статьи</a></li></IDXSKIP>
+                        <IDXSKIP><li><a href="/faq">FAQ</a></li></IDXSKIP>
+                        <IDXSKIP><li><a href="/sitemap">Карта сайта</a></li></IDXSKIP>
+                        <IDXSKIP><li><a href="/users">Вход</a></li></IDXSKIP>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 soc row-item">
+                    <IDXSKIP><p>Email для связи и сотрудничества:</p></IDXSKIP>
+                    <IDXSKIP><span class="footer-email">teslin@dotennis.ru</span></IDXSKIP>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 soc row-item">
+                    <IDXSKIP><p>Мы в социальных сетях:</p></IDXSKIP>
+                    <a href="http://vk.com/dotennis" target="_blank" title="Записки каппера | ВКонтакте" class="ik-vk"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/pages/Dotennis-%D0%A2%D0%B5%D0%BD%D0%BD%D0%B8%D1%81%D0%BD%D0%B0%D1%8F-%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0/482152241913546" target="_blank" title="Dotennis в Facebook" class="ik-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/syslikaaa" target="_blank" title="Dotennis в Твиттере" class="ik-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <div class="">
+                                <IDXSKIP><p class="design">Разработка сайта — <a target="_blank" href="http://jetmarketing.by/">JetMarketing</a></p></IDXSKIP>
+                            </div>
+                        </div>
+                        <IDXSKIP><div class="col-md-6">
+                            <div class="row footer-law-links">
+                                <a class="hidden-xs" href="http://www.blogabet.com/" target=_blank><img src="/images/blagabet_logo.png" title="BlogaBet" border="0" style="height: 31px; width: 126px"></a>
+                                <!-- begin WebMoney Transfer : attestation label -->
+                                <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=555957354417" target=_blank><img src="/images/PayIcons/88x31_wm_v_blue_on_white_ru.png" title="Здесь находится аттестат нашего WM идентификатора 555957354417" border="0" style="width: 81px; height: 31px"></a>
+                                <!-- end WebMoney Transfer : attestation label -->
+                                <img src="/images/PayIcons/88x31_wm_blue_on_white_ru.png" style="width: 81px; height: 31px">
+                                <!--LiveInternet counter-->
+                                <script type="text/javascript">
+                                    <!--
+                                    document.write("<a href='http://www.liveinternet.ru/click' "+
+                                        "target=_blank><img src='//counter.yadro.ru/hit?t52.6;r"+
+                                        escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                                        ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                                            screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                                        ";"+Math.random()+
+                                        "' alt='' title='LiveInternet: показано число просмотров и"+
+                                        " посетителей за 24 часа' "+
+                                        "border='0' style='width: 88px; height: 31px'><\/a>")
+                                    //-->
+                                </script><!--/LiveInternet-->
+                                <!-- begin of Top100 code -->
+                                <a class="hidden-xs" href="http://top100.rambler.ru/navi/3017908/">
+                                    <img src="https://counter.rambler.ru/top100.cnt?3017908" alt="Rambler's Top100" border="0" style="width: 81px; height: 31px">
+                                </a>
+                                <!-- end of Top100 code -->
+                            </div>
+                        </div></IDXSKIP>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#owl-demo").owlCarousel({
+            items : 4,
+            lazyLoad : false,
+            navigation : true
+        });
+    });
+    $(document).ready(function() {
+        $("#owl-demo-comment").owlCarousel({
+            items : 4,
+            lazyLoad : false,
+            navigation : true
+        });
+    });
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter21544327 = new Ya.Metrika({id:21544327,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/21544327" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-41835777-1', 'dotennis.ru');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+</script>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <IDXSKIP><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></IDXSKIP>
+            <div class="free_delivery">
+                <h3>Бесплатная рассылка</h3>
+                <p><IDXSKIP>Оцените качество наших материалов: <br> прогнозы и подробная аналитика матчей
+                </IDXSKIP></p>
+                <form class="subscribe-popup-form" action="/users/subscribe" method="post">
+                    <IDXSKIP><label for="">Ваше имя</label></IDXSKIP>
+                    <input class="field" type="text" placeholder="Как к вам обращаться" name="name">
+                    <IDXSKIP><label for="">Ваш e-mail</label></IDXSKIP>
+                    <input class="field" type="text" placeholder="На него будут приходить прогнозы" name="email">
+                    <input class="yellow_butt" type="submit" value="Получить">
+                    <IDXSKIP><p class="subscriber">Подписчиков: 4600+</p></IDXSKIP>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    $('.bs-example-modal-sm').modal();
+
+    $('.subscribe-popup-form').submit(function() {
+        var form =  $(this),
+            emailInput = form.find('input[name="email"]'),
+            email = emailInput.val(),
+            nameInput = form.find('input[name="name"]'),
+            name = nameInput.val(),
+            re = /\S+@\S+\.\S+/,
+            isError = false;
+
+        if (name === '') {
+            nameInput.css('border', '1px solid red');
+            nameInput.focus();
+            isError = true;
+        } else if (!re.test(email)) {
+            nameInput.css('border', '1px solid #d1d3d4');
+            emailInput.css('border', '1px solid red');
+            emailInput.focus();
+            isError = true;
+        }
+
+        if (!isError) {
+            emailInput.css('border', '1px solid #d1d3d4');
+            window._fbq.push(['track', '6021342409767', {'value':'0.00','currency':'USD'}]);
+            return true;
+        } else {
+            return false;
+        }
+    });
+});
+</script>
+</body>
+</html>
+

@@ -1,0 +1,774 @@
+ugolok.info/potrebnost.php
+<!DOCTYPE HTML PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 4.0::19971010::extensions to HTML 4.0//EN" "hmpro4.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+  
+    <title>Суточная потребность в калориях - рассчитайте сколько калорий вашему организму нужно получать ежедневно.</title>
+    <meta name="Keywords" content="потребность, калории, сколько калорий, расчет, калькулятор калорий, калорийность продуктов, считать калории, онлайн, питание">
+    <meta name="Description" content="Расчет калорий – рассчитайте необходимое для вашего организма количество калорий.  В основе нашего счетчика лежит формула, утвержденная диетологами всего мира. Сколько калорий вам нужно?">
+    <link rel="stylesheet" type="text/css" media="all" href="pics/style.css">
+<script src="../js/core.js" language="javascript"></script>
+<script language="JavaScript">
+function init() {
+	//showDebug();
+	Get("age").focus();
+}
+
+window.onload=init;
+
+function printPage (elementPrint) {
+	var printDiv=Get(elementPrint);
+
+	if (document.getElementsByTagName) {
+		linkEl=document.getElementsByTagName('link');
+		styleEl= document.getElementsByTagName('style');
+		}
+	printWindow=window.open("","printWindow","left=50,top=50,width=400,height=400,scrollbars=yes,"+"status=yes,resizable=yes");
+    printWindow.opener=self;
+    d=printWindow.document;
+	//Write the printed contents
+    d.open();
+	d.writeln("<html><head><title>" + document.title + "</title>");
+	if (linkEl) {
+	  	d.writeln ("<link rel='stylesheet' type='text/css' href='" +linkEl[0].getAttribute('href') + "'/>");
+		d.writeln ("<style type='text/css'>" + styleEl[0].innerHTML + "</style>");
+	}
+	d.writeln("</head><body>");
+	d.writeln(printDiv.innerHTML);
+	d.writeln("<br><b style='font-family:tahoma;'>Calculated at www.freedieting.com/tools/calorie_calculator.htm</b>");
+	d.writeln("</html>");
+	
+	d.close();
+	printWindow.print();
+	printWindow.close();
+}
+
+function showHide(block) {
+	
+	//var result=document.getElementById("zigResults");
+	if (block.className== "displayNone") {
+		block.className="displayBlock";
+		isVis=true;
+	} else {
+		block.className="displayNone";
+		isVis=false;
+	}
+	
+	return true;
+}	
+
+function toggleMe(trigger, div) {
+  showHide(document.getElementById(div));
+  linkImages=trigger.getElementsByTagName('IMG');
+  zipImg=linkImages[0];
+  if (isVis) {
+    zipImg.src="pics/widget_triangle_open.gif";
+  } else {
+    zipImg.src="pics/widget_triangle.gif";
+  }
+}
+	
+function calcIt() {
+oForm=document.calc;
+
+weight=parseInt(oForm.weight.value*1);
+age=parseInt(oForm.age.value*1);
+feet=parseInt(oForm.feet.value*1);
+inches=parseInt(oForm.inches.value*1);
+var bfPer=parseInt(oForm.txtBF.value*1);
+
+if (!isNumeric(age,"Age:","age"))
+	return false;
+else if ( (age <= 12) || (age > 80)) {
+	alert ("Возраст должен быть между 13 и 80 годами");
+	return false;
+}
+
+if (!isNumeric(weight,"Weight:","weight"))
+	return false;
+else if ( (weight <= 20) || (weight > 225) ) {
+	alert ("Введите СВОЙ вес!");
+	return false;
+}
+
+if (!isNumeric(feet,"Feet:","feet"))
+	return false;
+else if ( (feet < 122) || (feet > 214) ) {
+	alert ("Рост должен быть в пределах 122 - 214 см.!");
+	return false;
+}
+
+if (!isNumeric(inches,"Inches:","inches"))
+	return false;
+else if (inches > 11) {
+	alert ("Inches should be less than 12");
+	return false;
+}
+
+if (!isNumeric(bfPer,"Body Fat %","txtBF"))
+	return false;
+	
+//if (oForm.weighttype[0].checked) 
+	//weight=weight/2.2;
+
+height=feet;
+
+
+if (oForm.optFormula[2].checked) {
+	//Harris Benedict
+	if (oForm.sex[0].checked) {
+		result=655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age); //Women
+	} else {
+		result=66.5 + (13.75 * weight) + (5.003 * height) - (6.775 * age); //Men
+	}
+} else {
+
+	if (oForm.optFormula[1].checked) {
+		var leanMass=weight - (weight * (bfPer / 100));
+		result=21.6 * leanMass  + 370; //Katch Mcardle
+		//result=500 + (22 * weight); /?
+		//result=19.7 * leanMass + 413;
+	} else {
+		//Mifflin St-Jeor
+		if (oForm.sex[0].checked) 
+			result=-161 + (10*weight) + (6.25 * height) - (5 * age);
+		else 
+			result=5 + (10 * weight) + (6.25 * height) - (5 * age);		
+	}
+}
+
+var maintain=result * oForm.activity.options[oForm.activity.selectedIndex].value;
+var isBMR=false;
+if (oForm.activity.options[oForm.activity.selectedIndex].value== 1)
+	isBMR=true;
+	
+rockBottom=(weight*2.2)*8;
+var suffix=" ккал/день";
+
+//kJ conversion
+if (!oForm.optResults[0].checked) {
+	maintain=maintain * 4.184;
+	rockBottom=rockBottom * 4.184; 
+	suffix=" кДж/день";
+} else {
+	var linkNut=Get("linkNutrient").href;
+	if (linkNut.indexOf("?") != -1)
+		linkNut=linkNut.substring(0,linkNut.indexOf("?"));
+	linkNut += "?cals=" + Math.round(maintain);
+	Get("linkNutrient").href=linkNut;
+	Get("linkNutrient2").href=linkNut;
+}
+
+s=Math.round(maintain) + suffix;
+Get("answer").innerHTML=s;
+
+loseFat=maintain - (maintain*0.20)
+if (loseFat < rockBottom && rockBottom <= maintain)
+	loseFat=rockBottom;
+s=Math.round(loseFat) + suffix;
+Get("lose").innerHTML=s;
+
+var extLoseFat=maintain - (maintain*0.40)
+if (extLoseFat < rockBottom  && rockBottom <= maintain)
+	extLoseFat=rockBottom;
+s=Math.round(extLoseFat) + suffix;
+Get("loseExt").innerHTML=s;
+
+var gain=maintain + (maintain*0.20)
+s=Math.round(gain) + suffix;
+//Get("gain").innerHTML=s;
+
+if (isBMR) {
+	Get("loseExt").innerHTML="-";
+	Get("lose").innerHTML="-";
+}	
+
+if (extLoseFat== loseFat) {
+	Get("loseExt").innerHTML="-";
+}
+
+
+//try walking the DOM
+var zigzag=new Array(1,0.8,1.2,1,0.9,1.1,1);
+var tbl =document.getElementById('zigResultsTable');
+var sZig;
+
+for (r=1; r < tbl.rows.length; ++r) {
+  	thisRow=tbl.rows[r];
+  	for (c=1; c < thisRow.cells.length; ++c) {
+
+		if (c==1)
+			sZig=extLoseFat * zigzag[r-1];
+		if (c==2)
+			sZig=loseFat * zigzag[r-1];
+		if (c==3)
+			sZig=maintain * zigzag[r-1];
+		if (c==4)
+			sZig=gain * zigzag[r-1];
+			
+		if (sZig < rockBottom)
+			sZig=rockBottom
+			
+		thisRow.cells[c].innerHTML=Math.ceil(sZig);
+		if (isBMR)
+			thisRow.cells[c].innerHTML="-";
+	}
+}
+	
+return true;
+}
+//  End -->
+		</script>
+    <style type="text/css">
+<!--
+.displayNone {display:none;}
+-->
+    </style>
+    </head>
+<body leftmargin="0" topmargin="0" bgcolor="#f4f4f4">
+  
+   <IDXSKIP><table align="CENTER" border="0" cellpadding="0" cellspacing="0" width="779">
+      <tbody><tr>
+        <td height="160">
+		<a href="http://ugolok.info"><img src="http://ugolok.info/pics/logo1.gif" alt="калорийность продуктов" align="LEFT" border="0" height="160" hspace="0" vspace="0" width="290"></a><img src="http://ugolok.info/pics/kaloriya.gif" alt="таблица калорийности" align="LEFT" border="0" height="160" hspace="0" vspace="0" width="90">
+        <img src="http://ugolok.info/pics/calculator.gif" alt="калькулятор калороий" align="LEFT" border="0" height="160" hspace="0" vspace="0" width="100">
+        <img src="http://ugolok.info/pics/tablitsa.gif" alt="считать калории" align="LEFT" border="0" height="160" hspace="0" vspace="0" width="60">
+        <img src="http://ugolok.info/pics/raschet.gif" alt="расчет калорий" align="LEFT" border="0" height="160" hspace="0" vspace="0" width="105">
+        <a href="http://ugolok.info/sitemap.php"><img src="http://ugolok.info/pics/bludo.gif" alt="калорийность готовых блюд" border="0" height="160" hspace="0" vspace="0" width="134"></a>		</td>
+      </tr>
+    </tbody></table></IDXSKIP>
+<!-- BODY BEGINS-->
+    <table align="center" background="pics/background.gif" border="0" cellpadding="0" cellspacing="0" width="779">
+      <tbody><tr>
+        <td valign="top" width="125">
+        <link href="../pics/style.css" rel="stylesheet" type="text/css" />
+<table border="0" cellpadding="0" cellspacing="0" width="125">
+          <tbody><IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="130"><a href="index.php">ГЛАВНАЯ</a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td width="10" height="20" bgcolor="#E6E6E6"></td>
+            <td width="115" bgcolor="#E6E6E6" class="formButton"><div align="left">Калорийность продуктов</div></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr> 
+          <tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="tablitsa.php" class="small"><IDXSKIP>Сколько калорий в продуктах - таблица </IDXSKIP></a></td>
+          </tr>
+          <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+          <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="calculator.php" class="small">Калькулятор калорий в продуктах </a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>   
+          <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td width="115" class="main"><a href="kaloriynost.php" class="small">Калорийность продуктов - каталог </a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+          <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="nutrient-calculator.php" class="small">Калькулятор питательных веществ </a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td width="10" height="20" bgcolor="#E6E6E6"></td>
+            <td width="115" bgcolor="#E6E6E6" class="formButton"><div align="left">Потребность организма в калориях </div></td>
+          </tr></IDXSKIP>
+          <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr>
+          <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="potrebnost.php" class="small">Сколько калорий нужно в день?   </a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+		  <tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="pregnancy.php" class="small"><IDXSKIP>Сколько калорий в день при беременности?</IDXSKIP></a></td>
+          </tr>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+		  <tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="breast-feeding.php" class="small"><IDXSKIP>Сколько калорий  при кормлении грудью?</IDXSKIP></a></td>
+          </tr>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td width="10" height="20" bgcolor="#E6E6E6"></td>
+            <td width="115" bgcolor="#E6E6E6" class="formButton"><div align="left">Сжигание калорий и снижение веса </div></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="burn-calorie-calculator.php" class="small">Сколько калорий вы сжигаете</a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="loose-weight-calculator.php" class="small">Снижение веса</a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td width="10" height="20" bgcolor="#E6E6E6"></td>
+            <td width="115" bgcolor="#E6E6E6" class="formButton"><div align="left">Сколько нужно весить? </div></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="mass-tela-index.php" class="small">Индекс массы тела</a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="ideal-weight-calculator.php" class="small">Идеальный вес</a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td width="10" height="20" bgcolor="#E6E6E6"></td>
+            <td width="115" bgcolor="#E6E6E6" class="formButton"><div align="left">Полезная информация  </div></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_2.gif" height="1"></td>
+          </tr>
+		  
+		  <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="literature.php" class="small">Полезная литература</a></td>
+          </tr></IDXSKIP>
+          <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+          <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="articles.php" class="small">Статьи</a></td>
+          </tr></IDXSKIP>
+          <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+		  
+          <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><a href="kaloriynost-dir-parent.php" class="small small"><span class="small">Таблица калорийности </span>продуктов </a></td>
+          </tr></IDXSKIP>
+		  <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+		  <IDXSKIP><tr>
+            <td height="20" width="10"></td>
+            <td class="main" width="115"><span class="small" style="main"><a href="sitemap.php">Карта сайта </a></span></td>
+          </tr></IDXSKIP>
+          <tr>
+            <td colspan="2" background="pics/home_left_link_1.gif" height="1"></td>
+          </tr>
+        </tbody></table>
+		<IDXSKIP><div align="center"><br />
+		    <script type="text/javascript"><!--
+google_ad_client="pub-4245137752693919";
+/* 120x600, created 05.12.10 */
+google_ad_slot="4497165603";
+google_ad_width=120;
+google_ad_height=600;
+google_language="ru";
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div></IDXSKIP>
+        </td>
+        <IDXSKIP><td valign="top"><img src="pics/spacer.gif" width="1"> </td></IDXSKIP>
+
+<!-- CENTER -->
+        
+        <td valign="TOP" width="515">
+        
+        <table valign="top" align="CENTER" border="0" cellpadding="0" cellspacing="10" width="500">
+          <tbody>
+            <tr>
+              <td width="500" height="20" align="LEFT" valign="CENTER" bgcolor="#c6e0e1"><div class="main"><b>Суточная потребность организма в калориях </b></div></td>
+            </tr>
+            <tr>
+              <td align="LEFT" valign="CENTER">
+			  <h1 align="center">Сколько калорий? Суточная потребность. </h1>
+			  <div align="justify" class="main4">
+			      <p align="center">
+			        <script type="text/javascript"><!--
+google_ad_client="pub-4245137752693919";
+/* 336x280, created 16.12.10 */
+google_ad_slot="4671667836";
+google_ad_width=336;
+google_ad_height=280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>			</p>
+			      <p>          <strong>Сколько  калорий</strong> нужно организму в день? Для базового метаболизма или для снижения веса?  Рассчитайте <strong>потребность в калориях</strong> на нашем сайте – программа расчета базируется  на самых современных и одобренных диетологами формулах. Введите в <strong>счетчик  калорий</strong> ваш вес, рост, возраст, пол, уровень физической нагрузки и нажмите на кнопку  «считать» - вы получите 3 результата – для поддержания веса, для снижения веса  и для быстрой потери веса. Также будет рассчитан на неделю 7-дневный цикл  калорий (ЗигЗаг). Будем рады услышать  замечания и предложения по поводу работы нашего <strong>счетчика калорий</strong> <IDXSKIP>– <a href="mailto:yapl.support@gmail.com">пишите нам</a></IDXSKIP>!</p>
+			  </div></td>
+            </tr>
+        </tbody></table>
+           <table width="468" style="border: 1px solid #dedede" border="0" cellpadding="2" cellspacing="1" bgcolor="#F8FDFF" align="center">
+             <form name="calc" id="calc" >
+               
+               <tr>
+                 <td width="100" align="right" bgcolor="#efefef" class="small1">Возраст:&nbsp;</td>
+                 <td align="left" class="small1"><input name="age" type="text" class="small1" id="age" size="2" maxlength="2" />
+                   лет</td>
+               </tr>
+               <tr>
+                 <td  align="right" bgcolor="#efefef" class="small1">Пол:&nbsp;</td>
+                 <td  align="left" class="small1"><input name="sex" type="radio" class="rad" id="sexMale" value="M" checked="checked" />
+                     <label for="sexFem">женский</label>
+                     <br />
+                     <input name="sex" type="radio" class="rad" id="sexFem" value="F" />
+                     <label for="sexMale">мужской</label>                 </td>
+               </tr>
+               <tr>
+                 <td align="right" bgcolor="#efefef" class="small1">Вес:&nbsp; </td>
+                 <td class="small1"><input name="weight" class="small1" id="weight" size="3" maxlength="3" />
+                     <!-- original <input name="weighttype" type="radio" class="rad" id="weighttype1" value="P" checked="checked" />-->
+                     <label for="weighttype1">кг</label></td>
+               </tr>
+               <tr>
+                 <td align="right" bgcolor="#efefef" class="small1">Рост:&nbsp; </td>
+                 <td class="small1"><input name="feet" class="small1" id="feet" size="3" maxlength="3" />
+                   см      &nbsp;&nbsp;
+                   <input name="inches" type="hidden" id="inches" value="0" /></td>
+               </tr>
+               <tr>
+                 <td align="right" bgcolor="#efefef" class="small1">Уровень физической нагрузки:&nbsp;</td>
+                 <td class="small1"><select name="activity" size="1" class="small1" id="activity">
+                     <option value="1.0" >базовый обмен веществ</option>
+                     <option value="1.2" class="hilite">малая нагрузка (сидячая работа)</option>
+                     <option  selected="selected" value="1.375">занятия 3 раза в неделю</option>
+                     <option value="1.4625" class="hilite">занятия 5 раз в неделю</option>
+                     <option value="1.550">занятия 5 раза в неделю (интенсивные)</option>
+                     <option value="1.6375" class="hilite">ежедневные занятия</option>
+                     <option value="1.725">ежедневные занятия (интенсивные) или 2 раза в день</option>
+                     <option value="1.9" class="hilite">ежедневные занятия + несидячая работа</option>
+                 </select></td>
+               </tr>
+               <tr>
+                 <td colspan="2" align="center" class="small1"><a  href="#" onClick="toggleMe(this,'advanced');"> <img style="border:0; " src="pics/widget_triangle.gif">Продвинутые настройки</a></td>
+               </tr>
+               <tr>
+                 <td colspan="2" align="center"><div id="advanced" class="displayNone" style= "border: 1px solid #dedede;">
+                     <table  class="formulas" width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+                       <tr >
+                         <td style="padding-bottom: 6px;" align="right" bgcolor="#efefef" class="small1">Результаты:&nbsp;</td>
+                         <td  align="left" style="padding-bottom: 6px;" class="small1"><input name="optResults" type="radio" class="rad" id="optResults" value="C" checked="checked" />
+                             <label for="optResults">ккал</label>
+                           &nbsp;&nbsp;
+                           <input name="optResults" type="radio" class="rad" id="optResults2" value="K" />
+                           <label for="optResults2">килоджоули</label></td>
+                       </tr>
+                       <tr>
+                         <td align="right" valign="top" bgcolor="#efefef" class="small1">расчет по формуле:&nbsp;<br />
+                             <a href="http://ugolok.info/formulas.php">что это такое?</a>&nbsp;</td>
+                         <td align="left" class="small1"><input type="radio" class="rad" name="optFormula" id="optMS" value="M" checked="checked" onClick="document.getElementById('txtBF').disabled=true;" />
+                             <label for="optMS">Миффлин-Сан Жеор<br />
+                             </label>
+                             <input type="radio" class="rad"  name="optFormula" id="optLM" value="L"   onclick="document.getElementById('txtBF').disabled=false;document.getElementById('txtBF').focus();" />
+                             <label for="optLM">Кэтч-МакКардл<br />
+                               (введите <a href="http://ugolok.info/body-fat.php">% жировых тканей</a></label>
+                             <input name="txtBF"   type="text" class="small rad" id="txtBF" size="2" maxlength="2" disabled="disabled" />
+                           ) <br />
+                             <input type="radio" class="rad"  name="optFormula" id="optHB" value="H" onClick="document.getElementById('txtBF').disabled=true;" />
+                             <label for="optHB">Гаррис-Бенедикт</label></td>
+                       </tr>
+                     </table>
+                 </div></td>
+               </tr>
+               <tr>
+                 <td align="center" colspan="2"><br />
+                     <input type="button" value="Считать" onClick="calcIt()" id="Button1" name="Button1" style="font-size:14px;width:100px;text-transform:uppercase;" />
+                   &nbsp;</td>
+               </tr>
+               <tr >
+                 <td colspan="2" class="small1">&nbsp;</td>
+               </tr>
+               <tr align="center" bgcolor="#dedede">
+                 <td colspan="2" class="tablehead"><strong>Результаты</strong></td>
+               </tr>
+               <tr >
+                 <td colspan="2">
+				 <table width="100%"  border="0" cellspacing="0" cellpadding="3" class="small">
+                     <tr>
+                       <td align="right" width="50%">Основная потребность:&nbsp;</td>
+                       <td  width="50%"><div id="answer" style="font-weight:bold"></div></td>
+                     </tr>
+                     <tr>
+                       <td align="right"><!--<a href="../weight_loss_guide.htm">-->Снижение веса:<!--</a>-->&nbsp;</td>
+                       <td><div id="lose" style="font-weight:bold"></div></td>
+                     </tr>
+                     <tr>
+                       <td align="right"><!--<a href="../weight_loss_fast.htm">-->Быстрая потеря веса<!--</a>-->:&nbsp;</td>
+                       <td><div id="loseExt" style="font-weight:bold"></div></td>
+                     </tr>
+                     <tr align="center">
+                       <td colspan="2" class="small1"><br />
+                         <a  href="#" onClick="toggleMe(this,'zigResults');"> <img style="border:0; " src="../pics/widget_triangle.gif">7-дневный цикл калорий (ЗигЗаг)*</a></td>
+                     </tr>
+                   </table>
+                     <div id="zigResults" class="displayNone"> <br />
+                         <table id="zigResultsTable"  border="0" cellspacing="0" cellpadding="0" class="small">
+                           <tr align="center" valign="top">
+                             <td>&nbsp;</td>
+                             <td><strong>Быстрая потеря веса</strong></td>
+                             <td><strong>&nbsp;Снижение веса</strong></td>
+                             <td><strong>Основная потребность</strong></td>
+                           </tr>
+                           <tr align="center">
+                             <td align="right"><strong>Понедельник</strong></td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                           </tr>
+                           <tr align="center">
+                             <td align="right"><strong>Вторник</strong></td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                           </tr>
+                           <tr align="center">
+                             <td align="right"><strong>Среда</strong></td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                           </tr>
+                           <tr align="center">
+                             <td align="right"><strong>Четверг</strong></td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                           </tr>
+                           <tr align="center">
+                             <td align="right"><strong>Пятница</strong></td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                           </tr>
+                           <tr align="center">
+                             <td align="right"><strong>Суббота</strong></td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                           </tr>
+                           <tr align="center">
+                             <td align="right"><strong>Воскресенье</strong></td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                             <td>&nbsp;</td>
+                           </tr>
+                           <tr>
+                             <td colspan="5" class="small1"><br />
+                                 <br />
+                               * Такая цикличность в получении калорий позволяет, с одной стороны, получить нужное количество калорий за 1 неделю, а с другой стороны, облегчает процесс недополучения калорий для вашего организма, за счет отсутствия резкого продолжительного перепада в поступлении калорий. Но самое главное - ваш метаболизм не замедляется и не возникает эффект "плато" (см. ниже).</td>
+                           </tr>
+                         </table>
+                     </div></td>
+               </tr>
+             </form>
+           </table>
+           <div align="center"></div>
+           <div align="center" style="font-size:80%;" class="small"><a href="nutrient_calculator.htm" id="linkNutrient2"></a>
+<a href="nutrient_calculator.htm" id="linkNutrient"></a></div>
+
+<table valign="top" align="CENTER" border="0" cellpadding="0" cellspacing="8" width="500">
+          <tbody>
+		 <tr><td><div align="center">
+		   		 </div>
+		   <div align="left"></div>
+			</td></tr>
+
+		  <tr>
+            <td align="left" valign="top" class="main4"><p align="justify"><strong>Счетчик  калорий</strong> – калькулятор <strong>потребности организма в калориях</strong> рассчитывает  сколько калорий (килокалорий) требуется вашему  организму в день.</p>
+              <div align="justify">
+                <ul>
+                  <li>Для  разложения этого показателя на белки, жиры и углеводы используйте наш <strong><a href="http://ugolok.info/nutrient-calculator.php">счетчик питательных веществ</a></strong></li>
+                  <li>Если вы  планируете  увеличить ваш вес или набрать  мускульную массу – используйте наш <strong>калькулятор  для увеличения массы </strong>(в разработке)</li>
+                  <li>Если вы в положении  и хотите знать каков должен быть ваш оптимальный вес с точки зрения здоровья  ребенка – используйте <strong><a href="http://ugolok.info/pregnancy.php">калькулятор  калорий для будущих мам</a></strong></li>
+                  <li>Если вы  кормите ребенка – используйте <strong><a href="http://ugolok.info/breast-feeding.php">калькулятор  кормящей матери</a></strong></li>
+                </ul>
+              </div>
+              <p align="justify"><span class="main5">Калории для снижения веса</span><br>
+                <br>
+                Наука  говорит нам что 1 кг жира содержит порядка 1600 кило калорий, а ежедневное  недополучение 500 кило калорий приведет через неделю к снижению веса на 2 килограмма.  К сожалению, в реальности этот математический закон дополняется другими факторами!<br>
+                <br>
+                <span class="main5">                Предупреждение<br>
+</span><br>
+                Если вы  хотите снизить ваш вес – то выбирайте из рассчитанного показателя «снижение веса».  Показатель «быстрая потеря веса» - основан на предельно низком уровне калорий,  которые будет получать ваш организм. Не пробуйте резко переходить на расчетный параметр  «быстрая потеря веса» в надежде получить быстрый результат, поскольку это может  привести к нежелательным последствиям (проблемам со здоровьем). «Быстрая потеря  веса» - предельный показатель и должен быть использован как самый низкий объем  калорий, который может получать ваш организм, а не как ориентир для снижения  веса.<br>
+                Ну и еще одно правило – гораздо лучше сжигать лишний жир, ведя активный образ  жизни, чем голодать.<br>
+                <br>
+                <span class="main5"><strong>«Плато» потери</strong> <strong>веса</strong> </span><br>
+                <br>
+                С течением  времени наш организм адоптируется к сниженному уровню потребления калорий. Тело  начинает более эффективно использовать получаемую с пищей энергию (замедляется  метаболизм), а это приводит к замедлению процесса сжигания жира. <br>
+                Это как раз и  называется «плато» снижения веса. С этого момента у вас есть только один пусть – <strong>ускорение метаболизма</strong>: увеличение  пульса, повышение уровня физической активности, «провокационная» еда (т.е.  иногда вы должны есть высококалорийную пищу), применение пищевых циклов  (например ЗигЗаг) калорий, манипулирование вашим рационом питательных веществ  (но не забывайте о том, что нужно при этом хорошо высыпаться и давать организму  достаточное количество жидкости). Очень часто случается такое, что чем больше  снижается вес вашего тела, тем труднее достаются последующие килограммы  снижения…<br>
+                Постоянное снижение количества получаемых калорий лишь будет замедлять  метаболизм организма, и когда вы вернетесь к обычному количеству калорий –  вновь наберете прежний вес.<br>
+                <br>
+  <strong class="main5">Сколько калорий нужно в день?</strong><br>
+                <br>
+                Задача  расчета минимального количества калорий для организма человека является очень  трудной ввиду индивидуальных различий каждого человека – начиная от конституции  и заканчивая уровнем физической активности. Научные светила, тем не менее,  установили предел, ниже которого опускаться нельзя: 1200 кило калорий для  женщины и 1800 – для мужчины. Однако эти цифры практически не имеют никакого  значения как и средняя температура по больнице. Предельные значения не работают  – они дают нам представление о той черте, которую не следует пересекать ни при  каких обстоятельства.<br>
+                <br>
+                  <span class="main5"><strong>Когда</strong> <strong>снижаете</strong> <strong>калории…</strong> </span><br>
+                  <br>
+                  Снижайте уровень  потребления калорий с пищей в пределах 1000 ккал от расчетной основной  потребности. Несоблюдение данной рекомендации может привести к соответствующему  ответу со стороны организма и может возникнуть эффект <strong>Yo</strong><strong>-</strong><strong>yo</strong> (в переводе). <br>
+                Снижайте  количество калорий постепенно – резкие скачки в получении калорий могут  привести к замедлению метаболизма. <br>
+  <strong><br>
+  <span class="main5">  Что происходит когда калорий слишком мало?</span><br>
+  </strong><strong> </strong><br>
+                1) Снижается  мускульная масса тело – организм начинает есть сам себя (катаболизм). <br>
+                2) Уровень метаболизма (обычно) снижается на третий день существенного недополучения  калорий это связано с и приводит к потере мускульной массы.<br>
+                3) Получая слишком мало калорий вы рискуете стать заторможенной, получить  дефицит питательных веществ в организме, быструю утомляемость, повышенную  нервозность. В случае же возврата к прежнему уровню калорийности вы немедленно  наберете сброшенный вес. <br>
+                <br>
+  <strong class="main5">Как использовать методику ЗигЗаг?</strong></p>
+              <div align="justify">Как мы уже говорили ранее, «обман» организма при  помощи постоянно меняющегося количества получаемых калорий может оказать очень  хороший эффект, особенно этот эффект хорошо заметят те, кто уже достиг «плато»  (см. выше). <strong>Диета Джона Бенсона «Каждый  день новая диета»</strong> (в переводе) – это та статья, с которой вам следует  познакомиться. Его основная идея – не менять ничего, кроме объема употребляемой  пищи.</div></td>
+            </tr>
+		  			<tr><td>
+		<div align="left"></div>
+			</td></tr>
+        </tbody></table>        </td>
+        <IDXSKIP><td valign="MIDDLE"><img src="pics/spacer.gif" width="1"> </td></IDXSKIP>
+        <td valign="top" width="140">
+         <table border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+		            <IDXSKIP><tr>
+            <td class="brd" align="left" bgcolor="#4d9193" height="22" width="150">
+            <div class="main"><b><font color="#ffffff">Наши счетчики </font></b></div></td>
+          </tr></IDXSKIP>
+          <tr>
+            <td>
+              <div class="rightxt">
+               <br />
+               <IDXSKIP><a href="http://ugolok.info/calculator.php">- Калькулятор калорий </a></IDXSKIP><br />
+			   <IDXSKIP><a href="http://ugolok.info/nutrient-calculator.php">- Калькулятор питательных веществ </a></IDXSKIP><br />
+               <a href="http://ugolok.info/potrebnost.php"><IDXSKIP>- Счетчик калорий (сколько калорий в день) </IDXSKIP></a><br />
+               <IDXSKIP><a href="http://ugolok.info/body-fat.php">- % жировых тканей </a></IDXSKIP><br />
+			   <a href="http://ugolok.info/pregnancy.php"><IDXSKIP>- Счетчик калорий (при беременности) </IDXSKIP></a><br />               
+               <a href="http://ugolok.info/breast-feeding.php"><IDXSKIP>- Счетчик калорий (при вскармливании) </IDXSKIP></a><br />
+			   <IDXSKIP><a href="http://ugolok.info/mass-tela-index.php">- Индекс массы тела </a></IDXSKIP><br />
+			   <IDXSKIP><a href="http://ugolok.info/ideal-weight-calculator.php">- Калькулятор идеального веса </a></IDXSKIP><br />               
+   			   <IDXSKIP><a href="http://ugolok.info/burn-calorie-calculator.php">- Калькулятор сжигаемых калорий </a></IDXSKIP><br />   
+			   <IDXSKIP><a href="http://ugolok.info/loose-weight-calculator.php">- Калькулятор снижения веса</a></IDXSKIP><br />             
+
+			   <br />
+			   <br />
+               <br>
+              </div> </td>
+          </tr>
+		  <IDXSKIP><td class="brd" align="left" bgcolor="#4d9193" height="20" width="140">
+            <div class="main"><b><font color="#ffffff">Статьи</font></b></div></td></IDXSKIP>
+          <tr>
+            
+          </tr>
+		  <tr>
+		  <td>
+  		  <div class="rightxt">
+		  <br />
+             <a href="http://ugolok.info/formulas.php">
+             <IDXSKIP>- Формулы определения суточной потребности в калриях</IDXSKIP></a> <br>
+             <IDXSKIP><a href="http://ugolok.info/guide-weight-loss.php">- Руководство по снижению веса </a></IDXSKIP> <br>
+             <br>
+            </div> <br>
+		  </td>
+		  </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </tbody></table>
+		<script type="text/javascript"><!--
+google_ad_client="pub-4245137752693919";
+/* 120x600, created 05.12.10 */
+google_ad_slot="4497165603";
+google_ad_width=120;
+google_ad_height=600;
+google_language="ru";
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	    </td>
+      </tr>
+    </tbody></table>
+    
+<IDXSKIP><table align="center" border="0" cellpadding="0" cellspacing="0" width="780">
+     <tbody><tr>
+       <td align="left">&nbsp;</td>
+      </tr>
+</tbody></table></IDXSKIP>
+
+
+<IDXSKIP><table align="center" border="0" cellpadding="0" cellspacing="0" width="779">
+           <tbody><tr>
+        <td bgcolor="#427c7d" height="1" colspan="3"></td>
+      </tr>
+      <tr>
+	  <td width="33%" align="left">
+	  <!--Openstat--><span id="openstat2139918"></span><script type="text/javascript">
+var openstat={ counter: 2139918, image: 5067, next: openstat }; document.write(unescape("%3Cscript%20src=%22http" +
+(("https:"== document.location.protocol) ? "s" : "") +
+"://openstat.net/cnt.js%22%20defer=%22defer%22%3E%3C/script%3E"));
+</script><!--/Openstat--> 
+	  </td>
+        <td class="normal" align="center" width="34%">Copyright &copy; 2010-
+		<script language="javascript">
+	var myDate=new Date ();
+	var year=myDate.getFullYear(); 
+	document.write(year);
+	</script>
+		 <a href="http://ugolok.info/">ugolok.info</a>
+          <a href="mailto:yapl.support@gmail.com">DMS</a></td>
+		  <td width="33%">
+		  <script type="text/javascript">
+
+  var _gaq=_gaq || [];
+  _gaq.push(['_setAccount', 'UA-35252954-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true;
+    ga.src=('https:'== document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+		  </td>
+      </tr>
+    </tbody></table></IDXSKIP>
+<!-- BODY ENDS-->
+      
+</body></html>

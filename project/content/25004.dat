@@ -1,0 +1,2079 @@
+4dk-soft.ru/maintenance-of-1c/step-by-step-instructions/274/7101
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="1С-Битрикс, CMS, PHP, bitrix, система управления контентом" />
+<meta name="description" content="1С-Битрикс: Управление сайтом" />
+<link href="/bitrix/cache/css/s1/soft_inner/kernel_main/kernel_main.css?146243753836635" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/soft_inner/template_0ac3d0cc2b5fe992b433dfea617492a1/template_0ac3d0cc2b5fe992b433dfea617492a1.css?14685050241802" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script type="text/javascript">if(!window.BX)window.BX={message:function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;}};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','USER_ID':'','SERVER_TIME':'1497320220','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'b9d01b8564de1eec88a51f5f710f1093'});</script>
+
+
+<script type="text/javascript" src="/bitrix/cache/js/s1/soft_inner/kernel_main/kernel_main.js?1462438656334162"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js?142236469697612','/bitrix/js/main/core/core_ajax.js?142236469435278','/bitrix/js/main/json/json2.min.js?14090572543467','/bitrix/js/main/core/core_ls.js?140905725410330','/bitrix/js/main/session.js?14110387243170','/bitrix/js/main/core/core_popup.js?142236469439406','/bitrix/js/main/core/core_window.js?140905725496525','/bitrix/js/main/utils.js?140905725430972','/bitrix/js/main/core/core_fx.js?140905725416537']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css?14223646945336','/bitrix/js/main/core/css/core_popup.css?140905829528664','/bitrix/templates/soft_inner/components/bitrix/form/callback_form/bitrix/form.result.new/.default/style.css?1414063076666','/bitrix/templates/soft_inner/components/bitrix/news.list/popup-banner/style.css?1446470939163','/bitrix/templates/soft_inner/template_styles.css?1376033125210']); </script>
+
+
+<script type="text/javascript">
+bxSession.Expand(1440, 'b9d01b8564de1eec88a51f5f710f1093', false, 'e3d4e254f8b31f4aaf9b1e2e4f5808a0');
+</script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "d51d84b0818fd9ffb33fb352aba33161"]); _ba.push(["host", "www.4dk-soft.ru"]); _ba.push(["ad[ct][value]", "eyJ1c2VyX2lkIjowLCJwcm9kdWN0X2lkIjoiNzEwMSIsInByb2R1Y3RfdGl0bGUiOiJcdTA0MWFcdTA0MzBcdTA0M2EgXHUwNDMyIDFcdTA0MjEgXHUwNDNmXHUwNDQwXHUwNDNlXHUwNDMyXHUwNDM1XHUwNDQxXHUwNDQyXHUwNDM4IFx1MDQzMFx1MDQzZFx1MDQzMFx1MDQzYlx1MDQzOFx1MDQzNyBcdTA0NDNcdTA0NDdcdTA0MzVcdTA0NDJcdTA0MzAgXHUwNDNmXHUwNDNlIFx1MDQzZFx1MDQzMFx1MDQzYlx1MDQzZVx1MDQzM1x1MDQ0MyBcdTA0M2RcdTA0MzAgXHUwNDNmXHUwNDQwXHUwNDM4XHUwNDMxXHUwNDRiXHUwNDNiXHUwNDRjIiwiY2F0ZWdvcnlfaWQiOiIyNzQiLCJjYXRlZ29yeSI6eyIyNzQiOiIxXHUwNDIxOlx1MDQxZlx1MDQ0MFx1MDQzNVx1MDQzNFx1MDQzZlx1MDQ0MFx1MDQzOFx1MDQ0Zlx1MDQ0Mlx1MDQzOFx1MDQzNSA4In0sInJlY29tbWVuZGF0aW9uIjowLCJwcmljZSI6bnVsbCwiY3VycmVuY3kiOm51bGx9"]);_ba.push(["ad[ct][v]", "1"]);(function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+<script>new Image().src='http://4dk-seminar.ru/bitrix/spread.php?s=QklUUklYX1NNX1NBTEVfVUlEATEwNzYwMzQ0ATE1Mjg0MjQyMjABLwEBAQI%3D&k=796ad273e508336cf2a04c2d99d12875';
+new Image().src='http://i.4dk.ru/bitrix/spread.php?s=QklUUklYX1NNX1NBTEVfVUlEATEwNzYwMzQ0ATE1Mjg0MjQyMjABLwEBAQI%3D&k=796ad273e508336cf2a04c2d99d12875';
+new Image().src='http://4dk-soft.ru/bitrix/spread.php?s=QklUUklYX1NNX1NBTEVfVUlEATEwNzYwMzQ0ATE1Mjg0MjQyMjABLwEBAQI%3D&k=796ad273e508336cf2a04c2d99d12875';
+</script>
+
+
+	<title>Как в 1С провести анализ учета по налогу на прибыль - Что делать 1С</title>
+		<link rel="stylesheet" href="/bitrix/templates/soft_inner/css/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="/bitrix/templates/soft_inner/css/dynamic.css" type="text/css" media="all" />	
+	<link rel="stylesheet" type="text/css" href="/bitrix/templates/soft_inner/js/fancybox/jquery.fancybox-1.3.4.css"  media="screen, projection" />
+	<link rel="icon" type="image/x-icon"  href="/bitrix/templates/soft_inner/favicon.ico" />
+	<!--<script src="/js/jquery.js"></script>-->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="/bitrix/templates/soft_inner/js/maskedinput.js"></script>
+	
+	<script src="/bitrix/templates/soft_inner/js/slides.min.jquery.js"></script>
+	<script src="/bitrix/templates/soft_inner/js/slidesjs_init.js"></script>
+	<script type="text/javascript" src="/bitrix/templates/soft_inner/js/smartinput.js"></script>
+	<script type="text/javascript" src="/bitrix/templates/soft_inner/js/jquery.easing-sooper.js"></script>
+	<script src="/bitrix/templates/soft_inner/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="/bitrix/templates/soft_inner/js/jquery.sooperfish.js"></script>
+	<script type="text/javascript" src="/bitrix/templates/soft_inner/js/sooperfish_init.js"></script>
+	<link rel="stylesheet" type="text/css" href="/bitrix/templates/soft_inner/css/sooperfish.css" media="screen" />
+	<link rel="stylesheet" href="/bitrix/templates/soft_inner/css/jquery-ui-1.8.13.custom.css" type="text/css" media="all" />
+	<script type="text/javascript" src="/bitrix/templates/soft_inner/js/jquery-ui-1.8.13.custom.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/bitrix/templates/soft_inner/shadowbox/shadowbox.css">
+	<script type="text/javascript" src="/bitrix/templates/soft_inner/shadowbox/shadowbox.js"></script>
+	<script type="text/javascript">Shadowbox.init();</script>
+	<script type="text/javascript" src="/bitrix/templates/soft_inner/js/orphus.js"></script>
+	<script src="/bitrix/templates/soft_inner/js/main.js"></script>
+	<script src="/bitrix/templates/soft_inner/js/jquery.waitforimages.js"></script>
+  <script type="text/javascript" src="/bitrix/templates/soft_inner/js/forms.js"></script>
+  <script type="text/javascript" src="/bitrix/templates/soft_inner/js/subscription.js"></script>
+  
+  <script>
+  $(document).ready(
+     function(){
+       $("form").submit(
+         function(){
+            dataLayer.push({
+                'event': 'gaTriggerEvent',
+                'gaID': $(this).attr("id"),               //вместо formID подставляем ID формы (string)
+                'gaText': $(this).find("input.form_name").val(),                       // вместо formID подставляем заголовок формы – тот, который сверху формы, типа «оставьте заявку» (string)
+                'gaElement': $(this)           //DOM-элемент формы. Тип – object. 
+
+          });
+
+         }
+      );
+     }
+  );
+  </script>
+
+</head>
+ <body>
+
+<!--Google Tag Manager -->
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TDLFKW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TDLFKW');</script>
+
+<!--End Google Tag Manager -->
+<script>
+  $(document).ready(
+     function(){
+       $("input.urlref").val("из адресной строки");
+       $("input.urlent").val("http://www.4dk-soft.ru/maintenance-of-1c/step-by-step-instructions/274/7101/");
+       $("input.urlform").val("http://www.4dk-soft.ru/maintenance-of-1c/step-by-step-instructions/274/7101/");
+     }
+  );
+  </script>
+<!-- <div style="position:fixed; right:0; top:25%;"><a href="http://www.4dk-soft.ru/maintenance-of-1c/line-consultation-1c/"><img src="/images/zadat-vopros-1c-green.png" width="40" height="350"></a></div>  -->
+<div id="wrapper">
+
+	<div id="header-internal">
+		<div id="info" style="overflow:visible;">
+		<!--	<div style="margin-left: 200px;position: absolute;width: 100%;z-index:10;">
+			<img style="margin-top:5px;float:left;" src="/bitrix/templates/soft_inner/images/ny-ball-1C.png" />
+			<span style="font-size:11pt;display: block;color:#3663b6;padding: 10px 0px 0px 25px;">Мы обязательно ответим на Ваши вопросы после 12 января!</span>
+			</div> -->		
+			<div id="blue-smth"></div>
+			<div class="topcontainer" style="overflow:visible;">
+				<IDXSKIP><div id="logo-4dk">
+										<a href="/"><img src="/bitrix/templates/soft_inner/images/logo_20_let_soft_new.png" alt="Что делать Консалт. Внедренческий центр 1С" title="Что делать Консалт. Внедренческий центр 1С" /></a> 
+     <!--   <a href="/"><img src="/bitrix/templates/soft_inner/images/logo_chdk.png" alt="Что делать Консалт. Внедренческий центр 1С" style="width:220px;" title="Что делать Консалт. Внедренческий центр 1С" /></a>   -->
+				</div></IDXSKIP>
+				<div id="phones">
+					<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<IDXSKIP><div class="number changeNumber">+7 (495) 784-77-33</div></IDXSKIP>
+<IDXSKIP><div class="countryWrap">
+	<div class="cCountry"><span>Москва</span>&nbsp;<i class="fa fa-caret-down"></i></div>
+	<div class="contryList">
+		<div class="cElem" data-value="msk" data-phone="+7 (495) 784-77-33">Москва</div>
+		<div class="cElem" data-value="spb" data-phone="+7 (812) 334-44-73">Санкт-Петербург</div>
+	</div>	
+</div></IDXSKIP>
+<style type="text/css">
+	.countryWrap {
+		position: relative;
+		padding-left: 31px;
+	}
+	.countryWrap .cCountry {
+		font-size: 16px;
+		color:#3091CF;
+		cursor: pointer;
+	}
+	.countryWrap .contryList {
+		position: absolute;
+		width: 200px;
+		background: #fff;
+		border:1px solid #ccc;
+		box-shadow:1px 1px 8px rgba(0,0,0,0.5);
+		padding: 5px 0px;
+		box-sizing:border-box;
+		display: none;
+		z-index: 101;
+	}
+	.countryWrap .contryList .cElem {
+		padding: 5px 10px;
+		background: transparent;
+		cursor: pointer;
+		transition:0.3s;
+	}
+	.countryWrap .contryList .cElem:hover {
+		background: #ccc;
+	}
+
+	/*another*/
+	#phones .number {
+		width: auto !important;
+		white-space: nowrap;
+	}
+</style>
+<script type="text/javascript">
+	$('.countryWrap .contryList .cElem').bind('click', function () {
+		var cElem = $(this),
+			attr = cElem.attr('data-value'),
+			name = cElem.text(),
+			parent = cElem.parent(),
+			phone = cElem.attr('data-phone');
+
+		if(cElem.hasClass('this'))return false;
+
+		parent.find('.cElem').removeClass('this');
+		cElem.addClass('this');
+		
+		$('.countryWrap .contryList').fadeOut(100);
+		$('.countryWrap .cCountry').removeClass('show');
+
+		$('.countryWrap .cCountry span').text(name);
+		$('.changeNumber').text(phone);
+		return false;
+	});
+	$('.countryWrap .cCountry').bind('click', function () {
+		var cElem = $(this);
+
+		if(cElem.hasClass('show'))return false;
+
+		cElem.addClass('show');
+		$('.countryWrap .contryList').fadeIn(100);
+		return false;
+	});
+</script>
+				</div>
+
+				<IDXSKIP><div id="logo-1c">
+					<a href="/"><img src="/images/logo-1c.png" alt="1С:Франчайзинг" title="1С:Франчайзинг" /></a>
+				</div></IDXSKIP>
+				<div id="services" style="margin: 50px 31px 0 0;">
+	<IDXSKIP><div class="one-serv">
+			<a href="#" class="openModal nolink" data-modal="NewCallBackModalBlock"><img src="/images/iconcall2.png" alt="" />Заказать звонок</a>
+	
+			<!-- <a href="/callback/"><img src="/images/iconcall2.png" alt="" />Заказать звонок</a> -->
+		
+	</div></IDXSKIP>
+	<!--<div class="one-serv"><a href="/feedback/"><img src="/images/iconevaluate2.png" alt="" />Оценить сервис</a></div>    -->
+	<!--<div class="one-serv"><a href="skype:K33K33K?call"><img src="/images/iconskype2.png" alt="" />Skype</a></div>-->
+	<IDXSKIP><div class="one-serv"><a href="/4dk-support.exe"><img src="/images/teamviewer.png" alt="" />Удаленная поддержка</a></div></IDXSKIP>
+	<IDXSKIP><div class="one-serv"><a target="_blank" href="https://vk.com/pro1c_4dk"><span class="soc"><i class="fa fa-vk"></i></span> Присоединяйтесь</a></div></IDXSKIP>
+    <!--<div class="one-serv"><a href="/entry/"><img src="/images/reg-icon-soft.png" alt="" />Вход</a></div> -->
+</div>
+<style>
+	.soc {
+		display: inline-block;
+		border-radius: 50%;
+		line-height: 16px;
+		width: 16px;
+		height: 16px;
+		background: #0098ff;
+		color: #fff;
+		text-align: center;
+		font-size: 10px;
+		position: relative;
+		vertical-align: middle;
+		margin-right: 4px;
+	}
+	.soc i {
+		position: absolute;
+		left: 2px;
+		top: 2px;
+	}
+</style>			</div>
+			<IDXSKIP><div id="iso"><a href="/images/cert/iso_2011.jpg" class="fancybox">ISO 9001/2008</a></div></IDXSKIP>
+		</div>
+		
+		<div id="navigate">
+			<div id="topmenu">
+			
+<ul class="sf-menu">
+
+   	
+			
+									<IDXSKIP><li class="topit1">
+        
+				<a href="/products-and-services/">
+					<span class="topit-left"></span><span class="topit-right"></span><span class="itname">Купить программу 1С</span><span class="sf-arrow"></span></a>
+					<ul style="width: 987px; left: auto; z-index: 1002; display: none;" id="ul-products">
+					<li><table><tr><td class="top-left"></td><td class="top-center"></td><td class="top-right"></td></tr><tr><td class="center-left">&nbsp;</td><td class="center-center"><table><tr><th colspan="1"></th></tr><tr><td>									
+			
+					<table>
+<tbody>
+<tr>
+<td>
+<div class="zh">
+<img src="/images/icons/icon-1c.png" alt="/" /><a href="/products-and-services/1s-predpriyatie-8/">1С: Предприятие&nbsp;8</a></div>
+<div><table>
+	<tbody><tr>
+		<td>	
+			<div class="div_main_menu_once">
+				<a href="/1s-buhgalteriya/">Бухгалтерия&nbsp;8</a>
+			</div>
+			<div class="div_main_menu_once">
+				<a href="/1s-zarplata/">1С:Зарплата и Управление Персоналом&nbsp;8</a>
+			</div>
+			<div class="div_main_menu_once">
+				<a href="/products-and-services/srednim-i-melkim-predpriyatiyam/1s-predpriyatie-8-upravlenie-torgovley/">Управление торговлей&nbsp;8</a>
+			</div>
+			<div class="div_main_menu_once">
+				<a href="/products-and-services/srednim-i-melkim-predpriyatiyam/1s-upravlenie-nebolshoy-firmoy-8/">Управление небольшой фирмой&nbsp;8</a>
+			</div>
+			<div class="div_main_menu_once">
+				<a href="/products-and-services/krupnym-predpriyatiyam/1s-predpriyatie-8-upravlenie-proizvodstvennym-predpriyatiem/">Управление производственным предприятием&nbsp;8</a>
+			</div>
+			<div class="div_main_menu_once">
+				<a href="/products-and-services/krupnym-predpriyatiyam/1s-dokumentooborot-8/">1С:Документооборот</a>
+			</div>
+			<div class="div_main_menu_once">
+				<a href="/products-and-services/krupnym-predpriyatiyam/1s-kompleksnaya-avtomatizatsiya-8/">Комплексная автоматизация&nbsp;8</a>
+			</div>		
+		</td>
+	</tr>
+</tbody></table>
+</div><div class="zh"><img alt="" src="/images/icons/icon-license.png" />
+	<a href="/products-and-services/litcenzii_1s_predpriyatie_8/">Дополнительные лицензии 1С:Предприятие&nbsp;8</a></div>
+<div><table>
+	<tbody><tr>
+		<td>	
+			<div class="div_main_menu_once">
+				<a href="/products-and-services/klientskaya-litsenziya/1s-predpriyatie-8-klientskaya-litsenziya/">1С:Предприятие&nbsp;8. Клиентская лицензия</a>
+			</div>
+			<div class="div_main_menu_once">
+				<a href="/products-and-services/litsenziya-na-server/1s-predpriyatie-8-litsenziya-na-server/">1С:Предприятие&nbsp;8. Лицензия на сервер</a>
+			</div>		
+		</td>
+	</tr>
+</tbody></table>
+</div></td>
+<td>	<div class="zh"><img alt="" src="/images/icons/icon-otrasl.png" /><a href="/products-and-services/otraslevye_resheniya/">Отраслевые решения</a></div>
+<div><table>
+	<tbody><tr>
+		<td>	
+			<div class="div_main_menu_once">
+				<a href="/products-and-services/byudzhetnye-organizatsii/1s-bukhgalteriya-gosudarstvennogo-uchrezhdeniya-8/">Бухгалтерия государственного учреждения&nbsp;8</a>
+			</div>
+			
+			<div class="div_main_menu_once">
+				<a href="/products-and-services/byudzhetnye-organizatsii/1s-zarplata-i-kadry-byudzhetnogo-uchrezhdeniya-8/">Зарплата и кадры государственного учреждения&nbsp;8</a>
+			</div>		
+		</td>
+	</tr>
+</tbody></table>
+</div>
+<div class="zh"><img src="/images/icons/icon-education.png" style="width:36px;"><a href="/products-and-services/software-products-for-education/">Отраслевые решения для сферы образования</a></div>
+<div><table>
+	<tbody><tr>
+		<td>	<div class="div_main_menu_once"><a href="/products-and-services/software-products-for-education/1s-shkolnyy-bufet-prof/">1С:Школьный буфет ПРОФ</a></div>
+		<div class="div_main_menu_once"><a href="/products-and-services/software-products-for-education/1s-shkolnyy-bufet-bazovaya-versiya/">1С:Школьный буфет. Базовая версия</a></div>		</td>
+	</tr>
+</tbody></table>
+</div>
+<div class="zh" style="padding-left:20px;"><a href="/products-and-services/actions/" style="text-decoration:none !important; color:#FFFFFF !important; background-color:#FF6028 !important; padding:5px 10px !important; border-radius:4px; font-size:17px;">Акции и скидки</a></div>
+</td>
+<td>	<div class="zh"><img alt="" src="/images/icons/icon-serv.png" /><a href="/pakety-obsluzhivaniya/">Обслуживание «1С» в Москве</a></div>
+<div></div><div class="zh"><img alt="" src="/images/icons/nastr_s.jpg" /><a href="/products-and-services/nastroyka-i-vnedrenie/">Настройка и внедрение</a></div>
+<div></div><div class="zh"><img alt="" src="/images/icons/consult_s.jpg" /><a href="/products-and-services/konsalting-i-proektnye-raboty/">Консалтинг и проектные работы</a></div>
+<div></div><div class="zh"><img alt="" src="/images/icons/abonentspb_s.png" /><a href="/products-and-services/obsluzhivanie-1s-v-s-peterburge/">Обслуживание «1С» в С-Петербурге</a></div>
+<div></div><div class="zh"><a href="http://www.bitrix.4dk.ru" target="_blank">Создание Сайтов</a></div>
+<div></div></td>
+</tr>
+</tbody></table>				</td></tr></table></td><td class="center-right">&nbsp;</td></tr><tr><td class="bottom-left"></td><td class="bottom-center"></td><td class="bottom-right"></td></tr>
+							   	
+										   	
+										   	
+										   	
+										   	
+										   	
+										   	
+										   	
+										   	
+										   	
+										   	
+										   				</table></li></ul></li></IDXSKIP>			
+			
+										<IDXSKIP><li class="topit1 current">
+	        
+						<a href="/maintenance-of-1c/">
+						<span class="topit-left"></span><span class="topit-right"></span><span class="itname">Сопровождение 1С</span><span class="sf-arrow"></span></a>
+						<ul>
+						<li><table><tr><td class="top-left"></td><td class="top-center"></td><td class="top-right"></td></tr><tr><td class="center-left">&nbsp;</td><td class="center-center"><table><tr><th colspan="1"></th></tr><tr><td>
+								   	
+														
+							   	
+										<div class="div_main_menu_once"><a href="/pakety-obsluzhivaniya/">Обслуживание 1С (АО и ИТС)</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/maintenance-of-1c/line-consultation-1c/">Линия консультаций «1С»</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/products-and-services/tips-on-choosing/vozmozhnosti-servisa-1spark-riski/">1СПАРК Риски</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/maintenance-of-1c/1c-statements/">1С-Отчётность</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/1c-edo/">1С-ЭДО</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/projects/proektnye-vnedreniya/">Доработки системы «1С»</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/maintenance-of-1c/releases-1c/">Релизы 1С</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/maintenance-of-1c/questions-and-answers-1c/">Вопросы-ответы 1С</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/maintenance-of-1c/step-by-step-instructions/">Пошаговые инструкции</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/maintenance-of-1c/article-1c/">Статьи 1С</a></div>
+												
+							   				</td></tr></table></td><td class="center-right">&nbsp;</td></tr><tr><td class="bottom-left"></td><td class="bottom-center"></td><td class="bottom-right"></td></tr></table></li></ul></li></IDXSKIP>			
+			
+										<IDXSKIP><li class="topit1">
+	        
+					<a href="/projects/">
+						<span class="topit-left"></span><span class="topit-right"></span><span class="itname">Проекты</span><span class="sf-arrow"></span></a>
+						<ul>
+						<li><table><tr><td class="top-left"></td><td class="top-center"></td><td class="top-right"></td></tr><tr><td class="center-left">&nbsp;</td><td class="center-center"><table><tr><th colspan="1"></th></tr><tr><td>									
+				
+								   	
+														
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/vserossiyskiy-institut-aviatsionnykh-materialov/"> Всероссийский Институт Авиационных Материалов</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/nauchno-issledovatelskiy-vychislitelnyy-tsentr-mgu/"> Научно-исследовательский вычислительный центр МГУ</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/postanovka-bukhgalterskogo-ucheta-i-ego-avtomatizatsiya-v-moskovskom-tsentre-kachestve-obrazovaniya/">Постановка бухгалтерского учета и его автоматизация в Московском центре качестве образования.</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/ooo-kvo-arm/">ООО «КВО-АРМ»</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/kommerchesko-bankovskiy-kolledzh/">Коммерческо-Банковский Колледж</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/moskovskiy-institut-elektronnoy-tekhniki/"> Московский институт электронной техники</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/garazhno-ekspluatatsionnyy-kooperativ-11/">Гаражно-эксплуатационный кооператив №11</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/kompaniya-siti/">компания «Сити»</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/kompaniya-eladi/">компания «Элади»</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/moskovskaya-meditsinskaya-akademiya-im-i-m-sechenova/">Московская медицинская академия им. И.М. Сеченова</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/ooo-a-servis/">ООО «А-Сервис»</a></div>
+								</td><td>				
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/zao-astera/">ЗАО «Астера»</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/zao-f-end-si-treyding/">ЗАО «Ф энд Си Трейдинг»</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/moskovskiy-institut-kommunalnogo-khozyaystva-i-stroitelstva/">Московский институт коммунального хозяйства и строительства</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/moskovskaya-meditsinskaya-akademiya-imeni-i-m-sechenova/">Московская медицинская академия имени И.М. Сеченова</a></div>
+												
+							   				</td></tr></table></td><td class="center-right">&nbsp;</td></tr><tr><td class="bottom-left"></td><td class="bottom-center"></td><td class="bottom-right"></td></tr></table></li></ul></li></IDXSKIP>			
+										<IDXSKIP><li class="topit1">
+        
+					<a href="/courses-1c/" class="root-item" >
+						<span class="topit-left"></span><span class="topit-right"></span><span class="itname">Обучение 1С</span><span class="sf-arrow"></span>
+					</a>
+				</li></IDXSKIP>
+							   	
+			
+										<IDXSKIP><li class="topit1">
+	        
+					<a href="/about-the-company/">
+						<span class="topit-left"></span><span class="topit-right"></span><span class="itname">О компании</span><span class="sf-arrow"></span></a>
+						<ul>
+						<li><table><tr><td class="top-left"></td><td class="top-center"></td><td class="top-right"></td></tr><tr><td class="center-left">&nbsp;</td><td class="center-center"><table><tr><th colspan="1"></th></tr><tr><td>									
+				
+								   	
+														
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/company-certificates/">Сертификаты компании</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/projects/">Наши проекты</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/specialists/">Специалисты</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/ask-a-question-to-the-director-of-the-company/">Задать вопрос директору компании</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/contact-information/">Контактная информация</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/news/">Новости компании</a></div>
+												
+							   	
+										<div class="div_main_menu_once"><a href="/about-the-company/reviews/">Отзывы наших клиентов</a></div>
+												
+										</td></tr></table></td><td class="center-right">&nbsp;</td></tr><tr><td class="bottom-left"></td><td class="bottom-center"></td><td class="bottom-right"></td></tr></table></li></ul></li></IDXSKIP>			</ul>
+			</div>
+						<IDXSKIP><a href="/cart/" id="cart">				
+				<span class="cart-no">
+				Ваша корзина пока пуста				</span>
+			</a></IDXSKIP>			
+		</div>
+	</div><!-- #header -->
+	<div id="pre-middle-internal"></div>
+	<div id="middle-internal">
+		<div id="container-internal">
+			<div id="content-internal">
+						<div id="breadcrumb"><IDXSKIP><a href="/" title="Главная">Главная</a></IDXSKIP><IDXSKIP><span class="sep">&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;</span></IDXSKIP><IDXSKIP><a href="/maintenance-of-1c/" title="Сопровождение 1С">Сопровождение 1С</a></IDXSKIP><IDXSKIP><span class="sep">&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;</span></IDXSKIP><IDXSKIP><a href="/maintenance-of-1c/step-by-step-instructions/" title="Пошаговые инструкции">Пошаговые инструкции</a></IDXSKIP><IDXSKIP><span class="sep">&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;</span></IDXSKIP><IDXSKIP><a href="/maintenance-of-1c/step-by-step-instructions/274/" title="1С:Предприятие 8">1С:Предприятие 8</a></IDXSKIP><IDXSKIP><span class="sep">&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;</span></IDXSKIP><span class="cur-page">Как в 1С провести анализ учета по налогу на прибыль</span></div>						<table class="news-header">
+			<tr>
+			<td><h1 class="">Как в 1С провести анализ учета по налогу на прибыль</h1></td>
+						</tr>
+			</table>
+			 
+<IDXSKIP><div class="no_view">
+<div class="contmenu">
+<ul><li class="current"><a href="/maintenance-of-1c/step-by-step-instructions/"><img class="contmenu-left" alt="" src="/images/contmenu-left.png"><img class="contmenu-right" alt="" src="/images/contmenu-right.png"><span>1С:Предприятие 8</span></a></li>
+<li><a href="/maintenance-of-1c/step-by-step-instructions/index_old.php"><span>1С:Предприятие 7.7</span></a></li></ul>
+</div>
+	
+</div></IDXSKIP>					
+
+
+
+	
+   <IDXSKIP><a href="/pakety-obsluzhivaniya/ "><img src="/images/step-banner.gif" style="width:100%; margin-bottom:10px;"></a></IDXSKIP>
+<div class="a-data">
+	31.10.2014</div>
+
+<div class="a-autor"><IDXSKIP>Материал подготовлен на основе диска ИТС</IDXSKIP></div>
+
+<div>
+ <b>Для проверки правильности составления декларации по налогу на прибыль необходимо воспользоваться отчетом Анализ состояния налогового учета по налогу на прибыль.</b>
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Для примера возьмем организацию, занимающуюся выпуском продукции и продажей товаров.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 В 3 квартале организация закупила материалы, выпустила продукцию и реализовала ее покупателю.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Купила и продала товар.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 А также купила чай и сахар для сотрудников и списала их на прочие расходы, не принимая в налоговом учете.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 На примере рассмотрим принцип работы с отчетом.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Работать будем в программе бухгалтерия предприятия редакция 3.0
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Для корректной работы отчета необходимо провести закрытие всех месяцев, входящих в период отчета (рис.1).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/c2e/c2ebd1cccfa9e4f190601bfc5b1437d5.jpg" height="381" border="0">
+</div>
+<div>
+	 Рис. 1.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 После этого можно переходить непосредственно к анализу.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Переходим в меню Отчеты - Анализ учета по налогу на прибыль (рис. 2).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/8f2/8f25688fd0ed858920bf16d630060d43.jpg" height="590" border="0">
+</div>
+<div>
+	 Рис.2.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 При открытии отчета выводится структура налоговой базы по налогу на прибыль. С ее помощью можно перейти к интересующему разделу учета.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Основным принципом работы с отчетом для выявления ошибок является движение по разделам "от конца к началу".
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Сначала проанализируем данные раздела "Налог" (рис. 3).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="683" src="/upload/medialibrary/2c3/2c304bd4dd30b933d03725796db52ad2.jpg" height="367" border="0">
+</div>
+<div>
+	 Рис. 3.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Если данные всех видов учета по объекту учета согласуются между собой, то выполняется правило:
+</div>
+<div>
+	 БУ = НУ + ПР + ВР.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Особое внимание следует уделить блокам, обведенным красной рамкой. Это сигнал о возможной ошибке в учете. Для ее выявления в отчете предусмотрена возможность навигации по графической схеме и расшифровки данных (рис.4).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/2b7/2b7474c99513cddd7f7b5cfd197dd36b.jpg" height="413" border="0">
+</div>
+<div>
+	 Рис. 4.
+</div>
+<div>
+	 Перейдем внутрь блока, чтобы посмотреть из чего складываются Расходы.
+</div>
+<div>
+	 На схеме состава расходов видим, что есть два источника постоянных разниц и блок с возможной ошибкой (рис. 5).&nbsp;
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="679" src="/upload/medialibrary/dd8/dd84789493ab3a56ca763dc9d7c8fa1e.jpg" height="412" border="0">
+</div>
+<div>
+	 Рис. 5.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Существуют две основным причины возникновения ошибок при анализе учета по налогу на прибыль, это ошибки в первичных документах и не корректные ручные операции.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Рассмотрим сначала блок, в котором возникают отрицательные временные разницы. Переходим внутрь блока, здесь снова отражена графическая схема, на которой показатели группируются по экономическому содержанию (рис. 6).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/2a9/2a972b486ee845672be36b0e391e018c.jpg" height="411" border="0">
+</div>
+<div>
+	 Рис.6.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Продолжаем переходить в блоки источники &nbsp;потенциальной ошибки, пока не дойдем до отчета по сводным проводкам (оборотам), сформировавшим показатели блока.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Ставим флажок "По документам", нажимаем "Сформировать" и видим первичные документы, сформировавшие показатели блока (рис.7).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/c5a/c5a404ff0fb4ae16766f7eccc41de79b.jpg" height="230" border="0">
+</div>
+<div>
+	 Рис. 7.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Так же можно воспользоваться кнопкой Еще - Сформировать только ошибки - для просмотра проводок, не прошедших контроль (рис. 8).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="259" src="/upload/medialibrary/b27/b278b2d3c490cd754acee14a472b8859.jpg" height="179" border="0">
+</div>
+<div>
+	 Рис.8.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 В нашем примере контроль не выполняется в регламентной операции, поскольку она была сформирована при закрытии месяца, вернемся к отчету со всеми документами и посмотрим, какие из первичных документов могли стать причиной ошибки (рис. 9).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="679" src="/upload/medialibrary/3d9/3d9c180bb791f62bae176f5d5cfa299a.jpg" height="180" border="0">
+</div>
+<div>
+	 Рис. 9.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Предполагаем, что за ошибку ответственна ручная операция. Сразу из отчета двойным щелчком по строке с названием документа переходим в него (рис.10).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/606/606e79d389a3743c8d847858c2a26d1b.jpg" height="135" border="0">
+</div>
+<div>
+	 Рис. 10.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Видим, что при выполнении операции списания материалов на расходы не была указана сумма по кредиту счета 10.01. Вносим исправления и проводим документ (рис. 11).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/271/271d390ea01c4dbe3055b9d5f18161bf.jpg" height="210" border="0">
+</div>
+<div>
+	 Рис. 11.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 После этого, необходимо перезакрыть месяц, в документы которого вносились изменения.
+</div>
+<div>
+	 Вернуться в раздел Структура налоговой базы и снова зайти в раздел Налог (рис. 12).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="683" src="/upload/medialibrary/58e/58e04af50df3080ab82f9f42aad5e5d5.jpg" height="384" border="0">
+</div>
+<div>
+	 Рис. 12.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Видим, что источник ошибки был определен нами верно.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Однако, в разделе расходов присутствуют постоянные разницы. Необходимо разобраться с причиной их возникновения.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Переходим в блок Расходы и видим, что источником постоянных разниц является блок Прочие расходы по реализации товаров, а так же блок Прочие расходы не учитываемые в НУ (рис.13).
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Сначала проверим прочие расходы по реализации.&nbsp;
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/1ee/1ee2ce2d8904fbe9e773ae75303f280f.jpg" height="412" border="0">
+</div>
+<div>
+	 Рис. 13.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Продолжаем движение по блокам источникам, до отчета о проводках. Переформируем его, чтобы увидеть документы.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Постоянные разницы возникают при закрытии месяца (рис. 14).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/b4d/b4da55de05b5a2f7084b138d9092d38f.jpg" height="197" border="0">
+</div>
+<div>
+	 Рис. 14.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 И связано это с производством продукции.
+</div>
+<div>
+	 Вернемся к структуре налоговой базы и перейдем непосредственно в раздел производство.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Сразу видим, что затраты на производство не были приняты в налоговом учете, из-за этого и возникли постоянные разницы (рис. 15).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/008/0086fd4ab37cb32e899c53896c105c0d.jpg" height="454" border="0">
+</div>
+<div>
+	 Рис. 15.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Перейдем к отчету по проводкам, чтобы определить первичный документ (рис. 17).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/01c/01c4489e7faf672419824bdae45ac6b2.jpg" height="180" border="0">
+</div>
+<div>
+	 Рис. 17.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Из отчета переходим к документу и на закладке Материалы, видим, что неверно указана статья затрат. Вносим исправления (рис. 18).
+</div>
+<div>
+	 Проводим документ.
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/55e/55ed1e8fd2474d33394885404cd5e648.jpg" height="250" border="0">
+</div>
+<div>
+	 Рис. 18.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Возвращаемся к разделу Расходы, чтобы разобраться с расходами, не учитываемым в НУ. Доходим до отчета и стоим его по документам (рис. 19).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/1ab/1ab4da6a8a0a8d13f3b442bf0f40d0b3.jpg" height="217" border="0">
+</div>
+<div>
+	 Рис. 19.
+</div>
+<div>
+	 Определяем документ для проверки и переходим в него. Видим, что было выполнено списание Чая и сахара для сотрудников, мы не можем обосновать это списание для налогового учета и не принимаем расходы в НУ. Этот документ оформлен верно, и в исправлениях нет необходимости (рис. 20 и 21).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/0d1/0d1190bda94125d64f0e89f64fb40e76.jpg" height="196" border="0">
+</div>
+<div>
+	 Рис. 20.
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="680" src="/upload/medialibrary/509/50935527b027008f028b3689a5ded625.jpg" height="217" border="0">
+</div>
+<div>
+	 Рис. 21.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Теперь нужно перезакрыть месяц и проверить результаты расчета налога на прибыль (рис. 22).
+</div>
+<div>
+ <br>
+</div>
+<div>
+ <img width="679" src="/upload/medialibrary/9a9/9a90f54305da9c238b7d1169a87fd120.jpg" height="414" border="0">
+</div>
+<div>
+	 Рис. 22.
+</div>
+<div>
+ <br>
+</div>
+<div>
+	 Рекомендуем Вам при составлении декларации по налогу на прибыль пользоваться данным отчетом.
+</div>
+<div>
+ <br>
+</div>
+<div style="text-align: center;">
+ <a href="http://www.chtodelat.tv/tv/1s-shag-za-shagom/kak-v-1s-sdelat-analiz-naloga-na-pribyl/"><img width="300" src="/upload/medialibrary/361/361b939942d988b56a80f7b0c283ab13.png" height="30" border="0"></a>
+</div>
+ <br>
+ <i><IDXSKIP>Материал подготовлен на основе диска ИТС</IDXSKIP></i><br /><br /><br />
+
+<IDXSKIP><div class="articles_nav">
+	<table style="background:#ffffff;">
+		<tbody>
+			<tr>
+				<td style="text-align: right; border: none; width:240px;">&nbsp;</td>
+				<td style="text-align: center; border: none;" width="100px"><a href="/maintenance-of-1c/step-by-step-instructions/">Все статьи</a></td>
+				<td style="text-align: left; border: none;">&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div></IDXSKIP><br />
+
+<h1>Оставьте Ваш комментарий</h1>
+<IDXSKIP><div style="text-align: center;">
+	<a href="mailto:agafonenko@4dk.ru,sinitsyna@4dk.ru;">
+		<input id="send_form" class="input-submit" type="submit" name="web_form_submit" value="Написать нам">			
+	</a>
+</div></IDXSKIP> 
+			</div><!-- #content-->
+		</div><!-- #container-->
+
+		<div id="left">
+						
+<div id="leftmenu">
+	<div class="leftmenu-top"></div>
+	<div class="leftmenu-body">
+		<ul class="level1">
+									<IDXSKIP><li class="leftit1" id="nobckgrnd">
+					<div class="lit1"><a class="lit1-link" href="/maintenance-of-1c/">Сопровождение 1С</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1">
+					<div class="lit1"><a class="lit1-link" href="/pakety-obsluzhivaniya/">Обслуживание 1С (АО и ИТС)</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1">
+					<div class="lit1"><a class="lit1-link" href="/maintenance-of-1c/line-consultation-1c/">Линия консультаций «1С»</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1">
+					<div class="lit1"><a class="lit1-link" href="/products-and-services/tips-on-choosing/vozmozhnosti-servisa-1spark-riski/">1СПАРК Риски</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1">
+					<div class="lit1"><a class="lit1-link" href="/maintenance-of-1c/1c-statements/">1С-Отчётность</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1">
+					<div class="lit1"><a class="lit1-link" href="/1c-edo/">1С-ЭДО</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1">
+					<div class="lit1"><a class="lit1-link" href="/projects/proektnye-vnedreniya/">Доработки системы «1С»</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1">
+					<div class="lit1"><a class="lit1-link" href="/maintenance-of-1c/releases-1c/">Релизы 1С</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1">
+					<div class="lit1"><a class="lit1-link" href="/maintenance-of-1c/questions-and-answers-1c/">Вопросы-ответы 1С</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1 current">
+					<div class="lit1"><a class="lit1-link" href="/maintenance-of-1c/step-by-step-instructions/">Пошаговые инструкции</a></div>
+				</li></IDXSKIP>
+												<IDXSKIP><li class="leftit1">
+					<div class="lit1"><a class="lit1-link" href="/maintenance-of-1c/article-1c/">Статьи 1С</a></div>
+				</li></IDXSKIP>
+							</ul>
+	</div>
+	<div class="leftmenu-bottom"></div>
+</div>
+						<div id="links">
+	<IDXSKIP><a href="/maintenance-of-1c/questions-and-answers-1c/ask-a-question/" class="ask" >Задать вопрос</a></IDXSKIP>
+
+	<a href="/get-seminars-1c/" class="order" ><IDXSKIP>Практические семинары<br />для сопровождаемых Клиентов по 1С</IDXSKIP></a> 
+	<IDXSKIP><div style="margin-left: -12px;"> 
+		<br />
+	</div></IDXSKIP>
+	<style>
+		#links a.order {
+			width: 260px;
+		    box-sizing: border-box;
+		    margin: 3px;
+		    padding: 15px;
+		    height: auto;
+			background: #ffffff;
+			background: -moz-linear-gradient(top,  #ffffff 0%, #dde1e4 100%);
+			background: -webkit-linear-gradient(top,  #ffffff 0%,#dde1e4 100%);
+			background: linear-gradient(to bottom,  #ffffff 0%,#dde1e4 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dde1e4',GradientType=0 );
+		    -webkit-box-shadow: 0px 0px 5px 0px rgba(173,173,173,0.8);
+		    -moz-box-shadow: 0px 0px 5px 0px rgba(173,173,173,0.8);
+		    box-shadow: 0px 0px 5px 0px rgba(173,173,173,0.8);
+		    border-radius: 5px;
+		       
+		}
+	</style>
+ 	 	 	
+</div>
+
+		</div><!-- #left -->
+
+		
+	</div><!-- #middle -->
+	<div id="footer">
+		<div id="footer-cont-main">
+			<div style="overflow:hidden;">
+			<!--<div id="copyright">
+				Все права защищены<br />
+				Компания “Что делать Консалт”<br />
+				Copyright <script src="http://4dk.ru/curyear.js" type="text/javascript"></script>
+			</div>-->
+			<!--<div class="bottomiso">
+				<a href="http://www.4dk-soft.ru/images/cert/iso_2011.jpg" class="fancybox"><img src="/images/ISO_9001.png" border="0" /></a>
+			</div>-->
+			<div id="bottommenu">				
+			<IDXSKIP><a href="/maintenance-of-1c/article-1c/" class="botit">Статьи 1С</a></IDXSKIP><IDXSKIP>&nbsp;|&nbsp;				
+			<a href="/maintenance-of-1c/step-by-step-instructions/" class="botit">Пошаговые инструкции</a></IDXSKIP><IDXSKIP>&nbsp;|&nbsp;				
+		<!--	<a href="/the-magazine-budget-accounting/" class="botit">Журнал «Бюджетный учет»</a>&nbsp;|&nbsp;		-->		
+			<a href="/search/map.php" class="botit">Карта сайта</a></IDXSKIP>			</div>
+			<IDXSKIP><div id="search">
+<form action='/search/' method='get'>
+					<input type="text"  name='q' id="search-text" class="search-input input-text" title="Что делать?" style="color:#86929E;"  value=''/>
+					<input type="submit" value="Искать" class="search-button" />
+				</form>
+			</div></IDXSKIP>		</div>
+		<IDXSKIP><div id="logo2">
+		    <a href="http://www.4dk-soft.ru/images/cert/iso_2011.jpg" class="fancybox"><img src="/images/ISO_9001.png" border="0" /></a>
+			<a href="/images/cert/29_09_10_1c.gif" class="fancybox"><img src="/images/logo1c-centrsopr.png" alt="" /></a>	
+			<a href="https://24.4dk.ru/ " target="_blank"><img src="/images/logo24.png" alt="" /></a>			
+			<a href="/images/cert/kalyga_astral.JPG" class="fancybox"><img src="/images/EO_Logo.png" alt="" /></a> 
+         <!--   <img src="/images/logo-1c-setevoy-kompet.png" alt="">   -->
+         <a href="http://www.4dk-soft.ru/images/goldp.jpg" class="fancybox"><img src="/images/partner-gold.png?00001" height="50"></a>
+                         
+		</div></IDXSKIP>
+		<div id="copyright">
+				<IDXSKIP>Все права защищены Компания “Что делать Консалт” Copyright </IDXSKIP><script src="http://4dk.ru/curyear.js" type="text/javascript"></script>
+			</div>
+		</div>
+		
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+   <div class="subscribe-1s-block">
+     <div class="subscribe-open"></div> 
+     <div class="subscribe-1s-block-inner">
+        
+         <form method="POST" id="subscription-1s-form">
+         <div class="form-result">
+                 <b><IDXSKIP>Спасибо, что подписались на рассылку<br> «Что делать 1С»!</IDXSKIP></b><br>
+                 <font style="font-size:11pt;"><IDXSKIP>Мы отправили Вам письмо о подтверждении подписки. Вы будете получать письма от компании «Что делать 1С» только после подтверждения своего адреса.</IDXSKIP></font>
+
+              </div>    
+             <div class="form-inputs-block"> 
+              <div class="s1sbi-title"><IDXSKIP>Подпишитесь на рассылку «Что делать 1С»!</IDXSKIP></div>
+            <input type="text" name="email" placeholder="Введите e-mail" class="important-field"> <input type="submit" name="subsc" value="Подписаться"  id="subscription-1s-form-btn" class="subscription-1s-form-btn">
+            <br />
+            <div class="s1sbi-sogl">
+               <input type="checkbox" name="sogl" id="sogl"><label for="sogl"><IDXSKIP>Я согласен с условиями </IDXSKIP><IDXSKIP><a href="http://www.4dk-soft.ru/soglashenie/" target="_blank" style="color:#FFFFFF;text-decoration:underline;">Пользовательского соглашения</a></IDXSKIP> <IDXSKIP>и <a href="http://www.4dk.ru/privacy/" target="_blank" style="color:#FFFFFF;text-decoration:underline;">Политики конфиденциальности</a></IDXSKIP></label>
+            </div>
+            <input type="hidden" name="subs[][1]" value="4c123177-6e74-11e5-80e2-000af77049f0">
+            <input type="hidden" name="source" value="SOFT">
+            </div>
+         </form>
+     </div>
+  </div>
+  
+ <style>
+ .popup-sogl{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:1000000;
+    background: url("http://4dk-consultant.ru/images/sogl-back.png");
+    top:0px;
+    left:0px;
+ } 
+ 
+ .popup-sogl-inner{
+    width:600px;
+    height:600px;
+    padding: 30px 25px 30px 40px;
+    margin:50px auto 0px auto;
+    background:#FFFFFF;
+    position:relative;
+    overflow:hidden;
+ } 
+ 
+ .body-no-scroll{
+    height:100% !important;
+    overflow:hidden !important;
+ }
+ 
+ .psi-title{
+        text-align: center;
+    font-size: 17pt;
+    padding-bottom:20px;
+ }
+ 
+ .popup-sogl-inner p{
+    font-size: 9pt;
+    padding-right: 10px;
+
+ }
+ 
+ .popup-sogl-content{
+   width:100%;
+    height:100%;
+    overflow:auto; 
+ }
+ 
+ .sogl-close{
+    position:absolute;
+    top:7px;
+    right:10px;
+    cursor:pointer;
+ }
+ 
+ .popup-sogl-hide{
+    display:none;
+ }
+</style>
+
+<script>
+$(document).ready(
+  function(){
+     $("a[href*='soglashenie']").click(
+        function(event){
+           event.preventDefault();
+           if($(".popup-sogl").hasClass("popup-sogl-hide")){
+              $(".popup-sogl").removeClass("popup-sogl-hide");
+              $("body").addClass("body-no-scroll");
+           }
+        }
+     );
+     
+     $(".sogl-close").click(
+        function(){
+           $(".popup-sogl").addClass("popup-sogl-hide");
+              $("body").removeClass("body-no-scroll");
+        }
+     );
+  }
+);
+</script>
+<div class="popup-sogl popup-sogl-hide">
+  <div class="popup-sogl-inner">
+   <img src="http://4dk-consultant.ru/images/sogl-cross.png" class="sogl-close">
+   <div class="popup-sogl-content">
+     <IDXSKIP><div class="psi-title">Пользовательское соглашение</div></IDXSKIP>
+<IDXSKIP><p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'><IDXSKIP>Администрация Сайта предлагает Пользователям Услуги
+(предоставление информации, контента) Сайта </IDXSKIP><IDXSKIP><a href="http://4dk-soft.ru/">http://4dk-soft.ru/</a></IDXSKIP>
+<IDXSKIP>1С</IDXSKIP><IDXSKIP><span class=GramE>:Ф</span></IDXSKIP><IDXSKIP>ранчайзинг фирмы «1С» компания Первый Дом
+Консалтинга </IDXSKIP></span><IDXSKIP><span style='font-size:11.0pt;font-family:"Arial","sans-serif";
+mso-bidi-language:HE'>«Что делать Консалт»</span></IDXSKIP><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'> <IDXSKIP>на условиях, являющихся предметом настоящего
+Пользовательского соглашения.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt;
+mso-bidi-font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'><IDXSKIP>Настоящее Пользовательское соглашение (далее
+– Соглашение) рассматривается Администрацией Сайта </IDXSKIP><IDXSKIP><a href="http://4dk-soft.ru/">http://4dk-soft.ru/</a></IDXSKIP>
+<IDXSKIP>как публичная оферта в соответствии со ст. 437 Гражданского кодекса Российской
+Федерации. </IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal>&nbsp;</p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'><IDXSKIP>Регистрация Пользователя в целях получения Услуг
+означает принятие условий настоящего Соглашения в соответствии со ст.438
+Гражданского кодекса Российской Федерации.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal>&nbsp;</p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'><IDXSKIP>Пользуясь Услугами Сайта </IDXSKIP><IDXSKIP><a
+href="http://4dk-soft.ru/">http://4dk-soft.ru/</a></IDXSKIP><IDXSKIP>, Пользователь соглашается
+соблюдать условия настоящего Соглашения.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'><IDXSKIP>Пользователь осознает и соглашается, что
+предоставление Услуг на Сайте может сопровождаться рекламой и что наличие
+данной рекламы является необходимым условием получения Услуг. Пользователь
+также понимает и соглашается, что предоставление Услуг может сопровождаться сообщениями
+от </IDXSKIP><IDXSKIP><a href="http://4dk-soft.ru/">http://4dk-soft.ru/</a></IDXSKIP><IDXSKIP>, такими, как служебные
+сообщения, автоматические уведомления и новостные рассылки.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'><IDXSKIP>Администрация Сайта предоставляет доступ к
+Услугам (информации и контенту) всем заинтересованным лицам в соответствии с
+настоящим Пользовательским соглашением и действующим законодательством
+Российской Федерации.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'><IDXSKIP>Согласие Пользователя на принятие условий
+настоящего Соглашения выражается в форме нажатия Пользователем кнопок
+«Отправить», «Подписаться» или «Зарегистрировать сертификат», помещенных под
+формой регистрации.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal align=center style='margin-left:35.4pt;text-align:center'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:11.0pt;font-family:
+"Arial","sans-serif"'><IDXSKIP>1. Основные понятия, используемые в настоящем Соглашении.</IDXSKIP></span></b></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><IDXSKIP><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>1.1. Сайт – Сайт 1С</IDXSKIP><IDXSKIP><span
+class=GramE>:Ф</span></IDXSKIP><IDXSKIP>ранчайзинг<span style='mso-spacerun:yes'>  </span></IDXSKIP><IDXSKIP>фирмы
+«1С» компания Первый Дом Консалтинга </IDXSKIP></span><IDXSKIP><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif";mso-bidi-language:HE'>«Что делать Консалт»</span></IDXSKIP><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>, расположенный в
+информационно-телекоммуникационной сети «Интернет» (далее – сеть Интернет) по
+адресу (доменному имени) </IDXSKIP><IDXSKIP><a href="http://4dk-soft.ru/">http://4dk-soft.ru/</a></IDXSKIP><IDXSKIP>.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>1.2. Услуги – заказ
+продуктов и услуг по обслуживанию программных продуктов «1С», их настройке и
+внедрению, консалтинговых и проектных работ, заказ обратного звонка, а также информация,
+контент, указанные в п.1.3 и 1.4 настоящего Соглашения, предоставляемые
+Администрацией Сайта Пользователю (далее – Услуги). В понятие Услуги включается
+также прием от Пользователя справочной информации и других материалов,
+предоставляемых Пользователем Администрации Сайта, в том числе в целях оценки
+сервиса.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><IDXSKIP><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>1.3. Контент -</IDXSKIP><IDXSKIP><span
+style='mso-spacerun:yes'>  </span></IDXSKIP><IDXSKIP>электронные подборки документов, электронные
+версии журналов, новостные рассылки, диски и другие материалы.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>1.4. Информация –
+аналитические, справочные, справочно-правовые и другие сопутствующие материалы,
+в том числе печатные издания, предоставляемые Пользователю по его запросу Администрацией
+Сайта в электронной, бумажной форме или форме обратного звонка.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><IDXSKIP><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>1.5. </IDXSKIP><span
+class=GramE><IDXSKIP>Сервисы Сайта – разделы Сайта, позволяющие получить Услуги,
+указанные в п.1.2 настоящего Соглашения, путем заполнения регистрационной формы
+и нажатия кнопок «Отправить», «Зарегистрироваться», «Записаться» «Подписаться»,
+«Сохранить», «Зарегистрировать сертификат».</IDXSKIP></span></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>1.6. Регистрация
+Пользователя на Сайте (ранее и далее – Регистрация на Сайте, Регистрация) –
+оставление Пользователем своих контактных данных, указанных в п.4.3 настоящего
+Соглашения, в целях получения запрашиваемой Услуги. Регистрация осуществляется
+путем заполнения регистрационной формы, представленной на Сервисах Сайта, и
+нажатия кнопок «Отправить», «Зарегистрироваться», «Записаться» «Подписаться»,
+«Сохранить», «Зарегистрировать сертификат». Регистрация является одноразовой и
+осуществляется при каждом запросе контента или информации. </IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>2.
+Статус Пользовательского соглашения</IDXSKIP></span></b></p>
+
+<IDXSKIP><p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></b></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>2.1. Настоящее Пользовательское
+соглашение (ранее и далее – Соглашение)</IDXSKIP><span style='color:navy'> </span><IDXSKIP>определяет
+условия предоставления Администрацией Сайта Услуг, указанных в п.1.2 настоящего
+Соглашения Пользователю, а также права и обязанности Пользователя и
+Администрации Сайта.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>2.2. Предметом
+настоящего Соглашения является предоставление Администрацией Сайта
+Пользователям Услуг, указанных в п.1.2 настоящего Соглашения, а также
+возникающие при этом отношения.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>2.3. Настоящее
+Соглашение может быть изменено и/или дополнено Администрацией Сайта в
+одностороннем порядке без какого-либо специального уведомления.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>2.4. Настоящее
+Соглашение является открытым и общедоступным документом. Действующая редакция
+Соглашения располагается в сети Интернет по адресу: </IDXSKIP><IDXSKIP><a
+href="http://www.4dk-soft.ru/soglashenie/">http://www.4dk-soft.ru/soglashenie/.</a></IDXSKIP><IDXSKIP>.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<IDXSKIP><p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:11.0pt;font-family:
+"Arial","sans-serif"'>3. Статус Администрации Сайта</span></b></p></IDXSKIP>
+
+<IDXSKIP><p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:11.0pt;font-family:
+"Arial","sans-serif"'>&nbsp;</span></b></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><IDXSKIP><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>3.1. </IDXSKIP><IDXSKIP><span
+class=GramE>Администрация Сайта </IDXSKIP><IDXSKIP><span lang=EN-US style='mso-ansi-language:EN-US'><a
+href="http://4dk-soft.ru/">http<span lang=RU style='mso-ansi-language:RU'>://4</span><span
+class=SpellE>dk</span><span lang=RU style='mso-ansi-language:RU'>-</span>soft<span
+lang=RU style='mso-ansi-language:RU'>.</span><span class=SpellE>ru</span><span
+lang=RU style='mso-ansi-language:RU'>/</span></a></span></IDXSKIP> <IDXSKIP>(ранее и далее –
+Администрация Сайта, Администрация) в настоящем Соглашении и иных специальных
+документах, размещенных на Сайте, понимается как Закрытое акционерное общество
+«Что делать Внедрение», юридическое лицо, созданное по законодательству
+Российской Федерации и зарегистрированное по адресу: </IDXSKIP><IDXSKIP><span style='mso-bidi-font-style:
+italic'>107140, Москва, ул. </IDXSKIP><IDXSKIP><span class=SpellE>Краснопрудная</span></IDXSKIP><IDXSKIP>, д.12/1
+стр. 1 п.15,17.</IDXSKIP></span></span><span style='mso-bidi-font-style:italic'></span></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>3.2. Обращения,
+предложения и претензии физических и юридических лиц к Администрации Сайта в
+связи с настоящим Соглашением, а также запросы уполномоченных законодательством
+Российской Федерации лиц могут быть направлены на почтовый адрес ЗАО «ЧДВ»:
+117083, Москва, ул. Мишина, 56.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>3.3. Никакие
+положения настоящего Соглашения не предоставляют Пользователю право на
+использование фирменного наименования, товарных знаков, доменных имен и иных
+отличительных знаков Администрации Сайта. Право на использование фирменного
+наименования, товарных знаков, доменных имен и иных отличительных знаков Администрации
+Сайта может быть предоставлено исключительно по письменному соглашению с
+Администрацией Сайта.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal align=center style='margin-left:18.0pt;text-align:center'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:11.0pt;font-family:
+"Arial","sans-serif"'><IDXSKIP>4. Регистрация и статус Пользователя</IDXSKIP></span></b></p>
+
+<IDXSKIP><p class=MsoNormal align=center style='margin-left:18.0pt;text-align:center'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:11.0pt;font-family:
+"Arial","sans-serif"'>&nbsp;</span></b></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>4.1.
+Регистрация Пользователя на Сайте в целях получения Услуг является бесплатной,
+добровольной и производится по адресу в сети Интернет: </IDXSKIP><IDXSKIP><a
+href="http://4dk-soft.ru/">http://4dk-soft.ru/</a></IDXSKIP><IDXSKIP>.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>4.2.
+Пользователем является физическое лицо, зарегистрированное на Сайте в
+соответствии с установленным настоящим Соглашением порядком, достигшее
+возраста, допустимого в соответствии с законодательством Российской Федерации
+для акцепта настоящего Соглашения, и обладающее соответствующими полномочиями
+(ранее и далее – Пользователь).</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><IDXSKIP><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>4.3.</span></IDXSKIP><IDXSKIP><span
+lang=EN-US style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-ansi-language:
+EN-US'>&nbsp;</span></IDXSKIP><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>При
+регистрации на Сайте Пользователь обязан предоставить Администрации Сайта
+необходимую достоверную и актуальную информацию, в том числе, фамилию, имя,
+отчество, должность, номер телефона, адрес электронной почты (</IDXSKIP></span><IDXSKIP><span
+lang=EN-US style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-ansi-language:
+EN-US'>Email</span></IDXSKIP><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>),
+регион, название организации. Регистрационная форма Сайта может запрашивать у
+Пользователя дополнительную информацию.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>4.4. Пользователь
+несет ответственность за достоверность, актуальность, полноту и соответствие
+законодательству Российской Федерации предоставленной при регистрации информац</IDXSKIP><IDXSKIP><span
+class=GramE>ии и ее</span></IDXSKIP> <IDXSKIP>чистоту от претензий третьих лиц.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>4.5. При
+регистрации Пользователь соглашается с условиями настоящего Соглашения и
+принимает на себя указанные в нем права и обязанности, связанные с получением
+предоставляемых Администрацией Сайта Услуг. </IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>4.6.
+Регистрация Пользователя означает согласие на получение рекламы и рекламных
+предложений, распространяемых по сетям электросвязи в соответствии с частью 1
+статьи 18 Федерального закона от 13.03.2006 N 38-ФЗ «О рекламе». </IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>4.7.
+После регистрации Пользователя на Сайте Пользователю на указанную им
+электронную почту (</IDXSKIP></span><IDXSKIP><span lang=EN-US style='font-size:11.0pt;font-family:
+"Arial","sans-serif";mso-ansi-language:EN-US'>E</span></IDXSKIP><IDXSKIP><span style='font-size:
+11.0pt;font-family:"Arial","sans-serif"'>-</span></IDXSKIP><IDXSKIP><span lang=EN-US
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-ansi-language:
+EN-US'>mail</span></IDXSKIP><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>)
+может быть выслано уведомительное письмо о проведенной регистрации.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>4.8. После
+успешной регистрации Пользователя на Сайте Администрация принимает на себя
+права и обязанности перед Пользователем, указанные в настоящем Соглашении.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<IDXSKIP><p class=MsoNormal align=center style='text-align:center;
+text-indent:35.45pt'><b><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>5.
+Персональные данные</span></b></p></IDXSKIP>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><IDXSKIP><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>5.1. </IDXSKIP><span
+class=GramE><IDXSKIP>Администрация Сайта осуществляет обработку информации, полученной
+от Пользователя в соответствии с п.4.3 настоящего Соглашения, в том числе их
+персональных данных, в целях исполнения обязательств Администрации Сайта перед
+Пользователем по предоставлению Услуг, указанных в п.1.2 настоящего Соглашения,
+а также проверки, исследования и анализа таких данных, позволяющих поддерживать
+и улучшать сервисы и разделы Сайта, а также разрабатывать новые Сайты, сервисы</IDXSKIP></span>
+<IDXSKIP>и разделы Сайта и распространять рекламные предложения.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>5.2.
+Администрация Сайта осуществляет обработку персональных данных в соответствии с
+законодательством Российской Федерации в целях исполнения настоящего
+Соглашения. В силу ст.6 Федерального закона от 27.07.2006 </IDXSKIP></span><IDXSKIP><span
+lang=EN-US style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-ansi-language:
+EN-US'>N</span></IDXSKIP><span lang=EN-US style='font-size:11.0pt;font-family:"Arial","sans-serif"'>
+</span><span style='font-size:11.0pt;font-family:"Arial","sans-serif";
+mso-bidi-language:HE'><IDXSKIP>152-ФЗ «О персональных данных» отдельное согласие Пользователя
+на обработку его персональных данных не требуется. В силу пп.2 п.2 ст.22
+указанного Закона Администрация Сайта вправе осуществлять обработку
+персональных данных без уведомления уполномоченного органа по защите прав
+субъектов персональных данных.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif";
+mso-bidi-language:HE'><IDXSKIP>5.3. Сбор персональных данных осуществляется на Сайте при
+регистрации Пользователя в соответствии с п.1.6 и п. 4.3 настоящего Соглашения.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif";
+mso-bidi-language:HE'><IDXSKIP>5.4. Персональные данные Пользователей хранятся
+исключительно на электронных носителях и обрабатываются с использованием
+автоматизированных систем, за исключением случаев, когда неавтоматизированная
+обработка персональных данных необходима в связи с исполнением требований законодательства
+Российской Федерации.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif";
+mso-bidi-language:HE'><IDXSKIP>5.5. Персональные данные Пользователя не передаются
+каким-либо третьим лицам, за исключением случаев, прямо предусмотренных
+настоящим Соглашением. Предоставление персональных данных Пользователя по
+запросу государственных органов или органов местного самоуправления
+осуществляется в порядке, предусмотренном законодательством Российской
+Федерации.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif";
+mso-bidi-language:HE'><IDXSKIP>5.6. Пользователь имеет право требовать от Администрации
+Сайта уточнения своих персональных данных, их блокирования или уничтожения в
+случае, если такие данные являются неполными, устаревшими, недостоверными,
+незаконно полученными или не являются необходимыми для заявленной цели
+обработки.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif";
+mso-bidi-language:HE'><IDXSKIP>5.7. Пользователь имеет право на основании запроса
+получать от Администрации Сайта информацию, касающуюся обработки его
+персональных данных. В этих целях запрос направляется в письменной форме по
+адресу: 127083, Россия, ул. Мишина, 56 или в форме электронного документа,
+подписанного квалифицированной электронной подписью в соответствии с
+законодательством Российской Федерации, по адресу электронной почты:</IDXSKIP></span> <span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-bidi-language:
+HE'><IDXSKIP>4dv@4dk.ru. Администрация Сайта обязуется рассмотреть и направить ответ на
+поступивший запрос Пользователя в течение 30 дней с момента поступления
+обращения. Запрос, направляемый Пользователем, должен содержать следующую
+информацию:</IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:89.3pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l10 level1 lfo21;tab-stops:list 89.3pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;mso-bidi-language:HE'><IDXSKIP><span style='mso-list:Ignore'>1.</IDXSKIP><IDXSKIP><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></IDXSKIP></span></span><![endif]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-bidi-language:
+HE'><IDXSKIP>Номер основного документа, удостоверяющего личность Пользователя или его
+представителя.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:89.3pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l10 level1 lfo21;tab-stops:list 89.3pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;mso-bidi-language:HE'><IDXSKIP><span style='mso-list:Ignore'>2.</IDXSKIP><IDXSKIP><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></IDXSKIP></span></span><![endif]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-bidi-language:
+HE'><IDXSKIP>Сведения о выдаче основного документа, удостоверяющего личность
+Пользователя, и выдавшем его органе.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:89.3pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l10 level1 lfo21;tab-stops:list 89.3pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial;mso-bidi-language:HE'><IDXSKIP><span style='mso-list:Ignore'>3.</IDXSKIP><IDXSKIP><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></IDXSKIP></span></span><![endif]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-bidi-language:
+HE'><IDXSKIP>Подпись Пользователя или его представителя.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif";
+mso-bidi-language:HE'><IDXSKIP>5.8. Вся корреспонденция, полученная Администрацией Сайта
+от Пользователей (обращения в письменной или электронной форме), в соответствии
+с п.5.7 настоящего Соглашения, относится к информации ограниченного доступа, и
+не разглашается без письменных согласий Пользователей. Персональные данные и
+иная информация о Пользователе, направившем запрос, не могут быть без
+специального согласия Пользователя использованы иначе, как для ответа по теме
+полученного запроса или в случаях, прямо предусмотренных законодательством
+Российской Федерации.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif";
+mso-bidi-language:HE'><IDXSKIP>5.9. Администрация Сайта принимает технические и
+организационно-правовые меры в целях обеспечения защиты персональных данных
+Пользователя от неправомерного или случайного доступа к ним, уничтожения,
+изменения, блокирования, копирования, раскрытия, распространения, а также от
+иных неправомерных действий.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>5.10.
+Администрация предоставляет доступ к персональным данным Пользователя только
+тем работникам, подрядчикам и агентам Администрации которым эта информация
+необходима для предоставления Услуг Пользователю.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>5.11. Администрация
+Сайта вправе использовать предоставленную Пользователем информацию, в том числе
+персональные данные, в целях обеспечения соблюдения требований действующего
+законодательства Российской Федерации (в том числе в целях предупреждения и/или
+пресечения незаконных и/или противоправных действий Пользователей). </IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>5.12. Раскрытие
+предоставленной Пользователем информации может быть произведено лишь в
+соответствии с действующим законодательством Российской Федерации по требованию
+суда, правоохранительных органов, а равно в иных предусмотренных
+законодательством Российской Федерации случаях.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<IDXSKIP><p class=MsoNormal align=center style='text-align:center;
+text-indent:35.45pt'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>6. Обязанности
+Пользователя Сайта</span></b></p></IDXSKIP>
+
+<IDXSKIP><p class=MsoNormal align=center style='text-align:center;
+text-indent:35.45pt'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></b></p></IDXSKIP>
+
+<p class=MsoNormal style='text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>6.1. Пользователь при
+Регистрации на Сайте обязан предоставлять достоверные, полные и актуальные
+данные.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>6.2. При пользовании
+предоставляемыми Услугами Пользователь обязан соблюдать положения действующего
+законодательства Российской Федерации и настоящего Соглашения. </IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>6.3. Пользователю
+запрещается:</span></p></IDXSKIP>
+
+<p class=MsoNormal style='margin-left:82.2pt;text-align:justify;text-indent:
+-1.0cm'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>6.3.1. Регистрироваться
+в качестве Пользователя от имени или вместо другого лица. При этом возможна
+регистрация от имени и по поручению другого физического лица или юридического
+лица при условии получения необходимых полномочий в порядке и форме,
+предусмотренных законодательством Российской Федерации; </IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='margin-left:54.0pt;text-align:justify'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>6.3.2. Искажать
+сведения о себе; </span></p></IDXSKIP>
+
+<p class=MsoNormal style='margin-left:82.2pt;text-align:justify;text-indent:
+-1.0cm'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>6.3.3. Использовать
+программное обеспечение и осуществлять действия, направленные на нарушение
+нормального функционирования Сайта и его Сервисов; </IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:82.2pt;text-align:justify;text-indent:
+-1.0cm'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>6.3.4. Осуществлять
+(пытаться получить) доступ к каким-либо Услугам, предоставляемым Пользователю в
+соответствии с настоящим Соглашением, иным способом, кроме как через интерфейс,
+предоставленный Администрацией Сайта.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>6.4. Пользователю
+при использовании полученного Контента запрещается воспроизводить, дублировать,
+копировать, продавать, осуществлять торговые операции и перепродавать Контент
+для каких-либо целей, за исключением случаев, когда такие действия были прямо
+разрешены Пользователю в соответствии с условиями отдельного соглашения с Администрацией
+Сайта.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>6.5. В
+случае несогласия Пользователя с условиями настоящего Соглашения Пользователь
+обязан отказаться от регистрации на Сайте. </IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal align=center style='text-align:center;
+text-indent:35.45pt'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>7. Условия об
+интеллектуальных правах</IDXSKIP></span></b></p>
+
+<IDXSKIP><p class=MsoNormal align=center style='text-align:center;
+text-indent:35.45pt'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></b></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>7.1.
+Контент, предоставляемый Пользователю, включающий, в том числе, элементы
+дизайна, текст, графические изображения, иллюстрации, видео, скрипты,
+программы, и другие объекты и их подборки, может являться объектом
+исключительных прав Администрации Сайта и других правообладателей. Все права на
+эти объекты защищены.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><IDXSKIP><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>7.2. </IDXSKIP><span
+class=GramE><IDXSKIP>Кроме случаев, установленных настоящим Соглашением, а также
+действующим законодательством Российской Федерации, никакой Контент не может
+быть скопирован (воспроизведен), переработан, распространен, отображен во
+фрейме, опубликован, передан, продан или иным способом использован целиком или
+по частям без предварительного разрешения правообладателя, кроме случаев, когда
+правообладатель явным образом выразил свое согласие на свободное использование
+Контента любым лицом.</IDXSKIP></span></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>7.3. Использование
+Пользователем Контента, доступ к которому получен исключительно для личного
+некоммерческого использования, допускается при условии сохранения всех знаков
+авторства (</IDXSKIP><IDXSKIP><span class=SpellE>копирайтов</span></IDXSKIP><IDXSKIP>) или других уведомлений об
+авторстве, сохранения имени автора в неизменном виде, сохранении произведения в
+неизменном виде.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>7.4. Любое
+использование Контента, кроме разрешенного в настоящем Соглашении или в случае
+явно выраженного согласия правообладателя на такое использование, без
+предварительного письменного разрешения правообладателя, категорически
+запрещено. </IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>7.5. Если
+иное явным образом не установлено настоящим Соглашением, ничто в настоящем
+Соглашении не может быть рассмотрено как передача исключительных прав на
+Контент. </IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal align=center style='text-align:center;
+text-indent:35.45pt'><b><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>8.
+Функционирование Сервисов Сайта и ответственность Сторон</IDXSKIP></span></b></p>
+
+<IDXSKIP><p class=MsoNormal align=center style='text-align:center;
+text-indent:35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>8.1. Нарушение
+условий настоящего Соглашения и действующего законодательства Российской
+Федерации влечет за собой гражданско-правовую, административную и уголовную
+ответственность. </IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>8.2.
+Администрация Сайта обеспечивает функционирование и работоспособность Сервисов
+Сайта и обязуется оперативно восстанавливать их работоспособность в случае
+технических сбоев и перерывов. Администрация Сайта не несет ответственности за
+временные сбои и перерывы в работе Сайта и его Сервисов и вызванные ими потерю
+информации. Администрация не несет ответственности за любой ущерб компьютеру
+Пользователя или иного лица, мобильным устройствам, любому другому оборудованию
+или программному обеспечению, вызванный или связанный со скачиванием материалов
+посредством Сервисов Сайта.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>8.3.
+Администрация Сайта не проверяет достоверность получаемой (собираемой)
+информации о Пользователе, указанной в п. 4.3 настоящего Соглашения, за
+исключением случаев, когда такая проверка необходима в целях исполнения
+Администрацией Сайта обязательств перед Пользователем.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>8.4. Предоставляя
+Услуги, Администрация Сайта, действуя разумно и добросовестно, считает, что
+Пользователь:</IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:89.3pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo20;tab-stops:list 89.3pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial'><IDXSKIP><span style='mso-list:Ignore'>1.</IDXSKIP><IDXSKIP><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></IDXSKIP></span></span><![endif]><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>Обладает
+всеми необходимыми правами, позволяющими ему осуществлять Регистрацию на Сайте.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:89.3pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo20;tab-stops:list 89.3pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial'><IDXSKIP><span style='mso-list:Ignore'>2.</IDXSKIP><IDXSKIP><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></IDXSKIP></span></span><![endif]><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>Указывает
+достоверную информацию о себе в объемах, необходимых для получения Услуг.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:89.3pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo20;tab-stops:list 89.3pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial'><IDXSKIP><span style='mso-list:Ignore'>3.</IDXSKIP><IDXSKIP><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></IDXSKIP></span></span><![endif]><span class=GramE><IDXSKIP><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>Ознакомлен</span></IDXSKIP></span><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'> <IDXSKIP>с настоящим
+Соглашением, выражает свое согласие с ним и принимает на себя указанные в нем
+права и обязанности.</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>8.5.
+После регистрации Пользователя на Сайте Администрация Сайта имеет право
+направлять Пользователю информацию о развитии Сайтов Администрации и их Сервисов,
+а также рекламировать собственную деятельность и услуги по сетям электросвязи в
+соответствии с частью 1 статьи 18 Федерального закона от 13.03.2006 N 38-ФЗ «О
+рекламе».</IDXSKIP></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:
+35.45pt'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>8.6.
+Действие настоящего Соглашения не распространяется на действия и
+интернет-ресурсы третьих лиц.</IDXSKIP></span></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:11.0pt;font-family:"Arial","sans-serif"'><IDXSKIP>9.
+ОГРАНИЧЕНИЕ ОТВЕТСТВЕННОСТИ АДМИНИСТРАЦИИ САЙТА</IDXSKIP></span></b></p>
+
+<IDXSKIP><p class=MsoNormal style='text-align:justify'><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'>&nbsp;</span></p></IDXSKIP>
+
+<h2 style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-bottom:.0001pt;text-align:justify;text-indent:36.0pt;mso-list:l8 level2 lfo19;
+tab-stops:list 36.0pt left 81.0pt'><![if !supportLists]><span style='font-size:
+11.0pt;mso-fareast-font-family:Arial;font-weight:normal;font-style:normal'><IDXSKIP><span
+style='mso-list:Ignore'>9.1.</IDXSKIP><IDXSKIP><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></IDXSKIP></span></span><![endif]><span style='font-size:11.0pt;font-weight:normal;
+font-style:normal'><IDXSKIP>АДМИНИСТРАЦИЯ САЙТА НЕ МОЖЕТ ГАРАНТИРОВАТЬ И НЕ ОБЕЩАЕТ
+НИКАКИХ СПЕЦИФИЧЕСКИХ РЕЗУЛЬТАТОВ ОТ ИСПОЛЬЗОВАНИЯ ПОЛУЧЕННЫХ УСЛУГ – КОНТЕНТА
+И ИНФОРМАЦИИ.</IDXSKIP></span></h2>
+
+<h2 style='margin:0cm;margin-bottom:.0001pt;text-align:justify;text-indent:
+54.0pt;mso-list:l8 level2 lfo19;tab-stops:list 36.0pt left 81.0pt'><![if !supportLists]><span
+style='font-size:11.0pt;mso-fareast-font-family:Arial;font-weight:normal;
+font-style:normal'><IDXSKIP><span style='mso-list:Ignore'>9.2.</IDXSKIP><IDXSKIP><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></IDXSKIP></span></span><![endif]><span style='font-size:11.0pt;font-weight:normal;
+font-style:normal'><IDXSKIP>ВО ИЗБЕЖАНИЕ НЕДОРАЗУМЕНИЙ АДМИНИСТРАЦИЯ САЙТА НАСТОЯТЕЛЬНО
+РЕКОМЕНДУЕТ ИСПОЛЬЗОВАТЬ ПРИ СКАЧИВАНИИ КОНТЕНТА САЙТА ТОЛЬКО ЛИЦЕНЗИОННОЕ, В
+ТОМ ЧИСЛЕ АНТИВИРУСНОЕ, ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ.</IDXSKIP></span></h2>
+
+<h2 style='margin:0cm;margin-bottom:.0001pt;text-align:justify;text-indent:
+54.0pt;mso-list:l8 level2 lfo19;tab-stops:list 36.0pt left 81.0pt'><![if !supportLists]><span
+style='font-size:11.0pt;mso-fareast-font-family:Arial;font-weight:normal;
+font-style:normal'><IDXSKIP><span style='mso-list:Ignore'>9.3.</IDXSKIP><IDXSKIP><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></IDXSKIP></span></span><![endif]><span class=GramE><span style='font-size:11.0pt;
+font-weight:normal;font-style:normal'><IDXSKIP>ИСПОЛЬЗУЯ САЙТ, ПОЛЬЗОВАТЕЛЬ СОГЛАШАЕТСЯ
+С ТЕМ, ЧТО СКАЧИВАЕТ С САЙТА ИЛИ С ЕГО ПОМОЩЬЮ ЛЮБЫЕ МАТЕРИАЛЫ НА СВОЙ
+СОБСТВЕННЫЙ РИСК И НЕСЕТ ЛИЧНУЮ ОТВЕТСТВЕННОСТЬ ЗА ВОЗМОЖНЫЕ ПОСЛЕДСТВИЯ
+ИСПОЛЬЗОВАНИЯ УКАЗАННЫХ МАТЕРИАЛОВ, В ТОМ ЧИСЛЕ ЗА УЩЕРБ, КОТОРЫЙ ЭТО МОЖЕТ
+ПРИЧИНИТЬ КОМПЬЮТЕРУ ПОЛЬЗОВАТЕЛЯ ИЛИ ТРЕТЬИМ ЛИЦАМ, ЗА ПОТЕРЮ ДАННЫХ ИЛИ ЛЮБОЙ
+ДРУГОЙ ВРЕД.</IDXSKIP></span></span><span style='font-size:11.0pt;font-weight:normal;
+font-style:normal'></span></h2>
+
+<h2 style='margin:0cm;margin-bottom:.0001pt;text-align:justify;text-indent:
+54.0pt;mso-list:l8 level2 lfo19;tab-stops:list 36.0pt left 81.0pt'><![if !supportLists]><span
+style='font-size:11.0pt;mso-fareast-font-family:Arial;font-weight:normal;
+font-style:normal'><IDXSKIP><span style='mso-list:Ignore'>9.4.</IDXSKIP><IDXSKIP><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></IDXSKIP></span></span><![endif]><span class=GramE><span style='font-size:11.0pt;
+font-weight:normal;font-style:normal'><IDXSKIP>НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ
+АДМИНИСТРАЦИЯ САЙТА ИЛИ ЕЕ ПРЕДСТАВИТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ПЕРЕД
+ПОЛЬЗОВАТЕЛЕМ ИЛИ ПЕРЕД ЛЮБЫМИ ТРЕТЬИМИ ЛИЦАМИ ЗА ЛЮБОЙ КОСВЕННЫЙ, СЛУЧАЙНЫЙ,
+НЕУМЫШЛЕННЫЙ УЩЕРБ, ВКЛЮЧАЯ УПУЩЕННУЮ ВЫГОДУ ИЛИ ПОТЕРЯННЫЕ ДАННЫЕ, ВРЕД ЧЕСТИ,
+ДОСТОИНСТВУ ИЛИ ДЕЛОВОЙ РЕПУТАЦИИ, ВЫЗВАННЫЙ ИСПОЛЬЗОВАНИЕМ СКАЧИВАЕМОГО
+КОНТЕНТА ИЛИ ИНЫХ МАТЕРИАЛОВ, К КОТОРЫМ ПОЛЬЗОВАТЕЛЬ ИЛИ ИНЫЕ ЛИЦА ПОЛУЧИЛИ
+ДОСТУП С ПОМОЩЬЮ САЙТА, ДАЖЕ ЕСЛИ АДМИНИСТРАЦИЯ САЙТА ПРЕДУПРЕЖДАЛА</IDXSKIP></span></span><span
+style='font-size:11.0pt;font-weight:normal;font-style:normal'> <IDXSKIP>ИЛИ УКАЗЫВАЛА НА
+ВОЗМОЖНОСТЬ ТАКОГО ВРЕДА. </IDXSKIP></span></h2>
+
+<IDXSKIP><h2 style='margin:0cm;margin-bottom:.0001pt;text-align:justify;text-indent:
+0cm;mso-list:none;tab-stops:81.0pt'><span style='font-size:11.0pt;font-weight:
+normal;font-style:normal'>&nbsp;</span></h2></IDXSKIP>
+
+<IDXSKIP><p class="MsoNormal" align="center" style="text-align:center;
+text-indent:35.45pt"><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">10. Заключительные
+     положения</span></b></p></IDXSKIP>
+
+
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-indent:
+-21.0pt;mso-list:l18 level2 lfo24;tab-stops:list 21.0pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial'><IDXSKIP><span style='mso-list:Ignore'>10.1</span></IDXSKIP></span><![endif]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'> <IDXSKIP>Настоящее Соглашение толкуется
+в соответствии с законодательством Российской Федерации. Вопросы, не
+урегулированные настоящим Соглашением, подлежат разрешению в соответствии с
+законодательством Российской Федерации. </IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-indent:
+-21.0pt;mso-list:l18 level2 lfo24;tab-stops:list 21.0pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial'><IDXSKIP><span style='mso-list:Ignore'>10.2</span></IDXSKIP></span><![endif]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'> <IDXSKIP>В случае
+возникновения любых споров или разногласий, связанных с исполнением настоящего
+Соглашения, Пользователь и Администрация Сайта приложат все усилия для их
+разрешения путем проведения переговоров между ними. В случае если споры не
+будут разрешены путем переговоров, споры подлежат разрешению в порядке,
+установленном действующим законодательством Российской Федерации. </IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-indent:
+-21.0pt;mso-list:l18 level2 lfo24;tab-stops:list 21.0pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial'><IDXSKIP><span style='mso-list:Ignore'>10.3</span></IDXSKIP></span><![endif]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'> <IDXSKIP>Настоящее Соглашение
+вступает в силу для Пользователя с момента его присоединения к нему и действует
+в течение неопределенного срока. </IDXSKIP></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-indent:
+-21.0pt;mso-list:l18 level2 lfo24;tab-stops:list 21.0pt'><![if !supportLists]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+Arial'><IDXSKIP><span style='mso-list:Ignore'>10.4</span></IDXSKIP></span><![endif]><span
+style='font-size:11.0pt;font-family:"Arial","sans-serif"'> <IDXSKIP>Если по тем или иным
+причинам одно или несколько положений настоящего Соглашения будут признаны
+недействительными или не имеющими юридической силы, это не оказывает влияния на
+действительность или применимость остальных положений.</IDXSKIP></span></p>
+    </div>
+  </div>
+</div><IDXSKIP><div class="bottom-counter">
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter10970545 = new Ya.Metrika({id:10970545, enableAll: true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/10970545" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<!--ЧТОДЕЛАТЬКОНСАЛТ-->
+
+
+</div></IDXSKIP>
+				<!--sb_index_end-->
+
+<script type="text/javascript">
+    var product = {
+        category: [ 'бухгалтеры', 'articles', 'bukhgalteriya', 'www.4dk-soft.ru/maintenance-of-1c/step-by-step-instructions/274/7101/']  
+		
+    };
+</script>
+
+<script type="text/javascript">
+   /* (function(){
+        var s   = document.createElement('script');
+        var x   = document.getElementsByTagName('script')[0];
+        s.type  = 'text/javascript';
+        s.async = true;
+        s.src   = ('https:'==document.location.protocol?'https://':'http://')
+                + 'eu-sonar.sociomantic.com/js/2010-07-01/adpan/4dk-ru';
+        x.parentNode.insertBefore( s, x );
+    })(); */
+</script>
+
+
+<div class="customModal" id="NewCallBackModalBlock">
+	<div class="modalWrapper">
+		<div class="modalClose modalCloseBtn"><i class="fa fa-times"></i></div>
+		<div class="modalHeader"></div>
+		<div class="modalContent" style="max-width: 600px;padding: 20px;">
+			<h2>Заказать звонок</h2>
+									<form id="NewCallbackForm"  name="NewCallbackForm" action="/maintenance-of-1c/step-by-step-instructions/274/7101/" method="post" enctype="multipart/form-data"><input type="hidden" name="sessid" id="sessid" value="b9d01b8564de1eec88a51f5f710f1093" /><input type="hidden" name="WEB_FORM_ID" value="127" />				<div class="form-item">
+					<input type="text" class="inputtext" name="form_text_1328" placeholder="Имя">
+				</div>
+				<div class="form-item">					
+					<input type="text" class="inputtext valAsPhone" name="form_text_1329" placeholder="Телефон">
+				</div>
+				<div class="form-item">
+					<input id="sendbutton" class="input-submit" type="submit" name="web_form_submit" value="Отправить" />
+				</div>
+			</form>		</div>
+	</div>
+</div>
+
+<div class="customModal" id="SuccessCallBackModalBlock">
+	<div class="modalWrapper">
+		<div class="modalClose modalCloseBtn"><i class="fa fa-times"></i></div>
+		<div class="modalHeader"></div>
+		<div class="modalContent">
+			<h2>Спасибо!</h2>
+			<p><IDXSKIP>В ближайшее время наши операторы свяжутся с Вами.</IDXSKIP></p>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="/bitrix/templates/soft_inner/js/jquery.cookie.js"></script>
+<script>
+$(document).ready(
+   function(){
+     setTimeout(function(){
+       $(".banner-popup-block").css("display", "block");
+     }, 5000);
+     
+     
+     $(".close-banner-btn").click(
+       function(){
+          closePopup();
+       }
+     );
+     
+     $("a.popuplink").click(
+       function(){
+          closePopup();
+       }
+     );
+   }
+);
+
+$(document).mouseup(function (e) { 
+     $(".popupimg").each(    // скрываем всплывающие окна при клике вне их
+       function(){
+          if ($(this).find(".popupimg").has(e.target).length === 0){
+                   closePopup();  
+
+         }
+       }
+    );
+});
+
+function closePopup(){
+    $(".banner-popup-block").css("display", "none"); 
+         $.cookie('softbanner', '1', {
+              path: '/',
+         });
+}
+</script>
+
+<style>
+.banner-popup-block{
+   position:fixed;
+   top:0px;
+   left:0px;
+   width:100%;
+   height:100%;
+   z-index:10000;
+   background: url("/images/banner-back-shadow.png");
+   display:none;
+}
+
+.banner-popup-block-inner{
+   width:600px;
+   height:auto;
+   position:relative;
+   margin:100px auto 0px;
+   background-color:#FFFFFF;
+}
+
+img.popupimg{
+  max-width:100%;
+  height:auto;
+      margin-bottom: -4px;
+}
+
+.close-banner-btn{
+   cursor:pointer;
+   position:absolute;
+   top:-25px;
+   right:-25px;
+   
+}
+</style>
+<IDXSKIP><div class="banner-popup-block">
+  <div class="banner-popup-block-inner">
+  <img src="/images/close-banner-btn.png" class="close-banner-btn">
+		<a href="http://www.4dk-soft.ru/pakety-obsluzhivaniya/?utm_source=4dk-soft.ru&utm_medium=media&utm_campaign=popup-obsluzhivanie-301015" id="bx_3218110189_16764" class="popuplink">
+    <img src="/upload/iblock/ffd/ffde9093a0da890a6e92e88deafff52e.jpg" class="popupimg">
+	</a>
+   </div>
+ </div></IDXSKIP>
+
+  <script src="//counter.cleardata.ru" async="true"></script><IDXSKIP><noscript><img src="//counter.cleardata.ru/noscript" /></noscript></IDXSKIP>
+ <!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = '7r4cpEDjrR';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
+
+</body>
+</html>

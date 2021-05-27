@@ -1,0 +1,2806 @@
+gosuslugi.ru/pgu/cat/LIFE_SITUATION.html?open=11
+<!DOCTYPE html>
+
+
+
+
+    
+
+
+
+
+<html>
+	<head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Каталог услуг - Портал государственных услуг Российской Федерации</title>
+
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+        <link rel="shortcut icon" href="/favicon.ico?v2" />
+        <link rel="icon" type="image/png" href="/pgu/htdocs/img/icons/russia-flag.png;jsessionid=0EC3969A75C747053A76DD2EF7FC02CF" />
+            <script type="text/javascript">
+                this.top.location !== this.location && (this.top.location = this.location);
+            </script>
+
+
+
+		<script type="text/javascript" src="/pgu/htdocs/js/2012/jquery-1.7.1.min.js;jsessionid=0EC3969A75C747053A76DD2EF7FC02CF"></script>
+            <link rel="stylesheet" type="text/css" href="/pgu/htdocs/css/2012/jquery.ui.css;jsessionid=0EC3969A75C747053A76DD2EF7FC02CF" />
+            <script type="text/javascript" src="/pgu/htdocs/js/2012/jquery-ui-1.8.16.custom.min.js;jsessionid=0EC3969A75C747053A76DD2EF7FC02CF"></script>
+            <script type="text/javascript" src="/pgu/htdocs/js/2012/jquery-ui-i18n.min.js;jsessionid=0EC3969A75C747053A76DD2EF7FC02CF"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            // chunks decl
+
+            Chunk.decl("content", "categories",
+                // init
+                function(params, data){
+$('.region_indicator').bind('changeRegion', function(){
+    // reload catalog on region changed
+    catalog && catalog.load();
+});                    
+
+                },
+                // static data
+                {"recipCategory":"PERSON","classifier":"LIFE_SITUATION"},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "shadow",
+                // init
+                function(params, data){
+var $me = $(this);
+
+var counter = 0;
+
+$me.bind('shade', function() {
+    if (++counter == 1) {
+        $me.height($(document).height());
+        $me.show();
+    }
+    return false;
+});
+
+$me.bind('unshade', function(e) {
+    counter && --counter;
+    if (counter == 0){
+        $me.hide();
+    }
+    return false;
+});                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "button",
+                // init
+                function(params, data){
+
+params.href = params.href || 'javascript://';
+params.type = params.type || 'custom';
+params.title = params.title || 'Кнопка';
+
+var $button = $(this);
+
+// attribute-oriented params
+$.map(['id', 'name',  'href'], function(key){
+    $button.bind(key, function(e, val){
+        val ? $button.attr(key, val) : $button.removeAttr(val);
+        params[key] = val;
+        return false;
+    });
+});
+
+$button
+    .bind('title', function(e, title){
+        $button.empty()
+            .html(title)
+            .prepend('<i></i>');
+        $button.triggerHandler('icon', params.icon);
+        params.title = title;
+        return false;
+    })
+    .bind('icon', function(e, icon){
+        $button.find('b').remove();
+        icon && $('<b></b>').attr('class', icon).prependTo($button);
+        icon ? $button.addClass('has-icon') : $button.removeClass('has-icon');
+        params.icon = icon;
+        return false;
+    })
+    .bind('type', function(e, type){
+        $button.removeClass('button-' + params.type);
+        params.type = type;
+        $button.addClass('button-' + params.type);
+        return false;
+    })
+    .bind('disabled', function(e, val){
+      val ? $button.addClass('disabled') : $button.removeClass('disabled');
+        return false;
+    });
+
+// init
+$.map(['id', 'name', 'href', 'title', 'icon', 'type', 'disabled'], function(key){
+    $button.triggerHandler(key, [ params[key] ]);
+});                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                "$.tmpl for block button"
+            );
+
+            Chunk.decl("block", "popup",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "bluebanner",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "tool_lang",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "tool_blind",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "tool_maps",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "region_indicator",
+                // init
+                function(params, data){
+var $indicator = $(this);
+var $content = $('.choice', $indicator);
+var $setAction;
+$('a', $indicator).click(function(){
+    $('.region').trigger('show');
+    return false;
+});
+
+
+function changeRegion (e, params) {
+    var regName = params.regionName;
+    if ($('.toolbar').hasClass('has-tool-armd')) regName = (regName.length > 41) ? regName.replace(/^(.{0,41})(\s.+)?$/, '$1...') : regName;
+    $('.region_indicator .region-text').text(regName);
+
+    var path = '/pgu/cat/TERRITORY/' + params.regionCode + '/path.json';
+    $.getJSON(path, function(d){
+        var fullPath = $.map(d, function(i){
+            return i.title;
+        }).join(' / ');
+        $indicator.find('a').attr('title', fullPath);
+        $indicator.find('a').not('.select').attr('title', ' ');
+    });
+    
+}
+
+$indicator.bind('changeRegion', function(e, params){
+    changeRegion(e, params);
+});
+
+$(document).ready(function (e) {
+    changeRegion(e, params);
+});
+
+
+function createDialog() {
+    var $buttons = [];
+    var parentPosition = $('.region_indicator').offset();
+    if ($.browser.msie && parentPosition.left < 0) {
+        parentPosition.left = 387;
+    }
+    if (navigator.geolocation) {
+
+        $buttons.push(
+            Block("button").create({
+                "name": "autoAction",
+                "title": "Автоопределение"
+            }));
+    }
+    $buttons = $.merge($buttons,
+            [
+                Block("button").create({
+                    "name": "manualAction",
+                    "title": "Выбрать вручную"
+                }),
+                Block("button").create({
+                    "name": "currentAction",
+                    "title": "Напомнить позже"
+                })
+            ]);
+
+    $setAction = Block('dialog').create({
+        config: {
+            height: 190,
+            width: 475,
+            'closeText': 'Закрыть',
+            'dialogClass': "arrowClass"
+        },
+        title: '',
+        content: $content,
+        buttons: $buttons,
+        place: {"left": parentPosition.left, "top": parentPosition.top + 38}
+    });
+    $setAction.one("dialogclose", function() {
+        $('#regionHelp').popover({
+            content: '<div style="height: 50px;"><span>Для изменения выбранного местоположения и удобства поиска услуг нажмите кнопку "Ваше местоположение" и выберите местоположение из справочника.</span></div>',
+            placement: "bottom",
+            template: '<div class="popover"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+        });
+        $.post('/pgu/geo/setSelectionTypeRegionIsShown');
+        var $block = $('.filling_lk').find(':visible').closest('.arrow_box');
+        if ($block.length) {
+            var $top = $block.offset().top;
+            if ($top) {
+                var back = $.browser.mozilla ? $('html') : $('body');
+                if ($top > 100) {
+                    $top -= 100;
+                }
+                if ($.browser.msie) {
+                    document.documentElement.scrollTop = $top;
+                }
+                else {
+                    back.scrollTop($top);
+                }
+            }
+        }
+        return false;
+    });
+    $('a[name=currentAction]', $setAction).bind('click', function() {
+        $setAction.trigger('close');
+        return false;
+    });
+
+
+    $('a[name=manualAction]', $setAction).bind('click', function() {
+        $setAction.trigger('close');
+        $('.region').trigger('show');
+        return false;
+    });
+    if (navigator.geolocation) {
+        $('a[name=autoAction]', $setAction).bind('click', function() {
+            $setAction.trigger('close');
+            var $geo = Block('geo').create();
+            $geo.trigger('tabActivate');
+            return false;
+        });
+    }
+}
+function getCookie(name) {
+    var cookie = " " + document.cookie;
+    var search = " " + name + "=";
+    var setStr = null;
+    var offset = 0;
+    var end = 0;
+    if (cookie.length > 0) {
+        offset = cookie.indexOf(search);
+        if (offset != -1) {
+            offset += search.length;
+            end = cookie.indexOf(";", offset);
+            if (end == -1) {
+                end = cookie.length;
+            }
+            setStr = unescape(cookie.substring(offset, end));
+        }
+    }
+    return(setStr);
+}
+// init
+$('document').ready(function() {
+    $('#regionHelp').show();
+    if ((getCookie('userSelectedRegion') == '00000000000') && (!getCookie('locationSelectionTypeIsShown'))) {
+        createDialog();
+        $setAction.trigger('open');
+        $content.show();
+    }
+    else {
+        $('#regionHelp').popover({
+            content: '<div style="height: 50px;"><span>Для изменения выбранного местоположения и удобства поиска услуг нажмите кнопку "Ваше местоположение" и выберите местоположение из справочника.</span></div>',
+            placement: "bottom",
+            template: '<div class="popover"><div class="arrow"></div><div class="popover-inner"><div class="popover-content"><p></p></div></div></div>'
+        });
+    }
+});
+
+
+
+
+
+
+
+                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "toolbar",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "login_box",
+                // init
+                function(params, data){
+var $personcabBox = $(this);
+
+function mailNotification() {
+    var data = {};
+
+    data.pageNumber = 1;
+    data.pageSize = 6;
+
+    $.ajax({
+        url: '/pgu/wsapi/feedbackEventService/listUserUnreadMessage',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        type: 'POST',
+        dataType: 'json',
+        success: function (data) {
+            if (data && data.error && data.error.code == '0') {
+                var messageCount = data.messageCnt ? data.messageCnt : null;
+                if(messageCount && messageCount > 0) {
+                    var link = 'javascript: void(0);';
+                    if (messageCount == 1) {
+
+                        link = "https://www.gosuslugi.ru/pgu/feedback/v2/card?userMsgId=" + data.message[0].msgId;
+                    } else {
+                        if ($('.orders.tabs-lk-item a').length && window.location.hash) {
+                            $personcabBox.on('click', '.mail-box', function () {
+                                $('.orders.tabs-lk-item a').click();
+                                $('.tabs-simple .support a').click();
+                            });
+                        } else {
+                            link = "https://www.gosuslugi.ru/pgu/personcab#_orders-support";
+                        }
+
+                    }
+
+                    var $template = '<a href="' + link + '" class="mail-box" title="Непрочитанные сообщения"><i class="mail-box-icon"></i></a>';
+                    $('.exit-box', $personcabBox).addClass('has-mails').append($template);
+                }
+            }
+        }
+    });
+}
+mailNotification();
+
+                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "menu_top",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "search_box",
+                // init
+                function(params, data){
+var $inp = $('input', this);
+var $form = $inp.closest('form');
+var invitation = $inp.attr('invitation');
+var initial = $inp.val();
+var $button = $('.searchButton', this);
+
+$inp.val(initial || invitation);
+
+$inp.focus(function(){
+    if ($inp.val() == invitation)
+        $inp.val(initial);
+});
+
+var blurIgnoreOnce;
+$inp.blur(function(){
+    if (blurIgnoreOnce)
+        return blurIgnoreOnce = false;
+    if ($inp.val() == '')
+        $inp.val(initial || invitation);
+    emptySuggests();
+});
+
+// suggests //
+var $ul,
+    DELAY = 500, timeout,
+    MIN_LENGTH = 3,
+    lastWord = initial,
+    $list, $current;
+
+// init
+emptySuggests();
+
+$inp.keyup(function(e){
+    switch(e.keyCode){
+    case 27: // esc
+        emptySuggests();
+        $inp.val(initial);
+        break;
+    case 40: // down
+        setCurrent( $current.next()[0] || $current[0] );
+        return false;
+    case 38: // up
+        setCurrent( $current.prev()[0] || $current[0] );
+        return false;
+    case 13: // enter
+        if (($inp.val() != invitation) && ($.trim($inp.val()) != '') ) enterSuggest();
+        return false;
+    default:
+        var word = $.trim( $inp.val() );
+        if (word.length >= MIN_LENGTH && word != lastWord){
+            requestSuggests();
+        }
+        lastWord = word;
+    }
+});
+$inp.keypress(function(e){
+    return e.keyCode != 13;
+});
+$inp.focus(requestSuggests);
+
+$button.click(function(){
+    if (($inp.val() != invitation) && ($.trim($inp.val()) != '') ) enterSuggest();
+});
+
+function setCurrent(li, setVal){
+    $current.removeClass('active');
+    $current = $(li);
+    $current.addClass('active');
+    setVal === false || $inp.val( $current.data('word') );
+    lastWord = $.trim( $inp.val() );
+}
+
+function enterSuggest(){
+    var word = $current.length ? $current.data('word') || '' : $inp.val();
+    $inp.val(word);
+    emptySuggests();
+    word && $inp[0].form.submit();
+}
+
+var cache = {};
+function requestSuggests(){
+    emptySuggests();
+    var word = $.trim( $inp.val() );
+
+    if(!word) return;
+
+    if (cache[word])
+        receiveSuggests(cache[word], word);
+    else{
+        clearTimeout(timeout);
+        timeout = setTimeout(function(){
+            $.getJSON(
+                '/pgu/suggests',
+                {request: word, resultCount: 5},
+                function(data){
+                    cache[word] = data.suggests;
+                    if ($.trim($inp.val()) != word)
+                        return;
+                    receiveSuggests(data.suggests, word);
+                }
+            );
+        }, DELAY);
+    }
+}
+
+function receiveSuggests(list, word){
+    list.sort(function(a, b) {
+        return (a.requestCount >= b.requestCount) ? (a.requestCount == b.requestCount) ? 0 : -1 : 1;
+    });
+
+    emptySuggests();
+
+    // filter
+    list = $.map(list, function(item){
+        return item.hint != word ? item : null;
+    });
+
+    if (list.length){
+        var curr = {
+            hint: $inp.val()
+        };
+        list = [curr].concat(list);
+
+        $ul = $(
+            '<div class="suggest-list-wrapper">' +
+                '<div class="suggest-list-wrapper-center">' +
+                    '<ul class="suggest-list"></ul>' +
+                '</div>' +
+                '<div class="suggest-list-wrapper-bottom"><div class="suggest-list-wrapper-bottom-inner"></div></div>' +
+            '</div>')
+            .insertAfter($inp)
+            .find('ul');
+
+        var regexp = new RegExp('(' + word.replace(/([\/|()*+?$^{}\[\].])/g, '\\$1') + ')', 'i');
+        $.each(list, function(i, sugg){
+            $('<li class="suggest-list-item">' +
+                '<span class="suggest-list-item-text">' +
+                    sugg.hint.replace(regexp, '<b>$1</b>') + // ' (' + sugg.resultCount + ')' +
+                '</span>' +
+            '</li>')
+            .appendTo($ul)
+            .mouseover(function(e){
+                setCurrent(this);
+            })
+            .mousedown(function(e){
+                blurIgnoreOnce = true;
+            })
+            .click(enterSuggest)
+            .data('word', sugg.hint);
+        });
+        $list = $ul.find('li');
+        setCurrent($list.eq(0).hide(), false);
+
+        // mark than suggests is opened
+        $form.addClass('suggests-opened');
+    }
+}
+
+function emptySuggests(){
+    $inp.nextAll().remove();
+
+    $ul = $([]);
+    $list = $([]);
+    $current = $([]);
+
+    // mark than suggests is closed
+    $form.removeClass('suggests-opened');
+}                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "header",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "disclaimer",
+                // init
+                function(params, data){
+var $disclaimers = $(this);
+
+function getCookie(name) {
+    var cookie = " " + document.cookie;
+    var search = " " + name + "=";
+    var setStr = null;
+    var offset = 0;
+    var end = 0;
+    if (cookie.length > 0) {
+        offset = cookie.indexOf(search);
+        if (offset != -1) {
+            offset += search.length;
+            end = cookie.indexOf(";", offset);
+            if (end == -1) {
+                end = cookie.length;
+            }
+            setStr = unescape(cookie.substring(offset, end));
+        }
+    }
+    return(setStr);
+}
+
+function existDisclaimer(id) {
+    var ret = false;
+    if (!id) {
+        return ret;
+    }
+    var idStr = id.toString();
+    $('div.disclaimer .warningMsgClose').each(function(){
+         if ($(this).attr('id') === idStr) {
+             ret = true;
+             return false;
+         }
+    });
+    return ret;
+}
+
+function getAllDisclaimer() {
+   var dataSend = {"codes": params.code, "region": "00", "showAll": params.showAll};
+   $.ajax({
+        url: '/pgu/wsapi/serviceInspector/listActivePortalDisclaimersV3',
+        contentType: 'application/json',
+        data: JSON.stringify(dataSend),
+        type: 'POST',
+        dataType: 'json',
+        success: function(data) {
+            if (data && data.error && data.error.code == '0') {
+                if (data.portalDisclaimers && data.portalDisclaimers.length) {
+                    var ret = [];
+                    for (var j = 0; j < data.portalDisclaimers.length; j++) {
+                        var level_disclaimer = 'WARN';
+                        var messages = data.portalDisclaimers[j].messages;
+                        if (existDisclaimer(data.portalDisclaimers[j].id)) {
+                            continue;
+                        }
+                        if (data.portalDisclaimers[j].level) {
+                            switch (data.portalDisclaimers[j].level) {
+                                case 'WARN':
+                                case 'INFO':
+                                case 'ERROR':
+                                    level_disclaimer = data.portalDisclaimers[j].level;
+                                    break;
+                                default:
+                                    level_disclaimer = 'WARN';
+                                    break;
+                            }
+                        }
+                        if (messages && messages.length) {
+                            for (var i = 0; i < messages.length; i++) {
+                                if (messages[i].language == 'Ru') {
+                                   if (getCookie('hiddenWarningMsgId' +  data.portalDisclaimers[j].id) === 'true') {
+                                       break;
+                                   }
+                                    if (level_disclaimer == 'INFO' &&  $.browser.msie && $.browser.version.split(".")[0] < 9) {
+                                    }
+                                    else {
+                                        ret.push({"code": data.portalDisclaimers[j].mnemonic, "id": data.portalDisclaimers[j].id, "message": messages[i].message, "level_disclaimer": level_disclaimer.toLowerCase()});
+                                    }
+
+                                   break;
+                                }
+                            }
+                        }
+                    }
+                    if (ret.length) {
+                        for (var k = 0; k < ret.length; k++) {
+                            var blockDiscl = Block('disclaimer_item').create({
+                                "id": ret[k].id,
+                                "code": ret[k].code,
+                                "message": ret[k].message,
+                                "level_disclaimer": ret[k].level_disclaimer
+                            });
+                            if (ret[k].code == 'EPGU_V2_STATE_STRUCTURE_FOR_ALL') {
+
+                                $(blockDiscl).find('a').each(function (ind, a_obj) {
+                                    var a_href = $(a_obj).attr('href');
+                                    var pos = a_href.indexOf('/structure');
+                                    if (pos != -1) {
+                                        for (var k = 0; k < dataSend.codes.length; k++) {
+                                            if (dataSend.codes[k].mnemonic == 'EPGU_V2_STATE_STRUCTURE_FOR_ALL') {
+                                                var id = dataSend.codes[k].id;
+                                                break;
+                                            }
+                                        }
+                                        if (id) {
+                                            a_href = a_href.replace('/structure', '/structure/' + id);
+                                            $(a_obj).attr('href', a_href);
+                                        }
+                                    }
+                                });
+                            }
+                            $disclaimers.append(blockDiscl);
+                        }
+                    }
+                }
+            }
+        },
+        error: function() {
+            return false;
+        }
+    });
+}
+
+getAllDisclaimer();                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                "$.tmpl for block disclaimer"
+            );
+
+            Chunk.decl("block", "dropdown",
+                // init
+                function(params, data){
+
+// defaults
+params.optionsMaxHeight = params.optionsMaxHeight || 210;
+params.options = params.options || [];
+params.emptyOption = params.emptyOption || {
+    text: "Не выбрано",
+    val: ""
+};
+
+// inherit
+Block("abstract_input").init.apply(this, arguments);
+
+var $dropdown = $(this),
+    $input = $dropdown.find('input[type=hidden]'),
+    $both = $dropdown.add($input),
+    $ul = $dropdown.find('ul.select'),
+    textByVal = {};
+
+function options(){
+    return params.canEmpty ? (params.emptyOption && params.emptyOption.hasOwnProperty('text') ? [params.emptyOption].concat(params.options) : params.options) : params.options;
+}
+function outerClickHandler(e){
+	var $chain = $(e.target).parents().andSelf();
+	if (-1 == $.inArray($dropdown[0], $chain))
+		$dropdown.trigger('open', [ false ]);
+}
+
+// max height impl
+var scrollInited;
+function refreshScroll(){
+    if (scrollInited || $dropdown.is(':hidden')) return;
+
+    // remove scroll before filling
+    $ul.removeClass('has-scroll');
+    $ul.css('max-height', 'none');
+    $ul.css('height', 'auto');
+    // is show
+    var wasOpen = $dropdown.hasClass('open');
+    $dropdown.addClass('open');
+
+    // max height imitator
+    if ($ul.height() > params.optionsMaxHeight){
+        // add scroll
+        $ul.css('max-height', params.optionsMaxHeight);
+        $ul.addClass('has-scroll');
+    }
+    // restore show
+    wasOpen ? $dropdown.addClass('open') : $dropdown.removeClass('open');
+
+    scrollInited = true;
+}
+
+// methods
+$both
+    .bind("open", function(e, open){
+        open = open && !params.disabled;
+		if (open){
+			$dropdown.addClass('open');
+            refreshScroll();
+			// waiting for outer click
+			$(document).bind('mousedown', outerClickHandler);
+		}
+		else{
+			$dropdown.removeClass('open');
+			// remove waiting
+			$(document).unbind('mousedown', outerClickHandler);
+		}
+        params.open = open;
+        return false;
+    })
+
+    .bind("disabled", function(e, disabled){
+        disabled &&
+            $dropdown.triggerHandler('open', [ false ]);
+        return false;
+    })
+
+    .bind("canEmpty", function(e, canEmpty){
+        params.canEmpty = canEmpty;
+        $dropdown.trigger('refreshOptions');
+        return false;
+    })
+
+    .bind("refreshOptions", function(e){
+        $ul.empty();
+        $.each(options(),
+            function(i, opt){
+                var $opt = $('<li><a href="javascript://"></a></li>');
+                var $a = $opt.find('a');
+                opt.hasOwnProperty('text') && $a.text(opt.text);
+                opt.hasOwnProperty('html') && $a.html(opt.html);
+                $a.click(function(e){
+                    $dropdown.trigger('optionClick', [ opt, i ]);
+                });
+                $ul.append($opt);
+            }
+        );
+        scrollInited = false;
+        refreshScroll();
+        return false;
+    })
+
+    .bind("setOptions", function(e, opts){
+        params.options = opts;
+
+        // filling textByVal
+        textByVal = {};
+        $.each(options(), function(i, opt){
+            textByVal[opt.val] = opt.hasOwnProperty('text') ? opt.text :
+				$.trim( $('<i></i>').html(opt.html || '').text() );
+        });
+
+        $dropdown.trigger('refreshOptions');
+        return false;
+    })
+
+    .bind("optionClick", function(e, opt, i){
+        $dropdown.trigger('val', [ opt.val ]);
+        $dropdown.trigger('open', [ false ]);
+        return false;
+    })
+
+    .bind("textVal", function(e, text){
+        $dropdown.find('.text').text(text || "");
+        return false;
+    })
+
+    .unbind("val")
+    .bind("val", function(e, value){
+        value = (value === 0 || value) ? value : "";
+        if (textByVal.hasOwnProperty(value)){
+            // set input val
+            var prepVal = $input.val();
+            if (""+value !== ""+prepVal){
+                $input.val(value);
+                $dropdown.add($input).trigger('change', [ value, prepVal ]);
+            }
+
+            // set val in params
+            params.val = value;
+
+            // set widget text val & close
+            $dropdown.trigger('textVal', [ textByVal[value] ]);
+        }
+        else if (!value){
+            params.val = "";
+            $dropdown.trigger('textVal', [ "" ]);
+        }
+        else log('dropdown.val(): unknown val', value);
+        return false;
+    });
+
+$dropdown.find('a:first').click(function(){
+    $dropdown.trigger('open', [ !params.open ]);
+});
+
+// init
+$dropdown.trigger('canEmpty', [ params.canEmpty ]);
+$dropdown.trigger('setOptions', [ params.options ]);
+$dropdown.trigger('open', [ params.open ]);                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                "$.tmpl for block dropdown"
+            );
+
+            Chunk.decl("block", "region_item",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "crumbs",
+                // init
+                function(params, data){
+var stack = [];
+
+var $crumbs = $(this)
+.bind('refresh', function(){
+    // clear
+    $crumbs.empty();
+
+    // fill
+    $.each(stack, function(i, el){
+        el.first = !i;
+        el.last = (i == stack.length - 1);
+        $el = $(el.tmpl || '#crumbs_item').tmpl(el).appendTo($crumbs);
+        if (el.clickHandler) {
+            $el.bind('click', el.clickHandler);
+        }
+        el.init && $el.each(el.init);
+    });
+    return false;
+})
+
+.bind('empty', function(){
+    stack = [];
+    $(this).triggerHandler('refresh');
+    return false;
+})
+
+.bind('set', function(e, s){
+    stack = s || [];
+    $(this).triggerHandler('refresh');
+    return false;
+})
+
+.bind('splice', function(){
+    var args = Array.prototype.slice.call(arguments, 1);//remove event
+    Array.prototype.splice.apply(stack, args);
+    $(this).triggerHandler('refresh');
+    return false;
+})
+
+.bind('push', function(){
+    var elems = Array.prototype.slice.call(arguments, 1);
+    while(elems.length)
+        stack.push(elems.shift());
+    $(this).triggerHandler('refresh');
+    return false;
+})
+
+.bind('pop', function(e, count){
+    count = count || 1;
+    while (count--) stack.pop();
+    $(this).triggerHandler('refresh');
+    return false;
+});
+
+// init
+$crumbs.triggerHandler('set', [ params.stack ]);                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "region",
+                // init
+                function(params, data){
+// static
+var currentElem;
+var rf = {
+    title: "Российская Федерация",
+    id: '00000000000'
+};
+rf.path = [rf];
+$('.region .region_item.rf').data(rf);
+
+var $itemsCont = $('.region .region_list');
+var $searchInp = $('.region .search input');
+
+var topRegionId = '';
+
+// item click
+$('.region .region_item').live('click', function(){
+    var el = $(this).data();
+
+    if (currentElem.id == rf.id && el.id == rf.id){
+        gotoRegion();
+        return;
+    }
+
+    if (topRegionId == '') topRegionId = el.id;
+
+    loadChildren(el, function(items){
+        items.length || gotoRegion();
+    });
+});
+
+function addItems(items, xclass, parentId){
+    // try to set gerb bg-image
+    if (parentId && parentId != rf.id){
+        var order = items.slice(0);
+        order.sort(function(a,b){
+            return a.id - b.id;
+        });
+        $.each(order, function(i, el){
+            el.tryIco = i;
+        });
+    }
+
+    $.each(items, function(i, el){
+        el.ico = el.ico || 99;
+        var $el = $('#region_item').tmpl(el).appendTo($itemsCont);
+        $el.data(el);
+
+        xclass && $el.addClass(xclass);
+
+        // try to set gerb bg-image
+        if (parentId && parentId != rf.id){
+            var $icon = $el.find("span.icon");
+                        $icon.css('backgroundImage', 'url("/pgu/htdocs/img/2012/gerb_regions/' + parentId + '.jpg")');
+            $icon.css('backgroundPosition', '0px -' + (el.tryIco * 48) + 'px');
+        }
+    });
+}
+
+// external
+$('.region').bind('show', function(){
+    if ($('.region').is(':visible')) return;
+
+    loadChildren(rf, function(){
+        $('#content').hide();
+        $('.crumbs').hide();
+        $('.region').show();
+        $('.region_crumbs').show();
+        $searchInp.focus();
+    });
+});
+
+// search filter
+function searchText(){
+    return $.trim(
+        $searchInp.val().replace(/[^\wа-я-]+/ig, ' ')
+    );
+}
+
+$searchInp.change(searchFilter);
+
+var KEYUP_TIMEOUT = 500, keyupTimeout,
+    MIN_SEARCH_TEXT_LENGTH = 2;
+
+$searchInp.keyup(function(){
+    clearTimeout(keyupTimeout);
+    keyupTimeout = setTimeout(searchFilter, KEYUP_TIMEOUT);
+});
+
+// search "loading..."
+function searchLoading(show){
+    $(".region .search .loading")[ show ? 'addClass' : 'removeClass' ]( 'active' );
+}
+
+var lastSearchText;
+function searchFilter(){
+    var text = searchText();
+    var words = text.toLowerCase().split(/[^а-я]/i);
+    var wordStarts = starts(words);
+    var has = {};
+    var $items = $('.region .region_item').not('.rf');
+
+    if (text == lastSearchText) return;
+
+    // remove last search results
+    $('.region .region_search_item').remove();
+
+    // PGUDEV-2202 disabled search filter starts with search text length greater than 2 only
+    if (text.length < MIN_SEARCH_TEXT_LENGTH){
+        $items.show();
+        lastSearchText = text;
+        return;
+    }
+
+    // filter children by search string
+    $items
+        .hide()
+        .filter(function(){
+            // PGUDEV-2202 disable search filter
+            return false;
+            /*
+            if (touch( $(this).text(), wordStarts )){
+                has[ $(this).data('id') ] = 1;
+                return true;
+            }
+            return false;
+            */
+        })
+        .show();
+
+    function starts(words){
+        var start = '([^а-я]|^)';
+        return $.map(words, function(w){
+            return w ?
+                new RegExp(start + '(' + quote(w) + ')', 'i')
+            : null;
+        });
+    }
+    function touch(text, starts){
+        var found = true;
+        $.each(starts, function(i, start){
+            return found &= start.test(text);
+        });
+        return found;
+    }
+    // RegExp helper
+    function quote(s){
+        return s.replace(/[\/|()*+?$^{}\[\].]/g, function(s){
+            return '\\'+s;
+        }).replace(/\n/g, '\\n');
+    }
+
+    fireSearch(wordStarts);
+    adjustItemsByHeight();
+
+    // load search results
+    if (text.length >= MIN_SEARCH_TEXT_LENGTH){
+        loadSearch(currentElem.id, text,
+            function(items){
+                if (searchText() != text) return;
+
+                items =
+                    $.map(items, function(item){
+                        if (has[item.id]) return null;
+                        if (!item.isSearchResult)
+                            item.title = item.title + (item.pathString || "").split('/')[0].replace(/(^.)/, ' - $1');
+                        item.isSearchResult = true;
+                        return item;
+                    })
+                    .slice(0, 20);
+
+                $('.region .region_search_item').remove();
+                addItems(items, "region_search_item");
+                fireSearch(wordStarts);
+                adjustItemsByHeight();
+            }
+        );
+    }
+
+    lastSearchText = text;
+}
+
+// fire search chunks in items body
+function fireSearch(wordStarts){
+    $('.region .region_item:visible td').not('.icon').each(function(){
+        var $el = $(this);
+        // once save text
+        $el.attr('text', $el.attr('text') || $el.text());
+
+        // replace
+        var str = $(this).attr('text');
+        $.each(wordStarts, function(i, start){
+            str = str.replace(start, '$1<b style="color:#c55">$2</b>');
+        });
+        $el.html(str);
+    });
+}
+
+// adjust blocks height (for long text)
+function adjustItemsByHeight(){
+    $('.region .region_item:visible').each(function(){
+        var $i = $(this);
+        var $td = $i.find('.region_item_text');
+
+        $td.css('padding', '4px 0');
+        if ($.browser.msie)
+            $td.css('paddingBottom', '8px');
+
+        var fontSize = parseInt($td.css('fontSize'));
+        while(--fontSize && $td.outerHeight() > $i.height()){
+            $td.css('fontSize', fontSize);
+        }
+    });
+}
+
+// search result loader
+loadSearch.cache = {};
+function loadSearch(parentId, text, callback, error){
+    var cache = loadSearch.cache;
+    var serial = loadSearch.serial = 1 + (loadSearch.serial || 0);
+
+    searchLoading(true);
+
+    var key = parentId + ':' + text;
+    if (cache[key]){
+        var data = cache[key];
+        data.serial = loadSearch.serial;
+        receiver(cache[key]);
+    } else {
+        $.ajax({
+            url: '/pgu/cat/TERRITORY/' + parentId + '/searchChildren.json',
+            data: {
+                serial: serial,
+                q: text,
+                filteringType: 'SUBTREE'
+            },
+            type: 'POST',
+            success: receiver,
+            error: function(){
+                error && error.apply(this, arguments);
+                searchLoading(false);
+            }
+        });
+    }
+
+    function receiver(data){
+        cache[key] = data;
+        if (data.serial == loadSearch.serial) {
+            callback(data.items || []);
+            searchLoading(false);
+        }
+        return true;
+    }
+}
+
+// region crumbs
+var crumbs = {
+    stack: [],
+    refresh: function(){
+        var withButton = this.stack.concat([button]);
+        $('.region_crumbs').trigger('set', [withButton]);
+    },
+    _push: function(el){
+        el = $.extend({
+            url: "#",
+            init: function(){
+                $('a', this).click(function(){
+                    loadChildren(el);
+                    return false;
+                });
+            }
+        }, el);
+        this.stack.push(el);
+
+        el.path = this.stack.slice();
+
+        this.refresh();
+    },
+    set: function(elems){
+        this.stack = [];
+        $.each(elems, function(i, el){
+            crumbs._push(el);
+        });
+    }
+};
+// select region crumb
+var button = {
+    tmpl: "#region_select_button",
+    init: function(){
+        $('button', this).click(gotoRegion);
+    }
+};
+
+// children loader
+loadChildren.cache = {};
+function loadChildren(parent, callback){
+    var cache = loadChildren.cache;
+
+    // current crumbs path (to be synchronized)
+    var path = parent.path || crumbs.stack.concat(parent);
+
+    if (cache[parent.id]) {
+        receiver.call(this, cache[parent.id]);
+    } else {
+        (parent === rf) ? shadowLoading(true) : searchLoading(true);
+        $.ajax({
+            url: '/pgu/cat/TERRITORY/' + parent.id + '/children.json',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                (parent === rf) ? shadowLoading(false) : searchLoading(false);
+                return receiver.apply(this, arguments);
+            },
+            error: function() {
+                (parent === rf) ? shadowLoading(false) : searchLoading(false);
+            }
+        });
+    }
+
+    topRegionId = (parent.id === rf.id) ? '' : topRegionId;
+
+    function receiver(items){
+        cache[parent.id] = items;
+
+        // clear
+        var $rf = $itemsCont.find('.region_item.rf');
+        $rf.nextAll().remove();
+
+        // PGUDEV-2035 p.2
+        (parent.id === rf.id) ? $rf.show() : $rf.hide();
+
+        // fill
+        addItems(items, null, parent.id);
+
+        // set crumbs
+        crumbs.set(path);
+
+        // reset search
+        $searchInp.val("").change().focus();
+
+        // current region
+        currentElem = parent;
+
+        // after load
+        callback && callback(items);
+    }
+}
+
+function gotoRegion(){
+    if(doReload == 0) doReload = true;
+    shadowLoading(true);
+    $.ajax({
+        url: '/pgu/service/setSelectedRegion.html',
+        data: {'selectedRegion':currentElem.id},
+        type: 'POST',
+        dataType: 'json',
+        success: function(data) {
+            if(doReload){
+                window.location.reload();
+            } else {
+                currentElem.id = data.selectedRegion;
+
+                // block/region_indicator
+                $('.region_indicator').trigger('changeRegion', [{
+                    regionCode: data.selectedRegion,
+                    regionName: data.selectedRegionName
+                }]);
+
+                // turn to content
+                $('#content').show();
+                $('.region').hide();
+                $('.crumbs').show().filter('.region_crumbs').hide();
+
+                // gerb
+                var reg = data.selectedRegion;
+                if(reg && reg != '00000000000' && !reg != 'null') {
+                    if(reg.substring(0, 2) != '11' && reg.substring(0, 2) != '71') {
+                        reg = reg.substring(0, 2);
+                    } else {
+                        reg = topRegionId.substring(0, 4);
+                    }
+                    $('#gerb').css('background-image', 'url(/pgu/htdocs/img/2012/gerb_regions/gerb_' + reg + '.png)');
+                } else if (reg == '00000000000') {
+                    $('#gerb').css('background-image', 'none');
+                }
+                topRegionId = '';
+                shadowLoading(false);
+            }
+        },
+        error: function() {
+            if(doReload){
+                window.location.reload();
+            }
+        }
+    });
+}
+
+function shadowLoading(show){
+    $('#shadowWrap').trigger(show ? 'shade' : 'unshade');
+}                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "menu_footer",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "footer",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "widgetAddress",
+                // init
+                function(params, data){
+
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "dialog",
+                // init
+                function(params, data){
+
+params.config = $.extend({
+    autoOpen: false,
+    draggable: false,
+    resizable: false,
+    title: null,
+	minHeight: 233,
+    height: 'auto',
+	width: 377,
+	modal: true
+}, params.config || {});
+
+var buttonAliases = {
+    ok: "OK",
+    cancel: 'Отменить',
+    yes: 'Да',
+    no: 'Нет'
+};
+
+var $dialog = $(this).dialog(params.config),
+    $wrap = $dialog.parent(),
+    $content = $('div.dialog-content', this),
+    $title = $('.dialog-titlebar', this),
+    $titleContent = $('span', $title),
+    $close = $('.dialog-close', this),
+    $buttons = $('ul', this);
+
+// dialog position, TODO: catch change width with calling centerByHor()
+function centerByHor(){
+    $wrap.css(
+        $wrap.width() <= $(window).width() ? {
+            left: '50%',
+            marginLeft: -($wrap.width() / 2) + 'px'
+        } : {
+            left: 0,
+            marginLeft: 0
+        }
+    );
+}
+function placeByHor(){
+    $wrap.css(
+         {
+            left: params.place.left,
+            top: params.place.top
+        }
+    );
+}
+if (params.place) {
+   $dialog.dialog('option', 'open', placeByHor);
+}
+else {
+    $dialog.dialog('option', 'open', centerByHor);
+}
+
+
+
+$dialog
+    .bind('content', function(e, content){
+         $content.empty().append(
+            Chunk.make(content)
+         );
+        return false;
+    })
+    .bind('errorContent', function (e, content) {
+        if (content) {
+            $content.empty().html(content);
+        }
+        return false;
+    })
+    .bind('title', function(e, title){
+        $titleContent.empty();
+        $titleContent.append(title);
+        title ? $title.show() : $title.hide();
+        return false;
+    })
+    .bind('buttons', function(e, buttons){
+        $buttons.empty();
+        $.map(buttons || [], function(butt){
+            // aliases
+            var button = buttonAliases[butt] || butt;
+            // string
+            button = typeof(button) == 'string' ? {
+                block: 'button',
+                title: button
+            } : button;
+            // jquery
+            button = button.jquery ? button : Chunk.make(button);
+            // click
+            button.click(function(){
+                return $dialog.triggerHandler('button', [ butt ]);
+            })
+            .appendTo($buttons);
+        });
+        return false;
+    })
+    .bind('open', function(){
+        $dialog.dialog('open');
+        if (params.closeAction) {
+            $close.show();
+        }
+        $(document).unbind('mousedown.dialog')
+        .bind('mousedown.dialog', function(e) {
+            var elem = e.target ? e.target : ((e.srcElement) ? e.srcElement : null);
+            if (elem && ($(elem).hasClass('ui-dialog') || $(elem).parents().hasClass('ui-dialog'))) {
+                return true;
+            }
+            if (elem && !$(elem).parents().hasClass('dialog block')) {
+                $(document).unbind('mousedown.dialog');
+                $dialog.dialog('close');
+                return false;
+            }
+            return true;
+        });
+        return false;
+    })
+    .bind('close', function(){
+        $dialog.dialog('close');
+        return false;
+    })
+
+    // common
+    .bind('answer', function(e, content, buttons, one){
+        $dialog.triggerHandler('content', [ content ]);
+        $dialog.triggerHandler('buttons', [ buttons ]);
+        $dialog.triggerHandler('open');
+        $dialog.one('button', clicker);
+
+        function clicker(e, button){
+            // action
+            $dialog.triggerHandler('close');
+            // one call
+            one && one.apply(this, arguments);
+            return false;
+        }
+        return false;
+    })
+    .bind('errorAnswer', function(e, content, buttons, one){
+            $dialog.triggerHandler('errorContent', [ content ]);
+            $dialog.triggerHandler('buttons', [ buttons ]);
+            $dialog.triggerHandler('open');
+            $dialog.one('button', clicker);
+
+            function clicker(e, button){
+                // action
+                $dialog.triggerHandler('close');
+                // one call
+                one && one.apply(this, arguments);
+                return false;
+            }
+            return false;
+        })
+
+    //short
+    .bind('alert', function(e, content, one){
+        $dialog.triggerHandler('answer', [ content, ["ok"], one ]);
+        return false;
+    })
+
+    .bind('confirm', function(e, content, one){
+        $dialog.triggerHandler('answer', [ content, ["ok", "cancel"], one ]);
+        return false;
+    })
+
+    .bind('yes/no', function(e, content, one){
+        $dialog.triggerHandler('answer', [ content, ["yes", "no"], one ]);
+        return false;
+    });
+
+$close.bind('click', function() {
+    $dialog.trigger('close');
+    return false;
+});
+
+$.map(['content', 'buttons', 'class', 'title', 'id', 'errorContent'], function(key){
+    $dialog.triggerHandler(key, [ params[key] ]);
+});
+
+// fix ui-dialog-titlebar
+$dialog.prev('.ui-dialog-titlebar').remove();                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                "$.tmpl for block dialog"
+            );
+
+            Chunk.decl("block", "geo",
+                // init
+                function(params, data){
+var geoBlock = $(this);
+var geoPos =  Block('dialog').create({
+    config: {
+        'closeText': 'Закрыть'
+    },
+    title: '',
+    buttons: [
+        Block("button").create({
+            "name": "confirmPosition",
+            "title": "Да"
+        }),
+        Block("button").create({
+            "name": "cancelPosition",
+            "title": "Другое"
+        })
+    ]
+});
+
+
+function saveRegion (okatoCode) {
+    $.ajax('/pgu/geo/position',{
+        type: 'POST',
+        data: {"ocato_code": okatoCode},
+        dataType: 'json'})
+        .done( function(response) {
+            setSessionAutoChangeRegion();
+            geoPos.trigger('close');
+            window.location.reload();
+        })
+}
+
+function setSessionAutoChangeRegion() {
+       $.ajax('/pgu/geo/changeRegion',{
+        type: 'POST',
+        dataType: 'json'
+        })
+}
+
+function mainFunc(latitude, longitude) {
+    var okatoCode;
+    var okatoName;
+    var isRegionChanged;
+//определение региона по текущим координатам
+    var url = '/pgu/geo/position';
+    $.ajax(url + "?latitude=" + latitude + "&longitude=" + longitude, {
+        contentType: 'application/json',
+        type: 'GET',
+        dataType: 'json',
+        cache: false
+    })
+            .done(function(response) {
+
+        okatoCode = response.okatoCode;
+        okatoName = response.okatoName;
+        var titleValue = "Мы определили ваше местоположение для удобства поиска услуг.<br/>" + okatoName + ".<br/><br/>Сохранить местоположение?";
+
+        geoPos.trigger('title', [titleValue]);
+        geoPos.trigger('open');
+
+        var $buttonSaveRegion = $('a[name=confirmPosition]', geoPos);
+        var $buttonChangeRegion = $('a[name=cancelPosition]', geoPos);
+
+        $buttonSaveRegion.bind('click', function(e) {
+            saveRegion(okatoCode);
+            return false;
+        });
+
+        $buttonChangeRegion.bind('click', function(e) {
+            geoPos.trigger('close');
+            $('#region-selected').trigger('click');
+            return false;
+        });
+
+    })
+
+}
+
+geoBlock.bind('tabActivate', function() {
+        //если браузер поддерживает определение местоположения
+        if (navigator.geolocation) {
+            //определение текущих координат
+            navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        mainFunc(latitude, longitude);
+                    },
+                    function(error) {
+                        return false;
+                    },
+                    {
+                        timeout:10000,
+                        maximumAge: 75000
+                    }
+            );
+        }
+    return false;
+});
+
+
+
+
+                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                "$.tmpl for block geo"
+            );
+
+            Chunk.decl("block", "disclaimer_item",
+                // init
+                function(params, data){
+var disclaimer_item = $(this);
+
+disclaimer_item.bind('tabActivate', function() {
+    $(".warningMsgText", disclaimer_item).html(params.message || '');
+    var closeTag = $('.warningMsgClose', disclaimer_item);
+    closeTag.click(function() {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (1000 * 86400));
+        document.cookie = "hiddenWarningMsgId" + $(this).attr('id') + "=true; path=/; expires=" + expires.toGMTString();
+        $(this).closest('.warningMsg').hide();
+        return false;
+    });
+    return false;
+});
+disclaimer_item.trigger('tabActivate');
+
+                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                "$.tmpl for block disclaimer_item"
+            );
+
+            Chunk.decl("block", "abstract_input",
+                // init
+                function(params, data){
+// common input behaviour
+var $input = $('*', this).andSelf().filter('input, textarea, select, form').first();
+var $block = $(this);//.not('input');
+var $both = $block.add($input);
+
+// short hand
+$block.data('$input', $input);
+
+// abstract level defaults
+if (params.val === undefined) params.val = "";
+
+$both
+    .bind("val", function(e, val){
+        if (val === undefined)
+            return params.val;
+        params.val = val || "";
+        if ($input.val() != params.val)
+            $input.val(params.val);
+        return false;
+    })
+
+    .bind("disabled", function(e, disabled){
+        disabled ? $input.attr('readonly', 'readonly') : $input.removeAttr('readonly');
+        disabled && $input.triggerHandler('error', [ false ]);
+        return false;
+    })
+
+    .bind("cleaner", function(e, cleaner){
+        $block.find('.clear').remove();
+        if (cleaner){
+            $('<a class="clear"></a>').click(function(e){
+                e.stopPropagation();
+                $input.triggerHandler('val', [ "" ]);
+                $input.blur(); // for param.hello
+            }).appendTo($block);
+        }
+    });
+
+
+// attribute-oriented params
+$.map(['name', 'id', 'style'], function(key){
+    $both.bind(key, function(e, val){
+        val ? $input.attr(key, val) : $input.removeAttr(val);
+        params[key] = val;
+        return false;
+    });
+});
+
+// class-oriented params
+$.map(['disabled', 'error'], function(key){
+    $both.bind(key, function(e, val){
+        val ? $both.addClass(key) : $both.removeClass(key);
+        params[key] = val;
+        return false;
+    });
+});
+
+$input.bind('change', function(e){
+    // save val in params
+    params.val = $input.val();
+    // ignore hello-based val change
+    if ($input.attr('placeholder') && params.val === params.hello ) return false;
+    // event 'change' propagation to own form
+    $input.closest('form').triggerHandler('memberChanged', [ $input ]);
+    return false;
+});
+
+// init
+$block.bind('afterInit', function(){
+    $.map([ 'name', 'id', 'style', 'val', 'disabled', 'error', 'cleaner' ], function(key){
+        params.hasOwnProperty(key) &&
+            $input.triggerHandler(key, [ params[key] ]);
+    });
+    return false;
+});
+
+// validation
+var rulesInited = false;
++function(){
+    $both
+    // validation setters
+    .bind('rules', function(e, rules){
+        params.rules = rules || {};
+        rulesInited = false;
+        //$input.triggerHandler('initRules');
+        return false;
+    })
+
+    .bind('rule', function(e, key, val){
+        params.rules[key] = val;
+        rulesInited = false;
+        //$input.triggerHandler('initRules');
+        return false;
+    })
+
+    .bind('initRules', function(e){
+        if (!rulesInited && $input.prepareValidator()){
+            $input.rules('remove');
+            $input.rules('add', params.rules);
+            rulesInited = true;
+        }
+        return false;
+    })
+
+    // valid checker
+    .bind('validate', function(e){
+        $input.triggerHandler('initRules');
+        rulesInited && $input.valid();
+        return false;
+    });
+
+    // init
+    $block.bind('afterInit', function(){
+        $input.triggerHandler('rules', [ params.rules || params.validators, true ]);
+
+        // binding val changed with validation
+        $input.bind('change', function(e){
+            $input.triggerHandler('validate');
+            return false;
+        });
+        return false;
+    });
+}();                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                false
+            );
+
+            Chunk.decl("block", "tag",
+                // init
+                function(params, data){
+
+$(this).attr(params.attr || {});
+
+if (params.content)
+    Chunk.make(params.content).appendTo(this);                    
+
+                },
+                // static data
+                {},
+                // is tmpl
+                "$.tmpl for block tag"
+            );
+
+            // save chunk struct for delayed init
+            Chunk.pageStruct = [{"index":1,"name":"shadow","contains":[],"params":{},"type":"block"},{"index":2,"name":"popup","contains":[{"index":3,"name":"button","contains":[],"params":{"title":"Закрыть"},"type":"block"}],"params":{},"type":"block"},{"index":4,"name":"bluebanner","contains":[],"params":{},"type":"block"},{"index":5,"name":"toolbar","contains":[{"index":6,"name":"tool_lang","contains":[],"params":{"urls":{"foreignUrl":"/foreign","blindUrl":"/special"}},"type":"block"},{"index":7,"name":"tool_blind","contains":[],"params":{"urls":{"foreignUrl":"/foreign","blindUrl":"/special"}},"type":"block"},{"index":8,"name":"tool_maps","contains":[],"params":{"urls":{"foreignUrl":"/foreign","blindUrl":"/special"}},"type":"block"},{"index":9,"name":"region_indicator","contains":[],"params":{"regionCode":"00000000000","regionName":"Российская Федерация"},"type":"block"}],"params":{"urls":{"foreignUrl":"/foreign","blindUrl":"/special"}},"type":"block"},{"index":10,"name":"header","contains":[{"index":11,"name":"login_box","contains":[],"params":{},"type":"block"},{"index":12,"name":"menu_top","contains":[],"params":{},"type":"block"},{"index":13,"name":"search_box","contains":[],"params":{},"type":"block"}],"params":{},"type":"block"},{"index":14,"name":"disclaimer","contains":[],"params":{"showAll":true,"code":[{"mnemonic":"PGU"},{"mnemonic":"EPGU_V2"}]},"type":"block"},{"index":15,"name":"categories","contains":[{"index":16,"name":"disclaimer","contains":[],"params":{"showAll":true,"code":[{"mnemonic":"EPGU_V2_GOSUSLUGI"}]},"type":"block"},{"index":17,"name":"dropdown","contains":[],"params":{"val":"PERSON","name":"j-catalog-select-recip","options":[{"val":"PERSON","text":"Физических лиц"},{"val":"SOLE_PROPRIETOR","text":"Предпринимателей"},{"val":"FOREIGNER","text":"Иностранных граждан"},{"val":"LEGAL","text":"Юридических лиц"}]},"type":"block"},{"index":18,"name":"dropdown","contains":[],"params":{"val":"POPULAR","name":"j-catalog-select-category","options":[{"val":"STATE_STRUCTURE","text":"По ведомствам"},{"val":"POPULAR","text":"Популярные"},{"val":"MAIN_CLASS_A","text":"По категориям"},{"val":"LIFE_SITUATION","text":"По жизненным ситуациям"}]},"type":"block"}],"params":{},"type":"content"},{"index":19,"name":"region","contains":[{"index":20,"name":"region_item","contains":[],"params":{},"type":"block"},{"index":21,"name":"crumbs","contains":[],"params":{"xclass":"region_crumbs"},"type":"block"},{"index":22,"name":"crumbs","contains":[],"params":{"xclass":"region_crumbs"},"type":"block"}],"params":{},"type":"block"},{"index":23,"name":"footer","contains":[{"index":24,"name":"menu_footer","contains":[],"params":{},"type":"block"}],"params":{},"type":"block"},{"index":25,"name":"widgetAddress","contains":[],"params":{},"type":"block"}];
+        });
+    </script>
+
+    <script type="text/javascript">
+        // page chunks init
+        // (this must be run after resources been loaded, because chunks can have depends from by-resources-defined data)
+        $(function(){
+            Chunk.domReady(Chunk.pageStruct);
+        });
+    </script>
+
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/jquery.tmpl.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/json2.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/fw/framechunk.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/epgu.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/jquery.validate.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/jquery.validate.patch.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/validateFunctions.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/fw/form.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/mustache.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/jquery.mtpl.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/catalog.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/bootstrap-tooltip.js"></script>
+        <script type="text/javascript" src="/pgu/htdocs/js/2012/bootstrap-popover.js"></script>
+        <link rel="stylesheet" type="text/css" href="/pgu/htdocs/css/2012/epgu.css" />
+        <link rel="stylesheet" type="text/css" href="/pgu/htdocs/css/2012/popover.css" />
+
+            <script type="text/javascript" id="advanced validation methods js decl">
+
+    $.validator.addMethod('strlen', function(value, element){return strLenValidator()}, $.validator.format('validation.err.false'));
+    $.validator.addMethod('date', function(value, element){return validateDate(value)}, $.validator.format('Пожалуйста, введите корректную дату.'));
+    $.validator.addMethod('phone', function(value, element){return validatePhone(value)}, $.validator.format('Введите телефон по формату (код)номер'));
+    $.validator.addMethod('snils', function(value, element){return validateSnils(value)}, $.validator.format('Введите СНИЛС по формату 123-123-123 12'));
+    $.validator.addMethod('index', function(value, element){return validatePostIndex(value)}, $.validator.format('Введите индекс по формату 123456'));
+    $.validator.addMethod('talonvmp', function(value, element){return validateTalonVmp(value)}, $.validator.format('Введите номер талона по формату 12.1234.12345.12'));
+    $.validator.addMethod('carregno', function(value, element){return validateCarRegNo(value)}, $.validator.format('Введите правильный номер транспортного средства'));
+    $.validator.addMethod('drvlicno', function(value, element){return validateDriverLicenceNo(value)}, $.validator.format('Введите правильный номер водительского удостоверения'));
+    $.validator.addMethod('legalregno', function(value, element){return validateLegalRegNo(value)}, $.validator.format('Введите номер в формате ###-###-######'));
+    $.validator.addMethod('ipregno', function(value, element){return validateIpRegNo(value)}, $.validator.format('Введите 15 цифр'));
+    $.validator.addMethod('uchetno', function(value, element){return validateUchetNo(value)}, $.validator.format('Введите 10 цифр'));
+    $.validator.addMethod('cyrillic', function(value, element){return validateCyrillic(value)}, $.validator.format('Введите только кириллические символы'));
+    $.validator.addMethod('cyrillicText', function(value, element){return validateCyrillicText(value)}, $.validator.format('Введите только кириллические символы'));
+    $.validator.addMethod('latin', function(value, element){return validateLatin(value)}, $.validator.format('Введите только латинские символы'));
+    $.validator.addMethod('latinText', function(value, element){return validateLatinText(value)}, $.validator.format('Введите только латинские символы'));
+    $.validator.addMethod('innlegal', function(value, element){return validateInnLegal(value)}, $.validator.format('Введите 10 цифр (первые две цифры не могут быть подряд 00)'));
+    $.validator.addMethod('innind', function(value, element){return validateInnInd(value)}, $.validator.format('Введите 12 цифр (первые две цифры не могут быть подряд 00)'));
+    $.validator.addMethod('inn', function(value, element){return validateInn(value)}, $.validator.format('Введите 10/12 цифр (первые две цифры не могут быть подряд 00)'));
+    $.validator.addMethod('rsbank', function(value, element){return validateRSBank(value)}, $.validator.format('Введите номер счета в формате 123-12-123-1-12345678901'));
+    $.validator.addMethod('ksbank', function(value, element){return validateKSBank(value)}, $.validator.format('Введите 20 цифр'));
+    $.validator.addMethod('bikbank', function(value, element){return validateBikBank(value)}, $.validator.format('Введите 9 цифр'));
+    $.validator.addMethod('paymentorder', function(value, element){return validatePaymentOrder(value)}, $.validator.format('Введите минимум 3 цифры, не оканчивающиеся на 000'));
+    $.validator.addMethod('ogrnlegal', function(value, element){return validateOgrnLegal(value)}, $.validator.format('Введите верный ОГРН'));
+    $.validator.addMethod('ogrnind', function(value, element){return validateOgrnInd(value)}, $.validator.format('Введите верный ОГРН'));
+    $.validator.addMethod('ogrn', function(value, element){return validateOgrn(value)}, $.validator.format('Введите верный ОГРН'));
+    $.validator.addMethod('cyrlatltr', function(value, element){return validateSimilarLetters(value)}, $.validator.format('Введите допустимые буквы'));
+    $.validator.addMethod('isbn', function(value, element){return validateIsbn(value)}, $.validator.format('Введите верный ISBN'));
+    $.validator.addMethod('childDoc', function(value, element){return validateChildBirthDoc(value)}, $.validator.format('Введите корректный номер свидетельства о рождении, пример X-АА'));
+    $.validator.addMethod('email', function(value, element){return validateMail(value)}, $.validator.format('Пожалуйста, введите корректный адрес электронной почты.'));
+    $.validator.addMethod('digits', function(value, element){return validateDigits(value)}, $.validator.format('Поле может содержать только цифры'));
+    $.validator.addMethod('nameOrg', function(value, element){return validateOrgName(value)}, $.validator.format('Пожалуйста, введите название, используя шаблон: ООО \"Компания\"'));
+    $.validator.addMethod('cyrillicAndNumerals', function(value, element){return validateCyrillicAndNumerals(value)}, $.validator.format('Введите только кириллические символы'));
+    $.validator.addMethod('creditCardNumberByLuhn', function(value, element){return validateCreditCardNumberByLuhn(value)}, $.validator.format('Введите корректный номер банковской карты'));
+    $.validator.addMethod('phone7_10', function(value, element){return validatePhone7_10(value)}, $.validator.format('Пожалуйста, введите телефон, используя шаблон: 7XXXXXXXXXX'));
+    $.validator.addMethod('periodOfPayment', function(value, element){return validatePeriodOfPayment(value)}, $.validator.format('Формат не соответствует приказу Минфина России от 24.11.2004 N 106н'));
+    $.validator.addMethod('deprecatedSings', function(value, element){return validateDeprecatedSings(value)}, $.validator.format('Введены недопустимые символы (!,#,$,%,^,~,<,>,?,{,},[,] )'));
+    $.validator.addMethod('passwordComplexity', function(value, element){return validatePasswordComplexity(value)}, $.validator.format('Пожалуйста, укажите более сложный пароль'));
+    $.validator.addMethod('passwordIllegalSigns', function(value, element){return validatePasswordIllegalSigns(value)}, $.validator.format('Пароль содержит недопустимый символ'));
+    $.validator.addMethod('workinterval', function(value, element){return validateWorkInterval(element)}, $.validator.format('Пожалуйста, введите корректное значение интервала'));
+    $.validator.addMethod('intlphone', function(value, element){return validateIntlPhone(value)}, $.validator.format('Пожалуйста, введите телефон, допустимыми символами, помимо цифр, являются символы  +-() пробел  *(разделитель между добавочным номером)'));
+    $.validator.addMethod('carregnoNew', function(value, element){return validateCarRegNoNew(value)}, $.validator.format('Введите правильный номер транспортного средства'));
+    $.validator.addMethod('digitsexact', function(value, element, params){return validateDigitsExact(value, params)}, $.validator.format('Необходимое количество цифр - {0}'));
+    $.validator.addMethod('lengthexact', function(value, element, params){return validateLengthExact(value, params)}, $.validator.format('Введите {0} символов'));
+    $.validator.addMethod('fractcount', function(value, element, params){return validateFractCount(value, params)}, $.validator.format('Максимальное количество знаков после запятой: {0}'));
+    $.validator.addMethod('invaluelist', function(value, element, params){return validateIsInValueList(value, params)}, $.validator.format('Значение должно быть из списка'));
+    $.validator.addMethod('relativedays', function(value, element, params){return validateBeforeTodayNDays(value, params)}, $.validator.format('Пожалуйста, введите корректную дату.'));
+    $.validator.addMethod('reldaysbyfield', function(value, element, params){return validateNDaysByField(value, element,params)}, $.validator.format('Пожалуйста, введите корректную дату.'));
+    $.validator.addMethod('relativeyears', function(value, element, params){return validateBeforeTodayNYears(value, params)}, $.validator.format('Пожалуйста, введите корректную дату.'));
+    $.validator.addMethod('relyearsbyfield', function(value, element, params){return validateNYearsByField(value, element, params)}, $.validator.format('Пожалуйста, введите корректную дату.'));
+    $.validator.addMethod('oneofgrouprequired', function(value, element, params){return validateOneofgroupRequired(value, params)}, $.validator.format('Одно из этих полей необходимо заполнить'));
+    $.validator.addMethod('dateinterval', function(value, element, params){return validateDateInterval(value, params)}, $.validator.format('начальная дата не может быть больше конечной'));
+    $.validator.addMethod('regexp', function(value, element, params){return validateRegex(value, params)}, $.validator.format('Пожалуйста, введите корректное значение, соответствующее шаблону'));
+    $.validator.addMethod('fileExt', function(value, element, params){return validateFileExt(value, params)}, $.validator.format('Расширение файла не удовлетворяет требованию'));
+
+            </script>
+
+	</head>
+	<body>
+
+    <div style="display:none" class="block-templates-here">
+
+
+        <script type="text/x-jquery-tmpl" id="$.tmpl for block button">
+<a href="" class="" name=""><i></i>
+    <b class=""></b>
+    ${params.title}
+</a>        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script type="text/x-jquery-tmpl" id="$.tmpl for block disclaimer">
+
+
+<div class="disclaimer"></div>
+        </script>
+
+        <script type="text/x-jquery-tmpl" id="$.tmpl for block dropdown">
+<div class="input input-dropdown">
+    <input type="hidden" name="" value="" />
+    <i></i>
+    <a href="javascript://" class="link"><b><span class="text"></span></b></a>
+    <div class="select-list">
+        <div class="s-center">
+            <ul class="select">
+            </ul>
+        </div>
+        <div class="s-bottom"><div></div></div>
+    </div>
+</div>        </script>
+
+
+
+
+
+
+
+        <script type="text/x-jquery-tmpl" id="$.tmpl for block dialog">
+<div class="dialog">
+    <a class="dialog-close" href="javascript://" style="display:none;"></a>
+    <div class="dialogContent">
+    <div class="dialog-titlebar title-custom"><span></span></div>
+    <div class="dialog-content content-styles"></div>
+    <ul class="dialog-buttons"></ul>
+</div></div>        </script>
+
+        <script type="text/x-jquery-tmpl" id="$.tmpl for block geo">
+<div class="geo">
+    <div class="geoPos">
+    </div>
+</div>        </script>
+
+        <script type="text/x-jquery-tmpl" id="$.tmpl for block disclaimer_item">
+<div class="disclaimer_item">
+    <div class="warningMsg ${params.level_disclaimer}" data=${params.code}>
+        <div class="warningMsgT ${params.level_disclaimer}">
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="center"></div>
+        </div>
+        <div class="warningMsgC ${params.level_disclaimer}">
+            <a href="javascript:void(0)" class="warningMsgClose" id=${params.id}></a>
+            <div class="warningMsgAttention ${params.level_disclaimer}">Внимание:</div>
+            <div class="warningMsgText"></div>
+        </div>
+        <div class="warningMsgB ${params.level_disclaimer}">
+            <div class="right"></div>
+            <div class="left"></div>
+            <div class="center"></div>
+       </div>
+    </div>
+</div>        </script>
+
+
+        <script type="text/x-jquery-tmpl" id="$.tmpl for block tag">
+<${params.tag}></${params.tag}>        </script>
+
+    </div>
+
+            
+<span style="display:none" for="block/shadow" id="chunk1_start"></span>
+<div id="shadowWrap">
+    <div id="shadowglass-clock"></div>
+</div>
+
+<span style="display:none" for="block/shadow" id="chunk1_end"></span>
+
+
+    
+<span style="display:none" for="block/popup" id="chunk2_start"></span>
+<div class="popupShadow"></div>
+<IDXSKIP><div class="popupWrap">
+    <div class="popupInner">
+        <div class="popupT"></div>
+        <div class="popupC">
+            <div class="popupMsg">
+                <h1><span class="icon"></span><span class="title"></span></h1>
+                <h2 class="subtitle"></h2>
+                <p class="popupText"></p>
+                <div class="achtungButtons">
+                    <i href="javascript:void(0)" id="popupClose">
+                        
+<span style="display:none" for="block/button" id="chunk3_start"></span>
+<a href="" class="" name=""><i></i>
+    <b class=""></b>
+    Закрыть
+</a>
+<span style="display:none" for="block/button" id="chunk3_end"></span>
+
+                    </i>
+                </div>
+            </div>
+        </div>
+        <div class="popupB"></div>
+    </div>
+</div></IDXSKIP>
+
+<span style="display:none" for="block/popup" id="chunk2_end"></span>
+
+
+        
+<span style="display:none" for="block/bluebanner" id="chunk4_start"></span>
+<div id="js-stripper" class="b-frame__stripper">
+    <div class="b-stripper">
+        <div class="item b-stripper__logo">
+            <div class="e-logo"></div>
+        </div>
+        <div class="b-stripper__link item">
+            <IDXSKIP>Перейдите на новую версию портала </IDXSKIP><IDXSKIP><a class="e-link" href="https://www.gosuslugi.ru/?utm_source=gosuslugiru&utm_medium=banner&utm_content=banner1&utm_campaign=banner_na_gosuslugiru">www.gosuslugi.ru</a></IDXSKIP>
+        </div>
+        <div class="x-clear"></div>
+    </div>
+</div>
+
+<span style="display:none" for="block/bluebanner" id="chunk4_end"></span>
+
+    <div id="wrapper">
+        
+<span style="display:none" for="block/toolbar" id="chunk5_start"></span>
+
+<div class="toolbar">
+
+        
+<span style="display:none" for="block/tool_lang" id="chunk6_start"></span>
+<ul id="langbar">
+<li class="ru active">
+    <a href="#" title="Портал государственных услуг Российской Федерации"></a>
+</li>
+<li class="en">
+    <a href="https://www.gosuslugi.ru/foreign?userLang=en" title="Версия на английском языке"></a>
+</li>
+<li class="de">
+    <a href="https://www.gosuslugi.ru/foreign?userLang=de" title="Версия на немецком языке"></a>
+</li>
+<li class="fr">
+    <a href="https://www.gosuslugi.ru/foreign?userLang=fr" title="Версия на французском языке"></a>
+</li>
+</ul>
+<span style="display:none" for="block/tool_lang" id="chunk6_end"></span>
+
+
+        
+<span style="display:none" for="block/tool_blind" id="chunk7_start"></span>
+<IDXSKIP><a id="special-version-link" href="https://www.gosuslugi.ru/special" class="no-text" title="Версия для слабовидящих"><i></i>Версия для слабовидящих</a></IDXSKIP>
+
+<span style="display:none" for="block/tool_blind" id="chunk7_end"></span>
+
+
+    
+<span style="display:none" for="block/tool_maps" id="chunk8_start"></span>
+<a id="maps-link" href="https://esia.gosuslugi.ru/public/ra/" class="button-maps" title="Госуслуги на карте"><i class="button-maps-icon"></i></a>
+
+<span style="display:none" for="block/tool_maps" id="chunk8_end"></span>
+
+
+    
+<span style="display:none" for="block/region_indicator" id="chunk9_start"></span>
+<div class="region_indicator block" title="Ваше местоположение">
+    <i></i>
+
+    <IDXSKIP><span class="text">Ваше местоположение:</span></IDXSKIP>
+
+    <a id="region-selected" class="select" href="#" title="">
+        <span class="region-text"></span>
+        <span class="region-arrow"></span>
+       </a>
+
+    <a onclick="return false;" id="regionHelp"  href="#" class="region_help_icon block" style="display: none;">
+    </a>
+    <div class="choice" style="display:none">
+        <p><IDXSKIP>От выбранного местоположения зависит набор услуг, отображаемый в каталоге и доступный при поиске на портале.</IDXSKIP></br>
+        <IDXSKIP>Текущее местоположение: Российская Федерация <br/>(показаны только федеральные услуги)</IDXSKIP></p>
+    </div>
+</div>
+
+<span style="display:none" for="block/region_indicator" id="chunk9_end"></span>
+
+
+
+</div>
+<span style="display:none" for="block/toolbar" id="chunk5_end"></span>
+
+
+        
+<span style="display:none" for="block/header" id="chunk10_start"></span>
+<div id="header" class="header-wrap" role="banner">
+    <div class="bg-flag"></div>
+    <div class="bg-right"><div class="bg-left"></div></div>
+    <div class="bg-fade">
+
+        <a id="logo" href="https://www.gosuslugi.ru/pgu/" title="Портал государственных услуг Российской Федерации"></a>
+
+        <div id="phone">
+            <IDXSKIP><h5><a href="https://www.gosuslugi.ru/pgu/feedback/v2/helpdesk#_phones" class="link-dark-blue" title="Телефоны поддержки">Телефоны поддержки</a>:</h5></IDXSKIP>
+            <ul id="phones">
+                <IDXSKIP><li><em>в России:</em><strong>&nbsp;8 (800) 100-70-10</strong></li></IDXSKIP>
+                <IDXSKIP><li><em style="left:.45em">за границей:</em><strong>+7 495 727-47-47</strong></li></IDXSKIP>
+            </ul>
+        </div>
+
+        
+<span style="display:none" for="block/login_box" id="chunk11_start"></span>
+<IDXSKIP><div class="personcab-box">
+    <h5>Личный кабинет:</h5>
+            <ul id="sign-in-register">
+            <li>
+                <a class="sign-in" href="https://www.gosuslugi.ru/pgu/personcab#_data-common" title="Личный кабинет">Вход</a>
+            </li>
+            <li>
+                <a class="register" href="https://esia.gosuslugi.ru/registration" title="Регистрация">Регистрация</a>
+            </li>
+        </ul>
+</div></IDXSKIP>
+<span style="display:none" for="block/login_box" id="chunk11_end"></span>
+
+
+        <div class="top-menu-wrap">
+            <div class="bg-tm-right"></div>
+
+            
+<span style="display:none" for="block/menu_top" id="chunk12_start"></span>
+<ul class="top-menu">
+    <IDXSKIP><li class="m1 first">
+        <a href="https://www.gosuslugi.ru/pgu/cat/POPULAR.html#online" title="Государственные услуги"><i></i>Государственные услуги</a>
+    </li></IDXSKIP>
+    <IDXSKIP><li class="m2 last">
+        <a href="https://www.gosuslugi.ru/pgu/stateStructure.html" title="Органы власти"><i></i>Органы власти</a>
+    </li></IDXSKIP>
+</ul>
+
+<span style="display:none" for="block/menu_top" id="chunk12_end"></span>
+
+
+            
+<span style="display:none" for="block/search_box" id="chunk13_start"></span>
+<IDXSKIP><form class="search_box" action="https://www.gosuslugi.ru/pgu/service/search" role="search">
+    <h2 class="title-accessible">Поиск</h2>
+    <div class="bg-sb-right"></div>
+    <div class="search_box-inner">
+        <i class="search_box-inner-left"></i>
+        <input class="search_box-q" name="q" type="text" value="" invitation="Поиск услуг" autocomplete="off" title="Поиск услуг"/>
+    </div>
+    <a class="search_box-button searchButton" title="Найти" role="button"></a>
+</form></IDXSKIP>
+
+<span style="display:none" for="block/search_box" id="chunk13_end"></span>
+
+
+        </div>
+
+    </div>
+</div>
+
+<span style="display:none" for="block/header" id="chunk10_end"></span>
+
+
+        
+<span style="display:none" for="block/disclaimer" id="chunk14_start"></span>
+
+
+<div class="disclaimer"></div>
+
+<span style="display:none" for="block/disclaimer" id="chunk14_end"></span>
+
+
+        <div class="lk_profile_inform"></div>
+
+
+        
+<span style="display:none" for="block/region" id="chunk19_start"></span>
+
+<script type="text/html" id="region_select_button">
+    <li class="last">
+        <button class="select"></button>
+    </li>
+</script>
+<script type="text/javascript">
+    var doReload = false;
+</script>
+
+
+<span style="display:none" for="block/region_item" id="chunk20_start"></span>
+
+<script type="text/html" id="region_item">
+    <div class="region_item" name="${title}">
+        <table>
+            <tr>
+                <td class="icon">
+                    <span class="icon" style="background-position:0 ${-(ico - 1)* 48}px" _data="${-(ico - 1)* 48}" ></span>
+                </td>
+                <td class="region_item_text">${title}</td>
+            </tr>
+        </table>
+    </div>
+</script>
+
+<span style="display:none" for="block/region_item" id="chunk20_end"></span>
+
+
+
+<span style="display:none" for="block/crumbs" id="chunk21_start"></span>
+
+<script type="text/html" id="crumbs_item">
+    <li class="{{if first}}first{{/if}}{{if last}}last{{/if}}">
+        <span>
+            <a href="{{if url}}${url}{{else}}javascript:void(0);{{/if}}">${title}</a>
+        </span>
+    </li>
+</script>
+
+<ul class="crumbs region_crumbs"></ul>
+
+<span style="display:none" for="block/crumbs" id="chunk21_end"></span>
+
+<IDXSKIP><div class="region index">
+
+    <div class="wide wide-resize">
+        <div class="top"><i></i></div>
+        <div class="center cf">
+
+            <div class="region_list">
+                    <div class="search">
+                        <span class="search-input-wrapper">
+                            <div class="loading"></div>
+                            <span class="search-input-icon"></span>
+                            <input type="text" value="Поиск по регионам" />
+                        </span>
+
+                    </div>
+                <div class="region_item rf" data="0"></div>
+
+            </div>
+
+        </div>
+        <div class="bottom"><i></i></div>
+    </div>
+</div></IDXSKIP>
+
+
+<span style="display:none" for="block/crumbs" id="chunk22_start"></span>
+
+<script type="text/html" id="crumbs_item">
+    <li class="{{if first}}first{{/if}}{{if last}}last{{/if}}">
+        <span>
+            <a href="{{if url}}${url}{{else}}javascript:void(0);{{/if}}">${title}</a>
+        </span>
+    </li>
+</script>
+
+<ul class="crumbs region_crumbs"></ul>
+
+<span style="display:none" for="block/crumbs" id="chunk22_end"></span>
+
+<span style="display:none" for="block/region" id="chunk19_end"></span>
+
+
+        
+<span style="display:none" for="content/categories" id="chunk15_start"></span>
+
+<style type="text/css">
+    .catalog-message {
+        text-align:center;
+        font-weight:700;
+        padding:50px 0;
+    }
+</style>
+
+
+<script type="text/javascript">
+    var recipCategory = "PERSON",
+    classifier = "LIFE_SITUATION",
+    doReload = "0",
+    GET = {
+        open: "11"
+    },
+    isInfomat = false;
+</script>
+
+<script id="stateStructureTpl" type="text/html">
+    <%
+    for (var i = 0; i < result.length; i++) {
+        var res = result[i];
+        var ico = res.smallImageUrl || ('/pgu/htdocs/img/2012/gerb_depts/s/' + (res.ico || 'img_RUSSIA.png'));
+    %>
+    <div class="catalog-item">
+        <div class="top"></div>
+        <div class="center">
+
+            <div class="ministry-rubber j-catalog-ministry j-state-structure" data="<%=res.id%>">
+                <div class="arrow"></div>
+                <table class="ministry-button">
+                    <tr>
+                        <td class="icon"><img src="<%=ico%>" alt="" /></td>
+                        <td class="text"><%=res.title%></td>
+                    </tr>
+                </table>
+            </div>
+
+            <ul class="catalog-services j-catalog-services">
+                <li><a><img src="/pgu/htdocs/img/2012/ajax-loader.gif" alt="" /> Загрузка...</a></li>
+            </ul>
+
+            <div class="catalog-subministry-list j-catalog-subministry-list loaded">
+                <%
+                for (var j = 0; j < res.children.length; j++) {
+                    var ch = res.children[j];
+                %>
+                <div class="ministry-rubber sub j-catalog-subministry j-state-structure-sub" data="<%=ch.id%>">
+                    <div class="arrow"></div>
+                    <table class="ministry-button">
+                        <tr>
+                            <td class="text"><%=ch.title%></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <ul class="catalog-services j-catalog-services"><li><a><img src="/pgu/htdocs/img/2012/ajax-loader.gif" alt="" /> Загрузка...</a></li></ul>
+                <% } %>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    <% } %>
+</script>
+
+<script id="mainClassATpl" type="text/html">
+    <%
+    for (var i = 0; i < result.length; i++) {
+        var res = result[i];
+        var ico = res.smallImageUrl || ('/pgu/htdocs/img/2012/categories/' + (res.ico || 'img_RUSSIA.png'));
+    %>
+    <div class="catalog-item">
+        <div class="top"></div>
+        <div class="center">
+            <div class="catalog-ministry j-main-class-a" data="<%=res.id%>">
+                <span class="icon-cat" style="background-image:url(<%=ico%>)"></span><%=res.title%>
+            </div>
+
+            <ul class="catalog-services">
+                <li><a><img alt="" src="/pgu/htdocs/img/2012/ajax-loader.gif">&nbsp;Загрузка...</a></li>
+            </ul>
+
+            <div class="catalog-subministry-list loaded">
+                <%
+                for (var j = 0; j < res.children.length; j++) {
+                    var ch = res.children[j];
+                %>
+                <div class="catalog-subministry j-main-class-a-sub" data="<%=ch.id%>"><%=ch.title%></div>
+                <ul class="catalog-services"><li><a><img src="/pgu/htdocs/img/2012/ajax-loader.gif" alt="" />&nbsp;Загрузка...</a></li></ul>
+                <% } %>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    <% } %>
+</script>
+
+<script id="lifeSituationTpl" type="text/html">
+        <%
+        for (var i = 0; i < result.length; i++) {
+        %>
+        <div class="catalog-item">
+            <div class="top"></div>
+            <div class="center">
+                <div class="catalog-parent j-life-situation <%=result[i].cls%>" data="<%=result[i].id%>">
+                    <span class="icon-cat" style="background-image:url(<%=result[i].icon%>)"></span><%=result[i].title%>
+                </div>
+                <ul class="catalog-services"><li><a><img src="/pgu/htdocs/img/2012/ajax-loader.gif" alt="" /> Загрузка...</a></li></ul>
+            </div>
+            <div class="bottom"></div>
+        </div>
+        <% } %>
+</script>
+
+<div id="buffer" style="display:none"></div>
+
+<div id="content" class="catalog">
+
+    <div class="wide">
+        <div class="top"></div>
+        <div class="center">
+        
+<span style="display:none" for="block/disclaimer" id="chunk16_start"></span>
+
+
+<div class="disclaimer"></div>
+
+<span style="display:none" for="block/disclaimer" id="chunk16_end"></span>
+
+
+            <div class="catalog-filter">
+                <div class="text">Услуги для:</div>
+
+
+                <form id="j-catalog-selector-recip">
+
+                
+<span style="display:none" for="block/dropdown" id="chunk17_start"></span>
+<div class="input input-dropdown">
+    <input type="hidden" name="" value="" />
+    <i></i>
+    <a href="javascript://" class="link"><b><span class="text"></span></b></a>
+    <div class="select-list">
+        <div class="s-center">
+            <ul class="select">
+            </ul>
+        </div>
+        <div class="s-bottom"><div></div></div>
+    </div>
+</div>
+<span style="display:none" for="block/dropdown" id="chunk17_end"></span>
+
+
+                </form>
+
+                <form id="j-catalog-selector-category">
+                
+<span style="display:none" for="block/dropdown" id="chunk18_start"></span>
+<div class="input input-dropdown">
+    <input type="hidden" name="" value="" />
+    <i></i>
+    <a href="javascript://" class="link"><b><span class="text"></span></b></a>
+    <div class="select-list">
+        <div class="s-center">
+            <ul class="select">
+            </ul>
+        </div>
+        <div class="s-bottom"><div></div></div>
+    </div>
+</div>
+<span style="display:none" for="block/dropdown" id="chunk18_end"></span>
+
+                </form>
+                <div class="checkbox j-catalog-online">Только электронные услуги</div>
+            </div>
+
+            <div class="loading"></div>
+
+            <div id="r-state-structure" class="catalog-2-columns result" style="display:none">
+                    <div class="col-01 column"></div>
+                    <div class="col-02 column"></div>
+            </div>
+
+            <div id="r-popular" class="catalog-pop-holder result" style="display:none"></div>
+
+            <div id="r-main-class-a" class="catalog-2-columns result" style="display:none">
+                <div class="col-01 column"></div>
+                <div class="col-02 column"></div>
+            </div>
+
+            <div id="r-life-situation" class="catalog-2-columns result" style="display:none">
+                    <div class="col-01 column"></div>
+                    <div class="col-02 column"></div>
+            </div>
+
+        </div>
+        <div class="bottom"></div>
+    </div>
+
+</div>
+<span style="display:none" for="content/categories" id="chunk15_end"></span>
+
+
+        
+<span style="display:none" for="block/footer" id="chunk23_start"></span>
+<div id="footer">
+        <div id="logo-mks"></div>
+    <div id="logo-rtk"></div>
+
+    
+<span style="display:none" for="block/menu_footer" id="chunk24_start"></span>
+<ul id="footer-menu">
+    <li class="social vk">
+        <a target="_blank" href="http://vk.com/new.gosuslugi" title="ВКонтакте — Портал Госуслуг"></a>
+    </li>
+    <li class="social fb">
+        <a target="_blank" href="http://www.facebook.com/pages/%D0%9F%D0%BE%D1%80%D1%82%D0%B0%D0%BB-%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D1%83%D1%81%D0%BB%D1%83%D0%B3-%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9-%D0%A4%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8/217368344992825" title="Фейсбук — Портал государственных услуг Российской Федерации"></a>
+    </li>
+    <li class="social tw">
+        <a target="_blank" href="http://twitter.com/#!/EPGU" title="Твиттер — Портал госуслуг РФ"></a>
+    </li>
+    <li class="social lj">
+        <a target="_blank" href="http://gosuslugi.livejournal.com/" title="Живой Журнал — Портал государственных услуг"></a>
+    </li>
+    <IDXSKIP><li>
+        <a href="https://www.gosuslugi.ru/pgu/cat/POPULAR.html#online" title="Государственные услуги">Государственные услуги</a>
+    </li></IDXSKIP>
+    <IDXSKIP><li>
+        <a href="https://www.gosuslugi.ru/pgu/stateStructure.html" title="Органы власти">Органы власти</a>
+    </li></IDXSKIP>
+    <IDXSKIP><li>
+        <a target="_blank" href="https://www.gosuslugi.ru/pgu/feedback/v2/helpdesk#_msg" title="Служба поддержки">Служба поддержки</a>
+    </li></IDXSKIP>
+    <IDXSKIP><li>
+        <a href="https://www.gosuslugi.ru/pgu/cms/content/isr" title="Справочная информация">Справочная информация</a>
+    </li></IDXSKIP>
+</ul>
+<span style="display:none" for="block/menu_footer" id="chunk24_end"></span>
+
+
+
+
+    <div id="gerb" style="background-image:none"></div>
+</div>
+<span style="display:none" for="block/footer" id="chunk23_end"></span>
+
+
+        
+<span style="display:none" for="block/widgetAddress" id="chunk25_start"></span>
+
+<script type="text/x-jquery-tmpl" id="addressFiasTpl">
+
+    <div class="row complex_input row3" style="display:none;">
+        <div class="column1">
+            <label for="${name}"><span class="star">*&nbsp;</span>${label}</label>
+        </div>
+        <div class="column2">
+            <div class="input"><i></i><input type="text" class="-metrika-nokeys" name="${name}" value=""/></div>
+            <div class="error-text" for="${name}"></div>
+        </div>
+    {{if supportCheck}}
+
+       <div class="column3">
+            <a class="checkbox">
+                <input type="checkbox" style="display:none" name="${supportCheck}" value="">
+                <span>Нет</span>
+            </a>
+        </div>
+    {{/if}}
+    </div>
+</script>
+
+<script type="text/x-jquery-tmpl" id="fiasWidget">
+    <div class="widgetAddress kladrWrap" style="display:none;top: 550px;">
+        <div class="kladrBg">
+            <div class="kladrCont">
+                <h5 class="title">Изменение адреса</h5>
+                <div class="form-block">
+                    <div class="info-wrap">
+                        <div class="info-text">При вводе информации в адресную строку выполняется поиск адреса по данным Федеральной информационной адресной системы (ФИАС). В ФИАС хранится адресная информация, включая номера домов.<br/>Уточняя информацию в адресной строке, выберите нужный адрес. Недостающие данные введите вручную.</div>
+                    </div>
+                </div>
+                <form class='fias'>
+                    <div class="form-custom form-custom-common">
+                        <div class="row complex_input">
+                            <div class="column1">
+                                <label for="testAddress"><span class="star">*&nbsp;</span>Адресная строка</label>
+                            </div>
+                            <div class="column2 enterAddress">
+                                <div class="input  has-input">
+                                    <input type="hidden" value="" name="">
+                                    <i></i>
+                                    <input type="text" class="-metrika-nokeys search" name="" value="" />
+                                    <div class="select-list">
+                                        <div class="s-center">
+                                            <ul class="select" style="height:auto;">
+                                            </ul>
+                                        </div>
+                                        <div class="s-bottom"><div></div></div>
+                                    </div>
+                                    <a class="clear"></a>
+                                </div>
+                                <span class="field-qtip">Ввести адрес</span>
+                                <div class="error-text" for="testAddress"></div>
+                            </div>
+                        </div>
+                        <div class="row titlePost complex_input">
+                            <div class="column1">
+                                <label><h2>Проверьте Ваш почтовый индекс</h2></label>
+                            </div>
+                        </div>
+                        <div class="row complex_input">
+                            <div class="column1">
+                                <label for="post_index"><span class="star required">*&nbsp;</span>Почтовый индекс</label>
+                            </div>
+                            <div class="column2">
+                                <div class="input"><i></i><input type="text" class="-metrika-nokeys" name="post_index" value=""/></div>
+                                <div class="error-text" for="post_index"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div style="clear:both;"></div>
+                <div class="more-buttons">
+                    <a name="cancel" class="button-custom" href="javascript:void(0);"><i></i>Отмена</a>
+                    <a name="save" class="button-custom" href="javascript:void(0);"><i></i>Сохранить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<span style="display:none" for="block/widgetAddress" id="chunk25_end"></span>
+
+    </div>
+
+
+        <!-- Yandex.Metrika counter -->
+        
+<span style="display:none" for="block/yandexm" id="chunk26_start"></span>
+
+<script type="text/javascript">
+            (function (d, w, c) {
+                $.each($('input[type=text]'),function(){
+                    $(this).toggleClass('-metrika-nokeys',!$(this).hasClass('search_box-q'))
+                });
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter9722908 = new Ya.Metrika({id:9722908, enableAll: true, trackHash:true});
+                    } catch(e) { }
+                });
+
+                var n = d.getElementsByTagName("script")[0],
+                        s = d.createElement("script"),
+                        f = function () { n.parentNode.insertBefore(s, n); };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+            })(document, window, "yandex_metrika_callbacks");
+</script>
+
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/9722908" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+
+
+<span style="display:none" for="block/yandexm" id="chunk26_end"></span>
+
+        <!-- /Yandex.Metrika counter -->
+
+	</body>
+</html>
+

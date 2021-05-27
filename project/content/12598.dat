@@ -1,0 +1,898 @@
+forums.goha.ru/showthread_82_0_p22780084
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru">
+<head>
+<style type="text/css">
+#optnotice
+{
+	margin-bottom: 4px;
+	padding: 8px;
+	text-align: center;
+	background: #FFFFE1;
+	border: 1px solid #999;
+	color: #000;
+}
+
+#optnotice a
+{
+	color: #00F;
+}
+#optnotice a:hover
+{
+	color: #F00;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+var optvars = {
+	bburl:         "http://forums.goha.ru",
+	querystring:   "p=22780084",
+	userfile:      "showthread",
+	dstyleid:      "67",
+	mstyleid:      "82",
+	dlangid:       "3",
+	forumid:       "1939",
+	threadid:      "447938",
+	feature:       "",
+
+	cookie: {
+		prefix:  "bb",
+		name:    "lflag",
+		value:   "bqeGcsK5",
+		timeout: parseInt("900", 10)
+	}
+};
+
+var lflag = 0;
+var uflag = 0;
+
+(function()
+{
+	var u;
+	var url = new String(window.location);
+	var cookie = optvars.cookie;
+
+	var dourl = function(url)
+	{
+		if (window.stop)
+		{
+			window.stop();
+		}
+		window.location = url;
+	};
+
+	var set_cookie = function(name, value, expires)
+	{
+		var cookieStr = name + '=' + escape(value) + '; path=/';
+
+		if (typeof expires == 'number' && expires > 0)
+		{
+			var date = new Date();
+				date.setTime(date.getTime() + expires * 1000);
+			cookieStr += '; expires=' + date.toGMTString();
+		}
+
+		document.cookie = cookieStr;
+	};
+
+	var fetch_cookie = function(name)
+	{
+		var m = document.cookie.match(new RegExp("(?:^|; )" + name.toString().replace(/(\+|\{|\}|\(|\)|\[|\]|\||\/|\?|\^|$|\\|\.|\=|\!|\<|\>|\:|\*)/g, "\$1") + "=([^;]*)"));
+		return m ? m[1] : null;
+	};
+
+	var intval = function(i)
+	{
+		return parseInt(i, 10) || 0;
+	};
+
+	if ((u = url.match(new RegExp(optvars.userfile + "_([0-9]+)_([0-9]+)(_([a-z0-9_]+))*", "i"))) || (optvars.userfile == "index"))
+	{
+		if (fetch_cookie(cookie.prefix + cookie.name) == cookie.value)
+		{
+			lflag = 1;
+			var qstr = (optvars.querystring ? '?' + optvars.querystring.replace(/&amp;/g, "&") : '');
+
+			if (optvars.feature.length > 0)
+			{
+				qstr += ((qstr.indexOf("?") == -1) ? "?" : "&") + optvars.feature;
+			}
+
+			//var s = u ? u[1] : 0;
+			//set_cookie(cookie.prefix + 'mobilestyleid', s, 0);
+			//set_cookie(cookie.prefix + 'styleid', s, (s != optvars.mstyleid) ? 365 * 86400 : 0);
+
+			dourl(optvars.bburl + "/" + optvars.userfile + ".php" + qstr);
+		}
+		else
+		{
+			var session = {
+				lastvisit: intval(fetch_cookie(cookie.prefix + 'lastvisit')),
+				forumid: intval(fetch_cookie(cookie.prefix + 'optforumid')),
+				threadid: intval(fetch_cookie(cookie.prefix + 'optthreadid')),
+				inside: intval(fetch_cookie(cookie.prefix + 'optinside'))
+			};
+
+			var timenow = Math.ceil((new Date().getTime()) / 1000);
+			var outdated = session.lastvisit < timenow - cookie.timeout;
+			if ((optvars.forumid != session.forumid) || (optvars.threadid != session.threadid) || outdated || !session.inside)
+			{
+				uflag = 1;
+
+				set_cookie(cookie.prefix + 'lastvisit', timenow, 0);
+				set_cookie(cookie.prefix + 'optforumid', optvars.forumid, 0);
+				set_cookie(cookie.prefix + 'optthreadid', optvars.threadid, 0);
+			}
+			set_cookie(cookie.prefix + 'optinside', 1, 0);
+
+			// check style/language
+			var s = u ? u[1] : 0;
+			var l = u ? u[2] : 0;
+			var styleid = 0;
+			var langid = 0;
+
+			if (s == "0")
+			{
+				styleid = (fetch_cookie(cookie.prefix + "mobilestyleid") || fetch_cookie(cookie.prefix + "styleid"));
+				if (!styleid)
+				{
+					var m, md;
+					if (m = fetch_cookie(cookie.prefix + "mobiledevice"))
+					{
+						md = (m == 1);
+					}
+					else
+					{
+						md = navigator.userAgent.match(/(mobi|android|iphone|opera mini|windows ce|ipad|ipod|blackberry|palm)+/i) ? true : false;
+						set_cookie(cookie.prefix + 'mobiledevice', md ? 1 : 2, 0);
+					}
+					if (md)
+					{
+						styleid = optvars.mstyleid;
+					}
+				}
+				if (styleid == optvars.dstyleid)
+				{
+					styleid = 0;
+				}
+			}
+			s = styleid || s || 0;
+
+			if (l == "0")
+			{
+				langid = fetch_cookie(cookie.prefix + "languageid");
+				if (langid == optvars.dlangid)
+				{
+					langid = 0;
+				}
+			}
+			l = langid || l || 0;
+
+			if (styleid > 0 || langid > 0)
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + "_" + s + "_" + l + ((u && u[4]) ? "_" + u[4] : ""));
+			}
+			else if (u && u[1] == 0 && u[2] == 0 && optvars.userfile == "index")
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + ".php");
+			}
+		}
+	}
+})();
+// -->
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="HandheldFriendly" content="true" />
+<script type="text/javascript">
+<!--
+var SESSIONURL = "s=773436446c62c8cec3f4636b16488013&";
+var SECURITYTOKEN = "guest";
+var IMAGESFOLDER = "images/mobilestyle";
+var DSTYLE_PERMANENT = parseInt("0", 10);
+function checkclick(str, docookie)
+{
+	if (confirm(str))
+	{
+		if (docookie)
+		{
+			document.cookie = 'bbmobilestyleid=67; path=/';
+
+			if (DSTYLE_PERMANENT == 1)
+			{
+				var expires = new Date();
+					expires.setTime(expires.getTime() + 86400 * 365 * 1000);
+			}
+			document.cookie = 'bbstyleid=67; path=/' + (typeof expires != 'undefined' ? '; expires=' + expires.toGMTString() : '');
+		}
+		return true;
+	}
+	return false;
+}
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="mobilestyle.css.php" />
+<script type="text/javascript" src="clientscript/mobilehelper.min.v30.js"></script>
+<!-- MOBILE CLEAN START HERE (header) -->
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:image" content="http://forums.goha.ru/images/goharu250x250.gif" />
+<meta property="og:title" content="Поиск книг по сюжету, описанию, героям" />
+<meta property="og:description" content="GoHa.Ru" />
+
+
+<title> Поиск книг по сюжету, описанию, героям - Страница 5 - GoHa.Ru</title>
+
+
+</head>
+
+<body>
+<div class="bodywrapping">
+
+<div class="header">
+</div>
+
+
+
+
+<script type="text/javascript">
+<!--
+function fixImgs(b)
+{
+	var a = document.getElementsByTagName("img");
+	for (i = 0; i < a.length; i++)
+	{
+		if (w = a[i].width, h = a[i].height, w > b)
+		{
+			f = 1 - (w - b) / w, a[i].width = w * f, a[i].height = h * f
+		}
+	}
+}
+function addLoadEvent(b)
+{
+	var a = window.onload;
+	window.onload = typeof window.onload != "function" ? b : function(){a && a(); b()}
+}
+addLoadEvent(function(){fixImgs(240)});
+// -->
+</script>
+
+<div id="navbar-container">
+
+<div class="navbar" id="navbar">
+<ul>
+	<li><a href="http://forums.goha.ru/index_82_0">Домой</a></li>
+	
+
+	<li><a href="search.php?s=773436446c62c8cec3f4636b16488013">Поиск</a></li>
+	<li><a href="search.php?s=773436446c62c8cec3f4636b16488013&amp;do=getdaily&amp;forumid=1939&amp;childforum=1">Новое</a></li>
+	
+	<li><a href="#" id="login-button" rel="nolabel"><strong>Вход</strong></a></li>
+
+</ul>
+</div>
+
+
+<div class="dropdownbox" id="login-box" style="display: none;">
+<form action="10gin.php" method="post">
+<input type="hidden" name="s" value="773436446c62c8cec3f4636b16488013" />
+<input type="hidden" name="securitytoken" value="guest" />
+<input type="hidden" name="do" value="login" />
+<input type="hidden" name="url" value="/showthread_82_0_p22780084" />
+<input type="hidden" name="vb_login_md5password" />
+<input type="hidden" name="vb_login_md5password_utf" />
+
+<div class="textarea-container">
+	<input type="text" name="vb_login_username" class="textarea shadow-inset corner-all" id="navbar_username" size="8" tabindex="1" value="" title="Имя пользователя" />
+</div>
+<div class="textarea-container">
+	<input type="password" name="vb_login_password" class="textarea shadow-inset corner-all" id="navbar_password" size="8" tabindex="1" value="" title="Пароль" />
+</div>
+<div class="selectors">
+	<fieldset class="fieldset">
+	<ul>
+		<li class="checkbox">
+			<label class="label-selector" for="cb_cookieuser">
+				<span><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser" tabindex="1" />Запомнить?</span>
+			</label>
+		</li>
+	</ul>
+	</fieldset>
+</div>
+<div><input type="submit" class="bigbutton-go bigbutton-shadow big-corner-all" value="Вход" tabindex="1" /></div>
+<div><a class="bigbutton bigbutton-shadow big-corner-all" href="register.php?s=773436446c62c8cec3f4636b16488013" tabindex="1">Регистрация</a></div>
+</form>
+</div>
+
+
+<div class="breadcrumb" id="breadcrumb_t">
+	
+	<div class="dropdownbox" id="breadcrumb_t-box" style="display: none;">
+		
+<IDXSKIP><div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_3">
+			<span style="white-space: nowrap;">&bull; </span>
+			Форумы
+		</a>
+	</div>
+</div></IDXSKIP>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_14">
+			<span style="white-space: nowrap;">&bull; &bull; </span>
+			Задушевные разговоры и всяческие базары
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_1939">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; </span>
+			Книги и мп3 книги
+		</a>
+	</div>
+</div>
+
+
+	</div>
+	
+	<div class="breadcrumb-title">
+		<a class="breadcrumb-up" href="http://forums.goha.ru/forumdisplay_82_0_1939" rel="nofollow">
+			<img src="images/mobilestyle/bcup.png" alt="" border="0" />
+		</a>
+		<div class="breadcrumb-buttonbox">
+			<div id="breadcrumb_t-button">
+				
+	 Поиск книг по сюжету, описанию, героям
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+
+
+
+<div id="pagenav-top"><div class="pagenav">
+<script type="text/javascript">
+<!--
+var PAGENAV = {
+	page: parseInt("5", 10),
+	total: parseInt("12", 10),
+	address: "http://forums.goha.ru/showthread_82_0_t447938",
+	anchor: "",
+	guest: true
+};
+// -->
+</script>
+</div>
+</div>
+<div id="posts"><div class="postbit"><div class="windowbg2 postbit-head" id="post22507665">
+<a name="post22507665"></a>
+<span style="float: right; display: inline-block;">#61</span>
+
+<a href="member.php?userid=">egorov88888</a> <span class="postbit-date">13.03.2013, 19:53</span>
+
+</div>
+<div class="postbit-message">пожалуйста помогите вспомнить автора и название книги из детства по сюжету трем братьям для получения наследства нужно убить всех существующих в мире медведей по одному экземпляру и они отправляются на эту увлекательную охоту по всем материкам и странам<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22507665">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22610551">
+<a name="post22610551"></a>
+<span style="float: right; display: inline-block;">#62</span>
+
+<a href="member.php?userid=1033205">Venk</a> <span class="postbit-date">26.03.2013, 04:06</span>
+
+</div>
+<div class="postbit-message">Кто подскажет название и автора (кажется, женщина, англоязычная). Мальчик-художник, сирота, бедствует. У него собака. И когда вдруг приходит сообщение, что ему кто-то наследовал, он со своим псом замерзает, так и не узнав этого...<br />
+<br />
+<font size="1"><font color="#666686"><i>Добавлено через 4 минуты</i></font></font><br />
+Ещё одна книга интересует. Автор - женщина (Россия). Помещика волнует постоянно скрипящая половица. Он приказывает вскрыть пол и там обнаруживают письмо женщины... Она рассказывает, что её сын сильно болел. Она заснула и видит сон, что у неё ангел спрашивает: хочет ли она, чтобы сын выздоровел? &quot;Да&quot;. Тогда смотри. И ангел открывает занавеску - сын поправился уже и бегает. Открывает вторую - сын заканчивает гимназию... И т.д. Потом открывает последнюю - а там виселица. Ангел: &quot;Хочешь, чтобы было так?&quot; - &quot;Да&quot; И сын поправился, стал... декабристом...<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22610551">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22614332">
+<a name="post22614332"></a>
+<span style="float: right; display: inline-block;">#63</span>
+
+<a href="member.php?userid=1033285">Наталия</a> <span class="postbit-date">26.03.2013, 13:25</span>
+
+</div>
+<div class="postbit-message">Всем Привет)))...клааассснооо, как вы все помогаете найти <img src="images/smilies/yahoo.gif" border="0" alt="" title="Уррааааа! Ля-Ля!" class="inlineimg" />.. Заметила, что сюжет забытых книг очень похож<img src="images/smilies/grin.gif" border="0" alt="" title="LOL" class="inlineimg" />. Не буду оригинальничать....у меня тоже есть такой &quot;гвоздик&quot;, мучает  меня несколько лет. Из зарубежного  фентези : ученый, проводил опыты, &quot;обратился &quot; в каменную глыбу....очнулся через много столетий, люди пребразились, попал в племя людей-кошек...дальше не помню. Помогите найти, пжлста!!!<img src="images/smilies/blush.gif" border="0" alt="" title="Стесняется.." class="inlineimg" /><br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22614332">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22629794">
+<a name="post22629794"></a>
+<span style="float: right; display: inline-block;">#64</span>
+
+<a href="member.php?userid=556285">Дитрум</a> <span class="postbit-date">27.03.2013, 23:36</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>Наталия</strong>:<br />
+ученый, проводил опыты, &quot;обратился &quot; в каменную глыбу..</i></div>
+техника безопасности важнее всего!<img src="images/smilies/grin.gif" border="0" alt="" title="LOL" class="inlineimg" /> книги такой, к сожалению, не знаю<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22629794">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22671600">
+<a name="post22671600"></a>
+<span style="float: right; display: inline-block;">#65</span>
+
+<a href="member.php?userid=">Begin1990</a> <span class="postbit-date">01.04.2013, 22:38</span>
+
+</div>
+<div class="postbit-message">Подскажите пожалуйста... фантастика зарубежная... к одному мужику прилетают инопланетяне и возвращают в каменный век ,дав бессмертие и суперсилу предвидения, и он начинает строить весь мир по-своему.... в конечном итоге разрабатывает ядерное оружие против этих инопланетян.....<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22671600">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22686612">
+<a name="post22686612"></a>
+<span style="float: right; display: inline-block;">#66</span>
+
+<a href="member.php?userid=1034077">LillaMai</a> <span class="postbit-date">03.04.2013, 14:22</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>Venk</strong>:<br />
+Кто подскажет название и автора (кажется, женщина, англоязычная). Мальчик-художник, сирота, бедствует. У него собака. И когда вдруг приходит сообщение, что ему кто-то наследовал, он со своим псом замерзает, так и не узнав этого...</i></div>
+Гектор Мало &quot;Без семьи&quot; похожая книжка<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22686612">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22694876">
+<a name="post22694876"></a>
+<span style="float: right; display: inline-block;">#67</span>
+
+<a href="member.php?userid=1033285">Наталия</a> <span class="postbit-date">04.04.2013, 12:44</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>Дитрум</strong>:<br />
+техника безопасности важнее всего!<img src="images/smilies/grin.gif" border="0" alt="" title="LOL" class="inlineimg" /> книги такой, к сожалению, не знаю</i></div>
+Спасибо, что откликнулись))...жаль<img src="images/smilies/cry.gif" border="0" alt="" title="Печаль" class="inlineimg" />. Может кому еще?....знакомо???<img src="images/smilies/facepalm.gif" border="0" alt="" title="Facepalm" class="inlineimg" /><br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22694876">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22710726">
+<a name="post22710726"></a>
+<span style="float: right; display: inline-block;">#68</span>
+
+<a href="member.php?userid=1035479">ole-lykoie</a> <span class="postbit-date">06.04.2013, 09:16</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>egorov88888</strong>:<br />
+пожалуйста помогите вспомнить автора и название книги из детства по сюжету трем братьям для получения наследства нужно убить всех существующих в мире медведей по одному экземпляру и они отправляются на эту увлекательную охоту по всем материкам и странам</i></div>
+Слушайте, я даже почитать это захотела. <br />
+Буду надеяться, что кто-то вспомнит)<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22710726">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22728803">
+<a name="post22728803"></a>
+<span style="float: right; display: inline-block;">#69</span>
+
+<a href="member.php?userid=1036181">Рида</a> <span class="postbit-date">08.04.2013, 18:53</span>
+
+</div>
+<div class="postbit-message">Большая просьба! Помогите найти книгу по сюжету. Уде обзвонила все библиотеки и книжные магазины. Книга какого то азиатского автора. Она посвящена художнику, который рисует с натуры и не может сам придумывать образы для своих картин. В ней был такой момент , когда в пожаре погибает его дочь и он рисует с натуры. Хоть какие нибудь зацепки) буду признательна всем<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22728803">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22763766">
+<a name="post22763766"></a>
+<span style="float: right; display: inline-block;">#70</span>
+
+<a href="member.php?userid=1034077">LillaMai</a> <span class="postbit-date">12.04.2013, 10:24</span>
+
+</div>
+<div class="postbit-message">похоже на что-то из Стивена Кинга или что-то в этом духе, я мало читала, но сюжет характерный.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22763766">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post22780084">
+<a name="post22780084"></a>
+<span style="float: right; display: inline-block;">#71</span>
+
+<a href="member.php?userid=1035479">ole-lykoie</a> <span class="postbit-date">14.04.2013, 15:16</span>
+
+</div>
+<div class="postbit-message">Главная героиня была продавщицей в антикварной лавке - в меру одинокая  такая девушка. В лавке было много фарфоровых сервизов, фигурки,  шкатулки. И какие-то из этих вещей она очень хотела бы оставить себе, но  не могла. Были в лавке и особенные клиенты, каждый со своей историей.  Очень сумбурное описание, но вдруг кому-то что-то похожее вспомнится )<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=22780084">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post23130448">
+<a name="post23130448"></a>
+<span style="float: right; display: inline-block;">#72</span>
+
+<a href="member.php?userid=70926">Tarik</a> <span class="postbit-date">28.05.2013, 12:07</span>
+
+</div>
+<div class="postbit-message">Капец какой то просто. Уже года 3-4 ищу книгу, которую прочитал хз когда, не могу найти.<br />
+Суть:<br />
+Фантастика, может НФ. Даже не помню, русская или нет. Из глубин космоса прямо на цивилизацию людей несутся какие то твари. Со временем, становится понятно, что это в общем то стада огромных живых существ, живущих прямо в открытом космосе. И они летят не на людей, они летят от чего то, что их жутко напугало. Ну и вот, какая то хрень летит за ними, но дальше я уже не помню. Почему то подсознание упорно утверждает, что те существа, живущие стадами, назывались в книге левиафанами, но поиск с указанием этого слова также ничего не дал.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=23130448">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post23479151">
+<a name="post23479151"></a>
+<span style="float: right; display: inline-block;">#73</span>
+
+<a href="member.php?userid=1060157">GreySci</a> <span class="postbit-date">11.07.2013, 11:44</span>
+
+</div>
+<div class="postbit-message">Цитата: &quot;egorov88888;22507665&quot;&gt;пожалуйста помогите вспомнить автора и название книги из детства по сюжету трем братьям для получения наследства нужно убить всех существующих в мире медведей по одному экземпляру и они отправляются на эту увлекательную охоту по всем материкам и странам<br />
+<br />
+Слушайте, я даже почитать это захотела. <br />
+ Буду надеяться, что кто-то вспомнит)<br />
+<br />
+Похоже на Майн Рид &quot;Охотники за медведями&quot;<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=23479151">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post23479622">
+<a name="post23479622"></a>
+<span style="float: right; display: inline-block;">#74</span>
+
+<a href="member.php?userid=63923">Aid(Real GOD)</a> <span class="postbit-date">11.07.2013, 12:36</span>
+
+</div>
+<div class="postbit-message">Жанр драмма<br />
+Страна Япония.<br />
+Автора Я не запомнил<br />
+Сюжет<br />
+Вокруг Большого Вулкана раскинулись небольшие деревни. Там живут и работают люди.<br />
+Однажды от этого вулкана в сторону города проходил парень, и так случилось что одной девушки тоже надо было в город и они встретились на одной дороге и пошли в город вместе. Девушка влюбилась в юношу. В городе они потеряли друг друга и сделав покупки девушка пошла домой одна.<br />
+Через год на деревню девушки напали разбойники и забрали сильных мужчин и красивых женщин. <br />
+На пути обоз из этих людей встречает этого парня идущего к вулкану. Парень узнает девушку и убивает всех разбойников с помощью магии огня и меча. По пути в деревню парень рассказывает девушке что он часть вулкана. Дойдя до деревни они прощаются и обещают друг другу снова встретится.<br />
+Придя в вулкан парень натыкается на грубость своего брата который говорит ему что никто не должен знать кто они и заставляет этого парня убить девушку потому что она может все рассказать.<br />
+Пойдя на свидание парень убивает девушку, рыдая над телом он карит себя за то что рассказал девушке кто он есть. Придя домой этого парня утешает его брат и говорит что он поступил правильно. <br />
+Через пятнадцать лет, история повторяется снова идя в город парень встречает другую девушку которая тоже в него влюбляется. Они начинают встречаться. В это время люди стали обращать внимание на то что вулкан стал более активен. Брат парня узнает об его подруге и просит парня чтоб он бросил ее, но тот говорит о том что любит ее. Брат парня напоминает ему о последствиях. Тогда парень соглашается. Но всё равно продолжает встречаться. <br />
+И вот когда у них доходит до секса вулкан извергает лаву на деревни внизу. Брат парня находит их и убивает девушку, тогда парень убивает своего брата. Поняв что натворил он идет к вулкану и бросается в лаву.<br />
+И лава немного не дойдя до деревень засыхает, а вулкан умирает переставая греть землю деревень и города.<br />
+<br />
+Книга интересная, Я так понял что парень был сердцем вулкана, а его брат мозгом)<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=23479622">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post23535253">
+<a name="post23535253"></a>
+<span style="float: right; display: inline-block;">#75</span>
+
+<a href="member.php?userid=1061192">Masheka</a> <span class="postbit-date">19.07.2013, 07:21</span>
+
+</div>
+<div class="postbit-message">Главный герой - Филипп. Родители возможно нет, воспитывался кем-то из родственников, скорее всего дядей, пастором прихода, и тетей. <br />
+С детства хромой, обучался в каком-то христианском монастыре, позже разочаровывается в религии и теряет веру. Неплохо рисует, получив, оставленные еще отцом, деньги на образование, уезжает что-ли в Париж учиться на художника, где знакомится с рыжей девушкой, абсолютно бесталанной художницей, которая позже умирает, вроде бы от голода. Тусит с компанией художников, поэтов и прочих творческих личностей. Имел роман с какой-то девушкой с ребенком, позже вроде как ставшей проституткой. Поняв, что приличного художника из него не получится, идет учиться медицине, возможно переезжает в другой город. Практику проходит у чудаковатого сварливого тяжело находящего с людьми общий язык доктора, живущего где-то на острове, где после смерти учителя и остается врачом.<br />
+Спасибо.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=773436446c62c8cec3f4636b16488013&amp;do=newreply&amp;p=23535253">Ответ</a>
+	</div>
+</div></div>
+</div>
+<div id="pagenav-bottom"><div class="pagenav">
+<script type="text/javascript">
+<!--
+var PAGENAV = {
+	page: parseInt("5", 10),
+	total: parseInt("12", 10),
+	address: "http://forums.goha.ru/showthread_82_0_t447938",
+	anchor: "",
+	guest: true
+};
+// -->
+</script>
+</div>
+</div>
+
+
+
+
+
+
+<div class="breadcrumb" id="breadcrumb_b">
+	
+	<div class="dropdownbox" id="breadcrumb_b-box" style="display: none;">
+		
+<IDXSKIP><div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_3">
+			<span style="white-space: nowrap;">&bull; </span>
+			Форумы
+		</a>
+	</div>
+</div></IDXSKIP>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_14">
+			<span style="white-space: nowrap;">&bull; &bull; </span>
+			Задушевные разговоры и всяческие базары
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_1939">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; </span>
+			Книги и мп3 книги
+		</a>
+	</div>
+</div>
+
+
+	</div>
+	
+	<div class="breadcrumb-title">
+		<a class="breadcrumb-up" href="http://forums.goha.ru/forumdisplay_82_0_1939" rel="nofollow">
+			<img src="images/mobilestyle/bcup.png" alt="" border="0" />
+		</a>
+		<div class="breadcrumb-buttonbox">
+			<div id="breadcrumb_b-button">
+				
+	 Поиск книг по сюжету, описанию, героям
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+<div class="counter" id="cfleft">
+<!-- LiveInternet counter -->
+<script type="text/javascript">
+<!--
+document.write('<a href="http://www.liveinternet.ru/click" '+'target=_blank><img src="http://counter.yadro.ru/hit?t50.6;r'+escape(document.referrer)+((typeof(screen)=='undefined')?'':';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+';'+Math.random()+'" alt="" title="LiveInternet: показано число просмотров и посетителей за 24 часа" '+'border=0 width=31 height=31></a>');
+//-->
+</script>
+<!-- /LiveInternet -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1733792-37', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+<IDXSKIP><div class="counter" id="cfright">
+<img src="images/mobilestyle/18sign_mobile.png" alt="" border="0" width="30" height="33" />
+
+<!-- Rating@Mail.ru counter -->
+<a target="_top" href="http://top.mail.ru/jump?from=1059157">
+<img src="http://d9.c2.b0.a1.top.list.ru/counter?id=1059157;t=76" border="0" height="31" width="38" alt="Рейтинг@Mail.ru" /></a>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter20744278 = new Ya.Metrika({id:20744278,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/20744278" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</div></IDXSKIP>
+
+	<div id="cron" class="smallfont" align="center">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	</div>
+
+	<div class="footlinks">
+		<ul>
+			<IDXSKIP><li id="copyright">
+				<a class="footbtn" href="http://www.goha.ru">
+				
+					(c) GoHa.Ru 2003-2017
+				</a>
+			</li></IDXSKIP>
+			<li id="fullversion"><a class="footbtn" href="/showthread_0_0_p22780084" onclick="return checkclick('Переключиться на стиль \'GoHa.Ru\'?', true);">Полная версия</a></li>
+			
+			
+			<li id="lastchild"><a class="footbtn" href="register.php?s=773436446c62c8cec3f4636b16488013">Регистрация</a></li>
+			
+			
+		</ul>
+	</div>
+
+</div>
+
+
+<!-- MOBILE CLEAN START HERE (footer) -->
+
+
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,1053 @@
+forums.goha.ru/showthread_82_0_t486559_page3
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru">
+<head>
+<style type="text/css">
+#optnotice
+{
+	margin-bottom: 4px;
+	padding: 8px;
+	text-align: center;
+	background: #FFFFE1;
+	border: 1px solid #999;
+	color: #000;
+}
+
+#optnotice a
+{
+	color: #00F;
+}
+#optnotice a:hover
+{
+	color: #F00;
+}
+</style>
+
+<script type="text/javascript">
+<!--
+var optvars = {
+	bburl:         "http://forums.goha.ru",
+	querystring:   "t=486559&amp;page=3",
+	userfile:      "showthread",
+	dstyleid:      "67",
+	mstyleid:      "82",
+	dlangid:       "3",
+	forumid:       "117",
+	threadid:      "486559",
+	feature:       "",
+
+	cookie: {
+		prefix:  "bb",
+		name:    "lflag",
+		value:   "bqeGcsK5",
+		timeout: parseInt("900", 10)
+	}
+};
+
+var lflag = 0;
+var uflag = 0;
+
+(function()
+{
+	var u;
+	var url = new String(window.location);
+	var cookie = optvars.cookie;
+
+	var dourl = function(url)
+	{
+		if (window.stop)
+		{
+			window.stop();
+		}
+		window.location = url;
+	};
+
+	var set_cookie = function(name, value, expires)
+	{
+		var cookieStr = name + '=' + escape(value) + '; path=/';
+
+		if (typeof expires == 'number' && expires > 0)
+		{
+			var date = new Date();
+				date.setTime(date.getTime() + expires * 1000);
+			cookieStr += '; expires=' + date.toGMTString();
+		}
+
+		document.cookie = cookieStr;
+	};
+
+	var fetch_cookie = function(name)
+	{
+		var m = document.cookie.match(new RegExp("(?:^|; )" + name.toString().replace(/(\+|\{|\}|\(|\)|\[|\]|\||\/|\?|\^|$|\\|\.|\=|\!|\<|\>|\:|\*)/g, "\$1") + "=([^;]*)"));
+		return m ? m[1] : null;
+	};
+
+	var intval = function(i)
+	{
+		return parseInt(i, 10) || 0;
+	};
+
+	if ((u = url.match(new RegExp(optvars.userfile + "_([0-9]+)_([0-9]+)(_([a-z0-9_]+))*", "i"))) || (optvars.userfile == "index"))
+	{
+		if (fetch_cookie(cookie.prefix + cookie.name) == cookie.value)
+		{
+			lflag = 1;
+			var qstr = (optvars.querystring ? '?' + optvars.querystring.replace(/&amp;/g, "&") : '');
+
+			if (optvars.feature.length > 0)
+			{
+				qstr += ((qstr.indexOf("?") == -1) ? "?" : "&") + optvars.feature;
+			}
+
+			//var s = u ? u[1] : 0;
+			//set_cookie(cookie.prefix + 'mobilestyleid', s, 0);
+			//set_cookie(cookie.prefix + 'styleid', s, (s != optvars.mstyleid) ? 365 * 86400 : 0);
+
+			dourl(optvars.bburl + "/" + optvars.userfile + ".php" + qstr);
+		}
+		else
+		{
+			var session = {
+				lastvisit: intval(fetch_cookie(cookie.prefix + 'lastvisit')),
+				forumid: intval(fetch_cookie(cookie.prefix + 'optforumid')),
+				threadid: intval(fetch_cookie(cookie.prefix + 'optthreadid')),
+				inside: intval(fetch_cookie(cookie.prefix + 'optinside'))
+			};
+
+			var timenow = Math.ceil((new Date().getTime()) / 1000);
+			var outdated = session.lastvisit < timenow - cookie.timeout;
+			if ((optvars.forumid != session.forumid) || (optvars.threadid != session.threadid) || outdated || !session.inside)
+			{
+				uflag = 1;
+
+				set_cookie(cookie.prefix + 'lastvisit', timenow, 0);
+				set_cookie(cookie.prefix + 'optforumid', optvars.forumid, 0);
+				set_cookie(cookie.prefix + 'optthreadid', optvars.threadid, 0);
+			}
+			set_cookie(cookie.prefix + 'optinside', 1, 0);
+
+			// check style/language
+			var s = u ? u[1] : 0;
+			var l = u ? u[2] : 0;
+			var styleid = 0;
+			var langid = 0;
+
+			if (s == "0")
+			{
+				styleid = (fetch_cookie(cookie.prefix + "mobilestyleid") || fetch_cookie(cookie.prefix + "styleid"));
+				if (!styleid)
+				{
+					var m, md;
+					if (m = fetch_cookie(cookie.prefix + "mobiledevice"))
+					{
+						md = (m == 1);
+					}
+					else
+					{
+						md = navigator.userAgent.match(/(mobi|android|iphone|opera mini|windows ce|ipad|ipod|blackberry|palm)+/i) ? true : false;
+						set_cookie(cookie.prefix + 'mobiledevice', md ? 1 : 2, 0);
+					}
+					if (md)
+					{
+						styleid = optvars.mstyleid;
+					}
+				}
+				if (styleid == optvars.dstyleid)
+				{
+					styleid = 0;
+				}
+			}
+			s = styleid || s || 0;
+
+			if (l == "0")
+			{
+				langid = fetch_cookie(cookie.prefix + "languageid");
+				if (langid == optvars.dlangid)
+				{
+					langid = 0;
+				}
+			}
+			l = langid || l || 0;
+
+			if (styleid > 0 || langid > 0)
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + "_" + s + "_" + l + ((u && u[4]) ? "_" + u[4] : ""));
+			}
+			else if (u && u[1] == 0 && u[2] == 0 && optvars.userfile == "index")
+			{
+				dourl(optvars.bburl + "/" + optvars.userfile + ".php");
+			}
+		}
+	}
+})();
+// -->
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="HandheldFriendly" content="true" />
+<script type="text/javascript">
+<!--
+var SESSIONURL = "s=8684d177edc1f1929a26c490c231502b&";
+var SECURITYTOKEN = "guest";
+var IMAGESFOLDER = "images/mobilestyle";
+var DSTYLE_PERMANENT = parseInt("0", 10);
+function checkclick(str, docookie)
+{
+	if (confirm(str))
+	{
+		if (docookie)
+		{
+			document.cookie = 'bbmobilestyleid=67; path=/';
+
+			if (DSTYLE_PERMANENT == 1)
+			{
+				var expires = new Date();
+					expires.setTime(expires.getTime() + 86400 * 365 * 1000);
+			}
+			document.cookie = 'bbstyleid=67; path=/' + (typeof expires != 'undefined' ? '; expires=' + expires.toGMTString() : '');
+		}
+		return true;
+	}
+	return false;
+}
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="mobilestyle.css.php" />
+<script type="text/javascript" src="clientscript/mobilehelper.min.v30.js"></script>
+<!-- MOBILE CLEAN START HERE (header) -->
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:image" content="http://forums.goha.ru/images/goharu250x250.gif" />
+<meta property="og:title" content="Stalker Online" />
+<meta property="og:description" content="GoHa.Ru" />
+
+
+<title> Stalker Online - Страница 3 - GoHa.Ru</title>
+
+
+</head>
+
+<body>
+<div class="bodywrapping">
+
+<div class="header">
+</div>
+
+
+
+
+<script type="text/javascript">
+<!--
+function fixImgs(b)
+{
+	var a = document.getElementsByTagName("img");
+	for (i = 0; i < a.length; i++)
+	{
+		if (w = a[i].width, h = a[i].height, w > b)
+		{
+			f = 1 - (w - b) / w, a[i].width = w * f, a[i].height = h * f
+		}
+	}
+}
+function addLoadEvent(b)
+{
+	var a = window.onload;
+	window.onload = typeof window.onload != "function" ? b : function(){a && a(); b()}
+}
+addLoadEvent(function(){fixImgs(240)});
+// -->
+</script>
+
+<div id="navbar-container">
+
+<div class="navbar" id="navbar">
+<ul>
+	<li><a href="http://forums.goha.ru/index_82_0">Домой</a></li>
+	
+
+	<li><a href="search.php?s=8684d177edc1f1929a26c490c231502b">Поиск</a></li>
+	<li><a href="search.php?s=8684d177edc1f1929a26c490c231502b&amp;do=getdaily&amp;forumid=117&amp;childforum=1">Новое</a></li>
+	
+	<li><a href="#" id="login-button" rel="nolabel"><strong>Вход</strong></a></li>
+
+</ul>
+</div>
+
+
+<div class="dropdownbox" id="login-box" style="display: none;">
+<form action="10gin.php" method="post">
+<input type="hidden" name="s" value="8684d177edc1f1929a26c490c231502b" />
+<input type="hidden" name="securitytoken" value="guest" />
+<input type="hidden" name="do" value="login" />
+<input type="hidden" name="url" value="/showthread_82_0_t486559_page3" />
+<input type="hidden" name="vb_login_md5password" />
+<input type="hidden" name="vb_login_md5password_utf" />
+
+<div class="textarea-container">
+	<input type="text" name="vb_login_username" class="textarea shadow-inset corner-all" id="navbar_username" size="8" tabindex="1" value="" title="Имя пользователя" />
+</div>
+<div class="textarea-container">
+	<input type="password" name="vb_login_password" class="textarea shadow-inset corner-all" id="navbar_password" size="8" tabindex="1" value="" title="Пароль" />
+</div>
+<div class="selectors">
+	<fieldset class="fieldset">
+	<ul>
+		<li class="checkbox">
+			<label class="label-selector" for="cb_cookieuser">
+				<span><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser" tabindex="1" />Запомнить?</span>
+			</label>
+		</li>
+	</ul>
+	</fieldset>
+</div>
+<div><input type="submit" class="bigbutton-go bigbutton-shadow big-corner-all" value="Вход" tabindex="1" /></div>
+<div><a class="bigbutton bigbutton-shadow big-corner-all" href="register.php?s=8684d177edc1f1929a26c490c231502b" tabindex="1">Регистрация</a></div>
+</form>
+</div>
+
+
+<div class="breadcrumb" id="breadcrumb_t">
+	
+	<div class="dropdownbox" id="breadcrumb_t-box" style="display: none;">
+		
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_3">
+			<span style="white-space: nowrap;">&bull; </span>
+			Форумы
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_11">
+			<span style="white-space: nowrap;">&bull; &bull; </span>
+			Новые Игры
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_117">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; </span>
+			Обсуждение игр (любых)
+		</a>
+	</div>
+</div>
+
+
+	</div>
+	
+	<div class="breadcrumb-title">
+		<a class="breadcrumb-up" href="http://forums.goha.ru/forumdisplay_82_0_117" rel="nofollow">
+			<img src="images/mobilestyle/bcup.png" alt="" border="0" />
+		</a>
+		<div class="breadcrumb-buttonbox">
+			<div id="breadcrumb_t-button">
+				
+	 Stalker Online
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+
+
+
+<div id="pagenav-top"><div class="pagenav">
+<script type="text/javascript">
+<!--
+var PAGENAV = {
+	page: parseInt("3", 10),
+	total: parseInt("26", 10),
+	address: "http://forums.goha.ru/showthread_82_0_t486559",
+	anchor: "",
+	guest: true
+};
+// -->
+</script>
+</div>
+</div>
+<div id="posts"><div class="postbit"><div class="windowbg2 postbit-head" id="post12104809">
+<a name="post12104809"></a>
+<span style="float: right; display: inline-block;">#31</span>
+
+<a href="member.php?userid=670501">Redked</a> <span class="postbit-date">09.10.2010, 16:05</span>
+
+</div>
+<div class="postbit-message">так<br />
+кто переведёт свои 60к на счёт этих &quot;Горе&quot; разработчиков ради благой цели? <img src="images/smilies/eusa_think.gif" border="0" alt="" title="Задумался" class="inlineimg" /><br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=12104809">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post12106225">
+<a name="post12106225"></a>
+<span style="float: right; display: inline-block;">#32</span>
+
+<a href="member.php?userid=1886">Torgaroth</a> <span class="postbit-date">09.10.2010, 18:54</span>
+
+</div>
+<div class="postbit-message">А самое главное вот ведь игра то, на которую ммо просто само ложиться, даже придумывать ничего не надо. И пострелять друг в дружку было бы интересно... Почему разработчики официальной игры, а не этой, не возьмутся за идею, не понятно.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=12106225">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13685632">
+<a name="post13685632"></a>
+<span style="float: right; display: inline-block;">#33</span>
+
+<a href="member.php?userid=33709">Lorgar</a> <span class="postbit-date">08.02.2011, 22:29</span>
+
+</div>
+<div class="postbit-message">Зашел сегодня посмотреть что они там наворотили а тут такое:<br />
+<br />
+<br />
+<font color="Navy">Открытый Бета Тест &quot;Сталкер-онлайн&quot; начинается!<br />
+Вот и наступил знаменательный день! Путь в Зону открыт!<br />
+Сталкеры, специально для вас, сегодня, мы начинаем Открытое Бета Тестирование игры &quot;Сталкер-онлайн&quot; <br />
+<br />
+Ориентировочное время ОБТ- 4 недели. Спешите принять участие и вас ждут конкурсы, акции и ивенты! Следите за новостями на <span class="linkexternal"><a href="http://blog.stalker-online.co" target="_blank">http://blog.stalker-online.co</a></span> <br />
+<br />
+Также, коллектив Cybertime System хочет поблагодарить игроков, принявших участие в закрытом бета-тестировании. Все они получат подарки в игре, а пользователи, первыми достигшие максимального уровня и авторы самых подробных отчетов об ошибках будут награждены дополнительными призами.<br />
+<br />
+Теперь войти в Зону Отчуждения сможет любой желающий: достаточно зарегистрироваться и скачать клиент игры.</font><br />
+<br />
+<br />
+Только вот ссылок на скачку пока невидно, обещают в ближайшие часы выложить.<br />
+<br />
+PS графически вроде за последние пол года приятнее стала, будем посмотреть.<br />
+<div style="display: none;" id="ame_noshow_post_1497234014_1">
+        <a href="http://www.youtube.com/watch?v=FgZ4kN76ros&amp;feature=fvst" title="YouTube" target="_blank">YouTube</a>
+</div>
+<div style="display: inline;" id="ame_doshow_post_1497234014_1">
+<iframe width="640" height="385" src="http://www.youtube.com/embed/FgZ4kN76ros?wmode=transparent&amp;enablejsapi=1&amp;version=3" frameborder="0" allowfullscreen></iframe>
+</div><br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13685632">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13685892">
+<a name="post13685892"></a>
+<span style="float: right; display: inline-block;">#34</span>
+
+<a href="member.php?userid=70546">BAZOOKAMEGATRON</a> <span class="postbit-date">08.02.2011, 22:48</span>
+
+</div>
+<div class="postbit-message">зарегился на форуме<br />
+при попытке зарегиться на тест пишет:<br />
+Для группы пользователей, в которую Вы входите - регистрация на данный момент - запрещена<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13685892">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13686250">
+<a name="post13686250"></a>
+<span style="float: right; display: inline-block;">#35</span>
+
+<a href="member.php?userid=33709">Lorgar</a> <span class="postbit-date">08.02.2011, 23:22</span>
+
+</div>
+<div class="postbit-message"><span class="linkexternal"><a href="http://forum.stalker-online.co/viewtopic.php?f=2&amp;t=1080" target="_blank">http://forum.stalker-online.co/viewtopic.php?f=2&amp;t=1080</a></span><br />
+Во клиент доступен и регистрация заработала.<br />
+качаю, мож завтра отчетик накатаю)<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13686250">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13687033">
+<a name="post13687033"></a>
+<span style="float: right; display: inline-block;">#36</span>
+
+<a href="member.php?userid=">Pilman</a> <span class="postbit-date">09.02.2011, 00:36</span>
+
+</div>
+<div class="postbit-message">Кратко: клиент доступен по вот этой ссылке <span class="linkexternal"><a href="http://stalker-online.co/so_beta_0.7.4.rar.torrent" target="_blank">http://stalker-online.co/so_beta_0.7.4.rar.torrent</a></span><br />
+Но сначала, зарегистрируйте свой игровой аккаунт <span class="linkexternal"><a href="http://stalker-online.co/login.php" target="_blank">http://stalker-online.co/login.php</a></span><br />
+Очень интересно узнать ваше мнение<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13687033">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13687125">
+<a name="post13687125"></a>
+<span style="float: right; display: inline-block;">#37</span>
+
+<a href="member.php?userid=647996">OVERK1LL</a> <span class="postbit-date">09.02.2011, 00:50</span>
+
+</div>
+<div class="postbit-message">Пока ролика не увижу с этого ОБТ нормального даже на сайт переходить небуду, то что было пол года назад просто тихий ужас...<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13687125">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13687626">
+<a name="post13687626"></a>
+<span style="float: right; display: inline-block;">#38</span>
+
+<a href="member.php?userid=33709">Lorgar</a> <span class="postbit-date">09.02.2011, 03:25</span>
+
+</div>
+<div class="postbit-message">Первые впечатления.<br />
+Ну про проблемы с лаунчером  скачкой итд писать не буду, 5 минут на форуме и во всем разобрался.<br />
+Залогинившись и поковырявшись в нехитрых настройках (можно выбрать разрешение экрана, экранный или полноэкранный режимы и настройки графики от вери хай до лоу)<br />
+попадаем на окно выбора персонажа - <br />
+<span class="linkexternal"><a href="http://img228.imageshack.us/i/66931542.jpg/" target="_blank"><img src="http://img228.imageshack.us/img228/7831/66931542.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<br />
+на выбор 5 лиц и пара вариантов одежды - увы чтоб вы не настроили в игре вид персонажа не изменится (спишем на издержки беты)<br />
+<br />
+далее попадаем на площадь у заброшенного вокзала, вокруг копошатся такие же как и ты новички стакеры.<br />
+Там же стоит первый нпц-квестгивер.<br />
+<span class="linkexternal"><a href="http://img25.imageshack.us/i/11471373.jpg/" target="_blank"><img src="http://img25.imageshack.us/img25/2695/11471373.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<br />
+Первая моя реакция  -гомерический хохот при виде анимации передвижения персонажа – впечатление что персонаж - это чемпион по спортивной ходьбе потерявший из подмышек 2 арбуза. Анимацию переделывать обязательно это даже не 2000й год.<br />
+<br />
+Второе впечатление – просто нереальные тормоза на весьма не слабой машине.<br />
+Правда тут стоит признать как только я выбрался из начальной зоны – тормоза пропали и игра вполне резво пошла на максимальных доступных настройках. Так-что, тормоза скорее всего из за наплыва народу в нуб зоне.<br />
+<br />
+Далее первые квесты  -(настреляй крысок, сбегай к торговцу, подай принеси, в общем ничего выдающегося.) <br />
+Единственное что убило на повал - Кузнец предложил мне подобрать некий артефакт с целью последующей его продажей, я на радостях нахапал сих предметов до перегруза, принеся вещ по назначению я обнаружил: 1- артифакт забрали у меня одну штуку, 2-покупать остальные никто у меня не намерян, 3- ВЫКИНУТЬ ИХ НЕЛЬЗЯ!!! в итоге я так и ходил как в штаны наклав (именно так выглядит анимация перегруженного перса)<br />
+Как выяснилось чуть пожже 90% квестов или вобще не пашут или пажут через простите }I{опу<br />
+<span class="linkexternal"><a href="http://img824.imageshack.us/i/58952107.jpg/" target="_blank"><img src="http://img824.imageshack.us/img824/5598/58952107.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<br />
+Еще интересный момент Ни на мини – карте ни в игре, квестовые неписи и ключевые места никак не отмечаются.  А карту в  игре я вообще не нашел. Заблудится элементарно, а после выхода из нубозоны вообще блуждать можно долго.<br />
+Также отсутствуют какие бы то ни было подсказки как по управлению так и по тому что вообще в игре делать. Управление вообще пришлось искать на форуме.<br />
+Пвп в игре свободное, штрафов за смерть я не обнаружил, у злостных ПК меняется цвет ника, однако какого бы то ни было изменения отношения к ним со стороны нпц замечено не было.<br />
+Также при смерти с персонажа вываливается дроп, что конкретно падает я так и не понял так как после смерти и потери мной некоего рюкзачка - при воскрешении все что было при мне так и осталось (возможно выпала часть патронов или кредитов – их я не считал)<br />
+<br />
+Ну потенциал у игры явно есть необычный сетинг, свободное пвп  и на первый взгляд неплохо сделанный мир.<br />
+Однако на данный момент на ОБТ проект не тянет, скорее збт причем первых версий (посмотрим насколько оперативно будут разработчики править багги)<br />
+Тест продолжу завтра , а пока вот несколько скриншетов.<br />
+<br />
+Простой солдат с простой русской фамилией..<br />
+<span class="linkexternal"><a href="http://img841.imageshack.us/i/57571269.jpg/" target="_blank"><img src="http://img841.imageshack.us/img841/3843/57571269.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+антураж<br />
+<span class="linkexternal"><a href="http://img121.imageshack.us/i/14481649.jpg/" target="_blank"><img src="http://img121.imageshack.us/img121/8899/14481649.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<span class="linkexternal"><a href="http://img190.imageshack.us/i/61513607.jpg/" target="_blank"><img src="http://img190.imageshack.us/img190/5102/61513607.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<br />
+<br />
+во многие здания можно заходить<br />
+<span class="linkexternal"><a href="http://img51.imageshack.us/i/92777705.jpg/" target="_blank"><img src="http://img51.imageshack.us/img51/7715/92777705.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<span class="linkexternal"><a href="http://img534.imageshack.us/i/99870315.jpg/" target="_blank"><img src="http://img534.imageshack.us/img534/3203/99870315.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+медвед <img src="images/smilies/brberbrb.gif" border="0" alt="" title="..." class="inlineimg" /><br />
+<span class="linkexternal"><a href="http://img163.imageshack.us/i/64204092.jpg/" target="_blank"><img src="http://img163.imageshack.us/img163/6884/64204092.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+аномалии<br />
+<span class="linkexternal"><a href="http://img819.imageshack.us/i/84866285.jpg/" target="_blank"><img src="http://img819.imageshack.us/img819/7968/84866285.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+и последствия контакта с аномалиями..<br />
+<span class="linkexternal"><a href="http://img833.imageshack.us/i/22347938.jpg/" target="_blank"><img src="http://img833.imageshack.us/img833/969/22347938.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<span class="linkexternal"><a href="http://img12.imageshack.us/i/77234019.jpg/" target="_blank"><img src="http://img12.imageshack.us/img12/9136/77234019.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+на последнем скрине виден выпавший с персонажа при смерти лут.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13687626">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13687681">
+<a name="post13687681"></a>
+<span style="float: right; display: inline-block;">#39</span>
+
+<a href="member.php?userid=670501">Redked</a> <span class="postbit-date">09.02.2011, 03:55</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>Lorgar</strong>:<br />
+Первые впечатления.<br />
+Ну про проблемы с лаунчером  скачкой итд писать не буду, 5 минут на форуме и во всем разобрался.<br />
+Залогинившись и поковырявшись в нехитрых настройках (можно выбрать разрешение экрана, экранный или полноэкранный режимы и настройки графики от вери хай до лоу)<br />
+попадаем на окно выбора персонажа - <br />
+<span class="linkexternal"><a href="http://img228.imageshack.us/i/66931542.jpg/" target="_blank"><img src="http://img228.imageshack.us/img228/7831/66931542.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<table style="padding: 6px;  border-spacing: 1px; border: 0px;">
+<thead>
+<tr>
+<td><span class="thead" style="cursor: pointer; padding: 5px;"
+ onclick="var spnode=this.parentNode.parentNode.parentNode.nextSibling;
+ if(spnode.style.display=='none') { spnode.style.display='';
+ this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead.gif'; } else {
+   spnode.style.display='none'; this.lastChild.src='http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif'; }">...&nbsp;&nbsp;<img src="http://forums.goha.ru/images/customstyles/vbgoha/buttons/collapse_thead_collapsed.gif" alt="+" style="border:0px; vertical-align:middle;" /></span>
+</td>
+</tr>
+</thead><tbody style="display: none;">
+<tr>
+<td><br />
+на выбор 5 лиц и пара вариантов одежды - увы чтоб вы не настроили в игре вид персонажа не изменится (спишем на издержки беты)<br />
+<br />
+далее попадаем на площадь у заброшенного вокзала, вокруг копошатся такие же как и ты новички стакеры.<br />
+Там же стоит первый нпц-квестгивер.<br />
+<span class="linkexternal"><a href="http://img25.imageshack.us/i/11471373.jpg/" target="_blank"><img src="http://img25.imageshack.us/img25/2695/11471373.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<br />
+Первая моя реакция  -гомерический хохот при виде анимации передвижения персонажа – впечатление что персонаж - это чемпион по спортивной ходьбе потерявший из подмышек 2 арбуза. Анимацию переделывать обязательно это даже не 2000й год.<br />
+<br />
+Второе впечатление – просто нереальные тормоза на весьма не слабой машине.<br />
+Правда тут стоит признать как только я выбрался из начальной зоны – тормоза пропали и игра вполне резво пошла на максимальных доступных настройках. Так-что, тормоза скорее всего из за наплыва народу в нуб зоне.<br />
+<br />
+Далее первые квесты  -(настреляй крысок, сбегай к торговцу, подай принеси, в общем ничего выдающегося.)<br />
+Единственное что убило на повал - Кузнец предложил мне подобрать некий артефакт с целью последующей его продажей, я на радостях нахапал сих предметов до перегруза, принеся вещ по назначению я обнаружил: 1- артифакт забрали у меня одну штуку, 2-покупать остальные никто у меня не намерян, 3- ВЫКИНУТЬ ИХ НЕЛЬЗЯ!!! в итоге я так и ходил как в штаны наклав (именно так выглядит анимация перегруженного перса)<br />
+<span class="linkexternal"><a href="http://img824.imageshack.us/i/58952107.jpg/" target="_blank"><img src="http://img824.imageshack.us/img824/5598/58952107.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<br />
+Еще интересный момент Ни на мини – карте ни в игре, квестовые неписи и ключевые места никак не отмечаются.  А карту в  игре я вообще не нашел. Заблудится элементарно, а после выхода из нубозоны вообще блуждать можно долго.<br />
+Также отсутствуют какие бы то ни было подсказки как по управлению так и по тому что вообще в игре делать. Управление вообще пришлось искать на форуме.<br />
+Пвп в игре свободное, штрафов за смерть я не обнаружил, у злостных ПК меняется цвет ника, однако какого бы то ни было изменения отношения к ним со стороны нпц замечено не было.<br />
+Также при смерти с персонажа вываливается дроп, что конкретно падает я так и не понял так как после смерти и потери мной некоего рюкзачка - при воскрешении все что было при мне так и осталось (возможно выпала часть патронов или кредитов – их я не считал)<br />
+<br />
+Ну потенциал у игры явно есть необычный сетинг, свободное пвп  и на первый взгляд неплохо сделанный мир.<br />
+Однако на данный момент на ОБТ проект не тянет, скорее збт причем первых версий (посмотрим насколько оперативно будут разработчики править багги)<br />
+Тест продолжу завтра , а пока вот несколько скриншетов.<br />
+<br />
+Простой солдат с простой русской фамилией..<br />
+<span class="linkexternal"><a href="http://img841.imageshack.us/i/57571269.jpg/" target="_blank"><img src="http://img841.imageshack.us/img841/3843/57571269.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+антураж<br />
+<span class="linkexternal"><a href="http://img121.imageshack.us/i/14481649.jpg/" target="_blank"><img src="http://img121.imageshack.us/img121/8899/14481649.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<span class="linkexternal"><a href="http://img190.imageshack.us/i/61513607.jpg/" target="_blank"><img src="http://img190.imageshack.us/img190/5102/61513607.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<br />
+<br />
+во многие здания можно заходить<br />
+<span class="linkexternal"><a href="http://img51.imageshack.us/i/92777705.jpg/" target="_blank"><img src="http://img51.imageshack.us/img51/7715/92777705.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<span class="linkexternal"><a href="http://img534.imageshack.us/i/99870315.jpg/" target="_blank"><img src="http://img534.imageshack.us/img534/3203/99870315.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+медвед <img src="images/smilies/brberbrb.gif" border="0" alt="" title="..." class="inlineimg" /><br />
+<span class="linkexternal"><a href="http://img163.imageshack.us/i/64204092.jpg/" target="_blank"><img src="http://img163.imageshack.us/img163/6884/64204092.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+аномалии<br />
+<span class="linkexternal"><a href="http://img819.imageshack.us/i/84866285.jpg/" target="_blank"><img src="http://img819.imageshack.us/img819/7968/84866285.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+и последствия контакта с аномалиями..<br />
+<span class="linkexternal"><a href="http://img833.imageshack.us/i/22347938.jpg/" target="_blank"><img src="http://img833.imageshack.us/img833/969/22347938.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+<span class="linkexternal"><a href="http://img12.imageshack.us/i/77234019.jpg/" target="_blank"><img src="http://img12.imageshack.us/img12/9136/77234019.th.jpg" class="bbCodeImage" border="0" alt="" /></a></span><br />
+<br />
+на последнем скрине виден выпавший с персонажа при смерти лут.
+</td>
+</tr>
+</tbody>
+</table></i></div>
+<img src="http://www.halowheelmen.com/forum/images/smilies/facepalm.gif" class="bbCodeImage" border="0" alt="" /> уверен, что разработчиков имба_убогая анимация устраивает - иначе пытались бы изменить её ещё на хвалённой &quot;альфе&quot;, а раз с альфа версии - ничего не изменилось, значит к ОБТ ничего не изменится.<br />
+<br />
+в остальном - просто &quot;необычным&quot; сетингом сейчас игроков не заманить. А учитывая, что они не собираются ещё 5-лет её доделывать<font size="1"> (если брать во внимание их темп работы и то что получилось, именно столько им ещё нужно, что бы сделать что то разумное)</font> - то вывод один: очередной фтп треш.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13687681">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13689219">
+<a name="post13689219"></a>
+<span style="float: right; display: inline-block;">#40</span>
+
+<a href="member.php?userid=578323">Grizle</a> <span class="postbit-date">09.02.2011, 09:25</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>Redked</strong>:<br />
+по словам самих разработчиков Сталкера Онлайн - предыдущий их двухлетний проект &quot;Cyber-Town&quot; (он должен был быть овер9000 круче секонд лайфа :DDD), был финансирован на сумму в 10кк рублей, которые с гордостью были спущенны в &quot;канализацию РФ&quot;, в следствии чего компании в 2008 году на 2 года исчезла и.....................они вернулись <img src="http://forums.goha.ru/__F_Shared/frm_avatar/avatar624682_1.gif" class="bbCodeImage" border="0" alt="" /> и угадайте с чем? с тем же движком который провалился в 2008 году, а именно &quot;кибер-город&quot;, только теперь на него пытаются натянуть бренд &quot;сталкера&quot;, с целью заработать себе на хлеб &quot;с чем нибудь или вообще на хлеб&quot;.</i></div>
+Как бэ, я понятия не имею откуда у вас инфа про движок, но движок использующийся в Сталкер-Онлайн, это BigWorld (тот же что используется в WoT). А реализация зависит от пряморукости разрабов. <img src="images/smilies/smiley.gif" border="0" alt="" title="Просто улыбка" class="inlineimg" /><br />
+Клиент качаю, поглядим. Но уже насторожило: МИНИМАЛЬНОЕ соединение 1мбит для комфортной игры (они там че, текстуры в пакетах передают в реальном времени? <img src="images/smilies/redlol.gif" border="0" alt="" title="Redlol" class="inlineimg" />). За проектом следил с начала осени, но в по форуму впечатление, что игру делают люди без особого опыта в геймдеве.<br />
+<div class="quote"><i>Сообщение от <strong>Redked</strong>:<br />
+уверен, что разработчиков имба_убогая анимация устраивает - иначе   пытались бы изменить её ещё на хвалённой &quot;альфе&quot;, а раз с альфа версии -   ничего не изменилось, значит к ОБТ ничего не изменится. в остальном - просто &quot;необычным&quot; сетингом сейчас игроков не заманить. А учитывая, что они не собираются ещё 5-лет её доделывать<font size="1"> (если брать во внимание их темп работы и то что получилось, именно столько им ещё нужно, что бы сделать что то разумное)</font> - то вывод один: очередной фтп треш.</i></div>
+Только он не f2p :) Он p2p <img src="images/smilies/redlol.gif" border="0" alt="" title="Redlol" class="inlineimg" /><br />
+Но из за плохой анимации, мне кажется сейчас рано хоронить проект. Это все правиться, но у Сталкер-онлайн все ж действительно необычный сеттинг, аналогов которому в ММО еще нет. WoT в свое время (год назад) просто высмеивали суровые дядьки-танкосимлюбители, а сейчас поголовно в нем сидят <img src="images/smilies/smokin.gif" border="0" alt="" title="Курю" class="inlineimg" /> Игра взяла геймплеем, а все эти &quot;застревания на каждом углу&quot;, &quot;телепорты противников&quot; и т.д ушли в небытие. Так что будем надеятся, что и Сталкер-онлайн разрабы &quot;доработают напильником&quot; до вменяемого состояния.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13689219">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13690138">
+<a name="post13690138"></a>
+<span style="float: right; display: inline-block;">#41</span>
+
+<a href="member.php?userid=611330">DRG</a> <span class="postbit-date">09.02.2011, 10:40</span>
+
+</div>
+<div class="postbit-message">вопрос на миллион!<br />
+что делать после смерти? <img src="images/smilies/redlol.gif" border="0" alt="" title="Redlol" class="inlineimg" /><br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13690138">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13694711">
+<a name="post13694711"></a>
+<span style="float: right; display: inline-block;">#42</span>
+
+<a href="member.php?userid=673657">Пруль</a> <span class="postbit-date">09.02.2011, 15:49</span>
+
+</div>
+<div class="postbit-message"><div class="quote"><i>Сообщение от <strong>Grizle</strong>:<br />
+аналогов которому в ММО еще нет</i></div>
+Есть Fallen Earth - очень похоже и уже давно работает.<br />
+<br />
+Уадчи!<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13694711">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13695054">
+<a name="post13695054"></a>
+<span style="float: right; display: inline-block;">#43</span>
+
+<a href="member.php?userid=621655">KiplazaR</a> <span class="postbit-date">09.02.2011, 16:09</span>
+
+</div>
+<div class="postbit-message">анимация как и графа уг ибо нет умбры. в целом норм. игра будет называтся не сталкер. <br />
+с юридической точки там все ок.  Движок кстати то же что и WoT. у игры огромный потенциал играть буду 100%<br />
+так как огромное количество пвп и социалки<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13695054">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13695112">
+<a name="post13695112"></a>
+<span style="float: right; display: inline-block;">#44</span>
+
+<a href="member.php?userid=595974">Zloy_from_Tula</a> <span class="postbit-date">09.02.2011, 16:14</span>
+
+</div>
+<div class="postbit-message">Первый взгляд:<br />
+Игра скачалась, запустилась, и даже пошла. Настроек минимум, даже клавиши переназначать незнамо где. Ладно, фиг с ним, зато мир вроде бы правда большой. Бегает куча новичков. Все одинаковые. Что здорово, над человеком нет имени пока вы на него не прицелитесь. Нашел стоянку сталкеров - это дом, внутри шкафы и ящики водки.<br />
+А ещё почитал фак разработчиков. Обещают кучу счастья для всех и даром. Стоимость подписки - стописят рублей.<br />
+Ну какбе сам тот факт, что игра таки вышла, хоть и ужасно сыра и забагована - это здорово. Все игры через такое прошли. <br />
+Проект буду исследовать. ВОВ фпесду пока что.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13695112">Ответ</a>
+	</div>
+</div></div>
+<div class="postbit"><div class="windowbg2 postbit-head" id="post13695326">
+<a name="post13695326"></a>
+<span style="float: right; display: inline-block;">#45</span>
+
+<a href="member.php?userid=781414">LumiRO</a> <span class="postbit-date">09.02.2011, 16:28</span>
+
+</div>
+<div class="postbit-message">На ихнем месте пока игра только стартует, я бы сделал ф2п оплату, а потом, когда все баги и неровности исправят, пусть спокойно вводят абонентку, чтоб не позориться и не раздражать игроков, которые будут орать на форуме: Я ТАКИЕ БАБКИ ПЛАЧУ А МНЕ ПОДСУНУЛИ БАГОВАНУЮ ИГРУ.<br />
+ <br />
+Так что будет ждать исправление ошибок, а потом спокойно играть. А пока поиграем в Рагнарок и AIKA, две хорошие пвп игры.<br />
+
+		<!-- attachments -->
+		
+	<div class="manage">
+	
+		
+	
+	
+	
+	<a class="btn" href="newreply.php?s=8684d177edc1f1929a26c490c231502b&amp;do=newreply&amp;p=13695326">Ответ</a>
+	</div>
+</div></div>
+</div>
+<div id="pagenav-bottom"><div class="pagenav">
+<script type="text/javascript">
+<!--
+var PAGENAV = {
+	page: parseInt("3", 10),
+	total: parseInt("26", 10),
+	address: "http://forums.goha.ru/showthread_82_0_t486559",
+	anchor: "",
+	guest: true
+};
+// -->
+</script>
+</div>
+</div>
+
+
+
+
+
+
+<div class="breadcrumb" id="breadcrumb_b">
+	
+	<div class="dropdownbox" id="breadcrumb_b-box" style="display: none;">
+		
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_3">
+			<span style="white-space: nowrap;">&bull; </span>
+			Форумы
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_11">
+			<span style="white-space: nowrap;">&bull; &bull; </span>
+			Новые Игры
+		</a>
+	</div>
+</div>
+
+
+<div class="blockbit">
+	<div class="blockcont" style="background: url('images/mobilestyle/label-go.png') right center no-repeat;">
+		<a class="blocklink" href="http://forums.goha.ru/forumdisplay_82_0_117">
+			<span style="white-space: nowrap;">&bull; &bull; &bull; </span>
+			Обсуждение игр (любых)
+		</a>
+	</div>
+</div>
+
+
+	</div>
+	
+	<div class="breadcrumb-title">
+		<a class="breadcrumb-up" href="http://forums.goha.ru/forumdisplay_82_0_117" rel="nofollow">
+			<img src="images/mobilestyle/bcup.png" alt="" border="0" />
+		</a>
+		<div class="breadcrumb-buttonbox">
+			<div id="breadcrumb_b-button">
+				
+	 Stalker Online
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+<div class="counter" id="cfleft">
+<!-- LiveInternet counter -->
+<script type="text/javascript">
+<!--
+document.write('<a href="http://www.liveinternet.ru/click" '+'target=_blank><img src="http://counter.yadro.ru/hit?t50.6;r'+escape(document.referrer)+((typeof(screen)=='undefined')?'':';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+';'+Math.random()+'" alt="" title="LiveInternet: показано число просмотров и посетителей за 24 часа" '+'border=0 width=31 height=31></a>');
+//-->
+</script>
+<!-- /LiveInternet -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1733792-37', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</div>
+<div class="counter" id="cfright">
+<img src="images/mobilestyle/18sign_mobile.png" alt="" border="0" width="30" height="33" />
+
+<!-- Rating@Mail.ru counter -->
+<a target="_top" href="http://top.mail.ru/jump?from=1059157">
+<img src="http://d9.c2.b0.a1.top.list.ru/counter?id=1059157;t=76" border="0" height="31" width="38" alt="Рейтинг@Mail.ru" /></a>
+<!-- //Rating@Mail.ru counter -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter20744278 = new Ya.Metrika({id:20744278,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/20744278" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</div>
+
+	<div id="cron" class="smallfont" align="center">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	</div>
+
+	<div class="footlinks">
+		<ul>
+			<li id="copyright">
+				<a class="footbtn" href="http://www.goha.ru">
+				
+					(c) GoHa.Ru 2003-2017
+				</a>
+			</li>
+			<li id="fullversion"><a class="footbtn" href="/showthread_0_0_t486559_page3" onclick="return checkclick('Переключиться на стиль \'GoHa.Ru\'?', true);">Полная версия</a></li>
+			
+			
+			<li id="lastchild"><a class="footbtn" href="register.php?s=8684d177edc1f1929a26c490c231502b">Регистрация</a></li>
+			
+			
+		</ul>
+	</div>
+
+</div>
+
+
+<!-- MOBILE CLEAN START HERE (footer) -->
+
+
+
+
+
+</div>
+</body>
+</html>
+

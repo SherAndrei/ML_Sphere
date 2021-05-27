@@ -1,0 +1,523 @@
+download-minecraft-for-android.ru/guides/server-minecraft-1-8.html
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://download-minecraft-for-android.ru/xmlrpc.php">
+<title>Как создать сервер для Minecraft 1.8</title>
+<!-- All in One SEO Pack 2.3.13.2 by Michael Torbert of Semper Fi Web Design[274,342] -->
+<link rel="author" href="https://www.google.com/+SteveCrafter00" />
+<meta name="description"  content="Гайд по созданию своего сервера для Minecraft на домашнем ПК" />
+<link rel="canonical" href="http://download-minecraft-for-android.ru/guides/server-minecraft-1-8.html" />
+<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Мир Minecraft PE &raquo; Лента" href="http://download-minecraft-for-android.ru/feed" />
+<link rel="alternate" type="application/rss+xml" title="Мир Minecraft PE &raquo; Лента комментариев" href="http://download-minecraft-for-android.ru/comments/feed" />
+<link rel='stylesheet' id='roboto_google_font-css'  href='//fonts.googleapis.com/css?family=Roboto:400italic,300,700,400' type='text/css' media='all' />
+<!-- <link rel='stylesheet' id='materialcss-css'  href='http://download-minecraft-for-android.ru/wp-content/themes/mcpe/css/material-style5.min.css' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//download-minecraft-for-android.ru/wp-content/cache/wpfc-minified/865f7a33c9ca3ad7faedc77788ce6ad8/1491997233index.css" media="all"/>
+<link rel='stylesheet' id='materialicons-css'  href='//fonts.googleapis.com/icon?family=Material+Icons' type='text/css' media='all' />
+<!-- <link rel='stylesheet' id='material-style-css'  href='http://download-minecraft-for-android.ru/wp-content/themes/mcpe/style.css' type='text/css' media='all' /> -->
+<!-- <link rel='stylesheet' id='fonticons-css'  href='http://download-minecraft-for-android.ru/wp-content/themes/mcpe/css/fontello.css' type='text/css' media='all' /> -->
+<link rel="stylesheet" type="text/css" href="//download-minecraft-for-android.ru/wp-content/cache/wpfc-minified/b59155b4a01fb2e45ac0fadfc1030552/1491997233index.css" media="all"/>
+<script src='//download-minecraft-for-android.ru/wp-content/cache/wpfc-minified/b5ba16e0b26dbb2f9fc2cf130fc4f28f/1460810337index.js' type="text/javascript"></script>
+<!-- <script type='text/javascript' src='http://download-minecraft-for-android.ru/wp-includes/js/jquery/jquery.js'></script> -->
+<!-- <script type='text/javascript' src='http://download-minecraft-for-android.ru/wp-includes/js/jquery/jquery-migrate.min.js'></script> -->
+<!-- <script type='text/javascript' src='http://download-minecraft-for-android.ru/wp-content/themes/mcpe/js/material.min.js'></script> -->
+<link rel='https://api.w.org/' href='http://download-minecraft-for-android.ru/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://download-minecraft-for-android.ru/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://download-minecraft-for-android.ru/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Мод на луки и стрелы для MCPE 0.12.1' href='http://download-minecraft-for-android.ru/mods/luki.html' />
+<link rel='next' title='Карта The Lost Dog &#8212; потерянная собака' href='http://download-minecraft-for-android.ru/maps/lost-dog.html' />
+<meta name="generator" content="WordPress 4.8" />
+<link rel='shortlink' href='http://download-minecraft-for-android.ru/?p=16203' />
+<link rel="alternate" type="application/json+oembed" href="http://download-minecraft-for-android.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdownload-minecraft-for-android.ru%2Fguides%2Fserver-minecraft-1-8.html" />
+<link rel="alternate" type="text/xml+oembed" href="http://download-minecraft-for-android.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdownload-minecraft-for-android.ru%2Fguides%2Fserver-minecraft-1-8.html&#038;format=xml" />
+<script type="text/javascript">var ajaxurl = "http://download-minecraft-for-android.ru/wp-admin/admin-ajax.php"</script>        <style id="ec_stars_rating_head_css">
+.ec-stars-wrapper {
+font-size: 0;
+display: inline-block;
+position: relative;
+}
+.ec-stars-wrapper[data-tooltip]:hover:before {
+content: attr(data-tooltip);
+position: absolute;
+bottom: 90%;
+left: 50%;
+text-align: center;
+max-width: 100px;
+margin-left: -50px;
+background: rgba(0,0,0,.7);
+color: white;
+font-size: 10px;
+border-radius: 3px;
+padding: 3px;
+}
+.ec-stars-wrapper a {
+text-decoration: none;
+display: inline-block;
+font-size: 32px;
+color: #2782e4;
+}
+.ec-stars-wrapper:hover a,
+.ec-stars-wrapper.is-voted a {
+color: #2782e4;
+}
+.ec-stars-wrapper > a:hover ~ a {
+color: #888888;
+}
+.ec-stars-wrapper a:active {
+color: #1869c0;
+}
+.ec-stars-overlay {
+position: absolute;
+height: 100%;
+right: 0;
+top: 0;
+background-color: transparent;
+background-color: rgba(255,255,255,.5);
+/* OldIE support */
+zoom: 1;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF)";
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
+}
+.ec-stars-wrapper:hover .ec-stars-overlay {
+display: none;
+}
+</style>		<script type="text/javascript">
+jQuery(document).ready(function() {
+// Buttons
+jQuery('button, html input[type="button"], input[type="reset"], input[type="submit"], .next_prev_post a').addClass('mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored');
+jQuery('.search-submit, .post-actions').removeClass('mdl-button--raised mdl-js-ripple-effect mdl-button--colored');
+//Textfields
+jQuery('input[type="text"], input[type="password"],textarea').addClass('mdl-textfield__input');
+// Extracting main & accent colors & dynamically set the background-color/color style for some elements.
+var mainColor = jQuery('header').css( "background-color" );
+jQuery(".sticky .featured").css("background-color", mainColor );
+jQuery(".widget .thin-bar").css("border-color", mainColor );
+jQuery(".main-navigation li ul li").mouseenter(function() {
+jQuery(this).css("background-color", mainColor );
+}).mouseleave(function() {
+jQuery(this).css("background-color", "transparent" );
+});			
+// Adding MDL buttons classes to nav-links and its links.
+jQuery('.nav-links a').addClass('mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect');
+jQuery('.nav-links .current').addClass('mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect');
+});
+</script>
+<style type="text/css">
+body { background: #f7f7f7;}			</style>
+<link rel="shortcut icon" href="http://download-minecraft-for-android.ru/favicon.ico">
+</head>
+<body class="post-template-default single single-post postid-16203 single-format-standard group-blog">
+<div id="page" class="hfeed mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header id="masthead" class="site-header mdl-layout__header" role="banner">
+<div class="site-branding mdl-layout__header-row">
+<IDXSKIP><span class="site-title mdl-layout-title">
+<a href="http://download-minecraft-for-android.ru" title="Мир Minecraft PE" rel="nofollow">
+<img src="http://download-minecraft-for-android.ru/wp-content/uploads/2016/01/loggo-1.png" alt="Мир Minecraft PE - " />
+</a>
+</span></IDXSKIP>
+<span class="site-tagline" style="display: none;"></span>
+<div class="mdl-layout-spacer"></div>
+<nav id="site-navigation" class="main-navigation mdl-navigation mdl-layout--large-screen-only" role="navigation">
+<ul id="primary-menu" class="menu"><IDXSKIP><li id="menu-item-16168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16168"><a href="http://download-minecraft-for-android.ru/skachat-minecraft-pe">Скачать Minecraft PE 1.1</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16177"><a href="http://download-minecraft-for-android.ru/blocklauncher-pro">BlockLauncher Pro 1.16</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16243" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16243"><a href="http://download-minecraft-for-android.ru/mods/toolbox.html">Toolbox</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16182" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-16182"><a href="http://download-minecraft-for-android.ru/#">Как установить дополнения</a>
+<ul  class="sub-menu">
+<li id="menu-item-16181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16181"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-kartu">Как установить карту</a></li>
+<li id="menu-item-16180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16180"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-skript">Как установить мод</a></li>
+<li id="menu-item-16178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16178"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-skin">Как установить скин</a></li>
+<li id="menu-item-16169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16169"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-addon">Как установить аддон/патч</a></li>
+<li id="menu-item-16179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16179"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-tekstury">Как установить текстуры?</a></li>
+<li id="menu-item-17334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17334"><a href="http://download-minecraft-for-android.ru/ustanovka-kart-na-windows-10">Установка карт на Windows 10</a></li>
+</ul>
+</li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16174"><a href="http://download-minecraft-for-android.ru/servera-minecraft-pe">Сервера Minecraft PE</a></li></IDXSKIP>
+</ul>			</nav>
+<IDXSKIP><form role="search" method="get" class="search-form" action="http://download-minecraft-for-android.ru/">
+<div class="search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width is-upgraded">
+<label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+<i class="material-icons">search</i>
+</label>
+<div class="search-form mdl-textfield__expandable-holder">
+<input class="search-field  mdl-textfield__input" type="search" id="search-field" name="s" value="">
+</div>
+</div>
+</form></IDXSKIP>
+</div>
+</header>
+<div class="mdl-layout__drawer">
+<nav id="site-navigation" class="mobile-navigation mdl-navigation" role="navigation">
+<ul id="mobile-menu" class="menu"><IDXSKIP><li id="menu-item-16153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16153"><a href="http://download-minecraft-for-android.ru/skachat-minecraft-pe">Скачать Minecraft PE 1.1</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16162" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16162"><a href="http://download-minecraft-for-android.ru/blocklauncher-pro">BlockLauncher Pro 1.16</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16244" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16244"><a href="http://download-minecraft-for-android.ru/mods/toolbox.html">Toolbox</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-20197" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20197"><a href="http://download-minecraft-for-android.ru/category/maps">Карты для Minecraft PE</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-20198" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20198"><a href="http://download-minecraft-for-android.ru/category/mods">Моды для Minecraft PE</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16159"><a href="http://download-minecraft-for-android.ru/servera-minecraft-pe">Сервера Minecraft PE</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-20201" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20201"><a href="http://download-minecraft-for-android.ru/category/textury">Текстуры для Minecraft PE</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16165"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-skript">Как установить мод</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16166"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-kartu">Как установить карту</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16154"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-addon">Как установить аддон/патч</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16164"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-tekstury">Как установить текстуры?</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16163"><a href="http://download-minecraft-for-android.ru/kak-ustanovit-skin">Как установить скин</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16161"><a href="http://download-minecraft-for-android.ru/majnkraft-multiki">Майнкрафт мультики</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-16160" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16160"><a href="http://download-minecraft-for-android.ru/igry-majnkraft">Игры Майнкрафт</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-20199" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20199"><a href="http://download-minecraft-for-android.ru/category/sidy">Сиды для Minecraft PE</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-20200" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20200"><a href="http://download-minecraft-for-android.ru/category/skiny">Скины для Minecraft PE</a></li></IDXSKIP>
+</ul>		</nav><!-- #site-navigation -->
+</div>
+<div id="content" class="site-content mdl-layout__content mdl-grid">
+<div id="primary" class="content-area  mdl-cell mdl-cell--8-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+<main id="main" class="site-main" role="main">
+<article id="post-16203" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col post-16203 post type-post status-publish format-standard hentry category-guides">
+<div class="breadcrumb mdl-color-text--grey-500 mdl-cell mdl-cell--12-col" xmlns:v="http://rdf.data-vocabulary.org/#"><IDXSKIP><div typeof="v:Breadcrumb" class="root"><a rel="v:url" property="v:title" href="http://download-minecraft-for-android.ru">Главная</a></div></IDXSKIP><IDXSKIP><div>></div></IDXSKIP><IDXSKIP><div typeof="v:Breadcrumb"><a href="http://download-minecraft-for-android.ru/category/guides" rel="v:url" property="v:title">Гайды</a></div></IDXSKIP><IDXSKIP><div>></div></IDXSKIP><div typeof='v:Breadcrumb'><span property='v:title'>Как создать сервер для Minecraft 1.8</span></div></div>   
+<header class="entry-header mdl-cell mdl-cell--12-col">
+<h1 class="entry-title">Как создать сервер для Minecraft 1.8</h1>			</header><!-- .entry-header -->
+<div class="entry-content mdl-cell mdl-cell--12-col">
+<IDXSKIP><p><center><a href="http://bloodmine-pe.ru" target="_blank" rel="noopener noreferrer"><img class="aligncenter size-full wp-image-22984" src="http://download-minecraft-for-android.ru/wp-content/uploads/2017/06/bloodmine-server-mcpe.gif" alt="" width="336" height="280" /></a></center></p></IDXSKIP><p><a href="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/kak-sozdat-server-minecraft-1.8-logo.jpg"><img class="aligncenter size-full wp-image-16210" src="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/kak-sozdat-server-minecraft-1.8-logo.jpg" alt="kak-sozdat-server-minecraft-1.8-logo" width="560" height="315" srcset="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/kak-sozdat-server-minecraft-1.8-logo.jpg 560w, http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/kak-sozdat-server-minecraft-1.8-logo-300x169.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></a></p>
+<p>Как бы увлекателен ни был однопользовательский режим Minecraft, мультиплеер, где вы можете играть с друзьями, гораздо интереснее. Существует несколько способов играть Minecraft в мультиплеере. Один из них состоит в том, чтобы создать сервер Minecraft<span id="more-16203"></span>, к которому вы с друзьями сможете подключиться. Конечно, для этой цели можно использовать и уже существующие серверы.</p>
+<p>В этом руководстве мы покажем вам, как создать сервер Minecraft для себя и своих друзей на своем домашнем ПК.</p>
+<p><strong>Загрузка сервера</strong></p>
+<p>Для начала вам нужно скачать .jar версию сервера <a href="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/minecraft_server.zip"><strong>minecraft_server.1.8.8.jar</strong>.</a></p>
+<p>Поместите загруженный jar-файл в папку. Неважно, где она находится. Далее вам необходимо подготовить файл, который будет запускать ваш сервер.</p>
+<p><a href="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-1.jpg"><img class="aligncenter size-full wp-image-16205" src="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-1.jpg" alt="server-minecraft-1.8-1" width="560" height="213" srcset="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-1.jpg 560w, http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-1-300x114.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></a></p>
+<p><strong>Создание пакетного файла</strong></p>
+<p>Создайте новый текстовый документ и добавьте в него следующие строки:</p>
+<hr />
+<p>@echo off<br />
+title run-minecraft<br />
+java -Xms1024M -Xmx2048M -jar minecraft_server.jar nogui<br />
+pause</p>
+<hr />
+<p>&nbsp;</p>
+<p>Это означает, что мы хотим, чтобы java запустил наш сервер «minecraft_server.jar» с 1024 мегабайтами (1 гигабайтом) оперативной памяти. <strong>Если появляется ошибка, уменьшите значения оперативной памяти до 512 Мб, мне помогло и сервер запустился!</strong></p>
+<p>Чтобы запустить сервер с большим объёмом памяти, просто изменить значения -xms и -xmx. При этом они должны равняться числам 64, 128, 256, 512 и так далее.</p>
+<p>Чтобы сохранить файл в формате .bat, нажмите на кнопку Файл в левом верхнем углу экрана, выберите пункт Сохранить как, затем под полем «Имя файла» выберите Все файлы. Это очень важно. Назовите свой файл start или start server и нажмите «Сохранить». Затем поменяйте расширение файла с .txt на .bat</p>
+<p>Либо вы можете скачать мой bat-файл здесь: <strong><a href="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/start-server.zip">Start Server</a></strong> (чтобы изменить его, нажмите на файл правой кнопкой мыши и выберите пункт «Изменить»).</p>
+<p><strong>Пользовательское соглашение и запуск сервера</strong></p>
+<p>После завершения предыдущего этапа, запустите свой сервер. Сначала, он мгновенно закроется, поскольку вам нужно принять пользовательское соглашение. Чтобы сделать это, откройте появившийся в папке текстовый документ с соглашением, поменяйте строку <strong>eula=false на eula=true</strong>, сохраните его и запустите сервер заново.</p>
+<p><a href="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-2.jpg"><img class="aligncenter size-full wp-image-16207" src="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-2.jpg" alt="server-minecraft-1.8-2" width="560" height="181" srcset="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-2.jpg 560w, http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-2-300x97.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></a></p>
+<p>Ваш сервер должен нормально запуститься и начать генерацию мира и создание других важных файлов, вроде server.properties, whitelist, banned-players и так далее.</p>
+<p><a href="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-3.jpg"><img class="aligncenter size-full wp-image-16209" src="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-3.jpg" alt="server-minecraft-1.8-3" width="560" height="242" srcset="http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-3.jpg 560w, http://download-minecraft-for-android.ru/wp-content/uploads/2015/09/server-minecraft-1.8-3-300x130.jpg 300w" sizes="(max-width: 560px) 100vw, 560px" /></a></p>
+<p><strong>Подключение к серверу</strong></p>
+<p>Чтобы подключиться к серверу, который мы только что создали, вам, как владельцу, достаточно запустить Minecraft, зайти в мультиплеер и добавить сервер, указав «localhost» в качестве IP-адреса.</p>
+<p>Что касается ваших друзей, вы можете дать им свой внешний IP-адрес, чтобы узнать его, зайдите на сайт <strong><a href="http://2ip.ru" target="_blank">2ip.ru</a></strong>. Кроме этого, у вашего маршрутизатора должны быть перенаправлены порты с 25565 по 25566. Отличное видео на тему перенаправления портов можно найти ниже.</p>
+<p><center><iframe src="https://www.youtube.com/embed/Gv28PgnPED8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>Надеюсь, это краткое руководство поможет вам создать сервер Minecraft 1.8 для себя и своих друзей, а затем хорошо провести время вместе! Если у вас остались какие-либо вопросы, задавайте их в комментариях ниже!</p>
+<p><center><script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async=""></script> <!-- download верх --> <ins class="adsbygoogle" style="display: inline-block; width: 336px; height: 280px;" data-ad-client="ca-pub-4784048953761351" data-ad-slot="2502850094"></ins> <script>// <![CDATA[
+(adsbygoogle = window.adsbygoogle || []).push({});
+// ]]&gt;</script></center></p>			</div><!-- .entry-content -->
+</article><!-- #post-## -->
+<div style="width: 100%; float: left;">
+<div style="float: left; width: 50%;">
+<div style="margin: 10px; padding: 10px;">
+<div class="ya-share2" data-services="vkontakte,gplus,twitter" data-counter=""></div>
+</div>
+</div>
+<div style="float: left; width: 50%;">
+<div style="margin: 10px; padding: 10px;">
+<div class="ec-stars-outer hreview-aggregate">
+<div class="ec-stars-wrapper" data-post-id="16203">
+<div class="ec-stars-overlay" style="width: 36.666666666667%"></div>
+<a href="#" data-value="1" title="1/5">&#9733;</a>
+<a href="#" data-value="2" title="2/5">&#9733;</a>
+<a href="#" data-value="3" title="3/5">&#9733;</a>
+<a href="#" data-value="4" title="4/5">&#9733;</a>
+<a href="#" data-value="5" title="5/5">&#9733;</a>
+</div>
+<div class="ec-stars-value">
+<span class="item">
+<a href="http://download-minecraft-for-android.ru/guides/server-minecraft-1-8.html" class="fn url">Как создать сервер для Minecraft 1.8</a>,
+</span>
+<span class="ec-stars-rating-value rating">
+3.17                </span> <IDXSKIP>/ <span class="best">5</span></IDXSKIP>
+(<span class="ec-stars-rating-count votes">6</span> <IDXSKIP>голосов)
+</IDXSKIP></div>
+</div>
+<noscript><IDXSKIP>Вам необходимо включить JavaScript, чтобы проголосовать</IDXSKIP></noscript>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+<IDXSKIP><p><center><div id="hypercomments_widget"></div>
+<script type="text/javascript">
+_hcwp = window._hcwp || [];
+_hcwp.push({widget:"Stream", widget_id: 78042});
+(function() {
+if("HC_LOAD_INIT" in window)return;
+HC_LOAD_INIT = true;
+var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+var hcc = document.createElement("script"); hcc.type = "text/javascript"; hcc.async = true;
+hcc.src = ("https:" == document.location.protocol ? "https" : "http")+"://w.hypercomments.com/widget/hc/78042/"+lang+"/widget.js";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(hcc, s.nextSibling);
+})();
+</script>
+<a href="http://hypercomments.com" class="hc-link" title="comments widget">comments powered by HyperComments</a></center></p></IDXSKIP>
+<h3 class="section-title margin-8">Это тоже интересно!</h3>
+<div id="related_posts" class="related-posts mdl-grid mdl-cell mdl-cell--12-col">
+<div class="related-item mdl-card mdl-shadow--2dp mdl-grid mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<div class="relatedthumb mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+<a href="http://download-minecraft-for-android.ru/guides/tryuk-s-lodkoj-minecraft-pocket-edition-0-9-5-0-10-0.html" title="ТРЮК С ЛОДКОЙ! &#8212; Minecraft Pocket Edition 0.9.5-0.10.0">
+<img width="120" height="120" src="http://download-minecraft-for-android.ru/wp-content/uploads/2014/11/minecraft-pocket-edition-0.10.0-beta-test-7.png" class="attachment-featured wp-post-image" alt="ТРЮК С ЛОДКОЙ! &#8212; Minecraft Pocket Edition 0.9.5-0.10.0">
+<div class="post-format"><i class="material-icons">description</i></div>											</a>
+</div>
+<div class="post-data-container mdl-cell--8-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+<h4>
+<a href="http://download-minecraft-for-android.ru/guides/tryuk-s-lodkoj-minecraft-pocket-edition-0-9-5-0-10-0.html" title="ТРЮК С ЛОДКОЙ! &#8212; Minecraft Pocket Edition 0.9.5-0.10.0">ТРЮК С ЛОДКОЙ! &#8212; Minecraft Pocket Edition 0.9.5-0.10.0</a>
+</h4>
+<IDXSKIP><div class="post-info">
+<div class="meta-info">
+<span class="posted">2 года назад</span> in <span class="category"><a href="http://download-minecraft-for-android.ru/category/guides" title="View all posts in Гайды" >Гайды</a></span>												</div>
+</div></IDXSKIP>
+</div>
+</div>
+<div class="related-item mdl-card mdl-shadow--2dp mdl-grid mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<div class="relatedthumb mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+<a href="http://download-minecraft-for-android.ru/guides/hirobrine.html" title="Как призвать Хиробрина в Майнкрафт ПЕ 0.14.0?">
+<img width="120" height="120" src="http://download-minecraft-for-android.ru/wp-content/uploads/2016/02/mcpe-hirobrine-120x120.jpg" class="attachment-featured wp-post-image" alt="Как призвать Хиробрина в Майнкрафт ПЕ 0.14.0?">
+<div class="post-format"><i class="material-icons">description</i></div>											</a>
+</div>
+<div class="post-data-container mdl-cell--8-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+<h4>
+<a href="http://download-minecraft-for-android.ru/guides/hirobrine.html" title="Как призвать Хиробрина в Майнкрафт ПЕ 0.14.0?">Как призвать Хиробрина в Майнкрафт ПЕ 0.14.0?</a>
+</h4>
+<div class="post-info">
+<div class="meta-info">
+<span class="posted">1 год назад</span> in <span class="category"><a href="http://download-minecraft-for-android.ru/category/guides" title="View all posts in Гайды" >Гайды</a></span>												</div>
+</div>
+</div>
+</div>
+<div class="related-item mdl-card mdl-shadow--2dp mdl-grid mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<div class="relatedthumb mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+<a href="http://download-minecraft-for-android.ru/guides/adminka.html" title="Как получить админку на сервере Minecraft Pocket Edition">
+<img width="120" height="120" src="http://download-minecraft-for-android.ru/wp-content/uploads/2016/04/adminka-servera-2-120x120.jpg" class="attachment-featured wp-post-image" alt="Как получить админку на сервере Minecraft Pocket Edition">
+<div class="post-format"><i class="material-icons">description</i></div>											</a>
+</div>
+<div class="post-data-container mdl-cell--8-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+<h4>
+<a href="http://download-minecraft-for-android.ru/guides/adminka.html" title="Как получить админку на сервере Minecraft Pocket Edition">Как получить админку на сервере Minecraft Pocket Edition</a>
+</h4>
+<IDXSKIP><div class="post-info">
+<div class="meta-info">
+<span class="posted">1 год назад</span> in <span class="category"><a href="http://download-minecraft-for-android.ru/category/guides" title="View all posts in Гайды" >Гайды</a></span>												</div>
+</div></IDXSKIP>
+</div>
+</div>
+<div class="related-item mdl-card mdl-shadow--2dp mdl-grid mdl-cell--6-col-desktop mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+<div class="relatedthumb mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+<a href="http://download-minecraft-for-android.ru/guides/kak-sozdat-svoj-server-mcpe-na-pk.html" title="Как создать свой сервер MCPE на ПК">
+<img width="120" height="120" src="http://download-minecraft-for-android.ru/wp-content/uploads/2015/03/server-mcpe-logo.jpg" class="attachment-featured wp-post-image" alt="Как создать свой сервер MCPE на ПК">
+<div class="post-format"><i class="material-icons">description</i></div>											</a>
+</div>
+<div class="post-data-container mdl-cell--8-col-desktop mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+<h4>
+<a href="http://download-minecraft-for-android.ru/guides/kak-sozdat-svoj-server-mcpe-na-pk.html" title="Как создать свой сервер MCPE на ПК">Как создать свой сервер MCPE на ПК</a>
+</h4>
+<div class="post-info">
+<div class="meta-info">
+<span class="posted">2 года назад</span> in <span class="category"><a href="http://download-minecraft-for-android.ru/category/guides" title="View all posts in Гайды" >Гайды</a></span>												</div>
+</div>
+</div>
+</div>
+</div>				<div class="next_prev_post mdl-grid mdl-cell mdl-cell--12-col">
+<div class="left-button"><a href="http://download-minecraft-for-android.ru/mods/luki.html" rel="prev">Предыдущая страница</a></div><div class="mdl-layout-spacer"></div><div class="right-button"><a href="http://download-minecraft-for-android.ru/maps/lost-dog.html" rel="next">Следующая страница</a></div>				</div><!-- .next_prev_post -->
+</main><!-- #main -->
+</div><!-- #primary -->
+<div id="secondary" class="widget-area mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone" role="complementary">
+<IDXSKIP><aside id="text-17" class="widget sidebar-widget mdl-card mdl-shadow--2dp mdl-grid mdl-cell mdl-cell--12-col widget_text">			<div class="textwidget"><center><a href="http://mcpestats.ru" target="_blank"><img class="aligncenter size-full wp-image-15322" src="http://download-minecraft-for-android.ru/wp-content/uploads/2015/07/servera-minecraft-pe.jpg" alt="servera-minecraft-pe" width="280" height="50" /></a></center></div>
+</aside></IDXSKIP><IDXSKIP><aside id="search-2" class="widget sidebar-widget mdl-card mdl-shadow--2dp mdl-grid mdl-cell mdl-cell--12-col widget_search"><div class="widget-title"><h3>Поиск по сайту</h3><div class="thin-bar"></div></div><form role="search" method="get" class="search-form" action="http://download-minecraft-for-android.ru/">
+<div class="search-form mdl-textfield mdl-js-textfield">
+<span class="screen-reader-text">Search for</span>
+<input type="search" class="search-field mdl-textfield__input" placeholder="Введите запрос &#8230;" value="" name="s" title="Введите запрос:">
+<button type="submit" class="search-submit mdl-button mdl-js-button mdl-button--icon">
+<i class="material-icons">search</i>
+</button>	
+</div>
+</form></aside></IDXSKIP>		<aside id="recent-posts-2" class="widget sidebar-widget mdl-card mdl-shadow--2dp mdl-grid mdl-cell mdl-cell--12-col widget_recent_entries">		<IDXSKIP><div class="widget-title"><h3>Новенькое на сайте!</h3><div class="thin-bar"></div></div></IDXSKIP>		<ul>
+<IDXSKIP><li>
+<a href="http://download-minecraft-for-android.ru/addons/recepty.html">Аддон на книгу рецептов для Майнкрафт ПЕ</a>
+</li></IDXSKIP>
+<IDXSKIP><li>
+<a href="http://download-minecraft-for-android.ru/textury/shaders/sspe.html">SSPE v10.7 &#8212; шейдеры для слабых устройств!</a>
+</li></IDXSKIP>
+<IDXSKIP><li>
+<a href="http://download-minecraft-for-android.ru/maps/gun-pvp.html">PvP карта GuN_pvp_master</a>
+</li></IDXSKIP>
+<IDXSKIP><li>
+<a href="http://download-minecraft-for-android.ru/sidy/villages-mcpe.html">8 необычных сидов на деревни для MCPE</a>
+</li></IDXSKIP>
+<IDXSKIP><li>
+<a href="http://download-minecraft-for-android.ru/mods/pocketdecoration.html">Мод PocketDecoration v10.0 для MCPE 1.1</a>
+</li></IDXSKIP>
+</ul>
+</aside>		<aside id="text-18" class="widget sidebar-widget mdl-card mdl-shadow--2dp mdl-grid mdl-cell mdl-cell--12-col widget_text">			<div class="textwidget"><center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- download sidebar -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-4784048953761351"
+data-ad-slot="1026116899"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center></div>
+</aside><aside id="categories-2" class="widget sidebar-widget mdl-card mdl-shadow--2dp mdl-grid mdl-cell mdl-cell--12-col widget_categories"><IDXSKIP><div class="widget-title"><h3>Разделы сайта</h3><div class="thin-bar"></div></div></IDXSKIP>		<ul>
+<IDXSKIP><li class="cat-item cat-item-27"><a href="http://download-minecraft-for-android.ru/category/minecraft-iz-bumagi" title="Бумажные схемы Minecraft">Minecraft из бумаги</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-55"><a href="http://download-minecraft-for-android.ru/category/addons" title="Аддоны для Minecraft Pocket Edition - это новый раздел нашего сайта, в котором вы найдете все модификации для Minecraft PE, которые были созданы специально для телефонов и планшетов. Аддоны - это те же самые моды для Minecraft PE, которые которые добавляют в игру новые функции для блоков, предметов, мобов, биомов, оружия и многое другое. Поддержка аддонов появилась в версии 0.16.0!">Аддоны для Minecraft PE</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-1"><a href="http://download-minecraft-for-android.ru/category/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8" >Без рубрики</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-42"><a href="http://download-minecraft-for-android.ru/category/guides" title="В этой рубрике собраны гайды, инструкции и прочие обучающие материалы для Minecraft Pocket Edition, прочитав которые, вы научитесь многим вещам, о которых не знали ранее!">Гайды</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-52"><a href="http://download-minecraft-for-android.ru/category/maps/gorod" title="Хотите увидеть город в Майнкрафт? Тогда вы зашли по адресу! Для вас мы собрали богатый архив городских карт. У нас вы найдете множество различных локаций, например, город зомби апокалипсис! Выбирайте и скачивайте, все бесплатно!">Город в Майнкрафт</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-9"><a href="http://download-minecraft-for-android.ru/category/maps" title="Карты для Minecraft PE. В данном подразделе содержится огромная коллекция новых карт для любимой игры. Именно нестандартные игровые локации вызывают у большинства игроков максимальный интерес. Неудивительно, что раздел с картами для Minecraft PE пользуется огромной популярностью.
+В нашей коллекции содержатся только лучшие карты, среди которых найдут для себя интересное поклонники разных стилей игры. Представлены PvP и PvE карты, паркур, приключенческие, локации с огромными городами и многое другое.
+Стоит отметить, что все доступные карты для Minecraft PE предварительно тестируются на ошибки и несостыковки. Только после этого, они снабжаются инструкцией по игровому процессу и загружаются на сайт. С помощью рекомендаций можно без труда инсталлировать карты.
+Не забудьте поделиться ссылкой на понравившиеся вам карты для Minecraft PE с партнерами по игре и друзьями в соцсетях.">Карты для Minecraft PE</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-2"><a href="http://download-minecraft-for-android.ru/category/minecraft" title="Скачать Майнкрафт для Android">Майнкрафт</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-23"><a href="http://download-minecraft-for-android.ru/category/minecraft-pc" title="Все для PC версии Minecraft">Майнкрафт для ПК</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-54"><a href="http://download-minecraft-for-android.ru/category/mehanismy" title="Покажем и расскажем, как сделать крутые механизмы в Майнкрафт ПЕ: от простого лифта до сложного калькулятора. Все самые интересные и необычные механизмы, когда-либо созданные в Minecraft Pocket Edition, будут выкладываться здесь! Не пропустите! ">Механизмы в Майнкрафт ПЕ</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-11"><a href="http://download-minecraft-for-android.ru/category/mods" title="Моды для Minecraft PE. В данном подразделе содержится большая подборка модов для версии игры Minecraft: Pocket Edition. Сборник регулярно пополняется новинками, а уже размещенные файлы обновляются по мере появления последних версий.
+Моды из этого раздела способны не только улучшить игру. Они могут полностью изменить ее. Например, известная доработка Factorization, для развития и автоматизации собственного производства. Она отлично заменяет стандартные компоненты BuildCraft, а также IndustrialCraft. С помощью этого мода можно развивать и автоматизировать добычу игровых ресурсов. Все процессы генерации энергетических ресурсов, добычи руды и многие другие будут происходить без вашего участия с максимальной эффективностью.
+Уделите внимание нашей подборке и вы, наверняка, найдете, много интересных для себя разработок.
+Мы регулярно отслеживаем появление новинок и оперативно размещаем их для того, чтобы помочь вам сделать любимую игру более интересной. Все публикуемые в разделе моды для Minecraft PE предварительно тестируются на работоспособность и оцениваются по критерию игровой привлекательности.
+Если они вам понравились, будем признательны за то, что поделитесь информацией о нашем разделе с друзьями.">Моды для Minecraft PE</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-40"><a href="http://download-minecraft-for-android.ru/category/news" title="Все самые актуальные и свежие новости из мира Minecraft читайте в этой рубрике нашего сайта! У нас вы найдете только самую лучшую и полезную инфу о всех обновлениях, модах и картах для Minecraft PE. Мы пристально следим за всеми изменениями вселенной Майнкрафт и тут же размещаем новые материалы в этой рубрике! Оставайтесь с нами и вы не пожалеете!">Новости Minecraft</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-51"><a href="http://download-minecraft-for-android.ru/category/maps/parkur" title="Паркур карты для Minecraft PE - это раздел нашего сайта, в котором собраны лучшие карты на прохождение в стиле паркур. Хочешь увлекательных приключений, хочешь отточить навыки паркура - тогда ты попал по адресу. У нас только проверенные и качественные паркур-карты созданные специально для игры Майнкрафт ПЕ!">Паркур-карты</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-53"><a href="http://download-minecraft-for-android.ru/category/plugins" title="Сборник плагинов для серверов Minecraft PE!">Плагины для Minecraft PE</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-34"><a href="http://download-minecraft-for-android.ru/category/android-soft" title="В данной рубрике нашего сайта представлены различные программы для Майнкрафт ПЕ: альтернативные лаунчеры, редакторы скинов и миров MCPE и многое другое. Естественно, каждая программа снабжена детальным описанием и несколькими поясняющими скриншотами. Раздел постоянно пополняется новым специализированным софтом, так что советуем заглядывать сюда почаще!">Программы для Майнкрафт ПЕ</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-50"><a href="http://download-minecraft-for-android.ru/category/maps/redstoun" title="Карты для Minecraft PE, созданные с использованием редстоуна. Отличная находка для любителей редстоун-схем в Майнкрафт ПЕ!">Редстоун-карты</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-33"><a href="http://download-minecraft-for-android.ru/category/recepty" title="Рецепты в Minecraft">Рецепты</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-37"><a href="http://download-minecraft-for-android.ru/category/servera-minecraft" title="Если вы ищете готовые сервера Minecraft или же сборки с модами и плагинами, то вы попали по адресу! Эта категория нашего сайта содержит самые разные сборки серверов для Майнкрафт на любой вкус! Выбирайте и скачивайте!">Сервера Minecraft</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-35"><a href="http://download-minecraft-for-android.ru/category/sidy" title="Сиды для Minecraft Pocket Edition. Этот раздел мы создали с целью предложить вам отличную сборку увлекательных и оригинальных сидов для любимой игры.
+Каждый день сотрудники нашего портала, многие из которых по-настоящему увлечены миром Minecraft ищут и тестируют десятки сидов, чтобы отобрать и предложить вам лучшие экземпляры. Кроме общедоступных файлов, мы также публикуем и разработки наших посетителей. Среди них можно встретить очень оригинальные идеи. Если вы разрабатываете сиды для Minecraft PE, присылайте их нам для размещения.
+Например, воспользовавшись одним в нашей коллекции сидов, вы можете начать игру сразу на участке со множеством игровых ресурсов и деревень.
+Все файлы раздела проходят тщательную предварительную проверку на работоспособность и отсутствие вредоносных вложений. Только после нее они становятся доступны для вас. Поэтому рекомендуем обратить внимание на нашу коллекцию сидов для Minecraft PE.
+Будет приятно, если как признательность нам за приложенные усилия, вы поделитесь с друзьями ссылкой на нашу подборку сидов для Майнкрафт.">Сиды для Minecraft PE</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-41"><a href="http://download-minecraft-for-android.ru/category/skachat-minecraft" title="Игра Minecraft имеет простой и интуитивно понятный геймплей. Она выполнена в инди-режиме. Главное ее достоинство заключается в том, что игрок получает полнейшую свобода действий. Можно возводить или разрушать здания, выкапывать огромные траншеи, вести борьбу с мобами и так далее.
+Чтобы скачать майнкрафт на компьютер, надо затратить всего пару минут. Загрузка игры происходит напрямую с серверов. Для запуска процесса необходимо выполнить следующие действия:
+1. Скачать Лаунчер на свой ПК.
+2. Запустить Minecraft через интерфейс этой программы.
+3. Ввести свой ник в поле «NickName».
+4. Найти пункт «Force Update» и установить галочку в соответствующем окошке.
+После выполнения описанных выше шагов должна начаться загрузка игры, а также ее установка на жесткий диск компьютера. Если вам хочется скачать майнкрафт в виде готовой игры, то в этом случае придется использовать специальный клиент. Не нужно тратить много времени на поиски подходящей программы.
+На нашем сайте имеется категория «Скачать Майнкрафт». Здесь вы без труда подберете готовый клиент для запуска игры. Некоторые версии клиентов содержат различные моды и текстуры.">Скачать Майнкрафт</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-32"><a href="http://download-minecraft-for-android.ru/category/skiny" title="Скины для Minecraft Pocket Edition. В нашей коллекции любой игрок в Minecraft может найти интересное для себя решение. Подборка включает несколько сотен популярных скинов.
+С помощью наших скинов, вы сможете значительно улучшить внешний вид героя. Например, сделать из него известную личность или супермена, героя фильмов или комиксов. Также у нас вы найдете отличный сборник скинов с графикой в качестве HD. В результате у вас получится полностью модифицированный персонаж, идеально соответствующий желаниям и стилю игры.
+Все скины для Minecraft PE предварительно проверяются на нежелательные вложения и пригодность к игре. Кроме того, в комплекте с каждым набором идет инструкция. С ее помощью вы сможете без малейших усилий инсталлировать понравившуюся доработку.
+Если вам понравилась наша коллекция скинов для Minecraft PE, то будем очень признательны, если поделитесь упоминанием о нашем сайте с друзьями в соцсетях.">Скины для Minecraft PE</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-36"><a href="http://download-minecraft-for-android.ru/category/skripty" title="Скрипты для Minecraft Pocket Edition всех версий, сборники ModPE скриптов с инструкцией по установке.">Скрипты</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-28"><a href="http://download-minecraft-for-android.ru/category/textury" title="Текстуры для Minecraft PE. В данном подразделе вы найдете множество возможностей как улучшить игровой мир. Подборку мы создали потому, что сами играем в Minecraft и прекрасно знаем как со временем приедаются стандартные текстуры.
+Наша коллекция текстурпаков для Minecraft PE действительно заслуживает пристального внимания. Подборка пополняется новыми разработками практически ежедневно. Кроме того, регулярно обновляются и уже размещенные наборы файлов.
+Предварительно все текстур-паки проходят проверку. Конечно, всем не угодишь, и текстуры выбирает каждый для себя самостоятельно. Но главная цель предварительного тестирования – проверить комплект файлов на полную работоспособность. Очень часто, разработчики просто оставляют свои идее не до конца реализованными. В результате, игра в Minecraft PE с такими текстурами резко теряет свою привлекательность. Именно поэтому мы сначала и проверяем все паки перед публикацией на сайте.
+Будем по-настоящему признательны, если вы поделитесь ссылкой на нашу коллекцию текстур для Minecraft PE с друзьями и партнерами по игре.">Текстуры для Minecraft PE</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-43"><a href="http://download-minecraft-for-android.ru/category/chity" title="Читы могут помочь новичку стать профессиональным игроком. Правда, использование читов в сети запрещено! Это наказывается киком и баном на сервере. Для того чтобы не быть замеченным с читами, необходимо использовать их время от времени, иначе, если вы будете пользоваться ими на 100%, то, вероятно, вас забанят! Играть с читами для Майнкрафт очень хорошо на серверах, которые не имеют защиты и без администраторов! Там можно побаловаться и там практически каждый второй будет использовать читы. Читы делают равными шансы на победу между новичком и профессионалом в игре Minecraft PE.">Читы на Майнкрафт</a>
+</li></IDXSKIP>
+<IDXSKIP><li class="cat-item cat-item-46"><a href="http://download-minecraft-for-android.ru/category/textury/shaders" title="Для всех истинных поклонников игры, которые хотят получать от геймплея максимальное удовольствие, и созданы шейдеры для Minecraft PE, улучшающие качество картинки. Многим знатокам сразу стало ясно, о чём пойдёт речь – о лучших, на сегодняшний день, Minecraft шейдерах.">Шейдеры для MCPE</a>
+</li></IDXSKIP>
+</ul>
+</aside><IDXSKIP><aside id="text-4" class="widget sidebar-widget mdl-card mdl-shadow--2dp mdl-grid mdl-cell mdl-cell--12-col widget_text">			<div class="textwidget"><a title="Как сделать скин в Майнкрафт? Нет проблем!" href="http://download-minecraft-for-android.ru/minecraft/kak-sdelat-skin-v-majnkraft-net-problem.html"><img class="aligncenter size-full wp-image-238" alt="Создаем скин для Minecraft" src="http://download-minecraft-for-android.ru/wp-content/uploads/2013/04/banner_skin.png" width="280" height="120" /></a></div>
+</aside></IDXSKIP></div><!-- #secondary -->
+</div>
+<IDXSKIP><footer id="colophon" class="site-footer mdl-mega-footer" role="contentinfo">
+<div class="site-info mdl-mega-footer--bottom-section">
+<div id="copyright-note">
+<div class="left">
+</div>
+<div class="right">
+</div>
+</div>
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=24511121&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/24511121/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:24511121,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+(w[c] = w[c] || []).push(function() {
+try {
+w.yaCounter24511121 = new Ya.Metrika({id:24511121,
+webvisor:true,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true});
+} catch(e) { }
+});
+var n = d.getElementsByTagName("script")[0],
+s = d.createElement("script"),
+f = function () { n.parentNode.insertBefore(s, n); };
+s.type = "text/javascript";
+s.async = true;
+s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+if (w.opera == "[object Opera]") {
+d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/24511121" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</div><!-- .site-info -->	
+</footer></IDXSKIP><!-- #colophon -->
+</div><!-- .mdl-layout -->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+//move-to-top arrow
+jQuery("body").prepend("<div id='move-to-top' class='animate mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--accent'><i class='material-icons'>expand_less</i></div>");
+var scrollDes = 'html,body';
+if(navigator.userAgent.match(/opera/i)){
+scrollDes = 'html';
+}
+//show ,hide
+jQuery(window).scroll(function () {
+if (jQuery(this).scrollTop() > 300) {
+jQuery('#move-to-top').addClass('filling').removeClass('hiding');
+} else {
+jQuery('#move-to-top').removeClass('filling').addClass('hiding');
+}
+});
+// scroll to top when click 
+jQuery('#move-to-top').click(function () {
+jQuery(scrollDes).animate({ 
+scrollTop: 0
+},{
+duration :500
+});
+});
+});
+</script>
+<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+<script type='text/javascript' src='http://download-minecraft-for-android.ru/wp-content/themes/mcpe/js/navigation.js'></script>
+<script type='text/javascript' src='http://download-minecraft-for-android.ru/wp-content/themes/mcpe/js/skip-link-focus-fix.js'></script>
+<script type='text/javascript' src='http://download-minecraft-for-android.ru/wp-includes/js/wp-embed.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ec_ajax_data = {"ajax_url":"http:\/\/download-minecraft-for-android.ru\/wp-admin\/admin-ajax.php","codes":{"SUCCESS":1,"PREVIOUSLY_VOTED":0,"REQUEST_ERROR":2,"UNKNOWN":-1},"messages":{"success":"\u0412\u044b \u0443\u0436\u0435 \u043f\u0440\u043e\u0433\u043e\u043b\u043e\u0441\u043e\u0432\u0430\u043b\u0438","previously_voted":"\u0412\u044b \u0443\u0436\u0435 \u0433\u043e\u043b\u043e\u0441\u043e\u0432\u0430\u043b\u0438","request_error":"\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u0437\u0430\u043f\u0440\u043e\u0441, \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0451 \u0440\u0430\u0437","unknown":"\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430 \u043f\u0440\u043e\u0438\u0437\u043e\u0448\u043b\u0430, \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0435 \u0440\u0430\u0437 \u0433\u043e\u043b\u043e\u0441\u043e\u0432\u0430\u0442\u044c"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://download-minecraft-for-android.ru/wp-content/plugins/ec-stars-rating/js/ec-stars-rating.js'></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.58062291145325 seconds, on 11-06-17 15:41:01 -->

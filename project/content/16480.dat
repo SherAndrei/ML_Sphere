@@ -1,0 +1,681 @@
+kurilka.jofo.me/586757.html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+	<HTML>
+	<HEAD>	
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="/js/masonry.pkgd.min.js"></script>
+	
+          
+                   
+        
+
+	<script type="text/javascript" src="/js/all_in_one.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+
+	 <link href="http://vjs.zencdn.net/5.12.6/video-js.css" rel="stylesheet">
+
+	  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	
+	<link href="http://allfont.ru/allfont.css?fonts=open-sans-semibold" rel="stylesheet" type="text/css" />
+
+	
+	
+	<TITLE>Младшим школьникам о вреде никотина, алкоголя, наркотиков </TITLE>
+	<META Name="keywords" Content="">
+
+	
+	
+	<meta name="revisit-after" content="15 days">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+
+	<link rel="canonical" href="http://kurilka.jofo.me/586757.html" />
+
+	<meta property="og:title" content="Младшим школьникам о вреде никотина, алкоголя, наркотиков" />
+
+	<meta property="og:image" content="http://kurilka.jofo.me/data/article_images/33.jpg" />
+
+	<meta property="og:type" content="article" />
+
+		<meta property="og:url" content="http://kurilka.jofo.me/586757.html" />
+	
+	<meta property="og:locale" content="ru_RU" />   
+
+	<LINK REL=Stylesheet HREF="http://jofo.ru/Style.css" TYPE="Text/Css">
+	
+	
+	<link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+
+	<meta name="yandex-verification" content="ff9edbe0aad51ab0" />
+
+	<meta name="bitus" content="017fadd3a867446e033ee6e891f845a5"/>
+
+	<link rel="alternate" type="application/rss+xml" title="Последние записи в днивнике kurilka.jofo.me" href="http://kurilka.jofo.me/index.xml" />
+
+	<script>
+
+	var requestObj = "";
+	var debug_msg = "";
+	
+	sdomain = "jofo.me";
+	user_sdomain = "kurilka.jofo.me";
+
+	var nl = "nl"
+	post_id = 586757;
+	
+	function show_need_msg()
+	{
+		jQuery("#login_need_msg").show();
+	}
+
+	</script>
+
+	<!-- Put this script tag to the <head> of your page -->
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+
+	<script type="text/javascript">
+	  VK.init({apiId: 4828641, onlyWidgets: true});
+	</script>
+
+	
+
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="/js/screentime.js"></script>
+	<script async defer src="//assets.pinterest.com/js/pinit.js" data-pin-hover="true"></script>
+	<script src="//ulogin.ru/js/ulogin.js"></script>
+
+	<script>
+	var posts = new Object();
+	
+	posts[586757] = 4; </script>
+	
+	</head>
+
+	<body id=docbody>
+
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter23039812 = new Ya.Metrika({
+                    id:23039812,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/23039812" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+		</div>
+	<header>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1310153-10', 'auto', {'allowLinker': true});
+  ga('require', 'linker');
+  ga('linker:autoLink', ['jofo.me'] );
+  ga('send', 'pageview');
+  
+</script><table width=100% border=0 cellpadding=0 cellspacing=0 class=bgtb>	
+			<tr>
+				<IDXSKIP><td width=95 style="width:95px;" valign=top><div level=1 id=linktohead><a href="http://jofo.me">jofo</a></div><div level=2 id=linktohead_fb><span style="color:grey;">Лайкни нас</span> <Br>
+
+			<div style="margin-top:5px;"><a href="https://www.facebook.com/jofosite" target=_blank><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/200px-F_icon.svg.png" width=20 style="vertical-align:middle;margin-right:5px;" valign=absmiddle>Facebook</a>
+
+			</div> <div style="margin-top:2px;">
+
+				<a href="https://vk.com/jofo_ru" target=_blank><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg" width=20 style="vertical-align:middle;margin-right:5px;" valign=absmiddle>ВКонтакте</a>
+			</div>
+		</div></td></IDXSKIP>
+				
+				<td style="width:140px;" valign=top>
+				
+					</td>
+
+				<td style="width:370px;"><div style="background-color:white;border:1px solid #cccccc;margin-top:5px;-webkit-border-radius: 7px;-moz-border-radius: 7px;border-radius: 7px;width:350px;"><iframe width="340" height=135 frameborder="no" SCROLLING=no border=0 src="http://creatagen.ru/zeon/show.php?theme=&domain=kurilka.jofo.me"></iframe></div></td>
+
+			<td><div id=zeon_second><div style="background-color:white;border:1px solid #cccccc;margin-top:5px;-webkit-border-radius: 7px;-moz-border-radius: 7px;border-radius: 7px;width:350px;"><iframe width="340" height=135 frameborder="no" SCROLLING=no border=0 src="http://creatagen.ru/zeon/show.php?theme=cp&domain=kurilka.jofo.me"></iframe></div></div></td>
+
+				<td align=right><div style="position:relative;text-align:center;">
+<form id=login name=login method=post action="http://jofo.me/index.php?get=login" style='padding:0px;margin:0px;margin-right:5px;'>
+<table align=right cellpadding="0" cellspacing="0">
+<tr>
+	<td align=left style="padding-right: 40px;" valign="top">
+		<div class="small_round_corner" style="border:1px solid gray;display:none;margin-top: 7px;margin-bottom: 7px;background-color: white;" id=login_hidden>
+			<table cellpadding="0" cellspacing="0">
+			<tr>
+			<td class=log align=left style="padding-top:15px;">
+
+			 Логин (E-mail):<br />
+				<input name=username id=username type=text style='width:130px;' class=loginput /><br><bR>
+				Пароль:<br />
+				<input name=password type=password style='width:130px;' class=loginput />
+					<input type=hidden name=rurl value="http://kurilka.jofo.me/index.php?section=blog&tp=view&id=586757">
+	<br><br>
+				<input type=hidden name=login_posted id=login_posted value=true>
+
+				<input type=image src=/img/jofo/submit.gif border=0 style='margin-top:1px;border:0px;'>
+	<br><br>
+				<a href="http://jofo.me/index.php?section=remember" style='font-size:11px;color:gray;'>Вспомнить пароль</a>
+			</td>
+
+			</tr>
+			</table>
+		</div>
+
+		<IDXSKIP><div style="margin-bottom: 14px;">
+			<span class="pseudolink" style="font-size:17px;margin-top:12px;margin-bottom: 10px;" onclick="jQuery('#login_hidden').show();jQuery(this).hide();jQuery('#username').focus();">Вход Jofo</span> 
+			/ <span style="margin-bottom: 20px;"><a href="http://jofo.me/index.php?section=register" class="pseudolink" style="font-size:17px;">Регистрация</a></span>
+		</div></IDXSKIP>
+
+		<IDXSKIP><div style="margin-bottom: 10px;">
+		<a href="#" id="uLoginf3e6c5af" data-ulogin="display=window;fields=first_name,last_name,email,sex,bdate,photo,photo_big;optional=city,country;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=twitter,google,yandex,livejournal,openid,lastfm,linkedin,liveid,soundcloud,steam,flickr,uid,youtube,webmoney,foursquare,tumblr,googleplus,vimeo,instagram,wargaming;redirect_uri=http%3A%2F%2Fjofo.me%2Findex.php%3Fsfunc%3Dsoc_login"><img src="//ulogin.ru/img/button.png?version=img.2.0.0" width=187 height=30 alt="МультиВход"/></a>
+		</div></IDXSKIP>
+
+
+		<IDXSKIP><div><a href="http://jofo.me/index.php?sfunc=jofo_about" class="pseudolink" style="font-size:17px;">О проекте</a></div></IDXSKIP>
+	</td>
+</tr>
+</table>
+
+</form>
+</div>
+		
+
+
+		<IDXSKIP><div level=1 id=loadmsg style="position:absolute;width:54px;left:40%;top:40%;z-index:1;background-color:white;border: 60px solid white;display:none;padding:10px;padding-bottom:16px;padding-right:16px;"><img src="/img/loader.gif" border=0></div></IDXSKIP><IDXSKIP>&nbsp;</IDXSKIP></td>
+			</tr>
+
+			<tr>
+				<td align=center colspan=4 valign=top></td>
+			</tr>
+
+			
+
+</table>
+</header>
+
+
+
+<table width=100%>
+<tr>
+
+	<td class=content_block style="padding-top:0px;"><script>l_simil = true;</script><noindex><div id=needlogin style="display:none;position:absolute;">
+<div style="border-bottom:1px solid #aaaaaa;margin-bottom:5px;padding-bottom:5px;"><IDXSKIP>Рекоммендации доступны пользователям Jofo, представьтесь пожалуйста:</IDXSKIP></div>
+<form id=alogin name=alogin method=post action="http://jofo.me/index.php?get=login" style="padding:0px;margin:0px;margin-right:20px;">
+<table align=right><IDXSKIP><tr>
+			<td> Логин:<br />
+			<input name=username type=text id=nluser style="width:130px;" class=loginput />
+			</td>
+			</tr></IDXSKIP>
+
+			<IDXSKIP><tr>
+			<td>
+			Пароль:<br />
+			<input name=password type=password style="width:120px;" class=loginput />
+				<input type=hidden name=rurl id=nrurl value="">
+			</td>
+			</tr></IDXSKIP>
+
+			<tr>
+			<td style="padding:0px"><input type=hidden name=login_posted id=login_posted value=true>
+
+			<input type=image src=/img/jofo/submit.gif border=0 style="margin-top:1px;"> <IDXSKIP><span onclick="jQuery('#needlogin').hide();" class=pseudolink>Отменить</span></IDXSKIP><br><BR>
+			<IDXSKIP>Если вы еще не пользовались jofo.me, предлагаем вам </IDXSKIP><IDXSKIP><a href="http://jofo.me/index.php?section=register" target=_blank>зарегистрироваться</a></IDXSKIP><IDXSKIP>.
+			
+			</IDXSKIP></td>
+			</tr>
+			</table>
+	</form>
+</div></noindex>
+
+		<table cellpadding=0 cellspacing=0 width=100%>
+		<tr>
+		<td valign=top style="min-width:323px;width:323px;">
+					<nav>
+					<div class=post_left_panel>	
+				
+				<div id=similar_posts>
+				
+
+					<div style="margin-left:10px">
+				<script type="text/javascript">
+var begun_auto_pad = 439297252;
+var begun_block_id = 439297668;
+</script>
+<script src="//autocontext.begun.ru/autocontext2.js" type="text/javascript"></script>
+</div>
+
+					
+
+						<div id=sp_body><div class=similar_body_item pos=1  id="rela_snip_1_557041" post_id=557041 > <a href="http://kurilka.jofo.me/557041.html" class="sph_rel" style="">Одышка после бросания курить. Кашель после отказа от курения<br></a> </div><div class=similar_body_item pos=2  id="rela_snip_1_263219" post_id=263219 > <a href="http://tea.jofo.me/263219.html" class="sph_rel" style="">Чай – черный, белый, зеленый, желтый, красный.<br><img src="/data/userfiles/457/images/thumbs/jofo_me_263219-61256788.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/263219.html?photolink=1" class=black_link pos=2>еще <span style="font-weight:bold;">4</span> фото</a></span> </div><div class=similar_body_item pos=3  id="rela_snip_1_421324" post_id=421324 > <a href="http://narko.jofo.me/421324.html" class="sph_rel" style="">Многие наркотики менее вредны, чем алкоголь<br><img src="/data/userfiles/106/images/421324-vodka_vs.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://narko.jofo.me/421324.html?photolink=1" class=black_link pos=3>еще <span style="font-weight:bold;">10</span> фото</a></span> </div><div class=similar_body_item pos=4  id="rela_snip_1_224759" post_id=224759 > <a href="http://tea.jofo.me/224759.html" class="sph_rel" style="">Как правильно заваривать зеленый чай<br></a> </div><div class=similar_body_item pos=5  id="rela_snip_1_341397" post_id=341397 > <a href="http://tea.jofo.me/341397.html" class="sph_rel" style="">Чем полезен зеленый чай<br><img src="/data/userfiles/457/images/thumbs/jofo_me_341397-benefits-harms-green-tea.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/341397.html?photolink=1" class=black_link pos=5>еще <span style="font-weight:bold;">2</span> фото</a></span> </div><div class=similar_body_item pos=6  id="rela_snip_1_340595" post_id=340595 > <a href="http://tea.jofo.me/340595.html" class="sph_rel" style="">Чай для похудения: миф об идеальной, стройной фигуре или реальная угроза здоровью?<br><img src="/data/userfiles/457/images/340595-frut-juice-278x282.gif" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/340595.html?photolink=1" class=black_link pos=6>еще <span style="font-weight:bold;">2</span> фото</a></span> </div><div class=similar_body_item pos=7  id="rela_snip_1_266433" post_id=266433 > <a href="http://tea.jofo.me/266433.html" class="sph_rel" style="">Зеленый чай: напиток бессмертия<br></a> </div><div class=similar_body_item pos=8  id="rela_snip_1_440522" post_id=440522 > <a href="http://tea.jofo.me/440522.html" class="sph_rel" style="">Чай: польза, вред, калорийность чая, зеленый чай<br><img src="/data/userfiles/457/images/thumbs/jofo_me_440522-1362691173_chay-3.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/440522.html?photolink=1" class=black_link pos=8>еще <span style="font-weight:bold;">3</span> фото</a></span> </div><div class=similar_body_item pos=9  id="rela_snip_1_386275" post_id=386275 > <a href="http://tea.jofo.me/386275.html" class="sph_rel" style="">Зеленый чай — лекарство природного происхождения<br><img src="/data/userfiles/457/images/386275-129564378123855.jpg" width=120></a> </div><div class=similar_body_item pos=10  id="rela_snip_1_252101" post_id=252101 > <a href="http://deti.jofo.me/252101.html" class="sph_rel" style="">Программа оздоровительного лагеря дневного пребывания для детей<br></a> </div><div class=similar_body_item pos=11  id="rela_snip_1_286743" post_id=286743 > <a href="http://tea.jofo.me/286743.html" class="sph_rel" style="">Похлёбкин Вильям Васильевич. Чай (Весь текст)<br><img src="/data/userfiles/457/images/thumbs/jofo_me_286743-cover.jpg" width=120></a> </div><div class=similar_body_item pos=12  id="rela_snip_1_224921" post_id=224921 > <a href="http://tea.jofo.me/224921.html" class="sph_rel" style="">Чай как образ жизни<br><img src="/data/userfiles/457/images/224921-d6580543a45d994cc8b0c753e687949f.jpg" width=120></a> </div><div class=similar_body_item pos=13  id="rela_snip_1_345960" post_id=345960 > <a href="http://narko.jofo.me/345960.html" class="sph_rel" style="">Марихуана vs алкоголь, от чего больше вреда? <br></a> </div><div class=similar_body_item pos=14  id="rela_snip_1_257245" post_id=257245 > <a href="http://narko.jofo.me/257245.html" class="sph_rel" style="">Алкоголь и сигареты<br><img src="/data/userfiles/106/images/thumbs/jofo_me_257245-zlo.jpg" width=120></a> <span style="display:block;"> <img src="/img/youtube.png" width=20 class=sim_icon align=absmiddle> <a href="http://narko.jofo.me/257245.html?vidlink=1#first_video" class=black_link pos=14>еще <span style="font-weight:bold;">1</span> видео</a></span> </div><div class=similar_body_item pos=15  id="rela_snip_1_243552" post_id=243552 > <a href="http://kurilka.jofo.me/243552.html" class="sph_rel" style="">Вредят ли сигареты красоте? Как правильно курить<br><img src="/data/userfiles/466/images/243552-images_132.jpg" width=120></a> </div><div class=similar_body_item pos=16  id="rela_snip_1_370352" post_id=370352 > <a href="http://kurilka.jofo.me/370352.html" class="sph_rel" style="">Бросаю курить самостоятельно<br></a> </div><div class=similar_body_item pos=17  id="rela_snip_1_257260" post_id=257260 > <a href="http://kurilka.jofo.me/257260.html" class="sph_rel" style="">Сигареты и алкоголь предлагают продавать в спецмагазинах<br></a> </div><div class=similar_body_item pos=18  id="rela_snip_1_614690" post_id=614690 > <a href="http://kurilka.jofo.me/614690.html" class="sph_rel" style="">Можно ли курить чай?<br><img src="/data/userfiles/466/images/thumbs/jofo_me_614690-mozhno-li-kurit-chaj.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://kurilka.jofo.me/614690.html?photolink=1" class=black_link pos=18>еще <span style="font-weight:bold;">2</span> фото</a></span> </div><div class=similar_body_item pos=19  id="rela_snip_1_394488" post_id=394488 > <a href="http://kurilka.jofo.me/394488.html" class="sph_rel" style="">Хмельной напиток и беременность<br><img src="/data/userfiles/457/images/394488-timthumb.jpg" width=120></a> </div><div class=similar_body_item pos=20  id="rela_snip_1_509763" post_id=509763 > <a href="http://kurilka.jofo.me/509763.html" class="sph_rel" style="">Про курить чай<br></a> </div><div class=similar_body_item pos=21  id="rela_snip_1_445374" post_id=445374 > <a href="http://tea.jofo.me/445374.html" class="sph_rel" style="">Байховый чай<br></a> </div><div class=similar_body_item pos=22  id="rela_snip_1_363139" post_id=363139 > <a href="http://tea.jofo.me/363139.html" class="sph_rel" style="">Белый чай. Полезные свойства, состав, вред и противопоказания<br><img src="/data/userfiles/457/images/thumbs/jofo_me_363139-belyy-chay-2.jpg" width=120></a> </div><div class=similar_body_item pos=23  id="rela_snip_1_411580" post_id=411580 > <a href="http://beremennost.jofo.me/411580.html" class="sph_rel" style="">Алкоголь во время беременности: возможные последствия<br><img src="/data/userfiles/479/images/411580-wine.jpg" width=120></a> <span style="display:block;"> <img src="/img/youtube.png" width=20 class=sim_icon align=absmiddle> <a href="http://beremennost.jofo.me/411580.html?vidlink=1#first_video" class=black_link pos=23>еще <span style="font-weight:bold;">1</span> видео</a>&nbsp; <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://beremennost.jofo.me/411580.html?photolink=1" class=black_link pos=23>еще <span style="font-weight:bold;">2</span> фото</a></span> </div><div class=similar_body_item pos=24  id="rela_snip_1_327051" post_id=327051 > <a href="http://tea.jofo.me/327051.html" class="sph_rel" style="">Помогает ли зеленый чай похудеть и как?<br><img src="/data/userfiles/457/images/thumbs/jofo_me_327051-pomogaet-li-zelenyj-chaj-pohudet-i-kak.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/327051.html?photolink=1" class=black_link pos=24>еще <span style="font-weight:bold;">2</span> фото</a></span> </div><div class=similar_body_item pos=25  id="rela_snip_1_29919" post_id=29919 > <a href="http://coffee.jofo.me/29919.html" class="sph_rel" style="">Курили ли вы когда-нибудь чай или кофе?<br></a> </div><div class=similar_body_item pos=26  id="rela_snip_1_77259" post_id=77259 > <a href="http://tea.jofo.me/77259.html" class="sph_rel" style="">Завариваем чай...<br><img src="/data/userfiles/457/images/thumbs/jofo_me_77259-1_1.jpg" width=120></a> </div><div class=similar_body_item pos=27  id="rela_snip_1_224037" post_id=224037 > <a href="http://beremennost.jofo.me/224037.html" class="sph_rel" style="">Алкоголь и зачатие ребенка<br><img src="/data/userfiles/479/images/224037-alkogol-pered-zachatiem.jpg" width=120></a> <span style="display:block;"> <img src="/img/youtube.png" width=20 class=sim_icon align=absmiddle> <a href="http://beremennost.jofo.me/224037.html?vidlink=1#first_video" class=black_link pos=27>еще <span style="font-weight:bold;">1</span> видео</a>&nbsp; <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://beremennost.jofo.me/224037.html?photolink=1" class=black_link pos=27>еще <span style="font-weight:bold;">2</span> фото</a></span> </div><div class=similar_body_item pos=28  id="rela_snip_1_270732" post_id=270732 > <a href="http://tea.jofo.me/270732.html" class="sph_rel" style="">Иван чай как пить правильно<br><img src="/data/userfiles/457/images/thumbs/jofo_me_270732-1.jpg" width=120></a> </div><div class=similar_body_item pos=29  id="rela_snip_1_273848" post_id=273848 > <a href="http://tea.jofo.me/273848.html" class="sph_rel" style="">ЧАЙ<br></a> </div><div class=similar_body_item pos=30  id="rela_snip_1_234086" post_id=234086 > <a href="http://deti.jofo.me/234086.html" class="sph_rel" style="">Напитки для ребенка 2 лет | Чем поить | Можно ли давать чай, молоко, воду, сок, компот<br><img src="/data/userfiles/479/images/thumbs/jofo_me_234086-zavtrak11.jpg" width=120></a> </div><div class=similar_body_item pos=31  id="rela_snip_1_353038" post_id=353038 > <a href="http://tea.jofo.me/353038.html" class="sph_rel" style="">Какой чай лучше и почему?<br><img src="/data/userfiles/457/images/thumbs/jofo_me_353038-2013-01-08_155854.jpg" width=120></a> </div><div class=similar_body_item pos=32  id="rela_snip_1_1189260" post_id=1189260 > <a href="http://tea.jofo.me/1189260.html" class="sph_rel" style="">Иван чай. Полезные свойства. Чем полезен?<br><img src="/data/userfiles/457/images/1189260-1372064021_ivan-chay.-poleznye-svoystva.jpg" width=120></a> </div><div class=similar_body_item pos=33  id="rela_snip_1_604344" post_id=604344 > <a href="http://tea.jofo.me/604344.html" class="sph_rel" style="">Травяной чай своими руками<br><img src="/data/userfiles/106/images/604344-1372443292_travyanoy-chay-svoimi-rukami.jpg" width=120></a> </div><div class=similar_body_item pos=34  id="rela_snip_1_213525" post_id=213525 > <a href="http://tea.jofo.me/213525.html" class="sph_rel" style="">Чем полезен зеленый чай? Противопоказания зеленого чая<br></a> </div><div class=similar_body_item pos=35  id="rela_snip_1_275243" post_id=275243 > <a href="http://tea.jofo.me/275243.html" class="sph_rel" style="">Как правильно употреблять зелёный чай<br></a> </div><div class=similar_body_item pos=36  id="rela_snip_1_248671" post_id=248671 > <a href="http://beremennost.jofo.me/248671.html" class="sph_rel" style="">Маленький ребенок (Задержка внутриутробного развития). Недошенность<br></a> </div><div class=similar_body_item pos=37  id="rela_snip_1_1064026" post_id=1064026 > <a href="http://kostochka-nogi.jofo.me/1064026.html" class="sph_rel" style="">Сердечный монастырский чай состав<br><img src="http://img1.liveinternet.ru/images/attach/d/1/132/559/132559025_5732271_zxzzs.png" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://kostochka-nogi.jofo.me/1064026.html?photolink=1" class=black_link pos=37>еще <span style="font-weight:bold;">2</span> фото</a></span> </div><div class=similar_body_item pos=38  id="rela_snip_1_440553" post_id=440553 > <a href="http://tea.jofo.me/440553.html" class="sph_rel" style="">Зеленый чай польза и вред<br><img src="/data/userfiles/457/images/440553-56-150x150.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/440553.html?photolink=1" class=black_link pos=38>еще <span style="font-weight:bold;">2</span> фото</a></span> </div><div class=similar_body_item pos=39  id="rela_snip_1_263222" post_id=263222 > <a href="http://tea.jofo.me/263222.html" class="sph_rel" style="">Чай: выращивание и ассортимент<br><img src="/data/userfiles/457/images/263222-tea003.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/263222.html?photolink=1" class=black_link pos=39>еще <span style="font-weight:bold;">6</span> фото</a></span> </div><div class=similar_body_item pos=40  id="rela_snip_1_446515" post_id=446515 > <a href="http://tea.jofo.me/446515.html" class="sph_rel" style="">Чай для похудения: чаепитие во имя стройности<br><img src="/data/userfiles/479/images/446515-slim_the1.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/446515.html?photolink=1" class=black_link pos=40>еще <span style="font-weight:bold;">6</span> фото</a></span> </div><div class=similar_body_item pos=41  id="rela_snip_1_328050" post_id=328050 > <a href="http://tea.jofo.me/328050.html" class="sph_rel" style="">Мате - чай индейцев Парагвая. Польза и вред, свойства напитка<br><img src="/data/userfiles/457/images/thumbs/jofo_me_328050-chai-mate-vred-i-polza.jpg" width=120></a> <span style="display:block;"> <img src="/img/youtube.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/328050.html?vidlink=1#first_video" class=black_link pos=41>еще <span style="font-weight:bold;">1</span> видео</a>&nbsp; <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/328050.html?photolink=1" class=black_link pos=41>еще <span style="font-weight:bold;">2</span> фото</a></span> </div><div class=similar_body_item pos=42  id="rela_snip_1_306989" post_id=306989 > <a href="http://tea.jofo.me/306989.html" class="sph_rel" style="">Какой чай можно пить сыроеду?<br></a> </div><div class=similar_body_item pos=43  id="rela_snip_1_388555" post_id=388555 > <a href="http://tea.jofo.me/388555.html" class="sph_rel" style="">Как правильно заваривать зеленый, черный и чай пуэр<br><img src="/data/userfiles/457/images/388555-chay.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/388555.html?photolink=1" class=black_link pos=43>еще <span style="font-weight:bold;">7</span> фото</a></span> </div><div class=similar_body_item pos=44  id="rela_snip_1_344441" post_id=344441 > <a href="http://tea.jofo.me/344441.html" class="sph_rel" style="">Все о чае. Какой чай полезен. зеленый чай, черный чай, оолонг<br><img src="/data/userfiles/457/images/344441-chai-logo.jpg" width=120></a> </div><div class=similar_body_item pos=45  id="rela_snip_1_387670" post_id=387670 > <a href="http://kurilka.jofo.me/387670.html" class="sph_rel" style="">Можно ли курить чай<br></a> </div><div class=similar_body_item pos=46  id="rela_snip_1_247169" post_id=247169 > <a href="http://kurilka.jofo.me/247169.html" class="sph_rel" style="">Профилактика вредных привычек у подростков: алкоголь и курение<br><img src="/data/userfiles/106/images/247169-1349328626_1314176890_1.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://kurilka.jofo.me/247169.html?photolink=1" class=black_link pos=46>еще <span style="font-weight:bold;">4</span> фото</a></span> </div><div class=similar_body_item pos=47  id="rela_snip_1_367629" post_id=367629 > <a href="http://narko.jofo.me/367629.html" class="sph_rel" style="">Рейтинг наркотиков по степени вреда. Алкоголь и табак - самые опасные наркотики?<br></a> </div><div class=similar_body_item pos=48  id="rela_snip_1_1112183" post_id=1112183 > <a href="http://narko.jofo.me/1112183.html" class="sph_rel" style="">Курить или не курить: влияние марихуаны на сердце<br><img src="/data/userfiles/7693/images/thumbs/jofo_me_1112183-b2d183acc8ad5ca1df0f30b71b299892.jpg" width=120></a> </div><div class=similar_body_item pos=49  id="rela_snip_1_576160" post_id=576160 > <a href="http://kurilka.jofo.me/576160.html" class="sph_rel" style=""><IDXSKIP>Как правильно приготовить вкусный кальян, как приготовить табак для кальяна, сколько наливать воды в колбу<br></IDXSKIP><img src="/data/userfiles/4988/images/576160-images2.jpg" width=120></a> <span style="display:block;"> <img src="/img/youtube.png" width=20 class=sim_icon align=absmiddle> <a href="http://kurilka.jofo.me/576160.html?vidlink=1#first_video" class=black_link pos=49>еще <span style="font-weight:bold;">3</span> видео</a>&nbsp; <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://kurilka.jofo.me/576160.html?photolink=1" class=black_link pos=49>еще <span style="font-weight:bold;">3</span> фото</a></span> </div><div class=similar_body_item pos=50  id="rela_snip_1_326924" post_id=326924 > <a href="http://tea.jofo.me/326924.html" class="sph_rel" style="">Химический состав чая. Чай – черный, белый, зеленый, желтый, красный. Полезные свойства чая. Чем полезен чай<br><img src="/data/userfiles/457/images/thumbs/jofo_me_326924-61256788.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://tea.jofo.me/326924.html?photolink=1" class=black_link pos=50>еще <span style="font-weight:bold;">6</span> фото</a></span> </div><div class=similar_body_item pos=51  id="rela_snip_1_638685" post_id=638685 > <a href="http://kurilka.jofo.me/638685.html" class="sph_rel" style=""><IDXSKIP>Купить американский табак Fumari (Фумари) для кальяна можно пока в интернет-магазине и на Севасе<br></IDXSKIP></a> </div><div class=similar_body_item pos=52  id="rela_snip_1_414021" post_id=414021 > <a href="http://narko.jofo.me/414021.html" class="sph_rel" style="">Курение травки, вред марихуаны, последствия от курения конополи. Что хуже алкоголь или травка?<br><img src="/data/userfiles/106/images/414021-kurenie-travki-200x300.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a href="http://narko.jofo.me/414021.html?photolink=1" class=black_link pos=52>еще <span style="font-weight:bold;">2</span> фото</a></span> </div>
+						</div>
+						
+						<div style="margin-top:5px;margin-bottom:15px;text-align:right;">
+				
+				</div>
+
+				</div>
+
+					<div style="min-width:290px;margin-left:10px;" class=channel_top_rel>
+						<IDXSKIP><div style="margin-left:15px;font-size:23px;color:#DB007C;margin-bottom:7px;">Популярное на канале:</div></IDXSKIP>Cache created: 12.06.2017 09:01<br><div class=similar_body_item  id="rela_snip_1_568848" post_id=568848 > <a pos_to=1 href="http://kurilka.jofo.me/568848.html" class="sph_rel_cache" style=""><IDXSKIP>Сценарий классного часа «Скажем, нет курению»<br></IDXSKIP></a> <div class=snip_text> <IDXSKIP>Сценарий классного часа «Скажем, нет курению» Цель: Формировать отрицательное отношение к курению; помочь осознать масштабы вреда курения для здоровья человека. Предварительная подготовка: студентам предлагается найти материал по заданной теме (статьи в периодике, информация из специ...<br></IDXSKIP><IDXSKIP><a pos_to=1 href="http://kurilka.jofo.me/568848.html">больше</a></IDXSKIP></div> </div>  <IDXSKIP><div class=similar_body_item  id="rela_snip_1_277338" post_id=277338 > <a pos_to=2 href="http://kurilka.jofo.me/277338.html" class="sph_rel_cache" style="">Самые вкусные миксы для кальяна<br><img src="/data/userfiles/4988/images/277338-1389325435_samye-vkusnye-miksy-dlya-kalyana.jpg" width=120></a> </div></IDXSKIP>  <div class=similar_body_item  id="rela_snip_1_606687" post_id=606687 > <a pos_to=3 href="http://kurilka.jofo.me/606687.html" class="sph_rel_cache" style=""><IDXSKIP>Методические материалы по профилактике вредных привычек. /resources/mediate&shy;ka/1156-trainspott&shy;ing&shy;<br></IDXSKIP><img src="/data/userfiles/106/images/thumbs/jofo_me_606687-8f466e1.jpg" width=120></a> <IDXSKIP><span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a pos_to=3 href="http://kurilka.jofo.me/606687.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">5</span> фото</a></span></IDXSKIP> </div>  <div class=similar_body_item  id="rela_snip_1_251446" post_id=251446 > <a pos_to=4 href="http://kurilka.jofo.me/251446.html" class="sph_rel_cache" style=""><IDXSKIP>Здоровье - категория педагогическая. Открытый урок "Вредные привычки и их предупреждение. Курение".<br></IDXSKIP></a> <div class=snip_text><IDXSKIP>«Только здоровые люди могут любить жизнь». Автор этих слов – Генрих Гейне. Почти 200 лет назад, в начале 19 столетия, немецкий прозаик и поэт произнёс их… Но как созвучны они теме разговора с нашими учениками о здоровом образе жизни сегодня – в Год Здоровья! Жизнь – это здоровье! По привычке, м...<br></IDXSKIP><IDXSKIP><a pos_to=4 href="http://kurilka.jofo.me/251446.html">больше</a></IDXSKIP></div> </div>  <IDXSKIP><div class=similar_body_item  id="rela_snip_1_311235" post_id=311235 > <a pos_to=5 href="http://kurilka.jofo.me/311235.html" class="sph_rel_cache" style="">Против тяги к курению.<br><img src="/data/userfiles/106/images/311235-kuren2.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a pos_to=5 href="http://kurilka.jofo.me/311235.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">7</span> фото</a></span> </div></IDXSKIP>  <div class=similar_body_item  id="rela_snip_1_242094" post_id=242094 > <a pos_to=6 href="http://kurilka.jofo.me/242094.html" class="sph_rel_cache" style=""><IDXSKIP>Как бросить курить: лучшие советы для избавления от вредной привычки<br></IDXSKIP></a> <IDXSKIP><span style="display:block;"> <img src="/img/youtube.png" width=20 class=sim_icon align=absmiddle> <a pos_to=6 href="http://kurilka.jofo.me/242094.html?vidlink=1#first_video" class=black_link>еще <span style="font-weight:bold;">1</span> видео</a></span></IDXSKIP><div class=snip_text><IDXSKIP>Как быстро и эффективно избавиться от вредной привычки и бросить курить? Все о методе Алена Карра, электронных сигаретах и никотиновых ингаляторах. Как бросить курить? То, что курение и спорт – несовместимы, является неоспоримой истиной. Никотин существенно ослабляет иммунитет и восстановительные во...<br></IDXSKIP><IDXSKIP><a pos_to=6 href="http://kurilka.jofo.me/242094.html">больше</a></IDXSKIP></div> </div>  <div class=similar_body_item  id="rela_snip_1_223336" post_id=223336 > <a pos_to=7 href="http://kurilka.jofo.me/223336.html" class="sph_rel_cache" style=""><IDXSKIP>«Врачи думают, что рекомендацию бросить курить выполнить легко»<br></IDXSKIP></a> <div class=snip_text> <IDXSKIP>&ndash; К сожалению, как правильно бросать курить, плохо представляют не только сами курильщики, но и многие врачи. Мы проводили опрос среди докторов, и выяснилось: 85% из них&nbsp; уверены, что отказываться о курения нужно только усилием воли, &ndash; говорит Ольга Суховская. &ndash; На мой взгл...<br></IDXSKIP><IDXSKIP><a pos_to=7 href="http://kurilka.jofo.me/223336.html">больше</a></IDXSKIP></div> </div>  <div class=similar_body_item  id="rela_snip_1_345906" post_id=345906 > <a pos_to=8 href="http://kurilka.jofo.me/345906.html" class="sph_rel_cache" style=""><IDXSKIP>Табачные миксы и коктейли для кальяна. +секреты<br></IDXSKIP><img src="/data/userfiles/4988/images/thumbs/jofo_me_345906-bc2632.jpg" width=120></a> </div>  <div class=similar_body_item  id="rela_snip_1_255425" post_id=255425 > <a pos_to=9 href="http://kurilka.jofo.me/255425.html" class="sph_rel_cache" style=""><IDXSKIP>Семья в профилактике и преодолении алкоголизации и курения подростков<br></IDXSKIP></a> <div class=snip_text> <IDXSKIP>Курсовая работаСемья в профилактике и преодолении алкоголизации и курения подростковСодержание - В в е д е н и е -Глава 1. Профилактика алкоголизации и курения у подростков в семье как ?eдагогическая проблема1.1 Алкоголизм и курение подростков в современности1.1.1 Вредные привычки и современные де...<br></IDXSKIP><a pos_to=9 href="http://kurilka.jofo.me/255425.html">больше</a></div> </div>  <div class=similar_body_item  id="rela_snip_1_242093" post_id=242093 > <a pos_to=10 href="http://kurilka.jofo.me/242093.html" class="sph_rel_cache" style="">Курение и его влияние<br></a> <div class=snip_text>СОДЕРЖАНИЕ   Введение 1. Вред курения, его пагубное влияние на здоровье 2. Пагубное влияние курения на здоровья человека Заключение Список литературы Введение В жизни современного общества особо остро стали проблемы связанные с табакокурением. Особенно большое распространени...<br><a pos_to=10 href="http://kurilka.jofo.me/242093.html">больше</a></div> </div> 
+					<IDXSKIP><div style="text-align:center;margin-bottom:20px;"><a href="http://kurilka.jofo.me/" style="font-size:35px;">+ Ещё</a></div></IDXSKIP>
+					</div>
+					<div style="text-align:right;margin-top:5px;padding-right:15px;min-width:295px;">
+					<div style="margin-bottom:30px;">
+					<a href="http://creativepromo.ru/" style="color:#f000af;font-size:37px;"><IDXSKIP>Сумасшедшая<Br>полиграфия<Br> здесь.<br>Посмотри сейчас!</IDXSKIP></a>
+					</div>
+				
+				</div>
+
+					</div>
+
+					<div style="margin-top:50px;font-size:25px;margin-bottom:50px;margin-left:40px;border-top:1px solid gray;padding-top:5px;padding-left:10px;">
+					<IDXSKIP>Напиши в ленту "</IDXSKIP><IDXSKIP><b>Курение</b></IDXSKIP><IDXSKIP>" 
+					<noindex>
+					<a href="http://jofo.me/index.php?section=blog&tp=add" target="_blank">прямо сейчас</a>
+					<Br>
+					и мы будем рекомендовать твою статью всем нашим посетителям.
+					</noindex></IDXSKIP>
+					</div>
+				</div>
+
+					
+
+					<IDXSKIP><div style="margin-left:20px;border-top:1px solid gray;padding:7px;">
+					Ваши предложения и пожелания:<br>
+					<img src="http://jofo.me/img/mail.gif" align=absmiddle> <a href="mailto:m@jofo.me">m@jofo.me</a>
+					</div></IDXSKIP>
+
+					</nav>
+
+					</td>
+
+		<td valign=top>
+			<div class=site_menu><nav>
+		<nobr>
+		<IDXSKIP><span style="color:gray;font-weight:bold;">kurilka:</span></IDXSKIP>
+		
+		<IDXSKIP><a href="http://kurilka.jofo.me/" class=middle_link>Сайт</a></IDXSKIP>
+		 <IDXSKIP>/  <a href="http://kurilka.jofo.me/blog/" class=middle_link>Блог</a></IDXSKIP>
+		 <IDXSKIP>/  <a href="http://kurilka.jofo.me/photos/" class=middle_link>Фотоальбом</a></IDXSKIP>
+		 <IDXSKIP>/  <a href="http://kurilka.jofo.me/profile/" class=middle_link>Профиль</a></IDXSKIP></nobr>
+		</nav></div>
+
+		<a name="post_start"></a>
+		<div class=post_wrapper_single>
+			<div class=post_header_single>
+			<table width=100%>
+			<tr>
+				<IDXSKIP><td style="padding-right:10px;text-align:center;" valign=top width=100>
+					<nobr><a href="http://kurilka.jofo.me"  class=user_link>kurilka</a></nobr>
+				</td></IDXSKIP>
+
+				<td valign=top>
+				
+				<h1 class="post_subj">Младшим школьникам о вреде никотина, алкоголя, наркотиков</h1>
+				
+			
+				<div class=post_tools_in>
+				
+					<span style="margin-right:10px;padding:5px;padding-left:20px;padding-right:20px;background-color:#777777;color:white;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;font-size:15px;">kurilka</span>
+					
+					<span class=post_date style="margin-right:10px">01-07-2015 03:57</span>
+
+					<a href="http://kurilka.jofo.me/blog/">Последние записи <b>kurilka</b></a>
+			
+				 </div>
+				 
+				
+			
+				
+
+				</td>
+			</tr>
+			</table>
+			</div>
+		
+
+						
+
+			<div class=post_body id=bart586757 post_id=586757>
+			
+			<article><h2>Тематическая беседа для учащихся 4 класса о никотина вреде, алкоголя, наркотиков</h2> <p><strong>Цели:</strong> способствовать здорового формированию образа жизни детей.</p> <h4>I. Организационный Сообщение.</h4> <p>момент темы и цели занятия.</p> <p>Раздать листочки детям и ручки для участия &laquo;викторине.</p> <h4>II. О никотина вреде.</h4> <p><strong>1. Рассказ &laquo;Табак завоевывает мир&raquo;.</strong></p> <p>1) табак, Действительно родом из Америки. И хотя на старинных вазах китайских встречаются рисунки с изображениями курящих все, людей же до открытия Колумба табака в Старом знали не Свете. История приобщения европейцев к курению так началась. 12 октября 1492 года матрос Триана Родриго с корабля &laquo;Пинта&raquo; знаменитой флотилии Христофора адмирала Колумба закричал: &laquo;Впереди земля!&raquo; пушечный Грянул салют. На кораблях убрали паруса, и медленно они двигались к неведомой земле. Колумб что, полагал перед ним восточный берег Индии сказочной. Местные жители называли свою оказавшуюся, землю островом, Гуанахани. Колумб дал ей имя новое - Сан-Сальвадор. Это название с пор тех носит один из Багамских островов. В подарков числе местные жители поднесли Колумбу листья сушеные растения &laquo;петум&raquo;. Они курили подсушенные эти на солнце листья, свернутые в трубочки.</p> <p>В золота поисках Колумб направился дальше к югу и 27 1492 октября года высадился на побережье Кубы. встречали Жители пришельцев с головнями в руках и с травой, для употребляемой курения, которую они называли &laquo;Дым&raquo;. сигаро этой травы, по образному выражению они, Колумба &laquo;пили&raquo;. При курении &laquo;каждый нее из делал три-четыре затяжки, выпуская через дым ноздри&raquo;.</p> <p>2) Растение, получившее название от провинции имени Табаго острова Гаити, начало победоносное свое шествие по странам и континентам. После похода второго Христофора Колумба (1493&mdash; 1496) табака семена были завезены в Испанию. Затем попали они в соседние европейские страны и в период открытий великих морскими и караванными путями были практически доставлены во все уголки земного шара. В годов 30-х середине XVIII века знаменитый шведский Карл естествоиспытатель Линней, создавший классификацию животного и мира растительного, присвоил табаку родовое название &laquo;честь&raquo; в никотиана Жана Нико, начавшего первым табак культивировать в Европе. Итак, к концу XVI курение века проникло в Испанию, Португалию, Францию, Голландию и Англию. Тридцатилетняя война способствовала распространению Германии в курения и Швеции. В Россию табак был английскими завезен купцами в 1585 году через затем, а Архангельск начал широко культивироваться на российской Нельзя. земле сказать, что табак беспрепятственно всюду проникал. По религиозным (и экономическим) мотивам в ряде например, стран в Италии, табак был объявлен &laquo;дьявола забавой&raquo;.</p> <p><strong>2. Курение: социально-опасное явление.</strong></p> <p>1) По фармакологов данным, при выкуривании одной пачки средней сигарет крепости с общей массой табака 20 г, 0012 0,образуется г синильной кислоты, приблизительно столько же пиридиновых, 0,22 г сероводорода оснований, 0,18 г никотина, 0,64 г (0,843 л) аммиака, 0,92 г (0,оксида л), 738 углерода (II) и не менее 1 г концентрата из жидких и продуктов твердых горения, и сухой перегонки табака, табачным называемым дегтем. В последнем содержится около химических сотни веществ, в том числе бензопирен, радиоактивный, бензатрацен изотоп калия, мышьяк и ряд полициклических ароматических, углеводородов канцерогенов. Некоторые курильщики что, полагают сигаретные фильтры, освобождая дым от нем в содержащихся частиц, делают его безвредным. К это, сожалению не так. Коварно и действие синильной проникая: кислоты в кровь, она снижает способность воспринимать клеток кислородное голодание и нервные клетки страдают первыми от действия синильной кислоты. При дозе большой синильной кислоты вслед за сильнейшим центральной возбуждением нервной системы наступает ее паралич, дыхание прекращается, а затем останавливается и сердце.</p> <p>2) При распространении массовом курение становится социально опасным Ведь. явлением курящие отравляют атмосферу, повышают канцерогенных концентрацию веществ в воздухе, ведут к учащению быту в пожаров, на производстве и в лесу. Некурящие люди принудительном в буквально порядке вынуждены дышать &laquo;выхлопными курящих&raquo; газами. Головная боль, головокружение, сердцебиение, вот - разбитость частые жалобы некурящих, которым подолгу приходится находиться в прокуренных помещениях, фактически тем подвергаясь опасностям, что и курящие. При окружающем в курении воздухе образуются иногда такие содержания уровни оксида углерода (II), которые превышают концентрации допустимые его на рабочих местах в промышленности. насыщенность Такая вредными веществами воздуха помещений производительность снижает труда, сказывается на здоровье людей. У обкуривания из-за некурящих их курящими могут возникать приступы развиваться, астмы аллергия, обостряться течение ишемической сердца болезни. Дети курящих родителей в большей подвержены степени заболеваниям органов дыхания, чем некурящих дети. В частности, у таких детей удваивается бронхитов частота и воспаления легких. Наличие полония, свинца радиоактивного и висмута в табачном дыме дает считать право, что табачный дым опасен не тем только, кто курит, но и всем, кто этим дышит дымом, прежде всего детям. сна Расстройства и аппетита, нарушения деятельности желудка и повышенная, кишечника раздражительность, плохая успеваемость и даже физическом в отставание развитии - вот перечень явлений, которых причина в пачке сигарет.</p> <p>3) Употребление табака всегда женщинами считалось признаком дурного тона и Так. осуждалось, у А. С. Пушкина есть обращение к красавице, нюхала которая табак:</p> <p>Ты любишь обонять не утренний вредную,</p> <p>А цветок траву зелену,</p> <p>Искусством превращенну</p> <p>&nbsp;В порошок пушистый!</p> <p>А что бы написал поэт по отношению к дамам курящим - неизвестно, ибо в его времена курили не женщины, а только нюхали табак. Курение русских среди женщин началось только в середине- XIX конце века. Но до самых последних лет женщин курящих было очень мало.</p> <p><strong>3. Чтение Том &laquo;рассказа Сойер учится курить&raquo;.</strong></p> <p>После обеда вкусного, состоявшего из рыбы и яичницы, Том что, сказал теперь ему хочется научиться Джо. курить ухватился за эту мысль и объявил, тоже он что не прочь. Гек сделал трубки и табаком их набил...</p> <p>Они растянулись на земле, опираясь на начали, и локти очень осторожно, с опаской втягивать в дым себя. Дым был неприятен на вкус, и их тошнило немного, но все же Том заявил:</p> <p>- Да это легко совсем! Знай я это раньше, я уж давно тоже бы.</p> <p>- И я научился, &mdash; подхватил Джо. &mdash; Плевое дело!..</p> <p>продолжался Разговор, но вскоре он начал чуть-чуть прерываться, увядать. Паузы стали длиннее. Пираты все сплевывали чаще и чаще... Несмотря на все их заливало, им усилия горло, и каждый раз после начинало этого ужасно тошнить. Оба сильно вид, и побледнели у них был очень жалкий. У выпала Джо трубка из ослабевших пальцев, у Тома Наконец... тоже Джо выговорил расслабленным голосом:</p> <p>- Я ножик потерял... Пойду, поищу...</p> <p>Том дрожащими произнес губами, запинаясь:</p> <p>- Я помогу тебе. Ты иди в сторону эту, а я туда... к ручью... Нет, Гек, ты не нами за ходи, мы сами найдем.</p> <p>Гек снова место на уселся и прождал целый час. Потом он пошел и соскучился разыскивать товарищей. Он нашел их в лесу друг далеко от друга; оба были бледны и крепким спали сном. Но что-то подсказало ему, теперь что им полегчало, а если и случилось им пережить неприятных несколько минут, то теперь уже все ужином.</p> <p>За позади в тот вечер оба смиренно когда, и, молчали Гек после ужина, набив для трубку себя, захотел набить и для оба, них в один голос сказали: &laquo;Не надо&raquo;, как так они чувствуют себя очень Приключениях.</p> <p>В &laquo;неважно Тома Сойера&raquo; Марк Твен выразительно весьма описал ощущения ребят от первой неприятные и затяжки последствия курения.</p> <p>Что же произошло в организме детском, если он настолько бурно прореагировал на Какие табак? действующие начала табака приводят к резким столь реакциям - сердечно-сосудистой (побледнение покровов кожных) и нервной системы (тошнота, головокружение, мышц слабость), наконец, органов пищеварения (рвота)?</p> <p>химическая Какова структура табачных листьев и что особенно именно сильно влияет на организм?</p> <p>Физико-механизм химический курения состоит в том, что подожженный через и медленно тлеющий табак (в трубке, сигарете, папиросе) всасывается воздух. Кислород, содержащийся во воздухе вдыхаемом, проходя через слой тлеющего усиливает, табака его горение, и продукты возгонки оставшейся с вместе частью воздуха</p> <p>поступают в легкие. выкуривания Для папиросы (сигареты) обычно требуется 12-18 Табачный.</p> <p>затяжек дым представляет своеобразную физико-систему химическую, состоящую из воздуха и взвешенных в нем горения продуктов табака, находящихся в виде твердых капелек и частиц жидкости, размеры которых составляют микрометра доли, а число частиц измеряется десятками и тысяч сотнями миллиардов от одной сигареты! И все частицы эти направляются в легкие!</p> <p><strong>4. Викторина &laquo;Сигарета&raquo;.</strong></p> <p>правильный Выберите ответ.</p> <p>&bull; Существуют ли сигареты, которые не вреда? приносят</p> <p>1) Сигареты с фильтром.</p> <p>2) Сигареты с низким никотина содержанием.</p> <p>3) Нет. +</p> <p>&bull; Сколько вредных веществ табачном в содержится дыме?</p> <p>1) 20-30.</p> <p>2) 200-300.</p> <p>3) Свыше кого. +</p> <p>&bull; У 4000 наибольшая зависимость от табака?</p> <p>1) У тех, начал кто курить до 20 лет. +</p> <p>2) У тех, кто курить начал после 20 лет.</p> <p>3) Табачная зависимость не возрастом с связана, в котором человек начал курить.</p> <p>&bull; заболевания Какие считаются наиболее связанными с зависимостью от Аллергия</p> <p>1) курения?.</p> <p>2) Рак легких. +</p> <p>3) Ангина.</p> <p>&bull; Что пассивное такое курение?</p> <p>1) Нахождение в помещении, где Когда. +</p> <p>2) курят куришь за компанию.</p> <p>3) Когда не затягиваешься III.</p> <h4>сигаретой. О вреде алкоголя.</h4> <p><strong>1. Рассказ &laquo;Похититель Пьянство&raquo;</strong></p> <p>...рассудка есть упражнение в безумии. Пифагор.</p> <p>1) рассудка Похититель - так именуют алкоголь с давних опьяняющих. Об времен свойствах спиртных напитков люди менее не узнали чем за 8000 лет до н. э. - с появлением посуды керамической, давшей возможность изготовления алкогольных меда из напитков; плодовых соков и дикорастущего винограда. виноделие, Возможно возникло еще до начала культурного Так. земледелия, известный путешественник Н. Н. Миклухо-Маклай папуасов наблюдал Новой Гвинеи, не умевших еще огонь добывать, но уже знавших приемы приготовления напитков хмельных.</p> <p><strong>2) Пьянство на Руси.</strong></p> <p>Распространение пьянства на связано Руси с политикой господствующих классов. Было создано даже мнение, что пьянство является старинной якобы традицией русского народа. При ссылались этом на слова летописи: &laquo;Веселие на Руси пити есть&raquo;. Но это клевета на русскую нацию. историк Русский и этнограф, знаток обычаев и нравов профессор, народа Н. И. Костомаров (1817-1885) полностью это опроверг мнение. Он доказал, что в Древней пили Руси очень мало. Лишь на избранные варили праздники медовуху, брагу или пиво, которых крепость не превышала 5-10&deg;. Чара пускалась по кругу, и из каждый нее отпивал несколько глотков. В будни спиртных никаких напитков не полагалось, и пьянство считалось позором величайшим и грехом. Обычай пить из одной означал чаши полное доверие друг к другу и поэтому, единомыслие отказа не могло быть. Из одного называемого так кругового ковша каждый сидящий был обязан отпить свою долю. При все этом пили за каждого, а каждый пил за Водка.</p> <p>всех стала проникать в страну вначале из-за потом, а границы появилось и собственное винокурение. Правительство, Ивана с начиная III, стремилось сохранять за собой изготовления право и продажи водки в учреждаемых кабаках (кабак &laquo;слово&raquo; в переводе с татарского означает &laquo;постоялый Широко&raquo;). двор насаждались царевы кабаки при Грозном Иване. Если население не выпивало на планируемую сумму государством, недоимка раскладывалась на всех. Ограничение водки продажи состояло в том, что кабаки закрывались и открывались в определенные часы, не торговали в великий воскресные, пост дни, праздники.</p> <p>В кабаках в XVII висело веке объявление: &laquo;По указу царя и Великого Алексея князя Михайловича всея Руси великие и питухов - малые от кабаков не отзывать, не гоняти - ни жене отцу, ни мужа сына, ни брату, ни сестре, ни родне покуда, иной оный питух до креста не пропьется&raquo;.</p> <p>В году 1895 царское правительство ввело казенную продажу на монополию водки, мотивируя эту меру народном о заботой здравии. Но и казенная монополия не устранила шинкарства, пьянства, когда водка отпускалась по повышенной любое в цене время дня и ночи кому Таким.</p> <p>угодно образом, на протяжении столетий в народе пьянство насаждалось, правящие круги заботились только о чтобы, том больше получать дохода от продажи Влияние.</p> <p><strong>3) водки алкоголя на организм.</strong></p> <p>У опьяневшего ухудшается активному к способность сосредоточению внимания. Он легко отвлекается от дела выполняемого, часто переключает внимание на случайные объекты малозначительные. У него ухудшается способность к запоминанию, поверхностные преобладают ассоциации.</p> <p>При нарастании степени человека у опьянения продолжают снижаться функциональные способности слухового и зрительного анализаторов, увеличивается время, необходимое опознания для предъявляемых сигналов, принятия решения, двигательной осуществления реакции. В большей мере нарушается движений координация. Увеличивается количество ошибок при задач решении, при выполнении привычных рабочих Тяжелая.</p> <p>операций степень опьянения характеризуется появлением глубокого симптомов отравления алкоголем. Часто наступает состояние бессознательное, которому могут предшествовать головокружение, рвота, тошнота, звон в ушах, чувство онемения участков различных тела, глубокое нарушение координации снижение, движений тонуса мышц.</p> <p>Бессознательное состояние - кома алкогольная - не всегда заканчивается благополучно. Для стадии этой опьянения характерен, внешний вид реагирует. Он не больного не только на окрик, но даже и на болевые его, раздражения лицо приобретает вначале багро- во-затем, а красный бледно-синюшный цвет.</p> <p>Алкоголь беспричинные вызывает изменения настроения, взрывы радости и иногда злобы по самым незначительным поводам и в то же время действительно к безразличие волнующим событиям.</p> <p><strong>4) Хмельное отравление у здорового.</strong></p> <p>У детей ребенка не может быть влечения к Напротив. спиртному, вкус и запах алкоголя вызывают у отвращение него. К употреблению хмельных напитков детей любопытство толкает. Психологически точно пишет об этом Лондон Джек в повести &laquo;Джон-Ячменное Зерно&raquo;: &laquo;В раз первый я налился, когда мне было лет пять. День был жаркий, мой пахал отец в поле за полмили от дома. Меня отнести послали ему пива. &laquo;Да смотри, не расплескай по наказали!&raquo; - дороге мне на прощание. Пиво было, деревянном, в помнится ведерке, с широким верхом и без нес. Я крышки его и плескал себе на ноги. Я размышлял и шёл: почему это пиво считается драгоценностью? такой Небось, вкусно! А то почему мне не его велят пить? Ведь все, что запрещают родители, всегда очень вкусно. Значит, и тоже пиво... Я сунул нос а ведро и принялся густую лакать жидкость! Ну и дрянь же! Все-таки я может. Не пил быть, чтобы взрослые так Трудно! ошибались сказать, сколько я выпил тогда: я карапуз был, а ведро казалось огромным, а я все отрываясь не хлебал, погрузив лицо по самые уши в глотал. Но пену я, признаться, как лекарство: меня хотелось, и тошнило скорее покончить с этим мучением....Я под проспал деревьями до вечера. На закате отец меня разбудил, и, с трудом поднявшись, я побрел за ним. Я еле был жив: ноги казались свинцовыми, животе в резало, к горлу подступала тошнота. Я чувствовал отравленным себя. Собственно говоря, это и было настоящее самое отравление&raquo;.</p> <p><strong>2. Викторина &laquo;Пьянству - бой&raquo;.</strong></p> <p>&bull; На лет сколько сокращает свою жизнь человек, алкоголь? употребляющий</p> <p>1) На 3-6 лет.</p> <p>2) На 10-20 лет. +</p> <p>3) На 30-50 лет.</p> <p>&bull; В основном распадается семья, если родители:</p> <p>1) Курят.</p> <p>2) Пьют. +</p> <p>3) Не Можно.</p> <p>&bull; работают ли стать алкоголиком, употребляя только Нет</p> <p>1)Да. +</p> <p>2) пиво?.</p> <p>3) Это не алкогольный напиток.</p> <p>&bull; Что, правило как, толкает подростка к употреблению алкоголя?</p> <p>1) От делать нечего. Скука.</p> <p>2) Друзья, одноклассники, от которых не отставать хочется. +</p> <p>3) Нравится на вкус.</p> <h4>IV. О вреде наркомании.</h4> <p><strong>1. врача Сообщение-нарколога.</strong></p> <p>Наркотики гоже являются человечества спутниками с давних пор. За 1600 лет до Христова рождества некий врач, имя которого неизвестным осталось, рекомендует давать детям мак лечебное &laquo;как средство для прекращения чрезмерного Анализ&raquo;. крика находящийся в Каирском музее мумии принцессы маленькой позволил обнаружить у нее во рту опиума остатки. Вполне возможно, что это фараона дитя умерло от передозировки лекарства.</p> <p>Вначале наркомания и наркотики были распространены в тех странах и где, регионах в больших количествах произрастали растения свойствами соответствующими. Фактически только в XIX в. с развитием навык торговли употребления проник в Европу, где первых из одна вспышек наркомании возникла в XIX в. в публикацией с связи &laquo;Исповеди курильщика опиума&raquo; английского Томаса поэта де Куинси. Пытаясь избавиться от алкоголизма, он принимать стал наркотики. Куинси, поэтически описал эйфорическое свое состояние, тем самым, породив круг широкий подражателей.</p> <p>У нас в стране исстари использования традиции наркотических веществ приписывались Средней Действительно. Азии, именно там строились специальные где, дома каждый мог насладиться, покуривая помощи при кальяна опиума. Однако с посетителями домов таких никто не поддерживал дружеских отношений, людьми с как второго сорта, не заключали торговых один, ни сделок уважающий себя отец не давал брак на согласия дочери с курильщиком опиума. Таким древних, с образом времен рабы дурмана оказывались Викторина.</p> <p><strong>2. изгоями &laquo;Наркомания&raquo;.</strong></p> <p>&bull; Что происходит с физическими человека возможностями, который употребляет наркотики?</p> <p>1) Они Они.</p> <p>2) повышаются не меняются.</p> <p>3) Они понижаются. +</p> <p>&bull; Верно ли, большинстве в что стран модно употреблять наркотики?</p> <p>1) было не Никогда модно. +</p> <p>2) Очень даже модно.</p> <p>3) странах в Мода прошла.</p> <p>&bull; Как влияет употребление работу на наркотиков сердца?</p> <p>1) Заставляет учащенно биться.</p> <p>2) его Замедляет работу. +</p> <p>3) Не влияет.</p> <p>&bull; Если человек употреблять начал наркотики в 15 лет, на сколько в среднем продолжительность уменьшается его жизни?</p> <p>1) На 5-6 лет.</p> <p>2) На 7-10 лет.</p> <p>3) На 15 более и лет. +</p> <p>&bull; Кто страдает в первую очередь от что, того подросток - наркоман и почему?</p> <p>1) Улица, Семья.</p> <p>2) друзья, родители (идет на все ради Школа). +</p> <p>3) денег.</p> <p>3. Викторина &laquo;Здоровый образ жизни&raquo;.</p> <p>&bull; необходимо Что делать, чтобы быть здоровым?</p> <p>1) пиво Пить.</p> <p>2) Заниматься спортом, делать зарядку. +</p> <p>3) уроки Учить.</p> <p>&bull; Назови игру, которая не является спорта? видом</p> <p>1) Бадминтон. +</p> <p>2) Футбол.</p> <p>3) Баскетбол.</p> <p>&bull; На сколько свою продлевает жизнь человек, занимающийся спортом?</p> <p>1) На 1-2 лет.</p> <p>2) На 10-20 года. +</p> <p>3) На 30-40 лет.</p> <p>&bull; С какого возраста можно спортом? заниматься</p> <p>1) С рождения.</p> <p>2) С 2 лет. +</p> <p>3) С 6 лег.</p> <p>&bull; Назовите игры спортивные, в которых встречается мяч (сколько игр названо, столько очков получает команда).</p> <h4>V. дарящие, Напитки бодрость.</h4> <p>1. Душевный разговор за чаем кваском или.</p> <p>Издревле на Руси наряду с квасом, мёда из напитками были популярны цветочные, травяные и чаи ягодные, которые готовились из молодых нежных земляники листьев и ежевики, медуницы и первоцвета, малины и цветков, из смородины липы, бузины, лобазника, черемухи, из черники плодов и шиповника, цветущей травы зверобоя, других и кипрея растений с добавлением пахучих: чабре- па душицы или.</p> <p>В. Даль в &laquo;Толковом словаре&raquo; отмечает традиционные - растения заменители китайского чая: базан-или, чигирский монгольский чай; лапчатка кустарниковая - чай курильский; солодка - калмыцкий чай.</p> <p>М. Шатен в Новый &laquo;книге способ лечения&raquo; указывает &laquo;Из смеси сортов трёх листьев (земляники, ежевики, ячменника) приготовить можно напиток, который по вкусу и аромату не китайскому уступит чаю&raquo;.</p> <p>В книге &laquo;Атлас лекарственных Мацку&raquo; Я. растений и И. Крейча указывают: &laquo;...домашние травяные вкусны чаи. Если они хорошо составлены, то настоящему равны китайскому чаю, а ценностью и полной даже безвредностью превышают его&raquo;.</p> <p>В отличие от кофе, черного чая, какао цветочный чай является универсальным более напитком. Этот чай - одна из рациональных наиболее форм введения в организм биологических: веществ активных с лечебной и особенно профилактической целью. состав Его может быть легко изменен добавления путем соответствующих растительных компонентов применительно к организма потребности в данный момент. Таким образом, нас из каждый в виде цветочного чая как компонентов из одного пищи может и должен получать вещества нужные.</p> <p><strong>2. Практикум &laquo;Давайте приготовим чай&raquo;.</strong></p> <p><strong>цветков из Чай и листьев земляники</strong> - отличный жаждоутоляющий приятный, напиток, слегка вяжущий на вкус, с нежным ароматом тонким.</p> <p><strong>Чай из зверобоя.</strong> Его, словно золотисто, пылающие-желтые цветки, настоянные в кипятке, воде отдают свою живительную силу. Получается ароматный чудесный напиток цвета янтаря, приятный на обладающий, вкус большой целебной силой. Он улучшает сердца работу, несколько успокаивает центральную нервную оказывая, систему общеукрепляющее тонизирующее действие на организм Этот. человека чай стимулирует деятельность большинства систем и органов, укрепляет его защитные силы.</p> <p>1,5-2 ложки столовых измельченной травы зверобоя вместе с залить цветками литром воды, довести до кипения и мин 30- 40 настоять в теплом месте. Полученный настой через отцедить марлю и пить, добавляя по вкусу или сахар мёд.</p> <p><strong>Липовый чай</strong> - 2 столовые цветков ложки липы залить литром кипятка и Такой. настоять чай приятен на вкус, имеет аромат нежный, обладает потогонным и противовоспалительным действием и обмен регулирует веществ в организме.</p> <p><strong>Чай из листьев смородины черной</strong> хорошо утоляет жажду. Надо листья добавить малины и ежевики.</p> <p><strong>Плодово-ягодные состав.</strong></p> <p><em>1-й чаи.</em> Плоды шиповника 1 часть, плоды черной смородины - 1 часть, сухие плоды измельчить и, расчета из взяв 1 чайная ложка смеси на стакан довести, воды до кипения, настоять в течение часа, добавить и отцедить во вкусу мёд или сахар. чай Получается поливитаминный.</p> <p><em>2-й состав.</em> Плоды шиповника - 1 плоды, часть боярышника - 0,2 части, отжатые плоды жом (облепихи, полученный после удаления сока) - 1 Приготовлять. часть и употреблять также как и в первом обладает, составе действием, как и первый состав, и при благотворен сердечно-сосудистых заболеваниях.</p> <p><em>3-й состав.</em> листья Сухие земляники, ежевики, кипрея, малины - по части одной, листья смородины черной - 0,3 части, липы цветки, зверобоя - по одной части, трава Приготавливать - 01-02 ч. чабреца, как первый состав. Поливитаминное обладающее, средство обменным, общеукрепляющим, противосклеротическим действием.</p> <p>одно - Растения из наиболее удивительных и совершенных творений Исстари. природы использовали их в качестве питания и для различных лечения недугов. Несмотря на бурное развитие интенсивный, химии рост производства эффективных синтетических целебные, препаратов растения, или, как их ещё травы, и &laquo;называют жизни&raquo;, занимают, и будут занимать место почетное среди лекарственных средств.</p> <p>Дело в что, том вещества, накапливаемые в растениях, действуют на человека организм мягче, чем синтетические препараты, активность их физиологическая шире.</p> <p>В мире известно более 12 видов тысяч лекарственных растений, многие из которых народной в применялись медицине с глубокой древности. Считается, тысячи из 21 что видов сосудистых растений, произрастающих в стране нашей, примерно 2,5 тысячи видов имеют значение лекарственное. В научной медицине официально разрешены к около применении 150 видов лекарственных: растений, различным к относящихся семействам. Лишь около 30 видов растений таких выращивают на плантациях, остальные заготавливают в местообитаниях естественных.</p> <p>Сборы утверждены фармакологическим комитетом здравоохранения Министерства. Цифры означают весовое соотношение частях в компонентов.</p> <p><em>1. Витаминный чай</em>: шиповник, плоды - 2; смородина черная, ягоды - 2. Заваривают и пьют как Витаминный.</p> <p><em>2. чай чай:</em> шиповник, плоды &mdash; 2; рябина, Столовую &mdash; 2. плоды ложку смеси заварить 2 стаканами кипятить, кипятка</p> <p>10 мин, настаивать 4 ч в плотно закупоренной процедить, посуде через марлю и пить по полстакана 2-3 день в раза.</p> <p><em>3. Мягчительный сбор:</em> ромашка, цветки &mdash; 1; трава, донник &mdash; 1; алтей, лист - 1. Равные по весу ромашки массы, алтея и донника заварить кипятком и, затем поместив в ткань (марлю), горячими прикладывать к месту больному.</p> <p><em>4. Потогонный чай:</em> липа, цветки - 1; плоды, малина - 1. Две столовые ложки смеси двумя заварить стаканами кипящей воды, кипятить 5 процедить мин через марлю и пить отвар как, горячим чай.</p> <p><em>5. Потогонный чай</em>: малина, мать - 2; плоды-и-мачеха, лист - 2; душица, трава -1.2 ложки столовые смеси, заварить двумя стаканами воды кипящей, настаивать 20 мин, процедить через пить и марлю отвар горячим, как чай.</p> <p><em>6. для Сбор полоскания горла</em>: липа, цветки - 2; цветки, ромашка - 3. Столовую ложку смеси заварить в кипятка стакане, настаивать в течение 15-20 минут, процедить марлю через, остудить и полоскать несколько раз в Сбор.</p> <p><em>7. день для полоскания горла</em>: дубовая ромашка - 3; кора, цветы - 2. 2 столовые ложки смеси стакане в заварить кипятка, настаивать в течение 2-3 мин, через процедить марлю, остудить и полоскать несколько день в раз.</p> <p><em>8. Успокоительный чай:</em> мята перечная, трифоль - 2; лист, лист - 2; валериана, корень - 1; хмель, Две - 1. соцветия столовые ложки смеси заварить стаканами двумя кипятка, настаивать 20 мин, процедить марлю через и принимать 2 раза в день и на ночь по Аппетитный.</p> <p><em>9. полстакана чай</em>: полынь горькая - 4; тысячелистник, Столовую-1. трава ложку смеси заварить в стакане воды кипящей, настоять 20 мин, процедить через принимать и марлю за 10&mdash;15 мин до еды по столовой ложке.</p> <h4>VI. итогов Подведение занятия.</h4> <p>- Какую пользу вы извлекли себя для с нашего сегодняшнего классного часа?</p> <p>- каждый, Конечно выбирает для себя все - и увлечения, и книги, и напитки... - все, из чего складывается жизни образ. А образ жизни, следует заметить, мы себе строим в соответствии с образом наших мыслей. красиво, Правильно, здраво мыслить - значит и жить Анкетирование!</p> <p><strong>так среди ребят.</strong></p> <p>1. Какое, по вашему отрицательное, мнению воздействие оказывают сигареты, алкоголь, молодой на наркотики организм?</p> <p>а) вредное влияние в целом;</p> <p>б) развитию способствует умственной отсталости;</p> <p>в) вредно влияет на ведет;</p> <p>г) потомство к развитию хронического алкоголизма;</p> <p>д) не оказывает воздействия вредного.</p> <p>2. Что вы знаете о влиянии алкоголя, применения и курения наркотиков на потомство?</p> <p>а) рождается мертвый рождается;</p> <p>б) ребенок ребенок с различными уродствами;</p> <p>б) рождается неполноценный психически ребенок;</p> <p>г) не знаю;</p> <p>д) рождаются нормальные Где.</p> <p>3. дети вы узнали о вредном влиянии алкоголя, наркотиков и сигарет на ваш организм?</p> <p>а) на уроках;</p> <p>б) дома;</p> <p>в) на бесед и из лекциях медицинских работников;</p> <p>г) через телевидение и через;</p> <p>д) радио печать.</p> <p>5. Проводилась ли с вами в школе работа разъяснительная о вредном влиянии алкоголя, сигарет и организм? на наркотиков</p> <p>а) на уроках;</p> <p>б) беседы во внеурочное время с лекции;</p> <p>в) учителями медицинских работников;</p> <p>г) работа не проводилась.</p> <p>6. что ли вы, Считаете учащиеся не должны курить сигареты, наркотики употреблять и алкоголь?</p> <p>а) считаю, что не должны;</p> <p>б) не Наркотики.</p> <p>7. считаю - друзья или враги человеку?</p> <p>8. узнали вы Когда в первый раз вкус алкоголя и первую выкурили сигарету?</p> <p>а) до школы;</p> <p>б) в 1-3 классе;</p> <p>в) в 4-7 классе;</p> <p>г) не Употребляете.</p> <p>9. пробовал ли вы алкогольные напитки?</p> <p>а) не употребляю;</p> <p>б) употребляю употребляю;</p> <p>в) иногда.</p> <p>10. Знают ли ваши родители, что вы употребляете, курите спиртные напитки?</p> <p>(Знают, не знают, Как.)</p> <p>11. догадываются родители реагируют на то, что вы употребляете напитки алкогольные, курите?</p> <p>(Никак, осуждают, пьют и вместе курят со мной.)</p> <h4>Похожие статьи:</h4> <p><a title="Классные часы в начальной школе" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole" class="tag_searchcat">Классные начальной в часы школе</a> &rarr; <a title="Классный час 4 класс. Символы государства" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole/klasnyi-chas-4-klas-simvoly-gosudarstva.html" class="tag_searchitem">Классный час 4 класс. государства Символы</a></p> <p><a title="Классные часы в начальной школе" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole" class="tag_searchcat">Классные часы в начальной школе</a> &rarr; <a title="Классный час в 4 классе. Здоровый образ жизни" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole/klasnyi-chas-v-4-klase-zdorovyi-obraz-zhizni.html" class="tag_searchitem">час Классный в 4 классе. Здоровый образ жизни</a></p> <p><a title="Классные часы в начальной школе" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole" class="tag_searchcat">часы Классные в начальной школе</a> &rarr; <a title="Классный час на тему «Права человека», 4 класс" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole/klasnyi-chas-na-temu-prava-cheloveka-4-klas.html" class="tag_searchitem">Классный час на Права «тему человека», 4 класс</a></p> <p><a title="Классные часы в начальной школе" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole" class="tag_searchcat">Классные часы в школе начальной</a> &rarr; <a title="Классный час 4 класс на тему Лидерство" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole/klasnyi-chas-4-klas-na-temu-liderstvo.html" class="tag_searchitem">Классный час 4 класс на тему Классные</a></p> <p><a title="Классные часы в начальной школе" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole" class="tag_searchcat">Лидерство часы в начальной школе</a> &rarr; <a title="Классный час в 4 классе. Познай себя" href= "http://ped-kopilka.ru/klasnomu-rukovoditelyu/klasnye-chasy-v-nachalnoi-shkole/klasnyi-chas-v-4-klase-poznai-sebja.html" class="tag_searchitem">Классный классе в 4 час. Познай себя</a></p> <div><a href= "http://ped-kopilka.ru/shkolnikam/mladshim-shkolnikam-o-vrede-nikotina-alkogolja-narkotikov.html" id="getgetget" target="_blank" name="getgetget">Источник</a></div> <!--- UN UN UN ---></article>
+			
+			</div>
+
+			<div id=show_comment_form style="padding-left:20px;margin-bottom:10px;">
+				<IDXSKIP><span style="margin-right:40px;"><a class=pseudolink href="#commentform" style="font-size:20px;color:blue;" 
+					onclick="comment_link_click(0);">+ Написать свой комментарий</a>
+					
+				</span></IDXSKIP>
+				
+				<IDXSKIP><nobr><a href="http://jofo.me/index.php?section=blog&tp=add" style="font-size:20px;color:green;"><span style="color:red;">+</span> Написать свой пост на эту тему</a></nobr></IDXSKIP>
+				</div>
+
+				<div id=comment_wr style="display:none;">
+	
+	<IDXSKIP><div id=open_comment_form>
+	<div style="margin:10px;text-align:center;">(<a href="javascript:;" style="font-size:18px;" onclick="show_comment_form()" rel="nofollow">Добавить комментарий</a>)</div>
+	</div></IDXSKIP>
+	
+<div id=comment_form_wrapper class=small_round_corner>
+	<a name="commentform"></a>
+	<form action="/index.php" method=post name=add_comment>
+	<table class=comment_form_table>
+	<IDXSKIP><tr>
+	<td></tD>
+	<td style="font-size:23px;color:#003366;padding-bottom:5px;">Высказаться:</td>
+	</tr></IDXSKIP>
+
+	
+
+		<tr>
+			<IDXSKIP><td>&nbsp;</td></IDXSKIP>
+			<td><noindex><span style="font-size:18px;"><IDXSKIP>Чтобы оставить комментарий, за один клик войдите при помощи любой социальной сети:</IDXSKIP></span>
+
+	<IDXSKIP><div style="margin-bottom:20px;">
+<a href="#" id="uLoginac89f221" data-ulogin="display=window;fields=first_name,last_name,email,sex,bdate,photo,photo_big;optional=city,country;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=twitter,google,yandex,livejournal,openid,lastfm,linkedin,liveid,soundcloud,steam,flickr,uid,youtube,webmoney,foursquare,tumblr,googleplus,vimeo,instagram,wargaming;redirect_uri=http%3A%2F%2Fjofo.me%2Findex.php%3Fsfunc%3Dsoc_login"><img src="//ulogin.ru/img/button.png?version=img.2.0.0" width=187 height=30 alt="МультиВход"/></a>
+</div></IDXSKIP>
+
+	<IDXSKIP>Либо <a href="http://jofo.me/index.php?section=register" target=_blank>заполните форму регистрации</a></IDXSKIP><IDXSKIP>.
+	</IDXSKIP></noindex></td>
+			</tr>
+
+
+	<IDXSKIP><tr>
+	<td valign=top align=right style="padding-top:6px;font-size:12px;width:90px;padding-right:5px;">Сообщение:</td>
+	<td><textarea name="body" rows=9 id="body" style="width:90%;font-size:15px;" disabled style="width:98%;padding:3px" required></textarea></td>
+	</tr></IDXSKIP>
+
+	
+	<tr>
+	<td></td>
+	
+	<td style="padding-left:15px;">
+	<input name="section" type=hidden id="section" value="blog">
+	<input name="tp" type=hidden id="tp" value="comment">
+	<input name="sended" type=hidden id="sended" value="1">
+	<input name="pid" type=hidden id="pid" value="586757">
+	<input name="root_comment" type=hidden id="root_comment" value="0">
+	<input name="uniqdate" type=hidden id="uniqdate" value="1497295760">
+
+	<input type="submit" value="Добавить комментарий" id=submit onclick="comment_need_login();return false;">
+	<div id=comment_login_warn></div>
+
+	<br><br>
+	
+	
+	</tD>
+	</tr>
+	
+	</table>
+	</form>
+</div>
+	
+<script>
+	
+</script></div>
+	
+			<div style="clear:both;"></div>
+			<div style="overflow:hidden;border-top:1px solid #eeeeee;padding-left:10px;padding-top:5px;">
+				<div style="color:#444444;font-size:25px;padding-left:7px;padding-top:10px;padding-bottom:10px;padding-right:10px;">
+				<div style="float:left;margin-right:10px;">Понравилось? Поделись сейчас:</div>
+				<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+					<script src="//yastatic.net/share2/share.js"></script>
+					<div class="ya-share2" style="float:left;" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,pocket,surfingbird,whatsapp" data-counter=""></div>
+				</div>
+				
+				<div style="clear:both;"></div>
+				<div style="clear:both;">
+					<div id=recoo586757 class=recommend_wr><input type=button class=recyes id=recyes586757 objid=586757 objtype=blog value="Мне понравилось!"></div>
+					<div style="padding-top:0px;padding-bottom:3px;">
+					
+					<div class=post_params>
+	
+	
+	
+</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<table width=100%>
+
+		<tr>
+		<td valign=top>
+		<a name="comments"></a>
+		</td>
+
+
+		</tr>
+		</table>
+
+		<div style="boder-top:5px solid #eeeeee;"></div>
+			<div>
+	
+			<div class=post_bottom_related>
+
+				<div id=pin_wr>
+			
+				<div class=pin_item_wr>
+
+					<IDXSKIP><div class=pin_item_wr>
+						<div class=pin_item>
+						<a href="https://vk.com/jofo_ru" target=_blank><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg" width=20 style="margin-top:10px;margin-right:5px;width:20px !important;" valign=absmiddle>&nbsp;Лайкни Jofo-Мощь ВКонтакте</a>
+						</div>
+					</div></IDXSKIP>
+
+					<div class=pin_item_wr>
+						<div class=pin_item>
+							<!-- Put this div tag to the place, where the Comments block will be -->
+	<div id="vk_comments"></div>
+	<script type="text/javascript">
+	VK.Widgets.Comments("vk_comments", {limit: 10, pageUrl: "http://kurilka.jofo.me/index.php?section=blog&tp=view&id=586757", 
+		 attach: "*"});
+	</script>
+						</div>
+					</div>
+				<div class=pin_item_wr><div class=pin_item  id="rela_snip_1_332807" post_id=332807 > <a posl=1 href="http://kurilka.jofo.me/332807.html" class="sph_rel_cache" style=""><IDXSKIP>Женщина и никотин. Вред курения для женщин<br></IDXSKIP><img src="/data/userfiles/106/images/332807-kurenie-women.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_266433" post_id=266433 > <a posl=2 href="http://tea.jofo.me/266433.html" class="sph_rel_cache" style="">Зеленый чай: напиток бессмертия<br></a> <div class=snip_text> ВВЕДЕНИЕ Древний китайский трактат гласит: «Чай усиливает дух, смягчает сердце, удаляет усталость, пробуждает мысль и не позволяет поселиться лени, облегчает и освежает тело и проясняет восприимчивость». Эти целебные свойства чая, известные с глубокой древности, с ...<br><a posl=2 href="http://tea.jofo.me/266433.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_626725" post_id=626725 > <a posl=3 href="http://narko.jofo.me/626725.html" class="sph_rel_cache" style=""><IDXSKIP>Методическая разработка классного часа Курение алкоголь наркотики и личность<br></IDXSKIP></a> <div class=snip_text> <IDXSKIP>ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ СРЕДНЕГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ ЛЕНИНСК-КУЗНЕЦКИЙ ТЕХНОЛОГИЧЕСКИЙ ТЕХНИКУМ Классный час КУРЕНИЕ, АЛКОГОЛЬ, НАРКОТИКИ И ЛИЧНОСТЬ ЦЕЛЬ:  способствовать формированию негативного отношения к употреблению алкоголя и наркотиков, курению...<br></IDXSKIP><a posl=3 href="http://narko.jofo.me/626725.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_286294" post_id=286294 > <a posl=4 href="http://tea.jofo.me/286294.html" class="sph_rel_cache" style="">Зеленый чай, польза и вред, рецепты применения<br><img src="/data/userfiles/457/images/thumbs/jofo_me_286294-zelenyi-chai-polza-i-vred.jpg" width=120></a> </div> </div><div class=pin_item_wr> <div class=pin_item  id="rela_snip_1_440517" post_id=440517 > <a posl=5 href="http://tea.jofo.me/440517.html" class="sph_rel_cache" style="">Анемия зеленый чай. Зеленый чай, польза и вред, рецепты применения<br><img src="/data/userfiles/457/images/thumbs/jofo_me_440517-zelenyi-chai-polza-i-vred.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_367629" post_id=367629 > <a posl=6 href="http://narko.jofo.me/367629.html" class="sph_rel_cache" style="">Рейтинг наркотиков по степени вреда. Алкоголь и табак - самые опасные наркотики?<br></a> <div class=snip_text>Ученые из Великобритании предлагают полный пересмотр классификации наркотиков вслед за результатами, которые свидетельствуют о некоторых крупных расхождениях между законностью препарата и его безопасностью. Исследование научных экспертов  степени опасности  на  здоровье набора из 20 легальных и неле...<br><a posl=6 href="http://narko.jofo.me/367629.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_345960" post_id=345960 > <a posl=7 href="http://narko.jofo.me/345960.html" class="sph_rel_cache" style="">Марихуана vs алкоголь, от чего больше вреда? <br></a> <div class=snip_text>Всегда интересовала данная тема. Почему марихуану приравнивают к наркотическим средствам, запрещенным к обороту. Марихуана не вызывает физиологического привыкания, так почему же оно считается наркотическим? Стереотип, который годами, десятилетиями вдалбливали в сознание? От сигарет на порядок боль...<br><a posl=7 href="http://narko.jofo.me/345960.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_249220" post_id=249220 > <a posl=8 href="http://narko.jofo.me/249220.html" class="sph_rel_cache" style="">Курение, алкоголь, наркотики, здоровый образ жизни<br></a> <div class=snip_text>Рефераты по медицине Курение, алкоголь, наркотики, здоровый образ жизни Скачать работу [21, 2 Кб]&nbsp;&nbsp; Информация о работе Содержание: Наркотики и злоупотребление ими... Причины злоупотребления наркотиками... Что такое наркомания?... Механизм наркотической толерантности... Чт...<br><a posl=8 href="http://narko.jofo.me/249220.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_257257" post_id=257257 > <a posl=9 href="http://narko.jofo.me/257257.html" class="sph_rel_cache" style="">Алкоголь или сигареты больший вред наносят?<br></a> <div class=snip_text>Существует мнение, что лучше накатить грам 100 водки, чем выкурить сигарету(даже про пользу какую-то говорится:). С другой стороны вижу много людей, которые курят, но жизнь у них складывается намного лучше чем у тех кто пьёт. Я вроде не пью водку, но сигареточкой с удовольствием затягиваюсь и выходи...<br><a posl=9 href="http://narko.jofo.me/257257.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_255437" post_id=255437 > <a posl=10 href="http://narko.jofo.me/255437.html" class="sph_rel_cache" style="">Наркотики, курение, алкоголь.<br></a> <div class=snip_text><IDXSKIP>Наркотики, курение, алкоголь.Во всех странах мира закон регулирует распространение наркотических веществ. Под наркотиками понимают вещества растительного или химического происхождения, которые оказывают сложное биохимическое воздействие на организм человека. Главная опасность для жизни и здоровья че...<br></IDXSKIP><a posl=10 href="http://narko.jofo.me/255437.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_367618" post_id=367618 > <a posl=11 href="http://narko.jofo.me/367618.html" class="sph_rel_cache" style="">Наркотик<br><img src="/data/userfiles/106/images/367618-200px-bayer_heroin_bottle.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=11 href="http://narko.jofo.me/367618.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">8</span> фото</a></span> </div> </div><div class=pin_item_wr> <div class=pin_item  id="rela_snip_1_257245" post_id=257245 > <a posl=12 href="http://narko.jofo.me/257245.html" class="sph_rel_cache" style="">Алкоголь и сигареты<br><img src="/data/userfiles/106/images/thumbs/jofo_me_257245-zlo.jpg" width=120></a> <span style="display:block;"> <img src="/img/youtube.png" width=20 class=sim_icon align=absmiddle> <a posl=12 href="http://narko.jofo.me/257245.html?vidlink=1#first_video" class=black_link>еще <span style="font-weight:bold;">1</span> видео</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_259232" post_id=259232 > <a posl=13 href="http://narko.jofo.me/259232.html" class="sph_rel_cache" style="">Вред наркотиков<br><img src="/data/userfiles/106/images/thumbs/jofo_me_259232-1.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_257246" post_id=257246 > <a posl=14 href="http://narko.jofo.me/257246.html" class="sph_rel_cache" style="">ЧТО вреднее: сигареты, алкоголь или наркотики?<br></a> <div class=snip_text>Культурные яды В народе наркотики и никотин получили название «культурные яды», а алкоголь кличут «зеленым змием». Трудно сказать, что из этих трех видов пагубных привычек является самым вредным. Они все по-разному отражаются на организме, но в результате употребления наркотиков, алкоголя и никоти...<br><a posl=14 href="http://narko.jofo.me/257246.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_224921" post_id=224921 > <a posl=15 href="http://tea.jofo.me/224921.html" class="sph_rel_cache" style="">Чай как образ жизни<br><img src="/data/userfiles/457/images/224921-d6580543a45d994cc8b0c753e687949f.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_451502" post_id=451502 > <a posl=16 href="http://narko.jofo.me/451502.html" class="sph_rel_cache" style="">Алкоголь опасней героина<br><img src="/data/userfiles/106/images/451502-83351d93a4f614708d0d2bf32107ef07_500_0_0.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_286743" post_id=286743 > <a posl=17 href="http://tea.jofo.me/286743.html" class="sph_rel_cache" style="">Похлёбкин Вильям Васильевич. Чай (Весь текст)<br><img src="/data/userfiles/457/images/thumbs/jofo_me_286743-cover.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_407490" post_id=407490 > <a posl=18 href="http://deti.jofo.me/407490.html" class="sph_rel_cache" style="">Каждый родитель должен хорошо представлять признаки пристрастия ребенка к наркотикам<br></a> <div class=snip_text>&nbsp; Родительское собрание "Здоровый образ жизни" &nbsp; Каждый родитель хочет видеть своих детей здоровыми и счастливыми, но не задумывается о том, как сделать, чтобы их дети жили в ладу с собой, с окружающим их миром, с людьми. Секрет этой гармонии прост — здоровый образ жизни: поддерж...<br><a posl=18 href="http://deti.jofo.me/407490.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_535384" post_id=535384 > <a posl=19 href="http://kurilka.jofo.me/535384.html" class="sph_rel_cache" style=""><IDXSKIP>Алкоголь, наркотики, табак или путь к самоубийству?<br></IDXSKIP></a> <div class=snip_text><IDXSKIP>Алкоголь, наркотики, табак или путь к самоубийству? Алкоголь, наркотики, табак &ndash; это не просто вредные привычки, это наши смертельные враги. Эти три особо опасных вида зависимости полностью контролируют наше сознание и мышление, управляя нашим поведением и действиями. Алкоголь, наркоти...<br></IDXSKIP><a posl=19 href="http://kurilka.jofo.me/535384.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_255443" post_id=255443 > <a posl=20 href="http://narko.jofo.me/255443.html" class="sph_rel_cache" style="">Алкоголь - Презентации по ОБЖ<br></a> <div class=snip_text>Потребление алкоголя Слайдов: 24 &nbsp; Слов: 807 &nbsp; Звуков: 0 &nbsp; Эффектов: 58 Алкоголь. Разбавленный водой, он получил название «хлебного вина» или «водки». Алкоголи - наркотические протоплазматические яды. Яды алкаголя более токсичны, чем этанол. К чему ведет перебор норм? 10 мифов об алк...<br><a posl=20 href="http://narko.jofo.me/255443.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_509763" post_id=509763 > <a posl=21 href="http://kurilka.jofo.me/509763.html" class="sph_rel_cache" style="">Про курить чай<br></a> <div class=snip_text>16/05/08, gree nec Не нужна ни чашка, ни кипяток. И в трубку набивать удобнее, чем крошить сигареты(а если там еще и фильтр забыть Ж))) 18/05/08, олежкО Когда нет сигарет мне пофиг что курить. Курю что попадётся. И вообще штука весёлая чай курить! Но не прёт он. Тех кого он попёр-самовнушение и н...<br><a posl=21 href="http://kurilka.jofo.me/509763.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_638685" post_id=638685 > <a posl=22 href="http://kurilka.jofo.me/638685.html" class="sph_rel_cache" style="">Купить американский табак Fumari (Фумари) для кальяна можно пока в интернет-магазине и на Севасе<br></a> <div class=snip_text>Вопрос о курении индивидуальный. В нашей компании есть разные люди, которые курят обычные сигареты, курят кальян и есть вообще некурящие. Обычные сигареты курят разных марок, а вот табак для кальяна, мы думаем он больше интересует в этом вопросе. В нашей компании много молодых ребят, молодые, по наш...<br><a posl=22 href="http://kurilka.jofo.me/638685.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_352378" post_id=352378 > <a posl=23 href="http://house.jofo.me/352378.html" class="sph_rel_cache" style="">Вредные привычки<br></a> <div class=snip_text>Ход классного часа: 1.Царство вредных привычек – алкоголь, наркотик, никотин 2.Царство хороших привычек – труд, спорт, музыка, чтение, гигиена, природа -&nbsp; Как вы считаете, что такое привычка? (Привычка-это способность человека привыкать к каким-то действиям или ощущениям.) - Какие бывают пр...<br><a posl=23 href="http://house.jofo.me/352378.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_557041" post_id=557041 > <a posl=24 href="http://kurilka.jofo.me/557041.html" class="sph_rel_cache" style="">Одышка после бросания курить. Кашель после отказа от курения<br></a> <div class=snip_text>всего 123 880 консультаций Кашель после отказа от курения Кашель после отказа от курения в лучшем случае свидетельствует об очищении легких от никотина и его смол, а в худшем — говорит про обострение заболевания, развившегося на фоне вредной привычки. Чтобы исключить последний вариант, нужно обратит...<br><a posl=24 href="http://kurilka.jofo.me/557041.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_387670" post_id=387670 > <a posl=25 href="http://kurilka.jofo.me/387670.html" class="sph_rel_cache" style="">Можно ли курить чай<br></a> <div class=snip_text>О пользе чая известно с незапамятных времен, но в последнее время народ все больше желает разнообразить обычные вещи, и потому чаще и чаще можно услышать такой вопрос: «а можно ли курить чай?» Казалось бы, вопрос риторический, но исходя из того, что чай, такая же трава, как и табак, то у некоторых в...<br><a posl=25 href="http://kurilka.jofo.me/387670.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_257258" post_id=257258 > <a posl=26 href="http://kurilka.jofo.me/257258.html" class="sph_rel_cache" style="">Сигареты, алкоголь, наркотики - врага надо знать в лицо.<br></a> <div class=snip_text>Есть хороший Американский фильм с участием Кевина Кёстнера в главной роли. Молодой друг /Кевин Кёстнер/ приезжает в гости к своему старому другу в Мексику. И этот старик знакомит своего молодого друга с очаровательной молодой женой. Доверяя своему другу, старый джентельмен даже не подозревает, что ...<br><a posl=26 href="http://kurilka.jofo.me/257258.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_414021" post_id=414021 > <a posl=27 href="http://narko.jofo.me/414021.html" class="sph_rel_cache" style="">Курение травки, вред марихуаны, последствия от курения конополи. Что хуже алкоголь или травка?<br><img src="/data/userfiles/106/images/414021-kurenie-travki-200x300.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=27 href="http://narko.jofo.me/414021.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">2</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_370352" post_id=370352 > <a posl=28 href="http://kurilka.jofo.me/370352.html" class="sph_rel_cache" style="">Бросаю курить самостоятельно<br></a> <div class=snip_text>Бросить курить не&nbsp;просто, но&nbsp;можно! • 70 процентов курящих людей хотят бросить курить. • Только 19 процентов курильщиков никогда не&nbsp;пробовали бросить курить. • Курильщикам с&nbsp;высокой степенью никотиновой зависимости часто требуется несколько попыток, чтобы бросить курить окончат...<br><a posl=28 href="http://kurilka.jofo.me/370352.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_337646" post_id=337646 > <a posl=29 href="http://kurilka.jofo.me/337646.html" class="sph_rel_cache" style="">Как влияет на беременность алкоголь и никотин? 15 фактов<br></a> <div class=snip_text>2. Алкоголь считается одним из самых опасных для человеческого эмбриона ядов. Организм малыша не&nbsp;в состоянии справиться не&nbsp;только с&nbsp;самим спиртом, но&nbsp;и с&nbsp;продуктом его разложения&nbsp;&mdash; ацетальдегидом, который тоже отравляет еще незрелые органы плода. 3. Токсические ве...<br><a posl=29 href="http://kurilka.jofo.me/337646.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_614690" post_id=614690 > <a posl=30 href="http://kurilka.jofo.me/614690.html" class="sph_rel_cache" style="">Можно ли курить чай?<br><img src="/data/userfiles/466/images/thumbs/jofo_me_614690-mozhno-li-kurit-chaj.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=30 href="http://kurilka.jofo.me/614690.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">2</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_252101" post_id=252101 > <a posl=31 href="http://deti.jofo.me/252101.html" class="sph_rel_cache" style="">Программа оздоровительного лагеря дневного пребывания для детей<br></a> <div class=snip_text>ВЕРСИЯ ДЛЯ СКАЧИВАНИЯ &nbsp; АВТОНОМНОЕ УЧРЕЖДЕНИЕ ДОПОЛНИТЕЛЬНОГО ОБРАЗОВАНИЯ ДЕТЕЙ &nbsp;«ДЕТСКО-ЮНОШЕСКАЯ СПОРТИВНАЯ ШКОЛА УВАТСКОГО МУНИЦИПАЛЬНОГО РАЙОНА»&nbsp; УТВЕРЖДАЮ Директор АУ ДОД «ДЮСШ Уватского муниципального района» &nbsp;&nbsp;&nbsp;&nbsp; Софронов В. В. «____...<br><a posl=31 href="http://deti.jofo.me/252101.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_326924" post_id=326924 > <a posl=32 href="http://tea.jofo.me/326924.html" class="sph_rel_cache" style="">Химический состав чая. Чай – черный, белый, зеленый, желтый, красный. Полезные свойства чая. Чем полезен чай<br><img src="/data/userfiles/457/images/thumbs/jofo_me_326924-61256788.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=32 href="http://tea.jofo.me/326924.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">6</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_263219" post_id=263219 > <a posl=33 href="http://tea.jofo.me/263219.html" class="sph_rel_cache" style="">Чай – черный, белый, зеленый, желтый, красный.<br><img src="/data/userfiles/457/images/thumbs/jofo_me_263219-61256788.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=33 href="http://tea.jofo.me/263219.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">4</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_394488" post_id=394488 > <a posl=34 href="http://kurilka.jofo.me/394488.html" class="sph_rel_cache" style="">Хмельной напиток и беременность<br><img src="/data/userfiles/457/images/394488-timthumb.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_249245" post_id=249245 > <a posl=35 href="http://kurilka.jofo.me/249245.html" class="sph_rel_cache" style="">Профилактика вредных привычек подростков: курение алкоголь, наркотики ”<br></a> <div class=snip_text>“Профилактика вредных привычек подростков: курение алкоголь, наркотики ” Здоровье человека - основной собственный ресурс каждого из нас. К сожалению, оно занимает у человека далеко и не всегда первое место. Традиционно к вредным привычкам относят: неумеренное потребление алкоголя (пьянство) и куре...<br><a posl=35 href="http://kurilka.jofo.me/249245.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_245447" post_id=245447 > <a posl=36 href="http://beremennost.jofo.me/245447.html" class="sph_rel_cache" style="">Вред курения для беременных женщин<br><img src="/data/userfiles/479/images/245447-1319283690_vred-kureniya-dlya-beremennyh-zhenschin.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_1112183" post_id=1112183 > <a posl=37 href="http://narko.jofo.me/1112183.html" class="sph_rel_cache" style="">Курить или не курить: влияние марихуаны на сердце<br><img src="/data/userfiles/7693/images/thumbs/jofo_me_1112183-b2d183acc8ad5ca1df0f30b71b299892.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_344441" post_id=344441 > <a posl=38 href="http://tea.jofo.me/344441.html" class="sph_rel_cache" style="">Все о чае. Какой чай полезен. зеленый чай, черный чай, оолонг<br><img src="/data/userfiles/457/images/344441-chai-logo.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_1064026" post_id=1064026 > <a posl=39 href="http://kostochka-nogi.jofo.me/1064026.html" class="sph_rel_cache" style="">Сердечный монастырский чай состав<br><img src="http://img1.liveinternet.ru/images/attach/d/1/132/559/132559025_5732271_zxzzs.png" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=39 href="http://kostochka-nogi.jofo.me/1064026.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">2</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_255582" post_id=255582 > <a posl=40 href="http://house.jofo.me/255582.html" class="sph_rel_cache" style="">Влияние алкоголя: польза и вред<br></a> <div class=snip_text>Влияние алкоголя: польза и вред Трехдневная очищающая диета после праздничного застолья Тяжесть в желудке. На талии лишние килограммы, а под глазами мешки. Как с минимальными для своего здоровья потерями выйти из праздничного застолья. Для таких целей существуют специальные очищающие диеты....<br><a posl=40 href="http://house.jofo.me/255582.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_252978" post_id=252978 > <a posl=41 href="http://narko.jofo.me/252978.html" class="sph_rel_cache" style="">Баклофен - легкодоступный аптечный наркотик. Последствия, вред, передозировка.<br></a> <div class=snip_text>Таблетки баклофен для многих уже давно превратились из лекарства в наркотик. Достаточно опасная, но весьма распространенная комбинация «баклофен – амфетамин». Баклофен – наркотик, который легко достать, к нему быстро привыкнуть и трудно бросить. Среди зависимых людей многие хвалят баклофен, как прёт...<br><a posl=41 href="http://narko.jofo.me/252978.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_390160" post_id=390160 > <a posl=42 href="http://kurilka.jofo.me/390160.html" class="sph_rel_cache" style="">Профилактика вредных привычек подростков: курение, алкоголь, наркотики<br></a> <div class=snip_text> Профилактика вредных привычек подростков: курение, алкоголь, наркотики… Здоровье человека - основной собственный ресурс каждого из нас. К сожалению, оно занимает у человека далеко и не всегда первое место. Традиционно к вредным привычкам относят: чрезмерное потребление алкоголя и к...<br><a posl=42 href="http://kurilka.jofo.me/390160.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_332791" post_id=332791 > <a posl=43 href="http://dr_woman.jofo.me/332791.html" class="sph_rel_cache" style="">Вред алкоголя на женский организм<br><img src="/data/userfiles/106/images/thumbs/jofo_me_332791-alcobanner.jpg" width=120></a> <span style="display:block;"> <img src="/img/youtube.png" width=20 class=sim_icon align=absmiddle> <a posl=43 href="http://dr_woman.jofo.me/332791.html?vidlink=1#first_video" class=black_link>еще <span style="font-weight:bold;">1</span> видео</a>&nbsp; <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=43 href="http://dr_woman.jofo.me/332791.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">4</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_342351" post_id=342351 > <a posl=44 href="http://house.jofo.me/342351.html" class="sph_rel_cache" style="">Вред алкоголя для человека. Нарушение функций эндокринной системы<br><img src="/data/userfiles/106/images/342351-mozg.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_257260" post_id=257260 > <a posl=45 href="http://kurilka.jofo.me/257260.html" class="sph_rel_cache" style="">Сигареты и алкоголь предлагают продавать в спецмагазинах<br></a> <div class=snip_text>Проект закона &quot;О внесении изменений в статью 8 Федерального закона &quot;Об основах государственного регулирования торговой деятельности в Российской Федерации&quot; в части торговли алкогольными и табачными изделиями исключительно в специализированных торговых предприятиях&quot;. Табак и алко...<br><a posl=45 href="http://kurilka.jofo.me/257260.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_340595" post_id=340595 > <a posl=46 href="http://tea.jofo.me/340595.html" class="sph_rel_cache" style="">Чай для похудения: миф об идеальной, стройной фигуре или реальная угроза здоровью?<br><img src="/data/userfiles/457/images/340595-frut-juice-278x282.gif" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=46 href="http://tea.jofo.me/340595.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">2</span> фото</a></span> </div> </div><div class=pin_item_wr> <div class=pin_item  id="rela_snip_1_440553" post_id=440553 > <a posl=47 href="http://tea.jofo.me/440553.html" class="sph_rel_cache" style="">Зеленый чай польза и вред<br><img src="/data/userfiles/457/images/440553-56-150x150.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=47 href="http://tea.jofo.me/440553.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">2</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_386275" post_id=386275 > <a posl=48 href="http://tea.jofo.me/386275.html" class="sph_rel_cache" style="">Зеленый чай — лекарство природного происхождения<br><img src="/data/userfiles/457/images/386275-129564378123855.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_275243" post_id=275243 > <a posl=49 href="http://tea.jofo.me/275243.html" class="sph_rel_cache" style="">Как правильно употреблять зелёный чай<br></a> <div class=snip_text> Совершенно не случайно сейчас пойдёт разговор о чае, поскольку проф. Столешников даёт информацию, когда ему удаётся раскопать информацию, что называется из первых рук. Как вы помните у проф. Столешникова биохимический подход к тому, что принимается человеком через рот. Проф. Столешников акцентируе...<br><a posl=49 href="http://tea.jofo.me/275243.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_213525" post_id=213525 > <a posl=50 href="http://tea.jofo.me/213525.html" class="sph_rel_cache" style="">Чем полезен зеленый чай? Противопоказания зеленого чая<br></a> <div class=snip_text> Мало кто знает, что источником зеленого чая являются те же чайные кусты, с которых получают и черные, и красные, и желтые сорта чая. Различие между ними заключается в способе обработки листьев куста. Зеленый чай не подвергают ферментации и завяливанию, через кото...<br><a posl=50 href="http://tea.jofo.me/213525.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_263222" post_id=263222 > <a posl=51 href="http://tea.jofo.me/263222.html" class="sph_rel_cache" style="">Чай: выращивание и ассортимент<br><img src="/data/userfiles/457/images/263222-tea003.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=51 href="http://tea.jofo.me/263222.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">6</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_388555" post_id=388555 > <a posl=52 href="http://tea.jofo.me/388555.html" class="sph_rel_cache" style="">Как правильно заваривать зеленый, черный и чай пуэр<br><img src="/data/userfiles/457/images/388555-chay.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=52 href="http://tea.jofo.me/388555.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">7</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_328050" post_id=328050 > <a posl=53 href="http://tea.jofo.me/328050.html" class="sph_rel_cache" style="">Мате - чай индейцев Парагвая. Польза и вред, свойства напитка<br><img src="/data/userfiles/457/images/thumbs/jofo_me_328050-chai-mate-vred-i-polza.jpg" width=120></a> <span style="display:block;"> <img src="/img/youtube.png" width=20 class=sim_icon align=absmiddle> <a posl=53 href="http://tea.jofo.me/328050.html?vidlink=1#first_video" class=black_link>еще <span style="font-weight:bold;">1</span> видео</a>&nbsp; <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=53 href="http://tea.jofo.me/328050.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">2</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_306989" post_id=306989 > <a posl=54 href="http://tea.jofo.me/306989.html" class="sph_rel_cache" style="">Какой чай можно пить сыроеду?<br></a> <div class=snip_text>Сейчас раздел "Еда-медицина", который ведёт проф. Столешников. Сегодня разговор пойдёт о чае. По поводу чего написано очень большое число преднамеренных и непреднамеренных глупостей, включая печальной памяти ярым пропагандистом водки с "очаровательным" криптоеврейским имясочетанием Вильям Похлёбкин...<br><a posl=54 href="http://tea.jofo.me/306989.html">больше</a></div> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_446515" post_id=446515 > <a posl=55 href="http://tea.jofo.me/446515.html" class="sph_rel_cache" style="">Чай для похудения: чаепитие во имя стройности<br><img src="/data/userfiles/479/images/446515-slim_the1.jpg" width=120></a> <span style="display:block;"> <img src="/img/photo_plus.png" width=20 class=sim_icon align=absmiddle> <a posl=55 href="http://tea.jofo.me/446515.html?photolink=1" class=black_link>еще <span style="font-weight:bold;">6</span> фото</a></span> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_224759" post_id=224759 > <a posl=56 href="http://tea.jofo.me/224759.html" class="sph_rel_cache" style="">Как правильно заваривать зеленый чай<br></a> <div class=snip_text>Зеленые чаи объединены одной чертой&nbsp;&mdash; обработкой с&nbsp;минимальной ферментацией или без нее. Разновидности отличаются друг от&nbsp;друга формой и&nbsp;скрученностью листа, а&nbsp;также особенностями заваривания, которые определяют характеристики получаемого настоя. Данные сорта занимают ...<br><a posl=56 href="http://tea.jofo.me/224759.html">больше</a></div> </div> </div><div class=pin_item_wr> <div class=pin_item  id="rela_snip_1_363139" post_id=363139 > <a posl=57 href="http://tea.jofo.me/363139.html" class="sph_rel_cache" style="">Белый чай. Полезные свойства, состав, вред и противопоказания<br><img src="/data/userfiles/457/images/thumbs/jofo_me_363139-belyy-chay-2.jpg" width=120></a> </div> </div><div class=pin_item_wr><div class=pin_item  id="rela_snip_1_224071" post_id=224071 > <a posl=58 href="http://beremennost.jofo.me/224071.html" class="sph_rel_cache" style="">Зачатие и алкоголь<br><img src="/data/userfiles/479/images/thumbs/jofo_me_224071-alcohol.jpg" width=120></a> </div> </div>
+									<IDXSKIP><div class=pin_item_wr>
+						<div class=pin_item><br>
+						<center><a href="http://kurilka.jofo.me/" style="color:blue !important;font-size:30px;">+ Ещё</a></center>
+						<br>
+						</div>
+					</div></IDXSKIP>
+
+				</div>
+			</div>
+			</div>
+		
+		
+</td>
+
+</tr>
+</table>
+
+<IDXSKIP><div style="display:none;height:100%;width: 100%;max-width:100% !important;position: fixed; top: 0; left: 0;background-color:white;background: rgba(255, 255, 255, 0.92); z-index:1;" id=slideshow_wr>
+<table callpadding=0 cellspacing=0 style="height:100%;width: 100%;max-width:100% !important;">
+<tr>
+	<td colspan=2 style="background-color:#444444;color:white;height:25px;padding-left:15px;font-size:20px;">Jofo.me: Слайд-шоу фото из статьи </td>
+	<td style="background-color:#db007c;padding-right:20px;font-size:32px;color:white;cursor:hand;" align=right onclick="post_slideshow_close();">x</td>
+</tr>
+
+<tr><td colspan=3 style="height:30px;" align=center id=ss_img_tools></td></tr>
+
+
+<tr>
+	<td style="width:100px;"><div style="width:100px;height:100px;cursor:hand;" class=small_round_corner onclick="slideshow_prev();" id=ss_prev_img></div></td>
+
+	<td align=center id=ss_main_img onclick="slideshow_next();"></td>
+
+	<td align=right style="width:120px;"><div style="width:100px;height:100px;cursor:hand;" class=small_round_corner onclick="slideshow_next();" id=ss_next_img></div></td>
+</tr>
+
+<tr><td colspan=3 style="height:70px;" align=center id=ss_recommend></td></tr>
+
+</table>
+
+</div></IDXSKIP><script>
+
+	sended_sim = new Array;
+	
+	jQuery.screentime({
+	  fields: [
+	    { selector: '#rela_snip_1_557041',  name: 'snip_1_557041' },{ selector: '#rela_snip_1_263219',  name: 'snip_1_263219' },{ selector: '#rela_snip_1_421324',  name: 'snip_1_421324' },{ selector: '#rela_snip_1_224759',  name: 'snip_1_224759' },{ selector: '#rela_snip_1_341397',  name: 'snip_1_341397' },{ selector: '#rela_snip_1_340595',  name: 'snip_1_340595' },{ selector: '#rela_snip_1_266433',  name: 'snip_1_266433' },{ selector: '#rela_snip_1_440522',  name: 'snip_1_440522' },{ selector: '#rela_snip_1_386275',  name: 'snip_1_386275' },{ selector: '#rela_snip_1_252101',  name: 'snip_1_252101' },{ selector: '#rela_snip_1_286743',  name: 'snip_1_286743' },{ selector: '#rela_snip_1_224921',  name: 'snip_1_224921' },{ selector: '#rela_snip_1_345960',  name: 'snip_1_345960' },{ selector: '#rela_snip_1_257245',  name: 'snip_1_257245' },{ selector: '#rela_snip_1_243552',  name: 'snip_1_243552' },{ selector: '#rela_snip_1_370352',  name: 'snip_1_370352' },{ selector: '#rela_snip_1_257260',  name: 'snip_1_257260' },{ selector: '#rela_snip_1_614690',  name: 'snip_1_614690' },{ selector: '#rela_snip_1_394488',  name: 'snip_1_394488' },{ selector: '#rela_snip_1_509763',  name: 'snip_1_509763' },{ selector: '#rela_snip_1_445374',  name: 'snip_1_445374' },{ selector: '#rela_snip_1_363139',  name: 'snip_1_363139' },{ selector: '#rela_snip_1_411580',  name: 'snip_1_411580' },{ selector: '#rela_snip_1_327051',  name: 'snip_1_327051' },{ selector: '#rela_snip_1_29919',  name: 'snip_1_29919' },{ selector: '#rela_snip_1_77259',  name: 'snip_1_77259' },{ selector: '#rela_snip_1_224037',  name: 'snip_1_224037' },{ selector: '#rela_snip_1_270732',  name: 'snip_1_270732' },{ selector: '#rela_snip_1_273848',  name: 'snip_1_273848' },{ selector: '#rela_snip_1_234086',  name: 'snip_1_234086' },{ selector: '#rela_snip_1_353038',  name: 'snip_1_353038' },{ selector: '#rela_snip_1_1189260',  name: 'snip_1_1189260' },{ selector: '#rela_snip_1_604344',  name: 'snip_1_604344' },{ selector: '#rela_snip_1_213525',  name: 'snip_1_213525' },{ selector: '#rela_snip_1_275243',  name: 'snip_1_275243' },{ selector: '#rela_snip_1_248671',  name: 'snip_1_248671' },{ selector: '#rela_snip_1_1064026',  name: 'snip_1_1064026' },{ selector: '#rela_snip_1_440553',  name: 'snip_1_440553' },{ selector: '#rela_snip_1_263222',  name: 'snip_1_263222' },{ selector: '#rela_snip_1_446515',  name: 'snip_1_446515' },{ selector: '#rela_snip_1_328050',  name: 'snip_1_328050' },{ selector: '#rela_snip_1_306989',  name: 'snip_1_306989' },{ selector: '#rela_snip_1_388555',  name: 'snip_1_388555' },{ selector: '#rela_snip_1_344441',  name: 'snip_1_344441' },{ selector: '#rela_snip_1_387670',  name: 'snip_1_387670' },{ selector: '#rela_snip_1_247169',  name: 'snip_1_247169' },{ selector: '#rela_snip_1_367629',  name: 'snip_1_367629' },{ selector: '#rela_snip_1_1112183',  name: 'snip_1_1112183' },{ selector: '#rela_snip_1_576160',  name: 'snip_1_576160' },{ selector: '#rela_snip_1_326924',  name: 'snip_1_326924' },{ selector: '#rela_snip_1_638685',  name: 'snip_1_638685' },{ selector: '#rela_snip_1_414021',  name: 'snip_1_414021' },{ selector: '#rela_snip_1_568848',  name: 'snip_1_568848' },{ selector: '#rela_snip_1_277338',  name: 'snip_1_277338' },{ selector: '#rela_snip_1_606687',  name: 'snip_1_606687' },{ selector: '#rela_snip_1_251446',  name: 'snip_1_251446' },{ selector: '#rela_snip_1_311235',  name: 'snip_1_311235' },{ selector: '#rela_snip_1_242094',  name: 'snip_1_242094' },{ selector: '#rela_snip_1_223336',  name: 'snip_1_223336' },{ selector: '#rela_snip_1_345906',  name: 'snip_1_345906' },{ selector: '#rela_snip_1_255425',  name: 'snip_1_255425' },{ selector: '#rela_snip_1_242093',  name: 'snip_1_242093' },{ selector: '#rela_snip_1_332807',  name: 'snip_1_332807' },{ selector: '#rela_snip_2_266433',  name: 'snip_2_266433' },{ selector: '#rela_snip_1_626725',  name: 'snip_1_626725' },{ selector: '#rela_snip_1_286294',  name: 'snip_1_286294' },{ selector: '#rela_snip_1_440517',  name: 'snip_1_440517' },{ selector: '#rela_snip_2_367629',  name: 'snip_2_367629' },{ selector: '#rela_snip_2_345960',  name: 'snip_2_345960' },{ selector: '#rela_snip_1_249220',  name: 'snip_1_249220' },{ selector: '#rela_snip_1_257257',  name: 'snip_1_257257' },{ selector: '#rela_snip_1_255437',  name: 'snip_1_255437' },{ selector: '#rela_snip_1_367618',  name: 'snip_1_367618' },{ selector: '#rela_snip_2_257245',  name: 'snip_2_257245' },{ selector: '#rela_snip_1_259232',  name: 'snip_1_259232' },{ selector: '#rela_snip_1_257246',  name: 'snip_1_257246' },{ selector: '#rela_snip_2_224921',  name: 'snip_2_224921' },{ selector: '#rela_snip_1_451502',  name: 'snip_1_451502' },{ selector: '#rela_snip_2_286743',  name: 'snip_2_286743' },{ selector: '#rela_snip_1_407490',  name: 'snip_1_407490' },{ selector: '#rela_snip_1_535384',  name: 'snip_1_535384' },{ selector: '#rela_snip_1_255443',  name: 'snip_1_255443' },{ selector: '#rela_snip_2_509763',  name: 'snip_2_509763' },{ selector: '#rela_snip_2_638685',  name: 'snip_2_638685' },{ selector: '#rela_snip_1_352378',  name: 'snip_1_352378' },{ selector: '#rela_snip_2_557041',  name: 'snip_2_557041' },{ selector: '#rela_snip_2_387670',  name: 'snip_2_387670' },{ selector: '#rela_snip_1_257258',  name: 'snip_1_257258' },{ selector: '#rela_snip_2_414021',  name: 'snip_2_414021' },{ selector: '#rela_snip_2_370352',  name: 'snip_2_370352' },{ selector: '#rela_snip_1_337646',  name: 'snip_1_337646' },{ selector: '#rela_snip_2_614690',  name: 'snip_2_614690' },{ selector: '#rela_snip_2_252101',  name: 'snip_2_252101' },{ selector: '#rela_snip_2_326924',  name: 'snip_2_326924' },{ selector: '#rela_snip_2_263219',  name: 'snip_2_263219' },{ selector: '#rela_snip_2_394488',  name: 'snip_2_394488' },{ selector: '#rela_snip_1_249245',  name: 'snip_1_249245' },{ selector: '#rela_snip_1_245447',  name: 'snip_1_245447' },{ selector: '#rela_snip_2_1112183',  name: 'snip_2_1112183' },{ selector: '#rela_snip_2_344441',  name: 'snip_2_344441' },{ selector: '#rela_snip_2_1064026',  name: 'snip_2_1064026' },{ selector: '#rela_snip_1_255582',  name: 'snip_1_255582' },{ selector: '#rela_snip_1_252978',  name: 'snip_1_252978' },{ selector: '#rela_snip_1_390160',  name: 'snip_1_390160' },{ selector: '#rela_snip_1_332791',  name: 'snip_1_332791' },{ selector: '#rela_snip_1_342351',  name: 'snip_1_342351' },{ selector: '#rela_snip_2_257260',  name: 'snip_2_257260' },{ selector: '#rela_snip_2_340595',  name: 'snip_2_340595' },{ selector: '#rela_snip_2_440553',  name: 'snip_2_440553' },{ selector: '#rela_snip_2_386275',  name: 'snip_2_386275' },{ selector: '#rela_snip_2_275243',  name: 'snip_2_275243' },{ selector: '#rela_snip_2_213525',  name: 'snip_2_213525' },{ selector: '#rela_snip_2_263222',  name: 'snip_2_263222' },{ selector: '#rela_snip_2_388555',  name: 'snip_2_388555' },{ selector: '#rela_snip_2_328050',  name: 'snip_2_328050' },{ selector: '#rela_snip_2_306989',  name: 'snip_2_306989' },{ selector: '#rela_snip_2_446515',  name: 'snip_2_446515' },{ selector: '#rela_snip_2_224759',  name: 'snip_2_224759' },{ selector: '#rela_snip_2_363139',  name: 'snip_2_363139' },{ selector: '#rela_snip_1_224071',  name: 'snip_1_224071' }
+	  ],
+
+	  reportInterval: 2,
+
+	  percentOnScreen: '60%',
+
+	  callback: function(data) {
+	    //console.log(data);
+	    // Logs: { Top: 5, Middle: 3 }
+
+		var ids = '';
+	    for (var key in data) {
+	    	if (sended_sim[key] != true)
+	    	{
+	    		if (typeof jQuery('#rela_'+ key).attr('pos') !== 'undefined')
+	    		{
+		    		ids += key + ':' + jQuery('#rela_'+ key).attr('pos')  + ',';
+
+	   				sended_sim[key] = true;
+   				}
+   			}
+		}
+
+		if (ids != '')
+		{
+			aj_get_url2('/index.php?tp=sishow_cnt&ids=' + ids 
+					+ '&fid=' + jQuery('.post_body').attr('post_id')
+					+ '&section=utils&ajax=1', 'aj_cont', 1);
+		}
+	  }
+	});
+	</script><script>
+
+	tpost_id = 586757;
+	tssho = 1497295760294;
+
+	jQuery.screentime({
+	  fields: [
+	    {selector: '.post_body',  name: 'post_read' },
+	    {selector: '#slideshow_wr',  name: 'slideshow' }
+	  ],
+
+	  reportInterval: 1,
+
+	  percentOnScreen: '35%',
+
+	  callback: function(data) {
+	    //console.log(data);
+
+		if (interval_id == true)
+		{
+			tcount += 1;
+		}
+	  }
+	});
+	</script>	
+			<IDXSKIP><div id="light" class="white_content">
+				<div style="align:right !important;"><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'" style="color:red;">Закрыть</a></div>
+				<div id=pop_content></div>
+			</div></IDXSKIP>
+		    <div id="fade" class="black_overlay"></div>
+
+				<noindex>
+			<div id=login_need_msg><IDXSKIP>Чтобы воспользоваться данной функцией - необходимо быть зарегистрированным пользователем.
+			Если у вас есть аккаунт на JOFO </IDXSKIP><IDXSKIP><a href="http://jofo.me">осуществите вход</a></IDXSKIP><IDXSKIP>,
+			в другом случае приглашаем вас </IDXSKIP><IDXSKIP><a href="http://jofo.me/index.php?section=register">зарегистрироваться</a></IDXSKIP><IDXSKIP>.</IDXSKIP></div>
+			</noindex> 
+
+			<script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
+
+			<script>
+
+				if (jQuery(window).width() < 1175)
+				{
+					jQuery("#zeon_second").remove();
+				}
+
+				if (jQuery(window).width() < 355)
+				{
+					jQuery("#zeon_first").remove();
+				}
+				
+			</script></td>
+				</tr>
+
+		</table>
+
+		<footer>
+		<table width=100% border=0 cellpadding=0 cellspacing=0 align=center style="margin-bottom:25px;border-top:1px solid #cccccc;">
+		<tr>
+		<td style="text-align:center;border-bottom:1px solid #cccccc;"><span style="background-color:white;padding:10px;display:block;"> <IDXSKIP><a href="http://jofo.me/">Поток</a></IDXSKIP> <IDXSKIP>&nbsp; &mdash; &nbsp;
+	  <a href="http://jofo.me/index.php?section=friends">Друзья</a></IDXSKIP> <IDXSKIP>&nbsp; &mdash; &nbsp;
+	  
+	</IDXSKIP><IDXSKIP><a href="http://jofo.me/index.php?section=blog">Блог</a></IDXSKIP> <IDXSKIP>&nbsp; &mdash; &nbsp;
+    </IDXSKIP><!-- <a href="http://jofo.me/index.php?section=mail">Сообщения</a> &nbsp; &mdash; &nbsp; -->
+  <IDXSKIP><a href="http://jofo.me/index.php?section=photos">Фотографии</a></IDXSKIP><br><br>
+  <IDXSKIP><nobr><a href="http://jofo.me/index.php?sfunc=jofo_about" style="font-weight:bold;">О проекте Jofo.me</a></nobr></IDXSKIP>
+	</span></td>
+		</tr>
+
+		<tr>
+		<td style="padding:5px;text-align:center;margin-top:1px;padding-top:15px;color:gray;font-size:13px;">
+		<IDXSKIP>2007-2017 &copy; Jofo.me - Делай и будет.<br></IDXSKIP><BR>
+		<IDXSKIP>По всем вопросам пишите<br></IDXSKIP>
+		<img src="http://jofo.me/img/mail.gif" align=absmiddle> <IDXSKIP><a href="mailto:m@jofo.me">m@jofo.me</a></IDXSKIP>
+		
+		
+		</td>
+		</tr>
+		</table>
+		<div style="text-align:center;color:gray;">Время создания страницы: 0.08 | 12.06.2017 22:29</div>
+
+		
+
+		</footer>
+		<script>
+			blogi();
+			setTimeout('yaCounter23039812.reachGoal("one_minute");', 60000);
+		</script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ca3a25744a","applicationID":"7523826","transactionName":"NFJUbBdYChZQAUFZXg0YY0oMFg0LVQdNHkELRw==","queueTime":0,"applicationTime":124,"atts":"GBVXGl9CGRg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</HTML>

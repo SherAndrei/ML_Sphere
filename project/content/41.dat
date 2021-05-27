@@ -1,0 +1,1071 @@
+lumpics.ru/how-to-make-form-in-google
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Как создать Гугл Форму для опросов</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://lumpics.ru/xmlrpc.php">
+	
+<!-- All in One SEO Pack 2.3.13.2 by Michael Torbert of Semper Fi Web Design[145,194] -->
+<meta name="description"  content="Статья о том, как создать Гугл Форму для анкетирования пользователей интернета." />
+
+<link rel="canonical" href="http://lumpics.ru/how-to-make-form-in-google/" />
+<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='//s.w.org' />
+
+<!-- This site is using AdRotate v4.3 to display their advertisements - https://ajdg.solutions/products/adrotate-for-wordpress/ -->
+<!-- AdRotate CSS -->
+<style type="text/css" media="screen">
+	.g { margin:0px; padding:0px; overflow:hidden; line-height:1; zoom:1; }
+	.g img { height:auto; }
+	.g-col { position:relative; float:left; }
+	.g-col:first-child { margin-left: 0; }
+	.g-col:last-child { margin-right: 0; }
+	@media only screen and (max-width: 480px) {
+		.g-col, .g-dyn, .g-single { width:100%; margin-left:0; margin-right:0; }
+	}
+</style>
+<!-- /AdRotate CSS -->
+
+        <style id="ec_stars_rating_head_css">
+            .ec-stars-wrapper {
+                font-size: 0;
+                display: inline-block;
+                position: relative;
+            }
+            .ec-stars-wrapper[data-tooltip]:hover:before {
+                content: attr(data-tooltip);
+                position: absolute;
+
+                bottom: 90%;
+                left: 50%;
+                text-align: center;
+                max-width: 100px;
+                margin-left: -50px;
+
+                background: rgba(0,0,0,.7);
+                color: white;
+                font-size: 10px;
+                border-radius: 3px;
+                padding: 3px;
+
+            }
+            .ec-stars-wrapper a {
+                text-decoration: none;
+                display: inline-block;
+                font-size: 32px;
+                color: #2782e4;
+            }
+
+            .ec-stars-wrapper:hover a,
+            .ec-stars-wrapper.is-voted a {
+                color: #2782e4;
+            }
+            .ec-stars-wrapper > a:hover ~ a {
+                color: #888888;
+            }
+            .ec-stars-wrapper a:active {
+                color: #1869c0;
+            }
+            .ec-stars-overlay {
+                position: absolute;
+                height: 100%;
+                right: 0;
+                top: 0;
+
+                background-color: transparent;
+                background-color: rgba(255,255,255,.5);
+
+                /* OldIE support */
+                zoom: 1;
+                -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF)";
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF,endColorstr=#7FFFFFFF);
+            }
+            .ec-stars-wrapper:hover .ec-stars-overlay {
+                display: none;
+            }
+        </style><style type="text/css">div#toc_container {background: #F2F3F5;border: 1px solid #ccc;}div#toc_container ul li {font-size: 100%;}</style><style>
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;vertical-align:baseline;margin:0;padding:0;}
+*,:before,:after{box-sizing:border-box;word-wrap:break-word;}
+.header-area,.main-content-area{background:#fff;color:#000;}
+article,aside,details,figcaption,figure,footer,header,main,nav,section{display:block;}
+table{border-collapse:separate;border-spacing:0;}
+caption,th,td{font-weight:normal;text-align:left;}
+blockquote:before,blockquote:after,q:before,q:after{content:"";}
+blockquote,q{font-style:italic;}
+a img{border:0;}
+.full{width:100%;}
+.main{width:100%;max-width:1240px;margin:0 auto;}
+.inner{position:relative;padding:32px 0;}
+#primary{float:left;padding-right:30px;width:75%;}
+#secondary{float:left;width:25%;}
+body,
+button,
+input,
+select,
+textarea {
+font-family: "Roboto",Arial,sans-serif;
+font-size:17px;
+font-weight:300;
+line-height: 1.6em;
+}
+h1,h2,h3,h4,h5,h6,.site-title{clear:both;font-weight:400;line-height:1.6em;margin-bottom:.4em;}
+.site-title {font-family: Georgia;}
+h1{font-size:26px;font-weight:300}
+h2{font-size:22px;}
+h3{font-size:19px}
+h2,h3{margin: 1.5em 0 0}
+blockquote{margin: 40px 0;padding: 15px;background:#1abc9c;color:#fff;border-radius:5px;}
+blockquote p {margin:0;}
+blockquote a{color:#ff0;}
+address{margin:0 0 1.5em;}
+pre{font-family:"Courier 10 Pitch", Courier, monospace;font-size:13px;line-height:1.6;margin-bottom:1.6em;max-width:100%;overflow:auto;border-radius:3px;padding:16px;}
+code,kbd,tt,var{font:16px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;}
+abbr,acronym{border-bottom:1px dotted #666;cursor:help;}
+mark,ins{text-decoration:none;}
+sup,sub{font-size:75%;height:0;line-height:0;position:relative;vertical-align:baseline;}
+sup{bottom:1ex;}
+sub{top:.5ex;}
+small{font-size:75%;}
+big{font-size:125%;}
+hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em;}
+ul,ol{margin:1.2em 0 2em 1em}
+ul > li > ul{list-style:circle;}
+ol{list-style:decimal;}
+li > ul,li > ol{margin-bottom:0;margin: 1em 1.5em;}
+dd{margin:1.5em;padding:0 0 0 16px;}
+table{width:100%;margin:0 0 5px;}
+button,input,select,textarea{vertical-align:middle;margin:0;}
+input[type=text],input[type=email],input[type=url],input[type=password],input[type=search],textarea{padding:15px;width: 100%;border-radius: 5px;}
+#secondary .widget input[type=text],#secondary .widget input[type=email],#secondary .widget input[type=url],#secondary .widget input[type=password],#secondary .widget input[type=search]{display:block;width:100%;}
+textarea{overflow:auto;padding-left:3px;vertical-align:top;width:100%;}
+input[type=submit],input[type=button]{color:#fff;border:none;cursor:pointer;padding:8px;}
+input[type=submit]:hover,input[type=button]:hover{background:#404040;}
+a{text-decoration:none;}
+.main-navigation{clear:both;display:block;color:#fff;padding-left:12px;border-radius:3px;margin-bottom:32px;width:100%;}
+.header-menu{position:absolute;right:0;top:32px;}
+.main-navigation ul,.header-menu ul{list-style:none;padding-left:0;margin:0;}
+.main-navigation li,.header-menu li{float:left;position:relative;}
+.header-menu li:not(:last-child){padding-right:24px;}
+.main-navigation a{display:block;color:#fff;text-decoration:none;padding:12px;}
+.main-navigation a:hover{color:#fff}
+.main-navigation ul ul li:last-child a:hover{border-radius:0 0 3px 3px}
+.main-navigation ul ul{display:none;float:left;left:0;position:absolute;top:49px;z-index:99999;border-radius:0 0 3px 3px;}
+.main-navigation ul ul ul{left:100%;top:0;}
+.main-navigation ul ul a{width:260px;}
+.main-navigation ul li:hover > ul{display:block;}
+.menu-toggle{cursor:pointer;display:none;padding:12px;}
+.site-main .comment-navigation,.site-main .paging-navigation,.site-main .post-navigation{overflow:hidden;margin:0 0 1.5em;}
+.page-links{clear:both;margin:0 0 1.5em;}
+.comment-navigation .nav-previous,.paging-navigation .nav-previous,.post-navigation .nav-previous{float:left;width:48%;}
+.comment-navigation .nav-next,.paging-navigation .nav-next,.post-navigation .nav-next{float:right;text-align:right;width:48%;}
+.screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute!important;}
+.screen-reader-text:hover,.screen-reader-text:active,.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto!important;color:#21759b;display:block;font-size:14px;font-weight:bold;height:auto;left:5px;line-height:normal;text-decoration:none;top:5px;width:auto;z-index:100000;padding:15px 23px 14px;}
+.alignleft{display:inline;float:left;margin-right:1.5em;}
+.alignright{display:inline;float:right;margin-left:1.5em;}
+.aligncenter{clear:both;display:block;margin: 1.5em auto;}
+.inner:before,.inner:after,.clear:before,.clear:after,.entry-content:before,.entry-content:after,.comment-content:before,.comment-content:after,.site-header:before,.site-header:after,.site-content:before,.site-content:after,.site-footer:before,.site-footer:after{content:'';display:table;}
+.inner:after,.clear:after,.entry-content:after,.comment-content:after,.site-header:after,.site-content:after,.site-footer:after{clear:both;}
+.top-bar{padding:8px 0;}
+.site-description{font-size:16px;margin-bottom:0;}
+.header-elements{padding:32px 0;}
+.site-title a{color:#f90;font-size:30px;font-weight:300;}
+.site-title img {vertical-align: bottom;}
+.site-content{padding-top:0;}
+.error404 #primary{width:100%;padding:0;}
+.error404 #content{max-width:700px;min-height:300px;margin:0 auto;}
+.single .byline,.group-blog .byline{display:inline;}
+.single-post-footer{margin-bottom:1.5em;border-radius:3px;padding:32px;}
+footer.entry-meta{border:none;padding:0;margin: 10px 0;}
+.single-post-footer .post-footer-author{position:relative;border-width:1px 0;}
+.post-footer-author-bio p:last-child{margin-bottom:0;}
+.author-name{display:inline-block;font-size:18px;}
+.comment-content a{word-wrap:break-word;}
+.comment-body .comment-meta{position:relative;font-size:13px;border-width:1px 0;}
+.pingback{position:relative;font-size:13px;}
+.comment-author .fn,.comment-author .says{position:relative;font-size:16px}
+.comment-list{margin-left:0;}
+.comment-list > .parent [class*=depth-]{padding-left:24px;margin-left:0;}
+#comment-nav-below{margin-top:16px;}
+.comment-navigation{border:none;padding:0;}
+.no-comments{font-size:13px;background:#FFFFE0;text-align:center;padding:5px 10px;}
+#secondary aside{border-radius:3px;padding:24px;}
+.sidebarcomments a {font-size: .9em;display:block;margin:0 0 20px;}
+.widget-title{display:block;margin: 0 0 20px;font-size:22px;color:#757575}
+.widget ul ul{margin-top:10px;border-top:1px solid rgba(0,0,0,.05);padding-top:10px;}
+.widget li{list-style:none;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,.05);margin-bottom:10px;}
+.widget li:last-child{padding-bottom:0;border:none;margin-bottom:0;}
+.page-content img.wp-smiley,.entry-content img.wp-smiley,.comment-content img.wp-smiley{border:none;margin-bottom:0;margin-top:0;padding:0;}
+.wp-caption{margin-bottom:1.5em;max-width:100%;}
+.wp-caption img[class*=wp-image-]{display:block;max-width:98%;margin:1.2% auto 0;}
+.wp-caption-text{text-align:center;}
+.wp-caption .wp-caption-text{margin:.8075em 0;}
+#primary .site-main .gallery a img{border:none;height:auto;max-width:90%;}
+img{max-width:100%;height:auto;}
+.content-area .entry-content div.sharedaddy div.sd-block,.content-area .entry-summary div.sharedaddy div.sd-block{font-size:13px;border-width:1px 0 0;margin:1.5em 0;padding:6px 0 0;}
+#content .entry-content div.sharedaddy h3.sd-title,#content .entry-summary div.sharedaddy h3.sd-title{display:block;float:none;font-family:'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;font-weight:normal;margin-bottom:8px;width:100%;}
+#content .entry-content div.sharedaddy .sd-content,#content .entry-summary div.sharedaddy .sd-content{display:block;float:none;width:100%;}
+.entry-content a {font-weight:400;}
+.entry-content li {margin: 10px 0;}
+h4,h5,h6,.page-title{font-size:22px}
+p,.featured-img,#primary .site-main .gallery{margin: 1.2em 0 .8em;}
+b,strong,dt,th{font-weight:400;}
+dfn,cite,i,.response-title{font-style:italic;}
+em {
+font-style: normal;
+font-weight: 400;
+}
+
+
+figure,.widget ul,#primary .site-main .gallery dd{margin:0;}
+a:hover,.navigation a:hover,.page-numbers.current,.comment-navigation a:hover,.social-links a:hover{color:#404040;}
+.main-menu-container,.skip-link.screen-reader-text,.site-header{padding:0;}
+.header-menu a,.entry-header .entry-meta,footer.entry-meta,.navigation.post-navigation,.comments-area .comment-navigation,.site-footer{font-size:14px;}
+.header-menu ul ul,.updated,.widget_search .search-submit{display:none;}
+.nav-previous .fa,.entry-header .entry-meta .fa,.entry-meta .tax-links .fa{margin-right:6px;}
+.nav-next .fa,.social-links a{margin-left:6px;}
+.hentry,.widget{margin:0 0 3em;}
+.post-footer-author-bio,.comment{margin-top:1.5em;}
+.post-footer-author .avatar,.comment-author .avatar{border-radius:50%;margin:6px 6px 6px 0;}
+.widget select,embed,iframe,object{max-width:100%;}
+@media screen and (max-width: 1040px) {
+.inner{padding-right:20px;padding-left:20px;}
+.top-bar{padding-right:100px;}
+.header-menu,.top-bar .social-links{right:20px;}
+}
+@media screen and (max-width: 768px) {
+.site-header,.top-bar{text-align:center;}
+.header-menu,.top-bar .social-links{position:static;}
+.top-bar{padding-right:20px;}
+.header-menu ul{text-align:center;margin-top:16px;}
+.site-header .header-menu li{display:inline-block;float:none;padding:0 10px;}
+.main-navigation{padding-left:0;}
+.menu-toggle,.main-navigation.toggled .nav-menu{display:block;text-align:center;}
+.main-navigation ul{display:none;}
+.main-navigation ul ul{display:block;float:none;position:static;box-shadow:none;}
+.main-navigation li{float:none;}
+.main-navigation ul ul a{width:100%;}
+#primary,#secondary{float:none;width:100%;padding:0;}
+.widget{margin-bottom:1.5em;}
+}
+@media screen and (max-width: 550px) {
+.entry-title{font-size:24px;}
+.comments-link{display:inline-block;float:none;}
+}
+input[type="submit"],
+input[type="button"], .main-navigation,
+.main-navigation ul li:hover > ul {background: #2980B9;}
+.main-navigation a:hover{background:#3498DB;}
+a,.header-menu a:hover{color:#3498DB;}
+body,q,code,kbd,tt,var,.header-menu a,.comment-navigation a,.page-title,.entry-meta,.paging-navigation,.post-navigation,.comment-navigation,.social-links a,.response-title,.site-footer,.entry-content div.sharedaddy div.sd-block,.entry-summary div.sharedaddy div.sd-block{color:#8F9EB8;}
+body,pre,.single-post-footer,#secondary aside,.wp-caption{background:#F2F3F5;}
+dd{border-left:3px solid #F2F3F5;}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea,
+.wp-caption{border:2px solid #E1E6F0;}
+.post-footer-author{border:1px solid #E1E6F0;}
+.comment-body{background:#F2F3F5;padding:13px;border-radius:5px}
+.comment-reply-title{font-size:22px;margin:30px 0 0;}
+.comment-reply-link{float:right;margin:-20px 0 0;}
+.kama_breadcrumbs{margin:0 0 20px}
+
+.sbs2 {padding: 15px;}
+
+.smlpnch{width:100%;font-size:14px;padding:7px 0;margin: 10px 0 0;background:#facf62;border-color:#facf62;color:#876204;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
+#sbs1 button:hover,.smlpnch:hover{cursor:pointer;background:#f8ba1f;border-color:#facf62}
+#sbs1 button:active,.smlpnch:active{-webkit-box-shadow:inset 0 5px 10px rgba(0,0,0,0.3);-moz-box-shadow:inset 0 5px 10px rgba(0,0,0,0.3);box-shadow:inset 0 5px 10px gba(0,0,0,0.3)}
+#sbs1{border:1px solid #ccc;margin:0 0 30px;-moz-box-shadow:0 0 15px rgba(204,204,204,0.8);-webkit-box-shadow:0 0 15px rgba(204,204,204,0.8);box-shadow:0 0 15px rgba(204,204,204,0.8)}
+#sbs1 div.americanconvert{height:8px;background:#fff;background:-moz-repeating-linear-gradient(-45deg,rgb(173,25,45) ,rgb(173,25,45) 15px,rgb(255,255,255) 15px,rgb(255,255,255) 30px,rgb(75,101,140) 30px,rgb(75,101,140) 45px,rgb(255,255,255) 45px,rgb(255,255,255) 60px,rgb(133,66,76) 60px);background:-webkit-repeating-linear-gradient(-45deg,#AD192D ,#AD192D 15px,#FFF 15px,#FFF 30px,#4B658C 30px,#4B658C 45px,#FFF 45px,#FFF 60px,#85424C 60px);background:-o-repeating-linear-gradient(-45deg,rgb(173,25,45) ,rgb(173,25,45) 15px,rgb(255,255,255) 15px,rgb(255,255,255) 30px,rgb(75,101,140) 30px,rgb(75,101,140) 45px,rgb(255,255,255) 45px,rgb(255,255,255) 60px,rgb(133,66,76) 60px);background:repeating-linear-gradient(-45deg,#AD192D ,#AD192D 15px,#FFF 15px,#FFF 30px,#4B658C 30px,#4B658C 45px,#FFF 45px,#FFF 60px,#85424C 60px)}
+#sbs1 form{max-width:500px;margin-left:auto;margin-right:auto}
+#sbs1 button{width:33%;float:left;margin:0 0 0 1%;padding:10px}
+#sbs1 input[type="email"]{width:66%;float:left;padding:8px 10px 7px}
+#sbs1 img {margin: 10px 10px 10px 0}
+
+.schema {
+border: 1px solid #ccc;border-radius: 5px;padding: 7px;margin: 40px 0 20px;
+}
+
+.ec-stars-outer {
+margin: 20px 0;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//ssl.gstatic.com/fonts/roboto/v11/grlryt2bdKIyfMSOhzd1eA.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//ssl.gstatic.com/fonts/roboto/v11/vxNK-E6B13CyehuDCmvQvw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url(//ssl.gstatic.com/fonts/roboto/v11/d-QWLnp4didxos_6urzFtg.woff) format('woff');
+}
+
+.post-views {
+display: inline;
+}
+
+
+.yarpp-thumbnails-horizontal a, .homepage a {
+display: inline-block;
+vertical-align: top;
+position: relative;
+height: 100%;
+width: 180px;
+font-weight: 400;
+text-align: center;
+margin: 0 20px 0;
+}
+
+
+
+.yarpp-thumbnail img {
+height: 180px !important;
+width: 180px !important;
+display: block;
+margin: 20px auto 10px;
+overflow: hidden;
+border-radius: 7px;
+}
+
+
+.yarpp-thumbnail span, .link span {
+display: block;
+margin: 20px auto;
+max-width: 250px;
+}
+
+.homepage {
+clear: both;
+margin: auto;
+}
+
+
+.homepage a {
+margin: 0 50px 10px 10px;
+}
+
+.featured-img {
+width: 180px !important;
+height: 180px !important;
+display: block;
+margin: 15px auto;
+overflow: hidden;
+}
+
+
+
+.homesearch {
+margin: 30px 0 50px;
+}
+
+@media screen and (max-width: 550px) {
+.homepage a, .yarpp-thumbnails-horizontal a {
+float: none;
+display: block;
+margin: 0 auto 50px;
+}
+}
+
+#pagination, #pagination a {
+text-align: center;
+width: 100%;
+margin: 30px 0 50px;
+}
+
+#pagination a {
+border: 1px solid #ccc;
+border-radius: 5px;
+padding: 15px 20px;
+background: #2980B9;
+color: #fff;
+}
+
+#pagination a:hover {
+opacity: 0.7;
+}
+
+.homeother {
+font-size: .9em;
+}
+
+.homecat {
+width:55%;
+float:left;
+}
+
+.homecat a {
+display: inline-block;
+margin: 10px 20px 10px 0;
+font-weight: 400;
+}
+
+
+.homecomments {
+padding: 30px;
+background: #F2F3F5;
+border-radius: 5px;
+width:43%;
+float:left;
+margin: 0 0 0 20px;
+}
+
+.homecomments a, .comments a {
+display: block;
+margin: 0 0 20px;
+}
+
+.homecomments img, .comments img {
+vertical-align: middle;
+}
+
+
+@media screen and (max-width: 750px) {
+
+.homecomments, .homecat {
+width: 100%;
+margin: auto;
+}
+}
+
+
+#wrap,#wrap1{
+		display: none;
+		opacity: 0.8;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 16px;
+		background-color: rgba(1, 1, 1, 0.5);
+		z-index: 100;
+		overflow: auto;
+		transition: transform 0.6s ease-out;
+	}
+	
+	#window, #window1 {
+		display: none;
+		background: #fff;
+		z-index: 200;
+		position: relative;
+		padding: 16px;
+border-radius: 5px;
+}
+
+.popup {
+margin: 30px auto 0;
+text-align: center;
+}
+	
+.close{
+float:right;
+cursor: pointer;
+}
+
+.myButton {
+-moz-box-shadow: inset 0px 1px 0px 0px #54a3f7;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #54a3f7;
+    box-shadow: inset 0px 1px 0px 0px #54a3f7;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
+    background: -moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: -webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: -o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: -ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
+    background: linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
+    background-color: #007dc1;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #124d77;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff !important;
+    font-family: arial;
+    padding: 2px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #154682;
+margin: 10px 5px;
+}
+
+.myButton:hover {
+		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
+		background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+		background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+		background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+		background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
+		background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
+		background-color:#0061a7;
+	}
+	.myButton:active {
+		position:relative;
+		top:1px;
+	}
+	
+	
+.toc_widget {
+font-size: .9em;
+font-weight: 400;
+}	
+	
+.toc_widget li, .toc_widget ul {
+border: 0 !important;
+}
+
+.toc_widget li {
+margin: 0;
+}
+
+.quads-location {
+margin: 50px -15px !important;
+}
+
+#search-input {
+font-size: .9em;
+}
+
+
+.gsc-input-box, input.gsc-search-button-v2, .gsc-result .gs-title {
+height: auto !important;
+}
+input.gsc-search-button-v2 {
+width: auto !important;
+padding: 11px 30px !important;
+margin: 0 !important;
+}
+
+.cse .gsc-control-cse, .gsc-control-cse {
+background: none !important;
+padding: 0 !important;
+border: 0 !important;
+}
+
+.adblocksib {height: 250px !important; }
+@media (max-width:500px) {
+.adblock2, .adblock3 {height: 250px !important;}
+}
+@media (min-width:500px) {
+.adblock2 {height: 100px !important; }
+.adblock3 {height: 150px !important;}
+}
+
+
+</style>
+
+<link id="page_favicon" href="http://lumpics.ru/favicon.png" rel="icon" type="image/png" />
+</head>
+<body class="post-template-default single single-post postid-42535 single-format-standard group-blog">
+	<div class="header-area full">
+		<div class="main">
+			<IDXSKIP><header id="masthead" class="site-header inner">
+				<div class="header-elements">
+					<span class="site-title">
+						<a href="http://lumpics.ru/"><img src="http://lumpics.ru/wp-content/uploads/2016/04/logotype.png" alt="Lumpics.ru" style="display:inline-block;margin: 0 0 -10px;" /> lumpics.ru
+</a>
+</span>
+					<nav id="header-navigation" class="header-menu">
+											</nav>
+				</div>
+			</header></IDXSKIP>
+			<div class="main-menu-container inner">
+				<nav id="site-navigation" class="main-navigation clear">
+					<IDXSKIP><span class="menu-toggle"><i class="fa fa-bars"></i> Меню</span></IDXSKIP>
+					<IDXSKIP><div class="menu-menyu-v-shapke-container"><ul id="menu-menyu-v-shapke" class="menu"><li id="menu-item-40737" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-40737"><a href="http://lumpics.ru/">Главная</a></li>
+<li id="menu-item-40736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40736"><a href="http://lumpics.ru/about/">О нас</a></li>
+<li id="menu-item-74142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74142"><a href="http://lumpics.ru/community/">Присоединяйтесь к нам</a></li>
+</ul></div></IDXSKIP>				</nav>
+			</div>
+		</div>
+	</div>
+
+	<div class="main-content-area full">
+		<div class="main">
+			<div id="content" class="site-content inner">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		
+			<div class="kama_breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="http://lumpics.ru" itemprop="item"><span itemprop="name">Главная</span></a></span> » 
+<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="http://lumpics.ru/category/google/" itemprop="item"><span itemprop="name">Google</span></a></span> » 
+Вы здесь</div>
+<article id="post-42535" class="post-42535 post type-post status-publish format-standard has-post-thumbnail hentry category-google top">
+	<header class="entry-header">
+		<h1 class="entry-title">Создаем форму для анкетирования в Google</h1>
+		<div class="entry-meta">
+
+			
+<span class="posted-on">Обновлено: 
+		<time class="entry-date published" datetime="2016-12-10T16:17:05+00:00">10.12.2016</time><time class="updated" datetime="2016-12-11T00:18:03+00:00">11.12.2016</time></span> | Автор: <span class="author vcard"><strong class="fn">Viewport</strong></span>
+
+	
+			</div>
+	</header>
+	<div class="entry-content">
+		<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-logo.png" alt="Как создать форму Google лого" width="394" height="401" class="aligncenter size-full wp-image-42539" /></p>
+<p>Наверняка, вы, дорогие читатели, не раз сталкивались с заполнением онлайн-формы Google при анкетировании, регистрации на какие-либо мероприятия или заказе услуг. Прочитав эту статью, вы узнаете, насколько просто создаются эти формы и сможете самостоятельно организовывать и оформлять любые опросы, оперативно получая ответы на них. 
+<!-- WP QUADS Content Ad Plugin v. 1.5.2 -->
+<div class="quads-location quads-ad1" id="quads-ad1" style="float:none;margin:0px 0 0px 0;text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Lumpics (блок ссылок в 2 ряда) -->
+<ins class="adsbygoogle adblock2"
+     style="display:block"
+     data-ad-client="ca-pub-8233281901599575"
+     data-ad-slot="1354735249"
+     data-ad-format="link"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</p>
+<div id="toc_container" class="no_bullets"><IDXSKIP><p class="toc_title">Содержание</p></IDXSKIP><ul class="toc_list"><li><a href="#___Google">Процесс создания формы опроса в Google</a><ul><li><a href="#i">Настройки формы</a></li></ul></li></ul></div>
+<h2><span id="___Google">Процесс создания формы опроса в Google</span></h2>
+<p>Для того, чтобы начать работу с формами опроса необходимо авторизироваться в Google</p>
+<p><em>Более подробно: <a href="http://lumpics.ru/how-to-log-in-google/">Как войти в свой аккаунт в Google</a></em></p>
+<p>На главной странице поисковика нажмите пиктограмму с квадратиками.</p>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-1.png" alt="Как создать форму Google 1" width="845" height="556" class="aligncenter size-full wp-image-42571" /></p>
+<p>Нажмите &#171;Еще&#187; и &#171;Другие сервисы Google&#187;, после чего выберите &#171;Формы&#187; в разделе &#171;Для дома и офиса&#187; или просто перейдите по <strong><!--noindex--><a target="_blank" rel="nofollow" href="http://lumpics.ru/goto/https://www.google.com/forms/" >ссылке</a><!--/noindex--></strong>. Если вы создаете форму в первый раз, ознакомьтесь с презентацией и нажмите &#171;Открыть Google Формы&#187;.</p>
+<!-- WP QUADS Content Ad Plugin v. 1.5.2 -->
+<div class="quads-location quads-ad3" id="quads-ad3" style="float:none;margin:0px 0 0px 0;text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Lumpics (3 блок, 336*280) -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-8233281901599575"
+     data-ad-slot="6980746849"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-2.png" alt="Как создать форму Google 2" width="845" height="587" class="aligncenter size-full wp-image-42572" /></p>
+<p>1. Перед вами откроется поле, в котором будут находиться все формы, которые вы создавали. Нажмите на круглую кнопку с красным плюсом, чтобы создать новую форму.</p>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-3.png" alt="Как создать форму Google 3" width="845" height="587" class="aligncenter size-full wp-image-42573" /></p>
+<p>2. Находясь на вкладке &#171;Вопросы&#187;, в верхних строках введите название формы и краткое описание.</p>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-4.png" alt="Как создать форму Google 4" width="845" height="587" class="aligncenter size-full wp-image-42574" /></p>
+<p>3. Теперь вы можете добавлять вопросы. Щелкните на &#171;Вопрос без заголовка&#187; и введите свой вопрос. К вопросу можно добавить изображение, щелкнув на пиктограмме возле него.</p>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-5.png" alt="Как создать форму Google 5" width="845" height="587" class="aligncenter size-full wp-image-42575" /></p>
+<p>Далее вам нужно определить формат ответов. Это могут быть варианты из списка,раскрывающийся список, текст, время, дата, шкала и другие. Определите формат, выбрав его из списка справа от вопроса.</p>
+<!-- WP QUADS Content Ad Plugin v. 1.5.2 -->
+<div class="quads-location quads-ad2" id="quads-ad2" style="float:none;margin:0px 0 0px 0;text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Lumpics (блок ссылок в 3 ряда) -->
+<ins class="adsbygoogle adblock3"
+     style="display:block"
+     data-ad-client="ca-pub-8233281901599575"
+     data-ad-slot="2831468441"
+     data-ad-format="link"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<!-- WP QUADS Content Ad Plugin v. 1.5.2 -->
+<div class="quads-location quads-ad4" id="quads-ad4" style="float:none;margin:0px 0 0px 0;text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Lumpics (3 блок, 580*400) -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:580px;height:400px"
+     data-ad-client="ca-pub-8233281901599575"
+     data-ad-slot="8457480047"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-6.png" alt="Как создать форму Google 6" width="845" height="587" class="aligncenter size-full wp-image-42576" /></p>
+<p>Если вы выбрали формат в виде анкетирования &#8212; в строках под вопросом придумайте варианты ответов. Чтобы добавить вариант, нажмите одноименную ссылку</p>
+<p>Чтобы добавить вопрос нажмите &#171;+&#187; под формой. Как вы уже заметили, для каждого вопроса задается отдельный тип ответа.</p>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-7.png" alt="Как создать форму Google 7" width="845" height="587" class="aligncenter size-full wp-image-42577" /></p>
+<p>При необходимости, щелкните на &#171;Обязательный ответ&#187;. Такой вопрос будет помечен красной звездочкой.</p>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-8.png" alt="Как создать форму Google 8" width="845" height="587" class="aligncenter size-full wp-image-42578" /></p>
+<p>По этому принципу создаются все вопросы в форме. Любое изменение моментально сохраняется.</p>
+<!-- WP QUADS Content Ad Plugin v. 1.5.2 -->
+<div class="quads-location quads-ad4" id="quads-ad4" style="float:none;margin:0px 0 0px 0;text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Lumpics (3 блок, 580*400) -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:580px;height:400px"
+     data-ad-client="ca-pub-8233281901599575"
+     data-ad-slot="8457480047"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<h3><span id="i">Настройки формы</span></h3>
+<p>В верхней части формы есть несколько настроек. Вы можете задать цветовую гамму формы, щелкнув на пиктограмме с палитрой.</p>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-9.png" alt="Как создать форму Google 9" width="845" height="587" class="aligncenter size-full wp-image-42579" /></p>
+<p>Пиктограмма из трех вертикальных точек &#8212; дополнительные настройки. Рассмотрим некоторые из них.</p>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-10.png" alt="Как создать форму Google 10" width="845" height="587" class="aligncenter size-full wp-image-42580" /></p>
+<p>В разделе &#171;Настройки&#187; вы можете дать возможность изменять ответы после отправки формы и включить систему оценивания ответов.</p>
+<p>Нажав на &#171;Настройки доступа&#187;, можно добавить соавторов для создания и редактирования формы. Их можно пригласить по почте, отправить им ссылку или поделиться ей в социальных сетях.</p>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-12.png" alt="Как создать форму Google 12" width="845" height="587" class="aligncenter size-full wp-image-42582" /></p>
+<p>Чтобы отправить форму респондентам, нажмите на бумажный самолетик. Можно отправить форму на электронную почту, поделиться ссылкой или HTML-кодом.</p>
+<blockquote><p>Будьте внимательны, для респондентов и редакторов используются разные ссылки!</p></blockquote>
+<p><img src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-formu-Google-11.png" alt="Как создать форму Google 11" width="845" height="587" class="aligncenter size-full wp-image-42581" /></p>
+<p>Вот так, вкратце, создаются формы в Google. Поиграйте с настройками, чтобы создать уникальную и наиболее точно соответствующую вашей задаче форму.</p>
+
+<!-- WP QUADS Content Ad Plugin v. 1.5.2 -->
+<div class="quads-location quads-ad3" id="quads-ad3" style="float:none;margin:0px 0 0px 0;text-align:center;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Lumpics (3 блок, 336*280) -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-8233281901599575"
+     data-ad-slot="6980746849"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>
+<script type="text/javascript">
+ 
+function show(state){
+ 
+                    document.getElementById('window').style.display = state;                                                                                                        
+                    document.getElementById('wrap').style.display = state;          
+            
+            }
+function show1(state){
+ 
+                    document.getElementById('window1').style.display = state;           
+                    document.getElementById('wrap1').style.display = state;             
+            }
+        </script>
+
+
+<!-- Задний прозрачный фон-->
+<div onclick="show('none')" id="wrap"></div>
+
+<!-- Само окно-->
+<div id="window">
+<img src="http://lumpics.ru/social/close.png" class="close" onclick="show('none')" href="">
+<strong><IDXSKIP>Мы рады, что смогли помочь Вам в решении проблемы.</IDXSKIP></strong><br/>				
+<div class="popup">
+<IDXSKIP>В свою очередь, Вы тоже </IDXSKIP><IDXSKIP><a href="http://lumpics.ru/community/">можете нам помочь</a></IDXSKIP><IDXSKIP>, даже незначительно.<br/></IDXSKIP><br/>
+<IDXSKIP>Отблагодарите автора, поделитесь статьей в социальных сетях.<br/></IDXSKIP><br/>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter" data-counter=""></div>
+</div>				
+</div>
+
+<!-- Задний прозрачный фон-->
+<div onclick="show1('none')" id="wrap1"></div>
+
+<!-- Само окно-->
+<div id="window1">
+<img src="http://lumpics.ru/social/close.png" class="close" onclick="show1('none')" href="">
+<strong><IDXSKIP>Попробуйте найти другие ответы на сайте</IDXSKIP></strong><br/><br/>
+<script>
+  (function() {
+    var cx = '017759328944840869591:hhpfn0ompaa';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search><br/><br/>
+<IDXSKIP>...или <a href="#comments" onclick="show1('none')">задайте вопрос в комментариях</a></IDXSKIP><IDXSKIP>, где Вам обязательно ответят в кратчайшие сроки.	
+</IDXSKIP></div>
+
+
+			
+			
+		<h3>Опрос: помогла ли вам эта статья?</h3>
+<IDXSKIP><center><a class="myButton" href="#popups" onclick="show('block')">Да</a>  <a href="#popupsabort" class="myButton" onclick="show1('block')">Нет</a></center></IDXSKIP>
+	</div>
+	
+<br/>
+<div class="single-post-footer"><strong><IDXSKIP>Давайте решим все проблемы на Вашем компьютере?</IDXSKIP></strong><br/><br/>
+<script>
+  (function() {
+    var cx = '017759328944840869591:hhpfn0ompaa';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search></div>
+	
+	<h3>Еще статьи по этой теме:</h3>
+	<div class='yarpp-related'>
+<h3></h3>
+<div class="yarpp-thumbnails-horizontal">
+<a class='yarpp-thumbnail' href='http://lumpics.ru/how-to-create-google-sheets/' title='Как создать Google таблицу'>
+<img width="177" height="180" src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-Google-tablitsu-logo.png" class="attachment-yarpp-thumbnail size-yarpp-thumbnail wp-post-image" alt="Как создать Google таблицу лого" /><span>Как создать Google таблицу</span></a>
+<a class='yarpp-thumbnail' href='http://lumpics.ru/how-to-use-google-drive/' title='Как пользоваться Google Диском'>
+<img width="180" height="180" src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-polzovatsya-Google-Disk-logo.png" class="attachment-yarpp-thumbnail size-yarpp-thumbnail wp-post-image" alt="Как пользоваться Google Диск лого" srcset="http://lumpics.ru/wp-content/uploads/2016/12/Kak-polzovatsya-Google-Disk-logo.png 512w, http://lumpics.ru/wp-content/uploads/2016/12/Kak-polzovatsya-Google-Disk-logo-150x150.png 150w" sizes="(max-width: 180px) 100vw, 180px" /><span>Как пользоваться Google Диском</span></a>
+<a class='yarpp-thumbnail' href='http://lumpics.ru/how-to-sign-up-in-google/' title='Создаем аккаунт в Google'>
+<img width="177" height="180" src="http://lumpics.ru/wp-content/uploads/2016/11/Kak-sozdat-akkaunt-v-Google-logo.png" class="attachment-yarpp-thumbnail size-yarpp-thumbnail wp-post-image" alt="Как создать аккаунт в Google лого" /><span>Создаем аккаунт в Google</span></a>
+<a class='yarpp-thumbnail' href='http://lumpics.ru/how-to-create-google-document/' title='Как создать Google Документ'>
+<img width="177" height="180" src="http://lumpics.ru/wp-content/uploads/2016/12/Kak-sozdat-Google-Dokument-logo.png" class="attachment-yarpp-thumbnail size-yarpp-thumbnail wp-post-image" alt="Как создать Google Документ лого" /><span>Как создать Google Документ</span></a>
+</div>
+</div>
+</article>
+	<footer class="entry-meta">
+<strong><IDXSKIP>Поделиться статьей в социальных сетях</IDXSKIP></strong>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter" data-counter=""></div>
+</footer>
+				
+	
+			
+<div id="comments" class="comments-area">
+
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<p id="reply-title" class="comment-reply-title"><IDXSKIP>Оставьте свое мнение </IDXSKIP><small><a rel="nofollow" id="cancel-comment-reply-link" href="/how-to-make-form-in-google/#respond" style="display:none;">Отменить комментарий</a></small></p>			<form action="http://lumpics.ru/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p><IDXSKIP><p class="comment-form-author comment-form-field"><input id="author" name="author" type="text" placeholder="Ваше имя" aria-required='true' /></p></IDXSKIP>
+<IDXSKIP><p class="comment-form-email comment-form-field"><input id="email" name="email" type="text" placeholder="Ваш Email" aria-required='true' /></p></IDXSKIP>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Опубликовать комментарий" /> <input type='hidden' name='comment_post_ID' value='42535' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="3dee11b885" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="140"/></p>			</form>
+			</div><!-- #respond -->
+	</div>
+		
+		</main>
+	</div>
+
+	<div id="secondary" class="widget-area" role="complementary">
+				<script>
+  (function() {
+    var cx = '017759328944840869591:hhpfn0ompaa';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>		<br/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Lumpics (блок ссылок в Sidebar) -->
+<ins class="adsbygoogle adblocksib"
+     style="display:block"
+     data-ad-client="ca-pub-8233281901599575"
+     data-ad-slot="6569690445"
+     data-ad-format="link"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br/>
+<aside class="sidebarcomments"><IDXSKIP><span class="widget-title"><img src="http://lumpics.ru/social/live.gif" /> Сейчас обсуждают</span></IDXSKIP>
+
+
+<IDXSKIP>Автор: AndreKon<a href="http://lumpics.ru/how-to-create-qiwi-virtual-card/#comment-11238">Как было сказано комментарием выше, карта очень удобна тем, ...</a></IDXSKIP><IDXSKIP>Автор: Юрий<a href="http://lumpics.ru/how-to-sync-bookmarks-and-data-in-opera/#comment-11236">Володя, доброе время суток!
+Дело в том, что экспресс-панель...</a></IDXSKIP><IDXSKIP>Автор: Kait.15<a href="http://lumpics.ru/how-to-create-qiwi-virtual-card/#comment-11234">Полноценная банковская карта, которую вы можете получить не ...</a></IDXSKIP><IDXSKIP>Автор: Дуги<a href="http://lumpics.ru/how-to-create-qiwi-virtual-card/#comment-11233">для чего нужна она? чем удобна?...</a></IDXSKIP><IDXSKIP>Автор: Kait.15<a href="http://lumpics.ru/tor-browser/#comment-11226">Евгений Георгиевич, на нашем сайте уже достаточно много посв...</a></IDXSKIP><IDXSKIP>Автор: Kait.15<a href="http://lumpics.ru/setup-an-ssd-under-windows-7/#comment-11225">Здравствуйте. Все перечисленные рекомендации подходят и для ...</a></IDXSKIP><IDXSKIP>Автор: Kait.15<a href="http://lumpics.ru/how-to-change-language-in-lightroom/#comment-11223">Юлия, в списке языков русский отсутствует? Если речь действи...</a></IDXSKIP></aside><br/><br/>
+
+		<aside id="text-4" class="widget widget_text"><IDXSKIP><span class="widget-title">Работаем в программах</span></IDXSKIP>			<div class="textwidget"><IDXSKIP><li><a href="http://lumpics.ru/category/adobe-flash-player/">Adobe Flash Player</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/autocad/">AutoCAD</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/avast/">Avast</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/bluestacks/">BlueStacks</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/excel/">Microsoft Excel</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/google-chrome/">Google Chrome</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/hamachi/">Hamachi</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/internet-explorer/">Internet Explorer</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/itunes/">iTunes</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/mozilla-firefox/">Mozilla Firefox</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/opera/">Opera</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/outlook/">Outlook</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/photoshop/">Photoshop</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/powerpoint/">PowerPoint</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/skype/">Skype</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/sony-vegas/">Sony Vegas</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/steam/">Steam</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/ultraiso/">UltraISO</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/utorrent/">uTorrent</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/word/">Microsoft Word</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/torrent/">Торрент клиенты</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/yandex-browser/">Яндекс Браузер</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/yandex-disk/">Яндекс Диск</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/browser-extension/">Расширения для браузеров</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/how-to-do/">Другие программы</a></li></IDXSKIP></div>
+		</aside><aside id="text-5" class="widget widget_text"><IDXSKIP><span class="widget-title">Все о Windows</span></IDXSKIP>			<div class="textwidget"><IDXSKIP><li><a href="http://lumpics.ru/category/windows-xp/">Windows XP</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/windows-7/">Windows 7</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/windows-8/">Windows 8</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/windows-10/">Windows 10</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/choose-program/">Выбираем программу</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/reviews-programs/">Обзоры программ</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/file-extensions/">Работа с форматами файлов</a></li></IDXSKIP></div>
+		</aside><aside id="text-3" class="widget widget_text"><IDXSKIP><span class="widget-title">Интернет</span></IDXSKIP>			<div class="textwidget"><IDXSKIP><li><a href="http://lumpics.ru/category/vkontakte/">Вконтакте</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/yandex/">Яндекс</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/aliexpress/">AliExpress</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/apple-id/">Apple ID</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/avito/">Avito</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/facebook/">Facebook</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/gmail/">Gmail</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/rambler/">Рамблер почта</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/google/">Google</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/instagram/">Instagram</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/twitter/">Twitter</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/webmoney/">Webmoney</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/youtube/">YouTube</a></li></IDXSKIP>
+</div>
+		</aside><aside id="text-6" class="widget widget_text"><IDXSKIP><span class="widget-title">Работа с устройствами</span></IDXSKIP>			<div class="textwidget"><IDXSKIP><li><a href="http://lumpics.ru/category/ssd/">SSD диск</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/hdd/">Жесткий диск</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/memory-card/">Карта памяти</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/cpu/">Процессор</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/gpu/">Видеокарта</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/flash-drive/">Флешка</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/firmware/">Прошивка устройств</a></li></IDXSKIP>
+<IDXSKIP><li><a href="http://lumpics.ru/category/drivers/">Драйвера</a></li></IDXSKIP></div>
+		</aside><!-- fixed widget --><aside id="toc-widget-2" class="widget toc_widget"><IDXSKIP><span class="widget-title">Навигация по статье</span></IDXSKIP><ul class="toc_widget_list no_bullets"><li><a href="#___Google">Процесс создания формы опроса в Google</a><ul><li><a href="#i">Настройки формы</a></li></ul></li></ul></aside><!-- fixed widget --><IDXSKIP><aside id="text-7" class="widget widget_text">			<div class="textwidget"><style>
+#text-7 {background:#fff !important;padding:0 !important;}</style>
+<a href="http://lumpics.ru/community/" style="margin: auto;display:block;text-align:center;background: #3498DB;cursor: pointer;padding: 10px 15px;color:#fff !important;border-radius:3px;">Присоединяйтесь к нам</a></div>
+		</aside></IDXSKIP>	</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-area full">
+		<div class="main">
+			<footer id="colophon" class="site-footer inner">
+				<span class="site-info">
+<IDXSKIP>Copyright 2016 Lumpics.ru<br/></IDXSKIP>
+<IDXSKIP><a href="http://lumpics.ru/">Главная страница</a></IDXSKIP> <IDXSKIP>| <a href="http://lumpics.ru/sitemap.xml">Карта сайта</a></IDXSKIP>
+				</span>
+<br/>Запросов 62, за 0,136 секунды.
+			</footer>
+		</div>
+	</div>
+<script>
+( function() {
+	var container, button, menu;
+
+	container = document.getElementById( 'site-navigation' );
+	if ( ! container )
+		return;
+
+	button = container.getElementsByTagName( 'span' )[0];
+	if ( 'undefined' === typeof button )
+		return;
+
+	menu = container.getElementsByTagName( 'ul' )[0];
+
+	// Hide menu toggle button if menu is empty and return early.
+	if ( 'undefined' === typeof menu ) {
+		button.style.display = 'none';
+		return;
+	}
+
+	if ( -1 === menu.className.indexOf( 'nav-menu' ) )
+		menu.className += ' nav-menu';
+
+	button.onclick = function() {
+		if ( -1 !== container.className.indexOf( 'toggled' ) )
+			container.className = container.className.replace( ' toggled', '' );
+		else
+			container.className += ' toggled';
+	};
+} )();</script>
+<script type='text/javascript' src='http://lumpics.ru/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://lumpics.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ec_ajax_data = {"ajax_url":"http:\/\/lumpics.ru\/wp-admin\/admin-ajax.php","codes":{"SUCCESS":1,"PREVIOUSLY_VOTED":0,"REQUEST_ERROR":2,"UNKNOWN":-1},"messages":{"success":"\u0412\u044b \u0443\u0436\u0435 \u043f\u0440\u043e\u0433\u043e\u043b\u043e\u0441\u043e\u0432\u0430\u043b\u0438","previously_voted":"\u0412\u044b \u0443\u0436\u0435 \u0433\u043e\u043b\u043e\u0441\u043e\u0432\u0430\u043b\u0438","request_error":"\u041d\u0435\u0432\u0435\u0440\u043d\u044b\u0439 \u0437\u0430\u043f\u0440\u043e\u0441, \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0451 \u0440\u0430\u0437","unknown":"\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430 \u043f\u0440\u043e\u0438\u0437\u043e\u0448\u043b\u0430, \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0435 \u0440\u0430\u0437 \u0433\u043e\u043b\u043e\u0441\u043e\u0432\u0430\u0442\u044c"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://lumpics.ru/wp-content/plugins/ec-stars-rating/js/ec-stars-rating.js?ver=4.7.5'></script>
+<script type='text/javascript' src='http://lumpics.ru/wp-content/plugins/akismet/_inc/form.js?ver=3.3.2'></script>
+<link rel='stylesheet' id='toc-screen-css'  href='http://lumpics.ru/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=1509' type='text/css' media='all' />
+<link rel='stylesheet' id='quads-styles-css'  href='http://lumpics.ru/wp-content/plugins/quick-adsense-reloaded/assets/css/quads.css?ver=1.5.2' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var click_object = {"ajax_url":"http:\/\/lumpics.ru\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://lumpics.ru/wp-content/plugins/adrotate/library/jquery.adrotate.clicktracker.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tocplus = {"smooth_scroll":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://lumpics.ru/wp-content/plugins/table-of-contents-plus/front.min.js?ver=1509'></script>
+<script type='text/javascript' src='http://lumpics.ru/wp-includes/js/comment-reply.min.js?ver=4.7.5'></script>
+<script type='text/javascript'>
+var q2w3_sidebar_options = new Array();
+q2w3_sidebar_options[0] = { "sidebar" : "sidebar-1", "margin_top" : 10, "margin_bottom" : 0, "stop_id" : "", "screen_max_width" : 0, "screen_max_height" : 0, "width_inherit" : false, "refresh_interval" : 1500, "window_load_hook" : false, "disable_mo_api" : false, "widgets" : ['toc-widget-2','text-7'] };
+</script>
+<script type='text/javascript' src='http://lumpics.ru/wp-content/plugins/q2w3-fixed-widget/js/q2w3-fixed-widget.min.js?ver=5.0.4'></script>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script><!--/LiveInternet-->
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter36609485 = new Ya.Metrika({
+                    id:36609485,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/36609485" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86545937-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js" async="async"></script>
+
+<script type='text/javascript' src='http://lumpics.ru/wp-content/themes/presentation-lite/script.js'></script>
+<script type='text/javascript' src='http://lumpics.ru/wp-content/themes/presentation-lite/jquery.cookie.js'></script>
+
+</body>
+</html>

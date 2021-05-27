@@ -1,0 +1,3203 @@
+66.ru/news/hitech/25501
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+
+<head><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQ8AVFdUGwEFXFNbBwU="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(4),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(u){"stack"in u&&(t(5),t(3),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:4,2:7,3:5,4:18,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:18,2:19,ee:"QJf3ax",gos:"7eSDFh"}],5:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:19,2:18,ee:"QJf3ax"}],6:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:19,2:18,ee:"QJf3ax"}],7:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),u=s(a),f=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new f(t);try{i.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=f.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:4,2:19,ee:"QJf3ax"}],8:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=e(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var f=0;c>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:9,3:7,4:4,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],9:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,u="addEventListener",f="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[u]?(c[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(c[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],18:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],19:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:18,ee:"QJf3ax"}]},{},["G9z0Bl",3,8]);</script>
+
+    <script type="text/javascript">
+                    var url = "/lite/checkmobile/?rnd=578950";
+                    document.write('<scri' + 'pt type="text/javascript" src="' + url + '"></scri' + 'pt>');
+                </script>
+                <script type="text/javascript">
+                    checkMobile.redirect();
+                </script>
+
+            <script type="text/javascript">
+                    var url = "http://auth.66.ru/auth/checkIsAuth/?providers_set=66,vk,fb,lj,tw&redirectUrl=http%3A%2F%2F66.ru%2Fgporlogin%2F&returnUrl=http%3A%2F%2F66.ru%2Fnews%2Fhitech%2F25501%2F";
+                    url = url + "&rand=" + Math.floor(Math.random() * 1000000);
+                    url = url.replace("http%3A%2F%2F66.ru%2Fnews%2Fhitech%2F25501%2F",encodeURIComponent(window.location));
+                    document.write('<scri' + 'pt type="text/javascript" src="' + url + '"></scri' + 'pt>');
+                </script>
+        <script type="text/javascript">
+            GporAuth.run(function (token) {
+                window.location.href = 'http://66.ru/gporlogin/?auth_token=' + token + '&returnUrl=' + window.location;
+            });
+        </script>
+    
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+
+    <link rel="stylesheet" type="text/css" href="http://t.66.ru/external/video-js/video-js.min.css" />
+<script type="text/javascript" src="http://ptrck.ru/pt2.js"></script>
+<script type="text/javascript" src="http://t.66.ru/external/video-js/video.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+_V_.options.flash.swf = "http://t.66.ru/external/video-js/video-js.swf?1425344971";
+/*]]>*/
+</script>
+<title>Asus представила сверхдешевые компьютеры-моноблоки - Новости - 66.ru</title>
+
+                <meta name="description" content="Компания Asus представила свои первые компьютеры-моноблоки из серии Eee Top, сообщает Fudzilla. "/>
+    
+            
+        <meta property="og:title" content="Asus представила сверхдешевые компьютеры-моноблоки"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:image" content="http://s.66.ru/localStorage/news/d8/ee/b6/f5/d8eeb6f5_resizedScaled_659to494.jpg"/>
+        <meta property="og:site_name" content="66.ru"/>
+    
+
+    <link rel="pingback" href="http://api.66.ru/"/>
+    <link href="http://s.66.ru/localStorage/14/b5/cd/20/14b5cd20.ico" type="image/x-icon" rel="icon"/>
+    <link href="http://s.66.ru/localStorage/14/b5/cd/20/14b5cd20.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link rel="apple-touch-icon" href="http://s.66.ru/localStorage/3f/a4/74/1./3fa4741.png"/>
+
+    <link type="text/css" rel="stylesheet" href="http://t.66.ru/external/fonts/PT_Sans_Narrow.css">
+    <link href="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/7dbb6ea844e2589f8bd8c7d1d49ab298/client.css" rel="stylesheet"  type="text/css" />
+
+<!--[if lt IE 8]>
+<link href="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/7dbb6ea844e2589f8bd8c7d1d49ab298/float.ie.if_lt_IE_8.css" rel="stylesheet"  type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link href="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/7dbb6ea844e2589f8bd8c7d1d49ab298/decorations.ie.if_lt_IE_8.css" rel="stylesheet"  type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link href="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/7dbb6ea844e2589f8bd8c7d1d49ab298/b-popup-subscribe__popup.ie.if_lt_IE_8.css" rel="stylesheet"  type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link href="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/7dbb6ea844e2589f8bd8c7d1d49ab298/b-popup-subscribe__buttons.ie.if_lt_IE_8.css" rel="stylesheet"  type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link href="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/7dbb6ea844e2589f8bd8c7d1d49ab298/b-popup-subscribe__popup.ie.if_lt_IE_8.css" rel="stylesheet"  type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link href="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/7dbb6ea844e2589f8bd8c7d1d49ab298/b-popup-subscribe__buttons.ie.if_lt_IE_8.css" rel="stylesheet"  type="text/css" />
+<![endif]-->
+
+<script src="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/7dbb6ea844e2589f8bd8c7d1d49ab298/client.js"  type="text/javascript"></script>
+
+
+
+            <meta property="twitter:card" content="summary"/>
+            <meta property="twitter:site" content="@66ru"/>
+            <meta property="twitter:url" content="http://66.ru/news/hitech/25501/"/>
+            <meta property="twitter:title" content="Asus представила сверхдешевые компьютеры-моноблоки"/>
+            <meta property="twitter:description" content="Компания Asus представила свои первые компьютеры-моноблоки из серии Eee Top, сообщает Fudzilla. "/>
+            <meta property="twitter:image" content="http://s.66.ru/localStorage/news/d8/ee/b6/f5/d8eeb6f5_resizedScaled_100to75.jpg"/>
+    
+
+        <script type="text/javascript">
+        $(document).ready( function() {
+            GporAuth.createGlobalCookie('browser', JSON.stringify({width: window.outerWidth, height: window.outerHeight, left: window.screenLeft, top: window.screenTop}), 0.04);
+        });
+    </script>
+    
+        
+    <script type="text/javascript">
+        /* <![CDATA[ */
+                $(document)
+                .data('portal.resources', 'http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9')
+                .data('portal.user.id', '')
+                .data('portal.user.uid', '')
+                .data('portal.user.isInGlobalBan', '')
+                .data('portal.user.loginUrl', '/user/userAjax/login/')
+                .data('portal.user.registerUrl', '/user/userAjax/register/')
+                .data('portal.user.registerCaptchaUrl', 'http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/img/empty.gif')
+                .data('portal.user.infoUrl', '/news/ /user/userAjax/getUserInfo/')
+                .data('portal.siteDomain', '66.ru');
+        document.domain = '66.ru';
+
+        var bannersource = 'asus;pk;';
+        /* ]]> */
+    </script>
+
+                
+
+        
+        <script type="text/javascript" >
+    $(document).ready(function()
+    {
+       $(".news_single_content").find("table").each(function()
+       {
+            if ($(this).attr("class") == "")
+            {
+                if ($(this).find("th").length)
+                    $(this).find("tr:odd").addClass("odd");
+                else
+                    $(this).find("tr:even").addClass("odd");
+            }
+        });
+        /*for link-to-popup*/
+        $(".news_single_content").find(".js-wysiwyg-link-container").each(function(e)
+        {
+            width = 1000;
+            height = 700;
+            $(this).attr("onclick", 'window.open("' + this.href + '", "", "width=' + width + ', height=' + height + '"); return false;');
+        });
+    })
+    </script>
+
+        <style type="text/css">
+        
+    </style>
+
+</head>
+
+<body class="i-branding   page-fixed-right">
+<IDXSKIP><a id="ticka" class="link-go-up" href="#">
+  <span class="link-go-up-pad">наверх <ins class="link-go-up-ico"></ins></span>
+</a></IDXSKIP>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      jQuery("#ticka").flipTopBtn({
+        leftBorder: jQuery("#body-wrap"),
+        botBorder: jQuery(".l-footer"),
+        botBorderPadding: 10,
+        scrollHeight: 600
+      });
+
+      jQuery("#ticka").click(function() {
+        $().animate({scrollTop : 0},'100');
+      });
+
+
+    });
+</script>
+<script type="text/javascript">$(document).trigger('documentbodyloadstart');</script>
+
+<!--[if IE 8]>
+<div id="ie_frame_reflow"><![endif]-->
+<div id="opera_frame_reflow"></div>
+<!--[if IE 8]></div><![endif]-->
+
+<div id="frame" class="context">
+
+    
+
+    
+                <div class="content-block">
+        
+            
+                
+
+<style type="text/css">
+.sticky__content_sticky {
+	position: fixed;
+	top: 20px;
+}
+#menuBottom {margin-right: 250px;}
+.main-menu {margin-left: 100px !important;}
+</style>
+
+<div style="font-size: 0px; overflow:hidden" id="topBigAdb"></div>
+<div style="font-size: 0px; overflow:hidden" id="topAdb"></div>
+<script src="http://t.66.ru/external/adliftQueue/adliftQueue.js?rnd=201407231537"  type="text/javascript"></script>
+
+<script type="text/javascript">
+var doubleScraperEnable = false; // have no idea what's that
+var adliftParseResponse = false;
+var adliftBannersQueue = false;
+var doubleScraperEnable = false; // have no idea what's that
+
+
+$(document).ready(function(){
+
+if (typeof adliftQueue != 'undefined') {
+
+var el = $("#comments");
+var adMaxOffset = 0;
+var showWideScrollBanner = false; 
+if (el.length) {
+        adMaxOffset = el.offset().top;
+        if (adMaxOffset > 2600)
+            adMaxOffset = 2600;
+        if (adMaxOffset > 1000) {
+            showWideScrollBanner = true;
+        }
+        else {
+            adMaxOffset = false;
+        }
+}
+
+adliftBannersQueue = new adliftQueue({
+        'banners' : [
+            {
+                'identifier' : 'topBigBanner',
+                'hideOn' : false,
+                'adliftSlotUid' : '5302de43652a0479f98f05e2',
+                'priority' : 10,
+                'targetId' : 'topBigAdb'
+            },
+            {
+                'identifier' : 'topBanner',
+                'hideOn' : ['wideBanner', 'topBigBanner'],
+                'adliftSlotUid' : '4fbe2a8b714cbf1cd500001f',
+                'targetId' : 'topAdb'
+            },
+            {
+                'identifier' : 'wideBanner',
+                'hideOn' : ['topBigBanner'],
+                'adliftSlotUid' : '52a175f549ac1732af5c6918',
+                'priority' : 20,
+                'targetId' : 'wideAdb',
+                'behaviors' : {
+                    'fixed' : {
+                        'content' : '#wideAdb',
+                        'parent' : '#body',
+                        'maxOffset' : adMaxOffset,
+                        'after': '.b-fluid-fixed__fluid'
+                    }
+                }
+            },
+            {
+                'identifier' : 'wideScrollBanner',
+                'hideOn' : showWideScrollBanner ? (['topBigBanner', 'newsSkyscraper', 'newsAutoSkyscraper']) : true,
+                'insertAfterLoad' : false,
+                'adliftSlotUid' : '54754acf652a044af835bb03',
+                'priority' : 50,
+                'targetId' : 'wideScrollAdb',
+                'behaviors' : {
+                    'loadOnScroll' : {
+                        'content' : '#wideScrollAdb',
+                        'parentSelector' : '#body',
+                        'verticalOffset' : adMaxOffset
+                    }
+                }
+            },
+            {
+                'identifier' : 'newsSkyscraper',
+                'hideOn' : ['wideBanner', 'topBigBanner'],
+                'adliftSlotUid' : '4fbb7c5b714cbf0ced000001',
+                'targetId' : 'newsRightAdb',
+                'behaviors' : {
+                    'fixed' : {
+                        'content' : '#runBanner',
+                        'parent' : '#body',
+                        'after': '.page-col-11-span-9'
+                    }
+                }
+            },
+            {
+                'identifier' : 'newsAutoSkyscraper',
+                'hideOn' : ['wideBanner', 'topBigBanner'],
+                'adliftSlotUid' : '4fbdea51714cbf0ff700005c',
+                'targetId' : 'newsAutoRightAdb',
+                'behaviors' : {
+                    'fixed' : {
+                        'content' : '#runBanner',
+                        'parent' : '#body',
+                        'after': '.page-col-11-span-9'
+                    }
+                }
+            },
+            {
+                'identifier' : 'mg',
+                'hideOn' : ['wideBanner', 'topBigBanner'],
+                'adliftSlotUid' : '54dc8fee652a0479e23c4866',
+                'targetId' : 'mgAdb',
+                'behaviors' : {
+                    'fixed' : {
+                        'content' : '#mgAdb',
+                        'parent' : '#body',
+                        'after': '.page-col-11-span-9'
+                    }
+                }
+            },
+            {
+                'identifier' : 'skyscraper',
+                'hideOn' : ['wideBanner', 'topBigBanner'],
+                'adliftSlotUid' : '4fbb7c5b714cbf0ced000001',
+                'targetId' : 'rightAdb',
+                'behaviors' : {
+                    'fixed' : {
+                        'content' : '#runBanner',
+                        'parent' : '#body',
+                        'after': '.page-col-16-span-5'
+                    }/*,
+                    'refreshable' : {
+                        'timeInterval': 60,
+                        'minTimeInterval': 60,
+                        'verticalInterval': 2500
+                    }*/
+                }
+            },
+            {
+                'identifier' : 'middleWide',
+                'hideOn' : false,
+                'adliftSlotUid' : '52a8460649ac174e355c691a',
+                'targetId' : 'middleWideAdb',
+                'behaviors' : {
+                }
+            },
+            {
+                'identifier' : 'half_skyscraper',
+                'hideOn' : false,
+                'adliftSlotUid' : '521b248149ac1750a52de780',
+                'targetId' : 'midAdb',
+                'behaviors' : {
+                }
+            },
+            {
+                'identifier' : 'weatherWide',
+                'hideOn' : false,
+                'adliftSlotUid' : '515c218f49ac17297e1db410',
+                'targetId' : 'weatherWideAdb',
+                'behaviors' : {
+                }
+            },
+            {
+                'identifier' : 'logosAdb',
+                'hideOn' : false,
+                'adliftSlotUid' : '542a70ba652a040fe7bcc6d9',
+                'targetId' : 'logosAdb',
+                'behaviors' : {
+                }
+            },
+            {
+                'identifier' : 'empty1',
+                'hideOn' : false,
+                'adliftSlotUid' : '53830152652a04607cdc2d6d',
+                'targetId' : 'emptyAdb1',
+                'behaviors' : {
+                }
+            },
+            {
+                'identifier' : 'empty2',
+                'hideOn' : false,
+                'adliftSlotUid' : '53abbe98652a043a783f07cf',
+                'targetId' : 'emptyAdb2',
+                'behaviors' : {
+                }
+            },
+            {
+                'identifier' : 'empty3',
+                'hideOn' : false,
+                'adliftSlotUid' : '53abbeab652a043a783f07d0',
+                'targetId' : 'emptyAdb3',
+                'behaviors' : {
+                }
+            },
+            {
+                'identifier' : 'empty4',
+                'hideOn' : false,
+                'adliftSlotUid' : '53abbebb652a043a783f07d1',
+                'targetId' : 'emptyAdb4',
+                'behaviors' : {
+                }
+            },
+            {
+                'identifier' : 'empty5',
+                'hideOn' : false,
+                'adliftSlotUid' : '53abbec6652a043a753f07ce',
+                'targetId' : 'emptyAdb5',
+                'behaviors' : {
+                }
+            }
+
+        ]
+    });
+
+adliftParseResponse = function(data) {
+    adliftBannersQueue.parseResponse(data);
+}
+
+    adliftBannersQueue.init();
+
+}
+
+
+});
+</script>
+
+
+<!--div style="height: 30px; background-color: #fc8100; text-align: center; line-height: 30px; font-weight: bold; color: #ffffff; font-size: 12px;">В связи с техническим сбоем, часть разделов сайта может быть недоступна в течение некоторого времени. Мы решаем эту проблему прямо сейчас.</div-->
+
+
+<style type="text/css">
+.b-submenu-ads .b-submenu-ads__price {
+color: #000000;
+}
+
+.b-banner_layout_middle-page-3-col object {
+width: 100% !important;
+}
+
+.b-header-auth__tab__link:hover {color: #fff}
+.b-header-auth__tab__link:visited {color: #fff}
+
+.b-text-valute {padding-left: 5px; padding-right: 5px;}
+
+.b-proposal-mail {margin-bottom: 10px;}
+
+#body {margin-bottom: 45px;}
+
+.b-banner_layout_middle-page-4-col object {width: 100%}
+
+a.b-teaser-orange-text {background-position: top right;}
+
+#body .searchNewsBox {margin-top: 0;}
+.b-fluid-fixed__global { margin-bottom: 0px;}
+#body .news_warning {margin-top: 0;}
+
+</style>
+
+<style type="text/css">
+.page-col-11-span-9 .b-fluid-fixed__global iframe {width: 100% !important;}
+.page-col-11-span-9 .b-fluid-fixed__global img {width: 100% !important;}
+
+/* new main fix */
+.b-text_layout_cluodtag a:visited {color: #007899;}
+
+/* new menu fix */
+.main-menu__link:visited {color: #fff;}
+/*#body .button {height: inherit; padding: 6px .8em}*/
+
+
+/* afisha events fix */
+.js-cols-afisha-main-adapted .b-cols__item {
+	height: 205px;
+	overflow: hidden;
+}
+
+/* rabota autocomplete fix */
+.acResults {
+background-color: #fff !important;
+z-index: 100;
+}
+
+
+.js-cols-afisha-main-adapted .b-cols__item.b-cols__item_state_first {
+	height: auto;
+}
+
+/* photorep fix */
+.news_single-view .pic-with-repo__text {background: none;
+box-shadow: inset 0 -40px 180px rgba(0,0,0,.9);}
+
+/* kawanga fix */
+.i-branding .l-footer .l-width {z-index: 10 !important;}
+
+/* photorep fix */
+.pic-with-repo img {width: 100%;}
+</style>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-LGSQB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-LGSQB');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+
+            
+                </div>
+        
+    
+
+
+    <div class="l-branding-top">
+        <div class="l-branding-top-repeat"></div>
+        <div class="l-branding-top-bg"></div>
+        <div class="_l-width">
+                    </div>
+    </div>
+
+        <!--[if IE]>
+    <div id="ie_all"><![endif]-->
+    <!--[if IE 8]>
+    <div id="ie_8">
+    <style>
+        .out-head-wrap-content {
+            top: -6px;
+        }
+    </style>
+    <![endif]-->
+
+    <div class="l-header-wrap">
+
+    <div class="l-width l-width-old">
+        <div class="g-48">
+            <div class="g-col-1 g-span-36 js-main-col">
+                <IDXSKIP><a class="b-header-logo" href="/">
+                                                            <img class="b-header-logo__img" src="http://s.66.ru/localStorage/e3/57/b6/4f/e357b64f.png">
+                </a></IDXSKIP>
+
+                <ul class="main-menu main-menu_js_no">
+	<li class="main-menu__elem">
+	<a href="http://66.ru/news/" class="main-menu__link">
+	Новости</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<style type="text/css">
+.b-header-menu #b-header-menu__item__sub__wrap_1 {padding-right: 0 !important;}
+</style>
+
+<div class="layout">
+    <div class="layout__base">
+        <div class="grid">
+            <ul class="submenu__list submenu__list_separator_left grid__module grid__module_col_1 grid__module_span_17">
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/news/" class="submenu__link">Все новости</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/news/main/" class="submenu__link">Главные</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l submenu__elem_hilite_yes">
+                    <a href="http://66.ru/news/incident/" class="submenu__link">Происшествия</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/auto/news/" class="submenu__link">Авто</a>
+                </li>
+            </ul>
+            <ul class="submenu__list grid__module grid__module_col_21 grid__module_span_15">
+                <li class="submenu__elem submenu__elem_hilite_yes">
+                    <a href="http://66.ru/news/society/" class="submenu__link">Общество</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/news/business/" class="submenu__link">Бизнес</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/news/blago/" class="submenu__link">Благотворительность</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/news/positive/" class="submenu__link">Добрые новости</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/news/exclusive/" class="submenu__link">Наши спецпроекты</a>
+                </li>
+            </ul>
+            <div class="grid__module grid__module_col_38 grid__module_span_90">
+    <a href="/auto/news/169610/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/cf/c4/ce/a6/cfc4cea6_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Виновников «пьяных» ДТП заставят продавать имущество, чтобы компенсировать ущерб  <span class="case__comments">(15)</span></span>
+    </a>
+    <a href="/news/society/169607/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/1c/20/11/00/1c201100_resizedScaled_300to130.jpg);">
+        <span class="case__desc">К концу года россияне будут тратить на еду половину своих доходов  <span class="case__comments">(43)</span></span>
+    </a>
+    <a href="/news/business/169503/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/1f/2a/90/a./1f2a90a_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Moody's понизило рейтинг «Газпрома и «Роснефти» до «мусорного» уровня  <span class="case__comments">(86)</span></span>
+    </a>
+    <a href="/news/business/169116/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/3e/e7/f1/d3/3ee7f1d3_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Борис Лепинских, e96: «Мы стали в два раза беднее, осталось научиться с этим жить»  <span class="case__comments">(55)</span></span>
+    </a>
+
+            </div>
+        </div>
+    </div>
+</div></div>
+</li>
+<li class="main-menu__elem">
+	<a href="http://66.ru/bank/" class="main-menu__link">
+	Банки</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<style type="text/css">
+.b-header-menu #b-header-menu__item__sub__wrap_9 {padding-right: 0 !important;}
+</style>
+
+<div class="layout">
+	<div class="layout__base">
+		<div class="grid">
+			<ul class="submenu__list submenu__list_separator_left submenu__list_tight_yes grid__module grid__module_col_1 grid__module_span_29">
+				<li class="submenu__elem submenu__elem_size_l">
+					<a href="http://66.ru/bank/" class="submenu__link">Банки Екатеринбурга</a>
+				</li>
+				<li class="submenu__elem">
+					<div class="grid">
+						<ul class="submenu__list submenu__list_tight_yes grid__module grid__module_col_1 grid__module_span_60">
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/list/" class="submenu__link">Список банков</a>
+							</li>
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/office/" class="submenu__link">Офисы банков</a>
+							</li>
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/cash/" class="submenu__link">Банкоматы</a>
+							</li>
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/currency/" class="submenu__link">Курсы валют</a>
+							</li>
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/analytics/" class="submenu__link">Короткие новости</a>
+							</li>
+						</ul>
+						<ul class="submenu__list submenu__list_tight_yes grid__module grid__module_col_65 grid__module_span_59">
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/forum/" class="submenu__link">Отзывы о банках</a>
+							</li>
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/otvet/" class="submenu__link">Вопросы-ответы</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<ul class="submenu__list submenu__list_separator_left grid__module grid__module_col_31 grid__module_span_29">
+				<li class="submenu__elem submenu__elem_size_l">
+					<a href="http://66.ru/bank/credit_order/" class="submenu__link">Физическим лицам</a>
+				</li>
+				<li class="submenu__elem">
+					<div class="grid">
+						<ul class="submenu__list submenu__list_tight_yes grid__module grid__module_col_1 grid__module_span_60">
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/credit/" class="submenu__link">Кредиты</a>
+							</li>
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/autocredit/" class="submenu__link">Автокредиты</a>
+							</li>
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/hypothec/" class="submenu__link">Ипотека</a>
+							</li>
+						</ul>
+						<ul class="submenu__list submenu__list_tight_yes grid__module grid__module_col_65 grid__module_span_60">
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/creditcard/" class="submenu__link">Кредитные карты</a>
+							</li>
+							<li class="submenu__elem">
+								<a href="http://66.ru/bank/deposit/" class="submenu__link">Вклады</a>
+							</li>
+							<li class="submenu__elem submenu__elem_hilite_yes">
+								<a href="http://66.ru/bank/deposit_order/" class="submenu__link">Заявка на вклад</a>
+							</li>
+
+						</ul>
+					</div>
+				</li>
+				<li class="submenu__elem">
+					<a href="http://66.ru/bank/credit/" class="b-submenu-item__bank-zajavka__btn">Заполнить заявку на кредит <span style="white-space: nowrap;">за 3 минуты</span></a>
+				</li>
+			</ul>
+			<ul class="submenu__list submenu__list_separator_left submenu__list_tight_yes grid__module grid__module_col_61 grid__module_span_21">
+				<li class="submenu__elem submenu__elem_size_l">
+					<a href="http://66.ru/bank/bizcredit/" class="submenu__link">Юридическим лицам</a>
+				</li>
+				<li class="submenu__elem">
+					<a href="http://66.ru/bank/bizcredit/" class="submenu__link">Кредиты для бизнеса</a>
+				</li>
+				<li class="submenu__elem">
+					<a href="http://66.ru/bank/bizdeposit/" class="submenu__link">Депозиты для бизнеса</a>
+				</li>
+				<li class="submenu__elem">
+					<a href="http://66.ru/bank/biz_order/" class="submenu__link">Заявка на кредит</a>
+				</li>
+				<!--li class="submenu__elem">
+					<a href="http://66.ru/bank/factoring/" class="submenu__link">Факторинг</a>
+				</li-->
+			</ul>
+
+			<div class="submenu__list submenu__list_separator_left submenu__list_tight_yes grid__module grid__module_col_84 grid__module_span_26">
+  <style type="text/css">
+    .main-menu__sub .b-submenu-item__courses {
+      float: none;
+      text-align: left;
+    }
+
+    .main-menu__sub td.b-submenu-item__courses__table__cell-1 {
+      padding-right: 4px;
+    }
+
+    .main-menu__sub table.b-submenu-item__courses__table {
+      position: relative;
+      margin-bottom: 25px;
+      margin-top: 6px;
+    }
+
+    .main-menu__sub ins.b-submenu-item__courses__important {
+      position: absolute;
+      top: 105%;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .main-menu__sub a.b-submenu-item__courses__link {
+      color: #4d660f;
+      font-size: 12px;
+      text-decoration: none;
+      border-bottom: 1px solid #bccd92;
+      line-height: 18px;
+    }
+
+   .main-menu__sub a.b-submenu-item__courses__link:hover {
+      border-bottom-color: #ffcbb2;
+      color: #ff5400;
+   }
+  </style>
+
+  <div style="padding-top: 5px;">
+    <div class="b-submenu-item__courses">
+    <table class="b-submenu-item__courses__table">
+        <tbody><tr>
+            <td class="b-submenu-item__courses__table__cell-1">
+                Курс валют ЦБРФ<br><ins class="b-submenu-item__courses__important">на сегодня, 03.03.15</ins>
+            </td>
+            <td class="b-submenu-item__courses__table__cell-2">
+                <table class="b-bank-item-miniCard__courses__table">
+                    <tbody><tr>
+                        <td class="b-bank-item-miniCard__courses__table__body b-bank-item-miniCard__courses__table__body_first"><ins class="b-bank-item-miniCard__courses__label">$</ins></td>
+                        <td class="b-bank-item-miniCard__courses__table__body">62.224800</td>
+                        <td class="b-bank-item-miniCard__courses__table__body b-bank-item-miniCard__courses__table__body_last">
+                                                        <div class="b-bank-item-miniCard__courses__dynamic b-bank-item-miniCard__courses__dynamic_up">0.9530</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="b-bank-item-miniCard__courses__table__body b-bank-item-miniCard__courses__table__body_first"><ins class="b-bank-item-miniCard__courses__label">€</ins></td>
+                        <td class="b-bank-item-miniCard__courses__table__body">69.542397</td>
+                        <td class="b-bank-item-miniCard__courses__table__body b-bank-item-miniCard__courses__table__body_last">
+                                                        <div class="b-bank-item-miniCard__courses__dynamic b-bank-item-miniCard__courses__dynamic_up">0.8567</div>
+                        </td>
+                    </tr>
+                </tbody></table>                                                                    
+            </td>
+        </tr>
+    </tbody></table>
+    <a target="_blank" href="/bank/currency/" class="b-submenu-item__courses__link">Курсы валют банков Екатеринбурга</a>
+</div>
+  </div>
+</div>
+
+		</div>
+	</div>
+</div></div>
+</li>
+<IDXSKIP><li class="main-menu__elem">
+	<a href="http://66.ru/rabota/" class="main-menu__link">
+	Работа</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<div class="layout">
+	<div class="layout__base">
+	<div class="grid">
+	<div class="submenu">
+	<ul class="submenu__list grid__module grid__module_col_1 grid__module_span_20">
+	<li class="submenu__elem">
+	<a href="http://66.ru/rabota/" class="submenu__link">Все вакансии</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/rabota/vbranch1/" class="submenu__link">Бухгалтерия и финансы</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/rabota/vbranch10/" class="submenu__link">Логистика, транспорт, склад</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/rabota/vbranch36/" class="submenu__link">Государственная служба</a>
+</li>
+</ul>
+<ul class="submenu__list grid__module grid__module_col_21 grid__module_span_20">
+	<li class="submenu__elem">
+	<a href="http://66.ru/rabota/pervouralsk/" class="submenu__link">Работа в Первоуральске</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/rabota/kamensk_uralskijj/" class="submenu__link">Работа в Каменске-Уральском</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/rabota/nizhnijj_tagil/" class="submenu__link">Работа в Нижнем Тагиле</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/rabota/verkhnjaja_pyshma/" class="submenu__link">Работа в Верхней Пышме</a>
+</li>
+</ul>
+<ul class="submenu__list grid__module grid__module_col_41 grid__module_span_20">
+	<li class="submenu__elem">
+	<a href="" class="submenu__link"></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li></IDXSKIP>
+<li class="main-menu__elem">
+	<a href="http://66.ru/doska/" class="main-menu__link">
+	Объявления</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<div class="l-width"><div class="g-48 b-header-menu__item__sub__wrap" id="b-header-menu__item__sub__wrap_10" style="padding-top: 0; padding-bottom: 0;">
+<div class="g-col-2 g-span-9 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
+  <ul class="b-header-menu__item__sub__wrap__col__list">
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+      <a class="b-header-menu__item__sub__wrap__col__list__item__link b-header-menu__item__sub__wrap__col__list__item__link_size_l" href="http://66.ru/doska/">Доска объявлений</a>
+    </li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item b-header-menu__item__sub__wrap__col__list__item_mb_24">
+      <a class="b-header-menu__item__sub__wrap__col__list__item__link b-header-menu__item__sub__wrap__col__list__item__link_size_l"
+        href="/auto/doska/">Продажа автомобилей</a>
+    </li>
+  </ul>
+  <div class="b-submenu-item__bank-zajavka b-submenu-item__bank-zajavka_mt_yes b-submenu-item__bank-zajavka_for_ads">
+    <a class="b-submenu-item__bank-zajavka__btn" href="http://66.ru/doska/add-adv/">Подать объявление</a>
+  </div>
+</div>
+<div class="g-col-11 g-span-10 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
+  <ul class="b-header-menu__item__sub__wrap__col__list facets">
+    <li class="b-header-menu__item__sub__wrap__col__list__item"><span
+      class="b-header-menu__item__sub__wrap__col__list__item__link b-header-menu__item__sub__wrap__col__list__item__link_size_l"
+      style="border-bottom: 0;">Продажа недвижимости</span></li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link"
+           href="/realty/prodaja-kvartir-v-novostroike-ekaterinburga/">Новостройки</a><span
+        class="b-header-menu__inner-count">409</span>
+    </li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link"
+           href="/realty/prodaja-kvartir-i-komnat-v-ekaterinburge/">Квартиры и комнаты на вторичном рынке</a><span
+        class="b-header-menu__inner-count">7454</span>
+    </li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link"
+           href="/realty/doska/com/?action_type=buy&location=0&object_type=6">Офисы</a><span
+        class="b-header-menu__inner-count">1298</span>
+    </li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link"
+           href="/realty/prodaja-dom-v-okrestnostiah-ekaterinburga/">Загородные дома и коттеджи</a><span
+        class="b-header-menu__inner-count">2041</span>
+    </li>
+  </ul>
+</div>
+<div class="g-col-20 g-span-10 b-header-menu__item__sub__wrap__col b-header-menu__item__sub__wrap__col_separator_no">
+  <ul class="b-header-menu__item__sub__wrap__col__list facets">
+    <li class="b-header-menu__item__sub__wrap__col__list__item"><span
+      class="b-header-menu__item__sub__wrap__col__list__item__link b-header-menu__item__sub__wrap__col__list__item__link_size_l"
+      style="border-bottom: 0;">Аренда недвижимости</span></li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link"
+           href="/realty/arenda-kvartir-i-komnat-v-ekaterinburge/">Квартиры и комнаты</a><span
+        class="b-header-menu__inner-count">11957</span>
+    </li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link"
+           href="/realty/doska/com/?action_type=lease&location=0&object_type=office">Офисы</a><span
+        class="b-header-menu__inner-count">1272</span>
+    </li>
+    <li class="b-header-menu__item__sub__wrap__col__list__item">
+        <a class="b-header-menu__item__sub__wrap__col__list__item__link"
+           href="/realty/arenda-dom-v-okrestnostiah-ekaterinburga/">Загородные дома</a><span
+        class="b-header-menu__inner-count">63</span>
+    </li>
+  </ul>
+</div>
+
+</div></div></div>
+</li>
+<li class="main-menu__elem">
+	<a href="http://66.ru/realty/" class="main-menu__link">
+	Недвижимость</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<style type="text/css">
+.b-header-menu #b-header-menu__item__sub__wrap_1 {padding-right: 0 !important;}
+</style>
+
+<div class="layout">
+    <div class="layout__base">
+        <div class="grid">
+            <ul class="submenu__list grid__module submenu__list_separator_left grid__module_col_1 grid__module_span_29">
+                <li class="submenu__elem">
+                    <a href="http://66.ru/realty/doska/live/?action_type=buy&location=0" class="submenu__link">Квартиры и комнаты</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/realty/arenda-kvartir-i-komnat-v-ekaterinburge/" class="submenu__link">Аренда жилья</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/realty/doska/zagorod/" class="submenu__link">Загородные дома и участки</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/realty/doska/com/" class="submenu__link">Коммерческая недвижимость</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/realty/doska/live/?object_type=garage&location=0" class="submenu__link">Гаражи и паркинги</a>
+                </li>
+                <li class="submenu__elem">
+                    <a class="b-submenu-item__bank-zajavka__btn" style="margin-top: 10px;" href="http://66.ru/realty/doska/live/add-adv/">Подать объявление</a>
+                </li>
+            </ul>
+            <ul class="submenu__list grid__module grid__module_col_33 grid__module_span_29">
+                <li class="submenu__elem submenu__elem_size_l">
+                    <a href="http://66.ru/realty/prodaja-kvartir-v-novostroikah-ekaterinburga/" class="submenu__link">Новостройки</a>
+                </li>
+                <!--li class="submenu__elem">
+                    <a target="_blank" href="http://www.brusnika-ural.ru/objects/kvartal_novatorov/?utm_source=66.ru&utm_medium=66ruNVSP&utm_campaign=66&origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1105); width: 95%;">
+                    <span class="case__desc">ЖК на Новаторов</span>
+                    </a>
+                </li-->
+
+                <li class="submenu__elem">
+                    <a target="_blank" href="http://66.ru/go/http://www.brusnika-ural.ru/objects/kamennyy_ruchey/?utm_source=66ruVSP&utm_medium=banner&utm_campaign=66&origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1215); width: 95%;">
+                    <span class="case__desc">ЖК «Каменный ручей»</span>
+                    </a>
+                </li>
+                <!--li class="submenu__elem">
+                    <a href="http://66.ru/go/http://66.ru/realty/objects/49/?origin=head" class="case" style="background-image: url(http://s.66.ru/localStorage/collection/f6/33/89/19/f6338919.png); width: 95%;">
+                    <span class="case__desc">Жилой комплекс «Камелот»</span>
+                    </a>
+                </li-->
+            </ul>
+
+            <ul class="submenu__list grid__module grid__module_col_63 grid__module_span_29">
+
+                <li class="submenu__elem submenu__elem_size_l">
+                    <a href="http://66.ru/realty/community/" class="submenu__link">Коттеджные посёлки</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/go/http://www.villa66.ru/?origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1098); width: 95%;" target="_blank">
+                    <span class="case__desc">Заповедник, загородный поселок</span>
+                    </a>
+                    <!--a href="http://66.ru/go/http://66.ru/realty/community/102/?origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1183); width: 95%;">
+                    <span class="case__desc">КП «Новый исток»</span>
+                    </a>
+                    <a href="http://66.ru/go/http://www.zgorka.ru/?origin=head" class="case" style="background-image: url(http://dropbucket.ru/id/1187); width: 95%;" target="_blank">
+                    <span class="case__desc">Загородный комплекс «Золотая Горка»</span>
+                    </a-->
+                </li>
+
+            </ul>
+            <ul class="submenu__list grid__module grid__module_col_93 grid__module_span_26">
+                <li class="submenu__elem">
+                    <a href="http://66.ru/realty/news/" class="submenu__link">Новости</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/doska/rate/" class="submenu__link">Рейтинг домов</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/bank/hypothec/" class="submenu__link">Ипотечные программы</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div></div>
+</li>
+<li class="main-menu__elem">
+	<a href="http://66.ru/auto/" class="main-menu__link">
+	Авто</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<style type="text/css">
+.b-header-menu #b-header-menu__item__sub__wrap_1 {padding-right: 0 !important;}
+
+.submenu__link.submenu__link_nohover_yes:hover { color: #4d660f; }
+</style>
+
+<div class="layout">
+    <div class="layout__base">
+        <div class="grid">
+            <ul class="submenu__list grid__module submenu__list_separator_left grid__module_col_1 grid__module_span_29">
+                <li class="submenu__elem">
+                    <span class="submenu__link submenu__link_nohover_yes submenu__elem_size_l" style="border-bottom: 0;">Продажа автомобилей</span>
+                </li>
+                <!--li class="submenu__elem">
+                    <a href="http://66.ru/auto/dealer/" class="submenu__link">Новые от дилеров</a>
+                </li-->
+                <li class="submenu__elem">
+                    <a href="http://66.ru/auto/doska/" class="submenu__link">Объявления о продаже автомобилей</a>
+                </li>
+                <li class="submenu__elem">
+                    <a class="b-submenu-item__bank-zajavka__btn" style="margin-top: 15px;" href="http://66.ru/auto/doska/add-adv/">Подать объявление</a>
+                </li>
+            </ul>
+            <ul class="submenu__list grid__module grid__module_col_33 grid__module_span_23">
+                <li class="submenu__elem">
+                    <a href="http://66.ru/auto/news/" class="submenu__link">Новости</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/auto/test-drive/" class="submenu__link">Тест-драйвы</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/auto/probki/" class="submenu__link">Пробки</a>
+                </li>
+                <li class="submenu__elem">
+                    <a href="http://66.ru/bank/autocredit/" class="submenu__link">Автокредиты</a>
+                </li>
+            </ul>
+            <div class="grid__module grid__module_col_52 grid__module_span_85">
+                    <a href="/auto/news/169374/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/a4/ad/05/9e/a4ad059e_resizedScaled_300to130.jpg);">
+        <span class="case__desc">За пригоршню долларов: первая встреча с бюджетным хетчбэком Datsun mi-Do  <span class="case__comments">(26)</span></span>
+    </a>
+    <a href="/auto/news/168263/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/bf/c6/ec/e1/bfc6ece1_resizedScaled_300to130.jpg);">
+        <span class="case__desc">«Инспектор Гаджет», или Скользкий тест революционного Audi TT  <span class="case__comments">(18)</span></span>
+    </a>
+    <a href="/auto/news/151486/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/ef/fd/a9/6./effda96_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Хит 66.ru. Делай как Шуми: вживаемся в роль пилота гоночной «формулы»  <span class="case__comments">(5)</span></span>
+    </a>
+    <a href="/auto/news/164387/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/5c/63/ea/84/5c63ea84_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Хит 66.ru. Масти Rosso Corsa: объезжаем необузданную Ferrari 458 Italia Spider  <span class="case__comments">(20)</span></span>
+    </a>
+
+            </div>
+        </div>
+    </div>
+</div></div>
+</li>
+<IDXSKIP><li class="main-menu__elem">
+	<a href="http://66.ru/talk/" class="main-menu__link">
+	Общение</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<style type="text/css">
+.b-header-menu #b-header-menu__item__sub__wrap_4 {padding-right: 0 !important;}
+</style>
+
+<div class="layout__base">
+        <div class="grid">
+            <ul class="submenu__list submenu__list_separator_left grid__module grid__module_col_61 grid__module_span_30">
+                <li class="submenu__elem submenu__elem_size_l submenu__elem_hilite_yes">
+                    <a href="http://66.ru/fulllenta/" class="submenu__link">Развернутая лента</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/users/" class="submenu__link">Пользователи</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/photo/" class="submenu__link">Фото</a>
+                </li>
+            </ul>
+        </div>
+    </div></div>
+</li></IDXSKIP>
+<li class="main-menu__elem">
+	<a href="http://66.ru/afisha/" class="main-menu__link">
+	Афиша</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<style type="text/css">
+.b-header-menu #b-header-menu__item__sub__wrap_5 {padding-right: 0 !important;}
+</style>
+
+<div class="layout__base">
+        <div class="grid">
+            <ul class="submenu__list submenu__list_separator_left grid__module grid__module_col_71 grid__module_span_20">
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/afisha/cinema/" class="submenu__link submenu__elem_hilite_yes">Кино</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/afisha/event/" class="submenu__link">События</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l">
+                    <a href="http://66.ru/afisha/tv/" class="submenu__link">Телепрограмма</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/afisha/photoreportage/" class="submenu__link">Фотоотчеты</a>
+                </li>
+            </ul>
+            <div class="grid__module grid__module_col_1 grid__module_span_70">
+    <a href="/auto/news/168950/" class="case" style="background-image: url();">
+        <span class="case__desc">Мега-Aston и старичок-Defender: раскрыты тачки нового Бонда  <span class="case__comments">(2)</span></span>
+    </a>
+    <a href="/news/freetime/167839/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/29/99/d5/14/2999d514_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Первый блокбастер года: стоит ли смотреть «Исход: цари и боги»?  <span class="case__comments">(12)</span></span>
+    </a>
+    <a href="/news/freetime/165232/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/51/c0/97/ab/51c097ab_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Пытка спецэффектами: авторы фильма «Река» задешево порылись в подсознании Мавроди  <span class="case__comments">(28)</span></span>
+    </a>
+    <a href="/news/freetime/161313/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/81/41/11/a0/814111a0_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Отцы vs дети: смотрим главный блокбастер лета — «Неудержимые-3»  <span class="case__comments">(12)</span></span>
+    </a>
+
+
+            </div>
+        </div>
+    </div></div>
+</li>
+<li class="main-menu__elem">
+	<a href="http://66.ru/gurman/" class="main-menu__link">
+	Еда</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<style type="text/css">
+.b-header-menu #b-header-menu__item__sub__wrap_11 {padding-right: 0 !important;}
+</style>
+
+<div class="layout__base">
+        <div class="grid">
+            <ul class="submenu__list submenu__list_separator_left grid__module grid__module_col_71 grid__module_span_17">
+                <li class="submenu__elem submenu__elem_size_l  submenu__elem_hilite_yes">
+                    <a href="http://66.ru/gurman/house/" class="submenu__link">Все заведения</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/gurman/house/bar/" class="submenu__link">Бары</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l">
+                    <a href="http://66.ru/gurman/house/restaurant/" class="submenu__link">Рестораны</a>
+                </li>
+                <li class="submenu__elem submenu__elem_size_l ">
+                    <a href="http://66.ru/gurman/house/dostavka/" class="submenu__link">Доставка еды</a>
+                </li>
+            </ul>
+            <div class="grid__module grid__module_col_1 grid__module_span_70">
+    <a href="/news/freetime/167308/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/da/9f/af/86/da9faf86_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Небритый повар. Антисанкционная закуска по-русски с яблоком и творожным сыром  <span class="case__comments">(12)</span></span>
+    </a>
+    <a href="/news/freetime/167001/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/b4/94/01/2d/b494012d_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Небритый повар. Тартарим по-французски с авокадо и красной икрой</span>
+    </a>
+    <a href="/news/freetime/166713/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/d8/c4/e5/b2/d8c4e5b2_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Небритый повар. Маринуем, жарим и запекаем новогоднюю английскую курочку  <span class="case__comments">(8)</span></span>
+    </a>
+    <a href="/news/freetime/166393/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/95/60/f7/5c/9560f75c_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Небритый повар. Нарезаем новогодний салат по итальянской системе  <span class="case__comments">(18)</span></span>
+    </a>
+
+
+            </div>
+        </div>
+    </div></div>
+</li>
+<IDXSKIP><li class="main-menu__elem">
+	<a href="http://66.ru/skidki/" class="main-menu__link">
+	«Клуб 66»</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<div class="layout">
+	<div class="layout__base">
+	<div class="grid">
+	<div class="submenu">
+	<ul class="submenu__list grid__module grid__module_col_1 grid__module_span_20">
+	<li class="submenu__elem">
+	<a href="http://66.ru/skidki/company/" class="submenu__link">Где дают скидки</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/skidki/visa/" class="submenu__link">Как получить карту</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/skidki/action/" class="submenu__link">Акции, распродажи</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li></IDXSKIP>
+<li class="main-menu__elem">
+	<a href="http://66.ru/health/" class="main-menu__link">
+	Здоровье</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<style type="text/css">
+.b-header-menu #b-header-menu__item__sub__wrap_14 {padding-right: 0 !important;}
+</style>
+
+<div class="layout">
+    <div class="layout__base">
+        <div class="grid">
+            <ul class="submenu__list submenu__list_separator_left grid__module grid__module_col_71 grid__module_span_20">
+                <li class="submenu__elem submenu__elem_size_l submenu__elem_hilite_yes">
+                    <a href="http://66.ru/news/" class="submenu__link">Поиск лекарств</a>
+                </li>
+            </ul>
+
+            <div class="grid__module grid__module_col_1 grid__module_span_70">
+    <a href="/health/news/167935/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/53/a7/af/c6/53a7afc6_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Тотальный анализ: в дома Уралмаша поставляют ржавую воду с марганцем  <span class="case__comments">(17)</span></span>
+    </a>
+    <a href="/news/society/163462/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/61/33/c0/dc/6133c0dc_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Зловонные озера и поля нечистот: с высоты следим за большим ремонтом городской канализации  <span class="case__comments">(29)</span></span>
+    </a>
+    <a href="/health/news/167546/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/39/da/1a/12/39da1a12_resizedScaled_300to130.jpg);">
+        <span class="case__desc">Тотальный анализ доказал: СТК обманула, в центре города из-под крана течет ржавая вода  <span class="case__comments">(25)</span></span>
+    </a>
+    <a href="/health/news/167450/" class="case" style="background-image: url(http://s.66.ru/localStorage/news/bd/b2/de/70/bdb2de70_resizedScaled_300to130.jpg);">
+        <span class="case__desc">«Пахнет? Сообщайте адреса». Вонючий кипяток в городских сетях разбавили чистой водой  <span class="case__comments">(23)</span></span>
+    </a>
+
+            </div>
+
+        </div>
+    </div>
+</div></div>
+</li>
+<IDXSKIP><li class="main-menu__elem">
+	<a href="http://66.ru/konkurs/" class="main-menu__link">
+	Конкурсы</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<div class="layout">
+	<div class="layout__base">
+	<div class="grid">
+	<div class="submenu">
+	</div>
+</div>
+</div>
+</div>
+</div>
+</li></IDXSKIP>
+<IDXSKIP><li class="main-menu__elem">
+	<a href="http://66.ru/help/" class="main-menu__link">
+	Справка</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<div class="layout">
+	<div class="layout__base">
+	<div class="grid">
+	<div class="submenu">
+	<ul class="submenu__list grid__module grid__module_col_1 grid__module_span_20">
+	<li class="submenu__elem">
+	<a href="http://66.ru/hotels/" class="submenu__link">Гостиницы Екатеринбурга</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/catalog/" class="submenu__link">Интернет-магазины</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/weather/" class="submenu__link">Погода в Екатеринбурге</a>
+</li>
+<li class="submenu__elem">
+	<a href="http://66.ru/citymap/" class="submenu__link">Карта Екатеринбурга</a>
+</li>
+</ul>
+<ul class="submenu__list grid__module grid__module_col_21 grid__module_span_20">
+	<li class="submenu__elem">
+	<a href="http://study.66.ru/" class="submenu__link">Образование в Екатеринбурге</a>
+</li>
+<li class="submenu__elem">
+	<a href="" class="submenu__link"></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li></IDXSKIP>
+<IDXSKIP><li class="main-menu__elem">
+	<a href="http://66.ru/mail/" class="main-menu__link">
+	Почта</a>
+<div class="main-menu__sub main-menu__sub_width_global submenu">
+	<div class="layout">
+	<div class="layout__base">
+	<div class="grid">
+	<div class="submenu">
+	</div>
+</div>
+</div>
+</div>
+</div>
+</li></IDXSKIP>
+<IDXSKIP><li class="main-menu__elem">
+	<div class="main-menu__more">
+	Еще<span class="main-menu__arrow">
+	▾</span>
+</div>
+<div class="main-menu__sub main-menu__sub_width_global main-menu__sub_padding-bottom_no">
+	<div class="layout">
+	<div class="layout__base">
+	<ul class="flat-sub">
+	<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/news/">
+	Новости</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/main/">
+	Главные</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/auto/news/">
+	Авто</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/politic/">
+	Политика</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/society/">
+	Общество</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/business/">
+	Бизнес</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/incident/">
+	Происшествия!</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/internet/">
+	Интернет</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/freetime/">
+	Отдых</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/hitech/">
+	Наука и техника</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/sport/">
+	Спорт</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/health/news/">
+	Здоровье</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/entertainment/">
+	Безумный мир</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/world">
+	В мире</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/business/news/">
+	Новости компаний</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/blago/">
+	Благотворительность</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/exclusive/">
+	Наши спецпроекты</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/positive/">
+	Добрые новости</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/startup/">
+	Предпринимай</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/bank/">
+	Банки</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/credit_order/">
+	Онлайн заявка на кредит</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/credit/">
+	Кредиты населению</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/hypothec/">
+	Ипотека</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/currency/">
+	Курсы валют</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/forum/">
+	Отзывы о банках</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/analytics/">
+	Короткие новости</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/autocredit/">
+	Автокредиты</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/list/">
+	Список банков</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/rabota/">
+	Работа</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/rabota/">
+	Все вакансии</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/rabota/vbranch1/">
+	Бухгалтерия и финансы</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/rabota/vbranch10/">
+	Логистика, транспорт, склад</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/rabota/vbranch36/">
+	Государственная служба</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/rabota/pervouralsk/">
+	Работа в Первоуральске</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/rabota/kamensk_uralskijj/">
+	Работа в Каменске-Уральском</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/rabota/nizhnijj_tagil/">
+	Работа в Нижнем Тагиле</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/rabota/verkhnjaja_pyshma/">
+	Работа в Верхней Пышме</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="">
+	</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/doska/">
+	Объявления</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/doska/">
+	Доска объявлений</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/auto/doska/">
+	Продажа автомобилей</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/doska/live/?action_type=buy">
+	Продажа жилья</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/doska/my/">
+	Мои объявления</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/doska/com/">
+	Коммерческая недвижимость</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/doska/zagorod/">
+	Загородная недвижимость</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/doska/live/?action_type=lease">
+	Аренда жилья</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/doska/add-adv/">
+	Подать объявление</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/realty/">
+	Недвижимость</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/doska/live/?action_type=buy">
+	Продажа жилья</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/objects/">
+	Новостройки</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/community/">
+	Загородное жилье</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/news/">
+	Новости</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/hypothec/">
+	Ипотечные программы</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/doska/rate/">
+	Рейтинг домов</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/doska/live/?action_type=lease">
+	Аренда жилья</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/realty/doska/com/">
+	Коммерческая недвижимость</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/auto/">
+	Авто</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/auto/catalog/">
+	Каталог автомобилей</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/auto/select/">
+	Подбор автомобиля</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/auto/doska/">
+	Объявления</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/auto/news/">
+	Автоновости</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/auto/test-drive/">
+	Тест-драйвы</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/bank/autocredit/">
+	Автокредиты</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/talk/">
+	Общение</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/users/">
+	Пользователи</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/fulllenta/">
+	Развернутая лента</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/photo/">
+	Фото</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/afisha/">
+	Афиша</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/afisha/cinema/">
+	Кино</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/afisha/event/">
+	События</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/afisha/event/photoreportage/">
+	Фотоотчеты</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/afisha/tv/">
+	ТВ</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/dvdobzor/">
+	DVD-обзоры</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/news/recenz/">
+	Кинорецензии</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/gurman/">
+	Еда</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/gurman/house/">
+	Все заведения</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/gurman/house/bar/">
+	Бары</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/gurman/house/restaurant/">
+	Рестораны</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/gurman/house/dostavka/">
+	Доставка еды</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/skidki/">
+	«Клуб 66»</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/skidki/company/">
+	Где дают скидки</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/skidki/visa/">
+	Как получить карту</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/skidki/action/">
+	Акции, распродажи</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/health/">
+	Здоровье</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/health/pharmacy/">
+	Поиск лекарств</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/konkurs/">
+	Конкурсы</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/help/">
+	Справка</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/hotels/">
+	Гостиницы Екатеринбурга</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/catalog/">
+	Интернет-магазины</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/weather/">
+	Погода в Екатеринбурге</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://66.ru/citymap/">
+	Карта Екатеринбурга</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="http://study.66.ru/">
+	Образование в Екатеринбурге</a>
+</li>
+<li class="sub__elem ">
+	<a class="sub__link" href="">
+	</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="flat-sub__elem">
+	<div class="sub">
+	<ul class="sub__list sub__list_separator_left">
+	<li class="sub__elem sub__elem_size_l">
+	<a class="sub__link" href="http://66.ru/mail/">
+	Почта</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li></IDXSKIP>
+</ul>
+
+            </div>
+            <div class="g-col-39 g-span-10 g-main-col-2">
+                    <table class="b-header-auth">
+        <tr>
+            <td class="b-header-auth__tab">
+                <a href="http://auth.66.ru/?providers_set=66,vk,fb,lj,tw&amp;redirectUrl=http%3A%2F%2F66.ru%2Fgporlogin%2F&amp;returnUrl=http%3A%2F%2F66.ru%2Fnews%2Fhitech%2F25501%2F&amp;rand=985711" class="gpor_auth b-header-auth__tab__link" onclick="return false;">
+                    <ins class="b-icon b-icon_pic_login"></ins>
+                    Войти
+                </a>
+                
+                
+                            </td>
+                    </tr>
+    </table>
+    <script type="text/javascript">
+        try {
+            if ($.url().attr('anchor').length > 0) {
+                                $('a.gpor_auth').each(function (i, e) {
+                    var element = $(e);
+                    var href = element.attr('href');
+                    href = href.replace($.url(href).param('returnUrl'), encodeURIComponent(window.location));
+                    element.attr('href', href);
+                });
+                            }
+        }
+        catch (err) {
+        }
+    </script>
+            </div>
+        </div>
+    </div>
+</div>    <script type="text/javascript">$(document).trigger('contentheadload');</script>
+
+
+    <div id="body-wrap" class="ie_layout">
+        <div id="body" class="ie_layout">
+            
+    <div class="submenu_items context"><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/main/">Главные</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/society/">Общество</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/world/">В мире</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/politic/">Политика</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/business/">Бизнес</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/incident/">Происшествия!</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/freetime/">Отдых</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/auto/news/">Авто</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/sport/">Спорт</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/entertainment/">Безумный мир</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/positive/">Позитив</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/intern">Интернатура</a></div><div class="menu_bubbles"><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div></div></div>
+ <div class="page-grid-wrap page-grid-wrap_w-fluid context">
+  <div class="page-grid context">
+   <div class="context">
+
+    <div class="page-col-1-span-10">
+    
+    <div class="grid-15 context">
+        <div class="context">
+
+            <div class="span-15 col-1">
+
+             
+        
+                                    <div class="news_single-view" id="marker-25501">
+                        
+                        <div class="news_single_heading">
+        <h1
+                            class="news_single_heading_title readable ">Asus представила сверхдешевые компьютеры-моноблоки
+                        </h1>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">03.11.2008</i></nowrap>
+            </div>
+
+
+                        <div class="news_single_content content context">
+                            <div class="news_single_content__annotation">
+                                Компания Asus представила свои первые компьютеры-моноблоки из серии Eee Top, сообщает Fudzilla. 
+                            </div>
+                            <div class="news_single_content__photo">
+                                <div class="news_single_content__photo-shadow"></div>
+                                <img src="http://s.66.ru/localStorage/news/d8/ee/b6/f5/d8eeb6f5_resizedScaled_659to494.jpg" alt="Asus представила сверхдешевые компьютеры-моноблоки" />
+                                                            </div>
+                            Они построены на базе 15,6-дюймового сенсорного экрана и называются ET1602 и ET1603. <p> В настоящее время в некоторых онлайновых магазинах для предварительного заказ доступен ET1602 в белом и черном корпусе. Его цена составляет около 734 долларов. </p> <p>Внутри компьютеров установлен процессор Intel Atom N270, работающий с частотой 1,6 гигагерца. Объем оперативной памяти ET1602 и ET1603 равен одному гигабайту, жесткого диска - 160 гигабайтам. </p> <p> Кроме того, оба компьютеры оснащены портом Ethernet, модулем Wi-Fi и 1,3-мегапиксельной веб-камерой. Также у ET1602 и ET1603 есть по два порта USB, карт-ридер и стереодинамики. Оба компьютера работают под управлением Windows XP Home. </p> <p>Единственное различие между ET1602 и ET1603 - видеосистема. В ET1602 установлена интегрированная графика Intel GMA950, в ET1603 - дискретная видеокарта ATI Mobility Radeon HD3450. </p> <p>Впервые о планах по выпуску компьютера-моноблока представители Asus сообщили на выставке Computex2008 в начале июня текущего года. Тогда кодовое название компьютера было Eee Monitor. </p>
+
+                            
+                        </div>
+                                            </div>
+
+
+
+                                        
+
+
+                    
+                <div class="news_single-view">
+                                                                
+                                                            
+
+    
+                <div class="content-block">
+        
+            
+                <h3>Новости на эту же тему</h3>
+
+            
+                </div>
+        
+    
+
+        <ul class="b-news-feed-supplement context">
+                            <li><u>08.10.2008</u>
+                <a href="/news/hitech/24202/">Asus выпустил самые дорогие Eee PC</a>
+                </li>
+                            <li><u>29.08.2008</u>
+                <a href="/news/hitech/22213/">Intel разработал для Индии 115-долларовый компьютер</a>
+                </li>
+                            <li><u>27.08.2008</u>
+                <a href="/news/hitech/22012/">Создан компьютер с энергопотреблением лампочки</a>
+                </li>
+                    </ul>
+                            
+                                            		                                    </div>
+
+                    
+
+    
+                <div class="content-block">
+        
+            
+                <div style="overflow: hidden;">
+<script type="text/javascript">
+    var show_adlift = 'http://show.adlift.ru/515c218f49ac17297e1db410.js';
+    var current_url = window.location;
+var source = source !== undefined ? source : '';
+var bannersource = bannersource !== undefined ? bannersource : '';
+if (source == '') { var current_code = bannersource; } else { var current_code = source; }
+    document.write ("<scr"+"ipt type='text/javascript' src='"+show_adlift);
+    document.write ("?url="+current_url+"&code="+current_code);
+    document.write ("'></scr"+"ipt>");
+    </script>
+</div>
+<div style="height: 20px;"></div>
+
+            
+                </div>
+        
+    
+
+                
+                <div class="b-subscriber js-subscribeWidget">
+    <form type="multipart/formdata" id="yw0" action="/news/subscribe/" method="post">
+<div style="display:none"><input type="hidden" value="119194381c0a562b5126052b0d386acc2bfa3a76" name="YII_CSRF_TOKEN" /></div><div style="visibility:hidden"><input type="hidden" value="1" name="yform_894bd431" id="yform_894bd431" /></div>
+
+    <div class="b-subscriber__container b-subscriber__container_color_dark-green context">
+        <div class="b-subscriber__container__title">Главные новости 66.ru</div>
+        <div class="b-subscriber__container__descr">Только самые важные события. Подпишитесь на ежедневную рассылку.</div>
+    </div>
+    <div class="b-subscriber__container b-subscriber__container_color_soft-green context">
+        <ins class="b-subscriber__container__cnr"></ins>
+        <table class="b-subscriber__container__table">
+            <tr>
+				<td class="b-subscriber__container__table__cell short">
+                    <div class="b-subscriber__container-relative"><label class="b-subscriber__container__table__label" for="">Электронная почта</label></div>
+                </td>
+                <td class="b-subscriber__container__table__cell">
+                    <div class="b-subscriber__container-relative"><input class="grid-span-7" name="NewsSubscribe[email]" id="NewsSubscribe_email" type="text" />
+    <div class="b-form-builder_hint b-form-builder_hint__position_top" style="right: -5px; opacity: 0;"> <div class="b-form-builder_hint__ugol b-form-builder_hint__ugol-left-top"></div> <div class="b-form-builder_hint__frame"> <div class="blc-cn blc-tl"></div> <div class="blc-cn blc-tr"></div> <div class="b-form-builder_hint__content"> <div class="b-form-builder_hint__left-line"></div> <div class="b-form-builder_hint__right-line"></div> <div class="b-user-error-message"> <p>Укажите адрес электронной почты</p> </div> </div> <div class="blc-cn blc-bl"></div> <div class="blc-cn blc-br"></div> </div> </div>
+        <input name="NewsSubscribe[newsId]" id="NewsSubscribe_newsId" type="hidden" value="25501" /><input name="NewsSubscribe[tag]" id="NewsSubscribe_tag" type="hidden" value="0" /><input name="NewsSubscribe[type]" id="NewsSubscribe_type" type="hidden" value="10" /></div>
+                </td>
+                <td class="b-subscriber__container__table__cell short">
+                    <div class="b-btn b-btn_color_green">
+                        <ins class="b-btn__crn-left"></ins>
+                        <ins class="b-btn__crn-right"></ins>
+                        <input type="submit" class="b-btn__submit" name="send" value="" />
+                        <span class="b-btn__text">Подписаться	</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+app.module.register( 'subscribeWidget', b_subscriber, {
+        'containerSelector' : '.js-subscribeWidget',
+
+        'moreSubscribesContext' : ["subscribeWidget","moreSubscribes"],
+        'moreSubscribesSuccessContext' : false,
+        'successContext' : ["subscribeWidget","success"],
+        'errorContext' : ["subscribeWidget","errors"],
+
+
+        'contentSelector' : '.b-subscriber__container_color_soft-green',
+        'formRowSelector' : 'tr',
+        'submitBtnSelector' : '.b-btn_color_green',
+        'submitBtnDisableClass' : 'b-btn_state_inactive',
+        'errorContainerClass' : 'b-form-builder_hint',
+        'errorTextSelector' : '.b-form-builder_hint p',
+
+        'moreLinkClass' : 'b-link_dashed_yes',
+        'moreLinkClassClosed' : 'b-link_layout_toggle-arr-dwn',
+        'moreLinkClassOpened' : 'b-link_layout_toggle-arr-up',
+        'moreLinkText' : 'Подпишитесь на другие новостные рассылки',
+        'moreLinkOpenedText' : 'Подпишитесь на другие новостные рассылки',
+
+        'successTemplate' : function (item) { var res = '<div class="b-subscriber__container b-subscriber__container_color_soft-green context"><a href="'; res += ''; res += '" title="'; res += ''; res += '" class="b-link b-link_color_grey b-link_dashed_yes b-link_img_yes b-link_layout_toggle-arr-dwn"><ins class="b-link__ico">'; res += 'Подпишитесь на другие новостные рассылки'; res += '</ins></a><div class="b-subscriber__container__capture b-subscriber__container__capture_layout_ok b-subscriber__container__capture_state_replaced-in-new-str"><ins></ins>'; res += 'Вы успешно подписались'; res += '</div></div>'; return res; },
+        'moreSubscribesTemplate' : function (moreSubscribes) { var res = '<div class="b-subscriber__container b-subscriber__container_color_soft-green context"><dl class="b-subscriber__container__list">'; for ( x__item in moreSubscribes['items'] ) { var _item = moreSubscribes['items'][x__item]; res += '<dt class="b-subscriber__container__list__item__title">'; res += ''; res += _item['content']; res += ''; res += '</dt> <dd class="b-subscriber__container__list__item__descr">'; res += ''; res += _item['description']; res += ''; res += '</dd>'; } res += '</dl></div><div class="b-subscriber__container b-subscriber__container_color_footer-green context"><ins class="b-subscriber__container__cnr"></ins><table class="b-subscriber__container__table"> <tr> <td class="b-subscriber__container__table__cell short"><div class="b-subscriber__container-relative"><label class="b-subscriber__container__table__label" for="'; res += ''; res += '">'; res += 'Электронная почта'; res += '</label></div></td> <td class="b-subscriber__container__table__cell"><div class="b-subscriber__container-relative">'; res += ''; res += moreSubscribes['input']['content']; res += ''; res += '</div></td> <td class="b-subscriber__container__table__cell short"><div class="b-btn b-btn_color_green"> <ins class="b-btn__crn-left"></ins> <ins class="b-btn__crn-right"></ins> <input type="submit" class="b-btn__submit" name="'; res += ''; res += '" value="'; res += ''; res += '" /> <span class="b-btn__text"> '; res += 'Подписаться'; res += ' </span> </div></td> </tr> </table> </div>'; return res; },
+        'moreSubscribesSuccessTemplate' : function (item) { var res = '<div class="b-subscriber__container b-subscriber__container_color_footer-green context"><div class="b-subscriber__container__capture b-subscriber__container__capture_layout_ok"><ins></ins>'; res += 'Вы успешно подписались'; res += '</div></div>'; return res; }
+    });
+</script>
+                <div class="news_single-view-social">
+                                            
+
+
+        <noindex>
+        <script type="text/javascript">
+            var sharerOptions = { "networks": ["facebook","vk","twitter"],
+            "count": [1,1,1],
+            "template": $('<a />'),
+            "class": "social-button social-button_%network.id%",
+            "label": "Поделиться в %network.name%",
+            "title": null,
+            "description": null,
+            "url": null };
+            var socialzationBlockParams = {"linkText":"Asus \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u043b\u0430 \u0441\u0432\u0435\u0440\u0445\u0434\u0435\u0448\u0435\u0432\u044b\u0435 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u044b-\u043c\u043e\u043d\u043e\u0431\u043b\u043e\u043a\u0438","linkData":{"0":null,"newsId":"25501","section":"hitech"},"link":"http:\/\/66.ru\/news\/hitech\/25501\/","annotation":"\u041a\u043e\u043c\u043f\u0430\u043d\u0438\u044f Asus \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u043b\u0430 \u0441\u0432\u043e\u0438 \u043f\u0435\u0440\u0432\u044b\u0435 \u043a\u043e\u043c\u043f\u044c\u044e\u0442\u0435\u0440\u044b-\u043c\u043e\u043d\u043e\u0431\u043b\u043e\u043a\u0438 \u0438\u0437 \u0441\u0435\u0440\u0438\u0438 Eee Top, \u0441\u043e\u043e\u0431\u0449\u0430\u0435\u0442 Fudzilla. ","imageUrl":"http:\/\/s.66.ru\/localStorage\/news\/d8\/ee\/b6\/f5\/d8eeb6f5_resizedScaled_200to150.jpg","time":"1225708404","inNews":true,"options":{"authorId":null,"sectionId":"6","viewCount":3}};
+        </script>
+        
+
+    
+                <div class="content-block">
+        
+            
+                <style>
+.news-single-explorer {display: none;}
+.t-share__brand-wrap {z-index: -1;}
+</style>
+<script type="text/javascript">
+    var show_adlift = 'http://show.adlift.ru/53cf442f652a04790633307f.js';
+    var current_url = window.location;
+    var current_code = '';
+    document.write ("<scr"+"ipt type='text/javascript' src='"+show_adlift);
+    document.write ("?url="+current_url+"&code="+current_code);
+    document.write ("'></scr"+"ipt>");
+</script>
+
+            
+                </div>
+        
+    
+
+    </noindex>
+                                        </div>
+                
+
+
+                <noindex>
+                    
+                                                                        <a name="comments" class="news_single_content-links context js_toggle_p js_comment-6-14">
+                                                            </a>
+                            <a name="jsCommentForm"></a>
+                            <div>
+                                <div id="comments"></div>
+<div class="js_comments context" id="comments-6-25501">
+	<div class="js_comments-head">
+		<div>   <!-- К этому элементу будет добавляться форма, чтобы не пересекаться с js_comments__opinion-link -->
+			<div class="js_comments__opinion-link" id="jsCommentsOpinionLinkTop">
+				<span class="js_comment-to-object">Комментировать</span>
+			</div>
+		</div>
+		<div class="js_comments__count">
+			<span id="topCountComments">0 комментариев</span>
+		</div>
+		<div class="b-sep"></div>
+	</div>
+	<div id="jsCommentForm" class="rc2 rc-bl rc-br">
+		<form id=""
+			  class="js_comment_form ie_layout"
+			  style="display: none;"
+			  action="/comments/commentAjax/sendComment/" method="post">
+
+			<textarea class="forms_textarea  js_textarea_small commentForm" rows="5" name="Comment[content]" id="Comment_content"></textarea>						<div class="js_comment_form-bottom context">
+				<IDXSKIP><div class="js_comment_form-bottom_but">
+					<i class="button buttons_wrap rc3">
+						<b class="opera_inline-block-wrap">
+							<input class="forms_submit  forms_submit js_comments_forms_submit"
+                        name="submitComment"        id="submit-comment"                                                                type="submit"
+                value="Отправить" />
+						</b>
+					</i>
+				</div></IDXSKIP>
+				<div class="js_comment_form-bottom_text">
+					<IDXSKIP>Ссылки, начинающиеся с http:// автоматически становятся
+					гиперссылками.<br />Также можно использовать </IDXSKIP><IDXSKIP><a class="toggleTagsDescription js-toggleTagsDescription" href="#">теги оформления</a></IDXSKIP>
+				</div>
+				<div class="b-sep"></div>
+				<div class="hintCommentForm" style="display: none">
+					
+
+    
+                <div class="content-block">
+        
+            
+                <div style="font-size: 13px; line-height: 23px;" id="editor_help"><IDXSKIP><b>Форматирование текста</b></IDXSKIP><ul><IDXSKIP><li><b>[b] [/b]</b> – выделенный тегом [b] текст отображается <b>жирным</b>;</li></IDXSKIP><IDXSKIP><li><b>[i] [/i]</b> – выделенный тегом [i] текст отображается <i>наклонным</i>;</li></IDXSKIP><IDXSKIP><li><b>[s] [/s]</b> – выделенный тегом [s] текст отображается <s>зачеркнутым</s>;</li></IDXSKIP><IDXSKIP><li><b>[left] [/left]</b>, <b>[center] [/center]</b>, <b>[right] [/right]</b> - выделенный этими тегами текст выравнивается по левому, правому краям или по центру;</li></IDXSKIP><IDXSKIP><li><b>[quote][/quote]</b> – выделенный текст выводится цитатой.</li></IDXSKIP></ul><IDXSKIP><b>Вставки в текст</b></IDXSKIP><ul><IDXSKIP><li><b>[url=http://66.ru]Это ссылка на сайт[/url]</b> – добавляет ссылку в текст;</li></IDXSKIP><IDXSKIP><li><b>[user]НИКНЕЙМ[/user]</b> – добавляет ссылку на пользователя НИКНЕЙМ, если он зарегистрирован на 66.ru. Если такого пользователя нет, то имя выводится обычным текстом. В теге [user] [/user] можно указать ID пользователя на сайте. Это тоже сработает;</li></IDXSKIP><IDXSKIP><li><b>[img] [/img]</b> – вставляет изображение. Между тегами указывайте полный адрес картинки в интернете;</li></IDXSKIP><IDXSKIP><li><b>[photo] [/photo]</b> – вставляет картинку, если между тегами указан ID фотографии из фотоальбомов 66.ru. Готовый код для вставки фотографии можно получить на странице любой незакрытой фотографии;</li></IDXSKIP><IDXSKIP><li><b>[video] [/video]</b> – вставляет видеоролик, если между тегами указан ID видеоролика, загруженного на 66.ru;</li></IDXSKIP><IDXSKIP><li><b>[photoalbum] [/photoalbum]</b> – вставляет фотоальбом с прокруткой, если между тегами указан ID альбома. Готовый код для вставки можно получить на странице любого незакрытого фотоальбома;</li></IDXSKIP><IDXSKIP><li><b>[audio] [/audio]</b> – вставляет mp3 файл, предварительно загруженный на 66. Тоже по ID;</li></IDXSKIP><IDXSKIP><li><b>[---cut---]</b> – используется только в текстах постов. Скрывает под кат часть текста, следующую за тегом (будет написано «читать далее»).</li></IDXSKIP></ul></div>
+
+            
+                </div>
+        
+    
+
+				</div>
+			</div>
+			<input class="forms_hidden  js_comment_object-id"
+                        name="objectId"                                                                        type="hidden"
+                value="25501" />
+			<input class="forms_hidden  js_comment_object-type"
+                        name="objectType"                                                                        type="hidden"
+                value="6" />
+		</form>
+	</div>
+	<div id="comments-not-collapsed" class="js_comments-wrap">
+								
+
+	</div>
+	<div id="comments-tree" class="js_comments-wrap hidden">
+								
+
+	</div>
+	<div id="comments-toggle-all" class="all-comments-wrap rc5"><span class="all-comments">Показать все комментарии</span>
+		<span class="more-comment" style="font-weight: bold;">(еще -2)</span>
+	</div>
+	<IDXSKIP><div>   <!-- К этому элементу будет добавляться форма, чтобы не пересекаться с js_comments__opinion-link -->
+		<div id="jsCommentsOpinionLinkBottom" class="js_comments__opinion-link">
+			<span class="js_comment-to-object">Комментировать</span>
+		</div>
+	</div></IDXSKIP>
+	<div></div> </div>
+
+<div id="remove_comment_popup" style="display:none">
+	<table style="width:100%">
+		<tr style="height: 70px;">
+			<td style="width: 70px; vertical-align: top; padding-top: 10px;">
+				<img src="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/img/confirm_ico.gif" style="width: 37px; height: 34px; visibility: visible;">
+			</td>
+			<td style="color: #424242; font-size: 12px; vertical-align: top; padding-top: 17px;">
+				<div><b><IDXSKIP>Вы уверены, что хотите удалить запись?</IDXSKIP></b></div>
+			</td>
+		</tr>
+		<tr style="height: 40px;">
+			<td align="center" style="white-space: nowrap; border-top: 1px solid #D2D1CB;" colspan="2">
+				<div style="margin-top: 15px;">
+					<input id="button-submit" style="width: 68px; height: 16px" src="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/img/button_yes.gif" type="image" alt="Да"     title="Да">&nbsp;
+					<input id="button-cancel" style="width: 68px; height: 16px" src="http://t.66.ru/dd54290f4078802205f7b4a2fb3cbc4bf7cc28c9/img/cancel.gif"     type="image" alt="Отмена" title="Отмена">
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<script type="text/javascript">
+	$('#comments-6-25501').commentsTree({
+		objectId: 25501,
+		objectType: 6,
+		commentType: 5,
+		phrase: "Комментировать",
+		phraseAdd: 'Добавить комментарий',
+		numOfComments: 0,
+        showFullTree: 0
+	});
+
+</script>
+
+                            </div>
+                                                            </noindex>
+
+
+
+                <div class="news_single_content-links context" style="display: none">
+                    <!--p class="news_single_content-links_views">
+                        <a href="">Распечатать</a>
+                    </p-->
+                </div>
+
+
+
+                <div class="news_single-view">
+
+                    
+
+
+                    
+                                            
+<div>
+
+                <div class="news-list__title">
+                            <a href="/news/hitech/">Другие новости раздела &laquo;Наука и техника&raquo;</a>
+                    </div>
+        <noindex>
+            <div class="news-list context">
+                <ul>
+                                                                        <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/169418/">
+                    <img src="http://s.66.ru/localStorage/news/f1/d3/23/88/f1d32388_resizedScaled_100to73.jpg" alt="Жители Екатеринбурга увидят солнечное затмение в день весеннего равноденствия" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/169418/">Жители Екатеринбурга увидят солнечное затмение в день весеннего равноденствия</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">24.02 [13:50]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/hitech/169418/#comments">6<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">В следующий раз аналогичное астрономическое событие  произойдет в 2033 году.</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                                                                <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/169411/">
+                    <img src="http://s.66.ru/localStorage/news/94/0b/c4/b8/940bc4b8_resizedScaled_100to56.jpg" alt="«Привет, Сири»: Apple научится понимать русскую речь уже в марте" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/169411/">«Привет, Сири»: Apple научится понимать русскую речь уже в марте</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">24.02 [10:58]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/hitech/169411/#comments">9<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">Поддержка русских голосовых сообщений появится в новом обновлении iOS.</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                                                                <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/169046/">
+                    <img src="http://s.66.ru/localStorage/news/9c/80/19/ba/9c8019ba_resizedScaled_100to66.jpg" alt="Сеть «ВКонтакте» под нажимом Apple удалила музыку из мобильных приложений" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/169046/">Сеть «ВКонтакте» под нажимом Apple удалила музыку из мобильных приложений</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">12.02 [10:22]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/hitech/169046/#comments">11<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">В обновленных версиях приложений на IPhone и IPad отсутствует раздел «аудио».</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                                                                <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/168938/">
+                    <img src="http://s.66.ru/localStorage/news/e7/3b/5e/2e/e73b5e2e_resizedScaled_100to66.jpg" alt="3D-печать, технические инсталляции и битва роботов: в Екатеринбурге прошла «ТехноНочь»" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/168938/">3D-печать, технические инсталляции и битва роботов: в Екатеринбурге прошла «ТехноНочь»</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">09.02 [17:11]</i></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">Фестиваль «Город ТехноТворчества» продлится в городе до 12 февраля.</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                                                                <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/168918/">
+                    <img src="http://s.66.ru/localStorage/news/6b/f1/20/af/6bf120af_resizedScaled_100to66.jpg" alt="Чистая вода из ядовитых стоков: ученые сэкономили пышминским металлургам 3 млн" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/168918/">Чистая вода из ядовитых стоков: ученые сэкономили пышминским металлургам 3 млн</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">09.02 [15:39]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/hitech/168918/#comments">17<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">Целый год они изучали патенты, испытывали технологию в лаборатории и на опытном производстве. В итоге нашли простой способ очищать «обогащенные» мышьяком и селеном растворы на 99,9%.</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                                                                <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/168317/">
+                    <img src="http://s.66.ru/localStorage/news/35/c0/fc/d1/35c0fcd1_resizedScaled_100to75.jpg" alt="Партия сказала: «Надо!» Роскосмос должен восстановить лидерство России в освоении космоса" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/168317/">Партия сказала: «Надо!» Роскосмос должен восстановить лидерство России в освоении космоса</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">22.01 [20:39]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/hitech/168317/#comments">13<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">Вице-премьер Дмитрий Рогозин назвал несколько основных задач, которые нужно выполнить  космическому агентству.</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                                                                <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/168167/">
+                    <img src="http://s.66.ru/localStorage/news/ed/62/1b/09/ed621b09_resizedScaled_100to66.jpg" alt="К нам летит брат челябинского метеорита: к Земле приблизится астероид 2004 BL86" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/168167/">К нам летит брат челябинского метеорита: к Земле приблизится астероид 2004 BL86</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">19.01 [12:45]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/hitech/168167/#comments">17<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">Небесное тело пролетит в непосредственной близости от нашей планеты впервые за 200 лет.</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                                                                <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/168148/">
+                    <img src="http://s.66.ru/localStorage/news/2a/15/fa/e1/2a15fae1_resizedScaled_100to68.jpg" alt="Космические проблемы: на МКС у американцев поломалась сигнализация, у россиян — туалет" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/168148/">Космические проблемы: на МКС у американцев поломалась сигнализация, у россиян — туалет</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">18.01 [17:49]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/hitech/168148/#comments">22<i class="invisible"> комментария</i></a></noindex></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">Оба инцидента признаны некритическими.</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                                                                <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/168144/">
+                    <img src="http://s.66.ru/localStorage/news/91/13/45/67/91134567_resizedScaled_100to66.jpg" alt="Студент УрФУ доказал существование жизни после смерти" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/168144/">Студент УрФУ доказал существование жизни после смерти</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">18.01 [13:24]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/hitech/168144/#comments">82<i class="invisible"> комментария</i></a></noindex></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">Он даже вывел математическую формулу, которая объясняет его теорию.</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                                                                <li class="news_section-news-list_item context">                                                                                
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/hitech/168065/">
+                    <img src="http://s.66.ru/localStorage/news/44/19/ac/0d/4419ac0d_resizedScaled_100to77.jpg" alt="Одним смартфоном не обойдутся. Yota Devices выпустит двусторонний планшет" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                        <td class="news_single__content" style="margin-left:118px;">
+                    
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title readable "><a href="/news/hitech/168065/">Одним смартфоном не обойдутся. Yota Devices выпустит двусторонний планшет</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">15.01 [16:04]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/hitech/168065/#comments">4<i class="invisible"> комментария</i></a></noindex></nowrap>
+            </div>
+
+                                            <p class="news_single_annotation readable">Цена гаджета будет кусаться.</p>
+                                    </td>
+
+            </tr>
+    </table>
+</li>
+                                                            </ul>
+            </div>
+        </noindex>
+
+        <div class="context news-more-link">
+            <div class="inline-block news-more-link__link-more">
+                                    <a href="/news/hitech/">Больше новостей раздела &laquo;Наука и техника&raquo;&nbsp;<ins class="news-more-link__link-more-ico"></ins></a>
+                            </div>
+        </div>
+        <div style="height: 20px"></div>
+    </div>
+                                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="page-col-11-span-9">
+
+            <div class="b-fluid-fixed__global">
+                
+
+    
+                <div class="content-block">
+        
+            
+                <div id="wideAdb"></div>
+<div id="wideScrollAdb"></div>
+
+
+            
+                </div>
+        
+    
+
+            </div>
+
+            <div class="b-fluid-fixed__fixed">
+
+                                                         
+
+    
+                <div class="content-block">
+        
+            
+                <style type="text/css">
+a.creditApplication:link,
+a.creditApplication:visited,
+a.creditApplication:hover,
+a.creditApplication:active {
+     outline: none;
+     color: #fff;
+     text-decoration: none;
+}
+.creditApplication {
+     position:relative;
+     display: block;
+     margin-bottom: 10px;
+}
+.creditApplicationTextBox {
+     float: left;
+     background: url(http://t.66.ru/banks/img/creditAppImg/str.png) center right no-repeat;
+     padding-right: 20px;
+     text-align: right;
+     margin-top: 5px;
+     padding-left: 5px;
+}
+.creditApplicationTextVer2 {
+     vertical-align: middle;
+     text-decoration: none;
+     text-transform: uppercase;
+     border-bottom: none;
+     text-shadow: 0px 1px 0px #000;
+     background: url(http://t.66.ru/banks/img/creditAppImg/dotted.png) 0 bottom repeat-x;
+     position: relative;
+     white-space: nowrap;
+     position: relative;
+     padding-bottom: 1px;
+     text-align: right;
+     font: bold 12px/14px Arial, Tahoma, Sans-Serif;
+}
+.creditApplicationTable {
+     display: table; 
+     width: 100%; 
+     height: 38px;
+}
+.creditApplicationTableCol {
+     display: table-cell; 
+}
+.creditApplicationTableCol1 {
+     text-align: right; 
+     vertical-align: middle; 
+     padding: 0 10px 5px 0;
+}
+.creditApplicationTableCol2 {
+     vertical-align: top; 
+     width: 1%; 
+     padding-right: 5px;
+}
+.creditApplicationCounter {
+     background: url(http://t.66.ru/banks/img/creditAppImg/counter.png) 0 top no-repeat;
+     width: 102px;
+     height: 20px;
+     display: block;
+     color: #000;
+     text-decoration: none;
+     font-family: Verdana;
+     font-weight: bold;
+}
+.creditApplicationCounterLabel {
+    display: block;
+    font-size: 11px;
+    position: relative;
+    text-decoration: none;
+    margin-top: 4px;
+     margin-bottom: 2px;
+}     
+.creditApplicationCounter b {
+     display: block;
+     text-align: right;
+     float: right;
+     font-size: 12px;
+     letter-spacing: 11px;
+     position: relative;
+     right: -5px;
+     top: 3px;
+}
+.creditApplicationVer3 {
+     background: url(http://t.66.ru/banks/img/creditAppImg/v3_bg.png) 0 0 repeat-x;
+     height: 62px;
+     text-align: center;
+     min-width: 200px;
+}
+.creditApplication-ver3L,
+.creditApplication-ver3R {
+     position:absolute;
+     top: 0px;
+     width: 7px;
+     height: 62px;
+     display: block;
+     background: url(http://t.66.ru/banks/img/creditAppImg/v3_leftCnr.png);
+     background-repeat: no-repeat;
+}
+.creditApplication-ver3L {
+     background-position: 0 0;
+     left: -7px;
+}
+.creditApplication-ver3R {
+     background-position: -7px 0;
+     right: -7px;     
+}
+.creditApplicationVer3TextBot {
+     position: absolute;
+     font-size: 11px;
+     bottom: 7px;
+     left: 5px;
+     width: 100%;
+}
+</style>
+
+<script type="text/javascript"> 
+</script>
+
+<!--_script type="text/javascript">
+     $(document).ready(function() {
+          $.getScript('http://www.66.ru/e/banki/jsblockbanki.js', function(data){
+                  $('.creditApplicationCounter b').html(banki_order_fiz_approved_count);
+               });
+          });
+</_script-->
+
+<div id="runBanner"> 
+
+<div id="newsRightAdb"></div>
+
+<!--div style="margin: 10px 0 0 5px; width: 230px;" id="creditOrderBlock">
+<a href="http://www.66.ru/bank/credit_order/" class="creditApplication creditApplicationVer3">
+     <ins class="creditApplication-ver3L"></ins>
+     <ins class="creditApplication-ver3R"></ins>
+     <span class="creditApplicationTable">
+          <span class="creditApplicationTableCol creditApplicationTableCol1">
+          <span class="creditApplicationTextBox">
+          <ins class="creditApplicationTextVer2">
+               <ins class="creditApplicationStrVer2"></ins>
+               Заявка<br>на кредит
+          </ins>                                                  
+          </span>
+          </span>
+          <span class="creditApplicationTableCol creditApplicationTableCol2">
+          <ins class="creditApplicationCounterLabel">обработано заявок</ins>
+          <ins class="creditApplicationCounter"><b></b></ins>
+          </span>
+     </span>
+     <span class="creditApplicationVer3TextBot">заявку принимают 25 банков</span>
+</a>
+</div-->
+</div>
+
+<!--_script type="text/javascript">
+  $(document).ready(function () {
+    $('#creditOrderBlock .creditApplication').click( function() {
+      // push GA Universal event
+      ga('send', 'event', 'banki', 'FollowCreditOrderBanner', window.location.href);
+      // push GA event
+      _gaq.push(['_trackEvent', 'banki', 'FollowCreditOrderBanner', window.location.href]);
+      // push YAMetrika event
+      yaCounter1519197.reachGoal('FollowCreditOrderBanner'); 
+    });
+  });
+</_script-->
+
+
+            
+                </div>
+        
+    
+
+        
+
+    
+
+    
+                <div class="content-block">
+        
+            
+                <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?20"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 0, width: "240", height: "300"}, 23350715);
+</script>
+
+<!--p><b><h3>Наши партнеры:</h3></b></p>
+<p>
+<a href="http://www.genesis-law.ru/" Target="_blank"><center><Img align=center src="http://s.66.ru/localStorage/news/85/f1/76/84/85f17684_resizedScaled_230to168.jpg" Width="200"  align="center"></center> </a></p>
+<p>
+<a href="http://www.vipcomments.tv" Target="_blank"><center><Img align=center src="http://s.66.ru/photos/1/65/12/525e8366a4e63_normal_700.jpg?1381925785" Width="200"  align="center"></center> </a></p>
+<p>
+<a href="http://www.echoekb.ru/news/" Target="_blank"><center><Img align=center src="http://s.66.ru/photos/1/42/30/4ffdf037f3a25_normal_700.jpg?1340608216" Width="200"  align="center"></center> </a></p>
+<p>
+<a href="http://www.dkvartal.ru/" Target="_blank"><center><Img align=center src="http://s.66.ru/photos/1/42/30/4ffdf037d412c_normal_700.jpg?1340608141" Width="200"  align="center"></center> </a></p>
+<p>
+<a href="http://www.viberiradio.ru/stations/113/6/" Target="_blank"><center><Img align=center src="http://s.66.ru/photos/1/42/52/4ffdf1a3dccce_normal_700.jpg?1340882861" Width="200"  align="center"></center> </a></p>
+<p>
+<a href="http://www.expert-ural.com" Target="_blank"><center><Img align=center src="http://s.66.ru/photos/1/46/26/503b170271db2_normal_700.jpg?1346049909" Width="200"  align="center"></center> </a></p>
+<p>
+<a href="http://www.rockarsenal.ru" Target="_blank"><center><Img align=center src="http://s.66.ru/photos/1/48/39/50754757da499_normal_700.jpg?1349863329" Width="200"  align="center"></center> </a></p>
+<p>
+<a href="http://vk.com/club58309606" Target="_blank"><center><Img align=center src="http://s.66.ru/photos/1/63/63/5228366b8dab6_normal.jpg" Width="120"  align="center"></center></a></p>
+<p>
+<a href="http://www.maximum.ural.ru/" Target="_blank"><center><Img align=center src="http://s.66.ru/photos/1/55/66/5149399d388de_normal_700.jpg?1363753431" Width="200"  align="center"></center> </a></p>
+<p>
+<a href="http://www.avtoradio.ru/" Target="_blank"><center><Img align=center src="http://s.66.ru/photos/1/42/4/4ffdee0e68613_normal_700.jpg?1340785046" Width="200"  align="center"></center> </a></p-->
+
+            
+                </div>
+        
+    
+
+             
+
+            </div>
+
+
+            <div class="b-fluid-fixed__fluid">
+
+                                
+                                            
+                                            
+                                                                
+                    
+
+
+                                            <noindex><div class="tm-hourNews">
+<div class="news_cute-news-block news_cute-news-block-last news_cute-news-block-last-hour rc5">
+    <h2 class="news_cute-news-block_heading">Новости часа</h2>
+    <ul class="news_cute-news-block_news-list">
+            <li class="news_cute-news-block_news-list_item ie_layout">
+                            <i class="icon news_news-list_item_cute-marker"> </i>
+                
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title_first readable "><a href="/auto/news/169645/">А они людей возят! Прокуратура не нашла в екатеринбургских маршрутках ни аптечек, ни огнетушителей</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">Вчера [20:27]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/auto/news/169645/#comments">15<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                    </li>
+            <li class="news_cute-news-block_news-list_item ie_layout">
+                                            
+  <div class="frame frames_cute_frame ">
+   <div class="frame_wrap frames_cute_frame_wrap ">
+    <div class="frame_top-left frames_cute_frame_top-left "></div>
+    <div class="frame_top-right frames_cute_frame_top-right "></div>
+    <div class="frame_content ie_layout frames_cute_frame_content ">
+                                                                                                         
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/news/business/169644/">
+                    <img src="http://s.66.ru/localStorage/news/3c/4b/60/dc/3c4b60dc_resizedScaled_60to39.jpg" alt="Владимир Потанин стал самым богатым россиянином в мировом рейтинге Forbes" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                    <td class="news_single__content-first_brd context">
+                <div class="news_single__content-first news_single__content-first-margin-left">
+
+                                                                        
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title_first readable "><a href="/news/business/169644/">Владимир Потанин стал самым богатым россиянином в мировом рейтинге Forbes</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">Вчера [19:53]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/business/169644/#comments">28<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                                            
+                                    </div>
+            </td>
+            </tr>
+    </table>
+
+                
+    </div>
+    <div class="frame_bottom-left frames_cute_frame_bottom-left "></div>
+    <div class="frame_bottom-right frames_cute_frame_bottom-right "></div>
+   </div>
+  </div>
+
+
+
+                    </li>
+            <li class="news_cute-news-block_news-list_item ie_layout">
+                            <i class="icon news_news-list_item_cute-marker"> </i>
+                
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title_first readable "><a href="/news/society/169643/">Грейдеры перепахали тротуары на Уралмаше</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">Вчера [19:20]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/society/169643/#comments">18<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                    </li>
+            <li class="news_cute-news-block_news-list_item ie_layout">
+                            <i class="icon news_news-list_item_cute-marker"> </i>
+                
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title_first readable "><a href="/realty/news/169642/">Застройщикам разрешили продавать квадратные метры на 5 000 дороже</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">Вчера [19:02]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/realty/news/169642/#comments">3<i class="invisible"> комментария</i></a></noindex></nowrap>
+            </div>
+
+                    </li>
+            <li class="news_cute-news-block_news-list_item ie_layout">
+                            <i class="icon news_news-list_item_cute-marker"> </i>
+                
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title_first readable "><a href="/bank/news/169641/">Связной Банк снизил сумму переводов в другие банки до 25 тысяч рублей в день</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">Вчера [18:25]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/bank/news/169641/#comments">14<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                    </li>
+            <li class="news_cute-news-block_news-list_item ie_layout">
+                            <i class="icon news_news-list_item_cute-marker"> </i>
+                
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title_first readable "><a href="/news/incident/169640/">«Есть много версий»: маленькую Любу из Серова ищут водолазы, полицейские и волонтеры</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">Вчера [18:15]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/incident/169640/#comments">4<i class="invisible"> комментария</i></a></noindex></nowrap>
+            </div>
+
+                    </li>
+            <li class="news_cute-news-block_news-list_item ie_layout">
+                            <i class="icon news_news-list_item_cute-marker"> </i>
+                
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title_first readable "><a href="/news/incident/169638/">«У него и справка была»: сокурсники музыканта-убийцы с ВИЗа считают его сумасшедшим</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">Вчера [18:06]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/news/incident/169638/#comments">7<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                    </li>
+            <li class="news_cute-news-block_news-list_item ie_layout">
+                                            
+  <div class="frame frames_cute_frame ">
+   <div class="frame_wrap frames_cute_frame_wrap ">
+    <div class="frame_top-left frames_cute_frame_top-left "></div>
+    <div class="frame_top-right frames_cute_frame_top-right "></div>
+    <div class="frame_content ie_layout frames_cute_frame_content ">
+                                                                                                         
+    
+                
+    
+        <table class="news_single context news_single-with-image">
+    <tr>
+        <!--если надо выводить кратинку -->
+        
+                        <td class="news_single_image">
+                <a href="/auto/news/169614/">
+                    <img src="http://s.66.ru/localStorage/news/9b/01/b6/48/9b01b648_resizedScaled_60to40.jpg" alt="Математика скольжения: рвем уральский лед шипами Porsche 911 Carrera 4S" />
+                </a>
+            </td>
+            
+        
+        <!-- для первой новости другой отступ-->
+
+                    <td class="news_single__content-first_brd context">
+                <div class="news_single__content-first news_single__content-first-margin-left">
+
+                                                                        
+                        <div class="news_single_heading">
+        <div
+                            class="news_single_heading_title_first readable "><a href="/auto/news/169614/">Математика скольжения: рвем уральский лед шипами Porsche 911 Carrera 4S</a></div>
+        
+        <!--Если нужно что б дата переносилась на след строку-->
+        
+        
+        <nowrap><i class="news_single_date inline-block">Вчера [17:10]</i>&nbsp;&nbsp;<noindex><a class="comments-count inline-block" href="/auto/news/169614/#comments">27<i class="invisible"> комментариев</i></a></noindex></nowrap>
+            </div>
+
+                                            
+                                    </div>
+            </td>
+            </tr>
+    </table>
+
+                
+    </div>
+    <div class="frame_bottom-left frames_cute_frame_bottom-left "></div>
+    <div class="frame_bottom-right frames_cute_frame_bottom-right "></div>
+   </div>
+  </div>
+
+
+
+                    </li>
+        </ul>
+    <div class="news_cute-news-block_more-link">
+        <a href="/news/last/">Вся лента новостей</a> →
+    </div>
+</div></div></noindex>
+                    
+                    
+
+    
+                <div class="content-block">
+        
+            
+                <div id="mgAdb"></div>
+
+<style tye="text/css">
+#rt-n-25029 {display: inline-block; width: 100%;}
+#rt-n-25030 {display: inline-block; width: 100%;}
+#rt-n-25032 {display: inline-block; width: 100%;}
+
+#rt-n-25029 .rt-n-25029__title {line-height: 18px;}
+#rt-n-25030 .rt-n-25030__title {line-height: 18px;}
+
+#yandex_ad {display: inline-block !important; width: 100%; margin-bottom: 10px;}
+</style>
+
+<!-- Яндекс.Директ -->
+<div id="yandex_ad"></div>
+<!--_script type="text/javascript">
+(function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+        Ya.Direct.insertInto(47902, "yandex_ad", {
+            stat_id: 1771197,
+            ad_format: "direct",
+            font_size: 1,
+            font_family: "arial",
+            type: "vertical",
+            border_type: "block",
+            limit: 2,
+            title_font_size: 3,
+            border_radius: true,
+            site_bg_color: "FFFFFF",
+            header_bg_color: "F7F0C8",
+            bg_color: "E9EFDB",
+            border_color: "E9EFDB",
+            title_color: "037DD3",
+            url_color: "006600",
+            text_color: "000000",
+            hover_color: "FF5400",
+            no_sitelinks: true
+        });
+    });
+    t = d.documentElement.firstChild;
+    s = d.createElement("script");
+    s.type = "text/javascript";
+    s.src = "http://an.yandex.ru/system/context.js";
+    s.setAttribute("async", "true");
+    t.insertBefore(s, t.firstChild);
+})(window, document, "yandex_context_callbacks");
+</_script-->
+<!--br>
+<div class="news_cute-news-block news_cute-news-block-last">
+ <h2 class="news_cute-news-block_heading">Новости партнеров</h2>
+
+<div id="rt-n-25029"><a href="http://ru.redtram.com" target="_blank">RedTram</a></div>
+<_script type="text/javascript"  language="javascript" charset="UTF-8" src="http://js.ru.redtram.com/n4p/6/6/66.ru_25029.js"></_script>
+
+<div id="n4p_25030"></div>
+<_script type="text/javascript" charset="utf-8" src="http://js.ru.redtram.com/n4p/0/25/ticker_25030.js"></_script>
+
+</div-->
+
+
+<script type="text/javascript" src="http://s.66.ru/misc/orphus/orphus.js?v=201409081032"></script>
+<div style="display:none;"><a href="http://orphus.ru" id="orphus" target="_blank"><img alt="Orphus system" src="http://s.66.ru/misc/orphus/orphus.gif" border="0" width="121" height="21" /></a></div>
+
+
+
+
+
+<style type="text/css">
+#midAdb object {width: 100%; max-height: 285px;}
+#midAdb iframe {width: 100%; max-height: 285px;}
+#midAdb img {width: 100%; max-height: 285px;}
+</style>
+
+<div id="midAdb"></div>
+
+<div style="height: 10px"></div>
+
+            
+                </div>
+        
+    
+
+
+                    
+                
+            </div>
+
+
+
+    </div>
+
+
+
+   </div>
+  </div>
+ </div>
+
+    <div class="submenu_items context"><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/main/">Главные</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/society/">Общество</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/world/">В мире</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/politic/">Политика</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/business/">Бизнес</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/incident/">Происшествия!</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/freetime/">Отдых</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/auto/news/">Авто</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/sport/">Спорт</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/entertainment/">Безумный мир</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/positive/">Позитив</a><div class="b-submenu__separator"></div></div><div class="submenu_items__item "><a class="submenu_items__item-link" href="/news/intern">Интернатура</a></div><div class="menu_bubbles"><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div><div style="visibility: hidden"></div></div></div>
+        </div>
+        <div class="l-branding-footer">
+            <div class="l-branding-footer-repeat"></div>
+            <div class="l-branding-footer-bg"></div>
+            <div class="l-width">
+            </div>
+        </div>
+        <div class="l-push"></div>
+            </div>
+    <script type="text/javascript">$(document).trigger('contentbodyload');</script>
+
+        <!--[if IE 8]></div><![endif]-->
+    <!--[if IE]></div><![endif]-->
+
+</div>
+
+<div class="l-footer">
+    <div class="l-footer-bg"></div>         <div class="l-width">
+        <div class="g-48">
+            <div class="g-col-1 g-span-48">
+
+
+                                        <IDXSKIP><a class="b-footer-logo" href="/">
+                                
+                                <img class="b-footer-logo__pic" src="http://s.66.ru/localStorage/8c/a4/72/99/8ca47299.png">
+                
+                                </a></IDXSKIP>
+                
+
+                                <ul class="b-footer-menu">
+                                            <IDXSKIP><li><a href="http://66.ru/news/">Новости</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/bank/">Банки</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/rabota/">Работа</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/doska/">Объявления</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/realty/">Недвижимость</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/auto/">Авто</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/talk/">Общение</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/afisha/">Афиша</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/gurman/">Еда</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/skidki/">«Клуб 66»</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/health/">Здоровье</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/konkurs/">Конкурсы</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/help/">Справка</a></li></IDXSKIP>
+                                            <IDXSKIP><li><a href="http://66.ru/mail/">Почта</a></li></IDXSKIP>
+                                    </ul>
+
+                <div class="b-footer-seo">
+                    
+
+    
+                <div class="content-block">
+        
+            
+                				<IDXSKIP><ul class="b-footer-links">
+					<li><a href="http://66.ru/about/">О проекте</a></li>
+					<li><a href="http://66.ru/advert/">Размещение рекламы</a></li>
+				</ul></IDXSKIP>
+				<ul class="b-footer-links">
+					<IDXSKIP><li><a href="http://66.ru/agreement/">Пользовательское соглашение</a></li></IDXSKIP>
+					<IDXSKIP><li><a href="http://support.66.ru">Техподдержка</a></li></IDXSKIP>
+				</ul>
+				<IDXSKIP><ul class="b-footer-links">
+					<li><a href="http://66.ru/lite/setmobile/">Мобильная версия</a></li>
+					<li><a href="http://66.ru/rabota/office/82788/">Наши вакансии</a></li>
+				</ul></IDXSKIP>
+
+				<IDXSKIP><ul class="b-footer-links">
+					<li>
+
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script><!--/LiveInternet-->
+
+
+
+
+<!--LiveInternet counter--><script type="text/javascript">document.write("<a href='http://www.liveinternet.ru/click;66' target=_blank><img src='//counter.yadro.ru/hit;66?t14.16;r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u" + escape(document.URL) + ";" + Math.random() + "' border=0 width=88 height=31 alt='' title='LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня'><\/a>")</script><!--/LiveInternet-->
+
+
+<!-- tns-counter.ru -->
+
+
+<!--/ tns-counter.ru -->
+
+<!-- Yandex.Metrika counter -->
+<noscript><div><img src="//mc.yandex.ru/watch/1519197" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<div id="emptyAdb1"></div>
+<div id="emptyAdb2"></div>
+<div id="emptyAdb3"></div>
+<div id="emptyAdb4"></div>
+<div id="emptyAdb5"></div>
+
+				</li>
+				</ul></IDXSKIP>
+
+
+            
+                </div>
+        
+    
+
+                    
+
+                </div>
+
+            </div>
+        </div>
+            </div>
+</div>
+<script type="text/javascript">$(document).trigger('contentfootload');</script>
+
+<img style="position:absolute" src="/lite/counter/?type=10&q=system / news / show / 25501"></img>
+<script type="text/javascript">$(document).trigger('documentbodyloadend');</script>
+<script type="text/javascript" src="http://ptrck.ru/pt.js?s=gpor&amp;bd=h1wre0Mo4QeOjaN4%2BTC7j6IbuuGZ%2B3stzWemuErGtQsvC%2Bm6W9NObm0wWTQQAxRAx1UWKdFcrTDtN%2FGcQIB40w%3D%3D&amp;rf=http%3A%2F%2Fgo.mail.ru%2Fsearch_images"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+
+            $(document).data("commentForm.smiles", {"[;-)]":"http:\/\/s.66.ru\/localStorage\/smiles\/9a\/7e\/55\/5e\/9a7e555e.gif","[:-)]":"http:\/\/s.66.ru\/localStorage\/smiles\/e7\/f9\/7e\/4f\/e7f97e4f.gif","[8-)]":"http:\/\/s.66.ru\/localStorage\/smiles\/51\/bc\/9b\/16\/51bc9b16.gif","[:-D]":"http:\/\/s.66.ru\/localStorage\/smiles\/e8\/12\/96\/3.\/e812963.gif","[lol]":"http:\/\/s.66.ru\/localStorage\/smiles\/67\/a9\/61\/cf\/67a961cf.gif","[%)]":"http:\/\/s.66.ru\/localStorage\/smiles\/a2\/3a\/68\/60\/a23a6860.gif","[:O]":"http:\/\/s.66.ru\/localStorage\/smiles\/fd\/1b\/6f\/3f\/fd1b6f3f.gif","[dance]":"http:\/\/s.66.ru\/localStorage\/smiles\/59\/e1\/46\/66\/59e14666.gif","[dance2]":"http:\/\/s.66.ru\/localStorage\/smiles\/a6\/0c\/de\/2a\/a60cde2a.gif","[dance3]":"http:\/\/s.66.ru\/localStorage\/smiles\/b4\/c2\/ef\/d4\/b4c2efd4.gif","[drink]":"http:\/\/s.66.ru\/localStorage\/smiles\/a8\/3b\/43\/cc\/a83b43cc.gif","[cheese]":"http:\/\/s.66.ru\/localStorage\/smiles\/7f\/10\/c1\/50\/7f10c150.gif","[rock]":"http:\/\/s.66.ru\/localStorage\/smiles\/47\/d5\/cc\/45\/47d5cc45.gif","[popcorn]":"http:\/\/s.66.ru\/localStorage\/smiles\/c9\/b2\/4e\/23\/c9b24e23.gif","[cry]":"http:\/\/s.66.ru\/localStorage\/smiles\/f1\/77\/43\/36\/f1774336.gif","[sleep]":"http:\/\/s.66.ru\/localStorage\/smiles\/ad\/46\/9c\/.g\/ad469c.gif","[nono]":"http:\/\/s.66.ru\/localStorage\/smiles\/b8\/38\/54\/09\/b8385409.gif","[help]":"http:\/\/s.66.ru\/localStorage\/smiles\/e3\/b8\/74\/4e\/e3b8744e.gif","[nose]":"http:\/\/s.66.ru\/localStorage\/smiles\/f7\/fa\/69\/8a\/f7fa698a.gif","[girl]":"http:\/\/s.66.ru\/localStorage\/smiles\/d2\/18\/43\/0.\/d218430.gif","[girl2]":"http:\/\/s.66.ru\/localStorage\/smiles\/4e\/b5\/9b\/8a\/4eb59b8a.gif","[girl3]":"http:\/\/s.66.ru\/localStorage\/smiles\/bf\/6f\/9e\/20\/bf6f9e20.gif","[med]":"http:\/\/s.66.ru\/localStorage\/smiles\/7f\/3e\/c8\/06\/7f3ec806.gif","[angel]":"http:\/\/s.66.ru\/localStorage\/smiles\/8f\/71\/ea\/8c\/8f71ea8c.gif","[aya]":"http:\/\/s.66.ru\/localStorage\/smiles\/fc\/e0\/dd\/08\/fce0dd08.gif","[*CRAZY*]":"http:\/\/s.66.ru\/localStorage\/smiles\/33\/14\/64\/.g\/331464.gif","[isterica]":"http:\/\/s.66.ru\/localStorage\/smiles\/d0\/c3\/f8\/7.\/d0c3f87.gif","[kiss]":"http:\/\/s.66.ru\/localStorage\/smiles\/17\/e3\/98\/5f\/17e3985f.gif","[:-*]":"http:\/\/s.66.ru\/localStorage\/smiles\/60\/33\/63\/21\/60336321.gif","[kissing]":"http:\/\/s.66.ru\/localStorage\/smiles\/3a\/e7\/ed\/79\/3ae7ed79.gif","[love]":"http:\/\/s.66.ru\/localStorage\/smiles\/76\/89\/b9\/b9\/7689b9b9.gif","[love2]":"http:\/\/s.66.ru\/localStorage\/smiles\/e8\/2e\/0d\/0c\/e82e0d0c.gif","[love3]":"http:\/\/s.66.ru\/localStorage\/smiles\/d2\/5c\/a4\/22\/d25ca422.gif","[flowers]":"http:\/\/s.66.ru\/localStorage\/smiles\/23\/86\/a1\/88\/2386a188.gif","[flowers2]":"http:\/\/s.66.ru\/localStorage\/smiles\/a2\/08\/14\/ee\/a20814ee.gif","[manstop]":"http:\/\/s.66.ru\/localStorage\/smiles\/2e\/8f\/6d\/1b\/2e8f6d1b.gif","[womanstop]":"http:\/\/s.66.ru\/localStorage\/smiles\/b5\/48\/d7\/66\/b548d766.gif","[\\m\/]":"http:\/\/s.66.ru\/localStorage\/smiles\/e0\/12\/85\/4.\/e012854.gif","[dead]":"http:\/\/s.66.ru\/localStorage\/smiles\/d2\/ca\/33\/f6\/d2ca33f6.gif","[write]":"http:\/\/s.66.ru\/localStorage\/smiles\/a3\/d6\/be\/08\/a3d6be08.gif","[music]":"http:\/\/s.66.ru\/localStorage\/smiles\/25\/0b\/8b\/34\/250b8b34.gif","[type]":"http:\/\/s.66.ru\/localStorage\/smiles\/f0\/0b\/7d\/f.\/f00b7df.gif","[pioner]":"http:\/\/s.66.ru\/localStorage\/smiles\/fe\/da\/b2\/75\/fedab275.gif","[think]":"http:\/\/s.66.ru\/localStorage\/smiles\/da\/e6\/13\/78\/dae61378.gif","[cafe]":"http:\/\/s.66.ru\/localStorage\/smiles\/2b\/3c\/16\/d2\/2b3c16d2.gif","[friends]":"http:\/\/s.66.ru\/localStorage\/smiles\/29\/fd\/d5\/bd\/29fdd5bd.gif","[unknowing]":"http:\/\/s.66.ru\/localStorage\/smiles\/98\/f0\/e2\/fd\/98f0e2fd.gif","[bad]":"http:\/\/s.66.ru\/localStorage\/smiles\/34\/a7\/ae\/28\/34a7ae28.gif","[bayan]":"http:\/\/s.66.ru\/localStorage\/smiles\/20\/49\/50\/5.\/2049505.gif","[box]":"http:\/\/s.66.ru\/localStorage\/smiles\/33\/5b\/e6\/2b\/335be62b.gif","[car]":"http:\/\/s.66.ru\/localStorage\/smiles\/16\/c2\/6d\/af\/16c26daf.gif","[davil]":"http:\/\/s.66.ru\/localStorage\/smiles\/17\/92\/85\/e4\/179285e4.gif","[desire]":"http:\/\/s.66.ru\/localStorage\/smiles\/50\/62\/f5\/35\/5062f535.gif","[drum]":"http:\/\/s.66.ru\/localStorage\/smiles\/dd\/d8\/d8\/21\/ddd8d821.gif","[deer]":"http:\/\/s.66.ru\/localStorage\/smiles\/98\/f2\/3d\/9a\/98f23d9a.gif","[gomer]":"http:\/\/s.66.ru\/localStorage\/smiles\/4a\/04\/9c\/51\/4a049c51.gif","[gruzin]":"http:\/\/s.66.ru\/localStorage\/smiles\/f7\/27\/14\/7f\/f727147f.gif","[ole]":"http:\/\/s.66.ru\/localStorage\/smiles\/5f\/b9\/88\/1c\/5fb9881c.gif","[phone]":"http:\/\/s.66.ru\/localStorage\/smiles\/2f\/86\/5e\/03\/2f865e03.gif","[plyaj]":"http:\/\/s.66.ru\/localStorage\/smiles\/ee\/1e\/a7\/77\/ee1ea777.gif","[pray]":"http:\/\/s.66.ru\/localStorage\/smiles\/74\/6a\/fb\/75\/746afb75.gif","[so]":"http:\/\/s.66.ru\/localStorage\/smiles\/1d\/63\/39\/4f\/1d63394f.gif","[ninja]":"http:\/\/s.66.ru\/localStorage\/smiles\/41\/fc\/55\/03\/41fc5503.gif","[wall]":"http:\/\/s.66.ru\/localStorage\/smiles\/54\/c0\/6f\/2e\/54c06f2e.gif"});
+            $('textarea.commentForm').commentForm();	// Делаем сразу, чтобы не было ситуации, когда страница отобразилась, а редактора еще нет
+        
+/*]]>*/
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"d8cf5be460","applicationID":"2582904","transactionName":"MldQbEBZXRcEURZaCQsdZ0pbF1oKAVcaHRYNQg==","queueTime":0,"applicationTime":641,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-476.min.js"}</script></body>
+</html>
+

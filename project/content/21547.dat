@@ -1,0 +1,816 @@
+turkeyup.ru/rajon-fatix-v-stambule-odin-iz-starejshix-v-gorode
+<!doctype html>
+
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<html lang=ru>
+<head profile="http://gmpg.org/xfn/11">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Район Фатих в Стамбуле &#8212; один из старейших в городе &laquo;  Тур в Турцию</title>
+
+
+
+<link rel="stylesheet" href="http://turkeyup.ru/wp-content/themes/lyova/style.css" />
+<link rel="stylesheet" href="http://turkeyup.ru/wp-content/themes/lyova/css/pickmeup.min.css" />
+<link href="http://turkeyup.ru/wp-content/themes/lyova/css/jquery.formstyler.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="http://www.gismeteo.ru/static/css/informer2/gs_informerClient.min.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://turkeyup.ru/wp-content/themes/lyova/js/jquery.pickmeup.min.js"></script>
+<script src="http://turkeyup.ru/wp-content/themes/lyova/js/jquery.formstyler.min.js"></script>
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 4909569, onlyWidgets: true});
+</script>
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  
+
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,
+
+m)
+
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63509533-7', 'auto');
+
+  ga('send', 'pageview');
+
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter30590017 = new Ya.Metrika({id:30590017,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/30590017" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<script type="text/javascript" src="http://turkeyup.ru/wp-content/themes/lyova/js/jquery.form.js"></script>
+<!-- Begin #bottomMenu -->
+
+<!--  javaScript -->
+<script>  
+<!--  // Стрим меню для мобильных устройств -->
+$(function(){
+	var validateText = function(elem) {
+        var error = [];
+    	if(elem.val().length < 2) {
+    		elem.addClass('wrong');
+        	return false;
+        }
+        else {
+        	elem.removeClass('wrong');
+        	return true;
+        }
+    };
+	$('#tour-form').submit(function(){
+		var validate = true;
+		$('#tour-form input[type="text"]').each(function(){
+			if(!validateText($(this)))
+				validate = false;
+		});
+		if(validate) {
+			$.ajax({
+                type: "POST",
+                url: "/wp-content/themes/lyova/functions/sendTourRequest.php",
+                data:{
+                "flyFrom":$("#flyFrom").val(),
+                "peopleCount":$("#peopleCount").val(),
+                "dateFrom":$("#dateFrom").val(),
+                "dateTo":$("#dateTo").val(),
+                "priceFrom":$("#priceFrom").val(),
+                "priceTo":$("#priceTo").val(),
+                "name":$("#name").val(),
+                "phone":$("#phone").val(),
+                },
+                success: function(data) {
+                  alert('Заявка отправлена!');
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                  console.log(jqXHR);
+                  console.log(textStatus);
+                  console.log(errorThrown);
+                  return false;
+                }
+            });
+		}
+		return false;
+	});
+	$('.date').pickmeup({
+      format  : 'd-m-Y',
+      position		: 'bottom',
+	  hide_on_select	: true,
+	  mode: 'single'
+    });	
+    $('select').styler();
+	$("#news").hide();
+    $('.tabs li a').click(function(){
+      $('.tabs li').removeClass('selected');
+      $(this).parent().addClass('selected');
+      $('#' + $(this).attr('rel')).show();
+      ($(this).attr('rel')=='articles')?$('#news').hide():$('#articles').hide();
+      return false;
+    });
+	// Добавляем элемент select 
+	$('<select />').appendTo('#fdw');
+
+	//Добавляем опции в элемент select
+	$('<option />', {
+		'selected': 'selected',
+		'value' : '',
+		'text': 'Нажмите, чтобы выбрать рубрику...'
+	}).appendTo('nav select');
+
+	$('nav ul li a').each(function(){
+		var target = $(this);
+
+		$('<option />', {
+			'value' : target.attr('href'),
+			'text': target.text()
+		}).appendTo('nav select');
+
+	});
+
+	// Событие onclicking при нажатии на ссылку
+	$('nav select').on('change',function(){
+		window.location = $(this).find('option:selected').val();
+	});
+});
+
+var map;
+var MYMAP = {
+  map: null,
+	bounds: null
+}
+ 
+MYMAP.init = function(selector, latLng, _zoom) {
+  var myOptions = {
+    zoom: _zoom,
+    center: latLng,
+    disableDefaultUI: true,
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  this.map = new google.maps.Map($(selector)[0], myOptions);
+}
+ 
+MYMAP.placeMarkers = function(filename) {
+	$.get(filename, function(xml){
+		$(xml).find("marker").each(function(){
+			// create a new LatLng point for the marker
+			var lat = $(this).find('lat').text();
+			var lng = $(this).find('lng').text();
+			var cat = $(this).find('cat').text();
+			console.log(lat);
+			console.log(lng);
+			var point = new google.maps.LatLng(parseFloat(lat),parseFloat(lng));
+ 
+ 
+			var marker = new google.maps.Marker({
+				position: point,
+				map: MYMAP.map
+			});
+ 
+			google.maps.event.addListener(marker, 'click', function() {
+				window.location = 'http://turkeyup.ru/category/dostoprimechatelnosti/'+ cat;
+			});
+			MYMAP.map.fitBounds(MYMAP.bounds);
+		});
+	});
+}
+
+function initialize() {
+	  var myLatLng = new google.maps.LatLng(38.9574155,35.2415759);
+	  MYMAP.init('#map', myLatLng, 6);
+	  MYMAP.placeMarkers('/wp-content/themes/lyova/markers.xml');
+	}
+
+function loadScript() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' + '&callback=initialize';
+    document.body.appendChild(script);
+}
+
+window.onready = loadScript;
+
+// Выводим и скрываем подменю
+$(function(){
+	$('#fdw ul li').hover(
+		function () {
+			// Выводим подменю
+			$('ul', this).slideDown(150);
+		}, 
+		function () {
+			// Скрываем подменю
+			$('ul', this).slideUp(150);			
+		}
+	);
+});
+</script>
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Тур в Турцию &raquo; Лента комментариев к &laquo;Район Фатих в Стамбуле &#8212; один из старейших в городе&raquo;" href="http://turkeyup.ru/rajon-fatix-v-stambule-odin-iz-starejshix-v-gorode/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/turkeyup.ru\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.5"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='https://api.w.org/' href='http://turkeyup.ru/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://turkeyup.ru/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://turkeyup.ru/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Лучшие отели Турции с авкапарком: незабываемый семейный отдых' href='http://turkeyup.ru/luchshie-oteli-turcii-s-avkaparkom-nezabyvaemyj-semejnyj-otdyx' />
+<link rel='next' title='В Стамбуле будет проведен международный туристический форум' href='http://turkeyup.ru/v-stambule-budet-proveden-mezhdunarodnyj-turisticheskij-forum' />
+<meta name="generator" content="WordPress 4.7.5" />
+<link rel="canonical" href="http://turkeyup.ru/rajon-fatix-v-stambule-odin-iz-starejshix-v-gorode" />
+<link rel='shortlink' href='http://turkeyup.ru/?p=1228' />
+<link rel="alternate" type="application/json+oembed" href="http://turkeyup.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fturkeyup.ru%2Frajon-fatix-v-stambule-odin-iz-starejshix-v-gorode" />
+<link rel="alternate" type="text/xml+oembed" href="http://turkeyup.ru/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fturkeyup.ru%2Frajon-fatix-v-stambule-odin-iz-starejshix-v-gorode&#038;format=xml" />
+<meta name='yandex-verification' content='73d9f022e326b58b' />
+</head>
+<body>
+
+<header id="headerInner">
+
+<!-- Начало логотипа -->
+
+<IDXSKIP><div class="logo">
+<a href="http://turkeyup.ru"><img src="http://turkeyup.ru/wp-content/themes/Adapter/logo.png" alt=""/></a>
+
+	<div style="/* float: right */position: absolute;right: -200px;top: -65px;/* margin-left: -100px; */">
+	<a target="_blank" href="https://www.facebook.com/pages/Turkeyup/406995629465689"><img src="/wp-content/themes/lyova/images/soc/fb.png" alt="" style="width: 30px" /></a>
+	<a target="_blank" href="http://ok.ru/group/52542856364125"><img src="/wp-content/themes/lyova/images/soc/ok.png" alt="" style="width: 30px" /></a>
+	<a target="_blank" href="https://vk.com/public84794541"><img src="/wp-content/themes/lyova/images/soc/vk.png" alt="" style="width: 30px" /></a>
+	<a target="_blank" href="https://twitter.com/JhTurkeyup"><img src="/wp-content/themes/lyova/images/soc/tw.png" alt="" style="width: 30px" /></a>
+	<a target="_blank" href="https://plus.google.com/u/0/communities/115927695458551829155"><img src="/wp-content/themes/lyova/images/soc/gplus.png" alt="" style="width: 30px" /></a>
+	<!-- <a target="_blank" href="#"><img src="/wp-content/themes/lyova/images/soc/yt.png" alt="" style="width: 30px" /></a> -->
+	</div>
+</div></IDXSKIP>
+<!-- Конец логотипа -->
+
+
+
+<!-- Begin #bottomMenu -->
+<nav id="fdw">
+<div class="menu-menyu-1-container"><ul id="menu-menyu-1" class="menu"><IDXSKIP><li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-53"><a href="http://turkeyup.ru/">Главная</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-739" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-739"><a href="http://turkeyup.ru/category/dostoprimechatelnosti">Достопримечательности</a>
+<ul class="sub-menu">
+	<li id="menu-item-740" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-740"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/stambul">Стамбул</a></li>
+	<li id="menu-item-741" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-741"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/antaliya">Анталия</a></li>
+	<li id="menu-item-742" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-742"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/ankara">Анкара</a></li>
+	<li id="menu-item-743" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-743"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/kemer">Кемер</a></li>
+	<li id="menu-item-744" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-744"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/marmaris">Мармарис</a></li>
+	<li id="menu-item-745" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-745"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/alaniya">Алания</a></li>
+	<li id="menu-item-746" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-746"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/pamukkale">Памуккале</a></li>
+	<li id="menu-item-748" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-748"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/izmir">Измир</a></li>
+	<li id="menu-item-749" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-749"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/side">Сиде</a></li>
+	<li id="menu-item-750" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-750"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/fetxie">Фетхие</a></li>
+	<li id="menu-item-751" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-751"><a href="http://turkeyup.ru/category/dostoprimechatelnosti/erzurum">Эрзурум</a></li>
+</ul>
+</li></IDXSKIP>
+<IDXSKIP><li id="menu-item-737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-737"><a href="http://turkeyup.ru/category/oteli">Отели</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-738" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-738"><a href="http://turkeyup.ru/category/otdyx">Отдых в Турции</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-747"><a href="http://turkeyup.ru/category/kurorty">Курорты</a></li></IDXSKIP>
+<IDXSKIP><li id="menu-item-1189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1189"><a href="http://turkeyup.ru/karta-turcii">Карта Турции</a></li></IDXSKIP>
+</ul></div></nav><!-- Конец #bottomMenu -->
+
+
+
+
+
+
+</header>
+
+<!-- Конец хидер -->
+
+<!-- Начало врапер -->
+<section id="wrapper">
+<div id="middle">
+<div id="content">
+<div id="colLeft">
+
+		<!-- Begin .postBox -->
+
+<article id="singlecont">
+
+<div class="breadcrumb">
+
+<h3><a href="http://turkeyup.ru">Главная</a> > <a href="http://turkeyup.ru/category/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8" rel="category tag">Без рубрики</a> > <a href="http://turkeyup.ru/category/dostoprimechatelnosti/stambul" rel="category tag">Стамбул</a> </h3> 
+</div>
+				
+<h1>Район Фатих в Стамбуле &#8212; один из старейших в городе</h1>
+<div class="googleAd">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Под заголовком статьи -->
+	<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4358290441315702" data-ad-slot="8763598079"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+
+         <div style="padding-bottom: 10px;">
+                    <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="big" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div>
+            </div>
+
+<div class="infobig"> 
+<IDXSKIP>Опубликовано в </IDXSKIP><a href="http://turkeyup.ru/category/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8" rel="category tag">Без рубрики</a> / <a href="http://turkeyup.ru/category/dostoprimechatelnosti/stambul" rel="category tag">Стамбул</a> <IDXSKIP><div class="razd">/</div></IDXSKIP> <div class="data">16 Апр 2015</div> <!--<div class="commentar"><a href="http://turkeyup.ru/rajon-fatix-v-stambule-odin-iz-starejshix-v-gorode#respond">Комментариев 0</a></div>-->
+</div>
+
+<div class="cont">
+<p><strong>Район Фатих в Стамбуле </strong>&#8212; один из самых популярных районов города. Здесь расположены наиболее интересные достопримечательности и торговые центры в кварталах Эминёню, Султанахмет, Лалели и Аксарай (всего 57 кварталов). Округ расположился на европейской стороне города, на берегах Мраморного моря, Золотого Рога и Босфора. От соседних районов Эюп и Зейтинбурну Фатих отделяет Стена Феодосия.</p>
+<p>Несмотря на популярность у туристов, район Фатих является одним из самых бедных в городе, поэтому здесь редко можно увидеть современное здание. Это также и самый консервативный округ Стамбула, в котором больше, чем в других, соблюдаются турецкие традиции, здесь чаще можно встретить женщин с покрытой головой.</p>
+<p>В округе проживает более 450 тысяч горожан, это самый крупный район в городе по плотности населения. Кроме того, Фатих и самый большой по площади, которая составляет 16 квадратных километров.</p>
+<p>В отелях и хостелах района Фатих в Стамбуле чаще всего останавливаются туристы, которые желают быть поближе к главным достопримечательностям и не хотят тратить время и деньги на долгие поездки из других мест города. Большая часть исторических объектов находится в Султанахмет, например, Дворец Топкапы, Собор Святой Софии, мечеть Сулеймание, Голубая мечеть, Археологический музей и другие.</p>
+<p>Добраться до аэропорта Сабихи Гекчен из района Фатих можно на трамвае, автобусе или фуникулере, который доставит до площади Таксим.</p>
+<p><a href="http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-16-47.png"><img class="aligncenter size-large wp-image-1229" src="http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-16-47-1024x678.png" alt="Район Фатих в Стамбуле" width="1024" height="678" srcset="http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-16-47-1024x678.png 1024w, http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-16-47-300x199.png 300w, http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-16-47.png 1463w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<h2>Из истории района Фатих</h2>
+<p>Фатих &#8212; один из древнейших районов Стамбула, имеющий богатую историю и культуру. Развитие района началось с момента основания Константинополя в 330 году императором Константином. В 1453 году, когда город захватила турецкая армия, на месте современного округа Фатих появился старый город.</p>
+<p>В 18 в. Фатих сильно пострадал по причине землетрясения, но немного позже его восстановили. Сегодня в округе можно увидеть необычные правильные улицы, это связано с тем, что к процессу восстановительных работ были привлечены французские архитекторы.</p>
+<h2>Достопримечательности Фатих: историческая ценность района</h2>
+<p>В районе Фатих сосредоточены самые главные и популярные достопримечательности города, такие как:</p>
+<ul>
+<li>Айя София</li>
+<li>Дворец Топкапы</li>
+<li>Цистерна Базилика</li>
+<li>Голубая мечеть</li>
+<li>Ипподром</li>
+<li>Гранд Базар</li>
+<li>Египетский рынок</li>
+<li>Мечеть Фатих с двумя минаретами &#8212; одна из самых крупных мечетей города, которая, как и район, была названа в честь султана Фатих-Мехмеда Завоевателя.</li>
+<li>Университет Фатих, являющийся одним из самых престижных в стране.</li>
+</ul>
+<p><a href="http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-36-33.png"><img class="aligncenter size-large wp-image-1230" src="http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-36-33-1024x668.png" alt="Район Фатих в Стамбуле" width="1024" height="668" srcset="http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-36-33-1024x668.png 1024w, http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-36-33-300x196.png 300w, http://turkeyup.ru/wp-content/uploads/2015/04/Screenshot-at-апр.-27-13-36-33.png 1431w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<h2>Где остановиться в районе Фатих</h2>
+<p>В округе Фатих расположено множество отелей для разных категорий туристов. Конечно же, в основном гостиницы района выбирают те, кто предпочитает познавательный отдых и желает поближе познакомиться с историческим наследием Турции, остановившись в отеле вблизи самых главных достопримечательностей города Стамбула. Среди около 900 комплексов района наибольшей популярностью у туристов пользуются следующие гостиницы:</p>
+<ul>
+<li>Dosso Dossi Hotels Downtown</li>
+<li>Greay Fortune Hotel</li>
+<li>Hagia Sophia Hotel Istanbul Old City</li>
+<li>Azade Hotel</li>
+<li>Best Western Plus The President Hotel.</li>
+</ul>
+<p>Во всех гостиницах района представлены номера для туристов с разных бюджетом, и для тех, кто отдыхает экономно, и для тех, кто предпочитает отдых в условиях повышенного комфорта. Независимо от выбранного отеля, вы будете находиться в шаговой доступности от достопримечательностей.</p>
+<h2>Шопинг и рестораны в Фатих</h2>
+<p>В районе Фатих представлено сразу несколько популярных рынков, на которых можно приобрести все что угодно.</p>
+<p>1. Египетский базар &#8212; рынок, известный шикарным выбором всевозможных специй. Здание рынка под купольной крышей было построено в 1660 году. Сюда часто приезжали египтяне, чтобы торговать специями. Сегодня египтян на рынке не встретить, но специи являются одним из основных товаров.</p>
+<p>В северном крыле Египетского базара находится популярный ресторан Pandeli, который в свое время посещали такие известные личности, как Агата Кристи, Троцкий и Ататюрк.</p>
+<p>2. Рынок Сурури &#8212; древний базар, который был открыт в 1664 году. Сегодня туристы посещают его, чтобы купить орехи, сухофрукты, лукум и различные масла.</p>
+<p>3. Рыбные базары Кумкапы и Эминёню &#8212; здесь продается свежая и уже прошедшая обработку рыба, а также морепродукты. В кафе рынков есть кафе, где прямо при вас вам приготовят купленную рыбу.</p>
+<p>4. Ранок Сахафлар &#8212; книжный рынок, построенный в 18 веке, тут можно найти уникальные книги, карты, учебники, репродукции картин и открытки.</p>
+<p>5. Гранд Базар &#8212; один из крупнейших рынков мира, расположившийся на 66 улицах квартала Султанахмет. Здесь можно купить абсолютно любую вещь, от сувениров до турецких ковров.</p>
+<p>Туристы рекомендуют за покупками отправляться в квартал Лалели, который еще называют &#171;русским&#187; из-за большого количества вывесок магазинов на русском языке.</p>
+<p>В Фатихе расположились также многочисленные магазины, бутики и даже улица, посвященная свадебным товарам.</p>
+<p>Среди ресторанов со средней ценовой категорией, которые являются наиболее посещаемыми, выделяются:</p>
+<ul>
+<li>Sarnic</li>
+<li>Hagia Sophia Old City</li>
+<li>Asitane</li>
+<li>Tria Elegance.</li>
+</ul>
+<p>Подешевле можно пообедать в таких заведениях, как Khorosani, Grupsaray и Matbah.</p>
+</div>
+
+<div class="googleAd" style="margin-top: 35px;">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-4358290441315702" data-ad-slot="5949732475"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+
+<div class="nextpostlink"><a href="http://turkeyup.ru/v-stambule-budet-proveden-mezhdunarodnyj-turisticheskij-forum" rel="next"></a></div>
+<div class="prepostlink"><a href="http://turkeyup.ru/luchshie-oteli-turcii-s-avkaparkom-nezabyvaemyj-semejnyj-otdyx" rel="prev"></a></div>
+
+<div class="postTags">Метки: <a href="http://turkeyup.ru/tag/stambul" rel="tag">Стамбул</a><a href="http://turkeyup.ru/tag/turciya" rel="tag">Турция</a></div>
+
+<!-- Похожие посты-->
+<div class="relatedPosts">
+                                                       
+							
+                                                        <ul><h2>Вам будет интересно</h2>										<li><img width="250" height="180" src="http://turkeyup.ru/wp-content/uploads/2015/06/2-250x180.jpg" class="attachment-relatedThumb size-relatedThumb wp-post-image" alt="Распродажи в Турции" /><a href="http://turkeyup.ru/rasprodazhi-v-turcii-gde-luchshe-pokupat-i-xorosho-sekonomit" rel="bookmark" title="Перейти к записи Распродажи в Турции – где лучше покупать и хорошо сэкономить">Распродажи в Турции – где лучше покупать и хорошо сэкономить</a>
+<br><p>30 Июн 2015</p>
+</li>
+																			<IDXSKIP><li><img width="250" height="180" src="http://turkeyup.ru/wp-content/uploads/2015/06/Вид_на_Галатскую_башню_Стамбул_Турция-250x180.jpg" class="attachment-relatedThumb size-relatedThumb wp-post-image" alt="Тур выходного дня в Стамбуле" srcset="http://turkeyup.ru/wp-content/uploads/2015/06/Вид_на_Галатскую_башню_Стамбул_Турция-250x180.jpg 250w, http://turkeyup.ru/wp-content/uploads/2015/06/Вид_на_Галатскую_башню_Стамбул_Турция-300x216.jpg 300w, http://turkeyup.ru/wp-content/uploads/2015/06/Вид_на_Галатскую_башню_Стамбул_Турция-1024x736.jpg 1024w, http://turkeyup.ru/wp-content/uploads/2015/06/Вид_на_Галатскую_башню_Стамбул_Турция.jpg 1200w" sizes="(max-width: 250px) 100vw, 250px" /><a href="http://turkeyup.ru/tur-vyxodnogo-dnya-v-stambul-ceny-na-puteshestvie" rel="bookmark" title="Перейти к записи Тур выходного дня в Стамбул, цены на путешествие">Тур выходного дня в Стамбул, цены на путешествие</a>
+<br><p>9 Июн 2015</p>
+</li></IDXSKIP>
+																			<IDXSKIP><li><img width="250" height="180" src="http://turkeyup.ru/wp-content/uploads/2015/06/f788015018e0ae5122af1e4629e8c938-250x180.jpeg" class="attachment-relatedThumb size-relatedThumb wp-post-image" alt="Метро Стамбула" /><a href="http://turkeyup.ru/metro-v-stambule-karta-i-stoimost-proezda" rel="bookmark" title="Перейти к записи Метро в Стамбуле: карта и стоимость проезда">Метро в Стамбуле: карта и стоимость проезда</a>
+<br><p>6 Июн 2015</p>
+</li></IDXSKIP>
+									</ul>				</div>			
+                             <!--Конец Похожие посты-->
+
+	
+<!-- Put this div tag to the place, where the Comments block will be -->
+<div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 15, width: "835", attach: "*"});
+</script>
+	
+</div>
+
+
+</article><!-- Конец .синглконтент -->
+		
+			
+		<!-- Конец #colLeft -->
+
+<aside id="colRight">
+<IDXSKIP><form  method="get" action="http://turkeyup.ru" target="_blank">
+<input name="s" id="form-query" value="" placeholder="Поиск по сайту"> 
+<input id="form-querysub" type=submit value="">
+</form></IDXSKIP>
+<IDXSKIP><div class="tour-head">Подберите мне тур<br/>в Турцию!</div></IDXSKIP>
+<form class="tour" id="tour-form">
+  <IDXSKIP><div class="row">
+    <label for="flyFrom">Вылет из:</label>
+    <input type="text" id="flyFrom" name="flyFrom" placeholder="Москва"/>
+  </div></IDXSKIP>
+  <IDXSKIP><div class="row">
+    <label for="peopleCount">Кол-во отдыхающих:</label>
+    <select id="peopleCount" name="peopleCount">
+      <option>1</option>
+      <option selected="true">2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option>13</option>
+      <option>14</option>
+    </select>
+  </div></IDXSKIP>
+  <IDXSKIP><div class="row">
+    <label for="">Дата тура:</label>
+    <input type="text" class="date" value="" name="dateFrom" id="dateFrom" placeholder="От"/>
+    <div class="date-separator">-</div>
+    <input type="text" class="date" value="" name="dateTo" id="dateTo" placeholder="До"/>
+  </div></IDXSKIP>
+  <div class="row">
+    <IDXSKIP><label for="">Цена:</label></IDXSKIP>
+    <input type="text" class="price" value="" name="priceFrom" id="priceFrom" placeholder="15 000"/>
+    <IDXSKIP><p class="price-separator">-</p></IDXSKIP>
+    <input type="text" class="price" value="" name="priceTo" id="priceTo" placeholder="500 000"/>
+    <IDXSKIP><p class="price-currency">р.</p></IDXSKIP>
+  </div>
+  <IDXSKIP><div class="row">
+    <input type="text" name="name" id="name" placeholder="Имя"/>
+  </div></IDXSKIP>
+  <IDXSKIP><div class="row">
+    <input type="text" name="phone" id="phone" placeholder="+7 918 555 55 55"/>
+  </div></IDXSKIP>
+  <IDXSKIP><div class="row">
+    <input type="submit" value="Подобрать тур">
+  </div></IDXSKIP>
+</form>
+
+<div class="sharenew">
+
+
+
+
+
+
+</div>
+
+<div class="rightBoxtumb" style="margin-top: 0px">
+
+<IDXSKIP><p style="
+    text-align: center;
+    padding-bottom: 25px;
+    font-size: 23px;color: #d04961 
+">В Турцию самостоятельно</p></IDXSKIP>
+<div style="border: 3px #23c9ea solid;padding-left: 5px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;">
+<iframe scrolling="no" width="310" height="489" frameborder="0" src="//www.travelpayouts.com/widgets/224b05684c75d6c28577a03bf73b0a5a.html?v=373"></iframe>
+</div>
+<br/>
+<div class="googleAd">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-4358290441315702" data-ad-slot="8623997272"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<br/>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- turkeyup-sidebar -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:324px;height:100px;margin-bottom:25px;"
+     data-ad-client="ca-pub-4358290441315702"
+     data-ad-slot="1842132477"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<br/>
+<IDXSKIP><div class="tabs">
+  <ul>
+    <li class="selected"><a href="" rel="articles">Свежие записи</a></li>
+    <li><a href="" rel="news">Новости</a></li>
+  </ul>
+</div></IDXSKIP>
+<div class="rightBoxtumbline"></div>
+<ul id="articles" class="tab">				
+       
+ <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2016/07/tourists_as_russia_tass_17400420_b-80x80.jpg" class="attachment-loopThumb size-loopThumb wp-post-image" alt="" srcset="http://turkeyup.ru/wp-content/uploads/2016/07/tourists_as_russia_tass_17400420_b-80x80.jpg 80w, http://turkeyup.ru/wp-content/uploads/2016/07/tourists_as_russia_tass_17400420_b-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/normalizaciya-otnoshenij-s-rossiej" rel="bookmark" title="Нормализация отношений с Россией позволит Турции за два года получить $10 млрд">Нормализация отношений с Россией позволит Турции за два года получить $10 млрд</a><br/>
+<p>25 Июл 2016 / <a href="http://turkeyup.ru/normalizaciya-otnoshenij-s-rossiej" title="Нормализация отношений с Россией позволит Турции за два года получить $10 млрд">Посмотреть</a></p>
+</li></IDXSKIP>
+  <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2017/05/голубой-флаг-80x80.png" class="attachment-loopThumb size-loopThumb wp-post-image" alt="анталия" srcset="http://turkeyup.ru/wp-content/uploads/2017/05/голубой-флаг-80x80.png 80w, http://turkeyup.ru/wp-content/uploads/2017/05/голубой-флаг-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/%d0%b0%d0%bd%d1%82%d0%b0%d0%bb%d0%b8%d1%8f-%d1%80%d0%b5%d0%ba%d0%be%d1%80%d0%b4%d1%81%d0%bc%d0%b5%d0%bd-%d0%bf%d0%be-%d0%ba%d0%be%d0%bb%d0%b8%d1%87%d0%b5%d1%81%d1%82%d0%b2%d1%83-%d1%87%d0%b8%d1%81" rel="bookmark" title="Анталия &#8212; рекордсмен по количеству чистых пляжей.">Анталия &#8212; рекордсмен по количеству чистых пляжей.</a><br/>
+<p>15 Май 2017 / <a href="http://turkeyup.ru/%d0%b0%d0%bd%d1%82%d0%b0%d0%bb%d0%b8%d1%8f-%d1%80%d0%b5%d0%ba%d0%be%d1%80%d0%b4%d1%81%d0%bc%d0%b5%d0%bd-%d0%bf%d0%be-%d0%ba%d0%be%d0%bb%d0%b8%d1%87%d0%b5%d1%81%d1%82%d0%b2%d1%83-%d1%87%d0%b8%d1%81" title="Анталия &#8212; рекордсмен по количеству чистых пляжей.">Посмотреть</a></p>
+</li></IDXSKIP>
+  <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2016/07/7403988605-80x80.jpg" class="attachment-loopThumb size-loopThumb wp-post-image" alt="" srcset="http://turkeyup.ru/wp-content/uploads/2016/07/7403988605-80x80.jpg 80w, http://turkeyup.ru/wp-content/uploads/2016/07/7403988605-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/rossijsko-tureckie-otnosheniya-stali-nalazhivatsya" rel="bookmark" title="Российско-турецкие отношения стали налаживаться">Российско-турецкие отношения стали налаживаться</a><br/>
+<p>18 Июл 2016 / <a href="http://turkeyup.ru/rossijsko-tureckie-otnosheniya-stali-nalazhivatsya" title="Российско-турецкие отношения стали налаживаться">Посмотреть</a></p>
+</li></IDXSKIP>
+  <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2015/12/Покупки-в-Турции-80x80.jpg" class="attachment-loopThumb size-loopThumb wp-post-image" alt="Покупки в Турции" srcset="http://turkeyup.ru/wp-content/uploads/2015/12/Покупки-в-Турции-80x80.jpg 80w, http://turkeyup.ru/wp-content/uploads/2015/12/Покупки-в-Турции-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/pokupki-v-turcii" rel="bookmark" title="Покупки в Турции">Покупки в Турции</a><br/>
+<p>7 Дек 2015 / <a href="http://turkeyup.ru/pokupki-v-turcii" title="Покупки в Турции">Посмотреть</a></p>
+</li></IDXSKIP>
+ </ul>
+<ul id="news" class="tab">        
+       
+ <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2017/05/турция-виза-80x80.png" class="attachment-loopThumb size-loopThumb wp-post-image" alt="поехать в турцию" srcset="http://turkeyup.ru/wp-content/uploads/2017/05/турция-виза-80x80.png 80w, http://turkeyup.ru/wp-content/uploads/2017/05/турция-виза-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/%d0%bf%d1%80%d0%be%d0%b4%d0%bb%d0%b5%d0%bd-%d0%b1%d0%b5%d0%b7%d0%b2%d0%b8%d0%b7%d0%be%d0%b2%d1%8b%d0%b9-%d1%81%d1%80%d0%be%d0%ba-%d0%bf%d1%80%d0%b5%d0%b1%d1%8b%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f-%d1%80" rel="bookmark" title="Продлен безвизовый срок пребывания русских в Турции.">Продлен безвизовый срок пребывания русских в Турции.</a><br/>
+<p>10 Май 2017 / <a href="http://turkeyup.ru/%d0%bf%d1%80%d0%be%d0%b4%d0%bb%d0%b5%d0%bd-%d0%b1%d0%b5%d0%b7%d0%b2%d0%b8%d0%b7%d0%be%d0%b2%d1%8b%d0%b9-%d1%81%d1%80%d0%be%d0%ba-%d0%bf%d1%80%d0%b5%d0%b1%d1%8b%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f-%d1%80" title="Продлен безвизовый срок пребывания русских в Турции.">Посмотреть</a></p>
+</li></IDXSKIP>
+  <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2017/03/турц-80x80.png" class="attachment-loopThumb size-loopThumb wp-post-image" alt="зерно" srcset="http://turkeyup.ru/wp-content/uploads/2017/03/турц-80x80.png 80w, http://turkeyup.ru/wp-content/uploads/2017/03/турц-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/export-zerna" rel="bookmark" title="Экспорт зерна в Турцию прекращен">Экспорт зерна в Турцию прекращен</a><br/>
+<p>29 Мар 2017 / <a href="http://turkeyup.ru/export-zerna" title="Экспорт зерна в Турцию прекращен">Посмотреть</a></p>
+</li></IDXSKIP>
+  <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2015/08/Buz4-80x80.jpg" class="attachment-loopThumb size-loopThumb wp-post-image" alt="" srcset="http://turkeyup.ru/wp-content/uploads/2015/08/Buz4-80x80.jpg 80w, http://turkeyup.ru/wp-content/uploads/2015/08/Buz4-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/ledyanye-skulptory-mozhno-budet-posmotret-v-antalii" rel="bookmark" title="Ледяные скульптуры можно будет посмотреть в Анталии">Ледяные скульптуры можно будет посмотреть в Анталии</a><br/>
+<p>17 Авг 2015 / <a href="http://turkeyup.ru/ledyanye-skulptory-mozhno-budet-posmotret-v-antalii" title="Ледяные скульптуры можно будет посмотреть в Анталии">Посмотреть</a></p>
+</li></IDXSKIP>
+  <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2015/08/Saphir-4-80x80.jpg" class="attachment-loopThumb size-loopThumb wp-post-image" alt="" srcset="http://turkeyup.ru/wp-content/uploads/2015/08/Saphir-4-80x80.jpg 80w, http://turkeyup.ru/wp-content/uploads/2015/08/Saphir-4-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/turciya-stradaet-ot-nexvatki-russkix-turistov" rel="bookmark" title="Турция страдает от нехватки русских туристов">Турция страдает от нехватки русских туристов</a><br/>
+<p>14 Авг 2015 / <a href="http://turkeyup.ru/turciya-stradaet-ot-nexvatki-russkix-turistov" title="Турция страдает от нехватки русских туристов">Посмотреть</a></p>
+</li></IDXSKIP>
+  <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2015/07/Без-названия2-80x80.png" class="attachment-loopThumb size-loopThumb wp-post-image" alt="Новости Турции" srcset="http://turkeyup.ru/wp-content/uploads/2015/07/Без-названия2-80x80.png 80w, http://turkeyup.ru/wp-content/uploads/2015/07/Без-названия2-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/popravit-zdorove-mozhno-v-turcii" rel="bookmark" title="Поправить здоровье можно в Турции">Поправить здоровье можно в Турции</a><br/>
+<p>22 Июл 2015 / <a href="http://turkeyup.ru/popravit-zdorove-mozhno-v-turcii" title="Поправить здоровье можно в Турции">Посмотреть</a></p>
+</li></IDXSKIP>
+  <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2015/07/Без-названия1-80x80.png" class="attachment-loopThumb size-loopThumb wp-post-image" alt="Новости Турции" srcset="http://turkeyup.ru/wp-content/uploads/2015/07/Без-названия1-80x80.png 80w, http://turkeyup.ru/wp-content/uploads/2015/07/Без-названия1-150x150.png 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/v-adane-raskopali-biblejskie-teksty" rel="bookmark" title="В Адане раскопали библейские тексты">В Адане раскопали библейские тексты</a><br/>
+<p>15 Июл 2015 / <a href="http://turkeyup.ru/v-adane-raskopali-biblejskie-teksty" title="В Адане раскопали библейские тексты">Посмотреть</a></p>
+</li></IDXSKIP>
+  <IDXSKIP><li>
+<div class="rightBoxshadowleft"></div>
+<div class="rightBoxshadowright"></div>  
+<img width="80" height="80" src="http://turkeyup.ru/wp-content/uploads/2015/07/DSC_0812-80x80.jpg" class="attachment-loopThumb size-loopThumb wp-post-image" alt="Андриаке" srcset="http://turkeyup.ru/wp-content/uploads/2015/07/DSC_0812-80x80.jpg 80w, http://turkeyup.ru/wp-content/uploads/2015/07/DSC_0812-150x150.jpg 150w" sizes="(max-width: 80px) 100vw, 80px" /><a href="http://turkeyup.ru/andriake-otkryt-dlya-poseshheniya" rel="bookmark" title="Андриаке открыт для посещения">Андриаке открыт для посещения</a><br/>
+<p>7 Июл 2015 / <a href="http://turkeyup.ru/andriake-otkryt-dlya-poseshheniya" title="Андриаке открыт для посещения">Посмотреть</a></p>
+</li></IDXSKIP>
+ </ul>
+<div id="gsInformerID-aRL22gP6vUMm0R" class="gsInformer weather-informer" style="width:324px;height:333px">
+  <div class="gsIContent">
+    <div id="cityLink">
+      <IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3719/" target="_blank">Погода в Стамбуле</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3762/" target="_blank">Погода в Измире</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3787/" target="_blank">Погода в Анталье</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3740/" target="_blank">Погода в Анкаре</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3797/" target="_blank">Погода в Аланье</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3835/" target="_blank">Погода в Манавгате</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3780/" target="_blank">Погода в Фетхие</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3763/" target="_blank">Погода в Кушадасах</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3778/" target="_blank">Погода в Бодруме</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3786/" target="_blank">Погода в Кемере</a></IDXSKIP>
+    <br /><IDXSKIP><a href="http://www.gismeteo.ru/city/daily/3789/" target="_blank">Погода в Сиде</a></IDXSKIP>
+    </div>
+    <IDXSKIP><div class="gsLinks">
+      <table>
+        <tr>
+          <td>
+            <div class="leftCol">
+              <a href="http://www.gismeteo.ru" target="_blank">
+                <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.ru/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
+                <span>Gismeteo</span>
+              </a>
+            </div>
+            <div class="rightCol">
+              <a href="http://www.gismeteo.ru/" target="_blank">Прогноз на 2 недели</a>
+            </div>
+            </td>
+        </tr>
+      </table>
+    </div></IDXSKIP>
+  </div>
+</div>
+<script src="http://www.gismeteo.ru/api/informer/getinformer/aRL22gP6vUMm0R/" type="text/javascript"></script>
+<iframe class="currency-informer" src="http://informers.mt5.com/informer_currency_rate/run/skin=users&type=i&w=324&h=100&lang=ru&fh=a&fhs=16&ft=a&fts=16&clbg=ffffff&clh=d04961&clhf=ffffff&cli=383a3b&clr=000000&symbol=rur&stype=bid" frameborder="0"  scrolling="no" width = "344" height = "120" title="www.MT5.com"></iframe>
+</div>
+
+<div class="rightBox">
+			
+			<div class="rightBoxMid"><h2> Категории</h2><div class="rightBoxtumbline"></div><div class="tagcloud"><IDXSKIP><a href='http://turkeyup.ru/tag/akvaparki' class='tag-link-46 tag-link-position-1' title='5 записей' style='font-size: 13.333333333333pt;'>Аквапарки</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/aktery' class='tag-link-60 tag-link-position-2' title='2 записи' style='font-size: 10pt;'>Актеры</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/alaniya' class='tag-link-146 tag-link-position-3' title='2 записи' style='font-size: 10pt;'>Алания</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/antaliya' class='tag-link-142 tag-link-position-4' title='11 записей' style='font-size: 16.666666666667pt;'>Анталия</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/aeroport' class='tag-link-116 tag-link-position-5' title='3 записи' style='font-size: 11.333333333333pt;'>Аэропорт</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/bassejny' class='tag-link-43 tag-link-position-6' title='1 запись' style='font-size: 8pt;'>Бассейны</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/bashni' class='tag-link-38 tag-link-position-7' title='3 записи' style='font-size: 11.333333333333pt;'>Башни</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/bodrum' class='tag-link-61 tag-link-position-8' title='3 записи' style='font-size: 11.333333333333pt;'>Бодрум</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/vodopady' class='tag-link-44 tag-link-position-9' title='1 запись' style='font-size: 8pt;'>Водопады</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/vodoxranilishha' class='tag-link-39 tag-link-position-10' title='1 запись' style='font-size: 8pt;'>Водохранилища</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/gornolyzhnye-kurorty' class='tag-link-29 tag-link-position-11' title='5 записей' style='font-size: 13.333333333333pt;'>Горнолыжные курорты</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/goroda' class='tag-link-42 tag-link-position-12' title='10 записей' style='font-size: 16.222222222222pt;'>Города</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/gory' class='tag-link-28 tag-link-position-13' title='4 записи' style='font-size: 12.444444444444pt;'>Горы</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/grobnicy' class='tag-link-31 tag-link-position-14' title='1 запись' style='font-size: 8pt;'>Гробницы</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/dvorcy' class='tag-link-34 tag-link-position-15' title='3 записи' style='font-size: 11.333333333333pt;'>Дворцы</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/dostoprimechatelnosti' class='tag-link-139 tag-link-position-16' title='4 записи' style='font-size: 12.444444444444pt;'>Достопримечательности</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/kemer' class='tag-link-147 tag-link-position-17' title='7 записей' style='font-size: 14.666666666667pt;'>Кемер</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/kozha' class='tag-link-131 tag-link-position-18' title='2 записи' style='font-size: 10pt;'>Кожа</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/kurorty' class='tag-link-143 tag-link-position-19' title='6 записей' style='font-size: 14.111111111111pt;'>Курорты</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/mavzolei' class='tag-link-47 tag-link-position-20' title='2 записи' style='font-size: 10pt;'>Мавзолеи</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/marmaris' class='tag-link-148 tag-link-position-21' title='2 записи' style='font-size: 10pt;'>Мармарис</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/mesyacy' class='tag-link-56 tag-link-position-22' title='5 записей' style='font-size: 13.333333333333pt;'>Месяцы</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/mecheti' class='tag-link-33 tag-link-position-23' title='7 записей' style='font-size: 14.666666666667pt;'>Мечети</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/morya' class='tag-link-27 tag-link-position-24' title='2 записи' style='font-size: 10pt;'>Моря</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/mosty' class='tag-link-37 tag-link-position-25' title='3 записи' style='font-size: 11.333333333333pt;'>Мосты</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/muzei' class='tag-link-35 tag-link-position-26' title='3 записи' style='font-size: 11.333333333333pt;'>Музеи</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/ostrova' class='tag-link-45 tag-link-position-27' title='1 запись' style='font-size: 8pt;'>Острова</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/otdyx' class='tag-link-152 tag-link-position-28' title='32 записи' style='font-size: 21.555555555556pt;'>Отдых в Турции</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/s-detmi' class='tag-link-10 tag-link-position-29' title='5 записей' style='font-size: 13.333333333333pt;'>Отдых с детьми</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/oteli' class='tag-link-141 tag-link-position-30' title='35 записей' style='font-size: 22pt;'>Отели</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/parki' class='tag-link-30 tag-link-position-31' title='4 записи' style='font-size: 12.444444444444pt;'>Парки</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/ploshhadi' class='tag-link-36 tag-link-position-32' title='2 записи' style='font-size: 10pt;'>Площади</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/plyazhi' class='tag-link-58 tag-link-position-33' title='6 записей' style='font-size: 14.111111111111pt;'>Пляжи</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/side' class='tag-link-144 tag-link-position-34' title='1 запись' style='font-size: 8pt;'>Сиде</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/sobory' class='tag-link-40 tag-link-position-35' title='1 запись' style='font-size: 8pt;'>Соборы</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/stambul' class='tag-link-140 tag-link-position-36' title='34 записи' style='font-size: 21.777777777778pt;'>Стамбул</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/turciya' class='tag-link-80 tag-link-position-37' title='6 записей' style='font-size: 14.111111111111pt;'>Турция</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/turciya-zimoj' class='tag-link-26 tag-link-position-38' title='5 записей' style='font-size: 13.333333333333pt;'>Турция зимой</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/universitety' class='tag-link-153 tag-link-position-39' title='2 записи' style='font-size: 10pt;'>Университеты</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/festival-pesochnyx-zamkov' class='tag-link-101 tag-link-position-40' title='2 записи' style='font-size: 10pt;'>Фестиваль песочных замков</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/fetxie' class='tag-link-150 tag-link-position-41' title='2 записи' style='font-size: 10pt;'>Фетхие</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/xramy' class='tag-link-41 tag-link-position-42' title='3 записи' style='font-size: 11.333333333333pt;'>Храмы</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/novosti' class='tag-link-77 tag-link-position-43' title='5 записей' style='font-size: 13.333333333333pt;'>новости</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/skulptury-iz-peska' class='tag-link-102 tag-link-position-44' title='2 записи' style='font-size: 10pt;'>скульптуры из песка</a></IDXSKIP>
+<IDXSKIP><a href='http://turkeyup.ru/tag/shopping' class='tag-link-70 tag-link-position-45' title='3 записи' style='font-size: 11.333333333333pt;'>шоппинг</a></IDXSKIP></div>
+</div>	
+			
+		</div><div class="rightBox">
+			
+			<div class="rightBoxMid">			<div class="textwidget"><script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 2, width: "328", height: "400"}, 84794541);
+</script></div>
+		</div>	
+			
+		</div>
+		</aside><!-- конец колрайт -->	
+<!-- WordPressSEOPlugin --></div><!-- Конец контент -->
+</div><!-- Конец мидл -->
+</section><!-- Конец врапер -->
+	
+<!-- Начало футер -->
+
+<footer id="footer">
+
+<div id="footerInner">
+
+
+
+<div class="logofooter">
+
+
+			<ul>
+				<IDXSKIP><li class="pagenav">Страницы<ul><li class="page_item page-item-22"><a href="http://turkeyup.ru/karta-sajta">Карта сайта</a></li>
+<li class="page_item page-item-1188"><a href="http://turkeyup.ru/karta-turcii">Карта Турции</a></li>
+<li class="page_item page-item-562"><a href="http://turkeyup.ru/obratnaya-svyaz">Обратная связь</a></li>
+</ul></li></IDXSKIP>			</ul>
+
+</div>
+
+<IDXSKIP><div class="sharenewfooter" style="width: 135px">
+	<div> Сайт создан в<br/>
+	<a href="http://2-up.ru/" style="width: 85px;" target="_blank"><img src="http://2-up.ru/stat/logo/black.svg" width="85" /></a>
+	</div>
+</div></IDXSKIP>
+<div class="sharenewfooter" style="top: 25px;">
+
+
+
+
+
+ <IDXSKIP>© 2015 /
+Копирование материалов запрещено 
+
+
+
+</IDXSKIP><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t45.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='8' height='8'><\/a>")
+//--></script><!--/LiveInternet-->
+
+
+
+
+
+			
+
+
+
+
+
+
+</div>
+
+</div>
+
+</footer>
+<!-- Конец футер -->
+<script type='text/javascript' src='http://turkeyup.ru/wp-includes/js/wp-embed.min.js?ver=4.7.5'></script>
+
+<script type="text/javascript">
+  $(function(){
+      });
+</script>
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = '2N96LRqzLM';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'cFLOqm7deC';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/geo-widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->
+<!--script type="text/javascript" src="//perezvoni.com/files/widgets/3887-960b12-957417d83-e957417d83-f8e957417d83-f04-d83-3.js" charset="UTF-8"></script-->
+</body>
+</html>
+

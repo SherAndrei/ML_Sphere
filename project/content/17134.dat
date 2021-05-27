@@ -1,0 +1,568 @@
+visine.ru
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ВИЗИН® - капли для глаз | Глазные капли ВИЗИН® (VISINE®) – средство для лечения покраснения и дискомфорта глаз | ВИЗИН® - быстрая помощь глазам</title>
+<meta name="description" content="Капли для глаз ВИЗИН&reg; - эффективное средство при дискомфорте глаз. Глазные капли помогут справиться с покраснением и раздражением, сухостью и усталостью глаз, избавят от аллергического конъюнктивита" />
+<meta name="keywords" content="капли, глаза, глазные, средство, для глаз, лекарство, ВИЗИН" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/favicon.ico" rel="Shortcut Icon"  type="image/x-icon"/>
+<!--<link href="/favicon.ico" rel="Shortcut Icon"/>-->
+<link href="css/owl.carousel3.css" rel="stylesheet" type="text/css" />
+<link href="css/styles.css?r=90" rel="stylesheet" type="text/css" />
+
+<!--[if IE 6]>
+<script src="js/png.js"></script>
+<script>
+	DD_belatedPNG.fix('div, a, img, *');
+</script>
+<style type="text/css">
+BODY { behavior:url("js/csshover.htc");}
+</style>
+<![endif]-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/hoverintent.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/Helios_400.font.js"></script>
+<script type="text/javascript" src="js/my_script.js?r=90"></script>
+<script type="text/javascript" src="js/jquery.atooltip.js"></script>
+<script type="text/javascript" src="js/owl.carousel3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('a.normalTip1').aToolTip({xOffset: -113, yOffset: 170});
+		$('a.normalTip2').aToolTip({xOffset: -103, yOffset: 170});
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+	  url: "authcheck.php"
+	}).done(function(data) {
+	  if (data.toString() === "0") {
+          $('.prof').children('a').attr('href', 'pro.php');
+	  } else {
+          $('.prof').children('a').attr('href', 'pro.php?q=catalog&amp;login=' + data.toString());
+      }
+	});
+//    if($(".banner_slider").length){
+//        $(".banner_slider").owlCarousel({
+//            loop:true,
+//            autoplay: true,
+//            autoplayHoverPause: true,
+//            items:1,
+//            autoplayTimeout: 3000,
+//            autoplaySpeed: 500,
+//            navText : ["Назад","Вперед"]
+//        });
+//    }
+
+        $(".buble").css({'opacity':'0', 'display':'none'});
+
+         //$(".bubble_pop_1, .bubble_pop_2, .bubble_pop_3").mouseenter(
+        $(".bubble_overlay_1, .bubble_overlay_2, .bubble_overlay_3").mouseover(
+            function () {
+                var buble = $(this).next();
+                buble.stop().show().animate({'opacity' : '1'}, 500);
+            }
+		);
+
+        $("div.buble_1").mouseout(function(event){
+            $(this).stop().animate({'opacity' : '0'}, 500, function(){$(this).hide();});
+        });
+        $("div.buble_2").mouseout(function(event){
+            $(this).stop().animate({'opacity' : '0'}, 500, function(){$(this).hide();});
+        });
+        $("div.buble_3").mouseout(function(event){
+            $(this).stop().animate({'opacity' : '0'}, 500, function(){$(this).hide();});
+        });
+
+        $(".bubble_overlay_1").mouseout(function(event){
+            var buble = $(this).next();
+            buble.stop().animate({'opacity' : '0'}, 500, function(){$(this).hide();});
+        });
+        $(".bubble_overlay_2").mouseout(function(event){
+            var buble = $(this).next();
+            buble.stop().animate({'opacity' : '0'}, 500, function(){$(this).hide();});
+        });
+        $(".bubble_overlay_3").mouseout(function(event){
+            var buble = $(this).next();
+            buble.stop().animate({'opacity' : '0'}, 500, function(){$(this).hide();});
+        });
+        
+        $(".buble .close").click(function(){
+            $(this).parent().stop().animate({'opacity' : '0'}, 500, function(){$(this).hide();});
+        });
+
+});
+</script>
+
+<style type="text/css">
+.buble_1, .buble_2, .buble_3 {
+    opacity: 0;
+    display: none;
+    top: 60px;
+    /*position:absolute;*/
+    /*filter: alpha(opacity=5);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=5)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5);*/
+}
+.mbox-right .buble {
+    top: 170px;
+    padding:0;
+    width:595px;
+    z-index: 2;
+}
+.buble .close {
+    width:18px;
+    height:18px;
+    background: url("/images/index_buble_after.png") no-repeat;
+    position:absolute;
+    top:10px;
+    left:581px;
+    z-index:5;
+	display: none;
+}
+.mbox-right .buble img {
+    float: left;
+	margin: 0 20px 10px 20px;
+}
+.bubble_pop_1, .bubble_pop_2, .bubble_pop_3 {
+    position: absolute;
+}
+.bubble_pop_2 {
+    left: 202px;
+}
+.bubble_pop_3 {
+    left: 404px;
+}
+
+.bubble_overlay_1, .bubble_overlay_2, .bubble_overlay_3 {
+    position: absolute;
+    background-color: none;
+    /*border: 1px solid #76ACDD;
+    border-radius: 6px;*/
+    display: block;
+    /*float: left;
+    font-weight: bold;*/
+    height: 100px;
+    /*line-height: 20px;*/
+    margin: 20px 5px 0 6px;
+    padding: 15px 0 0;
+    /*text-align: center;
+    text-decoration: none;*/
+    width: 191px;
+}
+
+
+.bubble_overlay_2 {
+    left: 202px;
+}
+
+.bubble_overlay_3 {
+    left: 404px;
+}
+
+.ban {
+ color: #00529f;
+    font-family: Arial,sans-serif;
+    font-size: 36px;
+    margin: 0 65px 0 0;
+    text-align: right;
+}
+</style>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="css/response.css?r=90" rel="stylesheet" type="text/css" />
+<script src="//assets.adobedtm.com/bf12630c02a44df137a783f39cdb4dbd09e2b5d7/satelliteLib-a77040281e8ad94d1a2e4c30d4df757c9e6fed98.js"></script>
+</head>
+<body class="front">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5HSCF9"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5HSCF9');</script>
+<!-- End Google Tag Manager --><IDXSKIP><div style="position: absolute; visibility: hidden;">
+<!--  AdRiver code START. Type:counter(zeropixel) Site: www.visine-med.ru PZ: 0 BN: 0 -->
+<script language="javascript" type="text/javascript"><!--
+(function(n){
+	var l = window.location, a = l.hostname.split('.');
+	a.splice(a.length-2, 2);
+	window[n] = (a.length ? '/' + a.join('/') : '') + l.pathname + escape(l.search);
+})('sz');
+var RndNum4NoCash = Math.round(Math.random() * 1000000000);
+var ar_Tail='unknown'; if (document.referrer) ar_Tail = escape(document.referrer);
+var pr=location.protocol == 'https:' ? 'https://ssl' : 'http://ad';
+document.write('<img src="'+pr+'.adriver.ru/cgi-bin/rle.cgi?' + 'sid=185410&sz='+sz+'&bt=21&pz=0&rnd=' + RndNum4NoCash + '&tail256=' + ar_Tail + '" border="0" width="1" height="1" alt=""/>')
+//--></script>
+
+<noscript><img src="http://ad.adriver.ru/cgi-bin/rle.cgi?sid=185410&amp;bt=21&amp;pz=0&amp;rnd=1214362682" border="0" width="1" height="1" alt=""/></noscript>
+<!--  AdRiver code END  -->
+</div></IDXSKIP>
+
+<div class="main-container">
+<!-- Header -->
+<!-- Header -->
+<div class="header" id="home">
+    <IDXSKIP><i class="toggle_menu_icon">&#10005;</i></IDXSKIP>
+    <div class="logo">
+                <IDXSKIP><a href="/">
+                    <img src="/images/logo_pic2.png" alt="ВИЗИН - Экспертные решения при дискомфорте глаз" title="ВИЗИН - Экспертные решения при дискомфорте глаз" />
+        		</a></IDXSKIP>
+        <div class="slogan"><a href="/faq.html"><IDXSKIP>Экспертные решения<br> при дискомфорте глаз</IDXSKIP></a></div>
+		
+    </div>
+
+    <!--<div class="top_banner" style="padding-right: 0;"><a href="fork.html"><img src="images/banner2.png" alt="ВИЗИН Чистая Слеза - Специальные предложения" /></a></div>-->
+
+            <IDXSKIP><div class="prof"><a href="/pro.php">Специалистам</a></div></IDXSKIP>
+		<IDXSKIP><div class="profs">
+<a href="/vocabulary.html">Словарь терминов</a>
+</div></IDXSKIP>
+		<IDXSKIP><div class="search_container" style="float: right; width: 309px; margin-top: 0px;">
+		<i class="toggle_icon"></i>
+
+		<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'http://www.visine.ru/search/','arrow':false,'bg':'transparent','fontsize':12,'fg':'#000000','language':'ru','logo':'rb','publicname':'Поиск по сайту Visine','suggest':false,'target':'_self','tld':'ru','type':2,'usebigdictionary':true,'searchid':2163107,'webopt':false,'websearch':false,'input_fg':'#000000','input_bg':'#ffffff','input_fontStyle':'italic','input_fontWeight':'normal','input_placeholder':'Введите запрос для поиска','input_placeholderColor':'#000000','input_borderColor':'#7f9db9'}"><form action="//yandex.ru/sitesearch" method="get" target="_self"><input type="hidden" name="searchid" value="2163107"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="text" name="text" value=""/><input type="submit" value="Найти" style="position: relative; right: 10px;"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+		</div></IDXSKIP>
+    </div>
+<!-- /Header -->
+<!--<div class="header">
+	<div class="logo"><img src="images/logo.png" alt="ВИЗИН - Экспертные решения при дискомфорте глаз" /></div>
+	<div class="top_banner" style="padding-right: 0;"><a href="fork.html"><img src="images/banner2.png" alt="ВИЗИН Чистая Слеза - Специальные предложения" /></a></div>-->
+	<!--div class="search">
+		<form action="#" method="get">
+			<input class="text" type="text" value="" placeholder="поиск" />
+			<input class="button" type="image" src="images/search_button.png" />
+		</form>
+	</div>
+	<div class="prof"><a href="pro.php">Специалистам</a></div-->
+<!--</div>-->
+<!-- /Header -->
+
+<!--<div class="mmenu">
+	<ul>
+		<li class="first"><a href="/visine-classic.html"><span>ВИЗИН<sup>&reg;</sup> Классический</span></a>
+            <ul class="submenu">
+				<li><a href="/classic_in_vial.html"><img src="/images/submenu_classic1.png" alt="" />  <span>ВИЗИН<sup>&reg;</sup> Классический во&nbsp;флаконе</span></a></li>
+				<li><a href="/classic_in_ampules.html"><img src="/images/submenu_classic2.png" alt="" />  <span>ВИЗИН<sup>&reg;</sup> Классический в&nbsp;ампулах для однократного применения</span></a></li>
+			</ul>
+        </li>
+		<li class=""><a href="/visine-puretears.html"><span>ВИЗИН<sup>&reg;</sup> Чистая Слеза</span></a>
+            <ul class="submenu">
+				<li><a href="/puretears_in_vial.html"><img src="/images/submenu_puretears1.png" alt="" />  <span>ВИЗИН<sup>&reg;</sup> Чистая Слеза во&nbsp;флаконе</span></a></li>
+				<li><a href="/puretears_in_ampules.html"><img src="/images/submenu_puretears2.png" alt="" />  <span>ВИЗИН<sup>&reg;</sup> Чистая Слеза в&nbsp;ампулах на 1 день</span></a></li>
+			</ul>
+        </li>
+		<li class=""><a href="/check.html"><span>Проверь свои глаза<sup>&nbsp;</sup></span></a></li>
+		<li class=""><a href="/gymnastics.html"><span>Гимнастика для глаз<sup>&nbsp;</sup></span></a></li>
+        		<li class="end"><a href="/faq.html"><span>Как заботиться о глазах<sup>&nbsp;</sup></span></a></li>
+	</ul>
+</div>-->
+
+<div class="mmenu">
+    <ul>
+        <IDXSKIP><li class="first"><a href="/products.html"><span>Продукты</span></a>
+            <ul class="submenu">
+                <li><a href="/visine-classic.html"><span>ВИЗИН<sup>®</sup> Классический</span></a></li>
+                <li><a href="/visine-puretears.html"><span>ВИЗИН<sup>®</sup>  Чистая Слеза</span></a></li>
+                <li><a href="/visine_allergy.html"><span>ВИЗИН<sup>®</sup>  Алерджи </span></a></li>
+            </ul>
+        </li></IDXSKIP>
+        <IDXSKIP><li class="" style="width: 220px;"><a href="/check.html"><span>Какие капли подходят Вам</span></a></li></IDXSKIP>
+        <IDXSKIP><li class=""><a href="/gymnastics.html"><span>Гимнастика<sup>&nbsp;</sup></span></a></li></IDXSKIP>
+        <IDXSKIP><li class=""><a href="/faq.html"><span>Как заботиться о глазах<sup>&nbsp;</sup></span></a>
+<!--					<ul class="submenu">
+                <li style="margin-top: 3px;"><a href="http://www.visine-med.ru/faq/vision-prophylaxy.html"><span>Профилактика нарушений зрения</span></a></li>
+                <li style="margin-top: 8px;"><a href="http://www.visine-med.ru/faq/eye-drip.html"><span>Применение капель ВИЗИН<sup>&reg;</sup></span></a></li>
+                <li style="margin-top: 21px;"><a href="http://www.visine-med.ru/ask-expert.html"><span>Задайте вопрос эксперту</span></a></li>
+            </ul>-->
+		</li></IDXSKIP>	
+        <IDXSKIP><li class=""><a href="/content/"><span>Статьи<sup>&nbsp;</sup></span></a></li></IDXSKIP>
+    </ul>
+</div>
+<!--<div class="mmenu">
+	<ul>
+		<li class="first"><a href="visine-classic.html"><span>ВИЗИН<sup>&reg;</sup> Классический</span></a>
+			<ul class="submenu">
+				<li><a href="classic_in_vial.html"><img src="images/submenu_classic1.png" alt="" />  <span>ВИЗИН<sup>&reg;</sup> Классический во&nbsp;флаконе</span></a></li>
+				<li><a href="classic_in_ampules.html"><img src="images/submenu_classic2.png" alt="" />  <span>ВИЗИН<sup>&reg;</sup> Классический в&nbsp;ампулах для однократного применения</span></a></li>
+			</ul>
+		</li>
+		<li><a href="visine-puretears.html"><span>ВИЗИН<sup>&reg;</sup> Чистая Слеза</span></a>
+			<ul class="submenu">
+				<li><a href="puretears_in_vial.html"><img src="images/submenu_puretears1.png" alt="" />  <span>ВИЗИН<sup>&reg;</sup> Чистая Слеза во&nbsp;флаконе</span></a></li>
+				<li><a href="puretears_in_ampules.html"><img src="images/submenu_puretears2.png" alt="" />  <span>ВИЗИН<sup>&reg;</sup> Чистая Слеза в&nbsp;ампулах на 1 день</span></a></li>
+			</ul>
+		</li>
+		<li><a href="check.html"><span>Проверь свои глаза<sup>&nbsp;</sup></span></a></li>
+		<li><a href="gymnastics.html"><span>Гимнастика для глаз<sup>&nbsp;</sup></span></a></li>
+		<li class="end"><a href="faq.html"><span>Как заботиться о глазах<sup>&nbsp;</sup></span></a></li>
+	</ul>
+</div>-->
+
+<!-- Content -->
+    <div class="content">
+                <div class="banner_slider">
+                        <div class="item">
+                <a class="link" href="/classic_in_vial.html"></a>
+                <img src="/images/banner-visine.png" alt="ВИЗИН® классический">
+            </div>
+        </div>
+                    </div>
+
+    <div class="main_text">
+    <h1 style="font-size: 24px; font-weight: bold;">Капли для глаз ВИЗИН<sup>®</sup></h1>
+        <div class="list_products_home">
+            <div class="item">
+                <a class="images" href="/classic_in_vial.html">
+                    <img src="/images/prod05.png" alt="Капли для глаз ВИЗИН® Классический во флаконе" />
+                </a>
+                <a class="title" href="/classic_in_vial.html">ВИЗИН<sup>&reg;</sup> Классический во&nbsp;флаконе</a>
+                <a class="wh_bg more" href="/classic_in_vial.html">Описание препарата</a>
+                <a class="more" href="/classic_in_vial.html">Инструкция по применению </a>
+            </div>
+
+            <div class="item">
+                <a class="images" href="/classic_in_ampules.html" class="normalTip1 exampleTip" title="Теперь и в новом удобном формате, в ампулах на 1 раз!">
+                    <img src="/images/prod06.png" alt="Капли для глаз ВИЗИН® Классический в ампулах" />
+                </a>
+                <a class="title" href="/classic_in_ampules.html"><IDXSKIP>ВИЗИН<sup>&reg;</sup></IDXSKIP> <IDXSKIP>Классический в&nbsp;ампулах для однократного&nbsp;применения</IDXSKIP></a>
+                <a class="wh_bg more" href="/classic_in_ampules.html">Описание препарата</a>
+                <a class="more" href="/classic_1.html#ampules">Инструкция по применению </a>
+            </div>
+
+            <div class="item">
+                <a class="images" href="/puretears_in_vial.html">
+                    <img src="/images/prod08.png" alt="Капли для глаз ВИЗИН® Чистая Слеза во флаконе" />
+                </a>
+                <a class="title" href="/puretears_in_vial.html">ВИЗИН<sup>&reg;</sup> Чистая Слеза во&nbsp;флаконе</a>
+                <a class="wh_bg more" href="/puretears_in_vial.html">Описание препарата</a>
+                <a class="more" href="/puretears_1.html">Инструкция по применению </a>
+            </div>
+
+            <div class="item">
+                <a class="images" href="/puretears_in_ampules.html" class="normalTip2 exampleTip" title="В ампулах на 1 день. Можно закапывать на линзы.">
+                    <img src="/images/prod07.png" alt="Капли для глаз ВИЗИН® Чистая Слеза в ампулах" />
+                </a>
+                <a class="title" href="/puretears_in_ampules.html"><IDXSKIP>ВИЗИН<sup>&reg;</sup></IDXSKIP> <IDXSKIP>Чистая Слеза в&nbsp;ампулах&nbsp;на&nbsp;1&nbsp;день</IDXSKIP></a>
+                <a class="wh_bg more" href="/puretears_in_ampules.html">Описание препарата</a>
+                <a class="more" href="/puretears_1.html?in_ampules=yes">Инструкция по применению </a>
+            </div>
+
+            <div class="item">
+                <a class="images" href="/visine_allergy.html" >
+                    <img src="/images/main_block_allergy.png" alt="Капли для глаз ВИЗИН® Алерджи" />
+                </a>
+                <a class="title" href="/visine_allergy.html">ВИЗИН<sup>&reg;</sup> Алерджи</a>
+                <a class="wh_bg more" href="/visine_allergy.html">Описание препарата</a>
+                <a class="more" href="/visine_allergy_instruction.html">Инструкция по применению </a>
+            </div>
+        </div>
+    <div class="clear"></div>
+    <p>Глаза – это один из самых уязвимых органов. Причиной их дискомфорта могут стать самые разные факторы – раздражение, вызванное механическим воздействием, аллергическая реакция, длительная работа на компьютере и т. д. Правильно подобранное средство для глаз, например, в виде капель, способно помочь быстро устранить неприятные симптомы и позаботиться о Ваших глазах. Использование специальных средств позволит избежать более серьезных проблем, которые в будущем могут потребовать специального лечения.</p>
+    <h3 style="padding-bottom: 10px; font-size: 20px;">Когда глазам требуется помощь</h3>
+    <p>Существует целый ряд симптомов, при которых могут помочь капли для глаз. Самыми распространенными случаями применения являются:</p>
+    <ul class="list_symptoms">
+        <li class="item item_1">
+            <a href="/faq/syndrome-of-a-dry-eye.html" class="title">
+                <span>Сухость</span>
+            </a>
+        </li>
+        <li class="item item_2">
+            <a href="/faq/eye-redness.html" class="title">
+                <span>Покраснение</span>
+            </a>
+        </li>
+        <li class="item item_3">
+            <a href="/faq/eye-fatigue.html" class="title">
+                <span>Усталость</span>
+            </a>
+        </li>
+        <li class="item item_4">
+            <a href="/faq/reason-of-eyewater.html" class="title">
+                <span>Слезотечение</span>
+            </a>
+        </li>
+        <li class="item item_5">
+            <a href="/faq/sand-in-the-eyes-of.html" class="title">
+                <span>Песок в глазах</span>
+            </a>
+        </li>
+        <li class="item item_6">
+            <a href="/faq/burning-pain-in-the-eyes.html" class="title">
+                <span>Жжение</span>
+            </a>
+        </li>
+        <li class="item item_7">
+            <a href="/faq/eye-irritation.html" class="title">
+                <span>Раздражение</span>
+            </a>
+        </li>
+        <li class="item item_8">
+            <a href="/faq/eyestress.html" class="title">
+                <span>Напряжение</span>
+            </a>
+        </li>
+    </ul>
+
+	<div class="faq-box faq_answer">
+	<ul class="cont"> 			
+			<li>
+			<h2 class="undlineh2 click_show_hide" onclick="SpecialTrackEventScript2(this, 'FAQ_LensWear', {show: 'More', hide: 'Hide'})"  style="font-weight: normal;">
+Как использовать глазные капли ВИЗИН<sup>®</sup></h2>
+			<div class="short">
+				<div class="col col1">
+					</div>
+			<div class="next_text">
+				<div style="color: #3E3E3F; font-size: 16px;">
+<p></p>
+
+<p>ВИЗИН<sup>®</sup> – марка номер 1* в России для решения «несерьезных проблем с глазами». Являясь лидером рынка* и экспертом в заботе о глазах, ВИЗИН<sup>®</sup> предлагает средства,  помогающие устранить такие симптомы дискомфорта, как покраснение, раздражение, сухость и усталость. Капли для глаз также способствуют избавлению от зуда, слезотечения и отека, вызванного аллергией.</p>
+<p><span class="footnote" style="font-size: 11px;"><i><sup>*</sup>Аудит аптек, вся Россия, 2007-2014 гг.</i></span></p>
+<p><b>Как использовать средства ВИЗИН®</b></p>
+<p>Вам потребуется всего несколько секунд, чтобы воспользоваться подходящим средством. Капли предназначены для местного применения. Необходимо закапывать по 1-2 капли в каждый глаз, отклонив голову назад. Чтобы раствор равномерно распределился по поверхности, после закапывания рекомендуется поморгать. Точная дозировка и частота применения глазных капель зависят, прежде всего, от особенностей выбранного средства. Для Вашего удобства мы также предлагаем препараты в одноразовых ампулах.</p>
+<p>Лекарство ВИЗИН® можно использовать как самостоятельно, так и в качестве дополнения к профилактике заболеваний глаз – гимнастике, приему витаминов. Если у Вас есть какие-либо сомнения или подозрения в необходимости серьезного лечения, необходимо проконсультироваться с врачом.</p>
+				</div>
+				<div class="col">
+				</div>
+			</div>
+			
+			<input type="hidden" class="folded_height" />
+			<input type="hidden" class="stat" value="folded" />
+		</div>
+		<div class="hold-screen  hold-screen-script"><a class="show_hide" href="#" onclick="SpecialTrackEventScript2(this, 'FAQ_LensWear', {show: 'More', hide: 'Hide'})">подробнее</a></div>
+		<div></div>
+		</li>
+		</ul>
+	</div>
+	<div class="faq-box faq_answer">
+	<ul class="cont"> 			
+			<li>
+			<h2 class="undlineh2 click_show_hide" onclick="SpecialTrackEventScript2(this, 'FAQ_LensWear', {show: 'More', hide: 'Hide'})"  style="font-weight: normal;">
+Преимущества капель ВИЗИН<sup>®</sup></h2>
+			<div class="short">
+				<div class="col col1">
+					</div>
+			<div class="next_text">
+				<div>
+                    <ul class="list_adv_item">
+                        <li class="item item_1">
+                            <div class="content">
+                                <span class="title_list">
+                                    Быстрота и длительность действия.
+                                </span>
+                            </div>
+                        </li>
+                        <li class="item item_2">
+                            <div class="content">
+                                <span class="title_list">
+                                    Удобство использования капель для глаз.
+                                </span>
+                            </div>
+                        </li>
+                        <li class="item item_3">
+                            <div class="content">
+                                <span class="title_list">
+                                    Возможность регулярного применения (например, ВИЗИН® Чистая Слеза).
+                                </span>
+                            </div>
+                        </li>
+                        <li class="item item_4">
+                            <div class="content">
+                                <span class="title_list">
+                                    Высокая эффективность и безопасность*.
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+				</div>
+				<div class="col">
+				</div>
+			</div>
+			
+			<input type="hidden" class="folded_height" />
+			<input type="hidden" class="stat" value="folded" />
+		</div>
+		<div class="hold-screen  hold-screen-script"><a class="show_hide" href="#" onclick="SpecialTrackEventScript2(this, 'FAQ_LensWear', {show: 'More', hide: 'Hide'})">подробнее</a></div>
+		<div></div>
+		</li>
+		</ul>
+	</div>
+			 <p style="font-color:00539f; font-size: 16px;">За дополнительной информацией о препаратах ВИЗИН<sup>®</sup> или профессиональной консультацией Вы можете обратиться к нам по телефону <b>+7 (495) 726-55-55</b>.</p>
+			<span style="font-color: #3E3E3F; font-size: 11px;"><i><sup>*</sup>При использовании согласно инструкции по применению препарата.</i></span><br>
+			<span style="font-color: #3E3E3F; font-size: 11px;"><i><sup>**</sup>Препарат целесообразно применять при легком раздражении глаз.</i></span>
+</div>
+          
+            <br style="clear:both;" />
+
+        </div>
+
+			</div>
+    <!-- /Content -->
+
+<!-- Footer -->
+<div id="footer">
+    <div class="footer">
+        <IDXSKIP><a href="#home" id="scroll_to_top">Наверх сайта&nbsp;&nbsp;▲</a></IDXSKIP>
+        	<div class="share_links_container" style="width: 420px; margin: 0 auto; margin-top: 15px;">
+	    <div style="float: left; font-weight: bold; line-height: 30px; margin-right: 0px;"><IDXSKIP>Поделитесь этой страницей в социальных сетях:</IDXSKIP></div>
+	    <div style="float: left; margin-right: 10px; font-weight: bold;">
+		<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+		<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir"></div>
+	    </div>
+	    <div style="clear: both;"></div>
+	</div> <!-- .share_links_container -->
+	
+        <div class="fmenu" style="width: 1024px;">
+            <ul>
+                <li class="act"><a href="/">Главная</a></li>
+                <IDXSKIP><li><a href="/visine-classic.html">ВИЗИН<sup>&reg;</sup> Классический</a></li></IDXSKIP>
+                <IDXSKIP><li><a href="/visine-puretears.html">ВИЗИН<sup>&reg;</sup> Чистая Слеза</a></li></IDXSKIP>
+                <IDXSKIP><li><a href="/visine_allergy.html">ВИЗИН<sup>&reg;</sup> Алерджи</a></li></IDXSKIP>
+                <IDXSKIP><li><a href="/check.html">Какие капли подходят Вам</a></li></IDXSKIP>
+                <IDXSKIP><li><a href="/gymnastics.html">Гимнастика<sup>&nbsp;</sup></a></li></IDXSKIP>
+                <IDXSKIP><li><a href="/faq.html">Как заботиться о глазах</a></li></IDXSKIP>
+            </ul>
+
+            <div class="hw"><IDXSKIP>Необходимо ознакомиться с </IDXSKIP><IDXSKIP><a onclick="return recordOutboundLink(this, '', 'Link', 'Instruction');" style="text-decoration: underline; border: 0;padding-bottom: 2px;" href="/classic_1.html">инструкцией<span style="text-decoration: none; display: inline-block; color: #679bca">.</span></a></IDXSKIP><br />
+                <IDXSKIP>Проконсультируйтесь со специалистом</IDXSKIP></div>
+        </div>
+		<div class="f-left">
+            <!--noindex-->
+
+                <p><b><IDXSKIP>&copy; ООО "Джонсон &amp; Джонсон", Россия, 2010-2016 r.</IDXSKIP></b><br />
+                    <IDXSKIP>Этот сайт принадлежит компании ООО «Джонсон &amp; Джонсон», <br />которая полностью отвечает за его содержимое. <br />
+                    Сайт ориентирован на физических и юридических лиц из России и СНГ. <br />
+                    Последнее обновление: </IDXSKIP><IDXSKIP><span class="last_update">25/01/2016</span></IDXSKIP><IDXSKIP>.</IDXSKIP></p>
+
+					<p><IDXSKIP>Нажимая кнопку «Поделиться в социальных сетях», я подтверждаю, что выражаю собственное мнение о продукте ВИЗИН®. Мое мнение основано исключительно на моей собственной оценке данного продукта, я подтверждаю, что оно не мотивировано получением каких-либо благ или преференций производителя / импортера / продавцов продукта.</IDXSKIP></p>
+            <!--/noindex-->
+            
+        </div>
+
+        <div class="f-right">
+            <!--noindex-->
+                <p><IDXSKIP>Отпускается без рецепта. ООО «Джонсон &amp; Джонсон», <br  />г. Москва, ул. Крылатская, д. 17, стр. 2, тел.: (495) 726–55–55, факс: (495) 580–90–29.</IDXSKIP></p>
+                <p><IDXSKIP>Регистрационное удостоверение ВИЗИН</IDXSKIP><IDXSKIP><sup style="vertical-align:top">&reg;</sup></IDXSKIP> <IDXSKIP>Классический П N013621/01 от 02.04.2008.
+                <br />Регистрационное удостоверение ВИЗИН</IDXSKIP><IDXSKIP><sup style="vertical-align:top">&reg;</sup></IDXSKIP> <IDXSKIP>Чистая Слеза и ВИЗИН</IDXSKIP><IDXSKIP><sup style="vertical-align:top">&reg;</sup></IDXSKIP> <IDXSKIP>Чистая Слеза (на 1 день) № ФСЗ 2009/05110 от 28.12.2011.
+                <br />Регистрационное удостоверение ВИЗИН</IDXSKIP><IDXSKIP><sup style="vertical-align:top">&reg;</sup></IDXSKIP> <IDXSKIP>Алерджи П N014198/01 от 22.07.2011.
+                </IDXSKIP></p>
+            <!--/noindex-->
+			<p>
+                <IDXSKIP><a href="/rules.html">Политика конфиденциальности</a></IDXSKIP>
+                <IDXSKIP><a href="/terms.html">Условия использования</a></IDXSKIP>
+                <IDXSKIP><a href="/sitemap/">Карта сайта</a></IDXSKIP>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- /Footer -->
+
+<script type="text/javascript">_satellite.pageBottom();</script>
+
+
+</div>
+</body>
+</html>
+

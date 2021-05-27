@@ -1,0 +1,423 @@
+newlib.net/read/3215
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+<script src="http://newlib.net/other/fast.js"></script>
+<link rel="shortcut icon" href="http://newlib.net/templates/img/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="format-detection" content="telephone=no">
+<meta charset="UTF-8">
+<meta name="description" content="Незабываемое Рождество. На этой странице можно прочитать онлайн данное произведение.">
+<meta name="keywords" content="Незабываемое Рождество, Библиотека, книги, Жанры, бесплатно, читать, онлайн, бес смс">
+<title>Незабываемое Рождество. Читать онлайн электронную книгу Незабываемое Рождество</title>
+ 
+<link href="//style.newlib.net/css/bootstrap.min.css" rel="stylesheet">
+<link href="//style.newlib.net/css/animate.min.css" rel="stylesheet">
+<link href="//style.newlib.net/css/font-awesome.min.css" rel="stylesheet">
+<link href="//style.newlib.net/css/form.css" rel="stylesheet">
+<link href="//style.newlib.net/css/calendar.css" rel="stylesheet">
+<link href="//style.newlib.net/css/style.css" rel="stylesheet">
+<link href="//style.newlib.net/css/icons.css" rel="stylesheet">
+<link href="//style.newlib.net/css/generics.css" rel="stylesheet">
+<link href="//style.newlib.net/css/photo-gallery-alt.css" rel="stylesheet">
+</head>
+<body id="skin-blur-violate">
+<IDXSKIP><header id="header" class="media">
+<a href="default.htm" id="menu-toggle"></a>
+<a class="logo pull-left" href="/">NEWLIB.NET</a>
+<div class="media-body">
+<div class="media" id="top-menu">
+<div id="time" class="pull-right">
+<span id="hours"></span>
+:
+<span id="min"></span>
+:
+<span id="sec"></span>
+</div>
+<div class="pull-right">
+<a class="sa-top-message" href="/message.html" title="Связь с администрацией сайта">
+</a>
+</div>
+<div class="media-body">
+<form class="form-inline top-search shadowed" method="post" action="http://newlib.net/">
+<input type="text" name="search" class="main-search" placeholder="Поиск...">
+</form>
+</div>
+</div>
+</div>
+</header></IDXSKIP>
+<div class="clearfix"></div>
+<section id="main" class="p-relative" role="main">
+<aside id="sidebar">
+<div class="side-widgets overflow">
+<div class="text-center s-widget m-b-25 dropdown open" id="profile-menu">
+<ul class="dropdown-menu profile-menu">
+<IDXSKIP><li><a href="/authors">Авторы</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li></IDXSKIP>
+<IDXSKIP><li><a href="/series">Серии</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li></IDXSKIP>
+<IDXSKIP><li><a href="/publishers">Издательства</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li></IDXSKIP>
+<IDXSKIP><li><a href="/genre">Жанры</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li></IDXSKIP>
+<IDXSKIP><li><a href="/lang">Язык</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li></IDXSKIP>
+<IDXSKIP><li><a href="/name">Названия книг</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li></IDXSKIP>
+</ul>
+</div>
+<div class="s-widget m-b-25" style="display: block;!important">
+<h2 class="tile-title">
+Быстрый поиск
+</h2>
+<form method="post" action="http://newlib.net/engine/create_query.php">
+<div class="s-widget-body">
+<div class="side-border">
+<div class="block-area" id="tag-select" style="padding:0px;">
+<IDXSKIP><p>Автор произведения</p></IDXSKIP>
+<IDXSKIP><div class="dropdown">
+<input data-toggle="dropdown" onkeyup="searchNum('fast_author', 'author_ul')" id="fast_author" type="text" name="author" class="form-control m-b-10 input-focused" placeholder="Имя автора..."/>
+<div class="dropdown-menu dark col-md-3 animated flipInY dropdown-form" role="menu" style="background: rgba(0, 0, 0, 0.9);">
+<div class="dark-body">
+<ul id="author_ul" style="padding-left: 5px;"></ul>
+</div>
+</div>
+</div></IDXSKIP>
+<IDXSKIP><p>Литературная серия</p></IDXSKIP>
+<IDXSKIP><div class="dropdown">
+<input data-toggle="dropdown" onkeyup="searchNum('fast_series', 'series_ul')" id="fast_series" type="text" name="series" class="form-control m-b-10 input-focused" placeholder="Название серии..."/>
+<div class="dropdown-menu dark col-md-3 animated flipInY dropdown-form" role="menu" style="background: rgba(0, 0, 0, 0.9);">
+<div class="dark-body">
+<ul id="series_ul" style="padding-left: 5px;"></ul>
+</div>
+</div>
+</div></IDXSKIP>
+<IDXSKIP><p>Издательство книги</p></IDXSKIP>
+<IDXSKIP><div class="dropdown">
+<input data-toggle="dropdown" onkeyup="searchNum('fast_pub', 'pub_ul')" id="fast_pub" type="text" name="publisher" class="form-control m-b-10 input-focused" placeholder="Название издательства..."/>
+<div class="dropdown-menu dark col-md-3 animated flipInY dropdown-form" role="menu" style="background: rgba(0, 0, 0, 0.9);">
+<div class="dark-body">
+<ul id="pub_ul" style="padding-left: 5px;"></ul>
+</div>
+</div>
+</div></IDXSKIP>
+<IDXSKIP><p>Жанр произведения</p></IDXSKIP>
+<IDXSKIP><div class="dropdown">
+<input data-toggle="dropdown" onkeyup="searchNum('fast_gen', 'gen_ul')" id="fast_gen" type="text" name="genre" class="form-control m-b-10 input-focused" placeholder="Название серии..."/>
+<div class="dropdown-menu dark col-md-3 animated flipInY dropdown-form" role="menu" style="background: rgba(0, 0, 0, 0.9);">
+<div class="dark-body">
+<ul id="gen_ul" style="padding-left: 5px;"></ul>
+</div>
+</div>
+</div></IDXSKIP>
+<IDXSKIP><p>Язык</p></IDXSKIP>
+<IDXSKIP><div class="dropdown">
+<input data-toggle="dropdown" onkeyup="searchNum('fast_lang', 'lang_ul')" id="fast_lang" type="text" name="language" class="form-control m-b-10 input-focused" placeholder="Язык книги..."/>
+<div class="dropdown-menu dark col-md-3 animated flipInY dropdown-form" role="menu" style="background: rgba(0, 0, 0, 0.9);">
+<div class="dark-body">
+<ul id="lang_ul" style="padding-left: 5px;"></ul>
+</div>
+</div>
+</div></IDXSKIP>
+<IDXSKIP><button type="submit" class="btn btn-sm m-t-10">Применить</button></IDXSKIP>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+<IDXSKIP><ul class="list-unstyled side-menu">
+<li>
+<a class="sa-side-home" href="/">
+<span class="menu-item">Главная</span>
+</a>
+<li>
+<li>
+<a class="sa-top-message" href="/message.html">
+<span class="menu-item">Связь с нами</span>
+</a>
+<li>
+</ul></IDXSKIP>
+</aside>
+<section id="content" class="container">
+<h1 class="page-title" style="text-align:center;">Незабываемое Рождество. Читать онлайн электронную книгу Незабываемое Рождество</h1>
+<IDXSKIP><div class="block-area shortcut-area">
+<div class="block-area visible-lg">
+<a href="/id180649" title="Незвичайні пригоди Алі в країні Недоладії" target="_blank">
+<img src="/images/rate180649" alt="Незвичайні пригоди Алі в країні Недоладії" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id177963" title="Комкор" target="_blank">
+<img src="/images/rate177963" alt="Комкор" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id53047" title="Начало жизни вашего ребенка" target="_blank">
+<img src="/images/rate53047" alt="Начало жизни вашего ребенка" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id190997" title="Старая черепаха" target="_blank">
+<img src="/images/rate190997" alt="Старая черепаха" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id192929" title="Первый игрок, приготовьтесь" target="_blank">
+<img src="/images/rate192929" alt="Первый игрок, приготовьтесь" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id200808" title="П’ятнадцятирічний капітан" target="_blank">
+<img src="/images/rate200808" alt="П’ятнадцятирічний капітан" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id194413" title="Нас было четверо" target="_blank">
+<img src="/images/rate194413" alt="Нас было четверо" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id193643" title="Третий путь Без демократов и коммунистов" target="_blank">
+<img src="/images/rate193643" alt="Третий путь Без демократов и коммунистов" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id204201" title="Правила. Как выйти замуж за Мужчину своей мечты" target="_blank">
+<img src="/images/rate204201" alt="Правила. Как выйти замуж за Мужчину своей мечты" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id167453" title="Переплетаясь с тобой [Entwined with You]" target="_blank">
+<img src="/images/rate167453" alt="Переплетаясь с тобой [Entwined with You]" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id172227" title="От ненависти до любви — одно задание!" target="_blank">
+<img src="/images/rate172227" alt="От ненависти до любви — одно задание!" class="img-thumbnail m-r-10 m-b-10">
+</a><a href="/id172696" title="Физкультурные занятия в детском саду. Вторая младшая группа" target="_blank">
+<img src="/images/rate172696" alt="Физкультурные занятия в детском саду. Вторая младшая группа" class="img-thumbnail m-r-10 m-b-10">
+</a>
+</div>
+</div></IDXSKIP>
+<div class="block-area shortcut-area" style="text-align: center;">
+<div class="block-area">
+ <div id="amvb57225"></div> 
+ <script async type="text/javascript" src="//am15.net/vb.php?s=62530&f=50&d=57225&width=600&height=320&dummy=1"></script> 
+</div>
+</div>
+<hr class="whiter"/>
+<div class="block-area">
+<div class="row">
+<div class="media text-center">
+<ul class="pagination"><li class="active"><a href="/read/3215/p1" class="btn btn-sm">1</a></li><li class=""><a href="/read/3215/p2" class="btn btn-sm">2</a></li><li class=""><a href="/read/3215/p3" class="btn btn-sm">3</a></li><li class=""><a href="/read/3215/p4" class="btn btn-sm">4</a></li><li class=""><a href="/read/3215/p5" class="btn btn-sm">5</a></li><li><a href="/read/3215/p2" title="следующая страница" rel="next" class="btn btn-sm">></a></li><li><a href="/read/3215/p22" title="перейти в конец" class="btn btn-sm">В конец</a></li></ul></div><br> <div class="block-area">
+<div class="row">
+<div class="col-md-12">
+ 
+<div class="tile">
+<h2 class="tile-title"><p style="text-align: center">Незабываемое Рождество</p><a href="/authors/id2017"> Миранда Ли</a>, </h2>
+<div class="p-20">
+<p style="text-align:center;"><img src="http://newlib.net/images/read3215"></p> <p><body><h4 align="center">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Миранда Ли</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Незабываемое Рождество</p>
+</h4><h4 align="center">
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ГЛАВА ПЕРВАЯ</p>
+</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Итак, Джесси, что бы ты хотела получить на Рождество? Завтра пойду выбирать подарки. Осталось всего две недели, а я не люблю оставлять все на последний момент.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;На мгновение Джесси перестала краситься и улыбнулась своей хорошей подруге, у которой снимала квартиру.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– А ты знаешь какие-нибудь магазины, в которых продаются мужчины? – спросила она, сверкнув озорными карими глазами.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Дора от удивления открыла рот и переспросила:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Я не ослышалась? Ты сказала мужчины? Подожди, но минут десять назад ты заявила, что все мужчины неблагодарные существа.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Пожав плечами, Джесси ответила:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Ну, это было десять минут назад. Знаешь, иногда я вспоминаю то время, когда была молодой беззаботной девушкой и не подозревала о том, какие они, мужчины, на самом деле. Сейчас я бы многое отдала, чтобы хотя бы на один вечер вернуться в прошлое и отправиться на свидание с каким-нибудь сногсшибательным парнем.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– А если бы твое желание осуществилось, как думаешь, куда бы повез тебя этот сногсшибательный парень? – поинтересовалась Дора, внимательно глядя на подругу.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Ой, сначала наверняка в шикарный ресторан, потом в ночной клуб… – мечтательно закатив глаза, начала представлять Джесси. – А после горячих танцев он бы отвез меня в свою квартиру и там бы…</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Собственные рассуждения поразили Джесси. С тех пор как родилась Эмили, в ее жизни места мужчинам не было. И вдруг мысль о крепких объятиях какого-нибудь красавчика показалась такой соблазнительной! Даже больше, чем просто соблазнительной. Скорее, жизненно необходимой.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Нет, надо незамедлительно гнать от себя эту искушающую мысль.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Разочарованно вздохнув, она подумала, что все-таки вполне может обойтись без мужчин. Джесси всегда считала, что все они непонятные и непредсказуемые создания.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;И, по большому счету, ни на что не годные.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ни на что, кроме одного!</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Хочешь, не хочешь, но нельзя отвергать тот факт, что ничто в мире не может доставить такого удовольствия, как проведенная с опытным мужчиной ночь.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Отец Эмили был хорош в постели. Пожалуй, это единственное, что можно считать его положительным качеством. Ко всему остальному же он относился безответственно и опрометчиво. В конце концов, именно страсть к авантюрам погубила его. Еще до того, как Джесси обнаружила, что беременна, он разбился, катаясь на сноуборде.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Таким образом, к двадцати восьми годам Джесси убедилась в том, что искусные любовники редко становятся примерными мужьями. Обычно все они оказываются подлецами. Более того, она была уверена, что даже если бы Лайел выжил, то вряд ли остался бы с ней и с дочерью.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Нет, определенно без мужчин ее жизнь намного лучше во всех отношениях. По крайней мере, на данный момент. Зачем же заводить себе кого-то просто «для галочки»? К тому же Эмили еще только четыре года, и она очень впечатлительный ребенок…</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– На самом деле в качестве рождественского подарка я больше всего хочу получить приличное место в каком-нибудь рекламном агентстве, – решительно сказала Джесси, складывая косметику в сумочку.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;До рождения дочери она работала компьютерным дизайнером в «Джексон и Фелдс», одном из самых крупных агентств Сиднея. Но с появлением Эмили многие приоритеты в жизни Джесси изменились. Она планировала вернуться к работе после того, как дочь немного подрастет, но передумала. Ей не хотелось отдавать свою крошку в детский сад, поэтому она предпочла работать на дому и самой заниматься ее воспитанием.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;У Джесси был мощный компьютер и все необходимые дизайнерские программы. Но из-за сокращения финансирования агентств многие дизайнеры остались без работы. Таким образом, все надежды Джесси так и не оправдались.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Джесси получала небольшое пособие по безработице. Денег почти ни на что не хватало, поэтому ей пришлось съехать с квартиры. Но, к счастью, судьба свела ее с очень приятной женщиной в годах – Дорой, и Джесси нашла приют у нее.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Плата за проживание была чисто символической. В благодарность за это Джесси помогала Доре с домашними делами и с работой в саду, да и просто скрашивала ее одиночество.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но денег все равно катастрофически недоставало. Ко второй половине месяца они всегда заканчивались. Развлечения были редкостью, а на дни рождения и на Рождество в качестве подарков Джесси обычно покупала дешевые безделушки. В прошлом году Эмили было всего три года, и малышка радовалась любому пустячку. Но Джесси прекрасно осознавала, что в этом году такой номер уже не пройдет.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чем больше проходило времени, тем острее становилась необходимость бросать подобный образ жизни и возвращаться на работу. Поэтому в январе Джесси все же записала Эмили в детский сад, который находился неподалеку от дома, после чего принялась искать работу.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;К сожалению, поиски не увенчались успехом. Ни одно рекламное агентство не нуждалось в компьютерном дизайнере, который не работал в течение трех лет, а сидел дома с ребенком.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;По этой причине некоторое время она занималась неприятным, хоть и прибыльным делом. Однажды она увидела объявление, в котором предлагалась должность секретаря в приемной сыскного агентства. Опыта работы не требовалось, а единственным условием являлись приятные внешность и голос. Когда Джесси пришла туда, ей сказали, что место секретаря уже занято, но есть вакансия сыщика. Ей пришлось согласиться.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В ее обязанности входило разоблачать людей, подозреваемых деловыми партнерами или женами во лжи. Обычно давались определенные адреса – чаще всего различные бары и пивные, а также фотографии и необходимые сведения. Работа предполагала заигрывание с этими людьми, поэтому Джесси должна была выглядеть соблазнительно, чтобы расположить к себе свою жертву и вывести ее на чистую воду. Чаще всего после того, как Джесси собирала достаточно улик – записывала признание на диктофон или снимала на камеру в мобильном телефоне, – она говорила, что ей нужно отлучиться в дамскую комнату, и исчезала.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;После дюжины подобных дел она все-таки бросила это занятие. Возможно, на ее решение повлиял один случай. Как-то мужчина, за которым она следила, не поддался ее очарованию и более того, оказался почтенным человеком. Все остальные были настоящими мерзавцами и, не тратя времени на разговоры, сразу начинали приставать к ней.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Потом Джесси посчастливилось: она устроилась официанткой в местном ресторане. Из-за Эмили она отказывалась работать по ночам и выходным, несмотря на то, что в это время можно рассчитывать на большие чаевые. А расходы росли с каждым днем. И хотя Джесси получала государственное пособие как мать-одиночка, этих денег хватало лишь на оплату детского сада.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ее радовало, что Эмили обожала посещать дошкольные занятия. Она была смышленой и общительной девочкой. Казалось, за последний год дочурка заметно выросла, В прошлые выходные, например она, вдруг начала расспрашивать о своем отце и тотчас же заметила, что мама пытается уйти от разговора. Джесси ничего не оставалось, как рассказать всю правду о том, что папа погиб во время несчастного случая еще до ее рождения и то, что они так и не успели пожениться.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Так значит, вы с папочкой не разведены и он никогда не вернется, как папа Джоэля? – разочарованно спросила Эмили.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Джоэль был ее лучшим другом.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Нет, Эмили, папочка не вернется, он на небесах, – ответила Джесси, пытаясь побороть волнение и говорить спокойно.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Эмили вздохнула, нахмурилась и поспешно вышла из комнаты.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Джесси уже давно знала, о каком рождественском подарке мечтает Эмили, поэтому переступила через себя и решила очередной раз оказать услугу Джеку Кигану. Она знала, что может связаться с ним в случае, если ей срочно понадобятся деньги. А сейчас был именно такой случай. Ведь Барби – фея – самая дорогая кукла в этом году. Джесси придется потратить все четыреста долларов, которые она заработает этим вечером, на покупку этой проклятой куклы со всеми принадлежностями: со сказочным замком, волшебной лошадью и блестящим сундучком с одеждой.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Джесси поднялась со стула и поправила подол короткого черного платья, которое выбрала для сегодняшней работы. Хотя это платье самое приличное из всего ее гардероба, но ему уже больше шести лет. Поэтому Джесси переживала, что оно выглядит поношенным.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Ты, правда, считаешь, что это подойдет? – беспокойно спросила она Дору. – Оно ведь уже такое старое.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Оно замечательное. Ты выглядишь прекрасно и очень сексуально. Как модель, – уверенно заявила Дора.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Кто, я? Не смеши меня, Дора. Может, фигура у меня и хорошая, но в целом…</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Ты недооцениваешь себя, Джесси. – Во всех отношениях, мысленно добавила Дора.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Фигура у Джесси не просто хорошая, а скорее превосходная. Действительно, как с обложки журнала. Красивая грудь, тонкая талия, длинные ноги.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Лицо, правда, не без изъянов: большой рот, широкие скулы, слегка длинный нос. Но зато необычный разрез ее темных глаз манит своей загадочностью.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Что же касается волос… Дора бы отдала многое, чтобы у нее в молодости были такие волосы, как у Джесси. Черные, густые и волнистые от природы. Если они распущены, то красиво очерчивают лицо и лежат на плечах.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Дору не удивило то, что в сыскном агентстве именно Джесси поручали подобные дела. Несомненно, она стопроцентная ловушка для неверных мужей. А возможно, даже и для верных.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Это тот парень? – спросила Дора, рассматривая лежащую на столе фотографию.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Да, это он.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Милый, – заметила Дора.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Джесси тоже так считала. Он был намного симпатичнее и моложе всех тех личностей, с кем ей приходилось заигрывать. На вид ему можно дать лет тридцать. И все же, какое бы хорошее впечатление он ни производил, она не сомневалась относительно того, к какому типу людей он принадлежит.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Приятная внешность еще не показатель. Он женат, и у него двое детей. Но это не мешает ему каждую пятницу ходить по барам и проводить там ночи напролет, – категорично заявила Джесси.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– Многие </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="whiter"/>
+<div class="block-area">
+<div class="media text-center">
+<ul class="pagination"><li class="active"><a href="/read/3215/p1" class="btn btn-sm">1</a></li><li class=""><a href="/read/3215/p2" class="btn btn-sm">2</a></li><li class=""><a href="/read/3215/p3" class="btn btn-sm">3</a></li><li class=""><a href="/read/3215/p4" class="btn btn-sm">4</a></li><li class=""><a href="/read/3215/p5" class="btn btn-sm">5</a></li><li><a href="/read/3215/p2" title="следующая страница" rel="next" class="btn btn-sm">></a></li><li><a href="/read/3215/p22" title="перейти в конец" class="btn btn-sm">В конец</a></li></ul></div><br>
+</div>
+</section>
+</section>
+<script src="//style.newlib.net/js/jquery.min.js"></script>
+<script src="//style.newlib.net/js/jquery-ui.min.js"></script>
+<script src="//style.newlib.net/js/jquery.easing.1.3.js"></script>
+<script src="//style.newlib.net/js/bootstrap.min.js"></script>
+<script src="//style.newlib.net/js/charts/jquery.flot.js"></script>
+<script src="//style.newlib.net/js/charts/jquery.flot.time.js"></script>
+<script src="//style.newlib.net/js/charts/jquery.flot.animator.min.js"></script>
+<script src="//style.newlib.net/js/charts/jquery.flot.resize.min.js"></script>
+<script src="//style.newlib.net/js/sparkline.min.js"></script>
+<script src="//style.newlib.net/js/easypiechart.js"></script>
+<script src="//style.newlib.net/js/charts.js"></script>
+<script src="//style.newlib.net/js/maps/jvectormap.min.js"></script>
+<script src="//style.newlib.net/js/maps/usa.js"></script>
+<script src="//style.newlib.net/js/icheck.js"></script>
+<script src="//style.newlib.net/js/scroll.min.js"></script>
+<script src="//style.newlib.net/js/calendar.min.js"></script>
+<script src="//style.newlib.net/js/feeds.min.js"></script>
+<script src="//style.newlib.net/js/functions.js"></script>
+<script src="//style.newlib.net/js/editor.min.js"></script>
+<script src="//style.newlib.net/js/markdown.min.js"></script>
+<script src="//style.newlib.net/js/simple-inheritance.min.js"></script>
+<script src="//style.newlib.net/js/code-photoswipe-1.0.11.min.js"></script>
+<script src="//style.newlib.net/js/select.min.js"></script>
+<script src="//style.newlib.net/js/chosen.min.js"></script>
+<script src="//style.newlib.net/js/autosize.min.js"></script>
+<script src="//style.newlib.net/js/input-mask.min.js"></script>
+<script src="//style.newlib.net/js/spinner.min.js"></script>
+<script type="text/javascript"> 
+
+        $( "#author_ul").on( "click", "li", function() {
+		$("#fast_author").val($( this ).text() );
+		});
+		$( "#series_ul").on( "click", "li", function() {
+		$("#fast_series").val($( this ).text() );
+		});
+		$( "#pub_ul").on( "click", "li", function() {
+		$("#fast_pub").val($( this ).text() );
+		});
+		$( "#gen_ul").on( "click", "li", function() {
+		$("#fast_gen").val($( this ).text() );
+		});
+		$( "#lang_ul").on( "click", "li", function() {
+		$("#fast_lang").val($( this ).text() );
+		});     
+
+            $(document).ready(function(){
+                /* Tag Select */
+                (function(){
+                    /* Limited */
+                    $(".tag-select-limited").chosen({
+                        max_selected_options: 1
+                    });
+                    
+                    /* Overflow */
+                    $('.overflow').niceScroll();
+                })();
+                
+                /* Input Masking - you can include your own way */
+                (function(){
+                    $('.mask-date').mask('00/00/0000');
+                    $('.mask-time').mask('00:00:00');
+                    $('.mask-date_time').mask('00/00/0000 00:00:00');
+                    $('.mask-cep').mask('00000-000');
+                    $('.mask-phone').mask('0000-0000');
+                    $('.mask-phone_with_ddd').mask('(00) 0000-0000');
+                    $('.mask-phone_us').mask('(000) 000-0000');
+                    $('.mask-mixed').mask('AAA 000-S0S');
+                    $('.mask-cpf').mask('000.000.000-00', {reverse: true});
+                    $('.mask-money').mask('000.000.000.000.000,00', {reverse: true});
+                    $('.mask-money2').mask("#.##0,00", {reverse: true, maxlength: false});
+                    $('.mask-ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {translation: {'Z': {pattern: /[0-9]/, optional: true}}});
+                    $('.mask-ip_address').mask('099.099.099.099');
+                    $('.mask-percent').mask('##0,00%', {reverse: true});
+                    $('.mask-credit_card').mask('0000 0000 0000 0000');
+                })();
+                
+                /* Spinners */
+                (function(){
+                    //Basic
+                    $('.spinner-1').spinedit();
+                    
+                    //Set Value
+                    $('.spinner-2').spinedit('setValue', 100);
+                    
+                    //Set Minimum                    
+                    $('.spinner-3').spinedit('setMinimum', -10);
+                    
+                    //Set Maximum                    
+                    $('.spinner-4').spinedit('setMaxmum', 100);
+                    
+                    //Set Step
+                    $('.spinner-5').spinedit('setStep', 10);
+                    
+                    //Set Number Of Decimals
+                    $('.spinner-6').spinedit('setNumberOfDecimals', 2);
+                })();
+            });
+
+
+       
+	      function SetCookieForNDays(name, value, days, path, domain, secure)
+			{
+			var today = new Date();
+			expires = new Date(today.getTime() + days*24*60*60*1000);
+			 document.cookie = name + "=" + escape(value) +
+			                "; expires=" + expires.toGMTString() +
+			                ((path) ? "; path=" + path : "") +
+			                ((domain) ? "; domain=" + domain : "") +
+			                ((secure) ? "; secure" : "");
+			}
+
+	      document.addEventListener('DOMContentLoaded', function(){
+				Code.photoSwipe('a', '#photo-gallery-alt');
+		    }, false);
+        
+        </script>
+<IDXSKIP><noindex>
+<footer style="text-align:center;">
+ <script type="text/javascript"><!--
+			document.write("<a href='//www.liveinternet.ru/click' "+
+			"target=_blank><img src='//counter.yadro.ru/hit?t14.1;r"+
+			escape(document.referrer)+((typeof(screen)=="undefined")?"":
+			";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+			screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+			";"+Math.random()+
+			"' alt='' title='LiveInternet: показано число просмотров за 24"+
+			" часа, посетителей за 24 часа и за сегодня' "+
+			"border='0' width='88' height='31'><\/a>")
+			//--></script> 
+ 
+<a href="https://metrika.yandex.ru/stat/?id=28923800&amp;from=informer" target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/28923800/3_1_FFFFFFFF_EFEFEFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:28923800,lang:'ru'});return false}catch(e){}"/></a>
+ 
+ 
+<script type="text/javascript">
+			(function (d, w, c) {
+			    (w[c] = w[c] || []).push(function() {
+			        try {
+			            w.yaCounter28923800 = new Ya.Metrika({id:28923800,
+			                    webvisor:true,
+			                    clickmap:true,
+			                    trackLinks:true,
+			                    accurateTrackBounce:true});
+			        } catch(e) { }
+			    });
+
+			    var n = d.getElementsByTagName("script")[0],
+			        s = d.createElement("script"),
+			        f = function () { n.parentNode.insertBefore(s, n); };
+			    s.type = "text/javascript";
+			    s.async = true;
+			    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+			    if (w.opera == "[object Opera]") {
+			        d.addEventListener("DOMContentLoaded", f, false);
+			    } else { f(); }
+			})(document, window, "yandex_metrika_callbacks");
+			</script>
+<noscript><div><img src="//mc.yandex.ru/watch/28923800" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+ 
+</footer>
+ <script type="text/javascript" src="//c.am15.net/delay-loader/delay-loader.min.js?s=62530&d=5000&f=cu" class="amct"></script>
+<script type="text/javascript" class="amfs" src="//x.mobalert.net/fs.php?s=62530"></script>
+<script type="text/javascript" class="ambn" src="//x.mobalert.net/ma.php?s=62530&n=3"></script> 
+ <script type="text/javascript" src="//am15.net/bn.php?s=62530&f=6&d=8701"></script> 
+ <script type="text/javascript" src="//am15.net/bn.php?s=62530&f=1&d=46968"></script> 
+</noindex></IDXSKIP>
+</body>
+</html>
+

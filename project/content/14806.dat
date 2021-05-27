@@ -1,0 +1,837 @@
+optika-8.ru/auxpage_obratniy-zvonok
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="http://www.optika-8.ru/">
+	<script type="text/javascript">
+		var WAROOT_URL = 'http://www.optika-8.ru/';//ok
+	</script>
+	
+<!-- Head start -->
+<title>Обратный звонок ― Оптика-8 - магазин оптики в москве, интернет-магазин</title>
+
+
+<link rel="stylesheet" href="/published/publicdata/CHELFISHERO8/attachments/SC/themes/user_optika/main.css" type="text/css" media="screen" />
+<!--[if IE 6]><link rel="stylesheet" href="/published/publicdata/CHELFISHERO8/attachments/SC/themes/user_optika/style.ie6.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/published/publicdata/CHELFISHERO8/attachments/SC/themes/user_optika/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 8]><link rel="stylesheet" href="/published/publicdata/CHELFISHERO8/attachments/SC/themes/user_optika/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+<!--[if IE 9]><link rel="stylesheet" href="/published/publicdata/CHELFISHERO8/attachments/SC/themes/user_optika/style.ie7.css" type="text/css" media="screen" /><![endif]-->
+<link rel="shortcut icon" href="/published/publicdata/CHELFISHERO8/attachments/SC/images/favicon.png" type="image/x-icon" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+    <script type="text/javascript" src="/published/SC/html/scripts/js/script.js"></script>
+	<script src="/published/SC/html/scripts/js/ui/minified/jquery.ui.core.min.js"></script>
+	<script src="/published/SC/html/scripts/js/ui/minified/jquery.ui.widget.min.js"></script>
+    <script src="/published/SC/html/scripts/js/ui/minified/jquery.ui.datepicker.min.js"></script>
+	<script src="/published/SC/html/scripts/js/ui/minified/jquery.ui.datepicker-ru.js"></script>
+	<script type="text/javascript" src="/published/SC/html/scripts/js/jquery.loadmask.min.js"></script>
+	<script type="text/javascript" src="/published/SC/html/scripts/js/jquery.nivo.slider.js"></script>
+	
+    <link href="/published/SC/html/scripts/css/jquery.loadmask.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/published/SC/html/scripts/js/themes/humanity/jquery.ui.all.css">
+	<link rel="stylesheet" href="/published/SC/html/scripts/css/nivo-slider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/published/SC/html/scripts/css/themes/default/default.css" type="text/css" media="screen" />
+	
+<link rel="stylesheet" type="text/css" href="/fancybox/jquery.fancybox.css" media="screen" />
+	<script type="text/javascript" src="/fancybox/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="/fancybox/jquery.fancybox-1.2.1.pack.js"></script>
+	<script type="text/javascript">
+$(document).ready(function() {
+    $("a.gallery").fancybox();
+});
+</script>
+
+
+	
+    <script language=JavaScript>
+
+    $(document).ready(function() {
+	
+        $('#response_date_send, #response_date_get').datepicker();
+		
+		$('a.cat:last').css({'color':'#00cc00'}); 
+		/*
+		$('#sd td').each( function() 
+		{ 
+			if ( $(this).html() == 'Сфера: (диоптрии, Sph)' )
+			
+			
+		});
+		*/
+		
+
+	
+	$(document).ready(function(){ 
+		
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 100) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+		}); 
+		
+		$('.scrollup').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+		});
+
+	});
+
+		
+    });
+	
+    $(window).load(function() {
+        $('#slider').nivoSlider({pauseTime: 6000, prevText: 'Назад', nextText: 'Вперёд'});
+		$('#mainpage').click( function() { document.location.href = "http://www.optika-8.ru" });
+    });
+
+function change_bm(id, img, inner){
+	if(inner != 1) {	document.getElementById("bm"+id).src = "img/iphoto_"+id+"_"+img+".gif";}
+}
+	
+function send_response()
+{
+	if ( $('#response_name').val().length < 5 ) { alert ('Пожалуйста, введите корректное имя'); return ; }
+	if ( $('#response_city').val().length < 5 ) { alert('Пожалуйста, введите название города'); return ; }
+	if ( $('#response_date_send').val().length < 5 ) { alert('Не выбрана дата оформления заказа'); return ; }
+	if ( $('#response_date_get').val().length < 5 ) { alert('Не выбрана дата получения заказа'); return ; }
+	if ( $('#response_text').val().length < 5 ) { alert('Не выбрана дата получения заказа'); return ; }
+	
+	$.ajax({
+	beforeSend: function() { $('.order_form').mask('Пожалуйста, подождите...'); },
+	complete: function() 
+	{ 
+	  
+	  $('.order_form').unmask();
+
+	},
+	type: "POST",
+	url: "response.php",
+	data: 'response_name=' + $('#response_name').val() + '&response_product=' + $('#response_product').val() + '&response_city=' + $('#response_city').val() + '&response_date_send=' + $('#response_date_send').val() + '&response_date_send=' + $('#response_date_send').val() + '&response_date_get=' + $('#response_date_get').val() + '&response_text=' + $('#response_text').val() + '&recaptcha_response_field=' + $('#recaptcha_response_field').val() + '&recaptcha_challenge_field=' + $('#recaptcha_challenge_field').val(),
+	success: function(html)
+	{
+
+	  html=eval('('+html+')');
+	  if ( html.status == 1)
+	  {
+		   $('#response_block').html('<p>Спасибо, Ваш отзыв был успешно отправлен нам</p>');
+	  }
+	  
+	  if ( html.status == -1 )
+		{
+			alert('Капча распознана неверно, пожалуйста, повторите ввод текста с картинки');
+                       Recaptcha.reload();
+		}
+		
+	  if ( html.status == 0 )
+		{
+			alert('Произошла непредвиденная ошибка, пожалуйста, попробуйте ещё раз');
+		}	
+	  
+	}
+	});     
+}
+
+
+ var RecaptchaOptions = {
+    lang : 'ru'
+ };
+ 
+    </script>
+
+   <style type="text/css">
+.opt-post .layout-item-0 .ie7 .opt-post .opt-layout-cell .ie6 .opt-post .opt-layout-cell </style>
+<!-- блок для выпадающего меню -->
+<link rel="stylesheet" href="/dropdown.css" type="text/css" />
+<script type="text/javascript" src="/dropdown.js"></script>
+<!-- / блок для выпадающего меню -->
+<meta name='yandex-verification' content='5d877ceca139c40a' />
+<script src="/callme/js/callme.js"></script>
+<!-- Head end -->
+
+	<link rel="stylesheet" href="/published/publicdata/CHELFISHERO8/attachments/SC/themes/user_optika/overridestyles.css" type="text/css">	<script type="text/javascript" src="/published/publicdata/CHELFISHERO8/attachments/SC/themes/user_optika/head.js"></script>
+	<link rel="stylesheet" href="/published/publicdata/CHELFISHERO8/attachments/SC/themes/user_optika/main.css" type="text/css">
+	<link rel="stylesheet" href="/published/SC/html/scripts/css/general.css" type="text/css">
+	<script type="text/javascript" src="/published/SC/html/scripts/js/functions.js"></script>
+	<script type="text/javascript" src="/published/SC/html/scripts/js/behavior.js"></script>
+	<script type="text/javascript" src="/published/SC/html/scripts/js/widget_checkout.js"></script>
+	<script type="text/javascript" src="/published/SC/html/scripts/js/frame.js"></script>
+	<script type="text/javascript">
+<!--		
+
+var defaultCurrency = {
+	display_template: '{value} руб.',
+	decimal_places: '0',
+	decimal_symbol: '.',
+	thousands_delimiter: '',
+	getView: function (price){return this.display_template.replace(/\{value\}/, number_format(price, this.decimal_places, this.decimal_symbol, this.thousands_delimiter));}
+	};
+
+var ORIG_URL = 'http://www.optika-8.ru/';
+var ORIG_LANG_URL = '/';
+window.currDispTemplate = defaultCurrency.display_template;
+var translate = {};
+translate.cnfrm_unsubscribe = 'Вы уверены, что хотите удалить вашу учетную запись в магазине?';
+translate.err_input_email = 'Введите правильный электронный адрес';
+translate.err_input_nickname = 'Пожалуйста, введите Ваш псевдоним';
+translate.err_input_message_subject = 'Пожалуйста, введите тему сообщения';
+translate.err_input_price = 'Цена должна быть положительным числом';
+function position_this_window(){
+	var x = (screen.availWidth - 600) / 2;
+	window.resizeTo(600, screen.availHeight - 100);
+	window.moveTo(Math.floor(x),50);
+}		
+//-->
+</script>
+	</head>
+	<body >
+<!--  BODY -->
+<div id="opt-page-background-glare-wrapper">
+    <div id="opt-page-background-glare"></div>
+</div>
+<div id="opt-main">
+    <div class="cleared reset-box"></div>
+    <div class="opt-header">
+        <div class="opt-header-position">
+            <div class="opt-header-wrapper">
+                <div class="cleared reset-box"></div>
+                <div class="opt-header-inner">
+                <div class="opt-headerobject">
+<table width="" align="" style="width: 1000px; height: 140px; background-image: url(&quot;/published/publicdata/CHELFISHERO8/attachments/SC/images/logo_new_ico+.png&quot;); border-collapse: collapse; background-position: 0% 0%; margin-left: -5px;">
+
+<tbody style="margin-left: 0px;">
+
+
+<tr style="margin-left: 0px; padding-left: 0px;">
+<td title="Оптика-8" style="letter-spacing: 0px; word-spacing: 0px; cursor: pointer; color: white; font-size: 30px; top: 0px; margin-left: 0px; margin-right: 0px; padding-left: 0px; width: 330px;" id="mainpage">
+
+<div><a title="Магазин Оптика-8, 127437, Москва, ул. Селезневская, дом 34" alt="Магазин Оптика-8, 127437, Москва, ул. Селезневская, дом 34" href="http://www.optika-8.ru/"><img title="Магазин Оптика-8, 127437, Москва, ул. Селезневская, дом 34" alt="Магазин Оптика-8, 127437, Москва, ул. Селезневская, дом 34" src="/logo-optika-8-na-seleznevskoy.png" style="width: 247px; margin-left: 40px;"></a></div>
+
+</td>
+
+
+<td style="padding-bottom: 1px; font-size: 12pt; letter-spacing: 0px; word-spacing: 0px; padding-right: 0px; vertical-align: middle; margin-left: 0px; padding-top: 1px; width: 372px; text-align: left;">
+<font style="font-size: 14px;">
+<font style="font-size: 21px;"><a style="text-decoration: none; color: rgb(248, 248, 248); font-size: 40px; margin-bottom: 0px;" onclick="yaCounter25132613.reachGoal('TEL'); return true;" href="tel:+74951201808"><b style="color: #585858; margin-left: 3px;">8 (495)&nbsp;</b><b style="color: #585858; margin-left: -3px;">120-18-08</b></a><br>
+<p style="margin-top: 0px; padding-top: 10px;color: #585858;"><b style="margin-top: 0px; padding-top: 0px;">ПН-СБ :</b><b style="margin-left: 2px;">09:00 &ndash; 20:00</b><br>
+<b>ВОСКР:</b><b style="margin-left: 2px;">10:00 &ndash; 20:00</b></p></font>
+</font>
+<br>
+  
+
+</td>
+
+<td style="padding-bottom: 20px; vertical-align: middle; letter-spacing: 0px; word-spacing: 0px; margin-top: 0px; text-align: left; padding-left: 52px;color: #585858;font-weight: bold;">
+<font><font style="font-size: 24px; ">
+<div style="font-size: 17px; margin-bottom: 0px; margin-top: 0px;">
+<a title="Купить спортивные очки с диоптриями в интернет-магазине sport.optika-8.ru" alt="Купить спортивные очки с диоптриями в интернет-магазине sport.optika-8.ru" href="http://sport.optika-8.ru/" style="border-top-width: 0px; font-size: 20px;"  class="classname">Интернет-магазин</a></div></font></font>
+   8 (495) 688-24-45<br>
+  8 (916) 129-53-58<br> (пн-пт:10-18)
+<!--<p style="text-align: left;color: #585858;"><span onclick="yaCounter25132613.reachGoal('CALL'); return true;" class="callme_viewform" style="font-size: 16px; text-align: center; width: 190px; margin-top: 14px; padding-top: 0px; border-bottom-width: 0px; margin-bottom: 0px; padding-bottom: 9px; text-decoration: underline; cursor: pointer;">Обратный звонок</span></p>-->
+</td>
+</tr></tbody></table></div>
+                <div class="opt-logo">
+                                                </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+	
+	
+	
+	
+	
+<div class="cleared reset-box"></div>
+<div class="opt-box opt-sheet">
+<div class="opt-box-body opt-sheet-body">
+<div class="opt-bar opt-nav">
+<div class="opt-nav-outer">
+<!-- верхнее меню новое -->
+
+<div class=up_menu>
+
+<!-- о магазине -->
+<div class="floatleft">
+<div class="ddheader" id="about-ddheader" onmouseover="ddMenu('about',1);" onmouseout="ddMenu('about',-1);"><a href="/">О МАГАЗИНЕ</A></div>
+  <div class="ddcontent" id="about-ddcontent" onmouseover="cancelHide('about')" onmouseout="ddMenu('about',-1)">
+    <div class="ddinner">
+      <ul>
+        <li class="underline"><a href="/auxpage_about/">О магазине</A></li>
+<li class="underline"><a href="/auxpage_nashi-vrachi/">Наши врачи</A></li>
+		<li class="underline"><a href="/auxpage_doctor-services/">Услуги врачей</a></li>
+		<li class="underline"><a href="/auxpage_workshop-services/">Услуги мастерской</a></li>
+         <!--<li class="underline"><a href="/auxpage_reviews/">Отзывы покупателей</A></li>
+<li class="underline"><a href="/auxpage_job/">Вакансии</a></li>-->
+		<!-- <li class="underline" style="display: none;"><a href="/blog/">Новости</A></li> -->
+		<li class="underline"><a href="/feedback/">Контакты</A></li>
+		
+        </ul>
+    </div>
+  </div>
+</div>
+<!-- / о магазине -->
+<div class="floatleft"><IMG SRC="/img/bm_rzd.gif" style="padding-top: 12px"></div>
+<!-- каталог -->
+<div class="floatleft">
+<div class="ddheader" id="catalog-ddheader" onmouseover="ddMenu('catalog',1);" onmouseout="ddMenu('catalog',-1);"><a href="/auxpage_optika_dlya_vzroslih/">КАТАЛОГ</A></div>
+  <div class="ddcontent" id="catalog-ddcontent" onmouseover="cancelHide('catalog')" onmouseout="ddMenu('catalog',-1)">
+    <div class="ddinner">
+      <ul>
+        <li class="underline"><a href="auxpage_optika_dlya_vzroslih">Оправы для взрослых</A></li>
+		<li class="underline"><a href="/auxpage_optika_dlya_detei">Оправы для детей</A></li>
+<li class="underline"><a href="/auxpage_aksessuary/">Аксессуары</a>
+		<li class="underline"><a href="/auxpage_gotovie_ochki">Готовые очки</A></li>
+		<li class="underline"><a href="/auxpage_cohki_dlyz_raboti_za_komputerom">Очки для работы за компьютером</A></li>
+<li class="underline"><a href="/auxpage_solncezashitnie_ochki_dlya_vzroslih">Солнцезащитные очки для взрослых</A></li>
+		<li class="underline"><a href="/auxpage_solncezashitnie_ochki_dlya_detei">Солнцезащитные очки для детей</A></li>
+		<li class="underline"><a href="http://sport.optika-8.ru" target="_blank">Спортивные очки</A></li>
+		<li class="underline"><a href="/auxpage_ochkovie_linzi">Очковые линзы</A></li>
+		<li class="underline"><a href="/auxpage_kontaktnie_linzi">Контактные линзы</A></li>
+        </ul>
+    </div>
+  </div>
+</div>
+<!-- / каталог -->
+
+
+<div class="floatleft"><img style="padding-top: 12px;" src="/img/bm_rzd.gif"></div>
+<div class="floatleft">
+<div id="contact-ddheader" class="ddheader"><a href="/auxpage_novie-postupleniya-2/">НОВЫЕ ПОСТУПЛЕНИЯ</a></div>
+
+</div>
+<div class="floatleft"><IMG SRC="/img/bm_rzd.gif" style="padding-top: 12px"></div>
+<!-- услуги -->
+<div class="floatleft" style="display: none;">
+<div class="ddheader" id="uslugi-ddheader" onmouseover="ddMenu('uslugi',1);" onmouseout="ddMenu('uslugi',-1);"><a href="/auxpage_services/">НАШИ УСЛУГИ</A></div>
+  <div class="ddcontent" id="uslugi-ddcontent" onmouseover="cancelHide('uslugi')" onmouseout="ddMenu('uslugi',-1)">
+    <div class="ddinner">
+      <ul>
+        <li class="underline"><a href="/auxpage_doctor-services/">Услуги врачей</A></li>
+		<li class="underline"><a href="/auxpage_workshop-services/">Услуги мастерской</A></li>
+		<!--<li class="underline"><a href="/auxpage_stocks/">Скидки, Акции</a></li>-->
+        </ul>
+    </div>
+  </div>
+</div> 
+<!-- / услуги -->
+<!-- <div class="floatleft"><IMG SRC="/img/bm_rzd.gif" style="padding-top: 12px"></div> -->
+<!-- выгодно -->
+<div class="floatleft">
+<div class="ddheader" id="discont-ddheader" onmouseover="ddMenu('discont',1);" onmouseout="ddMenu('discont',-1);"><a href="/auxpage_discont/"  style="color: yellow;">ВЫГОДНО</a></div>
+  <div class="ddcontent" id="discont-ddcontent" onmouseover="cancelHide('discont')" onmouseout="ddMenu('discont',-1)">
+    <div class="ddinner">
+      <ul>
+          <li class="underline"  style="display: none;"><a href="/auxpage_discont/">Скидки</a></li>
+<!-- <li class="underline"><a href="/auxpage_action/">Акции</a></li>-->
+<li class="underline"><a href="/auxpage_spec/">Спецпредложения</a></li>
+        
+        </ul>
+    </div>
+  </div>
+</div>
+<!-- / выгодно -->
+<div class="floatleft"><IMG SRC="/img/bm_rzd.gif" style="padding-top: 12px"></div>
+<!-- полезно знать -->
+<div class="floatleft">
+<div class="ddheader" id="info-ddheader" onmouseover="ddMenu('info',1);" onmouseout="ddMenu('info',-1);"><a href="/auxpage_info_pamyatka/">ПОЛЕЗНО ЗНАТЬ</A></div>
+  <div class="ddcontent" id="info-ddcontent" onmouseover="cancelHide('info')" onmouseout="ddMenu('info',-1)">
+    <div class="ddinner">
+      <ul>
+<li class="underline"><a href="/auxpage_solncezashitnye-ochki">Фильтры солнцезащитных очков</A></li>
+        <li class="underline"><a href="/auxpage_info_pamyatka/">Памятка покупателя</A></li>
+        <li class="underline"><a href="/auxpage_info_pravila/">Правила ухода за очками</A></li>
+<li class="underline"><a href="/auxpage_faq/">Как определить размер оправы</A></li>
+        <li class="underline"><a href="/auxpage_soveti/">Советы специалиста</A></li>
+        
+        </ul>
+    </div>
+  </div>
+</div>
+<!-- / полезно знать -->
+<div class="floatleft"><IMG SRC="/img/bm_rzd.gif" style="padding-top: 12px"></div>
+
+
+<!-- интернет магазин -->
+<div class="floatleft">
+<div class="ddheader" id="ishop-ddheader" onmouseover="ddMenu('ishop',1);" onmouseout="ddMenu('ishop',-1);"><a href="http://sport.optika-8.ru/">ИНТЕРНЕТ-МАГАЗИН</A></div>
+  <div class="ddcontent" id="ishop-ddcontent" onmouseover="cancelHide('ishop')" onmouseout="ddMenu('ishop',-1)">
+    <div class="ddinner">
+      <ul>
+      <!--  <li class="underline"><a href="/category/solncezashitnye-ochki/">Солнцезащитные очки</A></li>
+        <li class="underline"><a href="/category/sportivnye-ochki-s-dioptrijami/">Спортивные очки с диоптриями</A></li>
+        <li class="underline"><a href="/category/ochki-dlja-raboty-za-kompjuterom/">Очки для работы за компьютером</A></li> -->
+        </ul>
+    </div>
+  </div>
+</div>
+<!-- / интернет магазин -->
+<div class="floatleft"><img style="padding-top: 12px;" src="/img/bm_rzd.gif"></div>
+<div class="floatleft">
+<div id="contact-ddheader" class="ddheader"><a href="/auxpage_reviews/">ОТЗЫВЫ</a></div>
+
+</div>
+<div class="floatleft"><img style="padding-top: 12px;" src="/img/bm_rzd.gif"></div>
+<div class="floatleft">
+<div id="contact-ddheader" class="ddheader"><a href="/feedback/">КОНТАКТЫ</a></div>
+
+</div>
+
+
+
+
+</div>
+<!-- / верхнее меню новое -->
+
+</div>
+</div>
+<div class="cleared reset-box"></div>
+
+<div class="opt-layout-wrapper"><div class="opt-content-layout">
+                    <div class="opt-content-layout-row">
+                        <div class="opt-layout-cell opt-content">
+
+
+<div class="opt-box opt-post">
+    <div class="opt-box-body opt-post-body">
+<div class="opt-post-inner opt-article">
+                                <div class="opt-postcontent">
+<div class="opt-content-layout">
+    <div class="opt-content-layout-row">
+    <div class="opt-layout-cell layout-item-0" style="width: 100%;">
+<!-- cpt_container_start -->
+<div class="cpt_maincontent"></div>
+<!-- cpt_container_end -->
+
+    </div>
+    </div>
+</div>
+
+                </div>
+                <div class="cleared"></div>
+                </div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+                          <div class="cleared"></div>
+                        </div>
+                        <div class="opt-layout-cell opt-sidebar1">
+
+
+<div class="opt-box opt-vmenublock">
+    <div class="opt-box-body opt-vmenublock-body" style="display:none;">
+    
+                <div class="opt-bar opt-vmenublockheader" style="color: rgb(131, 131, 125); font: bold 12px Arial; padding-left: 3px;">
+	
+
+				
+ 
+<!-- Блог -->
+
+<!-- Выгодно -->
+
+
+    
+
+
+		
+	<ul class="opt-vmenu">
+
+	        <li><a href="/auxpage_about/">О магазине</a></li>
+		<!--<li><a href="/auxpage_nashi-vrachi">Наши врачи</a></li>
+		<li><a href="/auxpage_doctor-services/">Услуги врачей</a></li>
+		<li><a href="/auxpage_workshop-services/">Услуги мастерской</a></li>-->
+		 <li><a href="/auxpage_optika_dlya_vzroslih/">Каталог</a></li>
+<li><a href="/auxpage_discont/" style="background-color: yellow; border-radius: 10px;">Выгодно</a></li>
+		<!-- <li><a href="/blog/">Новости</a></li> -->
+		<li><a href="/feedback/">Контакты</a></li>
+
+	</ul> 
+
+			
+	  
+
+                 
+                </div>
+				
+
+                <div style="display: none;" class="opt-box opt-vmenublockcontent">
+                    <div class="opt-box-body opt-vmenublockcontent-body">
+
+                    
+                    
+                <ul class="opt-vmenu">
+
+      
+<li class="parent">
+
+
+
+
+
+<span class="active">&nbsp;</span><a href='/category/gotovye-ochki/'>Каталог</a>
+
+</li>
+
+  <li>
+		<a href="/auxpage_delivery/">Условия доставки</a>
+	</li>	
+<li>
+		<a href="/auxpage_pay/">Способ оплаты</a>
+	</li>	
+
+</ul>  
+    <!-- cpt_container_start -->
+<div class="cpt_auxpages_navigation"><ul class="opt-vmenu"><li><a href="/auxpage_about/">О магазине</a></li><li><a href="/auxpage_nashi-vrachi/">Наши врачи</a></li><li><a href="/auxpage_delivery/">Условия доставки</a></li><li><a href="/auxpage_workshop-services/">Услуги мастерской</a></li><li><a href="/auxpage_stocks/">Выгодно</a></li><li><a href="/auxpage_job/">Вакансии</a></li><li><a href="/auxpage_doctor-services/">Услуги врача</a></li><li><a href="/auxpage_services/">Услуги магазина</a></li><li><a href="/auxpage_pay/">Способ оплаты</a></li><li><a href="/auxpage_info_pamyatka/">Памятка покупателя</a></li><li><a href="/auxpage_info_pravila/">Правила ухода за очками</a></li><li><a href="/auxpage_info_zrenie40/">Зрение после 40</a></li><li><a href="/auxpage_optika_dlya_vzroslih/">Оправы для взрослых</a></li><li><a href="/auxpage_optika_dlya_detei/">Оправы для детей</a></li><li><a href="/auxpage_gotovie_ochki/">Готовые очки</a></li><li><a href="/auxpage_cohki_dlyz_raboti_za_komputerom/">Очки для работы за компьютером</a></li><li><a href="/auxpage_solncezashitnie_ochki_dlya_vzroslih/">Солнцезащитные очки для взрослых</a></li><li><a href="/auxpage_solncezashitnie_ochki_dlya_detei/">Солнцезащитные очки для детей</a></li><li><a href="/auxpage_ochkovie_linzi/">Очковые линзы</a></li><li><a href="/auxpage_spec/">Спецпредложения</a></li><li><a href="/auxpage_kontaktnie_linzi/">Контактные линзы</a></li><li><a href="/auxpage_discont/">Скидки</a></li><li><a href="/auxpage_progresive/">Прогрессивные линзы</a></li><li><a href="/auxpage_action/">Акции</a></li><li><a href="/auxpage_soveti/">Советы специалиста</a></li><li><a href="/auxpage_bifocal/">Бифокальные линзы</a></li><li><a href="/auxpage_ochkovie_linzi_color/">Окрашенные очковые линзы</a></li><li><a href="/auxpage_office/">Офисные линзы</a></li><li><a href="/auxpage_faq/">Как определить размер оправы</a></li><li><a href="/auxpage_types_clip-in/">Спортивные очки с клипом</a></li><li><a href="/auxpage_ochkovie_linzi_material/">Материалы и покрытия для очковых линз</a></li><li><a href="/auxpage_ochkovie_linzi_fotohrom/">Фотохромные очковые линзы</a></li><li><a href="/auxpage_ochkovie_linzi_polar/">Поляризационные очковые линзы</a></li><li><a href="/auxpage_ochkovie_linzi_computer/">Компьютерные очковые линзы</a></li><li><a href="/auxpage_ochkovie_linzi_sport/">Спортивные очковые линзы</a></li><li><a href="/auxpage_ochkovie_linzi_driver/">Очковые линзы для водителей</a></li><li><a href="/auxpage_order/">Как заказать очки в нашем магазине</a></li><li><a href="/auxpage_garant/">Гарантии</a></li><li><a href="/auxpage_site/">О сайте</a></li><li><a href="/auxpage_water/">Очки для плавания с диоптриями</a></li><li><a href="/auxpage_sport/">Спорт для очкариков без проблем</a></li><li><a href="/auxpage_types/">Типы линз</a></li><li><a href="/auxpage_types_glance_156/">Glance 1.56 Night Driving UV400 HMC/EMI</a></li><li><a href="/auxpage_types_extra/">Спортивные линзы с экстра изогнутой поверхностью</a></li><li><a href="/auxpage_types_perfalit154/">Фотохромные линзы Perfalit 1,54</a></li><li><a href="/auxpage_types_excelite_sensors_156/">Фотохромные линзы Excelite (Glance) Sunsensors 1.56 by Corning</a></li><li><a href="/auxpage_types_nupolar_hmc_15/">Поляризационные линзы NuPolar HMC 1,5</a></li><li><a href="/auxpage_types_nupolar_15/">Поляризационные линзы NuPolar 1,5 (без антибликового покрытия)</a></li><li><a href="/auxpage_types_javis_156/">Линзы Javis 1.56 (утонченные)</a></li><li><a href="/auxpage_types_perfalit_15/">Линзы Perfalit 1,5 с антирефрексным покрытием</a></li><li><a href="/auxpage_adidas/">Производитель: Adidas</a></li><li><a href="/auxpage_demetz/">Производитель: Demetz</a></li><li><a href="/auxpage_aviator/">Производитель: Aviator</a></li><li><a href="/auxpage_centrostyle/">Производитель: Centrostyle</a></li><li><a href="/auxpage_istcorona/">Производитель: Ist Corona</a></li><li><a href="/auxpage_libertysport/">Производитель: Liberty Sport</a></li><li><a href="/auxpage_mvs/">Производитель: Miami Vision Sport</a></li><li><a href="/auxpage_nannini/">Производитель: Nannini</a></li><li><a href="/auxpage_rodenstock/">Производитель: Rodenstock</a></li><li><a href="/auxpage_action-man/">Оправы для детей - Action Man</a></li><li><a href="/auxpage_hot_wheels/">Оправы для детей - Hot Wheels</a></li><li><a href="/auxpage_barbie/">Оправы для детей - Barbie</a></li><li><a href="/auxpage_liw_lewant/">Оправы для детей - Liw Lewant</a></li><li><a href="/auxpage_sunglasses/">Солнцезащитные очки</a></li><li><a href="/auxpage_betty-boop/">Оправы для детей - Betty Boop</a></li><li><a href="/auxpage_ciao-ciao/">Оправы для детей - Ciao Ciao</a></li><li><a href="/auxpage_fisher-price/">Оправы для детей Fisher Price</a></li><li><a href="/auxpage_winx/">Оправы для детей - Winx</a></li><li><a href="/auxpage_transformers/">Оправы для детей - Transformers</a></li><li><a href="/auxpage_flexus/">Оправы - Flexus Teen</a></li><li><a href="/auxpage_titeuf/">Оправы для детей - Titeuf</a></li><li><a href="/auxpage_hello_kitty/">Оправы для детей - Hello Kitty</a></li><li><a href="/auxpage_garfield/">Оправы для детей - Garfield</a></li><li><a href="/auxpage_nigura/">Оправы для детей Nigura</a></li><li><a href="/auxpage_pucca/">Оправы для детей - Pucca</a></li><li><a href="/auxpage_seventhy_street/">Оправы для детей - Seventhy Street</a></li><li><a href="/auxpage_shrek/">Оправы для детей - Shrek</a></li><li><a href="/auxpage_moschino/">Оправы для детей - Moschino</a></li><li><a href="/auxpage_eschenbach/">Оправы для детей - OIO </a></li><li><a href="/auxpage_opravy-dlja-vzroslyh-bvlgari/">Оправы для очков - Bvlgari</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-davidoff/">Купить оправы для очков Davidoff в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_opravi-dlya-ochkov-baldessarini/">Оправы для очков Baldessarini</a></li><li><a href="/auxpage_opravy-dlja-vzroslyh-kenzo/">Купить оправы для очков KENZO в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_opravi-dlya-ochkov-charriol/">Купить оправы для очков - Charriol</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-dolcegabbana/">Купить оправы для очков Dolce&amp;Gabbana в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_opravy-dlja-vzroslyh-balmain/">Оправы для очков Balmain (Бальма)</a></li><li><a href="/auxpage_juniorlook/">Оправы для подростков - Juniorlook </a></li><li><a href="/auxpage_alain-mikli/">Купить оправы для очков - Alain Mikli</a></li><li><a href="/auxpage_bugatti/">Купить оправы для очков Bugatti (Бугатти)</a></li><li><a href="/auxpage_dior/">Купить оправы для очков DIOR (Диор) в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_dsquared2/">Купить оправы для очков - DSquared2</a></li><li><a href="/auxpage_ferragamo/">Купить оправы для очков - Ferragamo</a></li><li><a href="/auxpage_jaguar/">Купить оправы для очков - Jaguar</a></li><li><a href="/auxpage_leonardo-d/">Купить оправы для очков - Leonardo D.</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-porshe-design/">Купить оправы для очков Porshe Design в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_rodenstock_1jy/">Купить оправы для очков Rodenstock по низким ценам</a></li><li><a href="/auxpage_saint-laurent/">Купить оправы для очков Saint Laurent в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_reviews/">Отзывы наших покупателей</a></li><li><a href="/auxpage_novie-postupleniya/">Новые поступления</a></li><li><a href="/auxpage_opravi-dlya-ochkov-bally/">Купить оправы для очков Bally в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-chopard/">Купить оправы для очков - Chopard</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-chrome-hearts/">Купить оправы для очков - CHROME HEARTS</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-dunhill/">Купить оправы для очков Dunhill в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-escada/">Купить оправы для очков - Escada</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-fred/">Купить оправы для очков FRED в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-linda-farrow/">Купить оправы для очков Linda Farrow в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-mercedes-benz/">Купить оправы для очков Mercedes Benz в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-rodenstosk/">Купить оправы для очков Rodenstock в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-diane-von-furstenberg/">Купить оправы для очков Diane von Furstenberg в магазине &quot;Оптика</a></li><li><a href="/auxpage_solncezashitnye-ochki/">Фильтры солнцезащитных очков</a></li><li><a href="/auxpage_obratniy-zvonok/">Обратный звонок</a></li><li><a href="/auxpage_opravy-dlja-vzroslyh-blumarine/">Оправы для очков Blumarine</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-claudia-schiffer/">Купить оправы для очков Claudia Schiffer</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-givenchy/">Купить оправы для очков Givenchy</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-gucci/">Купить оправы для очков Gucci</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-judith-leiber/">Купить оправы для очков Judith Leiber</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-lafont/">Купить оправы для очков Lafont</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-prada/">Купить оправы для очков Prada</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-roberto-cavalli/">Купить оправы для очков Roberto Cavalli</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-silhouette/">Купить оправы для очков Silhouette</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-tiffany/">Купить оправы для очков Tiffany</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-baniss/">Купить оправы для очков BANISS</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-bogner/">Купить оправы для очков BOGNER</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-brendel/">Купить оправы для очков BRENDEL</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-calvin-klein/">Купить оправы для очков Calvin Klein</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-carrera/">Купить оправы для очков CARRERA</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-celine-dion/">Купить оправы для очков Celine Dion</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-enjoy/">Купить оправы для очков ENJOY</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-enni-marco/">Купить оправы для очков ENNI MARCO</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-faconnable/">Купить оправы для очков Faconnable</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-gerry-weber/">Купить оправы для очков Gerry Weber</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-mirella-mori/">Купить оправы для очков MIRELLA MORI</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-diva/">Купить оправы для очков DIVA</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-face-a-face/">Купить оправы для очков Face a Face</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-giorgio-armani/">Купить оправы для очков Giorgio Armani</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-guess/">Купить оправы для очков Guess</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-menrad/">Купить оправы для очков Menrad</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-mexx/">Купить оправы для очков MEXX</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-nicoleta-buchi/">Купить оправы для очков Nicoleta Buchi</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-nigura/">Купить оправы для очков NiGuRa</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-ray-ban/">Купить оправы для очков Ray-Ban</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-rolles/">Купить оправы для очков ROLLES</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-st-louise/">Купить оправы для очков St. Louise</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-stepper/">Купить оправы для очков Stepper</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-swarovski/">Купить оправы для очков Swarovski</a></li><li><a href="/auxpage_kupit-detskie-opravy-dlja-ochkov-gucci/">Купить детские оправы для очков Gucci</a></li><li><a href="/auxpage_kupit-detskie-opravy-dlja-ochkov-guess/">Купить детские оправы для очков Guess</a></li><li><a href="/auxpage_kupit-detskie-opravy-dlja-ochkov-tommy-hilfiger-kids/">Купить детские оправы для очков Tommy Hilfiger Kids</a></li><li><a href="/auxpage_ray-ban-junior/">Ray Ban детские оправы</a></li><li><a href="/auxpage_ohcki-united-colors-of-benetton-junior/">Очки для детей United Colors of Benetton junior</a></li><li><a href="/auxpage_opravi-dlya-podrostkov-rodenstosk/">Оправы для подростков Rodenstock</a></li><li><a href="/auxpage_kupit-detskie-opravy-dlja-ochkov-baniss/">Оправы для детей BANISS</a></li><li><a href="/auxpage_kupit-opravi-swing/">Купить оправы SWING</a></li><li><a href="/auxpage_kupit-ochki-jil-sander/">Купить очки Jil Sander</a></li><li><a href="/auxpage_opravi-dlya-ochkov-humphreys/">Коллекция оправ Humphrey&#039;s</a></li><li><a href="/auxpage_opravi-dlya-ochkov-lozza/">Коллекция оправ Lozza</a></li><li><a href="/auxpage_opravi-dlya-ochkov-sting/">Коллекция оправ Sting</a></li><li><a href="/auxpage_kids-by-safilo/">Купить очки для детей Safilo</a></li><li><a href="/auxpage_kupit-opravi-dlya-ochkov-flair/">Купить оправы для очков FLAIR в магазине &quot;Оптика-8&quot;</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-ben-x/">Купить оправы для очков Ben.x</a></li><li><a href="/auxpage_novie-postupleniya-2/">Новые поступления</a></li><li><a href="/auxpage_kupit-opravy-dlja-ochkov-starck/">Купить оправы для очков Starck</a></li><li><a href="/auxpage_opravi-dlya-podrostkov-mexx/">Коллекция оправ для подростков MEXX</a></li><li><a href="/auxpage_detskie-opravi-nano/">Детские оправы NANO</a></li><li><a href="/auxpage_aksessuary/">Аксессуары</a></li><li><a href="/auxpage_salfetki-vlazhnie/">Салфетки влажные</a></li><li><a href="/auxpage_salfetki-iz-mikrofibri/">Салфетки из микрофибры</a></li><li><a href="/auxpage_sprei/">Спреи</a></li><li><a href="/auxpage_futlyari/">Футляры</a></li><li><a href="/auxpage_shnurki/">Шнурки</a></li><li><a href="/auxpage_spopperi/">Стопперы</a></li><li><a href="/auxpage_tsepotski/">Цепочки</a></li><li><a href="/auxpage_mask/">Новая коллекция горнолыжных масок Adidas</a></li><li><a href="/auxpage_vlentin-yudashkin/">Обновление коллекции VALENTIN YUDASHKIN</a></li><li><a href="/auxpage_vlentin-yudashkin-aksia/">Акция на оправы коллекции VALENTIN YUDASHKIN - 15%</a></li><li><a href="/auxpage_vy/">Каталог оправ Valentin Yudashkin</a></li><li><a href="/auxpage_karta-postoyannogo-klienta/">Карта постоянного клиента</a></li><li><a href="/auxpage_genny/">GENNY</a></li><li><a href="/auxpage_byblos/">BYBLOS</a></li><li><a href="/auxpage_barracuda/">Barracuda</a></li><li><a href="/auxpage_jessie/">Jessie</a></li><li><a href="/auxpage_bj/">Новые поступления &quot;Barracuda&quot; и &quot;Jessie&quot;</a></li><li><a href="/auxpage_etnia-barcelona/">Etnia Barcelona</a></li></ul></div>
+<!-- cpt_container_end -->              
+                        
+						<div class="cleared"></div>
+				
+
+                    </div>
+                </div>
+		<div class="cleared"></div>
+    </div>
+</div>
+
+<!--
+<DIV style="border: 1px solid #64ac20; border-radius: 10px 2px 10px 2px; -moz-border-radius: 10px 2px 10px 2px; -webkit-border-radius: 10px 2px 10px 2px; padding: 10px; margin: 10px; background-color: #f2fadd; font-size: 89%"><p style="color: #64ac20; text-align: center; font-weight: bold;">Принимаем льготные рецепты</p><BR/>
+Уважаемые Клиенты, в нашем магазине "Оптика-8" на Селезневской производится приём льготных рецептов на оптику для детей и взрослых жителей Москвы. Обращайтесь из любого округа Москвы!</DIV>
+
+
+<div class="opt-box opt-block">
+	<div class="opt-box-body opt-block-body">
+		
+<div class="cpt_shopping_cart_info">
+
+	
+
+<div class="shcart_link" style="text-align: center;"><a rel="nofollow" style="color: #4682B4; font-weight: bold; font-size: 16px; text-decoration: none" href="/cart/">Ваша корзина пуста</a></div>
+
+<div style="display: none;" id="shpcrtgc">(пусто)</div>
+
+<div id="shpcrtca">&nbsp;</div>
+</div>
+
+	</div>
+</div> -->
+
+
+
+<!--<div class="opt-box opt-block" style="background-image: none;background: white none repeat scroll 0% 0%;">
+
+         <a title="Спортивный интернет-магазин Оптика-8 - официальный сайт" target="_blank" href="http://sport.optika-8.ru" onclick="yaCounter25132613.reachGoal('BANNER'); return true;"><img src="/akcii/ochki-s-dioptrijami-1.jpg" style="width: 215px;"></a>
+<a title="Спортивный интернет-магазин Оптика-8 - официальный сайт" target="_blank" href="http://sport.optika-8.ru" onclick="yaCounter25132613.reachGoal('BANNER'); return true;"><img src="/akcii/ochki-s-dioptrijami-3.jpg" style="width: 215px;"></a>
+</div>-->
+<p class="classname" style="margin-bottom: 40px;margin-top: 10px;"><span style="font-size: 16px; text-align: center; width: 190px; margin-top: 14px; padding-top: 0px; border-bottom-width: 0px; margin-bottom: 0px; padding-bottom: 9px; cursor: pointer;" class="callme_viewform" onclick="yaCounter25132613.reachGoal('CALL'); return true;">ОБРАТНЫЙ ЗВОНОК</span></p>
+<p><a class="classname" href="/auxpage_discont/" style="margin-bottom: 40px;">ВЫГОДНО</a></p>
+<p><a class="classname" href="http://sport.optika-8.ru/" style="margin-bottom: 40px;">ИНТЕРНЕТ-МАГАЗИН</a></p>
+<p><a href="/auxpage_optika_dlya_detei/" class="classname" style="margin-bottom: 40px;">ОПРАВЫ ДЛЯ ДЕТЕЙ</a></p>
+<a href="/auxpage_karta-postoyannogo-klienta/"><img height="123" width="208" src="/img/karta-postoyannogo-klienta-1.png" style="border-radius: 10px;" alt="Карта постоянного клиента в магазине Оптика-8" title="Карта постоянного клиента в магазине Оптика-8"></a>
+<!--
+<div class="opt-box opt-block">
+
+         <a href="http://sport.optika-8.ru" target="_blank" title="Оптика-8"><img src="/published/publicdata/CHELFISHERO8/attachments/SC/images/bann_sport-optika8.jpg" /></a>
+
+</div>
+
+<div class="opt-box opt-block">
+    <div class="opt-box-body opt-block-body">
+                <div class="opt-bar opt-blockheader">
+                   <img src="/published/publicdata/CHELFISHERO8/attachments/SC/images/predlogenij.png" alt="" style="">
+                </div>
+                <div class="opt-box opt-blockcontent">
+                    <div class="opt-box-body opt-blockcontent-body">
+ <div class="cpt_custom_html"><b style="color: #ff7200">Принимаем льготные рецепты</a></b><br>Уважаемые Клиенты! в нашем магазине "Оптика-8" на Селезневской производится приём льготных рецептов на оптику для детей и взрослых жителей Москвы. Обращайтесь из любого округа Москвы!</div>                             
+                                		<div class="cleared"></div>
+                    </div>
+                </div>
+		<div class="cleared"></div>
+    </div>
+</div>
+-->
+<div class="opt-box opt-block" style="display: none;">
+<div class="opt-box-body opt-block-body">
+<a href="/auxpage_reviews/" style="color: rgb( 70, 130, 180); text-decoration: none"><b>Отзывы наших клиентов</b></a>
+ <div style="width: 197; height: 151px; background: url('/published/publicdata/CHELFISHERO8/attachments/SC/images/otzuv.png'); "><div style="color: rgb(148, 128, 109); font-style: italic; display: block; font-size: 11px; font-weight: bold; padding: 7px; height: 117px;">Если нужна оправа для ребенка, обращаемся только сюда! Уже не первый раз пользовались услугами «Оптика-8» и вот стали постоянными клиентами. </div><span style="position: relative; bottom: 16px; font-weight: bold; font-size: 11px; left: 6px;">Светлакова Марина</span></div>
+ <div style="width: 197; height: 151px; background: url('/published/publicdata/CHELFISHERO8/attachments/SC/images/otzuv.png'); "><div style="color: rgb(148, 128, 109); font-style: italic; font-weight: bold; display: block; padding: 4px 0px 7px 7px; height: 116px; font-size: 11px;">Наконец-то я нашла салон оптики, где меня все устраивает: порядочный, вежливый персонал, адекватные цены, постоянно какие-то скидки. Все устраивает, это отличная <strong>социальная оптика в Москве</strong>!</div><span style="position: relative; bottom: 16px; font-weight: bold; font-size: 11px; left: 6px;">Ольга П.</span></div>
+ <img src="/published/publicdata/CHELFISHERO8/attachments/SC/images/ptitz.png" alt="" align="bottom" style="" width="11" height="12">&nbsp;<font size="1" style="font-size: 8pt; "><b><a href="/auxpage_reviews/" style="color: rgb( 70, 130, 180);">все отзывы</a></b></font>
+</div>
+
+</div>
+
+
+
+
+<!--
+<div class="opt-box opt-block">
+    <div class="opt-box-body opt-block-body">
+                <div class="opt-bar opt-blockheader">
+                   
+    
+<table style="width: 200px; height: 285px; background-image: url(/published/publicdata/CHELFISHERO8/attachments/SC/images/tag.png); border-collapse: collapse; background-position: 0% 0%; background-repeat: initial initial; " width="" align=""><tbody><tr><td style="height: 5px; letter-spacing: 0px; word-spacing: 0px; "><img src="/published/publicdata/CHELFISHERO8/attachments/SC/images/tag1.png" alt=""><br></td></tr><tr><td style="text-align: center; font-style: normal; vertical-align: top; letter-spacing: 0px; word-spacing: 0px; font-size: 12pt; "><span style="text-decoration: none; font-size: 7.5pt; "><a href="/shop/search/?tag=%D0%B4%D0%BB%D1%8F+%D0%B2%D0%B5%D0%BB%D0%BE%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0" style="color: rgb(105, 105, 105);">для велоспорта</a>&nbsp;<a href="/shop/search/?tag=RayBay" style="color: rgb(105, 105, 105); ">RayBan</a>&nbsp;</span><span style="text-decoration: none; font-size: 7.5pt; "></span><font style="font-weight: bold; font-size: 12pt; "><a href="/shop/search/?tag=Demetz" style="color: rgb(70, 130, 180);">Demenz</a></font><br><font size="1" style="text-decoration: none; "><a href="/shop/search/?tag=%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%BA%D0%B8" style="color: rgb(105, 105, 105);">новинки</a>&nbsp;<a href="/shop/search/?tag=%D1%81%D0%BA%D0%B8%D0%B4%D0%BA%D0%B8" style="color: rgb(105, 105, 105);">скидки</a></font><span style="text-decoration: none; "><font size="1" style="color: rgb(105, 105, 105); font-weight: bold; "><a href="/shop/search/?tag=%D1%81%D0%BA%D0%B8%D0%B4%D0%BA%D0%B8"></a></font><br><font size="1"><b><a href="/shop/search/?tag=%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0" style="color: rgb(105, 105, 105);">доставка</a>&nbsp;</b><a href="/shop/search/?tag=%D0%BE%D1%87%D0%BA%D0%B8+%D1%81+%D0%B4%D0%B8%D0%BE%D0%BF%D1%82%D1%80%D0%B8%D1%8F%D0%BC%D0%B8" style="color: rgb(105, 105, 105);">очки с диоптриями </a></font></span><br>&nbsp;</font><font size="1" style="text-decoration: none; color: rgb(0, 0, 0); font-weight: bold; "></font><b style="text-decoration: none; "><a href="/shop/search/?tag=%D0%B0%D0%BA%D1%86%D0%B8%D0%B8" style="color: rgb(105, 105, 105);">акции</a>&nbsp;</b><font size="1" style="text-decoration: none; color: rgb(0, 0, 0); font-weight: bold; "></font><font size="1" style="text-decoration: none; "><a href="/shop/search/?tag=adidas" style="color: rgb(50, 205, 50);">adidas</a></font><br><font size="1" style="text-decoration: none; "><a href="/shop/search/?tag=%D0%B4%D0%BB%D1%8F+%D0%B2%D0%B5%D0%BB%D0%BE%D1%81%D0%BF%D0%BE%D1%80%D1%82%D0%B0" style="color: rgb(105, 105, 105);">для велоспорта</a>&nbsp;<a href="/shop/search/?tag=RayBay" style="color: rgb(105, 105, 105);">RayBan</a>&nbsp;</font><font size="1" style="text-decoration: none; color: rgb(0, 0, 0); font-weight: bold; ">&nbsp;</font><font style="text-decoration: none; font-weight: bold; font-size: 12pt; "><a href="/shop/search/?tag=SNUG" style="color: rgb(70, 130, 180);">SNUG</a></font><br><font size="1" style="text-decoration: none; "><a href="/shop/search/?tag=%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%BA%D0%B8" style="color: rgb(105, 105, 105);">новинки</a>&nbsp;</font><font size="1" style="text-decoration: none; color: rgb(0, 0, 0); "></font><span style="text-decoration: none; "><font size="1"><a href="/shop/search/?tag=%D1%81%D0%BA%D0%B8%D0%B4%D0%BA%D0%B8" style="color: rgb(105, 105, 105);">скидки</a></font><br><font size="1"><b><a href="/shop/search/?tag=%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0" style="color: rgb(105, 105, 105);">доставка</a>&nbsp;</b><a href="/shop/search/?tag=%D0%BE%D1%87%D0%BA%D0%B8+%D1%81+%D0%B4%D0%B8%D0%BE%D0%BF%D1%82%D1%80%D0%B8%D1%8F%D0%BC%D0%B8" style="color: rgb(105, 105, 105);">очки с диоптриями </a></font><br><font size="1"><a href="/shop/search/?tag=%D0%BA%D0%BE%D1%81%D0%BC%D0%B5%D1%82%D0%B8%D0%BA%D0%B0" style="color: rgb(105, 105, 105);">косметика</a><span style="color: rgb(105, 105, 105);">&nbsp;</span></font></span><font size="1" style="text-decoration: none; color: rgb(0, 0, 0); font-weight: bold; ">&nbsp;</font><font style="text-decoration: none; font-weight: bold; font-size: 12pt; "><a href="/shop/search/?tag=%D0%B0%D0%BA%D1%86%D0%B8%D0%B8" style="color: rgb(105, 105, 105);">акции</a>&nbsp;</font><font size="1" style="text-decoration: none; "><a href="/shop/search/?tag=adidas" style="color: rgb(50, 205, 50);">adidas</a></font></td></tr></tbody></table>
+	</div></div>
+</div>-->
+
+
+                          <div class="cleared"></div>
+                        </div>				
+						
+                    </div>
+                </div>
+<!--<img src="/published/publicdata/CHELFISHERO8/attachments/SC/images/hr.png" alt="" width="987" height="28">-->
+
+</div>
+
+
+
+
+
+            <div class="cleared"></div>
+    		<div class="cleared"></div>
+        </div>
+    </div>
+
+	
+<div class="opt-box opt-sheet" style="margin-top: -20px;">
+<div class="opt-box-body opt-sheet-body">
+
+<div class="opt-bar opt-nav")">
+<div class="opt-nav-outer">
+<!-- верхнее меню новое -->
+
+<div class="up_menu">
+<!-- о магазине -->
+<div class="floatleft">
+<div onmouseout="ddMenu('about',-1);" onmouseover="ddMenu('about',1);" id="about-ddheader" class="ddheader"><a href="/">О МАГАЗИНЕ</a></div>
+  <div onmouseout="ddMenu('about',-1)" onmouseover="cancelHide('about')" id="about-ddcontent" class="ddcontent">
+    <div class="ddinner">
+      <ul>
+        <li class="underline"><a href="/auxpage_about/">О магазине</a></li>
+<li class="underline"><a href="/auxpage_nashi-vrachi">Наши врачи</a></li>
+         <li class="underline"><a href="/auxpage_reviews/">Отзывы покупателей</a></li>
+		<!-- <li class="underline"><a href="/blog/">Новости</a></li> -->
+		<li class="underline"><a href="/feedback/">Контакты</a></li>
+		<!--<li class="underline"><a href="/auxpage_job/">Вакансии</a></li>-->
+        </ul>
+    </div>
+  </div>
+</div>
+<!-- / о магазине -->
+<div class="floatleft"><img style="padding-top: 12px" src="/img/bm_rzd.gif"></div>
+<!-- каталог -->
+<div class="floatleft">
+<div id="fcatalog-ddheader" class="ddheader"><a href="/auxpage_optika_dlya_vzroslih/">КАТАЛОГ</a></div>
+  <div onmouseout="ddMenu('fcatalog',-1)" onmouseover="cancelHide('fcatalog')" id="fcatalog-ddcontent" class="ddcontent">
+    <div class="ddinner">
+      <ul>
+        <li class="underline"><a href="auxpage_optika_dlya_vzroslih">Оправы для взрослых</a></li>
+		<li class="underline"><a href="/auxpage_optika_dlya_detei">Оправы для детей</a></li>
+<li class="underline"><a href="/auxpage_aksessuary/">Аксессуары</a>
+		<li class="underline"><a href="/auxpage_gotovie_ochki">Готовые очки</a></li>
+		<li class="underline"><a href="/auxpage_cohki_dlyz_raboti_za_komputerom">Очки для работы за компьютером</a></li>
+		<li class="underline"><a href="/auxpage_solncezashitnie_ochki_dlya_vzroslih">Солнцезащитные очки для взрослых</A></li>
+		<li class="underline"><a href="/auxpage_solncezashitnie_ochki_dlya_detei">Солнцезащитные очки для детей</a></li>
+		<li class="underline"><a target="_blank" href="http://sport.optika-8.ru">Спортивные очки</a></li>
+		<li class="underline"><a href="/auxpage_ochkovie_linzi">Очковые линзы</a></li>
+		<li class="underline"><a href="/auxpage_kontaktnie_linzi">Контактные линзы</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+<!-- / каталог -->
+<div class="floatleft"><img style="padding-top: 12px;" src="/img/bm_rzd.gif"></div>
+<div class="floatleft">
+<div id="contact-ddheader" class="ddheader"><a href="/auxpage_novie-postupleniya-2/">НОВЫЕ ПОСТУПЛЕНИЯ</a></div>
+
+</div>
+<div class="floatleft"><img style="padding-top: 12px" src="/img/bm_rzd.gif"></div>
+<!-- услуги -->
+<div class="floatleft">
+<div id="uslugi-ddheader" class="ddheader"><a href="/auxpage_discont/"  style="color: yellow;">ВЫГОДНО</a></div>
+  <div onmouseout="ddMenu('uslugi',-1)" onmouseover="cancelHide('uslugi')" id="uslugi-ddcontent" class="ddcontent">
+    <div class="ddinner">
+      <ul>
+        <li class="underline"><a href="/auxpage_doctor-services/">Услуги врачей</a></li>
+		<li class="underline"><a href="/auxpage_workshop-services/">Услуги мастерской</a></li>
+		<!--<li class="underline"><a href="/auxpage_stocks/">Скидки, Акции</a></li>-->
+        </ul>
+    </div>
+  </div>
+</div>
+<!-- / услуги -->
+<div class="floatleft"><img style="padding-top: 12px" src="/img/bm_rzd.gif"></div>
+<!-- полезно знать -->
+<div class="floatleft">
+<div id="info-ddheader" class="ddheader"><a href="/auxpage_info_pamyatka/">ПОЛЕЗНО ЗНАТЬ</a></div>
+  <div id="info-ddcontent" class="ddcontent" style="display: block; height: 0px; opacity: 0;">
+    <div class="ddinner">
+      <ul>
+        <li class="underline"><a href="/auxpage_info_pamyatka/">Памятка покупателя</a></li>
+        <li class="underline"><a href="/auxpage_info_pravila/">Правила ухода за очками</a></li>
+               <li class="underline"><a href="/auxpage_soveti/">Советы специалиста</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+<!-- / полезно знать -->
+<div class="floatleft"><img style="padding-top: 12px" src="/img/bm_rzd.gif"></div>
+<!-- выгодно 
+<div class="floatleft">
+<div id="discont-ddheader" class="ddheader"><a href="/auxpage_discont/">ВЫГОДНО</a></div>
+  <div onmouseout="ddMenu('discont',-1)" onmouseover="cancelHide('discont')" id="discont-ddcontent" class="ddcontent" style="display: block; height: 0px; opacity: 0;">
+    <div class="ddinner">
+      <ul>
+          <li class="underline"><a href="/auxpage_discont/">Скидки</a></li>
+<li class="underline"><a href="/auxpage_action/">Акции</a></li>
+<li class="underline"><a href="/auxpage_spec/">Спецпредложения</a></li>
+        
+        </ul>
+    </div>
+  </div>
+</div>
+ выгодно
+<div class="floatleft"><img style="padding-top: 12px" src="/img/bm_rzd.gif"></div>
+ контакты 
+<div class="floatleft">
+<div id="contact-ddheader" class="ddheader"><a href="/feedback/">КОНТАКТЫ</a></div>
+  <div onmouseout="ddMenu('contact',-1)" onmouseover="cancelHide('contact')" id="contact-ddcontent" class="ddcontent">
+    <div class="ddinner">
+      <ul>
+        <li class="underline"><a href="/feedback/">Наш адрес</A></li>
+        <li class="underline"><a href="/feedback/">Схема проезда</A></li>
+        </ul>
+    </div>
+  </div>
+</div>
+ контакты 
+<div class="floatleft"><img style="padding-top: 12px;" src="/img/bm_rzd.gif"></div>
+ интернет магазин -->
+<div class="floatleft">
+<div onmouseout="ddMenu('ishop',-1);" onmouseover="ddMenu('ishop',1);" id="ishop-ddheader" class="ddheader"><a href="http://sport.optika-8.ru/">ИНТЕРНЕТ-МАГАЗИН</a></div>
+  <div onmouseout="ddMenu('ishop',-1)" onmouseover="cancelHide('ishop')" id="ishop-ddcontent" class="ddcontent">
+    <div class="ddinner">
+      <ul>
+        <li class="underline"><a href="/category/solncezashitnye-ochki/">Солнцезащитные очки для взрослых</a></li>
+        <li class="underline"><a href="/category/sportivnye-ochki-s-dioptrijami/">Спортивные очки с диоптриями</a></li>
+        <li class="underline"><a href="/category/ochki-dlja-raboty-za-kompjuterom/">Очки для работы за компьютером</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<!-- / интернет магазин -->
+
+<div class="floatleft"><img style="padding-top: 12px;" src="/img/bm_rzd.gif"></div>
+<div class="floatleft">
+<div id="contact-ddheader" class="ddheader"><a href="/auxpage_reviews/">ОТЗЫВЫ</a></div>
+
+</div>
+
+
+
+</div>
+<!-- / верхнее меню новое -->
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+<img src="/image/tanenbaum.png" title="С Новым Годом!" style="display: none; bottom: 1.5%;left: 1%;position: absolute; z-index: 20; width: 15%;" />
+
+<!--<img src="/image/bant.png" title="С Новым Годом!" style="top: 2px; right: 15px; position: absolute;z-index: 999;" />-->
+
+    <div class="opt-footer">
+        <div class="opt-footer-body">
+            <div class="opt-footer-center">
+                <div class="opt-footer-wrapper">
+                    <div class="opt-footer-text">
+                        <table style="width: 990px; border-collapse: collapse; " width="" align=""><tbody><tr>
+<td style="width: 360px; letter-spacing: 0px; word-spacing: 0px; ">
+<span style="color: rgb(25, 33, 41); font-family: Arial, Helvetica, sans-serif; font-size: 11px; text-align: left; ">© 1977 - 2017. Магазин оптики - Оптика-8. Все права защищены.<br>
+Москва, ул. Селезневская, 34, корп. 1,&nbsp;&nbsp;<a href="/feedback/"  style="color: rgb(70, 130, 180);">схема проезда</a></span></td>
+<td style="text-align: left;width: 330px; letter-spacing: 0px; word-spacing: 0px; "><font size="1" style="font-size: 8pt; "><b><a href="tel:+74951201808" onclick="yaCounter25132613.reachGoal('TEL'); return true;" style="text-decoration: none; border-bottom: 1px dashed;">8 (495) 120-18-08</a>, 8  (916) 129-53-58 (пн-пт:10-18)</b></font><br>
+<font size="1" style="font-size: 8pt; ">skype:&nbsp;<a href="skype:optika8881?call" style="text-decoration:none; color: rgb(70, 130, 180);"><u>optika8881</u></a>, e-mail: <a href='ma&#105;l&#116;o&#58;o%&#55;&#48;t%69%6B&#97;8%40mail&#46;%72u'>opt&#105;k&#97;8&#64;ma&#105;l&#46;&#114;u</a></font><br></td><td style="width: 330px; text-align: right; padding-right: 20px; vertical-align: top; letter-spacing: 0px; word-spacing: 0px; "><noindex>ООО "МультиОптика-8", ИНН 7707344312, ОГРН 1157746564469</noindex></td></tr></tbody></table>
+                        <div class="cleared"></div>
+                        <p class="opt-page-footer"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+        </div>
+    </div>
+    <div class="cleared"></div>
+</div>
+
+
+<a href="#" class="scrollup">Наверх</a>
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+
+var yaParams = {/*Здесь параметры визита*/};
+
+</script>
+
+<script type="text/javascript">
+
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter25132613 = new Ya.Metrika({id:25132613,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    trackHash:true,params:window.yaParams||{ }});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/25132613" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+        <script type='text/javascript'>
+        window['liv'+'eT'+'ex'] = true,
+        window['live'+'Te'+'xID'] = 105977,
+        window['liveTe'+'x_ob'+'ject'] = true;
+        (function() {
+        var t = document['create'+'E'+'lem'+'ent']('script');
+        t.type ='text/javascript';
+        t.async = true;
+        t.src = '//cs15'+'.l'+'iv'+'ete'+'x.'+'ru/'+'js/client.js';
+        var c = document['getEl'+'e'+'m'+'e'+'ntsByTa'+'gName']('script')[0];
+        if ( c ) c['p'+'ar'+'entN'+'od'+'e']['i'+'n'+'sertB'+'e'+'for'+'e'](t, c);
+        else document['doc'+'um'+'entE'+'lemen'+'t']['first'+'Chil'+'d']['appe'+'ndCh'+'i'+'l'+'d'](t);
+        })();
+        </script>
+         
+<!--  END -->
+
+	</body>
+</html>

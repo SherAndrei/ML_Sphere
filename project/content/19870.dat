@@ -1,0 +1,1128 @@
+dontracker.ru/viewtopic.php?p=366535
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html dir="ltr">
+
+<head>
+ <title>Need For Speed: World (EA) (ENG/GER) [RePack] by tukash :: DonTracker.ru</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+ <meta http-equiv="Content-Style-Type" content="text/css" />
+  <link rel="stylesheet" href="./templates/2011/css/main.css?v=1" type="text/css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+ <link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc.xml" title="Поиск по форуму" />
+ <link rel="search" type="application/opensearchdescription+xml" href="opensearch_desc_bt.xml" title="Поиск по трекеру" />
+  <script type="text/javascript" src="./misc/js/jquery.pack.js?v=1"></script>
+  <script type="text/javascript" src="./misc/js/main.js?v=1"></script>
+
+  <script type="text/javascript" src="./misc/js/bbcode.js?v=1"></script>
+ <script type="text/javascript">
+  var postImg_MaxWidth = screen.width - 202;
+  var postImgAligned_MaxWidth = Math.round(screen.width/3);
+  var attachImg_MaxWidth = screen.width - 280;
+  var ExternalLinks_InNewWindow = '1';
+  var hidePostImg = false;
+
+  function copyText_writeLink(node)
+  {
+  	if (!is_ie) return;
+  	document.write('<p style="float: right;"><a class="txtb" onclick="if (ie_copyTextToClipboard('+node+')) alert(\'Код скопирован в буфер обмена\'); return false;" href="#">скопировать в буфер обмена</a></p>');
+  }
+  function initPostBBCode(context)
+  {
+  	initSpoilers(context);
+  	initExternalLinks(context);
+  	initPostImages(context);	
+  }
+  function initPostImages(context)
+  {
+  	var context = context || 'body';
+  	if (hidePostImg) return;
+  	var $in_spoilers = $('div.sp-body var.postImg', context);
+  	$('var.postImg', context).not($in_spoilers).each(function(){
+  		var $v = $(this);
+  		var src = $v.attr('title');
+  		var $img = $('<img src="'+ src +'" class="'+ $v.attr('className') +'" alt="pic" />');
+  		//$img = fixPostImage($img);
+  		var maxW = ($v.hasClass('postImgAligned')) ? postImgAligned_MaxWidth : postImg_MaxWidth;
+  		$img.bind('click', function(){ return imgFit(this, maxW); });
+  		if (user.opt_js.i_aft_l) {
+  			$('#preload').append($img);
+  			var loading_icon = '<a href="'+ src +'" target="_blank"><img src="images/pic_loading.gif" alt="" /></a>';
+  			$v.html(loading_icon);
+  			if ($.browser.msie) {
+  				$v.after('<wbr>');
+  			}
+  			$img.one('load', function(){
+  				imgFit(this, maxW);
+  				$v.empty().append(this);
+  			});
+  		}
+  		else {
+  			$img.one('load', function(){ imgFit(this, maxW) });
+  			$v.empty().append($img);
+  			if ($.browser.msie) {
+  				$v.after('<wbr>');
+  			}
+  		}
+  	});
+  }
+
+  /*function initSpoilers(context)
+  {
+  	$('div.sp-body', context).each(function(){
+  		var $sp_body = $(this);
+  		var name = this.title || 'скрытый текст';
+  		this.title = '';
+  		$('<div class="sp-head folded clickable">'+ name +'</div>').insertBefore($sp_body).click(function(e){
+  			if (!$sp_body.hasClass('inited')) {
+  				initPostImages($sp_body);
+  				$sp_body.prepend('<div class="clear"></div>').append('<div class="clear"></div>').addClass('inited');
+  			}
+  			if (e.shiftKey) {
+  				e.stopPropagation();
+  				e.shiftKey = false;
+  				var fold = $(this).hasClass('unfolded');
+  				$('div.sp-head', $($sp_body.parents('td')[0])).filter( function(){ return $(this).hasClass('unfolded') ? fold : !fold } ).click();
+  			}
+  			else {
+  				$(this).toggleClass('unfolded');
+  				$sp_body.slideToggle(10);
+  			}
+  		});
+  	});
+  } */
+
+	function initSpoilers(context)
+	{
+  		$('div.sp-body', context).each(function(){
+  		var $sp_body = $(this);
+  		var name = this.title || 'скрытый текст';
+  		this.title = '';
+
+  		var $sp_head = $('<div class="sp-head folded clickable"></div>').text(name);
+  		
+
+   		$sp_head.insertBefore($sp_body).click(function(e){
+  			if (!$sp_body.hasClass('inited')) {
+  				initPostImages($sp_body);
+  				$sp_body.prepend('<div class="clear"></div>').append('<div class="clear"></div>').addClass('inited');
+
+  				var $sp_fold_btn = $('<div class="sp-fold clickable unfolded" style="margin-left:0px">Свернуть</div>').click(function(){
+				$.scrollTo($sp_head, { duration:200, axis:'y', offset:-200 });
+				$sp_head.click();
+				});
+
+				$sp_body.prepend('<div class="clear"></div>').append('<div class="clear"></div>').append($sp_fold_btn).addClass('inited');
+	
+  			}
+  			if (e.shiftKey) {
+  				e.stopPropagation();
+  				e.shiftKey = false;
+  				var fold = $(this).hasClass('unfolded');
+  				$('div.sp-head', $($sp_body.parents('td')[0])).filter( function(){ return $(this).hasClass('unfolded') ? fold : !fold } ).click();
+  			}
+  			else {
+  				$(this).toggleClass('unfolded');
+  				$sp_body.slideToggle(10);
+  			}
+  		});
+  	  });
+	}
+
+
+  function initExternalLinks(context)
+  {
+  	var context = context || 'body';
+  	if (ExternalLinks_InNewWindow) {
+  		$("a.postLink:not([href*='"+ window.location.hostname +"/'])", context).attr({ target: '_blank' });
+  		//$("a.postLink:not([@href*='"+ window.location.hostname +"/'])", context).replaceWith('<span style="color: red;">Ссылки запрещены</span>');
+  	}
+  }
+  $(document).ready(function(){
+  	$('div.post_wrap, div.signature').each(function(){ initPostBBCode( $(this) ) });
+  });
+ </script>
+ <script type="text/javascript">
+  var BB_ROOT       = "./";
+  var cookieDomain  = "";
+  var cookiePath    = "/";
+  var cookieSecure  = 0;
+  var cookiePrefix  = "bb_";
+  var LOGGED_IN     = 0;
+  var InfoWinParams = 'HEIGHT=510,resizable=yes,WIDTH=780';
+
+  var user = {
+  	opt_js: {},
+
+  	set: function(opt, val, days, reload) {
+  		this.opt_js[opt] = val;
+  		setCookie('opt_js', $.toJSON(this.opt_js), days);
+  		if (reload) {
+  			window.location.reload();
+  		}
+  	}
+  }
+    $(document).ready(function(){
+  	$("div.jumpbox").html('\
+  		<span id="jumpbox-container"> \
+  		<select id="jumpbox"> \
+  			<option id="jumpbox-title" value="-1">&nbsp;&raquo;&raquo; Выберите форум для перехода &nbsp;</option> \
+  		</select> \
+  		</span> \
+  		<input id="jumpbox-submit" type="button" class="lite" value="Перейти" /> \
+  	');
+  	$('#jumpbox-container').one('click', function(){
+  		$('#jumpbox-title').html('&nbsp;&nbsp; Загружается... ... &nbsp;');
+  		var jumpbox_src = './ajax/html/' + (0 ? 'jumpbox_user.html' : 'jumpbox_guest.html');
+  		$(this).load(jumpbox_src);
+  		$('#jumpbox-submit').click(function(){ window.location.href='./viewforum.php?f='+$('#jumpbox').val(); });
+  	});
+  });  
+  var ajax = new Ajax('./ajax.php', 'POST', 'json');
+
+   </script>
+
+ <!--[if lt IE 7]><script type="text/javascript">
+  $(document).ready(ie6_make_clickable_labels);
+
+  $(document).ready(function(){
+  	$('div.menu-sub').prepend('<iframe class="ie-fix-select-overlap"></iframe>'); // iframe for IE select box z-index issue
+  	Menu.iframeFix = true;
+  });
+ </script><![endif]-->
+
+ <!--[if gte IE 7]><style type="text/css">input[type="checkbox"] { margin-bottom: -1px; }</style><![endif]-->
+ <!--[if lte IE 6]><style type="text/css">.forumline th { height: 24px; padding: 2px 4px; }</style><![endif]-->
+ <!--[if IE]><style type="text/css">.code-copy { display: block; }.post-hr   { margin: 2px auto; }</style><![endif]-->
+
+ 
+	<script>
+	function do_thanks(topic_id) {
+		$.post('thx.php', { t: topic_id, mode: 'add_thx' },  function(data) {
+			$('#button-thanks-container').html('И Вам спасибо!');
+		});
+	}
+	</script>
+
+ <style type="text/css">
+	.menu-sub, #ajax-loading, #ajax-error, var.ajax-params { display: none; }
+ </style>
+</head>
+
+<body>
+
+<IDXSKIP><table id="ajax-loading" cellpadding="0" cellspacing="0"><tr><td class="icon"></td><td>Загрузка...</td></tr></table></IDXSKIP>
+<IDXSKIP><table id="ajax-error" cellpadding="0" cellspacing="0"><tr><td>Ошибка</td></tr></table></IDXSKIP>
+
+<div id="preload" style="position: absolute; overflow: hidden; top: 0; left: 0; height: 1px; width: 1px;"></div>
+
+<div id="body_container">
+
+<!--******************-->
+<!--======-->
+
+<!--page_container-->
+<div id="page_container">
+<a name="top"></a>
+
+<!--page_header-->
+<div id="page_header">
+
+<!--main_nav-->
+<table id="main_nav" cellspacing="0" cellpadding="0" border="0" width="100%"><tr>
+<td id="head-left"><div id="clicker" style="width:100%;height:90px;cursor:pointer" onclick="window.location='./'"></div></td>
+<td id="head-mid"><div id="head-mid-in"></div></td>
+<td id="head-right">
+		<table cellpadding="3" cellspacing="3" class="navicons" style="width:100%">
+			<tr>
+				<IDXSKIP><td><a href="tracker.php"><img onmouseover="$('#nl1').addClass('hovered')" onmouseout="$('#nl1').removeClass('hovered')" src="images/nav/tracker.png"></a><br><a id="nl1" class="navlink" href="tracker.php"><b>Трекер</b></a> </td></IDXSKIP>
+				<IDXSKIP><td><a href="search.php"><img onmouseover="$('#nl2').addClass('hovered')" onmouseout="$('#nl2').removeClass('hovered')" src="images/nav/search2.png"></a><br><a id="nl2" class="navlink" href="search.php"><b>Поиск</b></a> </td></IDXSKIP>
+				<IDXSKIP><td><a href="privmsg.php?folder=inbox"><img onmouseover="$('#nl3').addClass('hovered')" onmouseout="$('#nl3').removeClass('hovered')" src="images/nav/mail.png"></a><br><a id="nl3" class="navlink" href="privmsg.php?folder=inbox"><b>ЛС</b></a> </td></IDXSKIP>
+				<IDXSKIP><td><a href="memberlist.php"><img onmouseover="$('#nl4').addClass('hovered')" onmouseout="$('#nl4').removeClass('hovered')" src="images/nav/users2.png"></a><br><a id="nl4" class="navlink" href="memberlist.php"><b>Участники</b></a> </td></IDXSKIP>
+<!--				<td><a href="groupcp.php"><img onmouseover="$('#nl5').addClass('hovered')" onmouseout="$('#nl5').removeClass('hovered')" src="images/nav/groups2.png"></a><br><a id="nl5" class="navlink" href="groupcp.php"><b>Группы</b></a> </td>-->
+				<IDXSKIP><td><a href="http://img.donnet.ru" target="_blank"><img onmouseover="$('#nl6').addClass('hovered')" onmouseout="$('#nl6').removeClass('hovered')" src="images/nav/gallery.png"></a><br><a id="nl6" class="navlink" href="http://img.donnet.ru" target="_blank"><b>Галерея</b></a> </td></IDXSKIP>
+<!--				<td><a href="http://forum.donnet.ru/"><img onmouseover="$('#nl7').addClass('hovered')" onmouseout="$('#nl7').removeClass('hovered')" src="images/nav/forum.png"></a><br><a id="nl7" class="navlink" href="http://forum.donnet.ru/"><b>Общение</b></a> </td>-->
+				<IDXSKIP><td><a href="http://donnet.ru/services/sharing/dchub"><img onmouseover="$('#nl8').addClass('hovered')" onmouseout="$('#nl8').removeClass('hovered')" src="images/nav/dcpp.png" style="width: 48px; height: 48px;"></a><br><a id="nl8" class="navlink" href="http://donnet.ru/services/sharing/dchub"><b>DC-хаб</b></a> </td></IDXSKIP>
+				<IDXSKIP><td style="text-align:center;width:99%">
+<script type="text/javascript"><!--//<![CDATA[
+   var m3_u='http://ad.donnet.ru/delivery/ajs.php';
+   var m3_r=Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write("?zoneid=1");
+   document.write('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write(document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://ad.donnet.ru/delivery/ck.php?n=a0e12ad5&amp;cb=4893428' target='_blank'><img src='http://ad.donnet.ru/delivery/avw.php?zoneid=1&amp;cb=4893428&amp;n=a0e12ad5' border='0' alt='' /></a></noscript>
+				</td></IDXSKIP>
+			</tr>
+		</table>
+</td></tr></table>
+<!--/main_nav-->
+
+
+<!--login form-->
+<div class="topmenu">
+   <table width="100%" cellpadding="0" cellspacing="0">
+   <tr>
+      
+            <td class="tCenter pad_2">
+         <IDXSKIP><a href="profile.php?mode=register" id="register_link"><b>Регистрация</b></a></IDXSKIP>
+         <IDXSKIP>&nbsp;&#0183;&nbsp;
+         </IDXSKIP><IDXSKIP><form action="./login.php" method="post">
+            Имя: <input type="text" name="login_username" size="12" tabindex="1" accesskey="l" />
+            Пароль: <input type="password" name="login_password" size="12" tabindex="2" />
+            <label title="Автоматически входить при каждом посещении"><input type="checkbox" name="autologin" value="1" tabindex="3" /> Запомнить</label>&nbsp;
+            <input type="submit" name="login" value="Вход" tabindex="4" />
+         </form></IDXSKIP>
+         <IDXSKIP>&nbsp;&#0183;&nbsp;
+         </IDXSKIP><IDXSKIP><a href="profile.php?mode=sendpassword">Забыли пароль?</a></IDXSKIP>
+      </td>
+         </tr>
+   </table>
+</div>
+
+<!--/login form-->
+
+
+<!--breadcrumb-->
+<!--<div id="breadcrumb"></div>-->
+<!--/breadcrumb-->
+
+
+</div>
+<!--/page_header-->
+
+<!--menus-->
+
+
+<!--/menus-->
+
+
+
+<!--page_content-->
+<div id="page_content">
+<table cellspacing="0" cellpadding="0" border="0" style="width: 100%;">
+ <tr>
+<!--main_content-->
+  <td id="main_content">
+   <div id="main_content_wrap">
+    
+
+<!--=======================-->
+<!--***********************-->
+
+
+
+<!-- page_header.tpl END -->
+<!-- module_xx.tpl START -->
+
+
+<div class="spacer_6"></div>
+
+<h1 class="maintitle"><a href="viewtopic.php?t=29234">Need For Speed: World (EA) (ENG/GER) [RePack] by tukash</a></h1>
+<p class="small" style="padding: 1px 6px 5px;"><b>Страницы:&nbsp;&nbsp;<b>1</b>, <a href="viewtopic.php?t=29234&amp;start=15">2</a>, <a href="viewtopic.php?t=29234&amp;start=30">3</a>, <a href="viewtopic.php?t=29234&amp;start=45">4</a>, <a href="viewtopic.php?t=29234&amp;start=60">5</a>, <a href="viewtopic.php?t=29234&amp;start=75">6</a>, <a href="viewtopic.php?t=29234&amp;start=90">7</a>, <a href="viewtopic.php?t=29234&amp;start=105">8</a>&nbsp;&nbsp;<a href="viewtopic.php?t=29234&amp;start=15">След.</a></b></p>
+
+<table cellpadding="0" class="w100">
+<tr>
+	<td valign="bottom">
+		<a href="posting.php?mode=reply&amp;t=29234"><img src="./templates/2011/images/lang_russian/reply.gif" alt="Ответить на тему" /></a>
+	</td>
+	<td class="nav w100" style="padding-left: 8px;">
+		<IDXSKIP><a href="./index.php">Список форумов DonTracker.ru</a></IDXSKIP>
+		 <IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=170">Игры для PC по жанрам</a>		<IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=35">Онлайн игры</a>
+	</td>
+</tr>
+</table>
+
+
+
+<table class="w100 border bw_TRL" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="cat pad_2">
+
+	<table cellspacing="0" cellpadding="0" class="borderless w100">
+	<tr>
+
+		
+		<td class="small bold nowrap tRight" width="100%">
+			&nbsp;
+					</td>
+
+		<td class="nowrap" style="padding: 0px 4px 2px 4px;">
+			<form action="search.php?t=29234&amp;dm=1&amp;s=1" method="post" onsubmit="var txt=$('#search-text').val(); return !(txt=='искать в теме...' || !txt);">
+				<input id="search-text" type="text" name="nm" value="искать в теме..." class="hint css3" style="width: 150px;" />
+				<input type="submit" class="med css3" value="&raquo;" style="width: 30px;" />
+			</form>
+		</td>
+	</tr>
+	</table>
+
+	</td>
+</tr>
+</table>
+
+
+<table class="topic" id="topic_main" cellpadding="0" cellspacing="0">
+<IDXSKIP><tr>
+	<th class="thHead td1">Автор</th>
+	<th class="thHead td2">Сообщение</th>
+</tr></IDXSKIP>
+
+<tbody id="post_366535" class="row1">
+<tr>
+	<td class="poster_info td1"><a name="366535"></a>
+					<p class="nick">Maxis</p>
+		
+				<p class="rank_img"><img src="images/ranks/moderator.gif" alt="" title="" border="0" /></p>		<p class="avatar"><img src="images/avatars/10901020654f73092c199c7.jpg" alt="" border="0" /></p>		<IDXSKIP><p class="joined" title="Зарегистрирован: 2008-12-15"><em>Стаж:</em> 8 лет 5 месяцев</p></IDXSKIP>		<p class="posts"><em>Сообщений:</em> 853</p>					
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366535#366535" title="Линк на это сообщение">28-Июл-2010 20:21</a>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366535">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body"><span style="font-size: 24px; line-height: normal;">Need For Speed World</span> <br /><br /> <span style="color: red;"><span style="font-size: 20px; line-height: normal;"><span style="font-weight: bold;">Групповая закачка с внешки!</span></span></span> <br /><br /> <var class="postImg postImgAligned img-right" title="http://tracker.donnet.ru/uploads/a4/d2836e86c443675fb3a0ca30b71303f3.jpg">&#10;</var><IDXSKIP><span style="font-weight: bold;">Год выпуска</span></IDXSKIP><IDXSKIP>: 2010 <div></div></IDXSKIP> <IDXSKIP><span style="font-weight: bold;">Жанр</span></IDXSKIP>: Arcade / Racing (Cars) / 3D / Online-only / Massively multiplayer <div></div> <span style="font-weight: bold;">Разработчик</span>: EA Black Box и EA Singapore <div></div> <span style="font-weight: bold;">Издательство</span>: Electronic Arts <div></div> <span style="font-weight: bold;">Платформа</span>: PC <hr /><span style="font-weight: bold;">Системные требования</span>:  <div></div> Processor : Intel Core 2 Duo E2140 at 1.6 GHz / AMD X2 4000 at 2.1 GHz <div></div> Video Card : 256 MB VRAM – NVIDIA GeForce 7800 GTX / ATI Radeon X700 Pro <div></div> Memory : 1 GB RAM <div></div> Hard Disk : 3 GB of free Hard Drive Space <div></div> Operating System : Microsoft Windows XP (SP2) / Windows Vista (SP2) / Windows 7 <div></div> Sound Card : DirectX Compatible sound card <div></div> Direct X : 9.0c <div></div> Controls : Keyboard &amp; Mouse <div></div> Installation Media : Digital Download / DVD-ROM <div></div> 128 kbps Internet connection <hr /><span style="font-weight: bold;">Тип издания</span>: лицензия <div></div> <span style="font-weight: bold;">Язык интерфейса</span>: английский, немецкий <div></div> <span style="font-weight: bold;">Таблэтка</span>: Не требуется <div></div> <IDXSKIP><span style="font-weight: bold;">Описание</span></IDXSKIP>: Need for Speed: World Online- коллективная онлайн-игра для PC из знаменитой гоночной серии со сложной рейтинговой системой, способствующей общению игроков. Игроки смогут объединяться в команды и бросать вызов соперникам и полиции на многочисленных трассах в различных режимах коллективной игры. Новый проект представляет возможность собирать и видоизменять персонажей, кататься на реалистичных лицензированных машинах, а также отслеживать достижения отдельных гонщиков в заездах при помощи самого большого открытого игрового мира в истории Need for Speed. <br /><br /> «Need for Speed является одной из самых успешных игровых серий в мире, и она особенно популярна в Гонконге и Тайване. Мы рады представить это проект EA в Азии и начать самостоятельно издавать продукты в Тайване и Гонконге. Мы с нетерпением ждем результатов этого тестирования, чтобы произвести необходимые доработки в игре и представить лучший онлайн-продукт азиатским игрокам», - говорит Jon Niermann, президент EA Asia. <hr /><IDXSKIP><span style="font-weight: bold;">Доп. информация</span></IDXSKIP><IDXSKIP>:  <div></div></IDXSKIP> Установка: <div></div> 1.Создаем аккаунт для игры на <a href="http://world.needforspeed.com/" class="postLink">http://world.needforspeed.com/</a>  <div></div> 2.Устанавливаете игру вводите свои данные.  <div></div> <span style="font-weight: bold;">Во время установки инсталлятор два раза запросит путь</span>. <span style="font-weight: bold;"><span style="color: red;">ДВА РАЗА</span> </span><span style="font-weight: bold;">указывайте ту же папку, куда устанавливали/распаковывали игру</span>. В противном случае будет качаться обновление в 700 МБ вместо 70. <div></div> 3.Затем игра обновится, нажмете кнопку запуск и начнете игру! <hr /><span style="font-weight: bold;"><span style="color: red;"><span style="font-size: 20px; line-height: normal;">Раздача обновлена! Просьба всем качающим перекачать торрент-файл!</span></span></span> <hr /><div class="sp-wrap">	<div class="sp-body" title="Особенности репака"><span style="font-weight: bold;">&gt; Ничего не вырезано / не перекодировано  <div></div> &gt; Для установки 384 мб &quot;свободной озу&quot; и 5 минут времени!  <div></div> &gt; Автор репака - tukash  <div></div> &gt; Репак проверен на 2х компьютерах, с win7</span> 	</div><!--/spoiler-body--></div><!--/spoiler-wrap--> <hr /><div class="sp-wrap">	<div class="sp-body" title="Скриншоты"><var class="postImg" title="http://tracker.donnet.ru/uploads/a8/d8ee9b77f2afbb6e42bfc53e77b2bc7d.jpg">&#10;</var> <div></div> <var class="postImg" title="http://tracker.donnet.ru/uploads/a1/c1db3b5f7f85c0ef9a0144dc9fd57be4.jpg">&#10;</var> <div></div> <var class="postImg" title="http://tracker.donnet.ru/uploads/a1/f7319a8c81e097767dea4226fed9294d.jpg">&#10;</var> 	</div><!--/spoiler-body--></div><!--/spoiler-wrap--> <hr /><div class="sp-wrap">	<div class="sp-body" title="Источник"><a href="http://www.rustorka.com/forum/viewtopic.php?t=51204" class="postLink">http://www.rustorka.com/forum/viewtopic.php?t=51204</a> 	</div><!--/spoiler-body--></div><!--/spoiler-wrap-->   
+<div>
+   <fieldset class="attach">
+     <IDXSKIP><legend>Скачать</legend></IDXSKIP>
+       <IDXSKIP><h1 class="attach_link"><a href="profile.php?mode=register" style="color: brown;">Зарегистрироваться и скачать</a></h1></IDXSKIP>
+       <IDXSKIP><p id="guest-dl-tip" class="attach_comment med">
+       <a href="viewtopic.php?t=36"><b>Как скачать этот файл?</b></a>
+<!--&nbsp; &middot; &nbsp;	   <a href="viewtopic.php?t=2"><b>Что такое torrent (торрент)</b></a>&nbsp; &middot; &nbsp;
+	   <a href="viewtopic.php?t=3"><b>Рейтинг и ограничения</b></a><br />-->
+       </p></IDXSKIP>
+     </fieldset>
+</div>
+</div><!--/post_body-->
+						<div class="last_edited"><br /><br />Последний раз редактировалось: Maxis (01.08.2010 16:54), всего редактировалось 10 раз(а)</div>		</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=172">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=172">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366540" class="row2">
+<tr>
+	<td class="poster_info td1"><a name="366540"></a>
+					<p class="nick">BlooD</p>
+		
+						<p class="avatar"><img src="images/avatars/18146353874dd3ed8c71b5b.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2010-02-22"><em>Стаж:</em> 7 лет 2 месяца</p>		<p class="posts"><em>Сообщений:</em> 49</p>		<p class="from"><em>Откуда:</em> Таганрог</p>			
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366540#366540" title="Линк на это сообщение">28-Июл-2010 20:33</a>
+									<span class="posted_since">(спустя 12 минут)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366540">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body">Это ОБТ?? или Игра уже вышла?</div><!--/post_body-->
+								</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=13914">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=13914">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366543" class="row1">
+<tr>
+	<td class="poster_info td1"><a name="366543"></a>
+					<p class="nick">Maxis</p>
+		
+				<p class="rank_img"><img src="images/ranks/moderator.gif" alt="" title="" border="0" /></p>		<p class="avatar"><img src="images/avatars/10901020654f73092c199c7.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2008-12-15"><em>Стаж:</em> 8 лет 5 месяцев</p>		<p class="posts"><em>Сообщений:</em> 853</p>					
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366543#366543" title="Линк на это сообщение">28-Июл-2010 20:43</a>
+									<span class="posted_since">(спустя 9 минут)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366543">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body">Это уже полная версия. Релиз был вчера.</div><!--/post_body-->
+								</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=172">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=172">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366544" class="row2">
+<tr>
+	<td class="poster_info td1"><a name="366544"></a>
+					<p class="nick">Zarkon</p>
+		
+				<p class="rank_img"><img src="images/ranks/moderator.gif" alt="" title="" border="0" /></p>		<p class="avatar"><img src="images/avatars/18501151994d8cdd6f052dd.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2008-12-11"><em>Стаж:</em> 8 лет 5 месяцев</p>		<p class="posts"><em>Сообщений:</em> 7535</p>		<p class="from"><em>Откуда:</em> Новочеркасск</p>			
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366544#366544" title="Линк на это сообщение">28-Июл-2010 20:43</a>
+									<span class="posted_since">(спустя 33 секунды)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366544">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body"><span style="font-weight: bold;">BlooD</span> <div class="q-wrap">	<p class="q-head"><b>TwitterFeed</b> писал(а):</p>	<div class="q"> <div></div> NeedforSpeed <br /><br /> Good morning, NFS'ers! Today is a big day - NFS World has officially launched! Please feel free to enjoy! #NFSW ^MCU <br /><br /> Added 24 hours ago 	<div class="clear"></div>	</div><!--/q--></div><!--/q_wrap--> </div><!--/post_body-->
+			<div class="signature"><br />_________________<br /><span style="font-size: 24px; line-height: normal;">У трекера появился твиттер. Следуйте за <a href="http://twitter.com/#!/dontrackernews" class="postLink">@dontrackernews</a></span></div>					</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=6">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=6">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366548" class="row1">
+<tr>
+	<td class="poster_info td1"><a name="366548"></a>
+					<p class="nick">AlexDante</p>
+		
+						<p class="avatar"><img src="images/avatars/7329737624ca3000589943.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2009-07-05"><em>Стаж:</em> 7 лет 10 месяцев</p>		<p class="posts"><em>Сообщений:</em> 1148</p>		<p class="from"><em>Откуда:</em> Ростовская обл., г. Таганрог</p>			
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366548#366548" title="Линк на это сообщение">28-Июл-2010 20:48</a>
+									<span class="posted_since">(спустя 4 минуты)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366548">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body"><span style="font-weight: bold;">Maxis</span> <div></div> Я даже знаю откуда ты её взял  <img class="smile" src="images/smiles/ab.gif" alt="ab" align="absmiddle" border="0" /></div><!--/post_body-->
+			<div class="signature"><br /><IDXSKIP>_________________<br /></IDXSKIP><span style="font-weight: bold;"> <div></div> Нет у меня больше ЮТК, нет больше у меня МЗ... <div></div> </span></div>					</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=6447">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=6447">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366549" class="row2">
+<tr>
+	<td class="poster_info td1"><a name="366549"></a>
+					<p class="nick">BlooD</p>
+		
+						<p class="avatar"><img src="images/avatars/18146353874dd3ed8c71b5b.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2010-02-22"><em>Стаж:</em> 7 лет 2 месяца</p>		<p class="posts"><em>Сообщений:</em> 49</p>		<p class="from"><em>Откуда:</em> Таганрог</p>			
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366549#366549" title="Линк на это сообщение">28-Июл-2010 20:48</a>
+									<span class="posted_since">(спустя 25 секунд)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366549">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body">Ясно. Спасибо. Я слышал, что после прокачки определенного лвл, дальше платить надо будет, так это??</div><!--/post_body-->
+								</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=13914">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=13914">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366553" class="row1">
+<tr>
+	<td class="poster_info td1"><a name="366553"></a>
+					<p class="nick">Maxis</p>
+		
+				<p class="rank_img"><img src="images/ranks/moderator.gif" alt="" title="" border="0" /></p>		<p class="avatar"><img src="images/avatars/10901020654f73092c199c7.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2008-12-15"><em>Стаж:</em> 8 лет 5 месяцев</p>		<p class="posts"><em>Сообщений:</em> 853</p>					
+	<p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366553#366553" title="Линк на это сообщение">28-Июл-2010 20:52</a>
+									<span class="posted_since">(спустя 3 минуты)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366553">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body"><span style="font-weight: bold;">BlooD</span>, да. Игра бесплатна до достижения 10-го уровня. Дальше нужно будет отстегнуть $20 за пожизненный доступ. <br /><br /> <span style="font-weight: bold;">AlexDante</span>, да это и не секрет. С народа, конечно.  <div></div> Поделюсь с теми, у кого нет ДС.</div><!--/post_body-->
+						<div class="last_edited"><br /><br />Последний раз редактировалось: Maxis (28.07.2010 20:53), всего редактировалось 1 раз</div>		</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=172">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=172">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366607" class="row2">
+<tr>
+	<td class="poster_info td1"><a name="366607"></a>
+					<p class="nick">Dimoko4ka</p>
+		
+						<p class="avatar"><img src="images/avatars/1929472334e64ad8d49630.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2009-03-14"><em>Стаж:</em> 8 лет 2 месяца</p>		<p class="posts"><em>Сообщений:</em> 384</p>		<p class="from"><em>Откуда:</em> Зерноград</p>			
+	<p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366607#366607" title="Линк на это сообщение">28-Июл-2010 21:43</a>
+									<span class="posted_since">(спустя 50 минут)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366607">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body">я наверное лицку куплю ,как думаете сколько она будет стоить и будет ли она на русском ?</div><!--/post_body-->
+			<div class="signature"><br />_________________<br />Play on PC  | X360 | PSP 
+<br />
+core 2 duo 2.3 Ghz l Nvidia GeForce GTS 450 1gb.
+<br />
+amd athlon 2 N330 2.3Ghz l ATI mobility Radeon HD 5470 512mb.
+<br />
+Xbox 360 Pro 60 Gb LT 2.0 
+<br />
+PSP Slim &amp; Lite 3008 4 Gb</div>					</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=4263">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=4263">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366610" class="row1">
+<tr>
+	<td class="poster_info td1"><a name="366610"></a>
+					<p class="nick">Zarkon</p>
+		
+				<IDXSKIP><p class="rank_img"><img src="images/ranks/moderator.gif" alt="" title="" border="0" /></p></IDXSKIP>		<p class="avatar"><img src="images/avatars/18501151994d8cdd6f052dd.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2008-12-11"><em>Стаж:</em> 8 лет 5 месяцев</p>		<p class="posts"><em>Сообщений:</em> 7535</p>		<IDXSKIP><p class="from"><em>Откуда:</em> Новочеркасск</p></IDXSKIP>			
+	<p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366610#366610" title="Линк на это сообщение">28-Июл-2010 21:49</a>
+									<span class="posted_since">(спустя 6 минут)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366610">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body"><span style="font-weight: bold;">Dimoko4ka</span> <div></div> Она условно бесплатная и не должна продаваться.</div><!--/post_body-->
+			<div class="signature"><br />_________________<br /><span style="font-size: 24px; line-height: normal;">У трекера появился твиттер. Следуйте за <a href="http://twitter.com/#!/dontrackernews" class="postLink">@dontrackernews</a></span></div>					</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=6">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=6">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366651" class="row2">
+<tr>
+	<td class="poster_info td1"><a name="366651"></a>
+					<p class="nick">argonavt</p>
+		
+						<p class="avatar"><img src="images/avatars/7219195474bb87a7be5a8f.gif" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2010-03-02"><em>Стаж:</em> 7 лет 2 месяца</p>		<p class="posts"><em>Сообщений:</em> 70</p>					
+	<p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366651#366651" title="Линк на это сообщение">28-Июл-2010 23:15</a>
+									<span class="posted_since">(спустя 1 час 25 минут)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366651">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body">А что то вроде компании есть?</div><!--/post_body-->
+								</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=14209">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=14209">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366657" class="row1">
+<tr>
+	<td class="poster_info td1"><a name="366657"></a>
+					<p class="nick">The Wolverine</p>
+		
+						<p class="avatar"><img src="images/avatars/1233674959508d16e72564c.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2009-06-28"><em>Стаж:</em> 7 лет 10 месяцев</p>		<p class="posts"><em>Сообщений:</em> 486</p>		<p class="from"><em>Откуда:</em> Цимлянск</p>			
+	<p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366657#366657" title="Линк на это сообщение">28-Июл-2010 23:29</a>
+									<span class="posted_since">(спустя 13 минут)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366657">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body"><div class="q-wrap">	<p class="q-head"><b>argonavt</b> писал(а):</p>	<div class="q">А что то вроде компании есть? 	<div class="clear"></div>	</div><!--/q--></div><!--/q_wrap--> Наверно же нет <div></div> <span style="font-weight: bold;">Описание: Need for Speed: World Online- коллективная онлайн-игра для PC </span></div><!--/post_body-->
+			<div class="signature"><br />_________________<br /><a href="http://unk-cod.clan.su/" class="postLink">http://unk-cod.clan.su/</a> - Сайт клана Unknown</div>					</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=6266">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=6266">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366721" class="row2">
+<tr>
+	<td class="poster_info td1"><a name="366721"></a>
+					<p class="nick">denasus</p>
+		
+						<p class="avatar"><img src="images/avatars/10409111804b001c2d10d6e.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2009-11-02"><em>Стаж:</em> 7 лет 6 месяцев</p>		<p class="posts"><em>Сообщений:</em> 352</p>		<p class="from"><em>Откуда:</em> Г.Морозовск  Ростовская оласть</p>			
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366721#366721" title="Линк на это сообщение">29-Июл-2010 10:00</a>
+									<span class="posted_since">(спустя 10 часов)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366721">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body">автор! где раздача???стоим  ждем тебя!</div><!--/post_body-->
+			<div class="signature"><br />_________________<br />Viewsonic 2226w  1600*1200  Windows 7 Максимальная.AMD Phenom(tm) II X4 B65 Processor (4 CPUs), ~3.4GHzNVIDIA GeForce GTX 550 Ti nforse 790  2048MB RAM HDD 500</div>					</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=9509">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=9509">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366731" class="row1">
+<tr>
+	<td class="poster_info td1"><a name="366731"></a>
+					<p class="nick">Maxis</p>
+		
+				<p class="rank_img"><img src="images/ranks/moderator.gif" alt="" title="" border="0" /></p>		<p class="avatar"><img src="images/avatars/10901020654f73092c199c7.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2008-12-15"><em>Стаж:</em> 8 лет 5 месяцев</p>		<p class="posts"><em>Сообщений:</em> 853</p>					
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366731#366731" title="Линк на это сообщение">29-Июл-2010 10:45</a>
+									<span class="posted_since">(спустя 44 минуты)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366731">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body"><div class="q-wrap">	<p class="q-head"><b>denasus</b> писал(а):</p>	<div class="q">автор! где раздача???стоим  ждем тебя! 	<div class="clear"></div>	</div><!--/q--></div><!--/q_wrap--> Я всегда стабильно раздавал, раздаю и буду раздавать с 10-10:30 до 24:00. <br /><br /> Если ты думаешь, что раз ты включаешь компьютер в 9 утра, значит так делают все - то это не так. <div></div> Не терпится - качай с внешки, или с народа, если ДС есть.</div><!--/post_body-->
+								</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=172">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=172">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366758" class="row2">
+<tr>
+	<td class="poster_info td1"><a name="366758"></a>
+					<p class="nick">denasus</p>
+		
+						<p class="avatar"><img src="images/avatars/10409111804b001c2d10d6e.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2009-11-02"><em>Стаж:</em> 7 лет 6 месяцев</p>		<p class="posts"><em>Сообщений:</em> 352</p>		<p class="from"><em>Откуда:</em> Г.Морозовск  Ростовская оласть</p>			
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366758#366758" title="Линк на это сообщение">29-Июл-2010 12:02</a>
+									<span class="posted_since">(спустя 1 час 17 минут)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366758">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body">дс нету! если что я комп не выключаю вообще!!!! ниче потерплю не к спеху!</div><!--/post_body-->
+			<div class="signature"><br />_________________<br />Viewsonic 2226w  1600*1200  Windows 7 Максимальная.AMD Phenom(tm) II X4 B65 Processor (4 CPUs), ~3.4GHzNVIDIA GeForce GTX 550 Ti nforse 790  2048MB RAM HDD 500</div>					</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=9509">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=9509">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+<tbody id="post_366865" class="row1">
+<tr>
+	<td class="poster_info td1"><a name="366865"></a>
+					<p class="nick">LEXA</p>
+		
+						<p class="avatar"><img src="images/avatars/1858532514c165531ea4eb.jpg" alt="" border="0" /></p>		<p class="joined" title="Зарегистрирован: 2009-08-13"><em>Стаж:</em> 7 лет 9 месяцев</p>		<p class="posts"><em>Сообщений:</em> 369</p>		<p class="from"><em>Откуда:</em> Таганрог</p>			
+	<IDXSKIP><p><img src="./images/spacer.gif" width="142" height="2" border="0" alt="" /></p></IDXSKIP>
+
+	</td>
+	<td class="message td2" rowspan="2">
+
+		<div class="post_head">
+			<p style="float: left; padding: 4px 0 3px;">
+				<img src="./templates/2011/images/icon_minipost.gif" class="icon1" alt="post" />				<a class="small" href="./viewtopic.php?p=366865#366865" title="Линк на это сообщение">29-Июл-2010 18:34</a>
+									<span class="posted_since">(спустя 6 часов)</span>
+							</p>
+
+			
+			<p style="float: right; padding: 3px 2px 4px;" class="post_btn_1">
+				<a class="txtb" href="./posting.php?mode=quote&amp;p=366865">[Цитировать]</a>&nbsp;																[]&nbsp;							</p>
+			<div class="clear"></div>
+		</div>
+
+		<div class="post_wrap">
+			<div class="post_body"><span style="font-weight: bold;">Zarkon</span>, я видел продают некоторые.</div><!--/post_body-->
+								</div><!--/post_wrap-->
+
+	</td>
+</tr>
+<tr>
+	<td class="poster_btn td3">
+
+			<div style=" padding: 2px 6px 4px;" class="post_btn_2">
+			<a class="txtb" href="./profile.php?mode=viewprofile&amp;u=7398">[Профиль]</a>&nbsp;			<a class="txtb" href="./privmsg.php?mode=post&amp;u=7398">[ЛС]</a>&nbsp;		</div>
+	
+	</td>
+</tr>
+</tbody>
+
+
+</table><!--/topic_main-->
+
+
+<table id="pagination" class="topic" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="nav pad_6 row2">
+		<p style="float: left">Страница <b>1</b> из <b>8</b></p>
+		<p style="float: right">Страницы:&nbsp;&nbsp;<b>1</b>, <a href="viewtopic.php?t=29234&amp;start=15">2</a>, <a href="viewtopic.php?t=29234&amp;start=30">3</a>, <a href="viewtopic.php?t=29234&amp;start=45">4</a>, <a href="viewtopic.php?t=29234&amp;start=60">5</a>, <a href="viewtopic.php?t=29234&amp;start=75">6</a>, <a href="viewtopic.php?t=29234&amp;start=90">7</a>, <a href="viewtopic.php?t=29234&amp;start=105">8</a>&nbsp;&nbsp;<a href="viewtopic.php?t=29234&amp;start=15">След.</a></p>
+	</td>
+</tr>
+</table><!--/pagination-->
+
+
+<table class="topic" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="catBottom med">
+	<form method="post" action="viewtopic.php?t=29234&amp;start=0">
+		Показать сообщения: 
+<select  name="postdays" id="postdays">
+		<option selected="selected"  value="0">&nbsp;все сообщения&nbsp;</option>
+		<option value="1">&nbsp;за последний день&nbsp;</option>
+		<option value="7">&nbsp;за последние 7 дней&nbsp;</option>
+		<option value="14">&nbsp;за последние 2 недели&nbsp;</option>
+		<option value="30">&nbsp;за последний месяц&nbsp;</option>
+		<option value="90">&nbsp;за последние 3 месяца&nbsp;</option>
+		<option value="180">&nbsp;за последние 6 месяцев&nbsp;</option>
+		<option value="364">&nbsp;за последний год&nbsp;</option>
+</select>
+&nbsp;
+		
+<select  name="postorder" id="postorder">
+		<option selected="selected"  value="asc">&nbsp;Начиная со старых&nbsp;</option>
+		<option value="desc">&nbsp;Начиная с новых&nbsp;</option>
+</select>
+&nbsp;
+		<input type="submit" value="Перейти" class="lite" name="submit" />
+	</form>
+	</td>
+</tr>
+</table>
+
+
+<table cellpadding="0" class="w100" style="padding-top: 2px;">
+<tr>
+	<td valign="top">
+		<a href="posting.php?mode=reply&amp;t=29234"><img src="./templates/2011/images/lang_russian/reply.gif" alt="Ответить на тему" /></a>
+	</td>
+	<td class="nav w100" style="padding-left: 8px;">
+		<IDXSKIP><a href="./index.php">Список форумов DonTracker.ru</a></IDXSKIP>
+		 <IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=170">Игры для PC по жанрам</a>		<IDXSKIP><em>&raquo;</em></IDXSKIP>&nbsp;<a href="viewforum.php?f=35">Онлайн игры</a>
+	</td>
+</tr>
+</table>
+
+<!--bottom_info-->
+<div class="bottom_info">
+
+	<div class="jumpbox"></div>
+
+	<div id="timezone">
+		<p></p>
+		<p>Текущее время: <span class="tz_time">18-Май 09:45</span></p>
+		<IDXSKIP><p>Часовой пояс: <span class="tz_time">GMT + 4</span></p></IDXSKIP>
+	</div>
+	<div class="clear"></div>
+
+</div><!--/bottom_info-->
+
+<table width="100%">
+<tr>
+	<td width="40%" valign="top" nowrap="nowrap"><span class="small"></span><br />
+	<div class="small">
+		<br clear="all" />
+		<div style="float: left;"><IDXSKIP>Вы <b>не можете</b></IDXSKIP> <IDXSKIP>начинать темы<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>отвечать на сообщения<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>редактировать свои сообщения<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>удалять свои сообщения<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>голосовать в опросах<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>прикреплять файлы к сообщениям<br />Вы <b>не можете</b></IDXSKIP> <IDXSKIP>скачивать файлы<br /></IDXSKIP></div>
+	</div>
+	</td>
+</tr>
+</table>
+
+	</div><!--/main_content_wrap-->
+	</td><!--/main_content-->
+
+	
+	</tr></table>
+	</div>
+	<!--/page_content-->
+
+	<!--page_footer-->
+	<div id="page_footer">
+
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+	<td align="center"></td>
+</tr>
+</table>		
+		<div class="clear"></div>
+
+		<br /><br />
+
+				<div class="med bold tCenter">
+			<IDXSKIP><a href="misc.php?do=info&show=user_agreement" onclick="window.open(this.href, '', InfoWinParams); return false;">Пользовательское Соглашение</a></IDXSKIP>
+						<IDXSKIP><span class="normal">&nbsp;|&nbsp;</span></IDXSKIP>
+			<IDXSKIP><a href="misc.php?do=info&show=copyright_holders" onclick="window.open(this.href, '', InfoWinParams); return false;">Для правообладателей</a></IDXSKIP>
+									<IDXSKIP><span class="normal">&nbsp;|&nbsp;</span></IDXSKIP>
+			<IDXSKIP><a href="misc.php?do=info&show=advert" onclick="window.open(this.href, '', InfoWinParams); return false;">Реклама на сайте</a></IDXSKIP>
+					</div>
+		<br />
+		
+		
+		<div class="copyright tleft" align="center">
+			<IDXSKIP>2008-2011 &copy; <a href="http://www.donnet.ru">Домашняя сеть DonNet</a></IDXSKIP><br />
+			<IDXSKIP>Форум оптимизирован под работу в браузерах Mozilla Firefox, Google Chrome, Apple Safari (Webkit).
+			</IDXSKIP><span style="font-size:8pt">
+<center><font size="-2">
+
+</font></center></span>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t24.2;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border='0' width='88' height='15'><\/a>")
+//--></script><!--/LiveInternet-->
+<!-- Yandex.Metrika informer -->
+<IDXSKIP><a href="http://metrika.yandex.ru/stat/?id=1449813&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/1449813/1_0_FFFFFFFF_FFFFFFFF_0_uniques"
+width="80" height="15" border="0" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (уникальные посетители)" /></a></IDXSKIP>
+<!-- /Yandex.Metrika informer -->
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter1449813 = new Ya.Metrika(1449813);
+        } catch(e) { }
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<IDXSKIP><noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/1449813" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+<img src="/images/18plus.gif" alt="18+"/>
+		</div>
+
+	</div>
+
+	<!--/page_footer -->
+
+	</div>
+	<!--/page_container -->
+
+
+
+
+	</div><!--/body_container-->
+
+	</body>
+	</html>
+

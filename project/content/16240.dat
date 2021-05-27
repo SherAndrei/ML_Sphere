@@ -1,0 +1,3009 @@
+kazakh.ru/talk/mmess.phtml?idt=24956&page=2
+
+<!-- 
+
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru"
+
+-->
+
+<head>
+<title>Как потолстеть
+ / Здоровье / Общение / Сервер Казах.ру</title>
+	<link rel="stylesheet" href="/kazakh.css">
+    <!--meta http-equiv="Content-type" content="text/html; charset=utf-8"-->
+	<meta http-equiv="Content-type" content="text/html; charset=windows-1251">
+<link rel="icon" href="/favicon.ico" type="image/x-icon"> 
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<meta name="robots" content="all">
+	<meta name="keywords" content="Казахский сайт, казахские сайты, казах, казахи, казашки, казахстан, казахстанцы, kazakh, kazah, qazaq, kazakhstan, казахская культура, казахская диаспора">
+	<meta name="description" content="Международный казахский сервер Казах.ру. Информация о Казахстане, казахах и казахстанцах, живущих за его пределами. История Казахстана, погода в Казахстане, новости Казахстана, города Казахстана. Общение, казахские имена, казахская музыка, казахская кухня ">
+
+<script language="JavaScript" src="/_js/jquery-1.6.2.min.js" type="text/javascript"></script>
+<script language="JavaScript" src="/privezi/privezi.kz.js" type="text/javascript"></script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+//v1.7
+// Flash Player Version Detection
+// Detect Client Browser type
+// Copyright 2005-2008 Adobe Systems Incorporated.  All rights reserved.
+var isIE  = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;
+var isWin = (navigator.appVersion.toLowerCase().indexOf("win") != -1) ? true : false;
+var isOpera = (navigator.userAgent.indexOf("Opera") != -1) ? true : false;
+function ControlVersion()
+{
+	var version;
+	var axo;
+	var e;
+	// NOTE : new ActiveXObject(strFoo) throws an exception if strFoo isn't in the registry
+	try {
+		// version will be set for 7.X or greater players
+		axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.7");
+		version = axo.GetVariable("$version");
+	} catch (e) {
+	}
+	if (!version)
+	{
+		try {
+			// version will be set for 6.X players only
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");
+			
+			// installed player is some revision of 6.0
+			// GetVariable("$version") crashes for versions 6.0.22 through 6.0.29,
+			// so we have to be careful. 
+			
+			// default to the first public version
+			version = "WIN 6,0,21,0";
+			// throws if AllowScripAccess does not exist (introduced in 6.0r47)		
+			axo.AllowScriptAccess = "always";
+			// safe to call for 6.0r47 or greater
+			version = axo.GetVariable("$version");
+		} catch (e) {
+		}
+	}
+	if (!version)
+	{
+		try {
+			// version will be set for 4.X or 5.X player
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.3");
+			version = axo.GetVariable("$version");
+		} catch (e) {
+		}
+	}
+	if (!version)
+	{
+		try {
+			// version will be set for 3.X player
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.3");
+			version = "WIN 3,0,18,0";
+		} catch (e) {
+		}
+	}
+	if (!version)
+	{
+		try {
+			// version will be set for 2.X player
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+			version = "WIN 2,0,0,11";
+		} catch (e) {
+			version = -1;
+		}
+	}
+	
+	return version;
+}
+// JavaScript helper required to detect Flash Player PlugIn version information
+function GetSwfVer(){
+	// NS/Opera version >= 3 check for Flash plugin in plugin array
+	var flashVer = -1;
+	
+	if (navigator.plugins != null && navigator.plugins.length > 0) {
+		if (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]) {
+			var swVer2 = navigator.plugins["Shockwave Flash 2.0"] ? " 2.0" : "";
+			var flashDescription = navigator.plugins["Shockwave Flash" + swVer2].description;
+			var descArray = flashDescription.split(" ");
+			var tempArrayMajor = descArray[2].split(".");			
+			var versionMajor = tempArrayMajor[0];
+			var versionMinor = tempArrayMajor[1];
+			var versionRevision = descArray[3];
+			if (versionRevision == "") {
+				versionRevision = descArray[4];
+			}
+			if (versionRevision[0] == "d") {
+				versionRevision = versionRevision.substring(1);
+			} else if (versionRevision[0] == "r") {
+				versionRevision = versionRevision.substring(1);
+				if (versionRevision.indexOf("d") > 0) {
+					versionRevision = versionRevision.substring(0, versionRevision.indexOf("d"));
+				}
+			}
+			var flashVer = versionMajor + "." + versionMinor + "." + versionRevision;
+		}
+	}
+	// MSN/WebTV 2.6 supports Flash 4
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.6") != -1) flashVer = 4;
+	// WebTV 2.5 supports Flash 3
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.5") != -1) flashVer = 3;
+	// older WebTV supports Flash 2
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 2;
+	else if ( isIE && isWin && !isOpera ) {
+		flashVer = ControlVersion();
+	}	
+	return flashVer;
+}
+// When called with reqMajorVer, reqMinorVer, reqRevision returns true if that version or greater is available
+function DetectFlashVer(reqMajorVer, reqMinorVer, reqRevision)
+{
+	versionStr = GetSwfVer();
+	if (versionStr == -1 ) {
+		return false;
+	} else if (versionStr != 0) {
+		if(isIE && isWin && !isOpera) {
+			// Given "WIN 2,0,0,11"
+			tempArray         = versionStr.split(" "); 	// ["WIN", "2,0,0,11"]
+			tempString        = tempArray[1];			// "2,0,0,11"
+			versionArray      = tempString.split(",");	// ['2', '0', '0', '11']
+		} else {
+			versionArray      = versionStr.split(".");
+		}
+		var versionMajor      = versionArray[0];
+		var versionMinor      = versionArray[1];
+		var versionRevision   = versionArray[2];
+        	// is the major.revision >= requested major.revision AND the minor version >= requested minor
+		if (versionMajor > parseFloat(reqMajorVer)) {
+			return true;
+		} else if (versionMajor == parseFloat(reqMajorVer)) {
+			if (versionMinor > parseFloat(reqMinorVer))
+				return true;
+			else if (versionMinor == parseFloat(reqMinorVer)) {
+				if (versionRevision >= parseFloat(reqRevision))
+					return true;
+			}
+		}
+		return false;
+	}
+}
+function AC_AddExtension(src, ext)
+{
+  if (src.indexOf('?') != -1)
+    return src.replace(/\?/, ext+'?'); 
+  else
+    return src + ext;
+}
+function AC_Generateobj(objAttrs, params, embedAttrs) 
+{ 
+  var str = '';
+  if (isIE && isWin && !isOpera)
+  {
+    str += '<object ';
+    for (var i in objAttrs)
+    {
+      str += i + '="' + objAttrs[i] + '" ';
+    }
+    str += '>';
+    for (var i in params)
+    {
+      str += '<param name="' + i + '" value="' + params[i] + '" /> ';
+    }
+    str += '</object>';
+  }
+  else
+  {
+    str += '<embed ';
+    for (var i in embedAttrs)
+    {
+      str += i + '="' + embedAttrs[i] + '" ';
+    }
+    str += '> </embed>';
+  }
+  document.write(str);
+}
+function AC_FL_RunContent(){
+  var ret = 
+    AC_GetArgs
+    (  arguments, ".swf", "movie", "clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+     , "application/x-shockwave-flash"
+    );
+  AC_Generateobj(ret.objAttrs, ret.params, ret.embedAttrs);
+}
+function AC_SW_RunContent(){
+  var ret = 
+    AC_GetArgs
+    (  arguments, ".dcr", "src", "clsid:166B1BCA-3F9C-11CF-8075-444553540000"
+     , null
+    );
+  AC_Generateobj(ret.objAttrs, ret.params, ret.embedAttrs);
+}
+function AC_GetArgs(args, ext, srcParamName, classid, mimeType){
+  var ret = new Object();
+  ret.embedAttrs = new Object();
+  ret.params = new Object();
+  ret.objAttrs = new Object();
+  for (var i=0; i < args.length; i=i+2){
+    var currArg = args[i].toLowerCase();    
+    switch (currArg){	
+      case "classid":
+        break;
+      case "pluginspage":
+        ret.embedAttrs[args[i]] = args[i+1];
+        break;
+      case "src":
+      case "movie":	
+        args[i+1] = AC_AddExtension(args[i+1], ext);
+        ret.embedAttrs["src"] = args[i+1];
+        ret.params[srcParamName] = args[i+1];
+        break;
+      case "onafterupdate":
+      case "onbeforeupdate":
+      case "onblur":
+      case "oncellchange":
+      case "onclick":
+      case "ondblclick":
+      case "ondrag":
+      case "ondragend":
+      case "ondragenter":
+      case "ondragleave":
+      case "ondragover":
+      case "ondrop":
+      case "onfinish":
+      case "onfocus":
+      case "onhelp":
+      case "onmousedown":
+      case "onmouseup":
+      case "onmouseover":
+      case "onmousemove":
+      case "onmouseout":
+      case "onkeypress":
+      case "onkeydown":
+      case "onkeyup":
+      case "onload":
+      case "onlosecapture":
+      case "onpropertychange":
+      case "onreadystatechange":
+      case "onrowsdelete":
+      case "onrowenter":
+      case "onrowexit":
+      case "onrowsinserted":
+      case "onstart":
+      case "onscroll":
+      case "onbeforeeditfocus":
+      case "onactivate":
+      case "onbeforedeactivate":
+      case "ondeactivate":
+      case "type":
+      case "codebase":
+      case "id":
+        ret.objAttrs[args[i]] = args[i+1];
+        break;
+      case "width":
+      case "height":
+      case "align":
+      case "vspace": 
+      case "hspace":
+      case "class":
+      case "title":
+      case "accesskey":
+      case "name":
+      case "tabindex":
+        ret.embedAttrs[args[i]] = ret.objAttrs[args[i]] = args[i+1];
+        break;
+      default:
+        ret.embedAttrs[args[i]] = ret.params[args[i]] = args[i+1];
+    }
+  }
+  ret.objAttrs["classid"] = classid;
+  if (mimeType) ret.embedAttrs["type"] = mimeType;
+  return ret;
+}
+// -->
+</script>
+ <script language="JavaScript" type="text/JavaScript"> 
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+ 
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+ 
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+ 
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?53"></script>
+<script type="text/javascript"> 
+  VK.init({apiId: 2760281, onlyWidgets: true});
+</script>
+
+
+<script type='text/javascript'>
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+<script type='text/javascript'>
+googletag.defineSlot('/84095412/shapka_100_90', [1000, 90], 'div-gpt-ad-1350323649329-0').addService(googletag.pubads());
+
+
+
+
+
+googletag.defineSlot('/84095412/240_400_verh', [240, 400], 'div-gpt-ad-1360575267875-0').addService(googletag.pubads());
+
+
+googletag.defineSlot('/84095412/240_400_niz', [240, 400], 'div-gpt-ad-1360570758609-0').addService(googletag.pubads());
+
+
+
+googletag.defineSlot('/84095412/690_104', [690, 104], 'div-gpt-ad-1349419982399-0').addService(googletag.pubads());
+
+
+googletag.defineSlot('/84095412/nestandart', [1, 1], 'div-gpt-ad-1347439490205-2').addService(googletag.pubads());
+
+
+
+googletag.defineSlot('/84095412/klicker_all', [700, 100], 'div-gpt-ad-1354718014101-0').addService(googletag.pubads());
+
+
+
+googletag.defineSlot('/84095412/Уголок', [1, 1], 'div-gpt-ad-1347439490205-3').addService(googletag.pubads());
+
+
+
+googletag.pubads().enableSyncRendering();
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+</script>
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1031604-1']);
+  _gaq.push(['_setDomainName', '.kazakh.ru']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('/i/ico/1.gif','/i/ico/2.gif','/i/ico/3.gif','/i/ico/4.gif')">
+<!--<div align="center">
+<!-- shapka_100_90
+<div id='div-gpt-ad-1350323649329-0' style='width:1000px; height:90px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1350323649329-0'); });
+</script>
+</div>
+</div>-->
+
+
+<!-- Уголок -->
+<div id='div-gpt-ad-1347439490205-3' style='width:1px; height:1px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1347439490205-3'); });
+</script>
+</div>
+
+
+
+
+
+
+
+
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+	<td width="100%" valign="top" colspan="4">
+	<meta name="viewport" content="width=640">
+
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-0333133942197405",
+    enable_page_level_ads: true
+  });
+</script>
+
+<!-- header begin -->
+		
+<table width=100% border="0" cellspacing=0 cellpadding=0 height=100%>
+    <IDXSKIP><tr valign=top>
+        <td>
+            <table width=100% border=0 cellspacing=0 cellpadding=0 background="../i/top_bg.jpg">
+                <tr>
+                    <td><a href="/"><img src="../i/logo.jpg" width=315 height=130 border=0 alt="Казах.ру"></a></td>
+                    <td>
+
+
+
+		<!--<form method="get" action="http://www.yandex.ru/yandsearch">
+                            <input type="hidden" name="serverurl" value="http://www.kazakh.ru">
+                            <input type="hidden" name="site" value="kazakh.ru">
+                            <input type="hidden" name="tb" value="1">
+                            <input type="hidden" name="how" value="tm">
+                            <input type="hidden" name="pag" value="u">-->
+		<!--form method="get" action="/quintura/"-->
+		<form method="post" action="/search/">
+                            <table border=0 cellspacing=2 cellpadding=0 class=f11>
+                                <tr>
+                                    <td colspan=2 class=c3><img src="../i/arrow_1.gif" alt="" width=10 height=9 align=absmiddle>поиск по сайту и Казнету</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <!--input type="text" name="request" size=15 style="width:135px">-->
+                                        <input type="text" name="query" size=15 style="width:170px">
+					
+                                    </td>
+                                    <td>
+                                        <input type="image" src="../i/b_search.gif" alt="Казахский контент" width=90 height=20 border=0 name="search">
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr></IDXSKIP>
+    <tr height="29">
+        <td background="/i/menu_bg.gif" align=center>
+            <table width=80% border=0 cellspacing=0 cellpadding=0>
+                <tr align=center>
+	
+	                    <IDXSKIP><td><img src="../i/menu_s.gif" width=1 height=29 alt=""></td></IDXSKIP>
+                    <IDXSKIP><td class=menu><a href="http://www.kazakh.ru/lenta2/">Лента новостей</a></td></IDXSKIP>
+									<IDXSKIP><td><img src="../i/menu_s.gif" width=1 height=29 alt=""></td></IDXSKIP>
+               			<IDXSKIP><td class=menu_a><a href="http://www.kazakh.ru/talk/"><font color="white">Форумы</font></a></td></IDXSKIP>
+				
+			                    <IDXSKIP><td><img src="../i/menu_s.gif" width=1 height=29 alt=""></td></IDXSKIP>
+                    <IDXSKIP><td class=menu><a href="http://www.kazakh.ru/photo2/">Фото</a></td></IDXSKIP>
+				                    <IDXSKIP><td><img src="../i/menu_s.gif" width=1 height=29 alt=""></td></IDXSKIP>
+                    <IDXSKIP><td class=menu><a href="http://www.kazakh.ru/video2/">Видео</a></td></IDXSKIP>
+				                    <IDXSKIP><td><img src="../i/menu_s.gif" width=1 height=29 alt=""></td></IDXSKIP>
+                    <IDXSKIP><td class=menu><a href="http://www.kazakh.ru/blogs/">Блоги</a></td></IDXSKIP>
+				                    <IDXSKIP><td><img src="../i/menu_s.gif" width=1 height=29 alt=""></td></IDXSKIP>
+                    <IDXSKIP><td class=menu><a href="http://www.kazakh.ru/catalog/">Каталог сайтов</a></td></IDXSKIP>
+				                    <IDXSKIP><td><img src="../i/menu_s.gif" width=1 height=29 alt=""></td></IDXSKIP>
+                    <IDXSKIP><td class=menu><a href="http://www.kazakh.ru/club/">Клуб знакомств</a></td></IDXSKIP>
+				                    <IDXSKIP><td><img src="../i/menu_s.gif" width=1 height=29 alt=""></td></IDXSKIP>
+                    <IDXSKIP><td class=menu><a href="http://www.kazakh.ru/about/">О казахах</a></td></IDXSKIP>
+				                    <IDXSKIP><td><img src="../i/menu_s.gif" width=1 height=29 alt=""></td></IDXSKIP>
+                    <IDXSKIP><td class=menu><a href="http://www.kazakh.ru/kazakh/">О Казахстане</a></td></IDXSKIP>
+				                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<IDXSKIP><div style="position:absolute; left:340px; top:60px; width:90px; height:20px; z-index:1"><b class=c5>rus</b><!-- position:absolute; left:340px; top:10px; width:90px; height:20px; z-index:1 -->
+ / <a href="http://www.kazakh.ru/talk/index.phtml?lng=2" class=c0>eng</a> / <a href="http://www.kazakh.ru/talk/index.phtml?lng=1" class=c0>kaz</a></div></IDXSKIP>
+<!-- header end -->	</td>
+</tr>
+<tr valign="top">
+	<td width="24%" style="background:#F4F4F4;" align="center" valign="top">
+	<!-- Left column -->
+      <table width=100% border=0 cellspacing=0 cellpadding=0 height=100%>
+	<tr><td valign="top">
+
+
+
+<!-- МЕНЮ И КАРТИНКА ПОДРАЗДЕЛОВ -->
+      	
+      <table width=100% border=0 cellspacing=0 cellpadding=0 height=100%>
+	<IDXSKIP><tr>
+		<td valign=top align="right" style="padding-top : 20px;">
+			<table border="0" width="90%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="100%" align="left" valign="top" style="font-size : 13px; padding-left : 10px; padding-top : 25px; color:#FFFFFF; background : url(/i/topic_back.jpg) repeat-x">
+				<nobr><b><a class="ltop" href="http://www.kazakh.ru/talk/">Форумы</a></b></font></nobr>
+				</td>
+				<td>
+								<img src="/i/topics/talk.jpg">
+								</td>
+			</tr>
+			</table>
+
+		</td>
+	</tr></IDXSKIP>
+	
+
+	<tr>
+		<td valign="top">
+			<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<IDXSKIP><td><div style="width: 10px; height: 0px;"><spacer type="block" height="0" width="10" /></div></td></IDXSKIP>
+				<td valign="top" width="100%" style="padding-right:20px;" align="left">
+									<table border="0" cellspacing="0" cellpadding="2">
+												<IDXSKIP><tr><td><img src="../i/menu_2.gif" alt="" width="15" height="15" border="0"></td><td><a class="sub_menu" href="../talk/index.phtml?lng=0">На русском языке</a></td></tr></IDXSKIP>
+													<IDXSKIP><tr><td><img src="../i/menu_2.gif" alt="" width="15" height="15" border="0"></td><td><a class="sub_menu" href="../talk/index.phtml?lng=1">&#1178;аза&#1179;ша с&#1257;йлесу</a></td></tr></IDXSKIP>
+											</table>
+									</td>
+				<IDXSKIP><td><div style="width: 10px; height: 0px;"><spacer type="block" height="0" width="10" /></div></td></IDXSKIP>
+
+			</tr>
+			</table>
+		</td>
+	</tr>
+	<IDXSKIP><tr><td><div style="width: 1px; height: 10px;"><spacer type="block" height="10" width="1" /></div></td></tr></IDXSKIP>
+	<IDXSKIP><tr>
+		<td>
+
+      <table width="100%" border=0 cellspacing=9 cellpadding=0>
+	 <tr>
+      <td background="/i/p1.gif" height="1"><img src="/i/px.gif" width=155 height="1" alt=""></td>
+       </tr>
+	</table>
+					</td>
+	</tr></IDXSKIP>
+	<tr>
+		<td>
+
+
+
+<!-- МЕНЮ И КАРТИНКА ПОДРАЗДЕЛОВ -->
+
+
+	<!-- alias_f!=main -->
+	
+
+
+
+	    <div align="center">
+		<noindex>
+				 <table width="100%" border=0 cellspacing=9 cellpadding=0>
+                                
+<!--<tr><td align="center"><font class="c4"><b>Реклама</b></font></td></tr>-->
+
+                            <tr>
+                                <td align=center>
+
+
+<script type="text/javascript">
+    google_ad_client = "ca-pub-0333133942197405";
+    google_ad_slot = "6392201630";
+    google_ad_width = 300;
+    google_ad_height = 600;
+</script>
+<!-- Казах 300х600 -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<script language="JavaScript1.2" src="/initvar.php"></script>
+
+
+
+
+								</td>
+                            </tr>
+				</table>
+
+
+
+
+
+
+
+
+
+
+</noindex>		</div>
+
+
+
+
+      <table width="100%" align="center" border=0 cellspacing=9 cellpadding=0>
+	 <tr>
+      <td background="/i/p1.gif" height="1"></td>
+       </tr>
+	</table>
+
+
+
+
+
+
+
+
+		
+
+<table width="75%" align="center" border=0 cellpadding=0>
+
+<IDXSKIP><tr> 
+	<td align=center style="padding : 0px 0px 5px 0px;" class=c4><b>Последние темы всех форумов:</b></td>
+</tr></IDXSKIP>
+<tr>
+	<td align=center style="font-size : 10px;"><br>
+
+  				<table width=100% border=0 cellspacing=3 cellpadding=0 class="f11">
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=98876" title="Для брака (никях) познакомлюсь с мусульманкой " alt="Для брака (никях) познакомлюсь с мусульманкой " class=c2_>Для брака (никях) познакомлюсь с мусульманкой
+...</a></td>
+                </tr>
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=3207" title="ищу рабигу гадалку " alt="ищу рабигу гадалку " class=c2_>ищу рабигу гадалку...</a></td>
+                </tr>
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=17191" title="Намаз о&#1179;итын  &#1179;ыздар жігіттермен  танысу ж&#1241;не сырласу " alt="Намаз о&#1179;итын  &#1179;ыздар жігіттермен  танысу ж&#1241;не сырласу " class=c2_>Намаз о&#1179;итын  &#1179;ыздар жігіттермен  танысу ж&#1241;не сырласу 
+...</a></td>
+                </tr>
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=97618" title="Мусульмане и мусульманки Астаны, прием, рас рас " alt="Мусульмане и мусульманки Астаны, прием, рас рас " class=c2_>Мусульмане и мусульманки Астаны, прием, рас рас
+...</a></td>
+                </tr>
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=30248" title="Хочу женится " alt="Хочу женится " class=c2_>Хочу женится
+...</a></td>
+                </tr>
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=72955" title="сайты знакомств для мусульман " alt="сайты знакомств для мусульман " class=c2_>сайты знакомств для мусульман...</a></td>
+                </tr>
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=105515" title="Табын &#1178;ара&#1179;ойлы руыны&#1187; шежіресі керек " alt="Табын &#1178;ара&#1179;ойлы руыны&#1187; шежіресі керек " class=c2_>Табын &#1178;ара&#1179;ойлы руыны&#1187; шежіресі керек
+...</a></td>
+                </tr>
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=35636" title="Мусульманский сайт знакомств " alt="Мусульманский сайт знакомств " class=c2_>Мусульманский сайт знакомств...</a></td>
+                </tr>
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=139498" title="Помогу оформить кредит " alt="Помогу оформить кредит " class=c2_>Помогу оформить кредит...</a></td>
+                </tr>
+				<tr valign=top>
+                    <td width="15"><img src="/i/pimpa2.gif" alt="" width=15 height=15></td>
+					<td><a href="/talk/mmess.phtml?idt=35123" title="&#1256;те &#1179;ызы&#1179;ты танысу б&#1201;рышы " alt="&#1256;те &#1179;ызы&#1179;ты танысу б&#1201;рышы " class=c2_>&#1256;те &#1179;ызы&#1179;ты танысу б&#1201;рышы...</a></td>
+                </tr>
+				</table>
+
+
+	</td>
+</tr>
+</table>
+<br>
+      <table width="100%" align="center" border=0 cellspacing=9 cellpadding=0>
+	 <tr>
+      <td background="/i/p1.gif" height="1"></td>
+       </tr>
+	</table>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+.container {
+	height: 530px;  /*убираем скачок блока при прокрутке*/
+}
+#floating {
+	height: 570px;
+	width: 300px;
+	margin-left: 5px; top: 5px;
+}
+.fixed {
+	position: fixed;
+	top: 10px;
+	z-index: 9999;
+}
+footer {
+
+}
+</style>
+
+<div class="container">
+   <div id="floating">
+
+<table width="100%" border=0 cellspacing=9 cellpadding=0>
+                                
+<!--<tr><td align="center"><font class="c4"><b>Реклама</b></font></td></tr>-->
+
+                            <tr>
+                                <td align=center>
+
+
+<!-- Yandex.RTB R-A-138587-2 -->
+<div id="yandex_rtb_R-A-138587-2"></div>
+<script type="text/javascript">
+    (function(w, n) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-138587-2",
+                renderTo: "yandex_rtb_R-A-138587-2",
+                horizontalAlign: true,
+                async: false
+            });
+        });
+        document.write('<sc'+'ript type="text/javascript" src="//an.yandex.ru/system/context.js"></sc'+'ript>');
+    })(this, "yandexContextSyncCallbacks");
+</script>
+<div align="center">
+<!-- Yandex.RTB R-A-138587-5 -->
+<div id="yandex_rtb_R-A-138587-5"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-138587-5",
+                renderTo: "yandex_rtb_R-A-138587-5",
+                horizontalAlign: false,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+</div>
+
+
+
+
+								</td>
+                            </tr>
+				</table>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+
+$(function(){
+  var topPos = $('#floating').offset().top;
+  $(window).scroll(function() { 
+  var top = $(document).scrollTop(),
+      pip = $('footer').offset().top;
+      height = $('#floating').outerHeight();
+  if (top > topPos && top < pip - height) {
+		$('#floating').addClass('fixed').removeAttr("style");
+  } else if (top > pip - height) {
+	$('#floating').removeClass('fixed').css({'position':'absolute','bottom':'0'});
+  } else {
+	$('#floating').removeClass('fixed');
+  }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+	</td></tr>
+
+
+
+
+
+	<tr>
+		<td height="100%" valign="bottom">
+		</td>
+	</tr>
+
+	<IDXSKIP><tr><td align="center">
+	<!-- братская могила: голосование + счетчики -->
+	    
+
+
+
+
+	
+
+
+	<div align="center">
+	<br>
+
+<br>
+<br>
+  <footer>	
+<noindex>
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/stat/kazakh.ru' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t12.2;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+<br><br>
+<!-- ZERO.kz -->
+<span id="_zero_1137">
+<noscript>
+<a href="http://zero.kz/?s=1137" target="_blank">
+<img src="http://c.zero.kz/z.png?u=1137" width="88" height="31" alt="ZERO.kz" />
+</a>
+</noscript>
+</span>
+
+<script type="text/javascript"><!--
+var _zero_kz_ = _zero_kz_ || [];
+_zero_kz_.push(["id", 1137]);
+_zero_kz_.push(["type", 1]);
+
+(function () {
+    var a = document.getElementsByTagName("script")[0],
+    s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https:" : "http:")
+    + "//c.zero.kz/z.js";
+    a.parentNode.insertBefore(s, a);
+})(); //-->
+</script>
+<!-- End ZERO.kz -->
+
+
+</noindex>
+ 
+   </footer>
+			<br>
+			<br>
+
+
+			</div>
+		</td>
+	</tr></IDXSKIP>	</table>
+</td>
+</tr>
+</table>	</td>
+	<!--<td style="background:#F4F4F4 url(/i/bg1.gif) repeat-y right;"><img src="/i/px.gif" width="12" height="27"></td>-->
+	
+	<IDXSKIP><td width="5" style="background:#FFFFFF"><img src="/i/px.gif" width="5"></td></IDXSKIP>
+	
+
+	<td valign="top" style="padding-top: 30px; padding-bottom: 10px; padding-right : 10px;" align="center" background : #FFFFFF;">
+	
+	<table width="90%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	<td width="100%" valign="top">
+
+
+
+<!-- Yandex.RTB R-A-138587-1 -->
+<div id="yandex_rtb_R-A-138587-1"></div>
+<script type="text/javascript">
+    (function(w, n) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-138587-1",
+                renderTo: "yandex_rtb_R-A-138587-1",
+                horizontalAlign: false,
+                async: false
+            });
+        });
+        document.write('<sc'+'ript type="text/javascript" src="//an.yandex.ru/system/context.js"></sc'+'ript>');
+    })(this, "yandexContextSyncCallbacks");
+</script>
+
+
+
+<br>
+	<h2 class=v1 style="text-align : left; padding : 0px 35px 0px 20px;">Общение</h2>
+        <p>
+		
+
+<!-- content begin -->
+<table width="100%" height="160" border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td align="left">
+
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="100%">
+				<table border="0" cellspacing="0" cellpadding="0">
+
+				<tr>
+					<td colspan="2" class="simple_b"><font color="#666666"></font></td>
+       			</tr>                                                                                                            
+
+				<IDXSKIP><tr><td colspan="2"><div style="width: 1px; height: 5px;"><spacer type="block" height="5" width="1" /></div></td></tr></IDXSKIP>
+<b>Реклама:</b> Новый телеграм-канал для деловых людей > <a class="simple_b" href="https://goo.gl/xFo9jL"><font color="#990000">Траблшутинг</font></a>
+				<IDXSKIP><tr><td colspan="2"><div style="width: 1px; height: 5px;"><spacer type="block" height="5" width="1" /></div></td></tr></IDXSKIP>
+				<IDXSKIP><tr><td colspan="2"><div style="width: 1px; height: 5px;"><spacer type="block" height="5" width="1" /></div></td></tr></IDXSKIP>
+
+				<IDXSKIP><tr>
+					<td><img src="../i/menu_2.gif" alt="" width="15" height="15" border="0"></td>
+					<td class="simple">Общение: <a href="index.phtml?lng=0" class="simple"><font color="#990000"><b>Список форумов</b></font></a></td>
+				</tr></IDXSKIP>
+				<IDXSKIP><tr><td colspan="2"><div style="width: 1px; height: 5px;"><spacer type="block" height="5" width="1" /></div></td></tr></IDXSKIP>
+				<tr>
+					<td><img src="../i/arrow_t.gif" alt="" width="15" height="15" border="0"></td>
+					<td class="simple">Форум: <a href="mteam.phtml?mg=46" class="simple"><font color="#990000"><b>Здоровье</b></font></a></td>
+				</tr>
+				<IDXSKIP><tr><td colspan="2"><div style="width: 1px; height: 5px;"><spacer type="block" height="5" width="1" /></div></td></tr></IDXSKIP>
+				<tr>
+					<td><img src="../i/arrow_t.gif" alt="" width="15" height="15" border="0"></td>
+					<td class="simple_b">тема: <font color="#000099"><b>Как потолстеть
+</b></font></td>
+				</tr>
+				</table>
+			</td>
+			<IDXSKIP><td valign="bottom"><a href="javascript:history.back();"><img src="../i/button_back.gif" alt="" width="57" height="20" border="0"></a></td></IDXSKIP>
+		</tr>
+		</table>
+			<img src="../i/dot.gif" width="1" height="10"><br>		
+			<table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+			<td width="100%" valign="MIDDLE" bgcolor="#ffffff" class="txt" align="center"><IDXSKIP><b>страницы:</b></IDXSKIP>&nbsp;&nbsp;&nbsp;
+<a href="/talk/mmess.phtml?idt=24956&page=1"><font color=#000000><b>&laquo;&nbsp;в конец</b></font></a>&nbsp;&nbsp;&nbsp;
+			<a href="/talk/mmess.phtml?idt=24956&page=1"><font color=#000000><b>2</b></font></a><IDXSKIP>&nbsp;&nbsp;&nbsp;
+			<font color=#000000><b>1</b></font></IDXSKIP><IDXSKIP>&nbsp;&nbsp;
+				</IDXSKIP></font></td>
+			</tr>
+			</form>
+			</table>
+
+
+		<img src="../i/dot.gif" width="1" height="10"><br>		
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+													<IDXSKIP><tr bgcolor="#CCCCCC">
+														<td width="30%" background="../i/forum_corner.gif" class="simple_b" style="background-repeat: no-repeat; background-position: 0% 0%; padding-left: 18px;"><font color="#666666"><b>автор темы<b></font></td>
+														<td width="70%" class="simple_b"><font color="#666666"><b>сообщение<b></font></td>
+													</tr></IDXSKIP>
+													<tr valign="top">
+														<td colspan="2" style="padding: 0px;">
+															<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="293938"></a>
+																		<b>Туна</b>
+																		<br>
+																		08-01-07 21:23																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+																	<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Здравствуйте, сколько уже можно писать как похудеть, как похудеть. Есть же еще такие люди которые хотят потолстеть, о них тоже надо думать. Если вы можете посоветовать какие-либо рецепты, или обсудить эту тему, то пишите. Может вам удалось набрать вес за которкий срок?<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+
+																<IDXSKIP><tr valign="top" bgcolor="#F2F2F2">
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+																	<td colspan="3" class="simple" style="padding: 10px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Строка в форум 728 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-0333133942197405"
+     data-ad-slot="8335979635"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+																</tr></IDXSKIP>
+															</table>
+														</td>
+													</tr>
+													<IDXSKIP><tr><td colspan="2" bgcolor="#CCCCCC" style="padding: 0px;"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr></IDXSKIP>
+												</table>
+
+		<img src="../i/dot.gif" width="1" height="10"><br>		
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+													<IDXSKIP><tr bgcolor="#CCCCCC">
+														<td width="30%" background="../i/forum_corner.gif" class="simple_b" style="background-repeat: no-repeat; background-position: 0% 0%; padding-left: 18px;"><font color="#666666"><b>автор<b></font></td>
+														<td width="70%" class="simple_b"><font color="#666666"><b>ответ<b></font></td>
+													</tr></IDXSKIP>
+													<tr valign="top">
+														<td colspan="2" style="padding: 0px;">
+															<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="502449"></a>
+																		<b>Beanz</b>
+																		<br>
+																		13-11-07 14:17																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Да чего только неначитался... В общем так, у меня рост 185, вес 63 мне нужно набрать хотябы до 70 и 75 но ничего не получается. Чуть меньше года хожу на тренажоры, качаться весил я  тогда 57 и как начал заниматься стал набирать вес и набрал до 63 а дальше немогу. А ЧТО БЫ ПОТОЛСТЕТЬ  КУПИТЕ РЫБИЙ ЖИР В ТАБЛЕТКАК, В СПОРТ-АПТЕКЕ КУПИТЕ ЧТО НИБУДЬ ЧТО БЫ НАБИРАТЬ ВЕС, И ЕШТЕ ЖАРИНУЮ КАРТОШКУ, МЯСО, ХЛЕБА ПОБОЛЬШЕ ,СУПЫ, БОРЬШИ ЖИРНЫЕ И КАШИ- РЕЗУЛЬТАТ ГАРАНТИРУЮ!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="500044"></a>
+																		<b>данаск</b>
+																		<br>
+																		10-11-07 08:59																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>скажите как вырастить грудь в классе я самая худая и у меня нет груди<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="461222"></a>
+																		<b>Лерка</b>
+																		<br><a class="simple" href="mailto:lovely@mail.ru"><font color="#666666">lovely@mail.ru</font></a><br>
+																		23-09-07 21:47																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>В школе я самая худенькая!!!У меня рост 165 и вес 45,а мне 14 лет!!!Чё делать???<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="454154"></a>
+																		<b>Гранат</b>
+																		<br>
+																		14-09-07 05:23																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Гимнастику нужно делать. Наращивать мышцы. Маленькие гантели, пружины с двумя ручками. Есть много. Просто много есть то, что хочется. Если много сырых и вареных, жареных  яиц, животного жира, белого хлеба  - холестерин, склероз.<br />
+<br />
+Поэтому советую не суетиться - на это уходит много энергии, сжигается весь лишний жир. Много есть, набивая плотно желудок. Если это не поможет, значит вы просто не перевариваете всю пищу, которую получаете или еще что-то такое. В этом случае надо проверитьсся у врачей.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="449478"></a>
+																		<b>Лана</b>
+																		<br><a class="simple" href="mailto:miracla"><font color="#666666">miracla</font></a><br>
+																		07-09-07 21:50																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Привет ВСЕМ!У меня тажа проблема, что и у всех на этом форуме, я мечтаю немного поправиться, но не в весе, а в виде!Так как вес тут не причем, главное как выглядеть!Я в детстве была толстенькой и до 6 лет нормальной, а потом похудела...у меня в роду все женщины сначала худые, а потом поправляются, тока вот у меня поправление чет задержалося, мама моя в 16 потолстела, а мне уж 18!Я прямо не знаю что делать!может вовсе и не в генах дело?!!!Мне говорят, что можно гормональное употреблять, но я боюсь, не повредит ли это?Может ктонибудь подскажет чтонибудь??у меня нормальная фигура, но еслибы я поправилась немного то былобы отлично!А то я при росте 165 вешу всего 38-40!это просто ужас!ПОМОГИТЕ!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="439873"></a>
+																		<b>Нина</b>
+																		<br>
+																		25-08-07 18:54																	</td>
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div><noindex><a target="_blank" rel="nofollow" href="http://www.massgain.ru/">http://www.massgain.ru/</noindex></a><br />
+</div>
+																	</td>
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="439870"></a>
+																		<b>Нина</b>
+																		<br>
+																		25-08-07 18:48																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Как набрать вес... или полезно ли пиво<br />
+<br />
+Пиво - единственный напиток, содержащий горькие вещества хмеля. Они оказывают успокаивающее, снотворное, бактериостатическое и противотуберкулезное воздействие на организм. <br />
+- При недостатке веса и излишней худобе: в стакане пива размешивают 2 ст. ложки сметаны и пьют такой коктейль каждый день. <br />
+- Для повышения работоспособности и мышечной силы: раз в день принимают стакан смеси из равных частей сметаны и пива. <br />
+- При потливости в ванну с теплой водой выливают 1 л пива и размешивают. Принимают ванну в течение 20 минут ежедневно или через день.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="439867"></a>
+																		<b>Нина</b>
+																		<br>
+																		25-08-07 18:44																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div><noindex><a target="_blank" rel="nofollow" href="http://www.vsepolezno.ru/face/gainweight/">http://www.vsepolezno.ru/face/gainweight/</noindex></a><br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="380141"></a>
+																		<b>Калерия</b>
+																		<br>
+																		22-05-07 21:29																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>ЛЮДИ, ПОМОГИТЕ!Я никак не могу поправиться!Все девушки гоняются за диетами для похудения, а мне нужно наоборот - для ПОТОЛСТЕНИЯ что ли.Напишите диету,только, чтоб действовала наверняка.ПОЖАЛУЙСТА!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="377970"></a>
+																		<b>Туна</b>
+																		<br>
+																		18-05-07 21:20																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>извиняюсь, что заставила долго ждать, если кто-то найдет еще что нибудь, пишите<br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="377968"></a>
+																		<b>Туна</b>
+																		<br>
+																		18-05-07 21:19																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>И вот ещё, для девочек, которые ну никак не могут поправиться  <noindex><a target="_blank" rel="nofollow" href="http://4womans.info/3_14.php">http://4womans.info/3_14.php</noindex></a><br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="377967"></a>
+																		<b>Туна</b>
+																		<br>
+																		18-05-07 21:18																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>ПОНЕДЕЛЬНИК<br />
+Завтрак - возьмите полстакана свиного жира, растопите его на сковороде до кипящего состояния, после этого порежьте туда 3 яблока и потушите до готовности. В это время возьмите полторы плитки шоколада, которые необходимо натереть на мелкой терке. Добавьте его в чашку, где взбиты 5 желтков с 5 столовыми ложками сахара. Как раз, когда вы все это проделываете, ваши яблоки будут готовы, и потом либо разомните их ложкой, либо протрите через мелкое сито. Эту смесь намазывайте на хлеб и пейте со сладким (но не сильно) чаем.<br />
+Второй завтрак - одно вареное яйцо, бутерброд с ветчиной и помидором.<br />
+Обед - салат овощной (огурцы, базилик, лук, помидоры), куриный суп, гречневая каша с тушеной говядиной, 150 г хлеба (можно из пшеничной муки), компот из сушеных яблок, кураги, слив.<br />
+Полдник - яблочный сок, одна сдобная булка.<br />
+Ужин - спагетти (или любые макаронные изделия) с 200 г вареной колбасы, хлеб (если требуется), сладкий чай с двумя блинчиками.<br />
+Второй ужин - кефир с 70 г вафель.<br />
+<br />
+ВТОРНИК<br />
+Завтрак - яичница из двух яиц с добавлением поджаренного хлеба и помидоров, поджаренная либо на сливочном масле, либо на животном жиру; салат из свеклы: одну небольшую свеклу сварите, натрите ее на мелкой терке и добавьте 75 г грецких орехов, смешайте все с майонезом; хлеб.<br />
+Второй завтрак - 150 г творога, смешанного с нежирной сметаной и изюмом. Кофе с молоком, бутерброд с маслом и сыром.<br />
+Обед - рыбный салат; одну банку консервов с добавлением масла смешайте с двумя вареными яйцами, полстакана вареного риса и небольшой луковицей, заправьте майонезом; суп харчо; вареный картофель с двумя сосисками, хлеб; чай с лимоном.<br />
+Полдник - вишневый кисель, 30 г печенья.<br />
+Ужин - капуста, тушенная с морковью, котлеты, приготовленные на пару, хлеб, ананасовый сок. Второй ужин - 1 стакан нежирного молока, сдобная булка.<br />
+<br />
+СРЕДА<br />
+Завтрак - салат - огурцы, морковь, яблоки порежьте на небольшие кубики, добавьте зеленый горошек и веточки петрушки. Смешайте все компоненты, капните несколько капель лимонного сока, посолите, посыпьте сахаром и заправьте сметаной. Салат можно украсить ломтиками помидоров; картофельные оладьи и компот из сухофруктов.<br />
+Второй завтрак - несколько гренков, приготовленных из батона, смоченного в смеси из молока и взбитых яиц, кофе с молоком.<br />
+Обед - щи из свежей капусты (если вы решили соблюдать диету в весеннее время, то можете приготовить зеленые щи из щавеля); жареный сом, картофельное пюре на молоке, хлеб, 45 г печенья, сливовый сок.<br />
+Полдник - 300 граммов клубники со сливками.<br />
+Ужин - рагу овощное (картофель, капуста, баклажаны, лук, помидоры) с тушеным мясом, хлеб, чай с лимоном.<br />
+Второй ужин - 1 стакан не слишком сладкого снежка (или кефира, смешанного с сахаром), с тремя сухарями.<br />
+<br />
+ЧЕТВЕРГ<br />
+Завтрак - икра баклажанная, каша пшеничная с добавлением сливочного масла, 200 г хлеба, чай или кофе (обязательно некрепкий).<br />
+Второй завтрак - фруктовый салат: яблоки, груши, апельсины (клубнику, малину) смешайте, капните несколько капель лимонного сока, добавьте половину стакана орехов фундук и заправьте салат сметаной.<br />
+Обед - гороховый суп, голубцы мясные, хлеб, малиновый кисель.<br />
+Полдник - 250 г сливочного йогурта.<br />
+Ужин - салат: редька, капуста, нашинкованная мелко, порезанная морковь, все, перемешанное и заправленное майонезом; плов с бараниной, хлеб, компот из свежих ягод.<br />
+Второй ужин - 1 стакан томатного сока.<br />
+<br />
+ПЯТНИЦА<br />
+Завтрак - два вареных яйца, приправа (майонез, кетчуп, сливочное масло), хлеб, сладкий чай с бутербродом, (сыр, колбаса, ветчина).<br />
+Второй завтрак - творог со сметаной с добавлением ягод - вишни, малины, смородины, клубники.<br />
+Обед - салат из картофеля и маринованных грибов: вареный картофель порезать небольшими кубиками, уложить его в один слой, сверху положить слой маринованных грибов, а последний слой - порезанный кольцами лук, все залить растительным маслом, окрошка, рис с тушеным болгарским перцем, хлеб, компот из ягод.<br />
+Полдник - 2 апельсина или стакан апельсинового сока.<br />
+Ужин - пельмени, хлеб (если необходим), чай, пирог с вишней.<br />
+Второй ужин - кефир с двумя пряниками.<br />
+<br />
+СУББОТА<br />
+Завтрак - овсяная каша на молоке с добавлением сливочного масла.<br />
+Второй завтрак - сливочный йогурт с тремя сухарями.<br />
+Обед - щучья уха, кролик, тушенный в сметане, хлеб, компот из абрикосов.<br />
+Полдник - груши или яблоки.<br />
+Ужин - курица с майонезом, запеченная в духовке вместе с крупно порезанным картофелем, хлеб, стакан виноградного сока.<br />
+Второй ужин - 1 стакан молока с сухарями.<br />
+<br />
+ВОСКРЕСЕНЬЕ<br />
+Завтрак - блинчики с мясом, тушеной капустой, творогом -5 штук, фруктовый чай.<br />
+Второй завтрак - 1 стакан молока с яблочным пирогом "Шарлотка".<br />
+Обед - салат из креветок: креветок варят и добавляют картофель, морковь, капусту и зеленый горошек, все солят и заправляют майонезом; рассольник, бифштекс или отбивные котлеты с обжаренным картофелем, фруктовый кисель.<br />
+Полдник - кусочек торта "Медовый" или "Наполеон", несладкий чай или кофе.<br />
+Ужин - рыбные котлеты с макаронами, заправленные приправой (но не очень острой), хлеб, вишневый сок.<br />
+Второй ужин - 2 банана.<br />
+<br />
+Так вы можете использовать "наши советы для диет, можете сами придумать что-то свое, ориентируясь на наши рекомендации. Самое главное, "что вам необходимо учитывать при разработке собственной диеты, так это то, что пища должна быть достаточно калорийной, белковой и витаминизированной.<br />
+<br />
+Она должна сочетаться с равноценными физическими нагрузками, в противном случае все ваши усилия пройдут впустую. Мы желаем вам успеха и надеемся, что вы его добьетесь.<br />
+<br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="377793"></a>
+																		<b>Дианка</b>
+																		<br>
+																		18-05-07 15:45																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Туна, ну и чего же ты не пишешь ничего, мы же все ждем!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="376054"></a>
+																		<b>!!!</b>
+																		<br>
+																		16-05-07 08:12																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>И мы все ждем с нетерпением!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="375872"></a>
+																		<b>Дианка</b>
+																		<br>
+																		15-05-07 21:22																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Туна, конечно же пиши скорее, я жду с нетерпением!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="374345"></a>
+																		<b>Туна</b>
+																		<br><a class="simple" href="mailto:Дианке"><font color="#666666">Дианке</font></a><br>
+																		13-05-07 21:43																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Дианка, я скоро напишу один рецептик, тоже очень усердно искала что-нибудь на эту тему и в других местах и наклнец-то нашла<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="372756"></a>
+																		<b>Дианка</b>
+																		<br>
+																		10-05-07 21:04																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Ну так что,за такой период удалось хоть кому- нибудь,ну хоть на килограмчик потолстеть?А? Ведь скоро лето и ведь тоже хочется одеть коротенькие юбочки и платюшки!!! Если да, то скорее делитесь, а то все совсем от темы ведь ушли!!! Захожу сюда частенько, дабы проверить не появилось ли чего нового, смотрю - и нет ведь нету ничего нового. Если не знаете рецептов, то хотя бы расскажите у кого как успехи? Вдруг вот и мне повезет... <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="372056"></a>
+																		<b>Туна</b>
+																		<br><a class="simple" href="mailto:Женщина и всем"><font color="#666666">Женщина и всем</font></a><br>
+																		09-05-07 21:13																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Спасибо, я тоже поздравляю всех с Днем Победы!!! Желаю побед всегда и во всем!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="371731"></a>
+																		<b> Женщина</b>
+																		<br><a class="simple" href="mailto:всем"><font color="#666666">всем</font></a><br>
+																		09-05-07 01:59																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>С Великим Праздником Победы!!!Счастья и исполнения желаний!!!Удачи во всех начинаниях!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="370710"></a>
+																		<b>арман</b>
+																		<br><a class="simple" href="mailto:зюзику"><font color="#666666">зюзику</font></a><br>
+																		07-05-07 15:17																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>я пошутил не к тебе а в Мак дональдс<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="370708"></a>
+																		<b>арман</b>
+																		<br>
+																		07-05-07 15:16																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>хотите выглядеть так   <noindex><a target="_blank" rel="nofollow" href="http://young4ever.ru/index.php?name=News&op=article&sid=31">http://young4ever.ru/index.php?name=News&op=article&sid=31</noindex></a>  в гости к Зюзику<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="370367"></a>
+																		<b>Зюзик</b>
+																		<br>
+																		07-05-07 07:43																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>ника, Мейпл. ;-)<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="367819"></a>
+																		<b>ника</b>
+																		<br>
+																		03-05-07 17:01																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Зюзик, а можешь открыть секрет в какой западной стране ты жуёшь гамбургеры собств. приготовления? Просто интересно, может в той же где и я...<br />
+<br />
+Туна, может останешься такой какая ты есть? Или ты прям кожа и кости? Понимаешь, если твой вес не связан с какими-либо проблемами со здоровьем (чего надеюсь у тебя нет, а если есть- тебе к врачу ), то расслабься и живи спокойно, не создавай себе лишних проблем. <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="366566"></a>
+																		<b>Зюзик</b>
+																		<br>
+																		02-05-07 07:15																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>арма, рахмет! :-) Пкуснааа! :-) <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="364078"></a>
+																		<b>арман</b>
+																		<br><a class="simple" href="mailto:Зюзик"><font color="#666666">Зюзик</font></a><br>
+																		26-04-07 21:41																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>приятного апетита<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="362106"></a>
+																		<b>Зюзик</b>
+																		<br>
+																		24-04-07 08:34																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>арман, от плохих эмоций тоже худеют. :-) Гамбургеры обожаю, только не MacDonald's да и вообще не фастфудовские. А собственного приготовления, на природе... М-м-м... Пальчики оближешь... <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="361784"></a>
+																		<b>арман</b>
+																		<br><a class="simple" href="mailto:женщине"><font color="#666666">женщине</font></a><br>
+																		23-04-07 16:22																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>центр ЗКО<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="359139"></a>
+																		<b> Женщина</b>
+																		<br><a class="simple" href="mailto:арману"><font color="#666666">арману</font></a><br>
+																		18-04-07 23:45																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Я прекрасно поняла о каком западе идет речь.И вообще, когда писала предыдущее сообщение,твоей записи еще не было видно.Сервер<br />
+глючит что-ли? А в каком городе живешь?( если не секрет).Просто интересно!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="356665"></a>
+																		<b>арман</b>
+																		<br>
+																		15-04-07 21:21																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>я не о том Западе говорил, я тоже с ЗК.Не сомневаюсь в твоих кулинарных способностях<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="356544"></a>
+																		<b>арман</b>
+																		<br><a class="simple" href="mailto:Женщина"><font color="#666666">Женщина</font></a><br>
+																		15-04-07 12:21																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>я тоже из Зап Казахстана но я имел ввиду другой Запад, даже не сомневаюсь в твоих кулинарных способностях,когда читал даже кушать захотелось<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="355183"></a>
+																		<b>Женщина</b>
+																		<br><a class="simple" href="mailto:2Арман ,Зюзик"><font color="#666666">2Арман ,Зюзик</font></a><br>
+																		13-04-07 00:57																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>В роду все даже очень нормальные , а живу я в Зап.Каз-не. Да и готовлю я сама очень вкусно!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="355169"></a>
+																		<b>арман</b>
+																		<br><a class="simple" href="mailto:Зюзик"><font color="#666666">Зюзик</font></a><br>
+																		13-04-07 00:11																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Проблема Запада -ожирение, даже подают в суд на Мак Дональдс. кушай свои гамбургеры и толстей.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="354539"></a>
+																		<b>Зюзик</b>
+																		<br>
+																		12-04-07 08:45																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Оч. важно, где живете. Живя в СССР, был худой как тростинка-былинка. Жрал без остановки, да все бестолку. Как только переехал в спокойную западную страну, растолстел как боров. И еда западная вкуснее и здоровее. <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="354323"></a>
+																		<b>арман</b>
+																		<br><a class="simple" href="mailto:Женщина"><font color="#666666">Женщина</font></a><br>
+																		12-04-07 01:07																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Создай свою тему.А как насчет наследственности в роду все пионеры?<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="352660"></a>
+																		<b>Женщина-Арману</b>
+																		<br>
+																		10-04-07 00:37																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>p.s.насчет того,что:""не хотят рожать боясь испортить фигуру"",а зря ведь это такое счастье быть МАМОЙ.Фигуру с годами все равно потеряют,а детей рожать будет поздно и небезопасно.Не понимаю, какой толк от фигуры на старости лет? Как правило все" фигуристые"<br />
+в старости одинокие.Но это мое личное мнение и я его никому не навязываю,каждый вправе решать сам за себя!Удачи!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="352651"></a>
+																		<b>Женщина-Арману</b>
+																		<br>
+																		10-04-07 00:20																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Спасибо за комплимент, приятно слышать, что ты редкость!  Да уж- редкость! Рост у меня 153см.Этакая девочка-пионерка,у которой уже свои две дочи! Конечно, в этом есть свои плюсы- не спорю,но... По-началу все говорили: вот родишь...,потом- перестанешь грудью кормить...,потом-родишь второго...А результат все тотже. В том,что многие после родов полнеют, девчата отчасти виноваты сами.Многое зависит и от генов.Ну, а если ребенок беспокойный,то о лишних кг и мечтать не приходится! Я не против этих" лишних кг",<br />
+но в меру,толстой быть тоже не хочу.Ем все,ни в чем себе не отказываю, без хлеба жить не могу(даже беш ем с хлебом),могу есть на ночь, пить пиво и хоть бы хны!Да я уже особо не зацикливаюсь на этом,чего и другим желаю.Лишь бы здоровье было хорошее,а остальное само образуется!!!Пока.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="352590"></a>
+																		<b>алена</b>
+																		<br>
+																		09-04-07 22:27																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>помогите потолстеть!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="352588"></a>
+																		<b>алена</b>
+																		<br>
+																		09-04-07 22:24																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>я незнаю что мне делать... я хочу потолстеть но не могу!!! помогите!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="351618"></a>
+																		<b>арман</b>
+																		<br>
+																		08-04-07 02:06																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Действительно повезло. Проблема в том что некторые девушки не хотят рожать боясь испортить фигуру, и как правило так и происходит и не от того что родила а из-за смены режима, ну и чуть чуть гормональное. А ты редкость! Неужели ничего не помогает? 42 при каком росте?<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="351503"></a>
+																		<b>Женщина</b>
+																		<br>
+																		07-04-07 20:08																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Арман, вы так уверенны,что все женщины после родов толстеют? У вас может и  опыт имеется?!? Я вот родила двоих,а как была 42кг,<br />
+так и осталась.Это действительно проблема! И как ее решить не знаю.Некоторые завидуют,говорят ешь,пьешь что хочешь и хоть бы хны.А нам каково? Аппетит хороший,а результатов ноль!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="350354"></a>
+																		<b>арман</b>
+																		<br>
+																		06-04-07 00:44																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>женшинам даже не вопрос, как только родите проблема сама собой решиться. И еще, живите нормальной половой жизнью.<br />
+</div>
+																	</td>
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="350004"></a>
+																		<b>Таня</b>
+																		<br><a class="simple" href="mailto:millenium10-ka@yandex.ru"><font color="#666666">millenium10-ka@yandex.ru</font></a><br>
+																		05-04-07 17:18																	</td>
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>привет всем!Люди,помогите потолстеть в ногах,вернее в бедрах.у меня так все хорошо,но вот ноги худоваты.Что бы мне могло помочь?<br />
+<br />
+</div>
+																	</td>
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="344977"></a>
+																		<b>Амен</b>
+																		<br>
+																		29-03-07 10:53																	</td>
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Вот я тоже мучаюсь, рост 180 вес 62. Могу пиво пить листрами и заедать тортом, есть на ночь тарелками, съедать по банке сметаны каждый день... а всё без толку. Единственное что хоть как-то помогает, это просто постоянно заниматься спортом, в бассейн ходить...не толстеешь, конечно, но тело в тонусе смотрится намного лучше.<br />
+ЗЫ это от природы так, хотя многие мне завидут, что не смотря ни на что,  я никогда не толстею:)<br />
+</div>
+																	</td>
+																	<td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="344586"></a>
+																		<b>Маришка</b>
+																		<br>
+																		28-03-07 20:00																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>я тоже очень худая...ааа...у меня рост 157 и вешу я 41 кг...*(((<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="344419"></a>
+																		<b>арман</b>
+																		<br>
+																		28-03-07 15:26																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>После плотного обеда или ужина ложитесь спать, и самое главное не встречайте на своем пути Бывалую она здесь <noindex><a target="_blank" rel="nofollow" href="http://www.kazakh.ru/talk/mmess.phtml?idt=2037">http://www.kazakh.ru/talk/mmess.phtml?idt=2037</noindex></a><br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="339598"></a>
+																		<b>Дианка</b>
+																		<br>
+																		20-03-07 19:14																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Туна, вот скажи мне про травы, о которых ты раньше писала: есть толк или нет, и от каких именно.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="339595"></a>
+																		<b>Дианка</b>
+																		<br>
+																		20-03-07 19:09																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Кто нибудь!!! Предложите свою идею, чтобы потолстеть! Ведь только на протеин надеяться нельзя, не так уж и много толку от него. А если много и долго его пить, то проблемы с печенью будут. Так что не налегайте сильно на него. А полынь не могу больше пить. Помогает то она помагает, ничего тут не скажешь, только вот горькая уж сильно. Может кто нибудь еще знает,какие травки пить надо???<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="338892"></a>
+																		<b>Ерлан из Уральска!!!</b>
+																		<br><a class="simple" href="mailto:erlan_29@list.ru"><font color="#666666">erlan_29@list.ru</font></a><br>
+																		19-03-07 22:39																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Привет всем!!! Хочу поправиться Мне 16 лет А у меня вес 40кг. Help me Please!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="337958"></a>
+																		<b>Туна</b>
+																		<br>
+																		18-03-07 20:21																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>2 Настя<br />
+Да, как я тебя понимаю.<br />
+Добро пожаловать к нам!<br />
+Будем вместе решать эту проблему.<br />
+<br />
+2 Диана<br />
+Спасибо за совет, завтра же пойду куплю.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="337550"></a>
+																		<b>Настя</b>
+																		<br>
+																		17-03-07 19:23																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>чё делать прям не знаю! при росте 1.71 вешу 49 кг - катастрофа!  <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="337539"></a>
+																		<b>Настя</b>
+																		<br>
+																		17-03-07 19:12																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Боже! Наконец-то я поняла что не одна в этом мире страдаю. Из-за своей долбаной фыгуры на улицу стыдно выйти! Часами перед зеркалом кручюсь, дабы одеть что-то,чтобы толще козатся! Жру-жру, но вижу что результата нету, так флаг с ней этой едой!!! <br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="337067"></a>
+																		<b>Дианка</b>
+																		<br>
+																		16-03-07 21:18																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>А если у вас аппетита нет, то можно пить настойку полыни, в аптеке продается, стоит рублей 18. Пить за 30 минут до еды пл 10-15 капель. Просыпается зверский аппетит!Токо горькая она. Ну при всем желании потолстеть, думаю, это не помеха:)))Пробуйте, потом поделитесь своими результататми, а может и рецептами!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="337064"></a>
+																		<b>Диана</b>
+																		<br>
+																		16-03-07 21:14																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Купите протеиновый коктейль и пейте 3 раза в день. Из расчета 2 грамма белка на килограмм веса,т.е. если ты весишь 45 килограммов, то те нужно употреблять 90 граммов белков в день.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="333401"></a>
+																		<b>Брюнетка в законе</b>
+																		<br>
+																		12-03-07 11:45																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>перед едой пейте яблочный сок я читала что поднимает аппетит ! <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="329746"></a>
+																		<b>слон</b>
+																		<br>
+																		06-03-07 09:48																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>сметану кушайте и толстейти<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="322734"></a>
+																		<b>Туна</b>
+																		<br>
+																		23-02-07 20:06																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Привет всем, вот что недавно вычитала:<br />
+<br />
+Пониженный вес указывает, что существующий режим питания недостачен в отношении белков, жиров и углеводов и его нужно изменить в сторону повышения калорийности.<br />
+Во-первых, нужно установить определённый режим питания, чтобы выработать своеобразный рефлекс желудочно-кишечного тракта на переваривание и усвоение пищи.<br />
+Во-вторых, любую еду следует начинать с овощных закусок, которые повышают аппетит. <br />
+Если вы хотите избавится от худобы и поправится, народная медицина рекомендует следующие средства, повышающие аппетит и улучшающие пищеварение: <br />
+- ГОРЕЧАВКА. 30 г измельчённых корней заливаем 1 л вина белого и настаивают в течение нескольких дней. Принимать по 100 г перед едой. <br />
+- МЯТА. Это эффективное средство против атонического растройства пищеварения. 30 г растения заливают 1 л. кипятка и настаивать 2 ч. Принимают перед едой. <br />
+- БАРБАРИС. Улучшает аппетит и пищеварение, обладает желчегонным действием. 2 ст. л надземной части растения залить 0,5 л кипятка. Настаивать 2 ч., процедить. Принимать по 1/3 стакана за полчаса до еды. <br />
+- ДИКИЙ ЦИКОРИЙ. 20 г листьев или корней заливают одним кипятка и настаивают 2 часа. Принимать по 1/3 стакана три раза перед едой. <br />
+- ТРИГОНЕЛЛА. Её принимают в виде порошков из сухого растения с мёдом или сахаром. Разовая доза 1-2 г за 30 мин до еды.<br />
+- ВАСИЛЁК. 10 г сухого растения заливают стаканом кипятка и настаивают 1 час. Принимать по 100 г 3 раза в день. так как этот настой горький его пьют с сахарм или мёдом. <br />
+- ЧАБРЕЦ. 20 г растения заливают 0,5 л кипятка и настаивают в тёплом месте 2 часа. Процедить. Принимать по 100 г за 30 мин до еды. <br />
+<br />
+Буду пробовать может народная медицина поможет.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="322323"></a>
+																		<b>Брюнетка в законе</b>
+																		<br>
+																		23-02-07 06:57																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Думаю вполне может помочь употребляние пива за обедом,ужином,завтраком.Самое главное - не спиться!=)<br />
+<br />
+прикольно ! <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="322322"></a>
+																		<b>Брюнетка в законе</b>
+																		<br>
+																		23-02-07 06:55																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Иринка дорогая <br />
+"Всё враньё про беременность , можно родить двух детей и не поправиться"<br />
+я имела ввиду во время беременности!!! наверное в актау читать не умееют некоторые девицы ! <br />
+<br />
+<br />
+читай и понимай на русском может тебе на казахском обьяснить ! "толстой будете когда тока будете беременной "<br />
+а так наврятли ТОЛСТОЙ станите ))) <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="320627"></a>
+																		<b>Туна</b>
+																		<br><a class="simple" href="mailto:Ромик"><font color="#666666">Ромик</font></a><br>
+																		20-02-07 20:30																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>А тебе помог этот рецепт?<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="319852"></a>
+																		<b>Ромик</b>
+																		<br><a class="simple" href="mailto:little.smile@mail.ru"><font color="#666666">little.smile@mail.ru</font></a><br>
+																		19-02-07 22:24																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>специально для Вас, школьник 7 класса Smile)))<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="319850"></a>
+																		<b>Ромик</b>
+																		<br><a class="simple" href="mailto:little.smile@mail.ru"><font color="#666666">little.smile@mail.ru</font></a><br>
+																		19-02-07 22:23																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>ЗАВТРАК: стакан фруктового сока, большая порция овсяных хлопьев, замоченных с вечера в молоке или воде и перед употреблением заправленных медом, тертым яблоком и тертыми орехами. Большой кусок хлеба с маслом и 2-3 чашки какао.<br />
+ВТОРОЙ ЗАВТРАК: чашка бульона с желтком или стакан фруктового сока с медом и желтком, или большой кусок хлеба с маслом и колбасой, или кусок хлеба с маслом+50 грамм шоколада+стакан йогурта.<br />
+ОБЕД: чашка густого супа или жирного бульона+макароны, или картофель, или клецки, или рис с маслом, салат с маслом или майонезом. Большая порция мяса. На десерт - пудинг или мороженное + кофе со сливками.<br />
+УЖИН: Большая порция риса с молоком и свежими фруктами, два куска хлеба, пол-литра молока. Перед сном - 1 яблоко. <br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="319104"></a>
+																		<b>Tepemok</b>
+																		<br><a class="simple" href="mailto:senoval_@mail.ru"><font color="#666666">senoval_@mail.ru</font></a><br>
+																		18-02-07 22:00																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Люди я вешу 54 кило при росте гдето 170-173 мне это ненравиться что самое обидное что недавно я весил 61 кило и так похудел я не чего не употребляю из-за чего <br />
+мог бы похудеть. Кушаю нормально 3 раза в день.<br />
+Честно говоря я боюсь что что то со мной не так или я вобще умираю. Если можете помогите чем сможете.<br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="318887"></a>
+																		<b>quentin</b>
+																		<br>
+																		18-02-07 00:38																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>а иногда летальный исход =)<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="318776"></a>
+																		<b>р</b>
+																		<br>
+																		17-02-07 20:02																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Да пивные дрожжи тоже не всем помогают.<br />
+Можно витамины В поколоть. Иногда бывает прибавка в весе.<br />
+<br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="318663"></a>
+																		<b>quentin</b>
+																		<br>
+																		17-02-07 14:17																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>насчет безалкогольного даже и незнаю, просто зачем травить душу. насколько я знаю в пиве ваще не используеться спирт. Когда я пробывал ету диету, то после принятия пищи и на верх пива, просто происходит большее усваивание продукта, и через часика 3 опять хочеться есть. <br />
+п.с. для того что бы набрать вес надо чем то пожертвовать<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="318137"></a>
+																		<b>Doc</b>
+																		<br>
+																		16-02-07 15:43																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Поддерживаю ака Персона. Я против пропаганды алкоголя, даже в виде пива. <br />
+Для увеличения веса имеют значение пивные дрожжи, а не этиловый спирт.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="318135"></a>
+																		<b>Айгулек</b>
+																		<br>
+																		16-02-07 15:42																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>про пиво все ерунда. я его одно время пила много и никаких результатов. А моя одногрупница поправляется от трех глотков.<br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="317695"></a>
+																		<b>ака Персона</b>
+																		<br><a class="simple" href="mailto:almaty@daryn-s"><font color="#666666">almaty@daryn-s</font></a><br>
+																		16-02-07 08:45																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>непереношу алкоголь физически, поэтому<br />
+такой вопрос: безалкогольное пиво имеет<br />
+такой же эффект как и алкогольное?<br />
+я имею в виду для того, что бы набрать вес,<br />
+как советуют многие<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="317558"></a>
+																		<b>quentin</b>
+																		<br>
+																		16-02-07 01:20																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>пресик качай, и жирок равномерно пойдет =)<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="317492"></a>
+																		<b>Туна</b>
+																		<br>
+																		15-02-07 20:23																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>2 Ada и quentin <br />
+Спасибо вам за рецепты<br />
+А я пробовала вот такой: стакан пива смешать со стаканом сметаны. и пить (но мне это, как и все остальное, что я пыталась сделать,  не помогло. Может кому-нить другому поможет.<br />
+А так, насчет пива тоже слышала много чего, но также существует мнение, что от него только живот растет. А надо чтобы все тело увеличивалось.<br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="317172"></a>
+																		<b>quentin</b>
+																		<br>
+																		15-02-07 12:38																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>прива всем. наверно многие уже пробвали есть всечто можно и скока можно, но в итоге от етого больше просиживаешь в местах не столь отдаленых =). Использовал одну диету и поправился на 5 килограм, все просто, спасает простое пиво и яйцо. Как поели нада выпить 150 грамм пива и запить ето яйцом(сырым),лишь бы все не вышло назад, советую яйцо поперчить или посолить, легче идет. Дерзайте!!! если у кого что еще есть пишите.<br />
+p.s. у меня друг с 65 на 87 залез, терь толстый и хочет похудеть )))<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="316234"></a>
+																		<b>Ada</b>
+																		<br>
+																		14-02-07 07:16																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Тоже худющая, мечтаю потолстеть.На днях вычитала интересную информацию.Оказывается,мои дорогие задохлики,ПИВО для нас просто спасение.Сей замечательный напиток обладает одним весьма полезным для нас свойством - он ПОМОГАЕТ ОРГАНИЗМУ УСВАИВАТЬ ВСЮ ПИЩУ НА 100%!!!Хотя обычно еда усваивается процентов на 30(это зависит от работы поджелудочной железы,у худых она работает активней),при этом большая часть нужных нам каллорий уходит на ходьбу,бег,чесание носа и т.д. и т.п.Присутствовал также рецепт: в стакан пива добавляется 2 ст.ложки молотых грецких орехов и щепотка соли(можно ложку меда,что гораздо полезней).Пьется раз в день.Обещают за месяц +2-3 кг!Думаю вполне может помочь употребляние пива за обедом,ужином,завтраком.Самое главное - не спиться!=)Буду пробовать.Удачи вам!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="316067"></a>
+																		<b>Туна</b>
+																		<br>
+																		13-02-07 20:21																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>2 БуКа<br />
+абсолютно с тобой согласна особенно с " ты не можешь найти свой размер одежды,ибо оч маленький,когда не груди ни задницы нет...это совершенно не проблема!!! "<br />
+<br />
+Блин как мне все это надоело, кто-бы знал! Я ем 5 раз в день, на ночь наедаюсь, сладкое только так лопаю, у врача проверилась, все нормально сказали, ИМТ, про которое писал ДОС посчитала, так вроде нормально, но все равно я ужасно худая, и не тостею никак. Может это и природа такая, но когда толлько родилась я была толстушкой. Сама по себе спокойная, много не нервничаю, нипойму как еще можно потолстеть. Не ходить же всю жизнь такой. Ужас!<br />
+Я думала я одна такая со своей проблемой, куда ни посмотришь, все девченки хвастаются, какая у них фигура, попа, груди и так далее, или же какой журнал, газету ни откроешь везде пишут только о том, как похудеть, о худых никто даже не думает. Тут я прочитала, что есть такие люди которые тоже хотят потолстеть, немного полкгчало, чтоя не одна. Спасибо, конечно всем за советы, но ничего не помогает. Но я все равно не буду терять надежду.<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="314589"></a>
+																		<b>БуКа</b>
+																		<br>
+																		12-02-07 01:17																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Есть то,сё... это не помогает!!! <br />
+this is me...then - пишет ей бы такие проблемы,хммм да,это не проблема когда в 21 год ты не можешь найти свой размер одежды,ибо оч маленький,когда не груди ни задницы нет...это совершенно не проблема!!! Если не сталкивалась с этим лучше промолчи!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="313504"></a>
+																		<b>ИринКа</b>
+																		<br><a class="simple" href="mailto:IRINA_AKTAY@mail.ru"><font color="#666666">IRINA_AKTAY@mail.ru</font></a><br>
+																		09-02-07 16:13																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>  Всё враньё про беременность , можно родить двух детей и не поправиться, а вообще всем худым необходима помощь врача и тщательное исследование , потому что причиной худобы может быть всё что угодно от паразитов до болезней ЖКТ, а так же невротические состояния<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="313019"></a>
+																		<b>Сирожка</b>
+																		<br>
+																		09-02-07 01:27																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Я вот блять тоже хочу потолстеть, ато худой как задрот какой-то, рахло ходячее. Подскажите чё делать!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="311947"></a>
+																		<b>Doc</b>
+																		<br>
+																		07-02-07 14:05																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>2 Брюнетка <br />
+<br />
+Рост в метрах возвести в квадрат. Пример: рост 170 см = 1,7 м умножаем на 1,7 м = 2,89<br />
+<br />
+свой вес в кг, например, 60 кг делим на 2,89 = 20,76<br />
+<br />
+Получаем замечательный результат ИМТ= 20,76 (в диапазоне 18-25)<br />
+<br />
+<br />
+продолжение следует..<br />
+<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="311671"></a>
+																		<b>Брюнетка в законе</b>
+																		<br>
+																		07-02-07 08:54																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>это как "ИМТ= вес (в кг)/рост(метры в квадрате" <br />
+<br />
+вес поделить на рост чтоли непонятно ...18-25 никак не выходит <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="311278"></a>
+																		<b>Doc</b>
+																		<br>
+																		06-02-07 20:24																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Посчитайте свой индекс массы тела ИМТ= вес (в кг)/рост(метры в квадрате. <br />
+для здоровья наиболее благоприятен ИМТ от 18 до 25. <br />
+Если он меньше 18 или более 25 – вам необходима помощь.<br />
+<br />
+to be continued...<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="310473"></a>
+																		<b>Туна</b>
+																		<br>
+																		05-02-07 20:31																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Давайте, если кто-нибудь найдет какие-нибудь рецепты или еще что-нибудь, сюда скидывайте.. Вместе мы сила!!!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="310342"></a>
+																		<b>Сноугерл</b>
+																		<br><a class="simple" href="mailto:sveta@moshkova.ru"><font color="#666666">sveta@moshkova.ru</font></a><br>
+																		05-02-07 15:25																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>и меня возьмите в команду мечтателей потолстеть! давайте объединимся и будем пробовать разные методы:)<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="309873"></a>
+																		<b>Ра</b>
+																		<br>
+																		05-02-07 00:13																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>Для меня например потолстеть большая проблема, пробовал есть очень много всего, но не поправляюсь вообще даже на 100 грам и то нет, стабильный вес 60кг не меньше не больше, не знаю что и делать просто бяда!<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="308708"></a>
+																		<b>Брюнетка в законе</b>
+																		<br>
+																		02-02-07 10:39																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>this is me...then не совсем правельный подход  существует такое понятие как конституция против нее не попроешь но есть такие способы как накачать мыщечную массу чтобы все было немного округло, заниматся спортом обязательно иначе мыщцы станут еще более слабыми а нужно наоборот поднять тонус <br />
+толстой будете когда тока будете беременной <br />
+а так наврятли ТОЛСТОЙ станите ))) вообще немного люди поправляются когда уровень гормонов меняется ...а зачем вам ёти проблемы !!! <br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#F2F2F2">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="307448"></a>
+																		<b>this is me...then</b>
+																		<br>
+																		31-01-07 11:49																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>есть каждый день торт и шоколад особенно перед сном еще можно есть побольше масла с хлебом побольше орехов и питаться исключительно в фастфудах и поменьше двигаться<br />
+p.s. мне бы такие проблемы<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+																<tr valign="top" bgcolor="#ffffff">
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+																	<td width="30%" class="simple" style="padding: 10px 10px 10px 18px;">
+																		<a name="307153"></a>
+																		<b>MyPka</b>
+																		<br><a class="simple" href="mailto:mypka2@mail.ru"><font color="#666666">mypka2@mail.ru</font></a><br>
+																		30-01-07 22:46																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+															<td width="70%" class="simple" style="padding: 10px;">
+																		<div>я тоже хочу потолстеть )))<br />
+</div>
+																	</td>
+																	<IDXSKIP><td bgcolor="#CCCCCC"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></IDXSKIP>
+
+
+																</tr>
+															</table>
+														</td>
+													</tr>
+											<IDXSKIP><tr><td colspan="2" bgcolor="#CCCCCC" style="padding: 0px;"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr></IDXSKIP>
+												</table>
+
+
+			<img src="../i/dot.gif" width="1" height="10"><br>		
+
+
+			<table width="100%" border="0" cellspacing="0" cellpadding="3" align="center">
+
+<br>
+			<td width="100%" valign="MIDDLE" bgcolor="#ffffff" class="txt" align="center"><IDXSKIP><b>страницы:</b></IDXSKIP>&nbsp;&nbsp;&nbsp;
+<a href="/talk/mmess.phtml?idt=24956&page=1"><font color=#000000><b>&laquo;&nbsp;в конец</b></font></a>&nbsp;&nbsp;&nbsp;
+			<a href="/talk/mmess.phtml?idt=24956&page=1"><font color=#000000><b>2</b></font></a><IDXSKIP>&nbsp;&nbsp;&nbsp;
+			<font color=#000000><b>1</b></font></IDXSKIP><IDXSKIP>&nbsp;&nbsp;
+				</IDXSKIP></font></td>
+			</tr>
+			</form>
+			</table>
+
+
+
+
+		<img src="../i/dot.gif" width="1" height="15"><br>	
+<style> 
+.block_social {text-align:center;}
+.block_social div {
+	float:left; 
+	overflow:hidden;
+	}
+ 
+.FBConnectButton {height: 20px; float: left; background: #5e77aa url('/images/share/facebook.gif') no-repeat 0 1px!important; border-bottom: 1px solid #42669A;}
+.FBConnectButton_Text {font-size: 11px; height: 13px; font-weight:normal;}
+.fb_share_count_inner {height: 12px; position: relative;}
+.fb_share_count .fb_share_count_right {float: left;}
+</style>
+
+<table class="blog-footer-table" width="100%" border="0">
+<tbody>
+<tr>
+<td width="99%">
+<p><IMG hspace=5 src="/i/xml.gif" align=left vspace=3 border=0><a class="simple_b" href="/talk/rss2/idt/24956/"><font color="#990000">Обновления в теме</font></a></p>
+</td>
+<td width="110" style="text-align:right;">
+	<div style="margin-top:10px;">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<div style="width:110px !important; padding-left:10px;" class="fb-like" data-send="false" data-layout="button_count" data-width="400" data-show-faces="false"></div>
+</div>
+
+</td> 
+						         
+<td width="110" style="text-align:right;">
+	<div style="margin-top:10px;">
+	<div style="width:110px !important; padding-left:10px;">
+		<div id="vk_like"></div>
+		<script type="text/javascript"> 
+		VK.Widgets.Like("vk_like", {type: "mini", height: 18});
+		</script>
+	</div>
+</div>
+
+</td> 
+
+ 
+<IDXSKIP><td width="206" style="text-align:right;">
+	<div style="margin-top:10px;">
+	<div style="width:206px !important;">
+		<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="ru" data-hashtags="">Твитнуть</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+</div>
+
+</td></IDXSKIP> 
+ 
+ 
+
+
+</td> 
+</tr>
+</tbody>
+</table>
+
+
+
+ 
+</div>
+	
+
+
+		<img src="../i/dot.gif" width="1" height="15"><br>		
+		<!--
+		<style type="text/css">
+		@font-face {
+		font-family: Microsoft Sans Serif;
+		font-style:  normal;
+		font-weight: normal;
+		src: url(kz.eot);
+		}
+		</style>
+		-->
+		<link href="css/kbd.css" rel="stylesheet" type="text/css">
+		<script language="JavaScript">
+		<!--//
+			var nav = navigator.appVersion;
+			var flag = nav.indexOf("MSIE 6") > 0;
+            var browser = flag;
+						if (flag) {
+		        document.write('<script language="JavaScript" src="js/en.js"></script><IDXSKIP>');
+				document.write('</IDXSKIP><script language="JavaScript" src="js/kk.js"></script><IDXSKIP>');
+				document.write('</IDXSKIP><script language="JavaScript" src="js/ru.js"></script><IDXSKIP>');
+				document.write('</IDXSKIP><script language="JavaScript" src="js/keyboard.js"></script><IDXSKIP>');
+				languages=new Array("kaz","rus","eng");
+			} else {
+			 	document.write('</IDXSKIP><script language="JavaScript" src="js/dummy.js"></script>');
+			}
+		//-->
+		</script>
+		<form action="insmessage.phtml" method="POST" id="mainform" name="mainform">
+		<input type="Hidden" name="idt" value="24956">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr><a name="error"></a><td class="simple" style="padding-bottom: 5px;"><font color="#666699"><b>Ваш ответ</b></font></td></tr>
+		<tr><td bgcolor="#E5E5CC"><div style="width: 1px; height: 3px;"><spacer type="block" height="3" width="1" /></div></td></tr>
+		<tr>
+			<td>		
+
+				<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#F9F9F9">
+				<tr valign="top">
+					<td nowrap="nowrap" class="simple"><img src="../i/forum_o.gif" alt="" width="5" height="5" hspace="5" border="0" align="middle">Ваше имя:</td>
+					<td ><input type="text" name="mname" value="" class="simple" style="width: 175px;"
+							onkeydown="kbdButtonPress(this);"
+							onkeyup="kbdButtonRelease(this);"
+							onFocus="widget = 'mname';"
+							onkeypress="setNormalBackground(this); kbdButtonChange(keypressed);"></td>
+					<td rowspan="4" width="99%" class="simple" style="padding-left:20px;"><div style="background-color: #F4F4F4; border: 1px solid #E5E5CC;"><div style="padding: 5px;">Обратите внимание, что этом форуме можно писать <b>только по-русски</b>. Для общения на казахском приглашаем в <a href="http://www.kazakh.ru/talk/index.phtml?lng=1">казахские форумы</a>.<br>Также запрещены тексты, набранные ЗАГЛАВНЫМИ и latinicey.</div></div></td>
+				</tr>
+				<tr><td colspan="2" style="padding: 0px;" bgcolor="#F4F4F4"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr>
+				<tr><td colspan="2" style="padding: 0px;" bgcolor="#FFFFFF"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr>
+				<tr valign="top">
+					<td nowrap="nowrap" class="simple"><img src="../i/forum_o.gif" alt="" width="5" height="5" hspace="5" border="0" align="middle">Ваш e-mail: <br></td>
+					<td><input type="text" name="memail" value="" class="simple" style="width: 175px;"
+							onkeydown="kbdButtonPress(this);"
+							onkeyup="kbdButtonRelease(this);"
+							onFocus="widget = 'memail';"
+							onkeypress="setNormalBackground(this); kbdButtonChange(keypressed);"></td>
+				</tr>
+				<tr><td colspan="3" style="padding: 0px;" bgcolor="#F4F4F4"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr>
+				<tr><td colspan="3" style="padding: 0px;" bgcolor="#FFFFFF"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr>
+				<tr valign="top">
+					<td nowrap="nowrap" class="simple"><img src="../i/forum_o.gif" alt="" width="5" height="5" hspace="5" border="0" align="middle">Текст:</td>
+					<td colspan="2" width="100%"><textarea name="mtext" cols="80" rows="5" class="simple" style="width: 100%;"
+							onkeydown="kbdButtonPress(this);"
+							onkeyup="kbdButtonRelease(this);"
+							onFocus="widget = 'mtext';"
+							onkeypress="setNormalBackground(this); kbdButtonChange(keypressed);"></textarea>
+   	                </td>
+				</tr>
+
+
+
+
+
+
+
+				<tr><td colspan="3" style="padding: 0px;" bgcolor="#F4F4F4"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr>
+				<tr><td colspan="3" style="padding: 0px;" bgcolor="#FFFFFF"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr>
+				<tr valign="top">
+					<td nowrap="nowrap" class="simple"><img src="../i/forum_o.gif" alt="" width="5" height="5" hspace="5" border="0" align="middle">Код на картинке:</td>
+					<td colspan="2" width="100%">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td width="200" valign="top">
+								<input type="text" name="kartinka" value="" class="simple" style="width: 175px;"
+									onkeydown="kbdButtonPress(this);"
+									onkeyup="kbdButtonRelease(this);"
+									onFocus="widget = 'kartinka';"
+									onkeypress="setNormalBackground(this); kbdButtonChange(keypressed);">
+							</td>
+							<td>
+								<span id="dle-captcha"><img src="/i/kartinka.php?PHPSESSID=sii7c1k6sduil311i92ekuq291" width="120" height="50" border="0"><br /><a onclick="reload(); return false;" href="#">обновить код</a></span>
+								</td>
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+<script language='JavaScript' type="text/javascript">
+function reload () {
+
+	var rndval = new Date().getTime();
+
+	document.getElementById('dle-captcha').innerHTML = '<img src="/i/kartinka.php?PHPSESSID=sii7c1k6sduil311i92ekuq291&rndval=' + rndval + '"  width="120" height="50" border="0"><br /><a onclick="reload(); return false;" href="#">обновить код</a>';
+
+};
+</script>
+
+
+
+
+
+
+				<tr><td colspan="3" style="padding: 0px;" bgcolor="#F4F4F4"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr>
+				<tr><td colspan="3" style="padding: 0px;" bgcolor="#FFFFFF"><div style="width: 1px; height: 1px;"><spacer type="block" height="1" width="1" /></div></td></tr>
+				<tr valign="top">
+					<td nowrap="nowrap" class="simple">&nbsp;</td>
+					<td colspan="2" width="100%">
+							<script type="text/javascript">
+							<!--
+																if (flag) {
+									kbdInit(languages, "rus", "low", "mtext");
+									kbdShow();
+								}
+							//-->
+							</script><br>
+					</td>
+				</tr>
+				</table>
+				<table width="100%" border="0" cellspacing="0" cellpadding="5">
+				<tr><td align="center">
+				<script language="javascript">
+				<!--//
+				function checkForm() {
+					var mname = document.mainform.mname.value;
+					//alert(mname);
+					mname = mname == null ? '' : mname;
+					mname = mname.replace(/(^\s*)|(\s*$)/,"");
+				 	if (mname == '') {
+				 	 	alert('Введите Ваше имя!');
+				 	 	return false;
+				 	}
+					var mtext = document.mainform.mtext.value;
+					//alert(mtext);
+					mtext = mtext == null ? '' : mtext;
+					mtext = mtext.replace(/(^\s*)|(\s*$)/,"");
+				 	if (mtext == '') {
+				 	 	alert('Введите сообщение!');
+				 	 	return false;
+				 	}
+					var kartinka = document.mainform.kartinka.value;
+					//alert(kartinka);
+					kartinka = kartinka == null ? '' : kartinka;
+					kartinka = kartinka.replace(/(^\s*)|(\s*$)/,"");
+				 	if (kartinka == '') {
+				 	 	alert('Вы не ввели код!');
+				 	 	return false;
+				 	}
+				 	document.mainform.submit();
+				 	return true;
+				}
+				//-->
+				</script>
+				<!--
+                <input type="Image" src="../i/forum_new.gif" alt="" width="105" height="27" vspace="10" border="0" style="border: 0px" onClick="javascript:return checkForm();"><br>
+                -->
+                <img src="../i/forum_new.gif" width="105" height="27" vspace="10" border="0" style="border: 0px; cursor:hand" onClick="javascript:return checkForm();">
+                <br>
+						<script language="javascript">
+						<!--//
+						if (browser) {
+	                        document.write('<a href="setKey.php" class="simple_b" style="color:#990000">выключить виртуальную клавиатуру</a>');
+	                    }
+                        //-->
+                        </script>
+				</td></tr>
+				</table>
+                <script type="text/javascript" src="js/val.js"></script>
+			</td>
+		</tr>
+		</table>
+		</form>
+	</td>
+</tr>
+</table>
+<!-- content end -->		</p>
+
+<br><div align="center">
+
+
+
+</div>		<br>
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-0333133942197405"
+     data-ad-slot="3526133631"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<br>
+<div id="y5_direct1" class="y5 y5_nf y5_horizontal snap_noshots"> 
+<div class="y5_ba y5_ads3 y5_no_warnings y5_exp0"> 
+<table class="y5_ads">
+<tbody>
+<tr>
+<td class="y5_item">
+<div class="y5_ad">
+
+<div style="margin-top: 4px; padding:10px; border: 1px solid Maroon;">
+
+</div>
+
+</div>
+</td>
+<td class="y5_nbsp">
+	<div></div>
+</td>
+<td class="y5_item">
+<div class="y5_ad">
+<div style="margin-top: 4px; padding:10px; border: 1px solid Maroon;">
+
+</div>
+
+</div>
+</td>
+<td class="y5_nbsp">
+	<div></div>
+</td>
+<td class="y5_item">
+<div class="y5_ad">
+<div style="margin-top: 4px; padding:10px; border: 1px solid Maroon;">
+
+</div>
+</div>
+</td>
+
+
+
+
+
+
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+	</td>
+	</tr>
+	</table>
+
+	</td>
+</tr>
+
+<tr>
+	<td colspan="4">
+	<!-- footer begin -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			 <tr bgcolor="#C2C284">
+        <td width="60%" class=f11 style="padding: 15px 10px 15px 10px"><IDXSKIP>&copy; 2002&#151;2017 &nbsp;
+		 | </IDXSKIP><IDXSKIP><a href="mailto:info@kazakh.ru" class=c0_>info@kazakh.ru</a></IDXSKIP> <IDXSKIP>&nbsp; 
+		 | <noindex><a href="http://administration.kazakh.ru/">Блог</a>&nbsp;</noindex></IDXSKIP>
+	         <IDXSKIP>| <a href="http://kazakh.ru/site/" class=c0_>О проекте</a></IDXSKIP><IDXSKIP>&nbsp; 
+</IDXSKIP><!--		 | <noindex><a rel="nofollow" href="http://brafford.kz" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','/i/ico/brafford_color.gif',1)"><img src="/i/ico/brafford_dark.gif" alt="Интернет-агентство «Браффорд»" title="Интернет-агентство «Браффорд»" name="Image5" width="16" height="16" border="0" style="margin-right:5px;"></a>-->
+		 <IDXSKIP>| <a href="/site/contact/" class=c0_><b>Реклама на сайте</b></a></IDXSKIP> </noindex>
+		 <IDXSKIP>| <a href="http://kazakh.ru/site/contact/#3" class=c0_>Вакансии</a></IDXSKIP><IDXSKIP>&nbsp;
+</IDXSKIP></td><IDXSKIP><td align="center" nowrap style="vertical-align : top;">
+<noindex>
+<div style="margin-top:10px; margin-left:5px;">
+<nobr>
+<a href="http://vkontakte.ru/club17953859" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','/i/ico/1.gif',1)"><img src="/i/ico/5.gif" alt="Группа Вконтакте" title="Группа Вконтакте" name="Image5" width="16" height="16" border="0" style="margin-right:15px;"></a>
+<a href="http://www.facebook.com/kazakh.ru" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','/i/ico/2.gif',1)"><img src="/i/ico/6.gif" alt="Страница в Фейсбуке" title="Страница в Фейсбуке" name="Image6" width="16" height="16" border="0"  style="margin-right:15px;"></a>
+<a href="http://twitter.com/kazakhru" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','/i/ico/3.gif',1)"><img src="/i/ico/7.gif" alt="Микроблог в Твиттере" title="Микроблог в Твиттере" name="Image7" width="16" height="16" border="0"  style="margin-right:15px;"></a>
+<a href="http://my.mail.ru/community/kazakh.ru/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','/i/ico/4.gif',1)"><img src="/i/ico/8.gif" alt="Сообщество на Мейл.ру" title="Сообщество на Мейл.ру" name="Image8" width="16" height="16" border="0"  style="margin-right:15px;"></a></nobr>
+<a href="http://www.youtube.com/user/kazakhru/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('youtube','','/i/youtube_logo_standard_againstwhite.png',1)"><img src="/i/youtube_logo_onecolor_againstwhite.png" alt="Канал пользователя kazakhru - YouTube" title="Канал пользователя kazakhru - YouTube" name="youtube" width="44" height="16" border="0"  style="margin-right:15px;"></a></nobr>
+</div>
+</noindex>		 </td></IDXSKIP>
+
+
+<td width="25%" align="right" nowrap class=f11 style="padding-right : 30px;"><IDXSKIP>Создатель сайта &#151; <br></IDXSKIP>
+ <a href="https://t.me/t_shooting" class="c0_" title="Интернет траблшутер Марат Ижанов"><IDXSKIP>интернет-траблшутер&nbsp;Марат&nbsp;Ижанов</IDXSKIP></a></td>
+
+		 </tr>
+		</table>
+
+<!-- footer end -->
+	</td>
+</tr>
+</table>
+
+
+
+<!-- nestandart -->
+<div id='div-gpt-ad-1347439490205-2' style='width:1px; height:1px;'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1347439490205-2'); });
+</script>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+<!-- generation date 15.06.17 18:49:14, generation time: 0.024420022964478sec -->

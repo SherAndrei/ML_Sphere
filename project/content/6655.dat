@@ -1,0 +1,2630 @@
+1-pp.ru/index.php/%D0%9A%D0%B0%D0%BA_%D0%BF%D0%BE%D0%B7%D0%B2%D0%BE%D0%BD%D0%B8%D1%82%D1%8C_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%83_%D0%9C%D0%A2%D0%A1
+
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ru"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="ru"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+<head><meta charset="utf-8" /><link rel="yandex-tableau-widget" href="manifest.json" /><meta name='keywords' content='МТС,как позвонить оператору,служба поддержки,номер телефона,официальный аккаунт МТС,социальные сети'><meta name='description' content='Довольно часто возникает ситуация, что нам нужно срочно решить какой либо вопрос с оператором МТС, например узнать, как отписаться от платных подписок или изменить тарифный план. Но хитрые операторы связи, желая сэкономить на операторах техподдержки, создают целые лабиринты из пунктов меню для того, чтобы вы общались с роботами. Но ведь порой так важно решить свой вопрос именно  живым оператором техподдержки!'><!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--><title>Как позвонить оператору МТС - Первый Познавательный</title>
+		
+		<!-- Included CSS Files (Compressed) -->
+		<link rel="stylesheet" href="/stylesheets/foundation.min.css">
+		<link rel="stylesheet" href="/stylesheets/app.css">
+		<!-- 
+		<script src="/javascripts/modernizr.foundation.js"></script>
+		 -->
+		<script>
+				
+				function  getPageSize()
+				{
+				 var xScroll, yScroll;
+
+				 if (window.innerHeight && window.scrollMaxY) {
+								 xScroll = document.body.scrollWidth;
+								 yScroll = window.innerHeight + window.scrollMaxY;
+				 } else if (document.body.scrollHeight > document.body.offsetHeight){ // all but Explorer Mac
+								 xScroll = document.body.scrollWidth;
+								 yScroll = document.body.scrollHeight;
+				 } else if (document.documentElement && document.documentElement.scrollHeight > document.documentElement.offsetHeight){ // Explorer 6 strict mode
+								 xScroll = document.documentElement.scrollWidth;
+								 yScroll = document.documentElement.scrollHeight;
+				 } else { // Explorer Mac...would also work in Mozilla and Safari
+								 xScroll = document.body.offsetWidth;
+								 yScroll = document.body.offsetHeight;
+				 }
+
+				 var windowWidth, windowHeight;
+				 if (self.innerHeight) { // all except Explorer
+								 windowWidth = self.innerWidth;
+								 windowHeight = self.innerHeight;
+				 } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+								 windowWidth = document.documentElement.clientWidth;
+								 windowHeight = document.documentElement.clientHeight;
+				 } else if (document.body) { // other Explorers
+								 windowWidth = document.body.clientWidth;
+								 windowHeight = document.body.clientHeight;
+				 }
+
+				 // for small pages with total height less then height of the viewport
+				 if(yScroll < windowHeight){
+								 pageHeight = windowHeight;
+				 } else {
+								 pageHeight = yScroll;
+				 }
+
+				 // for small pages with total width less then width of the viewport
+				 if(xScroll < windowWidth){
+								 pageWidth = windowWidth;
+				 } else {
+								 pageWidth = xScroll;
+				 }
+
+				 return [pageWidth,pageHeight,windowWidth,windowHeight];
+				}
+				
+				function  gotoBottom(div_name)
+				{
+					if (document.getElementById(div_name) != null)
+					{
+						var div = document.getElementById(div_name);
+						var y = (div.scrollHeight > div.offsetHeight) ? div.scrollHeight : div.offsetHeight;
+						div.scrollTop = y;
+					}
+				}
+				
+				function  scrollControl(div_name)
+				{
+					var div = document.getElementById(div_name);
+					
+					if (div.scrollTop==0)
+					{
+						div.style.boxShadow="inset 0px 11px 10px -10px #bbb, inset 0px -11px 10px -10px #555";					
+					}else
+					{
+
+						if ( div.scrollTop >= (div.scrollHeight-div.offsetHeight))
+						{
+								div.style.boxShadow="inset 0px 11px 10px -10px #555, inset 0px -11px 10px -10px #bbb";						
+						}	else
+						{
+								div.style.boxShadow="inset 0px 11px 10px -10px #555, inset 0px -11px 10px -10px #555";
+						}				
+					}				
+				}
+				
+				function  resizeControl()
+				{
+					var mmetrics = document.getElementById("mobile_metrics");
+					var tlcol = document.getElementById("top_left");
+					var tmcol = document.getElementById("top_middle");
+					var mcol = document.getElementById("middle_column");
+					var rcol = document.getElementById("right_column");
+					var lcol = document.getElementById("left_column");		
+					//var pname = document.getElementById("username");
+					var sinput = document.getElementById("mysearchinput");
+					var search_div = document.getElementById("search_div");
+					
+					var btn_search = document.getElementById("mobile_search_btn");
+					var btn_search_text = document.getElementById("mobile_search_text");
+					
+					var size=getPageSize();				
+					var sizew=parseInt(size[0]);
+					var sizeh=parseInt(size[2]);				
+					
+					if (document.getElementById("messages_div") != null)
+					{
+						var btn_search = document.getElementById("messages_div");
+						sizeh = sizeh/2.5;
+						messages_div.style.height = sizeh+"px";
+					}		
+					
+					if(sizew < 900)				
+					{
+						mmetrics.className = "right"
+						tlcol.className = "two columns hide-for-small"
+						lcol.className = "two columns hide-for-small";
+						tmcol.className = "twelve columns";
+						mcol.className = "twelve columns";
+						rcol.className = "hide";
+						if (document.getElementById("bottom_google1") != null)
+						{
+							var div = document.getElementById("bottom_google1");
+							div.className=""
+							var div = document.getElementById("bottom_google2");
+							div.className="hide"
+						}	
+					}
+					else
+					{
+						mmetrics.className = "hide"
+						tlcol.className = "one columns hide-for-small";
+						lcol.className  = "one columns hide-for-small";
+						mcol.className  = "nine columns";		
+						tmcol.className = "nine columns";				
+						rcol.className  = "four columns hide-for-small";
+						if (document.getElementById("bottom_google1") != null)
+						{
+							var div = document.getElementById("bottom_google1");
+							div.className="hide"
+							var div = document.getElementById("bottom_google2");
+							div.className=""
+						}					
+					}
+					if(sizew < 480)				
+					{
+						btn_search_text.className="hide";
+						
+					}
+					else
+					{
+						btn_search_text.className="mobile_search_text";
+					}
+				}
+				
+				function showsearch()
+				{
+					var btn = document.getElementById("mobile_search_btn");
+					var input = document.getElementById("search_div");				
+					var name = document.getElementById("username");
+					//var img = document.getElementById("userpic");
+					//var log_btn = document.getElementById("logbtn");				
+					if ((btn.className)=="mobile_search_btn")
+					{	
+						name.className="hide";
+						//img.className="hide";
+						//log_btn.className="hide";
+						btn.className="hide";
+						input.className="search";
+						document.getElementById("mysearchinput").focus();
+					}else
+					{					
+						//img.className="userpic";	
+						//log_btn.className="btn";
+						name.className="username";
+						btn.className="mobile_search_btn";
+						input.className="hide";
+					}			
+				}
+			</script>
+			
+
+		<!-- IE Fix for HTML5 Tags -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- adsense fullscreen -->
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-9377993969415361",
+			enable_page_level_ads: true
+		});
+		</script>
+		
+    	 <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
+        	 <script type="text/javascript">
+        	 VK.init({apiId: 2308647, onlyWidgets: true});
+    	 </script>
+    </head><body onResize="resizeControl()" ><div id="container"><div id="topmenu" class="row">
+		<div class="one columns hide-for-small" id="top_left"></div>
+		<div class="nine  columns" id="top_middle"><table width='100%' cellspacing='0' class='top_row'><tbody><tr><td>
+			<div class='exitbtn show-for-small' onclick='openMenu()'>
+			<a class='exitbtn' href='#' ><img class='exitbtn' src='/images/menu.png' alt='Меню' /></a>
+			</div>
+			</td><td><a class='btn' id='logbtn' href='/index.php?action=userauth&url=http%3A%2F%2F1-pp.ru%2Findex.php%2F%25D0%259A%25D0%25B0%25D0%25BA%2520%25D0%25BF%25D0%25BE%25D0%25B7%25D0%25B2%25D0%25BE%25D0%25BD%25D0%25B8%25D1%2582%25D1%258C%2520%25D0%25BE%25D0%25BF%25D0%25B5%25D1%2580%25D0%25B0%25D1%2582%25D0%25BE%25D1%2580%25D1%2583%2520%25D0%259C%25D0%25A2%25D0%25A1'><img class='menu_img' src='/images/Exit.png' alt='Войти'></a>
+			</td>
+			<td class='username'>
+			<a class='username' id='username' href='/index.php?action=userauth&url=http%3A%2F%2F1-pp.ru%2Findex.php%2F%25D0%259A%25D0%25B0%25D0%25BA%2520%25D0%25BF%25D0%25BE%25D0%25B7%25D0%25B2%25D0%25BE%25D0%25BD%25D0%25B8%25D1%2582%25D1%258C%2520%25D0%25BE%25D0%25BF%25D0%25B5%25D1%2580%25D0%25B0%25D1%2582%25D0%25BE%25D1%2580%25D1%2583%2520%25D0%259C%25D0%25A2%25D0%25A1'>Войти</a></td><td width="100%">
+		<script>
+		function searchinput()
+		{
+			var s2 = document.getElementById('mysearchinput');
+			if ((s2.value != '') && (s2.value != 'Введите запрос и нажмите Enter...'))
+			{
+				document.location.href='/index.php?action=search&text='+s2.value;
+				
+			}
+			else
+			{
+				
+
+			}
+		}
+		</script>
+		<div class="hide" id="search_div">
+				<input class="search" placeholder="Введите запрос и нажмите Enter..." id="mysearchinput" type="text" name="text" value=""  onblur="showsearch()"  onkeypress="if ( event.keyCode == 13 ) searchinput()" />
+				<div class="search_img" ><img src="/images/Search.png"></div>
+		</div>				
+
+	
+		<a class="mobile_search_btn" id="mobile_search_btn" onclick="showsearch()" href="#">
+			<div class="mobile_search_img">
+				<img class="menu_img" src="/images/Search_white.png">
+			</div>
+			<span id="mobile_search_text" class="mobile_search_text">Поиск</span>
+		</a>
+		</td>
+		</tr></tbody></table></div>
+		<div class="tree columns hide-for-small" id="top_right"></div>
+		</div>	
+		<div class="clear"></div>
+	<div class="top_menu hide" id="top_menu">	
+		
+			<div class="show-for-small mobile_top_menu">
+			
+				<IDXSKIP><div class="menu_link" onclick="javascript:document.location.href='/index.php'">
+					<a class="menu_link_img" href="/index.php">
+						<img class="menu_img" src="/images/House.png" alt="Главная">
+					</a>
+					<div class="menu_link_text">
+						<a class="menu_link_name" href="/index.php">Главная</a>			
+					</div>		
+					<div class="clear"></div>
+				</div></IDXSKIP>
+				
+				<IDXSKIP><div class="menu_link" onclick="javascript:document.location.href='/index.php/Категория:Категории'">
+					<a href="/index.php/Категория:Категории" class="menu_link_img">
+						<img class="menu_img" src="/images/Category.png" alt="Категории">
+					</a>
+					<div class="menu_link_text">
+						<a class="menu_link_name" href="/index.php/Категория:Категории">Категории</a>	
+					</div>		
+					<div class="clear"></div>
+				</div></IDXSKIP>
+				
+				<IDXSKIP><div class="menu_link" onclick="javascript:document.location.href='/index.php/Категория:Сообщество'">
+					<a href="/index.php/Категория:Сообщество" class="menu_link_img">
+						<img class="menu_img" src="/images/Share-01.png" alt="Сообщество">
+					</a>
+					<div class="menu_link_text">
+						<a class="menu_link_name" href="/index.php/Категория:Сообщество">Сообщество</a>	
+					</div>		
+					<div class="clear"></div>
+				</div></IDXSKIP>
+				
+				<IDXSKIP><div class="menu_link" onclick="javascript:document.location.href='/index.php?action=addsite&tip=0'">
+					<a href="/index.php?action=addsite&tip=0" class="menu_link_img">
+						<img class="menu_img" src="/images/Write.png" alt="Написать статью">
+					</a>
+					<div class="menu_link_text">
+						<a class="menu_link_name" href="/index.php?action=addsite&tip=0">Написать статью</a>												
+					</div>		
+					<div class="clear"></div>
+				</div></IDXSKIP>
+	
+			</div>		
+		</div>	
+		
+		<script>
+			function openMenu()
+			{
+				var s = document.getElementById("top_menu");
+				if ((s.className)=="top_menu hide")
+				{			
+					s.className = "top_menu";
+					
+				}else{			
+					s.className = "top_menu hide";
+				}
+			}
+		</script>
+	<div class="row"><div class="one columns hide-for-small" id="left_column"><div class="l_column" id="l_column">	<div class="left_menu">
+			<IDXSKIP><div class="left_menu_tab ltab">
+				<a href="/index.php" class="left_menu_tab" title="Главная"><img class="left_menu_tab" alt="Главная" src="/images/House.png"></a>
+				<div class="left_menu_text">Главная</div>
+			</div></IDXSKIP>
+			<IDXSKIP><div class="left_menu_tab rtab" title="Категории">
+				<a href="/index.php/Категория:Категории" class="left_menu_tab"><img class="left_menu_tab" alt="Категории" src="/images/Category.png"></a>
+				<div class="left_menu_text">Категории</div>
+			</div></IDXSKIP>
+			<IDXSKIP><div class="left_menu_tab ltab">
+				<a href="/index.php/Категория:Сообщество" class="left_menu_tab" title="Сообщество"><img alt="Сообщество"  class="left_menu_tab" src="/images/Share-01.png"></a>
+				<div class="left_menu_text">Сообщество</div>
+			</div></IDXSKIP>
+			<IDXSKIP><div class="left_menu_tab rtab" title="Написать статью">
+				<a href="/index.php?action=addsite&tip=0" class="left_menu_tab"><img  alt="Написать статью" class="left_menu_tab" src="/images/Write.png"></a>
+				<div class="left_menu_text">Написать</div>
+			</div></IDXSKIP>	
+		</div>
+		
+			
+		 </div>
+	
+</div><div class="nine columns" id="middle_column">
+	<script type="text/javascript">
+		var tlcol = document.getElementById("top_left");
+		var tmcol = document.getElementById("top_middle");
+		var mcol = document.getElementById("middle_column");
+			var lcol = document.getElementById("left_column");		
+		//var pname = document.getElementById("username");
+		var sinput = document.getElementById("mysearchinput");
+		var search_div = document.getElementById("search_div");
+		
+		var btn_search = document.getElementById("mobile_search_btn");
+		var btn_search_text = document.getElementById("mobile_search_text");
+		
+		var size=getPageSize();				
+		var sizew=parseInt(size[0]);
+		var sizeh=parseInt(size[2]);				
+		
+		
+		if(sizew < 900)				
+		{
+			tlcol.className = "two columns hide-for-small"
+			lcol.className = "two columns hide-for-small";
+			tmcol.className = "twelve columns";
+			mcol.className = "twelve columns";
+		}
+		else
+		{
+			tlcol.className = "one columns hide-for-small";
+			lcol.className  = "one columns hide-for-small";
+			mcol.className  = "nine columns";		
+			tmcol.className = "nine columns";				
+		}
+		if(sizew < 480)				
+		{
+			btn_search_text.className="hide";
+		}
+		else
+		{
+			btn_search_text.className="mobile_search_text";
+		}
+	</script>
+	
+		<div class="row" id="content">
+			<article>
+				<div id="article"
+	
+				>
+	
+	<div class="row title">
+		<div class="ten columns"><h1
+	
+		>Как позвонить оператору МТС</h1></div><div class="four columns">
+	</div></div><P><div class='catnavigation'><A href='/index.php/Категория:Категории'>Категории</A> >> <A href='/index.php/Категория:ИТ'>ИТ</A> >> <A href='/index.php/Категория:Сотовые операторы'>Сотовые операторы</A></div></P><p><p></P><div class="tright"><A href='/index.php/Файл:Как позвонить оператору МТС.jpg?flag=edit&url=http%3A%2F%2F1-pp.ru%2Findex.php%2F%25D0%259A%25D0%25B0%25D0%25BA%2520%25D0%25BF%25D0%25BE%25D0%25B7%25D0%25B2%25D0%25BE%25D0%25BD%25D0%25B8%25D1%2582%25D1%258C%2520%25D0%25BE%25D0%25BF%25D0%25B5%25D1%2580%25D0%25B0%25D1%2582%25D0%25BE%25D1%2580%25D1%2583%2520%25D0%259C%25D0%25A2%25D0%25A1'><img itemprop="image" alt='Как позвонить оператору МТС.jpg' class='wiki_img' width=300 src='/index.php/Файл:Как позвонить оператору МТС.jpg?flag=mini3?name=Как позвонить оператору МТС.jpg' ' id='Как позвонить оператору МТС.jpg'></A></div><P></p><div class='article_description' itemprop='description'><p>Довольно часто возникает ситуация, что нам нужно срочно решить какой либо вопрос с оператором МТС, например узнать, как отписаться от платных подписок или изменить тарифный план. Но хитрые операторы связи, желая сэкономить на операторах техподдержки, создают целые лабиринты из пунктов меню для того, чтобы вы общались с роботами. Но ведь порой так важно решить свой вопрос именно  живым оператором техподдержки!</p></div><div style = "clear:both"></div>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- Адаптивный Верхний Блок -->
+					<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-client="ca-pub-9377993969415361"
+							 data-ad-slot="4092802654"
+							 data-ad-format="auto"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				<br>
+			</p><h2><span id='1'>Как связаться с оператором МТС</span></h2><p></P><P></p><h2><span id='2'>С мобильного телефона МТС по всей России, Украине, Беларуси, Узбекистану</span></h2><p></P><P>Для связи с оператором с мобильного МТС, позвоните на короткий номер <B>0890</B>.</P><P></p><h3><span id='2.1'>В роуминге</span></h3><p></P><P>Бесплатный звонок c номера МТС <B>+7-495-766-0166</B> (обязательно нужно набирать в международном формате с +7).</P><P></p><h3><span id='2.2'>С городского телефона и телефонов других сотовых операторов</span></h3><p></P><P>Для того, чтобы <I>бесплатно позвонить оператору МТС</I> с городского телефона и телефонов других сотовых операторов, наберите номер <B>8-800-250-0890</B><IDXSKIP>.</IDXSKIP></P><P></p><h3><span id='2.3'>E-mail</span></h3><p></P><P><B>info@mts.ru</B></P><P></p><h2><span id='3'>Как быстро соединиться с живым оператором техподдержки МТС</span></h2><p></P><P>Я думаю, что я не единственный, у кого возникало желание кого нибудь ударить после фразы  "Пожалуйста, прослушайте все варианты меню, прежде чем сделать свой выбор". Система такова, что позволяет соединиться с оператором техподдержки МТС только после того, как вы пройдете два уровня. Таким образом, <B>для быстрой связи с оператором нажмите с интервалов в несколько секунд, например "2-2-0"</B> - так вы быстро попадете в очередь ожидания к живому оператору техподдержки.</P><P><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Адаптивный Верхний Блок -->
+			<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-9377993969415361"
+					 data-ad-slot="4092802654"
+					 data-ad-format="auto"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script></P><P></p><h2><span id='4'>МТС в социальных сетях</span></h2><p></P><P>Ещё одним эффективным способом донести свои проблемы до оператора МТС является связь с ним через социальные сети. Вот <B>список официальных аккаунтов оператора МТС в социальных сетях</B>:</P><P><B></P><UL><LI><A rel='nofollow' target='_blank' href='https://vk.com/mts'>МТС вКонтакте</A></LI><LI><A rel='nofollow' target='_blank' href='https://twitter.com/ru_mts'>МТС в Twitter</A></LI><LI><A rel='nofollow' target='_blank' href='https://www.facebook.com/mts'>МТС в Facebook </A></LI></UL><P></B><p></p><IDXSKIP><h2><span id='1'>Источники</span></h2></IDXSKIP><p></P><OL><LI><A rel='nofollow' target='_blank' href='http://1-pp.ru'>http://1-pp.ru</A></LI></OL><P></P><P></p><div class='related_articles'><h2>Вам будет интересно:</h2><p></P><OL><LI><B><A  href='/index.php/Как отключить услугу GOODOK на МТС'>Как отключить услугу GOODOK на МТС</A></B></LI><LI><B><A  href='/index.php/Как узнать свой номер мобильного телефона'>Как узнать свой номер мобильного телефона</A></B></LI><LI><B><A  href='/index.php/Как позвонить оператору Билайн'>Как позвонить оператору Билайн</A></B></LI><LI><B><A  href='/index.php/Как позвонить оператору Мегафон'>Как позвонить оператору Мегафон</A></B></LI><LI><B><A  href='/index.php/Как позвонить оператору ТЕЛЕ2'>Как позвонить оператору ТЕЛЕ2</A></B></LI><LI><B><A  href='/index.php/Как бесплатно отправить СМС сообщение с компьютера (iSendSms)'>Как бесплатно отправить СМС сообщение с компьютера (iSendSms)</A></B></LI></OL><P></P><P></p></div><p><nowikisys><div style="width:100%;overflow:hidden;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- После статьи New --> <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9377993969415361" data-ad-slot="8033161059"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({});</script></div></nowikisys></p><IDXSKIP><h2><span id='1'>Сводка</span></h2></IDXSKIP><p></P><UL><LI><B>Авторы: <A href='/index.php/Пользователь:vk_120'>Василий Лазаренко</A>, <A href='/index.php/Пользователь:Support'>Служба Поддержки</A>, <A href='/index.php/Пользователь:fct'>Мыслящий Человек</A></B></LI><LI><B>Дата создания: 2012-12-17 08:53</B></LI><LI><B>Теги: <A href='/index.php?action=search&text=МТС'>МТС</A>, <A href='/index.php?action=search&text=как позвонить оператору'>как позвонить оператору</A>, <A href='/index.php?action=search&text=служба поддержки'>служба поддержки</A>, <A href='/index.php?action=search&text=номер телефона'>номер телефона</A>, <A href='/index.php?action=search&text=официальный аккаунт МТС'>официальный аккаунт МТС</A>, <A href='/index.php?action=search&text=социальные сети'>социальные сети</A></B></LI><LI><B>Количество просмотров: 683250</B></LI><IDXSKIP><LI><B>Оценить статью: </B><nowikisys>
+	<script>
+		function des_stars_av()
+		{
+			ajaxFunction2("siteid=3758&flag=10");
+			var s = document.getElementById('rating');
+			$v = s.innerHTML;
+			$k = $v.indexOf(' ');
+			$sum = Number($v.substr(0, $k));
+			$num = Number($v.substr($k+1));
+			$res = Math.floor($sum/$num);
+			for($i=0; $i<$res; $i++)
+			{
+				var s = document.getElementById('av_star'+($i+1));
+			s.className = "star inline active";
+			} 
+			for($i=$res+1; $i<=5; $i++)
+			{
+				var s = document.getElementById('av_star'+$i);
+			s.className = "star inline inactive";
+			}
+			if ((($sum/$num)-$res)>=0.5)
+			{
+				var s = document.getElementById('av_star'+($res+1));
+			s.className = "star inline half_active";
+			}
+		}
+		function starclick($num)
+		{
+	
+			ajaxFunction2("siteid=3758&flag="+$num);
+			var s = document.getElementById('rating');
+				
+			$num = Number(s.innerHTML);
+			for($i=0; $i<$num; $i++)
+			{
+				var s = document.getElementById('star'+($i+1));
+			s.className = "star inline active";
+			} 
+			if ($setnum!=0){
+				var s = document.getElementById('star'+($num));
+				s.className = "star inline click";
+			}
+			for($i=$num+1; $i<=5; $i++)
+			{
+				var s = document.getElementById('star'+($i));
+				s.className = "star inactive inline";
+			} 
+			des_stars_av();
+	}
+	function starhover($num)
+	{
+	  var s = document.getElementById('rating');
+	  $setnum = Number(s.innerHTML);
+		
+	  
+	  for($i=0; $i<$num; $i++)
+	  {
+        var s = document.getElementById('star'+($i+1));
+		s.className = "star inline active";
+	  }
+	  for($i=$num; $i<5; $i++)
+	  {
+   	    var s = document.getElementById('star'+($i+1));
+		s.className = "star inline inactive";
+	  }
+	  if ($setnum!=0){
+	  var s = document.getElementById('star'+($setnum));
+	  s.className = "star inline click"; 
+		}
+	}
+	function starout()
+	{
+	  ajaxFunction2("siteid=3758");
+	  var s = document.getElementById('rating');
+	  $setnum = Number(s.innerHTML);
+	  starhover($setnum);
+	}
+	</script>
+<script>
+function des_stars_sum()
+{
+  ajaxFunction2("siteid=3758&flag=10");
+  var s = document.getElementById('rating');
+  $v = s.innerHTML;
+  $k = $v.indexOf(' ');
+  $sum = Number($v.substr(0, $k));
+  $num = Number($v.substr($k+1));
+  var s = document.getElementById("stars_sum");
+  s.innerHTML=$num;
+}
+</script><div class="stars inline" id="starsrating"><div title="Плохо :(" class="star active inline" id=star1 onmouseover=starhover(1) onclick=starclick(1) onmouseout=starout()>&nbsp;</div><div title="Так себе..." class="star active inline" id=star2 onmouseover=starhover(2) onclick=starclick(2) onmouseout=starout()>&nbsp;</div><div  title="Средне" class="star active inline" id=star3 onmouseover=starhover(3) onclick=starclick(3) onmouseout=starout()>&nbsp;</div><div title="Хорошо" class="star active inline" id=star4 onmouseover=starhover(4) onclick=starclick(4) onmouseout=starout()>&nbsp;</div><div  title="Отлично!" class="star active inline" id=star5 onmouseover=starhover(5) onclick=starclick(5) onmouseout=starout()>&nbsp;</div></div></nowikisys></LI></IDXSKIP><IDXSKIP><LI><B>Всего оценок: </B><nowikisys><b id=stars_sum>&nbsp;</b></nowikisys></LI></IDXSKIP><LI><B>Рейтинг: 668</B></LI><LI><B>Поделиться:</B><nowikisys> <div class='fav_icon'><div class='fav_icons'><a class='fav_ico vk' href='http://vk.com/share.php?url=http://1-pp.ru/index.php/Как позвонить оператору МТС' target='_blank' title='Поделиться Вконтакте'><img src='http://vk.com/images/vk32.png?1' /></a><a class='fav_ico google' href='https://plus.google.com/share?url=http://1-pp.ru/index.php/Как_позвонить_оператору_МТС' onclick='javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;' title='Поделиться в Гугл+'><img
+  src='https://www.gstatic.com/images/icons/gplus-32.png' alt='Share on Google+'/></a><a href = '/index.php?action=useraddurl&url=Как позвонить оператору МТС' class='fav_ico 1pp' title='Добавить в закладки'><img alt='Добавить в закладки' src='/images/favorites.png'></a></div></div></nowikisys></LI></UL><P></P><P></p>
+		<div style='display:none;' itemprop='aggregateRating' itemscope itemtype='http://schema.org/AggregateRating'>
+			<span itemprop='worstRating'>0</span>
+			<span itemprop='bestRating'>999</span>
+			<span itemprop='ratingValue'>666</span>
+		</div>
+		<span style='display:none;' itemprop='keywords'><A href='/index.php?action=search&text=МТС'>МТС</A>, <A href='/index.php?action=search&text=как позвонить оператору'>как позвонить оператору</A>, <A href='/index.php?action=search&text=служба поддержки'>служба поддержки</A>, <A href='/index.php?action=search&text=номер телефона'>номер телефона</A>, <A href='/index.php?action=search&text=официальный аккаунт МТС'>официальный аккаунт МТС</A>, <A href='/index.php?action=search&text=социальные сети'>социальные сети</A></span>
+		<span style='display:none;' itemprop='dateCreated'><p>2012-12-17 08:53</p></span>
+	
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Реком контент -->
+			<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-9377993969415361"
+					 data-ad-slot="2990715453"
+					 data-ad-format="autorelaxed"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</p><BR><div style="clear:both;"></div>  <script language="javascript" type="text/javascript">
+  
+  function getAjax(){
+    if (window.ActiveXObject)
+      return new ActiveXObject("Microsoft.XMLHTTP");
+    else if (window.XMLHttpRequest) 
+      return new XMLHttpRequest();
+    else {
+      //alert("Ошибка Ajax");
+      return null;
+    }
+  }
+  </script>
+<div id=rating style='display:none'></div><script language="javascript" type="text/javascript">  
+  function ajaxFunction2(param){
+    if(typeof (ajaxFunction22) == 'function')  ajaxFunction22(param);	idnum='';	var ajax=null;
+	ajax=getAjax();
+	if (ajax != null) {
+	  	  document.getElementById("rating"+idnum).innerHTML="<p><img src='/images/loading.gif'><b>Подождите, идет загрузка результатов поиска...</b></p>";
+	        ajax.onreadystatechange = function(){
+	    if (ajax.readyState == 4) {   
+          if(ajax.status == 200) {   
+		    if (ajax.responseText!="") {
+				document.getElementById("rating"+idnum).innerHTML=ajax.responseText;
+		    } else {
+							document.getElementById("rating"+idnum).innerHTML="<p><b>К сожалению ничего не найдено, попробуйте ввести другой запрос.</b></p>";
+						    }
+		  }
+        }
+	  }
+	  ajax.open("GET", "/rating.php?" + param, false );//?"+encodeURI(document.getElementById("in").value), true);
+      ajax.send(null);
+    }
+  }
+</script>
+<SCRIPT>ajaxFunction2("siteid=3758");</SCRIPT><script>starout();</script><script>des_stars_av();</script><script>des_stars_sum();</script><SCRIPT>
+function toggleHider(id) {
+	var toc = document.getElementById('hidercontent'+id);
+	var toggleLink = document.getElementById('hiderlink'+id);
+	if (toc && toggleLink && toc.style.display == 'none') {
+		if (toggleLink.innerText == 'показать')	toggleLink.innerText = 'убрать';
+		toc.style.display = 'block';
+	} else {
+		if (toggleLink.innerText == 'убрать')	toggleLink.innerText = 'показать';
+		toc.style.display = 'none';	
+	}
+} 
+</SCRIPT>
+<script language="javascript" type="text/javascript">  
+  function ajaxFunction5(param,idnum){
+    if(typeof (ajaxFunction52) == 'function')  ajaxFunction52(param);		var ajax=null;
+	ajax=getAjax();
+	if (ajax != null) {
+	  	  document.getElementById("commrating"+idnum).innerHTML="<p><img src='/images/loading.gif'><b>Подождите, идет загрузка результатов поиска...</b></p>";
+	        ajax.onreadystatechange = function(){
+	    if (ajax.readyState == 4) {   
+          if(ajax.status == 200) {   
+		    if (ajax.responseText!="") {
+				document.getElementById("commrating"+idnum).innerHTML=ajax.responseText;
+		    } else {
+							document.getElementById("commrating"+idnum).innerHTML="<p><b>К сожалению ничего не найдено, попробуйте ввести другой запрос.</b></p>";
+						    }
+		  }
+        }
+	  }
+	  ajax.open("GET", "/comments.php?" + param, false );//?"+encodeURI(document.getElementById("in").value), true);
+      ajax.send(null);
+    }
+  }
+</script>
+<script language="javascript" type="text/javascript">  
+  function ajaxFunction6(param,idnum){
+    if(typeof (ajaxFunction62) == 'function')  ajaxFunction62(param);		var ajax=null;
+	ajax=getAjax();
+	if (ajax != null) {
+	  	  document.getElementById("comm2rating"+idnum).innerHTML="<p><img src='/images/loading.gif'><b>Подождите, идет загрузка результатов поиска...</b></p>";
+	        ajax.onreadystatechange = function(){
+	    if (ajax.readyState == 4) {   
+          if(ajax.status == 200) {   
+		    if (ajax.responseText!="") {
+				document.getElementById("comm2rating"+idnum).innerHTML=ajax.responseText;
+		    } else {
+							document.getElementById("comm2rating"+idnum).innerHTML="<p><b>К сожалению ничего не найдено, попробуйте ввести другой запрос.</b></p>";
+						    }
+		  }
+        }
+	  }
+	  ajax.open("GET", "/comments.php?" + param, false );//?"+encodeURI(document.getElementById("in").value), true);
+      ajax.send(null);
+    }
+  }
+</script>
+<script language="javascript" type="text/javascript">  
+  function ajaxFunction7(param,idnum){
+    if(typeof (ajaxFunction72) == 'function')  ajaxFunction72(param);		var ajax=null;
+	ajax=getAjax();
+	if (ajax != null) {
+	  	  document.getElementById("comm3rating"+idnum).innerHTML="<p><img src='/images/loading.gif'><b>Подождите, идет загрузка результатов поиска...</b></p>";
+	        ajax.onreadystatechange = function(){
+	    if (ajax.readyState == 4) {   
+          if(ajax.status == 200) {   
+		    if (ajax.responseText!="") {
+				document.getElementById("comm3rating"+idnum).innerHTML=ajax.responseText;
+		    } else {
+							document.getElementById("comm3rating"+idnum).innerHTML="<p><b>К сожалению ничего не найдено, попробуйте ввести другой запрос.</b></p>";
+						    }
+		  }
+        }
+	  }
+	  ajax.open("GET", "/comments.php?" + param, false );//?"+encodeURI(document.getElementById("in").value), true);
+      ajax.send(null);
+    }
+  }
+</script>
+<script>
+  function ratingfunc(id,res) {
+  var s = document.getElementById('commrating'+id);
+  var s2 = document.getElementById('comm2rating'+id);
+  var s3 = document.getElementById('comm3rating'+id);
+  var d = document.getElementById('comm_text'+id);
+  if (res == 0)
+  {
+    ajaxFunction5("id="+id+"&userid=0",id);
+	ajaxFunction6("id="+id+"&userid=0&title=1",id);
+	ajaxFunction7("id="+id+"&userid=0&clicked=1",id);
+  }
+  else
+  {
+    ajaxFunction5("id="+id+"&userid=0&res="+res,id);
+	ajaxFunction6("id="+id+"&userid=0&res="+res+"&title=1",id);
+	ajaxFunction7("id="+id+"&userid=0&res="+res+"&clicked=1",id);
+  }
+  s.title = s2.innerHTML;
+  
+  var s4 = document.getElementById('commratingplus'+id);
+  var s5 = document.getElementById('commratingminus'+id);
+  
+  if (s3.innerHTML == 'clickedminus')
+  {
+	s4.className='plus';
+	s5.className='minus clicked';
+  }
+  else if (s3.innerHTML == 'clickedplus')
+  {
+    s4.className='plus clicked';
+	s5.className='minus';
+  }
+  else
+  {
+    s4.className='plus '+s3.innerHTML;
+    s5.className='minus '+s3.innerHTML;
+  }
+    
+  if (s.innerHTML > 2)
+  {
+    s.className= "positive score";
+  }
+  else if (s.innerHTML < -3)
+  {
+    s.className= "negative score";
+		d.className += " bad";
+  }
+  else
+  {
+    s.className= "neutral score";
+  }
+  }
+  </script><H2 id=comments>Комментарии</H2>
+    <div id="vk_comments"></div>
+        <script type="text/javascript">
+        VK.Widgets.Comments("vk_comments", {limit: 15, attach: "*"});
+    </script>
+    <br><br>
+    <div id="vk_auth"></div><script type="text/javascript">
+	window.onload = function () {
+		VK.init({apiId: 2308647});
+		VK.Widgets.Auth("vk_auth", {width: "250px", authUrl: "http://1-pp.ru/index.php?action=userauth&login=vk&url=http%3A%2F%2F1-pp.ru%2Findex.php%2F%25D0%259A%25D0%25B0%25D0%25BA%2520%25D0%25BF%25D0%25BE%25D0%25B7%25D0%25B2%25D0%25BE%25D0%25BD%25D0%25B8%25D1%2582%25D1%258C%2520%25D0%25BE%25D0%25BF%25D0%25B5%25D1%2580%25D0%25B0%25D1%2582%25D0%25BE%25D1%2580%25D1%2583%2520%25D0%259C%25D0%25A2%25D0%25A1%23comments"});
+	}
+	</script><p><A href='/index.php?action=userauth&url=http%3A%2F%2F1-pp.ru%2Findex.php%2F%25D0%259A%25D0%25B0%25D0%25BA%2520%25D0%25BF%25D0%25BE%25D0%25B7%25D0%25B2%25D0%25BE%25D0%25BD%25D0%25B8%25D1%2582%25D1%258C%2520%25D0%25BE%25D0%25BF%25D0%25B5%25D1%2580%25D0%25B0%25D1%2582%25D0%25BE%25D1%2580%25D1%2583%2520%25D0%259C%25D0%25A2%25D0%25A1%23comments'><b>Войдите</b></A><IDXSKIP>, чтобы оставить комментарий.</IDXSKIP></p><div class='comments_all'><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(299,1)" class='plus' title='Нравится' id='commratingplus299'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating299'>
+		</div>
+		<div style='display:none' id='comm2rating299'>
+		</div>
+		<div style='display:none' id='comm3rating299'>
+		</div>
+		<a href="javascript:ratingfunc(299,-1)" class='minus' title='Не нравится' id='commratingminus299'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text299'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1723'>
+					<img class='comment_img' src='/img.php?userid=1723&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1723'>Владимир Uzbek</A>
+				<div class='comment_info_date'><time datetime='2017-03-07T12:48:05'>07.03.17 в 12:48</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >
+Являюсь вашим абонентом более 10 лет,было много вопросов и проблем но всегда решали.Столкнулся первый раз с откровенным хамством и бес пределом,всей компании.6 и 7 марта обратился с вопросом ,почему вместо абонентской платы Автоплатеж ,с меня снимают 17.50 в сутки.В течении многих лет проблем с автоплатежом ,не было.МТС снимал при любом балансе 1 числа 200+200 руб,при любом остатке на балансе.Сейчас вы изменили условия снятия денег не поставив в известность меня.После обращений ваши операторы не могут обьяснить с чего вдруг только в марте изменились правила.Подал заявку на смену оператора с переходом на МЕГАФОН,переведу всю семью.Очень скотское ваше отношение</td></tr>
+	</table>
+	<script>ratingfunc(299,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(297,1)" class='plus' title='Нравится' id='commratingplus297'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating297'>
+		</div>
+		<div style='display:none' id='comm2rating297'>
+		</div>
+		<div style='display:none' id='comm3rating297'>
+		</div>
+		<a href="javascript:ratingfunc(297,-1)" class='minus' title='Не нравится' id='commratingminus297'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text297'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1651'>
+					<img class='comment_img' src='/img.php?userid=1651&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1651'>Владимир Щемелев</A>
+				<div class='comment_info_date'><time datetime='2017-01-15T21:08:53'>15.01.17 в 21:08</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >не могу сделать перевод денег на др. телефон. приходит смс услуга не доступна связываюсь с оператором посылают в салон. в салоне по адресу ростов ул. ленина 101 тоже отказывают всё круг замкнулся не пробьёшь, надо переходить на др. оператора! а жаль я давний клиент мтс! мой тел. 89185303223 подожду несколько дней может этот комментарий поможет.</td></tr>
+	</table>
+	<script>ratingfunc(297,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(296,1)" class='plus' title='Нравится' id='commratingplus296'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating296'>
+		</div>
+		<div style='display:none' id='comm2rating296'>
+		</div>
+		<div style='display:none' id='comm3rating296'>
+		</div>
+		<a href="javascript:ratingfunc(296,-1)" class='minus' title='Не нравится' id='commratingminus296'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text296'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1579'>
+					<img class='comment_img' src='/img.php?userid=1579&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1579'>Дамир Сайфутдинов</A>
+				<div class='comment_info_date'><time datetime='2016-12-07T17:22:57'>07.12.16 в 17:22</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Полностью с вами согласен.Худшая связь.Сам давно уже не пользуюсь их услугами. Сегодня извещение о задолженности получил.Жулье!</td></tr>
+	</table>
+	<script>ratingfunc(296,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(292,1)" class='plus' title='Нравится' id='commratingplus292'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating292'>
+		</div>
+		<div style='display:none' id='comm2rating292'>
+		</div>
+		<div style='display:none' id='comm3rating292'>
+		</div>
+		<a href="javascript:ratingfunc(292,-1)" class='minus' title='Не нравится' id='commratingminus292'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text292'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1408'>
+					<img class='comment_img' src='/img.php?userid=1408&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1408'>Ольга Леонидовна Якимова</A>
+				<div class='comment_info_date'><time datetime='2016-09-01T00:32:43'>01.09.16 в 00:32</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Самая отвратительная связь. Деньги выкачивют, разобраться невозможно.Ощущение, что на мошейничество дан зелёный свет. Оператор вообще не подключается. Значит надо уходить</td></tr>
+	</table>
+	<script>ratingfunc(292,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(263,1)" class='plus' title='Нравится' id='commratingplus263'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating263'>
+		</div>
+		<div style='display:none' id='comm2rating263'>
+		</div>
+		<div style='display:none' id='comm3rating263'>
+		</div>
+		<a href="javascript:ratingfunc(263,-1)" class='minus' title='Не нравится' id='commratingminus263'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text263'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1176'>
+					<img class='comment_img' src='/img.php?userid=1176&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1176'>Ольга Фирсова</A>
+				<div class='comment_info_date'><time datetime='2016-01-29T00:36:05'>29.01.16 в 00:36</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Второй день без связи, только экстренные звонки, дозвониться до МТС уже стало не реально, причину отсутствия связи  не знаем( ни я одна), возможно буду расставаться с МТС и наверное без сожаления, хотя пользовалась много лет, испортились совсем.</td></tr>
+	</table>
+	<script>ratingfunc(263,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(254,1)" class='plus' title='Нравится' id='commratingplus254'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating254'>
+		</div>
+		<div style='display:none' id='comm2rating254'>
+		</div>
+		<div style='display:none' id='comm3rating254'>
+		</div>
+		<a href="javascript:ratingfunc(254,-1)" class='minus' title='Не нравится' id='commratingminus254'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text254'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1049'>
+					<img class='comment_img' src='/img.php?userid=1049&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1049'>Олег Французов</A>
+				<div class='comment_info_date'><time datetime='2015-10-12T15:32:48'>12.10.15 в 15:32</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Описываю ситуацию:
+1. Мой номер +79117913860
+2. Сейчас только обнаружил нехватку денег на счету
+3. Проверил расход в личном счете: Баланс на 01.09.2015 639,24 рубля - Баланс на 30.09.2015 47,94 рубля а израсходовано за этот период по номеру +7 (911) 791-38-60 71,50рубля, не сходится. Ищу дальше...
+4. Проверил информацию о платежах и вижу: 28.09.2015 10:14 Возврат части аванса -519,80рублей
+Вопрос№1: Что это за возврат, кому и куда вернули и кто и как санкционировал.
+Вопрос№2: Кто и, главное, когда вернёт именно мне.</td></tr>
+	</table>
+	<script>ratingfunc(254,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(253,1)" class='plus' title='Нравится' id='commratingplus253'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating253'>
+		</div>
+		<div style='display:none' id='comm2rating253'>
+		</div>
+		<div style='display:none' id='comm3rating253'>
+		</div>
+		<a href="javascript:ratingfunc(253,-1)" class='minus' title='Не нравится' id='commratingminus253'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text253'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_120'>
+					<img class='comment_img' src='/img.php?userid=120&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_120'>Василий Лазаренко</A>
+				<div class='comment_info_date'><time datetime='2015-09-25T13:24:49'>25.09.15 в 13:24</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Уважаемые читатели, постарайтесь обходиться без мата в комментариях, хотя это и тяжело. Заранее спасибо!</td></tr>
+	</table>
+	<script>ratingfunc(253,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(252,1)" class='plus' title='Нравится' id='commratingplus252'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating252'>
+		</div>
+		<div style='display:none' id='comm2rating252'>
+		</div>
+		<div style='display:none' id='comm3rating252'>
+		</div>
+		<a href="javascript:ratingfunc(252,-1)" class='minus' title='Не нравится' id='commratingminus252'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text252'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1029'>
+					<img class='comment_img' src='/img.php?userid=1029&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1029'>Светлана Сарманаева</A>
+				<div class='comment_info_date'><time datetime='2015-09-19T09:38:56'>19.09.15 в 09:38</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >пользуюсь связью теле2 мтс  с теле2 все отлично , но с мтс это просто беда . правильно пишут люди под их музыку только засыпать ,такое впечатление, что не только операторов нет , но и автомат с временем глючит, больше двух фраз он не говорит: либо 10 мин. либо больше 10 минут, такое впечатление,что вся компания веяно пьяная , нодо от них отключаться , будут тарифами зазывать, хоть бы посадили Нагиева отвечать за бабло,бежать надо отних достали суки, деньги гребут лопатой, а работать не научились, за такое отношение к людям в европе уже они бы на неустойках раззорились , а у нас только богатеют все лентяи, хоть бы кто-то добрался до ответственного , да жопу бы его от стула отрваь , пусть он возьмет наберет номер 0890 и поспит</td></tr>
+	</table>
+	<script>ratingfunc(252,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(250,1)" class='plus' title='Нравится' id='commratingplus250'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating250'>
+		</div>
+		<div style='display:none' id='comm2rating250'>
+		</div>
+		<div style='display:none' id='comm3rating250'>
+		</div>
+		<a href="javascript:ratingfunc(250,-1)" class='minus' title='Не нравится' id='commratingminus250'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text250'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1017'>
+					<img class='comment_img' src='/img.php?userid=1017&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1017'>Мераб Байтеряков</A>
+				<div class='comment_info_date'><time datetime='2015-08-30T17:29:27'>30.08.15 в 17:29</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Куда бля,  наподключали мне 15 Гигабайт интернета,  а ч пользуюсь максимум гиг в месяц </td></tr>
+	</table>
+	<script>ratingfunc(250,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(249,1)" class='plus' title='Нравится' id='commratingplus249'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating249'>
+		</div>
+		<div style='display:none' id='comm2rating249'>
+		</div>
+		<div style='display:none' id='comm3rating249'>
+		</div>
+		<a href="javascript:ratingfunc(249,-1)" class='minus' title='Не нравится' id='commratingminus249'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text249'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1017'>
+					<img class='comment_img' src='/img.php?userid=1017&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1017'>Мераб Байтеряков</A>
+				<div class='comment_info_date'><time datetime='2015-08-30T17:27:24'>30.08.15 в 17:27</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Бля!!случий мтс! Сами мне наподключают услуг хуй расплатиться, а оператору ебучему заибешься звонить. И выбора нет пользоваться другим оператором приходится тока эмтээсом конченым </td></tr>
+	</table>
+	<script>ratingfunc(249,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(237,1)" class='plus' title='Нравится' id='commratingplus237'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating237'>
+		</div>
+		<div style='display:none' id='comm2rating237'>
+		</div>
+		<div style='display:none' id='comm3rating237'>
+		</div>
+		<a href="javascript:ratingfunc(237,-1)" class='minus' title='Не нравится' id='commratingminus237'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text237'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_946'>
+					<img class='comment_img' src='/img.php?userid=946&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_946'>Разумов Алексей</A>
+				<div class='comment_info_date'><time datetime='2015-05-28T14:46:15'>28.05.15 в 14:46</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >конченная связь ! Я звонил 30 минут к оператору на 0890, все перетыкал и кароче так и не дозвонился.
+интернета нет совсем , в метро вообще нигде не ловит по сравнению с Билайном, видимо надо будет перейти на билайн.</td></tr>
+	</table>
+	<script>ratingfunc(237,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(236,1)" class='plus' title='Нравится' id='commratingplus236'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating236'>
+		</div>
+		<div style='display:none' id='comm2rating236'>
+		</div>
+		<div style='display:none' id='comm3rating236'>
+		</div>
+		<a href="javascript:ratingfunc(236,-1)" class='minus' title='Не нравится' id='commratingminus236'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text236'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_945'>
+					<img class='comment_img' src='/img.php?userid=945&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_945'>Вячеслав Фаульгабер</A>
+				<div class='comment_info_date'><time datetime='2015-05-27T18:25:30'>27.05.15 в 18:25</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Отвратительный сервис!!!!!Ужасная связь!!!Постоянно прерывается,дозвониться вообще нельзя...автоответчик протрындит..жмешь на клавишу - ни чего не происходит..300рублей кинул в терминал 2 часа уже не приходит деньги...чтоб вы провалились шарашкина контора!!!!</td></tr>
+	</table>
+	<script>ratingfunc(236,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(234,1)" class='plus' title='Нравится' id='commratingplus234'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating234'>
+		</div>
+		<div style='display:none' id='comm2rating234'>
+		</div>
+		<div style='display:none' id='comm3rating234'>
+		</div>
+		<a href="javascript:ratingfunc(234,-1)" class='minus' title='Не нравится' id='commratingminus234'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text234'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_926'>
+					<img class='comment_img' src='/img.php?userid=926&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_926'>Вадим Кузьмин</A>
+				<div class='comment_info_date'><time datetime='2015-04-30T18:43:17'>30.04.15 в 18:43</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Ужасный сервис-это еще мягко сказано! Купил сим карту МТС Смарт 12.04.15,заплатил 350 руб. Оказалось при звонке уже из дома что баланс минус 150 руб. Когда все таки дозвонился оператору,мне сказали что моя сим карта была активирована 06.03.2015,то есть месяц назад.Как это произошло мне так и не смогли пояснить.Пришлось писать претензию по их рекомендации.Через несколько дней деньги вернули на счет но не все. К тому же, что бы мне включили связь пришлось покрыть чужую задолженность 150 руб. В результате заплатив 500 руб.за сим карту и испортив настроение не на один день понял что с ними надо бороться только через суд!</td></tr>
+	</table>
+	<script>ratingfunc(234,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(228,1)" class='plus' title='Нравится' id='commratingplus228'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating228'>
+		</div>
+		<div style='display:none' id='comm2rating228'>
+		</div>
+		<div style='display:none' id='comm3rating228'>
+		</div>
+		<a href="javascript:ratingfunc(228,-1)" class='minus' title='Не нравится' id='commratingminus228'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text228'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_886'>
+					<img class='comment_img' src='/img.php?userid=886&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_886'>Елена Смирнова</A>
+				<div class='comment_info_date'><time datetime='2015-03-01T15:59:51'>01.03.15 в 15:59</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >отвратительно!!!!!!!!!!!!!!!!!!!!!! не дозвониться никуда, как связаться с оператором, там только как оплатить да как то-се подключить, куда жать если они подключили мне гудок который я не просила, и уже пришло оповещение от них что скоро спишут деньги хоть я и пользуюсь, как оказалось этим долбанным гудком, который мне не нужен, всего неделю. Постоянно вороют деньги!!!! Ужасная компания!!!!!!!
+</td></tr>
+	</table>
+	<script>ratingfunc(228,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(221,1)" class='plus' title='Нравится' id='commratingplus221'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating221'>
+		</div>
+		<div style='display:none' id='comm2rating221'>
+		</div>
+		<div style='display:none' id='comm3rating221'>
+		</div>
+		<a href="javascript:ratingfunc(221,-1)" class='minus' title='Не нравится' id='commratingminus221'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text221'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_824'>
+					<img class='comment_img' src='/img.php?userid=824&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_824'>Татьяна Родаева</A>
+				<div class='comment_info_date'><time datetime='2014-12-28T11:29:28'>28.12.14 в 11:29</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Перечитала все негативные высказывания о работе МТС и вообще то удивилась.... я с МТС не один год, так же мои родные и друзья, но я не слышала ничего такого о чем прочитала в сообщениях.... Мне нравятся услуги МТС, нравятся люди работающие в пунктах обслуживания, очень тактичные и вежливые с недопонимающими людьми, им хватает терпения объяснять людям, доступным языком, все проблемы связи, особенно людям в возрасте. ПОЗДРАВЛЯЮ ВСЕХ СОТРУДНИКОВ СВЯЗИ МТС С НАСТУПАЮЩИМ НОВЫМ 2015 ГОДОМ! ВСЕМ ЗДОРОВЬЯ И УСПЕХОВ!!!!!!!</td></tr>
+	</table>
+	<script>ratingfunc(221,0)</script>	
+	<div style='clear:both;'></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(300,1)" class='plus' title='Нравится' id='commratingplus300'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating300'>
+		</div>
+		<div style='display:none' id='comm2rating300'>
+		</div>
+		<div style='display:none' id='comm3rating300'>
+		</div>
+		<a href="javascript:ratingfunc(300,-1)" class='minus' title='Не нравится' id='commratingminus300'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text300'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_1723'>
+					<img class='comment_img' src='/img.php?userid=1723&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_1723'>Владимир Uzbek</A>
+				<div class='comment_info_date'><time datetime='2017-03-07T12:50:16'>07.03.17 в 12:50</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >раньше тоже так думал.</td></tr>
+	</table>
+	<script>ratingfunc(300,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(222,1)" class='plus' title='Нравится' id='commratingplus222'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating222'>
+		</div>
+		<div style='display:none' id='comm2rating222'>
+		</div>
+		<div style='display:none' id='comm3rating222'>
+		</div>
+		<a href="javascript:ratingfunc(222,-1)" class='minus' title='Не нравится' id='commratingminus222'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text222'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_120'>
+					<img class='comment_img' src='/img.php?userid=120&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_120'>Василий Лазаренко</A>
+				<div class='comment_info_date'><time datetime='2014-12-29T10:56:52'>29.12.14 в 10:56</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Татьяна, присоединяюсь! Несмотря на некоторые недочеты, в целом МТС - молодцы. Поздравляю сотрудников и клиентов МТС с Новым Годом!</td></tr>
+	</table>
+	<script>ratingfunc(222,0)</script>	
+	<div style='clear:both;'></div></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(213,1)" class='plus' title='Нравится' id='commratingplus213'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating213'>
+		</div>
+		<div style='display:none' id='comm2rating213'>
+		</div>
+		<div style='display:none' id='comm3rating213'>
+		</div>
+		<a href="javascript:ratingfunc(213,-1)" class='minus' title='Не нравится' id='commratingminus213'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text213'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_798'>
+					<img class='comment_img' src='/img.php?userid=798&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_798'>Юлия Меньшикова</A>
+				<div class='comment_info_date'><time datetime='2014-11-30T11:21:23'>30.11.14 в 11:21</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >переключилась на мтс  муж нахваливал такая компания хорошая  я переплевалась. деньги исчезают непонятно куда, связь дерьмо, дозвониться до оператора вообще отдельная история. выкину симку без сожаления. 
+ </td></tr>
+	</table>
+	<script>ratingfunc(213,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(209,1)" class='plus' title='Нравится' id='commratingplus209'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating209'>
+		</div>
+		<div style='display:none' id='comm2rating209'>
+		</div>
+		<div style='display:none' id='comm3rating209'>
+		</div>
+		<a href="javascript:ratingfunc(209,-1)" class='minus' title='Не нравится' id='commratingminus209'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text209'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_761'>
+					<img class='comment_img' src='/img.php?userid=761&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_761'>Юля Вишейко</A>
+				<div class='comment_info_date'><time datetime='2014-10-29T12:36:36'>29.10.14 в 12:36</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Просто кошмар!!! три дня назад пополнила на 100руб, сегодня заблокировали номер остаток денег на счету   -123 руб, пипец
+</td></tr>
+	</table>
+	<script>ratingfunc(209,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(207,1)" class='plus' title='Нравится' id='commratingplus207'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating207'>
+		</div>
+		<div style='display:none' id='comm2rating207'>
+		</div>
+		<div style='display:none' id='comm3rating207'>
+		</div>
+		<a href="javascript:ratingfunc(207,-1)" class='minus' title='Не нравится' id='commratingminus207'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text207'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_757'>
+					<img class='comment_img' src='/img.php?userid=757&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_757'>Сергей Контарев</A>
+				<div class='comment_info_date'><time datetime='2014-10-18T11:20:16'>18.10.14 в 11:20</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Деньги постоянно исчезают со счета. Я выяснил что компания мтс подключает платные услуги без ведома клиентов. Худшая связь.</td></tr>
+	</table>
+	<script>ratingfunc(207,0)</script>	
+	<div style='clear:both;'></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(229,1)" class='plus' title='Нравится' id='commratingplus229'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating229'>
+		</div>
+		<div style='display:none' id='comm2rating229'>
+		</div>
+		<div style='display:none' id='comm3rating229'>
+		</div>
+		<a href="javascript:ratingfunc(229,-1)" class='minus' title='Не нравится' id='commratingminus229'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text229'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_895'>
+					<img class='comment_img' src='/img.php?userid=895&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_895'>Владимир Александрович</A>
+				<div class='comment_info_date'><time datetime='2015-03-11T18:31:44'>11.03.15 в 18:31</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Это точно</td></tr>
+	</table>
+	<script>ratingfunc(229,0)</script>	
+	<div style='clear:both;'></div></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(206,1)" class='plus' title='Нравится' id='commratingplus206'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating206'>
+		</div>
+		<div style='display:none' id='comm2rating206'>
+		</div>
+		<div style='display:none' id='comm3rating206'>
+		</div>
+		<a href="javascript:ratingfunc(206,-1)" class='minus' title='Не нравится' id='commratingminus206'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text206'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_750'>
+					<img class='comment_img' src='/img.php?userid=750&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_750'>Вика Филатова</A>
+				<div class='comment_info_date'><time datetime='2014-10-12T08:50:35'>12.10.14 в 08:50</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Ужасная сеть,непонятно за что снимают денежные средства!!!Звонишь оператору,переводят на якобы специалиста,который не берет!Сеть одним словом-гавно!!!!!!
+</td></tr>
+	</table>
+	<script>ratingfunc(206,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(205,1)" class='plus' title='Нравится' id='commratingplus205'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating205'>
+		</div>
+		<div style='display:none' id='comm2rating205'>
+		</div>
+		<div style='display:none' id='comm3rating205'>
+		</div>
+		<a href="javascript:ratingfunc(205,-1)" class='minus' title='Не нравится' id='commratingminus205'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text205'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_744'>
+					<img class='comment_img' src='/img.php?userid=744&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_744'>Евгений Кескин</A>
+				<div class='comment_info_date'><time datetime='2014-10-04T14:20:11'>04.10.14 в 14:20</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Читаю и удивляюсь неужели кто то из МТС отого не читал?Согласен со всеми - НАДО ДЁРГАТЬ С ЭТОЙ ШАРАШКИНОЙ КОНТОРЫ !!!!! Хорошо бы все эти деньги запихать им в одно место НО...к сожаленью до них не дозвониться...Вот так.</td></tr>
+	</table>
+	<script>ratingfunc(205,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(204,1)" class='plus' title='Нравится' id='commratingplus204'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating204'>
+		</div>
+		<div style='display:none' id='comm2rating204'>
+		</div>
+		<div style='display:none' id='comm3rating204'>
+		</div>
+		<a href="javascript:ratingfunc(204,-1)" class='minus' title='Не нравится' id='commratingminus204'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text204'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_742'>
+					<img class='comment_img' src='/img.php?userid=742&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_742'>Анастасия Ковтун</A>
+				<div class='comment_info_date'><time datetime='2014-10-01T09:58:14'>01.10.14 в 09:58</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >У меня такая же ситуация ,есть бесплатные минуты а деньги уходят постоянно куда то (((и дозвониться до них не реально ,приходиться очень долго ждать (
+
+</td></tr>
+	</table>
+	<script>ratingfunc(204,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(203,1)" class='plus' title='Нравится' id='commratingplus203'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating203'>
+		</div>
+		<div style='display:none' id='comm2rating203'>
+		</div>
+		<div style='display:none' id='comm3rating203'>
+		</div>
+		<a href="javascript:ratingfunc(203,-1)" class='minus' title='Не нравится' id='commratingminus203'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text203'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_739'>
+					<img class='comment_img' src='/img.php?userid=739&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_739'>Екатерина Булатова</A>
+				<div class='comment_info_date'><time datetime='2014-09-30T12:31:30'>30.09.14 в 12:31</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Да что это такое!!! Операторы не отвечают!!! У меня бесплатные звонки по всей России за 100 руб. в месяц, а они сдирают деньги, что мне теперь делать, каждый день по 100 руб. класть что ли?! Я что миллионер? И не дозвонишься до операторов (спросить, почему деньги списываются).</td></tr>
+	</table>
+	<script>ratingfunc(203,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(201,1)" class='plus' title='Нравится' id='commratingplus201'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating201'>
+		</div>
+		<div style='display:none' id='comm2rating201'>
+		</div>
+		<div style='display:none' id='comm3rating201'>
+		</div>
+		<a href="javascript:ratingfunc(201,-1)" class='minus' title='Не нравится' id='commratingminus201'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text201'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_729'>
+					<img class='comment_img' src='/img.php?userid=729&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_729'>Евгения Авдиенко</A>
+				<div class='comment_info_date'><time datetime='2014-09-17T16:22:04'>17.09.14 в 16:22</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >спасибо большое за помощь
+</td></tr>
+	</table>
+	<script>ratingfunc(201,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(200,1)" class='plus' title='Нравится' id='commratingplus200'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating200'>
+		</div>
+		<div style='display:none' id='comm2rating200'>
+		</div>
+		<div style='display:none' id='comm3rating200'>
+		</div>
+		<a href="javascript:ratingfunc(200,-1)" class='minus' title='Не нравится' id='commratingminus200'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text200'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_727'>
+					<img class='comment_img' src='/img.php?userid=727&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_727'>Владимир Красновский</A>
+				<div class='comment_info_date'><time datetime='2014-09-16T14:06:16'>16.09.14 в 14:06</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Не буду уподобляться юным особям пишущим резко и как то не совсем правильно! Скажу только то что с МТС провел не один год, но разочарован и более того НЕ РАЗ ОБВОРОВАН этой компанией. Если ранее компания развиваясь ИНОГДА думала о клиентах...то сегодня вал заработанных не ЧЕСТНО денег застлал глаза владельцам и про СВОИХ абонентов они забыли..ВЫВОД...НУЖНО ПЕРЕХОДИТЬ ОТ ЭТОГО ОПЕРАТОРА!! Всех призываю ПОКИНУТЬ это логово ВОРОВ!!!! </td></tr>
+	</table>
+	<script>ratingfunc(200,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(192,1)" class='plus' title='Нравится' id='commratingplus192'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating192'>
+		</div>
+		<div style='display:none' id='comm2rating192'>
+		</div>
+		<div style='display:none' id='comm3rating192'>
+		</div>
+		<a href="javascript:ratingfunc(192,-1)" class='minus' title='Не нравится' id='commratingminus192'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text192'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_706'>
+					<img class='comment_img' src='/img.php?userid=706&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_706'>Галина Родина</A>
+				<div class='comment_info_date'><time datetime='2014-08-22T11:49:08'>22.08.14 в 11:49</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >КРОМЕ ТОГО ЧТО ЭТО УЖАСНАЯ СВЯЗЬ, так и оператора можно записать в красную книгу. Мне лично просто номер дорог, а перейти на другого оператора времени физически не хватает, но полагаю это уже просто дело времени.
+</td></tr>
+	</table>
+	<script>ratingfunc(192,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(189,1)" class='plus' title='Нравится' id='commratingplus189'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating189'>
+		</div>
+		<div style='display:none' id='comm2rating189'>
+		</div>
+		<div style='display:none' id='comm3rating189'>
+		</div>
+		<a href="javascript:ratingfunc(189,-1)" class='minus' title='Не нравится' id='commratingminus189'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text189'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_693'>
+					<img class='comment_img' src='/img.php?userid=693&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_693'>Лариса Капушева</A>
+				<div class='comment_info_date'><time datetime='2014-08-14T14:59:56'>14.08.14 в 14:59</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Дозвонилась кое как до оператора, она уперлась рогами и утверждает, что с моим тарифным планом я не могу оплачивать фильмы в плэй маркете с 2013 года якобы введен запрет, но я уже миллион раз оплачивала. Неужели они даже не могут подумать своей башкой прежде чем что то утверждать, они ответы на вопросы вообще походу с неба берут.</td></tr>
+	</table>
+	<script>ratingfunc(189,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(186,1)" class='plus' title='Нравится' id='commratingplus186'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating186'>
+		</div>
+		<div style='display:none' id='comm2rating186'>
+		</div>
+		<div style='display:none' id='comm3rating186'>
+		</div>
+		<a href="javascript:ratingfunc(186,-1)" class='minus' title='Не нравится' id='commratingminus186'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text186'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_688'>
+					<img class='comment_img' src='/img.php?userid=688&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_688'>Зоя Басистая</A>
+				<div class='comment_info_date'><time datetime='2014-08-12T09:47:26'>12.08.14 в 09:47</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >ужасная связь с оператором. все делается для людей в обратном смысле слова.деньги списываются не знаю куда. хотя бывает сутками не кому не звоню.отвратительная работа компании.стыд и позор такой компании.</td></tr>
+	</table>
+	<script>ratingfunc(186,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(181,1)" class='plus' title='Нравится' id='commratingplus181'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating181'>
+		</div>
+		<div style='display:none' id='comm2rating181'>
+		</div>
+		<div style='display:none' id='comm3rating181'>
+		</div>
+		<a href="javascript:ratingfunc(181,-1)" class='minus' title='Не нравится' id='commratingminus181'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text181'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_652'>
+					<img class='comment_img' src='/img.php?userid=652&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_652'>Рома Жуков</A>
+				<div class='comment_info_date'><time datetime='2014-07-24T17:45:20'>24.07.14 в 17:45</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >дошло до смешного сим карту покупали по своему паспорту,а оказалось номер оформлен на другого.Как так непонятно1</td></tr>
+	</table>
+	<script>ratingfunc(181,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(179,1)" class='plus' title='Нравится' id='commratingplus179'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating179'>
+		</div>
+		<div style='display:none' id='comm2rating179'>
+		</div>
+		<div style='display:none' id='comm3rating179'>
+		</div>
+		<a href="javascript:ratingfunc(179,-1)" class='minus' title='Не нравится' id='commratingminus179'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text179'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_645'>
+					<img class='comment_img' src='/img.php?userid=645&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_645'>Виктория Попова</A>
+				<div class='comment_info_date'><time datetime='2014-07-21T12:16:25'>21.07.14 в 12:16</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >очередной раз мтс сам мне подключил услугу интернет и сняли 250 рублей, хотя я ничего не подтверждала( надоела эта система....</td></tr>
+	</table>
+	<script>ratingfunc(179,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(176,1)" class='plus' title='Нравится' id='commratingplus176'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating176'>
+		</div>
+		<div style='display:none' id='comm2rating176'>
+		</div>
+		<div style='display:none' id='comm3rating176'>
+		</div>
+		<a href="javascript:ratingfunc(176,-1)" class='minus' title='Не нравится' id='commratingminus176'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text176'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_636'>
+					<img class='comment_img' src='/img.php?userid=636&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_636'>Mc Feniks</A>
+				<div class='comment_info_date'><time datetime='2014-07-16T04:52:22'>16.07.14 в 04:52</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Ууу у меня слов нет.Ладно то что не дозвонишься. 
+Я не разу не видел хоть одного честного проекта от мтс.
+С балансом вечно глюки.Снимают то вперед за месяц то больше чем должен и за что не знаешь.
+Оформляли кредитку в мтс банке.Так там вообще одни мошенники!!!
+Сам работаю веб разработчиком и дизайнером сам на себя.
+Так вечная проблема.То интернета нет.То связь полное ....!
+А самое главное часто заказчикам удобнее оплачивать на номер телефона(естественно мтс)Так то деньги приходят через сутки.То при выводе через киви Не выводит отказ в мтс.То тормоза.Дак и в предачу постоянные тех работы чуть ли не через день.о которых толком не сообщают.Пока не дозвонишься до оператора мозг ему не вынесешь дак они только под конец заявляют что у них тех работы либо отправляют к специалисту по техническим причинам. Честно говоря самая беспонтовая идиотская и дебильная связь это МТС Сколько было операторов.Билайн.Тупит местами но работает хоть как.Мегафон идеал был для меня.Хоть и самый дорогой но </td></tr>
+	</table>
+	<script>ratingfunc(176,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(171,1)" class='plus' title='Нравится' id='commratingplus171'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating171'>
+		</div>
+		<div style='display:none' id='comm2rating171'>
+		</div>
+		<div style='display:none' id='comm3rating171'>
+		</div>
+		<a href="javascript:ratingfunc(171,-1)" class='minus' title='Не нравится' id='commratingminus171'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text171'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_630'>
+					<img class='comment_img' src='/img.php?userid=630&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_630'>Стас Маневич</A>
+				<div class='comment_info_date'><time datetime='2014-07-14T14:04:16'>14.07.14 в 14:04</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Долбаный МТС когда надо срочно связаться со специалистом контактного центра то возникает большая проблема на этот счёт!!!Отвратительный сервис...даже скажем ужаснейший, если они нашли такой обход что бы не помогать нам в трудную минуту, своим клиентам то я так считаю компания которая не уважает своих клиентов обречена на провал!!!Не ужели нельзя найти какое ни будь решение для данной проблемы? Стыдно должно быть руководству компании за такой подход к людям, к своим клиентам!!! </td></tr>
+	</table>
+	<script>ratingfunc(171,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(167,1)" class='plus' title='Нравится' id='commratingplus167'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating167'>
+		</div>
+		<div style='display:none' id='comm2rating167'>
+		</div>
+		<div style='display:none' id='comm3rating167'>
+		</div>
+		<a href="javascript:ratingfunc(167,-1)" class='minus' title='Не нравится' id='commratingminus167'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text167'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_614'>
+					<img class='comment_img' src='/img.php?userid=614&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_614'>Alex Morze</A>
+				<div class='comment_info_date'><time datetime='2014-07-03T20:20:06'>03.07.14 в 20:20</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Отсутствует сеть подключения домашнего интернета МТС. Пройдя семь кругов ада общения с роботами, попадаешь в длинную очередь ожидания, потом приблатненный голосок дебило-девушки оператора убеждает что если перезагружать компьютер и роутер то соединение появится и  МЕХАНИЧЕСКИ ПОВРЕЖДЕННЫЕ ПРОВОДА НАХОДЯЩИЕСЯ ВНЕ ПРЕДЕЛОВ МОЕЙ КВАРТИРЫ, (а следовательно я не обязан стоять в подъезде и охранять их целостность) срастутся сами собой. А посколько она из своего места не видит обрыва значит его нет, а проблема в компьютере абонента. УБЛЮДО ТУПОГОЛОВЫЕ СОТРУДНИКИ ТЕХ.ПОДДЕРЖКИ МТС. сдохните тупые суки и сволочи. </td></tr>
+	</table>
+	<script>ratingfunc(167,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(166,1)" class='plus' title='Нравится' id='commratingplus166'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating166'>
+		</div>
+		<div style='display:none' id='comm2rating166'>
+		</div>
+		<div style='display:none' id='comm3rating166'>
+		</div>
+		<a href="javascript:ratingfunc(166,-1)" class='minus' title='Не нравится' id='commratingminus166'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text166'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_612'>
+					<img class='comment_img' src='/img.php?userid=612&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_612'>Борис Павлюченков</A>
+				<div class='comment_info_date'><time datetime='2014-07-02T14:40:52'>02.07.14 в 14:40</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Наиотвратительнейшее качество обслуживания.Хуже уже не бывает.Понимал что можно работать плохо и даже очень плохо, но чтобы настолько ПЛОХО...Два с половиной часа ожидания ответа!!!!!!!!!Ответ уже не нужен был, из принципа ждал на громкой связи.</td></tr>
+	</table>
+	<script>ratingfunc(166,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(164,1)" class='plus' title='Нравится' id='commratingplus164'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating164'>
+		</div>
+		<div style='display:none' id='comm2rating164'>
+		</div>
+		<div style='display:none' id='comm3rating164'>
+		</div>
+		<a href="javascript:ratingfunc(164,-1)" class='minus' title='Не нравится' id='commratingminus164'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text164'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_607'>
+					<img class='comment_img' src='/img.php?userid=607&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_607'>Артур Сафин</A>
+				<div class='comment_info_date'><time datetime='2014-06-28T20:52:07'>28.06.14 в 20:52</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Здравствуйте!!! Всегда получается быстро связаться с оператором МТС 0890 4 0.</td></tr>
+	</table>
+	<script>ratingfunc(164,0)</script>	
+	<div style='clear:both;'></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(178,1)" class='plus' title='Нравится' id='commratingplus178'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating178'>
+		</div>
+		<div style='display:none' id='comm2rating178'>
+		</div>
+		<div style='display:none' id='comm3rating178'>
+		</div>
+		<a href="javascript:ratingfunc(178,-1)" class='minus' title='Не нравится' id='commratingminus178'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text178'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_645'>
+					<img class='comment_img' src='/img.php?userid=645&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_645'>Виктория Попова</A>
+				<div class='comment_info_date'><time datetime='2014-07-21T12:14:45'>21.07.14 в 12:14</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >спасибо, а то весь день не могу связаться по номеру 0890))</td></tr>
+	</table>
+	<script>ratingfunc(178,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(172,1)" class='plus' title='Нравится' id='commratingplus172'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating172'>
+		</div>
+		<div style='display:none' id='comm2rating172'>
+		</div>
+		<div style='display:none' id='comm3rating172'>
+		</div>
+		<a href="javascript:ratingfunc(172,-1)" class='minus' title='Не нравится' id='commratingminus172'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text172'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_630'>
+					<img class='comment_img' src='/img.php?userid=630&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_630'>Стас Маневич</A>
+				<div class='comment_info_date'><time datetime='2014-07-14T14:09:48'>14.07.14 в 14:09</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Спасибо большое!</td></tr>
+	</table>
+	<script>ratingfunc(172,0)</script>	
+	<div style='clear:both;'></div></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(162,1)" class='plus' title='Нравится' id='commratingplus162'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating162'>
+		</div>
+		<div style='display:none' id='comm2rating162'>
+		</div>
+		<div style='display:none' id='comm3rating162'>
+		</div>
+		<a href="javascript:ratingfunc(162,-1)" class='minus' title='Не нравится' id='commratingminus162'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text162'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_596'>
+					<img class='comment_img' src='/img.php?userid=596&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_596'>Аня Яранцева</A>
+				<div class='comment_info_date'><time datetime='2014-06-20T15:41:14'>20.06.14 в 15:41</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >добрый день,все возмущаются а вы возьмите и устройтесь оператором, и посмотрем как вы будете работать.У меня всегда получается дозвонится с первого раза.</td></tr>
+	</table>
+	<script>ratingfunc(162,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(161,1)" class='plus' title='Нравится' id='commratingplus161'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating161'>
+		</div>
+		<div style='display:none' id='comm2rating161'>
+		</div>
+		<div style='display:none' id='comm3rating161'>
+		</div>
+		<a href="javascript:ratingfunc(161,-1)" class='minus' title='Не нравится' id='commratingminus161'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text161'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_594'>
+					<img class='comment_img' src='/img.php?userid=594&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_594'>Иван Зайцев</A>
+				<div class='comment_info_date'><time datetime='2014-06-19T16:26:08'>19.06.14 в 16:26</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Звон оператору каждые минут 10 и постоянно звучит информация "Время ожидания оператора составляет более 5 минут. Где они? Бесит уже. Надо по делу переговорить с оператором,а их нет на месте. Беспредел какой-то</td></tr>
+	</table>
+	<script>ratingfunc(161,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(160,1)" class='plus' title='Нравится' id='commratingplus160'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating160'>
+		</div>
+		<div style='display:none' id='comm2rating160'>
+		</div>
+		<div style='display:none' id='comm3rating160'>
+		</div>
+		<a href="javascript:ratingfunc(160,-1)" class='minus' title='Не нравится' id='commratingminus160'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text160'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_590'>
+					<img class='comment_img' src='/img.php?userid=590&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_590'>Мария Ситникова</A>
+				<div class='comment_info_date'><time datetime='2014-06-18T21:14:04'>18.06.14 в 21:14</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Это кошмар!!!!! они там вообще есть??? мало того, что операторы как будто не существуют, так и в салонах МТС валенки работают. </td></tr>
+	</table>
+	<script>ratingfunc(160,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(156,1)" class='plus' title='Нравится' id='commratingplus156'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating156'>
+		</div>
+		<div style='display:none' id='comm2rating156'>
+		</div>
+		<div style='display:none' id='comm3rating156'>
+		</div>
+		<a href="javascript:ratingfunc(156,-1)" class='minus' title='Не нравится' id='commratingminus156'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text156'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_571'>
+					<img class='comment_img' src='/img.php?userid=571&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_571'>Та Мирошникова</A>
+				<div class='comment_info_date'><time datetime='2014-06-06T20:07:11'>06.06.14 в 20:07</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >До  оператора  дозвониться ,  как  до  Бога...</td></tr>
+	</table>
+	<script>ratingfunc(156,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(155,1)" class='plus' title='Нравится' id='commratingplus155'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating155'>
+		</div>
+		<div style='display:none' id='comm2rating155'>
+		</div>
+		<div style='display:none' id='comm3rating155'>
+		</div>
+		<a href="javascript:ratingfunc(155,-1)" class='minus' title='Не нравится' id='commratingminus155'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text155'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_567'>
+					<img class='comment_img' src='/img.php?userid=567&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_567'>Виктор Qwer</A>
+				<div class='comment_info_date'><time datetime='2014-06-05T06:08:16'>05.06.14 в 06:08</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >что с мтс за проблемса денег не хвыатает решили всех обобрать 
+</td></tr>
+	</table>
+	<script>ratingfunc(155,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(153,1)" class='plus' title='Нравится' id='commratingplus153'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating153'>
+		</div>
+		<div style='display:none' id='comm2rating153'>
+		</div>
+		<div style='display:none' id='comm3rating153'>
+		</div>
+		<a href="javascript:ratingfunc(153,-1)" class='minus' title='Не нравится' id='commratingminus153'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text153'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_556'>
+					<img class='comment_img' src='/img.php?userid=556&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_556'>Геннадий Зубков</A>
+				<div class='comment_info_date'><time datetime='2014-05-30T15:21:22'>30.05.14 в 15:21</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Почему сняты 5 гривень на карателей без моего разрешения?  </td></tr>
+	</table>
+	<script>ratingfunc(153,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(148,1)" class='plus' title='Нравится' id='commratingplus148'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating148'>
+		</div>
+		<div style='display:none' id='comm2rating148'>
+		</div>
+		<div style='display:none' id='comm3rating148'>
+		</div>
+		<a href="javascript:ratingfunc(148,-1)" class='minus' title='Не нравится' id='commratingminus148'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text148'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_525'>
+					<img class='comment_img' src='/img.php?userid=525&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_525'>Екатерина Ефремова</A>
+				<div class='comment_info_date'><time datetime='2014-05-11T16:26:34'>11.05.14 в 16:26</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >надо набрать 0890 далее прослушав автоответчика 4 а там уже как раньше 0
+И быстро отвечают на ваш вызов)))
+</td></tr>
+	</table>
+	<script>ratingfunc(148,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(145,1)" class='plus' title='Нравится' id='commratingplus145'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating145'>
+		</div>
+		<div style='display:none' id='comm2rating145'>
+		</div>
+		<div style='display:none' id='comm3rating145'>
+		</div>
+		<a href="javascript:ratingfunc(145,-1)" class='minus' title='Не нравится' id='commratingminus145'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text145'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_506'>
+					<img class='comment_img' src='/img.php?userid=506&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_506'>Иван Бегичев</A>
+				<div class='comment_info_date'><time datetime='2014-05-05T19:06:46'>05.05.14 в 19:06</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >дозвониться до мтс как до ленина в мавзолей тоест невозможно жду уже 10 минут слушаю гребаную музыку
+</td></tr>
+	</table>
+	<script>ratingfunc(145,0)</script>	
+	<div style='clear:both;'></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(157,1)" class='plus' title='Нравится' id='commratingplus157'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating157'>
+		</div>
+		<div style='display:none' id='comm2rating157'>
+		</div>
+		<div style='display:none' id='comm3rating157'>
+		</div>
+		<a href="javascript:ratingfunc(157,-1)" class='minus' title='Не нравится' id='commratingminus157'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text157'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_571'>
+					<img class='comment_img' src='/img.php?userid=571&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_571'>Та Мирошникова</A>
+				<div class='comment_info_date'><time datetime='2014-06-06T20:10:19'>06.06.14 в 20:10</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' > Я  тоже  " люблю"    ночами  их  шарманку  слушать  ,  пока  не  засну  к  утру,  ожидаючи....</td></tr>
+	</table>
+	<script>ratingfunc(157,0)</script>	
+	<div style='clear:both;'></div></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(138,1)" class='plus' title='Нравится' id='commratingplus138'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating138'>
+		</div>
+		<div style='display:none' id='comm2rating138'>
+		</div>
+		<div style='display:none' id='comm3rating138'>
+		</div>
+		<a href="javascript:ratingfunc(138,-1)" class='minus' title='Не нравится' id='commratingminus138'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text138'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_467'>
+					<img class='comment_img' src='/img.php?userid=467&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_467'>Борис Терегулов</A>
+				<div class='comment_info_date'><time datetime='2014-04-17T08:25:17'>17.04.14 в 08:25</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >ТАКОЕ ЧУСТВО ЧТО МТС АБОНЕНТАМИ НЕ ДРУЖИТ ВЫ РАКИ ХОТЯ БЫ НАЙМИТЕ ОПЕРАТОРОВ ДЛЯ СВЯЗИ БЫСТРЕЙ БЫ АВГУСТ СВАЛЮ ОТ ВАС НУБОВ
+ </td></tr>
+	</table>
+	<script>ratingfunc(138,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(137,1)" class='plus' title='Нравится' id='commratingplus137'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating137'>
+		</div>
+		<div style='display:none' id='comm2rating137'>
+		</div>
+		<div style='display:none' id='comm3rating137'>
+		</div>
+		<a href="javascript:ratingfunc(137,-1)" class='minus' title='Не нравится' id='commratingminus137'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text137'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_467'>
+					<img class='comment_img' src='/img.php?userid=467&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_467'>Борис Терегулов</A>
+				<div class='comment_info_date'><time datetime='2014-04-17T08:11:52'>17.04.14 в 08:11</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >ЧТО ЕСЛИ ВЫ СУКИ МТС ЛИДЕР ИНЕТА НО ЗАЧЕМ НАГЛЕТЬ В РЕГИОНАХ ЕСЛИ ВАМ РАКАМ ЗАМЕНЫ НЕТУ
+</td></tr>
+	</table>
+	<script>ratingfunc(137,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(135,1)" class='plus' title='Нравится' id='commratingplus135'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating135'>
+		</div>
+		<div style='display:none' id='comm2rating135'>
+		</div>
+		<div style='display:none' id='comm3rating135'>
+		</div>
+		<a href="javascript:ratingfunc(135,-1)" class='minus' title='Не нравится' id='commratingminus135'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text135'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_467'>
+					<img class='comment_img' src='/img.php?userid=467&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_467'>Борис Терегулов</A>
+				<div class='comment_info_date'><time datetime='2014-04-17T08:08:37'>17.04.14 в 08:08</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >МТС ПАРТИЗАНЫ  БЛЯТЬ ДОСТАЛИ УЖЕ</td></tr>
+	</table>
+	<script>ratingfunc(135,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(132,1)" class='plus' title='Нравится' id='commratingplus132'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating132'>
+		</div>
+		<div style='display:none' id='comm2rating132'>
+		</div>
+		<div style='display:none' id='comm3rating132'>
+		</div>
+		<a href="javascript:ratingfunc(132,-1)" class='minus' title='Не нравится' id='commratingminus132'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text132'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_437'>
+					<img class='comment_img' src='/img.php?userid=437&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_437'>Анна Федюшкина</A>
+				<div class='comment_info_date'><time datetime='2014-04-02T11:53:01'>02.04.14 в 11:53</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Спасибо компании МТС!!!!!Работают операторы  быстро ,супер-молодцы!!!</td></tr>
+	</table>
+	<script>ratingfunc(132,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(128,1)" class='plus' title='Нравится' id='commratingplus128'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating128'>
+		</div>
+		<div style='display:none' id='comm2rating128'>
+		</div>
+		<div style='display:none' id='comm3rating128'>
+		</div>
+		<a href="javascript:ratingfunc(128,-1)" class='minus' title='Не нравится' id='commratingminus128'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text128'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_398'>
+					<img class='comment_img' src='/img.php?userid=398&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_398'>Радмир Бикбулатов</A>
+				<div class='comment_info_date'><time datetime='2014-03-04T08:59:18'>04.03.14 в 08:59</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >надо набрать 0890 далее прослушав автоответчика 4 а там уже как раньше 0</td></tr>
+	</table>
+	<script>ratingfunc(128,0)</script>	
+	<div style='clear:both;'></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(136,1)" class='plus' title='Нравится' id='commratingplus136'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating136'>
+		</div>
+		<div style='display:none' id='comm2rating136'>
+		</div>
+		<div style='display:none' id='comm3rating136'>
+		</div>
+		<a href="javascript:ratingfunc(136,-1)" class='minus' title='Не нравится' id='commratingminus136'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text136'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_467'>
+					<img class='comment_img' src='/img.php?userid=467&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_467'>Борис Терегулов</A>
+				<div class='comment_info_date'><time datetime='2014-04-17T08:09:42'>17.04.14 в 08:09</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >ЗАЕБСЯ УЖЕ СЛУШАТЬ ИХ ЕЛОДИЮ</td></tr>
+	</table>
+	<script>ratingfunc(136,0)</script>	
+	<div style='clear:both;'></div></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(126,1)" class='plus' title='Нравится' id='commratingplus126'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating126'>
+		</div>
+		<div style='display:none' id='comm2rating126'>
+		</div>
+		<div style='display:none' id='comm3rating126'>
+		</div>
+		<a href="javascript:ratingfunc(126,-1)" class='minus' title='Не нравится' id='commratingminus126'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text126'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_380'>
+					<img class='comment_img' src='/img.php?userid=380&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_380'>Даша Семенова</A>
+				<div class='comment_info_date'><time datetime='2014-02-13T21:52:21'>13.02.14 в 21:52</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >В ЦРУ быстрее дозвонится
+</td></tr>
+	</table>
+	<script>ratingfunc(126,0)</script>	
+	<div style='clear:both;'></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(134,1)" class='plus' title='Нравится' id='commratingplus134'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating134'>
+		</div>
+		<div style='display:none' id='comm2rating134'>
+		</div>
+		<div style='display:none' id='comm3rating134'>
+		</div>
+		<a href="javascript:ratingfunc(134,-1)" class='minus' title='Не нравится' id='commratingminus134'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text134'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_467'>
+					<img class='comment_img' src='/img.php?userid=467&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_467'>Борис Терегулов</A>
+				<div class='comment_info_date'><time datetime='2014-04-17T08:07:29'>17.04.14 в 08:07</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >ЭТО ТОЧНО</td></tr>
+	</table>
+	<script>ratingfunc(134,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(127,1)" class='plus' title='Нравится' id='commratingplus127'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating127'>
+		</div>
+		<div style='display:none' id='comm2rating127'>
+		</div>
+		<div style='display:none' id='comm3rating127'>
+		</div>
+		<a href="javascript:ratingfunc(127,-1)" class='minus' title='Не нравится' id='commratingminus127'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text127'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_391'>
+					<img class='comment_img' src='/img.php?userid=391&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_391'>Просто Так</A>
+				<div class='comment_info_date'><time datetime='2014-02-26T09:37:49'>26.02.14 в 09:37</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Это факт ужас...</td></tr>
+	</table>
+	<script>ratingfunc(127,0)</script>	
+	<div style='clear:both;'></div></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(117,1)" class='plus' title='Нравится' id='commratingplus117'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating117'>
+		</div>
+		<div style='display:none' id='comm2rating117'>
+		</div>
+		<div style='display:none' id='comm3rating117'>
+		</div>
+		<a href="javascript:ratingfunc(117,-1)" class='minus' title='Не нравится' id='commratingminus117'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text117'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_280'>
+					<img class='comment_img' src='/img.php?userid=280&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_280'>Карина Саблина</A>
+				<div class='comment_info_date'><time datetime='2013-12-01T13:37:11'>01.12.13 в 13:37</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >до оператора мтс дозвониться не возможно.Сервис просто отвратительный стал. Куда смотрит их начальство или только умеют быстро снимать деньги. позор. </td></tr>
+	</table>
+	<script>ratingfunc(117,0)</script>	
+	<div style='clear:both;'></div></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(103,1)" class='plus' title='Нравится' id='commratingplus103'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating103'>
+		</div>
+		<div style='display:none' id='comm2rating103'>
+		</div>
+		<div style='display:none' id='comm3rating103'>
+		</div>
+		<a href="javascript:ratingfunc(103,-1)" class='minus' title='Не нравится' id='commratingminus103'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text103'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_120'>
+					<img class='comment_img' src='/img.php?userid=120&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_120'>Василий Лазаренко</A>
+				<div class='comment_info_date'><time datetime='2013-07-15T17:43:28'>15.07.13 в 17:43</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >У меня получается быстро дозвониться так, как и написано: звоним 0890, ждем пока начнут перечислять пункты меню, нажимаем 2-2-0 и вуаля! Минута ожидания и оператор готов отвечать на ваши вопросы )))</td></tr>
+	</table>
+	<script>ratingfunc(103,0)</script>	
+	<div style='clear:both;'></div><div class='comment_div'>
+	<div class='voting'>
+		<a href = "javascript:ratingfunc(133,1)" class='plus' title='Нравится' id='commratingplus133'></a>
+		<div class='score' title='Всего 46: ↑40 и ↓6' id='commrating133'>
+		</div>
+		<div style='display:none' id='comm2rating133'>
+		</div>
+		<div style='display:none' id='comm3rating133'>
+		</div>
+		<a href="javascript:ratingfunc(133,-1)" class='minus' title='Не нравится' id='commratingminus133'></a>
+	
+	</div>
+	
+	<table class='comment_info' id='comm_text133'>
+		<tr>
+			<td rowspan='2' class='comment_info_img'>
+				<A class='comment_img' href='/index.php/Пользователь:vk_437'>
+					<img class='comment_img' src='/img.php?userid=437&flag=sqr'>
+				</A>
+			</td>
+			<td class='comment_info_user'>
+				<A href='/index.php/Пользователь:vk_437'>Анна Федюшкина</A>
+				<div class='comment_info_date'><time datetime='2014-04-02T11:54:17'>02.04.14 в 11:54</time>
+				</div>
+			</td>
+		</tr><tr><td class='comment_text' >Точно все так и происходит!</td></tr>
+	</table>
+	<script>ratingfunc(133,0)</script>	
+	<div style='clear:both;'></div></div></div></div>	
+				</div>
+				<div id="searchresult2"></div>
+			
+				<IDXSKIP><div class="show-for-small" id="mobile_metrics">
+					<!-- Yandex.Metrika informer -->
+					<a href="http://metrika.yandex.ru/stat/?id=6458071&amp;from=informer"
+					target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/6458071/3_0_FFFFFFFF_FFFFFFFF_0_pageviews"
+					style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:6458071,lang:'ru'});return false}catch(e){}"/></a>
+					<!-- /Yandex.Metrika informer -->
+					<!--LiveInternet logo--><a href="http://www.liveinternet.ru/click"
+					target="_blank"><img src="//counter.yadro.ru/logo?15.1"
+					title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+					alt="" border="0" width="88" height="31"/></a><!--/LiveInternet-->				
+				</div></IDXSKIP>
+			</article>	
+		</div>
+	</div><!--noindex--><div class="hide" id="right_column"><div id="r_column" class="r_column"><div class="rctab catid=14 and "><IDXSKIP><div class="rctitle">Что посмотреть</div></IDXSKIP><ul class="block-grid one-up mobile">
+			<li class="page_table" onclick="javascript:document.location.href='/index.php/Как позвонить оператору ТЕЛЕ2'">
+				<div class="page_link_img">
+					<a href="/index.php/Как позвонить оператору ТЕЛЕ2" class="page_link_img"><img class="page_link_img_right" src="/index.php/Файл:Как позвонить оператору ТЕЛЕ2.jpg?flag=mini"alt="Как позвонить оператору ТЕЛЕ2"></a>
+					<div class="page_rating">350</div>
+				</div>
+				<a class="page_link" href="/index.php/Как позвонить оператору ТЕЛЕ2">Как позвонить оператору ТЕЛЕ2</a>
+				<a href="/index.php/Категория:Сотовые операторы">Сотовые операторы</a>
+				<div class="clear"></div>
+			</li>
+		
+			<li class="page_table" onclick="javascript:document.location.href='/index.php/Как бесплатно отправить СМС сообщение с компьютера (iSendSms)'">
+				<div class="page_link_img">
+					<a href="/index.php/Как бесплатно отправить СМС сообщение с компьютера (iSendSms)" class="page_link_img"><img class="page_link_img_right" src="/index.php/Файл:Как бесплатно отправить СМС сообщение с компьютера (iSendSms).jpg?flag=mini"alt="Как бесплатно отправить СМС сообщение с компьютера (iSendSms)"></a>
+					<div class="page_rating">195</div>
+				</div>
+				<a class="page_link" href="/index.php/Как бесплатно отправить СМС сообщение с компьютера (iSendSms)">Как бесплатно отправить СМС сообщение с компьютера (iSendSms)</a>
+				<a href="/index.php/Категория:Сотовые операторы">Сотовые операторы</a>
+				<div class="clear"></div>
+			</li>
+		
+			<li class="page_table" onclick="javascript:document.location.href='/index.php/Как отключить услугу GOODOK на МТС'">
+				<div class="page_link_img">
+					<a href="/index.php/Как отключить услугу GOODOK на МТС" class="page_link_img"><img class="page_link_img_right" src="/index.php/Файл:Как отключить услугу GOODOK на МТС.jpg?flag=mini"alt="Как отключить услугу GOODOK на МТС"></a>
+					<div class="page_rating">250</div>
+				</div>
+				<a class="page_link" href="/index.php/Как отключить услугу GOODOK на МТС">Как отключить услугу GOODOK на МТС</a>
+				<a href="/index.php/Категория:Сотовые операторы">Сотовые операторы</a>
+				<div class="clear"></div>
+			</li>
+		
+			<li class="page_table" onclick="javascript:document.location.href='/index.php/Как пользоваться симкартой МТС в Крыму'">
+				<div class="page_link_img">
+					<a href="/index.php/Как пользоваться симкартой МТС в Крыму" class="page_link_img"><img class="page_link_img_right" src="/index.php/Файл:Как пользоваться симкартой МТС в Крыму.jpg?flag=mini"alt="Как пользоваться симкартой МТС в Крыму"></a>
+					<div class="page_rating">137</div>
+				</div>
+				<a class="page_link" href="/index.php/Как пользоваться симкартой МТС в Крыму">Как пользоваться симкартой МТС в Крыму</a>
+				<a href="/index.php/Категория:Сотовые операторы">Сотовые операторы</a>
+				<div class="clear"></div>
+			</li>
+		
+			<li class="page_table" onclick="javascript:document.location.href='/index.php/Как позвонить оператору Мегафон'">
+				<div class="page_link_img">
+					<a href="/index.php/Как позвонить оператору Мегафон" class="page_link_img"><img class="page_link_img_right" src="/index.php/Файл:Как позвонить оператору Мегафон.jpg?flag=mini"alt="Как позвонить оператору Мегафон"></a>
+					<div class="page_rating">417</div>
+				</div>
+				<a class="page_link" href="/index.php/Как позвонить оператору Мегафон">Как позвонить оператору Мегафон</a>
+				<a href="/index.php/Категория:Сотовые операторы">Сотовые операторы</a>
+				<div class="clear"></div>
+			</li>
+		
+			<li class="page_table" onclick="javascript:document.location.href='/index.php/Как позвонить оператору Билайн'">
+				<div class="page_link_img">
+					<a href="/index.php/Как позвонить оператору Билайн" class="page_link_img"><img class="page_link_img_right" src="/index.php/Файл:Как позвонить оператору Билайн.jpg?flag=mini"alt="Как позвонить оператору Билайн"></a>
+					<div class="page_rating">195</div>
+				</div>
+				<a class="page_link" href="/index.php/Как позвонить оператору Билайн">Как позвонить оператору Билайн</a>
+				<a href="/index.php/Категория:Сотовые операторы">Сотовые операторы</a>
+				<div class="clear"></div>
+			</li>
+		</ul></div>
+	<div class="rctab">
+		<IDXSKIP><div class="rctitle">Чем заняться</div></IDXSKIP>
+		<ul>
+		<IDXSKIP><li>
+			<a href="/index.php?action=addsite&tip=0">Написать статью</a>
+		</li></IDXSKIP>
+		<IDXSKIP><li>
+			<a href="/index.php/Категория:Без%20картинок">Добавить картинки</a>
+		</li></IDXSKIP>
+		<IDXSKIP><li>
+			<a href="/index.php/Категория:Без%20описания">Добавить описание</a>
+		</li></IDXSKIP>
+		<IDXSKIP><li>
+			<a href="/index.php/Категория:Без%20тегов">Добавить теги</a>
+		</li></IDXSKIP>
+		<IDXSKIP><li>
+			<a href="/index.php?action=messages&id=141">Сообщить об ошибке</a>
+		</li></IDXSKIP>
+	
+		</ul>
+	</div>
+	<div class="rctab">
+		<IDXSKIP><div class="rctitle">Что происходит</div></IDXSKIP>
+	<p><IDXSKIP>Сейчас на сайте </IDXSKIP><IDXSKIP><a href="/index.php/Категория:Пользователи online">0 пользователей</a></IDXSKIP> и 50 гостей.</p><P><IDXSKIP><A href='/index.php/Пользователь:vk_1844'>Артём Юдин</A></IDXSKIP>  <IDXSKIP>добавил(а) файл </IDXSKIP><A href='/index.php/Файл:Как посмотреть где находится автобус онлайн 4.jpg?flag=edit'><IDXSKIP>Как посмотреть где находится автобус онлайн 4.jpg</IDXSKIP></A><br><IDXSKIP><time> вчера</time></IDXSKIP></P><P><IDXSKIP><A href='/index.php/Пользователь:vk_120'>Василий Лазаренко</A></IDXSKIP>  <IDXSKIP>правил(а) статью </IDXSKIP><A href='/index.php/Загрузка сайта через анонимайзер и опцию turbo'><IDXSKIP>Загрузка сайта через анонимайзер и опцию turbo</IDXSKIP></A><br><IDXSKIP><time>7 дней назад</time></IDXSKIP></P><P><IDXSKIP><A href='/index.php/Пользователь:vk_120'>Василий Лазаренко</A></IDXSKIP>  <IDXSKIP>добавил(а) комментарий </IDXSKIP><IDXSKIP><A href='/index.php/Как посмотреть где находится автобус онлайн#comm_text304'>Заходил раз пять, все работает</A></IDXSKIP><br><IDXSKIP><time>11 дней назад</time></IDXSKIP></P><P><IDXSKIP><A href='/index.php/Пользователь:vk_120'>Василий Лазаренко</A></IDXSKIP>  <IDXSKIP>правил(а) статью </IDXSKIP><A href='/index.php/Как посмотреть где находится автобус онлайн'><IDXSKIP>Как посмотреть где находится автобус онлайн</IDXSKIP></A><br><IDXSKIP><time>11 дней назад</time></IDXSKIP></P><P><IDXSKIP><A href='/index.php/Пользователь:vk_120'>Василий Лазаренко</A></IDXSKIP>  <IDXSKIP>правил(а) статью </IDXSKIP><IDXSKIP><A href='/index.php/Как научиться ездить на механике'>Как научиться ездить на механике</A></IDXSKIP><br><IDXSKIP><time>11 дней назад</time></IDXSKIP></P>
+	</div>
+	
+			<IDXSKIP><div class="rctab">
+				<div class="rctitle">
+					Статистика
+				</div>
+				<div class="metrics">
+			<!-- Yandex.Metrika informer -->
+				<a href="http://metrika.yandex.ru/stat/?id=6458071&amp;from=informer"
+				target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/6458071/3_0_FFFFFFFF_FFFFFFFF_0_pageviews"
+				style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:6458071,lang:'ru'});return false}catch(e){}"/></a>
+				<!-- /Yandex.Metrika informer -->
+
+				<!-- Yandex.Metrika counter -->
+				<script type="text/javascript">
+				(function (d, w, c) {
+						(w[c] = w[c] || []).push(function() {
+								try {
+										w.yaCounter6458071 = new Ya.Metrika({id:6458071,
+														webvisor:true,
+														clickmap:true,
+														trackLinks:true,
+														accurateTrackBounce:true});
+								} catch(e) { }
+						});
+
+						var n = d.getElementsByTagName("script")[0],
+								s = d.createElement("script"),
+								f = function () { n.parentNode.insertBefore(s, n); };
+						s.type = "text/javascript";
+						s.async = true;
+						s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+						if (w.opera == "[object Opera]") {
+								d.addEventListener("DOMContentLoaded", f, false);
+						} else { f(); }
+				})(document, window, "yandex_metrika_callbacks");
+				</script>
+				<noscript><div><img src="//mc.yandex.ru/watch/6458071" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+				<!-- /Yandex.Metrika counter -->
+	
+			
+	<!--LiveInternet counter--><script type="text/javascript"><!--
+	new Image().src = "//counter.yadro.ru/hit?r"+
+	escape(document.referrer)+((typeof(screen)=="undefined")?"":
+	";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+	screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+	";"+Math.random();//--></script><!--/LiveInternet-->
+	<!--LiveInternet logo--><a href="http://www.liveinternet.ru/click"
+	target="_blank"><img src="//counter.yadro.ru/logo?15.1"
+	title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"
+	alt="" border="0" width="88" height="31"/></a><!--/LiveInternet-->
+			
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-22395420-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+			</div>
+			</div></IDXSKIP>
+			 
+			<IDXSKIP><div class="rctab">
+				<div class="rctitle">Реклама</div>
+				<div class="rcbanner">
+
+					<div class="show-for-medium">
+						<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<ins class="adsbygoogle"
+								 style="display:inline-block;width:120px;height:600px"
+								 data-ad-client="ca-pub-9377993969415361"
+								 data-ad-slot="2665700254"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+					<div class="show-for-large-up">
+						<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<ins class="adsbygoogle"
+								 style="display:inline-block;width:300px;height:600px"
+								 data-ad-client="ca-pub-9377993969415361"
+								 data-ad-slot="4529053059"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</div>
+				</div>
+			</div></IDXSKIP>
+	</div></div><!--/noindex--><div style="clear:both;"></div></div>
+	<footer>
+		<div>
+			<div style="float:left; padding-left:10px;"><span class="footer"><IDXSKIP>Первый Познавательный Портал. Copyright © 2013</IDXSKIP></span>
+			</div> 
+			<IDXSKIP><div style="float:right; padding-right:10px;"><span class="footer">Programmed by <a style="color:#fff" href="/index.php/Пользователь:Master">Dm. Voronin</a></span>
+			</div></IDXSKIP>
+		</div>
+	</footer>
+	  
+	  
+		<!-- Included JS Files (Compressed)  -->
+	  <script src="/javascripts/foundation.min.js"></script>
+	  
+	  <!-- Initialize JS Plugins -->
+	  <script src="/javascripts/app.js"></script>
+	  
+		<script>
+			resizeControl();
+			gotoBottom('messages_div');
+		</script>
+		
+	
+
+	<script type="text/javascript" src="//vk.com/js/api/openapi.js?111"></script>
+	</div></body></html>

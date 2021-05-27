@@ -1,0 +1,574 @@
+sami-svoimi-rukami.ru/item/916/peresolila-sup-chto-delat
+<html>
+
+<head>
+  <title>Пересолила суп, что делать? | Сами своими руками</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="description" content="Если я пересолила суп, что делать и как можно спасти пересоленный суп" />
+<link rel="stylesheet" href="http://www.sami-svoimi-rukami.ru/js/jwysiwyg/jquery.wysiwyg.css" type="text/css" /> 
+<link rel="stylesheet" href="http://www.sami-svoimi-rukami.ru/css/style.css" type="text/css" />
+
+<script src="http://www.sami-svoimi-rukami.ru/js/jquery.min.js"></script>
+<script src="http://www.sami-svoimi-rukami.ru/js/jwysiwyg/jquery.wysiwyg.js"></script>
+<script src="http://www.sami-svoimi-rukami.ru/js/ajaxupload.js"></script>
+
+
+ <script>
+ 
+  function print_switch_images()
+    {
+        var nopic = $("#print_nopic:checked").val();
+        
+         
+            if(nopic == 1)
+                {
+                   $(".item_images").hide();  
+                }
+                else
+                {
+                   $(".item_images").show(); 
+                }
+    }
+ 
+  function show_loading(type,div_id)
+  {
+     $(function () 
+     { 
+     if(div_id != "")
+      {
+       if(type == 1)
+         {
+          //show loading
+           if(div_id == "loading_pages")
+             {
+          $("."+div_id).html("<img src=art/throbber.gif border=0>");   
+             }
+             else
+             {
+          $("#"+div_id).html("<img src=art/throbber.gif border=0>");
+             }    			 
+         }
+       else if(type == 0)
+         {
+          //show loading
+           if(div_id == "loading_pages")
+             {
+             $("."+div_id).html("");   
+             }
+             else
+             {
+          $("#"+div_id).html("");
+             }    			 
+         }  
+       }  
+  
+     });
+  }
+ 
+ function show_repeat_box()
+  {
+       
+	   $("#repeat_box").show(); 
+  
+  }
+ 
+ function email_save()
+  {
+      $(function() 
+	   {
+	    var email = $("#email_sub").val();
+ 		 var url = "data.php?a=email&b=save&email="+email;
+  	    var loading_div = "email_save_box "; 
+	    
+	   
+ 
+      });
+  }
+ 
+ function add_fav_msg()
+    {
+      
+      $("#fav_add_msg").html("<P><a href=index.php?a=register><b>Зарегистрируйтесь</b></a> и сможете создавать свой список Избранного.<br>Самое интересное всегда под рукой!<P>");   
+      
+    }
+    
+  function comment_set_reply(comment_id)
+    {
+      
+      if(comment_id > 0)
+        {
+          $("#reply_id").val(comment_id);
+          
+          var tmp = "<P>Ответ на комментарий от: ";
+              tmp += $("#comment_subject_"+comment_id).html();
+              tmp += " ("+$("#comment_date_"+comment_id).html()+") - <a href=#js onclick=\"comment_set_reply(0);\">отменить</a>";
+            
+          $("#comment_reply_box").html(tmp);
+          $("#comment_reply_box").show("fast");          
+          
+        }
+        else
+        {
+          $("#reply_id").val(0);
+          $("#comment_reply_box").hide("fast");  
+          $("#comment_reply_box").html("");          
+        }     
+        
+    }
+    
+  
+
+  </script>
+ 
+<script>
+ $(function () 
+     { 
+//slides the element with class "menu_body" when paragraph with class "menu_head" is clicked
+$("#firstpane p.menu_head").click(function()
+{
+    $(this).css({backgroundImage:"url(http://www.sami-svoimi-rukami.ru/art/arrow_down.gif)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+    
+});
+   });
+   
+</script>
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-19775617-2']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+<script type="text/javascript">
+window.google_analytics_uacct = "UA-19775617-2";
+</script>
+
+<script>
+ function run_search()
+   {
+     $(function () 
+     { 
+      var search_txt =  encodeURIComponent(jQuery.trim($("#search").val()));
+      location.href= 'http://www.sami-svoimi-rukami.ru/index.php?search='+search_txt;     
+     });
+   
+   }
+   
+ function search_remove_txt()
+   {
+     $(function () 
+     { 
+      var search_txt =  $("#search").val();
+        if(search_txt == "Что ищем?")
+          {
+          $("#search").val("");
+          $("#search").addClass("input_search_black");
+          }           
+     });
+   
+   }
+   
+  function email_remove_txt()
+   {
+     $(function () 
+     { 
+        var email_txt =  $("#email_sub").val();
+       
+        if(email_txt == "ваш e-mail")
+          {            
+          $("#email_sub").val("");
+          $("#email_sub").addClass("input_search_black");
+          }           
+     });
+   
+   } 
+   
+</script>
+
+<script type="text/javascript">
+function addLink() {
+var body_element = document.getElementsByTagName('body')[0];
+var selection;
+ selection = window.getSelection();
+var pagelink = "<a href='"+document.location.href+"'>.</a>";
+var copytext = selection + pagelink;
+var newdiv = document.createElement('div');
+ newdiv.style.position='absolute';
+ newdiv.style.left='-99999px';
+ body_element.appendChild(newdiv);
+ newdiv.innerHTML = copytext;
+ selection.selectAllChildren(newdiv);
+ window.setTimeout(function() {
+ body_element.removeChild(newdiv);
+},0);
+}
+ document.oncopy = addLink;
+</script>
+
+
+
+</head>
+
+<BODY BGCOLOR=#FFFFFF link=#0000EE vlink=#0000EE  LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 rightmargin="0" bottommargin="0">
+
+  
+<table border=0 width=1024 cellspacing=0 cellpadding=0 align=center bgcolor=#f9f2d3>
+ <IDXSKIP><tr><td colspan=2 width=634 valign=bottom><a href=http://www.sami-svoimi-rukami.ru><img src=http://www.sami-svoimi-rukami.ru/art/top_left.gif width=633 height=75 border=0></a></td>
+  
+ </tr></IDXSKIP>
+
+  <IDXSKIP><tr><td valign=bottom background=http://www.sami-svoimi-rukami.ru/art/top_mid_bg.gif><a href=http://www.sami-svoimi-rukami.ru/index.php?a=new><img src=http://www.sami-svoimi-rukami.ru/art/but_add.gif width=185 height=40 border=0></a><a href=http://www.sami-svoimi-rukami.ru/index.php><img src=http://www.sami-svoimi-rukami.ru/art/but_home.gif width=73 height=40 border=0></a><a href=http://www.sami-svoimi-rukami.ru/index.php?a=about><img src=http://www.sami-svoimi-rukami.ru/art/but_about.gif width=97 height=40 border=0></a><a href=http://www.sami-svoimi-rukami.ru/index.php?a=contacts><img src=http://www.sami-svoimi-rukami.ru/art/but_contacts.gif width=86 height=40 border=0></a><img src=http://www.sami-svoimi-rukami.ru/art/1x1.gif width=235 height=1 border=0></td><td nowrap align=center valign=middle background=http://www.sami-svoimi-rukami.ru/art/top_mid_bg.gif><input type=text name=search id=search size=15 class=input_search value="Что ищем?" onclick=search_remove_txt();> <input type=button value=OK class=input_search_but onclick=run_search();></td></tr></IDXSKIP>
+  
+<IDXSKIP><tr><td valign=bottom colspan=2>
+ <table border=0 width=1024 cellspacing=0 cellpadding=0><tr>
+   <td width=18><img src=http://www.sami-svoimi-rukami.ru/art/1x1.gif width=18 height=1 border=0></td>
+   <td width=206 align=center valign=top>
+   <div style="min-height:120px; background-color:#a28745;">
+   
+      <form action=http://www.sami-svoimi-rukami.ru/index.php method=post> 
+   <table border=0 width=205 cellspacing=0 cellpadding=3 align=right bgcolor="#a28745"><tr><td width=50><span class=mail_sub_txt>Логин</span></td><td width=100 align=right><input type=text name=uid size=10 class=input_text_login></td></tr>
+   <tr><td><span class=mail_sub_txt>Пароль</span></td><td align=right><input type=password name=pwd size=10 class=input_text_login></td></tr>
+   <tr><td><a href=http://www.sami-svoimi-rukami.ru/index.php?a=register style="color:#F3E3B2;">Регистрация</a></td><td align=right><input type=submit class=input_button value="Ok"></form></td></tr>
+   
+     </table> 
+  </div>
+  
+     
+ 
+   </td><td width=15><img src=http://www.sami-svoimi-rukami.ru/art/1x1.gif width=15 height=1 border=0></td><td width=800><!-- Яндекс.Директ -->
+<script type="text/javascript">
+yandex_partner_id = 134871;
+yandex_site_bg_color = 'FFFFFF';
+yandex_ad_format = 'direct';
+yandex_font_size = 1.0;
+yandex_direct_type = 'horizontal';
+yandex_direct_limit = 3;
+yandex_direct_title_font_size = 3;
+yandex_direct_header_bg_color = 'FEEAC7';
+yandex_direct_title_color = 'CC0000';
+yandex_direct_url_color = '006600';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = '0066FF';
+yandex_direct_favicon = true;
+yandex_no_sitelinks = false;
+var jquery_start = true; 
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+</script></td></tr></IDXSKIP>
+   
+   <tr>
+   <IDXSKIP><td valign=top><img src=http://www.sami-svoimi-rukami.ru/art/1x1.gif width=18 height=1 border=0></td></IDXSKIP>
+   <td valign=top><img src=http://www.sami-svoimi-rukami.ru/art/1x1.gif width=1 height=10 border=0><br><img src=http://www.sami-svoimi-rukami.ru/art/but_menu.gif width=206 height=37 border=0>
+   <br>
+   <div id="firstpane" class="menu_list"><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Мебель</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/12/kak-sdelat-shkaf-kupe-chertezhi-vstroennyi" class=group_small>Шкафы  (14)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/13/dveri-ustanovka-dverei-mezhkomnatnyh-mezhkomnatnye-razdvizhnye-kupe" class=group_small>Двери  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/14/kak-sdelat-krovat-chertezhi-dvuhyarusnaya-dvuspalnaya-podium-cherdak-detskaya" class=group_small>Кровать  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/15/kak-sdelat-stol-kompyuternyj-tennisnyj-biljardnyj-derewyannyi-skladnoi-chertezhi" class=group_small>Столы  (9)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/16/kak-sdelat-stul-skladnoy-restavraciya-stulev-remont-raskladnoj" class=group_small>Стулья  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/17/mjagkaja-mebel-peretyazhka-mebeli-divan-kreslo" class=group_small>Мягкая мебель  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/18/polki-akusticheskaja-polka-dlya-obuvi-kak-sdelat-polku-nastennye-knizhnye-dlya-cvetov" class=group_small>Полки  (8)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Ремонт</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/4/detskaya-komnata-remont-foto" class=group_small>Детская комната  (4)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/5/kuhnya-remont-kuhni-foto" class=group_small>Кухня  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/6/vannaya-komnata-remont" class=group_small>Ванная  (18)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/7/lodzhiya-balkon-otdelka-uteplenie-remont-lodzhii" class=group_small>Лоджия, балкон  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/8/garderobnaja-garderobnye-komnaty-prixozhaya-remont" class=group_small>Гардеробная, прихожая </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/9/potolok-iz-gipsokartona-podvesnoy-remont" class=group_small>Потолок  (4)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/10/pol-stjazhka-pola-ukladka-laminata-teplyi-vodyanoy-derevjannyj-remont" class=group_small>Пол  (16)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/11/steny-shtukaturka-vyravnivanie-shpaklevka-iz-gipsokartona-remont" class=group_small>Стены  (21)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/167/dizajn-interera" class=group_small>Дизайн интерьера  (9)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Подарки</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/20/otkrytki-master-class-kak-sdelat-na-svadbu-svadebnie-ljubimomu-originalnye" class=group_small>Открытки  (9)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/21/na-8-marta-podelki-k-9-maya-pashe-pasxalnye-yajca" class=group_small>8 марта, 9 мая, Пасха  (10)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/22/suveniry-kak-sdelat-iz-dereva-rakushek" class=group_small>Сувениры  (19)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/23/podarok-mame-i-pape-kak-sdelat" class=group_small>Маме и Папе  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/33/upakovka-podarka-podarkov" class=group_small>Упаковка  (10)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/154/novyj-god-igrushki-podelki-suveniry-k-novomu-godu-otkrytki-ukrasheniya-oformlenie-podarki" class=group_small>Новый год  (26)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/155/rozhdestvo-podelki-k-rozhdestvu-podarki-otkrytki-igrushki-ukrashenija" class=group_small>Рождество  (3)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Поделки</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/25/tsvety-tsvetok-iz-tkani-bumagi-lent-iskusstvennye-bukety-tsvetov" class=group_small>Цветы  (31)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/26/igrushki-mjagkie-razvivayushhie-kak-sdelat-igrushku-dlya-detej-malyshej" class=group_small>Игрушки  (72)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/27/Kukly-tildy-kak-sdelat-kuklu-odezhda-mebel-dlya-kukol-tryapichnye-iz-plastika-izgotovlenie-vykrojki" class=group_small>Куклы  (9)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/29/ramki-fotoramki-dlya-fotografij-kartin-kak-sdelat" class=group_small>Рамки  (8)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/30/detskie-podelki" class=group_small>Детские поделки  (10)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/31/svechi-svadebnye-dekorativnye-gelevye-master-klass-reczepty" class=group_small>Свечи  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/34/podelki-iz-kozhi" class=group_small>Из кожи  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/35/podelki-iz-bumagi" class=group_small>Из бумаги  (13)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/41/podelki-iz-shersti-vojloka-vojlok-izdeliya" class=group_small>Из войлока, шерсти  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/158/modeli-avtomobiley-korabley-mashin-tankov-iz-bumagi" class=group_small>Модельки </a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Автомобиль</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/36/remont-avtomobilya-porogov-kuzovnoj-remont-kuzova-vaz-video" class=group_small>Ремонт  (5)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/37/tyuning-avto-avtomobilej-avtomobilya-obves-tyuning-salona-uaz-vaz-avtotyuning-foto-video" class=group_small>Тюнинг  (3)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/38/dvigatel-stirlinga-remont-tyuning-kapremont-dvigatelya-vaz-uaz" class=group_small>Двигатель  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/39/bamper-kak-sdelat-remont-bamperov-tyuning-pokraska-bampera-polirovka-far-fary" class=group_small>Бампер, фары  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/40/pokraska-avtomobilya-avto-video-metallik" class=group_small>Покраска </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/42/garazh-stroitelstvo-garazha-stroim-kak-postroit-krysha-remont-otoplenie" class=group_small>Гараж  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/43/salon-peretyazhka-salona-avtomobilya-obshivka-ximchistka-proklejka-flokirovanie-obtyazhka-obivka" class=group_small>Салон </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/44/polirovka-avtomobilya-kuzova-video" class=group_small>Полировка </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/45/tonirovka-stekol-avtomobilya-video-semnaya-tonirovka" class=group_small>Тонировка  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/46/shumoizolyacziya-avtomobilya-avtozvuk" class=group_small>Шумоизоляция </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/47/glushitel-radiator-remont-radiatorov-avtomobilej-radiatora-glushitelya" class=group_small>Глушитель, радиатор </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/index.php?show=123" class=group_small>Другое (2)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Сад, огород</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/49/klumba-klumby-i-czvetniki-oformlenie-czvetnika-czvetochnye" class=group_small>Клумба, грядки  (35)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/50/besedka-chertezhi-kak-postroit-besedku-stroitelstvo-besedki-dlya-dachi-sadovye-foto" class=group_small>Беседки  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/51/detskaya-ploshhadka-oformlenie-detskoj-ploshhadki-foto-idei-kak-sdelat-detskuyu-ploshhadku" class=group_small>Детская площадка  (6)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/52/prud-na-dache-kak-sdelat-sadovyj-dekorativnyj-foto" class=group_small>Прудики  (3)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/53/sadovyj-uchastok-ukrashaem-dizajn-oformlenie-ukrashenie-sadovogo-uchastka" class=group_small>Садовый участок  (14)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/54/kacheli-chertezhi-sadovye-detskie-derevyannye-dlya-dachi" class=group_small>Качели  (3)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/55/sadovaya-mebel-chertezhi-raskladnoj-skladnoj-stolik" class=group_small>Садовая мебель </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/56/alpijskaya-gorka-foto-sxema-alpijskie-gorki-ustrojstvo-alpijskoj-gorki-bonsaj" class=group_small>Альпийские горки  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/57/skamejka-sadovaya-skamejki-dlya-dachi-kak-sdelat-skamejku-chertezh-derevyannaya" class=group_small>Скамейки  (3)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Дача</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/59/banya-kak-postroit-banyu-stroitelstvo-bani-stroim-iz-brusa-karkasnaya" class=group_small>Баня  (8)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/60/tualet-na-dache-septik-dlya-dachi-postroit-dachnyj-remont-tualeta-foto" class=group_small>Туалет, септик  (4)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/61/skvorechnik-kak-sdelat" class=group_small>Скворечник  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/62/dush-dlya-dachi-letnij-dachnyj-sadovyj-postroit" class=group_small>Душ  (4)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/63/kolodecz-na-dache-chistka-kolodcza-domik-dlya-kak-vykopat-sdelat-postroit" class=group_small>Колодец  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/64/landshaftnyj-dizajn-uchastka-dachnyj-dachnogo-sadovogo-foto" class=group_small>Дизайн участка  (8)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/65/teplicza-tepliczy-iz-polikarbonata-kak-postroit-tepliczu-stroitelstvo-parnik-parniki" class=group_small>Теплица, парник  (6)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/66/kapelnyj-poliv-sistema-kapelnogo-poliva" class=group_small>Капельный полив  (2)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Домашнее хозяйство</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/68/akvarium-kak-sdelat-kryshka-dlya-akvariuma-dizajn-filtr-video" class=group_small>Аквариум  (3)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/69/ulej-kak-sdelat-uli-ijzgotovlenie-ulya-pchelinyj" class=group_small>Ульи  (4)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/70/kletki-dlya-krolikov-chertezhi-kak-sdelat-kletku" class=group_small>Клетки для кроликов  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/71/voler-volery-dlya-sobak" class=group_small>Вольеры  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/72/kuryatnik-kak-postroit-stroitelstvo-kuryatnika-stroim" class=group_small>Курятник  (6)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/73/domik-dlya-koshki" class=group_small>Домик для кошки  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/74/inkubator-dlya-yaicz" class=group_small>Инкубатор для яиц </a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Электроника</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/76/antenna-wifi-televizionnaya-tv-3g-sputnikovaya-fm-dlya-dachi" class=group_small>Антенна  (4)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/77/usilitel-zvuka-lampovyj-kak-sdelat-dlya-sabvufera-kolonok-avtomobilnyj" class=group_small>Усилитель  (6)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/78/kompyuter-modding-kompyutera-oxlazhdenie-vodyanoe-sborka-remont-korpus-sabvufer-sobiraem" class=group_small>Компьютер  (26)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/79/vetrogenerator-chertezhi-kak-sdelat-vertikalnye-vetrogeneratory" class=group_small>Ветрогенератор </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/166/remont-elektroniki-foto" class=group_small>Ремонт электроники  (77)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/80/signalizacziya-gsm-oxrannaya-prostaya-ustanovit-signalizacziyu-ustanovka-signalizaczii" class=group_small>Сигнализация  (16)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/81/robot-kak-sdelat-robota-prostoj-mini-roboty-skachat" class=group_small>Робот  (4)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/82/elektroudochka-video-sxema" class=group_small>Электроудочка  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/83/metalloiskatel-sxema-video" class=group_small>Металлоискатель  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/168/drugoe" class=group_small>Другое  (51)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Строим дом</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/85/lestnicza-lestniczy-izgotovlenie-kak-postroit-stroitelstvo" class=group_small>Лестница  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/86/otoplenie-chastnogo-doma-montazh-otopleniya-sxemy" class=group_small>Отопление  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/87/solnechnaya-batareya" class=group_small>Солнечная батарея </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/88/fundament-lentochnyj-stolbchatyj-dlya-bani-pod-dom-zalivka-fundamenta-opalubka-dlya-stroitelstvo" class=group_small>Фундамент  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/89/kanalizacziya-zagorodnogo-doma-chastnogo-na-dache-avtonomnaya-montazh-kanalizaczii" class=group_small>Канализация  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/90/krysha-doma-stroitelstvo-kryshi-kak-postroit-kryshu-kak-sdelat-stroim-kryshu" class=group_small>Крыша, Мансарда  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/92/zabor-iz-profnastila-kak-postroit-zabory-dlya-dachi-derevyannyj-stroitelstvo-zabora" class=group_small>Забор  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/93/otkatnye-vorota-garazhnye-raspashnye-iz-profnastila-razdvizhnye-sdvizhnye-dlya-dachi-kak-sdelat" class=group_small>Ворота  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/94/okna-plastikovye-derevyannye-ustanovka-plastikovyx-okon-remont" class=group_small>Окна  (8)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/95/skvazhina-na-vodu-bureniya-skvazhin-chistka-ochistka-remont-skvazhiny" class=group_small>Скважина </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/96/vodoprovod-na-dache-dachnyj-plastikovyj-montazh-vodoprovoda" class=group_small>Водопровод </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/97/sauna-v-kvartire-na-dache-stroitelstvo-otdelka-sauny" class=group_small>Сауна </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/98/bassejn-dlya-dachi-kak-sdelat-postroit-filtr-dlya-bassejna-stroitelstvo-foto" class=group_small>Бассейн  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/99/veranda-na-dache-k-domu-stroitelstvo-verandy-kak-postroit-stroim" class=group_small>Веранда  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/100/saraj-dlya-dachi-kak-postroit-stroim-stroitelstvo-saraya" class=group_small>Сарай  (4)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/103/dorozhki-sadovye-na-dache-v-sadu-foto" class=group_small>Дорожки  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/104/trotuarnaya-plitka-formy-ukladka-trotuarnoj-plitki-izgotovlenie" class=group_small>Тротуарная плитка  (1)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/105/penobloki-dom-banya-iz-penoblokov-stroitelstvo-kladka-izgotovlenie" class=group_small>Пеноблоки </a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/106/kirpich-kladka-kirpicha" class=group_small>Кирпич  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/107/karkasnyj-dom-proekty-texnologiya-video-foto-stroitelstvo-karkasnogo-doma" class=group_small>Каркасный дом  (6)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/108/dom-iz-brusa-kak-postroit" class=group_small>Дом из бруса  (3)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/109/betonomeshalka-iz-bochki-kak-sdelat-betonomeshalku" class=group_small>Бетономешалка  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/110/kamin-pech-iz-gipsokartona-chertezhi" class=group_small>Камин, печь  (8)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Домашний уют</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/112/kartiny-iz-rakushek-iz-tkani-iz-kozhi-ramki-dlya-kartin-kak-sdelat-kartinu" class=group_small>Картины  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/113/panno-na-stenu-nastennoe-dekorativnoe-kak-sdelat" class=group_small>Панно  (3)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/114/podushki-dekorativnye-divannye-igrushki-sshit-podushku" class=group_small>Подушки  (8)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/115/kovriki-kovrik-razvivayushhij-kak-sdelat" class=group_small>Коврики  (5)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/116/abazhur-iz-nitok-kak-sdelat-karkas-dlya-abazhura" class=group_small>Абажур  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/117/lyustra-chizhevskogo-svetilnik-svetodiodnyj-kak-sdelat-lyustru-foto-master-klass" class=group_small>Люстра, светильник  (6)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/118/oberegi-kukly-oberegi-dlya-doma-kak-sdelat-obereg" class=group_small>Обереги  (5)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/119/pokryvalo-na-krovat-na-divan-poshiv-pokryval" class=group_small>Покрывало, Скатерти  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/120/tapochki-domashnie-vyazanye-detskie-sshit-tapochki" class=group_small>Тапочки  (3)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/121/shtory-rimskie-dlya-kuxni-poshiv-shtor-vykrojki-foto" class=group_small>Шторы  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/122/sumki-kak-sshit-sumku-iz-kozhi-vykrojki" class=group_small>Сумки  (8)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/index.php?show=133" class=group_small>Другое (34)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/177/uhod-za-komnatnymi-rasteniyami" class=group_small>Комнатные растения  (14)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Украшения</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/173/zakolki-dlya-volos" class=group_small>Заколки  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/125/busy-iz-bisera-tkani-kak-sdelat-master-klass" class=group_small>Бусы  (15)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/126/braslety-iz-bisera-kozhi-kak-sdelat-braslet" class=group_small>Браслеты  (12)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/127/kolca-kak-sdelat-foto" class=group_small>Кольца  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/128/sergi-foto-kak-sdelat" class=group_small>Серьги  (16)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/129/broshi-kak-sdelat" class=group_small>Броши  (8)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/160/kulony-kak-sdelat-foto" class=group_small>Кулоны  (8)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Рукоделие</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/131/vjazanie-dlja-malyshejj" class=group_small>Вязание для малышей  (26)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/132/vyazanie-dlya-detey" class=group_small>Вязание для детей  (11)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/134/vyazanie-spicami" class=group_small>Вязание спицами  (55)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/135/vjazanie-krjuchkom" class=group_small>Вязание крючком  (47)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/136/shem-dlya-detei-shite" class=group_small>Шитье для детей  (7)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/137/shite-dlya-vzroslyx" class=group_small>Шитье для взрослых  (17)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/157/odezhda-dlja-sobak" class=group_small>Одежда для собак  (2)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/index.php?show=159" class=group_small>Другое (9)</a></IDXSKIP></div><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Отдых</p></IDXSKIP><IDXSKIP><div class="menu_body"><a href="http://www.sami-svoimi-rukami.ru/group/139/mangal-barbeku-iz-kirpicha-chertezhi" class=group_small>Мангал, барбекю  (1)</a><a href="http://www.sami-svoimi-rukami.ru/group/140/podvodnaja-lodka-iz-fanery-chertezhi" class=group_small>Лодка </a><a href="http://www.sami-svoimi-rukami.ru/index.php?show=141" class=group_small>Игры (4)</a></div></IDXSKIP><IDXSKIP><p class="menu_head"><img src=art/1x1.gif width=5 height=1 border=0>Уход за собой</p></IDXSKIP><div class="menu_body"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/169/uhod-za-litsom" class=group_small>Уход за лицом  (144)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/170/uhod-za-volosami" class=group_small>Уход за волосами  (53)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/28/mylo-recepty" class=group_small>Мыло  (12)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/164/kosmetika-ruchnoj-raboty-recepty" class=group_small>Косметика  (9)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/172/uhod-za-telom" class=group_small>Уход за телом  (15)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/171/uhod-za-rukami-nogami" class=group_small>Уход за руками, ногами  (24)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/index.php?show=162" class=group_small>Ногти (17)</a></IDXSKIP></div><IDXSKIP><p class="menu_head_opened"><img src=art/1x1.gif width=5 height=1 border=0>Кулинарные рецепты</p></IDXSKIP><div class="menu_body_opened"><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/165/zagotovki-na-zimu" class=group_small>Заготовки на зиму  (93)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/143/salaty-na-skoruyu-ruku-retsepty-salatov" class=group_small>Салаты  (122)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/144/zakuski-buterbrody-na-skoruyu-ruku-retsepty" class=group_small>Бутерброды, закуски  (111)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/145/supy-na-skoruyu-ruku-retsepty-supov" class=group_small>Супы  (99)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/146/blyuda-vtorie-na-skoruyu-ruku-retsepty" class=group_small>Вторые блюда  (285)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/147/kurica-na-skoruyu-ruku-retsepty" class=group_small>Курица  (87)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/148/Ryba-na-skoruyu-ruku-retsepty" class=group_small>Рыба  (62)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/149/vypechka-pechene-na-skoruyu-ruku-retsepty" class=group_small>Выпечка, Печенье  (216)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/150/blini-olady-na-skoruyu-ruku-retsepty" class=group_small>Блины, оладьи  (74)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/151/torty-tortiki-na-skoruyu-ruku-retsepty" class=group_small>Торты  (72)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/152/deserti-na-skoruyu-ruku-retsepty" class=group_small>Десерты  (84)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/153/raznoe" class=group_small>Разное  (82)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/156/piccy-pirogy-recepty" class=group_small>Пиццы, пироги  (110)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/174/recepty-dlya-hlebopechki" class=group_small>Рецепты для хлебопечки  (6)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/175/recepty-dlya-multivarki" class=group_small>Рецепты для мультиварки  (58)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/176/bytovaya-tehnika-dlya-kuhni" class=group_small>Техника для кухни  (40)</a></IDXSKIP><IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/163/poleznie-statyi" class=group_small>Полезные статьи  (29)</a></IDXSKIP></div></div>   
+   <P>
+   <script type="text/javascript"><!--
+google_ad_client = "pub-3935924815994269";
+/* 160x600, создано 09.10.11 вмето повторяшек */
+google_ad_slot = "5831758655";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+   <IDXSKIP><p><img src=http://www.sami-svoimi-rukami.ru/art/but_last_comments.gif width=195 height=31 border=0></IDXSKIP>
+    <P><table width=95% border=0 cellpadding=2 cellspacing=0><IDXSKIP><tr class=td_step_head><td valign=top colspan=2><span class=item_name_txt_small>Людмила</span></td></tr></IDXSKIP>
+                                                     
+                              <tr class=td_step_head><td valign=top colspan=2><span class=txt_small><a href="http://www.sami-svoimi-rukami.ru/item/2634/remont-novogodney-girlyangy-foto" class=txt_small_black><IDXSKIP>Здравствуйте! На носу новый год. Достали елку, а у неё не горят светодиодные лампочки. Звезда и тычинки на ветках светятся, а вот сама нет. Подскажите что делать?</IDXSKIP></a></span></td></tr>
+                              <tr class=td_step_head><td valign=top colspan=2 align=right><IDXSKIP><span class=txt_small_comment_content>к статье</span></IDXSKIP> <a href="http://www.sami-svoimi-rukami.ru/item/2634/remont-novogodney-girlyangy-foto" class=txt_small_comment_link><IDXSKIP>"Ремонт новогодней (елочной) гирлянды"</IDXSKIP></a></td></tr>
+                              <IDXSKIP><tr class=tr_comment_line><td valign=top colspan=2><img src="http://www.sami-svoimi-rukami.ru/art/1x1.gif" width=1 height=1 border=0></td></tr></IDXSKIP>
+                         
+                              <IDXSKIP><tr class=td_step_head><td valign=top colspan=2><span class=item_name_txt_small>Olli 67</span></td></tr></IDXSKIP>
+                                                     
+                              <tr class=td_step_head><td valign=top colspan=2><span class=txt_small><a href="http://www.sami-svoimi-rukami.ru/item/3414/remont-televizora-vestel-foto" class=txt_small_black><IDXSKIP>НЕ нашёл в схеме С613 наврно другое обозначение</IDXSKIP></a></span></td></tr>
+                              <tr class=td_step_head><td valign=top colspan=2 align=right><IDXSKIP><span class=txt_small_comment_content>к статье</span></IDXSKIP> <IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/item/3414/remont-televizora-vestel-foto" class=txt_small_comment_link>"Ремонтируем телевизор VESTEL"</a></IDXSKIP></td></tr>
+                              <IDXSKIP><tr class=tr_comment_line><td valign=top colspan=2><img src="http://www.sami-svoimi-rukami.ru/art/1x1.gif" width=1 height=1 border=0></td></tr></IDXSKIP>
+                         
+                              <IDXSKIP><tr class=td_step_head><td valign=top colspan=2><span class=item_name_txt_small>супер жук</span></td></tr></IDXSKIP>
+                                                     
+                              <IDXSKIP><tr class=td_step_head><td valign=top colspan=2><span class=txt_small><a href="http://www.sami-svoimi-rukami.ru/item/3469/domik-dlya-koshki-iz-pape-mashe-foto" class=txt_small_black>Круто! Идеи класс!</a></span></td></tr></IDXSKIP>
+                              <tr class=td_step_head><td valign=top colspan=2 align=right><IDXSKIP><span class=txt_small_comment_content>к статье</span></IDXSKIP> <IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/item/3469/domik-dlya-koshki-iz-pape-mashe-foto" class=txt_small_comment_link>"Дом для кошки из папье-маше"</a></IDXSKIP></td></tr>
+                              <IDXSKIP><tr class=tr_comment_line><td valign=top colspan=2><img src="http://www.sami-svoimi-rukami.ru/art/1x1.gif" width=1 height=1 border=0></td></tr></IDXSKIP>
+                         
+                              <IDXSKIP><tr class=td_step_head><td valign=top colspan=2><span class=item_name_txt_small>krmbl</span></td></tr></IDXSKIP>
+                                                     
+                              <tr class=td_step_head><td valign=top colspan=2><span class=txt_small><a href="http://www.sami-svoimi-rukami.ru/item/2871/novogodnyaya-elka-iz-konfet" class=txt_small_black><IDXSKIP>Елка - непременный атрибут новогоднего праздника. Без поздравления президента, шампанского, мандаринов и зеленой пушистой красавицы невозможно представить себе наступление Нового года в России!</IDXSKIP></a></span></td></tr>
+                              <tr class=td_step_head><td valign=top colspan=2 align=right><IDXSKIP><span class=txt_small_comment_content>к статье</span></IDXSKIP> <a href="http://www.sami-svoimi-rukami.ru/item/2871/novogodnyaya-elka-iz-konfet" class=txt_small_comment_link><IDXSKIP>"Новогодняя елка из конфет, красиво и просто"</IDXSKIP></a></td></tr>
+                              <IDXSKIP><tr class=tr_comment_line><td valign=top colspan=2><img src="http://www.sami-svoimi-rukami.ru/art/1x1.gif" width=1 height=1 border=0></td></tr></IDXSKIP>
+                         
+                              <IDXSKIP><tr class=td_step_head><td valign=top colspan=2><span class=item_name_txt_small>Анна</span></td></tr></IDXSKIP>
+                                                     
+                              <tr class=td_step_head><td valign=top colspan=2><span class=txt_small><a href="http://www.sami-svoimi-rukami.ru/item/1745/maska-dlya-nogtey-s-krasnym-pertsem-recept-otzyvy" class=txt_small_black><IDXSKIP>Я сделала эту маску - ногти явно улучшились, стали красивее. начали белеть. После процедуры смажьте ручки кремом.</IDXSKIP></a></span></td></tr>
+                              <tr class=td_step_head><td valign=top colspan=2 align=right><IDXSKIP><span class=txt_small_comment_content>к статье</span></IDXSKIP> <IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/item/1745/maska-dlya-nogtey-s-krasnym-pertsem-recept-otzyvy" class=txt_small_comment_link>"Маска для ногтей с красным перцем"</a></IDXSKIP></td></tr>
+                              <IDXSKIP><tr class=tr_comment_line><td valign=top colspan=2><img src="http://www.sami-svoimi-rukami.ru/art/1x1.gif" width=1 height=1 border=0></td></tr></IDXSKIP>
+                         
+                              </table>    
+    
+    <!-- Блок для вставки на место информера -->
+<IDXSKIP><div id="gnezdo_ru_7364">Загрузка...</div></IDXSKIP>
+<!-- Блок для вставки в конец страницы перед закрывающим </body> -->
+<script language="JavaScript" src="http://news.gnezdo.ru/show/7364/block.js" type="text/javascript" charset="windows-1251"></script>
+
+    
+    </td> 
+     <IDXSKIP><td width=15><img src=http://www.sami-svoimi-rukami.ru/art/1x1.gif width=15 height=1 border=0></td></IDXSKIP><td valign=top> 
+          
+     
+<IDXSKIP><a href="http://www.sami-svoimi-rukami.ru/group/142/recepty-na-skoruyu-ruku" class=group_small>Кулинарные рецепты</a></IDXSKIP> > <a href="http://www.sami-svoimi-rukami.ru/group/163/poleznie-statyi" class=group_small>Полезные статьи</a> > Пересолила суп, что делать?<div class=sub_box><IDXSKIP>Хотите получать все новые публикации себе на e-mail? Подписывайтесь на рассылку!</IDXSKIP><IDXSKIP><form action=http://www.sami-svoimi-rukami.ru/index.php method=get>
+       <input type=hidden name=a value=mail>
+       <input type=hidden name=b value=save>
+     <input type=text name=email id=email_sub size=17 class=input_subscribe onclick=email_remove_txt(); value="ваш e-mail"> <input type=submit value="Подписаться" class=input_button>
+       <span class=smail_sub_txt>Уже подписались: 1720</span></form></IDXSKIP>
+     </div><P>           
+           <h1><span class=item_name>Пересолила суп, что делать?</span></h1>
+           <P>
+<!-- Яндекс.Директ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 134871;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1.1;
+yandex_direct_type = 'flat';
+yandex_direct_limit = 1;
+yandex_direct_title_font_size = 3;
+yandex_direct_header_bg_color = 'FEEAC7';
+yandex_direct_title_color = 'CC6600';
+yandex_direct_url_color = '006600';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = 'FF9933';
+yandex_direct_favicon = true;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+<table width=100% border=0 cellpadding=5 cellspacing=1>
+           <tr><td nowrap valign=top width=33%>Автор: admin
+           <P><a href=http://www.sami-svoimi-rukami.ru/index.php?a=view_user&id=1>Все изделия автора</a><IDXSKIP><P><div id=fav_add_msg><span class=fav_txt><a href="#js" onclick="add_fav_msg();" class=fav_txt_link>Добавить в Избранное</a></span></div></IDXSKIP>
+           </td>
+           <td width=66% valign=top><IDXSKIP>Последние публикации автора</IDXSKIP><P><a href=http://www.sami-svoimi-rukami.ru/item/3609/kak-sshit-sumku-iz-dzhinsov-master-klass-foto class=link_small>11.08.2014  Как сшить сумку из старых джинсов</a><br><a href=http://www.sami-svoimi-rukami.ru/item/3555/kak-sdelat-manikyur-na-den-svyatogo-valentina-foto class=link_small>16.02.2014  Как сделать водный маникюр на день Святого Валентина, Сердечки...</a><br><a href=http://www.sami-svoimi-rukami.ru/item/3548/kak-dekorirovat-kuhonniy-garnitur-master-klass-foto class=link_small>06.02.2014  Как декорировать кухонный гарнитур фото обоями...</a><br><a href=http://www.sami-svoimi-rukami.ru/item/3546/kak-obvyazat-chyashechki-dlya-kupalnika-master-klass-foto class=link_small>04.02.2014  Как обвязать крючком чашечки для купальника...</a><br><a href=http://www.sami-svoimi-rukami.ru/item/3544/kak-spryatat-ostry-ugol-mebeli-master-klass class=link_small>30.01.2014  Как спрятать острый угол мебели</a><br></td></tr>
+           
+           <tr><td colspan=3><P><span class=item_images><a href="http://www.sami-svoimi-rukami.ru/uploads/916_content_img.jpg" target=_blank  title="Пересолила суп, что делать?"><img src="http://www.sami-svoimi-rukami.ru/uploads/916_content_img.jpg" width=400 height=268 border=0 alt="Пересолила суп, что делать?" title="Пересолила суп, что делать?"></a></span><P><P>Я думаю каждая хозяйка попадала в ситуацию и задавалась вопросом, как спасти пересоленный суп? В этой статье мы дадим вам несколько
+советов, что можно сделать в такой ситуации. <br><br><div>
+                  <!-- Яндекс.Директ -->
+<script type="text/javascript">
+//<![CDATA[
+yandex_partner_id = 134871;
+yandex_site_bg_color = 'FFFFFF';
+yandex_site_charset = 'windows-1251';
+yandex_ad_format = 'direct';
+yandex_font_size = 1.1;
+yandex_direct_type = 'flat';
+yandex_direct_limit = 2;
+yandex_direct_title_font_size = 3;
+yandex_direct_header_bg_color = 'FEEAC7';
+yandex_direct_title_color = 'CC0000';
+yandex_direct_url_color = '006600';
+yandex_direct_text_color = '000000';
+yandex_direct_hover_color = 'FF3333';
+yandex_direct_favicon = true;
+document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');
+//]]>
+</script>
+</div><table width=100% border=0 cellpadding=5 cellspacing=5 class=content_table><tr class=td_step_head><td width=240 valign=top></td><td width=90% valign=top><P><p style="margin-bottom: 0cm" align="justify">Если в<strong>ы пересолили суп
+и думаете, как исправить такой пересоленный
+суп</strong>, то не спешите добавлять воды и
+убирать с супа лишнюю жидкость, которая
+уже и наваристая стала и ароматная.
+</p><p style="margin-bottom: 0cm" align="justify">Таким образом вы только разбавите суп
+и он потеряет свой вкус. Смотрите ниже
+несколько способов, как спасти пересоленный
+суп.</p> <P>                        
+<script type="text/javascript"><!--
+google_ad_client = "pub-3935924815994269";
+/* 468x60, создано в текст ставлю 11.05.11 */
+google_ad_slot = "2209009157";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></td></tr><tr class=td_step_head><td width=240 valign=top></td><td width=90% valign=top><h2><span class=step_name>Мама, я пересолила суп, что теперь делать?</span></h2><P><p style="margin-bottom: 0cm" align="justify">Итак, что же делать если
+вы и ваш ребенок случайно пересолили
+суп?</p>
+<p style="margin-bottom: 0cm" align="justify"><strong>Выбирайте один из
+способов:</strong></p>
+<p style="margin-bottom: 0cm" align="justify"><u>Первый способ </u>самый
+простой и эффективный — убрать лишнюю
+соль с помощью риса. Для этого вам надо
+взять какую-то чистую марлечку или
+тряпочку, положить в нее промытую жменьку
+риса, связать мешочек и опустит его в
+кастрюлю, край, привязав к ручке и
+придавив его крышкой. </p><p style="margin-bottom: 0cm" align="justify">Можно поступить
+еще проще — положить в кастрюлю пакетик
+риса, который варится в пакетиках и все.
+Рис сварится и впитает в себя лишнюю
+соль, а ваш суп станет не таким пересоленным.&nbsp;</p>
+<p style="margin-bottom: 0cm" align="justify"><u>Второй способ</u>, как
+исправить пересоленный суп: можно
+уменьшить соленость с помощью добавления
+в суп еще картошки. Прием можно просто
+добавить несколько целых картофелин,
+пусть они сварятся, а вы их вытащите и
+потом сделаете с них еще какое-то блюдо
+или салат. Если суп не такой густой, то
+картошку можно сразу порезать и просто
+добавить в суп.</p> <P></td></tr><tr class=td_step_head><td width=240 valign=top></td><td width=90% valign=top><P><p style="margin-bottom: 0cm" align="justify"><u>Третий способ</u>, что
+делать если пересолили суп — это взять
+стакан муки (примерно один стакан) и
+проделать с ним тоже самое, что с рисом.
+Правда учтите, что в этом случае суп
+потеряет свою прозрачность и станет
+мутноватым от муки. Но все равно лучше
+мутный, чем соленый. 
+</p>
+<p style="margin-bottom: 0cm" align="justify">Еще есть один способ с
+помощью сахара, но здесь остаются
+сомнения в его эффективности. Нужно
+положить сахар в кусочке в поварешку и
+пустить ее в суп. Как только сахар начнет
+таять и распадется, надо его вытащить.
+Такую процедуру можно повторить несколько
+раз, пока вся лишняя соль не исчезнет.</p> <P></td></tr><tr class=td_step_head><td width=240 valign=top></td><td width=90% valign=top><P><p align="justify"><strong>Смотрите несколько рецептов супов и постарайтесь их не пересолить.</strong></p><p><a title="куриный суп с яичной лапшой" href="http://www.sami-svoimi-rukami.ru/item/639/sup-s-yaichnoy-lapshoy-kurinyj">Куриный суп с яичной лапшой</a></p><p><a title="куриный суп с яйцом и клецками" href="http://www.sami-svoimi-rukami.ru/item/619/kurinyj-sup-s-kleckami-yajcom">Куриный суп с яйцом и клецками</a></p><p><a title="креветочный суп" href="http://www.sami-svoimi-rukami.ru/item/324/krevetochnyjj-sup-recept">Креветочный суп</a></p><p><a title="суп гуляш с болгарским перцем" href="http://www.sami-svoimi-rukami.ru/item/494/sup-gulyash-bolgarskim-percem">Суп-гуляш с болгарским перцем</a></p><p><a href="http://www.sami-svoimi-rukami.ru/item/853/recept-sup-s-grechkoj">Суп с гречкой</a></p><p><a title="суп с плавленным сыром" href="http://www.sami-svoimi-rukami.ru/item/139/sup-s-plavlennim-sirom-recept">Суп с плавленным сыром</a></p><p><a title="суп с щавелем и крапивой" href="http://www.sami-svoimi-rukami.ru/item/406/sup-so-shhavelem-krapivoy">Суп с щавелем и крапивой</a></p><p><a title="суп гороховый с копченостями" href="http://www.sami-svoimi-rukami.ru/item/238/sup-s-kopchenostyami-gorohovyy">Суп гороховый с копченостями</a></p><p>Еще <a title="супы на скорую руку" href="http://www.sami-svoimi-rukami.ru/group/145/supy-na-skoruyu-ruku-retsepty-supov">рецепты супов на скорую руку</a><br></p> <P></td></tr></table><P><table border=0 width=100%><tr>
+<td valign=top>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3935924815994269";
+/* 300x250, создано 06.07.10 Сами своими руками */
+google_ad_slot = "8184650754";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</td>
+<td align=right valign=top>
+
+ <IDXSKIP><div class=share_buttons>
+ 
+<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?47"></script>
+<script type="text/javascript">
+ VK.init({apiId: 2795757, onlyWidgets: true});
+</script>
+<script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript">
+  VK.Widgets.Like("vk_like", {type: "full"});
+</script>
+ 
+ <div class=share_facebook>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://www.sami-svoimi-rukami.ru/item/916/peresolila-sup-chto-delat&layout=button_count&show_faces=false&width=100&action=like&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+ </div>
+ <div class=share_mailru>
+<a target="_blank" class="mrc__plugin_uber_like_button" href="http://connect.mail.ru/share" data-mrc-config="{'cm' : '1', 'ck' : '1', 'sz' : '20', 'st' : '1', 'tp' : 'combo'}">Нравится</a>
+<script src="http://cdn.connect.mail.ru/js/loader.js" type="text/javascript" charset="UTF-8"></script>
+</div>
+<div class=share_vk>
+    <div id="vk_like"></div>
+</div>
+  
+ 
+  </div></IDXSKIP>
+  <div style="clear:both;"></div>
+
+
+<noindex>
+<br><br>
+<span class=item_copy><IDXSKIP>Copyright © by <a href=http://www.sami-svoimi-rukami.ru class=item_copy>Сами своими руками</a></IDXSKIP><IDXSKIP><p>Копирование материалов запрещено.</IDXSKIP></span>
+</noindex>
+</td>
+</tr></table>
+<noindex>
+      <P><span class=txt_title_sub><IDXSKIP>Смотрите еще материалы из этого раздела:</IDXSKIP></span><P><table width=100% border=0 cellpadding=5 cellspacing=1>
+                  <tr><td width=33% valign=top><a href="http://www.sami-svoimi-rukami.ru/item/2626/blyuda-iz-bananov-recepty-s-foto"><img src="http://www.sami-svoimi-rukami.ru/uploads/thumb_2626_content_img.jpg" width=240 height=130 border=1></a>
+                           <br><a href="http://www.sami-svoimi-rukami.ru/item/2626/blyuda-iz-bananov-recepty-s-foto" class="item_name_txt">Блюда из бананов</a></td><td width=33% valign=top><a href="http://www.sami-svoimi-rukami.ru/item/2615/blyuda-iz-yaits-chto-prigotovit-recepty-s-foto"><img src="http://www.sami-svoimi-rukami.ru/uploads/thumb_2615_content_img.jpg" width=240 height=130 border=1></a>
+                           <br><a href="http://www.sami-svoimi-rukami.ru/item/2615/blyuda-iz-yaits-chto-prigotovit-recepty-s-foto" class="item_name_txt">Блюда из яиц (перепелиных, куриных)</a></td><td width=33% valign=top><a href="http://www.sami-svoimi-rukami.ru/item/908/prigotovit-bystro-i-vkusno-chto-mozhno-chayu"><img src="http://www.sami-svoimi-rukami.ru/uploads/thumb_908_content_img.jpg" width=240 height=130 border=1></a>
+                           <br><a href="http://www.sami-svoimi-rukami.ru/item/908/prigotovit-bystro-i-vkusno-chto-mozhno-chayu" class="item_name_txt">Что можно приготовить к чаю - быстро и вкусно</a></td></tr><tr><td width=33% valign=top><a href="http://www.sami-svoimi-rukami.ru/item/2581/blyuda-dlya-detej-detskie-recepty-s-foto"><img src="http://www.sami-svoimi-rukami.ru/uploads/thumb_2581_content_img.jpg" width=240 height=130 border=1></a>
+                           <br><a href="http://www.sami-svoimi-rukami.ru/item/2581/blyuda-dlya-detej-detskie-recepty-s-foto" class="item_name_txt">Блюда для детей</a></td><td width=33% valign=top><a href="http://www.sami-svoimi-rukami.ru/item/911/vreden-li-majoneza"><img src="http://www.sami-svoimi-rukami.ru/uploads/thumb_911_content_img.jpg" width=240 height=130 border=1></a>
+                           <br><a href="http://www.sami-svoimi-rukami.ru/item/911/vreden-li-majoneza" class="item_name_txt">Вред майонеза - чем его можно заменить</a></td><td width=33% valign=top><a href="http://www.sami-svoimi-rukami.ru/item/2617/blyuda-iz-kapusty-recepty-s-foto"><img src="http://www.sami-svoimi-rukami.ru/uploads/thumb_2617_content_img.jpg" width=240 height=130 border=1></a>
+                           <br><a href="http://www.sami-svoimi-rukami.ru/item/2617/blyuda-iz-kapusty-recepty-s-foto" class="item_name_txt">Блюда из капусты, что приготовить</a></td></tr></table>
+                   </noindex>
+
+  <table width=100% border=0 cellpadding=5 cellspacing=3>
+<IDXSKIP><tr class=td_step_head><td>Комментарии:</td></tr></IDXSKIP><tr class=td_step_head><td><span class=item_name_txt id="comment_subject_14231"><span class=comment_black>Полина</span></span><br><span class=txt_small_comment_date id="comment_date_14231">05.07.2012 17:34</span>  [<a href=#reply onclick="comment_set_reply(14231);">ответить</a>]
+                        <p>Всегда думала, что надо просто воды добавить еще и прокипятить. Обязательно попробую данные советы при неудачном опыте готовки.</td></tr><tr class=td_step_head><td><span class=item_name_txt id="comment_subject_14472"><span class=comment_black>Изабэлла</span></span><br><span class=txt_small_comment_date id="comment_date_14472">10.07.2012 15:48</span>  [<a href=#reply onclick="comment_set_reply(14472);">ответить</a>]
+                        <p>Суп уж лучше стараться не пересаливать. Способы, конечно все хороши, но ведь таким образом мы суп переварим :) и он потеряет все свои вкусовые свойства.</td></tr><tr class=td_step_head><td><span class=item_name_txt id="comment_subject_15291"><span class=comment_black>ordo85</span></span><br><span class=txt_small_comment_date id="comment_date_15291">24.07.2012 00:15</span>  [<a href=#reply onclick="comment_set_reply(15291);">ответить</a>]
+                        <p>Хочется отметить, что первый вариант с добавлением риса действительно работает. Мне про него мама рассказывала раньше. Я, при необходимости, делаю марлевый мешочек, насыпаю туда рис и отправляю в суп. Пересол исчезает.</td></tr><tr class=td_step_head><td><span class=item_name_txt id="comment_subject_15971"><span class=comment_black>Vita</span></span><br><span class=txt_small_comment_date id="comment_date_15971">01.08.2012 17:17</span>  [<a href=#reply onclick="comment_set_reply(15971);">ответить</a>]
+                        <p>Стараюсь не пересаливать, но все в жизни случается… Способ с рисом самой испытывать не приходилось, но слышала о нем от подруг. А вот способ с мукой не очень понравился, супчик-то все равно испорчен будет.</td></tr><tr class=td_step_head><td><span class=item_name_txt id="comment_subject_27855"><span class=comment_black>жанна</span></span><br><span class=txt_small_comment_date id="comment_date_27855">08.02.2013 10:03</span>  [<a href=#reply onclick="comment_set_reply(27855);">ответить</a>]
+                        <p>Если что-то пересолили надо добавить немножко лимонного сока и будет все хорошо.</td></tr><tr class=td_step_head><td><span class=item_name_txt id="comment_subject_31269"><span class=comment_black>лена</span></span><br><span class=txt_small_comment_date id="comment_date_31269">27.03.2013 04:48</span>  [<a href=#reply onclick="comment_set_reply(31269);">ответить</a>]
+                        <p>Девочки, вот воспользовалась Вашим способом, но не помогло! Я случайно,машинально, кинула в кастрюлю ,как всегда, 1.5 столовых ложек соли, но забыла, что она морская и не молотая! Уже 3-й пакет с мукой варю, пакет с рисом там же - не помогло! Варю уже минут 30!!! Хорошо,  что пока только курица и картошка в кастрюле.  А что бы с другим супом было бы, если его так долго "спасать"?!? И всё же, как спасти по-другому? <br>P.s. Но перелью в большую кастрюлю и воды добавлю!  Лучший способ! Иначе, будет каша!</td></tr><tr class=td_step_head><td><span class=item_name_txt id="comment_subject_55761"><span class=comment_black>Ника</span></span><br><span class=txt_small_comment_date id="comment_date_55761">23.01.2014 15:01</span>  [<a href=#reply onclick="comment_set_reply(55761);">ответить</a>]
+                        <p>Положить одну большую очищенную картошку, она заберет всю соль!</td></tr><tr class=td_step_head><td><span class=item_name_txt id="comment_subject_62505"><span class=comment_black>Вадим</span></span><br><span class=txt_small_comment_date id="comment_date_62505">04.05.2014 05:09</span>  [<a href=#reply onclick="comment_set_reply(62505);">ответить</a>]
+                        <p>попробую воспользоваться, спасибо за совет!</td></tr></table><P> 
+  <form method="post" action="http://www.sami-svoimi-rukami.ru/index.php">
+<input type=hidden name=view value=916>
+<input type=hidden name=b value=comment_add>
+
+<input type=hidden name=reply_id id=reply_id value=0>
+
+  <table width=100% border=0 cellpadding=5 cellspacing=1>
+<tr class=td_step_head><td><b><IDXSKIP>Оставляйте свой комментарий, можно без регистрации - нам важно ваше мнение</IDXSKIP></b><IDXSKIP>:</IDXSKIP></td></tr>
+  
+  <tr><td>
+  <a name=reply></a>
+  <div id=comment_reply_box style="display:none"></div>
+  
+  <IDXSKIP>Ваш ник
+  <br></IDXSKIP><input type=text name=comment_name id=comment_name class=input_text size=15 value="">  
+  <IDXSKIP><P>Текст  
+  <br><textarea cols=30 rows=3 name=comment_body id=comment_body class=input_text></textarea></IDXSKIP>
+  <IDXSKIP><P><input type=submit value="Отправить комментарий" class=input_button></IDXSKIP>
+  <p><span class=txt_small><IDXSKIP>Внимание: комментарий будет добавлен только после одобрения модератора.</IDXSKIP></span></form>
+  
+  
+  </td></tr>
+   
+  
+  </table>
+  </td></tr></table>
+
+ </td></tr>
+   
+   
+   </table>
+   
+
+  </td></tr>
+<IDXSKIP><tr bgcolor=#7e765f><td height=1 colspan=2><img src=http://www.sami-svoimi-rukami.ru/art/1x1.gif width=1 height=1 border=0></td></tr></IDXSKIP>  
+<tr bgcolor=#a28745><td valign=top colspan=2><table border=0 width=100% cellspacing=0 cellpadding=0><tr><IDXSKIP><td width=10><img src=http://www.sami-svoimi-rukami.ru/art/1x1.gif width=30 height=50 border=0></td></IDXSKIP>
+ <td width=89%><table width=100% border=0 cellspacing=0 cellpadding=0><tr><IDXSKIP><td nowrap width=200><span class=link_small_white>2017 © Сами своими руками</span></td></IDXSKIP>
+  <td width=500> <table border=0 width=100% cellspacing=10 cellpadding=1><IDXSKIP><a href=http://www.sami-svoimi-rukami.ru/group/1/mebel class=link_small_white>Мебель</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/group/3/remont class=link_small_white>Ремонт</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/group/19/podarki class=link_small_white>Подарки</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/group/24/podelki class=link_small_white>Поделки</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/group/32/avtomobil class=link_small_white>Автомобиль</a></IDXSKIP><br><IDXSKIP><a href=http://www.sami-svoimi-rukami.ru/group/48/sad-ogorod-oformlenie-sada-ogoroda-foto class=link_small_white>Сад, огород</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/group/58/dacha-foto-kak-postroit-dachu class=link_small_white>Дача</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/index.php?show=67 class=link_small_white>Домашнее хозяйство</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/group/75/elektronika class=link_small_white>Электроника</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/group/84/postroit-dom-stroitelstvo-doma-stroim-dom class=link_small_white>Строим дом</a></IDXSKIP><br><IDXSKIP><a href=http://www.sami-svoimi-rukami.ru/group/111/dlya-doma class=link_small_white>Домашний уют</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/group/124/ukrasheniya-svadebnye-na-svadbu-foto class=link_small_white>Украшения</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/group/130/rukodelie class=link_small_white>Рукоделие</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/index.php?show=138 class=link_small_white>Отдых</a></IDXSKIP><IDXSKIP>&nbsp;<span class=link_small_white>|</span></IDXSKIP><IDXSKIP>&nbsp;<a href=http://www.sami-svoimi-rukami.ru/index.php?show=161 class=link_small_white>Уход за собой</a></IDXSKIP><br><IDXSKIP><a href=http://www.sami-svoimi-rukami.ru/group/142/recepty-na-skoruyu-ruku class=link_small_white>Кулинарные рецепты</a></IDXSKIP></td></tr></table> 
+ 
+ </td>
+
+
+ <td width=10%>
+ <noindex><NOFOLLOW><!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t13.5;r"+
+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet--></NOFOLLOW></noindex>
+</td> 
+ </tr></table></td></tr>
+</table>
+    
+ 
+
+
+</body>
+
+</html>

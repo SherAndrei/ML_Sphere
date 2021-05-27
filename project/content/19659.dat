@@ -1,0 +1,2545 @@
+eva.ru/static/forums/53/2003_9/64321.html
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head lang="ru-RU"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="language" content="ru"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta http-equiv="cache-control" content="max-age=0"> 
+  <meta http-equiv="cache-control" content="no-cache"> 
+  <meta http-equiv="expires" content="0"> 
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"> 
+  <meta http-equiv="pragma" content="no-cache"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/eva/css/normalize.css" rel="stylesheet"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/vendors/social/bootstrap-social.css" rel="stylesheet" media="screen"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/eva/css/eva.css?3.2.026" rel="stylesheet"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/fonts/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/fonts/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"> 
+  <link href="https://cloudstatic.eva.ru/design/eva3/bootstrap/vendors/switch/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet"> 
+  <title>        Белый список    </title>
+ </head>
+ <body>
+  <nav class="navbar navbar-fixed-top hidden" id="nav-scrolled" role="navigation"> 
+   <div class="container"> 
+    <ul class="nav navbar-nav"> 
+     <IDXSKIP><li> <a href="/forum.htm">Форумы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/news.htm">Новости</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/polls.htm">Опросы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/contests.htm">Конкурсы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/do.htm">Объявления</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/photoalbum/index.htm">Фотозалы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/top5.htm">Топ 5</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="dropdown pull-right hidden-xs"> <a class="dropdown-toggle" data-toggle="dropdown">Войти<span class="caret"></span></a> 
+      <div class="dropdown-menu login-menu"> 
+       <form class="form" id="frmLogin" action="/login.htm"> 
+        <input type="hidden" name="action" value="login"> 
+        <input type="hidden" name="successRedirect" value=":start"> 
+        <input type="hidden" name="errorRedirect" value=":user-forget-password"> 
+        <div class="form-group"> 
+         <div class="input-group"> 
+          <span class="input-group-addon"><i class="fa fa-user"></i></span> 
+          <input class="form-control" type="text" required="true" title="Введите логин" data-valid-min="2" pattern="^[a-z,A-Z,0-9,_]{6,15}$" size="15" placeholder="Логин или @" id="username" name="username"> 
+         </div> 
+        </div> 
+        <div class="form-group clearfix"> 
+         <div class="pull-left"> 
+          <div class="input-group"> 
+           <span class="input-group-addon"><i class="fa fa-lock"></i></span> 
+           <input class="form-control" type="password" required="true" title="Введите пароль" placeholder="Пароль" id="password" size="15" name="password"> 
+          </div> 
+         </div> 
+         <button id="btnLogin" class="btn-eva-login btn btn-default pull-right"> <i class="fa fa-sign-in"></i>&nbsp; </button> 
+        </div> 
+        <div> 
+         <a class="btn btn-vk btn-sm btn-block btn-social" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i> Зайти через VK</a> 
+         <a class="btn btn-facebook btn-sm btn-block btn-social" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook"><i class="fa fa-facebook"></i> Зайти через Facebook</a> 
+         <a class="btn btn-openid btn-sm btn-block" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; Зайти через Одноклассников</a> 
+        </div> 
+       </form> 
+      </div> </li></IDXSKIP> 
+     <IDXSKIP><li class="pull-right"> 
+      <form role="form" action="http://yandex.ru/sitesearch" class="search form-inline"> 
+       <input type="hidden" name="searchid" value="153288"> 
+       <input type="text" name="text" class="form-control" placeholder="Найти на Еве.Ру" style="width:200px"> 
+       <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i> </button> 
+      </form> </li></IDXSKIP> 
+    </ul> 
+   </div>
+  </nav>
+  <div class="eva container"> 
+   <header> 
+    <IDXSKIP><div class="hat-xs visible-xs-block clearfix"> 
+     <div class="pull-left"> 
+      <a href="/" title="Ева.Ру"><img src="https://cloudstatic.eva.ru/design/eva3//eva/images/logo2.png" alt="Ева.Ру">EVA.RU</a> 
+     </div> 
+     <form role="form" action="http://yandex.ru/sitesearch" class="form-inline"> 
+      <input type="hidden" name="searchid" value="153288"> 
+      <button type="submit" class="btn btn-sm btn-danger">Поиск</button> 
+      <input type="text" name="text" class="input-sm form-control" placeholder="Найти на Еве.Ру"> 
+     </form> 
+    </div></IDXSKIP> 
+    <div class="hat-non-logged"> 
+     <IDXSKIP><div class="additional visible-xs-block"> 
+      <a class="reg" href="/registration.htm" title="Зарегистрироваться">Регистрация</a> 
+     </div></IDXSKIP> 
+     <div class="clearfix"> 
+      <IDXSKIP><div class="logo pull-left hidden-xs"> 
+       <a href="/" title="Ева.Ру"><img class="hidden-xs" src="https://cloudstatic.eva.ru/design/eva3//eva/images/logo.png" alt="Ева.Ру"></a> 
+      </div></IDXSKIP> 
+      <IDXSKIP><ul class="list-unstyled pull-right"> 
+       <li> 
+        <form class="form-login-inline" id="frmLogin" action="/login.htm"> 
+         <input type="hidden" name="action" value="login"> 
+         <input type="hidden" name="successRedirect" value=":start"> 
+         <input type="hidden" name="errorRedirect" value=":user-forget-password"> 
+         <input class="form-control input-sm" type="text" required="true" title="Введите логин" data-valid-min="2" pattern="^[a-z,A-Z,0-9,_]{6,15}$" size="15" placeholder="Логин или @" id="username" name="username"> 
+         <input class="form-control input-sm" type="password" required="true" title="Введите пароль" placeholder="Пароль" id="password" size="15" name="password"> 
+         <button id="btnLogin" class="btn-eva-login btn-sm btn btn-default"> <i class="fa fa-sign-in"></i>&nbsp; </button> 
+        </form> </li> 
+       <li class="hidden-xs"> 
+        <div class="clearfix"> 
+         <a class="btn btn-danger btn-sm" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook">&nbsp;<i class="fa fa-facebook"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники">&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; </a> 
+         <a class="reg pull-right" href="/registration.htm" title="Зарегистрироваться">Регистрация</a> 
+        </div> </li> 
+      </ul></IDXSKIP> 
+      <IDXSKIP><ul class="list-unstyled pull-right visible-xs-inline"> 
+       <li> 
+        <div class="clearfix "> 
+         <a class="btn btn-danger btn-sm" href="https://oauth.vk.com/authorize?client_id=2393078&amp;scope=status,email,photos,wall&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fvk%2Flogin.htm%3FsuccessRedirect%3D%3Aprofile-start&amp;response_type=code" title="Зайти через VK"><i class="fa fa-vk"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="https://www.facebook.com/dialog/oauth?client_id=249745221703111&amp;redirect_uri=http%3A%2F%2Feva.ru%2Ffb%2Flogin.htm&amp;scope=public_profile,email,publish_actions&amp;response_type=code" title="Зайти через Facebook">&nbsp;<i class="fa fa-facebook"></i>&nbsp; </a> 
+         <a class="btn btn-danger btn-sm" href="http://www.odnoklassniki.ru/oauth/authorize?client_id=1137160704&amp;scope=VALUABLE_ACCESS&amp;redirect_uri=http%3A%2F%2Feva.ru%2Fok%2Flogin.htm%3Faction%3Dlogin%26successRedirect%3D%3Aprofile-start&amp;response_type=code&amp;layout=w" title="Зайти через Одноклассники">&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAADNSURBVHjaRMyxKsQBAMfx3/+Wuy7KoEhJucG9gMVqtXgAD2AwSLqiGCwSww2eQIliMSoWeQBlluEwuuMk7vhYrnzrs36jEGuefHvWUCgidvEzsC8x6wu3lt2gZy428GJMjGphu5RKkm5ek7TznqQSC6Cp5gAsRlyiP9hfK0VUneAXZ4aksJSZ7GU4k2mlk/U8FD5STSdXecxU5jOSr2jq+a/vMArTjtDFsZqiFGmnnqScpJ63iHF3+HTqA/cm4hysihVwEVvYFGXRwM7fAJtFwd9GZ/4EAAAAAElFTkSuQmCC">&nbsp; </a> 
+        </div> </li> 
+      </ul></IDXSKIP> 
+     </div> 
+    </div> 
+   </header> 
+   <nav class="navbar navbar-static-top clearfix" role="navigation"> 
+    <ul class="nav navbar-nav"> 
+     <IDXSKIP><li> <a href="/forum.htm">Форумы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/news.htm">Новости</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/polls.htm">Опросы</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/contests.htm">Конкурсы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/do.htm">Объявления</a> </li></IDXSKIP> 
+     <IDXSKIP><li> <a href="/photoalbum/index.htm">Фотозалы</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="hidden-xs"> <a href="/top5.htm">Топ 5</a> </li></IDXSKIP> 
+     <IDXSKIP><li class="dropdown visible-xs-inline"> <a class="dropdown-toggle" data-toggle="dropdown">Разделы <span class="caret"></span></a> 
+      <ul class="dropdown-menu"> 
+       <li><a href="/beauty/index.htm"> <small>Красота</small> </a></li> 
+       <li><a href="/pregnancy/index.htm"> <small>Беременность</small> </a></li> 
+       <li><a href="/kids/index.htm"> <small>Дети</small> </a></li> 
+       <li><a href="/house-and-hobby/index.htm"> <small>Дом</small> </a></li> 
+       <li><a href="/health/index.htm"> <small>Здоровье</small> </a></li> 
+       <li><a href="/animals/index.htm"> <small>Звери</small> </a></li> 
+       <li><a href="/travel/index.htm"> <small>Отдых</small> </a></li> 
+       <li><a href="/recipes/index.htm"> <small>Рецепты</small> </a></li> 
+       <li><a href="/love/index.htm"> <small>Любовь</small> </a></li> 
+       <li><a href="/eva-life/index.htm"> <small>LIFE</small> </a></li> 
+      </ul> </li></IDXSKIP> 
+     <IDXSKIP><li class="pull-right"> 
+      <form role="form" action="http://yandex.ru/sitesearch" class="search form-inline"> 
+       <input type="hidden" name="searchid" value="153288"> 
+       <input type="text" name="text" class="form-control" placeholder="Найти на Еве.Ру" style="width:200px"> 
+       <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i> </button> 
+      </form> </li></IDXSKIP> 
+    </ul> 
+   </nav> 
+   <div class="row"> 
+    <div class="col-lg-9 col-md-8 col-sm-7 col-xs-12"> 
+     <div id="mainContent"> 
+      <h1> Белый список </h1> 
+      <hr> 
+      <div id="archivedContent">
+        
+       <table border="0" width="100%"> 
+        <tbody> 
+         <tr> 
+          <td width="70%" valign="middle"> <b><a href="/static/forums" style="color:cc3333;"><IDXSKIP>Список всех форумов (версия для печати) </IDXSKIP></a></b><br><br> <b><a href="/static/forums/53" style="color:cc3333;"><IDXSKIP>Помесячная карта форума Беременность &gt; Беременность (версия для печати) </IDXSKIP></a></b><br><br> <b><a href="/static/forums/53/2003_9" style="color:cc3333;">Все темы форума Беременность &gt; Беременность за 2003 Сентябрь (версия для печати) </a></b><br><br><br> <b><font style="color:999999;font-size:14px">Список сообщений топика "Белый список" форума Беременность &gt; Беременность</font><br> <br><br> </b></td> 
+         </tr> 
+         <tr> 
+          <td> 
+           <table border="0" cellpadding="0" cellspacing="2"> 
+            <tbody> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2353070.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25101.html">Mari_N</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 15:01 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Девочки, здравствуйте!<br>Не так давно я тоже мыла в "мамах" февралюшек, но, как уже писала в топике "черный список", теперь в "хочушках".<br>И вот что самое плохое в моей ситуации: я побывала в руках хороших врачей, к которым вроде бы люди идут, а вот со мной такое случилось. И я просто НЕ ЗНАЮ, к кому теперь обращаться, кому вообще верить можно. Ведь даже деньги, как выяснилось, ничего в нашем вопросе не значат.<br>Пожалуйста, посоветуйте своих "белых" врачей, которым вы сами можете доверить свое здоровье и жизнь ребятенка.<br>Спасибо. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2354137"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2354137.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2353070">сообщение 2353070</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/24494.html">киска</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 16:28 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> я знаю в институте педиатрии на нахимовском врачи все супер туда можно с деткой по любому вопросу если что </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2354220"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2354220.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2353070">сообщение 2353070</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/19217.html">Olay</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 16:36 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Я наблюдаюсь в "Здоровом поколении" на Шаболовке. Сначало у Наталье Александровны Назаровой, но она сейчас в отпуске, а теперь у Ольги Васильевны Дроновой (заведующая). Обе мне очень нравятся. Там же в соседнем кабинете УЗИ, Узист все рассказывает, что видно на мониторе (ты тоже видишь) и если что всем можно задавать вопросы, все подробно, на русском языке, расскажут. Если что всегда можно им позвонить. Даже поздно вечером на домашний телефон или на мобильный. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2354357"></a></td> 
+              <td width="99%" colspan="12"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2354357.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2354220">сообщение 2354220</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27263.html">Мамуля</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 16:47 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> И это всё в "Здоровом поколении" бесплатно или по контракту ? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2354451"></a></td> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2354451.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2354357">сообщение 2354357</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14205.html">Эдика</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 16:55 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> А я наоборот отрицательного о них мнения!! Пришла туда т.к. начались коричневатые выделения..так они мне внематочную где-то нашли и по скорой отправили в больницу! Слава БОгу!!! что в больнице не стали сразу резать (врач попался умница), а положили наблюдать! Итог: никакой внематочной и не было!! начинался выкидыш, который они не сумели разглядеть и вовремя предотвратить ( а тогда это было еще возможно)!! вместо этого куча нервов, слез!! я понимаю...сколько людей-столько мнений! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2355745"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2355745.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2354451">сообщение 2354451</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/19217.html">Olay</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:46 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Это точно. Видимо мне повезло. (ттт) У меня в детстве как то раз бок заболел. Привезли в больницу, хотели тоже аппендицит вырезать, а потом пришел врач и посвил диагноз воспаление легких. Вот так. А то бы вырезали. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2357717"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2357717.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2354451">сообщение 2354451</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/7715.html">Be</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 23:51 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Извините, не знаю Вашу ситуацию подробней,чем Вы ее описали, но считаю, что врачи в Вашем случае поступили правильно. В больницу Вы попали с подозрением на внематочную, так как судя по всему Вам не делали УЗИ, и это был наверняка один из нескольких диагнозов. То, что Вас не стали в больнице сразу резать, это вполне нормально, так как у Вас, насколько я поняла не было острой боли, а были только выделения, и диагноз необходимо было уточнить. Выкидыш у Вас произошел на раннем сроке, и подобные случаи не нуждаются в том, чтобы беременность во что бы то ни стало сохранять, так как наверняка у эмбриона были нарушения, которые и привели к выкидышу. Все это не относиться к тем случаям, когда у женщины ВСЕ предыдущие беременности заканчивались выкидышами, так как в таких случаях пытаются сохранить беременность.<br> Поймите правильно, я написала Вам для того, чтобы Вы попробовали взглянуть на ситуацию с другой точки зрения, и может быть переоценили. <br> Пожалуйста, не сердитесь на меня, если считаете, что я лезу не в свое дело. Удачи. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2364652"></a></td> 
+              <td width="99%" colspan="9"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2364652.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2357717">сообщение 2357717</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14205.html">Эдика</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 16:50 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> В том-то все и дело, что мне делали УЗИ!!!!!! и диагноз звучал однозначно и понятно-внематочная..кстати ребетенка я в тот раз потеряла(( </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2385417"></a></td> 
+              <td width="99%" colspan="9"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2385417.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2357717">сообщение 2357717</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/11517.html">wera</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:38 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> согласна с вами, что лучше при подозрении положить в больницу, чем этого не сделать. Главное,чтоб врач с маху не резал при таком диагнозе!!!(в 33-й например режут, как говорится ради любопытства) потому как продиагностировать внематочную непросто, считается одним из самых сложных, поэтому необходимо наблюдать в стационаре! если этого не сделать, то возможен смертельный исход. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2405026"></a></td> 
+              <td width="99%" colspan="9"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2405026.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2357717">сообщение 2357717</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14839.html">МарАся</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:54 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 15 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> я беременность сохраняла на маленьком сроке. претензий к детке по здоровью не имею </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2405131"></a></td> 
+              <td width="99%" colspan="8"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2405131.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2405026">сообщение 2405026</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/7715.html">Be</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:03 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 15 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Маленький срок это какой? А у Вас раньше выкидыши были? В России по-моему все бывают на сохранении хотя бы 1 раз за Б, но это не говорит о том, что у все есть реальная угроза. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2415644"></a></td> 
+              <td width="99%" colspan="7"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2415644.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2405131">сообщение 2405131</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14839.html">МарАся</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:54 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 16 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> не надо путать укалдку на сохранение и действительно угрозу. где то с 8 до 12. все как положено - с кровотечениеи и дикой болью. насколько я потом поняла еще и плодный пузырь подтекал до кучи. отделалиь отставанием на 2 недели. вроде бы ттт. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2355721"></a></td> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2355721.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2354357">сообщение 2354357</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/19217.html">Olay</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:44 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Нет платно. Можно если что прийти на разовый прием. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2359606"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2359606.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2355721">сообщение 2355721</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27263.html">Мамуля</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 10:09 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Ольга, а где именно находится этот центр куда вы ходите.Я просто живу недалеко от 25 роддома и собираюсь сходить туда. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2361769"></a></td> 
+              <td width="99%" colspan="9"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2361769.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2359606">сообщение 2359606</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/29667.html">Мартын</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 13:17 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> "Здоровое Поколение" - это платное отделение при 25 роддоме. Я стояла на учете по беременности в консультации при 25 роддоме и рожала там же. Бесплатно. Я там живу рядом, это мой районны роддом, к счастью. Если есть возможность встать там на учет - очень рекомендую. 25-й входит в число лучших роддомов Москвы. А врачей можно потом отблагодарить. Вот ссылочка - там про мои роды. Там же можешь почитать и отзывы об этом роддоме. <br>http://www.detki-predki.ru/birth/roddoma/opinions.asp?id=396&amp;Check10=0&amp;oid=3536&amp;Check5=0&amp;Check1=0&amp;View=%CF%EE%EA%E0%E7%E0%F2%FC%21 </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2362430"></a></td> 
+              <td width="99%" colspan="8"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2362430.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2361769">сообщение 2361769</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27263.html">Мамуля</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 14:11 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Меня мама там родила,в 25 роддоме :) <br> Я хочу съездить туда,узи сделать. Может подскажешь,сколько оно стоит и к какому врачу лучше идти. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2363630"></a></td> 
+              <td width="99%" colspan="7"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2363630.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2362430">сообщение 2362430</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/29667.html">Мартын</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 15:37 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Моего мужа тоже мама там рожала. Насчет врача могу свою посоветовать, но там ведь по участкам. Я не знаю, кто у тебя участковый будет. У меня - Рожкова, очень симпатичная девушка. А может, Зубарева из роддома обратно вернулась. Она тоже хороший гинеколог. А УЗИ там мне больше всего понравилось делать у Натальи если не ошибаюсь Ростиславовны. Она хорошо делает, внимательно. Год назад давала 300 рублей, за бесплатно сделала у другой тёти - не понравилось. Как за подаянием. Надо с участковой договориться, она отправит к Наталье Ростиславовне. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2368159"></a></td> 
+              <td width="99%" colspan="6"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2368159.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2363630">сообщение 2363630</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/21628.html">Lera Vo</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 02:42 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 11 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> В 25 моя подружка рожала, осталась НУ ПРОСТО ОЧЕНЬ ДОВОЛЬНА, правда рожала по контракту!:-) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2405072"></a></td> 
+              <td width="99%" colspan="5"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2405072.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2368159">сообщение 2368159</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14839.html">МарАся</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:57 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 15 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> а у кого? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2408213"></a></td> 
+              <td width="99%" colspan="4"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2408213.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2405072">сообщение 2405072</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/21628.html">Lera Vo</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 01:43 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 16 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Точно мужчина-врач, фамилию могу узнать, говорит, что за вторым только к нему пойдет!:-) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2415652"></a></td> 
+              <td width="99%" colspan="3"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2415652.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2408213">сообщение 2408213</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14839.html">МарАся</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:55 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 16 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> просто для статистики. я у корбута через з/п </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2418231"></a></td> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2418231.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2415652">сообщение 2415652</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/21628.html">Lera Vo</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 00:14 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Сообщу через пару недель, девушка сейчас в отпуске. Напишите мне на мыло, если все еще интересно?! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2438821"></a></td> 
+              <td width="99%" colspan="1"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2438821.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2418231">сообщение 2418231</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14839.html">МарАся</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 23:19 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 18 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> ага, интересно. тогда спрошу через пару недель </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2419629"></a></td> 
+              <td width="99%" colspan="2"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2419629.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2415652">сообщение 2415652</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/29667.html">Мартын</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 09:07 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Корбут хороший доктор. А еще в 25-м мне очень нравится Кольцова, она моим доктором была, когда я на сохранении лежала. И еще Ольга Александровна, которая у меня принимала роды. Я ,к сожалению, не помню фамилию. И чудо-акушерка Федотова. Только я не уверена, работают ли они в "Здоровом Поколении". Я рожала в 25-м в бесплатном отделении. А кесарево хорошо делать у Матусовой, она зав. отделением патологии. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2426464"></a></td> 
+              <td width="99%" colspan="1"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2426464.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2419629">сообщение 2419629</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27957.html">miana</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:08 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 17 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> У меня девчонка с работы рожала у Корбута по контракту.Довольна. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2438836"></a></td> 
+              <td width="99%" colspan="1"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2438836.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2419629">сообщение 2419629</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14839.html">МарАся</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 23:21 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 18 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> мы тоже произведение корбута. а врачи все работают и в з/п. акушерки - свои. просто если будем второго, то не уверена что с деньгами будет так же свободно что хватит и на з/п опять </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2405056"></a></td> 
+              <td width="99%" colspan="7"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2405056.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2362430">сообщение 2362430</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14839.html">МарАся</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:56 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 15 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> мне там узи не очень понравилось (именно в 25). стаили вес и 3400 и 2800. на лестьева говорят лучше делают </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2355720"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2355720.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2353070">сообщение 2353070</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25936.html">buznika</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Новичок &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:44 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Центр ПроМедицина на Каховке. Маленькая семейная клиника, врач - Абляева Эльмира Шавкатовна. забота и отношение как к родной, наблюдают при наличии даже минимальных проблем очень пристально. я там наблюдаюсь с 4 недели, были и угроза выкидыша (кровотечение), и плацентарная недостаточность, сейчас предстоит рожать с гепатитом С. за все 8 месяцев у меня не возникло к ним ни одной претензии, да я в жизни никогда не встречала таких врачей - приходишь к ним как к себе домой. чаем напоят, поговорят, выспросят, успокоят. очень это важно во время беременности, когда хочется, чтобы весь свет был состредоточен на тебе и на твоем состоянии. так что очень рекомендую... </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2355776"></a></td> 
+              <td width="99%" colspan="12"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2355776.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2355720">сообщение 2355720</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25396.html">Цветочек</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:50 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> а координаты этого центра ?)))) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2355810"></a></td> 
+              <td width="99%" colspan="12"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2355810.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2355720">сообщение 2355720</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25396.html">Цветочек</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:55 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> скажи, пожалуйста, сколько стоит ведение Б. с самого начала (с 4-6 недель). Мне нужна помощь врачей с самых первых дней до самых родов (т.к. трудности с вынашиванием) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2355934"></a></td> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2355934.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2355810">сообщение 2355810</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25936.html">buznika</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Новичок &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 19:07 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> координаты все написаны на сайте у них, www.promedicina.ru<br>стоило там все удовольствие кажется около 20 000 рублей - в это входят все узи, анализы и прочее - тебе там дадут бумажку где все расписано по пунктам. мне из-за угрозы выкидыша делали узи часто, и никаких денег за это не брали - просто врач смотрела сердечко на мониторе, чтобы и меня успокоить и самой быть спокойной. ну и некоторые лекарства там просто так дают, да и вообще - очень это приятное место :) я после двух выкидыщей туда пришла, боялась всего страшно, и очень они мне помогли. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2359699"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2359699.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2355934">сообщение 2355934</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25396.html">Цветочек</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 10:17 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> а на сохранение тебя клали? Если понадобится ложиться на сохранение, они как это делают? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2364529"></a></td> 
+              <td width="99%" colspan="9"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2364529.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2359699">сообщение 2359699</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25936.html">buznika</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Новичок &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 16:42 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> клали - направление в 55 больницу, где меня приняли даже без страхового полиса. больница по бытовым условиям ужасная (ну мне так показалось, а на самом деле - просто обычная), но врачи - просто потрясающие, я честно сказать была потрясена, т.к. до этого никогда в бесплатных больницах не лежала и не думала даже, что безо всяких денег может быть такое отношение. а Эльмира Шавкатовна мне сказала - ты на евроремонт внимания не обращай, это неважно, важно врачи, а они там прекрасные. мне такой подход очень нравится.<br>правда я как узнала что все с ребеночком ок, сбежала оттуда под расписку (скандал был), и оставшееся время дома лежала. все-таки больницы, евро-не евро - все одно - плохо </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2365593"></a></td> 
+              <td width="99%" colspan="8"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2365593.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2364529">сообщение 2364529</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25396.html">Цветочек</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:09 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> спасибо, бузничка...ты меня здорово подбодрила ))) я пожалуй тоже обращусь в этот центр и если все будет ОК, буду наблюдаться у них...))) <br><br>Тебе от всей души желаю крепкого здоровья и замечательного малыша !!!!!!!!))))))) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2365822"></a></td> 
+              <td width="99%" colspan="7"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2365822.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2365593">сообщение 2365593</a>&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25936.html">buznika</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Новичок &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:34 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> спасибо! тебе тоже поскорее забеременеть и легко родить! а если к Эльмире Шавкатовне соберешься - сообщи, я тебя ей порекомендую. на вс. случай аська моя 35189161 </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2366084"></a></td> 
+              <td width="99%" colspan="6"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2366084.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2365822">сообщение 2365822</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25396.html">Цветочек</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:59 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> бузничка, даже не знаю как тебя благодарить !!!! Я пойду к Эльмире Шавкатовне после лапары (кот. у меня запланирована на 24 сент.) твоя рекомендация очень мне помогла бы !! У меня вот только аськи нет и я не умею ей пользоваться. Давай, может мы по e-mail будем переписываться ? <br><br>(мой адрес есть в паспорте) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2366228"></a></td> 
+              <td width="99%" colspan="5"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2366228.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2366084">сообщение 2366084</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25936.html">buznika</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Новичок &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 19:14 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> я тебе написала </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2372929"></a></td> 
+              <td width="99%" colspan="4"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2372929.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2366228">сообщение 2366228</a>&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25396.html">Цветочек</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 14:50 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 11 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> у меня похоже накрылся почтовый ящик на land.ru (((( напиши,пожалуйста, еще раз на другой адрес - ob25@yahoo.com </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2374273"></a></td> 
+              <td width="99%" colspan="3"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2374273.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2372929">сообщение 2372929</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25936.html">buznika</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Новичок &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 16:37 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 11 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> написала! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2356224.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/21628.html">Lera Vo</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 19:46 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> ЦПСиР, если интересуетесь, напишите мне на мыло, отвечу про своего врача. Но в принципе - там все хорошие! :-) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2356464.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/20242.html">Манюта</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 20:28 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> А про "Планету здоровья 21 век" кто нибудь слышал? Мне говорили, что там очень хорошо, только дороговато. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2357413.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/28937.html">Nadin</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <b><font class="omnu">Время:</font></b> 23:08 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Центр на Опарина,4. Врач - заведующая отделением по невынашиванию беременности Сидельникова Вера Михайловна. Правда, я у нее не наблюдалась, а лишь несколько раз приезжала на консультации. Она уже лет 30 возглавляет это отделение, и многие женщины, наблюдающиеся у нее рожают без проблем. Очень граммотный доктор. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2357933"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2357933.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2357413">сообщение 2357413</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/20242.html">Манюта</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 00:24 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Целиком поддерживаю:)! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2363598"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2363598.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2357413">сообщение 2357413</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/29232.html">Stori</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 15:34 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> А можно телефончик, метро и сколько стоит? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2367112"></a></td> 
+              <td width="99%" colspan="12"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2367112.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2363598">сообщение 2363598</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/28937.html">Nadin</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> <IDXSKIP>23:46 &nbsp; 
+                </IDXSKIP><IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Телефон платного отделения 438-1900. Проезд - м. Коньково, м.такси №36; м.Юго-Западная м.такси №718, авт. №718; м.Калужская м.такси №295, авт. №295; остановка «ЦЕНТР ОХРАНЫ МАТЕРИ И РЕБЕНКА». Отделение терапии и профилактики невынашивания беременности. Руководитель: Доктор медицинских наук, профессор, заслуженный деятель науки РФ<br>Сидельникова Вера Михайловна. Тел. отделения: 438-14-88. Первое посещение у Сидельниковой - 1500 рублей. Если наблюдаться у нее дальше - 900 рублей за прием. Не знаю, сколько стоит контракт, но анализы у них дешевле, чем во многих платных клиниках. Можно попасть к ней на прием и бесплатно, по направлению из женской консультации. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2367135"></a></td> 
+              <td width="99%" colspan="12"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2367135.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2363598">сообщение 2363598</a>&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/28937.html">Nadin</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 23:49 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Посмотри еще ссылку - http://www.pregnancy.ru/division/profcure/main2.html </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2403412"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2403412.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2357413">сообщение 2357413</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/21933.html">Катюшкин</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Новичок &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 15:49 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 15 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Из этого отделения на Опарина Логинова. Очень грамотный врач. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2357596.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27412.html">Ленок</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 23:34 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 09 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Республиканский центр репродукции человека минздрава России, врач Демина ольга Валерьевна, наблюдалась у нее полтора года, перед тем, как забеременеть смогла, просто супер:) Классный диагност, причем если ей что-то не нравится или кажется ненормальным - обязательно проконсультирует у других врачей, причем за ручку буквально отведет:) Очень внимательна, верит в то, что ты говоришь, даже если сама признаков не видит, ни при осмотре, ни по УЗИ, мне так эндометриоз и рубцевание шейки поставила, отчасти на слово поверив и начав по хирургам и в гинекологии таскать, на гистероскопии причину нашли, еще бы недолго и про естественные роды можно было бы забыть, сейчас-то вопрос:( В общем, супер, причем находится на базе больницы, поэтому все анализы, рентгены и т. п. не отходя от кассы, хирурги тоже там же. Таблетками не сильно увлекается, лишнего старается не назначать, любит добавлять в лечение БАДы, в принципе, очень грамотно комбинируя с лекарствами, молочницу БАДами-таки вылечила, а лекарства не брали, привыкла. Вот. Если надо, дам координаты:) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2359637"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2359637.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2357596">сообщение 2357596</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27263.html">Мамуля</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 10:12 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> А где это находится? И сколько там узи стоит сделать? Сейчас у меня 13 недель,хочу сделать узи и вот незнаю где лучше. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2361504"></a></td> 
+              <td width="99%" colspan="12"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2361504.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2359637">сообщение 2359637</a>&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27412.html">Ленок</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 12:55 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Это на Иваньковском шоссе, между Соколом и Щукинской, но саму Б. они там не ведут, передают в Кураре, там же находится, только в другом корпусе, я там по контракту сейчас наблюдаюсь:) УЗИ у них стоит что-то около 600 р., после УЗИ можно проконсультироваться сразу, не знаю, работают ли они без контракта, но думаю, что да, так что можно выяснить по тел., и решить. На всякий случай тел. 193-0091,190-9843,190-9845. Я Кураре оч-чень довольна, пока ни одной претензии, да и думаю, что и не будет:) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2362519"></a></td> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2362519.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2361504">сообщение 2361504</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27263.html">Мамуля</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 14:18 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Спасибо за подробный ответ.Очень уж это для меня далеко находится:( 2 часа добираться,я не выдержу. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2362755"></a></td> 
+              <td width="99%" colspan="10"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2362755.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2362519">сообщение 2362519</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27412.html">Ленок</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 14:36 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Да уж, мне-то удобно, минут за 30-40 и по верху, раз и там:) Удачи в поисках:) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2384579"></a></td> 
+              <td width="99%" colspan="9"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2384579.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2362755">сообщение 2362755</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/11517.html">wera</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 16:25 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Ленок, а сколько страховка стоит? подумываю тоже на страховку перейти в хорошую клинику, а то с "бесплатным" медицинским страхованием можно калекой остаться </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2384644"></a></td> 
+              <td width="99%" colspan="8"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2384644.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2384579">сообщение 2384579</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27412.html">Ленок</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <b><font class="omnu">Время:</font></b> 16:29 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Это не страховка, а просто контракт на ведение Б. Стоило 29900, я заключала в конце мая-начале июня, на роды для меня будет стоить 29800, а вообще они сейчас цены поднимать хотят, вчера мне только врач сказала об этом, у них наплыв большой и отделение с трудом справляется:) Если надо, могу дать телефоны, позвони узнай подробности, но мне там очень нравится, вчера лишний раз убедилась:) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2385244"></a></td> 
+              <td width="99%" colspan="7"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2385244.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2384644">сообщение 2384644</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/11517.html">wera</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 17:23 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> это на ведение беременности? мне бы просто понаблюдаться у грамотного гинеколога, чтоб зря гармонами и таблетками не пичкали.<br>А телефоны дай на всякий случай :)<br>А ведение беременности цена за весь срок? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2386067"></a></td> 
+              <td width="99%" colspan="6"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2386067.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2385244">сообщение 2385244</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27412.html">Ленок</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:41 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Да, на ведение Б., до 36й недели, дальше контракт на роды идет. А если гинеколог грамотный нужен - там же, на Иваньковском шоссе есть центр репродукции при Минздраве России, я про него чуть выше писала, и врач Демина Ольга Валерьевна:) Мне лучшего врача не попадалось, и в плане отношения, и в плане диагностики и вообще. Так что можешь к ней сходить, там просто разово за прием платишь, за первый раз я платила порядка 600 р., повторные (следующие полтора года) по 200, а потом 300 за прием, короче, я очень довольна и после Б. опять планирую у нее наблюдаться:) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2386101"></a></td> 
+              <td width="99%" colspan="6"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2386101.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2385244">сообщение 2385244</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27412.html">Ленок</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Опытный пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 18:44 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Да, телефоны - Центр Репродукции - 193-5298, 190-4422(адм.)<br>Кураре - 193-0091,190-9843,190-9845. Удачи:) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2391620"></a></td> 
+              <td width="99%" colspan="5"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2391620.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2386101">сообщение 2386101</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/11517.html">wera</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:21 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 13 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> спасибо большое :) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2357988.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/746.html">Катёна (ОР)</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Корифей &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 00:38 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Роддом при 29 ГКБ - врач Рябцев К.М., все неонатологи, а также заведующая неонатологией Заякина ... Роды прошли превосходно, после родов очень быстро восстановилась:) А неонатологам вообще низкий поклон - ребенка спасили!! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2360583.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27552.html">Кариша</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 11:41 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Девочки, подскажите, кто сталкивался, в Питере хорошего врача! Ну сил нет больше! Не встречаются мне оне совсем. (для справки - у меня 2 замершие беременности - причины - самые фантастические, и, причем, у каждого врача своя версия). Хелп ми!! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2369511"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2369511.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2360583">сообщение 2360583</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/13465.html">Барсучок</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 10:16 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 11 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> есть такой Питерский форум www.forum.littleone.ru так там как раз очень бурно обсуждались какие в питере самые лучшие врачи. В поиске можно задать врач и тебе выдадат кучу информации. И где самое лучше узи и т.д. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2371309"></a></td> 
+              <td width="99%" colspan="12"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2371309.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2369511">сообщение 2369511</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27552.html">Кариша</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 12:42 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 11 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Ой, спасибо тебе огромное!!!!! Просто выручила!!! :) :) :) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2361265.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/17365.html">Nelly</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 12:36 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> А про клинику Семейный доктор кто-нибудь знает? Какие там врачи? Думаем там контракт на медобслуживание ребенка заключить. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2428520"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2428520.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2361265">сообщение 2361265</a>&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/30610.html">nomi</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <b><font class="omnu">Время:</font></b> 22:50 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 17 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Я лечила там тонзилит во взрослом отделении в феврале этого года. Про детское, к сожаленю, ничего сказать не могу, кроме того, что когда мой ЛОР был на больничном, я один раз была у детского ЛОРа - супер врач. Мне понравилось - врачи хорошие, вежливые, заботливые и не пихают всяческими лекарствами без надобности. Но лучше там заключить контакт, т.к. услуги разовые у них дорогие. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2361493.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/8296.html">Бармалерик</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 12:55 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> ЦПСиР на Севастопольском - супер! Врач - Мысакова Ирина - акушер от Бога! Если интересует, могу подробнее. Пишите. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2363119"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2363119.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2361493">сообщение 2361493</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/14666.html">babymuis</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 15:02 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Интересует :-) А туда можно ещё до заключения контракта ходить и разово платить (ну в смысле на 30-х неделях)? И про врача очень интересно </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2363284"></a></td> 
+              <td width="99%" colspan="12"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2363284.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2363119">сообщение 2363119</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27627.html">Mortishia</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 15:14 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Если я не ошибаюсь: 650 р. консультация, 800 р. -УЗИ </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2402129"></a></td> 
+              <td width="99%" colspan="12"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2402129.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2363119">сообщение 2363119</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/23935.html">Аллена</a> &nbsp;&nbsp;&nbsp; 
+                <IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> Новичок &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 14:02 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 15 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Настя, я хожу туда на курсы и врач говорит, что они каждый год закрываются на мойку как раз с 28.12 и по...Так что нам там не рожать. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11">&nbsp;</td> 
+              <IDXSKIP><td width="11">&nbsp;</td></IDXSKIP> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2415315"></a></td> 
+              <td width="99%" colspan="11"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2415315.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2402129">сообщение 2402129</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/18378.html">Genny</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 18:24 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 16 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Я этим фактом тоже очень расстроена!!!!!!!!!!Тоже хотела туда попробовать. А как там тебе курсы?? Я туда с октября хочу на курсы походить. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2363565"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2363565.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2361493">сообщение 2361493</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/29232.html">Stori</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 15:32 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Интересуюсь. Можно подробнее? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2368167"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2368167.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2361493">сообщение 2361493</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/21628.html">Lera Vo</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 02:44 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 11 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> ЦПСиР - СУПЕР, согласна на все 100, очень хочется еще раз вернуться, не смотря на то, что ДЕТОК ХВАТИТ! :-) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2368814"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2368814.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2361493">сообщение 2361493</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/19096.html">Xuta</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 08:48 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 11 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Согласна на все 100. У меня была врач Мельникова Светалана Анатольевна, просто супер. Надеюсь что приду туда за вторым! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2378902"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2378902.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2361493">сообщение 2361493</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/19520.html">lw@f</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 01:02 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> У меня были осложнения и долго не могла нигде договориться, чтобы роды приняли, пришлось понервничать на последних неделях, деньги не помогали. В ЦПСИР спокойно заключили контракт и роды суперски приняли. Врач Борисова. Разовые посещения возможны и кстати помогают выбрать своего доктора. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2361578.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/29190.html">sanya</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 13:02 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> А про Агаджанову Анну Арамовну из ЦАиГ на Опарина,4 кто-нибудь может что-то сказать? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2364980.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/27552.html">Кариша</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:16 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> ПИТЕР!!! АУ!! :) неужели во всем городе не сыскать нормального врача??? </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2365068"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2365068.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2364980">сообщение 2364980</a>&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/30109.html">Shenja</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Новичок &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 17:22 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 10 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Нормального врача сыскать можно. :) Только сложно в данном случае советовать что-то. У меня мама в ж/к работает, у них есть хорошие доктора, к которым сама хожу и доверяю. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="11"><img src="/images/board/ReplyArrow.gif" width="11" height="13" align="top"><a name="Message2384875"></a></td> 
+              <td width="99%" colspan="13"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2384875.&nbsp;&nbsp; Ответ на 
+                <a style="text-align:left;;font-weight:normal;color:B2B2B2" href="#Message2364980">сообщение 2364980</a><IDXSKIP>&nbsp; 
+                <br></IDXSKIP> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/28426.html">Svetulya</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Новичок &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 16:50 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Все очень хвалят Воронцова из МГЦ на Тобольской, 5. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2369071.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/21262.html">Lyubashka</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 09:30 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 11 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Самара.<br>Областная больница им. Калинина. В роддоме врач Серебрякова Татьяна Николаевна и заведующая акушерско-гинекологическим отделением Батакова Наталья Михайловна. Дочу мою там просто спасли. Роддом обычный - бегать вокруг вас там никто не будет, но относятся все (от заведующей до санитарки) очень хорошо - стараются беременность сохранить и ребенка спасти (я из Тольятти - тут от нас вообще отказались). Лежала там почти 2 месяца - очень много видела тех, кто даже надежду стать мамой потерял, но с помощью врачей все благополучно родили...<br>Очень благодарна - в этот раз поеду туда же рожать, у себя в Тольятти даже боюсь к роддому подходить... </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2382040.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/11517.html">wera</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 12:30 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Москва. 1-я гинекологическая больница по восточному округу. Она для меня вся хорошая, но сказать могу только про одного врача: Исаков Сергей Антонидович. Врач-гинеколог+сам делает УЗИ (там все врачи так). Операционное вмешательство для него последнее дело, сначала кучу анализов сделает. Вообще в больнице при поступлении у всех берут два анализа крови (из вены, из пальца), врач на осмотре назначает первое лечение, поэтому сразу и укольчик вкатят и таблетки дадут. На следующее утро (или сразу же при поступлении, зависит от того с чем приехали)всем УЗИ и анализ мочи + осмотр своего врача (он назначает окончательное лечение уже после всех анализов). Вообще система у них супер отработана!После отстойной 33-й (где меня хотели без проверенных показаний резать), 1-я гинекологическая РАЙ!!! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2385150.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/25188.html">katya13</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 17:16 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 12 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> ЦПСиР, а конкретно врач Нормантович Татьяна Олеговна </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2400982.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/13569.html">snovamama</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Пользователь &nbsp; 
+                </IDXSKIP><!--br--> 
+                <b><font class="omnu">Время:</font></b> 12:30 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 15 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Простая районная консультация при 134 поликлинике в Ясенево - Смирнова Ирина Викторовна, я у нее уже двух дочек выносила и родила. Профессиональна, внимательна и сама мама трехлетней дочки... </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2419504.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/11113.html">Пoлинка</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <b><font class="omnu">Время:</font></b> 08:47 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 17 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> ЦПСиР на Севастопольском. Врач Калашников Сергей Аркадьевич, акушерка Мария Алексеевна. Спасибо им за мои роды! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2429214.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/2276.html">Nadusha I</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 00:51 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 18 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> 4 р/д акушерка Надежда Николаевна (фамилию не помню) </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2429256.&nbsp;&nbsp; 
+                <br> 
+                <IDXSKIP><b><font class="omnu">Автор:</font></b></IDXSKIP> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/30616.html">polina</a> <IDXSKIP>&nbsp;&nbsp;&nbsp; 
+                </IDXSKIP><IDXSKIP><font class="omnu">Статус:</font></IDXSKIP> <IDXSKIP>Новичок &nbsp; 
+                </IDXSKIP><!--br--> 
+                <b><font class="omnu">Время:</font></b> 01:00 &nbsp; 
+                <b><font class="omnu">Дата:</font></b> 18 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> Надо было, наверное, сразу сюда писать: <br>кто-нибудь может подсказать хорошие платные семейные клиники, по программам, с врачами на дом и т.п.?<br>Я нашла такую пока только одну, но не знаю, хорошая ли она - мед клиника "семейный доктор". Если кто слышал про нее, расскажите, пожалуйста! </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+             <tr valign="Top"> 
+              <td width="99%" colspan="14"> 
+               <div style="text-align:left;;font-weight:normal;color:B2B2B2">
+                 Сообщение 2436860.&nbsp;&nbsp; 
+                <br> 
+                <b><font class="omnu">Автор:</font></b> 
+                <a class="fzNick" target="_blank" href="http://www.eva.ru/passport/9913.html">Светка</a> &nbsp;&nbsp;&nbsp; 
+                <font class="omnu">Статус:</font> Опытный пользователь &nbsp; 
+                <!--br--> 
+                <IDXSKIP><b><font class="omnu">Время:</font></b></IDXSKIP> 19:07 &nbsp; 
+                <IDXSKIP><b><font class="omnu">Дата:</font></b></IDXSKIP> 18 сен 2003 
+               </div> <br> 
+               <div> 
+                <table border="0" width="100%"> 
+                 <tbody> 
+                  <tr> 
+                   <td style=""> РД при 15 ГКБ Глотова Ольга Валерьевна.<br>Меня с моей больщой близорукостью все хотели кесарить, хотя окулисты разрешали рожать самой, но под присмотром. Она единственная согласилась. Огромное ей за это спасибо!. </td> 
+                  </tr> 
+                 </tbody> 
+                </table> 
+               </div> <br> </td> 
+             </tr> 
+            </tbody> 
+           </table> </td> 
+         </tr> 
+         <tr> 
+          <td> <a href="/main/forum" style="color:cc3333;"><IDXSKIP>Перейти к динамической версии форумов </IDXSKIP></a> </td> 
+         </tr> 
+        </tbody> 
+       </table>
+       <div class="clearfix"></div>
+<!-- Яндекс.Директ -->
+<div id="yandex_ad"></div>
+<script type="text/javascript">
+(function(w, d, n, s, t) {
+    w[n] = w[n] || [];
+    w[n].push(function() {
+        Ya.Direct.insertInto(50948, "yandex_ad", {
+            ad_format: "direct",
+            font_size: 0.9,
+            type: "horizontal",
+            border_type: "ad",
+            limit: 4,
+            title_font_size: 3,
+            links_underline: false,
+            site_bg_color: "FFFFFF",
+            header_bg_color: "FFFFFF",
+            border_color: "FFCCCC",
+            title_color: "CC0000",
+            url_color: "000000",
+            text_color: "000000",
+            hover_color: "0066FF",
+            favicon: true,
+            no_sitelinks: true
+        });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.src = "//an.yandex.ru/system/context.js";
+    s.type = "text/javascript";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+})(window, document, "yandex_context_callbacks");
+</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+     <center>
+<!-- R-50948-2 Яндекс.RTB-блок  -->
+<div id="yandex_ad_R-50948-2"></div>
+<script type="text/javascript">
+    (function (w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function () {
+            Ya.Context.AdvManager.render({blockId: "R-50948-2", renderTo: "yandex_ad_R-50948-2", async: true});
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+
+<iframe id='a6296f44' name='a6296f44' src='http://ad.eva.ru/ad/adframe.php?n=a6296f44&amp;what=zone:989' framespacing='0' frameborder='no' scrolling='no' width='240' height='140'><a href='http://ad.eva.ru/ad/adclick.php?n=a6296f44' target='_blank'><img src='http://ad.eva.ru/ad/adview.php?what=zone:989&amp;n=a6296f44' border='0' alt=''></a></iframe>
+</center>
+    </div> 
+   </div> 
+  </div>
+  <footer> 
+   <div class="container"> 
+    <div class="row clearfix"> 
+     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">О проекте</h5></IDXSKIP> 
+      <hr> 
+      <p class="text-justify"> <small> <IDXSKIP>Все права на материалы, размещенные на сайте, защищены законодательством об авторском праве и смежных правах и не могут быть воспроизведены или каким либо образом использованы без письменного разрешения правообладателя и проставления активной ссылки на главную страницу портала Ева.Ру (www.eva.ru) рядом с использованными материалами.<br> За содержание рекламных материалов редакция ответственности не несет. Свидетельство о регистрации СМИ Эл № ФС77-36354 от 22 мая 2009 г. v.3.2.026 </IDXSKIP></small> </p> 
+     </div> 
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">Мы в соцсетях</h5></IDXSKIP> 
+      <hr> 
+      <IDXSKIP><ul class="list-inline"> 
+       <li><a class="btn btn-vk" target="_blank" href="http://vk.com/evato4karu"><span class="hidden-sm hidden-xs">&nbsp;</span><i class="fa fa-vk fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;</span></a></li> 
+       <li> <a class="btn btn-facebook" target="_blank" href="https://www.facebook.com/evato4karu"><span class="hidden-sm hidden-xs">&nbsp;&nbsp;</span><i class="fa fa-facebook fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;&nbsp;</span></a> </li> 
+       <li> <a class="btn btn-instagram" target="_blank" href="https://instagram.com/eva__ru/"><span class="hidden-sm hidden-xs">&nbsp;</span><i class="fa fa-instagram fa-1x"></i><span class="hidden-sm hidden-xs">&nbsp;</span></a> </li> 
+      </ul></IDXSKIP> 
+     </div> 
+     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+      <IDXSKIP><h5 class="text-uppercase">Контакты</h5></IDXSKIP> 
+      <hr> 
+      <ul class="list-unstyled"> 
+       <IDXSKIP><li><a href="/articles/peopleeva.htm">Контакты</a></li></IDXSKIP> 
+       <IDXSKIP><li><a href="/articles/reklama.htm">Реклама на сайте</a></li></IDXSKIP> 
+       <IDXSKIP><li><a href="/articles/payforum.htm">Реклама в форумах</a></li></IDXSKIP> 
+      </ul> 
+     </div> 
+    </div> 
+    <hr> 
+    <IDXSKIP><p> <span class="btn btn-circle btn-danger btn-sm">18+</span> © Eva.ru 2002-2015 <a href="http://top100.rambler.ru/top100/"><img src="https://cloudstatic.eva.ru/design/eva/images/rambler-w7.gif" alt="Rambler's Top100" width="88" height="31" border="0"></a> <a href="http://www.liveinternet.ru/click" target="_blank"><img src="https://cloudstatic.eva.ru/design/eva/images/liveinternet-logo.gif" title="LiveInternet:" border="0" width="88" height="15"></a> <script type="text/javascript">                var img = new Image();                img.src = 'http://www.tns-counter.ru/V13a***R>' + document.referrer.replace(/\*/g, '%2a') + '*eva_ru/ru/UTF-8/tmsec=eva_total/' + Math.round(Math.random() * 1000000000);            </script> 
+     <noscript> 
+      <img src="http://www.tns-counter.ru/V13a****eva_ru/ru/UTF-8/tmsec=eva_total/" width="1" height="1"> 
+     </noscript> <script type="text/javascript">            var _gaq = _gaq || [];            _gaq.push(['_setAccount', 'UA-20593733-1']);            _gaq.push(['_trackPageview']);            (function () {                var ga = document.createElement('script');                ga.type = 'text/javascript';                ga.async = true;                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';                var s = document.getElementsByTagName('script')[0];                s.parentNode.insertBefore(ga, s);            })();        </script> <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script> <script type="text/javascript">try {            var yaCounter132528 = new Ya.Metrika(132528);        } catch (e) {        }</script> 
+     <noscript> 
+     </noscript></p></IDXSKIP>
+    <IDXSKIP><div style="position: absolute;">
+     <img src="//mc.yandex.ru/watch/132528">
+    </div></IDXSKIP>  
+    <script type="text/javascript">(function () {            function c() {                if (!g) {                    g = !0;                    var d = a.createElement(e);                    d.type = "text/java" + e;                    var b;                    b = "?rnd=" + (100 * ((new Date).getTime() % 1E7) + h.round(99 * h.random()));                    b += a.referrer ? "&r=" + encodeURIComponent(a.referrer) : "";                    b += "&t=" + (new Date).getTime();                    b += '&https=' + ('https:' == window.location.protocol ? 1 : 0);                    "undefined" !== typeof __lx__target && (b += "&trg=" + encodeURIComponent(__lx__target));                    d.src = ("https:" == document.location.protocol ? "https://ssl." : "http://") + "luxup.ru/tr_js/" + j + "/24673/" + b;                    "undefined" != typeof d && a.getElementsByTagName(e)[0].parentNode.appendChild(d)                }            }            var j = 737, g = !1, a = document, i = a.documentElement, h = Math, f = window, e = "script";            a.addEventListener ? a.addEventListener("DOMContentLoaded", c, !1) : a.attachEvent ? (i.doScroll && f == f.top && function () {                try {                    i.doScroll("left")                } catch (a) {                    setTimeout(arguments.callee, 0);                    return                }                c()            }(), a.attachEvent("onreadystatechange", function () {                "complete" === a.readyState && c()            })) : f.onload = c        })();</script> 
+    <IDXSKIP><a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?592288" width="0" height="0" border="0"></a></IDXSKIP> 
+    <script type="text/javascript">            document.write("<img style='float:left;' src='http://counter.yadro.ru/hit?r" + escape(document.referrer) + ((typeof(screen) == "undefined") ? "" : ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) + ";" + Math.random() + "' width=1 height=1 alt=''>");        </script> 
+    <p></p> 
+   </div>
+  </footer>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/scrollup/dist/jquery.scrollUp.min.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/bootstrap/itself/plugins/tooltip.js"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/eva/js/functions.js?jsv=3.2.026"></script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/jquery/jquery-cookie/src/jquery.cookie.js"></script>
+  <script type="text/javascript">    function setScrollUpRight() {        var right = $(window).width() - $('div.eva').width();        if (right > 150) {            $('#scrollUp').css('right', (Math.round(right / 2) + 10) + 'px');        }        else {            $('#scrollUp').css('right', '10px');        }    }    $(function () {        $("[data-toggle='tooltip']").tooltip();        $.scrollUp({            scrollText: 'Наверх',            zIndex: 200,            topDistance: '300',            topSpeed: 300,            animation: 'fade',            animationInSpeed: 200,            animationOutSpeed: 200        });        setScrollUpRight();        $(window).on('resize', function () {            setScrollUpRight();        });        var orgElementPos = $('.navbar-static-top').offset();        if (orgElementPos) {            var orgElementTop = orgElementPos.top;            $(window).scroll(function () {                if ($(window).scrollTop() > orgElementTop) {                    $('#nav-scrolled').removeClass('hidden');                } else {                    $('#nav-scrolled').addClass('hidden');                }            });        }    });</script>
+  <script type="text/javascript" src="https://cloudstatic.eva.ru/design/eva3/eva/js/profile.js?jsv=3.2.026"></script>
+ </body>
+</html>

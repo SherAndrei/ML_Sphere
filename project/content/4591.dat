@@ -1,0 +1,697 @@
+webmaster.artem-kashkanov.ru/wordpress/16-zashchita-wordpress-pri-pomoshchi-fajla-htaccess
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr">
+<head>
+<meta name="yandex-verification" content="4e35744005998cfa" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8" />
+	<base href="http://webmaster.artem-kashkanov.ru/wordpress/16-zashchita-wordpress-pri-pomoshchi-fajla-htaccess" />
+	<meta name="keywords" content="Wordpress, htaccess, безопасность" />
+	<meta name="rights" content="Артем Кашканов" />
+	<meta name="author" content="Артем Кашканов" />
+	<meta name="description" content="Создание сайтов в Нижнем Новгороде. Аналитика, аудит и продвижение веб-проектов. Контекстная реклама и поисковое продвижение. Внутренняя оптимизация сайтов. Привлечение посетителей из социальных сетей." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Защита Wordpress при помощи файла .htaccess</title>
+	<link href="/component/jcomments/feed/com_content/16" rel="alternate" type="application/rss+xml" title="Защита Wordpress при помощи файла .htaccess" />
+	<link href="/templates/new-protostar/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://webmaster.artem-kashkanov.ru/component/search/?Itemid=119&amp;catid=21&amp;id=16&amp;format=opensearch" rel="search" title="Искать Вебмастер Артем Кашканов" type="application/opensearchdescription+xml" />
+	<link href="/components/com_jcomments/tpl/default/style.css?v=3002" rel="stylesheet" />
+	<link href="/templates/new-protostar/css/template.css" rel="stylesheet" />
+	<link href="/media/mod_pwebcontact/css/bootstrap.css" rel="stylesheet" />
+	<link href="/media/mod_pwebcontact/css/icomoon.css" rel="stylesheet" />
+	<link href="/media/mod_pwebcontact/css/layout.css" rel="stylesheet" />
+	<link href="/media/mod_pwebcontact/css/animations.css" rel="stylesheet" />
+	<link href="/media/mod_pwebcontact/css/background/white.css" rel="stylesheet" />
+	<link href="/media/mod_pwebcontact/css/form/blue.css" rel="stylesheet" />
+	<link href="/media/mod_pwebcontact/css/toggler/blue.css" rel="stylesheet" />
+	<link href="/cache/mod_pwebcontact/e81e1bce8cbd93100833c422f5655fe6.css" rel="stylesheet" />
+	<link href="/libraries/videobox/css/videobox.min.css" rel="stylesheet" />
+	<style>
+#gototop{border:1px solid #000;margin:5px;padding:5px;background-color:#ff0;color:#000;} #gototop:hover{background-color:#000;color:#ff0;} .pagination>li>a, .pagination>li>span{color:#005723;text-shadow:0 0 10px #84d1a4} .pagination>li.active>a, .pagination>li.active>span, .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{color:#005723;background-color:#84d1a4} .vb_video_cont, .vb_video_cont a, .vb_video_frame{color:#005723} #vbiClose:focus, #vbiClose:hover, .vb_video_cont a:focus, .vb_video_cont a:focus .vb_thub_wrap .vb-icon-play, .vb_video_cont a:hover, .vb_video_cont a:hover .vb_thub_wrap .vb-icon-play, .vb_video_cont:focus, .vb_video_cont:focus .vb_thub_wrap .vb-icon-play, .vb_video_cont:hover, .vb_video_cont:hover .vb_thub_wrap .vb-icon-play{color:#84d1a4} #vbiWrap{color:#005723} .vb_slider_outer .vb_slider_next:focus, .vb_slider_outer .vb_slider_next:hover, .vb_slider_outer .vb_slider_prev:focus, .vb_slider_outer .vb_slider_prev:hover{color:#84d1a4} .vb_slider_outer{color:#005723} #vbCloseLink:focus, #vbCloseLink:hover, .vjs-big-play-button:focus, .vjs-big-play-button:hover, .vjs-fullscreen-control:hover, .vjs-play-control:hover, .vjs-volume-menu-button:focus, .vjs-volume-menu-button:hover{color:#84d1a4}
+/*# sourceMappingURL=overrides.css.map */
+
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"joomla.jtext":{"MOD_PWEBCONTACT_INIT":"\u0418\u043d\u0438\u0446\u0438\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438 \u0444\u043e\u0440\u043c\u044b...","MOD_PWEBCONTACT_SENDING":"\u0418\u0434\u0435\u0442 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0430...","MOD_PWEBCONTACT_SEND_ERR":"\u041f\u043e\u0434\u043e\u0436\u0434\u0438\u0442\u0435 \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0441\u0435\u043a\u0443\u043d\u0434, \u043f\u0440\u0435\u0436\u0434\u0435 \u0447\u0435\u043c \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u0442\u044c \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435","MOD_PWEBCONTACT_REQUEST_ERR":"\u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u043f\u0440\u043e\u0441\u0430: ","MOD_PWEBCONTACT_COOKIES_ERR":"\u0412\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u043a\u0443\u043a\u0438 (cookies) \u0432 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0435 \u0438 \u043e\u0431\u043d\u043e\u0432\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443"}}</script>
+	<script src="/components/com_jcomments/js/jcomments-v2.3.js?v=12"></script>
+	<script src="/components/com_jcomments/libraries/joomlatune/ajax.js?v=4"></script>
+	<script src="/media/jui/js/jquery.min.js?7109f237a20b7673913e0285cfb4e896"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?7109f237a20b7673913e0285cfb4e896"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?7109f237a20b7673913e0285cfb4e896"></script>
+	<script src="/media/system/js/caption.js?7109f237a20b7673913e0285cfb4e896"></script>
+	<script src="/media/jui/js/bootstrap.min.js?7109f237a20b7673913e0285cfb4e896"></script>
+	<script src="/templates/new-protostar/js/template.js"></script>
+	<script src="/media/mod_pwebcontact/js/jquery.validate.min.js?v=1.14.0"></script>
+	<script src="/media/mod_pwebcontact/js/jquery.pwebcontact.min.js?v=3.4.2"></script>
+	<script src="/media/system/js/core.js?7109f237a20b7673913e0285cfb4e896"></script>
+	<script src="/media/system/js/html5fallback.js?7109f237a20b7673913e0285cfb4e896"></script>
+	<script src="/media/system/js/mootools-core.js?7109f237a20b7673913e0285cfb4e896"></script>
+	<script src="/media/system/js/mootools-more.js?7109f237a20b7673913e0285cfb4e896"></script>
+	<script src="/media/plg_system_topofthepage/ScrollSpy.min.js"></script>
+	<script src="/media/plg_system_topofthepage/topofthepage.min.js"></script>
+	<script src="/libraries/videobox/js/videobox.bundle.js"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+			function ctSetCookie(c_name, value) {
+				document.cookie = c_name + "=" + encodeURIComponent(value) + "; path=/";
+			}
+
+			ctSetCookie("ct_ps_timestamp", Math.floor(new Date().getTime()/1000));
+			ctSetCookie("ct_fkp_timestamp", "0");
+			ctSetCookie("ct_pointer_data", "0");
+			ctSetCookie("ct_timezone", "0");
+
+			setTimeout(function(){
+				ctSetCookie("ct_checkjs", "353456b3f34fd5369449f34fea6d2d91");
+				ctSetCookie("ct_timezone", new Date().getTimezoneOffset()/60*(-1));
+			},1000);
+
+			//Stop observing function
+			function ctMouseStopData(){
+				if(typeof window.addEventListener == "function")
+					window.removeEventListener("mousemove", ctFunctionMouseMove);
+				else
+					window.detachEvent("onmousemove", ctFunctionMouseMove);
+				clearInterval(ctMouseReadInterval);
+				clearInterval(ctMouseWriteDataInterval);				
+			}
+
+			//Stop key listening function
+			function ctKeyStopStopListening(){
+				if(typeof window.addEventListener == "function"){
+					window.removeEventListener("mousedown", ctFunctionFirstKey);
+					window.removeEventListener("keydown", ctFunctionFirstKey);
+				}else{
+					window.detachEvent("mousedown", ctFunctionFirstKey);
+					window.detachEvent("keydown", ctFunctionFirstKey);
+				}			
+			}
+
+			var d = new Date(), 
+				ctTimeMs = new Date().getTime(),
+				ctMouseEventTimerFlag = true, //Reading interval flag
+				ctMouseData = "[",
+				ctMouseDataCounter = 0;
+				
+			//Reading interval
+			var ctMouseReadInterval = setInterval(function(){
+					ctMouseEventTimerFlag = true;
+				}, 150);
+				
+			//Writting interval
+			var ctMouseWriteDataInterval = setInterval(function(){ 
+					var ctMouseDataToSend = ctMouseData.slice(0,-1).concat("]");
+					ctSetCookie("ct_pointer_data", ctMouseDataToSend);
+				}, 1200);
+
+			//Logging mouse position each 300 ms
+			var ctFunctionMouseMove = function output(event){
+				if(ctMouseEventTimerFlag == true){
+					var mouseDate = new Date();
+					ctMouseData += "[" + event.pageY + "," + event.pageX + "," + (mouseDate.getTime() - ctTimeMs) + "],";
+					ctMouseDataCounter++;
+					ctMouseEventTimerFlag = false;
+					if(ctMouseDataCounter >= 100)
+						ctMouseStopData();
+				}
+			}
+			//Writing first key press timestamp
+			var ctFunctionFirstKey = function output(event){
+				var KeyTimestamp = Math.floor(new Date().getTime()/1000);
+				ctSetCookie("ct_fkp_timestamp", KeyTimestamp);
+				ctKeyStopStopListening();
+			}
+
+			if(typeof window.addEventListener == "function"){
+				window.addEventListener("mousemove", ctFunctionMouseMove);
+				window.addEventListener("mousedown", ctFunctionFirstKey);
+				window.addEventListener("keydown", ctFunctionFirstKey);
+			}else{
+				window.attachEvent("onmousemove", ctFunctionMouseMove);
+				window.attachEvent("mousedown", ctFunctionFirstKey);
+				window.attachEvent("keydown", ctFunctionFirstKey);
+			}
+    jQuery(function($){ $(".hasTooltip").tooltip({"html": true,"container": "body"}); });window.plg_system_topofthepage_options = {"spyposition":"200","visibleopacity":"100","displaydur":"250","slidein":"0","slideindir":"top","zindex":"0","topalways":false,"icon":false,"buttontext":"\u0412 \u043d\u0430\u0447\u0430\u043b\u043e","styles":{"position":"fixed","opacity":0,"display":"block","bottom":"0px","right":"0px"},"smoothscroll":{"duration":"500","transition":"linear"}};
+
+	</script>
+
+				<link href='//fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet' type='text/css' />
+		<style type="text/css">
+			h1,h2,h3,h4,h5,h6,.site-title{
+				font-family: 'Roboto Condensed', sans-serif;
+			}
+		</style>
+				
+		<!--[if lt IE 9]>
+		<script src="/media/jui/js/html5.js"></script>
+	<![endif]-->
+<script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body class="site com_content view-article no-layout no-task itemid-119 fluid">
+
+	<!-- Body -->
+	<div class="body">
+		<div class="container-fluid">
+			<!-- Header -->
+			<header class="header" role="banner">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<IDXSKIP><span class="site-title" title="Вебмастер Артем Кашканов">Вебмастер Артем Кашканов</span></IDXSKIP>													<div class="site-description"><IDXSKIP>Авторский информационный проект о веб-разработке, оптимизации, конверсии и монетизации</IDXSKIP></div>											</a>
+					<IDXSKIP><div class="header-search pull-right">
+						<div class="search">
+	<form action="/wordpress" method="post" class="form-inline">
+		<label for="mod-search-searchword89" class="element-invisible">Искать...</label> <input name="searchword" id="mod-search-searchword89" maxlength="200"  class="inputbox search-query input-medium" type="search" placeholder="Поиск..." />		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="Itemid" value="119" />
+	</form>
+</div>
+
+
+<div class="custom"  >
+	<p>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//yastatic.net/share2/share.js" type="text/javascript" charset="utf-8"></script>
+</p>
+<center>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter" data-counter=""> </div>
+</center></div>
+
+					</div></IDXSKIP>
+				</div>
+			</header>
+							<nav class="navigation" role="navigation">
+					<div class="navbar pull-left">
+						<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+					</div>
+					<div class="nav-collapse">
+						<ul class="nav menu nav-pills">
+<IDXSKIP><li class="item-101 default"><a href="/" >Начало</a></li></IDXSKIP><IDXSKIP><li class="item-148"><a href="/proekty" >Проекты</a></li></IDXSKIP><IDXSKIP><li class="item-102"><a href="/sozdanie-sajtov" >Создание сайтов</a></li></IDXSKIP><IDXSKIP><li class="item-118"><a href="/optimizatsiya-sajta" >Оптимизация сайта</a></li></IDXSKIP><IDXSKIP><li class="item-121"><a href="/monetizatsiya-sajta" >Монетизация сайта</a></li></IDXSKIP><IDXSKIP><li class="item-120"><a href="/poleznye-skripty" >Полезные скрипты</a></li></IDXSKIP><IDXSKIP><li class="item-147"><a href="/life-hack" >Лайфхаки</a></li></IDXSKIP><IDXSKIP><li class="item-162"><a href="/devices" >Девайсы</a></li></IDXSKIP><IDXSKIP><li class="item-203"><a href="/students" >Моим студентам</a></li></IDXSKIP></ul>
+
+					</div>
+				</nav>
+								<div class="moduletable s-otstupom">
+						
+<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb s-otstupom">
+			<li class="active">
+			<span class="divider icon-location"></span>
+		</li>
+	
+				<IDXSKIP><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/" class="pathway"><span itemprop="name">Главная</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="1">
+			</li></IDXSKIP>
+					<IDXSKIP><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+									<a itemprop="item" href="/wordpress" class="pathway"><span itemprop="name">Статьи по Wordpress</span></a>
+				
+									<span class="divider">
+						<img src="/media/system/images/arrow.png" alt="" />					</span>
+								<meta itemprop="position" content="2">
+			</li></IDXSKIP>
+					<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+				<span itemprop="name">
+					Защита Wordpress при помощи файла .htaccess				</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ul>
+		</div>
+	
+			<div class="row-fluid">
+									<!-- Begin Sidebar -->
+					<div id="sidebar" class="span3">
+						<div class="sidebar-nav">
+							<div class="well "><h3 class="page-header">Свежие материалы</h3><ul class="latestnews">
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/sozdanie-sajtov/36-software/php-dlya-nachinayushchikh/laravel-for-kettels/118-composer-proxy" itemprop="url">
+			<span itemprop="name">
+				Как заставить работать Composer через прокси?			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/devices/117-sho-me-525-str-review" itemprop="url">
+			<span itemprop="name">
+				Радар-детектор ShoMe STR 525			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/sozdanie-sajtov/36-software/php-dlya-nachinayushchikh/laravel-for-kettels/116-setup-laravel" itemprop="url">
+			<span itemprop="name">
+				Установка Laravel - 4 простых шага			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/devices/115-telefunken-tf-srp3401b" itemprop="url">
+			<span itemprop="name">
+				Магнитола TELEFUNKEN TF-SRP3401B. Наверное, лучший аппарат в своем классе.			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/devices/114-sony-zs-ps50" itemprop="url">
+			<span itemprop="name">
+				Sony ZS-RS60BT - отзыв о магнитоле. Не впечатлила...			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/life-hack/113-vt52-ru-otzyv-pokupatela-customer-review" itemprop="url">
+			<span itemprop="name">
+				Интернет-магазин "Вся техника" - чтобы я еще раз с ними связался...			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/kak-zarabotat-na-sajte/112-yandex-ua-kaput" itemprop="url">
+			<span itemprop="name">
+				Блокировка Яндекса на Украине.Чем это грозит веб-мастерам?			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/sozdanie-sajtov/35-software/bootstrap/111-modal-form-bootstrap-on-page" itemprop="url">
+			<span itemprop="name">
+				Неактивное модальное окно Bootstrap заслоняет контент, делая ссылки под ним не кликабельными			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/software/110-joomla-3-7-fields" itemprop="url">
+			<span itemprop="name">
+				Новая полезная опция в Joomla 3.7 - пользовательские поля			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/sozdanie-sajtov/109-yandex-money-form-for-site" itemprop="url">
+			<span itemprop="name">
+				Как разместить форму приема платежей через Яндекс на своем сайте			</span>
+		</a>
+	</li></IDXSKIP>
+</ul>
+</div><IDXSKIP><div class="well "><h3 class="page-header">Тема!</h3><div class="bannergroup">
+
+	<div class="banneritem">
+																																																															<a
+							href="/component/banners/click/4" target="_blank" rel="noopener noreferrer"
+							title="market-place">
+							<img
+								src="http://webmaster.artem-kashkanov.ru/images/marketplace.png"
+								alt="market-place"
+								 width="240"								 height="400"							/>
+						</a>
+																<div class="clr"></div>
+	</div>
+
+</div>
+</div></IDXSKIP>
+						</div>
+					</div>
+					<!-- End Sidebar -->
+								<main id="content" role="main" class="span6">
+					<!-- Begin Content -->
+					
+					<div id="system-message-container">
+	</div>
+
+					<div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="ru-RU" />
+	
+		
+			<div class="page-header">
+					<h2 itemprop="headline">
+				Защита Wordpress при помощи файла .htaccess			</h2>
+									</div>
+					
+		
+	
+	
+		
+									<div itemprop="articleBody">
+		
+
+
+<div style="float:left;margin:6px 15px 2px 2px;">
+
+<!-- Вебмастер, верх -->
+<ins class="adsbygoogle"
+	style="display:inline-block;width:336px;height:280px"
+	data-ad-client="ca-pub-4515709609667141"
+	data-ad-slot="4360507535"
+	data-ad-type="image"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><p><strong>.htaccess</strong> - файл, который лежит в корне сайта и в котором прописаны все правила и ограничения доступа к сайту целиком и его отдельным файлам по протоколу HTTP. При работе с файлом .htaccess  следует соблюдать осторожность и делать бэкап перед каждой модификацией. Если в файле допущена ошибка хотя бы в один символ, сайт может полностью потерять работоспособность.</p>
+<p>Чтобы защитить Wordpress хотя бы  "от пионеров", стоит внести в этот файл следующие изменения.</p>
+<p><strong>1. Защищаем файл конфикурации wp-config.php</strong></p>
+<p>В файле wp-config.php хранятся в открытом виде важные данные - логин и пароль подключения к базе данных сайта. Логичным выглядит скрыть его ото всех любопытных глаз и загребущих рук.</p>
+<blockquote><strong>&lt;files wp-config.php&gt;</strong><br /><strong>order allow,deny</strong><br /><strong>deny from all</strong><br /><strong>&lt;/files&gt;</strong></blockquote>
+<p><strong>2. Защита каталогов сервера от просмотра</strong></p>
+<p>Некоторые хостинг-провайдеры позволяют просматривать содержимое каталогов на сервере. Если в каталоге нет файла index.html, содержимое каталога выводится в браузере и можно скачать любой файл. Чтобы этого не было, нужно либо в каждом каталоге создать index.html или в .htaccess добавить следующую фразу:</p>
+<blockquote>Options All -Indexes</blockquote>
+<p><strong>3. Двухфакторная авторизация </strong></p>
+<p>По умолчанию в Wordpress авторизация однофакторная, простой вход в админку (/wp-admin). Для повышения безопасности можно для данного каталога добавить еще HTTP-авторизацию. Для этого нужно воспользоваться админкой хостинга и найти пункт "Защитить каталог паролем". У разных хостеров это может называться по-разному. У Agava.ru, услугами которой я пользуюсь, в админке есть пункт:</p>
+<p><img src="/images/secure.jpg" alt="secure" /></p>
+<p>У других хостеров вид админки может отличаться, но почти всегда что-то подобное имеется. Заходим туда, создаем пользователя и делаем доступ к каталогу <strong>/wp-admin </strong>защищенным. В этом случае при входе в админку сайта нужно будет вводить уже две пары "логин-пароль" - те что вы указали в админке хостинга и те, что соответствуют админу в Wordpress. </p>
+<p>В каталоге /wp-admin будет создан свой .htaccess, в котором будут присутствовать строки:</p>
+<blockquote><strong>AuthName 'Restricted Area'</strong><br /><strong>AuthType Basic</strong><br /><strong>AuthUserFile /*****/*/********/.authfile</strong><br /><strong>require user ***имя пользователя***</strong></blockquote>
+<p><strong>4. Защита от XSS</strong></p>
+<p>XSS ("кроссайтовый скриптинг") - тип атаки на веб-сайт, заключающийся во внедрении в формируемую сайтом страницу вредоносного кода, который взаимодействует с сервером злоумышленника. К примеру, если в комментариях к сайту не запретить javascript, то найдется умник, который этим воспользуется, добавив строчку &lt;script&gt;window.open('...');&lt;/script&gt;. При этом каждый раз при открытии страницы с данным комментарием будет открываться окно с другим сайтом. Этот пример, на самом деле, достаточно безобиден и легко выявляется. Но есть гораздо более серьезные виды XSS-атак, которые могут принести большой вред. Подробнее о них можно почитать, например, здесь - <a href="http://habrahabr.ru/post/66057/">http://habrahabr.ru/post/66057/</a></p>
+<p>Приведенный ниже код защищает от "вредных" GET- и POST- запросов, содержащих слово &lt;script&gt;, а также пресекает попытки модифицировать значение глобальных переменных GLOBALS и _REQUEST.</p>
+<blockquote><strong>Options +FollowSymLinks</strong><br /><strong>RewriteEngine On</strong><br /><strong>RewriteCond %{QUERY_STRING} (\&lt;|%3C).*script.*(\&gt;|%3E) [NC,OR]</strong><br /><strong>RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]</strong><br /><strong>RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})</strong><br /><strong>RewriteRule ^(.*)$ index.php [F,L]</strong></blockquote>
+<p>Если запрос "не проходит" через данный фильтр, браузер показывает ошибку 403 - доступ запрещен.</p> 
+<div style="text-align:center;">
+
+<!-- Вебмастер, верх -->
+<ins class="adsbygoogle"
+	style="display:inline-block;width:336px;height:280px"
+	data-ad-client="ca-pub-4515709609667141"
+	data-ad-slot="4360507535"
+	data-ad-type="text"
+	data-color-border="FFFFFF"
+	data-color-bg="FFFFFF"
+	data-color-link="0088CC"
+	data-color-text="555555"
+	data-color-url="AAAAAA"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>	</div>
+
+											<dl class="article-info muted">
+
+		
+			<IDXSKIP><dt class="article-info-term">
+									Подробности							</dt></IDXSKIP>
+
+			
+			
+										<IDXSKIP><dd class="category-name">
+																		Категория: <a href="/wordpress" itemprop="genre">Wordpress</a>							</dd></IDXSKIP>			
+			
+										<dd class="published">
+				<span class="icon-calendar" aria-hidden="true"></span>
+				<time datetime="2015-11-27T07:50:15+00:00" itemprop="datePublished">
+					Опубликовано: 27 ноября 2015				</time>
+			</dd>			
+		
+					
+			
+										<dd class="hits">
+					<span class="icon-eye-open"></span>
+					<meta itemprop="interactionCount" content="UserPageVisits:1129" />
+					Просмотров: 1129			</dd>						</dl>
+					
+					
+<ul class="pager pagenav">
+	<li class="previous">
+		<a href="/wordpress/95-wp-new-plugin-site-not-works" rel="prev">
+			<span class="icon-chevron-left"></span> Wordpress: установили новый плагин, сайт упал! Что делать?		</a>
+	</li>
+	<li class="next">
+		<a href="/wordpress/40-contact-form-7-url-title" rel="next">
+			Как в форме обратной связи Wordpress передать адрес страницы, с которой отправлено сообщение? <span class="icon-chevron-right"></span>		</a>
+	</li>
+</ul>
+			<script type="text/javascript">
+<!--
+var jcomments=new JComments(16, 'com_content','/component/jcomments/');
+jcomments.setList('comments-list');
+//-->
+</script>
+<div id="jc">
+<div id="comments"></div>
+<h4>Добавить комментарий</h4>
+<a id="addcomments" href="#addcomments"></a>
+<form id="comments-form" name="comments-form" action="javascript:void(null);">
+<IDXSKIP><p>
+	<span>
+		<input id="comments-form-name" type="text" name="name" value="" maxlength="20" size="22" tabindex="1" />
+		<label for="comments-form-name">Имя (обязательное)</label>
+	</span>
+</p></IDXSKIP>
+<IDXSKIP><p>
+	<span>
+		<input id="comments-form-email" type="text" name="email" value="" size="22" tabindex="2" />
+		<label for="comments-form-email">E-Mail (обязательное)</label>
+	</span>
+</p></IDXSKIP>
+<p>
+	<span>
+		<textarea id="comments-form-comment" name="comment" cols="65" rows="8" tabindex="5"></textarea>
+	</span>
+</p>
+<p>
+	<span>
+		<input class="checkbox" id="comments-form-subscribe" type="checkbox" name="subscribe" value="1" tabindex="5" />
+		<label for="comments-form-subscribe"><IDXSKIP>Подписаться на уведомления о новых комментариях</IDXSKIP></label><br />
+	</span>
+</p>
+<p>
+	<span>
+		<img class="captcha" onclick="jcomments.clear('captcha');" id="comments-form-captcha-image" src="/component/jcomments/captcha/77912" width="121" height="60" alt="Защитный код" /><br />
+		<span class="captcha" onclick="jcomments.clear('captcha');">Обновить</span><br />
+		<input class="captcha" id="comments-form-captcha" type="text" name="captcha_refid" value="" size="5" tabindex="6" /><br />
+	</span>
+</p>
+<IDXSKIP><div id="comments-form-buttons">
+	<div class="btn" id="comments-form-send"><div><a href="#" tabindex="7" onclick="jcomments.saveComment();return false;" title="Отправить (Ctrl+Enter)">Отправить</a></div></div>
+	<div class="btn" id="comments-form-cancel" style="display:none;"><div><a href="#" tabindex="8" onclick="return false;" title="Отменить">Отменить</a></div></div>
+	<div style="clear:both;"></div>
+</div></IDXSKIP>
+<div>
+	<input type="hidden" name="object_id" value="16" />
+	<input type="hidden" name="object_group" value="com_content" />
+</div>
+</form>
+<script type="text/javascript">
+<!--
+function JCommentsInitializeForm()
+{
+	var jcEditor = new JCommentsEditor('comments-form-comment', true);
+	jcEditor.initSmiles('/components/com_jcomments/images/smilies/');
+	jcEditor.addSmile(':D','laugh.gif');
+	jcEditor.addSmile(':lol:','lol.gif');
+	jcEditor.addSmile(':-)','smile.gif');
+	jcEditor.addSmile(';-)','wink.gif');
+	jcEditor.addSmile('8)','cool.gif');
+	jcEditor.addSmile(':-|','normal.gif');
+	jcEditor.addSmile(':-*','whistling.gif');
+	jcEditor.addSmile(':oops:','redface.gif');
+	jcEditor.addSmile(':sad:','sad.gif');
+	jcEditor.addSmile(':cry:','cry.gif');
+	jcEditor.addSmile(':o','surprised.gif');
+	jcEditor.addSmile(':-?','confused.gif');
+	jcEditor.addSmile(':-x','sick.gif');
+	jcEditor.addSmile(':eek:','shocked.gif');
+	jcEditor.addSmile(':zzz','sleeping.gif');
+	jcEditor.addSmile(':P','tongue.gif');
+	jcEditor.addSmile(':roll:','rolleyes.gif');
+	jcEditor.addSmile(':sigh:','unsure.gif');
+	jcEditor.addCounter(1000, 'Осталось:', ' символов', 'counter');
+	jcomments.setForm(new JCommentsForm('comments-form', jcEditor));
+}
+
+if (window.addEventListener) {window.addEventListener('load',JCommentsInitializeForm,false);}
+else if (document.addEventListener){document.addEventListener('load',JCommentsInitializeForm,false);}
+else if (window.attachEvent){window.attachEvent('onload',JCommentsInitializeForm);}
+else {if (typeof window.onload=='function'){var oldload=window.onload;window.onload=function(){oldload();JCommentsInitializeForm();}} else window.onload=JCommentsInitializeForm;} 
+//-->
+</script>
+<IDXSKIP><div id="comments-footer" align="center"><a href="http://www.joomlatune.ru" title="JComments" target="_blank">JComments</a></div></IDXSKIP>
+</div></div>
+
+					
+
+<div class="custom"  >
+	<center></center>
+<IDXSKIP><div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter" data-counter="">&nbsp;</div></IDXSKIP>
+<IDXSKIP><p>&nbsp;</p></IDXSKIP></div>
+<div class="well "><h3 class="page-header">Возможно, вас заинтересует...</h3><ul class="relateditems">
+<li>
+	<a href="/optimizatsiya-sajta/24-dorabotka-napilnikom/19-somnitelnye-stranitsy-v-statistike-sajta">
+		07.12.2015 - 		Рефспам - сомнительные страницы в статистике сайта.</a>
+</li>
+<IDXSKIP><li>
+	<a href="/wordpress/95-wp-new-plugin-site-not-works">
+		15.12.2016 - 		Wordpress: установили новый плагин, сайт упал! Что делать?</a>
+</li></IDXSKIP>
+<li>
+	<a href="/wordpress/40-contact-form-7-url-title">
+		16.02.2016 - 		Как в форме обратной связи Wordpress передать адрес страницы, с которой отправлено сообщение?</a>
+</li>
+<IDXSKIP><li>
+	<a href="/wordpress/25-remove-site-field">
+		06.01.2016 - 		Как убрать поле "Сайт" из формы комментариев Wordpress</a>
+</li></IDXSKIP>
+</ul>
+</div>
+					<!-- End Content -->
+				</main>
+									<div id="aside" class="span3">
+						<!-- Begin Right Sidebar -->
+						<div class="well "><h3 class="page-header">Самые популярные категории</h3><ul class="nav menu">
+<IDXSKIP><li class="item-191"><a href="/kak-zarabotat-na-sajte" >Как заработать на сайте</a></li></IDXSKIP><IDXSKIP><li class="item-103"><a href="/software" >Статьи по Joomla</a></li></IDXSKIP><IDXSKIP><li class="item-119 current active"><a href="/wordpress" >Статьи по Wordpress</a></li></IDXSKIP></ul>
+</div><div class="well "><h3 class="page-header">Самые популярные материалы</h3><ul class="mostread">
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/wordpress/40-contact-form-7-url-title" itemprop="url">
+			<span itemprop="name">
+				Как в форме обратной связи Wordpress передать адрес страницы, с которой отправлено сообщение?			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/kak-zarabotat-na-sajte/30-direct-vs-adsense" itemprop="url">
+			<span itemprop="name">
+				Заработок на контекстной рекламе в 2016 году. РСЯ vs Google Adsense			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/life-hack/35-kak-otklyuchit-pakety-dopolnitelnogo-trafika-u-mts-superbit" itemprop="url">
+			<span itemprop="name">
+				Как отключить пакеты дополнительного трафика у МТС (Супербит)?			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/optimizatsiya-sajta/20-vneshnyaya-optimizatsiya/45-links-for-seo-2016" itemprop="url">
+			<span itemprop="name">
+				Стоит ли покупать ссылки для продвижения сайта в 2016 году?			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/software/54-ajax-popup-contact-form-plugin" itemprop="url">
+			<span itemprop="name">
+				Perfect AJAX Popup Contact Form - отличный модуль формы обратной связи Joomla3			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/devices/55-gal-universal-pult-tv" itemprop="url">
+			<span itemprop="name">
+				Как настроить универсальный пульт GAL для телевизора Samsung			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/kak-zarabotat-na-sajte/24-avdertur" itemprop="url">
+			<span itemprop="name">
+				Advertur.ru - отзыв после 3 месяцев работы. Стоит ли овчинка выделки?			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/software/89-landing-page-joomla-sppagebuilder" itemprop="url">
+			<span itemprop="name">
+				Создание посадочной страницы на Joomla при помощи компонента SP Page Builder			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/software/6-joomla3-modules" itemprop="url">
+			<span itemprop="name">
+				Как в Joomla 3 посмотреть позиции для модулей?			</span>
+		</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li itemscope itemtype="https://schema.org/Article">
+		<a href="/kak-zarabotat-na-sajte/29-sell-links-2016" itemprop="url">
+			<span itemprop="name">
+				Можно ли в 2016 году зарабатывать на продаже ссылок?			</span>
+		</a>
+	</li></IDXSKIP>
+</ul>
+</div>
+						<!-- End Right Sidebar -->
+					</div>
+							</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container-fluid">
+			<hr />
+			
+			<IDXSKIP><p class="pull-right">
+				<a href="#top" id="back-top">
+					Back to Top				</a>
+			</p></IDXSKIP>
+			<IDXSKIP><p>
+				&copy; 2017 Вебмастер Артем Кашканов			</p></IDXSKIP>
+		</div>
+	</footer>
+	
+
+<div class="custom"  >
+	<IDXSKIP><p> </p></IDXSKIP>
+<!-- Yandex.Metrika informer -->
+<IDXSKIP><p><a href="https://metrika.yandex.ru/stat/?id=34470390&amp;from=informer" target="_blank" rel="nofollow"><img style="width: 88px; height: 31px; border: 0;" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" src="https://informer.yandex.ru/informer/34470390/3_0_2086B9FF_006699FF_1_pageviews" alt="Яндекс.Метрика" /></a></p></IDXSKIP>
+<!-- /Yandex.Metrika informer -->
+<IDXSKIP><p> </p></IDXSKIP>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">// <![CDATA[
+(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter34470390 = new Ya.Metrika({ id:34470390, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
+// ]]></script>
+<IDXSKIP><noscript><div><img src="https://mc.yandex.ru/watch/34470390" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP><!-- /Yandex.Metrika counter --></div>
+<!-- PWebContact -->
+
+
+<div id="pwebcontact102" class="pwebcontact pweb-bottom pweb-offset-left pweb-slidebox pweb-labels-inline pweb-bg-white pweb-form-blue pweb-horizontal pweb-toggler-slide pweb-icomoon pweb-radius pweb-shadow" dir="ltr">
+	
+		
+		<div id="pwebcontact102_box" class="pwebcontact-box pweb-slidebox pweb-labels-inline pweb-bg-white pweb-form-blue pweb-horizontal pweb-toggler-slide pweb-icomoon pweb-radius pweb-shadow pweb-init" dir="ltr">
+	<div id="pwebcontact102_container" class="pwebcontact-container">
+	
+		<IDXSKIP><div id="pwebcontact102_toggler" class="pwebcontact102_toggler pwebcontact_toggler pweb-closed pweb-toggler-blue pweb-icon pweb-icon-icomoon pweb-radius pweb-shadow"><span class="pweb-text">Предложить тему</span><span class="pweb-icon"></span></div></IDXSKIP>		
+				
+		<form name="pwebcontact102_form" id="pwebcontact102_form" class="pwebcontact-form" action="http://webmaster.artem-kashkanov.ru/wordpress/16-zashchita-wordpress-pri-pomoshchi-fajla-htaccess" method="post" accept-charset="utf-8">
+			
+						
+			<div class="pweb-fields">
+								<IDXSKIP><div class="pweb-field-container pweb-field-name pweb-field-name">
+												<div class="pweb-label">
+							<label id="pwebcontact102_field-name-lbl" for="pwebcontact102_field-name">
+								Ваше имя								<span class="pweb-asterisk">*</span>							</label>
+						</div>
+												<div class="pweb-field">
+														<input type="text" name="fields[name]" id="pwebcontact102_field-name" class="pweb-input required" value="" data-role="none">
+													</div>
+					</div></IDXSKIP>
+										<IDXSKIP><div class="pweb-field-container pweb-field-email pweb-field-email_4">
+												<div class="pweb-label">
+							<label id="pwebcontact102_field-email_4-lbl" for="pwebcontact102_field-email_4">
+								Ваш E-Mail								<span class="pweb-asterisk">*</span>							</label>
+						</div>
+												<div class="pweb-field">
+														<input type="email" name="fields[email_4]" id="pwebcontact102_field-email_4" class="pweb-input required" value="" data-role="none">
+													</div>
+					</div></IDXSKIP>
+										<div class="pweb-field-container pweb-field-textarea pweb-field-text">
+												<div class="pweb-label">
+							<label id="pwebcontact102_field-text-lbl" for="pwebcontact102_field-text">
+								<IDXSKIP>О чем бы вы хотели почитать?															</IDXSKIP></label>
+						</div>
+												<IDXSKIP><div class="pweb-field">
+														<textarea name="fields[text]" id="pwebcontact102_field-text" cols="50" rows="5" maxlength="1000" data-role="none"></textarea>
+														<div class="pweb-chars-counter"><span id="pwebcontact102_field-text-limit">1000</span> максимум символов</div>
+								
+													</div></IDXSKIP>
+					</div>
+										<IDXSKIP><div class="pweb-field-container pweb-field-buttons">
+						<div class="pweb-field">
+							<button id="pwebcontact102_send" type="button" class="btn" data-role="none">Отправить</button>
+																				</div>
+					</div></IDXSKIP>
+						</div>
+			
+			<div class="pweb-msg pweb-msg-after"><div id="pwebcontact102_msg" class="pweb-progress"><script type="text/javascript">document.getElementById("pwebcontact102_msg").innerHTML="Инициализация отправки формы..."</script></div></div>			
+						<input type="hidden" name="1025958a995935e072ef0c7747e76ff3" value="1" id="pwebcontact102_token">
+		</form>
+		
+			
+	</div>
+	</div>
+	</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function($){pwebContact102=new pwebContact({id:102,layout:"slidebox",position:"bottom",offsetPosition:"left",basePath:"",ajaxUrl:"index.php?option=com_ajax&module=pwebcontact&Itemid=119&lang=ru-RU&method=",slideDuration:400})});</script>
+<!-- PWebContact end -->
+</body>
+</html>
+

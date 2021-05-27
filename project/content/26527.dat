@@ -1,0 +1,494 @@
+rocca.ru/Question/19961
+﻿﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content=" chrome=1" />
+<title>Что делать, если помидоры жируют?</title>
+	<meta name="description" content="Как исправить положение?" />
+	<meta name="keywords" content="" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/js/ajaxupload.3.5.js"></script>
+<script>
+	$(document).ready(function(){
+
+	    // hide #back-top first
+	    $("#back-top").hide();
+
+	    // fade in #back-top
+	    $(function () {
+	        $(window).scroll(function () {
+	            if ($(this).scrollTop() > 100) {
+	                $('#back-top').fadeIn();
+	            } else {
+	                $('#back-top').fadeOut();
+	            }
+	        });
+
+	        // scroll body to 0px on click
+	        $('#back-top a').click(function () {
+	            $('body,html').animate({
+	                scrollTop: 0
+	            }, 800);
+	            return false;
+	        });
+	    });
+
+	 	$('input[type=radio], input[type=file], select').styler();
+	});
+</script>
+<!-- <link rel="stylesheet" type="text/css" href="/jqtransformplugin/jqtransform.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="/formValidator/validationEngine.jquery.css" />
+<script type="text/javascript" src="jqtransformplugin/jquery.jqtransform.js"></script>
+<script type="text/javascript" src="formValidator/jquery.validationEngine.js"></script>
+
+<script type="text/javascript" src="/script.js"></script> -->
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var query = '';
+		if(query == 'wiki') {
+		// window.open("http://ru.wikipedia.org/w/index.php?search=", "_blank");
+		document.location.href = "http://ru.wikipedia.org/w/index.php?search="
+
+		} else if(query == 'livejournal') {
+			document.location.href = "http://www.livejournal.com/search/?q=";
+			//window.open("http://www.livejournal.com/search/?q=", "_blank");
+		} else if (query == 'yandex') {
+			document.location.href = "http://yandex.ru/yandsearch?lr=960&text=",'_blank';
+		} else if (query == 'google') {
+			document.location.href = "https://www.google.ru/search?q=";
+		} else if (query == 'mail') {
+			document.location.href = "http://go.mail.ru/search_otvet?q=";
+		}
+	});
+</script>
+
+<link href="/js/jquery.formstyler.css" rel="stylesheet" />
+<script src="/js/jquery.formstyler.js"></script>
+<script src="/js/placeholder.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/css/styles.css" /> -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".search li.li").click(function(){
+		var n = $(this).attr('id');
+		$(".search li.li").removeClass("active");
+		$(this).addClass("active");
+		$("#query_sel").attr('value', n );
+		$(".search_form").attr('target','_blank');
+	});
+	$('#rocca').click(function(){
+		$(".search_form").attr('target','_self');
+	});
+});
+
+$(document).ready(function(){
+	$(".types li").click(function(){
+
+		$(".types li").removeClass("active_type");
+		$(this).addClass("active_type");
+
+
+	});
+});
+function blink(id,opacity,speed,interval){ window.setTimeout(function(){$(id).animate({"opacity":opacity}, speed); $(id).animate({"opacity":"1"}, speed); window.setTimeout(function(){blink(id,opacity,speed,interval);}, interval);}, interval);}
+blink('.new_mess','0.3',300,800);
+blink('.new_best','0.3',300,800);
+blink('#blink_star','0.3',300,800);
+
+</script>
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="header">
+			    <div class="header_top" id="top">
+        <div class="container">
+            <span class="left">
+                <IDXSKIP><a href="/">Главная</a></IDXSKIP> <IDXSKIP>|
+                <a href="/About">О проекте</a></IDXSKIP> <IDXSKIP>|
+                <a href="/Help">Правила</a></IDXSKIP>
+            </span>
+
+            <span class="right">
+    		<IDXSKIP><a href="/AddQuestion"><strong>Задать вопрос</strong></a></IDXSKIP> <IDXSKIP>|
+                <a href="/Login">Вход на сайт</a></IDXSKIP> <IDXSKIP>|
+                <a href="/Registration">Регистрация</a></IDXSKIP>
+    			            </span>
+        </div>
+    </div><!--/ End header -->
+			<div class="container">
+				
+												<div class="lupa"></div>
+				
+								<IDXSKIP><a href="/" class="logo"><img src="/images/logo_help.png" alt="Help Cata!" title="Главная" /></a></IDXSKIP>
+				
+				<div class="clear"></div>
+				<!-- не знаю наперед как это будет реализовано, поэтому сделал так: -->
+				<ul class="search">
+					<IDXSKIP><li>Искать на:</li></IDXSKIP>
+					<IDXSKIP><li  class="li active" id="rocca"><a href="#">Rocca</a></li></IDXSKIP>
+					<!-- <li class="li" id="other_source"><a href="#">Сайты ответов</a></li> -->
+					<IDXSKIP><li class="li" id="wiki"><a href="javascript:void(0)">Википедия</a></li></IDXSKIP>
+					<IDXSKIP><li class="li" id="livejournal"><a href="javascript:void(0)">LiveJournal</a></li></IDXSKIP>
+					<IDXSKIP><li class="li" id="yandex"><a href="javascript:void(0)">Яндекс</a></li></IDXSKIP>
+					<IDXSKIP><li class="li" id="google"><a href="javascript:void(0)">Google</a></li></IDXSKIP>
+					<IDXSKIP><li class="li" id="mail"><a href="javascript:void(0)">Otvet.Mail.ru</a></li></IDXSKIP>
+					
+		 </ul>
+			 
+				<IDXSKIP><form action="/" class="search_form" name="sf">
+				
+				
+					<input type="text" class="text_query"name="q" placeholder="Введите заголовок вопроса" value="" onblur="if(this.value==''){this.value='Введите заголовок вопроса';}" onfocus="if(this.value=='Введите заголовок вопроса'){this.value='';}" />
+					<input type="hidden" id="query_sel" name="query_sel" />
+					<a href="javascript:void(0)" class="find-button" onclick="document.sf.submit();">Найти</a>
+			    </form></IDXSKIP>
+				<IDXSKIP><a href="/My/AddQuestion" class="button">Задать вопрос</a></IDXSKIP><IDXSKIP><a href="/Help#5" class="button">Заработать</a></IDXSKIP>
+				<IDXSKIP><span class="right_example">Например: <a href="/Question/41933">Что такое чит?</a></span></IDXSKIP>
+								
+				
+			
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="after_header"></div>
+			<div class="container">
+			        
+	
+	
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Rocca верх всех страниц -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5076404442287710"
+     data-ad-slot="5488144384"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+		<!-- <a href="/" class="logo"><img border="0" src="/img/logo.png" alt="#"></a> -->
+﻿<h2><a href="http://rocca.ru">Главная</a> &raquo; Вопрос пользователя: Agnesa</h2>
+	<div class="post">
+				<h3><a href="/Profile/507" class="name">Agnesa</a></h3>
+                <div class="circle_border"><div class="avatar"><img src="/ava/bd583393ef92ec22fd1be37b3b23a185.jpg" alt="#"><i></i></div></div>
+                
+                
+                <div class="clear"></div>
+				<div>2017-02-15 19:40:51</div>
+
+                <h1>Что делать, если помидоры "жируют"?</h1>
+                <p class="descr_quest">Как исправить положение?</p><table  style="border-radius: 6px; border: 1px  solid #CACACA; background-color: #fafafa;" width="500px;">
+
+<IDXSKIP><div align="center"><br />
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Rocca вопрос после текста -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-5076404442287710"
+     data-ad-slot="5854744380"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></IDXSKIP>
+
+<td align="left" style="padding:6px;"><IDXSKIP><b>Поделись</b></IDXSKIP> <IDXSKIP>вопросом с друзьями:<br></IDXSKIP>
+<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,moikrug,gplus"></div> 
+<div style="padding-top:5px;">
+<IDXSKIP><i><b>Похожие вопросы:</b></i></IDXSKIP>
+<br /><a href="/Question/33">Для чего нужен Adobe Flash Player?</a>
+<br /><a href="/Question/4655">Какие семьи могут иметь приёмных детей, какие критерии?</a>
+<br /><a href="/Question/279">Можно ли покупать помидоры в мае?</a>
+</div>
+
+
+</td></table>                <nav class="breadcrumbs">
+	 <a href="/animals_plants/">Животные и растения</a>  <a href="/plants_and_flowers/">Растения и цветы</a>                 </nav>
+				<script language="JavaScript" src="/js/aj.js"></script>
+<script language="JavaScript" src="/js/plus.js"></script>
+<script language="JavaScript" src="/js/compl.js"></script>
+
+                <div class="carma_some pos" style="position:relative">
+										<img style="cursor:pointer;" alt="" src="/images/globus.png" title="Просмотров: 56"> Просмотров: 56 &nbsp; &nbsp;&nbsp;  <a href="javascript:void(0)" onClick="pplus(19961)" title="Мне нравится"><img src="/images/like.png" alt=""></a>&nbsp;<span id="plus19961">0</span> &nbsp;
+					<div id="err19961"></div>
+                </div>
+                
+
+            </div>
+            <div class="core">
+                <div class="line"></div>
+				<IDXSKIP><table width="100%"><tr><td>
+                <nav class="main"  style="padding:0; margin:0">
+                    <span class="curent">Ответы пользователей</span>
+                </nav></td><td align="right" style="padding-right:20px;">
+
+                    <a class="respond" href="#answer">ответить</a>
+                    <a class="respond_count">0<i></i></a>
+                </td><td>&nbsp;</td></tr></table></IDXSKIP>
+				<IDXSKIP><div class="pagination"><span>нет ответов</span></div></IDXSKIP>            </div><!--  End .core  -->
+<a name="answer"></a>
+
+            <form method="post" class="text" action="#answer">
+				<input type="hidden" name="abr" value="abd0079253683a35c2da5e956f0c4948">
+				<input type="hidden" name="counvpros" value="0">
+                <h2>Ваш ответ на вопрос:</h2>
+                <p></p>
+								<a href="/Registration"> </a>  <IDXSKIP><a href="/Login">войти на сайт</a></IDXSKIP><br/> <br/>
+				<IDXSKIP>Ответить анонимно </IDXSKIP><small><b><IDXSKIP>(мин. кол-вол символов 150)<br/> * Ссылки использовать запрещено</IDXSKIP></b></small><IDXSKIP>:<br/></IDXSKIP>
+				 
+				<script type="text/javascript">
+					$(function() {
+
+							$("textarea[name='ans']").keyup(function countRemainingChars(){
+								counter = $("textarea[name='ans']").val().trim().length;
+								counterStr = String(counter);
+								counterStr = counterStr.substr(-2);
+								counterStr = Number(counterStr);
+										
+								if(counter > 149){
+									$("#hids").css("display", "block");
+									}
+								else{
+									$("#hids").hide();
+								}
+								
+																if(counter == 1 || counter%10 == 1 && counter%100 > 20){
+									$("#count-2").html(counter + " символ");
+								}
+								else if(counter > 1 && counter < 5 || counter%10 > 1 && counter%10 < 5 && counter%100 > 20){
+									$("#count-2").html(counter + " символа");
+								}
+								else{
+									$("#count-2").html(counter + " символов");
+								}
+								
+							});
+						});
+				</script>
+				
+				<div class="text-editor">
+					<input type="hidden" id="your-text-area" name="quest" value="19961">
+                    <textarea rows="5" class="answer_textarea" name="ans"></textarea>
+					<p id="count-2"></p>
+                </div>
+				
+				<IDXSKIP><div class="inp">
+                    <div class="captcha"><img src='/captcha.php' id='capcha-image'></div>
+                    <a href="javascript:void(0);" onclick="document.getElementById('capcha-image').src='/captcha.php?rid=' + Math.random();">Обновить капчу</a>
+                </div></IDXSKIP>
+                <IDXSKIP><div class="inp"><input type="text" name="captcha_code"></div></IDXSKIP>
+				
+                <IDXSKIP><div style='display:none;' id='hids'>
+                <button class="blue_but right" onclick="yaCounter27042242.reachGoal('NovyOtvet'); return true;"><i class="question"></i>Ответить на вопрос</button>
+				</div></IDXSKIP>
+				            
+			<div class="clear"></div>
+				
+            </form>
+
+
+        <!--/ End mainbar -->
+		
+				
+			</div>
+		</div>
+
+				<IDXSKIP><p id="back-top">
+		    <a href="#top">&uarr;</a>
+		</p></IDXSKIP>
+		<div class="empty"></div>
+	</div>
+	<div class="footer">		<div class="top_footer">
+			<div class="container">
+				<IDXSKIP><center><h2>Категории всех вопросов</h2></center></IDXSKIP>
+				<ul class="categories">
+			<IDXSKIP><li><a href="/auto/">Авто, Транспорт			<span class="count">(
+			            589			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/humor/">Юмор			<span class="count">(
+			            281			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/business/">Бизнес, Финансы			<span class="count">(
+			            797			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/magic/">Гороскопы, Гадания			<span class="count">(
+			            480			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/food/">Еда, Кулинария			<span class="count">(
+			            5432			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/animals_plants/">Животные и растения			<span class="count">(
+			            2873			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/legislation/">Законодательство			<span class="count">(
+			            197			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/games/">Игры			<span class="count">(
+			            337			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/internet/">Интернет			<span class="count">(
+			            1192			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/culture/">Искусство и Культура			<span class="count">(
+			            312			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/health_beauty/">Красота и Здоровье			<span class="count">(
+			            6140			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/films/">Кино и телевидение			<span class="count">(
+			            2226			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/computers/">Компьютеры			<span class="count">(
+			            554			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/books/">Литература			<span class="count">(
+			            537			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/music/">Музыка			<span class="count">(
+			            609			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/science/">Наука и образование			<span class="count">(
+			            820			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/immovables/">Недвижимость			<span class="count">(
+			            111			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/society/">Общество, СМИ			<span class="count">(
+			            1019			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/relations/">Отношения и эмоции			<span class="count">(
+			            2578			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/job/">Работа и карьера			<span class="count">(
+			            632			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/relax/">Развлечения			<span class="count">(
+			            672			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/family/">Семья, Дом, Дети			<span class="count">(
+			            3764			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/sport/">Спорт			<span class="count">(
+			            540			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/lifestyle/">Стиль и мода			<span class="count">(
+			            865			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/countries/">Страны и Города			<span class="count">(
+			            944			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/goods_services/">Товары и Услуги			<span class="count">(
+			            716			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/travel/">Туризм, Путешествия			<span class="count">(
+			            677			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/law/">Юридическая консультация			<span class="count">(
+			            253			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/other/">Другое			<span class="count">(
+			            9989			)</span></a></li></IDXSKIP>
+			<IDXSKIP><li><a href="/rocca/">Rocca.ru			<span class="count">(
+			            144			)</span></a></li></IDXSKIP>
+
+            </ul>
+            
+			</div>
+<div class="container" style="margin-top: 20px;">
+    <table style="width: 620px; margin: 0 auto; font: 14px Trebuchet MS; line-height: 19px;">
+        <tr>
+            <td>
+                <h3>Общая статистика:</h3>
+                <div><span>Всего пользователей:</span><span class="count">(2196)</span></div>
+                <IDXSKIP><div><span>Всего вопросов:</span><span class="count">(46287)</span></div></IDXSKIP>
+                <div><span>Всего ответов:</span><span class="count">(84438)</span></div>
+            </td>
+            <td>
+                <h3>За текущий месяц:</h3>
+                <div><span>Пользователей:</span><span class="count">(40)</span></div>
+                <IDXSKIP><div><span>Вопросов:</span><span class="count">(97)</span></div></IDXSKIP>
+                <div><span>Ответов:</span><span class="count">(138)</span></div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<IDXSKIP><div class="idea"><a rel="nofollow" href="http://rocca.reformal.ru" target="_blank" style="color:#525252;">Предложить идею</a></div></IDXSKIP>
+		</div>		<div class="footer_bottom">
+			<div class="after_footer"></div>
+			<div class="container">
+				<span><IDXSKIP>Copyright © <a href="#">Rocca.ru</a></IDXSKIP> <IDXSKIP>2013-2016 Все права защищены.</IDXSKIP></span>
+				<IDXSKIP><span class="as2">
+
+					<a href="/Contacts">Контакты</a></br></br>
+				</span></IDXSKIP>
+
+			</div>
+                
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter27042242 = new Ya.Metrika({id:27042242,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+ 
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+ 
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/27042242" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69516528-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<IDXSKIP><div style="display: none">
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t26.11;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число посетителей за"+
+" сегодня' "+
+"border='0' width='88' height='15'><\/a>")
+//--></script><!--/LiveInternet-->
+<!-- HotLog -->
+<span id="hotlog_counter"></span>
+<span id="hotlog_dyn"></span>
+<script type="text/javascript">
+   var hot_s = document.createElement('script'); hot_s.type = 'text/javascript'; hot_s.async = true;
+   hot_s.src = 'http://js.hotlog.ru/dcounter/2533486.js';
+   hot_d = document.getElementById('hotlog_dyn');
+   hot_d.appendChild(hot_s);
+</script>
+
+<noscript>
+<a href="http://click.hotlog.ru/?2533486" target="_blank">
+<img src="http://hit19.hotlog.ru/cgi-bin/hotlog/count?s=2533486&im=307" border="0"
+alt="HotLog" title="HotLog">
+</a>
+</noscript>
+<!-- /HotLog -->
+</div></IDXSKIP>
+
+		</div>
+	</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+
+        $('input[placeholder], textarea[placeholder]').placeholder();
+    });
+</script>
+
+<!-- Страница сгенерирована за 0.298876 секунд -->
+<!-- Запросов в кэше: 37 -->
+</body>
+</html>
+
+

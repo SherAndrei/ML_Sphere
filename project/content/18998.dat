@@ -1,0 +1,890 @@
+playerslife.ru/3186-kak-dat-oruzhiegranatusmokfleshku-cherez-konsol-v-cs-go.html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="/templates/playtogame/css/style.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Как дать оружие/гранату/смок/флешку через консоль в cs go?</title>
+<meta name="description" content="В этой статье я вас научу раз и навсегда как при помощи консоли выдать любое оружие себе. Или даже можете пользоваться как подсказку." />
+<meta name="keywords" content="оружие, можете, пользоваться, подсказку, любое, выдать, научу, навсегда, помощи, консоли, статье" />
+<meta name="revisit-after" content="1 days" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.playerslife.ru/engine/opensearch.php" title="Моды для CSS, CS:GO, Left 4 Dead 2, Minecraft и множества других" />
+<link rel="alternate" type="application/rss+xml" title="Моды для CSS, CS:GO, Left 4 Dead 2, Minecraft и множества других" href="http://www.playerslife.ru/rss.xml" />
+
+<meta name="google-site-verification" content="L7Z9DIfjsvpjoEIkQgZkhLLXsegWwHx1c9M4dLPauPY" />
+<link rel="stylesheet" type="text/css" href="/templates/playtogame/css/engine.css" />
+<link rel="stylesheet" type="text/css" href="/templates/playtogame/css/style-light.css" />
+<link rel="stylesheet" type="text/css" href="/templates/playtogame/css/vermutoff-buttons.css" />
+
+<link rel="stylesheet" type="text/css" href="/templates/playtogame/css/table_new.css" />
+<!--[if IE]><style type="text/css">.ratemulti .starsbar .gdcurrent { -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70); }</style><![endif]-->
+<!--!*** 9768326***advMaker.net***17,02,2015 @-@-@@-@-@-TeRRaN###-->
+<style type="text/css">
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: -2px;
+	line-height: 0px;
+	height: 0px;
+ background: #;
+ border: 1px solid #;
+}
+</style>
+
+
+
+<link media="screen" href="/templates/playtogame/style/orating.css" type="text/css" rel="stylesheet" />
+
+
+
+
+</head>
+
+
+<style type="text/css">
+#hintbox{
+  position:absolute;
+  top: 0;
+  background-color: white;
+  width: 200px;
+  padding: 3px;
+  font:normal 10px Tahoma;
+  line-height:18px;
+  z-index:100;
+  visibility: hidden;
+  border:1px solid #8c8c8c;
+}
+</style>
+
+
+
+<script language="javascript" type="text/javascript">
+<!--
+    function Help(section) {
+      q=window.open('?mod=help&section='+section, 'Help', 'scrollbars=1,resizable=1,width=450,height=400');
+    }
+    function ShowOrHide(d1, d2) {
+      if (d1 != '') DoDiv(d1);
+      if (d2 != '') DoDiv(d2);
+    }
+    function DoDiv(id) {
+      var item = null;
+      if (document.getElementById) {
+        item = document.getElementById(id);
+      } else if (document.all){
+        item = document.all[id];
+      } else if (document.layers){
+        item = document.layers[id];
+      }
+      if (!item) {
+      }
+      else if (item.style) {
+        if (item.style.display == "none"){ item.style.display = ""; }
+        else {item.style.display = "none"; }
+      }else{ item.visibility = "show"; }
+     }
+
+var horizontal_offset="9px" //horizontal offset of hint box from anchor link
+
+/////No further editting needed
+
+var vertical_offset="0" //horizontal offset of hint box from anchor link. No need to change.
+var ie=document.all
+var ns6=document.getElementById&&!document.all
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=(whichedge=="rightedge")? parseInt(horizontal_offset)*-1 : parseInt(vertical_offset)*-1
+if (whichedge=="rightedge"){
+var windowedge=ie && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-30 : window.pageXOffset+window.innerWidth-40
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetWidth+parseInt(horizontal_offset)
+}
+else{
+var windowedge=ie && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetHeight
+}
+return edgeoffset
+}
+
+function showhint(menucontents, obj, e, tipwidth){
+if ((ie||ns6) && document.getElementById("hintbox")){
+dropmenuobj=document.getElementById("hintbox")
+dropmenuobj.innerHTML=menucontents
+dropmenuobj.style.left=dropmenuobj.style.top=-500
+if (tipwidth!=""){
+dropmenuobj.widthobj=dropmenuobj.style
+dropmenuobj.widthobj.width=tipwidth
+}
+dropmenuobj.x=getposOffset(obj, "left")
+dropmenuobj.y=getposOffset(obj, "top")
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+obj.offsetWidth+"px"
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+"px"
+dropmenuobj.style.visibility="visible"
+obj.onmouseout=hidetip
+}
+}
+
+function hidetip(e){
+dropmenuobj.style.visibility="hidden"
+dropmenuobj.style.left="-500px"
+}
+
+function createhintbox(){
+var divblock=document.createElement("div")
+divblock.setAttribute("id", "hintbox")
+document.body.appendChild(divblock)
+}
+
+if (window.addEventListener)
+window.addEventListener("load", createhintbox, false)
+else if (window.attachEvent)
+window.attachEvent("onload", createhintbox)
+else if (document.getElementById)
+window.onload=createhintbox
+//--></script>
+
+
+<body>
+
+
+ <a name="top" id="top"></a>
+<div class="topbg"></div>
+<div class="wrapper">
+  <div class="header">
+    <IDXSKIP><h1><a href="/"><img src="/templates/playtogame/images/logo.png" width="370" alt="" /></a></h1></IDXSKIP> 
+
+
+
+    <IDXSKIP><ul class="toplinks">
+      <li><img src="/templates/playtogame/images/youtube.png" width="15" heigh=15"/><a href="/to?a%3AaHR0cDovL3d3dy55b3V0dWJlLmNvbS91c2VyL2J1Y2hhMTMzNw%3D%3D" target="_blank"><font color="white">YouTube</font></a></li>
+      <li><img src="/templates/playtogame/images/steam_icon1.gif" width="15" heigh=15"/><a href="/to?a%3AaHR0cDovL3N0ZWFtY29tbXVuaXR5LmNvbS9ncm91cHMvcGxheWVyc2xpZmVydQ%3D%3D" target="_blank"><font color="white">Мы в STEAM</font></a></li>
+      <li><img src="/templates/playtogame/images/icon_rss-trans.png" alt="rss" /><a href="/rss.xml"><font color="white">RSS</font></a></li>
+      
+    </ul></IDXSKIP>
+
+<style type="text/css" media="all">
+@import url(/templates/playtogame/css/lpanel.css);
+</style>
+<style type="text/css" media="all">
+@import url(/templates/playtogame/css/highslide/highslide-with-html.css);
+</style>
+
+<script type="text/javascript" src="/templates/playtogame/css/highslide/highslide-full.js"></script>
+<script type="text/javascript" src="/templates/playtogame/css/highslide/highslide-with-html.js"></script>
+<script type="text/javascript">
+  hs.graphicsDir = '/templates/playtogame/css/highslide/graphics/';
+  hs.outlineType = 'rounded-white';
+  hs.outlineWhileAnimating = true;
+</script> 
+
+    <div class="radio">
+   <div class="pressed"> 
+
+
+<div class="lpanel">
+<IDXSKIP><a href="#" onclick="return hs.htmlExpand(this,{contentId:'highslide-html',align:'center'})">Вход в систему</a></IDXSKIP>
+<div class="highslide-html-content" id="highslide-html">
+<IDXSKIP><div class="highslide-header">
+<ul>
+<li class="highslide-close">
+<a href="#" onclick="return hs.close(this)"><img src="/templates/playtogame/images/lpanel/button.gif" border="0" alt=""></a>
+</li>
+</ul>
+</div></IDXSKIP>
+<div class="highslide-body">
+<table>
+<tr>
+<td align="left" ><div style="height:145px;padding-top: 0px">
+<form name="s" method="post" onsubmit="javascript:showBusyLayer()" action="">
+<IDXSKIP><div id="ibox">
+<input type="text" id="s" name="login_name"
+value="Ваша почта" onfocus="if(this.value=='Ваша почта')this.value=''"
+onblur="if(this.value=='')this.value='Ваша почта'" >
+</div></IDXSKIP>
+<IDXSKIP><div id="ibox">
+<input type="password" id="s" name="login_password"
+value="Пароль" onfocus="if(this.value=='Пароль')this.value=''"
+onblur="if(this.value=='')this.value='Пароль'" >
+</div></IDXSKIP>
+<IDXSKIP><div class="clear" type="submit" style="padding-top:5px;">
+<a class="" href="javascript:document.s.submit();" ><pan>Отправить данные</span></a>
+</div></IDXSKIP>
+<IDXSKIP><div class="llink" style="padding-top:10px;">
+<img style="vertical-align: middle" src="/templates/playtogame/images/lpanel/rdo.gif" alt="" />
+<a href="http://www.playerslife.ru/index.php?do=lostpassword" title="Забыли пароль">Забыли пароль</a>
+</div></IDXSKIP>
+<IDXSKIP><div class="llink" style="padding-top:5px;">
+<img style="vertical-align: middle" src="/templates/playtogame/images/lpanel/rdo.gif" alt="" />
+<a href="http://www.playerslife.ru/index.php?do=reg_forma" title="Регистрация">Регистрация</a>
+</div></IDXSKIP>
+<input name="login" type="hidden" id="login" value="submit" />
+</form>
+</td>
+<IDXSKIP><td align="right">
+<div class="ltext">Авторизация<br>пользователя<br>
+<img src="/templates/playtogame/images/lpanel/login.png" alt="" />
+</div>
+</td></IDXSKIP>
+</tr>
+</table>
+</div>
+</div></div>    
+</div>
+
+
+<br>      
+    </div>
+
+
+	
+
+
+    <ul class="menu">
+      <li><a href="/">Главная</a></li>
+
+      <li><a href="http://www.playerslife.ru/addnews.html">Добавить файл!</a></li>
+
+    <div class="search">
+      <form id="searchform" onsubmit="javascript: showBusyLayer()" method="post" action=''>
+        <input type="hidden" name="do" value="search" />
+        <input type="hidden" name="subaction" value="search" />
+        <input name="story" type="text" class="s_field" style="width:130px" value="Поисковый запрос ..." onfocus="this.value = '';" />
+        <input type="image" src="/templates/playtogame/images/spacer.gif" />
+      </form>
+      
+    </div>
+</ul>
+
+
+    <ul class="submenu">
+
+
+
+
+ <IDXSKIP><li><a href="http://www.playerslife.ru/cs-go/">CS: Global Offensive</a>
+
+      </li></IDXSKIP>
+
+
+      <IDXSKIP><li><a href="http://www.playerslife.ru/css/">Counter-Strike: Source</a>
+      </li></IDXSKIP>
+     
+
+
+
+
+
+
+     <IDXSKIP><li><a href="http://www.playerslife.ru/left4dead2/">Left 4 Dead 2</a>
+      </li></IDXSKIP>
+
+
+
+             <IDXSKIP><li><a href="http://www.playerslife.ru/skyrim/">Skyrim</a>
+
+      </li></IDXSKIP>
+
+  
+    
+             <IDXSKIP><li><a href="http://www.playerslife.ru/minecraft/">Minecraft</a>
+
+      </li></IDXSKIP>
+
+             <IDXSKIP><li><a href="http://www.playerslife.ru/gta5/">GTA 5</a>
+
+      </li></IDXSKIP>
+
+
+     
+     <IDXSKIP><li><a href="http://www.playerslife.ru/steam/"><img src="/templates/playtogame/images/steam_icon.png" width="20" heigh="20"></img> Все для Steam</a> </li></IDXSKIP>
+
+
+  	
+
+
+    </ul>
+  </div>
+
+
+ 
+  <div class="ftop">
+
+
+
+
+       <div class="clear"></div>
+  </div>
+  
+
+
+  
+  <div class="content">
+  
+
+    <!--[if lt IE 7]>
+				<div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'>
+					<div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div>
+					<div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>
+					<div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div>
+					<div style='width: 275px; float: left; font-family: Arial, sans-serif;'>
+					<div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>
+					<div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div>
+					</div>
+					<div style='width: 75px; float: left;'><a href='/to?a%3AaHR0cDovL3d3dy5maXJlZm94LmNvbQ%3D%3D' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div>
+					<div style='width: 75px; float: left;'><a href='/to?a%3AaHR0cDovL3d3dy5icm93c2VyZm9ydGhlYmV0dGVyLmNvbS9kb3dubG9hZC5odG1s' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div>
+					<div style='width: 73px; float: left;'><a href='/to?a%3AaHR0cDovL3d3dy5hcHBsZS5jb20vc2FmYXJpL2Rvd25sb2FkLw%3D%3D' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div>
+					<div style='float: left;'><a href='/to?a%3AaHR0cDovL3d3dy5nb29nbGUuY29tL2Nocm9tZQ%3D%3D' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div>
+					</div>
+				</div>
+				<![endif]-->
+    <!-- Left // --><IDXSKIP><div style="display:none;"><a href="/">block</a></div></IDXSKIP>
+    <div class="left"> 
+
+     
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+<br>
+
+      <div id='skeleton-conntex'>
+
+<div class="articles article">
+
+ <div class="ainfo2"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Как дать оружие/гранату/смок/флешку через консоль в cs go?</font> </div>
+
+
+  <div class="ainfo">
+    <IDXSKIP><div class="infol"> <span class="author">Добавил: <a onclick="ShowProfile('6am6yk', 'http://www.playerslife.ru/user/6am6yk/', '0'); return false;" href="http://www.playerslife.ru/user/6am6yk/">6am6yk</a></span></div></IDXSKIP>
+    <ul>
+      <IDXSKIP><li><a class="comments">Комментариев: 1</a></li></IDXSKIP>
+      <li><a href="javascript:AddComplaint('3186', 'news')">Сообщить об ошибке</a></li>
+      <IDXSKIP><li><a href="javascript:void(0);" onclick="return bookmark(this);">Добавить в избранное</a></li></IDXSKIP>
+    </ul>
+    <div class="clear"></div>
+  </div>
+
+
+
+
+<IDXSKIP><div class="ainfo2">
+<center>Поделиться с друзьями:
+<script type="text/javascript" src="//yandex.st/share/share.js"
+charset="utf-8"></script>
+<div class="yashare-auto-init" data-yashareL10n="ru"
+ data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"
+
+></div> </center>
+</div></IDXSKIP><br>
+
+
+  <div class="post2"><div class="images-border"> <div class="34933186"><div align="center"><!--TBegin--><a href="http://www.playerslife.ru/uploads/posts/2014-09/1411686712_13715970295counter-strike-global-offensive-de-dust-2-001.jpeg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2014-09/thumbs/1411686712_13715970295counter-strike-global-offensive-de-dust-2-001.jpeg" alt='Как дать оружие/гранату/смок/флешку через консоль в cs go?' title='Как дать оружие/гранату/смок/флешку через консоль в cs go?'  /></a><!--TEnd--></div>В этой статье я вас научу раз и навсегда как при помощи консоли выдать любое оружие себе. Или даже можете использовать как подсказку.<br /><br />1. Первым делом создаем одиночную игру с ботами. Можно и без них, если у вас есть свой сервер и на котором вы хотите потренироваться со своей командой или просто в одиночку.<br />2. Прописываем в консоле следующую команду: <b>sv_cheats 1</b> (если не работает консоль - <a href="http://www.playerslife.ru/2941-kak-vklyuchit-konsol-v-csgo-esli-ona-ne-rabotaet.html" >СМОТРИ СЮДА</a>)<br />3. Выдаем себе оружия<br /><br /><!--QuoteBegin--><div class="quote"><!--QuoteEBegin--><b>give weapon_ak47</b> - получить автомат калашникова в CS:GO<br /><b>give weapon_m4a1</b> - получить эмку в CS:GO<br /><b>give weapon_m4a1_silencer</b> - получить эмку с глушителем в CS:GO<br /><b>give weapon_awp</b> - получить AWP в CS:GO<br /><b>give weapon_ssg08</b> - дать муху/scout в CS:GO<br /><b>give weapon_bizon</b> - получить бизон в CS:GO<br /><b>give weapon_c4</b> - получить бомбу в CS:GO<br /><b>give weapon_deagle</b> - получить дигл в CS:GO<br /><b>give weapon_revolver</b> - получить револьвер в CS:GO<br /><b>give weapon_decoy</b> - получить декой в CS:GO<br /><b>give weapon_elite</b> - получить Dual Elites в CS:GO<br /><b>give weapon_glock</b> - получить глок в CS:GO<br /><b>give weapon_famas</b> - получить фамас в CS:GO<br /><b>give weapon_sg553</b> - получить SG553 в CS:GO<br /><b>give weapon_aug</b> - получить AUG в CS:GO<br /><b>give weapon_usp_silencer</b> - получить ЮСП с глушителем в CS:GO<br /><b>give weapon_hkp2000</b> - получить p2000 в CS:GO<br /><b>give weapon_cz75a</b> - получить cz75 в CS:GO<br /><b>give weapon_fiveseven</b> - получить Five Seven в CS:GO<br /><b>give weapon_tec9</b> - получить тек 9 в CS:GO<br /><b>give weapon_taser </b>- получить Zeus в CS:GO<br /><b>give weapon_scar20</b> - получить скорострелку SCAR-20 в CS:GO<br /><b>give weapon_ump45</b> - получить UMP45 в CS:GO<br /><b>give weapon_m249</b> - получить Negev (Негев) в CS:GO<!--QuoteEnd--></div><!--QuoteEEnd--><br /><i>И остальные оружия делаются по такому же пункту.</i><br /><br />Выдаём себе гранаты:<br /><!--QuoteBegin--><div class="quote"><!--QuoteEBegin--><b>give weapon_hegrenade</b> - осколочная граната<br /><b>give weapon_smokegrenade</b> - дымовая граната<br /><b>give weapon_flashbang</b> - световая граната<br /><b>give weapon_molotov</b> - коктейль Молотова<br /><b>give weapon_incgrenade</b> - зажигательная граната<br /><b>give weapon_decoy</b> - ложная граната<!--QuoteEnd--></div><!--QuoteEEnd--><br />Но если вы хотите использовать гранаты бесконечно, то используйте команду в консоле <b>sv_infinite_ammo 1</b> (но она делает и также бесконечные патроны у любого оружия)</div>
+
+
+<br>
+
+
+
+
+
+
+
+<br><center>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Fullstory2 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-1014542352998283"
+     data-ad-slot="5380791250"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+</center>
+
+
+  
+
+
+
+
+
+
+  </div></div>
+
+<br>
+<div class="orating" id="orating-3186">
+	<a href="#" class="orating_p" title="Нравится" onclick="orating(3186,1);return false;"></a>
+	<a href="#" class="orating_res" onclick="ostats(3186,1,true);return false;">+22</a>
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+  <div class="atabs">
+    <ul class="tabs">
+      <IDXSKIP><li><a rel="#atabs_similar" class="active" href="#">Похожие публикации из рубрики</a></li></IDXSKIP>
+      <IDXSKIP><li><a rel="#atabs_categories" href="#" class="">Категории</a></li></IDXSKIP>
+      <IDXSKIP><li><a rel="#atabs_tags" href="#" class="">Дата добавления и теги</a></li></IDXSKIP>
+    </ul>
+    <div id="atabs_content" class="atabs_content">
+     
+        <ul>
+<table bgcolor="grey" width="600">
+
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3169-surf-servera-csgo-na-prohozhdenie.html"><img alt="Surf сервера CS:GO на прохождение" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1411386780_surf_servers.jpg" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3169-surf-servera-csgo-na-prohozhdenie.html">Surf сервера CS:GO на прохождение</a></div>
+</div>
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3125-csgo-trenirovka-aim-skilla-bez-dm-s-botami.html"><img alt="CS:GO тренировка AIM скилла без DM (с ботами)" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1410443403_sdasdad.png" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3125-csgo-trenirovka-aim-skilla-bez-dm-s-botami.html">CS:GO тренировка AIM скилла без DM (с ботами)</a></div>
+</div>
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3117-kak-otklyuchit-hud-v-csgo.html"><img alt="Как отключить HUD в CS:GO" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1410291423_jest.png" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3117-kak-otklyuchit-hud-v-csgo.html">Как отключить HUD в CS:GO</a></div>
+</div>
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3094-stavki-v-counter-strike-global-offensive-realnye-dengi-i-veschi-iz-stim.html"><img alt="Ставки в Counter-Strike: Global Offensive - реальные деньги и вещи из стим" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1409940238_1394629076_csgolounge-817x320.jpg" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3094-stavki-v-counter-strike-global-offensive-realnye-dengi-i-veschi-iz-stim.html">Ставки в Counter-Strike: Global Offensive - реальные деньги и вещи из стим</a></div>
+</div>
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3093-idle-servera-cs-go-ili-servera-na-kotoryh-ne-kikayut.html"><img alt="Idle сервера cs go или сервера, на которых не кикают" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1409938175_med_1409278204_1382488900_image.jpg" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3093-idle-servera-cs-go-ili-servera-na-kotoryh-ne-kikayut.html">Idle сервера cs go или сервера, на которых не кикают</a></div>
+</div>
+</table>      
+        </ul>
+      
+    </div>
+    <div class="hidden" id="atabs_similar">
+<table bgcolor="grey" width="600">
+
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3169-surf-servera-csgo-na-prohozhdenie.html"><img alt="Surf сервера CS:GO на прохождение" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1411386780_surf_servers.jpg" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3169-surf-servera-csgo-na-prohozhdenie.html">Surf сервера CS:GO на прохождение</a></div>
+</div>
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3125-csgo-trenirovka-aim-skilla-bez-dm-s-botami.html"><img alt="CS:GO тренировка AIM скилла без DM (с ботами)" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1410443403_sdasdad.png" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3125-csgo-trenirovka-aim-skilla-bez-dm-s-botami.html">CS:GO тренировка AIM скилла без DM (с ботами)</a></div>
+</div>
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3117-kak-otklyuchit-hud-v-csgo.html"><img alt="Как отключить HUD в CS:GO" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1410291423_jest.png" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3117-kak-otklyuchit-hud-v-csgo.html">Как отключить HUD в CS:GO</a></div>
+</div>
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3094-stavki-v-counter-strike-global-offensive-realnye-dengi-i-veschi-iz-stim.html"><img alt="Ставки в Counter-Strike: Global Offensive - реальные деньги и вещи из стим" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1409940238_1394629076_csgolounge-817x320.jpg" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3094-stavki-v-counter-strike-global-offensive-realnye-dengi-i-veschi-iz-stim.html">Ставки в Counter-Strike: Global Offensive - реальные деньги и вещи из стим</a></div>
+</div>
+
+<div class="topmonth fulls">
+<div class="id_position rline">
+	<div class="linkEnso_i"><a title="" href="http://www.playerslife.ru/3093-idle-servera-cs-go-ili-servera-na-kotoryh-ne-kikayut.html"><img alt="Idle сервера cs go или сервера, на которых не кикают" title="" src="http://www.playerslife.ru/uploads/posts/2014-09/thumbs/1409938175_med_1409278204_1382488900_image.jpg" /></a></div>
+	<div class='name'><a title="" href="http://www.playerslife.ru/3093-idle-servera-cs-go-ili-servera-na-kotoryh-ne-kikayut.html">Idle сервера cs go или сервера, на которых не кикают</a></div>
+</div>
+</table>
+    </div>
+    <div class="hidden" id="atabs_tags">
+      <div class="tags"><br />
+        <div class="border">Дата добавления статьи: 2 года и 9 месяцев назад</div>
+         </div>
+    </div>
+    <div class="hidden" id="atabs_categories">
+      <div class="categories"> <IDXSKIP>Новость находится вкатегории: </IDXSKIP><span typeof="v:Breadcrumb"><a href="http://www.playerslife.ru/cs-go/" rel="v:url" property="v:title">Counter-Strike: Global Offensive</a></span> &raquo; <span typeof="v:Breadcrumb"><a href="http://www.playerslife.ru/cs-go/csgo_articles/" rel="v:url" property="v:title">Гайды и советы CS:GO</a></span> </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<br>
+
+<br>
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?75"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 3325384, onlyWidgets: true});
+</script>
+
+<!-- Put this div tag to the place, where the Comments block will be -->
+<div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 10, width: "630", attach: "*"});
+</script><br>
+<a name="comment"></a><form method="post" action="" name="dlemasscomments" id="dlemasscomments">
+
+<div id="dle-ajax-comments"></div>
+<div id='comment-id-2445'><div id='comment-id-1316'><div id="dle-comments-list">
+<div class="comment-block">
+<div class="comment-block-left">
+
+    <img height="60" width="60" class="avatar avatar-60 photo" src="/templates/playtogame/images/noavatar.png" border="0" alt="" />
+<font color="white">Репа:</font>  0
+
+<img src="/templates/playtogame/images/icon_5.gif" alt="" />
+
+	</div>
+
+
+	
+
+
+<div class="comment-block-right">
+
+		<div class="comment-block-right2">
+
+			<div class="comment-text">
+
+				<div class="comment-text-title">
+
+                    имран | (17 декабря 2016 17:17) | Комментариев: 0
+
+				</div>
+				<div id='comm-id-1316'> <div id='comm-id-2445'>неработает</div>
+
+ </div>
+                <br />
+
+				<div class="comment-text-more">     </div>
+
+
+
+
+			</div>		
+
+		</div>
+
+	</div>
+</div></div>
+</div></div></form>
+ <span class="heading2"><IDXSKIP><span>Информация</span></IDXSKIP></span>
+<div class="box"> <br><IDXSKIP>Уважаемый гость, если Вы хотите оставить комментарий, то пожалуйста </IDXSKIP><IDXSKIP><a href='http://www.playerslife.ru/index.php?do=reg_forma'>зарегистрируйтесь</a></IDXSKIP> <IDXSKIP>на нашем сайте. Регистрация займет у Вас не более одной минуты либо войдите с помощью социальных закладов со своего профиля.</IDXSKIP></div>
+</div>
+
+      <div class="wpn_clear"></div>
+    </div>
+    <div class="right">
+
+
+  <table width="100%" border="0" cellpadding="5" cellspacing="0" bgcolor="#000000">
+    <tr>
+      <td height="10" valign="top"><IDXSKIP><p><a rel="nofollow" style="font-size:14px; color:#FFFFFF;">Новое в категории</a></p></IDXSKIP></td>
+    </tr>
+  </table>
+
+ <table width="100%" border="0" height="26" cellpadding="2" cellspacing="0" bgcolor="#CFCFCF" style="border-bottom: dotted 1px #CCCCCC;">
+    <tr>        
+      <td valign="top" style="padding: 2px;"> 
+<li><a href="http://www.playerslife.ru/4957-csgo-novye-zvuki-novyy-nuke-obnovleniya-081216.html">Обновление 08.12.16 CS:GO (Новые Звуки | Новый Nuke)</a></li><li><a href="http://www.playerslife.ru/4955-kak-igrat-po-seti-na-piratke-v-csgo.html">Как играть по сети на пиратке в CS:GO</a></li><li><a href="http://www.playerslife.ru/4953-kak-sozdat-lokalnyy-server-surf-v-csgo.html">Как создать локальный сервер Surf в CS:GO?</a></li><li><a href="http://www.playerslife.ru/4946-kak-sdelat-animirovannyy-nik-v-csgo.html">Как сделать анимированный ник в CS:GO</a></li><li><a href="http://www.playerslife.ru/4945-kak-uznat-nik-v-patrule-ks-go.html">Как узнать ник в патруле кс го?</a></li>
+</td>
+	  </tr>
+  </table>
+<br>
+
+
+
+
+
+
+
+
+
+    
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300x600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-1014542352998283"
+     data-ad-slot="9204801253"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+
+
+
+
+
+<br>
+<ul id="megamenu"><li><a href="http://www.playerslife.ru/cs-go/">Counter-Strike: Global Offensive</a>
+<ul><li class="current"><a href="http://www.playerslife.ru/cs-go/csgo_articles/">Гайды и советы CS:GO</a></li>
+<li><a href="http://www.playerslife.ru/cs-go/csgo_cfg/">Конфиги игроков CS:GO</a></li>
+<li><a href="http://www.playerslife.ru/cs-go/csgo_maps/">Карты для CS:GO</a>
+<li><a href="http://www.playerslife.ru/cs-go/csgo_soft/">Программы для CS:GO</a></li>
+<li><a href="http://www.playerslife.ru/cs-go/csgo_for_server/">Для сервера CS:GO</a>
+</ul></li>
+</ul><br>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 1, width: "300", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 76325665);
+</script>
+
+<br>
+
+
+
+
+<div id="vk_comments2"></div>
+<script type="text/javascript">
+window.onload = function () {
+ VK.init({apiId: 3325384, onlyWidgets: true});
+ VK.Widgets.CommentsBrowse('vk_comments2', {width: 300, limit: 5, mini: 0});
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="clear"></div>
+
+
+<div class="wpn_clear"></div>
+
+
+ <!-- Footer // -->
+<div class="footer">
+<div class="bg_footer">
+<div class="fleft">
+
+<IDXSKIP><div class='copyrate_18plus'><div style="display:block;float:left;margin: 2px;">+18</div></div></IDXSKIP>
+<IDXSKIP>Игровой проект </IDXSKIP><IDXSKIP><b>Плеерслайф © 2016</b></IDXSKIP><IDXSKIP>. По вопросам, связанным с размещением рекламы, обращаться к администрации по почте support(собачка)playerslife(точка)ru
+<br>Рассматриваются любые предложения о размещении рекламы и взаимовыгодном сотрудничестве. 
+</IDXSKIP></div>
+<div class="fright">
+<IDXSKIP>Копирование материалов запрещено!
+<br/></IDXSKIP> 
+<br>
+
+<script type="text/javascript" src="/engine/classes/min/index.php?charset=windows-1251&amp;g=general&amp;4"></script>
+<script type="text/javascript" src="/engine/classes/min/index.php?charset=windows-1251&amp;f=engine/classes/highslide/highslide.js&amp;4"></script>
+<IDXSKIP><div id="loading-layer" style="display:none"><div id="loading-layer-text">Загрузка. Пожалуйста, подождите...</div></div></IDXSKIP>
+<script language="javascript" type="text/javascript">
+<!--
+var dle_root       = '/';
+var dle_admin      = '';
+var dle_login_hash = '';
+var dle_group      = 5;
+var dle_skin       = 'playtogame';
+var dle_wysiwyg    = 'no';
+var quick_wysiwyg  = '0';
+var dle_act_lang   = ["Да", "Нет", "Ввод", "Отмена"];
+var menu_short     = 'Быстрое редактирование';
+var menu_full      = 'Полное редактирование';
+var menu_profile   = 'Просмотр профиля';
+var menu_send      = 'Отправить сообщение';
+var menu_uedit     = 'Админцентр';
+var dle_info       = 'Информация';
+var dle_confirm    = 'Подтверждение';
+var dle_prompt     = 'Ввод информации';
+var dle_req_field  = 'Заполните все необходимые поля';
+var dle_del_agree  = 'Вы действительно хотите удалить? Данное действие невозможно будет отменить';
+var dle_complaint  = 'Укажите текст вашей жалобы для администрации:';
+var dle_p_send     = 'Отправить';
+var dle_p_send_ok  = 'Уведомление успешно отправлено';
+var dle_del_news   = 'Удалить статью';
+var allow_dle_delete_news   = false;
+//-->
+</script><script language="javascript" type="text/javascript">  
+<!--  
+	hs.graphicsDir = '/engine/classes/highslide/graphics/';
+	hs.outlineType = 'rounded-white';
+	hs.numberOfImagesToPreload = 0;
+	hs.showCredits = false;
+	hs.dimmingOpacity = 0.60;
+	hs.lang = {
+		loadingText :     'Загрузка...',
+		playTitle :       'Просмотр слайдшоу (пробел)',
+		pauseTitle:       'Пауза',
+		previousTitle :   'Предыдущее изображение',
+		nextTitle :       'Следующее изображение',
+		moveTitle :       'Переместить',
+		closeTitle :      'Закрыть (Esc)',
+		fullExpandTitle : 'Развернуть до полного размера',
+		restoreTitle :    'Кликните для закрытия картинки, нажмите и удерживайте для перемещения',
+		focusTitle :      'Сфокусировать',
+		loadingTitle :    'Нажмите для отмены'
+	};
+	
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.addSlideshow({
+		interval: 4000,
+		repeat: false,
+		useControls: true,
+		fixedControls: 'fit',
+		overlayOptions: {
+			opacity: .75,
+			position: 'bottom center',
+			hideOnMouseOut: true
+		}
+	});
+//-->
+</script>
+
+
+
+
+
+
+
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t57.10;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+
+</div>
+</div>
+</div>
+<!-- Javascript -->
+<!-- Javascript -->
+<!-- // Footer -->
+
+
+
+</div>
+
+<script src="/templates/playtogame/fpm/assets/script.js" type="text/javascript"></script>
+<script src="/templates/playtogame/fpm/assets/jquery.cookie.js" type="text/javascript"></script>
+<link href="/templates/playtogame/fpm/assets/style.css" rel="stylesheet" />
+<div id="fpm-area">
+	<div id="fpm-head" title="Передвинуть окно">
+		<h3>Личные сообщения</h3>
+		<input type="text" value="Искать людей..." onfocus="if(this.value=='Искать людей...') this.value='';" onblur="if(this.value=='') this.value='Искать людей...';" title="Введите логин для поиска" /><a href="#" id="fpm-user-find-close"></a>
+		<ul id="fpm-user-find"></ul>
+		<a href="#" title="Закрыть" id="fpm-head-close"></a>
+		<ul id="fpm-actions">
+			<IDXSKIP><li><a href="#" title="Пометить выбранные сообщения как прочитаннные" onclick="fpm_fast_action('read');return false;">Прочитал</a></li></IDXSKIP>
+			<IDXSKIP><li><a href="#" title="Пометить выбранные сообщения как не прочтеннные" onclick="fpm_fast_action('unread');return false;">Непрочитанные</a></li></IDXSKIP>
+			<IDXSKIP><li><a href="#" title="Удалить отмеченные сообщения" onclick="fpm_fast_action('delete');return false;">Удалить</a></li></IDXSKIP>
+			<!--<li><a href="#" title="Удалить и Игнорировать все сообщения от данного пользователя" onclick="fpm_fast_action('ignore');return false;">Игнор</a></li>-->
+			<IDXSKIP><li><a href="#" title="Пометить выбранные сообщения как спам" onclick="fpm_fast_action('spam');return false;">Это спам!</a></li></IDXSKIP>
+			<IDXSKIP><li style="float:right;"><a href="#" title="Снять выделение" onclick="fpm_fast_action('cancel');return false;">Отмена</a></li></IDXSKIP>
+		</ul>
+	</div>
+	<div id="fpm-sep-line"></div>
+	<IDXSKIP><div id="fpm-right">
+		<h3><a href="#" id="fpm-right-head">Ваши переписки</a></h3>
+		<ul></ul>
+	</div></IDXSKIP>
+	<a href="#" id="fpm-right-close" title="Скрыть / Показать"></a>
+	<IDXSKIP><div id="fpm-main">
+		<ul id="fpm-content"></ul>
+		<div id="fpm-textinput">
+			<div id="fpm-textava"><img src="/templates/playtogame/dleimages/noavatar.png" alt="foto" /></div>
+			<div id="fpm-textinput-text"><textarea></textarea></div>
+			<div class="fclr" style="height:2px;"></div>
+			<a href="#" id="fpm-textinput-a"></a>
+			<a href="#" id="fpm-textinput-profile" target="_blank"></a>
+			<a href="#" id="fpm-textinput-clear" title="Очистить историю переписки">(очистить)</a>
+			<h3><a href="#" id="fpm_textinput-send">Отправить</a></h3>
+		</div>
+	</div></IDXSKIP>
+	<div class="fclr"></div>
+</div>
+
+
+
+<script type="text/javascript" src="/templates/playtogame/js/orating_pack.js"></script>
+<script type="text/javascript" src="/templates/playtogame/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/templates/playtogame/js/common.js"></script>
+<script type="text/javascript" src="/templates/playtogame/js/mootools-1.2.4-core-yc.js"></script>
+<script type="text/javascript" src="/templates/playtogame/js/random.js"></script>
+<script type="text/javascript" src="/templates/playtogame/js/fav.js"></script>
+
+
+
+
+
+</body>
+</html><!-- dude Smart Leech time: 0,896931 msec -->

@@ -1,0 +1,1930 @@
+webdive.ru/forum.php?a=2&id_p=6&id_t=441&page=2
+<html>
+<head>
+<TITLE>Плохое Зрение № страницы (2)</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<meta name="Keywords" content='' >
+ 	<meta name="Description" content='Дайвинг форум Плохое Зрение' >
+   	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<meta name='yandex-verification' content='556690c8b2f3b38a' />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+ <LINK href="style2.css" rel='stylesheet' type='text/css'>
+</head>
+
+<!--
+<body topmargin='0' leftmargin='0' rightMargin='0' bgcolor='#FFFFFF'>
+-->
+<body style="margin-left: 0px; margin-top: 0px; margin-right: 0px; background-color: #FFFFFF;">
+
+<div id='div_res' style="display:none; position:absolute; left:0; top:0;  z-index:1" onmouseover="Cancel_Clos()" onmouseout="Close_Win()"></div><script type="text/javascript" language="javascript">
+	// Инициализация ajax
+	var xmlHttp = false;
+	try
+	{
+		xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+			try 
+			{
+				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e2) 
+				{
+					xmlHttp = false;
+				}
+	}
+		
+	if (!xmlHttp && typeof XMLHttpRequest != 'undefined') {
+		xmlHttp = new XMLHttpRequest();
+	}
+
+	var x_mous = y_mous = 0;			var x_wind = y_wind = 0;			var x_scrol = y_scrol = 0;	
+	function Out_Coord_Mouse(event)
+	{
+		if (document.attachEvent != null)
+		{ 
+			x_scrol = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft;
+			x_mous = window.event.clientX + x_scrol;
+
+			y_scrol = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
+			y_mous = window.event.clientY + y_scrol;
+
+			x_wind = document.body.offsetWidth;
+			y_wind = document.body.offsetHeight;
+			
+			return true;
+		}
+		//Для Firefox
+		mouse_x = event.clientX;
+		mouse_y = event.clientY;
+
+		x_mous = event.clientX;
+		y_mous = event.clientY;
+		
+		
+		y_scrol = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
+		
+		return false;
+	}
+
+	document.onmousemove = function(event)
+	{
+		rez = Out_Coord_Mouse(event || window.event);
+	}
+	
+	var offs_y = 20;
+
+	function out_div(table_id, div_id)
+	{
+							x_div = document.getElementById(table_id).offsetWidth;
+			y_div = document.getElementById(table_id).offsetHeight;
+
+			//alert("x_div = "+x_div+"; y_div = "+y_div);
+				
+						//y_top = y_mous - y_div - 10;
+			y_top = y_mous - y_div - offs_y;
+			if(y_top - y_scrol < 0)
+				y_top += y_div + offs_y;
+				//y_top += y_div + 10;
+
+						pos_Left = parseInt(x_mous, 10) - 10 - parseInt(x_div, 10);
+			if(pos_Left < 0)
+				pos_Left = parseInt(x_mous, 10) + 10;
+
+			document.getElementById(div_id).style.left = pos_Left;
+
+			document.getElementById(div_id).style.top = y_top;
+			}
+
+	function out_div_in_old_coord(table_id, div_id, old_x, old_y)
+	{								if(document.getElementById(table_id) == null)
+				return;
+			x_div = document.getElementById(table_id).offsetWidth;
+			y_div = document.getElementById(table_id).offsetHeight;
+
+			//alert("x_div = "+x_div+"; y_div = "+y_div);
+				
+						//y_top = y_mous - y_div - 10;
+			//y_top = y_mous - y_div - offs_y;
+			y_top = old_y - y_div - offs_y - 25;
+			if(y_top - y_scrol < 0)
+				y_top += y_div + offs_y + 25;
+				//y_top += y_div + 10;
+
+						//pos_Left = parseInt(x_mous, 10) - 10 - parseInt(x_div, 10);
+			pos_Left = parseInt(old_x, 10) - 10 - parseInt(x_div, 10);
+			if(pos_Left < 0)
+				pos_Left = parseInt(old_x, 10) + 10;
+
+			document.getElementById(div_id).style.left = pos_Left;
+			document.getElementById(div_id).style.top = y_top;
+			}
+</script>
+<script type="text/javascript">
+	var delay_out = 250;		var x_mous_out, y_mous_out;
+	
+	var mama_id;
+
+	function get_mama(item_id){
+		mama_id = item_id;
+		x_mous_out = x_mous;
+		y_mous_out = y_mous;
+
+		window.setTimeout("go_mama()", delay_out);
+	}
+	
+	function go_mama(){
+		item_id = mama_id;
+		if(item_id == '')
+			return;
+			
+		offs_y = -10;
+			
+		if(xmlHttp){
+			var url = "ajax/aja_mama.php?id="+item_id;
+
+			xmlHttp.open("GET", url, true);
+			xmlHttp.onreadystatechange = rez_getGood_aja;
+			xmlHttp.send(null);
+		}
+	}
+
+		var prompt_id;
+	function get_prompt(id_prompt){
+		prompt_id = id_prompt;
+		x_mous_out = x_mous;
+		y_mous_out = y_mous;
+
+		window.setTimeout("go_prompt()", delay_out);
+	}
+
+	function go_prompt(){
+		id_prompt = prompt_id;
+		if(id_prompt == '')
+			return;
+
+		x_mous = x_mous_out;
+		y_mous = y_mous_out;
+
+		offs_y = -10;
+
+		if(xmlHttp){
+			var url = "ajax/aja_prompt.php?id="+id_prompt;
+			xmlHttp.open("GET", url, true);
+			xmlHttp.onreadystatechange = rez_getGood_aja;
+			xmlHttp.send(null);
+		}
+	}
+	
+	var cancel_close = false;	//Если станет true - значит закрытие окна отменили
+	var timeoiut_value = 1000;
+
+	function rez_getGood_aja(){	//Сюда приходит ответ от запрошенной серверной страницы
+		if (xmlHttp.readyState == 4){
+			var rez = xmlHttp.responseText;
+
+			document.getElementById('div_res').innerHTML = rez;
+			document.getElementById('div_res').style.display = 'block';
+
+			out_div_in_old_coord('Table_aja', 'div_res', x_mous_out, y_mous_out);
+			
+			Cancel_Clos();
+		}
+	}
+	
+	function Cancel_Clos(){
+		cancel_close = true;
+	}
+	
+	function Close_Win(){
+		mama_id = '';
+		prompt_id = '';
+
+		//Запускаю таймаут.
+		window.setTimeout("Clo()", timeoiut_value);
+		cancel_close = false;	//Если это не сбросят при входе в окошко - оно закровется через таймаут
+	}
+	
+	function Clo(){
+		if(cancel_close)
+			return;
+		document.getElementById('div_res').style.display = 'none';
+	}
+</script>
+
+<script type="text/javascript" src="swfobject.js"></script>
+
+<!-- YaMetrics -->
+<script type="text/javascript"><!--
+var ya_class = 1;
+var ya_cid = 32395;
+//--></script>
+<script type="text/javascript" src="http://bs.yandex.ru/resource/watch.js"></script>
+
+<IDXSKIP><noscript><div style="display:inline;"><img src="http://bs.yandex.ru/watch/32395" width="1" height="1" alt=""></div></noscript></IDXSKIP>
+<style>
+    table.table_top_main{
+        width: 100%;
+        background-color: #FFFFFF;
+        border: 0;
+        border-collapse: collapse;
+    }
+    table.table_top_main td{
+        padding: 0;
+    }
+</style>
+<table class="table_top_main">
+    <tr>
+        <td style='width: 250px; vertical-align: top; text-align: center;'>
+
+            <table style="width: 250px;">
+	            <IDXSKIP><tr>
+		            <td style='padding-top:10px; text-align: center;'>
+			            <a href="index.php" title="Дайвинг - портал WebDive.ru"><img src='/images/logo.gif' style="border: 0;" alt=""></a>
+                    </td>
+	            </tr></IDXSKIP>
+                	                <tr>
+		                <td style='padding-top: 10px; padding-left:5px; vertical-align: bottom; text-align: left;'>
+			                <IDXSKIP><span style='font-size: 11px; color: #0c91bb;'><B>ИНТЕРЕСНО:</B></span></IDXSKIP>
+			                <span style='font-size: 10px; color: #808080;'>
+			                <IDXSKIP>Теперь в форуме виден </IDXSKIP><IDXSKIP><b>pr-рейтинг</b></IDXSKIP> <IDXSKIP>участников, что облегчает восприятие авторитетности мнения. Рейтинг расчитывается на основе Вашей реакции на сообщения </IDXSKIP><IDXSKIP><b>+1</b></IDXSKIP> <IDXSKIP>и <b>-1</b></IDXSKIP><IDXSKIP>.			                </IDXSKIP></span>
+			                <br>
+		                </td>
+	                </tr>
+	                <IDXSKIP><tr>
+		                <td style="text-align: right;"><a href="interest.php" title="Интересно">
+			                <span style='font-size: 10px; color: #0c91bb'><B>еще ...</B></span></a>&nbsp;&nbsp;<!-- <img src=images/top1/top_mnogo.gif> -->
+		                </td>
+	                </tr></IDXSKIP>
+                                </table>
+
+        </td>
+        <td style="vertical-align: top; text-align: left;">
+	        <table style="width: 100%;">
+	            <tr>
+		            <td style="width: 33%; vertical-align: top;">
+			        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			            <table style="background-image: URL(images/top1/top1_bg.gif); width: 100%;">
+			                <tr>
+			                    <td style="vertical-align: top;">
+				                    				                    <table style="width: 100%;">
+				                        <IDXSKIP><tr>
+                                            <td style="height: 2px; background-color: #0c91bb; padding: 5px;" class='top_menu'><B>Наш виртуальный клуб:</B></td>
+                                        </tr></IDXSKIP>
+				                        <tr><td style="height: 2px; background-color: #FFFFFF;"></td></tr> 
+				                        <tr>
+                                            <td style='padding-left: 7px; padding-top:5px; padding-bottom:5px;'>
+
+				                                <table style="width: 100%;">
+				                                    <tr><td style="background-color: #D1F1FC" class='menu' onmouseover="this.style.backgroundColor='#D1F1FC';"  onmouseout="this.style.backgroundColor='';"> <a href='forum.php' class='menu' title="Дайвинг Форум">Дайвинг Форум</a>  <a href='club_list.php' class='menu' title="Клубы по интересам">Клубы</a></td></tr>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#D1F1FC';"  onmouseout="this.style.backgroundColor='';"> <a href='n_fotoalbom.php' class='menu' title="Фотоальбомы">Фотоальбомы.</a> <a href='fotocat.php' class='menu' title="Фото по темам">Фото по темам.</a></td></tr></IDXSKIP>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#D1F1FC';"  onmouseout="this.style.backgroundColor='';"> <a href='videoalbomlist.php' class='menu' title="Дайвинг-видеоальбомы">Видеоальбомы</a> <a href='videocat.php' class='menu' title="Видео по темам">Видео по темам.</a></td></tr></IDXSKIP>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#D1F1FC';"  onmouseout="this.style.backgroundColor='';"> <a href='obj.php' class='menu' title="Доска объявлений">Доска объявлений</a></td></tr></IDXSKIP>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#D1F1FC';"  onmouseout="this.style.backgroundColor='';"> <a href='fuser.php' class='menu' title="Наши дайверы">Наши дайверы</a></td></tr></IDXSKIP>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#D1F1FC';"  onmouseout="this.style.backgroundColor='';"> <a href='comment.php' class='menu' title="Комментарии">Комментарии</a></td></tr></IDXSKIP>
+				                                </table>
+				                            </td>
+				                        </tr>
+				                    </table>
+				<!--  -->		
+			                    </td>
+			               </tr>
+			            </table>
+			<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->		
+		            </td>
+		            <td style="vertical-align: top;">
+			        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			            <table style="background-image: URL(images/top1/top1_bg.gif); width: 100%;">
+			                <tr>
+			                    <td style="vertical-align: top;">
+				                    <!--  -->
+				                    				                    <table style="width: 100%;">
+				                        <IDXSKIP><tr>
+                                            <td style="height: 2px; background-color: #006666; padding: 5px;" class='top_menu'><B>Дайвинг-бизнес:</B></td>
+                                        </tr></IDXSKIP>
+				                        <tr><td style="height: 2px; background-color: #FFFFFF;"></td></tr> 
+				                        <tr>
+		 			                        <td style='padding-left: 7px; padding-top:5px; padding-bottom:5px'>
+
+						                        <table style="width: 100%;">
+						                            <IDXSKIP><tr><td  class='menu'  onmouseover="this.style.backgroundColor='#D2FFEB';"  onmouseout="this.style.backgroundColor='';"> <a href='diveclub.php' class='menu' title="Дайвинг клубы и дайвинг центры">Дайвинг клубы и дайвинг центры</a></td></tr></IDXSKIP>
+						                            <IDXSKIP><tr><td  class='menu'  onmouseover="this.style.backgroundColor='#D2FFEB';"  onmouseout="this.style.backgroundColor='';"> <a href='shop.php' class='menu' title="Дайвинг Магазины">Дайвинг Магазины</a></td></tr></IDXSKIP>
+						                            <IDXSKIP><tr><td  class='menu'  onmouseover="this.style.backgroundColor='#D2FFEB';"  onmouseout="this.style.backgroundColor='';"> <a href='magazine.php' class='menu' title="Дайвинг Журналы">Дайвинг Журналы</a></td></tr></IDXSKIP>
+						                            <IDXSKIP><tr><td  class='menu'  onmouseover="this.style.backgroundColor='#D2FFEB';"  onmouseout="this.style.backgroundColor='';"> <a href='top100.php' class='menu' title="Рейтинг сайтов (ТОП100)">Рейтинг сайтов (ТОП100)</a></td></tr></IDXSKIP>
+						                            <IDXSKIP><tr><td  class='menu'  onmouseover="this.style.backgroundColor='#D2FFEB';"  onmouseout="this.style.backgroundColor='';"> <a href='triplist.php' class='menu' title="Дайвинг поездки, сафари.">Дайвинг поездки.</a> <a href='yacht.php' class='menu' title="Яхты.">Яхты.</a></td></tr></IDXSKIP>
+						                            <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#D2FFEB';"  onmouseout="this.style.backgroundColor='';" > <a href='instructor.php' class='menu' title="Инструкторы">Инструкторы</a></td></tr></IDXSKIP>
+						                        </table>
+
+					                        </td>
+					                    </tr>
+				                    </table>
+				                    <!--  -->		
+			                    </td>
+                            </tr>
+			            </table>
+			            <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->		
+		            </td>
+		            <td style="width: 33%; vertical-align: top;">
+			        <!-- логин. пароль++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			            <table style="background-image: URL(images/top1/top1_bg.gif); width: 100%;">
+			                <tr>
+			                    <td style="vertical-align: top;">
+				                <!--  -->
+				                    <table style="width: 100%;">
+
+				                        <IDXSKIP><tr><td style="height: 2px; background-color: #808080; padding: 5px;" class='top_menu'><B>Вход для пользователей:</B></td></tr></IDXSKIP>
+				                        <tr><td style="height: 2px; background-color: #FFFFFF;"></td></tr> 
+				                        <tr><td class='menu' style='padding-top:5px'> 
+				                        				                        <form method="POST" action="">
+					                        <input type="hidden" name="login" value="1" id="login_login">
+
+					                        <table style="width: 100%;">
+						                        <IDXSKIP><tr>
+							                        <td style='padding-left: 10px; padding-top: 0; width: 50px; font-size: 10px;'>
+								                        логин:
+							                        </td>
+							                        <td style='padding-left: 10px; padding-top: 0; width: 80px;'>
+								                        <INPUT TYPE="text" NAME="email" id="login_email" style='font:100% Tahoma,Arial,Helvetica,sans-serif;  width: 100px; height: 15px; background: #FFFFFF; border-color: #CECECE; border-width: 1px'>
+							                        </td>
+							                        <td></td>
+						                        </tr></IDXSKIP>
+						                        <tr>
+							                        <td style='padding-left: 10px; padding-top: 0; font-size: 10px;'>
+								                        <IDXSKIP>пароль:
+                                                    </IDXSKIP></td>
+							                        <IDXSKIP><td style='padding-left: 10px; padding-top: 0;'>
+								                        <INPUT TYPE="password" NAME="pass" id="login_pass" style='font:100% Tahoma,Arial,Helvetica,sans-serif;  width: 100px; height: 15px; background: #FFFFFF; border-color: #CECECE; border-width: 1px'>
+							                        </td></IDXSKIP>
+							                        <IDXSKIP><td style='padding-left: 5px; padding-right: 5px; padding-top: 0'>
+								                        <img src='/images/into_b.gif' alt="" onclick="javascript:document.forms[0].submit();" style='cursor:pointer; border: 0;'>
+							                        </td></IDXSKIP>
+						                        </tr>
+						                        <IDXSKIP><tr>
+							                        <td style='padding-left: 10px; padding-top: 5px; padding-right: 5px;' colspan='3'>
+								                        <a href="lostpassword.php" style="font-size: 10px;">
+									                        <U><B>забыли пароль?</B></U></a>
+							                        </td>
+						                        </tr></IDXSKIP>
+						                        <IDXSKIP><tr>
+							                        <td style='padding-left: 10px; padding-top: 0; padding-right: 5px; padding-bottom: 15px' colspan='3'>
+								                        <a href="userreg.php" title="регистрация / registration" style="font-size: 10px;">
+									                        <U>регистрация / registration</U></a>
+							                        </td>
+						                        </tr></IDXSKIP>
+						                        <tr>
+							                        <td style='padding-left: 10px; padding-top: 0; height: 5px;' colspan="3"></td>
+						                        </tr>
+					                        </table>
+				                        </form>
+				                        		
+				
+				                            </td>
+				                        </tr>
+				                    </table>
+				                    <!--  -->		
+			                    </td>
+                            </tr>
+			            </table>
+			
+			            <!-- / логин. пароль++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		            </td>
+	            </tr>
+	            <tr>
+		            <td style="width: 33%; vertical-align: top;">
+			        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			            <table border='0' style="background-image: URL(images/top1/top1_bg.gif); width: 100%;">
+			                <tr>
+			                    <td style="vertical-align: top;">
+				                    				                    <table style="width: 100%;">
+					                    <IDXSKIP><tr>
+						                    <td style="height: 2px; background-color: #CC6633; padding: 5px;" class='top_menu'><B>Справочная информация:</B></td>
+                                        </tr></IDXSKIP>
+					                    <tr><td style="height: 2px; background-color: #FFFFFF;"></td></tr> 
+					                    <tr>
+			 			                    <td style='padding-left: 7px; padding-top:5px; padding-bottom:5px;'>
+
+							                    <table style="width: 100%;">
+								                    <IDXSKIP><tr>
+                                                        <td  class='menu' onmouseover="this.style.backgroundColor='#FFF0C1';"  onmouseout="this.style.backgroundColor='';"> <a href='article2.php' class='menu' title="Места для дайвинга">Места для дайвинга.</a> <a href='weatherworld.php' class='menu' title="Погода в мире">Погода в мире.</a></td>
+                                                    </tr></IDXSKIP>
+								                    <IDXSKIP><tr>
+                                                        <td  class='menu' onmouseover="this.style.backgroundColor='#FFF0C1';"  onmouseout="this.style.backgroundColor='';"> <a href='fish.php' class='menu' title="Энциклопедия рыб">Энциклопедия рыб</a></td>
+                                                    </tr></IDXSKIP>
+								                    <IDXSKIP><tr>
+                                                        <td  class='menu' onmouseover="this.style.backgroundColor='#FFF0C1';"  onmouseout="this.style.backgroundColor='';"> <a href='article.php' class='menu' title="Статьи о дайвинге">Статьи.</a> <a href='books.php' class='menu' title="Книги о дайвинге">Книги о дайвинге.</a></td>
+                                                    </tr></IDXSKIP>
+								                    								                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFF0C1';"  onmouseout="this.style.backgroundColor='';"> <a href='dic.php' class='menu' title="Дайвинг словарь (Rus-Eng, Eng-Rus)">Дайвинг словарь (3165 слов)</a></td></tr></IDXSKIP>
+								                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFF0C1';"  onmouseout="this.style.backgroundColor='';"> <a href='dictionary.php' class='menu' title="Термины">Термины.</a> <a href='signs.php' class='menu' title="Знаки">Знаки.</a></td></tr></IDXSKIP>
+								                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFF0C1';"  onmouseout="this.style.backgroundColor='';"> <a href='catalog.php' class='menu' title="Оборудование">Оборудование</a></td></tr></IDXSKIP>
+							                    </table>
+						                    </td></tr>
+				                    </table>
+				                    <!--  -->
+			                    </td>		
+			                </tr>
+			            </table>
+			            <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			        </td>
+			        <td style="vertical-align: top;">
+				    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+				        <table style="background-image: URL(images/top1/top1_bg.gif); width: 100%;">
+				            <tr>
+				                <td style="vertical-align: top;">
+					            <!--  -->
+					                					                <table style="width: 100%;">
+					                    <IDXSKIP><tr>
+                                            <td style="height: 2px; background-color: #CC00CC; padding: 5px;" class='top_menu'> <B>Дайвинг-новости:</B></td></tr></IDXSKIP>
+					                    <tr><td style="height: 2px; background-color: #FFFFFF"></td></tr>
+					                    <tr>
+                                            <td style='padding-left: 7px; padding-top:5px; padding-bottom:5px;'>
+
+					                            <table style="width: 100%;">
+					                                <tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFD2FF';"  onmouseout="this.style.backgroundColor='';"> <a href='newsitem.php?type=divecentr' class='menu' title="Новости дайвинг клубов и дайвинг центров"><IDXSKIP>Новости дайвинг клубов и дайвинг центров</IDXSKIP></a></td></tr>
+					                                <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFD2FF';"  onmouseout="this.style.backgroundColor='';"> <a href='newsitem.php?type=shop' class='menu' title="Новости дайвинг магазинов">Новости дайвинг магазинов</a></td></tr></IDXSKIP>
+					                                <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFD2FF';"  onmouseout="this.style.backgroundColor='';"> <a href='newsitem.php?type=magazine' class='menu' title="Анонсы дайвинг журналов">Анонсы дайвинг журналов</a></td></tr></IDXSKIP>
+					                                <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFD2FF';"  onmouseout="this.style.backgroundColor='';"> <a href='newsitem.php?type=site' class='menu' title="Новости дайвинг ресурсов">Новости дайвинг ресурсов</a></td></tr></IDXSKIP>
+					                                <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFD2FF';"  onmouseout="this.style.backgroundColor='';"> <a href='newsitem.php?type=divemaster' class='menu' title="Новости от инструкторов">Новости от инструкторов</a></td></tr></IDXSKIP>
+					                                <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFD2FF';"  onmouseout="this.style.backgroundColor='';" > <a href='newsitem.php?type=trip' class='menu' title="Новости дайвинг поездок, сафари и яхт">Новости дайвинг поездок и яхт</a></td></tr></IDXSKIP>
+					                            </table>
+					                        </td>
+                                        </tr>
+					                </table>
+					                <!--  -->		
+					            </td>
+                            </tr>
+				        </table>
+				        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			        </td>
+			        <td style="vertical-align: top;">
+			
+				        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+				        <table style="background-image: URL(images/top1/top1_bg.gif); width: 100%">
+				            <tr>
+				                <td style="vertical-align: top;">
+				                <!--  -->
+				                				                    <table style="width: 100%;">
+				                        <IDXSKIP><tr><td style="height: 2px; background-color: #FF6600; padding: 5px;" class='top_menu'> <B>Наш портал:</B></td></tr></IDXSKIP>
+				                        <tr><td style="height: 2px; background-color: #FFFFFF;"></td></tr> 
+				                        <tr>
+                                            <td style='padding-left: 7px; padding-top:5px; padding-bottom:5px;'>
+
+				                                <table style="width: 100%;">
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFDFCA';"  onmouseout="this.style.backgroundColor='';"> <a href='opros.php' class='menu' title="Результаты дайвинг опросов">Результаты дайвинг опросов</a></td></tr></IDXSKIP>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFDFCA';"  onmouseout="this.style.backgroundColor='';"> <noindex><a href='http://www.seaangel.ru' class='menu' title="Фотоконкурс Sea Angel">Фотоконкурс</a></noindex></td></tr></IDXSKIP>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFDFCA';"  onmouseout="this.style.backgroundColor='';"> <a href='wallpapes.php' class='menu' title="Фотообои">Фотообои</a></td></tr></IDXSKIP>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFDFCA';"  onmouseout="this.style.backgroundColor='';"> <a href='about.php' class='menu' title="О портале">О портале</a></td></tr></IDXSKIP>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFDFCA';"  onmouseout="this.style.backgroundColor='';"> <a href='news.php' class='menu' title="Новости">Новости.</a> <a href='interest.php' class='menu' title="Интересно">Интересно.</a></td></tr></IDXSKIP>
+				                                    <IDXSKIP><tr><td  class='menu' onmouseover="this.style.backgroundColor='#FFDFCA';"  onmouseout="this.style.backgroundColor='';"> <a href='contact.php' class='menu' title="Контакты">Контакты</a> <a href='helpsite.php' class='menu' title="Помощь">Помощь</a> <a href='/banner/index.php' class='menu'>Реклама</a></td></tr></IDXSKIP>
+				                                </table>
+				                            </td>
+                                        </tr>
+				                    </table>
+				                    <!--  -->		
+				                </td>
+                            </tr>
+				        </table>
+				        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			        </td>
+	            </tr>
+	        </table>
+
+        </td>
+    </tr>
+</TABLE>
+
+<!--		
+		</td>
+	</tr>
+	</table>
+
+
+
+</td>
+</tr>
+</TABLE>
+-->
+
+<table style="width: 100%; background-color: #FFFFFF; border: 0; border-collapse: collapse;">
+    <tr>
+        <td style='width: 250px; padding-top: 3px; vertical-align: top; padding: 0;'>
+
+            <table style="width: 250px; border-collapse: collapse;">
+                <tr>
+                    <td style="width: 100%; padding: 0; text-align: center;">
+<!--
+                <div id="db636593368" class="v234"><a href="#" target="_blank">Загрузка...</a></div><script type="text/javascript" src="http://extrasale.ru/636593368/script.js"></script>
+-->
+                    </td>
+                </tr>
+            </table>
+    
+
+	<!-- <tr bgcolor='#FFFFFF'><td    height=2 style='padding-left: 0' ></td></tr> -->
+	<br>    <IDXSKIP><table class="column_left_header">
+	    <tr style="background-color: #7ba0cc;">
+	        <td><img src='/images/1112.gif' style="border: 0;" alt=""></td>
+	        <td>Дайвинг - опрос</td>
+	        <td><img src='/images/left1.gif' style="border: 0;" alt=""></td>
+	    </tr>
+	</table></IDXSKIP>
+
+	<table class="column_left_data">
+	    	    <tr>
+	        <td style='padding-left: 14px; padding-top: 5px; padding-right: 5px; background-image: URL(images/top1/top3_bg.gif); vertical-align: top;' colspan='2'>
+		        <IDXSKIP><B>Вы ныряли в Таиланде?</B></IDXSKIP><BR><BR>
+
+                <table style="width: 95%; border-collapse: collapse;">
+		            <tr>
+			            <td style="padding: 2px;">
+	                    		                    <form method="POST" action="forum.php?a=2&id_p=6&id_t=441&page=2&opros=41">
+			                    <table>
+			                        			                        <IDXSKIP><tr>
+				                        <td><input type="checkbox" id="opros0" name='opros[]' value="288" class="chkbox" style="border:0">&nbsp;</td>
+				                        <td style="width: 100%; vertical-align: top; padding-top: 2px;"><div style="cursor: pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="setCheck(0)">Да, на Пхукете</div></td>
+			                        </tr></IDXSKIP>
+			                        			                        <IDXSKIP><tr>
+				                        <td><input type="checkbox" id="opros1" name='opros[]' value="289" class="chkbox" style="border:0">&nbsp;</td>
+				                        <td style="width: 100%; vertical-align: top; padding-top: 2px;"><div style="cursor: pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="setCheck(1)">Да, на Пхи-Пхи</div></td>
+			                        </tr></IDXSKIP>
+			                        			                        <IDXSKIP><tr>
+				                        <td><input type="checkbox" id="opros2" name='opros[]' value="290" class="chkbox" style="border:0">&nbsp;</td>
+				                        <td style="width: 100%; vertical-align: top; padding-top: 2px;"><div style="cursor: pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="setCheck(2)">Да, на Самуи</div></td>
+			                        </tr></IDXSKIP>
+			                        			                        <IDXSKIP><tr>
+				                        <td><input type="checkbox" id="opros3" name='opros[]' value="291" class="chkbox" style="border:0">&nbsp;</td>
+				                        <td style="width: 100%; vertical-align: top; padding-top: 2px;"><div style="cursor: pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="setCheck(3)">Да, на Ко Тао</div></td>
+			                        </tr></IDXSKIP>
+			                        			                        <IDXSKIP><tr>
+				                        <td><input type="checkbox" id="opros4" name='opros[]' value="292" class="chkbox" style="border:0">&nbsp;</td>
+				                        <td style="width: 100%; vertical-align: top; padding-top: 2px;"><div style="cursor: pointer;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'" onclick="setCheck(4)">Нет, не нырял</div></td>
+			                        </tr></IDXSKIP>
+			                        			                        <IDXSKIP><tr>
+                                        <td></td>
+                                        <td style='padding-right: 10px;'>
+				                            <INPUT TYPE="submit" name="opros_add" value='голосовать' style='width: 100px; border-color: #787878; background-color: #7ba0cc; border-width: 1px; height: 17px; font-size: 10px; color: #FFFFFF; text-align: center;'>
+                                        </td>
+                                    </tr></IDXSKIP>
+			                    </table>
+		                    </form>
+		                    			            </td>
+		            </tr>
+	                <IDXSKIP><tr>
+                        <td></td>
+                        <td style='padding-right: 10px; vertical-align: top; text-align: right;'>
+	                    		                        <a style="font-size: 10px; text-decoration: underline; font-weight: bold;" href="opros.php?idd=41" title='результаты опроса "Вы ныряли в Таиланде?"'>
+			                        результаты опроса</a>
+		                        	                    </td>
+	                </tr></IDXSKIP>
+	            </table>
+	        </td>
+	    </tr>
+	    <IDXSKIP><tr>
+            <td style='padding-bottom: 1px;'><img src='/images/bot_line3.jpg' alt=""></td>
+        </tr></IDXSKIP>
+	</table>
+
+	<script type="text/javascript">
+	    <!--
+	    function setCheck(n){
+	        el = document.getElementById("opros" + n);
+	        if (el.type == "radio") el.checked = true;
+	        else el.checked = (el.checked ? false : true);
+	    }
+	    //-->
+	</script>
+	
+
+
+ <IDXSKIP><table id="dv_shap_forum" border='0' cellspacing='0' cellpadding='0' style="width: 100%; background-color: #FFFFFF;">
+	<tr style="background-color: #7C7C7C;">
+	<td style="width: 6px;" align='left'><img src='images/1112_r.gif' alt=""></td>
+	<td style='height: 20px; padding-left: 10px; border-bottom: 2px solid #2c2c2c; width: 234px;'>
+
+		<table style="width: 100%;">
+			<tr>
+				<td><font color='#FFFFFF' style='font-size: 11px'> <B>Обсуждаемые темы</B></font></td>
+				<td align="right">
+					<span onmouseover="set_more_fmess()" onmouseout="close_more_fmess()" style="cursor: pointer;">
+						<a href="discuss_themes.php" style="color: #FFFFF0; font-size: 11px; font-weight: bold; text-decoration: underline;">
+							еще...</a>
+					</span>
+				</td>
+			</tr>
+		</table>
+		
+	</td>
+	<td style="width: 6px;" align='right'><img src='images/left2.gif' alt=""></td>
+	</tr>
+</table></IDXSKIP>
+
+<table id="tbl_vidget_forum" border='0' cellspacing='0' cellpadding='0' style="width: 100%; background-color: #FFFFFF;">
+	<tr>
+		<td valign='top'>
+
+			<table style="width: 95%;" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td style='padding-left: 0;' valign='top'>
+
+													<table style="width: 100%;">
+								<tr>
+									<td style='padding-left: 14px; background-image: URL(images/top1/top2_bg.gif);'>
+	<IDXSKIP><div style='padding-bottom: 3px'>
+	<a href="forum.php?a=2&amp;id_p=1&amp;id_t=1208&amp;page=1#11090" title='Поиск единомышленников' style="color: #2487a6; font-size: 11px; text-decoration: underline">
+		Поиск единомышленников</a>
+	</div></IDXSKIP>
+
+										<a href="forum.php?a=2&amp;id_p=1&amp;id_t=1208&amp;page=1#11090" title='Поиск единомышленников'>
+											<IDXSKIP>Ищу любителей дайвинга в городах Жуковский, Раменский или в ближайших...</IDXSKIP></a>
+										<BR><BR>
+
+
+																				<IDXSKIP><div align="right">
+											<font style='font-size: 10px'>06.12.2014 19:36</font>
+											<BR><B>hohol62</B>
+										</div></IDXSKIP>
+									</td>
+								</tr>
+							</table>
+														<table style="width: 100%;">
+								<tr>
+									<td style='padding-left: 14px; background-image: URL(images/top1/top2_bg.gif);'>
+	<div style='padding-bottom: 3px'>
+	<a href="forum.php?a=2&amp;id_p=669&amp;id_t=1207&amp;page=1#11089" title='Внимание! Проводится набор в группу по обучению дайвингу SSI' style="color: #2487a6; font-size: 11px; text-decoration: underline">
+		<IDXSKIP>Внимание! Проводится набор в группу по обучению дайвингу SSI</IDXSKIP></a>
+	</div>
+
+										<a href="forum.php?a=2&amp;id_p=669&amp;id_t=1207&amp;page=1#11089" title='Внимание! Проводится набор в группу по обучению дайвингу SSI'>
+											<IDXSKIP>Дайвинг-центр «Посейдон» с 1998г. проводит обучение дайвингу в Одессе от начального уровня OWD (Open Water Diver) до...</IDXSKIP></a>
+										<BR><BR>
+
+
+																				<IDXSKIP><div align="right">
+											<font style='font-size: 10px'>01.12.2014 13:08</font>
+											<BR><B>DivingOdessa</B>
+										</div></IDXSKIP>
+									</td>
+								</tr>
+							</table>
+														<table style="width: 100%;">
+								<tr>
+									<td style='padding-left: 14px; background-image: URL(images/top1/top2_bg.gif);'>
+	<IDXSKIP><div style='padding-bottom: 3px'>
+	<a href="forum.php?a=2&amp;id_p=11&amp;id_t=1206&amp;page=1#11088" title='Underwater housing WOSS Alpha 7 for Sony A7/ A7R/ A7S' style="color: #2487a6; font-size: 11px; text-decoration: underline">
+		Underwater housing WOSS Alpha 7 for Sony A7/ A7R/ A7S</a>
+	</div></IDXSKIP>
+
+										<a href="forum.php?a=2&amp;id_p=11&amp;id_t=1206&amp;page=1#11088" title='Underwater housing WOSS Alpha 7 for Sony A7/ A7R/ A7S'>
+											<IDXSKIP>WOSS Alpha7 is designed for Sony A7. Assigned for underwater shooting within the depth up to 150 meters or limits of...</IDXSKIP></a>
+										<BR><BR>
+
+
+																					<IDXSKIP>прикреплено фото/видео: 1 шт.
+																					</IDXSKIP><IDXSKIP><div align="right">
+											<font style='font-size: 10px'>03.11.2014 19:37</font>
+											<BR><B>yellow-turtle</B>
+										</div></IDXSKIP>
+									</td>
+								</tr>
+							</table>
+							
+					</td>
+				</tr>
+			</table>
+					
+
+		</td>
+	</tr>
+	<IDXSKIP><tr><td style='padding-bottom: 2px'><img src='images/bot_line2.jpg' alt=""></td></tr></IDXSKIP>
+</table>
+
+
+
+<IDXSKIP><div id="div_for1" style="z-index: 10; background-color: #FFFFFF; display: none; position: absolute;" onmouseover="out_in_message_forum()" onmouseout="close_more_fmess()">
+	<table border='0' cellspacing='0' cellpadding='0' style="width: 100%; background-color: #FFFFFF;">
+		<tr style="background-color: #7C7C7C;">
+			<td style="width: 6px;" align='left'><img src='images/1112_r.gif' alt=""></td>
+			<td style='height: 20px; padding-left: 10px; border-bottom: 2px solid #2c2c2c; width: 234px;'>
+				<div id="pages_forum1" style='width: 100%; font-size: 12px; padding-top:10px; color: #FFFFFF; margin-right: 10px;' align="right"></div>
+			</td>
+		</tr>
+	</table>
+	
+	<div id="div_data1" style="width: 100%;"></div>
+</div></IDXSKIP>
+
+<IDXSKIP><div id="div_for2" style="z-index: 10; background-color: #FFFFFF; display: none; position: absolute;" onmouseover="out_in_message_forum()" onmouseout="close_more_fmess()">
+	<table border='0' cellspacing='0' cellpadding='0' style="width: 100%; background-color: #FFFFFF;">
+		<tr style="background-color: #7C7C7C;">
+			<td style="width: 6px;" align='left'><img src='images/1112_r.gif' alt=""></td>
+			<td style='height: 20px; padding-left: 10px; border-bottom: 2px solid #2c2c2c; width: 234px;'>
+				<div id="pages_forum2" style='width: 100%; font-size: 12px; padding-top:10px; color: #FFFFFF; margin-right: 10px;' align="right"></div>
+			</td>
+		</tr>
+	</table>
+	
+	<div id="div_data2" style="width: 100%;"></div>
+</div></IDXSKIP>
+
+<IDXSKIP><div id="div_for3" style="z-index: 10; background-color: #FFFFFF; display: none; position: absolute;" onmouseover="out_in_message_forum()" onmouseout="close_more_fmess()">
+	<table border='0' cellspacing='0' cellpadding='0' style="width: 100%; background-color: #FFFFFF;">
+		<tr style="background-color: #7C7C7C;">
+			<td style="width: 6px;" align='left'><img src='images/1112_r.gif' alt=""></td>
+			<td style='height: 20px; padding-left: 10px; border-bottom: 2px solid #2c2c2c; width: 234px;'>
+				<div id="pages_forum3" style='width: 100%; font-size: 12px; padding-top:10px; color: #FFFFFF; margin-right: 10px;' align="right"></div>
+			</td>
+		</tr>
+	</table>
+	
+	<div id="div_data3" style="width: 100%;"></div>
+</div></IDXSKIP>
+
+<IDXSKIP><div id="div_for4" style="z-index: 10; background-color: #FFFFFF; display: none; position: absolute;" onmouseover="out_in_message_forum()" onmouseout="close_more_fmess()">
+	<table border='0' cellspacing='0' cellpadding='0' style="width: 100%; background-color: #FFFFFF;">
+		<tr style="background-color: #7C7C7C;">
+			<td style="width: 6px;" align='left'><img src='images/1112_r.gif' alt=""></td>
+			<td style='height: 20px; padding-left: 10px; border-bottom: 2px solid #2c2c2c; width: 234px;'>
+				<div id="pages_forum4" style='width: 100%; font-size: 12px; padding-top:10px; color: #FFFFFF; margin-right: 10px;' align="right"></div>
+			</td>
+		</tr>
+	</table>
+	
+	<div id="div_data4" style="width: 100%;"></div>
+</div></IDXSKIP>
+
+<IDXSKIP><div id="div_for5" style="z-index: 10; background-color: #FFFFFF; display: none; position: absolute;" onmouseover="out_in_message_forum()" onmouseout="close_more_fmess()">
+	<table border='0' cellspacing='0' cellpadding='0' style="width: 100%; background-color: #FFFFFF;">
+		<tr style="background-color: #7C7C7C;">
+			<td style="width: 6px;" align='left'><img src='images/1112_r.gif' alt=""></td>
+			<td style='height: 20px; padding-left: 10px; border-bottom: 2px solid #2c2c2c; width: 234px;'>
+				<div id="pages_forum5" style='width: 100%; font-size: 12px; padding-top:10px; color: #FFFFFF; margin-right: 10px;' align="right"></div>
+			</td>
+		</tr>
+	</table>
+	
+	<div id="div_data5" style="width: 100%;"></div>
+</div></IDXSKIP>
+
+
+<script type="text/javascript" language="javascript">
+
+	var number_page_forum = 1;
+	var premier_page;
+	var x_page;
+	
+	var opened_pages = new Array();
+
+	opened_pages['1'] = false;
+		opened_pages['2'] = false;
+		opened_pages['3'] = false;
+		opened_pages['4'] = false;
+		opened_pages['5'] = false;
+		
+		var arr = new Array();
+	arr['init'] = false;
+	arr['count_next'] = '5';
+	
+	function ini_more()
+	{
+		if(!arr['init'])
+		{
+			arr['opened_pages_more'] = Array();
+			for(i=0; i<arr['count_next']; i++)
+			{
+				arr['opened_pages_more'][i] = false;
+				
+				//Создать строку с номеарми страниц
+				
+				str = "";
+				if(i == 0)
+					str = "<font color='#999999'><<"+"<"+"/font> ";
+				else
+				{
+					//str = "<a href='javascript:dec_page_more("+arr['array_name']+")'><<"+"<"+"/a> ";
+					str = "<a href='javascript:dec_page_forum()'><font color='#FFFFFF'><<"+"<"+"/font>"+"<"+"/a> ";
+				}
+
+				for(j=1; j<=arr['count_next']; j++)
+				{
+					if(j > 1) str += " ";
+
+        			if(i+1 != j)
+        			{
+						//str += "<a href='javascript:to_page_more("+arr['array_name']+","+j+")'><u>";
+						str += "<a href='javascript:to_page_forum("+j+")'><u>";
+					}
+					else
+						str += "<b>";
+        			
+        			str += "<font color='#FFFFFF'>"+j+"<"+"/font>";
+
+        			if((i+1) != j)
+						str += "<"+"/u><"+"/a>";
+					else
+						str += "<"+"/b>";
+        			
+				}
+				if(i >= arr['count_next']-1)
+					str += " <font color='#999999'>>>"+"<"+"/font>";
+				else
+				{
+					//str += " <a href='javascript:inc_page_more("+arr['array_name']+")'> >>"+"<"+"/a>";
+					str += " <a href='javascript:inc_page_forum()'> <font color='#FFFFFF'>>>"+"<"+"/font>"+"<"+"/a>";
+				}
+				
+				//Положить созданную строку в соответствующий див
+				//var dv = document.getElementById(arr['id_div_pages']+(i+1));
+				var dv = document.getElementById("pages_forum"+(i+1));
+				if(dv != null)
+				{
+					dv.innerHTML = str;
+					//alert(str);
+				}
+			}
+			arr['init'] = true;
+			
+			//alert("init");
+		}
+	}
+	
+	ini_more();
+		
+
+		premier_page = document.getElementById("div_for1").innerHTML;
+
+	
+	var max_count_page_forum = parseInt('5', 10);
+
+	function inc_page_forum()
+	{
+		number_page_forum++;
+		set_more_fmess();
+	}
+
+	function dec_page_forum()
+	{
+		number_page_forum--;
+		set_more_fmess();
+	}
+	
+	function to_page_forum(num)
+	{
+		number_page_forum = num;
+		set_more_fmess();
+	}
+	
+	function absPosition(obj) 
+	{
+		var x = y = 0;
+		while(obj) {
+			x += obj.offsetLeft;
+			y += obj.offsetTop;
+			obj = obj.offsetParent;
+		}
+		return {x:x, y:y};
+	}
+	
+	var pause_close_more_fmess = false;
+	function close_more_fmess()
+	{
+		pause_close_more_fmess = true;
+		window.setTimeout("close_more_fmess_after_pau()", 500);
+	}
+	function close_more_fmess_after_pau()
+	{
+		if(pause_close_more_fmess)
+		{
+			pause_close_more_fmess = false;
+			close_all_forum();
+		}
+	}
+	
+	function close_all_forum()
+	{
+		var dv;
+				dv = document.getElementById("div_for1");
+		if(dv != null)
+		{
+			document.getElementById("div_for1").style.display = "none";
+		}
+				dv = document.getElementById("div_for2");
+		if(dv != null)
+		{
+			document.getElementById("div_for2").style.display = "none";
+		}
+				dv = document.getElementById("div_for3");
+		if(dv != null)
+		{
+			document.getElementById("div_for3").style.display = "none";
+		}
+				dv = document.getElementById("div_for4");
+		if(dv != null)
+		{
+			document.getElementById("div_for4").style.display = "none";
+		}
+				dv = document.getElementById("div_for5");
+		if(dv != null)
+		{
+			document.getElementById("div_for5").style.display = "none";
+		}
+			}
+	
+	function out_in_message_forum()
+	{
+		pause_close_more_fmess = false;
+	}
+
+	function close_all_more_fmess()
+	{
+		pause_close_more_fmess = false;
+		div_for.style.display = "none";
+	}
+	
+	function set_more_fmess()
+	{
+		if(opened_pages[number_page_forum])
+			open_pages();
+		else
+			load_pages();
+	}
+	
+	function load_pages()
+	{
+		if(opened_pages[number_page_forum])
+		{
+			open_pages();
+			return;
+		}
+
+		if(xmlHttp)
+		{
+			start_record = 3+((number_page_forum-1)*6);
+			x_page = document.getElementById("tbl_vidget_forum").clientWidth;
+
+			var url = "../ajax/forum_disc_themes.php?page_start="+start_record+"&amp;widt="+x_page;
+
+			xmlHttp.open("GET", url, true);
+			xmlHttp.onreadystatechange = rez_loadPage_aja;
+			xmlHttp.send(null);
+		}
+	}
+	
+	
+	var premier_open = false;
+	function rez_loadPage_aja()
+	{
+		if (xmlHttp.readyState == 4)
+		{
+			var rez = xmlHttp.responseText;
+
+			
+		//alert("Гружу в div_data"+number_page_forum+"\r\nСейчас там: "+document.getElementById("div_data"+number_page_forum).innerHTML);
+		//alert(rez);
+			
+			if(document.getElementById("div_data"+number_page_forum) != null)
+				document.getElementById("div_data"+number_page_forum).innerHTML = rez;
+			else
+				alert("Не нашел блок; "+"div_data"+number_page_forum);
+			
+			opened_pages[number_page_forum] = true;
+				
+		//alert("Загрузил - показываю");				
+		//alert("Теперь там:\r\n" + document.getElementById("div_data"+number_page_forum).innerHTML);
+			open_pages();
+		}
+	}
+	
+	function open_pages()
+	{
+		if(!premier_open)
+		{
+			premier_open = true;
+			offs_x = absPosition(document.getElementById("tbl_vidget_forum")).x;				offs_y = absPosition(document.getElementById("tbl_vidget_forum")).y;
+
+			x = document.getElementById("tbl_vidget_forum").clientWidth;				y = document.getElementById("tbl_vidget_forum").clientHeight;				
+			y1 = document.getElementById("dv_shap_forum").clientHeight;			}
+
+		close_all_forum();	        var div_f = document.getElementById("div_for"+number_page_forum);
+
+		div_f.style.display = "block";
+		div_f.style.left = (offs_x + x)+"px";
+
+		div_f.style.top = (offs_y-y1)+"px";
+		div_f.style.width = (x*2)+"px";
+		div_f.style.height = (y+y1)+"px";
+		
+		div_f.style.display = "block";
+	}
+
+
+
+</script>
+
+    
+	<IDXSKIP><table class="column_left_header">
+	    <tr style="background-color: #3D925F;">
+	        <td><img src='/images/1112_l.gif' alt=""></td>
+	        <td style="border-bottom: 2px solid #174d2d;">Случайное фото</td>
+	        <td><img src='/images/left3.gif' alt=""></td>
+	    </tr>
+	</table></IDXSKIP>
+		<table class="column_left_data">
+	    <tr>
+	        <td style='padding-left: 10px; padding-top: 5px; background-image: URL(images/top1/top2_bg.gif); vertical-align: top;' colspan='2'>
+		        <a style="font-size: 10px; font-weight: bold;" href="n_fotoalbom_foto.php?id_fotogallary=21200" title='Шняжка2 (Halgerda stricklandi)'>
+				    Шняжка2 (Halgerda stricklandi)</a><BR>
+			    <span style='font-size: 10px'>Автор: Valerik</span>
+	            
+                <table style="width: 100%; border-collapse: collapse;">
+	                <tr>
+	                    <td style='padding-left: 0; padding-top: 5px; vertical-align: top; text-align: center;'>
+		                    <a href="n_fotoalbom_foto.php?id_fotogallary=21200" title='Шняжка2 (Halgerda stricklandi)'>
+			                    <img src="/images/gallary/21/s21200.jpg" style="border: 0;" alt=""></a>
+	                    </td>
+	                    <td style='padding-left: 5px; padding-right: 10px; padding-top: 5px; vertical-align: top;'>
+	
+		                    <span style='font-size: 10px'>Дата: 01.05.2012<BR>
+			                Просмотров: 1492<BR>
+			                Всего в альбоме: <BR>13 фотографий<BR>
+			                </span>
+			                <BR>
+			                <a style="color: #174d2d; font-weight: bold; text-decoration: underline;" href="n_fotoalbom_in.php?id_gallary=1087" title='фотоальбом "Шняжки Индонезии 2011"'>
+				                весь фотоальбом</a>
+	                    </td>
+	                </tr>
+                </table>
+	
+	        </td>
+	    </tr>
+	    <IDXSKIP><tr><td style='padding-bottom: 1px;'><img src='/images/bot_line2.jpg' alt=""></td></tr></IDXSKIP>
+	</table>
+	    
+
+    <IDXSKIP><table class="column_left_header">
+	    <tr style="background-color: #9966CC;">
+	        <td><img src='/images/1112_p.gif' alt=""></td>
+	        <td style='border-bottom: 2px solid #4F1B67;'>Последний комментарий</td>
+	        <td><img src='images/left4.gif' alt=""></td>
+	    </tr>
+    </table></IDXSKIP>
+
+	<table class="column_left_data">
+	    <tr>
+	        <td style='padding-left: 14px; padding-top: 5px; background-image: URL(images/top1/top2_bg.gif); vertical-align: top;' colspan='2'>
+	
+	            <table style="width: 95%;">
+	                <tr>
+	                    <td style='padding-left: 0;padding-top: 5px; vertical-align: top;'>
+		                    <span style='font-size: 10px'>
+		<a href='n_fotoalbom_in.php?id_gallary=1183' title='Фотоальбом "Underwater housing WOSS PRO 700 for Sony NEX-FS700"'>wh0cd120186 acomplia 20mg rimonabant super avana buy prozac nexium ...</a></span>
+    <BR><BR>
+	
+	</td>
+	</tr>
+	<tr>
+	<td style='padding-left: 10px; padding-right: 10px; padding-top: 5px; vertical-align: top; text-align: right;'>
+		<span style='font-size: 10px'>08.05.2017</span><BR>
+		<B>Гость</B>
+	</td>
+	</tr>
+
+</table>
+	
+
+	</td>
+	</tr>
+	<IDXSKIP><tr><td style='padding-bottom: 2px'><img src='/images/bot_line2.jpg' alt=""></td></tr></IDXSKIP>
+	</table>
+
+	
+
+	
+    <IDXSKIP><table class="column_left_header" style="width: 245px;">
+	    <tr style="background-color: #FF6600;">
+	        <td><img src='/images/1112_r3.gif' alt=""></td>
+	        <td style='border-bottom: 2px solid #6d2d02;'>Слово из словаря</td>
+	        <td><img src='/images/left7.gif' alt=""></td>
+	    </tr>
+	</table></IDXSKIP>
+
+	<table class="column_left_data">
+	    <tr>
+	        <td style='padding-left: 14px; padding-top: 5px; background-image: URL(images/top1/top2_bg.gif); vertical-align: top;' colspan='2'>
+	
+	            <table style="width: 95%; border-collapse: collapse;">
+	                <tr>
+	                    <td style='padding-left: 0; padding-top: 5px; vertical-align: top; font-size: 10px;'>
+	                        	                        <a href="dic_in.php?id_word=1568&amp;char=68" title='dingo-fish'>dingo-fish - барракуда</a>                            <BR><BR>
+	                    </td>
+	                </tr>
+                </table>
+
+	        </td>
+	    </tr>
+	    <tr><td style='padding-bottom: 2px;'><img src='/images/bot_line2.jpg' alt=""></td></tr>
+	</table>
+	
+	
+
+	
+    <IDXSKIP><table class="column_left_header">
+	    <tr style="background-color: #7C7C7C;">
+	        <td><img src='images/1112_r.gif' alt=""></td>
+	        <td style='border-bottom: 2px solid #2c2c2c;'>Сейчас на сайте</td>
+	        <td><img src='/images/left2.gif' alt=""></td>
+	    </tr>
+	</table></IDXSKIP>
+
+	<table class="column_left_data">
+	    <tr>
+	        <td style='padding-left: 14px; padding-top: 5px; background-image: URL(images/top1/top2_bg.gif); vertical-align: top;' colspan='2'>
+	
+	            <table style="width: 95%; border-collapse: collapse;">
+	                <tr>
+	                    <td style='padding-left: 0; padding-top: 5px; vertical-align: top;'>
+                            <IDXSKIP><span style='font-size: 10px'>
+	                                                    Сейчас на сайте веб-дайверов: 0</span></IDXSKIP><br>
+                            	                        <span style="font-size: 10px;">Онлайн гостей: 9</span>
+                            <BR><BR>
+	                    </td>
+	                </tr>
+                </table>
+	        </td>
+	    </tr>
+	    <IDXSKIP><tr><td style='padding-bottom: 2px'><img src='images/bot_line2.jpg' alt=""></td></tr></IDXSKIP>
+	</table>
+
+
+
+
+<IDXSKIP><form action='http://divetop.ru/vote.php' target='_blank'>
+	<table style="width: 95%;">
+		<tr>
+		    <td style='padding-left: 0; padding-top: 5px; vertical-align: top; text-align: center;'>
+			    <span style='font-size: 10px'>
+				    Поддержать сайт на DIVEtop.ru:</span><BR><BR>
+			    <input type='submit' name='Submit' value='Голосую за сайт!' style='width: 100px; border-color: #787878; background-color: #7ba0cc; border-width: 1px; height: 17px; font-size: 10px; color: #FFFFFF; text-align: center; vertical-align: center;'>
+			    <input type='hidden' name='SID' value='475'>
+		        <BR>
+		    </td>
+		</tr>
+	</table>
+</form></IDXSKIP>
+
+<table style="width: 95%;" border="0"  cellpadding="0" cellspacing="0" >
+    <tr>
+        <td style='padding-left: 0; padding-top: 5px' valign='top' align='center'>
+                            <div id="div_banner_left" style="z-index: 1;" align="left">
+                                        <div id="lx_302461"></div>                </div>
+                        </td>
+    </tr>
+</table>
+
+    
+
+
+<IDXSKIP><table style="width: 100%;" border="0"  cellpadding="0" cellspacing="0" >
+	<tr>
+	<td style='padding-left: 0; padding-top: 5px; vertical-align: top;' align='center'>
+	
+<BR><BR>
+	
+	</td>
+	</tr>
+</table></IDXSKIP>
+
+
+
+
+
+<IDXSKIP><table style="width: 95%;" border="0"  cellpadding="0" cellspacing="0" >
+	<tr>
+	<td style='padding-left: 0; padding-top: 5px' valign='top' align='center'>
+	<BR><BR>
+	
+	</td>
+	</tr>
+</table></IDXSKIP>
+
+
+
+
+</td>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++ -->
+<td style="padding-left: 0; padding-top: 3px; padding-right: 5px; vertical-align: top;">
+<table style="width: 100%; background-color: #FFFFFF; border-collapse: collapse;">
+    	<tr style="background-color: #0c91bb;">
+		<td style='padding-left: 10px; padding: 5px;' class='top_menu1'><B>Дайвинг форум</B></td>
+		<td style=' padding: 0; width: 150px; background-color: #D1F1FC; padding-left: 10px; text-align: right;'>
+	
+			<form method="get" action="//webdive.ru/search.php" target="_top" style="margin: 0;">
+			<table border="0">
+						<tr>
+					<td style='padding-top: 0; white-space: nowrap; text-align: left;'>
+						<label id="sbi" style="display: none">Введите условия поиска</label>
+						<span style='font-size: 10px'>поиск:</span>
+					</td>
+					<td> 						<input type="text" name="query" size="20" maxlength="230" value="" style='font:100% Tahoma,Arial,Helvetica,sans-serif;  height: 15; width: 100; background: #FFFFFF; border-color: #CECECE; border-width: 1px; padding-top:0; background-image: url(images/ysearch_small.png); background-repeat: no-repeat;' onfocus="this.style.backgroundImage='none';">
+					</td>
+					<td style='padding-top:2px'>
+						<img src='/images/search_b.gif' onclick='submit();' style='cursor:pointer; border: 0;' alt="">
+					</td>
+				</tr>			<!--
+			</td>
+		</tr>
+		-->
+			</table>
+			</form>
+		</td>
+	</tr>
+	<!-- <tr><td><img src=images/bot_line.jpg></td></tr> -->
+</table>
+
+<table style="width: 100%; background-color: #FFFFFF; border-collapse: collapse;">
+		<tr style="background-color: #D1F1FC;">
+		<td style='height: 26px; padding-left: 10px; border-bottom: #0c91bb 2px solid; color: #6F6F6F; font-size: 14px;' class='top_menu1'>
+			<B>Плохое Зрение</B>
+		</td>
+	</tr>
+		<tr>
+		<td>
+			<img src='/images/bot_line.jpg' alt="">
+		</td>
+	</tr>
+</table>
+
+<table style="width: 100%;" border='0' cellspacing='0' cellpadding='0'>
+	<tr>
+		<td style='height: 0; padding-left:5px; border-top: 0px solid #6C6C6C' valign='top'>
+	<div id="ya_direct_top" style='font-size: 11px'></div>		</td>
+	</tr>
+</table>
+	
+<table border='0' cellspacing='0' cellpadding='0' style="width: 100%; background-color: #FFFFFF;">
+	<tr>
+		<td style='padding:10px'>
+<style>
+    table.table_data{
+        border-collapse: collapse;
+    }
+    table.table_data td{
+        padding: 0;
+    }
+</style>        
+
+
+<script type="text/javascript" src="ajax.js"></script>
+<!-- поиск -->
+	<form method="GET" action="search_forum.php" style="margin:0;">	
+		<TABLE class="table_data" style="width: 100%;">
+		<TBODY>
+		<tr>
+			<td style=' padding-left: 5px; text-align: right;'>
+				<span style='font-size: 10px;'>Поиск по форуму:&nbsp;</span>
+				<input type="text" name="query" size="20" maxlength="230" style='font:100% Tahoma,Arial,Helvetica,sans-serif;  height: 15; width: 100; background: #FFFFFF; border-color: #CECECE; border-width: 1px; padding-top:0; background-image: url(images/ysearch_small.png); background-repeat: no-repeat;' onfocus="this.style.backgroundImage='none';">
+				&nbsp;<img src='/images/search_b.gif' onclick='submit();' style='cursor:pointer; border: 0;' alt="">
+			</td>
+		</TR>
+		</TBODY>
+		</table>
+	</form>
+	<!-- /поиск -->	
+	&nbsp;&nbsp;<a href="forumrule.php" title="Правила форума">Правила форума</a>&nbsp;&nbsp;
+	&nbsp;&nbsp;<a href="forumhelp.php" title="Помощь по форуму">Помощь по форуму</a>&nbsp;&nbsp;<BR><BR>
+		&nbsp;&nbsp;<a href='forum.php' title='Дайвинг Форум'><b><u>Дайвинг Форум WebDive</u> </b></a>/&nbsp;&nbsp;<a href='forum.php?a=1&amp;id_p=6' title='Медицина и дайвинг'><b><u>Медицина и дайвинг</u></b></a> <b>/</b>
+	&nbsp;&nbsp;<b>Плохое Зрение</b><BR> <style>
+    table.table_pages{
+        border-collapse: collapse;
+        border: 0;
+    }
+    table.table_pages td{
+        padding: 0;
+    }
+ </style>
+ 
+ <BR><BR> <table class="table_pages" style="background-color: #E5E5E5;">
+	<tr style="height: 20px;">
+		<td style="padding: 2px 5px 2px 5px; BORDER-bottom: #9a3022 0 solid; color: #666666;  font-size: 10px;">Страницы: </td>
+		<td style="text-align: center;">
+			<table class="table_pages" style="background-color: #E5E5E5;">
+				<tr style="height: 20px;">
+										<td style="width: 3px; background-color: #FFFFFF;"></td>
+						<td style="padding-left: 5px; padding-right: 5px; text-align: center;" onmouseover="this.style.backgroundColor='#C0DEDE';"  onmouseout="this.style.backgroundColor='';">
+							<a href='forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=1' style="font-size: 10px; color: #666666;">
+								1</a></td>
+						<td style="width: 3px; background-color: #FFFFFF;"></td>
+												<td style="width: 3px; background-color: #FFFFFF;"></td>
+						<td style='padding-left: 5px; padding-right: 5px; background-color: #666666; color: #FFFFFF; text-align: center;'>
+							<B>2</B></td>
+						<td style="width: 3px; background-color: #FFFFFF;"></td>
+											<td style="width: 3px; background-color: #666666;"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<BR>
+	<script type="text/javascript">
+	var httpRequester_forum_vote = getHTTPRequestObject();
+	var couldProcess_forum_vote = false;
+	function forum_vote( type, id ) {
+		if (!couldProcess_forum_vote && httpRequester_forum_vote)	{
+			if (type=='plus') {
+    			httpRequester_forum_vote.open("GET", "ajax_forum_vote.php?voteplus="+id,true);
+			}
+			else {
+    			httpRequester_forum_vote.open("GET", "ajax_forum_vote.php?voteminus="+id,true);
+			}
+    		httpRequester_forum_vote.onreadystatechange = processResponse_forum_vote;
+    		couldProcess_forum_vote = true;
+    		httpRequester_forum_vote.send(null);
+  		}
+	}
+	function processResponse_forum_vote() {
+		if ( httpRequester_forum_vote.readyState == 4) {
+			if ( httpRequester_forum_vote.status == 200) {
+				//var values = httpRequester.responseText.split(","); //анализируем ответ сервера
+				if (document.getElementById('forum_vote_plus_'+httpRequester_forum_vote.responseText)!=null) {
+		    		document.getElementById('forum_vote_plus_'+httpRequester_forum_vote.responseText).innerHTML = '';
+				}
+				if (document.getElementById('forum_vote_minus_'+httpRequester_forum_vote.responseText)!=null) {
+		    		document.getElementById('forum_vote_minus_'+httpRequester_forum_vote.responseText).innerHTML = '';
+				}
+			    couldProcess_forum_vote = false;
+			}
+		}
+	}
+	</script>
+
+	<TABLE style="width: 100%;">
+		<TR>
+			<TD style="text-align: left;">
+			<A href="userreg.php"><B><U>Регистрация</U></B></A>&nbsp;
+				<span style="color: silver;"><b>:::</b></span>&nbsp; <A href="enter.php"><b><U>Вход</U></b></A>			</TD>
+			<TD style="text-align: right;">
+		 		 		<A href="newmess.php?a=1&amp;id_p=6&amp;id_t=441&amp;page=2">
+		 			<b><U>Развернутый ответ/ Answer</U></b></A>&nbsp;
+		 	<span style="color: silver;"><b>:::</b></span>&nbsp;&nbsp;<A href="newmess.php?id_p=6"><B><U>Новая тема</U></B></a>		 	</TD>
+		 </TR>
+	</TABLE>
+<BR>
+<index>    <style>
+        table.table_forum1{
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #9B9B9B;
+        }
+        table.table_forum1 td{
+            padding: 3px;
+            border: 1px solid #9B9B9B;
+        }
+    </style>
+	<TABLE class="table_forum1">
+		<TR style="background-color: #A8A8A8; height: 35px;">
+			<TD><b>Автор</b></TD>
+			<TD><b>Сообщения</b></TD>
+   		</TR>
+   		<TR style="background-color: #EEEEEE;">
+			<TD style="text-align: left; vertical-align: top; width: 230px; height: 10px;  padding-top:15px; padding-bottom:15px; padding-left:3px;">
+		  		
+				<table style="width: 100%;" class="table_data">
+		  			<tr>
+		  				<td>
+		                    <a name="9441"></a>
+		  							<img src="/images/user/face/676.jpeg" align="left" alt="" style="padding-right: 5px; border: 0;">
+												<a href="fuser.php?a=2&amp;id_user=676" title="Kost62">
+								<b>Kost62</b></a><br>
+				            AN TDI<BR>
+				                Рейтинг: 151.29<br>
+                					<img src="/pic/prplus.gif" alt=""> &nbsp;50 &nbsp;&nbsp;
+					<img src="/pic/prminus.gif" alt=""> &nbsp;1					</td>
+				</tr>
+				<tr>
+					<td>
+				Всего сообщений: 310									</td>
+				</tr>
+			</table>
+			</TD>
+			<TD style="PADDING: 15px; TEXT-ALIGN: justify; text-align: left; vertical-align: top;">
+				<table class="table_data" style="width: 100%;">
+					<tr>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px;'>
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9441" title="ссылка на это сообщение">
+								<img src="/pic/link.gif" style="border: 0;" alt=""></a>&nbsp;&nbsp;
+								<img src='/pic/time.gif' alt="">
+								<span style="font-size: 10px;"><B>04.03.2011  <font color='#009999'>16:35</font></B></span>&nbsp;&nbsp;
+								<a href="newmess.php?a=1&amp;id_post=9441&amp;id_p=6&amp;id_t=441&amp;page=2" title="ответить на сообщение">
+									<img src='/pic/post2post.gif' alt='ответить на сообщение' style="border: 0;"></a>
+								&nbsp;&nbsp;
+									</td>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px; text-align: right;'>
+										</td>
+					</tr>
+				</table> 
+					  		Дим, а что за плоские линзы? То, что в электричках продают под именем "линзы Френеля"?		  		  </TD>
+   		</TR>
+			<TR style="background-color: #FFFFFF;">
+			<TD style="text-align: left; vertical-align: top; width: 230px; height: 10px;  padding-top:15px; padding-bottom:15px; padding-left:3px;">
+		  		
+				<table style="width: 100%;" class="table_data">
+		  			<tr>
+		  				<td>
+		                    <a name="9442"></a>
+		  							<img src="/images/user/face/47.jpeg" align="left" alt="" style="padding-right: 5px; border: 0;">
+												<a href="fuser.php?a=2&amp;id_user=47" title="Renegade">
+								<b>Renegade</b></a><br>
+				            MSD PADI<BR>
+				                Рейтинг: 141.39<br>
+                					<img src="/pic/prplus.gif" alt=""> &nbsp;11 &nbsp;&nbsp;
+					<img src="/pic/prminus.gif" alt=""> &nbsp;1					</td>
+				</tr>
+				<tr>
+					<td>
+				Всего сообщений: 95									</td>
+				</tr>
+			</table>
+			</TD>
+			<TD style="PADDING: 15px; TEXT-ALIGN: justify; text-align: left; vertical-align: top;">
+				<table class="table_data" style="width: 100%;">
+					<tr>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px;'>
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9442" title="ссылка на это сообщение">
+								<img src="/pic/link.gif" style="border: 0;" alt=""></a>&nbsp;&nbsp;
+								<img src='/pic/time.gif' alt="">
+								<span style="font-size: 10px;"><B>04.03.2011  <font color='#009999'>19:42</font></B></span>&nbsp;&nbsp;
+								<a href="newmess.php?a=1&amp;id_post=9442&amp;id_p=6&amp;id_t=441&amp;page=2" title="ответить на сообщение">
+									<img src='/pic/post2post.gif' alt='ответить на сообщение' style="border: 0;"></a>
+								&nbsp;&nbsp;
+									</td>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px; text-align: right;'>
+										</td>
+					</tr>
+				</table> 
+					  		2 варианта в случае плюсового зрения, как я понимаю. Один - приводить общее зрение (суммарное) к норме. Это или полностью линзы контактные или маска с диоптрийными линзами.<br>Второй вариант - сделать маску по аналогии с т.н. очками БСПО/бифокальными очками (когда верх - одна сила линз, низ - другая сила линз)		  		  </TD>
+   		</TR>
+			<TR style="background-color: #EEEEEE;">
+			<TD style="text-align: left; vertical-align: top; width: 230px; height: 10px;  padding-top:15px; padding-bottom:15px; padding-left:3px;">
+		  		
+				<table style="width: 100%;" class="table_data">
+		  			<tr>
+		  				<td>
+		                    <a name="9443"></a>
+		  							<img src="/images/user/face/676.jpeg" align="left" alt="" style="padding-right: 5px; border: 0;">
+												<a href="fuser.php?a=2&amp;id_user=676" title="Kost62">
+								<b>Kost62</b></a><br>
+				            AN TDI<BR>
+				                Рейтинг: 151.29<br>
+                					<img src="/pic/prplus.gif" alt=""> &nbsp;50 &nbsp;&nbsp;
+					<img src="/pic/prminus.gif" alt=""> &nbsp;1					</td>
+				</tr>
+				<tr>
+					<td>
+				Всего сообщений: 310									</td>
+				</tr>
+			</table>
+			</TD>
+			<TD style="PADDING: 15px; TEXT-ALIGN: justify; text-align: left; vertical-align: top;">
+				<table class="table_data" style="width: 100%;">
+					<tr>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px;'>
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9443" title="ссылка на это сообщение">
+								<img src="/pic/link.gif" style="border: 0;" alt=""></a>&nbsp;&nbsp;
+								<img src='/pic/time.gif' alt="">
+								<span style="font-size: 10px;"><B>04.03.2011  <font color='#009999'>20:35</font></B></span>&nbsp;&nbsp;
+								<a href="newmess.php?a=1&amp;id_post=9443&amp;id_p=6&amp;id_t=441&amp;page=2" title="ответить на сообщение">
+									<img src='/pic/post2post.gif' alt='ответить на сообщение' style="border: 0;"></a>
+								&nbsp;&nbsp;
+									</td>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px; text-align: right;'>
+										</td>
+					</tr>
+				</table> 
+					  		Мне больше нравится второй вариант. Все, что дальше от носа более чем на полметра - вижу идеально, тьфу-тьфу-тьфу!		  		  </TD>
+   		</TR>
+			<TR style="background-color: #FFFFFF;">
+			<TD style="text-align: left; vertical-align: top; width: 230px; height: 10px;  padding-top:15px; padding-bottom:15px; padding-left:3px;">
+		  		
+				<table style="width: 100%;" class="table_data">
+		  			<tr>
+		  				<td>
+		                    <a name="9444"></a>
+		  							<img src="/images/user/face/53.jpeg" align="left" alt="" style="padding-right: 5px; border: 0;">
+												<a href="fuser.php?a=2&amp;id_user=53" title="Evgeny">
+								<b>Evgeny</b></a><br>
+				            DM PADI<BR>
+				                Рейтинг: 76.9<br>
+                					<img src="/pic/prplus.gif" alt=""> &nbsp;1 &nbsp;&nbsp;
+					<img src="/pic/prminus.gif" alt=""> &nbsp;1					</td>
+				</tr>
+				<tr>
+					<td>
+				Всего сообщений: 82									</td>
+				</tr>
+			</table>
+			</TD>
+			<TD style="PADDING: 15px; TEXT-ALIGN: justify; text-align: left; vertical-align: top;">
+				<table class="table_data" style="width: 100%;">
+					<tr>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px;'>
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9444" title="ссылка на это сообщение">
+								<img src="/pic/link.gif" style="border: 0;" alt=""></a>&nbsp;&nbsp;
+								<img src='/pic/time.gif' alt="">
+								<span style="font-size: 10px;"><B>04.03.2011  <font color='#009999'>22:24</font></B></span>&nbsp;&nbsp;
+								<a href="newmess.php?a=1&amp;id_post=9444&amp;id_p=6&amp;id_t=441&amp;page=2" title="ответить на сообщение">
+									<img src='/pic/post2post.gif' alt='ответить на сообщение' style="border: 0;"></a>
+								&nbsp;&nbsp;
+									</td>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px; text-align: right;'>
+										</td>
+					</tr>
+				</table> 
+					  		Линзы для дальнозорких называются OTPX 20/20<br>я покупал здесь <img src="pic/http.gif">cgi.ebay.com/MAGNOPTX-20-20-LRG-STICK-READING-LENSE-1-6-2-25-<br>/290472867659?pt=LH_DefaultDomain_0&amp;hash=item43a188374b<br>поставил себе и супруге. Доволен как слон. При правильной установке не смываются даже струей воды при промывке маски. При обращении с маской просто забываешь что они там стоят.		  		  </TD>
+   		</TR>
+			<TR style="background-color: #EEEEEE;">
+			<TD style="text-align: left; vertical-align: top; width: 230px; height: 10px;  padding-top:15px; padding-bottom:15px; padding-left:3px;">
+		  		
+				<table style="width: 100%;" class="table_data">
+		  			<tr>
+		  				<td>
+		                    <a name="9445"></a>
+		  							<img src="/images/user/face/376.jpeg" align="left" alt="" style="padding-right: 5px; border: 0;">
+												<a href="fuser.php?a=2&amp;id_user=376" title="Pound">
+								<b>Pound</b></a><br>
+				            CMAS***    AN IANTD<BR>
+				                Рейтинг: 260.56<br>
+                					<img src="/pic/prplus.gif" alt=""> &nbsp;73 &nbsp;&nbsp;
+					<img src="/pic/prminus.gif" alt=""> &nbsp;1					</td>
+				</tr>
+				<tr>
+					<td>
+				Всего сообщений: 496									</td>
+				</tr>
+			</table>
+			</TD>
+			<TD style="PADDING: 15px; TEXT-ALIGN: justify; text-align: left; vertical-align: top;">
+				<table class="table_data" style="width: 100%;">
+					<tr>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px;'>
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9445" title="ссылка на это сообщение">
+								<img src="/pic/link.gif" style="border: 0;" alt=""></a>&nbsp;&nbsp;
+								<img src='/pic/time.gif' alt="">
+								<span style="font-size: 10px;"><B>05.03.2011  <font color='#009999'>08:56</font></B></span>&nbsp;&nbsp;
+								<a href="newmess.php?a=1&amp;id_post=9445&amp;id_p=6&amp;id_t=441&amp;page=2" title="ответить на сообщение">
+									<img src='/pic/post2post.gif' alt='ответить на сообщение' style="border: 0;"></a>
+								&nbsp;&nbsp;
+									</td>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px; text-align: right;'>
+										</td>
+					</tr>
+				</table> 
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=1#9441" style="color: #808080;">
+				 		к сообщению 04.03.2011 16:35 автора <B>Kost62</B></a>
+				<BR><i>"Дим, а что за плоские линзы? То, что в электричках продают под именем &quot;линзы..."</i><BR>
+				 			  		Ну да. Но это только идея - непроверенная <img src="pic/sm12.gif" alt=":-D">		  		  </TD>
+   		</TR>
+			<TR style="background-color: #FFFFFF;">
+			<TD style="text-align: left; vertical-align: top; width: 230px; height: 10px;  padding-top:15px; padding-bottom:15px; padding-left:3px;">
+		  		
+				<table style="width: 100%;" class="table_data">
+		  			<tr>
+		  				<td>
+		                    <a name="9448"></a>
+		  							<img src="/images/user/face/676.jpeg" align="left" alt="" style="padding-right: 5px; border: 0;">
+												<a href="fuser.php?a=2&amp;id_user=676" title="Kost62">
+								<b>Kost62</b></a><br>
+				            AN TDI<BR>
+				                Рейтинг: 151.29<br>
+                					<img src="/pic/prplus.gif" alt=""> &nbsp;50 &nbsp;&nbsp;
+					<img src="/pic/prminus.gif" alt=""> &nbsp;1					</td>
+				</tr>
+				<tr>
+					<td>
+				Всего сообщений: 310									</td>
+				</tr>
+			</table>
+			</TD>
+			<TD style="PADDING: 15px; TEXT-ALIGN: justify; text-align: left; vertical-align: top;">
+				<table class="table_data" style="width: 100%;">
+					<tr>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px;'>
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9448" title="ссылка на это сообщение">
+								<img src="/pic/link.gif" style="border: 0;" alt=""></a>&nbsp;&nbsp;
+								<img src='/pic/time.gif' alt="">
+								<span style="font-size: 10px;"><B>05.03.2011  <font color='#009999'>18:08</font></B></span>&nbsp;&nbsp;
+								<a href="newmess.php?a=1&amp;id_post=9448&amp;id_p=6&amp;id_t=441&amp;page=2" title="ответить на сообщение">
+									<img src='/pic/post2post.gif' alt='ответить на сообщение' style="border: 0;"></a>
+								&nbsp;&nbsp;
+									</td>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px; text-align: right;'>
+										</td>
+					</tr>
+				</table> 
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9444" style="color: #808080;">
+				 		к сообщению 04.03.2011 22:24 автора <B>Evgeny</B></a>
+				<BR><i>" Линзы для дальнозорких называются OTPX 20/20я покупал здесь..."</i><BR>
+				 			  		Спасибо. Буду пробовать. А по-подробнее про технологию приклеивания можно? На сайте прочитал, но не очень понял. Чем клеили и как?		  		  </TD>
+   		</TR>
+			<TR style="background-color: #EEEEEE;">
+			<TD style="text-align: left; vertical-align: top; width: 230px; height: 10px;  padding-top:15px; padding-bottom:15px; padding-left:3px;">
+		  		
+				<table style="width: 100%;" class="table_data">
+		  			<tr>
+		  				<td>
+		                    <a name="9457"></a>
+		  							<img src="/images/user/face/53.jpeg" align="left" alt="" style="padding-right: 5px; border: 0;">
+												<a href="fuser.php?a=2&amp;id_user=53" title="Evgeny">
+								<b>Evgeny</b></a><br>
+				            DM PADI<BR>
+				                Рейтинг: 76.9<br>
+                					<img src="/pic/prplus.gif" alt=""> &nbsp;1 &nbsp;&nbsp;
+					<img src="/pic/prminus.gif" alt=""> &nbsp;1					</td>
+				</tr>
+				<tr>
+					<td>
+				Всего сообщений: 82									</td>
+				</tr>
+			</table>
+			</TD>
+			<TD style="PADDING: 15px; TEXT-ALIGN: justify; text-align: left; vertical-align: top;">
+				<table class="table_data" style="width: 100%;">
+					<tr>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px;'>
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9457" title="ссылка на это сообщение">
+								<img src="/pic/link.gif" style="border: 0;" alt=""></a>&nbsp;&nbsp;
+								<img src='/pic/time.gif' alt="">
+								<span style="font-size: 10px;"><B>07.03.2011  <font color='#009999'>14:05</font></B></span>&nbsp;&nbsp;
+								<a href="newmess.php?a=1&amp;id_post=9457&amp;id_p=6&amp;id_t=441&amp;page=2" title="ответить на сообщение">
+									<img src='/pic/post2post.gif' alt='ответить на сообщение' style="border: 0;"></a>
+								&nbsp;&nbsp;
+									</td>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px; text-align: right;'>
+										</td>
+					</tr>
+				</table> 
+					  		На коробке и в инструкции всё подробно расписано. Никакого клея не надо - линзы держатся на молекулярной адгезии. Основное требование - абсолютная чистота стекла маски в месте установки - жир, налет и особенно даже очень мелкие частицы недопустимы - будет отваливаться. И вода чем чище тем лучше. Можно клеить как в инструкции но я делал по-другому - наливал в маску воду, сажал линзу на место и выливал воду. Дальше когда линза начнет присасываться на просвет будет видно если есть мутные пятна значит в этом месте не приклеилась <br>и ещё - я покупал те, на которых написано что они годятся для дайвинга, а не только для солнечных и лыжных очков.		  		  </TD>
+   		</TR>
+			<TR style="background-color: #FFFFFF;">
+			<TD style="text-align: left; vertical-align: top; width: 230px; height: 10px;  padding-top:15px; padding-bottom:15px; padding-left:3px;">
+		  		
+				<table style="width: 100%;" class="table_data">
+		  			<tr>
+		  				<td>
+		                    <a name="9601"></a>
+		  							<img src="/images/user/face/378.jpeg" align="left" alt="" style="padding-right: 5px; border: 0;">
+												<a href="fuser.php?a=2&amp;id_user=378" title="Дождливая">
+								<b>Дождливая</b></a><br>
+				            PADI AOWD<BR>
+				                Рейтинг: 66.91<br>
+                					<img src="/pic/prplus.gif" alt=""> &nbsp;2 &nbsp;&nbsp;
+										</td>
+				</tr>
+				<tr>
+					<td>
+				Всего сообщений: 70									</td>
+				</tr>
+			</table>
+			</TD>
+			<TD style="PADDING: 15px; TEXT-ALIGN: justify; text-align: left; vertical-align: top;">
+				<table class="table_data" style="width: 100%;">
+					<tr>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px;'>
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9601" title="ссылка на это сообщение">
+								<img src="/pic/link.gif" style="border: 0;" alt=""></a>&nbsp;&nbsp;
+								<img src='/pic/time.gif' alt="">
+								<span style="font-size: 10px;"><B>30.03.2011  <font color='#009999'>22:39</font></B></span>&nbsp;&nbsp;
+								<a href="newmess.php?a=1&amp;id_post=9601&amp;id_p=6&amp;id_t=441&amp;page=2" title="ответить на сообщение">
+									<img src='/pic/post2post.gif' alt='ответить на сообщение' style="border: 0;"></a>
+								&nbsp;&nbsp;
+									</td>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px; text-align: right;'>
+										</td>
+					</tr>
+				</table> 
+					  		мой опыт таков. фишка в том, что под водой все объекты ближе и крупнее, только немного размыты, поэтому первое время я обходилась обычной маской. знаки, показываемые инструктором/ бадди/ гидом, видела всегда. долго заглядывалась на маски с диоптриями. но решила попробовать сначала линзы (так ношу очки почти все время) иииии о чудо! уиииииии оказывается вокруг под водой еще круче, чем было до этого! =) так что мой выбор линзы, ежедневные. единственное, что тем, кто не носит линзы регулярно, не стоит бежать за день перед вылетом и покупать их. потому что к ним нужно привыкнуть. первый день - 3 часа, потом 6 и т.д.		  		  </TD>
+   		</TR>
+			<TR style="background-color: #EEEEEE;">
+			<TD style="text-align: left; vertical-align: top; width: 230px; height: 10px;  padding-top:15px; padding-bottom:15px; padding-left:3px;">
+		  		
+				<table style="width: 100%;" class="table_data">
+		  			<tr>
+		  				<td>
+		                    <a name="9655"></a>
+		  							<img src="/images/user/face/3247.jpeg" align="left" alt="" style="padding-right: 5px; border: 0;">
+												<a href="fuser.php?a=2&amp;id_user=3247" title="MedMax">
+								<b>MedMax</b></a><br>
+				            NDL Universal Diver VK 4-01611<BR>
+				                Рейтинг: 41.56<br>
+                					<img src="/pic/prplus.gif" alt=""> &nbsp;3 &nbsp;&nbsp;
+					<img src="/pic/prminus.gif" alt=""> &nbsp;4					</td>
+				</tr>
+				<tr>
+					<td>
+				Всего сообщений: 39									</td>
+				</tr>
+			</table>
+			</TD>
+			<TD style="PADDING: 15px; TEXT-ALIGN: justify; text-align: left; vertical-align: top;">
+				<table class="table_data" style="width: 100%;">
+					<tr>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px;'>
+							<a href="forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=2#9655" title="ссылка на это сообщение">
+								<img src="/pic/link.gif" style="border: 0;" alt=""></a>&nbsp;&nbsp;
+								<img src='/pic/time.gif' alt="">
+								<span style="font-size: 10px;"><B>07.04.2011  <font color='#009999'>11:21</font></B></span>&nbsp;&nbsp;
+								<a href="newmess.php?a=1&amp;id_post=9655&amp;id_p=6&amp;id_t=441&amp;page=2" title="ответить на сообщение">
+									<img src='/pic/post2post.gif' alt='ответить на сообщение' style="border: 0;"></a>
+								&nbsp;&nbsp;
+									</td>
+						<td class='b_menu_bottom_silver' style='padding-bottom:5px; text-align: right;'>
+										</td>
+					</tr>
+				</table> 
+					  		Кто клеял линзы в маску, подскажите на сколько хорошо они держатся, не смываются ли они при промывании и опреснении снаряжения?		  		  </TD>
+   		</TR>
+		</TABLE>
+</index>
+	<table style="width: 100%;">
+		<TR>
+			<TD style="text-align: left;"><BR><BR>
+			<A href="userreg.php"><B><U>Регистрация</U></B></A>&nbsp;
+				<span style="color: silver;"><b>:::</b></span>&nbsp; <A href="enter.php"><b><U>Вход</U></b></A>			</TD>
+			<TD style="text-align: right;">
+						<A href="newmess.php?a=1&amp;id_p=6&amp;id_t=441&amp;page=2"><b><U>Развернутый ответ/ Answer</U></b></A>&nbsp;		  		<span style="color: silver;"><b>:::</b></span>&nbsp;&nbsp;<A href="newmess.php?id_p=6"><B><U>Новая тема</U></B></a>
+		 	</TD>
+		 </TR>
+	</table>
+ <style>
+    table.table_pages{
+        border-collapse: collapse;
+        border: 0;
+    }
+    table.table_pages td{
+        padding: 0;
+    }
+ </style>
+ 
+ <BR><BR> <table class="table_pages" style="background-color: #E5E5E5;">
+	<tr style="height: 20px;">
+		<td style="padding: 2px 5px 2px 5px; BORDER-bottom: #9a3022 0 solid; color: #666666;  font-size: 10px;">Страницы: </td>
+		<td style="text-align: center;">
+			<table class="table_pages" style="background-color: #E5E5E5;">
+				<tr style="height: 20px;">
+										<td style="width: 3px; background-color: #FFFFFF;"></td>
+						<td style="padding-left: 5px; padding-right: 5px; text-align: center;" onmouseover="this.style.backgroundColor='#C0DEDE';"  onmouseout="this.style.backgroundColor='';">
+							<a href='forum.php?a=2&amp;id_p=6&amp;id_t=441&amp;page=1' style="font-size: 10px; color: #666666;">
+								1</a></td>
+						<td style="width: 3px; background-color: #FFFFFF;"></td>
+												<td style="width: 3px; background-color: #FFFFFF;"></td>
+						<td style='padding-left: 5px; padding-right: 5px; background-color: #666666; color: #FFFFFF; text-align: center;'>
+							<B>2</B></td>
+						<td style="width: 3px; background-color: #FFFFFF;"></td>
+											<td style="width: 3px; background-color: #666666;"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<BR>
+ 
+<BR><BR>
+
+	<table style="width: 100%;">
+		<tr>
+			<td style='height: 0; padding-left:5px;border-top: 0px solid #6C6C6C; vertical-align: top;'>
+		        <div id="ya_direct_bottom" style='font-size: 11px'></div>			</td>
+		</tr>
+	</table>
+	
+    <div id="lx_302462"></div></td></tr></table>
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+	
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<table style="width: 100%;">
+	<tr>
+		<td style='padding:10px; border-top: 7px solid #6C6C6C; background-image: URL(images/top1/top4_bg.gif); text-align: right;'>
+
+<noindex>			<IDXSKIP><a href='//webdive.ru/banner/banner_price.php' target="_blank"><img src='//webdive.ru/pic/rek50wd.jpg' style="border: 0;" alt=""></a></IDXSKIP>
+<!-- <a href="http://www.yandex.ru/cy?base=0&host=www.webdive.ru"> <img src="http://www.yandex.ru/cycounter?www.webdive.ru" width="88" height="31" alt="Яндекс цитирования" border="0"> </a> -->
+
+<!-- begin of Top100 code -->
+<IDXSKIP><a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?1354342" alt="" width="1" height="1" style="border: 0;"></a></IDXSKIP>
+<!-- end of Top100 code -->
+<!-- begin of Top100 logo -->
+<IDXSKIP><a href="http://top100.rambler.ru/top100/"><img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Rambler's Top100" width="88" height="31" style="border: 0;"></a></IDXSKIP>
+<!-- end of Top100 logo -->
+
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click;server166/nas3/webdive' "+
+"target=_blank><img src='http://counter.yadro.ru/hit;server166/nas3/webdive?t14.1;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+			
+
+<!-- webdive.ru counter code begin -->
+<IDXSKIP><a href='//www.webdive.ru'><img src="//www.webdive.ru/counter.php?c=1" width="88" height="31" style="border: 0;" alt="WebDive. Top100"></a></IDXSKIP>
+
+<script type="text/javascript">
+<!--
+d=document;server='http://www.webdive.ru/counter';
+rn=Math.round(Math.random()*1e6);
+d.write('<a href=\'http://www.webdive.ru/\'>');
+d.write('<img  src=\''+server+'/counter.php?c=1&ref='+escape(d.referrer)+'&rand='+rn+'\' width=\'1px\' height=\'1\' border=\'0\'>'+'<'+'/a>');
+// -->
+</script>
+
+<IDXSKIP><noscript>
+<a href="http://www.webdive.ru/">
+<img src="http://www.webdive.ru/counter.php?c=1" width="88" height="31" border="0" alt="WebDive. Top100"></a>
+</noscript></IDXSKIP><!-- webdive.ru counter code end -->
+
+<!--DIVEtop COUNTER-->
+<img src='http://divetop.ru/baner.php?SID=475&amp;t=1&amp;c=2' style="border: 0;" height='31' width='88' alt='Дайвинг - рейтинг DIVEtop'>
+<!--/COUNTER-->
+
+<br><IDXSKIP>&copy; 2005-2011 <a href='//webdive.ru'>webdive.ru</a></IDXSKIP><br>
+<IDXSKIP>Все материалы этого сайта могут использоваться, перепечатываться, распространяться и цитироваться только с указанием активной гиперссылки на первоисточник.
+</noscript><br></IDXSKIP><IDXSKIP><a href='//webdive.ru/banner/index.php' style="color: #000000;">Реклама</a></IDXSKIP>
+			<BR>
+			<IDXSKIP>Разработка сайта </IDXSKIP><IDXSKIP><a href='//www.nas-3.ru' target='_blank'>Вебстудия Настройка</a></IDXSKIP><br>
+                        <noindex></td></tr>
+</table>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	<img src="//www.webdive.ru/sitemap/sitemap.php?id=1" style="border: 0;" width="0" height="0" alt="">
+
+<noindex></body>
+		<script type="text/javascript">
+		//<![CDATA[
+		yandex_partner_id = 32395;
+		yandex_site_bg_color = 'FFFFFF';
+		yandex_site_charset = 'windows-1251';
+		yandex_ad_format = 'direct';
+		yandex_font_size = 1;
+		yandex_direct_type = 'horizontal';
+		yandex_direct_border_type = 'ad';
+		yandex_direct_limit = 4;
+		yandex_direct_bg_color = 'F7F7F7';
+		yandex_direct_border_color = 'FFFFFF';
+		yandex_direct_title_color = '0000CC';
+		yandex_direct_url_color = '006600';
+		yandex_direct_all_color = '0000CC';
+		yandex_direct_text_color = '000000';
+		yandex_direct_hover_color = '0066FF';
+		yandex_direct_favicon = true;
+		yandex_direct_place = 'ya_direct_top';
+		//document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/resource/context.js?rnd=' + Math.round(Math.random() * 100000) + '">'+'<'+'/sc'+'ript>');
+		//]]>
+		</script>
+		<script type="text/javascript">
+		document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js">'+'<'+'/sc'+'ript>');
+		</script>
+		
+	<script type="text/javascript">
+	//<![CDATA[
+	yandex_partner_id = 32395;
+	yandex_site_bg_color = 'FFFFFF';
+	yandex_site_charset = 'windows-1251';
+	yandex_ad_format = 'direct';
+	yandex_font_size = 1;
+	yandex_direct_type = 'horizontal';
+	yandex_direct_border_type = 'ad';
+	yandex_direct_limit = 4;
+	yandex_direct_bg_color = 'F7F7F7';
+	yandex_direct_border_color = 'FFFFFF';
+	yandex_direct_title_color = '0000CC';
+	yandex_direct_url_color = '006600';
+	yandex_direct_all_color = '0000CC';
+	yandex_direct_text_color = '000000';
+	yandex_direct_hover_color = '0066FF';
+	yandex_direct_favicon = true;
+	yandex_direct_place = 'ya_direct_bottom';
+	//document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/resource/context.js?rnd=' + Math.round(Math.random() * 100000) + '">'+'<'+'/sc'+'ript>');
+	//]]>
+	</script>
+	<script type="text/javascript">
+	document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js">'+'<'+'/sc'+'ript>');
+	</script>
+		
+
+
+
+
+	
+	
+
+
+

@@ -1,0 +1,743 @@
+darasims.com/stati/tutorial/tutor_sims4/3325-the-sims-4-masshtabirovanie-obektov-do-nestandartnyh-razmerov-umenshenie-originala.html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>The Sims 4: Масштабирование объектов до нестандартных размеров + уменьшение оригинала</title>
+<meta name="description" content="Сегодня мы расскажем вам, как чисто игровыми методами (noCC) получить предметы меньше оригинала или увеличить их до размеров, отличных от получаемых стандартным методом увеличения." />
+<meta name="keywords" content="sims 4, симс 4, строительство, масштабирование, как уменьшить предметы, размер, уменьшение, увеличение," />
+<meta name="generator" content="DataLife Engine (http://dle-news.ru)" />
+<meta property="og:site_name" content="DaraSims.com | Вселенная игры the Sims!" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Sims 4: Масштабирование объектов до нестандартных размеров + уменьшение оригинала" />
+<meta property="og:url" content="http://darasims.com/stati/tutorial/tutor_sims4/3325-the-sims-4-masshtabirovanie-obektov-do-nestandartnyh-razmerov-umenshenie-originala.html" />
+<meta property="og:image" content="http://darasims.com/uploads/posts/2016-10/1476795088_1.png" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://darasims.com/engine/opensearch.php" title="DaraSims.com | Вселенная игры the Sims!" />
+<link rel="alternate" type="application/rss+xml" title="DaraSims.com | Вселенная игры the Sims!" href="http://darasims.com/rss.xml" />
+<script type="text/javascript" src="/engine/classes/js/jquery.js"></script>
+<script type="text/javascript" src="/engine/classes/js/jqueryui.js"></script>
+<script type="text/javascript" src="/engine/classes/js/dle_js.js"></script>
+<script type="text/javascript" src="/engine/classes/highslide/highslide.js"></script>
+<script type="text/javascript" src="/engine/classes/masha/masha.js"></script>
+	<meta name='yandex-verification' content='5876b3a154c697ac' />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" href="/templates/Violet/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="/templates/Violet/css/responsive.css" type="text/css" />
+	<!-- NIVO-SLIDER -->
+	<link rel="stylesheet" href="/templates/Violet/js/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+<!--[if IE 7]>
+<link rel="stylesheet" href="/templates/Violet/css/style_ie7.css" type="text/css" />
+<![endif]-->
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="/templates/Violet/css/style_lteie8.css" type="text/css" />
+<![endif]-->
+
+	<script type="text/javascript" src="/templates/Violet/js/nivo-slider/jquery.nivo.slider.pack.js"></script>
+	<script>
+		// nivo-slider
+		$(window).load(function() {
+		        $('#slider').nivoSlider({
+		        effect: 'random',
+		        slices: 15,
+		        boxCols: 8,
+		        boxRows: 4,
+		        animSpeed: 700,
+		        startSlide: 0,
+		        directionNav: false,
+		        controlNav: true,
+		        controlNavThumbs: false,
+		        pauseOnHover: true,
+		        manualAdvance: false,
+		        prevText: 'Prev',
+		        nextText: 'Next',
+		        randomStart: false,
+		        pauseTime: 4500
+		    });
+		    });
+		// end nivo-slider
+		//tags
+		$(document).ready(function(){
+		    var spoiler = $('.tags_block');
+		        spoiler.hide();
+		        $('#tags_btn').click(function(){spoiler.slideToggle("slow");return false;});
+            });
+	  //end tags
+
+	  // fancy dropdown menu
+		(function($){$.fn.hoverIntent=function(f,g){var cfg={sensitivity:7,interval:100,timeout:0};cfg=$.extend(cfg,g?{over:f,out:g}:f);var cX,cY,pX,pY;var track=function(ev){cX=ev.pageX;cY=ev.pageY;};var compare=function(ev,ob){ob.hoverIntent_t=clearTimeout(ob.hoverIntent_t);if((Math.abs(pX-cX)+Math.abs(pY-cY))<cfg.sensitivity){$(ob).unbind("mousemove",track);ob.hoverIntent_s=1;return cfg.over.apply(ob,[ev]);}else{pX=cX;pY=cY;ob.hoverIntent_t=setTimeout(function(){compare(ev,ob);},cfg.interval);}};var delay=function(ev,ob){ob.hoverIntent_t=clearTimeout(ob.hoverIntent_t);ob.hoverIntent_s=0;return cfg.out.apply(ob,[ev]);};var handleHover=function(e){var p=(e.type=="mouseover"?e.fromElement:e.toElement)||e.relatedTarget;while(p&&p!=this){try{p=p.parentNode;}catch(e){p=this;}}if(p==this){return false;}var ev=jQuery.extend({},e);var ob=this;if(ob.hoverIntent_t){ob.hoverIntent_t=clearTimeout(ob.hoverIntent_t);}if(e.type=="mouseover"){pX=ev.pageX;pY=ev.pageY;$(ob).bind("mousemove",track);if(ob.hoverIntent_s!=1){ob.hoverIntent_t=setTimeout(function(){compare(ev,ob);},cfg.interval);}}else{$(ob).unbind("mousemove",track);if(ob.hoverIntent_s==1){ob.hoverIntent_t=setTimeout(function(){delay(ev,ob);},cfg.timeout);}}};return this.mouseover(handleHover).mouseout(handleHover);};})(jQuery);
+		
+		$(function () {			
+			$('.droplist').each(function () {
+				$(this).parent().eq(0).hoverIntent({
+					timeout: 100,
+					over: function () {
+						var current = $('.droplist:eq(0)', this);
+						current.slideDown(400);
+					},
+					out: function () {
+						var current = $('.droplist:eq(0)', this);
+						current.fadeOut(200);
+					}
+				});
+			});
+		});
+	  // end fancy dropdown menu
+
+	 </script>
+	 <!-- END NIVO-SLIDER -->
+
+	<!-- VK LIKE -->
+		<script type="text/javascript" src="//vk.com/js/api/openapi.js?89"></script>
+		<script type="text/javascript">
+		  VK.init({apiId: 3200855, onlyWidgets: true});
+		</script>
+
+	<!-- GOOGLE ANALYTICS -->
+		<script type="text/javascript">
+		
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-16442018-2']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
+	<!-- END GOOGLE ANALYTICS -->
+
+	<!-- PAGE UP -->
+		<script type="text/javascript">$(document).ready(function(){
+		$(window).scroll(function () {if ($(this).scrollTop() > 0) {$('#scroller').fadeIn();} else {$('#scroller').fadeOut();}});
+		$('#scroller').click(function () {$('body,html').animate({scrollTop: 0}, 400); return false;});
+		});</script>
+	<!-- END PAGE UP -->
+
+	<!-- SNOW -->
+		<!-- <script type="text/javascript" src="/templates/Violet/js/snow.js"></script> -->
+	<!-- END SNOW -->
+</head>
+
+<body>
+	<IDXSKIP><div id="loading-layer" style="display:none">Загрузка. Пожалуйста, подождите...</div></IDXSKIP>
+<script type="text/javascript">
+<!--
+var dle_root       = '/';
+var dle_admin      = '';
+var dle_login_hash = '';
+var dle_group      = 5;
+var dle_skin       = 'Violet';
+var dle_wysiwyg    = '0';
+var quick_wysiwyg  = '0';
+var dle_act_lang   = ["Да", "Нет", "Ввод", "Отмена", "Сохранить", "Удалить"];
+var menu_short     = 'Быстрое редактирование';
+var menu_full      = 'Полное редактирование';
+var menu_profile   = 'Просмотр профиля';
+var menu_send      = 'Отправить сообщение';
+var menu_uedit     = 'Админцентр';
+var dle_info       = 'Информация';
+var dle_confirm    = 'Подтверждение';
+var dle_prompt     = 'Ввод информации';
+var dle_req_field  = 'Заполните все необходимые поля';
+var dle_del_agree  = 'Вы действительно хотите удалить? Данное действие невозможно будет отменить';
+var dle_spam_agree = 'Вы действительно хотите отметить пользователя как спамера? Это приведет к удалению всех его комментариев';
+var dle_complaint  = 'Укажите текст вашей жалобы для администрации:';
+var dle_big_text   = 'Выделен слишком большой участок текста.';
+var dle_orfo_title = 'Укажите комментарий для администрации к найденной ошибке на странице';
+var dle_p_send     = 'Отправить';
+var dle_p_send_ok  = 'Уведомление успешно отправлено';
+var dle_save_ok    = 'Изменения успешно сохранены. Обновить страницу?';
+var dle_del_news   = 'Удалить статью';
+var allow_dle_delete_news   = false;
+//-->
+</script><script type="text/javascript">  
+<!--  
+	hs.graphicsDir = '/engine/classes/highslide/graphics/';
+	hs.outlineType = 'rounded-white';
+	hs.numberOfImagesToPreload = 0;
+	hs.showCredits = false;
+	hs.dimmingOpacity = 0.60;
+	hs.lang = {
+		loadingText :     'Загрузка...',
+		playTitle :       'Просмотр слайдшоу (пробел)',
+		pauseTitle:       'Пауза',
+		previousTitle :   'Предыдущее изображение',
+		nextTitle :       'Следующее изображение',
+		moveTitle :       'Переместить',
+		closeTitle :      'Закрыть (Esc)',
+		fullExpandTitle : 'Развернуть до полного размера',
+		restoreTitle :    'Кликните для закрытия картинки, нажмите и удерживайте для перемещения',
+		focusTitle :      'Сфокусировать',
+		loadingTitle :    'Нажмите для отмены'
+	};
+	
+	hs.align = 'center';
+	hs.transitions = ['expand', 'crossfade'];
+	hs.addSlideshow({
+		interval: 4000,
+		repeat: false,
+		useControls: true,
+		fixedControls: 'fit',
+		overlayOptions: {
+			opacity: .75,
+			position: 'bottom center',
+			hideOnMouseOut: true
+		}
+	});
+//-->
+</script>
+	<div class="base_unit">
+  
+		<IDXSKIP><div class="helper">
+			<div class="helper_left"></div>
+			<div class="helper_center">
+				<a title="Добавить в избранное" href="http://darasims.com" onclick="window.external.AddFavorite('http://darasims.com','Добавить в избранное'); return false;" rel="sidebar">
+					<div class="helper_home"></div>
+				</a>
+				<a href="/forum/sendmessage.php" title="Обратная связь">
+					<div class="helper_mail"></div>
+				</a>
+				<a href="/rss.xml" title="RSS-канал">
+					<div class="helper_rss"></div>
+				</a>
+				<div class="search_top">
+
+				    <form action="" name="searchform" method="post">
+					    <input type="hidden" name="do" value="search" />
+						<input type="hidden" name="subaction" value="search" />
+					    <div>
+					    	<input class="search_box" id="story" name="story" type="text" value="Поиск..." onClick="if(this.value == 'Поиск...') {this.value=''}" onBlur="if(this.value == ''){this.value='Поиск...'}" />
+						    <div class="search_btn">
+							    <a title="Поиск">
+							    <input type="image" src="/templates/Violet/images/search.png" alt="Найти" />
+							    </a>
+						    </div>  
+					    </div>  
+				    </form>
+
+				</div>
+  				<div style="clear:both"></div>
+			</div>
+			<div class="helper_right"></div>
+  			<div style="clear:both;"></div>
+		</div></IDXSKIP>
+
+		<IDXSKIP><div id="logo">
+			<a href="/">
+	        	 <img alt="логотип" title="Darasims.com - фан-сайт по играм серии The Sims" src="/templates/Violet/images/logo.png" width="382" height="83"/> 
+				<!-- <img alt="логотип" title="Darasims.com - фан-сайт по играм серии The Sims" src="/templates/Violet/images/nglogo.png" width="382" height="100"/> -->
+	      	</a>
+		</div></IDXSKIP>
+
+		<div class="glass_top">
+			<div class="glass_tl"></div>
+				<ul id="main_menu">
+					<IDXSKIP><li class="menu_item1"><a href="/">Главная</a></li></IDXSKIP>
+					<IDXSKIP><li class="menu_item1 menu_item2"><a href="/forum/">Форум</a></li></IDXSKIP>
+					<IDXSKIP><li class="menu_item1 menu_item2 dropdown">
+						<a href="/gallery/">Галерея</a>
+						<ul class="droplist">
+							<li><a href="/gallery/screenshots/">Скриншоты</a></li>
+							<li><a href="/gallery/fanart/">Фан-Арт</a></li>
+							<li><a href="/gallery/comics/">Комиксы</a></li>
+							<li><a href="/gallery/smehotron/">Смехотрон</a></li>
+							<li><a href="/gallery/pixelart/">Пиксель Арт</a></li>
+						</ul>
+					</li></IDXSKIP>
+					<IDXSKIP><li class="menu_item1 menu_item2 dropdown">
+						<a href="/video/">Видео</a>
+						<ul class="droplist">
+							<li><a href="/video/offvideo/">Трейлеры и офиц. видео</a></li>
+							<li><a href="/video/fanvideo/">Фан-видео</a></li>
+							<li><a href="/video/video_tutorial/">Видео-уроки</a></li>
+						</ul>
+					</li></IDXSKIP>
+					<IDXSKIP><li class="menu_item1 menu_item2 dropdown">
+						<a href="/stati/">Статьи</a>
+						<ul class="droplist">
+							<li><a href="/stati/obzory/">Обзоры</a></li>
+							<li><a href="/stati/tutorial/">Уроки</a></li>
+							<li><a href="/stati/code/">Чит-коды</a></li>
+							<li><a href="/stati/story/">Другие статьи</a></li>
+						</ul>
+					</li></IDXSKIP>
+					<IDXSKIP><li class="menu_item1 menu_item2 dropdown">
+						<a href="/download/">Скачать</a>
+						<ul class="droplist">
+							<li><a href="/download/patch/">Патчи и обновления</a></li>
+							<li><a href="/download/soft/">Программы</a></li>
+							<li><a href="/download/music/">Музыка</a></li>
+							<li><a href="/download/content/">Пользовательский контент</a></li>
+							<li><a href="/downgame.html">Скачать игру The Sims</a></li>
+						</ul>
+					</li></IDXSKIP>
+					<IDXSKIP><li class="menu_item1 menu_item2"><a href="/wiki/">ВикиСимс</a></li></IDXSKIP>
+
+					<IDXSKIP><li class="menu_item2 dropdown">
+						<a href="/sims_shop/">Купить</a>
+						<ul class="droplist">
+							<li><a href="/sims_shop/buy_sims4/">Купить Симс 4</a></li>
+							<li><a href="/sims_shop/buy_sims3/">Купить Симс 3</a></li>
+							<li><a href="/sims_shop/buy_simsmedieval/">Купить Симс Средневековье</a></li>
+						</ul>
+					</li></IDXSKIP>
+
+					<div style="clear:both;"></div>
+				</ul>
+
+			<div class="glass_tr"></div>
+		</div>
+
+		<div class="main_content_wrap">
+			<div class="glass_content_r">
+			<div class="glass_content_l">
+				<div class="main_content">
+
+					<div class="content_block">
+
+						<div class="speedbar"><span id="dle-speedbar"><IDXSKIP><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://darasims.com/" itemprop="url"><span itemprop="title">DaraSims.com</span></a></span></IDXSKIP> <IDXSKIP>&raquo; <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://darasims.com/stati/" itemprop="url"><span itemprop="title">Статьи</span></a></span></IDXSKIP> &raquo; <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://darasims.com/stati/tutorial/" itemprop="url"><span itemprop="title">Уроки</span></a></span> &raquo; <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="http://darasims.com/stati/tutorial/tutor_sims4/" itemprop="url"><span itemprop="title">Урок Симс 4</span></a></span> &raquo; The Sims 4: Масштабирование объектов до нестандартных размеров + уменьшение оригинала</span></div>
+
+						<!-- CONNECTION TEMPLATES -->
+						
+			            
+			            
+			                        
+			            
+			            
+			             
+			              
+			            
+						
+			            
+			            
+						
+			            
+						
+						
+						
+						
+						<!-- END CONNECTION TEMPLATES -->
+
+						<div id='dle-content'><div itemscope itemtype="http://schema.org/Article">
+<div class="shortstory">
+	<div class="data">
+		<IDXSKIP><p class="data_m">окт</p></IDXSKIP>
+		<p class="data_d">18</p>
+		<p class="data_y">2016</p>
+	</div>
+	
+	<div class="shortstory_content">
+	
+		<h1 itemprop="name">The Sims 4: Масштабирование объектов до нестандартных размеров + уменьшение оригинала</h1>
+	
+		<div class="views">
+			 <a href="javascript:AddComplaint('3325', 'news')"><img src="/templates/Violet/images/report.png" title="Сообщить об ошибке" alt="Сообщить об ошибке" width="16" height="16" /></a> <noindex><a href="http://darasims.com/stati/tutorial/tutor_sims4/print:page,1,3325-the-sims-4-masshtabirovanie-obektov-do-nestandartnyh-razmerov-umenshenie-originala.html" rel="nofollow"><img title="Напечатать" src="/templates/Violet/images/print_s.png" width="16" height="13" /></a></noindex> Просмотров: <meta itemprop="interactionCount" content="UserPageVisits:4795" />4795 
+		</div>
+	
+		<hr class="title_hr"/>
+			<div class="shortstory_icon">
+				<!--dle_image_begin:http://darasims.com/uploads/posts/2016-10/1476793355_icon.png|left--><img src="/uploads/posts/2016-10/1476793355_icon.png" style="float:left;" alt="The Sims 4: Масштабирование объектов до нестандартных размеров + уменьшение оригинала" title="The Sims 4: Масштабирование объектов до нестандартных размеров + уменьшение оригинала"  /><!--dle_image_end--> Наверняка все уже знают, что в The Sims 4 можно увеличивать практически любые объекты с помощью клавиш <b><i>[</i></b> и <b><i>]</i></b> (или <b><i>Shift+[</i></b> и <b><i>Shift+]</i></b>). Но не всегда такое масштабирование может дать нам нужный результат, к тому же уменьшить предметы данным способом не получится (только при увеличении и обратно до исходного размера). Конечно, можно скачать специальные OMSP, которые будут масштабировать предметы на четко заданную пропорцию, но рассматривать пользовательский контент в данном туториале мы не будем. Сегодня мы расскажем вам, как чисто игровыми методами (noCC) получить предметы меньше оригинала или увеличить их до размеров, отличных от получаемых стандартным методом увеличения.
+		<div style="clear:both"></div>
+			</div>
+		<div style="clear:both"></div><br />
+				<p itemprop="description">Метод, который мы будем использовать, может давать различный результат на разных предметах, поэтому урок показывает лишь принцип действия, а эксперименты с конкретной вещью (если она не освещена ниже) вы можете провести самостоятельно. Скажу честно: когда я изучала этот способ, то залипла на несколько часов, тестируя каждую вещицу из режима покупок и строительства, – настолько непредсказуемо и по-разному они себя вели.<br /><br /><div style="text-align:center;"><!--sizestart:3--><span style="font-size:12pt;"><!--/sizestart--><b>Подготовка и принцип</b><!--sizeend--></span><!--/sizeend--></div><br />Здесь важен один момент: начальные манипуляции с объектами мы будем проводить в режиме жизни, используя персонажа. Поэтому стоит просчитать этот момент при обустройстве общественных или незаселенных участков. Для этих целей подойдет обычная функция посещения лота активным симом и последующее обустройство в режиме строительства.<br /><br />Итак, сперва нам нужно включить код разработчика. Открываем консоль клавишами <i><b>Ctrl+Shift+C</b></i> и вводим <i><b>testingcheats true</b></i><IDXSKIP>.<br /></IDXSKIP><br /><div style="text-align:center;"><!--dle_image_begin:http://darasims.com/uploads/posts/2016-10/1476795088_1.png||Код разработчика в Симс 4--><img src="/uploads/posts/2016-10/1476795088_1.png" alt="Код разработчика в Симс 4" title="Код разработчика в Симс 4"  /><!--dle_image_end--></div><br />Нам нужна опция установки предмета на голову сима. Для этого мы зажимаем клавишу <b><i>Shift</i></b>, кликаем на понравившийся предмет и выбираем опцию <i>«<b>Установить в качестве головы</b>»</i><IDXSKIP>.<br /></IDXSKIP><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795167_2.jpg||Опция в Симс 4, Установить в качестве головы--><a href="http://darasims.com/uploads/posts/2016-10/1476795167_2.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795167_2.jpg" alt="Опция в Симс 4, Установить в качестве головы" title="Опция в Симс 4, Установить в качестве головы"  /></a><span class="highslide-caption">Опция в Симс 4, Установить в качестве головы</span><!--TEnd--></div><br />Далее наблюдаем комическую картину и с зажатой клавишей <b><i>Shift</i></b> нажимаем на персонажа-головастика или на предмет на его голове. Нам нужна опция <i>«<b>Восстановить объект (отладка)</b>»</i><IDXSKIP>.<br /></IDXSKIP><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795247_3.jpg||Восстановить объект (отладка) в Симс 4--><a href="http://darasims.com/uploads/posts/2016-10/1476795247_3.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795247_3.jpg" alt="Восстановить объект (отладка) в Симс 4" title="Восстановить объект (отладка) в Симс 4"  /></a><span class="highslide-caption">Восстановить объект (отладка) в Симс 4</span><!--TEnd--></div><br />Наверняка вы заметили, что предмет при закреплении на голове сима поменял размер и стал больше по сравнению с исходным. При сбрасывании вещицы с персонажа нестандартный размер остается нетронутым. Нам осталось зайти в режим покупок и поколдовать клавишами <b><i>[</i></b> и <b><i>]</i></b> (или <b><i>Shift+[</i></b> и <b><i>Shift+]</i></b>), которыми мы пользуемся при обычном масштабировании объектов. Такой объект не только можно увеличивать и получать нестандартные размеры, но и в некоторых случаях уменьшать один или несколько раз. Смотрите сами:<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795236_4.jpg||Масштабирование объектов в Симс 4--><a href="http://darasims.com/uploads/posts/2016-10/1476795236_4.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795236_4.jpg" alt="Масштабирование объектов в Симс 4" title="Масштабирование объектов в Симс 4"  /></a><span class="highslide-caption">Масштабирование объектов в Симс 4</span><!--TEnd--></div><br />Для примера я показала оригинал и его увеличенный размер при стандартном масштабировании, а также полученную описанным выше методом копию и ее уменьшенный вариант.<br />Созданные таким путем вещи могут вписаться в интерьер даже лучше и гармоничнее оригиналов.<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795184_5.jpg||Как в Симс 4 уменьшить предмет--><a href="http://darasims.com/uploads/posts/2016-10/1476795184_5.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795184_5.jpg" alt="Как в Симс 4 уменьшить предмет" title="Как в Симс 4 уменьшить предмет"  /></a><span class="highslide-caption">Как в Симс 4 уменьшить предмет</span><!--TEnd--><br /><br /><!--sizestart:3--><span style="font-size:12pt;"><!--/sizestart--><b>Переходим к практике</b><!--sizeend--></span><!--/sizeend--></div><br />В теории все выглядит идеально, но на деле предметы из разных категорий (или даже из одной и той же) могут вести себя совершенно по-разному. Некоторые из вещей вообще не масштабируются, некоторые масштабируются в те же размеры, что и исходный предмет, а некоторые можно уменьшить до размера блохи. Поэтому вам придется тестировать каждый самостоятельно. Но ниже я все же покажу основные моменты при работе с большинством вещей из режима покупок и строительства, чтобы сократить время проверок.<br /><br /><div style="text-align:center;"><b>Различный декор (предметы интерьера)</b></div><br />Большинство предметов декорирования поддаются описанному выше методу. Для наглядности я покажу, как ведут себя некоторые из объектов и пронумерую, где какой вариант показан.<br /><br /><b>1</b> - Увеличенный оригинал (для сравнения)<br /><b>2</b> - Оригинал<br /><b>3</b> - Копия<br /><b>4</b> - Увеличенная копия (для сравнения)<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795205_6.jpg||Увеличение и уменьшение предметов--><a href="http://darasims.com/uploads/posts/2016-10/1476795205_6.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795205_6.jpg" alt="Увеличение и уменьшение предметов" title="Увеличение и уменьшение предметов"  /></a><span class="highslide-caption">Увеличение и уменьшение предметов</span><!--TEnd--> <!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795196_7.jpg||Масштабирование предметов в Симс 4--><a href="http://darasims.com/uploads/posts/2016-10/1476795196_7.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795196_7.jpg" alt="Масштабирование предметов в Симс 4" title="Масштабирование предметов в Симс 4"  /></a><span class="highslide-caption">Масштабирование предметов в Симс 4</span><!--TEnd--></div><br />У некоторых предметов различие между оригиналом и копией получается менее наглядное, и заметить его можно, только наложив объекты друг на друга или при внимательном рассмотрении вблизи. При этом копия может быть как меньше, так и чуть больше оригинала.<br />А есть и объекты-копии, которые по неведомой причине превращаются сразу из крупногабаритных в блошиные. Правда, толку от них немного, кому в Симс 4 нужны вещи размером с муху? 8)<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795243_8.jpg||Как уменьшить предметы в Симс 4--><a href="http://darasims.com/uploads/posts/2016-10/1476795243_8.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795243_8.jpg" alt="Как уменьшить предметы в Симс 4" title="Как уменьшить предметы в Симс 4"  /></a><span class="highslide-caption">Как уменьшить предметы в Симс 4</span><!--TEnd--><br /><br /><b>Настенный декор</b></div><br />Практически весь декор, который размещается на стене (шторы, картины, светильники и т.п.), не меняет свой размер после описанных выше манипуляций. При масштабировании он возвращается в свои стандартные размеры (как оригинал, так и увеличенные варианты).<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795169_9.jpg||Масштабирование настенного декора--><a href="http://darasims.com/uploads/posts/2016-10/1476795169_9.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795169_9.jpg" alt="Масштабирование настенного декора" title="Масштабирование настенного декора"  /></a><span class="highslide-caption">Масштабирование настенного декора</span><!--TEnd--></div><br />С настенными зеркалами вообще ничего путного не выйдет. Большинство из них масштабируют раму, но не зеркальную поверхность, которая остается неизменной. К напольным зеркалам это не относится.<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795156_10.jpg||Уменьшение и увеличение зеркал--><a href="http://darasims.com/uploads/posts/2016-10/1476795156_10.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795156_10.jpg" alt="Уменьшение и увеличение зеркал" title="Уменьшение и увеличение зеркал"  /></a><span class="highslide-caption">Уменьшение и увеличение зеркал</span><!--TEnd--><br /><br /><b>Освещение (потолочные светильники)</b></div><br />Большинство потолочных светильников отлично поддаются изменению размеров, но есть один нюанс. При сбросе предмета с головы персонажа они появляются не на потолке, а под ногами сима. То есть полностью проваливаются под пол. В данном случае переключение этажа не поможет, поскольку светильник воспринимается активным на текущем этаже. Поэтому при отладке предмета придется "ловить" его инструментом «Рука» прямо под ногами персонажа. Делать это можно как в закрытом помещении, так и на улице.<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795250_11.jpg||Масштабирование освещения--><a href="http://darasims.com/uploads/posts/2016-10/1476795250_11.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795250_11.jpg" alt="Масштабирование освещения" title="Масштабирование освещения"  /></a><span class="highslide-caption">Масштабирование освещения</span><!--TEnd--></div><br />При взятии предмета инструментом «Рука» он автоматически подпрыгнет до потолка, так что вам не придется поднимать его вручную. Ниже несколько примеров масштабирования потолочных светильников. Крупный вариант – оригинал, уменьшенный – копия.<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795242_12.jpg||Уменьшение светильников в Sims 4--><a href="http://darasims.com/uploads/posts/2016-10/1476795242_12.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795242_12.jpg" alt="Уменьшение светильников в Sims 4" title="Уменьшение светильников в Sims 4"  /></a><span class="highslide-caption">Уменьшение светильников в Sims 4</span><!--TEnd--><br /><br /><b>Ковры</b></div><br />Ковры, на удивление, не поддаются уменьшению и нестандартным форматам.<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795207_13.jpg||Масштабирование ковров--><a href="http://darasims.com/uploads/posts/2016-10/1476795207_13.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795207_13.jpg" alt="Масштабирование ковров" title="Масштабирование ковров"  /></a><span class="highslide-caption">Масштабирование ковров</span><!--TEnd--><br /><br /><b>Телевизоры</b></div><br />В качестве кухонного телевизора можно использовать уменьшенную копию обычного. Он адекватно работает и показывает все необходимые каналы.<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795241_14.jpg||Симс 4 уменьшение телевизоров--><a href="http://darasims.com/uploads/posts/2016-10/1476795241_14.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795241_14.jpg" alt="Симс 4 уменьшение телевизоров" title="Симс 4 уменьшение телевизоров"  /></a><span class="highslide-caption">Симс 4 уменьшение телевизоров</span><!--TEnd--><br /><br /><b>Крупные объекты</b></div><br />Крупногабаритные предметы, достигающие двух этажей и более, вполне можно уменьшить до размера одного яруса и использовать как в интерьере, так и в саду.<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795172_15.jpg||Уменьшение объектов в Sims 4--><a href="http://darasims.com/uploads/posts/2016-10/1476795172_15.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795172_15.jpg" alt="Уменьшение объектов в Sims 4" title="Уменьшение объектов в Sims 4"  /></a><span class="highslide-caption">Уменьшение объектов в Sims 4</span><!--TEnd--><br /><br /><b>Аквариумы и фонтаны</b></div><br />Любые предметы, в которых имеется эффект-анимация, скорее всего, не будут масштабироваться адекватно. При этом неважно, используете ли вы метод, описанный в данном уроке, или стандартный метод увеличения.<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795183_16.jpg||Габариты аквариумов и фонтанов--><a href="http://darasims.com/uploads/posts/2016-10/1476795183_16.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795183_16.jpg" alt="Габариты аквариумов и фонтанов" title="Габариты аквариумов и фонтанов"  /></a><span class="highslide-caption">Габариты аквариумов и фонтанов</span><!--TEnd--><br /><br /><b>Деревья и кустарники</b></div><br />А вот зелень и садовые насаждения прекрасно себя чувствуют в разных масштабах. Таким образом, можно превратить гигантское дерево в деревце для сада или создать разнообразие клумб из одного кустарника.<br /><br /><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2016-10/1476795182_17.jpg||Уменьшение деревьев и кустарников--><a href="http://darasims.com/uploads/posts/2016-10/1476795182_17.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2016-10/thumbs/1476795182_17.jpg" alt="Уменьшение деревьев и кустарников" title="Уменьшение деревьев и кустарников"  /></a><span class="highslide-caption">Уменьшение деревьев и кустарников</span><!--TEnd--></div><br /><br /><b>Примечания:</b><br /><!--dle_list--><ul><li>При последующей загрузке участка с нестандартными предметами, они сохраняют свой размер;<br /></li><!--dle_li--><li>При перемещении предмета в багаж семьи, его размер сбрасывается до стандартного;<br /></li><!--dle_li--><li>При передаче участка через Галерею, размер объектов также сохраняется;<br /></li><!--dle_li--><li>Пользовательский контент заимствует особенности масштабирования от оригинала, с которого клонировали предмет.<br /></li></ul><!--dle_list_end--><br /><div style="text-align:right;">Большая благодарность <a href="https://www.youtube.com/watch?v=oRWv3WauZ84" target="_blank">Jools, автору идеи</a></div></p>
+		<div style="clear:both"></div><br /><br />
+	
+		<div class="tags">
+			Теги: <a href="http://darasims.com/tags/sims+4/">sims 4</a>, <a href="http://darasims.com/tags/симс+4/">симс 4</a>, <a href="http://darasims.com/tags/строительство/">строительство</a>, <a href="http://darasims.com/tags/строительство+в+симс+4/">строительство в симс 4</a>
+		</div>
+	
+		<div class="material_author">
+			<p itemscope itemtype="http://schema.org/Person">Автор: <span itemprop="name"><a href="http://darasims.com/forum/member.php?u=1" >Dara_Savelly</a><br /></span></p>
+			Редактор: <a href="http://darasims.com/forum/member.php?u=4317" >Lamare</a><br />
+			Публикатор: <a onclick="ShowProfile('Dara_Savelly', 'http://darasims.com/user/Dara_Savelly/', '0'); return false;" href="http://darasims.com/user/Dara_Savelly/">Dara_Savelly</a>
+		</div>
+	
+		<div style="clear:both;"></div>
+
+<!-- LIKE BUTTONS -->
+		<br />
+		<div class="div_like">
+			<div id="vk_like"></div>
+			<script type="text/javascript">
+			VK.Widgets.Like("vk_like", {type: "mini", height: "20", width: "100"});
+			</script>
+		</div>
+
+		<div class="div_like2">
+			<script type="text/javascript">(function(w,doc) {
+			if (!w.__utlWdgt ) {
+			    w.__utlWdgt = true;
+			    var d = doc, s = d.createElement('script'), g = 'getElementsByTagName';
+			    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+			    s.src = ('https:' == w.location.protocol ? 'https' : 'http')  + '://w.uptolike.com/widgets/v1/uptolike.js';
+			    var h=d[g]('body')[0];
+			    h.appendChild(s);
+			}})(window,document);
+			</script>
+			<div data-background-alpha="0.0" data-orientation="horizontal" data-text-color="#000000" data-share-shape="SHARP" data-buttons-color="#FFFFFF" data-sn-ids="fb." data-counter-background-color="#ffffff" data-share-size="LARGE" data-background-color="#ffffff" data-mobile-sn-ids="fb.vk.ok." data-preview-mobile="false" data-pid="1600313" data-counter-background-alpha="1.0" data-mode="like" data-following-enable="false" data-exclude-show-more="false" data-like-text-enable="false" data-selection-enable="false" data-mobile-view="true" data-icon-color="#ffffff" class="uptolike-buttons" ></div>
+		</div>
+
+		<div style="clear:both;"></div>
+<!-- END LIKE BUTTONS -->
+	
+		<hr class="title_hr"/>
+	        <p class="rel_news_p">Другие новости по теме:</p>
+	        <span class="rel_news_span"><li><a href="http://darasims.com/stati/tutorial/tutor_sims4/2625-goryachie-klavishi-v-sims-4.html">Горячие клавиши в Симс 4</a></li><li><a href="http://darasims.com/stati/code/2623-obschie-kody-dlya-the-sims-4.html">Общие коды для The Sims 4</a></li><li><a href="http://darasims.com/main/2601-informaciya-s-the-sims-4-creators-camp-kody-i-goryachie-klavishi-v-sims-4.html">Информация с The Sims 4 Creator’s Camp: Коды и горячие клавиши в Симс 4</a></li><li><a href="http://darasims.com/stati/tutorial/tutor_sims3/2485-debug-enabler-upravlenie-vysotoy-predmetov-zamena-omsp.html">Debug Enabler: управление высотой предметов (замена OMSP)</a></li><li><a href="http://darasims.com/stati/code/12-kod-razrabotchika-dlya-the-sims-3.html">Код разработчика для The Sims 3</a></li></span>
+		<hr class="title_hr"/>
+
+	</div>
+</div>
+</div></div>
+
+					</div>
+
+					
+					<div class="content_informer">
+
+					    <!-- SLIDER -->
+						<IDXSKIP><div id="slider_block" class="slider-wrapper theme-default">
+            				<div id="slider" class="nivoSlider">
+								<a href="/forum/showthread.php?t=6485" target="_blank"><img src="/templates/Violet/images/slider/04.png" alt="Строительный конкурс Домик Дарасимс"></a>
+								<a href="http://darasims.net" target="_blank"><img src="/templates/Violet/images/slider/06.png" alt="Пользовательский контент для Симс"></a>
+								<a href="/forum/forumdisplay.php?f=200" target="_blank"><img src="/templates/Violet/images/slider/08.png" alt="головоломки"></a>
+								<a href="/forum/showpost.php?p=337432&postcount=5" target="_blank"><img src="/templates/Violet/images/slider/09.png" alt="креаторские мастерские"></a>
+								<a href="/forum/showpost.php?p=337430&postcount=3" target="_blank"><img src="/templates/Violet/images/slider/05.png" alt="опыты над симами"></a>
+						      	<a href="/forum/showpost.php?p=337431&postcount=4" target="_blank"><img src="/templates/Violet/images/slider/01.png" alt="техническая поддержка"></a>
+						      	<a href="/forum/showpost.php?p=337429&postcount=2" target="_blank"><img src="/templates/Violet/images/slider/03.png" alt="династии симс"></a>
+					    	</div>
+					    </div></IDXSKIP>
+					    <!-- END SLIDER -->
+
+						<div class="title_informer">
+								<div class="title_informer_left"></div>
+								<div class="title_informer_center">
+									<IDXSKIP><p>Последние статьи</p></IDXSKIP>
+								</div>
+								<div class="title_informer_right"></div>
+					  			<div style="clear:both;"></div>
+						</div>
+
+						<ul>	<IDXSKIP><li title="Обзоры Симс 4, Обзоры по Sims 4 City Living">
+		<a href="http://darasims.com/stati/obzory/obzor_sims4/3424-gorodskie-festivali-san-mishuno-v-sims-4-zhizn-v-gorode.html">Городские фестивали Сан Мишуно в «Симс 4 Жизнь в городе»</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Урок Симс 4, Уроки по строительству в Симс 4">
+		<a href="http://darasims.com/stati/tutorial/tutor_sims4/3423-idei-dlya-doma-urok-po-stroitelstvu-podokonnika-v-the-sims-4.html">Идеи для дома: урок по строительству подоконника в The Sims 4</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 4, Обзоры по базовой Симс 4, Обзоры по Sims 4 City Living, Обзоры игровых наборов Симс 4">
+		<a href="http://darasims.com/stati/obzory/obzor_sims4/3391-harakternye-cherty-uchastkov-v-the-sims-4-i-dopolneniyah.html">Свойства участков в The Sims 4 и дополнениях — черты характера квартир и домов</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 4, Обзоры игровых наборов Симс 4, Материалы">
+		<a href="http://darasims.com/stati/obzory/obzor_sims4/3414-bonusnye-cherty-haraktera-v-igrovom-nabore-the-sims-4-vampiry.html">Бонусные черты характера в игровом наборе The Sims 4 Вампиры</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 4, Обзоры игровых наборов Симс 4, Материалы">
+		<a href="http://darasims.com/stati/obzory/obzor_sims4/3413-zhiznennye-celi-iz-igrovogo-nabora-the-sims-4-vampiry.html">Жизненные цели из игрового набора The Sims 4 Вампиры</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 4, Обзоры по базовой Симс 4, Обзоры по Sims 4 Get to Work, Обзоры по Sims 4 Get Together, Обзоры по Sims 4 City Living, Обзоры игровых наборов Симс 4, Обзоры по каталогам Симс 4, Материалы">
+		<a href="http://darasims.com/stati/obzory/obzor_sims4/3412-putevoditel-po-geympleyu-sims-4.html">Путеводитель по геймплею Симс 4</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 4, Обзоры по базовой Симс 4, Материалы">
+		<a href="http://darasims.com/stati/obzory/obzor_sims4/3390-cherty-haraktera-malyshey-v-the-sims-4-obychnye-i-nagradnye.html">Черты характера малышей в The Sims 4: обычные и наградные</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 3, Обзоры по базовой Симс 3, Обзоры по Sims 3 World Adventures, Обзоры по Sims 3 Late Night, Обзоры по Sims 3 Supernatural, Обзоры по Sims 3 Seasons, Обзоры по Sims 3 Island Paradise">
+		<a href="http://darasims.com/stati/obzory/obzor_sims3/3389-vkusy-personazhey-sims-3-lyubimye-blyuda-i-cveta.html">Вкусы персонажей Симс 3: любимые блюда и цвета</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 3, Обзоры по базовой Симс 3, Обзоры по Sims 3 World Adventures, Обзоры по Sims 3 Ambitions, Обзоры по Sims 3 Late Night, Обзоры по Sims 3 Generations, Обзоры по Sims 3 Pets, Обзоры по Sims 3 Showtime, Обзоры по Sims 3 Supernatural, Обзоры по Sims 3 Seasons, Обзоры по Sims 3 University Life, Обзоры по Sims 3 Island Paradise, Обзоры по Sims 3 Into the Future, Обзоры по каталогам Симс 3, Обзоры по Sims 3 Store, Материалы">
+		<a href="http://darasims.com/stati/obzory/obzor_sims3/2854-putevoditel-po-the-sims-3-i-dopolneniyam.html">Путеводитель по геймплею Симс 3</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 3, Обзоры по базовой Симс 3, Обзоры по Sims 3 World Adventures, Обзоры по Sims 3 Ambitions, Обзоры по Sims 3 Late Night, Обзоры по Sims 3 Pets, Обзоры по Sims 3 Supernatural, Обзоры по Sims 3 University Life, Обзоры по Sims 3 Island Paradise, Обзоры по Sims 3 Into the Future, Обзоры по каталогам Симс 3">
+		<a href="http://darasims.com/stati/obzory/obzor_sims3/3388-muzyka-lyubimye-stancii.html">Любимые музыкальные радиостанции персонажей The Sims 3</a>
+	</li></IDXSKIP>
+
+
+
+</ul>
+
+						<div class="title_informer">
+								<div class="title_informer_left"></div>
+								<div class="title_informer_center">
+									<IDXSKIP><p>Последние скриншоты</p></IDXSKIP>
+								</div>
+								<div class="title_informer_right"></div>
+					  			<div style="clear:both;"></div>
+						</div>
+
+ 						<div class="last_screen_block">
+	<a href="http://darasims.com/gallery/screenshots/screen_sims4/3426-personazh-naprashivaetsya-na-volshebnye-boby-u-rostomana.html"><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2017-04/1492323712_sims-4-ispytanie-rostoman.jpg|--><a href="http://darasims.com/uploads/posts/2017-04/1492323712_sims-4-ispytanie-rostoman.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2017-04/thumbs/1492323712_sims-4-ispytanie-rostoman.jpg" alt='Персонаж напрашивается на волшебные бобы у ростомана' title='Персонаж напрашивается на волшебные бобы у ростомана'  /></a><!--TEnd--></div></a>
+</div>
+
+<div class="last_screen_invisible_btn">	
+	<a href="http://darasims.com/gallery/screenshots/screen_sims4/3426-personazh-naprashivaetsya-na-volshebnye-boby-u-rostomana.html"><img alt="Описание: Персонаж напрашивается на волшебные бобы у ростомана" title="Персонаж напрашивается на волшебные бобы у ростомана" src="/templates/Violet/images/invisible_btn.png"/></a>
+</div>
+
+<div style="clear:both"></div>
+
+<div class="last_screen_category">
+	<IDXSKIP><a href="http://darasims.com/gallery/screenshots/screen_sims4/">Скриншоты Симс 4</a></IDXSKIP>, <a href="http://darasims.com/gallery/screenshots/screen_sims4/screen_sims4_base/">Скриншоты из базовой Симс 4</a>
+</div>
+<IDXSKIP><div class="last_screen_block">
+	<a href="http://darasims.com/gallery/screenshots/screen_sims4/3422-igra-v-bouling-v-the-sims-4-vecher-boulinga.html"><div style="text-align:center;"><!--TBegin:http://darasims.com/uploads/posts/2017-03/1490892574_ts4_0174_sp10_lifts_04.jpg|--><a href="http://darasims.com/uploads/posts/2017-03/1490892574_ts4_0174_sp10_lifts_04.jpg" onclick="return hs.expand(this)" ><img src="/uploads/posts/2017-03/thumbs/1490892574_ts4_0174_sp10_lifts_04.jpg" alt='Игра в боулинг в «The Sims 4 Вечер боулинга»' title='Игра в боулинг в «The Sims 4 Вечер боулинга»'  /></a><!--TEnd--></div></a>
+</div></IDXSKIP>
+
+<IDXSKIP><div class="last_screen_invisible_btn">	
+	<a href="http://darasims.com/gallery/screenshots/screen_sims4/3422-igra-v-bouling-v-the-sims-4-vecher-boulinga.html"><img alt="Описание: Игра в боулинг в «The Sims 4 Вечер боулинга»" title="Игра в боулинг в «The Sims 4 Вечер боулинга»" src="/templates/Violet/images/invisible_btn.png"/></a>
+</div></IDXSKIP>
+
+<div style="clear:both"></div>
+
+<div class="last_screen_category">
+	<IDXSKIP><a href="http://darasims.com/gallery/screenshots/screen_sims4/">Скриншоты Симс 4</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/gallery/screenshots/screen_sims4/screen_sims4_stuff/">Скриншоты из каталогов Симс 4</a></IDXSKIP>
+</div>
+
+
+						<div class="title_informer">
+								<div class="title_informer_left"></div>
+								<div class="title_informer_center">
+									<IDXSKIP><p>Последнее видео</p></IDXSKIP>
+								</div>
+								<div class="title_informer_right"></div>
+					  			<div style="clear:both;"></div>
+						</div>
+
+						<IDXSKIP><div class="last_screen_block">
+<a href="http://darasims.com/video/offvideo/offvideo4/3416-oficialnyy-treyler-dlya-kataloga-the-sims-4-vecher-boulinga.html"><img src="/uploads/posts/2017-03/1490211878_sims-4-bowling-video.jpg" title="Официальный трейлер для каталога «The Sims 4 Вечер боулинга»" alt="Официальный трейлер для каталога «The Sims 4 Вечер боулинга»"/></a>
+</div></IDXSKIP>
+
+<div style="clear:both"></div>
+
+<div class="last_screen_category">
+	<IDXSKIP><a href="http://darasims.com/video/">Видео</a></IDXSKIP> <IDXSKIP>&raquo; <a href="http://darasims.com/video/offvideo/">Официальное видео</a></IDXSKIP> <IDXSKIP>&raquo; <a href="http://darasims.com/video/offvideo/offvideo4/">Официальное видео из Симс 4</a></IDXSKIP>
+</div>
+
+
+
+
+						<div class="title_informer">
+								<div class="title_informer_left"></div>
+								<div class="title_informer_center">
+									<IDXSKIP><p>Мы в соцсетях</p></IDXSKIP>
+								</div>
+								<div class="title_informer_right"></div>
+					  			<div style="clear:both;"></div>
+						</div>
+						
+						<IDXSKIP><noindex>
+						<div class="social_icons">
+							<span>
+								<a rel="nofollow" href="https://twitter.com/Dara_Sims/">
+			        				<img alt="Мы в Twitter" title="Мы в Twitter" src="/templates/Violet/images/tw.png" width="50" height="50"/>
+			      				</a>
+							</span>
+							<span>
+								<a rel="nofollow" href="https://www.facebook.com/pages/DaraSimscom-%D0%92%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F-%D0%B8%D0%B3%D1%80%D1%8B-the-Sims/122152647840625">
+			        				<img alt="Мы в Facebook" title="Мы в Facebook" src="/templates/Violet/images/fb.png" width="50" height="50"/>
+			      				</a>
+							</span>
+							<span>
+								<a rel="nofollow" href="http://vk.com/darasims">
+			        				<img alt="Мы в Контакте" title="Мы в Контакте" src="/templates/Violet/images/vk.png" width="50" height="50"/>
+			      				</a>
+							</span>
+							<div style="clear:both;"></div>
+						</div>
+						</noindex></IDXSKIP>
+
+					</div>
+				
+					<div style="clear:both;"></div>
+
+
+
+					<!-- KEYWORDS SPOILER -->
+					<IDXSKIP><div class="keywords_spoiler">
+						<div class="keywords_spoiler_linetop_left"></div>
+						<div class="keywords_spoiler_linetop_right"></div>
+						<div class="keywords_spoiler_linetop">
+							<div class="keywords_spoiler_btn">
+								<a href="#" id="tags_btn">Ключевые слова</a>
+							</div>
+						</div>
+					</div></IDXSKIP>
+					<div style="clear:both;"></div>
+
+					<div class="tags_block">
+						<p><IDXSKIP><a href="http://darasims.com/tags/city+living/" class="clouds_xsmall" title="Найдено публикаций: 37">city living</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/EA+Games/" class="clouds_xsmall" title="Найдено публикаций: 34">EA Games</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/EA+Store/" class="clouds_xsmall" title="Найдено публикаций: 165">EA Store</a></IDXSKIP>, <a href="http://darasims.com/tags/simpe/" class="clouds_xsmall" title="Найдено публикаций: 12">simpe</a><IDXSKIP>, <a href="http://darasims.com/tags/sims+2/" class="clouds_xsmall" title="Найдено публикаций: 15">sims 2</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/sims+4/" class="clouds_xsmall" title="Найдено публикаций: 130">sims 4</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/sims+музыка/" class="clouds_xsmall" title="Найдено публикаций: 42">sims музыка</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/sims+саундтрек/" class="clouds_xsmall" title="Найдено публикаций: 42">sims саундтрек</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/the+sims+2/" class="clouds_xsmall" title="Найдено публикаций: 23">the sims 2</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/the+sims+4/" class="clouds_xsmall" title="Найдено публикаций: 85">the sims 4</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/в+поход/" class="clouds_xsmall" title="Найдено публикаций: 17">в поход</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/в+ресторане/" class="clouds_xsmall" title="Найдено публикаций: 22">в ресторане</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/в+сумерках/" class="clouds_xsmall" title="Найдено публикаций: 64">в сумерках</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/вампиры/" class="clouds_xsmall" title="Найдено публикаций: 16">вампиры</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/веселимся+вместе/" class="clouds_xsmall" title="Найдено публикаций: 41">веселимся вместе</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/видео+симс+3/" class="clouds_xsmall" title="Найдено публикаций: 53">видео симс 3</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/видео+симс+4/" class="clouds_xsmall" title="Найдено публикаций: 47">видео симс 4</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/викисимс/" class="clouds_xsmall" title="Найдено публикаций: 115">викисимс</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/вперед+в+будущее/" class="clouds_xsmall" title="Найдено публикаций: 61">вперед в будущее</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/времена+года/" class="clouds_xsmall" title="Найдено публикаций: 49">времена года</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/все+возрасты/" class="clouds_xsmall" title="Найдено публикаций: 32">все возрасты</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/день+спа/" class="clouds_xsmall" title="Найдено публикаций: 20">день спа</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/домашний+кинотеатр/" class="clouds_xsmall" title="Найдено публикаций: 13">домашний кинотеатр</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/дополнение/" class="clouds_xsmall" title="Найдено публикаций: 29">дополнение</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/жизнь+в+городе/" class="clouds_xsmall" title="Найдено публикаций: 45">жизнь в городе</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/жуткие+вещи/" class="clouds_xsmall" title="Найдено публикаций: 18">жуткие вещи</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/игровой+набор/" class="clouds_xsmall" title="Найдено публикаций: 53">игровой набор</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/карьера/" class="clouds_xsmall" title="Найдено публикаций: 43">карьера</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/каталог/" class="clouds_xsmall" title="Найдено публикаций: 97">каталог</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/кино/" class="clouds_xsmall" title="Найдено публикаций: 21">кино</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/коллекции+sims+4/" class="clouds_xsmall" title="Найдено публикаций: 21">коллекции sims 4</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/коллекционирование/" class="clouds_xsmall" title="Найдено публикаций: 21">коллекционирование</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/консоли/" class="clouds_xsmall" title="Найдено публикаций: 36">консоли</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/мир+приключений/" class="clouds_xsmall" title="Найдено публикаций: 41">мир приключений</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/мудлеты/" class="clouds_xsmall" title="Найдено публикаций: 39">мудлеты</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/музыка+sims+2/" class="clouds_xsmall" title="Найдено публикаций: 16">музыка sims 2</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/музыка+sims+3/" class="clouds_xsmall" title="Найдено публикаций: 18">музыка sims 3</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/на+работу/" class="clouds_xsmall" title="Найдено публикаций: 66">на работу</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/обзор+городов+симс+3/" class="clouds_xsmall" title="Найдено публикаций: 15">обзор городов симс 3</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/питомцы/" class="clouds_xsmall" title="Найдено публикаций: 52">питомцы</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/работа+и+профессии/" class="clouds_xsmall" title="Найдено публикаций: 89">работа и профессии</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/райские+острова/" class="clouds_xsmall" title="Найдено публикаций: 41">райские острова</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/роскошная+вечеринка/" class="clouds_xsmall" title="Найдено публикаций: 17">роскошная вечеринка</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/саундтреки+sims+2/" class="clouds_xsmall" title="Найдено публикаций: 16">саундтреки sims 2</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/саундтреки+sims+3/" class="clouds_xsmall" title="Найдено публикаций: 17">саундтреки sims 3</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/сверхъестественное/" class="clouds_xsmall" title="Найдено публикаций: 43">сверхъестественное</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/симс+1/" class="clouds_xsmall" title="Найдено публикаций: 76">симс 1</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/симс+2/" class="clouds_small" title="Найдено публикаций: 461">симс 2</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/симс+3/" class="clouds_xlarge" title="Найдено публикаций: 1705">симс 3</a></IDXSKIP>, <a href="http://darasims.com/tags/симс+4/" class="clouds_small" title="Найдено публикаций: 716">симс 4</a><IDXSKIP>, <a href="http://darasims.com/tags/симс+средневековье/" class="clouds_xsmall" title="Найдено публикаций: 121">симс средневековье</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/скриншоты/" class="clouds_xsmall" title="Найдено публикаций: 19">скриншоты</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/скриншоты+симс+4/" class="clouds_xsmall" title="Найдено публикаций: 24">скриншоты симс 4</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/стильные+70-е+80-е+90-е/" class="clouds_xsmall" title="Найдено публикаций: 24">стильные 70-е 80-е 90-е</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/строительство/" class="clouds_xsmall" title="Найдено публикаций: 128">строительство</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/студенческая+жизнь/" class="clouds_xsmall" title="Найдено публикаций: 52">студенческая жизнь</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/увлечения/" class="clouds_xsmall" title="Найдено публикаций: 18">увлечения</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/университет/" class="clouds_xsmall" title="Найдено публикаций: 14">университет</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/фан-арт/" class="clouds_xsmall" title="Найдено публикаций: 30">фан-арт</a></IDXSKIP><IDXSKIP>, <a href="http://darasims.com/tags/шоу-бизнес/" class="clouds_xsmall" title="Найдено публикаций: 42">шоу-бизнес</a></IDXSKIP><br /><br /><IDXSKIP><a href="http://darasims.com/tags/">Показать все теги</a></IDXSKIP></p>
+					</div>
+
+					<div class="keywords_spoiler_linebottom_left"></div>
+					<div class="keywords_spoiler_linebottom_right"></div>
+					<div class="keywords_spoiler_linebottom"></div>
+					<div style="clear:both;"></div>
+					<!-- END KEYWORDS SPOILER -->
+
+					<div class="content_footer">
+
+						<div id="footer-page-top" title="Наверх" onclick="scrollTo(0,0)">
+						</div>
+
+						<div class="footer_list">
+							<IDXSKIP><p>Навигация:</p></IDXSKIP>
+							<ul>
+								<IDXSKIP><li><a href="/">Главная</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="/forum/">Форум</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="/gallery/">Галерея</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="/video/">Видео</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="/stati/">Статьи</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="/download/">Скачать</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="/wiki/">ВикиСимс</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="/sims_shop/">Купить</a></li></IDXSKIP>
+							</ul>
+						</div>
+
+						<div class="footer_list">
+							<IDXSKIP><p>Популярные статьи:</p></IDXSKIP>
+							
+							<ul>	<IDXSKIP><li title="Коды">
+		<a href="http://darasims.com/stati/code/6-kody-dlya-the-sims-2.html">Общие коды для The Sims 2</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 3, Обзоры по Sims 3 World Adventures">
+		<a href="http://darasims.com/stati/obzory/obzor_sims3/450-kvesty-i-proxozhdenie-grobnic-v-sims-3-mir-priklyuchenij.html">Квесты и прохождение гробниц в «Симс 3 Мир приключений»</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Коды">
+		<a href="http://darasims.com/stati/code/12-kod-razrabotchika-dlya-the-sims-3.html">Код разработчика для The Sims 3</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Коды">
+		<a href="http://darasims.com/stati/code/11-obshhie-kody-dlya-the-sims-3.html">Общие коды для The Sims 3</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Коды">
+		<a href="http://darasims.com/stati/code/9-kod-razrabotchika-dlya-the-sims-2.html">Код разработчика для The Sims 2</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 3, Обзоры по базовой Симс 3, Обзоры по Sims 3 World Adventures, Обзоры по Sims 3 Ambitions, Обзоры по Sims 3 Late Night, Обзоры по Sims 3 Showtime, Обзоры по Sims 3 Supernatural, Обзоры по Sims 3 Seasons, Обзоры по Sims 3 University Life, Обзоры по Sims 3 Island Paradise, Обзоры по Sims 3 Into the Future, Обзоры по Sims 3 Store">
+		<a href="http://darasims.com/stati/obzory/obzor_sims3/250-smert-i-prizraki-v-the-sims-3.html">Смерть, призраки и воскрешение в The Sims 3</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 3, Обзоры по базовой Симс 3, Обзоры по Sims 3 Ambitions, Обзоры по Sims 3 Late Night, Обзоры по Sims 3 Supernatural, Обзоры по Sims 3 Seasons">
+		<a href="http://darasims.com/stati/obzory/obzor_sims3/201-rabota-karera-professii-i-zarabotok-v-the-sims-3.html">Работа, карьера, профессии и заработок в The Sims 3</a>
+	</li></IDXSKIP>
+
+
+
+	<IDXSKIP><li title="Обзоры Симс 3, Обзоры по базовой Симс 3, Обзоры по Sims 3 World Adventures, Обзоры по Sims 3 Ambitions, Обзоры по Sims 3 Late Night, Обзоры по Sims 3 Generations, Обзоры по Sims 3 Pets, Обзоры по Sims 3 Showtime, Обзоры по Sims 3 Supernatural, Обзоры по Sims 3 Seasons, Обзоры по Sims 3 University Life, Обзоры по Sims 3 Island Paradise, Обзоры по Sims 3 Into the Future, Обзоры по Sims 3 Store">
+		<a href="http://darasims.com/stati/obzory/obzor_sims3/719-vuxu-i-seks-v-sims-3.html">Вуху в Симс 3 и аддонах</a>
+	</li></IDXSKIP>
+
+
+
+</ul>
+							
+							<!--
+							<ul>
+								<li><a href="/stati/code/6-kody-dlya-the-sims-2.html">Общие коды для The Sims 2</a></li>
+								<li><a href="/stati/obzory/obzor_sims3/450-kvesty-i-proxozhdenie-grobnic-v-sims-3-mir-priklyuchenij.html">Квесты и прохождение гробниц в «Симс 3 Мир приключений»</a></li>
+								<li><a href="/stati/code/12-kod-razrabotchika-dlya-the-sims-3.html">Код разработчика для The Sims 3</a></li>
+								<li><a href="/stati/code/11-obshhie-kody-dlya-the-sims-3.html">Общие коды для The Sims 3</a></li>
+								<li><a href="/stati/code/9-kod-razrabotchika-dlya-the-sims-2.html">Код разработчика для The Sims 2</a></li>
+								<li><a href="/stati/obzory/obzor_sims3/250-smert-i-prizraki-v-the-sims-3.html">Смерть, призраки и воскрешение в The Sims 3</a></li>
+								<li><a href="/stati/obzory/obzor_sims3/201-rabota-karera-professii-i-zarabotok-v-the-sims-3.html">Работа, карьера, профессии и заработок в The Sims 3</a></li>
+								<li><a href="/stati/obzory/obzor_sims3/719-vuxu-i-seks-v-sims-3.html">Вуху в Симс 3 и аддонах</a></li>
+							</ul>
+							-->
+						</div>
+
+						<div class="footer_list">
+							<IDXSKIP><p>Информация:</p></IDXSKIP>
+							<ul>
+								<!-- <li><a href="/banner.html">Наша ссылка на вашем сайте</a></li> -->
+								<IDXSKIP><li><a href="/pomosh_sajtu.html">Материальная помощь сайту</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="https://docs.google.com/spreadsheet/viewform?formkey=dDZPVHc2TzZWYVhJNmtmMDhwVnFOV3c6MQ">Анкета пользователя</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="/forum/sendmessage.php">Обратная связь</a></li></IDXSKIP>
+								<IDXSKIP><li><a href="/about.html">О нас</a></li></IDXSKIP>
+							</ul>
+						</div>
+
+						<noindex>
+							<div id="counter">
+								<!--LiveInternet counter-->
+								<script>
+								document.write("<a href='http://www.liveinternet.ru/click' "+"target=_blank><img src='//counter.yadro.ru/hit?t18.8;r"+escape(document.referrer)+((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";"+Math.random()+"' alt='' title='LiveInternet: показано число просмотров за 24"+" часа, посетителей за 24 часа и за сегодня' "+"border='0' width='88' height='31'><\/a>");
+								</script>
+								<!-- End of LiveInternet-->
+							</div>
+						</noindex>
+
+						<div style="clear:both;"></div>
+
+					</div>
+				</div>
+			</div>
+			</div>
+			
+		</div>
+
+		<div class="glass_bottom">
+			<div class="glass_br"></div>
+			<div class="glass_bl"></div>
+		</div>
+		<p class="footer_info">
+			<IDXSKIP>Запрещены копирование и публикация материалов сайта на другие ресурсы <br />
+			без письменного разрешения администрации сайта <br />
+			и прямой активной ссылки на darasims.com <br /></IDXSKIP><br />
+
+			<IDXSKIP>При сотрудничестве с Electronic Arts Inc.
+			<br /></IDXSKIP><br />
+			<IMG SRC="http://darasims.com/templates/Violet/images/ea_logo.png" width="55px" height="55px" /></a>
+			<br /><br />
+			<IDXSKIP>(2010-2017)	
+
+	</IDXSKIP></div>
+
+<!-- Page Up -->
+<IDXSKIP><div id="scroller" class="b-top" style="display: none;"><span class="b-top-but">наверх</span></div></IDXSKIP>
+<!-- End Page Up -->
+
+</body>
+</html>
+<!-- DataLife Engine Copyright SoftNews Media Group (http://dle-news.ru) -->
+

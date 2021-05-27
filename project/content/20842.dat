@@ -1,0 +1,1044 @@
+pozdravil.org/?post=459
+<html>
+    <head>
+	<title>Сайт творческого объединения 'Счастье'</title>
+	<noscript><meta http-equiv='refresh' content='0; url=badbrowser.php'> </noscript>
+	<link href="css/askanswer_style.css" rel="stylesheet" type="text/css">
+	<link href="css/lightbox.css" rel="stylesheet" />
+	<link href="css/jquery.cleditor.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+	<script type="text/javascript" src='js/fv.js'></script>
+	<script src="../js/lightbox.js" type='text/javascript'></script>
+	<script type="text/javascript">
+            $(function() {
+                $('#linkBeginUploadImage').on('click', onSubmitImageAddClick);
+		$('#linkCancelUploadedImg').on('click', doCancelImageUpload);
+		$('#do_logout_link').on('click', performLogout);
+		$('#goto_admin_panel').on('click', function(e){
+		    e.preventDefault();
+		    document.location = "http://" + document.domain + "/admin";
+		});
+		
+		// if image is already attached
+                if($('#h_imagefilename').val() != ''){
+		    $('#img_add_tr, #img_add_tr_form').hide();
+		    $('#img_add_tr_done').show();
+                }
+		
+		var btn = $("#process_login_btn");
+		if(btn.length > 0){
+		    btn.on('click', performLogin);
+		}
+            });
+	</script>
+	<script>
+	    
+	</script>
+    </head>
+    <body bgproperties="fixed" bgcolor="#ffffff">
+	<IDXSKIP><div class='page_header'>
+	    <div id='login_form' >
+			    <table width='180px' border='0' cellpadding='0' cellspacing='0'>
+		<tr>
+		    <td style='font-size: 9pt' align='right'>Имя:</td>
+		    <td style='font-size: 9pt' align='right'><input id='login' type='text' value='' style='font-size: 9pt; width: 120px;' /></td>
+		</tr>
+		<tr>
+		    <td style='font-size: 9pt' align='right'>Пароль:</td>
+		    <td style='font-size: 9pt' align='right'><input id='password' type='password' value='' style='font-size: 9pt;  width: 120px;' /></td>
+		</tr>
+		<tr >
+		    <td style='font-size: 9pt' colspan='2' align='right'><input style='font-size: 9pt' id='process_login_btn' type='button' value='Вход' style='width: 50px;' /></td>
+		</tr>
+	    </table>
+    	    </div>
+	</div></IDXSKIP>
+            <IDXSKIP><table style='margin-bottom: 20px;' border='0' width='100%'>
+	<tr>
+	    <td width='160'><a href='http://pozdravil.org'><img src='../i/blog_h.jpg'/></a></td>
+	    <td width='160'><a href='http://pozdravil.org/gallery'><img src='../i/photo_h.jpg'/></a></td>
+	    <!--<td width='170'><a href='http://pozdravil.org/art'><img src='../i/art_h.jpg'/></a></td>-->
+	    <td>&nbsp;</td>
+	</tr>
+    </table></IDXSKIP>
+    	<table width='100%' border='0'>
+	    <tr>
+		<td style='vertical-align: top;'>
+		    
+<input id='post_id' type='hidden' value='459' />
+<div style='margin-bottom: 10px; padding: 10px;'>
+    <div style='font-style: italic; font-size: 1em; margin-bottom: 3px;'>Текст: derGriza&nbsp;&nbsp;&nbsp;17.12.2015</div>
+	<div style='border-radius: 7px; padding: 10px; border: 2px solid #ae4043;'>
+	    <div style='padding-bottom: 15px; color: #ae4043; font-weight: bold;'>Ёлочка</div>
+	    <div style='padding-bottom: 10px;'> 				<a href='image_save/full/4ff2cf9fc3b8df16fb43f6ea4fab2989.jpg' rel='lightbox'>
+		    <img style='border-radius:10px; margin-top: 20px; width: 500px; height: 500px;' src='image_save/full/4ff2cf9fc3b8df16fb43f6ea4fab2989.jpg' title="Нажмите для увеличения"/>
+		</a>
+			    </div>
+	</div>
+</div>
+<IDXSKIP><div style='width: 950px; padding-left: 15px; padding-right: 15px; padding-top: 10px;'>
+    <div style='font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: #ae4043'>Комментарии:</div>
+    <div style='float: left;'>
+	<textarea id='comment_text' rows="5" cols="50" /></textarea>
+    </div>
+    <div style='float: right; width: 400px;'>
+	<table style='width: 390px; color: #ae4043' >
+	    <tr><td width='50px;'>Имя:</td><td align='right'><input id='new_author' value='' type='text' style='width: 320px;border: 1px solid #ae4043'/></td></tr>
+	    <tr><td>Почта:</td><td align='right'><input id='new_mail' type='text' style='width: 320px;border: 1px solid #ae4043'/></td></tr>
+	    <tr><td>Код:</td><td align='right'><input id='new_capcha' type='text' style='width: 320px;border: 1px solid #ae4043'/></td></tr>
+	    <tr><td>&nbsp;</td>
+		<td>
+		    <img id='capcha_image' src='../image.php?s=postcomment' title='Защитный КОД' style='float: left; margin-top: 10px' />
+		    <input id='add_comment_btn' type='button' style='float: right; cursor: pointer; border: 1px solid #ae4043; height: 30px; background-color: #ae4043; color: #FFF; font-weight: bold; font-style: italic; margin-top: 10px' value='Добавить'/>
+		</td>
+	    </tr>
+	</table>
+	
+    </div>
+    
+    <div style='clear:both;'></div>
+</div></IDXSKIP>
+<a name='comments'></a>
+<div id='photo_comments_collection' style='width: 950px; padding-left: 15px; padding-right: 15px; margin-top: 50px;'>
+    		<div class='photo_comment_div' cid='6025'>
+		    <div class='photo_comment_title'>
+						    Фрау (25.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Завидую. )</span><span style="font-size: 10pt;">"(с) безусловно приятное достижение, но, во первых, не твое, так задумано природой, во-вторых, ему предшествует 3-4 года очень кропотливой, часто рутинной работы, с отсутствием чувства личного пространства, с психологическими перестройками, с нервами на пределах возможностей, постоянной нехваткой времени (совмещать воспитание ребенка, заботу о нем и ранний выход на работу ни фига не просто и вдвойне обиднее, что несмотря на весомую жертву, карьера стоит на месте, хотя вроде стараешься и из кожи вон лезешь, но уж лучше б тогда оставался в декрете, полезнее, как ни крути. извините, лирика). вообщем если организовать правильно, то не так уж и тяжело, если честно, а если организовано все через жопу и перманентная усталость не покидает, то конечно сложно. все как в жизни))))</span></div>
+		</div>
+	    		<div class='photo_comment_div' cid='6021'>
+		    <div class='photo_comment_title'>
+						    Раиса (25.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"не только работать умеете, но и зарабатывать" (с)</span><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Не умею &nbsp;ни того, ни другого.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Первое делаю на силе воли, если бы получалось второе - была бы счастлива.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Вернее не так - если бы получилось иметь бабло, не зарабатывая его был бы идеальный вариант.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Например,вполне устроил бы вот <a href="http://vseloterei.com/vazhnoe-o-lotereyakh/istoriya-loterej/samye-krupnye-vyigryshi-v-lotereyu.html">этот</a> способ.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"сын сейчас находится в таком возрасте, что общаться и обучаться (это самое главное) с ним одно удовольствие" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Завидую. )</span></div><div><img src="http://lotus-design.ucoz.ru/_ph/20/2/970703361.jpg" alt="image" /></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='6011'>
+		    <div class='photo_comment_title'>
+						    Фрау (24.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>близнецысамыйпоганыйзнак и какжетебебеднаядевочканеповезло. ))
+Всё зашибись, если бы не один забавный нюанс - и бабуля, и мама - близнецы. ))) (с) забавно) у меня с близнецами полный несовпадос, как и с девами. мама - дева, первая свекровь - близнец, вторая - стрелец. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='6010'>
+		    <div class='photo_comment_title'>
+						    Фрау (24.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Мне сны почти не снятся, а если и случаются, то какая-то феерическая х**та, связанная с работами - с кем-то ругаюсь, не успеваю сдать бумажки и пр. говно... ((( (с) у меня так же, но Вы хоть не только работать умеете, но и зарабатывать, а я пока только первое. снов, как правило, видеть не успеваю, то падаю замертво и вдруг обнаруживаю, что пора вставать, то на нервах мучаюсь бессоницами и никак не могу уснуть. сны если и бывают, то связаны с работой, то меня кто то пытается подставить, то падаю, то повесить большую сумму денег, то от кого то убегаю по ходу дела прихватывая с собой каких то левых детей, то я на кого то ору, то на меня орут и какая то нескончаемая круговерть вот именно той самой х**ты. у меня же сейчас мини-отпуск, сижу на больничном с сыном. сегодня правда выписали, но недельные каникулы не прошли даром: выспались, при том что читала с 23-00 до 3-00 ежесуточно, но и вставали в 10-00, организовали здоровое питание, много занимались по школьной программе и вне ее, делали поделки на елку, учили песни по ходу творчества, сегодня елку будем украшать. сын сейчас находится в таком возрасте, что общаться  и обучаться (это самое главное) с ним одно удовольствие. для полного счастье не хватает только посещений фитнеса, каких нибудь культурных мероприятий. а так все хорошо, организмы набрались сил, отдохнули и начали смотреть нормальные сны) </div>
+		</div>
+	    		<div class='photo_comment_div' cid='6009'>
+		    <div class='photo_comment_title'>
+						    Раиса (24.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"вспомнила!" (с)</span><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Везыка! ))</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Мне сны почти не снятся, а если и случаются, то какая-то феерическая х**та, связанная с работами - с кем-то ругаюсь, не успеваю сдать бумажки и пр. говно... (((</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"дорогой Estmar и кстати не менее дорогой ДерГриша тоже." (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Да, естесственно, и они тоже! ))))</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Чё-то как-то посчитала - немыслимое количество дяденек-стрельцов рядом, аномальное. :))</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ещё про гороскопы вспомнила.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Один из шефов у меня - близнец (другой - стрелец ))) ).</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Со стрельцом - тыщу лет работаю, а вот вторая работа и худрук-близнец относительно недавно появились.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Первый же вопрос у бабули, после того как стала на второй работе работать - "Кто твой новый начальник по гороскопу?"</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Сказала.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">В ответ получила вагон сочувствия и эмоций на тему - близнецысамыйпоганыйзнак и какжетебебеднаядевочканеповезло. ))</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Всё зашибись, если бы не один забавный нюанс - и бабуля, и мама - близнецы. )))</span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='6007'>
+		    <div class='photo_comment_title'>
+						    Фрау (24.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>мужчин-стрельцов(с) :)))) дорогой Estmar и кстати не менее дорогой ДерГриша тоже. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='6006'>
+		    <div class='photo_comment_title'>
+						    Фрау (24.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Близкие, зная эту мою "особенность" ржут и стебуться, держа пари на какой минуте просмотра скажу: "Как же хочется в Париж, Багдад, Брюссель, Акапульку" и пр. (нужное подчеркнуть) (с) вспомнила! сын спросил меня "что тебе снилось?", а я не могу вспомнить, а вот теперь, читая Ваши строки, и хорошо явно представляя как смотрю любые передачи про путешествия и хочу, хочу туда, добралась в памяти до путешествий Кусто и вспомнила, плавала с аквалангом в кристально чистом неизученном пока еще недавно образовавшемся в жерле гигантского потухшего вулкана озере. ну, точно же. а если б не прочитала Вас, так бы и не вспомнила. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='6003'>
+		    <div class='photo_comment_title'>
+						    Раиса (24.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"описание знака" (с)</span><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Описание знака - те же яйца )), 50 на 50%.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Что-то случайно совпадает, канеш, да и как иначе -теорию вероятности никто не отменял. )))</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"почему Вы мне так нравитесь" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Приятно, взаимно. :)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">В чём-то мы очень похожи. )</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"меня патологически тянет" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Для себя не могу вывести никакой астрологической зависимости ни в какой из сфер. )</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Пожалуй только концентрация неординарных и незаурядных мужчин-стрельцов вокруг чуть выше среднего. ;)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Да, ещё когда-то бабуля, в силу возраста почитывающая иногда гороскопы и периодически делящаяся полученной бесценной инфой ;)) как-то вывела (а может где-то вычитала) такой постулат - если в семье есть один скорпион, рано или поздно появится ещё один или несколько.))</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Антинаучно, но - правда, опрашивала многих коллег по знаку. ))</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Хотя может это всех знаков касается. )))</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"поняла, что хочу в Стамбул" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">У меня патология ещё более ярко выражена. ))))</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Когда смотрю любой, например, фильм, снятый в любой стране появляется, острое, непреодолимое желание попасть в эту страну. ))</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Близкие, зная эту мою "особенность" ржут и стебуться, держа пари на какой минуте просмотра скажу: "Как же хочется в Париж, Багдад, Брюссель, Акапульку" и пр. (нужное подчеркнуть). ))</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><br /></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"плохо, когда не можешь удовлетворить" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Тупо жду, беспросветно воркая.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Что-то сбывается само, за 99% - плачУ и тоже сбывается.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Не сразу - Венгрия, к примеру, со школы в виш-листе жила. )</span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5999'>
+		    <div class='photo_comment_title'>
+						    Фрау (23.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"Стамбул"(с) после 2 днейпроведенных в Турции, поняла, что хочу в Стамбул и только туда. какие бы финансовые возможности меня туда отпустили? к черту все ол-инклюзивы, услужливый персонал, бассейн вместе с немцами, пляж и море, хочу в Стамбул орал надрываясь внутренний голос. плохо, когда не можешь удовлетворить своих горячих желаний и мечт и не знаешь как достичь их, это еще хуже, огонь (цель) жизни пропадает. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5998'>
+		    <div class='photo_comment_title'>
+						    Фрау (23.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>скорпиона (с) вот значит одна из причин почему Вы мне так нравитесь. меня патологически тянет к козерогам и скорпионам, все мои близкие друзья, приятные знакомые (те, с кем комфортно разговаривать, проводить время, работать), возлюбленные были именно этих двух знаков. раки и рыбы - родные души/самые близкие друзья, никакого притяжения, но всегда взаимопонимание, что называется без слов. водолей, дева, близнецы (преимущественно женщины)  - это всегда конфликт, как правило, холодный, местами переходящий в открытые стычки. все остальные знаки - абсолютно нейтральны, тени, они меня не колышат никак эмоционально, а я в них ровным счетом ничего не бужу. это я не начиталась гороскопов, это жизненные наблюдения. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5997'>
+		    <div class='photo_comment_title'>
+						    Фрау (23.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"Попадаемость" как и в любых "прогнозах" - 50/50(с) в данно случае рассматривала не прогноз, ими мало интересуюсь, а описание знака, со мной 109% попадание. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5996'>
+		    <div class='photo_comment_title'>
+						    Раиса (23.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana;"><span style="font-size: 10pt;">"</span></span><a href="http://www.rbc.ru/business/22/12/2015/5671694c9a79477d16f68af5" style="font-family: Arial; font-size: 14.6667px; color: rgb(174, 64, 67); padding: 5px; cursor: pointer; font-weight: bold; text-decoration: none; background-color: rgb(255, 255, 255);">Не ссыте Россияне</a><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">&nbsp;будет всё чики-пуки!" (с)" (с)</span><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><span style="text-decoration: line-through;">Голимый пиздёж</span>&nbsp;довольно лукавая статья.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Друзья и близкие трудятся в нефтянке - всё совсем не так радужно, увы.</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"гороскопы врут всегда" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Чё это врут?</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Попадаемость" как и в любых "прогнозах" - 50/50, либо будет либо нет. )</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ничем не хуже и не лучше любой другой такого рода "аналитики". ))</span></span></div><IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"гороскоп путешественника :)))" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">У меня - скорпиона и у моих близких - стрельцов по больше части )), стабильный результат, чётко попадающий в статистику.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Именно 50 на 50.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Китай и Исландия - в вишлисте, остальное - мимо. )</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">У стрельцов совпадений гораздо меньше (зациклены на лакшери-отелях и мишленовских едальнях, Бразилия и,тем более США - не манят ни разу, но от Индии, да - внезапно в бешеном восторге )) ), но если их результат с вашим, Фрау, сложить, то на те же "либо будет либо нет" - легко выходим. ))))</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Амстердам, Стамбул или Вена" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">В отношении Стамбула мы с вами "коллеги" ((.</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">В Турляндии не менее 2-х десятков раз бывала, но вот до Стамбула так и не добралась пока. (</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Сегодня в планах - <a href="http://phantom-musical.ru/?affiliate=ADH&amp;xtor=AL-303030406&amp;cn_info=34c51c38bde858f55cbaaacb310859d9">театр</a>. )</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5995'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>к тому же почти побывала в Стамбуле в 2015 году, хахаха :)))) извините, самоирония прет)</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5994'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>удивительно, потому что гороскопы врут всегда, но тут попали в сердцевину яблочка:
+
+Особенность Рыб в том, что в любом месте они способны чувствовать себя замечательно. Но им всегда необходим новый эмоциональный и интеллектуальный опыт. Продолжительному пляжному отдыху они предпочтут походы по музеям и осмотр архитектурных достопримечательностей.
+
+К услугам многогранных Рыб целый мир — например, Амстердам, Стамбул или Вена, способные удовлетворить интеллектуальные и культурные запросы этого знака. В поисках нового духовного опыта можете заняться йогой на севере Индии, в Ришикеше, или заглянуть внутрь себя на курсах випассаны в Европе, Азии или Подмосковье.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5993'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>гороскоп путешественника :))) http://www.skyscanner.ru/news/goroskop-puteshestvii-na-2015-god?associateid=SOC_VKO_00349_00001&amp;utm_source=vkontakte&amp;utm_medium=social+paid&amp;utm_campaign=ru-article&amp;utm_content=ru-sa-pd-horoscope-december2015</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5992'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Искренне сочувствую (с) совершенно нечему, это данность, с которой надо жить и с последствиями которой следует бороться, в себе естественно. ни за что не хотела бы быть похожей ни на одного из родителей, хотя отец наделен многими талантами, которыми в силу отсутствия амбиций и присутствия лени так и не воспользовался толком, очень слабый характер. на бабушку может отчасти хотела бы походить силой даже не столько характера, сколько  какого то магического влияния на окружающих хотелось бы быть похожей и красотой, уж чего у нее было не отнять, очень красивая) не смотря на необразованность, стержень в ней был солидный.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5990'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Думаю, что дело не в качестве произведения, а в неподготовленности восприятия.
+Умение увидеть, понять и принять даже общепризнанно гениальные вещи - не врождённое, а даётся бэкграундом, ИМХО.(с) полностью согласна</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5989'>
+		    <div class='photo_comment_title'>
+						    Estmar (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><a href="http://www.rbc.ru/business/22/12/2015/5671694c9a79477d16f68af5">Не ссыте Россияне</a> будет всё чики-пуки! <a href="http://lenta.ru/articles/2015/12/22/purim/">Ну может и не у всех </a>:))<br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5988'>
+		    <div class='photo_comment_title'>
+						    Раиса (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana;"><span style="font-size: 10pt;">Рано радовалась тому, что удалось избежать вчера "синдрома понедельника" - дня, &nbsp;которого как в песне поют "взять бы и отменить".</span></span><div style="font-family: Arial, Verdana; font-size: 10pt;">"Понедельником" накрыло сегодня... ((</div><div style="font-family: Arial, Verdana; font-size: 10pt;"><br /></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"творчество уж очень идеалистическое и прекрасное" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Фрау, обязательно посмотрите "Новейший завет" &nbsp;- понравится, гарантирую. )</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Даже такому далёкому от романтики цинику, как я, и то понравилось. ))</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"дома не находишь отклика, а только выкрики и непонимание." (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Искренне сочувствую.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Бывало всякое, в основном по моей вине - росла жутко вредной, непокорной и часто абсолютно неуправляемой. (</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Родители воспринимали стойко, с мудростью и терпением.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Кричали и не понимали, но любили - всегда и это невозможно было не чувствовать.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Люблю их больше жизни - и папу, которого нет и маму, конечно.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Да, мне повезло, очень повезло - лучших родителей просто не бывает на свете.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Хочу быть хоть немного на них похожей.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Пафосно, м.б., но - правда.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"интернет кстати во все выручает, я по нему даже суп варить училась ))" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Аналогично.)))</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"а какие то, казалось бы качественные и тщательно советуемые половиной человечества к прочтению, нет." (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Такое тоже бывает (я про себя).</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Думаю, что дело не в качестве произведения, а в неподготовленности восприятия.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Умение увидеть, понять и принять даже общепризнанно гениальные вещи - не врождённое, а даётся бэкграундом, ИМХО.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Отрубаюсь... ((</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><img src="http://viktor-falko.ru/wp-content/uploads/2014/04/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-5.jpg" alt="image" /></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5987'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"в одних штанах"(с) экономный дед</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5986'>
+		    <div class='photo_comment_title'>
+						    Estmar (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>комикс "разбудите меня в стране счастья" (c)<br />--<br />Дед проспал всё.<br />Посмотрел на маяк и проспал дорогу обратно.<br />В итоге его табличку громко прочитал девочка, обрадовалась поездке в вагоне.<br />Дед проснулся и вышел не пойми где... Альцгеймер рулит.<br />Деда жалко, в одних штанах он прожил всю жизнь.<br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5985'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>комикс "разбудите меня в стране счастья" очень премило и согревающе, но слишком утопично, я в такую хрень давно не верю, но творчество уж очень идеалистическое и прекрасное http://www.adme.ru/tvorchestvo-hudozhniki/samyj-dobryj-komiks-o-tom-chto-my-ne-tam-ischem-svoe-schaste-1138710/?vksrc=vksrc1138710</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5984'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>если человек становится родителем, то он должен понимать насколько большую ответственность он на себя берет, он не просто продляет человеческий род, его задача первостепенная максимально помочь взрастить в новом человеке здоровую личность, а не покалечить ее. вот у вас школа злая, ломающая, ну вот это не худший вариант, поверьте. гораздо хуже, когдадома не находишь отклика, а только выкрики и непонимание. школа раем покажется. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5983'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>ну пусть отсутствуют образование, пусть деньги отсутствуют, это можно пережить, но допускать разрушающий по всем фронтам эмоциональный фон, деструктивное отношение к себе, к жизни. эту хрень потом сдерживать офигенно непросто я вам скажу, спасибо интернету, очень выручает. интернет кстати во все выручает, я по нему даже суп варить училась ))</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5982'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>а при чем тут родители(с) ну как причем? а на кого вы в детстве смотрите, у кого учитесь"как жить", чей пример у вас перед глазами, кому вы доверяете и ждете полной, без халявы, поддержки? я очень надеюсь, что смогу своему ребенку дать это все вполной мере и быть ему примером, но ястолько всего не знаю, а могла бы знать, если б мои родители в самое время хотя бы воспользовались буфером, что дала им советская власть, открыв дорогу в образование для крестьян и пролетариев. но все предпочли деградировать. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5981'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Если лезу в душу - простите и смело шлите ... далеко.
+Вы родились в семье потомственных алкашей?(с) я родилась в очень неблагополучной семье и выросла в очень неблагополучной обстановке, но закончила благополучную школу, что собственно и поспособствовало, явилось первой предпосылкой для моего выхода из неблагополучных условий. грубо говоря, кроме жизни и минимальных материальных благ до 17 лет я не получила ничего, даже хуже чем ничего, ничего это 0;0, с удовольствием помогу материально и частично физически, но не эмоционально, говорить нам не о чем. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5980'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Оставив родителей? (с) маменька любит говаривать "Запомни, Катя, ласковый теленок двух маток сосет". Такой теленок у них есть, мой брат, а со мной маменька в вечных контрах и мы с ней видимся дай бог раз в год. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5979'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Жаль, что не делитесь впечатлениями(с) чукча - не писатель, когда событие или мероприятие по настоящему глубоко цепляют, делюсь много и эмоционально. каждый поход на выставку ярких чувств и эмоций не вызывает, проходит как то мимо. это же как книги, какие то восхищают и остаются в памяти, а какие то, казалось бы качественные и тщательно советуемые половиной человечества к прочтению, нет.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5978'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Таких знакомых вокруг - тьма.(с) населенные пункты несколько разные и круги общения естественно тоже</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5977'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Фрау, если не в лом - дайте ссыль для тех, кто вне соцсетей - не видно ничего.(с) не в лом, но в данном случае не могу, такой ссылки нет: семейное фото двух снежинцев в возрасте и их дочери с маленьким внуком.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5976'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Остальные - "хватаются за чо есть, лишь бы деньги платили" (с). мой вариант, образование безусловно помогает, как вспомогательный ресурс, но не основной.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5975'>
+		    <div class='photo_comment_title'>
+						    Фрау (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Школу ненавижу! Всех ломала и мешала с говном и в говно.(с) Вам просто не с чем было сравнить, вероятно. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5974'>
+		    <div class='photo_comment_title'>
+						    Раиса (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><a href="https://www.facebook.com/permalink.php?story_fbid=972074296190984&amp;id=100001652672805&amp;fref=nf&amp;pnref=story">Лечебное средство.</a> )))</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5973'>
+		    <div class='photo_comment_title'>
+						    Раиса (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Вчера позвонила подруга - зовёт на выставку Серова, на которой уже весь город побывал и даже очереди охрененные, как говорят, закончились.<div>Сказала ей, что конец года - завалы работы всюду.</div><div>Очень хочу, но не могу - дел по горло.</div><div>Она в ответ прислала вот что -&nbsp;</div><IDXSKIP><div><br /></div></IDXSKIP><div><img src="https://scontent-frt3-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/10294281_787987464660506_2394569839116419623_n.jpg?oh=c2cccbb633746314ab9a84d123ca903f&amp;oe=5714D504" alt="image" /></div><IDXSKIP><div><br /></div></IDXSKIP><div>Видимо, придётся идти. ))))</div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5972'>
+		    <div class='photo_comment_title'>
+						    Раиса (22.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Специальность даёт метод решения рабочих вопросов.</span><br style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);" /><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Подход к проблеме чтобы получить результат." (с)</span><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Именно.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Из моей немаленькой группы по специальности работают двое.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Остальные - "</span><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">хватаются за чо есть, лишь бы деньги платили" (с).</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Досмотрела второй сезон "Настоящего детектива". )</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Первый понравился больше, но не пожалела, что второй не бросила посередине.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Очень качественный сериал - оба сезона.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Причём они настолько разные, что поражаешься тому, что сценарист - один и тот же.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Захватывающий сюжет, великолепная игра актёров, классные съёмки.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Всё безупречно - от заставок до последних кадров.</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Крайне редко смотрю сериалы, тут - не пожалела ни капельки.</span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5971'>
+		    <div class='photo_comment_title'>
+						    Estmar (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>потому что по специальности работы нет и быть не может.&nbsp; (с)<br />--<br />Не факт.<br />Специальность даёт метод решения рабочих вопросов.<br />Подход к проблеме чтобы получить результат.<br />Желательно с минимальными головняками.<br />Есть пример тётеньки-математика ставшая крутыми экономистом.<br /><br /><br /> школа была самым интересным (с)<br />--<br />Школу ненавижу! Всех ломала и мешала с говном и в говно.<br /><br /><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">в отличие от тех у кого его нет - вот эти-то как раз рвут всё и всех, чтобы выжить. (с)<br />--<br />Главное не брезговать ни чем. Есть примеры когда идут к цели по трупам.<br /></span><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5970'>
+		    <div class='photo_comment_title'>
+						    Estmar (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Классная погода - теплынь и красота. :) (с)<br />--<br />По телику это единственная добрая весть, которой хотят закрыть резкое падение нефти :))<br />Доллар точно будет по 80рэ в новом году :))<br />Еще <a href="http://www.rbc.ru/economics/21/12/2015/5677d9da9a7947e2066b6094">прочел новые "экономические решения"...</a><br />То есть сократят 10% чтобы из з.п. отдать тем кто на пне.<br />Не покупать телефончики дороже чем за 15 т руб и авто за 2.5 мил руб. :))<br />Ахуеть, так это сразу экономика сэррогирует на подъём.<br /><br /><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">А потом жизнь сама правит и направляет. (с)<br />--<br />Она изначально так делает.&nbsp; <br />Только в начале нам не так больно.<br />Совершаем дохера глупостей.<br />Когда жир на жопе кончается и судьба пинает под костлявую сраку кованным сапогом, тогда до мозга доходит.<br />А если есть тылы и подушки, так никогда и не не дойдет до мозгов волшебный пендаль.<br />Так и будут глупости до седых лобков :))<br /></span></span></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5969'>
+		    <div class='photo_comment_title'>
+						    Раиса (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana;"><span style="font-size: 10pt;">Адский день.</span></span><div style="font-family: Arial, Verdana; font-size: 10pt;">Одно слово - понедельник.</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Но!&nbsp;</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Настроение - офигенное! )</div><div style="font-family: Arial, Verdana; font-size: 10pt;">На градуснике днём было ... + 11! ))</div><div style="font-family: Arial, Verdana; font-size: 10pt;">+11!!! )))</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Весь снег, вся грязь и коричневая жижа - растаяли! )</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Лужи, канеш, есть - ну и пусть!</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Классная погода - теплынь и красота. :)</div><div style="font-family: Arial, Verdana; font-size: 10pt;"><br /></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">"господи, какие чудесные ребята!" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Фрау, если не в лом - дайте ссыль для тех, кто вне соцсетей - не видно ничего.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"сама знакома с такими, коих один." (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Таких знакомых вокруг - тьма.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"что бесполезно и никак не повлияет на твою жизнь, не принесет дивиденды"(с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Никогда не знаешь и фиг просчитаешь, что будет полезно, а что принесёт дивиденды.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><br /></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Назаканчивала милльён идиотских, бессмысленных и бесполезных казалось бы курсов.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Многие впоследствии оказались вполне востребованными.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial, Verdana; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"После практикуют ещё встречи с теми, с кем мотал срок :)" с)</span></div><div><span style="font-family: Arial, Verdana; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Встречаюсь с единицами, остальные - неинтересны и нафиг не сдались.</span></div><div><span style="font-family: Arial, Verdana; font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial, Verdana; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"Им повезло. Берегите их." (с)</span></div><div><span style="font-family: Arial, Verdana; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Берегу.</span></div><div><span style="font-family: Arial, Verdana; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Терплю когда выносят остатки мозга, ибо знаю - ЛЮБЯТ.</span></div><div><span style="font-family: Arial, Verdana; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Бескорыстно и несмотря ни на что.&nbsp;</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><br /></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">"Вижу как те кто постарался вытолкнуть на большую землю детей, остаются&nbsp; в полной изоляции." (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Если бы не переезд всем "кланом", сама бы из города не уехала.</span></div><div style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Смысл есть только если переезжают все - и родители, и дети.</span></div><div style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Иначе - вечная тоска и рефлексия.</span></div><div style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">В городе осталась моя тётя - умная, активная, остроумная, добрая и клёвая.</span></div><div style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Жутко скучаю, несмотря на то, что два-три раза в год видимся.</span></div><div style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"судя по моей семейке" (с)</span></div><div style="font-family: Arial, Verdana;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Если лезу в душу - простите и смело шлите ... далеко.</span></div><div style="font-family: Arial, Verdana;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Вы родились в семье потомственных алкашей?</span></div><div style="font-family: Arial, Verdana;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"мне понравилась выставка" (с)</span></div><div style="font-family: Arial, Verdana;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Жаль,что никогда об этом не пишите и ни разу не делились впечатлениями.</span></div><div style="font-family: Arial, Verdana;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"они живут за счет детей" (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Абсолютно искренне готова отказаться от всех поездок, да вообще от всего - только бы жили.</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"мы должны уехать" (c)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Оставив родителей?</span></div><IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"а ничо особо не изменилось" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Тогда при чём тут родители?</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"в 17 человек определяется с профессией и может выбрать" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">В 17 у многих, (и у меня, увы) присутствует оголтелый нигилизм.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Редкие, по-настоящему умные, прислушиваются к советам старших.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Я, естесственно, не из их числа - вуз выбирала кудашли"друзья", кудабылоближеехать и по другим таким же идиотским признакам.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Никого не слушала, делала всё наперекор.</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Близкие - безмерно и беззаветно любили и не давили, хотя могли бы.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Сейчас скажу крамольную вещь - думаю, что в/о нужно и вообще-то пофиг - какое.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">В 16-17 лет развивает мозг, даёт базу на которой потом строишь, что хочешь и что можешь сам.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Заканчиваешь миллионы курсов - платных и absolutely free, думаешьчтонужных и кажущихсясовершеннобесполезными.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">А потом жизнь сама правит и направляет.</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div style="font-family: Arial, Verdana;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">&nbsp;</span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5968'>
+		    <div class='photo_comment_title'>
+						    Фрау (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px;">https://vk.com/feed?z=photo-91333837_392419486%2Ffeed_suggested</span></span><div><span style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px;"><br /></span></span></div><div><span style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px;">господи, какие чудесные ребята!</span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5967'>
+		    <div class='photo_comment_title'>
+						    Фрау (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>почему я написала 17 лет как определяющий рубеж, потому что в 17 человек определяется с профессией и может выбрать такую, когда он будет искать работу с позиции специалиста, рассматривая насколько устраивают его предлагаемые условия труда, а не с позиции хватаюсь за чо есть, лишь бы деньги платили, потому что по специальности работы нет и быть не может.&nbsp;</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5966'>
+		    <div class='photo_comment_title'>
+						    Фрау (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Сильный аргумент! )</span><div style="font-size: 10pt; background-color: rgb(255, 255, 255);"><span style="font-size: 13.3333px;">Только с ваших 17-ти полтора десятилетия прошло, с моих и того больше.</span></div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Не год и не два, даже не пять.</span>"(с)&nbsp;<div>а ничо особо не изменилось, никакой ясности и сплошной туман, в какую сторону идти совсем неизвестно.&nbsp;</div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5965'>
+		    <div class='photo_comment_title'>
+						    Фрау (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Вижу как те кто постарался вытолкнуть на большую землю детей, остаются&nbsp; в полной изоляции.</span><br style="font-size: 13.3333px;" /><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Какой то изначально путь в одиночество.</span>"(с)<div>поэтому самим уезжать тоже надо. по моему прекрасно-звездатому плану мы должны уехать из города к началу средней школы ребенка. чтобы и его выпихнуть из места, где если останется, загниет однозначно, ну если конечно фермером не станет) и самим в старости не остаться в одиночестве и если что быть рядом, чтобы помочь.</div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5964'>
+		    <div class='photo_comment_title'>
+						    Фрау (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Их "достойные пенсии", когда выходя на пенсию начинается битва за жизнь.</span>"(с)<div>у почти всех пожилых людей Вьета пенсий нет, они живут за счет детей. мы идем к тому же, как я понимаю.</div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5963'>
+		    <div class='photo_comment_title'>
+						    Фрау (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Как быть с приехавшими из ебеней и сделавшими головокружительную карьеру и родившимися с золотой ложкой во рту и успешно планомерно просирающих наследство в угоду сиюминутных развлекух?<br /></span><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Те у кого пресловутый "фундамент" - как правило вялы и расслаблены, в отличие от тех у кого его нет - вот эти-то как раз рвут всё и всех, чтобы выжить.</span>"(с)<div>думаю, это талант. сама знакома с такими, коих один. если честно, у меня создается впечатление, что они считывают идеи решения проблем и дальнейшей продуктивности<span style="font-size: 10pt;">&nbsp;откуда то из космоса. это мой главный затык, слабоумие, не могу найти ответов в голове: как решить ту или иную проблему, место где рождаются идеи тоже неизвестно. а вот ленивой назвать себя все таки не могу, при наличии понятной цели пру на всех парах.лениво делать то, что бесполезно и никак не повлияет на твою жизнь, не принесет дивиденды. есть исключения: он-лайн общение, но это все неизжитая инфантильность поднимает голову.&nbsp;</span></div><div><span style="font-size: 10pt;"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Город - сказка, город - мечта!".</span><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">&nbsp;(с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">забавное название. мне понравилась выставка<a href="https://vk.com/skolyaskin"> Сергея Коляскина</a>, посвященная Индии, но мне вообще на снежинских фотовыставках (на других не бывала) нравятся только фотографии про зарубежье: путешествия Макса Полякова по Таю, "Француз", дальние дали и горы тоже интересуют остальные фото не цепляют, ... вообщем у кого что болит.&nbsp;</span></div><div><span style="font-size: 10pt;"><br /></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5962'>
+		    <div class='photo_comment_title'>
+						    Раиса (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><p>"Та же самая. "Город - сказка, город - мечта!"." (с)</p><p>А что планируется с городскими фотовыставками?</p><p>Самой смешно, но куча снежинских подруг/родственничков/коллег спрашивают МЕНЯ! ))) когда будет выставки и стоит ли на неё идти! ))))))))</p><p>Интеллигентные с виду люди, владеющие компами и интернетами. )</p><p>Я х*ею, дорогая редакция...&nbsp;</p></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5961'>
+		    <div class='photo_comment_title'>
+						    Фрау (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Всегда считала, что школа - феерическое говно(с) не знаю, мне не с чем было сравнить. школа была самым интересным, самым захватывающим, самым лучшим, что происходило в моем детстве. хотя она ни чем не отличалась от других школ и нас регулярно всех равняли с плинтусом и напоминали какое мы дерьмо и что из нас ничего не выйдет. но, если бы не школа, то, судя по моей семейке, меня ждала либо судьба маргинала, либо судьба швеи на фабрике горизонт, регулярно поколачиваемую мужем-алкашем ; никаких следов интеллекта или кругозора, так что именно этому неоднозначному заведению я обязана получением вышки и хоть какими то амбициями в жизни, заведением семьи, интересом к искусству, умению читать и анализировать информацию, умению дружить и прочее, вообщем всему тому немногому хорошему, что во мне есть. поэтому скорее рада наличию в своей жизни этого с одной стороны церберской уравниловки и муштры, с другой единственного шанса в жизни хоть как то отлаленно напоминать человека. учителям хотя бы было дело до моей успеваемости, хотя бы когда то от вас кому то что то было нужно, потому он оказывал вам пристальное и стойкое внимание, ну и попоутно рассказывал кучу всего интересного, например, на уроках истории или литературы, биологии и пр., и ты хотя бы понимал что вообще нужно делать и куда идти. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5960'>
+		    <div class='photo_comment_title'>
+						    Estmar (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Эта выставка будет в апреле в Нязепетровске или вы про новую? (с)<br />--<br />Та же самая. "Город - сказка, город - мечта!". <br /><br /></span><br /><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Всегда считала, что школа - это феерическое говно. (с)<br />--<br />Согласен полностью.&nbsp; <br />10 лет исправительных работ.<br /></span><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">После практикуют ещё встречи с теми, с кем мотал срок :)</span><br /><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br />Мне нужны и мама, и бабуля.</span> (с)<br />--<br />Им повезло. Берегите их. <br />Я же вижу отношение всей системы к пожилым. <br />Их "достойные пенсии", когда выходя на пенсию начинается битва за жизнь.<br />В прямом смысле - за свою. <br />Вижу как те кто постарался вытолкнуть на большую землю детей, остаются&nbsp; в полной изоляции.<br />Какой то изначально путь в одиночество.<br /><br /></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5959'>
+		    <div class='photo_comment_title'>
+						    Раиса (21.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"чушь! вы не выбираете в какой семье вам родиться" (с)</span><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Дооооооо!&nbsp;</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Классическое оправдание для ленивых жоп и лузеров - "не виноватая я, оно само".</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><div style="font-size: 13.3333px;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">"ваш фундамент, определяющий будете вы ведомым или лидером." (с)</span></div><div style="font-size: 13.3333px;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Вот это как раз феерическая чушь.</span></div></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Как быть с приехавшими из ебеней и сделавшими головокружительную карьеру и родившимися с золотой ложкой во рту и успешно планомерно просирающих наследство в угоду сиюминутных развлекух?</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Те у кого пресловутый "фундамент" - как правило вялы и расслаблены, в отличие от тех у кого его нет - вот эти-то как раз рвут всё и всех, чтобы выжить.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">"а уж в 17 лет" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Сильный аргумент! )</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Только с ваших 17-ти полтора десятилетия прошло, с моих и того больше.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Не год и не два, даже не пять.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">"дело не в лени, может в слабоумии, но не в лени" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Скорее в счастливом сочетании, гармонии двух этих качеств.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"мероприятие по интересности и впечатлениям мероприятию рознь" (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Это суждение не лишено снобизма.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Интересность и впечатления в полной мере можно оценить только лично, полагаться на чужие мнения - неверно и глупо, ИМХО.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Если бы я так рассуждала, то Вьетнам, к примеру, мне не светил бы НИКОГДА, какие бы копейки он не стоил. )</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"оперативки и чувствительности не хватает, спят." (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Тут - понимаю.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Красиво написали )), моя самооценка по этому поводу грубее и безжалостней, самое мягкое, что могу про себя написать, пожалуй - ленивая жопа.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Перманентная вымотанность, хроническая усталость, бесконечные пробки, херовая погода &nbsp;и пр.отговорки - рулят. ((((</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"Хватит самобичевания :)" (с)</span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Больше не буду! ))))</span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"Живите в гармони с собой.</span><br style="font-family: Arial; font-size: 13.3333px;" /><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Что нравиться делать&nbsp; - то и делайте!" (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Не получается.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Интересы тех, кого люблю, зачастую противоположны моим.</span></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><br /></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"В старости мы никому&nbsp;</span><span style="font-family: Arial; font-size: 13.3333px; text-decoration: line-through;">нахуйвпизду</span><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">&nbsp;не нужны кроме самих себя." (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Мне нужны и мама, и бабуля.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Дальше покажем в Нязепетровске.</span><br style="font-family: Arial; font-size: 14.6667px;" /><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Время выставки апрель." (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Эта выставка будет в апреле в Нязепетровске или вы про новую?</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">"https://www.youtube.com/watch?v=UbX_DenZjuQ" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Всегда считала, что школа - это феерическое говно.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Практически любая.</span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5958'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana;"><span style="font-size: 10pt;">"</span></span><span style="font-family: Arial; font-size: 13.3333px; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; background-color: rgb(255, 255, 255);">В старости мы никому&nbsp;</span><span style="font-family: Arial; font-size: 13.3333px; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; text-decoration: line-through;">нахуйвпизду</span><span style="font-family: Arial; font-size: 13.3333px; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; background-color: rgb(255, 255, 255);">&nbsp;не нужны кроме самих себя.</span><span style="font-family: Arial, Verdana;"><span style="font-size: 10pt;">"(с)</span></span><div style="font-family: Arial, Verdana; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal;">пфф..а то раньше нужны, да человек как рождается никому на хер не нужен. в течение жизни с вас выкачают ресурс кто попадется по жизни помаленьку, заартачитесь, найдут другого с кого качать, вы не уникальны. артачиться, если хотите дать детям хоть какое то будущее и то чего сами были лишены, не получится. вырастили ребенка - свободны, выебывайтесь сколько влезет, умирать уже можно. и хоть сто завыделывайся, изображая из себя не ресурс, но вы ресурс, тот, кого рано или поздно заменит компьютер.хочешь знать правду?</div><div><span style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px;">https://www.youtube.com/watch?v=UbX_DenZjuQ</span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5957'>
+		    <div class='photo_comment_title'>
+						    Estmar (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Estmar, а до какого числа фотовыставка про Снежинск?<br />--<br />Раиса, до 19 декабря.<br />21-го музей не работает. Выставку в это время разбирают.<br />Дальше покажем в Нязепетровске.<br />Время выставки апрель.<br /><br /></span><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">..00% ленивая жопа (с)<br />--<br />Хватит самобичевания :)<br />Жизнь одна и как проживём так она и будет.<br />По большому счёту ваше пофиг как она проходит.<br />Она просто закончиться через несколько лет.<br />Живите в гармони с собой.<br />Что нравиться делать&nbsp; - то и делайте!<br />Хоть на диване валяйтесть, хоть на Мисс мира напрягайтесь :) Монописуарно!<br />В старости мы никому <span style="text-decoration: line-through;">нахуйвпизду</span> не нужны кроме самих себя.<br />А если словим слабоумие, аль альцгеймера... так всё прошлое забудем в еббеня.<br />Путешествия, книги, фильмы, секс, как звать - забудем всё :)<br />Живите ни не переживайте за проспанный, проеденный день :)<br /></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5956'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-size: 13.3333px; font-family: Arial; background-color: rgb(255, 255, 255);">И снова логика - not detected.<br /></span><span style="font-size: 13.3333px; font-family: Arial; background-color: rgb(255, 255, 255);">При чём тут город, если ленивая жопа - вы?</span>"(с)<div>мероприятие по интересности и впечатлениям мероприятию рознь, но спорить не буду, у меня сейчас действительно такой период жизни, что некоторые вещи, которые раньше воспринимались сейчас не вызывают никакого интереса, оперативки и чувствительности не хватает, спят.&nbsp;</div><IDXSKIP><div><br /></div></IDXSKIP><div>"<span style="font-size: 14.6667px; font-family: Arial; background-color: rgb(255, 255, 255);">Обстоятельства человек сам себе создаёт.</span></div><div style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><span style="font-size: 14.6667px;">Исключения - фатальные вещи, типа болезни и смерти близких.</span><span style="font-family: Arial, Verdana; font-size: 10pt;">" (с)</span></div><div style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><span style="font-family: Arial, Verdana; font-size: 10pt;">чушь! вы не выбираете в какой семье вам родиться, как минимум. это, на секундочку, ваш фундамент, определяющий будете вы ведомым или лидером. а уж в 17 лет без поддержки вообще находитесь в такой несознанке и действуете вслепую настолько, что в принципе нормальный выбор сделать - дело случая, ну так случилось, что далеко до мозгов самостоятельного гения. вы даже не выбираете с кем проводить жизнь, потому что идеальный вариант, когда человек меняет под себя обстоятельства конечно прекрасен, но как ни парадоксально обычно обстоятельства диктуют свои условия. и вы меня хоть убейте, но дело не в лени, может в слабоумии, но не в лени. есть обязательства, есть другие люди и срать им в души нельзя. и если уж ты сам не сумел быть себе хозяином, лидером, то хотя бы пожалей их, потому что провернуть ход конем, чтоб и волки сыты, и овцы целы и вывести всех с минимальным ущербом, разработать стратегию ты дебил не знаешь, а способен лишь на хаотичные конвульсии, то сиди тварь и не дергайся.&nbsp;</span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5955'>
+		    <div class='photo_comment_title'>
+						    Раиса (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-size: 10pt;">"</span><a href="http://www.interfax.ru/culture/485703" style="font-size: 14.6667px; color: rgb(174, 64, 67); padding: 5px; cursor: pointer; font-weight: bold; text-decoration: none; font-family: Arial; background-color: rgb(255, 255, 255);">Номинанты на "ОСКАР".</a><span style="font-size: 10pt;">&nbsp;" (с)</span><div style="font-size: 10pt;">Йессссссс! )))</div><div style="font-size: 10pt;">Посмотрела <a href="http://www.kinopoisk.ru/film/840470/">"Новейший завет"</a>&nbsp;- удивительное, парадоксальное, философское, неожиданное кино с потрясающей, очень уместной музыкой и филигранным ч/ю. ))</div><div style="font-size: 10pt;">Заинтересовал режиссёр, он же - соавтор сценария.</div><div style="font-size: 10pt;">Появилось желание посмотреть ещё какой-нибудь его фильм. &nbsp;</div><div style="font-size: 10pt;"><a href="http://www.kinopoisk.ru/interview/2676440/">Интересное интервью</a>&nbsp;с ним.</div><div style="font-size: 10pt;">Советую!</div><IDXSKIP><div style="font-size: 10pt;"><br /></div></IDXSKIP><div style="font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"в сраном гребанном снежинске, ненавижу, бесперспективно сдыхая от скуки" (с)</span></div><div style="font-size: 10pt;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">"весьма хаотично посещаю культурные мероприятия, никакого плана и отслеживания событий, сплошные бесконтрольные случайности" (с)</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">И снова логика - not detected.</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">При чём тут город, если ленивая жопа - вы?</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Сегодня был не худший выбор между очередной ресторацией и выставкой орхидей.</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Провела день дома - смотрела биатлон и "Новейший завет", готовила еду и ела её же, стирала, наряжала ёлку.</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Понимаю, что 100% ленивая жопа, но с другой стороны - завтра тяжелейший понедельник с двумя работами в разных концах города, пробками, дождём и пр. форс-мажорами и м.б. организм просто энергию сберегает?</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Такое типо самооправдание. )</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"во Вьетнаме просто куча и еще 33 кучи интересного" (с)</span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Верю! )</span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"от обстоятельств многое зависит" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Обстоятельства человек сам себе создаёт.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Исключения - фатальные вещи, типа болезни и смерти близких.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Estmar, а до какого числа фотовыставка про Снежинск?</span></div><IDXSKIP><div style="font-size: 10pt;"><br /></div></IDXSKIP></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5954'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">эмоциональность</span>"(с)<div>да, не отвратительное, но мешающее, как правило, в жизни качество.</div><IDXSKIP><div><br /></div></IDXSKIP><div>"<span style="font-size: 10pt; background-color: rgb(255, 255, 255);">Все остальные в лучшем случае смотрят нейтрально-сочувственно и предостерегают от возможных траблов, вы - излучаете позитив, это очень приятно и мне нужно.</span><span style="font-size: 10pt;">"(с)</span></div><div><span style="font-size: 10pt;">напрасно, во Вьетнаме просто куча и еще 33 кучи интересного, даже для бюджетного туриста. там есть на что посмотреть, там есть возможность почувствовать страну и её жителей, потому что они еще не привыкли видимо облюбовывать туристов со всех сторон и у Вас есть отличная возможность посмотреть на них настоящих, а, следовательно, очень красивых. имхо, человек по настоящему красив, когда не рисуется и не играет, не позирует. ну Вы поняли, я за непосредственность и естественность :))) Настройтесь положительно, мелкое жульничество и возможность быть обворованным на немножко денюшек - это такая мелочь, перед миром, который Вам откроется. я понимаю, не мне Вам советовать, и конечно Вьет не мог на меня не произвести какого-то феерического впечатления, но кто ищет чудес и сказки, тот найдет, в данном случае точно, поверьте. Больше ездите, больше смотрите широко открытыми глазами, больше впитывайте сердцем как губка и успех обеспечен. Вам правда понравится, если не тюленить на пляже сутками. И цены Вас порадуют, ОЧЕНЬ.</span></div><div><span style="font-size: 10pt;"><br /></span></div><div><span style="font-size: 10pt;">"</span><span style="font-size: 14.6667px; font-family: Arial; background-color: rgb(255, 255, 255);">С таким тоже нередко сталкивалась в Турции той же, Тунисе, Болгарии, Греции, Хорватии,на Кипре.</span></div><div><span style="font-size: 14.6667px; font-family: Arial; background-color: rgb(255, 255, 255);">Особенно для греков и болгар это характерно.</span><span style="font-size: 10pt;">"(с)&nbsp;</span></div><div><span style="font-size: 10pt;">у меня от турков остались неоднозначные впечатления. я вообще не имею права о них судить, потому что в силу того что мы ездили вдвоем с ребенком я турков-то не видела, только персонал отеля, в большинстве своем вытанцовывающий вокруг бюргеров за чаевые,&nbsp;</span><span style="font-size: 10pt;">продавцов в туристических магазинах, впаривающих по высоким ценам неплохое вино и сладости и гидов, которые уже просто устали от этих безграмотных русских. поэтому я собственно и изучала больше немцев, чем турков. Турцию я не видела получается, даже краешком глаза. Это ж надо в город выходить, вливаться в толпу, посещать нетуристические места, а так ... :(((</span></div><IDXSKIP><div><span style="font-size: 10pt;"><br /></span></div></IDXSKIP><div><span style="font-size: 10pt;">"</span><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Лет десять если не больше уже не меняю, да и никто, ИМХО, не меняет. )</span><span style="font-size: 10pt;">" (с)</span></div><div><span style="font-size: 10pt;">да я подозревала, что никто не меняет, меня смутил факт, что сдали сдачу, тогда как в других местах такого ни разу не происходило. сдачу взяла, должна же остаться хоть какая то денюшка страны, где побывал. не знаю, глядя на то как 70% персонала танцевало перед туристами, причем национальность неважна, только долларом тряхни, мне показалось, что это какие то неискренняя, очень ушла нация. хотя было много и приятных людей, кто...ну просто человек и улыбается просто, а не потому что попрошайка или банчила. вот не хотела обидеть, а получилось. а почему? а потому что ездила как турист-тюлень и видела только мааааленький краешек одной стороны монеты.</span></div><div><span style="font-size: 10pt;">"</span><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Цинично.</span><span style="font-size: 10pt;">"(с)</span></div><div><span style="font-size: 10pt;">почему? я серьезно встречала много женщин (особенно в снежинске), кому дом - лучшее и единственное место на земле, куда они стремятся и сад.&nbsp;</span></div><IDXSKIP><div><span style="font-size: 10pt;"><br /></span></div></IDXSKIP><div><span style="font-size: 10pt;">"</span><span style="font-size: 13.3333px; font-family: Arial; background-color: rgb(255, 255, 255);">У меня другая инфа -</span><span style="font-size: 13.3333px; font-family: Arial; background-color: rgb(255, 255, 255);">&nbsp;</span><a href="http://www.snzadm.ru/?art=10031" style="font-size: 1em; font-family: Arial; color: rgb(174, 64, 67); padding: 5px; cursor: pointer; font-weight: bold; text-decoration: none; background-color: rgb(255, 255, 255);">выставок одновременно несколько</a><span style="font-size: 13.3333px; font-family: Arial; background-color: rgb(255, 255, 255);">&nbsp;</span><span style="font-size: 13.3333px; font-family: Arial; background-color: rgb(255, 255, 255);">почти всегда и в музее, и в ДК.</span></div><div style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><span style="font-size: 13.3333px;">9-ть! только в музее, если каждую на полчаса умножить уже почти 5 часов выходит.)</span></div><div style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><span style="font-size: 13.3333px;">А ещё и в ДК, как я понимаю, &nbsp;есть, вот хотя бы - р</span><span style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; text-align: -webkit-center;">абота выставки ТО «Художник» «Зимние узоры». ( по той же ссылке).</span><span style="font-size: 10pt; font-family: Arial, Verdana;">"(с)</span></div><div style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><span style="font-size: 10pt; font-family: Arial, Verdana;">спасибо за информацию. в этом году весьма хаотично посещаю культурные мероприятия, никакого плана и отслеживания событий, сплошные бесконтрольные случайности, коих мало получается.</span></div><IDXSKIP><div><br /></div></IDXSKIP></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5953'>
+		    <div class='photo_comment_title'>
+						    Раиса (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana;"><span style="font-size: 10pt;">Фрау, искреннее спасибо!</span></span><div style="font-family: Arial, Verdana; font-size: 10pt;">Особенно за эмоциональность - ощущаю ответственность за то, что выбрала самое дешёвое, а отнюдь не самое лучшее место, остро нуждаюсь в поддержке своего выбора и вы мне здорово помогаете.</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Все остальные в лучшем случае смотрят нейтрально-сочувственно и предостерегают от возможных траблов, вы - излучаете позитив, это очень приятно и мне нужно.</div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><br /></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"есть такое, часто стремятся обмануть" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;">В активе около десятка самых разных азиатских стран, фактически везде плавала ночью, оставляя вещи на пляже.</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Друзья, путешествующие значительно больше меня, говорят, что наёбы и воровство - это всё-таки специфика именно Вьетнама, увы.</div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><br /></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"К слову сказать в Турции я не меняла доллары на лиры" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Лет десять если не больше уже не меняю, да и никто, ИМХО, не меняет. )</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"а как пытаются нагреть в Краснодарском крае" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Тут соглашусь, думаю, что наши жулики - всем жуликам жулики. ))</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Хотя вот в этом году много поездила по средней полосе России - ни с чем подобным не сталкивалась ни разу, всё было дёшево и душевно.&nbsp;</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"охранник вынесет тебе чайку, сладостей, посидите поболтаете на языке жестов, абсолютно бесплатно" (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">С таким тоже нередко сталкивалась в Турции той же, Тунисе, Болгарии, Греции, Хорватии,на Кипре.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Особенно для греков и болгар это характерно.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Я много ездила на общественном транспорте, так поступают только бюджетные русские туристы" (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Заблуждаетесь и очень!</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Так поступают абсолютно все, кого интересует не пассивный отдых и с уровнем доходов это совершенно никак не связано.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"многим нравятся Самуи как райское место" (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">В Таиланде я бывала, и на Пхукете и на Самуях.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Дороже Вьета почти в два раза выходит... (</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"но может им так нравится и устраивает" (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Цинично.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"выставка в снз - это обычно фотовыставка и занимает она минут 30 времени" (с)</span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">У меня другая инфа - <a href="http://www.snzadm.ru/?art=10031">выставок одновременно несколько</a> почти всегда и в музее, и в ДК.</span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">9-ть! только в музее, если каждую на полчаса умножить уже почти 5 часов выходит.)</span></div><div><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">А ещё и в ДК, как я понимаю, &nbsp;есть, вот хотя бы - р</span><span style="font-family: Helvetica, Arial, sans-serif; font-size: 12px; text-align: -webkit-center; background-color: rgb(255, 255, 255);">абота выставки ТО «Художник» «Зимние узоры». ( по той же ссылке).</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">":)))))))" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Шикарно! )))</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Почти все, да даже все эти упражнения нам на стретчинге дают. ))</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Стимул - классный! :)</span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5952'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>:)))))))<div><img src="https://pp.vk.me/c630016/v630016215/6220/unJbq7MmG0s.jpg" alt="image" /></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5951'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>ахаха, это йа) просто не человек, а ходячий хруст какой-то и с йогой и без с самого сызмальства))<div><img src="https://pp.vk.me/c630016/v630016215/622e/-vxtsBgmdso.jpg" alt="image" /></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5950'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>накрыло <a href="https://www.youtube.com/watch?v=DfG6VKnjrVw">Аделью</a>. Мы заболели, перед самым утренником. Но, пожалуй, даже рада: во-первых, все успею до НГ спокойно, без спешки, раздражения, с ребзей позанимаюсь побольше во-вторых, нервишки подлечу, в последнюю неделю заработала бессонницу и при малейшей даже возможности критики раздражаться и повышать голос на людей начала. плохо с одной стороны, даже на сутки выходить из колеи, чревато, с другой стороны когда загнался и можешь сделать только хуже, лучше взять тайм-аут всем: и мне, и Ване.&nbsp;</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5949'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-size: 14.6667px; font-family: Arial; background-color: rgb(255, 255, 255);">Вы всерьёз считаете, что у кого-то иначе?</span>"(с) нет. но может им так нравится и устраивает, а может у них есть свет в конце тоннеля в виде поездки куда нибудь.<IDXSKIP><div><br /></div></IDXSKIP><div>"<span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Скучному - везде скучно.</span><span style="font-size: 10pt;">"(с)</span></div><div>возможно, мне откровенно скучные люди не встречались. от обстоятельств многое зависит: и если в одних человек скучен, то в других оживляется по щелкнуть не успеешь.</div><IDXSKIP><div><br /></div></IDXSKIP><div>"<span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Выставки вообще никакие не рассматриваете?&nbsp;</span><span style="font-size: 10pt;">"(с)</span></div><div><span style="font-size: 10pt;">в Снежинске? рассматриваю в обязательном порядке, практически все. в этом году культурная программа моя сильно пострадала, в связи с подготовкой ребенка в 1 класс. выставка в снз - это обычно фотовыставка и занимает она минут 30 времени, но тоже вид досуга, почему нет. &nbsp;</span></div><div><br /></div><div><br /></div><div><br /></div><div><br /></div><div><br /></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5948'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>ой..я нечаянно. если зайти вглубь Нячанга, буквально 3-4 улицы, то Вы попадете в другой город, никто не говорит и не понимает вообще по английски, даже школьники, ни одного такси, улыбчивые жители тусят по своим делам и работам, идет обычная повседневная жизнь, без туристического налета.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5947'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Из многочисленных знакомых, которые искренне считают Вьетнам отстоем, сравнивая с соседними странами, одним из аргументов было, что среди них (бывалых ездунов) не было не одного не объёбанного этими чудными вьетнамцами.</span>"(с)&nbsp;<div>ну как бэ тут поделикатней выразиться. есть такое, часто стремятся обмануть, нас раз наебали откровенно в падоге Лонг Сон (это тоже Нячанг) и один раз обокрали на пляже. Оба раза мы сами дураки.В местах скопления полупьяных расслабленных туристов полно маргиналов (на центральном пляже у них организованная команда, действующая быстро и слаженно, ничего ценного не берите на пляж. да и нечего, если честно, делать на центральном пляже, поезжайте в Вин Перл, заплатите копейки за активный отдых перемежающийся с отдыхом на пляже с отборным белым песочком и бирюзовейшей чистой водой, в центр по мне так, грязно и многолюдно). Подозреваю, что эти самые маргиналы, обирающие и обрабатывающие туристов являются причиной негативного отношения гостей, имхо, просто надо понимать, что вы находитесь в курортном городе страны, жители которой крайне бедно живут и все зарабатывают как могут. нам, например, жаловаться не на что. Мы оставили без присмотра рюкзак с ценными вещами на пляже в 4 утра, нормально, что его уперли. И ей богу, неосмотрительно в принципе было шляться по пляжу глубокой ночью, хотя красиво: ночью море приобретает облик бездны, а по его кромке толпами бегают премилые маленькие крабы. Но мне довелось видеть нормальных честно работающих вьетнамцев. К слову сказать в Турции я не меняла доллары на лиры и сдачу с долларов лирами мне сдали только в Памуккале и я думаю, что обманывают турки не меньше вьетнамцев, а как пытаются нагреть в Краснадарском крае, и если вьет выманит у вас 20 руб. за бесплатную вонючую палочку для храма и еще сходит с вами её поставит и помолится с вами вместе видимо для того чтоб побольше таких дураков было, то хохол в Краснодаре с нескрываемой наглостью сострижет дополнительно 2-3 тыс., а потому что тебе все равно деваться некуда и он это знает. Так что я даже не знаю, какого то сумасшедшего воровства и обмана я не заметила, если не вести себя как сорящий баблом в 5 утра на центральном пляже пьяный беззаботный дебил, то никто вас не обворует. У меня так же были случаи и они происходили куда чаще попыток обманов, когда останавливаешься, например, в обменнике в лютую жару и просто стоишь пытаешься прийти в себя (ну нас же в июле понесло во Вьет), а охранник вынесет тебе чайку, сладостей, посидите поболтаете на языке жестов, абсолютно бесплатно. Вот ему просто приятно с тобой посидеть и все. Или таксист подвезет за бесплатно, ну жарко же. Хорошими людьми Вьетнам полнится, как любая другая страна. Главными чертами (понравившимися) я бы отметила: непосредственность, нескончаемый позитив (это очень улыбчивая и солнечная нация), трудолюбие, отсутствие личностных границ (они все таки больше команда, общество, нежели отдельные личности, как вероятно многие азиаты), умение радоваться, открытость, любопытство, болтливость. Как нормальные люди ездят в общественном транспорте? Все уткнутся в окно и едут грустные. Вьетнамский автобус - это базар, разговаривают все, абсолютно любой незнакомый человек заходит в автобус и тут же включается в разговор, как будто он тут уже 100 лет едет. Я много ездила на общественном транспорте, так поступают только бюджетные русские туристы, поэтому насмотрелась вдоволь и рада этому, если честно. Но это город, стоит вам выехать в пригород или в плавучие деревни (например, при посещении экскурсии на Южные острова - очень расслабляющая пляжно-рыбалко-снорклинговая экскурсия) и вы увидите совсем других вьетнамцев, им совсем нет дела до окружающих, они не лучезарны как городские и не так трудолюбивы: сидят под пальмами и смотрят угрюмо куда то вдаль. Поднимитесь в Далат по серпантину, снова другие люди, в Далате развито с/х и это видимо накладывает отпечаток. В итоге я не могу сказать Вам, Раиса, какие они, вьетнамцы, они везде разные. Как говорил наш гид Слава (не помню его вьетнамского имени), невероятно интеллигентный человек, когда то учился в СССР по обмену, он сам с севера Вьетнама и в каждой части Вьетнама у жителей свои отличительные черты и свой диалект, и порой северянин не может понять даже что говорит южанин. Я бы хотела съездить на север Вьетнама, многим нравятся Самуи как райское место. Меня тусовки не интересуют, пляжи лишь отчасти, очень хочется посетить как можно больше храмов, они у них удивительной красоты, а при экскурсии в Далат (берите 2хдневную) удалось их осмотреть галопом по европам. Не забывайте прикрывать колени, просто возьмите с собой парео и повяжите как юбку.&nbsp;<br /></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5946'>
+		    <div class='photo_comment_title'>
+						    Раиса (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Экономика.&nbsp;</span><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Придёт эра роскоши - будут блондинки.</span><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">" (с)</span><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">? )</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Это как-то взаимосвязано? ))</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Раиса, не переживайте." (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Спасибо,не буду! :)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Как бы стираю и ... ленюсь - мониторю в своё удовольствие всякие сайтики.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Наткнулась на <a href="http://www.soblakami.ru/tailand-ili-vetnam-kakoy-tur-vybrat">отличный сайт</a>&nbsp;ещё более утвердивший в том, что сделала правильный выбор. )</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ребята чётко и без сантиментов &nbsp;рассказывают <a href="http://www.soblakami.ru/top-10-samyh-rasprostranennyh-razvodov-vo-vetname-chast-1">о жуликоватых вьетах</a>&nbsp;-"хитроумных барыгах, помешанных на деньгах" (с)&nbsp;&nbsp;и об особенностях самого <a href="http://www.soblakami.ru/nyachang-obratnaya-storona-vetnama">попсово-дешёвского места</a>, куда я как раз и еду. ))</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"По Нагар - мистическое место" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Номер один в списке того, что хочу <a href="http://www.soblakami.ru/chamskie-bashni-po-nagar-v-nyachange-misticheskie-drevnosti">обязательно увидеть</a>!</span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5945'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Фрау, в комментах чаще всего спрашивают "кто её танцует".(с) а это важно разве? понятно, что не инженер вниитф Василий Иванов. главное, что красивая и что смогла свой дар использовать по назначению и успешно, проявила волю к победе и недюжую целеустремленность. Моника кстати некрасивая, имхо. Она молодец, что сумела всех убедить в своей красоте, создав сумасшедшую иллюзию, в которую поверили все, как и Монро собственно.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5944'>
+		    <div class='photo_comment_title'>
+						    Estmar (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ленива охрененно... ((( (c)<br />--<br />Раиса, не переживайте. Мне лениться тоже очень по душе :))<br /></span></span></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5943'>
+		    <div class='photo_comment_title'>
+						    Estmar (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Выпускной? (с)<br />--<br />Угу :)<br />Её выпускной были во времена pozdravil.ru.<br />Афте - ищите туточки :)<br /></span></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5942'>
+		    <div class='photo_comment_title'>
+						    Estmar (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>но пусть ей повезёт, удачу никто не отменял. (с)<br />--<br />Удача и везение! Согласен полностью.<br />Подниматься на Эверест проще чем с него спускаться..<br /><br />человек сумел воспользоваться по назначению и успешно (с)<br />--<br />Фрау, в комментах чаще всего спрашивают "кто её танцует".<br /><span class="forum__text">Как сказала <b>Моника</b> <b>Белуччи</b>: Тебе простят <b>всё</b> <b>кроме</b> <b>красоты</b>. </span><br />Есть еще один фильм Вуди Аллена "Спящий", где с полнейшим сарказмом применяется для "лечения психики" конкурс красоты.<br /><br />Все в пятёрке финалисток - брюнетки. (с)<br />--<br />Экономика. Придёт эра роскоши - будут блондинки.<br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5941'>
+		    <div class='photo_comment_title'>
+						    Раиса (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><a href="https://lady.mail.ru/article/488594-molodozheny-obratilis-v-politsiju-iz-za-plohih-svadebnyh-foto/?from=mr_news">Эта служба и опасна и трудна.</a> )</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5940'>
+		    <div class='photo_comment_title'>
+						    Раиса (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"хз... но раз так сказали :)" (с)</span><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">))))))))))</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Пожалуй и я своему результату поверю. ))</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">"Раиса у вас была командировка в Челябинск?" (с)</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Увы, нет - вся грязь местная. (</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div>"<a href="http://www.rbc.ru/rbcfreenews/567583a69a7947f18c1e3e6a" style="color: rgb(174, 64, 67); font-size: 14.6667px; padding: 5px; cursor: pointer; font-weight: bold; text-shadow: rgb(170, 170, 170) 0px 0px 5px; font-family: Arial; background-color: rgb(255, 255, 255);">Снежинка вторя на конкурсе Мисс Мира -2015.</a>&nbsp;" (с)</div><div>Все в пятёрке финалисток - брюнетки.</div><div>Прошла по ссылке прошлого года - почти аналогично.</div><div>Тенденция, однако. )</div><div>Снежинская девушка - бесспорно красавица.</div><div>Жопыт показывает, что счастья это не даёт (или не всегда даёт), но пусть ей повезёт, удачу никто не отменял. )</div><div><br /></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Пара тройка фоток её из школьной и афте школьной жизни проходили на нашем сайте :)" (с)</span><br style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);" /></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Выпускной?</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"буду рада ответить" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Спасибо!</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"а мне нравится Челябинск, не меньше Еката" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">И мне, когда в Снежинске жила, больше Челябинск нравился почему-то.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Необъяснимо, просто по ощущениям.</span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5939'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Раиса у вас была командировка в Челябинск?(с) а мне нравится Челябинск, не меньше Еката </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5938'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Снежинка вторая(с) очень красивая девушка, что называется бог дал, человек сумел воспользоваться по назначению и успешно</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5937'>
+		    <div class='photo_comment_title'>
+						    Фрау (20.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>2Раиса "Фрау, буду задавать вопросы, ладно?"(с) безусловно, если чем то смогу быть полезна, буду рада ответить на Ваши вопросы. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5936'>
+		    <div class='photo_comment_title'>
+						    Estmar (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><a href="http://www.rbc.ru/rbcfreenews/567583a69a7947f18c1e3e6a">Снежинка вторя на конкурсе Мисс Мира -2015.</a><br /><a href="http://lenta.ru/news/2015/12/19/spain/">Тут даже указывается видос</a>, но что то он не кажет...<br />Пар тройка фоток её из школьной и афте школьной жизни проходили на нашем сайте :)<br /><br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5935'>
+		    <div class='photo_comment_title'>
+						    Estmar (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana;"><span style="font-size: 10pt;">Целый день ездила по чудовищно, нереально чумазому городу. (с)<br />--<br />Раиса у вас была командировка в Челябинск?<br />Суппер!<br /></span></span></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5934'>
+		    <div class='photo_comment_title'>
+						    Estmar (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Мой - Золотой.<br /><i>Вы обаятельны и неотразимы, и поэтому люди не могут не восхищаться вами.
+ Вы умеете любить и сочувствовать, и у вас замечательная способность 
+быстро прощать людей.<br />Вы словно магнит, который притягивает к себе людей. От вас так и исходят уверенность и успешность. Настоящая звезда!<br />--<br /></i>хз... но раз так сказали :)<i><br /></i></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5933'>
+		    <div class='photo_comment_title'>
+						    Раиса (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"среди черного, азовского, средиземного и озер Урала" (с)</span><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">На Азовском не была.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Очевидный минус Чёрного и озёр Урала только один - очень короткий период для комфортного плавания.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">По поводу Средиземного сравнение некорректное, Турция - не самое лучшее, хоть и не худшее место для объективной оценки.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ну и, опять же Средиземное - не круглогодичное место для плавания (западные тру-спортсмены и отечественные алкоголики, плавающие в феврале - нещитовы).</span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5932'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>2Раиса среди черного, азовского, средиземного и озер Урала, южно-китайское - самое бирюзовое и самое красивое на свете.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5931'>
+		    <div class='photo_comment_title'>
+						    Раиса (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana;"><span style="font-size: 10pt;">Целый день ездила по чудовищно, нереально чумазому городу.</span></span><div style="font-family: Arial, Verdana; font-size: 10pt;">Сырая, отвратительно-грязная субстанция повсюду.</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Внизу - коричневая снежная каша, сверху - такая же каша, только чуть более жидкая.</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Дворники работают беспрерывно.</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Всякие - и щётки Денсо на авто, и люди на технике и с лопатами.</div><div style="font-family: Arial, Verdana; font-size: 10pt;">Толку - ноль, такое впечатление, что мерзкая жижа только прибывает,да &nbsp;так и есть &nbsp;- сверху лупит непрестанный дождь...</div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><br /></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Южно-Китайское море - самое красивое на свете" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">В моём личном рейтинге - нет.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Красное, Адриатическое, Тирренское, Аравийское, Персидский залив, Индийский океан и Атлантика как минимум - не хуже.</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"вьетнамцы Вас приятно удивят." (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Из многочисленных знакомых, которые искренне считают Вьетнам отстоем, сравнивая с соседними странами, одним из аргументов было, что среди них (бывалых ездунов) не было не одного не объёбанного этими чудными вьетнамцами.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">От ерундовых приписок якобы выпитого пива из бара в номере у людей вообще не пьющих алкоголя, до банального воровства.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">В соседнем Тае такого нет, или почти нет.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Мне - пофиг, "предупреждён - значит вооружён".</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Выбор трипа был по принципу минимальнейшего ценника, к слову Таиланд на меньший срок при тех же исходных данных был в полтора раза дороже, так же Израиль, Иордания и Хайнань, доминикана - вообще в два раза.</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Вин Перл , По Нагар, рынок Чо Дам, Тран Фу (набережная-улица)" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Хоть еду с циниками, желающими спать-жрать-лежать на пляже, да и сама в таком же моральном состоянии, но надежда умирает последней и зная себя - верю, что смогу убедить себя и коллег по поездке посмотреть страну.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Фрау, буду задавать вопросы, ладно?</span></div><div><span style="font-family: Arial, sans-serif; background: white;"><br /></span></div><div><span style="font-family: Arial, sans-serif; background: white;">"Зелёный.</span><span style="font-family: Arial, sans-serif;"> На более глубоком уровне у вас существует огромная
+потребность в том, чтобы любить и быть любимым. И нет ничего более болезненного
+для вас, чем отсутствие возможности делать это.&nbsp;Вы самый лучший друг или
+возлюбленный, которого только можно встретить, и сами заслуживаете только
+лучшего. Вы чувствительны, но без лишних эмоций и драм. Вы настоящий глоток
+свежего воздуха для окружающих!" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Лестная ложь. )</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Меняла "показания" несколько раз, но итог неизменен - зелёная. ))</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Estmar и derGriza а вы кто по тесту?&nbsp;</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">У всех до единого знакомых дяденек получается чёрный цвет.</span></div><IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"ОХУЕТЬ!!!!" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ровно это услышала от одного из шефов, достаточно платежеспособного.</span></div><IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"</span><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">у меня в жизни ничего подобного более никогда не случится." (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Это не знает никто и никогда.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Рига и Будапешт, к примеру - в три раза дешевле Вьетнама.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Сделаю всё, чтобы у меня они сбылись, кто бы и как бы их снобистски не хаял (это Риги касается).</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"бесперспективно сдыхая от скуки" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Скучному - везде скучно.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"захаживая на концерты местной и неместной самодеятельности и несамодеятельности" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Выставки вообще никакие не рассматриваете?&nbsp;</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Во Вьетнам лечу на их НГ, с 29.01, "каникулы" буду проводить в городе.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Уговорить друзей на мини-поездку в российские близлежащие города пока не получается, хотя надежды не теряю.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Рассматриваю музеи и выставки, в рабочие дни это не получается, праздники - самое то.</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"уборка, готовка и делание уроков. ну и далее по дороге беспросветности." (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Вы всерьёз считаете, что у кого-то иначе?</span></div><IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"На видосе, он самая гиперактивная часть вьетнамского Деда Мороза.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Я еще смотрел на зрителей, те ваще угорают от таких раскладов." (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ролики - охуенные по экспрессии, спасибо!!! )))</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ассоциации самой постановки - с самодеятельными детскими спектаклями, зрителей в зале - с зрителями петросяновского "Аншлага", искренне заливающимися хохотом до слёз и сверкающими золотыми зубами. )))</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><img src="http://ww.picplus.ru/uploads/posts/2015-01/1422457828_030.jpg" alt="image" /></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Раиса, спасибо за конкурс!</span><br style="font-family: Arial; font-size: 14.6667px;" /><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Позабавил очень." (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Рада, что понравилось! ))</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Надеюсь, что путешествия в моей жизни не закончатся никогда, а Дед Мороз перестанет сачковать и начнёт сбывать мечты.</span></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Дел хватит на все праздничные дни :)" (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Дел - до фига, но хочется музеев и выставок.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"нравятся звездные войны с 1999 по 2005 г.в" (с)</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Именно!</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Пресекать на корню у себя ПРАЗДНОТУ и ЖОПОМОЗГ." (с)</span><br style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);" /></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">НЕ ПОЛУЧАЕТСЯ. (</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Стараюсь, но ни фига. ((</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Плохо стараюсь, видимо.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ленива охрененно... (((</span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5930'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Фрау, вы что хотите?(с) много чего и абсолютно все завязано на деньги. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5929'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"С наступающим!" (с) спасибо, но себе оставьте.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5928'>
+		    <div class='photo_comment_title'>
+						    Estmar (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Фрау, а вы что хотите то?<br />Толк от чего нужен?<br />Коль нужны бабки, так получение оных это не всегда "работа".<br />Воруйте, обманывайте, крадите, грабьте :)))<br />Лень и это делать?<br />Займитесь ленью! Вот что точно получится. Смотрите телик и ешьте :) <br />Толк от такого занятие и на пути к такой цели будет 100%!<br />С наступающим!<br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5927'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Делать это по максиму из того что СЕЙЧАС можете.
+Заняться самообразованием.
+Заняться учёбой.(с) всего этого хоть попой ешь... только толку ноль</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5926'>
+		    <div class='photo_comment_title'>
+						    Estmar (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>чтобы сделать жизнь интересной? (с)<br />--<br />Заняться делом.<br />Делать это по максиму из того что СЕЙЧАС можете.<br />Заняться самообразованием.<br />Заняться учёбой.<br />Применять полученные знания на деле.<br />Делится знаниями с остальными.<br />Пресекать на корню у себя ПРОЗДНОТУ и ЖОПОМОЗГ.<br /><br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5925'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>день прошел как вчера, как завтра, короче очередной никакой день. ничо нового, потрясающего или интересного не было - отчет за неделю, месяц, год. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5924'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Девочкам такое надоедает лет в 5(с) да щас, я до сих пор жду прилета Питер Пэна, обнаружения портала в Нарнию Хогвартс, Зазеркалье, встречи с эльфами, хоббитами, драконами, инопланетными расами и мечтаю стать ДжЕдаем. чо тут делать на вашей земле, если не имеешь достаточно денег, чтобы сделать жизнь интересной?</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5923'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"Так их и смотрите"(с) та я уж раз 5 смотрела, сколько можно? переживать никто никого ни за что не заставляет, в таких фильмах привлекает размах спецэффектов, непоколебимый героизм персонажей, фантастичность самой ситуации. я люблю героические фильмы и всегда очень жалею, что жизнь на них даже отдаленно не похожа. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5922'>
+		    <div class='photo_comment_title'>
+						    Estmar (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>нравятся звездные войны с 1999 по 2005 г.в. (с)<br />--<br />Так их и смотрите.<br /><br />Лично я не любитель подобных фильмов. Отдаёт какой то аутичной инфантильностью. В добавок предлагаю переживать не пойми за что, так это полнейшая шизофрения.<br />Спецэффекты, да интересно. <br />Как самообразование&nbsp; по колористике, работе оператор - от же интересно.<br />Но не более. <br />По этому смотрел "Интерстелла" и про Валинтину Терешкову в образе Сандры Буллок, кино "Гравитация".<br />Ради колористик посмотрел бы "Картошкиного Мрсианина".<br />Лично&nbsp; я отношу все фильмы фэнтази с космосом-хоббитами, в категорию - для детей до 12 лет. <br />И то для мальчиков. <br />Девочкам&nbsp; такое уже надоедает лет в пять.<br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5921'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>2Estmar мне неприятны и неинтересны ни порнуха, ни эротика. нравятся звездные войны с 1999 по 2005 г.в. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5920'>
+		    <div class='photo_comment_title'>
+						    Estmar (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Раиса, спасибо за конкурс!<br />Позабавил очень.<br />Так бы и не узнал о причудах народов живущих на экваторе :)<br />Хорошего отдыха и утех :)<br />Мне и в своём городке хорошо. <br />Дел хватит на все праздничные дни :)<br /><br />"да, на новых звездных войнах неча делать" (с)<br />--<br />Фрау, <a href="http://www.paradisehill.tv/Star_Wars_XXX_A_Porn_Parody.html">смотрите правильные звёздные войны</a> :)<br /><br /></span><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Вы - <a href="http://tema.livejournal.com/2123608.html">не одиноки</a>. :)&nbsp; (с)<br />--<br />Сам же автор спойлера постоянно упоминал что кино стоит смотреть если его бюджет свыше 10 мил долларов.<br />В его ценностях кино ахуй и крутатенушка :)<br /><br /><br /><br /></span></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5919'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>..вы обязательно умрёте ;с) да поскорей бы уже, невозможно же так чтобы все желания не сбывались</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5918'>
+		    <div class='photo_comment_title'>
+						    Estmar (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>, бесперспективно сдыхая от скуки, (с)<br />--<br />Фрау, не кипятитесь...вы обязательно умрёте. Это 100% факт!<br />Егор Летов так глаголи по этом поводу: Когда я умер, не было никого, кто бы это опроверг".<br /><br /><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Тао Куэн в синем! :) (с)<br />--<br />На видосе, он самая гиперактивная часть вьетнамского Деда Мороза.<br />Деде Мороз в красном у них по моему тётенька.<br />Или свисторанс... хз... Азия она вся такая.<br />Не зря мужик с синим&nbsp; пропеллером в голове, шастил по сцене в лыжах.<br />Затейник :)<br />Я еще смотрел на зрителей, те ваще угорают от таких раскладов.<br /></span><br />Ch</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5917'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>позари=полхари, плохо без возможности редактирования</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5916'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Может ли человек, живущий среди огромных голубых пляжей и серфингистов, иметь вспыльчивый характер? Нет. Вы привыкли быть расслабленным и принимать каждый день таким, какой он есть. У вас легкий и непринужденный характер, который тем не менее делает вас невероятно популярным, куда бы вы ни отправились. Окружающие вас люди не устают наслаждаться вашим веселым нравом.(с) а вот тут они не промахнулись, несерьезная, хоть и не дура, легкая, общительная с вечной лыбой на позари, склонная к любого рода авантюрам и приключениям, перемещениям, безкоторых просто сдыхаю. ладно, меня щас ждут охеренно увлекательные детские веселые старты, 20 подобное мероприятие за последние полгода, веселее и интереснее все равно ничего не происходит, уборка, готовка и делание уроков. ну и далее по дороге беспросветности. фсио. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5915'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>а мы все нг каникулы проведем в сраном гребанном снежинске, ненавижу, бесперспективно сдыхая от скуки, создавая видимость интересной деятельности, захаживая на концерты местной и неместной самодеятельности и несамодеятельности</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5914'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-size: 14.6667px; font-family: Arial; background-color: rgb(255, 255, 255);">Мини-шорты ведь нещитово? ;)</span>"(с) не знаю, как придумаете для себя так и будет. за себя же скажу, мои наряды в отрочестве и молодости были куда более пуританскими, чем сейчас. они и сейчас не верх вульгарности, но все таки как то посвободнее в нравах, нежели то, что носила с 17 до 30 лет. я почему то девочка антисекс и антитемперамент. как бэ не очень понимаю зачем.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5913'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'> Стоимость проживания в новом отеле – от 371 евро в сутки.(с) ОХУЕТЬ!!!! мы жили за 7 долларов в сутки. и даже на трип с самым низкой стоимостью проживания мне денег ни за что не собрать.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5912'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"Золотой. Вы обаятельны и неотразимы, и поэтому люди не могут не восхищаться вами. Вы умеете любить и сочувствовать, и у вас замечательная способность быстро прощать людей.
+Вы словно магнит, который притягивает к себе людей. От вас так и исходят уверенность и успешность. Настоящая звезда!
+Мы угадали? Расскажите об этом в комментариях".(с) они не угадали :(</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5911'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>в Нячанге самом особо смотреть нечего, больше ездите по окрестностям и экскурсиям). но Южно-Китайское море - самое красивое на свете, Вин Перл прекрасен и беззаботен, По Нагар - мистическое место, там живет какая то сила (Нячанг вообще место открытой энергетики, мысли и желания сбываются буквально налету),  рынок Чо Дам обязателен к посещению, он хоть как то колоритен и самобытен, в отличие от ночного рынка, расположенного на Тран Фу (набережная-улица). вьетнамцы Вас приятно удивят. завидую лютой завистью, у меня в жизни ничего подобного более никогда не случится. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5910'>
+		    <div class='photo_comment_title'>
+						    Фрау (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Фрау, вы во Вьетнаме в каком месте были (с) в Нячанге и была, это у них вместо Ялты или Сочей, курортный город. подумала еще про Вьетнам и Тайланд, но не нашла как у них дед мороз называется. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5909'>
+		    <div class='photo_comment_title'>
+						    Раиса (19.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Моё "внутреннее я" - зелёненькое.<div><br /><div><img src="http://www.angelahuntbooks.com/wp-content/uploads/2012/08/grassbody.0.jpg" alt="image" /></div><div><br /><div>Не-не, не сошла с ума,это просто <a href="http://www.adme.ru/svoboda-psihologiya/test-kakogo-cveta-vashe-vnutrennee-ya-1102560/">тест</a> такой. )</div></div></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5908'>
+		    <div class='photo_comment_title'>
+						    Раиса (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"да, на новых звездных войнах неча делать" (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Вы - <a href="http://tema.livejournal.com/2123608.html">не одиноки</a>. :)&nbsp;</span></div><IDXSKIP><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"про меня так никогда не скажут..." (с)</span><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Про меня один-единственный раз так ошиблись, поэтому столько лет и помню! )))</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"мини-юбок не имею в гардеробе." (с)</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Всё в прошлом. ))</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Мини-шорты ведь нещитово? ;)</span></span></div><IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"зато я и косяк - вполне" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Косяков в моей жизни - с Эверест наберётся.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Убеждена, что для тётенек - это в пределах нормы. )</span></div><IDXSKIP><div><br /></div></IDXSKIP><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">А теперь объявляю победителя!</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Та-да-да-дам!!!</span></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Тао Куэн -в желтом, Тхэн Беп - в синем" (с)</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Тао Куэн в синем! :)</span></div><IDXSKIP><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div></IDXSKIP><div><img src="http://st.vitalk.vn/img/2014/1_20/tao-quan-2014-he-lo-hau-truong-cuc-doc_3_2ie90mh28minc.jpg" alt="image" /></div><IDXSKIP><div><br /></div></IDXSKIP><div>Еду на вьетнамский Новый год в Нянчаг, там как раз к моему визиту <a href="http://www.travel.ru/news/2015/12/13/251329.html">новый отель</a> открыли. ) &nbsp;(пошучено)</div><div>Одна из причин поездки - именно фантасмагорически низкая цена трипа.</div><div>Меньше 45 т.р. на 16 дней в де-люкс номер четвёрки на первой линии.</div><div>Забавно, что до 15 дней пребывания виза не нужна, но на границе оплачиваешь консульский сбор 45$, а если больше 15 дней, как у меня, то оформляешь визу (на которую даже фото не требуется) за 25$ и сбор уже не платишь. ))</div><IDXSKIP><div><br /></div></IDXSKIP><div>Фрау, вы во Вьетнаме в каком месте были?&nbsp;</div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5907'>
+		    <div class='photo_comment_title'>
+						    Фрау (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>да, на новых звездных войнах неча делать, сплошной пиздеж и мало битв,хватит по тв глянуть, но пожалеть, что я не джедай успела раз 500.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5906'>
+		    <div class='photo_comment_title'>
+						    Фрау (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Да она только выглядит как девочка, у неё мозг - мальчика!" )) (с) про меня так никогда не скажут... гигантское УВЫ!!! :(((, хоть и мини-юбок не имею в гардеробе.</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5905'>
+		    <div class='photo_comment_title'>
+						    Фрау (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>увы(с) да ну что Вы, Раиса, я  и выигрыш, удача, чудо - это понятия в принципе не совместимые. зато я и косяк - вполне, как можно ошибиться совершенно случайно и позвонить начальнику - москвичу, а потом извиняться, что названивала ему весь вечер абсолютно в адекватном состоянии, просто так получилось, что гребанный телефон при легком нажатии в кинотеатре чуть что наяривает именно по данному номеру, потому что каким то волшебным образом он забился во все чрезвычайные списки? косяк и антифортуна моя фамилия!!! ей богу, ни разу в жизни не свезло, а то и наоборот. </div>
+		</div>
+	    		<div class='photo_comment_div' cid='5904'>
+		    <div class='photo_comment_title'>
+						    Estmar (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>У азиатов нормально - когда с головой не нормально :)<br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5903'>
+		    <div class='photo_comment_title'>
+						    Estmar (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>Моя ставка на эту троицу: Тао Куэн -в желтом, Тхэн Беп - в синем и Онг ги Ноэн - в красном.<br />Три в одном :)<i><br /><br /></i>Вариант нумер два - когда Два в одном <i>- </i><strong>Дун Че Лао Рен</strong> или <strong>Шань Дань Лаожен.<br /><br />Кааароче чем странней тем лучше!<br /></strong></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5902'>
+		    <div class='photo_comment_title'>
+						    Estmar (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><a href="https://www.youtube.com/watch?v=XilpFc7t9AM">Люблю я пентатонику на европейский лад</a> :)<br />Смотрите на 26 минуте на мужика в лыжах.<br />Вот так ребята из Вьетнама празднуют Новогоднюю ёлку в 2015 году.<br /><a href="https://www.youtube.com/watch?v=mBZA8IytUHI">Те же клоуны, но в 2014 году.</a><br />Мужик в синей шапке жжет постоянно шапчёнка у него с крыльями.<br />С такой можно каждый год приходить на корпоратив и быть в центре внимания.<br />У азиатов я думаю вот так выглядят деды морозы. <br />По обыкновению их у них много и все со обязательными странностями :)<br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5901'>
+		    <div class='photo_comment_title'>
+						    Раиса (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"сложный вопрос, даже гугл не помогает" (с)</span><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ага!</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Думаю над подсказками. )</span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5900'>
+		    <div class='photo_comment_title'>
+						    Раиса (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">"Раиса, Вы true женщина! :)))" (с)</span><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">А то! ))</span></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Самый запомнившийся комплимент получила в ранней юности, когда впервые поставили руководителем проекта.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Лоббировал моё назначение один из моих нынешних шефов, представил перед советом директоров такую соплю-блондинку в мини.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Когда вышла, услышала через неплотно закрытую дверь сначала мат, а потом возглас шефа - "Да она только выглядит как девочка, у неё мозг - мальчика!" ))</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Больше таких прекрасных комплиментов про мозг не получала нигде и никогда. )</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">1 Корбобо, Узбекистан</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">2 Тол Бабай, Удмуртия</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">3 Аяз Ата, Казахстан</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">4 Каханд Пап, Армения</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">5 Товлис Бабуа, Грузия</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">6 Мош Крэчун, Молдавия (c)</span></div><div><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Cписок внушительный, но ни по одному из заявленных параметров не соответствует, увы. (</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Нигде из этих стран не бывала, надеюсь, всё впереди.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Сейчас тренд такой - раскручивают страны бывшего СССР.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Очень хотела в Ригу, но никто не поддержал, говорят в Прибалтику зимой - сумасшествие... ((</span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5899'>
+		    <div class='photo_comment_title'>
+						    Фрау (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><div style="font-weight: normal;"><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">2Иван, зато сколько нового о дедах морозах узнали:</span></div><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);"><span style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);"><br /></span>1 Корбобо, Узбекистан</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-weight: normal; font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">2 Тол Бабай, Удмуртия</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-weight: normal; font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">3 Аяз Ата, Казахстан</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-weight: normal; font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">4 Каханд Пап, Армения</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-weight: normal; font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">5 Товлис Бабуа, Грузия</span><br style="font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);" /><span style="font-weight: normal; font-family: verdana, arial, helvetica; font-size: 10.6667px; text-align: justify; background-color: rgb(255, 255, 255);">6 Мош Крэчун, Молдавия</span></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5898'>
+		    <div class='photo_comment_title'>
+						    Иван (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>ура, я лидирую:) сложный вопрос, даже гугл не помогает&nbsp;</div>
+		</div>
+	    		<div class='photo_comment_div' cid='5897'>
+		    <div class='photo_comment_title'>
+						    Фрау (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Уши д.б. похожи на рога, у китайца - не похожи. )))</span>"<div>"<span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Рога - true, на уши, ИМХО, совсем не похожи.&nbsp;</span><span style="font-size: 10pt;">"(с)&nbsp;</span></div><div><span style="font-size: 10pt;">Раиса, Вы true женщина! :)))</span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5896'>
+		    <div class='photo_comment_title'>
+						    Раиса (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"на наличие ушей повелась" (с)</span></div>Уши д.б. похожи на рога, у китайца - не похожи. )))<IDXSKIP><div><br /></div></IDXSKIP><IDXSKIP><div>P.S.</div></IDXSKIP><div>Количество попыток - не ограничено! :)</div><IDXSKIP><div><br /></div></IDXSKIP><div>З.З.Ы.</div><div>Пока лидирует Иван - хоть ответ и неправильный и рога на уши не похожи, но тулуп - синий и рога есть. )</div><IDXSKIP><div><br /></div></IDXSKIP></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5895'>
+		    <div class='photo_comment_title'>
+						    Фрау (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>"<span style="font-family: Arial; font-size: 13.3333px; background-color: rgb(255, 255, 255);">Мимо. (((</span>" (с)<div>на наличие ушей повелась</div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5894'>
+		    <div class='photo_comment_title'>
+						    Раиса (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">"шань дань лаожен" (с)</span><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);">Мимо. (((</span></div><div><span style="font-size: 13.3333px; background-color: rgb(255, 255, 255);"><br /></span></div><div><img src="http://cdn11.img22.ria.ru/images/98681/53/986815302.jpg" alt="image" /></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5893'>
+		    <div class='photo_comment_title'>
+						    Фрау (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial, Verdana;"><span style="font-size: 13.3333px;">шань дань лаожен</span></span></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5892'>
+		    <div class='photo_comment_title'>
+						    Раиса (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><strong style="color: rgb(52, 52, 52); font-family: arial, tahoma; font-size: 14px; line-height: 21px; text-align: justify; background-color: rgb(255, 255, 255);">"Йоулупукки ? :) " (с)</strong><div><strong style="color: rgb(52, 52, 52); font-family: arial, tahoma; font-size: 14px; line-height: 21px; text-align: justify; background-color: rgb(255, 255, 255);">Холодно! &nbsp;)))))))))</strong></div><div><strong style="color: rgb(52, 52, 52); font-family: arial, tahoma; font-size: 14px; line-height: 21px; text-align: justify; background-color: rgb(255, 255, 255);"><br /></strong></div><div><img src="http://img-fotki.yandex.ru/get/9756/148561800.37e/0_d6eb0_78a95d4c_L.jpg" alt="image" /></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5891'>
+		    <div class='photo_comment_title'>
+						    Светлана (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><strong style="color: rgb(52, 52, 52); font-family: arial, tahoma; font-size: 14px; line-height: 21px; text-align: justify; background-color: rgb(255, 255, 255);">Йоулупукки ? :)</strong></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5890'>
+		    <div class='photo_comment_title'>
+						    Раиса (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Ищем в и-нете" (с)</span><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Прочитала про <a href="http://www.kinopoisk.ru/film/861468/">"Мустанга"</a>&nbsp;, понравилось, буду искать.</span></div><div><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></div><div><span style="color: rgb(0, 0, 48); font-family: Arial; font-size: small; text-align: justify; background-color: rgb(255, 255, 255);">"Эхээ Дьыл" (с)</span></div><div><span style="color: rgb(0, 0, 48); font-family: Arial; font-size: small; text-align: justify; background-color: rgb(255, 255, 255);"><br /></span></div><div><img src="http://www.aykhal.info/images/Chyshaan2.JPG" alt="image" /></div><IDXSKIP><div><br /></div></IDXSKIP><div>Клёвый, но не он. :)</div><div>Рога - true, на уши, ИМХО, совсем не похожи.&nbsp;</div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5889'>
+		    <div class='photo_comment_title'>
+						    Иван (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>правильный ответ -&nbsp;<span style="color: rgb(0, 0, 48); font-family: Arial; font-size: small; text-align: justify; background-color: rgb(255, 255, 255);">Эхээ Дьыл из Якутии ?&nbsp;</span></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5888'>
+		    <div class='photo_comment_title'>
+						    Estmar (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><a href="http://www.interfax.ru/culture/485703">Номинанты на "ОСКАР".</a><br />Ищем в и-нете, делимся линками :) <br /></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5887'>
+		    <div class='photo_comment_title'>
+						    Раиса (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">"Санта Клаус запрещен" (с)</span><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Может оно и правильно.</span></div><div style="font-family: Arial, Verdana; font-size: 10pt;"><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);">Ждёшь чуда - тратишь время в напрасных иллюзиях.</span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Отечественный Дед Мороз в этом году сильно сдал. (</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Не могу сказать, что он совсем уж про меня забыл - справедливости ради надо сказать, что "три раза по рублю" (с), как говорила героиня Муравьёвой в известном фильме, было, канеш, но это - не то, чего ждала.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Совсем не то.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Старенький, наверное - забывает и путает. (</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Или кризис.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Решила прислушаться к <a href="http://tsitaty.com/quotes-pictures/tsitaty-%D0%BC%D1%8B-%D0%BD%D0%B5-%D0%BC%D0%BE%D0%B6%D0%B5%D0%BC-%D0%B6%D0%B4%D0%B0%D1%82%D1%8C-%D0%BC%D0%B8%D0%BB%D0%BE%D1%81%D1%82%D0%B5%D0%B9-%D0%BE%D1%82-%D0%BF%D1%80%D0%B8%D1%80%D0%BE%D0%B4%D1%8B-%D0%B2%D0%B7%D1%8F%D1%82%D1%8C-%D0%B8%D1%85-%D1%83-%D0%B8%D0%B2%D0%B0%D0%BD-%D0%B2%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87-%D0%BC%D0%B8%D1%87%D1%83%D1%80%D0%B8%D0%BD-157875.jpg">Ивану Владимировичу</a>. )</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Новый год буду отмечать в гостях у не отечественного Деда Мороза.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Халат у него в отличие от нашего и америкосовского - синий, и нереально креативная шапка с рогами, похожими на уши. )</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">По традиции - конкурс.</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);">Угадавшего имя Деда Мороза - 1000 деревянных на телефон (ну или наличными - как скажете).</span></span></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div><div><img src="http://cs5334.vk.com/u136269782/149536602/x_b4537c1a.jpg" alt="image" /></div><div><span style="font-family: Arial;"><span style="font-size: 14.6667px; background-color: rgb(255, 255, 255);"><br /></span></span></div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5886'>
+		    <div class='photo_comment_title'>
+						    derGriza (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'><span style="font-family: Arial; font-size: 14.6667px; background-color: rgb(255, 255, 255);"><i>Что он означает?</i></span><div style="font-style: normal;"><br /></div><div style="font-style: normal;">"Санта Клаус запрещен"&nbsp;</div></div>
+		</div>
+	    		<div class='photo_comment_div' cid='5885'>
+		    <div class='photo_comment_title'>
+						    Раиса (18.12.2015)
+		    </div>
+		    <div style='padding-left: 10px;'>У меня - искусственная.<div>Большая и клёвая, мне нравится.&nbsp;<br /><IDXSKIP><div><br /></div></IDXSKIP><div>Заинтересовал принт на футболке Бородача, выкопавшего ёлку.</div><div>Что он означает?</div></div></div>
+		</div>
+	    </div>
+<script type="text/javascript" src="js/jquery.cleditor.min.js"></script>
+    <script type="text/javascript">
+    
+    var editorObject;
+    
+    $(function() {
+	editorObject = $("#comment_text").cleditor({
+							width: 530,
+							height: 150,
+							controls: "bold italic underline strikethrough link unlink"
+						    })[0];
+	$('#add_comment_btn').on('click', subimNewComment);
+	$('img.delete_comment')
+	    .on('click', deleteComment)
+	    .on('mouseover', function() { $(this).attr('src', 'i/cross.png'); })
+	    .on('mouseout', function() { $(this).attr('src', 'i/s_cross.png'); });
+    });
+    
+    
+    function deleteComment(){
+	var container = $(this).parents('div.photo_comment_div');
+	var postId = $("#post_id").val();
+	var commentId = container.attr('cid');
+	
+	$.post(
+	    'blogajax.php?action=delcomment', 
+	    {
+		commentId: commentId, 
+		postId : postId
+	    }, 
+	    function(data){
+		if(data.code != '0'){
+		    var msg;
+		    switch(data.code){
+			case '2':
+			    msg = 'Операция требует авторизации';
+			    break;
+			case '3':
+			    msg = 'Запись блога не найдена. Проверьте параметры запроса';
+			    break;
+			case '4':
+			    msg = 'Доступ запрещен';
+			    break;   
+			case '1':
+			    msg = 'Комментарий не найден';
+			    break;   
+			default:
+			    msg = data.message;
+			    break;
+		    }
+		    alert(msg);
+		    return;
+		}
+		container.fadeOut(200, function(){container.remove();});
+	    },
+	    "json"
+	    );
+    }
+    
+    function subimNewComment(){
+	
+	var author = $("#new_author").val();
+	var mail = $("#new_mail").val();
+	var capcha = $("#new_capcha").val();
+	var msg = $("#comment_text").val();
+	var postId = $("#post_id").val();
+	
+	if(author == '' || capcha == '' || msg == ''){
+	    alert('Не все поля заполнены!');
+	    return;
+	}
+	if(mail != '' && !mailRegex.test(mail)){
+	    alert('Почта указано неверно');
+	    return;
+	}
+	
+	$.post(
+	    'blogajax.php?action=addcomment', 
+	    {
+		author: author, 
+		mail : mail,
+		capcha: capcha,
+		msg: msg,
+		postId: postId
+	    },
+	    function(data){
+		var r = Math.random();
+		$("#new_capcha").val("");
+		$('#capcha_image').attr("src", "../image.php?s=postcomment&r=" + r);
+		
+		if(data.code != '0'){
+		    var emsg;
+		    switch(data.code){
+			case '2':
+			    emsg = 'Ошибка: проверьте текст комментария';
+			    break;
+			case '3':
+			    emsg = 'Ошибка: Проверочный код не совпадает!';
+			    break;
+			case '4':
+			    emsg = 'Запись не найдена';
+			    break;   
+			case '1':
+			    emsg = 'Адрес почты указан неверно';
+			    break;   
+			default:
+			    emsg = data.message;
+			    break;
+		    }
+		    alert(emsg);
+		    return;
+		}
+		
+		try{
+		    editorObject.clear();
+		}
+		catch(e){
+		    
+		}
+		var commentTitle = $('<div></div>',{
+				    'class': 'photo_comment_title'
+				    });
+		if(data.authorized == '1'){
+		    commentTitle.append($('<img></img>', {
+				    'class': 'delete_comment',
+				    'src': 'i/s_cross.png',
+				    'title': 'Удалить комментарий'
+				    })
+				    .on('click', deleteComment)
+				    .on('mouseover', function() { $(this).attr('src', 'i/cross.png'); })
+				    .on('mouseout', function() { $(this).attr('src', 'i/s_cross.png'); })
+				);
+		}
+		commentTitle.append(author + ' (' + data.appendDate + ')');
+		
+		var comment = $('<div></div>',{
+			    'class': 'photo_comment_div',
+			    'style': 'display: none',
+			    'cid': data.commentId
+			})
+			.append(commentTitle)
+			.append($('<div></div>', {
+				    'style': 'padding-left: 10px;',
+				    'html': msg
+				})
+			);
+		
+		$('#photo_comments_collection').prepend(comment);
+		comment.fadeIn(200);
+	    },
+	    "json"
+	);
+    }
+    </script>		</td>
+		<td style='width: 150px; vertical-align: top; padding-left: 30px'>
+		    <IDXSKIP><div style='font-style: italic; color: #ae4043; height: 150px;'>
+			Мысль...
+		    </div></IDXSKIP>
+		    		    <IDXSKIP><div style='margin-bottom: 20px;'>
+			<div style='display: inline-block; background-image: url("i/dots.jpg"); background-position: top; background-repeat: repeat-x; padding-top: 15px;'><img src='gallery/thumbs/b43a1a847505b1f58eabeb4cff0443fd.jpg' style='border: 1px solid #ae4043;' /></div>
+			<div style='padding-top: 5px; padding-bottom: 5px;'><a style='padding: 0px;' href='gallery/?id=329'><img src='i/gallery_right.jpg' /></a></div>
+			<div>Венеция.			(12)</div>
+		    </div></IDXSKIP>
+						    <div style='margin-bottom: 20px;'>
+			<div style='display: inline-block; background-image: url("i/dots.jpg"); background-position: top; background-repeat: repeat-x; padding-top: 15px;'><img src='gallery/thumbs/c594dbd0fc15405403d4b77428e36d2a.jpg' style='border: 1px solid #ae4043;' /></div>
+			<div style='padding-top: 5px; padding-bottom: 5px;'><a style='padding: 0px;' href='gallery/?id=343'><img src='i/gallery_right.jpg' /></a></div>
+			<div>Все платья "Выпускного 2015". Платья в статике. Часть Третья.			(72)</div>
+		    </div>
+						    <div style='margin-bottom: 20px;'>
+			<IDXSKIP><div style='display: inline-block; background-image: url("i/dots.jpg"); background-position: top; background-repeat: repeat-x; padding-top: 15px;'><img src='gallery/thumbs/760687c5f1b18d0ba22c277b42a9f41a.jpg' style='border: 1px solid #ae4043;' /></div></IDXSKIP>
+			<IDXSKIP><div style='padding-top: 5px; padding-bottom: 5px;'><a style='padding: 0px;' href='gallery/?id=301'><img src='i/gallery_right.jpg' /></a></div></IDXSKIP>
+			<div><IDXSKIP>Фотовыставка без стен. "Сушка" 2013.			(29)</IDXSKIP></div>
+		    </div>
+						</td>
+	    </tr>
+	</table>
+	<IDXSKIP><div>
+	<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">//<![CDATA[
+(function(w,n,d,r,s){d.write('<a href="http://top.mail.ru/jump?from=2292632" target="_top">'+
+'<img src="http://db.cf.b2.a2.top.mail.ru/counter?id=2292632;t=59;js=13'+
+((r=d.referrer)?';r='+escape(r):'')+((s=w.screen)?';s='+s.width+'*'+s.height:'')+';_='+Math.random()+
+'" border="0" height="31" width="88" alt="Рейтинг@Mail.ru"><\/a>');})(window,navigator,document);S//]]>
+</script><noscript><a target="_top" href="http://top.mail.ru/jump?from=2292632">
+<img src="http://db.cf.b2.a2.top.mail.ru/counter?id=2292632;t=59;js=na"
+border="0" height="31" width="88" alt="Рейтинг@Mail.ru"></a></noscript>
+<!-- //Rating@Mail.ru counter -->
+</div></IDXSKIP>
+    </body>
+</html>
+

@@ -1,0 +1,1092 @@
+ru.savefrom.net/webmaster.php
+<!doctype html>
+<!--[if lte IE 7]> <html lang="ru" class="ru no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html lang="ru" class="ru no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]> <html lang="ru" class="ru no-js ie9"> <![endif]-->
+<!--[if !(IE)]><!--> <html lang="ru" class="ru no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Вебмастеру</title>
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lte IE 8]><script src="/js/libs/es5-shim.min.js"></script><![endif]-->
+  <script src="/js/libs/modernizr-2.8.3.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="/js/scripts_1.16.js?v=1"></script>
+
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="image_src" href="/img/icon_100.png">
+
+  <link rel="stylesheet" href="/css/styles.css?v=1.98">
+
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" href="/css/ie_1.1.css?v=2">
+  <![endif]-->
+
+  <meta name="verify-v1" content="ub1H7kYJnwqYG8F1I+HOcbvOZ1ZorzzYgei/UVDCJkY=">
+
+  <meta name="yandex-verification" content="747050caf9aca482" />
+
+<script>
+  'use strict';
+
+  window._sf = {
+    lang: 'ru',
+    cookieDomain: '.savefrom.net',
+    openxHost: "78.138.126.253",
+    openxEnabled: true,
+    openxAutorun: true,
+    gaTrackers: {
+      televzrIos: {id: 'UA-7055055-41', sendPageview: true},
+      televzrAndroid: {id: 'UA-7055055-42', sendPageview: true}
+    }
+  };
+
+  (function(){
+    var _sf = window._sf;
+
+    _sf.uaParser = new UAParser();
+    _sf.ua = _sf.uaParser.getUA();
+    _sf.browser = _sf.uaParser.getBrowser() || {};
+    _sf.device = _sf.uaParser.getDevice() || {};
+    _sf.os = _sf.uaParser.getOS() || {};
+
+    var supportPlatforms = [
+      'Android',
+      'Bada',
+      'BlackBerry',
+      'Firefox OS',
+      'iOS',
+      'MeeGo',
+      'Sailfish',
+      'Series40',
+      'Symbian',
+      'Tizen',
+      'WebOS',
+      'Windows Phone'
+    ];
+
+    if(!_sf.device.type && _sf.os.name) {
+      if(supportPlatforms.indexOf(_sf.os.name) > -1) {
+        _sf.device.type = 'mobile';
+      }
+    }
+
+    if(_sf.device.type) {
+      if(_sf.device.type == 'tablet') {
+        _sf.mobile = true;
+        $('html').addClass('tablet');
+      }
+      else if(_sf.device.type == 'mobile' || _sf.device.type == 'wearable') {
+        _sf.mobile = true;
+        $('html').addClass('mobile');
+      }
+    }
+
+          _sf.country = "ru"    
+    if (_sf.country) {
+      _sf.country = _sf.country.toLowerCase();
+    }
+
+    _sf.applications = ["sf-android","televzr"];
+
+    _sf.stats = {
+      uid: ''
+    };
+
+          _sf.stats.uid = "d513ab7eb50d5dcb";
+    
+  })();
+</script>
+
+  <script>
+    $(function(){
+      $('input[placeholder], textarea[placeholder]').placeholder();
+
+      setTooltipHandler('.tooltip[title]');
+      setTooltipHandler('.tooltip-err[title]', {className: 'err'});
+
+      // menu
+      $('nav li').on('mouseenter', function(){
+        if($(this).children('ul').is('ul'))
+        {
+          $(this).addClass('hover').on('mouseleave', function(){
+            $(this).removeClass('hover');
+          });
+        }
+      });
+
+      $('body').on('click', 'header .menu-btn', function(){
+        $('#nav_top').toggleClass('active');
+      });
+
+      $('body').on('click', '.spoiler-title', function(){
+        var $this = $(this).toggleClass('open');
+        var $box = $this.parent().children('.spoiler-box');
+
+        if($this.hasClass('open'))
+          $box.slideDown();
+        else
+          $box.slideUp();
+
+        return false;
+      });
+
+      var thumbnail_rel = [];
+      $('a.thumbnail').each(function(){
+        var rel = $(this).attr('rel');
+        if(rel && !thumbnail_rel[rel])
+        {
+          thumbnail_rel[rel] = 1;
+          $("a[rel='" + rel + "']").fancybox();
+        }
+      });
+
+      $('body').on('click', 'img.thumbnail', function(){
+        this.src = this.src.replace(/(\w\w)\.([a-z]{3,4})(?:\?|$)/i, function(s, p1, p2){
+          if(p1 == '_t')
+            return '.' + p2;
+
+          return p1 + '_t.' + p2;
+        });
+      });
+
+      var clipboard = new Clipboard('.clipboard-btn');
+      clipboard.on('success', function(e){
+        e.clearSelection();
+        jAlert('Скопировано');
+      });
+      clipboard.on('error',function(e){
+        jAlertErr('Не удалось скопировать');
+      });
+    });
+
+
+    function setTooltipHandler(selector, options)
+    {
+      var opts = {
+        fade: true,
+        opacity: 1,
+        delayIn: 300,
+        delayOut: 500,
+        hoverHold: true,
+        html: true,
+        gravity: 's',
+        offset: 5,
+        live: true,
+        title: function(){
+          if (window.ga && $(this).hasClass('ga_track_events')) {
+            var data = $(this).data('tooltip-ga-event');
+            if (data) {
+              data = data.replace(/;+$/, '');
+              data = data.split(';');
+              if(data.length < 2)
+                return;
+
+              data.unshift('send', 'event');
+              ga.apply(null, data);
+            }
+          }
+
+          return $(this).attr('original-title');
+        }
+      };
+
+      if(options)
+        opts = $.extend({}, opts, options);
+
+      $(selector).tipsy(opts);
+    }
+
+    function jAlert(message, sticky, theme, position)
+    {
+      $.jGrowl.defaults.closer = false;
+      $.jGrowl.defaults.closeTemplate	= '&times;';
+
+      var options = {
+        sticky: sticky ? true : false,
+        life: 5000
+      };
+
+      if(theme)
+        options['theme'] = theme;
+
+      if(position)
+        options.position = position;
+
+      $.jGrowl(message, options);
+    }
+
+    function jAlertErr(message, sticky, position)
+    {
+      if(sticky === undefined)
+        sticky = true;
+
+      jAlert(message, sticky, 'err', position);
+    }
+
+    function showMessage(message, onCloseClick, onBtnClick)
+    {
+      if(!message)
+        return;
+
+      $('.top-message-bar').remove();
+
+      var $panel = $('<div class="top-message-bar"/>').hide();
+      $panel.append('<div class="content-box">' +
+        '<div class="message-box">' + message + '</div>' +
+        '<div class="close-btn"></div>' +
+        '</div>'
+      );
+
+      $panel.prependTo('body').slideDown();
+
+      $panel.on('click', '.close-btn', function(){
+        if(onCloseClick) {
+          onCloseClick();
+        }
+        $panel.fadeOut(function(){
+          $panel.remove();
+        });
+      });
+
+      if(onBtnClick) {
+        $panel.on('click', '.button', onBtnClick);
+      }
+    }
+  </script>
+
+  <!-- Bing pixel -->
+<script>
+  (function() {
+    var sf = window._sf;
+
+    if (sf && sf.os && sf.os.name === 'Mac OS') {
+      (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5105693"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+    }
+  })();
+</script>
+<!-- End Bing pixel -->
+<!-- Facebook Pixel Code -->
+<script>
+  (function() {
+    var sf = window._sf;
+
+    if (sf && sf.os && sf.os.name === 'Mac OS') {
+
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '978059908934144');
+      fbq('track', "PageView");
+    }
+  })();
+</script>
+<!-- End Facebook Pixel Code -->
+
+<link rel="alternate" hreflang="de" href="http://de.savefrom.net/webmaster.php">
+<link rel="alternate" hreflang="en" href="http://en.savefrom.net/webmaster.php">
+<link rel="alternate" hreflang="es" href="http://es.savefrom.net/webmaster.php">
+<link rel="alternate" hreflang="fr" href="http://fr.savefrom.net/webmaster.php">
+<link rel="alternate" hreflang="id" href="http://id.savefrom.net/webmaster.php">
+<link rel="alternate" hreflang="it" href="http://it.savefrom.net/webmaster.php">
+<link rel="alternate" hreflang="pt" href="http://pt.savefrom.net/webmaster.php">
+<link rel="alternate" hreflang="ru" href="http://ru.savefrom.net/webmaster.php">
+<link rel="alternate" hreflang="tr" href="http://tr.savefrom.net/webmaster.php">
+<link rel="alternate" hreflang="uk" href="http://uk.savefrom.net/webmaster.php">
+
+</head>
+<body class="">
+<!--Error message for IE 6-->
+<!--[if lt IE 7]>
+<p class=chromeframe>Ваш браузер <strong>устарел!</strong> <a href="http://browsehappy.com/">Перейдите на современный браузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">установите Google Chrome Frame</a> для получения доступа к этому сайту.</p>
+<![endif]-->
+<!--/Error message for IE 6-->
+<div style="position: absolute; left: -100px; top: -100px;">
+  <!--LiveInternet counter-->
+  <script type="text/javascript"><!--
+    document.write("<img src='//counter.yadro.ru/hit?r" +
+    escape(document.referrer) + ((typeof(screen) == "undefined") ? "" :
+    ";s" + screen.width + "*" + screen.height + "*" + (screen.colorDepth ?
+        screen.colorDepth : screen.pixelDepth)) + ";u" + escape(document.URL) +
+    ";h" + escape(document.title.substring(0, 80)) + ";" + Math.random() +
+    "' width=1 height=1 alt=''>")//--></script>
+  <!--/LiveInternet-->
+</div>
+
+
+  <!--Header-->
+  <header class="header header_v2">
+    <div class="page-width-inner g-row_inline">
+      <div class="header__left g-col c3">
+        <span class="menu-btn menu-btn_v2"></span>
+        <a name="logo" class="logo" href="//ru.savefrom.net/">Savefrom.net</a>
+      </div>
+              <div id="nav_top" class="g-col c9">
+          <div class="nav-top-2 right">
+            <a href="/user.php?vid=387" class="nav-top-2__item">Установить</a><span class="nav-top-2__item nav-top-2__item_active">Вебмастерам</span><a href="/faq.php" class="nav-top-2__item">Помощь</a>          </div>
+        </div>
+          </div>
+  </header>
+        
+<div id="main" class="main-block main-block_v2">
+  <noscript>
+    <div class="wrapper"><p class="javascript-error"><IDXSKIP>SaveFrom.net использует JavaScript для отображения информации. Пожалуйста, включите JavaScript и обновите эту страницу.</IDXSKIP></p></div>
+  </noscript>
+    <!--content-->
+    <div class="wrapper">
+
+  <div class="page-webmaster">
+    <!-- Заголовок страницы -->
+    <h2 class="center">Интеграция сервиса на ваш сайт<a href="#integration" name="integration" class="anchor">&raquo;</a></h2>
+
+    <!-- Хотите увеличить количество посетителей и сделать свой сайт удобнее? -->
+    <!--  <div class="center bold">--><!--</div>-->
+    <!--  <br/>-->
+
+    <br/>
+
+    <!-- Установите кнопку -->
+    <p class="center webmaster">
+      Разместите кнопку:      <!-- Кнопка -->
+    <span class="sf-downloader-btn sf-downloader-btn-light sf-downloader-btn1 webmaster__btn_preview_main">
+      <span class="text">Скачать</span>
+      <span class="arrow">»</span>
+    </span>
+    </p>
+
+    <!-- Пользователи начнут скачивать видео прямо с вашего сайта -->
+    <div class="center">и пользователи смогут скачивать видео прямо с вашего сайта!</div>
+
+    <!-- (Start) sf-addon integrate -->
+
+    <!-- Стили: ресеты, основные стили, колорпикер -->
+    <link rel="stylesheet" href="css/webmaster.css?v=2">
+
+    <!-- (Start) HTML страницы -->
+
+    <!-- Блок webmaster-example -->
+    <div class="webmaster-example clearfix">
+      <div class="webmaster-example__text">Пример установленной кнопки</div>
+      <a class="webmaster-example__link" href="http://clipza.ru/" target="_blank">посмотреть на сайте</a>
+      <div class="webmaster-example__preview">
+
+        <span class="webmaster-example__preview-btn sf-downloader-btn sf-downloader-btn-light sf-downloader-btn1 webmaster__btn_preview_main">
+          <span class="text">Скачать</span>
+          <span class="arrow">»</span>
+        </span>
+
+        <img class="webmaster-example__preview" src="img/webmaster/example-preview.jpg" alt="Пример установленной кнопки">
+      </div>
+    </div>
+
+    <!-- Описание youtube -->
+    <div class="note-block">
+      <p><span class="bold">SaveFrom.net</span> &mdash; это самый быстрый способ скачать видео с вашего сайта. При первом клике по "Скачать" пользователю будет предложено установить Savefrom.net помощник. После установки скачивание будет происходить в один клик со страницы, на которой находится пользователь.</p>
+
+<p>Скрипт интеграции позволяет скачивать видео с:</p>
+
+<ul>
+  <li>youtube.com</li>
+  <li>vimeo.com</li>
+  <li>dailymotion.com</li>
+  <li>vk.com</li>
+</ul>
+
+<p>Внимание! Если ваш сайт посещает больше 10 000 человек в сутки, для вас есть специальное предложение с возможностью заработка. Напишите нам: <span class="wm-contact-info"></span></p>
+    </div>
+
+    <script>
+      $(function(){
+        if(!window.atob)
+          return;
+
+        try {
+          var s = 'mV0cGFydG5lcnNAc2F2ZWZyb20ub';
+          s = atob(s.substr(3) + s.substr(0,3));
+          if(!s)
+            return;
+
+          $('.wm-contact-info').html('<a href="mai' +
+            'lto:' + s + '">' + s + '</a>');
+        }
+        catch(err){}
+      });
+    </script>
+
+    <table class="constructor">
+      <tr>
+        <td class="title"><span>Выберите вид<br>и цвет кнопки</span></td>
+        <td class="control-1"><div class="colorpicker"><input id="color" style="display:none"></div></td>
+        <td class="control-2 buttons">
+          <div class="control-row">
+            <label>
+              <input class="constructor__radio" type="radio" name="btn-type" value="1">
+              <a href="#" class="sf-downloader-btn sf-downloader-btn-light sf-downloader-btn1">
+                <span class="text">Скачать</span>
+                <span class="arrow">»</span>
+              </a>
+            </label>
+            <label>
+              <input class="constructor__radio" type="radio" name="btn-type" value="2">
+              <a href="#" class="sf-downloader-btn sf-downloader-btn-light sf-downloader-btn2">
+                <span class="text">Скачать</span>
+                <span class="arrow">»</span>
+              </a>
+            </label>
+            <label>
+              <input class="constructor__radio" type="radio" name="btn-type" value="3">
+              <a href="#" class="sf-downloader-btn sf-downloader-btn-light sf-downloader-btn3">
+                <span class="text">Скачать</span>
+                <span class="arrow">»</span>
+              </a>
+            </label>
+          </div>
+          <div class="control-row">
+            <label>
+              <input class="constructor__radio" type="radio" name="btn-type" value="4">
+              <a href="#" class="sf-downloader-btn sf-downloader-btn-dark sf-downloader-btn1">
+                <span class="text">Скачать</span>
+                <span class="arrow">»</span>
+              </a>
+            </label>
+            <label>
+              <input class="constructor__radio" type="radio" name="btn-type" value="5">
+              <a href="#" class="sf-downloader-btn sf-downloader-btn-dark sf-downloader-btn2">
+                <span class="text">Скачать</span>
+                <span class="arrow">»</span>
+              </a>
+            </label>
+            <label>
+              <input class="constructor__radio" type="radio" name="btn-type" value="6">
+              <a href="#" class="sf-downloader-btn sf-downloader-btn-dark sf-downloader-btn3">
+                <span class="text">Скачать</span>
+                <span class="arrow">»</span>
+              </a>
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="title"><span>Выберите шрифт<br>и размер</span></td>
+        <td class="control-1 font-size"><span class="action">12</span> px</td>
+        <td class="control-2 font-family">
+          <div class="control-row">
+            <label><input type="radio" name="font" value="arial">&nbsp;Arial</label>
+            <label><input type="radio" name="font" value="tahoma">&nbsp;Tahoma</label>
+            <label><input type="radio" name="font" value="georgia">&nbsp;Georgia</label>
+          </div>
+          <div class="control-row">
+            <label><input type="radio" name="font" value="verdana">&nbsp;Verdana</label>
+            <label><input type="radio" name="font" value="trebuchet">&nbsp;Trebuchet MS</label>
+            <label><input type="radio" name="font" value="helvetica">&nbsp;Helvetica</label>
+          </div>
+        </td>
+      </tr>
+      <tr class="advanced">
+        <td class="title"><span>Укажите текст<br>и контрастность</span></td>
+        <td class="control-1 text-opacity">
+          <input id="text-opacity" type="range" min="40" max="100" step="5" value="60">
+        </td>
+        <td class="control-2 text"><input id="text" type="text" size="25" value="Скачать"></td>
+      </tr>
+      <tr class="result">
+        <td class="title"><span>Результат</span></td>
+        <td class="control-1"><div class="result-btn"></div></td>
+        <td class="control-2 result-code"><label for="result-code">Скопируйте код и вставьте на ваш сайт!</label>
+          <textarea id="result-code" cols="40" rows="27"></textarea></td>
+      </tr>
+    </table>
+    <!-- (End) HTML страницы -->
+
+    <!-- (Start) Скрипты: работа с цветом, колорпикер, сам скрипт страницы -->
+    <script src="js/libs/tinycolor-min.js"></script>
+    <script src="js/jquery_plugins/chromoselector.min.js"></script>
+
+
+    <script>
+      $(function(){
+        var btnClass = 'sf-helper-btn',
+            bgColor = '',
+            colors = ['#9cd600', '#69ae00', '#609f00', '#416B00'],
+            base = colorBlend(colors),
+            hslOffset = [],
+            opacityOffset = [20, -10, 50, -20],
+            timer = 0,
+            styleLight = {}, styleDark = {},
+            fontFamily = {
+              arial: 'Arial,Helvetica,sans-serif',
+              tahoma: 'Tahoma,Geneva,sans-serif',
+              georgia: 'Georgia,serif',
+              verdana: 'Verdana,Geneva,sans-serif',
+              trebuchet: "'Trebuchet MS',Helvetica,sans-serif",
+              helvetica: 'Helvetica,Arial,sans-serif'
+            };
+
+        if(!bgColor)
+          bgColor = base;
+
+        var params = {
+          type: 1,
+          text: 'Скачать',
+          borderRadius: 0,
+          font: '',
+          fontSize: 12,
+          textOpacity: 60        };
+
+        calcHslOffset();
+        initConstructor();
+        updateButton();
+
+        // color picker
+        $('#color').chromoselector({
+          target: '.colorpicker',
+          autoshow: false,
+          width: 130,
+          ringwidth: 10,
+          preview: false,
+          resizable: false,
+          create: changeColor,
+          update: changeColor
+        }).chromoselector('show', 0).chromoselector('setColor', bgColor);
+
+        //
+        $('.buttons a').on('click', function(){
+          $('input', this.parentNode).click();
+          return false;
+        });
+
+        $('.buttons input').on('change', function(){
+          params.type = parseInt(this.value);
+          updateButton();
+        });
+
+        $('#text-opacity').on('change', function(){
+          changeTextOpacity(this.value);
+          updateButton();
+        });
+
+        $('body').on('change click keyup', '#text, #font-size', function(e){
+          clearTimeout(timer);
+          if(this.value)
+          {
+            var _this = this;
+            timer = setTimeout(function(){
+              if(_this.id == 'text')
+              {
+                params.text = _this.value;
+              }
+              else if(_this.id == 'font-size')
+              {
+                params.fontSize = parseInt(_this.value);
+              }
+
+              updateButton();
+            })
+          }
+        });
+
+        $('.font-size .action').on('click', function(){
+          $('<input/>').attr({
+            type: 'number',
+            name: 'font-size',
+            id: 'font-size',
+            value: params.fontSize,
+            min: 7,
+            max: 40,
+            size: 2
+          }).replaceAll(this);
+        });
+
+        $('input[name="font"]').on('change', function(){
+          if(fontFamily[this.value])
+          {
+            params.font = this.value;
+            updateButton();
+          }
+        });
+
+
+        function initConstructor()
+        {
+          var color = base;
+          $('.buttons input[value="' + params.type + '"]').attr('checked', '');
+
+          if(!params.font || !fontFamily[params.font])
+            params.font = 'arial';
+
+          $('.font-family input[value="' + params.font + '"]').attr('checked', '');
+
+          applyNewColor(color);
+          changeTextOpacity(params.textOpacity);
+        }
+
+        function getLineHeight(fontSize)
+        {
+          return Math.round(fontSize * 1.75);
+        }
+
+        function getBorderRadius(type, height)
+        {
+          type %= 3;
+
+          if(type == 1)
+            return 4;
+
+          if(type == 2)
+            return 21;
+
+          return 2;
+        }
+
+        function getColorStyle(type)
+        {
+          var s = (type < 4) ? styleLight : styleDark;
+          for(var i in s)
+            params[i] = s[i];
+        }
+
+        function calcHslOffset()
+        {
+          var baseHsl = tinycolor(base).toHsl();
+          for(var i = 0; i < colors.length; i++)
+          {
+            var hsl = tinycolor(colors[i]).toHsl();
+            hslOffset.push({
+              h: baseHsl.h - hsl.h,
+              s: baseHsl.s - hsl.s,
+              l: baseHsl.l - hsl.l
+            });
+          }
+        }
+
+        function calcNewColors(baseClr)
+        {
+          var baseHsl = tinycolor(baseClr).toHsl(),
+              newColors = [];
+
+          for(var i = 0; i < hslOffset.length; i++)
+          {
+            var hsl = {
+              h: (baseHsl.h - hslOffset[i].h) % 360,
+              s: Math.min(1, baseHsl.s - hslOffset[i].s),
+              l: Math.min(1, baseHsl.l - hslOffset[i].l)
+            };
+
+            if(hsl.h < 0)
+              hsl.h = 360 - hsl.h;
+
+            newColors[i] = tinycolor(hsl).toHexString();
+          }
+
+          return newColors;
+        }
+
+        function changeColor()
+        {
+          var color = $(this).chromoselector('getColor').getHexString();
+          applyNewColor(color);
+          updateButton();
+        }
+
+        function applyNewColor(color)
+        {
+          var clrs = calcNewColors(color);
+
+          styleLight.gFrom = clrs[0];
+          styleLight.gTo = clrs[1];
+          styleLight.backgroundColor = colorBlend([clrs[0], clrs[1]]);
+
+          styleDark.gFrom = clrs[2];
+          styleDark.gTo = clrs[3];
+          styleDark.backgroundColor = colorBlend([clrs[2], clrs[3]]);
+
+        }
+
+        function changeTextOpacity(value)
+        {
+          value = parseInt(value);
+          var c = [10, -20, 40, -30];
+          for(var i = 0; i < c.length; i++)
+          {
+            c[i] = value + c[i];
+            if(c[i] < 0)
+              c[i] = 0;
+            else if(c[i] > 100)
+              c[i] = 100;
+
+            c[i] /= 100;
+          }
+
+          styleLight.textColor = 'rgba(0,0,0,' + c[0] + ')';
+          styleLight.textShadow = '1px 1px 1px rgba(255,255,255,' + c[1] + ')';
+          styleDark.textColor = 'rgba(255,255,255,' + c[2] + ')';
+          styleDark.textShadow = '-1px -1px 1px rgba(0,0,0,' + c[3] + ')';
+        }
+
+        function updateButton()
+        {
+          $('.result-btn').html(getBtnHtmlCode());
+          $('#result-code').val(getBtnApiCode());
+        }
+
+        function getBtnHtmlCode()
+        {
+          updateParams();
+
+          return '<a class="' + btnClass +
+              '" style="' + getBtnStyle() + '" data-savefrom-get-links="ссылка_на_видео">' +
+              '<span class="' + btnClass + '-text">' + params.text + '</span>&nbsp;' +
+              '<span class="' + btnClass + '-arrow" style="' + getArrowStyle() +
+              '">»</span></a>';
+        }
+
+        function getBtnApiCode() {
+          console.log('params', params);
+
+          var styles = [
+            'sfButton.styles = {'
+          ];
+
+          if (params.textColor) styles.push(' color: \'' + params.textColor + '\',');
+          if (params.textShadow) styles.push(' textShadow: \'' + params.textShadow + '\',');
+          if (params.fontFamily) styles.push(' fontFamily: \'' + params.fontFamily + '\',');
+          if (params.fontSize) styles.push(' fontSize: \'' + params.fontSize + 'px\',');
+          if (params.borderRadius) styles.push(' borderRadius: \'' + params.borderRadius + 'px\',');
+          if (params.gFrom && params.gTo) {
+            styles.push(
+                ' backgroundColor: \'' + (params.backgroundColor || params.gTo) + '\',',
+                ' \'background-image\': \'-webkit-linear-gradient(' + params.gFrom + ', ' + params.gTo + ')\',',
+                ' \'background-image\': \'-moz-linear-gradient(' + params.gFrom + ', ' + params.gTo + ')\',',
+                ' \'background-image\': \'linear-gradient(' + params.gFrom + ', ' + params.gTo + ')\','
+            );
+          }
+
+          styles.push(
+              ' border: \'none\'',
+              '};'
+          );
+
+          return '' +
+            '\<script\>\n' +
+            '// Вставка скрипта:\n' +
+            '(function(w, d, s, p, a, c) {\n' +
+              'w.sfButton = w.sfButton || function(){};\n' +
+              'c = d.getElementsByTagName(s)[0];\n' +
+              'a = d.createElement(s);\n' +
+              'a.async=1;\n' +
+              'a.src=p;\n' +
+              'c.parentNode.insertBefore(a, c);\n' +
+            '})(window, document, \'script\', \'//savefrom.net/js/sf-helper-agent.min.js\');' +
+            '\n\n' +
+            '// Текст:\n' +
+            'sfButton.text = \'' + params.text + '\';' +
+            '\n\n' +
+            '// Cтили:\n' +
+            styles.join('\n') +
+            '\n' +
+            '\<\/script\>';
+        }
+
+        function updateParams()
+        {
+          params.lineHeight = getLineHeight(params.fontSize);
+          params.borderRadius = getBorderRadius(params.type, params.lineHeight);
+          getColorStyle(params.type);
+
+          params.fontFamily = fontFamily[params.font];
+        }
+
+        function getBtnStyle()
+        {
+          var style = [
+            'border-width: 0;',
+            'border-radius: {borderRadius}px;',
+            'display: inline-block;',
+            'font: {fontSize}px/2em {fontFamily};',
+            'font-weight: bold;',
+            'padding: 0 0.7em;',
+            'text-decoration: none;',
+            'vertical-align: middle;',
+            'color: {textColor};',
+            'background-color:{backgroundColor};',
+            'background-image:-webkit-gradient(linear,0 0,0 100%,from({gFrom}),to({gTo}));',
+            'background-image:-webkit-linear-gradient({gFrom},{gTo});',
+            'background-image:-moz-linear-gradient({gFrom},{gTo});',
+            'background-image:-o-linear-gradient({gFrom},{gTo});',
+            'background-image:linear-gradient({gFrom},{gTo});',
+            'text-shadow: {textShadow};'
+          ];
+
+          style = style.join(' ');
+          style = style.replace(/\{([\w]+)\}/g, function(s, m1){
+            if(params[m1])
+              return params[m1];
+
+            return s;
+          });
+
+          return style;
+        }
+
+        function getArrowStyle()
+        {
+          var style = [
+            'display: inline-block;',
+            'vertical-align: middle;',
+            'font-size: 1.5em;',
+            'margin-left: 0.2em;',
+            '-webkit-transform: rotate(90deg);',
+            '-moz-transform: rotate(90deg);',
+            '-ms-transform: rotate(90deg);',
+            '-o-transform: rotate(90deg);',
+            'transform: rotate(90deg);'
+          ];
+
+          return style.join(' ');
+        }
+
+        function colorBlend(colors)
+        {
+          var res = {h: 0, s: 0, l: 0};
+          for(var i = 0; i < colors.length; i++)
+          {
+            var hsl = tinycolor(colors[i]).toHsl();
+            res.h += hsl.h;
+            res.s += hsl.s;
+            res.l += hsl.l;
+          }
+
+          res.h /= colors.length;
+          res.s /= colors.length;
+          res.l /= colors.length;
+
+          return tinycolor(res).toHexString();
+        }
+
+        function normalizeNumber(n, min, max)
+        {
+          if(n < min)
+            return min;
+          if(n > max)
+            return max;
+
+          return n;
+        }
+
+        // full-range YCbCr http://www.equasys.de/colorconversion.html
+        function yuv2rgb(yuv)
+        {
+          var y = yuv.y,
+              u = yuv.u - 128,
+              v = yuv.v - 128;
+
+          var rgb = {
+            r: Math.floor(y + 1.4 * v),
+            g: Math.floor(y - 0.343 * u - 0.711 * v),
+            b: Math.floor(y + 1.765 * u)
+          };
+
+          normalizeNumber(rgb.r, 0, 255);
+          normalizeNumber(rgb.g, 0, 255);
+          normalizeNumber(rgb.b, 0, 255);
+
+          return rgb;
+        }
+
+        function rgb2yuv(rgb)
+        {
+          var color = (typeof(rgb) == 'object') ? rgb : tinycolor(rgb).toRgb();
+          var r = color.r, g = color.g, b = color.b;
+
+          var yuv = {
+            y: Math.floor(r *  .299 + g *  .587 + b *  .114),
+            u: Math.floor(r * -.169 + g * -.331 + b *  .500) + 128,
+            v: Math.floor(r *  .500 + g * -.419 + b * -.081) + 128
+          };
+
+          return yuv;
+        }
+      });
+    </script>
+
+    <!-- (End) sf-addon integrate -->
+  </div>
+
+    </div>
+    <!--/content-->
+</div> <!--/main-->
+
+
+  <!--Footer-->
+  <footer class="footer_v2">
+    <div class="wrapper clearfix">
+      <IDXSKIP><p class="copyright">© 2008-2017, SaveFrom.net</p></IDXSKIP>
+      <div class="lang-box" tabindex="2" style="z-index:1000;"><div>
+          <ul class="lang">
+            
+<script>
+$(function(){function d(){b.removeClass(e);$("body").off(f)}function i(){b.addClass(e);c=$("li.active",b);$("body").off(f).on("click"+f,function(){d()}).on("keydown"+f,function(a){switch(a.which){case 27:d();break;case 13:case 32:$(".active",b).removeClass("active");c.addClass("active").removeClass(g);d();if(a=$("li.active a",b).attr("href"))location.href=a;break;case 38:h(c.prev("li"));break;case 40:h(c.next("li"));break;case 36:h($("li",b).first());break;case 35:h($("li",b).last());break;default:return!0}return!1})}
+function h(a){a[0]&&!a.hasClass(g)&&(c.removeClass(g),a.addClass(g),c=a)}var b=$(".lang-box"),e="active",g="current",f=".langbox",c;b.on("click",function(a){if("A"!=a.target.tagName)return b.hasClass(e)?d():i(),!1}).on("keydown",function(a){if(b.hasClass(e))return!0;switch(a.which){case 13:case 32:i();break;default:return!0}return!1})});
+</script>
+<li><a href="http://en.savefrom.net/webmaster.php" class="lang-en">English</a></li><IDXSKIP><li class="active"><span class="lang-ru">Русский</span></li></IDXSKIP><li><a href="http://de.savefrom.net/webmaster.php" class="lang-de">Deutsch</a></li><li><a href="http://es.savefrom.net/webmaster.php" class="lang-es">Español</a></li><li><a href="http://fr.savefrom.net/webmaster.php" class="lang-fr">‪Français</a></li><li><a href="http://id.savefrom.net/webmaster.php" class="lang-id">Bahasa Indonesia‬</a></li><li><a href="http://it.savefrom.net/webmaster.php" class="lang-it">‪Italiano‬</a></li><li><a href="http://pt.savefrom.net/webmaster.php" class="lang-br">Português (Brasil)</a></li><li><a href="http://tr.savefrom.net/webmaster.php" class="lang-tr">Türkçe‬</a></li><li><a href="http://uk.savefrom.net/webmaster.php" class="lang-uk">Українська‬</a></li>          </ul>
+          <i></i></div></div>
+      <div class="clearfix"></div>
+      <ul class="f-nav f-nav_v2">
+        <IDXSKIP><li><a href="/">Главная</a></li></IDXSKIP><IDXSKIP><li><a href="/faq.php">FAQ</a></li></IDXSKIP><IDXSKIP><li><a href="/user.php?vid=388">Установить</a></li></IDXSKIP><li><a href="" class="active">Вебмастерам</a></li><IDXSKIP><li><a href="/contact.php">Обратная связь</a></li></IDXSKIP><IDXSKIP><li><a href="/advertising.php">Реклама</a></li></IDXSKIP><IDXSKIP><li><a href="/terms.html">Terms of Service</a></li></IDXSKIP><IDXSKIP><li><a href="/EULA.html">EULA</a></li></IDXSKIP><IDXSKIP><li><a href="/privacy-policy.html">PP</a></li></IDXSKIP>      </ul>
+    </div>
+  </footer>
+
+
+<script>
+  $('.spoiler-box:not(.open)').hide();
+</script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','_ga');
+
+      (function(){
+        window.gaHandler = {
+          trackers: {},
+
+          stringToArray: function(str, delimiter)
+          {
+            delimiter = delimiter || ';';
+            var re = new RegExp(delimiter + '+$');
+            str = str.replace(re, '');
+            return str.split(delimiter);
+          },
+
+          checkTracker: function(data) {
+            if($.isArray(data) && data.length >= 2)
+            {
+              var tName = this.getTrackerName(data[0]);
+              if(tName && !this.trackers[tName])
+              {
+                if (_sf.gaTrackers[tName] && _sf.gaTrackers[tName].id) {
+                  var parameters = _sf.gaTrackers[tName].parameters || {};
+
+                  ga('create', _sf.gaTrackers[tName].id, 'savefrom.net', tName, parameters);
+                  this.trackers[tName] = tName;
+
+                  if (_sf.gaTrackers[tName].sendPageview) {
+                    ga(tName + '.send', 'pageview');
+                  }
+                }
+                else {
+                  data[0] = data[0].substr(tName.length + 1);
+                }
+              }
+
+              return true;
+            }
+
+            return false;
+          },
+
+          track: function(data)
+          {
+            if(typeof(data) == 'string')
+              data = this.stringToArray(data);
+
+            if (this.checkTracker(data)) {
+              ga.apply(null, data);
+            }
+          },
+
+          trackNode: function(node, attr)
+          {
+            attr = attr || 'data-ga-event';
+            var data = $(node).attr(attr);
+            if(data)
+              this.track(data);
+          },
+
+          getTrackerName: function(command)
+          {
+            var i = command ? command.indexOf('.') : -1;
+            if(i <= 0)
+              return;
+
+            return command.substr(0, i);
+          }
+        };
+
+        $('body').on('click sendstats', 'a.ga_track_events', function(event){
+          gaHandler.trackNode(this);
+        });
+     })();
+
+     window.ga = function() {
+      var args = Array.prototype.slice.call(arguments, 0);
+
+      if (window.gaHandler.trackers['events'] &&
+        args[0] == 'send' && args[1] == 'event') {
+          args[0] = 'events.send';
+      }
+      else {
+        window.gaHandler.checkTracker(args);
+      }
+
+              window._ga.apply(window, args);
+          }
+
+    
+      if (_sf.app) {
+        ga('create', 'UA-7055055-17', 'savefrom.net', {'userId': _sf.stats.uid});
+      }
+      else {
+        ga('create', 'UA-7055055-1', 'savefrom.net',
+          {'sampleRate': 10, 'userId': _sf.stats.uid});
+
+        ga('create', 'UA-7055055-19', 'savefrom.net',
+          {'name': 'events', 'sampleRate': 10, 'userId': _sf.stats.uid});
+        window.gaHandler.trackers['events'] = 'events';
+      }
+
+      ga('create', 'UA-7055055-7', 'savefrom.net',
+        {'name': 't2', 'userId': _sf.stats.uid});
+
+      window.gaHandler.trackers['t2'] = 'test';
+
+    
+      ga('require', 'displayfeatures');
+
+      if (window.gaqTrackPageview) {
+        ga('send', 'pageview', gaqTrackPageview);
+      }
+      else {
+        ga('send', 'pageview');
+      }
+    </script>
+
+
+<div class="share42init" data-title="Вебмастеру" data-path="/img/socials/share42/ru/" data-image="//savefrom.net/img/icon_100.png"></div><script src="/js/libs/share42_ru_2.js?v=2"></script>    <script>
+    $(function(){
+      if($(window).width() >= 1056)
+      {
+        setTimeout(function(){
+          $('#share42').fadeIn();
+        }, 2000);
+      }
+    });
+    </script>
+
+</body>
+</html>
+
+
+

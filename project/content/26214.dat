@@ -1,0 +1,532 @@
+imsevimse.ru/map.html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <base href="http://www.imsevimse.ru/map.html" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="title" content="Карта сайта" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Карта сайта</title>
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script type="text/javascript">
+function keepAlive() {	var myAjax = new Request({method: "get", url: "index.php"}).send();} window.addEvent("domready", function(){ keepAlive.periodical(840000); });
+  </script>
+  <link type = "text/css" rel = "stylesheet" href = "http://www.imsevimse.ru/components/com_jshopping/css/default.css" />
+  <script type = "text/javascript" src = "/templates/baby_page/js/jquery-1.8.1.min.js"></script>
+  <script type = "text/javascript">jQuery.noConflict();</script>
+  <script type = "text/javascript" src = "http://www.imsevimse.ru/components/com_jshopping/js/jquery/jquery.media.js"></script>
+  <script type = "text/javascript" src = "http://www.imsevimse.ru/components/com_jshopping/js/functions.js"></script>
+  <script type = "text/javascript" src = "http://www.imsevimse.ru/components/com_jshopping/js/validateForm.js"></script>
+
+  <link media="all" rel="stylesheet" type="text/css" href="/templates/baby_page/css/all.css" />
+  <link media="all" rel="stylesheet" type="text/css" href="/templates/baby_page/css/jquery.fancybox.css" />
+  <!--[if IE 8]><link rel="stylesheet" href="/templates/baby_page/css/ie8.css" type="text/css" media="screen, projection" /><![endif]-->
+  <script type="text/javascript" src="/templates/baby_page/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="http://vk.com/js/api/openapi.js?95"></script>
+  <script type="text/javascript">
+  VK.init({apiId: 3665103, onlyWidgets: true});
+  </script>
+  <script type="text/javascript" src="/templates/baby_page/js/menu.js"></script>
+  <script type="text/javascript" src="/templates/baby_page/js/tabs.js"></script>
+  <script type="text/javascript" src="/templates/baby_page/js/easySlider1.7.js"></script>
+  <script type="text/javascript" src="/templates/baby_page/js/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="/templates/baby_page/js/validation.js"></script>
+  <script type="text/javascript" src="/templates/baby_page/js/changeprice.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){  
+      $('.my').fancybox();
+      $('.fancybox').fancybox();
+      
+     $(".jg_catelem_photo")
+            .fancybox({
+                loop: false,
+                    helpers: {
+                        title : { type : 'inside' },
+                        buttons	: false
+                      },
+      });
+                            
+      $("#slider1").easySlider({
+        auto: true,
+        pause: 5000,
+        prevText:    '',
+        nextText:     '',
+        continuous: true,
+      });
+       $('.news li').each(function(){
+        if (!($(this).children('.news-img').length == 1)){
+          $(this).children('.news-block').css('width', 731 + 'px');
+        }
+      });
+      // Добавленная часть 18,07,2013
+      if(!($('.breadcrumbs').height() == 18)){
+        $('.logo').css('marginBottom', 20 + 'px');
+        $('.breadcrumbs').css('marginBottom', 50 + 'px');
+      }
+        $('.my').click();
+    });  
+    $(window).load(function(){
+      // Скрипт выравнивающий каталог по высоте 18,03,2013
+      var aa = $('.catalog li .catalog-name-text');
+      for(var i = 0; i <= aa.length; i += 4){
+        var h = 0;
+        for(var j = 0; j < 4; j++){
+          h = Math.max(h, aa.eq(i + j).height());
+        }
+        for(var j = 0; j < 4; j++){
+          aa.eq(i + j).css({'height' : h});
+        }
+      }
+    });   
+      
+  </script>
+  
+</head>
+<body class="min-bg" onkeypress="return catchControlKeys(event)">
+  <div id="wrapper">
+    <div id="header">
+      <div class="header-top">
+        <div class="header-webs">
+                    <a href="http://vk.com/public54038655"><img src="/templates/baby_index/images/vk.png" alt="" /></a>
+          <a href="https://www.facebook.com/pages/Натуральный-малыш/600066436679276"><img src="/templates/baby_index/images/fb.png" alt="" /></a>
+                  </div>
+        <div class="search">
+          <script type = "text/javascript">
+function isEmptyValue(value){
+    var pattern = /\S/;
+    return ret = (pattern.test(value)) ? (true) : (false);
+}
+</script>
+<form name = "searchForm" method = "post" action="/shop/search/result.html" onsubmit = "return isEmptyValue(jQuery('#jshop_search').val())">
+<input type="hidden" name="setsearchdata" value="1">
+<input type = "hidden" name = "category_id" value = "0" />
+<input type = "text" class = "search-input" name = "search" id = "jshop_search" onblur="if (this.value=='') this.value='Поиск по сайту';" onfocus="if (this.value=='Поиск по сайту') this.value='';" value="Поиск по сайту" />
+<input class = "search-submit button" type = "submit" value = "" />
+<input type="hidden" name="search_type" value="any" />
+</form>
+        </div>
+        <a href="/shipping.html" class="delivery">Доставка и оплата</a>
+          <div class="header-cart">
+ <a href = "#"></a>
+<span class="pink">
+  <span>
+    0  </span>
+    шт.
+</span>
+    на сумму 
+<span class="pink">
+     <span>0</span> руб.
+</span>
+   
+</div>    <div id="header_login">
+        <form action="/map.html" method="post" id="login-form" >
+                        <fieldset class="userdata">
+                                <input id="modlgn-username" type="text" name="username" class="inputbox"  placeholder="логин"/>
+                                <input id="modlgn-passwd" type="password" name="password" class="inputbox" placeholder="пароль"/>
+                <input type="submit" name="Submit" class="button" value="Войти" />
+                <input type="hidden" name="option" value="com_users" />
+                <input type="hidden" name="task" value="user.login" />
+                <input type="hidden" name="return" value="aW5kZXgucGhwP2Zvcm1hdD1odG1sJm9wdGlvbj1jb21feG1hcCZ2aWV3PWh0bWwmaWQ9MSZJdGVtaWQ9MTE4" />
+                <input type="hidden" name="5217318524d55050287c97413e036c86" value="1" />            </fieldset>
+                    </form>
+    </div>
+
+          
+        
+      </div>
+      
+<IDXSKIP><div class="logo">
+        <a href="/"><img src="/templates/baby_page/images/logo.png" alt="" /></a>
+         <noindex><h1>Натуральный малыш</h1></noindex>
+
+      </div></IDXSKIP>
+
+      <div class="main-nav">
+        <ul>
+          
+<ul class="menu">
+<IDXSKIP><li class="item-101"><a href="/" >Главная</a></li></IDXSKIP><IDXSKIP><li class="item-111"><a href="/catalog.html" >Каталог</a></li></IDXSKIP><IDXSKIP><li class="item-113"><a href="/reviews.html" >Обзоры</a></li></IDXSKIP><li class="item-115"><a href="/kontakty.html" >Контакты</a></li><IDXSKIP><li class="item-174"><a href="/voprosy-otvety.html" >Вопросы-ответы</a></li></IDXSKIP></ul>
+
+        </ul>
+      </div>
+        
+<div class="breadcrumbs">
+<ul>
+<li><a href="/" class="pathway">Главная</a></li><li><a>Карта сайта</a></li></ul>
+</div>
+
+    </div>
+    <div id="main">
+          <noindex>
+        <div class="sidebar">
+        
+          <IDXSKIP><div class="title">
+		<h2>Каталог</h2>
+</div></IDXSKIP>
+<div class="sidebar-catalog">
+<ul class="menu collapsible">
+<IDXSKIP><li class=''>     <a class="" href="/shop/category/view/8.html">ПЕЛЕНАЛЬНЫЕ ТРУСИКИ</a>
+       
+</li></IDXSKIP><IDXSKIP><li class=''>     <a class="" href="/shop/category/view/16.html">ПЕЛЕНАЛЬНЫЕ ШТАНИШКИ</a>
+       
+</li></IDXSKIP><IDXSKIP><li class=''>     <a class="" href="/shop/category/view/19.html">НАТУРАЛЬНОЕ МАМЕ</a>
+       
+</li></IDXSKIP><IDXSKIP><li class=''>     <a class="" href="/shop/category/view/25.html">НАТУРАЛЬНОЕ ДЛЯ СНА</a>
+       
+</li></IDXSKIP><IDXSKIP><li class=''>     <a class="" href="/shop/category/view/26.html">УДОБНОЕ ВЫСАЖИВАНИЕ</a>
+       
+</li></IDXSKIP><IDXSKIP><li class=''>     <a class="" href="/shop/category/view/27.html">ВКЛАДЫШИ В ПОДГУЗНИК</a>
+       
+</li></IDXSKIP><IDXSKIP><li class=''>     <a class="" href="/shop/category/view/29.html">КОМПЛЕКТЫ ПОДГУЗНИКОВ</a>
+       
+</li></IDXSKIP><IDXSKIP><li class=''>     <a class="" href="/shop/category/view/30.html">ВОКРУГ ПЕЛЕНАНИЯ</a>
+       
+</li></IDXSKIP><IDXSKIP><li class=''>     <a class="" href="/shop/category/view/31.html">МНОГОРАЗОВЫЕ ПОДГУЗНИКИ</a>
+       
+</li></IDXSKIP>
+
+</ul>
+</div>
+        
+          <IDXSKIP><div class="title">
+<h2>Обзоры</h2>
+<a class="link" href="/reviews.html">Архив</a>
+</div></IDXSKIP>
+<div class="pink-list">
+<ul>
+	<IDXSKIP><li>
+		<a href="/reviews/30-o-naturalnom-dlya-mamy/138-zhenskaya-gigiena-osnovnye-postulaty.html">
+			Женская гигиена: основные постулаты</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li>
+		<a href="/reviews/24-o-podguznikakh/134-imse-vimse-katalog-podguznikov-i-obshchee-opisanie.html">
+			Imse Vimse. Каталог подгузников и общее описание</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li>
+		<a href="/reviews/24-o-podguznikakh/133-christine-bendel-katalog-podguznikov-i-obshchee-opisanie.html">
+			Christine Bendel. Каталог подгузников и общее описание</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li>
+		<a href="/reviews/24-o-podguznikakh/132-anatomicheskie-vkladyshi-nappi-otzyv-polzovatelya.html">
+			Анатомические вкладыши Наппи. Отзыв пользователя</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li>
+		<a href="/reviews/23-voprosy-novichkov/128-podbiraem-mnogorazovye-podguzniki-dlya-podrosshego-malysha.html">
+			Подбираем многоразовые подгузники для подросшего малыша</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li>
+		<a href="/reviews/33-o-moyushchikh-sredstvakh/124-sherstyanye-shariki-dlya-sushki-v-sushilnoj-mashine.html">
+			Шерстяные шарики для сушки в сушильной машине</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li>
+		<a href="/reviews/23-voprosy-novichkov/121-tkanevye-podguznik.html">
+			Тканевые подгузники</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li>
+		<a href="/reviews/24-o-podguznikakh/120-amsterdamskie-shtanishki-a-pro-takie-vy-znaete.html">
+			Амстердамские штанишки – а про такие вы знаете?</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li>
+		<a href="/reviews/33-o-moyushchikh-sredstvakh/119-stiraem-mnogorazovye-podguzniki-pravilno.html">
+			Стираем многоразовые подгузники правильно</a>
+	</li></IDXSKIP>
+	<IDXSKIP><li>
+		<a href="/reviews/33-o-moyushchikh-sredstvakh/118-chem-stirat-mnogorazovye-podguzniki.html">
+			Чем стирать многоразовые подгузники</a>
+	</li></IDXSKIP>
+</ul>
+</div>
+
+          
+          
+        <IDXSKIP><div class="title">
+          <noindex><h2>Соц.сети</h2></noindex>
+        </div></IDXSKIP>
+        <IDXSKIP><div class="sidebar-webs">
+          <ul class="tabs">
+            <li class="current"><noindex><a rel="nofollow" href="#tab1">В контакте</a></noindex></li>
+            <li><noindex><a rel="nofollow" href="#tab2">Facebook</a></noindex></li>
+          </ul>
+          <div class="tabs-holder">
+            <div id="tab1" class="tab-content">
+              <div class="tab-top"></div>    
+              <div class="tab-main">
+               <div id="vk_groups"></div>
+                <script type="text/javascript">
+                 VK.Widgets.Group("vk_groups", {mode: 0, width: "170", height: "300", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 54038655);
+               </script>
+              </div>
+              <div class="tab-bottom"></div>
+            </div>
+            <div id="tab2" class="tab-content">
+              <div class="tab-top"></div>    
+              <div class="tab-main">
+                 
+              <div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like-box" data-href="http://www.facebook.com/pages/Натуральный-малыш/600066436679276" data-width="170" data-height="300" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"></div>
+              </div>
+              <div class="tab-bottom"></div>
+            </div>
+          </div>
+        </div></IDXSKIP>
+      </div>
+      </noindex>
+          <div class="content">
+      
+
+<div id="system-message-container">
+</div>
+  
+              
+        
+        <div class="article">
+<div class="title"><h2><span class="blue">Карта сайта</span></h2></div>
+
+
+<p>Эта страница содержит полный список статей на сайте. Она будет полезна для тех, кто только начинает разбираться в системах естественного пеленания и интересуется натуральными многоразовыми пдгузниками</p>
+
+<ul class="level_0">
+<li><a href="/" title="Главная">Главная</a>
+<ul class="level_1">
+<li><a href="/component/content/article/2-information/4-kupit-podguzniki.html" title="Многоразовые подгузники">Многоразовые подгузники</a></li>
+</ul>
+</li><li><a href="/catalog.html" title="Каталог">Каталог</a></li><li><a href="/reviews.html" title="Обзоры">Обзоры</a>
+<ul class="level_1">
+<li><a href="/reviews/16-obo-mne.html" title="О проекте">О проекте</a>
+<ul class="level_2">
+<li><a href="/reviews/16-obo-mne/101-chto-takoe-naturalnyj-malysh.html" title="Что такое “Натуральный малыш”?">Что такое “Натуральный малыш”?</a></li>
+<li><a href="/reviews/16-obo-mne/72-naturalnyj-malysh.html" title="Натуральный малыш">Натуральный малыш</a></li>
+</ul>
+</li><li><a href="/reviews/34-blog-zapiski-na-musline.html" title="Записки на муслине">Записки на муслине</a>
+<ul class="level_2">
+<li><a href="/reviews/34-blog-zapiski-na-musline/136-kak-ya-otvechayu-na-nelovkie-voprosy-o-mnogorazovykh-podguznikakh-i-vysazhivanii-rebenka.html" title="Как я отвечаю на неловкие вопросы о многоразовых подгузниках и высаживании ребенка">Как я отвечаю на неловкие вопросы о многоразовых подгузниках и высаживании ребенка</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/131-chemu-menya-nauchili-mnogorazovye-podguzniki-ili-pochemu-mamochki-s-upoeniem-sobirayut-zavetnuyu-stopku-podguznikov.html" title="Чему меня “научили” многоразовые подгузники или почему мамочки с упоением собирают заветную “стопку подгузников”">Чему меня “научили” многоразовые подгузники или почему мамочки с упоением собирают заветную “стопку подгузников”</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/96-portret-potentsialnogo-pokupatelya-naturalnykh-podguznikov.html" title="Портрет потенциального покупателя натуральных подгузников">Портрет потенциального покупателя натуральных подгузников</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/71-da-emu-zhe-tam-mokro-mokro-li-malyshu-v-mnogorazovom-podguznike.html" title="Да ему же там мокро! Мокро ли малышу в многоразовом подгузнике">Да ему же там мокро! Мокро ли малышу в многоразовом подгузнике</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/60-estestvennoe-pelenanie-vybor-dumayushchikh-roditelej.html" title="Естественное пеленание – выбор думающих родителей">Естественное пеленание – выбор думающих родителей</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/59-mozhno-li-ispolzovat-sistemu-estestvennogo-pelenaniya-bez-sherstyanykh-shtanishek.html" title="Можно ли использовать систему естественного пеленания без шерстяных штанишек?">Можно ли использовать систему естественного пеленания без шерстяных штанишек?</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/57-kto-pokupaet-mnogorazovye-podguzniki.html" title="Кто покупает многоразовые подгузники?">Кто покупает многоразовые подгузники?</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/56-mnogorazovye-podguzniki-protekayut-chto-delat.html" title="Многоразовые подгузники протекают. Что делать?">Многоразовые подгузники протекают. Что делать?</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/54-blogu-o-mnogorazovykh-podguznikakh-ispolnilos-polgoda-itogi.html" title="Блогу о многоразовых подгузниках исполнилось полгода. Итоги">Блогу о многоразовых подгузниках исполнилось полгода. Итоги</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/53-ura-oni-vystiralis-situatsii-pri-kotorykh-protekayut-novye-mnogorazovye-podguzniki.html" title="Ура! Они выстирались! Ситуации, при которых протекают новые многоразовые подгузники">Ура! Они выстирались! Ситуации, при которых протекают новые многоразовые подгузники</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/46-mnogorazovye-podguzniki-i-nochnoj-son-dlya-podrosshego-rebenka.html" title="Многоразовые подгузники и ночной сон для подросшего ребенка">Многоразовые подгузники и ночной сон для подросшего ребенка</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/45-nastoyashchij-li-vy-tsenitel-mnogorazovykh-podguznikov-proverim.html" title="Настоящий ли вы ценитель многоразовых подгузников. Проверим?">Настоящий ли вы ценитель многоразовых подгузников. Проверим?</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/44-pochemu-sherstyanye-pelenalnye-shtanishki-iz-shersti-merinosa-pokryvayutsya-katyshkami.html" title="Почему шерстяные пеленальные штанишки из шерсти мериноса покрываются катышками">Почему шерстяные пеленальные штанишки из шерсти мериноса покрываются катышками</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/43-zaglyanem-v-istoriyu-nashi-pervye-mnogorazovye-podguzniki.html" title="Наши первые многоразовые подгузники. Мультидайперс">Наши первые многоразовые подгузники. Мультидайперс</a></li>
+<li><a href="/reviews/34-blog-zapiski-na-musline/42-blog-o-mnogorazovykh-podguznikakh-zapiski-na-musline-nachalo.html" title="Блог о многоразовых подгузниках “Записки на муслине”. Начало">Блог о многоразовых подгузниках “Записки на муслине”. Начало</a></li>
+</ul>
+</li><li><a href="/reviews/23-voprosy-novichkov.html" title="Выбор многоразовых подгузников">Выбор многоразовых подгузников</a>
+<ul class="level_2">
+<li><a href="/reviews/23-voprosy-novichkov/128-podbiraem-mnogorazovye-podguzniki-dlya-podrosshego-malysha.html" title="Подбираем многоразовые подгузники для подросшего малыша">Подбираем многоразовые подгузники для подросшего малыша</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/121-tkanevye-podguznik.html" title="Тканевые подгузники">Тканевые подгузники</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/112-proizvoditeli-mnogorazovykh-podguznikov.html" title="Производители многоразовых подгузников">Производители многоразовых подгузников</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/100-mnogorazovye-podguzniki.html" title="Все про многоразовые подгузники - общая информация">Все про многоразовые подгузники - общая информация</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/93-iz-chego-sostoit-mnogorazovyj-podguznik.html" title="Многоразовые подгузники - как выбрать">Многоразовые подгузники - как выбрать</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/88-kak-chasto-nado-menyat-mnogorazovyj-podguznik-nochyu.html" title="Как часто надо менять многоразовый подгузник ночью">Как часто надо менять многоразовый подгузник ночью</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/75-mnogorazovye-podguzniki-neskolko-sovetov-novichkam.html" title="Многоразовые подгузники - несколько советов новичкам">Многоразовые подгузники - несколько советов новичкам</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/74-estestvennoe-pelenanie-moj-vzglyad.html" title="Естественное пеленание. Мой взгляд">Естественное пеленание. Мой взгляд</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/33-mnogoobrazie-mnogorazovykh-podguznikov-chto-vybrat.html" title="Многообразие многоразовых подгузников. Какие выбрать?">Многообразие многоразовых подгузников. Какие выбрать?</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/30-mnogorazovye-podguzniki-dlya-novorozhdennogo-s-rozhdeniya-i-do-6-mesyatsev-optimalnyj-nabor.html" title="Многоразовые подгузники с рождения. Оптимальный набор">Многоразовые подгузники с рождения. Оптимальный набор</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/17-mnogorazovye-podguzniki-dlya-novorozhdennogo-startovyj-nabor.html" title="Многоразовые подгузники для новорожденных">Многоразовые подгузники для новорожденных</a></li>
+<li><a href="/reviews/23-voprosy-novichkov/6-mnogorazovye-podguzniki-kak-sekonomit.html" title="Как сложить подгузник - венгерская пеленка">Как сложить подгузник - венгерская пеленка</a></li>
+</ul>
+</li><li><a href="/reviews/24-o-podguznikakh.html" title="Обзоры многоразовых подгузников">Обзоры многоразовых подгузников</a>
+<ul class="level_2">
+<li><a href="/reviews/24-o-podguznikakh/134-imse-vimse-katalog-podguznikov-i-obshchee-opisanie.html" title="Imse Vimse. Каталог подгузников и общее описание">Imse Vimse. Каталог подгузников и общее описание</a></li>
+<li><a href="/reviews/24-o-podguznikakh/133-christine-bendel-katalog-podguznikov-i-obshchee-opisanie.html" title="Christine Bendel. Каталог подгузников и общее описание">Christine Bendel. Каталог подгузников и общее описание</a></li>
+<li><a href="/reviews/24-o-podguznikakh/132-anatomicheskie-vkladyshi-nappi-otzyv-polzovatelya.html" title="Анатомические вкладыши Наппи. Отзыв пользователя">Анатомические вкладыши Наппи. Отзыв пользователя</a></li>
+<li><a href="/reviews/24-o-podguznikakh/120-amsterdamskie-shtanishki-a-pro-takie-vy-znaete.html" title="Амстердамские штанишки – а про такие вы знаете?">Амстердамские штанишки – а про такие вы знаете?</a></li>
+<li><a href="/reviews/24-o-podguznikakh/110-storchenkinder-katalog-podguznikov-i-obshchee-opisanie.html" title="Storchenkinder. Каталог подгузников и общее описание">Storchenkinder. Каталог подгузников и общее описание</a></li>
+<li><a href="/reviews/24-o-podguznikakh/105-amsterdamskie-shtanishki-istoriya-fakty-opisanie-i-otzyv.html" title="Амстердамские штанишки – история, факты, описание и отзыв">Амстердамские штанишки – история, факты, описание и отзыв</a></li>
+<li><a href="/reviews/24-o-podguznikakh/55-cotonea-kachestvennye-mnogorazovye-podguzniki-na-lyubitelya.html" title="Cotonea – качественные многоразовые подгузники … на любителя">Cotonea – качественные многоразовые подгузники … на любителя</a></li>
+<li><a href="/reviews/24-o-podguznikakh/40-trenirovochnye-trusiki-ot-mokosha-design-mokosha-germaniya-obzor.html" title="Тренировочные трусики от Mokosha Design (Мокоша, Германия). Обзор">Тренировочные трусики от Mokosha Design (Мокоша, Германия). Обзор</a></li>
+<li><a href="/reviews/24-o-podguznikakh/38-mokosha-cistema-pelenaniya-pri-vysazhivanii.html" title="Одежда для высаживания от Mokosha Design ">Одежда для высаживания от Mokosha Design </a></li>
+<li><a href="/reviews/24-o-podguznikakh/37-pelenalnye-trusiki-ot-mother-ease-chast-2.html" title="Пеленальные трусики Sandys от Mother-ease. Часть 2">Пеленальные трусики Sandys от Mother-ease. Часть 2</a></li>
+<li><a href="/reviews/24-o-podguznikakh/35-pelenalnye-trusiki-sandys-ot-mother-ease.html" title="Пеленальные трусики Sandys от Mother-ease. Часть 1">Пеленальные трусики Sandys от Mother-ease. Часть 1</a></li>
+<li><a href="/reviews/24-o-podguznikakh/31-pelenalnye-trusiki-imevimse-mogut-li-oni-byt-edinstvennymi-v-arsenale-mnogorazovykh-podguznikov.html" title="Пеленальные трусики ImseVimse – могут ли они быть  единственными в арсенале многоразовых подгузников">Пеленальные трусики ImseVimse – могут ли они быть  единственными в арсенале многоразовых подгузников</a></li>
+<li><a href="/reviews/24-o-podguznikakh/25-mnogorazovye-podguzniki-mother-ease-pervye-vpechatleniya.html" title="Многоразовые подгузники Mother-ease. Первые впечатления">Многоразовые подгузники Mother-ease. Первые впечатления</a></li>
+<li><a href="/reviews/24-o-podguznikakh/24-pelenalnye-shtanishki-storchenkinder-novinki-leta-2013.html" title="Пеленальные штанишки Storchenkinder – новинки лета 2013">Пеленальные штанишки Storchenkinder – новинки лета 2013</a></li>
+<li><a href="/reviews/24-o-podguznikakh/23-kak-perezhit-leto-v-mnogorazovykh-podguznikakh.html" title="Как пережить лето в многоразовых подгузниках">Как пережить лето в многоразовых подгузниках</a></li>
+<li><a href="/reviews/24-o-podguznikakh/21-dozhd-dozhd-i-snova-dozhd-testiruem-pelenalnye-trusiki-na-skorost-vysykhaniya.html" title="Дождь, дождь … и снова дождь. Тестирование подгузников на скорость высыхания">Дождь, дождь … и снова дождь. Тестирование подгузников на скорость высыхания</a></li>
+<li><a href="/reviews/24-o-podguznikakh/18-storchenkinder-vs-disana-sravnim-sherstyanye-shtanishki.html" title="Disana vs Storchenkinder. Сравниваем шерстяные штанишки">Disana vs Storchenkinder. Сравниваем шерстяные штанишки</a></li>
+<li><a href="/reviews/24-o-podguznikakh/16-pelenalnye-trusiki-christine-bendel-oni-pochti-idealny.html" title="Пеленальные трусики Christine Bendel – они почти идеальны…">Пеленальные трусики Christine Bendel – они почти идеальны…</a></li>
+<li><a href="/reviews/24-o-podguznikakh/15-variant-tonkikh-sherstyanykh-shtanishek-na-leto.html" title="Вариант тонких шерстяных штанишек на лето">Вариант тонких шерстяных штанишек на лето</a></li>
+<li><a href="/reviews/24-o-podguznikakh/14-trenirovochnye-trusiki-iobio-obzor.html" title="Тренировочные трусики для детей IOBIO. Обзор.">Тренировочные трусики для детей IOBIO. Обзор.</a></li>
+<li><a href="/reviews/24-o-podguznikakh/12-russkaya-smekalka-ili-ekonomiya.html" title="Шерстяные штанишки – как сэкономить">Шерстяные штанишки – как сэкономить</a></li>
+<li><a href="/reviews/24-o-podguznikakh/11-kak-stirat-sherstyanye-shtanishki-podguzniki.html" title="Как использовать ланолин для стирки шерстяных штанишек">Как использовать ланолин для стирки шерстяных штанишек</a></li>
+<li><a href="/reviews/24-o-podguznikakh/10-vkladyshi-iz-konopli-ot-storchenkinder-idealnoe-reshenie-dlya-nochnykh-snov.html" title="Конопляные вкладыши и подгузники">Конопляные вкладыши и подгузники</a></li>
+<li><a href="/reviews/24-o-podguznikakh/9-podguzniki-firmy-imsevimse-dlya-novorozhdennogo.html" title="Подгузники фирмы ImseVimse для новорожденного">Подгузники фирмы ImseVimse для новорожденного</a></li>
+<li><a href="/reviews/24-o-podguznikakh/8-komplekt-na-vypisku-dlya-novorozhdennogo-leto.html" title="Комплект на выписку для новорожденного (лето)">Комплект на выписку для новорожденного (лето)</a></li>
+<li><a href="/reviews/24-o-podguznikakh/7-mnogorazovye-podguzniki-christine-bendel-germaniya.html" title="Многоразовые подгузники Christine Bendel">Многоразовые подгузники Christine Bendel</a></li>
+<li><a href="/reviews/24-o-podguznikakh/5-mnogorazovye-podguzniki-popolini-otzyv-opytnoj-mamy.html" title="Многоразовые подгузники Popolini ">Многоразовые подгузники Popolini </a></li>
+<li><a href="/reviews/24-o-podguznikakh/2-davno-vyyasneno-chto-pri-otsenke-dizajna.html" title="Многоразовые подгузники Storсhenkinder ">Многоразовые подгузники Storсhenkinder </a></li>
+</ul>
+</li><li><a href="/reviews/25-o-materialakh.html" title="О материалах для подгузников и одежды">О материалах для подгузников и одежды</a>
+<ul class="level_2">
+<li><a href="/reviews/25-o-materialakh/108-sertifikatsiya-mnogorazovykh-podguznikov.html" title="Сертификация многоразовых подгузников">Сертификация многоразовых подгузников</a></li>
+<li><a href="/reviews/25-o-materialakh/69-sherstyanye-pelenalnye-shtanishki-iz-starogo-papinogo-svitera-a-stoit-li.html" title="Шерстяные  штанишки из папиного свитера. А стоит ли?">Шерстяные  штанишки из папиного свитера. А стоит ли?</a></li>
+<li><a href="/reviews/25-o-materialakh/66-mnogorazovyj-podguznik-s-membrannym-sloem-dyshit-li.html" title="Многоразовый подгузник с мембранным слоем. Дышит ли?">Многоразовый подгузник с мембранным слоем. Дышит ли?</a></li>
+<li><a href="/reviews/25-o-materialakh/64-mnogorazovyj-podguznik-v-zharu-mnogorazovyj-vs-odnorazovyj-chto-luchshe.html" title="Многоразовый или одноразовый подгузник. Что выбрать?">Многоразовый или одноразовый подгузник. Что выбрать?</a></li>
+<li><a href="/reviews/25-o-materialakh/41-mnogorazovye-podguzniki-s-flisovym-sloem-vy-gotovy-ego-nadet-na-rebenka.html" title="Многоразовые подгузники с флисовым слоем. Вы готовы oдеть их на ребенка?">Многоразовые подгузники с флисовым слоем. Вы готовы oдеть их на ребенка?</a></li>
+<li><a href="/reviews/25-o-materialakh/32-oda-kitajskim-mnogorazovym-podguznikam-zadumajtes-o-zdorove-svoikh-detej.html" title="“Ода” китайским многоразовым подгузникам. Задумайтесь о здоровье своих детей!">“Ода” китайским многоразовым подгузникам. Задумайтесь о здоровье своих детей!</a></li>
+<li><a href="/reviews/25-o-materialakh/29-mnogorazovye-podguzniki-iz-bambuka-naturalny-tak-li-eto.html" title="Бамбуковые многоразовые подгузники - натуральны ли?">Бамбуковые многоразовые подгузники - натуральны ли?</a></li>
+</ul>
+</li><li><a href="/reviews/33-o-moyushchikh-sredstvakh.html" title="Уход за многоразовыми подгузниками">Уход за многоразовыми подгузниками</a>
+<ul class="level_2">
+<li><a href="/reviews/33-o-moyushchikh-sredstvakh/124-sherstyanye-shariki-dlya-sushki-v-sushilnoj-mashine.html" title="Шерстяные шарики для сушки в сушильной машине">Шерстяные шарики для сушки в сушильной машине</a></li>
+<li><a href="/reviews/33-o-moyushchikh-sredstvakh/119-stiraem-mnogorazovye-podguzniki-pravilno.html" title="Стираем многоразовые подгузники правильно">Стираем многоразовые подгузники правильно</a></li>
+<li><a href="/reviews/33-o-moyushchikh-sredstvakh/118-chem-stirat-mnogorazovye-podguzniki.html" title="Чем стирать многоразовые подгузники">Чем стирать многоразовые подгузники</a></li>
+<li><a href="/reviews/33-o-moyushchikh-sredstvakh/67-lanolinovoe-mylo-nuzhno-li-ono-dlya-stirki-sherstyanykh-pelenalnykh-shtanishek.html" title="Мыло с ланолином. Нужно ли оно для стирки шерстяных пеленальных штанишек?">Мыло с ланолином. Нужно ли оно для стирки шерстяных пеленальных штанишек?</a></li>
+<li><a href="/reviews/33-o-moyushchikh-sredstvakh/62-stiraem-sherstyanye-pelenalnye-shtanishki-lanolinovoe-mylo-svoimi-rukami.html" title="Ланолиновое мыло своими руками">Ланолиновое мыло своими руками</a></li>
+<li><a href="/reviews/33-o-moyushchikh-sredstvakh/39-okh-uzh-etot-lanolin-lanolinovyj-ukhod-za-pelenalnymi-shtanishkami.html" title="Ох уж этот ланолин! Ланолиновый уход за пеленальными штанишками">Ох уж этот ланолин! Ланолиновый уход за пеленальными штанишками</a></li>
+<li><a href="/reviews/33-o-moyushchikh-sredstvakh/27-samodelnyj-gel-dlya-stirki.html" title="Гель для стирки">Гель для стирки</a></li>
+</ul>
+</li><li><a href="/reviews/26-detskaya-odezhda.html" title="О детской одежде">О детской одежде</a>
+<ul class="level_2">
+<li><a href="/reviews/26-detskaya-odezhda/58-termobele-dlya-detej-nuzhno-li-i-kakov-bazovyj-komplekt.html" title="Шерстяное термобелье для детей. Нужно ли и каков базовый комплект?">Шерстяное термобелье для детей. Нужно ли и каков базовый комплект?</a></li>
+<li><a href="/reviews/26-detskaya-odezhda/19-bolshe-chem-prosto-odeyalo.html" title="Мериносовое одеяло Christine Bendel">Мериносовое одеяло Christine Bendel</a></li>
+</ul>
+</li><li><a href="/reviews/30-o-naturalnom-dlya-mamy.html" title="О натуральном для мамы">О натуральном для мамы</a>
+<ul class="level_2">
+<li><a href="/reviews/30-o-naturalnom-dlya-mamy/138-zhenskaya-gigiena-osnovnye-postulaty.html" title="Женская гигиена: основные постулаты">Женская гигиена: основные постулаты</a></li>
+<li><a href="/reviews/30-o-naturalnom-dlya-mamy/107-ezhednevnye-mnogorazovye-prokladki-dlya-mamy-mysli-vslukh.html" title="Ежедневные многоразовые прокладки для мамы. Мысли вслух...">Ежедневные многоразовые прокладки для мамы. Мысли вслух...</a></li>
+<li><a href="/reviews/30-o-naturalnom-dlya-mamy/91-luchshie-tkanevye-gigienicheskie-prokladki.html" title="Лучшие тканевые гигиенические прокладки">Лучшие тканевые гигиенические прокладки</a></li>
+<li><a href="/reviews/30-o-naturalnom-dlya-mamy/73-mnogorazovye-gigienicheskie-prokladki-obzor-sredstv-naturalnoj-gigieny.html" title="Многоразовые гигиенические прокладки. Обзор средств натуральной гигиены">Многоразовые гигиенические прокладки. Обзор средств натуральной гигиены</a></li>
+<li><a href="/reviews/30-o-naturalnom-dlya-mamy/13-mnogorazovye-gigienicheskie-prokladki-imsevimse.html" title="Гигиенические прокладки из хлопка ImseVimse">Гигиенические прокладки из хлопка ImseVimse</a></li>
+</ul>
+</li><li><a href="/reviews/27-igrushki.html" title="Об игрушках">Об игрушках</a>
+<ul class="level_2">
+<li><a href="/reviews/27-igrushki/34-myagkie-igrushki-firmy-plue-natur.html" title="Мягкие игрушки фирмы Plue-natur">Мягкие игрушки фирмы Plue-natur</a></li>
+</ul>
+</li><li><a href="/reviews/32-zabota-o-prirode.html" title="Забота о природе">Забота о природе</a>
+<ul class="level_2">
+<li><a href="/reviews/32-zabota-o-prirode/20-tri-pampersa-v-zhizni-moej-dochki-ili-pochemu-sleduet-vybirat-mnogorazovye-podguzniki.html" title="Три памперса в жизни одного ребенка. Почему следует выбирать многоразовые подгузники">Три памперса в жизни одного ребенка. Почему следует выбирать многоразовые подгузники</a></li>
+</ul>
+</li><li><a href="/reviews/36-mnogorazovye-podguzniki-nappi.html" title="Многоразовые подгузники Наппи">Многоразовые подгузники Наппи</a>
+<ul class="level_2">
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/127-novye-odnoslojnye-sherstyanye-pelenalnye-shtanishki-s-shirokim-poyasom-nappi.html" title="Новые однослойные шерстяные пеленальные штанишки с широким поясом Наппи">Новые однослойные шерстяные пеленальные штанишки с широким поясом Наппи</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/115-fotogalereya-malyshi-v-podguznikakh.html" title="Пеленальные трусики Наппи - фотографии">Пеленальные трусики Наппи - фотографии</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/106-mnogorazovy-podguzniki-nappi-otzyv-dlinoyu-v-god.html" title="Многоразовые подгузники Наппи. Отзыв длиною в год">Многоразовые подгузники Наппи. Отзыв длиною в год</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/104-dvukhslojnye-pelenalnye-tshtanishki-na-rezinke-nappi-nebolshoj-obzor.html" title="Двухслойные пеленальные штанишки на резинке &quot;Наппи&quot;. Небольшой обзор">Двухслойные пеленальные штанишки на резинке &quot;Наппи&quot;. Небольшой обзор</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/77-trenirovochnye-shtanishki-nappi-teper-on-po-nastoyashchemu-trenirovochnye.html" title="Тренировочные трусики Наппи... Теперь они по-настоящему тренировочные">Тренировочные трусики Наппи... Теперь они по-настоящему тренировочные</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/70-sherstyanoj-vkladysh-v-podguznik.html" title="Шерстяной вкладыш- зачем нужен, как использовать, как стирать, как стерилизовать">Шерстяной вкладыш- зачем нужен, как использовать, как стирать, как стерилизовать</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/68-nochnye-pelenalnye-trusiki-nappi-rossiya.html" title="Ночные подгузники Наппи (Россия)">Ночные подгузники Наппи (Россия)</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/63-konturnyj-mnogorazovyj-podguznik-nappi.html" title="Контурный подгузник Наппи (Россия)">Контурный подгузник Наппи (Россия)</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/50-trenirovochnye-trusiki-nappi-variant-mnogofunktsionalnogo-komponenta-v-sisteme-pelenaniya.html" title="Тренировочные трусики Наппи. Вариант многофункционального компонента в системе пеленания">Тренировочные трусики Наппи. Вариант многофункционального компонента в системе пеленания</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/49-luchshie-mnogorazovye-podguzniki-kakie-oni.html" title="Лучшие многоразовые подгузники. Какие они?">Лучшие многоразовые подгузники. Какие они?</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/47-nappi-na-malyshe-pervogo-mesyatsa-zhizni-moi-strakhi-i-opaseniya.html" title="Многоразовые подгузники Наппи для новорожденного. Мои страхи и опасения">Многоразовые подгузники Наппи для новорожденного. Мои страхи и опасения</a></li>
+<li><a href="/reviews/36-mnogorazovye-podguzniki-nappi/92-mnogorazovye-podguzniki-udobnye-v-slinge.html" title="Многоразовые подгузники, новорожденный и слинг - как совместить?">Многоразовые подгузники, новорожденный и слинг - как совместить?</a></li>
+</ul>
+</li><li><a href="/reviews/38-estestvennaya-gigiena.html" title="Жизнь без подгузников">Жизнь без подгузников</a>
+<ul class="level_2">
+<li><a href="/reviews/38-estestvennaya-gigiena/109-vysazhivanie-rebenka.html" title="Высаживание ребенка">Высаживание ребенка</a></li>
+</ul>
+</li><li><a href="/reviews/41-zhizn-v-podguznikakh.html" title="Жизнь в подгузниках">Жизнь в подгузниках</a>
+<ul class="level_2">
+<li><a href="/reviews/41-zhizn-v-podguznikakh/117-dvukhslojnye-pelenalnye-shtanishki-nappi-fotografii.html" title="Двухслойные пеленальные штанишки Наппи - фотографии">Двухслойные пеленальные штанишки Наппи - фотографии</a></li>
+<li><a href="/reviews/41-zhizn-v-podguznikakh/97-kak-komplektovat-podguznik-na-nochnoj-son-rebenka.html" title="Как комплектовать подгузники на ночные сны ребенка?">Как комплектовать подгузники на ночные сны ребенка?</a></li>
+</ul>
+</li><li><a href="/reviews/40-entsiklopediya-pelenaniya.html" title="Энциклопедия пеленания">Энциклопедия пеленания</a>
+<ul class="level_2">
+<li><a href="/reviews/40-entsiklopediya-pelenaniya/137-priuchenie-k-gorshku.html" title="Приучение ребёнка к горшку: результаты научных исследований">Приучение ребёнка к горшку: результаты научных исследований</a></li>
+<li><a href="/reviews/40-entsiklopediya-pelenaniya/135-istoriya-podguznikov-i-pelenaniya-ot-drevnikh-vremen-do-kontsa-18-veka.html" title="История подгузников и пеленания. От древних времен до конца 18 века">История подгузников и пеленания. От древних времен до конца 18 века</a></li>
+<li><a href="/reviews/40-entsiklopediya-pelenaniya/123-kakie-byvayut-odnorazovye-podguzniki.html" title="Какие бывают одноразовые подгузники">Какие бывают одноразовые подгузники</a></li>
+<li><a href="/reviews/40-entsiklopediya-pelenaniya/114-vse-o-estestvennom-pelenanii.html" title="Все о естественном пеленании">Все о естественном пеленании</a></li>
+</ul>
+</li></ul>
+</li><li><a href="/kontakty.html" title="Контакты">Контакты</a></li><li><a href="/voprosy-otvety.html" title="Вопросы-ответы">Вопросы-ответы</a></li></ul>
+
+<span class="article_separator">&nbsp;</span>
+</div>
+        <!--Новости-->
+        
+            </div>
+          </div>
+  </div>
+  <div id="footer">
+    <div class="footer-nav">
+      <ul>
+        
+<ul class="menu">
+<IDXSKIP><li class="item-101"><a href="/" >Главная</a></li></IDXSKIP><IDXSKIP><li class="item-111"><a href="/catalog.html" >Каталог</a></li></IDXSKIP><IDXSKIP><li class="item-113"><a href="/reviews.html" >Обзоры</a></li></IDXSKIP><li class="item-115"><a href="/kontakty.html" >Контакты</a></li><IDXSKIP><li class="item-174"><a href="/voprosy-otvety.html" >Вопросы-ответы</a></li></IDXSKIP></ul>
+
+      </ul>
+    </div>
+    
+                 <div class="copy"><IDXSKIP>&copy; Натуральный малыш. Многоразовые подгузники.
+                <br></IDXSKIP>
+
+                       <IDXSKIP><noindex><a rel="nofollow" href="https://plus.google.com/116851460921773448769?rel=author">Google+</a></noindex></IDXSKIP>
+                      
+
+                      <IDXSKIP><noindex><a rel="nofollow" href="https://plus.google.com/116851460921773448769" rel="publisher">Я в Google+</a></noindex></IDXSKIP>
+                      
+
+                      <IDXSKIP><noindex><a rel="nofollow" href="https://plus.google.com/+NaturbabyRussia " rel="publisher">Мы в Google+</a></noindex></IDXSKIP>
+
+
+              </div>
+
+
+
+    <IDXSKIP><div class="stat">
+    
+          
+
+ <!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=22316983&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/22316983/3_0_FFFFD4FF_FFE9B4FF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:22316983,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter22316983 = new Ya.Metrika({id:22316983,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/22316983" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  
+    </div></IDXSKIP>
+    <IDXSKIP><div class="footer-link">
+    <a href="/map.html" class="site-map">Карта сайта</a>
+    <a href="/subscription.html" class="subscription">Подписка на новости</a>
+    </div></IDXSKIP>
+
+ 
+     
+<div id="system-message-container">
+</div>
+  </div>
+</body>
+</html>

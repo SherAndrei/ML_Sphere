@@ -1,0 +1,1663 @@
+cnc-club.ru/forum/viewtopic.php?f=38&t=9160
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="ru-ru" xml:lang="ru-ru">
+<head>
+<meta name="theme-color" content="#0889CA" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="ru-ru" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="icon" href="/forum/images/custom/cnc-club fav.png" />
+
+<title>apache + nginx + phpmyadmin &bull; Станки с ЧПУ на форуме cnc-club.ru </title>
+
+<link rel="alternate" type="application/atom+xml" title="Канал - cnc-club.ru" href="http://cnc-club.ru/forum/feed.php" /><link rel="alternate" type="application/atom+xml" title="Канал - Новости" href="http://cnc-club.ru/forum/feed.php?mode=news" /><link rel="alternate" type="application/atom+xml" title="Канал - Все форумы" href="http://cnc-club.ru/forum/feed.php?mode=forums" /><link rel="alternate" type="application/atom+xml" title="Канал - { FEED_TOPICS_NEW }" href="http://cnc-club.ru/forum/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Канал - { FEED_TOPICS_ACTIVE }" href="http://cnc-club.ru/forum/feed.php?mode=topics_active" /><link rel="alternate" type="application/atom+xml" title="Канал - Форум - Оффтоп" href="http://cnc-club.ru/forum/feed.php?f=38" /><link rel="alternate" type="application/atom+xml" title="Канал - Тема - apache + nginx + phpmyadmin" href="http://cnc-club.ru/forum/feed.php?f=38&amp;t=9160" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	/* Replaced by MOD */
+	var collapse_view = 'Свернуть';
+	var expand_view = 'Развернуть'; 
+	var jump_page = 'Введите номер страницы, на которую хотите перейти:';
+	var on_page = '1';
+	var per_page = '';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '; path=/; domain=cnc-club.ru';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+<script type="text/javascript" src="./styles/prosilver/template/styleswitcher.js"></script>
+<script type="text/javascript" src="./styles/prosilver/template/forum_fn.js"></script>
+<script type="text/javascript" src="./styles/prosilver/template/highlight.pack.js"></script> 
+<script type="text/javascript" src="./styles/prosilver/template/editor.js"></script>
+<script type="text/javascript" src="/forum/js/colorbox/colorbox/jquery.colorbox.js"/></script>
+<script type="text/javascript" src="/forum/js/jquery.hotkeys.js"/></script>
+
+
+<link href="./styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="./style.php?id=1&amp;lang=ru&amp;sid=c08137d6283b01a60e16bf17051c5cfe" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="./styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="./styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="./styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+<link href="./styles/prosilver/theme/only-attachments.css" rel="alternate stylesheet" type="text/css" title="only-attachments" />
+
+<link href="./styles/prosilver/theme/cnc-club.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="js/colorbox/example4/colorbox.css"/>
+
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr gid1  guest">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div id="site-description">
+				<a href="./index.php?sid=c08137d6283b01a60e16bf17051c5cfe" title="Список форумов" id="logo">
+					<img src="./styles/prosilver/imageset/cnc-club.ru%20logo%20tranparent.png" alt="" title="" />
+					</a>
+				<h1><a href="./index.php?sid=c08137d6283b01a60e16bf17051c5cfe" title="Список форумов">cnc-club.ru</a></h1>
+				<IDXSKIP><p class="skiplink"><a href="#start_here">Пропустить</a></p></IDXSKIP>
+			</div>
+			<IDXSKIP><div id="right-box">
+				<div id="search-box">
+					
+						<div class="yandexform" onclick="return {'bg': '#098dcf', 'language': 'ru', 'encoding': '', 'suggest': false, 'tld': 'ru', 'site_suggest': false, 'webopt': false, 'fontsize': 12, 'arrow': false, 'fg': '#000000', 'logo': 'rb', 'websearch': false, 'type': 3}"><form action="http://yandex.ru/sitesearch" method="get" target="_blank"><input type="hidden" name="searchid" value="1844118"/><input name="text"/><input type="submit" value="Найти"/></form></div><script type="text/javascript" src="http://site.yandex.net/load/form/1/form.js" charset="utf-8"></script>
+					
+					
+
+				</div>
+
+				<!-- Google translate links -->
+				<div id="translate-box" style="float: right; clear: right; margin-top: 5px; margin-right: 5px;" >
+					Translate using Google:
+						<a id="google-translate-gb" href="http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=ru&tl=en&u=http://www.cnc-club.ru"><img width="16" height="11" style="vertical-align: middle;" src="/forum/images/custom/gb.gif"></a>
+						<a id="google-translate-de" href="http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=ru&tl=de&u=http://www.cnc-club.ru"><img width="16" height="11" style="vertical-align: middle;" src="/forum/images/custom/de.gif"></a>
+						<a id="google-translate-ru" href="http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=en&tl=ru&u=http://www.cnc-club.ru"><img width="16" height="11" style="vertical-align: middle;" src="/forum/images/custom/ru.gif"></a>
+						<a id="google-translate-fr" href="http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=ru&tl=fr&u=http://www.cnc-club.ru"><img width="16" height="11" style="vertical-align: middle;" src="/forum/images/custom/fr.gif"></a>
+						<a id="google-translate-es" href="http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=ru&tl=es&u=http://www.cnc-club.ru"><img width="16" height="11" style="vertical-align: middle;" src="/forum/images/custom/es.gif"></a>
+						<script language="javascript">
+							var current_location = escape(document.location.href)
+							document.getElementById("google-translate-gb").href = "http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=ru&tl=en&u="+current_location;
+							document.getElementById("google-translate-de").href = "http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=ru&tl=de&u="+current_location;
+							document.getElementById("google-translate-ru").href = "http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=en&tl=ru&u="+current_location;
+							document.getElementById("google-translate-fr").href = "http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=ru&tl=fr&u="+current_location;
+							document.getElementById("google-translate-es").href = "http://translate.google.com/translate?js=y&ie=UTF-8&layout=1&eotf=1&sl=ru&tl=es&u="+current_location;
+						</script>
+				</div>
+			</div></IDXSKIP>
+			
+		</div>
+
+		<div class="navbar">
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="./index.php?sid=c08137d6283b01a60e16bf17051c5cfe" accesskey="h">Список форумов</a>  <strong>&#8249;</strong> <a href="./viewforum.php?f=17&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Сайт</a> <strong>&#8249;</strong> <a href="./viewforum.php?f=38&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Оффтоп</a></li>
+				<li class="rightside">
+					<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="icon" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,gplus"></div> 
+				</li>
+				<IDXSKIP><li class="rightside"><a href="#" onclick="fontsizeup(); return false;" onkeypress="return fontsizeup(event);" class="fontsize" title="Изменить размер шрифта">Изменить размер шрифта</a></li></IDXSKIP>
+				<li class="rightside"><a href="#" onclick="change_colorbox_img_size(); return false;" class="colorbox_img_size small" title="Изменить размер изображений в colorbox"></a></li>
+				<li class="rightside"><a href="#" onclick="only_attachments(); return false;" class="only-attachments" title="{ CHANGE_ONLY_ATTACHMENTS }"></a></li>
+				
+				<li class="rightside"><a href="./memberlist.php?mode=email&amp;t=9160&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Сообщить другу" class="sendemail">Сообщить другу</a></li><li class="rightside"><a href="./viewtopic.php?f=38&amp;t=9160&amp;sid=c08137d6283b01a60e16bf17051c5cfe&amp;view=print" title="Версия для печати" accesskey="p" class="print">Версия для печати</a></li><!-- Added by MOD --><li class="rightside"><a href="/forum/viewtopic.php?f=38&t=9160&amp;mobile_style=on&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Мобильная версия" accesskey="p" class="print" style="background-image: url(./styles/prosilver/theme/images/icon_mobile.gif)">Мобильная версия</a></li>				
+				<IDXSKIP><li class="center"><a class="wiki" href="http://cnc-club.ru/wiki/">Wiki</a></li></IDXSKIP>				
+			</ul>
+
+			
+
+			<ul class="linklist rightside">
+				<li class="icon-faq"><a href="./faq.php?sid=c08137d6283b01a60e16bf17051c5cfe" title="Часто задаваемые вопросы">FAQ</a></li>
+				<li class="icon-register"><a href="./ucp.php?mode=register&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Регистрация</a></li>
+					<li class="icon-logout"><a href="./ucp.php?mode=login&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Вход" accesskey="x">Вход</a></li>
+				
+			</ul>
+		</div>
+
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<div class="f38 t9160 fid tid"> 
+
+	<IDXSKIP><div class="left-col">
+		 &nbsp;
+	</div></IDXSKIP>
+	<IDXSKIP><div class="right-col">&nbsp;
+	</div></IDXSKIP>
+			<div class='ads'><div class='spacer'>	<a href='http://www.cnc-box.ru/Products/Обработка%2C_услуги#Токарная обработка' style='background-image:url("/forum/ads/img/токарная обработка.png");' title='Фрезерная обработка'></a>	<a href='http://www.cnc-box.ru/Products/Кабель-каналы' style='background-image:url("/forum/ads/img/гибкий кабель канал.png");' title='Гибкие кабель-каналы для станков с ЧПУ'></a>	</div></div>
+	
+
+	<h2 class="topic-title"><a href="./viewtopic.php?f=38&amp;t=9160&amp;sid=c08137d6283b01a60e16bf17051c5cfe">apache + nginx + phpmyadmin</a></h2>  
+	<script language="javascript">
+		t=$("h2.topic-title a").html();
+		t=t.replace(/&amp;/g,'&');
+		$("h2.topic-title a").html(t);
+	</script>
+	<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+	<div class="topic-actions">
+
+		<div class="buttons">
+		
+			<div class="reply-icon"><a href="./posting.php?mode=reply&amp;f=38&amp;t=9160&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Ответить"><span></span>Ответить</a></div>
+		
+		</div>
+
+		
+			<div class="pagination">
+				Сообщений: 17
+				 &bull; Страница <strong>1</strong> из <strong>1</strong>
+			
+				<script language="javascript">
+					// Added by custom mod !!!
+					var post_page_number = parseInt("Страница <strong>1</strong> из <strong>1</strong>".match("<strong>\\s*(\\d+)\\s*</strong>")[1]);				
+				</script>
+			</div>
+		
+
+	</div>
+	<div class="clear"></div>
+
+	
+	<script type="text/javascript">
+		topic_url = "./viewtopic.php?f=38&amp;t=9160&amp;sid=c08137d6283b01a60e16bf17051c5cfe";
+		topic_url = topic_url.substring(2,topic_url.length);
+		topic_url = topic_url.replace(/\&amp;/g,"&");
+		post_id = [];
+	</script>
+
+	
+		<div id="p223752" class="post u11852 bg2 topic-starter">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223752'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[0] = "#"+(0 + ((post_page_number-1)*20) + 1); </script>
+					<h3 class="first"> <a href="#p223752">apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223752#p223752]"+ $("#p223752 h3 a").first().text().replace(/"/g,"")+" "+post_id[0]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]alexg-nn[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[0]);</script> <a href="./viewtopic.php?p=223752&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223752"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe">alexg-nn</a></strong> &raquo; 03 окт 2015, 21:23 </p>
+
+					
+					<div class="content">Ребяты, я, конечно, понимаю, что тема непрофильная, но, во-первых, концентрация линукс-мэнов тут более чем высокая, во-вторых, явно есть и администраторы, и в третьих, мне просто регаться на профильном форуме не хотелось, а тут я уже есть <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /><br /><br />Вопрос мой явно забитый и детский, но как ни бился, не смог решить проблему.<br />В общем, есть у меня VPS с ubuntu 14.04, на нём крутилось несколько сайтов на apache2 (виртуальные хосты). И там же был phpmyadmin. Всё было хорошо.<br />Потребовалось завести ещё пару сайтов на Node.js, посему решено было поставить nginx как прокси и раздавать с него трафик уже на апач или ноду.<br />Всё прошло хорошо, сайты завелись, но не завёлся phpmyadmin <img src="./images/smilies/icon_e_sad.gif" alt=":(" title="Sad" /><br /><br />Конфиги привожу, чтобы было попредметнее.<br /><br /><div>
+<a href="#phpbb3bbcodes_spoiler" onclick="
+if (this.parentNode.getElementsByTagName('div')[0].style.display != '') 
+{ 
+	this.parentNode.getElementsByTagName('div')[0].style.display = '';
+	this.style.backgroundImage = 'url(/forum/images/custom/icon_minus.gif)';
+} 
+else
+{ 
+	this.parentNode.getElementsByTagName('div')[0].style.display = 'none';
+	this.style.backgroundImage = 'url(/forum/images/custom/icon_plus.gif)';
+} return false;"
+style = "padding-right: 20px; background: transparent url(/forum/images/custom/icon_plus.gif) no-repeat scroll right;"
+><b>/etc/apache2/ports.conf</b> <IDXSKIP>(для просмотра содержимого нажмите на ссылку)</IDXSKIP></a>
+
+<div style="display: none;">
+<dl class="codebox"><IDXSKIP><dt>Код: <a href="#" onclick="selectCode(this); return false;">Выделить всё</a> &bull; <a href="#" onclick="viewableCode(this); return false;">Развернуть</a></dt></IDXSKIP><dd><pre><code class="">listen 127.0.0.1:8090<br />listen 127.0.0.1:8080<br />listen 127.0.0.1:8081<br />listen 127.0.0.1:8082<br />listen 127.0.0.1:8083<br />listen 127.0.0.1:8084<br /><br />&lt;IfModule ssl_module&gt;<br />&nbsp; &nbsp;Listen 443<br />&lt;/IfModule&gt;<br /><br />&lt;IfModule mod_gnutls.c&gt;<br />&nbsp; &nbsp;Listen 443<br />&lt;/IfModule&gt;</code></pre></dd></dl>
+</div>
+</div><br />Основной сайт висит на 8090 порту, остальные - это поддомены.<br /><br /><div>
+<a href="#phpbb3bbcodes_spoiler" onclick="
+if (this.parentNode.getElementsByTagName('div')[0].style.display != '') 
+{ 
+	this.parentNode.getElementsByTagName('div')[0].style.display = '';
+	this.style.backgroundImage = 'url(/forum/images/custom/icon_minus.gif)';
+} 
+else
+{ 
+	this.parentNode.getElementsByTagName('div')[0].style.display = 'none';
+	this.style.backgroundImage = 'url(/forum/images/custom/icon_plus.gif)';
+} return false;"
+style = "padding-right: 20px; background: transparent url(/forum/images/custom/icon_plus.gif) no-repeat scroll right;"
+><b>Конфиг основного сайта, апач</b> <IDXSKIP>(для просмотра содержимого нажмите на ссылку)</IDXSKIP></a>
+
+<div style="display: none;">
+<dl class="codebox"><dt>Код: <a href="#" onclick="selectCode(this); return false;">Выделить всё</a> &bull; <a href="#" onclick="viewableCode(this); return false;">Развернуть</a></dt><dd><pre><code class="">&lt;VirtualHost 127.0.0.1:8090&gt;<br />&nbsp; &nbsp; DocumentRoot /var/www/SERVERNAME/public_html<br />&nbsp; &nbsp; <br />&nbsp; &nbsp; &lt;Directory /var/www/SERVERNAME/public_html&gt;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Options Indexes FollowSymLinks MultiViews<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; AllowOverride All<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Order allow,deny<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; allow from all<br />&nbsp; &nbsp; &lt;/Directory&gt;<br />&lt;/VirtualHost&gt;</code></pre></dd></dl>
+</div>
+</div><br /><br /><div>
+<a href="#phpbb3bbcodes_spoiler" onclick="
+if (this.parentNode.getElementsByTagName('div')[0].style.display != '') 
+{ 
+	this.parentNode.getElementsByTagName('div')[0].style.display = '';
+	this.style.backgroundImage = 'url(/forum/images/custom/icon_minus.gif)';
+} 
+else
+{ 
+	this.parentNode.getElementsByTagName('div')[0].style.display = 'none';
+	this.style.backgroundImage = 'url(/forum/images/custom/icon_plus.gif)';
+} return false;"
+style = "padding-right: 20px; background: transparent url(/forum/images/custom/icon_plus.gif) no-repeat scroll right;"
+><b>Конфиг прокси основного сайта, nginx</b> <IDXSKIP>(для просмотра содержимого нажмите на ссылку)</IDXSKIP></a>
+
+<div style="display: none;">
+<dl class="codebox"><dt>Код: <a href="#" onclick="selectCode(this); return false;">Выделить всё</a> &bull; <a href="#" onclick="viewableCode(this); return false;">Развернуть</a></dt><dd><pre><code class="">server {<br />&nbsp; listen 80;<br />&nbsp; server_name SERVERNAME;<br />&nbsp; server_name_in_redirect off;<br /><br />&nbsp; location / {<br />&nbsp; &nbsp; proxy_pass http://127.0.0.1:8090/;<br />&nbsp; &nbsp; proxy_redirect off;<br />&nbsp; &nbsp; proxy_set_header Host $host;<br />&nbsp; &nbsp; proxy_set_header X-Real-IP $remote_addr;<br />&nbsp; &nbsp; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;<br />&nbsp; &nbsp; client_max_body_size 10m;<br />&nbsp; &nbsp; proxy_connect_timeout 90;<br />&nbsp; }<br />}</code></pre></dd></dl>
+</div>
+</div><br /><br />phpmyadmin установлен с интеграцией apache2 в /usr/share/phpmyadmin<br /><br />Сейчас, если зайти на SERVERNAME/phpmyadmin, то после пяти минут висения браузер вываливается с ошибкой таймаута. Если зайти на SERVERNAME/phpmyadmin<span style="font-weight: bold">/</span>, то покажется окно логина phpmyadmin, но после авторизации получаю ту же ошибку по таймауту, а адресная строка станет вида SERVERNAME:8090/phpmyadmin/index.php?token=XXX Однако, если после этого снова зайти на SERVERNAME/phpmyadmin<span style="font-weight: bold">/</span>, то я окажусь залогиненым в админку phpmyadmin  <img src="./images/smilies/think.gif" alt=":thinking:" title="Thinking" /><br /><br />У меня слегка едет крыша от того, что же надо подкрутить. Виртуальные хосты настраивал вот по <a href="https://toster.ru/answer?answer_id=256142#answers_list_answer" class="postlink">этому ответу</a><IDXSKIP>.<br /></IDXSKIP><br />Буду признателен за подсказки, если у кого подобная конфигурация работает.</div>
+
+					
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile11852">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=11852_1423392295.jpg" width="100" height="100" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe">alexg-nn</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 793</dd><dd><strong>Зарегистрирован:</strong> 08 фев 2015, 12:45</dd><dd><strong>Откуда:</strong> Нижний Новгород</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('11852', '223752'); return false;"><strong>127</strong></a></dd>
+					
+					<dd><strong>Настоящее имя:</strong> Алексей</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223752&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223770" class="post u4250 bg1">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223770'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[1] = "#"+(1 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223770">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223770#p223770]"+ $("#p223770 h3 a").first().text().replace(/"/g,"")+" "+post_id[1]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]donvictorio[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[1]);</script> <a href="./viewtopic.php?p=223770&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223770"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=4250&amp;sid=c08137d6283b01a60e16bf17051c5cfe">donvictorio</a></strong> &raquo; 04 окт 2015, 00:17 </p>
+
+					
+					<div class="content">если хотите хороший совет (не по теме, правда, но сильно упрощающий жизнь) - избавьтесь от апача. nginx, как вебсервер, покрывает 98% потребностей веб хостинга.<br />также по поводу phpmyadmin - если вы используете его как IDE для разработки и тестирования бд - это не оч хорошая идея. Навикат или dbforge с этим справляются куда лучше и удобнее. если лишь для нечастого администрирования бд на своём серваке - не обязательно делать глобальный алиас, это для хостеров удобно. для себя - сделайте хост с именем от балды на несуществующем домене и пропишите его в хосты на своей машине. так меньше левых людей будет долбиться на него и пытаться вскрыть, вам же никакой разницы не будет. либо оформите в виде поддомена, либо вообще слейте в каталог на каком-то рабочем сайте. а ещё проще - использовать для этих целей adminer. он вообще в одном файле php вмещается. прсотые вещи делать в нём можно и запускать откуда угодно вообще без каких-либо настроек.<br /><!-- m --><a class="postlink" href="https://www.adminer.org/">https://www.adminer.org/</a><!-- m --></div>
+
+					
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile4250">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=4250&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=4250_1483925890.png" width="143" height="150" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=4250&amp;sid=c08137d6283b01a60e16bf17051c5cfe">donvictorio</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 1705</dd><dd><strong>Зарегистрирован:</strong> 11 окт 2012, 16:26</dd><dd><strong>Откуда:</strong> Санкт-Петербург</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('4250', '223770'); return false;"><strong>477</strong></a></dd>
+					
+					<dd><strong>Настоящее имя:</strong> Виктор</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223770&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223781" class="post u12958 bg2">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223781'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[2] = "#"+(2 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223781">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223781#p223781]"+ $("#p223781 h3 a").first().text().replace(/"/g,"")+" "+post_id[2]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]MX_Master[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[2]);</script> <a href="./viewtopic.php?p=223781&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223781"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a></strong> &raquo; 04 окт 2015, 06:09 </p>
+
+					
+					<div class="content">Про phpmyadmin забыл уже очень давно, юзаю исключительно dbforge.<br /><br />В качестве проверенной отсебятины могу рекомендовать lighttpd.</div>
+
+					<div id="sig223781" class="signature"><div style="float:right; margin:5px;"><a href="http://linuxcnc.org/" class="postlink"><img src="http://topcnc.ru/img/linuxcnc_logo.png" alt="Изображение" /></a></div>• <a href="http://topcnc.ru/StepperMotorCalculator.html#lng=0" class="postlink"><span style="font-weight: bold">Шаговый калькулятор</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=41&amp;t=13977" class="postlink"><span style="font-weight: bold">Шаговый умножитель</span> на <span style="color: #000088">STM32</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=16&amp;t=8355" class="postlink"><span style="font-weight: bold">Wi-Fi пульт</span> для <span style="font-weight: bold"><span style="color: #880000">Mach3</span></span>, <span style="font-weight: bold"><span style="color: #000088">NCStudio</span></span> из планшета</a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=15&amp;t=11968" class="postlink"><span style="font-weight: bold">Веб-морда</span> для <span style="font-weight: bold"><span style="color: #0000FF">LinuxCNC</span></span></a></div>
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile12958">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=12958_1491926202.jpg" width="106" height="150" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a>
+					</dt>
+
+					<dd>Мастер</dd>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 1229</dd><dd><strong>Зарегистрирован:</strong> 27 июн 2015, 19:45</dd><dd><strong>Откуда:</strong> Алматы</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('12958', '223781'); return false;"><strong>583</strong></a></dd>
+					
+					<dd><strong>Настоящее имя:</strong> Михаил</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223781&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223787" class="post u3828 bg1">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223787'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[3] = "#"+(3 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223787">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223787#p223787]"+ $("#p223787 h3 a").first().text().replace(/"/g,"")+" "+post_id[3]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]UAVpilot[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[3]);</script> <a href="./viewtopic.php?p=223787&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223787"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe">UAVpilot</a></strong> &raquo; 04 окт 2015, 09:13 </p>
+
+					
+					<div class="content"><blockquote><div><cite>MX_Master писал(а):</cite>Про phpmyadmin забыл уже очень давно, юзаю исключительно dbforge.</div></blockquote><br />для dbforge нужна винда.<br />у phpmyadmin есть огромный плюс: не надо открывать доступ к mysql для всего мира, например чтобы иметь возможность порулить с помощью планшета на пляже.<br /><br />P.S. nginx не пользую, считаю его лишним. <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /></div>
+
+					<div id="sig223787" class="signature"><span style="font-size: 100%; line-height: 116%;"><span style="color: #4040BF">1. Робот не может ответить отказом на предложение человека выпить или своим бездействием допустить, чтобы человек напился один.</span></span></div>
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile3828">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=3828_1339865102.jpg" width="79" height="90" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe">UAVpilot</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 13605</dd><dd><strong>Зарегистрирован:</strong> 17 апр 2012, 14:58</dd><IDXSKIP><dd><strong>Откуда:</strong> Москва</dd></IDXSKIP>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('3828', '223787'); return false;"><strong>3201</strong></a></dd>
+					
+					<dd><strong>Медальки:</strong> <a class="medal gold" href="http://cnc-club.ru/forum/viewtopic.php?f=40&t=1930&p=33092#p33092" title="За модернизацию линейных подшипников"></a>
+<a class='medal gold' href='http://cnc-club.ru/forum/viewtopic.php?f=3&t=3369&start=40&p=112771#p112771' title='За пересадку мозга AG-400'></a></dd>
+				
+					<dd><strong>Настоящее имя:</strong> Сергей</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223787&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223813" class="post u12958 bg2">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223813'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[4] = "#"+(4 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223813">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223813#p223813]"+ $("#p223813 h3 a").first().text().replace(/"/g,"")+" "+post_id[4]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]MX_Master[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[4]);</script> <a href="./viewtopic.php?p=223813&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223813"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a></strong> &raquo; 04 окт 2015, 14:42 </p>
+
+					
+					<div class="content"><blockquote><div><cite>UAVpilot писал(а):</cite><blockquote><div><cite>MX_Master писал(а):</cite>Про phpmyadmin забыл уже очень давно, юзаю исключительно dbforge.</div></blockquote><br />для dbforge нужна винда.<br />у phpmyadmin есть огромный плюс: не надо открывать доступ к mysql для всего мира, например чтобы иметь возможность порулить с помощью планшета на пляже</div></blockquote><br />пхпадмин это как раз и есть доступ к вашим бд для всего мира, а еще это доступ ко всем скриптам, которые рядом с ним лежат. Я лучше внешний порт на пару часов приоткрою пока работаю с бд, чем буду оставлять еще один вход</div>
+
+					<div id="sig223813" class="signature"><div style="float:right; margin:5px;"><a href="http://linuxcnc.org/" class="postlink"><img src="http://topcnc.ru/img/linuxcnc_logo.png" alt="Изображение" /></a></div>• <a href="http://topcnc.ru/StepperMotorCalculator.html#lng=0" class="postlink"><span style="font-weight: bold">Шаговый калькулятор</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=41&amp;t=13977" class="postlink"><span style="font-weight: bold">Шаговый умножитель</span> на <span style="color: #000088">STM32</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=16&amp;t=8355" class="postlink"><span style="font-weight: bold">Wi-Fi пульт</span> для <span style="font-weight: bold"><span style="color: #880000">Mach3</span></span>, <span style="font-weight: bold"><span style="color: #000088">NCStudio</span></span> из планшета</a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=15&amp;t=11968" class="postlink"><span style="font-weight: bold">Веб-морда</span> для <span style="font-weight: bold"><span style="color: #0000FF">LinuxCNC</span></span></a></div>
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile12958">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=12958_1491926202.jpg" width="106" height="150" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 1229</dd><dd><strong>Зарегистрирован:</strong> 27 июн 2015, 19:45</dd><dd><strong>Откуда:</strong> Алматы</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('12958', '223813'); return false;"><strong>583</strong></a></dd>
+					
+					<dd><strong>Настоящее имя:</strong> Михаил</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223813&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223821" class="post u3828 bg1">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223821'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[5] = "#"+(5 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223821">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223821#p223821]"+ $("#p223821 h3 a").first().text().replace(/"/g,"")+" "+post_id[5]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]UAVpilot[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[5]);</script> <a href="./viewtopic.php?p=223821&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223821"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe">UAVpilot</a></strong> &raquo; 04 окт 2015, 15:45 </p>
+
+					
+					<div class="content"><blockquote><div><cite>MX_Master писал(а):</cite>пхпадмин это как раз и есть доступ к вашим бд для всего мира, а еще это доступ ко всем скриптам, которые рядом с ним лежат.</div></blockquote><br />Прямо-таки ко всем? На <!-- m --><a class="postlink" href="http://cncdevice.pro">http://cncdevice.pro</a><!-- m --> есть phpmyadmin - можешь попробовать доступиться. <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /><br /><br /><blockquote><div><cite>MX_Master писал(а):</cite>Я лучше внешний порт на пару часов приоткрою пока работаю с бд</div></blockquote><br />За эти пару часов и ломанут, ибо в mysql защиты никакой.<br /><br />P.S. Сейчас &quot;хакеров&quot; развелось - чем хочешь ешь. Ставишь сервер с IP-адресом, который до этого момента никогда и нигде не использовался - через полчаса-час во лог сыпятся записи о попытках подбора пароля по ssh...</div>
+
+					<div id="sig223821" class="signature"><span style="font-size: 100%; line-height: 116%;"><span style="color: #4040BF"><IDXSKIP>1. Робот не может ответить отказом на предложение человека выпить или своим бездействием допустить, чтобы человек напился один.</IDXSKIP></span></span></div>
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile3828">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=3828_1339865102.jpg" width="79" height="90" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe">UAVpilot</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 13605</dd><IDXSKIP><dd><strong>Зарегистрирован:</strong> 17 апр 2012, 14:58</dd></IDXSKIP><IDXSKIP><dd><strong>Откуда:</strong> Москва</dd></IDXSKIP>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('3828', '223821'); return false;"><strong>3201</strong></a></dd>
+					
+					<IDXSKIP><dd><strong>Медальки:</strong> <a class="medal gold" href="http://cnc-club.ru/forum/viewtopic.php?f=40&t=1930&p=33092#p33092" title="За модернизацию линейных подшипников"></a>
+<a class='medal gold' href='http://cnc-club.ru/forum/viewtopic.php?f=3&t=3369&start=40&p=112771#p112771' title='За пересадку мозга AG-400'></a></dd></IDXSKIP>
+				
+					<IDXSKIP><dd><strong>Настоящее имя:</strong> Сергей</dd></IDXSKIP>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223821&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223833" class="post u12958 bg2">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223833'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[6] = "#"+(6 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223833">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223833#p223833]"+ $("#p223833 h3 a").first().text().replace(/"/g,"")+" "+post_id[6]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]MX_Master[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[6]);</script> <a href="./viewtopic.php?p=223833&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223833"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a></strong> &raquo; 04 окт 2015, 17:26 </p>
+
+					
+					<div class="content">Фаервол вышел из моды? Для меня обычное дело открывать порты на свой IP пока я работаю с сервером. Не говоря уже о том, что порты далеко не дефолтные. Если лично ваш пхпадмин засел как партизан и не один сканер его не отрыл - поздравляю, у вас талант. Но вот у автора темы он лежит почти на виду. Именно поэтому я и не рекомендую.<br /><br /><blockquote><div><IDXSKIP><cite>UAVpilot писал(а):</cite></IDXSKIP>через полчаса-час во лог сыпятся записи о попытках подбора пароля по ssh...</div></blockquote><br />категорически согласен, но мы-то с вами не первый день в Интернете и умеем грамотно настраивать SSH вкупе с фаерволом</div>
+
+					<div id="sig223833" class="signature"><div style="float:right; margin:5px;"><a href="http://linuxcnc.org/" class="postlink"><img src="http://topcnc.ru/img/linuxcnc_logo.png" alt="Изображение" /></a></div>• <a href="http://topcnc.ru/StepperMotorCalculator.html#lng=0" class="postlink"><span style="font-weight: bold">Шаговый калькулятор</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=41&amp;t=13977" class="postlink"><span style="font-weight: bold">Шаговый умножитель</span> на <span style="color: #000088">STM32</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=16&amp;t=8355" class="postlink"><span style="font-weight: bold">Wi-Fi пульт</span> для <span style="font-weight: bold"><span style="color: #880000">Mach3</span></span>, <span style="font-weight: bold"><span style="color: #000088">NCStudio</span></span> из планшета</a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=15&amp;t=11968" class="postlink"><span style="font-weight: bold">Веб-морда</span> для <span style="font-weight: bold"><span style="color: #0000FF">LinuxCNC</span></span></a></div>
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile12958">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=12958_1491926202.jpg" width="106" height="150" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 1229</dd><dd><strong>Зарегистрирован:</strong> 27 июн 2015, 19:45</dd><dd><strong>Откуда:</strong> Алматы</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('12958', '223833'); return false;"><strong>583</strong></a></dd>
+					
+					<dd><strong>Настоящее имя:</strong> Михаил</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223833&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223861" class="post u3828 bg1">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223861'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[7] = "#"+(7 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223861">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223861#p223861]"+ $("#p223861 h3 a").first().text().replace(/"/g,"")+" "+post_id[7]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]UAVpilot[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[7]);</script> <a href="./viewtopic.php?p=223861&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223861"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe">UAVpilot</a></strong> &raquo; 04 окт 2015, 19:32 </p>
+
+					
+					<div class="content"><blockquote><div><cite>MX_Master писал(а):</cite>Фаервол вышел из моды? Для меня обычное дело открывать порты на свой IP пока я работаю с сервером.</div></blockquote><br />При работе через сотовых операторов адрес может меняться даже в пределах одного &quot;сеанса&quot;, как правило в местах большой нагрузки на сеть, на тех-же курортах.<br /><br /><blockquote><div><cite>MX_Master писал(а):</cite>категорически согласен, но мы-то с вами не первый день в Интернете и умеем грамотно настраивать SSH вкупе с фаерволом</div></blockquote><br />А mysql как настраивать? У него ж даже нет элементарной защиты от подбора пароля...</div>
+
+					<div id="sig223861" class="signature"><span style="font-size: 100%; line-height: 116%;"><span style="color: #4040BF">1. Робот не может ответить отказом на предложение человека выпить или своим бездействием допустить, чтобы человек напился один.</span></span></div>
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile3828">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=3828_1339865102.jpg" width="79" height="90" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe">UAVpilot</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 13605</dd><dd><strong>Зарегистрирован:</strong> 17 апр 2012, 14:58</dd><IDXSKIP><dd><strong>Откуда:</strong> Москва</dd></IDXSKIP>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('3828', '223861'); return false;"><strong>3201</strong></a></dd>
+					
+					<dd><strong>Медальки:</strong> <a class="medal gold" href="http://cnc-club.ru/forum/viewtopic.php?f=40&t=1930&p=33092#p33092" title="За модернизацию линейных подшипников"></a>
+<a class='medal gold' href='http://cnc-club.ru/forum/viewtopic.php?f=3&t=3369&start=40&p=112771#p112771' title='За пересадку мозга AG-400'></a></dd>
+				
+					<dd><strong>Настоящее имя:</strong> Сергей</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223861&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223862" class="post u11852 bg2 topic-starter">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223862'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[8] = "#"+(8 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223862">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223862#p223862]"+ $("#p223862 h3 a").first().text().replace(/"/g,"")+" "+post_id[8]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]alexg-nn[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[8]);</script> <a href="./viewtopic.php?p=223862&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223862"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe">alexg-nn</a></strong> &raquo; 04 окт 2015, 19:38 </p>
+
+					
+					<div class="content">Дискуссия немного не в то русло пошла. Я PMA использую только когда надо визуально посмотреть табличку какую, остальное через консоль.</div>
+
+					
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile11852">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=11852_1423392295.jpg" width="100" height="100" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe">alexg-nn</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 793</dd><dd><strong>Зарегистрирован:</strong> 08 фев 2015, 12:45</dd><dd><strong>Откуда:</strong> Нижний Новгород</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('11852', '223862'); return false;"><strong>127</strong></a></dd>
+					
+					<dd><strong>Настоящее имя:</strong> Алексей</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223862&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223871" class="post u12958 bg1">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223871'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[9] = "#"+(9 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223871">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223871#p223871]"+ $("#p223871 h3 a").first().text().replace(/"/g,"")+" "+post_id[9]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]MX_Master[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[9]);</script> <a href="./viewtopic.php?p=223871&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223871"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a></strong> &raquo; 04 окт 2015, 20:34 </p>
+
+					
+					<div class="content">Хорошо, давайте вернёмся от курорта с плохим сигналом к делу<br /><blockquote><div><cite>alexg-nn писал(а):</cite>Сейчас, если зайти на SERVERNAME/phpmyadmin, то после пяти минут висения браузер вываливается с ошибкой таймаута. Если зайти на SERVERNAME/phpmyadmin/, то покажется окно логина phpmyadmin, но после авторизации получаю ту же ошибку по таймауту, а адресная строка станет вида SERVERNAME:8090/phpmyadmin/index.php?token=XXX Однако, если после этого снова зайти на SERVERNAME/phpmyadmin/, то я окажусь залогиненым в админку phpmyadmin  </div></blockquote><br />Могу объяснить последнее чудо. После успешного логина скрипт РМА сохраняёт свои куки в вашем браузере просто для домена SERVERNAME, не учитывая порт. Поэтому, далее заходя на этот адрес с любого порта, скрипт РМА законно покажет вам, что вы успешно вошли.<br /><br />А по кусочкам настроек, которые вы дали, всё чисто. Разве что не видно строчек вида<br /><dl class="codebox"><dt>Код: <a href="#" onclick="selectCode(this); return false;">Выделить всё</a> &bull; <a href="#" onclick="viewableCode(this); return false;">Развернуть</a></dt><dd><pre><code class="">NameVirtualHost 127.0.0.1:8080<br />NameVirtualHost 127.0.0.1:8090</code></pre></dd></dl></div>
+
+					<div id="sig223871" class="signature"><div style="float:right; margin:5px;"><a href="http://linuxcnc.org/" class="postlink"><img src="http://topcnc.ru/img/linuxcnc_logo.png" alt="Изображение" /></a></div>• <a href="http://topcnc.ru/StepperMotorCalculator.html#lng=0" class="postlink"><span style="font-weight: bold">Шаговый калькулятор</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=41&amp;t=13977" class="postlink"><span style="font-weight: bold">Шаговый умножитель</span> на <span style="color: #000088">STM32</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=16&amp;t=8355" class="postlink"><span style="font-weight: bold">Wi-Fi пульт</span> для <span style="font-weight: bold"><span style="color: #880000">Mach3</span></span>, <span style="font-weight: bold"><span style="color: #000088">NCStudio</span></span> из планшета</a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=15&amp;t=11968" class="postlink"><span style="font-weight: bold">Веб-морда</span> для <span style="font-weight: bold"><span style="color: #0000FF">LinuxCNC</span></span></a></div>
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile12958">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=12958_1491926202.jpg" width="106" height="150" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 1229</dd><dd><strong>Зарегистрирован:</strong> 27 июн 2015, 19:45</dd><dd><strong>Откуда:</strong> Алматы</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('12958', '223871'); return false;"><strong>583</strong></a></dd>
+					
+					<dd><strong>Настоящее имя:</strong> Михаил</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223871&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223873" class="post u11852 bg2 topic-starter">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223873'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[10] = "#"+(10 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223873">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223873#p223873]"+ $("#p223873 h3 a").first().text().replace(/"/g,"")+" "+post_id[10]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]alexg-nn[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[10]);</script> <a href="./viewtopic.php?p=223873&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223873"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe">alexg-nn</a></strong> &raquo; 04 окт 2015, 20:42 </p>
+
+					
+					<div class="content"><span style="font-weight: bold">MX_Master</span>, это понятно. Вопрос, как настроить правильно проксирование nginx. Например, почему адресная строка меняет вид? Порт 8090 вообще наружу не должен быть виден, это &quot;междусобойчик&quot; апача и nginx.</div>
+
+					
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile11852">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=11852_1423392295.jpg" width="100" height="100" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe">alexg-nn</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 793</dd><dd><strong>Зарегистрирован:</strong> 08 фев 2015, 12:45</dd><IDXSKIP><dd><strong>Откуда:</strong> Нижний Новгород</dd></IDXSKIP>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('11852', '223873'); return false;"><strong>127</strong></a></dd>
+					
+					<dd><strong>Настоящее имя:</strong> Алексей</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223873&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223874" class="post u11852 bg1 topic-starter">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223874'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[11] = "#"+(11 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223874">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223874#p223874]"+ $("#p223874 h3 a").first().text().replace(/"/g,"")+" "+post_id[11]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]alexg-nn[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[11]);</script> <a href="./viewtopic.php?p=223874&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223874"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe">alexg-nn</a></strong> &raquo; 04 окт 2015, 20:44 </p>
+
+					
+					<div class="content"><blockquote><div><cite>MX_Master писал(а):</cite>Разве что не видно строчек вида</div></blockquote><br />Потому что эти директивы устарели, мне об этом заявляет апач при перезапуске.<br /><blockquote class="uncited"><div>NameVirtualHost has no effect and will be removed in the next release</div></blockquote></div>
+
+					
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile11852">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=11852_1423392295.jpg" width="100" height="100" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=11852&amp;sid=c08137d6283b01a60e16bf17051c5cfe">alexg-nn</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 793</dd><dd><strong>Зарегистрирован:</strong> 08 фев 2015, 12:45</dd><dd><strong>Откуда:</strong> Нижний Новгород</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('11852', '223874'); return false;"><strong>127</strong></a></dd>
+					
+					<dd><strong>Настоящее имя:</strong> Алексей</dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223874&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p223883" class="post u12958 bg2">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('223883'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[12] = "#"+(12 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p223883">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=223883#p223883]"+ $("#p223883 h3 a").first().text().replace(/"/g,"")+" "+post_id[12]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]MX_Master[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[12]);</script> <a href="./viewtopic.php?p=223883&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p223883"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a></strong> &raquo; 04 окт 2015, 21:01 </p>
+
+					
+					<div class="content"><blockquote><div><cite>alexg-nn писал(а):</cite><dl class="codebox"><dt>Код: <a href="#" onclick="selectCode(this); return false;">Выделить всё</a> &bull; <a href="#" onclick="viewableCode(this); return false;">Развернуть</a></dt><dd><pre><code class="">listen 127.0.0.1:8090<br />listen 127.0.0.1:8080<br />listen 127.0.0.1:8081<br />listen 127.0.0.1:8082<br />listen 127.0.0.1:8083<br />listen 127.0.0.1:8084<br /><br />&lt;IfModule ssl_module&gt;<br />   Listen 443<br />&lt;/IfModule&gt;<br /><br />&lt;IfModule mod_gnutls.c&gt;<br />   Listen 443<br />&lt;/IfModule&gt;</code></pre></dd></dl></div></blockquote><br />Из этих настроек я вижу что, если у апача включен <span style="font-weight: bold">SSL </span>модуль или модуль <span style="font-weight: bold">GNUTLS</span>, то апач становится доступен извне с адресов вида <span style="font-weight: bold">https://</span></div>
+
+					<div id="sig223883" class="signature"><div style="float:right; margin:5px;"><a href="http://linuxcnc.org/" class="postlink"><img src="http://topcnc.ru/img/linuxcnc_logo.png" alt="Изображение" /></a></div>• <a href="http://topcnc.ru/StepperMotorCalculator.html#lng=0" class="postlink"><span style="font-weight: bold">Шаговый калькулятор</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=41&amp;t=13977" class="postlink"><span style="font-weight: bold">Шаговый умножитель</span> на <span style="color: #000088">STM32</span></a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=16&amp;t=8355" class="postlink"><span style="font-weight: bold">Wi-Fi пульт</span> для <span style="font-weight: bold"><span style="color: #880000">Mach3</span></span>, <span style="font-weight: bold"><span style="color: #000088">NCStudio</span></span> из планшета</a><br>• <a href="http://www.cnc-club.ru/forum/viewtopic.php?f=15&amp;t=11968" class="postlink"><span style="font-weight: bold">Веб-морда</span> для <span style="font-weight: bold"><span style="color: #0000FF">LinuxCNC</span></span></a></div>
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile12958">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=12958_1491926202.jpg" width="106" height="150" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=12958&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MX_Master</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 1229</dd><dd><strong>Зарегистрирован:</strong> 27 июн 2015, 19:45</dd><dd><strong>Откуда:</strong> Алматы</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('12958', '223883'); return false;"><strong>583</strong></a></dd>
+					
+					<IDXSKIP><dd><strong>Настоящее имя:</strong> Михаил</dd></IDXSKIP>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=223883&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p225063" class="post u9293 bg1">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('225063'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[13] = "#"+(13 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p225063">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=225063#p225063]"+ $("#p225063 h3 a").first().text().replace(/"/g,"")+" "+post_id[13]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]AndyBig[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[13]);</script> <a href="./viewtopic.php?p=225063&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p225063"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=9293&amp;sid=c08137d6283b01a60e16bf17051c5cfe">AndyBig</a></strong> &raquo; 09 окт 2015, 05:21 </p>
+
+					
+					<div class="content"><blockquote><div><cite>donvictorio писал(а):</cite>избавьтесь от апача. nginx, как вебсервер, покрывает 98% потребностей веб хостинга</div></blockquote><br />А наоборот? <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /><br />Я, например, довольно часто использую .htaccess, который не обрабатывается nginx-ом <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /><br /><blockquote><div><cite>MX_Master писал(а):</cite>пхпадмин это как раз и есть доступ к вашим бд для всего мира, а еще это доступ ко всем скриптам, которые рядом с ним лежат.</div></blockquote><br />Это Вы не умеете его готовить <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /> У меня он, к примеру, завязан на сабдомен quitnasto.мойсайт.ru (буквы другие, но смысл тот же), плюс доступ к каталогу требует HTTP-авторизации, так что даже если кто-то и наткнется случайно на этот набор букв в сабдомене, то даже не поймет что там находится.<br /><blockquote><div><cite>UAVpilot писал(а):</cite>Ставишь сервер с IP-адресом, который до этого момента никогда и нигде не использовался - через полчаса-час во лог сыпятся записи о попытках подбора пароля по ssh...</div></blockquote><br />На днях переносил хостинг на другой сервер, записи о попытках входа по SSH начались буквально через 10 минут после поднятия сети <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /><br /><blockquote><div><cite>UAVpilot писал(а):</cite>А mysql как настраивать? У него ж даже нет элементарной защиты от подбора пароля...</div></blockquote><br />Есть fail2ban, он реализует защиту от перебора паролей практически для всех сервисов. У меня настроен 30-минутный бан после 3 неверных попыток.<br /><blockquote><div><cite>MX_Master писал(а):</cite>А по кусочкам настроек, которые вы дали, всё чисто. Разве что не видно строчек вида<br />NameVirtualHost 127.0.0.1:8080</div></blockquote><br />Апач уже считает эти опции устаревшими. По крайней мере версия 2.4.6:<br /><dl class="codebox"><dt>Код: <a href="#" onclick="selectCode(this); return false;">Выделить всё</a> &bull; <a href="#" onclick="viewableCode(this); return false;">Развернуть</a></dt><dd><pre><code class="">Oct&nbsp; 9 05:19:05 mysite httpd: AH00548: NameVirtualHost has no effect and will be removed in the next release /etc/httpd/conf.d/httpd-vhosts.conf:20</code></pre></dd></dl></div>
+
+					
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile9293">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=9293&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=9293_1429470849.jpg" width="101" height="150" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=9293&amp;sid=c08137d6283b01a60e16bf17051c5cfe">AndyBig</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 3440</dd><dd><strong>Зарегистрирован:</strong> 07 мар 2014, 04:01</dd><dd><strong>Откуда:</strong> юг России</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('9293', '225063'); return false;"><strong>900</strong></a></dd>
+					
+					<dd><strong>Медальки:</strong> <a class='medal gold' href='http://cnc-club.ru/forum/viewtopic.php?f=28&t=9921&p=242684#p242684' title='За  статью Гравировка печатных плат на станках с ЧПУ в подробностях!'></a></dd>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=225063&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p225064" class="post u9293 bg2">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('225064'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[14] = "#"+(14 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p225064">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=225064#p225064]"+ $("#p225064 h3 a").first().text().replace(/"/g,"")+" "+post_id[14]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]AndyBig[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[14]);</script> <a href="./viewtopic.php?p=225064&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p225064"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=9293&amp;sid=c08137d6283b01a60e16bf17051c5cfe">AndyBig</a></strong> &raquo; 09 окт 2015, 05:40 </p>
+
+					
+					<div class="content"><blockquote><div><cite>alexg-nn писал(а):</cite>Вопрос, как настроить правильно проксирование nginx</div></blockquote><br />Я сам не ставил nginx, но читал всяческие рекомендации по этой теме... Вроде настроено правильно, только я видел, что секция server включена внутрь секции http. Не знаю насколько это критично <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /><br />Что еще пишут:<br /><blockquote class="uncited"><div>Т.к. теперь все запросы к Apache приходят не от удалённых клиентов, а от Nginx, то в итоге IP-адрес клиента Apache определяет как локальный (127.0.0.1). Для решения этой проблемы нам нужен модуль RPAF. Он берет тело заголовка X-Forwarded-For, присланного от фронтенда (Nginx) и заменяет значение заголовка REMOTE_ADDR на бекенде (Apache).<br /></div></blockquote><br />Но опять же - не знаю, влияет ли это на поведение Апача или только на данные, которые скрипты могут получить из глобальных переменных.<br /><blockquote><div><cite>alexg-nn писал(а):</cite>Например, почему адресная строка меняет вид? Порт 8090 вообще наружу не должен быть виден, это &quot;междусобойчик&quot; апача и nginx.</div></blockquote><br />Но сам-то PMA видит, что обратились на сервер по адресу SERVERNAME:8090/phpmyadmin, он же не знает, что это прокся перенаправила сюда, а у сайта на самом деле совсем другой порт.<br /><br />А вообще, что пишут в логах Апач и nginx? Предупреждения, ошибки? PHP лог выводит в отдельный файл или в апачевский лог?</div>
+
+					
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile9293">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=9293&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=9293_1429470849.jpg" width="101" height="150" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=9293&amp;sid=c08137d6283b01a60e16bf17051c5cfe">AndyBig</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 3440</dd><IDXSKIP><dd><strong>Зарегистрирован:</strong> 07 мар 2014, 04:01</dd></IDXSKIP><IDXSKIP><dd><strong>Откуда:</strong> юг России</dd></IDXSKIP>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('9293', '225064'); return false;"><strong>900</strong></a></dd>
+					
+					<IDXSKIP><dd><strong>Медальки:</strong> <a class='medal gold' href='http://cnc-club.ru/forum/viewtopic.php?f=28&t=9921&p=242684#p242684' title='За  статью Гравировка печатных плат на станках с ЧПУ в подробностях!'></a></dd></IDXSKIP>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=225064&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p225080" class="post u3828 bg1">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation zero"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('225080'); return false;">0</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[15] = "#"+(15 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p225080">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=225080#p225080]"+ $("#p225080 h3 a").first().text().replace(/"/g,"")+" "+post_id[15]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]UAVpilot[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[15]);</script> <a href="./viewtopic.php?p=225080&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p225080"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe">UAVpilot</a></strong> &raquo; 09 окт 2015, 08:27 </p>
+
+					
+					<div class="content"><blockquote><div><IDXSKIP><cite>AndyBig писал(а):</cite></IDXSKIP>Есть fail2ban, он реализует защиту от перебора паролей практически для всех сервисов. У меня настроен 30-минутный бан после 3 неверных попыток.</div></blockquote><br />&quot;Подборщики&quot; уже давно знают про fail2ban и пытаются его обойти - например одновременно атакуют с разных IP и делают попытки по одной в 40 минут или реже...</div>
+
+					<div id="sig225080" class="signature"><span style="font-size: 100%; line-height: 116%;"><span style="color: #4040BF">1. Робот не может ответить отказом на предложение человека выпить или своим бездействием допустить, чтобы человек напился один.</span></span></div>
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile3828">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=3828_1339865102.jpg" width="79" height="90" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=3828&amp;sid=c08137d6283b01a60e16bf17051c5cfe">UAVpilot</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 13605</dd><dd><strong>Зарегистрирован:</strong> 17 апр 2012, 14:58</dd><dd><strong>Откуда:</strong> Москва</dd>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('3828', '225080'); return false;"><strong>3201</strong></a></dd>
+					
+					<dd><strong>Медальки:</strong> <a class="medal gold" href="http://cnc-club.ru/forum/viewtopic.php?f=40&t=1930&p=33092#p33092" title="За модернизацию линейных подшипников"></a>
+<a class='medal gold' href='http://cnc-club.ru/forum/viewtopic.php?f=3&t=3369&start=40&p=112771#p112771' title='За пересадку мозга AG-400'></a></dd>
+				
+					<IDXSKIP><dd><strong>Настоящее имя:</strong> Сергей</dd></IDXSKIP>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=225080&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+		<div id="p225138" class="post u9293 bg2">
+			
+			<div class="postbody">
+				
+							<ul class="profile-icons">
+								
+									<li>
+									<ul class="post-reputation">
+										<li class="rate-good-icon"></li>
+										<li class="reputation positive"><div title="Репутация записи"><a href="#" onclick="jRS.postdetails('225138'); return false;">1</a></div></li>
+										
+									</ul>
+									</li>
+									<br />
+								
+
+							</ul>
+						
+					<script type="text/javascript">  post_id[16] = "#"+(16 + ((post_page_number-1)*20) + 1); </script>
+					<h3 > <a href="#p225138">Re: apache + nginx + phpmyadmin</a>  
+					<a class="named-href-to-post" onclick='copyToClipboard("[url=http://cnc-club.ru/forum/"+topic_url+"&p=225138#p225138]"+ $("#p225138 h3 a").first().text().replace(/"/g,"")+" "+post_id[16]+"[/url]");'></a> 
+					<a class="name-quote" onclick="mozWrap($('#message-box textarea').get(0),'[b]AndyBig[/b], ',''); if ($('#qr_editor_div').css('display') != 'block') {dE('qr_editor_div');dE('qr_showeditor_div');}"></a>
+					  </h3>
+					<p class="author"> <script type="text/javascript">document.write(post_id[16]);</script> <a href="./viewtopic.php?p=225138&amp;sid=c08137d6283b01a60e16bf17051c5cfe#p225138"><img src="./styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Сообщение" title="Сообщение" /></a> <strong class="author"><a href="./memberlist.php?mode=viewprofile&amp;u=9293&amp;sid=c08137d6283b01a60e16bf17051c5cfe">AndyBig</a></strong> &raquo; 09 окт 2015, 11:31 </p>
+
+					
+					<div class="content"><blockquote><div><cite>UAVpilot писал(а):</cite>например одновременно атакуют с разных IP и делают попытки по одной в 40 минут или реже...</div></blockquote><br />Да флаг им в руки, сервер рассыпется от старости раньше, чем они таким образом подберут пару логин/пароль <img src="./images/smilies/icon_e_smile.gif" alt=":)" title="Smile" /></div>
+
+					
+
+			</div>
+
+			
+				<dl class="postprofile" id="profile9293">
+					<dt>
+						<a href="./memberlist.php?mode=viewprofile&amp;u=9293&amp;sid=c08137d6283b01a60e16bf17051c5cfe"><img src="./download/file.php?avatar=9293_1429470849.jpg" width="101" height="150" alt="Аватара пользователя" /></a><br />
+						<a href="./memberlist.php?mode=viewprofile&amp;u=9293&amp;sid=c08137d6283b01a60e16bf17051c5cfe">AndyBig</a>
+					</dt>
+
+					<IDXSKIP><dd>Мастер</dd></IDXSKIP>
+				<IDXSKIP><dd>&nbsp;</dd></IDXSKIP>
+
+				<dd><strong>Сообщения:</strong> 3440</dd><IDXSKIP><dd><strong>Зарегистрирован:</strong> 07 мар 2014, 04:01</dd></IDXSKIP><IDXSKIP><dd><strong>Откуда:</strong> юг России</dd></IDXSKIP>
+					<dd class="user-reputation"><strong>Репутация:</strong> <a href="#" onclick="jRS.userdetails('9293', '225138'); return false;"><strong>900</strong></a></dd>
+					
+					<IDXSKIP><dd><strong>Медальки:</strong> <a class='medal gold' href='http://cnc-club.ru/forum/viewtopic.php?f=28&t=9921&p=242684#p242684' title='За  статью Гравировка печатных плат на станках с ЧПУ в подробностях!'></a></dd></IDXSKIP>
+				
+					<dd>
+						<ul class="profile-icons">
+							<li class="pm-icon"><a href="./ucp.php?i=pm&amp;mode=compose&amp;action=quotepost&amp;p=225138&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Личное сообщение"><span>Личное сообщение</span></a></li>
+						</ul>
+					</dd>
+				
+
+				</dl>
+			
+
+			<IDXSKIP><div class="back2top"><a href="#wrap" class="top" title="Вернуться к началу">Вернуться к началу</a></div></IDXSKIP>
+
+			
+		</div>
+
+		<hr class="divider" />
+	
+
+	<script language='javascript'>
+		$("div.post:last").before('<a id="unread"></a>');
+	</script>
+
+	
+	<!--	<div style="
+				border: 1px solid rgb(204, 204, 204);
+				background: url('/custom_scripts/transparent_bg_50.png') repeat scroll 0 0;
+				font-size: 16px;
+				font-weight: bold;
+				left: 0pt;
+				position: fixed;
+				text-align: center;
+				top: 0pt;
+				width: 100%;
+				z-index: 100;
+				color: rgb(16, 82, 137);
+				display: block;
+				padding: 5px;">Вы можете создавать темы и отвечать в форумах без регистрации.</div>
+	-->
+	
+		<form id="viewtopic" method="post" action="./viewtopic.php?f=38&amp;t=9160&amp;sid=c08137d6283b01a60e16bf17051c5cfe">
+
+		<fieldset class="display-options" style="margin-top: 0; ">
+			
+			<IDXSKIP><label>Показать сообщения за: <select name="st" id="st"><option value="0" selected="selected">Все сообщения</option><option value="1">1 день</option><option value="7">7 дней</option><option value="14">2 недели</option><option value="30">1 месяц</option><option value="90">3 месяца</option><option value="180">6 месяцев</option><option value="365">1 год</option></select></label></IDXSKIP>
+			<IDXSKIP><label>Поле сортировки <select name="sk" id="sk"><option value="a">Автор</option><option value="t" selected="selected">Время размещения</option><option value="s">Заголовок</option></select></label></IDXSKIP> <IDXSKIP><label><select name="sd" id="sd"><option value="a" selected="selected">по возрастанию</option><option value="d">по убыванию</option></select> <input type="submit" name="sort" value="Перейти" class="button2" /></label></IDXSKIP>
+			
+		</fieldset>
+
+		</form>
+		<hr />
+	
+
+	<div class="topic-actions">
+		<div class="buttons">
+		
+			<div class="reply-icon"><a href="./posting.php?mode=reply&amp;f=38&amp;t=9160&amp;sid=c08137d6283b01a60e16bf17051c5cfe" title="Ответить"><span></span>Ответить</a></div>
+		
+		</div>
+
+		
+			<div class="pagination">
+				Сообщений: 17
+				 &bull; Страница <strong>1</strong> из <strong>1</strong>
+			</div>
+		
+	</div>
+
+	
+	<p></p><p><a href="./viewforum.php?f=38&amp;sid=c08137d6283b01a60e16bf17051c5cfe" class="left-box left" accesskey="r">Вернуться в Оффтоп</a></p>
+
+	<form method="post" id="jumpbox" action="./viewforum.php?sid=c08137d6283b01a60e16bf17051c5cfe" onsubmit="if(this.f.value == -1){return false;}">
+
+	
+		<fieldset class="jumpbox">
+	
+			<label for="f" accesskey="j">Перейти:</label>
+			<select name="f" id="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+			
+				<option value="-1">Выберите форум</option>
+			<option value="-1">------------------</option>
+				<option value="136">Wiki</option>
+			
+				<option value="135">&nbsp; &nbsp;Wiki нашего клуба:  cnc-club.ru/wiki</option>
+			
+				<option value="6">Станки</option>
+			
+				<option value="146">&nbsp; &nbsp;Фрезерные станки по металлам</option>
+			
+				<option value="147">&nbsp; &nbsp;Фрезерные станки по дереву и пластикам, гравировальные станки, роутеры</option>
+			
+				<option value="148">&nbsp; &nbsp;Токарные станки</option>
+			
+				<option value="149">&nbsp; &nbsp;Лазерные, плазменные и другие раскроечные станки</option>
+			
+				<option value="150">&nbsp; &nbsp;3D принтеры</option>
+			
+				<option value="151">&nbsp; &nbsp;Прочие станки</option>
+			
+				<option value="34">&nbsp; &nbsp;Изделия</option>
+			
+				<option value="152">&nbsp; &nbsp;Общие вопросы</option>
+			
+				<option value="3">&nbsp; &nbsp;Станки</option>
+			
+				<option value="19">Предложения покупки/продажи/услуг</option>
+			
+				<option value="162">&nbsp; &nbsp;Куплю</option>
+			
+				<option value="163">&nbsp; &nbsp;Продам</option>
+			
+				<option value="164">&nbsp; &nbsp;Услуги</option>
+			
+				<option value="165">&nbsp; &nbsp;Продано</option>
+			
+				<option value="138">&nbsp; &nbsp;Карантин</option>
+			
+				<option value="153">Системы ЧПУ</option>
+			
+				<option value="15">&nbsp; &nbsp;LinuxCNC</option>
+			
+				<option value="158">&nbsp; &nbsp;&nbsp; &nbsp;MESA</option>
+			
+				<option value="16">&nbsp; &nbsp;Windows / Mach</option>
+			
+				<option value="144">&nbsp; &nbsp;&nbsp; &nbsp;KFlop</option>
+			
+				<option value="142">&nbsp; &nbsp;Промышленные стойки</option>
+			
+				<option value="14">Программное обеспечение</option>
+			
+				<option value="35">&nbsp; &nbsp;Новости и анонсы</option>
+			
+				<option value="154">&nbsp; &nbsp;CAD пакеты</option>
+			
+				<option value="160">&nbsp; &nbsp;&nbsp; &nbsp;SolidWorks</option>
+			
+				<option value="161">&nbsp; &nbsp;&nbsp; &nbsp;Компас</option>
+			
+				<option value="155">&nbsp; &nbsp;CAM пакеты</option>
+			
+				<option value="159">&nbsp; &nbsp;&nbsp; &nbsp;Artcam</option>
+			
+				<option value="157">&nbsp; &nbsp;Прочие вопросы Linux</option>
+			
+				<option value="156">&nbsp; &nbsp;Прочие вопросы Windows</option>
+			
+				<option value="39">Детали станков</option>
+			
+				<option value="40">&nbsp; &nbsp;Механика</option>
+			
+				<option value="41">&nbsp; &nbsp;Электроника</option>
+			
+				<option value="42">&nbsp; &nbsp;Двигатели и шпиндели</option>
+			
+				<option value="27">Обработка</option>
+			
+				<option value="28">&nbsp; &nbsp;Материалы</option>
+			
+				<option value="29">&nbsp; &nbsp;Инструмент</option>
+			
+				<option value="30">&nbsp; &nbsp;Видео</option>
+			
+				<option value="36">Мероприятия</option>
+			
+				<option value="37">&nbsp; &nbsp;Мероприятия</option>
+			
+				<option value="131">Площадки друзей cnc-club.ru</option>
+			
+				<option value="134">&nbsp; &nbsp;Chipmaker.ru</option>
+			
+				<option value="25">Ресурсы сети</option>
+			
+				<option value="26">&nbsp; &nbsp;Интернет сайты</option>
+			
+				<option value="31">&nbsp; &nbsp;Организации</option>
+			
+				<option value="17">Сайт</option>
+			
+				<option value="18">&nbsp; &nbsp;Обсуждение сайта</option>
+			
+				<option value="38" selected="selected">&nbsp; &nbsp;Оффтоп</option>
+			
+				<option value="140">Женский раздел</option>
+			
+				<option value="141">&nbsp; &nbsp;Женский раздел</option>
+			
+				<option value="33">English forum</option>
+			
+				<option value="132">Архив</option>
+			
+				<option value="133">&nbsp; &nbsp;Архив</option>
+			
+			</select>
+			<input type="submit" value="Перейти" class="button2" />
+		</fieldset>
+	</form>
+
+
+		<h3>Кто сейчас на конференции</h3>
+		<p><IDXSKIP>Зарегистрированные пользователи: </IDXSKIP><a href="./memberlist.php?mode=viewprofile&amp;u=3760&amp;sid=c08137d6283b01a60e16bf17051c5cfe">aegis</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=83&amp;sid=c08137d6283b01a60e16bf17051c5cfe" style="color: #009900;" class="username-coloured">aftaev</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=17329&amp;sid=c08137d6283b01a60e16bf17051c5cfe">anthro</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=13879&amp;sid=c08137d6283b01a60e16bf17051c5cfe">bananio12</a><IDXSKIP>, <span style="color: #9E8DA7;" class="username-coloured">Bing [Bot]</span></IDXSKIP>, <a href="./memberlist.php?mode=viewprofile&amp;u=12533&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Enot_1</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=1487&amp;sid=c08137d6283b01a60e16bf17051c5cfe" style="color: #0066CC;" class="username-coloured">evgenyjp</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=8105&amp;sid=c08137d6283b01a60e16bf17051c5cfe" style="color: #0066CC;" class="username-coloured">frezeryga</a><IDXSKIP>, <span style="color: #9E8DA7;" class="username-coloured">Google [Bot]</span></IDXSKIP>, <a href="./memberlist.php?mode=viewprofile&amp;u=22349&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Kiriller</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=22840&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Lafayette</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=23137&amp;sid=c08137d6283b01a60e16bf17051c5cfe">maagalex</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=13182&amp;sid=c08137d6283b01a60e16bf17051c5cfe">magnetic</a><IDXSKIP>, <span style="color: #9E8DA7;" class="username-coloured">Majestic-12 [Bot]</span></IDXSKIP>, <a href="./memberlist.php?mode=viewprofile&amp;u=14852&amp;sid=c08137d6283b01a60e16bf17051c5cfe">MGG</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=9430&amp;sid=c08137d6283b01a60e16bf17051c5cfe">nik0</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=23472&amp;sid=c08137d6283b01a60e16bf17051c5cfe">novodk</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=12341&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Rom327</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=10244&amp;sid=c08137d6283b01a60e16bf17051c5cfe" style="color: #0066CC;" class="username-coloured">shalek</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=21733&amp;sid=c08137d6283b01a60e16bf17051c5cfe">sima8520</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=16906&amp;sid=c08137d6283b01a60e16bf17051c5cfe">staltech</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=3506&amp;sid=c08137d6283b01a60e16bf17051c5cfe">T00T</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=4591&amp;sid=c08137d6283b01a60e16bf17051c5cfe">User0711</a><IDXSKIP>, <span style="color: #9E8DA7;" class="username-coloured">Yahoo [Bot]</span></IDXSKIP><IDXSKIP>, <span style="color: #9E8DA7;" class="username-coloured">Yandex [bot]</span></IDXSKIP></p>
+	
+	<script language="javascript">shrink_profiles();</script>
+</div> 
+<script language="javascript">
+		// Women logo
+		if (window.location.href.indexOf("f=141") != -1 )
+		{
+			jQuery("#logo img").attr("src","/forum/styles/prosilver/theme/images/cnc-club.ru%20women.png");
+		}
+	</script>
+
+
+	<h3>Поделиться</h3>	
+	<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="icon" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,gplus"></div> 
+</div>
+
+<div id="page-footer">
+	<div class="navbar">
+		<ul class="linklist">
+			<li class="icon-home"><a href="./index.php?sid=c08137d6283b01a60e16bf17051c5cfe" accesskey="h">Список форумов</a></li>
+				
+			<li class="rightside">
+				<!-- Added by MOD --><a href="/forum/viewtopic.php?f=38&t=9160&amp;mobile_style=on&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Мобильная версия</a> &bull; <a href="./memberlist.php?mode=leaders&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Наша команда</a> &bull; <a href="./ucp.php?mode=delete_cookies&amp;sid=c08137d6283b01a60e16bf17051c5cfe">Удалить cookies конференции</a> &bull; Часовой пояс: UTC + 3 часа 
+			</li>
+		</ul>
+	</div>
+	
+	<div class="copyright">
+		<IDXSKIP><a href="http://www.cnc-box.ru" title="Комплектующие для станков с ЧПУ"><img class="cnc-box-adv" src="/forum/images/cnc-box.png" alt="Комплектующие для станков с ЧПУ" title="Комплектующие для станков с ЧПУ"></a></IDXSKIP>
+		<div class="cnc-box-adv">
+			<IDXSKIP>При поддержке </IDXSKIP><IDXSKIP><a href="http://www.cnc-box.ru" title="Комплектующие для станков с ЧПУ">CNC-BOX.RU</a></IDXSKIP><br>
+			<IDXSKIP>Комплектующие для станков с ЧПУ
+		</IDXSKIP></div>
+		<div>
+			<IDXSKIP>Powered by <a href="http://www.phpbb.com/">phpBB</a></IDXSKIP><IDXSKIP>&reg; Forum Software &copy; phpBB Group<br />Powered by <a href="http://pico88.github.com/phpBB-Reputation-System/" title="Reputation System">Reputation System</a></IDXSKIP> <IDXSKIP>&copy; Pico88
+			<br /></IDXSKIP><IDXSKIP><a href='http://www.phpbbguru.net/'>Русская поддержка phpBB</a></IDXSKIP>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	
+</div>
+
+
+<IDXSKIP><div id="reputation-popup">
+<a href="http://pico88.github.com/phpBB-Reputation-System/" title="Reputation System">Reputation System</a> &copy;'</div></IDXSKIP>
+
+<script type="text/javascript">
+// <![CDATA[
+	window.jQuery || document.write(unescape('%3Cscript src="./styles/prosilver/template/reputation/jquery-1.10.1.min.js" type="text/javascript"%3E%3C/script%3E'));
+// ]]>
+</script>
+<script type="text/javascript">
+// <![CDATA[
+	var rsfile = './reputation.php?sid=c08137d6283b01a60e16bf17051c5cfe';
+	var rsdelete = 'Действительно удалить эту оценку?';
+	var rsclearpost = '{ RS_CLEAR_POST_CONFIRM }';
+	var rsclearuser = '{ RS_CLEAR_USER_CONFIRM }';
+	var requestSent = false;
+// ]]>
+</script>
+<script type="text/javascript" src="./styles/prosilver/template/reputation/jquery.reputation.js"></script>
+
+
+</body>
+
+<script>
+	// before load functions
+	before_load();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1851786-2', 'cnc-club.ru');
+  
+</script>
+<script src="/forum/js/ga_customs.js"></script>
+
+
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter4112881 = new Ya.Metrika(4112881);
+             yaCounter4112881.clickmap(true);
+             yaCounter4112881.trackLinks(true);
+        
+        } catch(e) { }
+    });
+})(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<IDXSKIP><noscript><div style="position:absolute"><img src="//mc.yandex.ru/watch/4112881" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter --><!--  Yandex.Share -->
+	<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+<!-- /Yandex.Share -->
+</html>

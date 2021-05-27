@@ -1,0 +1,953 @@
+router.kz/TL-WR740N.html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Настройка TP-LINK TL-WR740N</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript">
+var ai, xmlhttp, rows , globalTmpMustRemoved;
+
+(window.addEventListener)?window.addEventListener('load', start_script, false):window.attachEvent('onload', start_script);
+
+function start_script() {
+
+	var logoButton = window.document.getElementById('logo'), menuButton, cnt;
+	
+	if(logoButton.getElementsByClassName) {
+		menuButton = logoButton.getElementsByClassName('menu')[0];
+	} else { //FOR IE
+		menuButton = logoButton.getElementsByTagName('DIV');
+		for(cnt = 0; cnt < menuButton.length; cnt++) {
+			if(menuButton[cnt].className == 'menu') {
+				menuButton = menuButton[cnt];
+				break;
+			}
+		}
+	}
+	menuButton = menuButton.getElementsByTagName('DIV')[0].getElementsByTagName('DIV')[0];
+	(menuButton.addEventListener)?menuButton.addEventListener('click', displayLogoMenu, false):menuButton.attachEvent('onclick', displayLogoMenu);
+	function displayLogoMenu() {
+		if(logoButton.className) {
+			logoButton.removeAttribute('class');
+		} else {
+			logoButton.className = 'show';
+			window.document.body.focus();
+			
+			if (window.getSelection) {
+				if (window.getSelection().empty) { // Chrome
+					window.getSelection().empty();
+				} else if (window.getSelection().removeAllRanges) { // Firefox
+					window.getSelection().removeAllRanges();
+				} else if (document.selection) { // IE?
+					document.selection.empty();
+				}
+			}
+		}
+	}
+	
+	(window.document.addEventListener)?window.document.addEventListener('click', closeLogoMenu, false):window.document.attachEvent('onclick', closeLogoMenu);
+	function closeLogoMenu(event) {
+		var searchMenu = event.target || event.srcElement;
+		while(searchMenu && (searchMenu != window.document.body)) {
+			searchMenu = searchMenu.parentNode;
+			if(searchMenu.className == 'menu') {
+				return;
+			}
+		}
+		logoButton.removeAttribute('class');
+	}	
+	var tmp = new Object();
+	xmlhttp = getXmlHttp();
+	ai = {'list':window.document.getElementById('additional-info')};
+	tmp['points'] = ai['list'].getElementsByTagName('TR');
+	try {
+		rows = {
+			'location':{
+				row:tmp['points'][tmp['points'].length-2],
+				content:window.document.createElement('SPAN')
+			},
+			'provider':{
+				row:tmp['points'][tmp['points'].length-1],
+				content:window.document.createElement('SPAN')
+			}
+		};
+		rows.location['cell'] = rows.location.row.getElementsByTagName('TD')[0];
+		rows.provider['cell'] = rows.provider.row.getElementsByTagName('TD')[0];
+		
+		while(rows.location.cell.firstChild) rows.location.cell.removeChild(rows.location.cell.firstChild);
+		while(rows.provider.cell.firstChild) rows.provider.cell.removeChild(rows.provider.cell.firstChild);
+		
+		rows.location.cell.appendChild(rows.location.content);
+		rows.provider.cell.appendChild(rows.provider.content);
+		
+		
+		
+		
+	} catch(e){
+		console.error('Ошибка: '+e);
+		return;
+	};
+	getIpInfo();
+	tmp = null;
+}
+
+function getIpInfo() {
+
+	xmlhttp.open('POST', 'http://router.kz/ajax/get-header-info.php', true);
+	xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8');
+	xmlhttp.send('ip='+'217.69.133.242');
+	
+	
+	if(xmlhttp.addEventListener) {
+		xmlhttp.addEventListener('readystatechange', get_header_info, false);
+	} else {
+		//attachEvent не канает для «onreadystatechange»
+		xmlhttp.onreadystatechange = function() {
+			get_header_info();
+		}
+	}
+	
+	function get_header_info() {
+		if(xmlhttp.readyState != 4) return;
+		var imgObj, responsed = xmlhttp.responseXML.documentElement, countryInfo = getElementAttributes(responsed.getElementsByTagName('country')[0]), providerInfo = getElementAttributes(responsed.getElementsByTagName('provider')[0]);
+		
+		if(countryInfo) {
+			if(countryInfo['image']) {
+				imgObj = new Image();
+				imgObj.src = countryInfo['image'];
+				(imgObj.addEventListener)?imgObj.addEventListener('load', load_location_icon, false):imgObj.attachEvent('onload', function() {load_location_icon(imgObj);});
+			}
+			if(countryInfo['name']) rows.location.content.appendChild(window.document.createTextNode(countryInfo['name']));
+			rows.location.row.removeAttribute('style');
+		}
+		
+		if(providerInfo) {
+			if(providerInfo['image']) {
+				imgObj = new Image();
+				imgObj.src = providerInfo['image'];
+				(imgObj.addEventListener)?imgObj.addEventListener('load', load_provider_icon, false):imgObj.attachEvent('onload', function() {load_provider_icon(imgObj);});
+			}
+			if(providerInfo['name']) {
+				rows.provider.row.getElementsByTagName('TH')[0].appendChild(window.document.createTextNode((providerInfo['is_provider'] == '1')?'Провайдер':'Организация'));
+				rows.provider.content.appendChild(window.document.createTextNode(providerInfo['name']));
+			}
+			rows.provider.row.removeAttribute('style');
+		}
+		if(xmlhttp.removeEventListener) xmlhttp.removeEventListener('readystatechange', get_header_info, false);
+		xmlhttp.close;
+	}
+	tmp = null;
+}
+
+function load_provider_icon() {
+	var eventObj = createLoadedImage(arguments[0]);
+	var imgNode = createLoadedImage(arguments[0]);
+	if(!imgNode) return;
+	imgNode.setAttribute('alt', 'Провайдер');
+	if(rows.provider.content.firstChild) {
+		rows.provider.content.insertBefore(imgNode, rows.provider.content.firstChild);
+	} else {
+		rows.provider.content.appendChild(imgNode);
+	}
+}
+
+function load_location_icon() {
+	var eventObj = createLoadedImage(arguments[0]);
+	var imgNode = createLoadedImage(arguments[0]);
+	if(!imgNode) return;
+	imgNode.setAttribute('alt', 'Флаг');
+	if(rows.location.content.firstChild) {
+		rows.location.content.insertBefore(imgNode, rows.location.content.firstChild);
+	} else {
+		rows.location.content.appendChild(imgNode);
+	}
+}
+
+function createLoadedImage(eventObj) {
+	var imgNode, loaded;
+	if(eventObj['target'] || eventObj['currentTarget']) {
+		imgNode = window.document.createElement('IMG');
+		loaded = (eventObj['target'])?eventObj['target']:eventObj['currentTarget'];
+		imgNode.setAttribute('src', loaded.src);
+		imgNode.setAttribute('width', loaded.width);
+		imgNode.setAttribute('height', loaded.height);
+	} else if(eventObj['nodeType'] == 1) {
+		imgNode = eventObj;
+	} else {
+		return false;
+	}
+	return imgNode;
+}
+
+function getElementAttributes (elementNode) {
+	if(!elementNode) return null;
+	var attList = new Object();
+	elementNode = elementNode.attributes;
+	for(var cnt = 0; cnt < elementNode.length; cnt++) attList[elementNode[cnt]['name']] = elementNode[cnt]['value'];
+	return attList;
+}
+
+function getXmlHttp(){
+	var xmlhttp;
+	try {
+		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+	} catch (e) {
+		try {
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		} catch (e) {
+			xmlhttp = false;
+		}
+	}
+	if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+		xmlhttp = new XMLHttpRequest();
+	}
+	return xmlhttp;
+}
+</script><script type="text/javascript" src="ruba-banner/banner.js"></script><style type="text/css">
+#header {
+font: 10pt Arial,Helvetica,sans-serif;
+width: 100%;
+margin-bottom: 3px;
+}
+#header, .table {
+display: table;
+}
+#header > div, .table > * {
+display: table-row;
+}
+#header > div > div {
+height: 200px;
+}
+#header > div > div, .table > * > * {
+vertical-align: top;
+display: table-cell;
+
+}
+
+
+
+#header > div > div + div {
+width: 690px;
+background: url(http://router.kz/image/header.png) no-repeat;
+}
+#header table em {
+font-size: 15pt;
+display: block;
+}
+
+#additional-info {
+margin: 0;
+padding: 0;
+list-style-type: none;
+display: table;
+}
+#additional-info li {
+display: table-cell;
+}
+#additional-info li {
+display: table-row;
+white-space: nowrap;
+}
+#additional-info li > * {
+display: table-cell;
+}
+#additional-info strong {
+padding-right: 20px;
+width: 80px;
+text-align: right;
+}
+#additional-info strong:after {
+content: ':';
+}
+#header td > strong {
+font-size: 18pt;
+color: rgb(102,102,102);
+}
+#header table th {
+text-align: right;
+vertical-align: top;
+}
+#header tbody th:after {
+content:":";
+}#header th + td {
+padding-left: 20px;
+}
+#header th + td img {
+position: absolute;
+margin-left: -20px;
+}
+#header tbody tr:first-child + tr + tr td:last-child img {
+position: absolute;
+margin-left: -20px;
+}#header > div > div > div {
+width: 100%;
+height: 180px;
+position: relative;
+}
+
+#header div > div.table {
+margin-top: 5px;
+position: absolute;
+right: 0;
+}
+#header div > div.table ul {
+list-style-type: none;
+margin:0;
+padding: 0;
+}
+#header div > div.table li {
+height: 28px;
+width: 30px;
+vertical-align: top;
+}
+#header li img, #header li a {
+border: 0 !important;
+}
+#header div.table li a {
+position: absolute;
+display: block;
+text-decoration: none;
+}
+#header a img {
+border: 0;
+}
+
+#header th label.table {
+position: relative;
+z-index: 3;
+}
+#header th label.table:hover {
+color: red;
+border-color: red;
+}
+#display-menu:checked + label:hover + .table {
+border-color: red;
+}
+
+#logo {
+position: relative;
+z-index: 4;
+}
+#logo > div {
+display: table-row;
+}
+#logo > div > div {
+display: table-cell;
+}
+#logo .logo div{
+width: 48px;
+height: 48px;
+overflow: hidden;
+}
+#logo .logo a, #logo .logo span {
+display: block;
+width: 48px;
+height: 48px;
+background: url('../../image/logo.png') no-repeat top left;
+}
+#logo .logo:hover a{
+background: url('../../image/logo.png') no-repeat top center;
+}
+#logo .logo:active a{
+background: url('../../image/logo.png') no-repeat top right;
+}
+
+#logo .menu > div {
+width: 44px;
+height: 16px;
+border: 2px solid rgba(200,200,200,0.3);
+border-radius: 3px;
+background: #fff url('../../image/menu-closed.png') no-repeat center center;
+position: relative;
+}
+#logo .menu:hover > div {
+border-color: rgba(23,163,165,0.5)
+}
+#logo .menu div div {
+position: absolute;
+display: block;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+border: 1px solid transparent;
+border-radius: 1px;
+}
+#logo .menu:hover div div {
+border-color: rgba(200,200,200,0.3);
+}
+#logo .menu ul {
+position: absolute;
+top: 18px;
+margin: 0;
+padding: 0;
+list-style-type: none;
+display: none;
+box-shadow: 5px 5px 5px #cfcfcf;
+background-color: white;
+}
+
+
+#logo .menu ul a {
+text-decoration: none;
+display: block;
+width: 120px;
+color: #025ea0;
+padding: 3px 5px;
+font-size: 10pt;
+margin: 2px 5px;
+}
+
+
+
+
+
+
+
+#logo .menu ul a:hover {
+background: #025ea0;
+color: white;
+}
+#logo .menu ul li:last-child a {
+background: #ea6c18;
+}
+
+
+#logo .menu ul li:last-child hr {
+margin: 0 auto;
+padding: 0;
+
+border: 0;
+border-top: 1px solid grey;
+
+border-style: solid;
+margin: auto;
+
+}
+
+
+
+#logo.show .menu ul {
+display: block;
+border-radius: 5px;
+border: 1px solid #e0e0e0;
+font-weight: bold;
+}
+
+
+
+#ip-info {
+position: absolute;
+top: 7px;
+left: 56px;
+z-index: 4;
+margin: 0;
+padding: 0;
+}
+#ip-info em {
+display: block;
+font-style: italic;
+font-size: 15pt
+}
+#ip-info strong {
+font-size: 18pt;
+color: rgb(102, 102, 102);
+}
+
+
+
+#logo .menu ul li:last-child {
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+#logo .menu ul li:last-child,
+#logo .menu ul li:last-child a {
+background-color: #f2f2f2;
+margin-bottom: 0;
+}
+#logo .menu ul li:last-child:hover,
+#logo .menu ul li:last-child:hover a {
+background: #025ea0;
+}
+
+
+
+
+
+
+
+
+
+
+#display-menu {
+display: none;
+}
+#nav {
+text-align: left;
+}
+
+#nav span.logo {
+display: block;
+width: 60px;
+height: 60px;
+overflow: hidden;
+}
+#nav .table {
+border-collapse: collapse;
+}
+#display-menu + .table {
+border: 1px solid grey;
+border-top: 0;
+width: 59px;
+background-color: #dfdfdf;
+cursor: pointer;
+}
+#display-menu:checked + .table {
+background-color: #efefef;
+border-bottom: 0;
+}
+
+#nav ul.table {
+display: none;
+position: absolute;
+margin: 0;
+padding: 0;
+z-index: 2;
+border: 1px solid grey;
+}
+
+#display-menu:checked + label + .table {
+display: table;
+margin-top: -1px;
+}
+#nav ul.table li + li span {
+border-top: 1px ridge grey;
+}
+
+#nav .table a {
+display: block;
+border: 1px solid red;
+background-color: #efefef;
+padding: 5px 8px;
+}
+#logo-block {
+position: absolute;
+}
+.grid {
+display: table;
+}
+.grid > div {
+display: table-row;
+}
+.grid > div > div {
+display: table-cell;
+vertical-align: top;
+}
+.block-even, .block-odd {
+margin: 5px 10px;
+overflow: auto;
+padding: 10px;
+text-align: justify;
+}
+.block-even {
+
+}
+.block-odd {
+
+}
+#submenu {
+margin: 10px 20px 0 0;
+padding: 0;
+text-align: right;
+}
+#submenu ul li+li:before {
+content: '|';
+margin: 0 5px;
+}
+#submenu ul {
+list-style-type: none;
+display: inline;
+margin: 0;
+padding: 0;
+}
+#submenu li{
+margin-left: 0;
+display: inline;
+}
+h3 {
+    color:#143D55;
+    font-size: 16pt;
+    font-family: Georgia, Times, serif;
+    font-weight: normal;
+    text-align: left;
+}
+
+h4 {
+	margin: 0px 0px 0px 15px;
+	border-bottom: 1px solid #999;
+}
+
+table tr {
+vertical-align: top;
+}
+
+table.style111 {
+	margin: 0px 0px 5px 0px;
+        padding: 10px;
+	display: block;
+	overflow: auto;
+	background: #F0EEE5;
+	}
+	
+table.clean {
+	margin: 0px 0px 5px 0px;
+	padding: 10px;
+	display: block;
+	overflow: auto;
+	background: #FDFDFD;
+	}
+
+table.style333 {
+	margin: 0px 0px 5px 0px;
+    padding: 10px;
+	display: block;
+	overflow: auto;
+	background: #FFF8DE;
+	}
+	
+p.st0 {
+margin: 0px 0px 0px 0px;
+font-size: 10pt;
+text-align: justify;
+}
+
+p.st1 {
+margin: 0px 0px 0px 15px;
+font-size: 10pt;
+text-align: justify;
+}
+
+p.st2 {
+margin: 0px 0px 0px 15px;
+font-size: 8pt;
+text-align: justify;
+font-style: italic;
+}
+
+p.fig {
+text-align: center;
+}
+#footer {
+width: 923px;
+margin: auto;
+}
+
+
+#footer {
+margin-top: 3px;
+border: 1px solid #E0E0E0;
+color: #bbb; /* Цвет текста */
+padding: 5px; /* Отступы вокруг текста */
+}
+
+#footer table { 
+margin:0 auto; /* Выравнивание таблице по центру блока "footer" */
+}
+
+#footer table td {
+text-align: right; /* Выравнивание строчки '© PavelS 2011' по правому краю */
+} 
+a[href^="http://top100.rambler.ru"] img {
+visibility: hidden;
+position: absolute;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+	<!--[if (IE 8)]>
+<style type="text/css">
+#logo .menu ul a:hover {
+background: #001c38;
+}
+#logo .menu > div {
+border: 2px solid #eeeeee;
+}
+
+#logo .menu:hover div {
+border-color: #8bd1d2;
+}
+
+</style>
+<![endif]-->
+<!--[if (IE 6) | (IE 7)]>
+<p style="position: absolute; left: 0; top: 50px; color: #600; z-index: 21; text-align: center; width: 100%; margin: 0;
+padding: 0; font-size: 18pt;">Вы используете устаревший браузер</p>
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 100%; z-index: 20; background-color: black; filter:alpha(opacity=50);"></div>
+<style type="text/css">
+#header, #content, #sidebar{
+display: none;
+}
+html, body {
+height: 100%;
+overflow: hidden;
+margin: 0 ;
+padding: 0;
+}
+</style>
+<![endif]-->
+<div id="header">
+	<div>
+		<div>
+			<div id="info-block">
+				<div id="logo">
+					<div>
+						<div class="logo">
+							<div><a href="http://router.kz/index.php"></a>							</div>
+						</div>
+					</div>
+					<div>
+						<div class="menu"><div>
+						<div></div>
+						<ul>
+							<IDXSKIP><li><a href="http://router.kz/about.html">О сайте</a></li></IDXSKIP>
+							<IDXSKIP><li><a href="http://router.kz/info.html">Статьи</a></li></IDXSKIP>
+							<IDXSKIP><li><a href="http://router.kz/news.html">Новости</a></li></IDXSKIP>
+							<IDXSKIP><li><a href="http://router.kz/site-map.html">Карта сайта</a></li></IDXSKIP>
+							<IDXSKIP><li><a href="http://router.kz/my-ip.html">Узнать IP адрес</a></li></IDXSKIP>
+						</ul>
+						</div></div>
+					</div>
+				</div>
+				<IDXSKIP><p id="ip-info">
+					<em>Ваш IP-адрес:</em>
+					<strong>217.69.133.242</strong>
+				</p></IDXSKIP>
+				<IDXSKIP><table id="additional-info">
+					<colgroup>
+						<col style="width: 100px;" />
+						<col style="width: 170px;" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>Браузер</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th>Система</th>
+							<td><img src="image/os/linux.png" />Linux</td>
+						</tr><tr style="display: none;"><th>Страна</th><td></td></tr><tr style="display: none;"><th></th><td></td></tr>					</tbody>
+				</table></IDXSKIP>
+			</div>
+		</div>
+		<div></div>
+	</div>
+</div>	    <div id="sidebar">
+		<div id="ruba-banner"></div>	</div>	<div id="content">
+	
+		
+	<h1>Настройка TP-LINK TL-WR740N</h1>
+	<h2>Маршрутизатор с точкой доступа 802.11n и 4-портовым коммутатором Ethernet 10/100 Base-T</h2>
+<div class="block-odd"><p class="fig"><img src="http://router.kz/image/TP-Link/device/TL-WR740N.jpg" alt="TP-LINK TL-WR743ND"/></p>
+<br />
+
+<table class="style111">
+<tr>
+<td>
+<p class="st0">
+
+Инструкция по настройки маршрутизатора TP-LINK TL-WR740N. В данной инструкции приводится пример настройки устройства через WEB интерфейс, установка драйверов и иного программного обеспечения на компьютер не потребуется. Понадобится только интернет обозреватель, подойдет любой (Google Chrome, Opera или Mozilla Firefox).</p>
+
+</td>
+</tr>
+</table>
+
+
+<table class="style111">
+<tr>
+<td><img src="http://router.kz/image/TP-Link/TL-WR74X/192.168.0.1.png" alt="Подключение" /></td>
+<td>
+<p class="st1">
+
+Подключите устройство к компьютеру с помощью сетевого кабеля. В адресной
+строке браузера введите адрес 192.168.0.1 Укажите Имя пользователя и Пароль для доступа к настройкам устройства. Заводской логин и пароль – <IDXSKIP><strong>admin</strong></IDXSKIP> <IDXSKIP>(все буквы в нижнем регистре).</IDXSKIP></p>
+
+<br />
+<h4></h4>
+<p class="st2">
+
+<IDXSKIP>Если зайти на WEB-интерфейс не удается, проверьте настройки сетевого подключения, в свойствах сетевого подключения для протокола TCP/IP значения IP адреса и адреса DNS серверов должны быть выставлены - получать автоматически.</IDXSKIP></p>
+
+</td>
+</tr>
+</table>
+
+<h3>Настройка подключения для Beeline</h3>
+
+<table class="style111">
+<tr>
+<td><a href="http://router.kz/image/TP-Link/TL-WR74X/ENG/beeline-l2tp.png"><img src="http://router.kz/image/TP-Link/TL-WR74X/ENG/400px-beeline-l2tp.png" alt="Настройка подключения TP-Link для Beeline" /></a></td>
+<td>
+<p class="st1">
+
+Для подключения к сервису «Интернет дома» от компании «2Day Telecom» перейдите на страницу настройки параметров подключения к глобальной сети – <strong>Network > WAN</strong><br />Выберите режим подключения <strong>WAN Connection Type – L2TP</strong><br />
+Введите Логин <strong>User Name</strong> и Пароль <strong>Password</strong>, выданные провайдером.<br />
+Укажите адрес севера аутентификации <strong>Server IP Address/Name – l2tp.internet.beeline.kz</strong><br />
+Нажмите кнопку <strong>Connect</strong> для подключения.<br />
+Сохраните настройки <strong>Save</strong><IDXSKIP>.
+
+</IDXSKIP></p>
+<br />
+<h4></h4>
+<p class="st2">
+
+Если подключение прошло успешно, появится сообщение <strong>Connected!</strong>
+При этом значения IP Address, Subnet Mask, Gateway и DNS должны присвоиться автоматически.
+
+</p>
+</td>
+</tr>
+</table>
+
+<h3>Настройка подключения для Megaline, ID-Net</h3>
+
+<table class="style111">
+<tr>
+<td><a href="http://router.kz/image/TP-Link/TL-WR74X/ENG/ID-Net.png"><img src="http://router.kz/image/TP-Link/TL-WR74X/ENG/400px-ID-Net.png" alt="Настройка подключения TP-Link для Megaline, ID-Net" /></a></td>
+<td>
+<p class="st1">
+
+Для подключения к сервису «ID-Net» от «Казахтелеком» перейдите на страницу настройки параметров подключения к глобальной сети – <strong>Network > WAN</strong><br />
+
+Выберите тип подключения <strong>WAN Connection Type – PPPoE</strong><br />
+Введите Логин <strong>User Name</strong> и Пароль <strong>Password</strong>, выданные провайдером.<br />
+
+Нажмите кнопку <strong>Connect</strong> для подключения.<br />
+Сохраните настройки <IDXSKIP><strong>Save</strong></IDXSKIP>.<br />
+
+</p>
+<br />
+<h4></h4>
+<p class="st2">
+
+Если подключение прошло успешно, появится сообщение <strong>Connected!</strong>
+
+</p>
+</td>
+</tr>
+</table>
+
+<h3>Настройка параметров безопасности</h3>
+
+<table class="style111">
+<tr>
+<td><a href="http://router.kz/image/TP-Link/TL-WR74X/ENG/Password.png"><img src="http://router.kz/image/TP-Link/TL-WR74X/ENG/400px-Password.png" alt="Password" /></a></td>
+<td>
+<p class="st1">
+
+По состоянию из коробки доступ к настройкам устройства разрешен только из локальной сети. Вы можете не опасаться того, что кто-нибудь сможет получить доступ к панели управления воспользовавшись дефолтным паролем admin.
+
+Сменить заводской пароль и имя пользователя для подключения к настройкам устройства можно на странице <strong>«System Tools > Password»</strong><IDXSKIP>.
+
+</IDXSKIP></p>
+<br />
+<h4></h4>
+<p class="st2">
+
+Имя пользователя и пароль не должны превышать 14 символов и содержать пробелы.
+
+</p>
+</td>
+</tr>
+</table>
+
+<h3>Настройка параметров беспроводной сети</h3>
+
+<table class="style111">
+<tr>
+<td><a href="http://router.kz/image/TP-Link/TL-WR74X/ENG/Wireless_Settings.png"><img src="http://router.kz/image/TP-Link/TL-WR74X/ENG/400px-Wireless_Settings.png" alt="Настройка параметров беспроводной сети  TP-Link" /></a></td>
+<td>
+<p class="st1">
+
+Устройство оснащено беспроводной точкой доступа, стандарта IEEE 802.11n.
+Для упрощения настройки беспроводной сети предусмотрена фирменная технология <a href="http://router.kz/info/qss.html">QSS</a>.<br />
+
+Ниже приводится пример настройки беспроводной сети через web интерфейс.
+Для конфигурирования базовых настроек беспроводной сети перейдите на страницу <strong>Wireless > Wireless Settings</strong><IDXSKIP>.<br />
+Обратите внимание на следующие параметры:<br /></IDXSKIP>
+<strong>Wireless Network Name</strong> – Имя беспроводной сети. Указанное вами имя сети появится в списке доступных беспроводных сетей при подключении.<br />
+<strong>Enable Wireless Router Radio</strong> – Позволяет отключить поддержку беспроводной сети (Снимите галочку, если хотите отключить беспроводной режим).<br />
+<strong>Enable SSID Broadcast</strong> – Отключив данный параметр можно скрыть имя беспроводной сети. При подключении к такой сети, имя необходимо указать вручную. Данный прием, не является серьезным инструментом зашиты. Используйте его только как дополнительную меру предосторожности совместно с методами WPA/WPA2 или WEP шифрования.
+
+</p>
+</td>
+</tr>
+</table>
+
+<h3>Настройка безопасности беспроводной сети</h3>
+
+<table class="style111">
+<tr>
+<td><a href="http://router.kz/image/TP-Link/TL-WR74X/ENG/Wireless_Security.png"><img src="http://router.kz/image/TP-Link/TL-WR74X/ENG/400px-Wireless_Security.png" alt="Настройка безопасности беспроводной сети  TP-Link" /></a></td>
+<td>
+<p class="st1">
+
+Для конфигурирования параметров безопасности беспроводной сети перейдите на страницу <strong>Wireless > Wireless Security</strong>
+Выберите Режим безопасности <strong>WPA2-Personal</strong> если хотите обеспечить максимальный уровень защиты.<br />
+Выберите алгоритм шифрования <strong>AES</strong> или <strong>Automatic</strong>.<br />
+В поле <strong>PSK Password</strong>, необходимо задать пароль для подключения к сети.
+
+</p>
+<br />
+<h4></h4>
+<p class="st2">
+
+Пароль должен содержать не менее 8 и не более 64 знаков.
+
+</p>
+</td>
+</tr>
+</table>
+
+
+</div>	</div>
+		<IDXSKIP><div id="footer">
+		
+		<table cellspacing="0" cellpadding="0" >
+			<tr>
+				<td>
+<!-- begin of Top100 code -->
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2561493"></script>
+<noscript><a href="http://top100.rambler.ru/navi/2561493/">
+<img src="http://counter.rambler.ru/top100.cnt?2561493" alt="Rambler's Top100" border="0" /></a></noscript>
+<!-- end of Top100 code -->
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="about.html">© PavelS 2011</a>
+				</td>
+			</tr>
+		</table>
+		<div id="yandex">
+			<!-- Yandex.Metrika counter -->
+			<div style="display:none;">
+				<script type="text/javascript">
+				(function(w, c) {
+					(w[c] = w[c] || []).push(function() {
+						try {
+							w.yaCounter9988723 = new Ya.Metrika({id:9988723, enableAll: true});
+						}
+						catch(e) { }
+					});
+				})(window, "yandex_metrika_callbacks");
+				</script>
+			</div>
+			<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+			<noscript><div><img src="//mc.yandex.ru/watch/9988723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+			<!-- /Yandex.Metrika counter -->
+		</div>
+	</div></IDXSKIP>	</div>
+</body>
+</html>

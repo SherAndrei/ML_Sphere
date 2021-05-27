@@ -1,0 +1,791 @@
+labmagic.ru/novosti/energeticheskie_vampiry
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->  <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Энергетические вампиры. Защита ауры от негатива | Labmagic.ru</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="Энергетические вампиры. Существуют ли они? Что нужно знать. Как распознать и защитить себя и своих близких от его негативного влияния? " />
+
+
+    <link href='https://fonts.googleapis.com/css?family=Philosopher:400,700,700italic,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="/templates/labmagic/data/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/templates/labmagic/data/css/lightbox.min.css" rel="stylesheet">
+    <link href="/templates/labmagic/data/css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script>
+        var app = {};
+
+        app.onload = {
+            listAr:new Array(),
+            add:function(data) {
+                if(typeof(data) == "function") this.listAr.push(data);
+                else this.listAr[data.name] = data.func;
+            },
+            loadAll:function(){
+                for(var a in this.listAr){
+                    console.log(typeof(this.listAr[a]));
+                    this.listAr[a]();
+                }
+                console.log("app.onload.loadAll");
+            },
+            run:function(name, data){
+                if(typeof(this.listAr[name]) == "undefined") return false;
+                if(typeof(data) == "object") this.listAr[name](data);
+                else this.listAr[name]();
+            }
+        }
+    </script>
+
+
+</head>
+
+<body class="">
+
+<div class="topFade"></div>
+<a href="#" class="navigateButtonLeft" title="" rel="nofollow" data-toggle="modal" data-target="#helpForm"></a>
+<a href="#" class="navigateButtonRight" title="" rel="nofollow" data-toggle="modal" data-target="#askQuestion"></a>
+
+<div class="modal fade" id="authModal">
+    <div class="modal-dialog text-center">
+        <div class="modal-window auth">
+            <div class="content">
+                
+                <IDXSKIP><div class="headerModal">Авторизация</div></IDXSKIP>
+                <IDXSKIP><form method="post" action="/users/login_do/">
+                    <input type="hidden" name="from_page" value="/">
+                    <div class="form-group">
+                        <input type="text" name="login" class="form-control" placeholder="Логин">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="Пароль">
+                    </div>
+                    <button type="submit" class="buttonCustom1">Авторизация</button>
+                </form></IDXSKIP>
+
+                <p></p>
+                <p></p>
+                <IDXSKIP><p>
+                    <a href="/users/registrate/" title="Страница регистрации">Регистрация?</a>
+                    <a href="/users/forget/" title="Страница восстановления пароля от аккаунта">Забыли пароль?</a></p></IDXSKIP>
+            </div>
+
+            <a href="#" rel="nofollow" class="closeModal" data-dismiss="modal"></a>
+            <div class="pop-win-top"></div>
+            <div class="pop-win-bottom"></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="askQuestion">
+    <div class="modal-dialog text-center">
+        <div class="modal-window auth">
+            <div class="content">
+                <div class="headerModal"><IDXSKIP>Задайте свой вопрос и получите помощь</IDXSKIP></div>
+                <form action="/forum/addQuestion.xml" method="post" data-async="true">
+                    <IDXSKIP><div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="user_name" placeholder="Ваше имя">
+                    </div></IDXSKIP>
+                    <IDXSKIP><div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Ваш e-mail">
+                    </div></IDXSKIP>
+                    <IDXSKIP><div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="date_born" placeholder="Дата рождения/формта даты: дд.мм.гггг" data-mask="99.99.9999">
+                    </div></IDXSKIP>
+                    <IDXSKIP><div class="form-group">
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="city" placeholder="Город">
+                    </div></IDXSKIP>
+                    <div class="form-group">
+                        <textarea class="form-control" name="query" placeholder="Ваш вопрос"></textarea>
+                    </div>
+                                        <IDXSKIP><div class="form-group">
+                        <button type="submit" class="btn btn-default">Отправить</button>
+                    </div></IDXSKIP>
+                    <p></p>
+                    <p><IDXSKIP>* - поля обязательные для заполнения</IDXSKIP></p>
+                </form>
+            </div>
+
+            <a href="#" rel="nofollow" class="closeModal" data-dismiss="modal"></a>
+            <div class="pop-win-top"></div>
+            <div class="pop-win-bottom"></div>
+        </div>
+    </div>
+</div>
+
+
+<IDXSKIP><div class="modal fade" id="helpForm">
+    <div class="modal-dialog text-center">
+        <div class="modal-window auth">
+            <div class="content">
+
+                <div class="headerModal">Написать сообщение</div>
+                
+
+<form method="post" action="/webforms/sendAsync/.xml" data-async='true' enctype="multipart/form-data">
+
+    
+        
+                    <input type="hidden" name="system_email_to" value="39936" />
+            
+                        <div class="form-group">
+                
+<input type="text" name="data[new][name]" value="" placeholder="Ваше имя" class="form-control "  />            </div>
+                    <div class="form-group">
+                
+<input type="text" name="data[new][email]" value="" placeholder="Ваш e-mail" class="form-control "  />            </div>
+                    <div class="form-group">
+                
+<input type="number" name="data[new][mobil]" value="" placeholder="Мобильный телефон" class="form-control" />            </div>
+                    <div class="form-group">
+                
+<textarea name="data[new][query]" class="form-control" placeholder="Ваше сообщение"></textarea>            </div>
+            
+    <input type="hidden" name="system_form_id" value="144" />
+    <input type="hidden" name="ref_onsuccess" value="/webforms/posted/144/" />
+
+    
+
+    <div class="form-group">
+        <button class="buttonCustom1" type="submit">Отправить</button>
+    </div>
+
+</form>
+
+            </div>
+
+            <a href="#" rel="nofollow" class="closeModal" data-dismiss="modal"></a>
+            <div class="pop-win-top"></div>
+            <div class="pop-win-bottom"></div>
+        </div>
+    </div>
+</div></IDXSKIP>
+
+<div class="header">
+    <div class="container">
+
+
+        <IDXSKIP><div class="logoBox">
+            <a href="/" title="Главная страница сайта" class="logo" >
+                <img src="/templates/labmagic/data/images/logo-new-ok.png" alt="Логотип"/>
+            </a>
+        </div></IDXSKIP>
+
+        <IDXSKIP><a href="#" title="" class="contactButton hidden-xs" rel="nofollow" data-toggle="modal" data-target="#helpForm">
+            <img src="/templates/labmagic/data/images/b-help-mag2.png" alt="Контакты"/>
+        </a></IDXSKIP>
+
+
+        <IDXSKIP><div class="authBlock">
+                            <a href="#" title="Форма авторизации пользователя" class="authButton" rel="nofollow" data-toggle="modal" data-target="#authModal">
+                    Вход                </a>
+            
+        </div></IDXSKIP>
+
+
+
+        <div class="clearfix"></div>
+
+        <div class="vlad_menu_on_main">
+                        <ul>
+                                <IDXSKIP><li umi:element-id="1114">
+                    <a href="/consultants/chernyj_mag_vlad_greu/vazhno/obo_mne/#obo_mne" title="Обо мне" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Обо мне</a>
+                </li></IDXSKIP>
+                                <IDXSKIP><li umi:element-id="1115">
+                    <a href="/consultants/chernyj_mag_vlad_greu/vazhno/moi_kontakty/#moi_kontakty" title="Мои контакты" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Мои контакты</a>
+                </li></IDXSKIP>
+                                <IDXSKIP><li umi:element-id="1116">
+                    <a href="/consultants/chernyj_mag_vlad_greu/vazhno/moi_pravila/#moi_pravila" title="Мои правила" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Мои правила</a>
+                </li></IDXSKIP>
+                                <IDXSKIP><li umi:element-id="1117">
+                    <a href="/consultants/chernyj_mag_vlad_greu/vazhno/oplata/#oplata" title="Оплата" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Оплата</a>
+                </li></IDXSKIP>
+                                <IDXSKIP><li umi:element-id="1118">
+                    <a href="/consultants/chernyj_mag_vlad_greu/vazhno/garantii/#garantii" title="Гарантии" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Гарантии</a>
+                </li></IDXSKIP>
+                                <IDXSKIP><li umi:element-id="1119">
+                    <a href="/consultants/chernyj_mag_vlad_greu/vazhno/otzyvy/#otzyvy" title="Отзывы" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Отзывы</a>
+                </li></IDXSKIP>
+                            </ul>
+                    </div>
+
+        <div class="clearfix"></div>
+
+        <IDXSKIP><a href="#" rel="nofollow" class="hidden-sm hidden-md hidden-lg openMobileMenu">
+            Разделы сайта        </a></IDXSKIP>
+
+        <IDXSKIP><a href="#" rel="nofollow" class="searchOpenButton">Поиск </a></IDXSKIP>
+
+        <div class="topMenu">
+
+                
+                <IDXSKIP><div class="searchBlock">
+                    <form action="/search/search_do" method="get" class="form-inline">
+                        <input type="hidden" name="search_types" value="30 29 56 55"/>
+                        <div class="form-group t1">
+                            <label>Поиск в разделах</label>
+                            <select class="form-control" name="search_branches">
+                                <option selected value="">По всему сайту</option>
+                                                                                                        <option value="236">Гороскоп</option>
+                                                                                                        <option value="382">Гадания</option>
+                                                                                                        <option value="390">Заговоры</option>
+                                                                                                        <option value="1045">Эксперты</option>
+                                                                                                        <option value="1041">Обучение</option>
+                                                                                                        <option value="1042">Амулеты</option>
+                                                                                                        <option value="1043">Сонник</option>
+                                                                                                                                            <option value="6119">Вопросы</option>
+                                
+                                                                    <option value="3603">Любовь и отношения</option>
+                                                                    <option value="3873">Красота и здоровье</option>
+                                                            </select>
+                        </div>
+                        <div class="form-group t2">
+                            <input type="text" name="search_string" placeholder="Введите запрос"/>
+                        </div>
+                        <div class="form-group t3">
+                            <button type="submit"/>
+                        </div>
+                    </form>
+                </div></IDXSKIP>
+
+            
+
+
+    <ul class="list-unstyled">
+                <IDXSKIP><li >
+                                <a href="/goroskop/">Гороскоп</a>
+            </li></IDXSKIP>
+                <IDXSKIP><li >
+                                <a href="/gadaniya/">Гадания</a>
+            </li></IDXSKIP>
+                <IDXSKIP><li >
+                                <a href="/obryady_i_zagovory/">Заговоры</a>
+            </li></IDXSKIP>
+                <IDXSKIP><li >
+                                <div class="menuStar"></div>
+                                <a href="/consultants/">Эксперты</a>
+            </li></IDXSKIP>
+                <IDXSKIP><li >
+                                <a href="/shkola-duhovnogo-razvitiya-okean-shua/">Обучение</a>
+            </li></IDXSKIP>
+                <IDXSKIP><li >
+                                <a href="/catalog1/">Амулеты</a>
+            </li></IDXSKIP>
+                <IDXSKIP><li >
+                                <a href="/sonnik/">Сонник</a>
+            </li></IDXSKIP>
+                <IDXSKIP><li >
+                                <a href="/articles/">Статьи</a>
+            </li></IDXSKIP>
+                <IDXSKIP><li >
+                                <a href="/faq_page/">Вопросы</a>
+            </li></IDXSKIP>
+        </ul>
+        </div>
+
+        <div class="clearfix"></div>
+
+
+
+    </div>
+</div>
+
+    <div class="middle">
+        <div class="container">
+            
+
+<div class="col-md-3 col-sm-4 hidden-xs" id="leftPart">
+    <div class="contentBlock">
+
+        
+        
+        
+                    <div class="block">
+                <h3 class="text-center" umi:element-id="1056" umi:field-name="h1" umi:empty="Пусто">Мои услуги</h3>
+                <div class="vladGrauServiceBlockLeftPart">
+                                                            <div class="list">
+                        <ul class="list-unstyled">
+                                                            <IDXSKIP><li  umi:element-id="1057"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/privorot_privyazka/" title="Приворот, привязка" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Приворот, привязка</a></li></IDXSKIP>
+                                                            <IDXSKIP><li  umi:element-id="1058"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/privorot_deneg/" title="Приворот денег" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Приворот денег</a></li></IDXSKIP>
+                                                            <IDXSKIP><li  umi:element-id="1059"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/izgotovlenie_oberegov/" title="Изготовление оберегов" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Изготовление оберегов</a></li></IDXSKIP>
+                                                            <IDXSKIP><li  umi:element-id="29287"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/iscelenie-ot-boleznej/" title="Целительство" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Целительство</a></li></IDXSKIP>
+                                                            <IDXSKIP><li  umi:element-id="1060"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/pohudenie/" title="Похудение" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Похудение</a></li></IDXSKIP>
+                                                            <IDXSKIP><li  umi:element-id="1062"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/biznes_magiya/" title="Бизнес магия" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Бизнес магия</a></li></IDXSKIP>
+                                                            <IDXSKIP><li  umi:element-id="1061"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/zawita/" title="Защита от колдовства и порчи" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Защита от колдовства и порчи</a></li></IDXSKIP>
+                                                            <IDXSKIP><li  umi:element-id="1063"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/venec_bezbrachiya_odinochestvo/" title="Венец безбрачия, одиночество" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Венец безбрачия, одиночество</a></li></IDXSKIP>
+                                                            <IDXSKIP><li  umi:element-id="1064"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/snyatie_porchi/" title="Снятие порчи и сглаза" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Снятие порчи и сглаза</a></li></IDXSKIP>
+                                                            <IDXSKIP><li  umi:element-id="1065"><a href="/consultants/chernyj_mag_vlad_greu/services_vlada_greu/nakazat/" title="Наказать обидчиков" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Наказать обидчиков</a></li></IDXSKIP>
+                                                    </ul>
+                    </div>
+                                        <div class="s_t"></div>
+                    <div class="s_b"></div>
+                </div>
+            </div>
+
+        
+        
+                        <div class="block newsBlock">
+                    <h3 umi:field-name="h1" umi:element-id="3296" umi:empty="Пусто">Новости</h3>
+
+
+                                                            <div class="list">
+                                                    <div class="item">
+                                <IDXSKIP><div class="imageBox">
+                                    <a href="/novosti/kak-privorozhit-devushku/" class="img" title="Как приворожить девушку">
+                                        
+
+<img
+	src="/images/cms/thumbs/cfc6f9cb9b67b6df61d69cd72b955d0517f9360b/7304_70_106_jpg_5_80.jpg"
+	width="70"
+	height="106"
+	umi:element-id="36117" umi:field-name="anons_pic" umi:empty="/templates/demodizzy/images/nofoto.jpg" alt="Как приворожить девушку" />
+                                    </a>
+                                </div></IDXSKIP>
+                                <div class="descr">
+                                    <IDXSKIP><div class="name"><a href="/novosti/kak-privorozhit-devushku/" umi:field-name="h1" umi:element-id="36117" umi:empty="Пусто">Как приворожить девушку</a></div></IDXSKIP>
+                                    <div class="text" umi:field-name="anons" umi:element-id="36117" umi:empty="Пусто"><p><IDXSKIP>Как работает любовная магия и когда ее лучше всего использовать</IDXSKIP></p></div>
+                                </div>
+                            </div>
+                                                    <div class="item">
+                                <IDXSKIP><div class="imageBox">
+                                    <a href="/novosti/kak-snyat-porchu/" class="img" title="Как снять порчу">
+                                        
+
+<img
+	src="/images/cms/thumbs/cfc6f9cb9b67b6df61d69cd72b955d0517f9360b/2017-05-16_11h22_24_70_106_png_5_80.png"
+	width="70"
+	height="106"
+	umi:element-id="36049" umi:field-name="anons_pic" umi:empty="/templates/demodizzy/images/nofoto.jpg" alt="Как снять порчу" />
+                                    </a>
+                                </div></IDXSKIP>
+                                <div class="descr">
+                                    <IDXSKIP><div class="name"><a href="/novosti/kak-snyat-porchu/" umi:field-name="h1" umi:element-id="36049" umi:empty="Пусто">Как снять порчу</a></div></IDXSKIP>
+                                    <div class="text" umi:field-name="anons" umi:element-id="36049" umi:empty="Пусто"><p><IDXSKIP>Как снять порчу? Один из самых популярных вопросов магу</IDXSKIP></p></div>
+                                </div>
+                            </div>
+                        
+                        <IDXSKIP><div class="item">
+                            <a href="/novosti/" class="allnews" title="Все новости">Все новости</a>
+                        </div></IDXSKIP>
+                    </div>
+                                    </div>
+        
+        
+        <div class="bot-top"></div>
+        <div class="bot-bottom"></div>
+    </div>
+</div>
+            
+            <div class="col-md-9 col-sm-8" id="rightPart">
+
+                
+                <div class="block">
+                    <div class="contentBlock">
+
+                        
+
+                        
+
+
+<div class="breadcrumbs">
+    <nav>
+        <IDXSKIP><a href="/" title="Главная">Главная</a></IDXSKIP> /
+    <a href='/novosti/'>Новости</a> / Энергетические вампиры    </nav>
+</div>
+
+<h1 umi:element-id="3498" umi:field-name="h1" umi:empty="Название страницы">Энергетические вампиры</h1>
+
+<div>
+    
+
+<img
+	src="/images/cms/thumbs/b6d9c79c0ab6d281bbe58a4f835b264154c06b94/vammpire_200_auto_jpg_5_80.jpg"
+	width="200"
+	height="296"
+	umi:element-id="3498" umi:field-name="publish_pic" umi:empty="/templates/demodizzy/images/nofoto.jpg" alt="Энергетические вампиры" style="float:right;padding-left:10px;padding-bottom:10px;" />
+    <div umi:element-id="3498" umi:field-name="content" umi:empty="Содержание страницы">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Наверняка многие из вас слышали такое понятие как энергетический вампир, но все ли знают, кто это? Откуда они берутся и как от них защититься? Сейчас мы попытаемся это выяснить.<br /> Прежде всего, энергетический вампир &ndash; это человек, насильно забирающий вашу положительную энергию.&nbsp; Конечно же, вампиризм это болезнь, ученые утверждают, что в наши дни она развивается очень стремительно.&nbsp; Энергетические вампиры могут стать причиной возникающих в окружающих их людях недугов и различных заболеваний.&nbsp; Так же вампиров можно разделить на два типа, первые даже не догадываются о своем вампиризме, вторые же сознательно питаются нашей энергией.&nbsp; Каждый человек может стать энергетическим вампиром, ведь во время болезни или стрессовых ситуаций нам всем нужна положительная энергия, так некоторые люди восстанавливают свои силы за счёт других. После того, как вампир забирается ваши положительные эмоции, вы на глазах у всех становитесь вялым и подавленным, всё буквально валится из рук, а вот вампиры наоборот заметно добреют, улыбаются, их энергия и силы моментально восстанавливаются, и они становятся более доброжелательными. <br /> С энергетическими вампирами мы сталкиваемся очень часто, сами того не подозревая.&nbsp; Возможно вампиры могут быть даже в вашей семьей.&nbsp; Например, ревнивые люди, своим недоверием и подозрительностью к любимому человеку, способны забрать из него все силы, конечно же, сделав это не специально. Очень тяжело работать людям, чей начальник является энергетическим вампиром, ведь такой босс будет всё время срывать злость на подчиненных, тем самым&nbsp; оставляя их совершенно беспомощными и бессильными, навряд ли они смогут работать дальше.&nbsp; Часто вы и сами замечали, как неприятно находиться в&nbsp; огромной очереди в поликлинику, почту или на прием каких-либо платежей, ведь именно там измученные ожиданием люди превращаются на время в энергетических вампиров, и в этих местах скапливается неприятная энергетика.&nbsp; <br /> Обязательно нужно знать о том, как защититься от энергетических вампиров. Для начала запомните, никогда не вступайте с такими людьми в конфликт. Ведь вампир специально провоцирует вас, и чем больше вы злитесь, тем лучше для него. Так же знайте, старайтесь не смотреть им в глаза, именно через них вампир забирает вашу энергию, если смотрите в их лицо, то сконцентрируйте свой взгляд на переносице.&nbsp; Старайтесь меньше общаться с людьми, которые часто жалуются на свою жизнь, считая себя неудачниками, такие люди, хоть и на подсознательном уровне, но могут подавить вашу собственную веру в себя, а сами, хоть и на время, но приободрится.&nbsp; Если же вы всё- таки начали своё общение с энергетическим вампиром, то скрестите свои руки на груди, соедините стопы вместе, если вы будете находиться в такой позе, то это защитит вас от отрицательной энергии. &nbsp;Есть ещё один совет от психологов, при общении с подозрительным для вас человеком, в котором вы не до конца уверенны и считаете его вампиров, нужно мысленно строить кирпичную стенку, шаг за шагом, прокладываю каждый кирпичик.&nbsp; Это поможет вам сохранить самообладание,&nbsp; да и вампиру будет намного сложнее заполучить вашу положительную энергию. <br /> Если вам каким-либо образом не удалось&nbsp; спастись от &laquo;нападения&raquo; энергетического вампира, и ваши силы покинули вас, нужно обязательно принять контрастный душ, мысленно представляя, как с водой с вас смывается отрицательная энергия, после этого выпить какой-нибудь лечебный чай.&nbsp; Хорошо было бы, после этого, пойти прогуляться на природе, например в парк, если такая возможность предоставляется. <br /> Ну и, в конце концов, для того, чтобы самому не превратиться в энергетического вампира, никогда не позволяйте руководить эмоциями над вами, иначе вы и ваш организм привыкнет к этому, и вам нужна будет некая подзарядка. Всегда будьте добры и веселы!</p>    </div>
+</div>
+
+<p></p>
+<div class="social">
+    
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-services="collections,vkontakte,facebook,odnoklassniki,moimir,gplus,twitter"></div></div>
+
+<div class="row">
+    <div class="col-md-6 readAlsoBlock">
+        <h3 class="text-left mb0 pb0">Читайте также</h3>
+
+                            <ul class="list-unstyled">
+                                    <li umi:element-id="3319"><a href="/novosti/chto_takoe_omorochki_v_magii/" title="Что такое оморочки в магии" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Что такое оморочки в магии</a></li>
+                                    <li umi:element-id="3320"><a href="/novosti/kak_proverit_est_li_na_cheloveke_privorot/" title="Как проверить есть ли на человеке приворот" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Как проверить есть ли на человеке приворот</a></li>
+                                    <li umi:element-id="3321"><a href="/novosti/porcha_na_biznes/" title="Порча на бизнес" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Порча на бизнес</a></li>
+                                    <li umi:element-id="3322"><a href="/novosti/silnyj_zagovor_chtoby_lyubimyj_pozvonil/" title="Сильный заговор чтобы любимый позвонил" umi:field-name="name" umi:delete="delete" umi:empty="Пусто">Сильный заговор чтобы любимый позвонил</a></li>
+                            </ul>
+            </div>
+
+    <div class="col-md-6">
+        <div class="formGetHelpMag">
+            <IDXSKIP><span>Получить помощь мага</span></IDXSKIP>
+            
+
+<form method="post" action="/webforms/sendAsync/.xml" data-async='true' enctype="multipart/form-data">
+
+    
+        
+                    <input type="hidden" name="system_email_to" value="39936" />
+            
+                        <IDXSKIP><div class="form-group">
+                                    <label>Ваше имя</label>
+                                
+<input type="text" name="data[new][name]" value="" placeholder="Ваше имя" class="form-control "  />            </div></IDXSKIP>
+                    <IDXSKIP><div class="form-group">
+                                    <label>Ваш e-mail</label>
+                                
+<input type="text" name="data[new][email]" value="" placeholder="Ваш e-mail" class="form-control "  />            </div></IDXSKIP>
+                    <IDXSKIP><div class="form-group">
+                                    <label>Мобильный телефон</label>
+                                
+<input type="number" name="data[new][mobil]" value="" placeholder="Мобильный телефон" class="form-control" />            </div></IDXSKIP>
+                    <IDXSKIP><div class="form-group">
+                                    <label>Ваше сообщение</label>
+                                
+<textarea name="data[new][query]" class="form-control" placeholder="Ваше сообщение"></textarea>            </div></IDXSKIP>
+            
+    <input type="hidden" name="system_form_id" value="144" />
+    <input type="hidden" name="ref_onsuccess" value="/webforms/posted/144/" />
+
+    
+
+    <IDXSKIP><div class="form-group">
+        <button class="btn btn-default" type="submit">Отправить</button>
+    </div></IDXSKIP>
+
+</form>
+            </form>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="clearfix"></div>
+</div>
+
+<IDXSKIP><a href="../">
+    Назад к списку новостей</a></IDXSKIP>
+
+                        <div class="clearfix"></div>
+
+                        <div class="bot-top"></div>
+                        <div class="bot-bottom"></div>
+                    </div>
+                </div>
+
+
+
+                
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+    <div class="container">
+
+            
+                        <IDXSKIP><div class="menuBanner">
+                <ul class="list-unstyled">
+                                            <li umi:element-id="383">
+                            <a href="/gadaniya/gadanie-na-taro/" title="Гадание на ТАРО">
+                                <img src="/images/labmagic.ru/gadanaia/b-taro_249_auto_jpg.jpg" alt="Гадание на ТАРО" umi:field-name="header_pic" umi:empty="/templates/demodizzy/images/nofoto.jpg"/>
+                            </a>
+                        </li>
+                                            <li umi:element-id="384">
+                            <a href="/gadaniya/gadanie-da-net/" title="Гадание "Да - Нет"">
+                                <img src="/images/labmagic.ru/gadanaia/b_danet_249_auto_jpg.jpg" alt="Гадание "Да - Нет"" umi:field-name="header_pic" umi:empty="/templates/demodizzy/images/nofoto.jpg"/>
+                            </a>
+                        </li>
+                                            <li umi:element-id="385">
+                            <a href="/gadaniya/gadanie-na-kostyah/" title="Гадание на костях">
+                                <img src="/images/labmagic.ru/gadanaia/b_kosty_249_auto_jpg.jpg" alt="Гадание на костях" umi:field-name="header_pic" umi:empty="/templates/demodizzy/images/nofoto.jpg"/>
+                            </a>
+                        </li>
+                                            <li umi:element-id="386">
+                            <a href="/gadaniya/gadanie-kogda-ya-vyjdu-zamuzh/" title="Гадание Когда я выйду замуж">
+                                <img src="/images/labmagic.ru/gadanaia/b_zamuzh_249_auto_jpg.jpg" alt="Гадание Когда я выйду замуж" umi:field-name="header_pic" umi:empty="/templates/demodizzy/images/nofoto.jpg"/>
+                            </a>
+                        </li>
+                                    </ul>
+            </div></IDXSKIP>
+            
+
+        <div class="footer-menu hidden-xs">
+                            <div class="col-md-2 col-sm-4 col-xs-4 item">
+                    
+
+
+    <ul class="list-unstyled">
+                    <IDXSKIP><li >
+                <a href="/goroskop/goroskop-na-segodnya/" title="Гороскоп на сегодня">Гороскоп на сегодня</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/goroskop-na-zavtra/" title="Гороскоп на завтра">Гороскоп на завтра</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/month/" title="Гороскоп на месяц">Гороскоп на месяц</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/next-month/" title="Гороскоп на следующий месяц">Гороскоп на следующий месяц</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/obzor-znakov/" title="Обзор знаков">Обзор знаков</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/obwij-obzornyj-goroskop/" title="Общий гороскоп">Общий гороскоп</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/vasha-stihiya/" title="Ваша стихия">Ваша стихия</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/lyubovnyj-goroskop/" title="Любовный гороскоп">Любовный гороскоп</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/goroskop-sovmestimosti/" title="Гороскоп совместимости">Гороскоп совместимости</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/zhenskij-goroskop/" title="Женский гороскоп">Женский гороскоп</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/goroskop-zdorov-ya/" title="Гороскоп здоровья">Гороскоп здоровья</a>
+            </li></IDXSKIP>
+            </ul>
+                </div>
+                            <div class="col-md-2 col-sm-4 col-xs-4 item">
+                    
+
+
+    <ul class="list-unstyled">
+                    <IDXSKIP><li >
+                <a href="/goroskop/goroskop-dosuga/" title="Гороскоп досуга">Гороскоп досуга</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/goroskop-poznaj-sebya/" title="Гороскоп «Познай себя»">Гороскоп «Познай себя»</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/karernyj_goroskop/" title="Карьерный гороскоп">Карьерный гороскоп</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/detskij-goroskop/" title="Детский гороскоп">Детский гороскоп</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/roditelskij_goroskop/" title="Родительский гороскоп">Родительский гороскоп</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/astromedicinskij-goroskop/" title="Астромедицинский гороскоп">Астромедицинский гороскоп</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/tipazhnyj-goroskop/" title="Типажный гороскоп">Типажный гороскоп</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop/zapadnyj-goroskop/" title="Западный гороскоп">Западный гороскоп</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/goroskop-druidov/" title="Гороскоп друидов">Гороскоп друидов</a>
+            </li></IDXSKIP>
+            </ul>
+                </div>
+                            <div class="col-md-2 col-sm-4 col-xs-4 item">
+                    
+
+
+    <ul class="list-unstyled">
+                    <IDXSKIP><li >
+                <a href="/magiya/lyubovnyj_privorot/" title="Любовный приворот">Любовный приворот</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/magiya/belyj_privorot/" title="Белый приворот">Белый приворот</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/magiya/seryj_privorot/" title="Серый приворот">Серый приворот</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/magiya/chernyj_privorot/" title="Черный приворот">Черный приворот</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/magiya/privorot_vudu/" title="Приворот Вуду">Приворот Вуду</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/obryady_i_zagovory/dengi_biznes_udacha/denezhnoe_koldovstvo_zagovor_na_udachu/" title="Денежное колдовство">Денежное колдовство</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/obryady_i_zagovory/" title="Обряды и заговоры">Обряды и заговоры</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/magiya/lunnyj_kalendar/" title="Лунный календарь">Лунный календарь</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/magicheskie_stihi/" title="Магические стихи">Магические стихи</a>
+            </li></IDXSKIP>
+            </ul>
+                </div>
+                            <div class="col-md-2 col-sm-4 col-xs-4 item">
+                    
+
+
+    <ul class="list-unstyled">
+                    <IDXSKIP><li >
+                <a href="/gadaniya/gadanie-na-zhelanie/" title="Гадание на желание">Гадание на желание</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/gadaniya/gadanie-na-kostyah/" title="Гадание на костях">Гадание на костях</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/gadaniya/gadanie-da-net/" title="Гадание "Да - Нет"">Гадание "Да - Нет"</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/gadaniya/gadanie-po-telefonu/" title="Гадание по телефону">Гадание по телефону</a>
+            </li></IDXSKIP>
+            </ul>
+                </div>
+                            <IDXSKIP><div class="col-md-2 col-sm-4 col-xs-4 item">
+                    
+
+
+    <ul class="list-unstyled">
+                    <li >
+                <a href="http://www.labmagic.ru/istorii_iz_zhizni2/" title="Истории из жизни">Истории из жизни</a>
+            </li>
+                    <li >
+                <a href="/consultants/" title="Консультанты">Консультанты</a>
+            </li>
+            </ul>
+                </div></IDXSKIP>
+                            <div class="col-md-2 col-sm-4 col-xs-4 item">
+                    
+
+
+    <ul class="list-unstyled">
+                    <IDXSKIP><li >
+                <a href="/faq_page/" title="Вопрос/ответ">Вопрос/ответ</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/lyubov_i_otnosheniya/" title="Любовь и отношения">Любовь и отношения</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/krasota_i_zdorove/" title="Красота и здоровье">Красота и здоровье</a>
+            </li></IDXSKIP>
+                    <IDXSKIP><li >
+                <a href="/sonnik/" title="Сонник">Сонник</a>
+            </li></IDXSKIP>
+            </ul>
+                </div>
+                        <div class="clearfix"></div>
+        </div>
+
+        <IDXSKIP><div class="col-md-2">
+            <a href="/pravo/" title="Правовая информация" umi:element-id="4089" umi:field-name="h1" umi:empty="Пусто">Правовая информация</a>
+        </div></IDXSKIP>
+        <div class="col-md-10">
+            <p umi:element-id="3" umi:field-name="tekst_v_futere" umi:empty="Пусто"><IDXSKIP>Лаборатория практической магии Сервис предоставляется ООО "Наш Регион" 656049, Россия, Алтайский край, г. Барнаул, ул. Пушкина, 78 Все права защищены. Копирование информации с данного сайта без разрешения администрации запрещено.</IDXSKIP></p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+-->
+
+<IDXSKIP><div class="hide">
+    <!--LiveInternet counter--><script type="text/javascript"><!--
+        document.write("<a rel='nofollow' href='http://www.liveinternet.ru/click' "+
+        "target=_blank><img src='//counter.yadro.ru/hit?t16.15;r"+
+        escape(document.referrer)+((typeof(screen)=="undefined")?"":
+        ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+            screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+        ";h"+escape(document.title.substring(0,80))+";"+Math.random()+
+        "' alt='' title='LiveInternet: показано число просмотров за 24"+
+        " часа, посетителей за 24 часа и за сегодня' "+
+        "border='0' width='88' height='31'><\/a>")
+        //--></script><!--/LiveInternet-->
+
+
+    <!-- Yandex.Metrika informer -->
+    <a href="http://metrika.yandex.ru/stat/?id=4357258&amp;from=informer"
+       target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/4357258/3_0_7DC150FF_5DA130FF_0_pageviews"
+                                           style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:4357258,type:0,lang:'ru'});return false}catch(e){}"/></a>
+    <!-- /Yandex.Metrika informer -->
+
+    <!-- Yandex.Metrika counter -->
+    <div style="display:none;"><script type="text/javascript">
+            (function(w, c) {
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter4357258 = new Ya.Metrika({id:4357258,
+                            clickmap:true,
+                            trackLinks:true, webvisor:true});
+                    }
+                    catch(e) { }
+                });
+            })(window, "yandex_metrika_callbacks");
+        </script></div>
+    <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+    <noscript><div><img src="//mc.yandex.ru/watch/4357258" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21281414-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</div></IDXSKIP>
+
+				<script type="text/javascript" src="/js/cms/jquery.compiled.js?81738" charset="utf-8"></script>
+				<script type="text/javascript" charset="utf-8" src="/js/guest.js?81738"></script>
+				<link type="text/css" rel="stylesheet" href="/js/jquery/fancybox/jquery.fancybox.css?81738" />
+<script src="/templates/labmagic/data/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="/templates/labmagic/data/js/bootstrap-notify.min.js" type="text/javascript"></script>
+<script src="/templates/labmagic/data/js/jquery.form.min.js" type="text/javascript"></script>
+<script src="/templates/labmagic/data/js/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+    <script src="/templates/labmagic/data/js/jquery.backgroundSize.js" type="text/javascript"></script>
+    <script>
+        $.debugBGS = true;
+        app.onload.add({name:"backgroundSize", func:function(){ $(".header .container > .topMenu").css( "background-size", "cover" ); }, autoload:true});
+    </script>
+<![endif]-->
+
+    
+<script type="text/javascript" src="/templates/labmagic/data/js/app.js"></script>
+
+</body>
+</html><!-- This page generated in 0.228344 secs by PHP, SITE MODE -->

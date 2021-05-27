@@ -1,0 +1,705 @@
+chita.big-book-money.ru/sudebnye_pristavy
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Федеральная служба судебных приставов в г. Чита. Отзывы, адреса и телефоны.</title>
+        <!-- Bootstrap -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="Федеральная служба судебных приставов в Чите – 1 объект на сайте chita.big-book-money.ru.">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link href="/assets/css/main-large.css" rel="stylesheet" media="screen">
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="../../assets/js/html5shiv.js"></script>
+  <script src="../../assets/js/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+    //yandex metrica ID
+    var yandex_metrika_id = '17810944';
+    //var jquery_load = new Event('jquery_load');
+    var jquery_load = document.createEvent("Event");
+    jquery_load.initEvent("jquery_load", true, false);
+    jquery_loaded = false;
+</script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/assets/js/jquery.js" defer></script>
+<script src="/assets/js/jquery-ui.js" defer></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/assets/js/bootstrap.min.js" defer></script>
+<script src="/assets/js/main-large.js" defer></script>
+<script src="/assets/js/hidden.js" defer></script>
+    
+	<!-- site include -->
+	<script type="text/javascript">
+    var YAM = null;
+    function initMainMap(_after_function) {
+        var loader = $('<div class="map-loader"><div class="map-loader-img"></div></div>');
+        $('#mainmap').append(loader);
+        loadScript('http://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru-RU', function () {
+            ymaps.ready(function () {
+                init();
+                if ('function' == typeof _after_function) {
+                    _after_function();
+                }
+            });
+        });
+        function init() {
+            loader.remove();
+            var select_radius = $('#select_radius');
+            var zoom = document.getElementById('zoom').value;
+            if (zoom <= 0) {
+                zoom = 11;
+            }
+            YAM = new ymaps.Map("mainmap", {
+                center: [52.033973, 113.499432],
+                zoom: zoom,
+                yandexMapAutoSwitch: true
+            });
+            document.getElementById('zoom').value = YAM.getZoom();
+            // Add a circle...
+            var circle = $('<img src="/assets/img/circle.svg" class="map_circle">');
+            $('.ymaps-glass-pane').append(circle);
+            setRadius(select_radius.val());
+
+            select_radius.on('change', function () {
+                setRadius($(this).val());
+            })
+
+            YAM.events.add('actionend', function () {
+                setRadius(select_radius.val())
+            });
+
+            function setRadius(radius) {
+                var center = YAM.getCenter();
+                var bounds = YAM.getBounds();
+                var ymap_len = ymaps.coordSystem.geo.getDistance(bounds[0], bounds[1]);
+                var map_len = $('.map-wrap').width();
+                k = ymap_len / map_len;
+                setPixelRadius(2 * radius / k);
+                document.getElementById('zoom').value = YAM.getZoom();
+                document.getElementById('coord_x').value = center[1];
+                document.getElementById('coord_y').value = center[0];
+            }
+
+            function setPixelRadius(pixelRadius) {
+                var mr = -pixelRadius / 2;
+                circle.css({
+                    'margin-top': mr,
+                    'margin-left': mr,
+                    'width': pixelRadius + 'px',
+                    'height': pixelRadius + 'px',
+                });
+            }
+
+            var placecenters = [];
+            var myPlacecenters = [];
+            $('.balloon_info').each(function (e) {
+                placecenters[e] = [$('.address-info', $(this)).data('geo_y'), $('.address-info', $(this)).data('geo_x')];
+                $(this).data('index', e);
+                var balloon_ticket_name = $('.title-info', $(this)).html();
+                var balloon_ticket_address = $('.address-info-text', $(this)).html();
+                var balloon_ticket_href = $('<span><a class="balloon_ticket_action btn btn-success btn-xs" style="margin-top:10px;" href="/company/' + $(this).data('cid') + '/#company_info" onclick="yaCounter17810944.reachGoal(\'more\');return true;">Смотреть подробнее</a></span>');
+
+                if ($('.balloon_info').length > 1) {
+                    balloon_ticket_address = '<p style="margin:0px; min-width: 280px;">' + balloon_ticket_address + '<br>' + balloon_ticket_href.html() + '</p>';
+                }
+
+                myPlacecenters[e] = new ymaps.Placemark(
+                        placecenters[e],
+                        {
+                            balloonContentHeader: balloon_ticket_name,
+                            balloonContentBody: balloon_ticket_address
+                        }, {
+                    balloonAutoPan: false,
+                    iconLayout: 'default#image',
+                    iconImageHref: '/assets/img/ballon.svg',
+                    iconImageSize: [60, 45],
+                    iconImageOffset: [-18, -41]
+                }
+                );
+
+                YAM.geoObjects.add(myPlacecenters[e]);
+                myPlacecenters[e].events.add("click", function () {
+                    YAM.panTo([parseFloat(placecenters[e][0]), parseFloat(placecenters[e][1])], {delay: 200});
+                });
+            });
+
+            $('.map-wrap').on('setCenter', function (e, params) {
+                var z = parseInt(params.z);
+                if (!isNaN(z)) {
+                    YAM.panTo([parseFloat(params.y), parseFloat(params.x)], {delay: 0, flying: false, callback: function () {
+                            YAM.setZoom(params.z)
+                        }});
+                } else {
+                    YAM.panTo([parseFloat(params.y), parseFloat(params.x)]);
+                }
+            });
+            $('.map-wrap').on('setZoom', function (e, z) {
+                YAM.setZoom(z);
+            });
+            $('.map-wrap').on('openPlaceholder', function (e, i) {
+                myPlacecenters[i].balloon.open();
+            });
+            $('.map-wrap').on('closePlaceholder', function (e, i) {
+                myPlacecenters[i].balloon.close();
+            });
+            $('.map-wrap').on('fitToViewport', function (e) {
+                YAM.container.fitToViewport();
+            });
+            $('#zoom-in').on('click', function () {
+                var zoom = YAM.getZoom();
+                YAM.setZoom(zoom + 1);
+            });
+            $('#zoom-out').on('click', function () {
+                var zoom = YAM.getZoom();
+                YAM.setZoom(zoom - 1);
+            });
+        }
+    }
+    function closePopup(index) {
+        $('.map-wrap').trigger('closePlaceholder', index);
+    }
+    function redrawMap() {
+        $('.map-wrap').trigger('fitToViewport');
+    }
+</script>
+<style>
+    .map_circle{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .ymaps-b-balloon__content-body{
+        font-size: 12px;
+        line-height: 18px;
+        color: #363636;
+    }
+</style>
+	<style>
+    .row-map-wrap{
+        position: absolute; 
+        top: 0;
+        width: 100%;
+    }
+    .btn-filter{
+        background: none repeat scroll 0% 0% rgb(32, 189, 248);
+        color: white;
+        width: 100%;
+        border: 1px solid rgba(96, 96, 96, 1);
+    }
+    .search-wrap{
+        position: relative;
+        background: rgba(90, 90, 90, 0.8) none repeat scroll 0% 0%;
+        box-shadow: 0px 0px 5px #555;
+        padding: 4px;
+        max-width: 950px;
+        width: 100%;
+        margin: 10px;
+    }
+    .search-form-item{
+    }
+    .search-form-item.c,
+    .search-form-item.r,
+    .search-form-item.b{
+        float: none;
+        margin: 10px 0 0;
+    }
+    .search-form-item .form-control{
+        width: 100%;
+        border-radius: 0;
+        background-color: rgb(222, 222, 222);
+        border: 1px solid #606060;
+    }
+    .search-wrap .input-group{
+        width: 100%;
+    }
+    .search-label{
+        color: white;
+        font-style: italic;
+        text-shadow: 0px 0px 1px black;
+        font-size: 14px;
+        padding-bottom: 2px;
+        padding-left: 5px;
+    }
+
+    .row-map-wrap{
+        /*width: 100%;*/
+    }
+    @media (max-width:1024px) {
+        .search-wrap{
+            padding: 0 20px 4px;
+            margin: 0px;
+            max-width: 100%;
+        }
+        .search-form-item.c,
+        .search-form-item.r,
+        .search-form-item.b{
+            float: none;
+            margin: 4px 0 0;
+        }
+        .search-label{
+            display: none;
+        }
+        .fixed-map .col-md-12{
+            padding: 0px;
+        }
+    }
+    @media (max-width:768px) {
+        .fixed-map {
+            margin: 0 -15px;
+        }
+    }
+    .search-form-item{
+        position: relative;
+    }
+    .search-form-item.c,
+    .search-form-item.r,
+    .search-form-item.b{
+        float: left;
+    }
+    .search-form-item.c{width: 50%}
+    .search-form-item.r{width: 30%}
+    .search-form-item.b{width: 20%}
+    .search-label{
+        position: absolute;
+        bottom: 30px;
+        font-size: 10px;
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+</style>
+	
+	<!-- end site include --></head>
+    <body>
+        <div class="page-wrap">
+            <div class="global-left-menu">
+    <div style="position:absolute;padding-bottom:230px;min-height:100%;width:100%;">
+        <script async>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35256439-1', 'big-book-money.ru');
+  ga('send', 'pageview');
+
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    var authorized_profile_id = parseInt('');
+    (function(d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter17810944 = new Ya.Metrika({id: 17810944,
+                    webvisor: true,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
+                });
+                if (!isNaN(authorized_profile_id)) {
+                    w.yaCounter17810944.setUserID(authorized_profile_id.toString());
+                    w.yaCounter17810944.userParams({
+                        company_owner: true,
+                        profile_id: authorized_profile_id
+                    });
+                }
+            } catch (e) {
+            }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<IDXSKIP><noscript><div><img src="//mc.yandex.ru/watch/17810944" style="position:absolute; left:-9999px;" alt="" /></div></noscript></IDXSKIP>
+<!-- /Yandex.Metrika counter -->
+
+<script src="/assets/js/advert.js"></script>
+<script>
+    function detectAddBlock() {
+        if (!('adBlock' in window)) {
+            yaCounter17810944.reachGoal('adblock-status');
+        }
+    }
+    document.addEventListener("DOMContentLoaded", detectAddBlock);
+</script>
+<div class="menu-header">
+    <div class="logo-wrap">
+        <IDXSKIP><a href="/" onclick="yaCounter17810944.reachGoal('logo');
+                return true;"><span class="domain_name">BIG-BOOK-money</span></a></IDXSKIP>
+        <br>
+        <IDXSKIP><a href="/" class="case-city" onclick="yaCounter17810944.reachGoal('city-name');
+                return true;"><span class="text">Чита</span><span class="arrov-text"></span></a></IDXSKIP>
+        <div class="user-panel-box">
+            <a href="/office/registration/?back_url=%2Foffice%2Fcompany%2Fadd%2F" class="add_company_button_v2 btn btn-success add_cb" onclick="yaCounter17810944.reachGoal('add-B'); return true;">
+    <div class="add_company_button_v2_bg">Добавить организацию</div>
+</a>
+            <noindex>
+                <a href="/office/login/?back_url=%2Fsudebnye_pristavy%2F" class="login_button" onclick="yaCounter17810944.reachGoal('enter'); return true;">Вход</a>
+            </noindex>
+        </div>
+    </div>
+</div>
+<IDXSKIP><div class="search-line-wrap" id="search-line-wrap">
+    <label id="catalog_search_name">Поиск по рубрике:</label>
+    <input type="text" name="search-line" class="search-line" id="search-line" placeholder="Начните вводить рубрику">
+    <div style="position: relative" class="dropdown">
+        <div class="dropdown-menu-help" id="dropdown-menu-help" style="display: none;"></div>
+        <ul class="dropdown-menu"></ul>
+    </div>
+</div></IDXSKIP>
+<div style="display: none;" id="data-search-line"></div>
+<script type="text/javascript">
+    var catalog_list_json = false;
+    var tags_list_json = false;
+    var catalog_search_name = '' || 'Поиск по рубрике:';
+    var catalog_search_not_found = '' || '<b class="search-help-text">По Вашему запросу ничего не найдено!</b><p class="search-help-sub-text">Допускается переход только по элементам представленным в выпадающем списке!</p>';
+    document.getElementById('catalog_search_name').innerHTML = catalog_search_name;
+    document.getElementById('dropdown-menu-help').innerHTML = catalog_search_not_found;
+    function loadJsonDataForSearchLine() {
+        var catalogs = $('<div></div>').load('/ajax/?form=catalog_list_json', function () {
+            $('#data-search-line').append(catalogs);
+        });
+        var tags = $('<div></div>').load('/ajax/?form=tag_list_json', function () {
+            $('#data-search-line').append(tags);
+        });
+    }
+    if (jquery_loaded) {
+        loadJsonDataForSearchLine();
+    } else {
+        document.addEventListener('jquery_load', loadJsonDataForSearchLine);
+    }
+</script>
+
+        <ul>
+            <IDXSKIP><li><a href="#" class="menu-slide"><i class="glyphicon glyphicon-plus"></i> Реклама, рекламная печать</a><ul class="sub-menu-slide "><li><a href="/internet-agentstva/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Интернет-агентства&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(17)</small></a></li><li><a href="/poligrafiya_i_tipografiya/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Полиграфия и типография&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(17)</small></a></li><li><a href="/reklamnye_agentstva/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Рекламные агентства&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(14)</small></a></li><li><a href="/naruzhnaya_reklama/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Наружная реклама&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(10)</small></a></li><li><a href="/izgotovlenie_pechatey_i_shtampov/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Изготовление печатей и штампов&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(2)</small></a></li></ul></li></IDXSKIP><li><a href="#" class="menu-slide"><i class="glyphicon glyphicon-minus"></i> Юридические организации, услуги</a><ul class="sub-menu-slide active"><li><a href="/yuridicheskie_uslugi/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Юридические услуги&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(54)</small></a></li><li><a href="/notarialnye_uslugi/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Нотариальные услуги&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(10)</small></a></li><li><a href="/sertifikaciya__licenzirovanie/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Сертификация, лицензирование&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(7)</small></a></li><li><a href="/sud/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Суд&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(5)</small></a></li><li><a href="/ocenka__ekspertiza/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Оценка, экспертиза&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(4)</small></a></li><li><a href="/sudebnye_pristavy/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide active">Судебные приставы&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(1)</small></a></li></ul></li><IDXSKIP><li><a href="#" class="menu-slide"><i class="glyphicon glyphicon-plus"></i> Финансы, финансовые организации</a><ul class="sub-menu-slide "><li><a href="/banki__obmen_valyut__kreditovanie/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Банки&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(151)</small></a></li><li><a href="/denezhnye_perevody/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Денежные переводы&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(101)</small></a></li><li><a href="/finansovye_uslugi/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Финансовые услуги&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(18)</small></a></li><li><a href="/mikrofinansirovanie/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Микрофинансирование&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(14)</small></a></li><li><a href="/kreditnye_brokery/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Кредитные брокеры&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(12)</small></a></li><li><a href="/prochie_finansovye_organizacii/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Прочие финансовые организации&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(8)</small></a></li><li><a href="/lombardy/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Ломбарды&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(8)</small></a></li><li><a href="/kollektorskie_agentstva/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Коллекторские агентства&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(2)</small></a></li><li><a href="/nalogovaya_inspekciya/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Налоговая инспекция&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(2)</small></a></li><li><a href="/npf/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">НПФ&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(2)</small></a></li><li><a href="/pensionnyy_fond/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Пенсионный фонд&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(2)</small></a></li></ul></li></IDXSKIP><IDXSKIP><li><a href="/pochtovye_otdeleniya/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Почта&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(93)</small></a></li></IDXSKIP><IDXSKIP><li><a href="#" class="menu-slide"><i class="glyphicon glyphicon-plus"></i> Издательства, СМИ</a><ul class="sub-menu-slide "><li><a href="/redakcii_smi/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Редакции СМИ&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(9)</small></a></li><li><a href="/izdatelskie_uslugi/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Издательские услуги&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(1)</small></a></li></ul></li></IDXSKIP><IDXSKIP><li><a href="/kadrovye_agentstva/" onclick="yaCounter17810944.reachGoal('click-menu'); return true;" class="menu-noslide ">Кадровые агентства&nbsp;<small style="font-size: 11px;color: #8B8B8B;">(5)</small></a></li></IDXSKIP>
+        </ul>
+        <div style="clear: both"></div>
+        <div class="filter-btn-wrap">
+            <IDXSKIP><div class="filter-btn-icon"><a href="#" class="map-filter-btn" onclick="yaCounter17810944.reachGoal('map-open-menu'); return true;"><img src="/assets/img/search.svg"></a></div></IDXSKIP>
+            <div class="filter-btn-text"><IDXSKIP>Поиск по заданному радиусу на карте</IDXSKIP></div>
+        </div>
+    </div>
+</div>
+            <div class="content-wrap">
+                <div class="content">
+                    <div class="fixed-map-wrap">
+    <div class="fixed-map">
+        <div class="fixed-map-content">
+            <div class="map-header"></div>
+            <div class="map-wrap" style="display:none;">
+                <div class="map-content">
+                    
+<div class='map-layer-wrap'>
+    <div id="mainmap" style="width:100%; height:470px;"></div>
+    <div class="row-wrap">
+    <div class="row-map-wrap">
+        <div class="row">
+            <div class="col-md-12" style="height: 1px;">
+                <div class="search-wrap">
+                    <div class="search-wrap-item">
+
+                        <form role="form" method="GET" action="/search/" >
+                            <input type="hidden" name="coord_x" id="coord_x" value="113.499432">
+                            <input type="hidden" name="coord_y" id="coord_y" value="52.033973">
+                            <input type="hidden" name="zoom" id="zoom" value="">
+
+                            <div class="input-group">
+
+                                <IDXSKIP><div class="search-form-item c">
+                                    <label class="search-label">Выберите рубрику</label>
+                                    <select class="form-control" name="catalog">
+                                        <option value="false">Все рубрики</option><option  value="0">Наружная реклама</option><option  value="1">Полиграфия и типография</option><option  value="2">Изготовление печатей и штампов</option><option  value="3">Рекламные агентства</option><option  value="4">Издательские услуги</option><option  value="5">Редакции СМИ</option><option selected value="6">Судебные приставы</option><option  value="7">Суд</option><option  value="8">Банки</option><option  value="9">Ломбарды</option><option  value="10">Денежные переводы</option><option  value="11">Почта</option><option  value="12">Микрофинансирование</option><option  value="13">НПФ</option><option  value="14">Налоговая инспекция</option><option  value="15">Пенсионный фонд</option><option  value="16">Прочие финансовые организации</option><option  value="17">Юридические услуги</option><option  value="18">Финансовые услуги</option><option  value="19">Нотариальные услуги</option><option  value="20">Коллекторские агентства</option><option  value="22">Кредитные брокеры</option><option  value="23">Сертификация, лицензирование</option><option  value="24">Оценка, экспертиза</option><option  value="25">Интернет-агентства</option><option  value="26">Кадровые агентства</option>
+                                    </select>
+                                </div></IDXSKIP>
+
+                                <IDXSKIP><div class="search-form-item r">
+                                    <label class="search-label">Выберите радиус</label>
+                                    <select class="form-control" name="radius" id="select_radius">
+                                        <option value = "500">500 м</option><option value = "1000">1000 м</option><option value = "2000">2000 м</option><option value = "3000">3000 м</option><option value = "4000">4000 м</option><option value = "5000">5000 м</option><option value = "6000">6000 м</option><option value = "7000">7000 м</option><option value = "8000" selected = "selected">8000 м</option><option value = "9000">9000 м</option><option value = "10000">10000 м</option><option value = "15000">15000 м</option><option value = "20000">20000 м</option>
+                                    </select>
+                                </div></IDXSKIP>
+
+                                <IDXSKIP><div class="search-form-item b">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default btn-filter" type="submit">Найти</button>
+                                    </span>
+                                </div></IDXSKIP>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-zoom-control-wrap"><div id="zoom-in" class="map-zoom-control plus" onclick="yaCounter17810944.reachGoal('plus-minus');
+                return true;"></div><div id="zoom-out" class="map-zoom-control minus" onclick="yaCounter17810944.reachGoal('plus-minus');
+                        return true;"></div></div>
+    </div>
+</div>
+
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    <div class="row-wrap">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="catalog-items">
+                <h1 class="title-info">Федеральная служба судебных приставов в г. Чита.</h1>
+	<p class="title-info-sub">Ищете официальный сайт ФССП своего города, например, чтобы узнать, существует ли у Вас задолженность и ее размер? Служба судебных приставов – 1 объект в нашей базе! Chita.big-book-money.ru – поможем узнать адреса, телефоны и режим работы организаций в г. Чита!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-md-8">
+        <div class="catalog-items">
+            <div class="catalog-item adsence_wrap first-ads"><!-- Блок на каталожной первый в листинге -->
+<div style="text-align: center;">
+<!-- Yandex.RTB R-A-148665-1 -->
+<div id="yandex_rtb_R-A-148665-1"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-148665-1",
+                renderTo: "yandex_rtb_R-A-148665-1",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+</div></div>
+            <noindex>
+    <div class="catalog-hint">
+        <div class="catalog-hint-area">
+            <span class="catalog-hint-text">
+                <IDXSKIP>Любая организация может<br>
+                размещаться на этой позиции<br>
+                СОВЕРШЕННО БЕСПЛАТНО<br>
+                и получить <a href="http://sozdadim-site.tt34.ru/" target="_blank" rel="nofollow" onclick="yaCounter17810944.reachGoal('site-promo-click'); return true;">ТАКОЙ САЙТ</a></IDXSKIP><br>
+                <IDXSKIP>в подарок
+            </IDXSKIP></span>
+        </div>
+    </div>
+</noindex>
+
+        </div>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+    <div class="row">
+        <div class="col-md-8">
+            
+            <div class="catalog-items">
+                
+    <div class="company-preview balloon_info" data-cid="226243">
+        <a href="/company/226243/" class="logo map" data-style="background-image: url('http://static-maps.yandex.ru/1.x/?ll=113.5012110000,52.0388320000&size=400,300&z=16&l=map')" onclick="yaCounter17810944.reachGoal('click-logo-map'); return true;">
+            <span class="map_balun glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+        </a>
+        <div class="details">
+            <div class="d-info-wrap">
+                <div class="name"><span class="title-info"><a href="/company/226243/#company_info" onclick="yaCounter17810944.reachGoal('click-name-org'); return true;">Межрайонный отдел по исполнению особо важных исполнительных производств Управление Федеральной службы судебных приставов РФ по Забайкальскому краю</a></span></div>
+                
+                <div class="address">
+                    <span class="address-info" data-geo_x="113.5012110000" data-geo_y="52.0388320000"  onclick="yaCounter17810944.reachGoal('adress-list'); return true;">
+                        <span class="address-item-ico"></span>
+                        <span class="address-info-text"><span style="white-space:nowrap">Чита</span>, ул. Бабушкина, <span style="white-space:nowrap">127</span></span>
+                    </span>                        
+                </div>
+                <div class="actions">
+                    
+                </div>
+            </div>
+            
+            <div class="phones"><span class="phone-item"><span class="phone-item-ico"></span>+7 (3022) 32-59-48</span><span class="phone-item"><span class="phone-item-ico"></span>+7 (3022) 32-59-43</span><span class="phone-item"><span class="phone-item-ico"></span>+7 (3022) 32-59-44</span></div>
+            <div style="clear:both"></div>
+            <div class="more"><span class="hidden" data-href="/company/226243/" data-name="Посмотреть подробнее: Межрайонный отдел по исполнению особо важных исполнительных производств Управление Федеральной службы судебных приставов РФ по Забайкальскому краю" onclick="yaCounter17810944.reachGoal('click-name-org'); return true;"></span></div>
+        </div>
+    </div>
+<div><p class="title-info-sub">Ищете официальный сайт ФССП своего города, например, чтобы узнать, существует ли у Вас задолженность и ее размер? Служба судебных приставов в г. Чита – подробная информация на сайте Chita.big-book-money.ru!</p>
+	<p class="title-info-sub">Федеральная служба судебных приставов – узнайте мнения, отзывы, адреса и телефоны!</p></div><div class="btn-group paginator"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            
+            <div class="block-wrap">
+                <div class="row"><IDXSKIP><div class="col-md-12 block-title">Случайные организации</div></IDXSKIP><div class="company-rand-item col-md-6">
+    <div class="company-rand-item-content">
+        <a href="/company/226593/" class="company-link-info">Забайкальский региональный центр независимой оценки и услуг</a>
+        <div style="clear: both"></div>
+        <span class="title-info-sub"><i>В каталоге: <br><a href="/ocenka__ekspertiza/">Оценка, экспертиза</a></i></span>
+    </div>
+</div>
+<div class="company-rand-item col-md-6">
+    <div class="company-rand-item-content">
+        <a href="/company/44844/" class="company-link-info">Сбербанк России Дополнительный офис № 8600/014</a>
+        <div style="clear: both"></div>
+        <span class="title-info-sub"><i>В каталоге: <br><a href="/banki__obmen_valyut__kreditovanie/">Банки</a></i></span>
+    </div>
+</div>
+<div style="clear:both"></div><div class="company-rand-item col-md-6">
+    <div class="company-rand-item-content">
+        <a href="/company/226490/" class="company-link-info">Элиада</a>
+        <div style="clear: both"></div>
+        <span class="title-info-sub"><i><IDXSKIP>В каталоге: <br></IDXSKIP><IDXSKIP><a href="/prochie_finansovye_organizacii/">Прочие финансовые организации</a></IDXSKIP></i></span>
+    </div>
+</div>
+<div class="company-rand-item col-md-6">
+    <div class="company-rand-item-content">
+        <IDXSKIP><a href="/company/226234/" class="company-link-info">Азия-Пресс</a></IDXSKIP>
+        <div style="clear: both"></div>
+        <IDXSKIP><span class="title-info-sub"><i>В каталоге: <br><a href="/izdatelskie_uslugi/">Издательские услуги</a></i></span></IDXSKIP>
+    </div>
+</div>
+<div style="clear:both"></div></div><div style="clear:both;"></div>
+            </div>
+            <div class="left-block">
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+                <div style="clear: both"></div>
+                <div class="footer">
+    <div class="row-wrap">
+        <div class="row">
+            <noindex>
+                <div class="col-md-4">
+                    <IDXSKIP><ul class="footer-links">
+    <li><span class="footer-social-links">Поиск от яндекса</span></li>
+    <li>
+        <div class="ya-site-form-wrap">
+            <div class="ya-site-form ya-site-form_inited_no" onclick="return {'bg': 'transparent', 'target': '_self', 'language': 'ru', 'suggest': true, 'tld': 'ru', 'site_suggest': true, 'action': '/ya_search/', 'webopt': false, 'fontsize': 12, 'arrow': false, 'fg': '#000000', 'searchid': '1956107', 'logo': 'rb', 'websearch': false, 'type': 2}"><form action="http://yandex.ru/sitesearch" method="get" target="_self"><input type="hidden" name="searchid" value="1956107" /><input type="hidden" name="l10n" value="ru" /><input type="hidden" name="reqenc" value="" /><input type="text" name="text" value="" /><input type="submit" value="Найти" /></form></div>
+            <style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style>
+            <script type="text/javascript">(function (w, d, c) {
+                    var s = d.createElement('script'), h = d.getElementsByTagName('script')[0], e = d.documentElement;
+                    (' ' + e.className + ' ').indexOf(' ya-page_js_yes ') === -1 && (e.className += ' ya-page_js_yes');
+                    s.type = 'text/javascript';
+                    s.async = true;
+                    s.charset = 'utf-8';
+                    s.src = (d.location.protocol === 'https:' ? 'https:' : 'http:') + '//site.yandex.net/v2.0/js/all.js';
+                    h.parentNode.insertBefore(s, h);
+                    (w[c] || (w[c] = [])).push(function () {
+                        Ya.Site.Form.init()
+                    })
+                })(window, document, 'yandex_site_callbacks');</script>
+            <style>
+                .ya-site-form-wrap{
+                    max-width: 90%;
+                    margin-left: -5px;
+                }
+                .ya-site-form-wrap input{
+                    height: 30px;
+                }
+            </style>
+        </div>        
+    </li>
+</ul></IDXSKIP>
+
+                    <IDXSKIP><ul class="footer-links">
+                        <li>
+                            <span class="footer-social-links">Поделитесь с друзьями</span>
+                            <span><script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8" async></script>
+<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="yaru,vkontakte,facebook,twitter,odnoklassniki,moimir"></div></span>
+                        </li>
+                    </ul></IDXSKIP>
+                </div>
+                <IDXSKIP><div class="col-md-2">
+                    <ul class="footer-links">
+                        <li>
+                            <a href="/office/registration/?back_url=%2Foffice%2Fcompany%2Fadd%2F" onclick="yaCounter17810944.reachGoal('add-footer');
+                                    return true;">
+                                <span class="glyphicon glyphicon-plus"></span>
+                                <span>Добавить организацию</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div></IDXSKIP>
+                <div class="col-md-3">
+                    <ul class="footer-links">
+                        <IDXSKIP><li><span class="footer-social-links">О проекте:</span></li></IDXSKIP>
+                        <IDXSKIP><li><a href="/about/#user">О Big-Book для пользователей</a></li></IDXSKIP><IDXSKIP><li><a href="/about/#business">О Big-Book для бизнеса</a></li></IDXSKIP><IDXSKIP><li><a href="/about/#free">Почему все это бесплатно?</a></li></IDXSKIP><IDXSKIP><li><a href="/about/search/">Как работает поиск</a></li></IDXSKIP><IDXSKIP><li><a href="/feedback/">Обратная связь</a></li></IDXSKIP><IDXSKIP><li><a href="/office/registration/agreement/">Пользовательское соглашение</a></li></IDXSKIP>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="footer-links">
+                        <IDXSKIP><li><span class="footer-social-links">Помощь:</span></li></IDXSKIP>
+                        <IDXSKIP><li><a href="/help/reg/">Регистрация</a></li></IDXSKIP><IDXSKIP><li><a href="/help/about_lk/">Общие сведения о личном кабинете</a></li></IDXSKIP><IDXSKIP><li><a href="/help/search/">Поиск организации</a></li></IDXSKIP><IDXSKIP><li><a href="/help/add/">Добавление организации</a></li></IDXSKIP><IDXSKIP><li><a href="/help/edit/">Редактирование, объединение в сеть, удаление</a></li></IDXSKIP>
+                    </ul>
+                </div>
+            </noindex>
+        </div>
+    </div>
+    <div class="sub-footer">
+        <div class="row-wrap">
+            <div class="row">
+                <div class="col-md-12" style="text-align: center">
+                    <IDXSKIP>© ООО «БИГ БУК ПОРТАЛЫ», 2013 — 2017
+                </IDXSKIP></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content"></div>
+    </div>
+</div>
+    </body>
+</html>
+

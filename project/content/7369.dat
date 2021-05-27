@@ -1,0 +1,2581 @@
+ski.spb.ru/conf/index.php?act=Print&client=printer&f=8&t=9100
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+		<title>Питерская горнолыжная конференция [Русская версия Invision Power Board]</title>
+		<style type="text/css">
+	/*  
+ * Cascading Style Sheet(CSS 467), for Invision Power Board 2.2.0
+ * Author: James A. Mathias, admin@leihu.com, http://www.1lotus.com 
+ * Copyright: 2005 Invision Power Services, all rights reserved 
+ *
+ * All style attributes in alpha-numeric order starting from 0
+ *
+ */
+
+/* 
+ * ========================================
+ * global element styles 
+ * ========================================
+ */
+
+html{
+	overflow-x: auto; /* fixes MSIE scrollbar bug DO NOT REMOVE, has no effect in Mozilla, or Opera */
+}
+
+body{ 
+	background: #FFF;
+	color: #222;
+	font-family: Verdana, Tahoma, Arial, "Trebuchet MS", Sans-Serif, Georgia, Courier, "Times New Roman", Serif;
+	font-size: 11px;
+	line-height: 135%;
+	margin: 0px;
+	padding: 0px; /* required for Opera to have 0 margin */
+	text-align: center; /* centers board in MSIE */
+}
+
+/* 
+ * ========================================
+ * Set up IPB table
+ * ========================================
+ */
+ 
+.ipbtable { width:100% }
+
+table.ipbtable,
+tr.ipbtable,
+td.ipbtable
+{ /* required for text in tables, because tables do not inherit from body */
+	background: transparent;
+	color: #222;
+	font-size: 12px;
+	line-height: 135%;
+}
+
+.ipbtable td,
+.divpad{ /* gives all tables faux cellpadding of 5px */
+	padding: 5px;
+}
+
+td.nopad{ /* allows some tables to have no padding on the td */
+	padding: 0;
+}
+
+/* Safari... */
+th
+{
+	text-align: left;
+}
+
+
+form{
+	display: inline;
+	margin: 0; /* removes mystery form tag gapping */
+	padding: 0; /* removes mystery form tag gapping */
+}
+
+img{
+	border: 0; /* makes sure linked images do not have a border */
+	vertical-align: middle;
+}
+
+/* 
+ * ========================================
+ * global hyperlink styles 
+ * ========================================
+ */
+
+a:link,
+a:visited,
+a:active{
+	background: transparent;
+	color: #222;
+	text-decoration: underline;
+}
+
+a:hover{
+	background: transparent;
+	color: #34498B;
+}
+
+/* 
+ * ========================================
+ * Main wrapper, this controls the overall width of the board in you browser view window. 
+ * ========================================
+ */
+
+#ipbwrapper{ 
+	margin: 20px auto 20px auto; /* centers the box, no matter the overall width, also applies a 20px gap at the top and bottom of the board */
+	text-align: left; /* re_aligns text to left second part of two part MSIE centering workaround */
+	/* EDIT THIS TO CHANGE THE WIDTH OF THE BOARD -> 960px is a common fixed resolution size */
+	width: 98%;
+}
+
+/* 
+ * ========================================
+ * styles for pagination links 
+ * ========================================
+ */
+ 
+
+.pagelink,
+.pagelinklast,
+.pagecurrent,
+.minipagelink,
+.minipagelinklast{
+	background: #F0F5FA;
+	border: 1px solid #072A66;
+	padding: 1px 3px 1px 3px;
+}
+
+.pagelinklast,
+.minipagelinklast{
+	background: #DFE6EF;
+}
+
+
+.pagecurrent{
+	background: #FFC9A5;
+}
+
+.minipagelink,
+.minipagelinklast{
+	border: 1px solid #C2CFDF;
+	font-size: 10px;
+	margin: 0 1px 0 0;
+}
+
+.pagelink a:active,
+.pagelink a:visited,
+.pagelink a:link,
+.pagelinklast a:active,
+.pagelinklast a:visited,
+.pagelinklast a:link,
+.pagecurrent a:active,
+.pagecurrent a:visited,
+.pagecurrent a:link,
+.minipagelink a:active,
+.minipagelink a:visited,
+.minipagelink a:link,
+.minipagelinklast a:active,
+.minipagelinklast a:visited,
+.minipagelinklast a:link{
+	text-decoration: none;
+}
+
+/* fake button effect for some links */
+.fauxbutton{
+	background: #BFCDE0;
+	border: 1px solid #072A66;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 4px;
+}
+
+.fauxbutton a:link,
+.fauxbutton a:visited,
+.fauxbutton a:active{
+	color: #222 !important;
+	text-decoration: none;
+}
+
+.forumdesc,
+.forumdesc a:link,
+.forumdesc a:visited,
+.forumdesc a:active{ 
+	background: transparent;
+	font-size: 10px; 
+	color: #666;
+	line-height: 135%;
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+.searchlite {
+	background-color:yellow;
+	font-weight:bold;
+	color: red;
+}
+
+.activeusers{
+	background: #FFF;
+	border: 1px solid #072A66;
+	color: #000;
+	margin: 0px;
+	padding: 1px;
+}
+
+.activeuserposting a:link,
+.activeuserposting a:visited,
+.activeuserposting a:active,
+.activeuserposting
+{
+	font-style:italic;
+	text-decoration: none;
+	border-bottom:1px dotted black;
+}
+
+fieldset.search{ 
+	line-height: 150%;
+	padding: 6px; 
+}
+
+label{ 
+	cursor: pointer; 
+}
+
+img.attach{ 
+	background: #808080 url(style_images/1/click2enlarge.gif) no-repeat top right;
+	border: 1px solid #808080;
+	margin: 0 2px 0 0;
+	padding: 11px 2px 2px 2px;
+}
+
+.thumbwrap,
+.thumbwrapp,
+.fullimagewrap
+{
+	border: 1px solid #072A66;
+	margin: 2px;
+}
+
+.thumbwrapp{
+	border: 2px solid #660707;
+}
+
+.fullimagewrap{
+	background: #F5F9FD;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+.thumbwrap h4,
+.thumbwrapp h4{	
+	background: #DDE6F2;
+	border: 0 !important;
+	border-bottom: 1px solid #5176B5 !important;
+	color: #5176B5; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.thumbwrap p,
+.thumbwrapp p{
+	background: #EEF2F7 !important;
+	border: 0 !important;
+	border-top: 1px solid #5176B5 !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrap p.alt,
+.thumbwrapp p.alt{
+	background: #DFE6EF !important;
+	margin: 0 !important;
+	padding: 5px !important;
+	text-align: left;
+}
+
+.thumbwrapp p.pin{
+	background: #EFDFDF !important;
+	text-align: center !important;
+}
+	
+.thumbwrap img.galattach,
+.thumbwrapp img.galattach{
+	background: #FFF url(style_images/1/img_larger.gif) no-repeat bottom right;
+	border: 1px solid #072A66;
+	margin: 5px;
+	padding: 2px 2px 10px 2px;
+}
+
+li.helprow{ 
+	margin: 0 0 10px 0;
+	padding: 0; 
+}
+
+ul#help{ 
+	padding: 0 0 0 15px; 
+}
+
+.warngood,
+.warnbad{ 
+	color: #0B9500;
+	font-weight: bold;
+}
+
+.warnbad{ 
+	color: #DD0000;
+}
+
+#padandcenter{ 
+	margin: 0 auto 0 auto;
+	padding: 14px 0 14px 0;
+	text-align: center;
+}
+
+#profilename{ 
+	font-size: 28px; 
+	font-weight: bold; 
+}
+
+#photowrap{ 
+	padding: 6px; 
+}
+
+#phototitle{ 
+	border-bottom: 1px solid #000; 
+	font-size: 24px; 
+}
+
+#photoimg{ 
+	margin: 15px 0 0 0;
+	text-align: center; 
+} 
+
+#ucpmenu,
+#ucpcontent{ 
+	background: #F5F9FD;
+	border: 1px solid #345487;
+	line-height: 150%;
+}
+
+#ucpmenu p{ 
+	margin: 0; 
+	padding: 2px 5px 6px 9px;
+}
+
+#ucpmenu a:link, 
+#ucpmenu a:active, 
+#ucpmenu a:visited{ 
+	text-decoration: none; 
+}
+
+#ucpcontent{ 
+	width: auto;
+}
+
+#ucpcontent p{ 
+	margin: 0;
+	padding: 10px;
+}
+
+.activeuserstrip{ 
+	background: #BCD0ED;
+	padding: 6px;
+}
+
+/* Topic View elements */
+.signature{  
+	background: transparent;
+	color: #339; 
+	font-size: 10px;
+	line-height: 150%;
+}
+
+.postdetails{ 
+	font-size: 10px;
+	line-height:140%;
+}
+
+.postcolor{ 
+	font-size: 12px; 
+	line-height: 160%;
+}
+
+.normalname{ 
+	color: #003;
+	font-size: 12px; 
+	font-weight: bold; 
+}
+
+.normalname a:link, 
+.normalname a:visited, 
+.normalname a:active{ 
+	font-size: 12px;
+}
+
+.post1,
+.bg1{ 
+	background: #F5F9FD;
+}
+
+.post2,
+.bg3{ 
+	background: #EEF2F7;
+}
+
+.row2shaded,
+.post1shaded { background-color: #DEDBE4 }
+.row4shaded,
+.post2shaded { background-color: #E3DFE7 }
+
+.row1{ 
+	background: #DFE6EF; 
+}
+
+.row2{ 
+	background: #E4EAF2; 
+}
+
+.rowhighlight{
+	background-color: #FFF9BA;
+}
+
+.darkrow1{ 
+	background: #BCD0ED;
+	color: #3A4F6C; 
+}
+
+.darkrow3{ 
+	background: #D1DCEB; 
+	color: #3A4F6C; 
+}
+
+/* tableborders gives the white column / row lines effect */
+.plainborder,
+.tablefill,
+.tablepad{ 
+	background: #F5F9FD;
+	border: 1px solid #345487;
+}
+
+.tablefill,
+.tablepad{ 
+	padding: 6px;  
+}
+
+.tablepad{ 
+	border: 0 !important;
+}
+
+.wrapmini{ 
+	float: left;
+	line-height: 1.5em;
+	width: 25%;
+}
+
+.pagelinks{
+	float: left;
+	line-height: 1.2em;
+	width: 35%;
+}
+
+.desc{ 
+	font-size: 11px; 
+	color: #434951;
+}
+
+.lastaction
+{
+	font-size: 10px; 
+	color: #434951;
+}
+
+.edit{ 
+	font-size: 9px;
+}
+
+.thin{ 
+	border: 1px solid #FFF;
+	border-left: 0;
+	border-right: 0;
+	line-height: 150%;
+	margin: 2px 0 2px 0;
+	padding: 6px 0 6px 0;
+}
+
+/* =================================================================================== */
+/* =================================================================================== */
+/* =================================================================================== */
+
+/* 
+ * ========================================
+ * calendar styles 
+ * ========================================
+ */
+	
+.calmonths{ 
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	font-size: 18px; 
+	font-weight: bold; 
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.weekday{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.calmonths a{
+	text-decoration: none;
+}
+
+.calday,
+.calweekday{ 
+	background: #DFE6EF;
+	color: #666;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 0;
+	padding: 4px;
+	text-align: right;
+}
+
+.calweekday{
+	border-right: 1px solid #AAA;
+	color: #222;
+	font-size: 14px;
+	padding: 6px;
+	text-align: center;
+}
+
+.celltodayshaded,
+.celldateshaded,
+.cellblank,
+.celldate,
+.celltoday,
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	background: #EEF2F7; 
+	height: 100px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.celltodayshaded,
+.celldateshaded
+{
+	background: #E3DFE7;
+}
+
+.mcellblank,
+.mcelldate,
+.mcelltoday{
+	height: auto;
+}
+
+.cellblank,
+.mcellblank{
+	background: #C2CFDF;
+}
+
+.celltoday,
+.celltodayshaded,
+.mcelltoday{
+	border: 2px solid #8B0000;
+}
+
+.calranged
+{
+	border: 2px outset #C2CFDF;
+	background: #C2CFDF;
+	padding:4px;
+}
+
+.calitem
+{
+	border-bottom: 1px dotted #C2CFDF;
+	padding:4px;
+}
+
+/* 
+ * ========================================
+ * form styles 
+ * ========================================
+ */
+
+.input-warn,
+.input-green,
+.input-checkbox,
+input,
+textarea,
+select{
+	background: #FFF;
+	border: 1px solid #4C77B6;
+	color: #000;
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 11px;
+	margin: 5px;
+	padding: 2px;
+	vertical-align: middle;
+}
+
+select
+{
+	margin: 0px;
+}
+
+.input-checkbox
+{
+	border: none;
+}
+
+.input-warn,
+.input-warn-content
+{
+	border: 1px solid #C00;
+}
+
+.input-ok,
+.input-ok-content
+{
+	border: 1px solid #0C0;
+}
+
+.input-warn-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #FCC;
+}
+
+.input-ok-content
+{
+	padding: 4px;
+	margin: 4px;
+	background-color: #CFC;
+}
+
+
+.input-text
+{
+	color: #900;
+}
+
+input.button{
+	margin: 0;
+	width: auto;
+	cursor: pointer;
+}
+
+optgroup option{
+	font-family: verdana, helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.codebuttons{ 
+	font-family: Verdana, Helvetica, Sans-Serif; 
+	font-size: 10px; 
+	vertical-align: middle;
+	margin:2px;
+}
+
+.textarea,
+.searchinput,
+.button,
+.gobutton{
+	background: #FFF;
+	border: 1px solid #4C77B6;
+	color: #000;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 11px;
+	padding: 2px;
+	vertical-align: middle;
+}
+	
+.button{
+	background: #DFE6EF;
+}
+
+.gobutton{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.radiobutton,
+.checkbox,
+.helpbox { 
+	border: 0;
+	vertical-align: middle;
+	background: transparent;
+}
+
+/* 
+ * class.formtable 
+ *
+ * used for tabled forms 
+ * technically tables should not be used for form display 
+ * but, in the case of IPB a table is easier to work with
+ * for the average webmaster, who has little to no CSS knowledge.
+ *
+ */
+
+.formtable{
+	background: transparent;
+}
+
+.formtable td,
+.pformleft,
+.pformleftw,
+.pformright{
+	background:#F5F9FD;
+	border: 1px solid #C2CFDF;
+	border-bottom: 0;
+	border-left: 0;
+	font-weight: bold;
+	margin: 1px 0 0 0;
+	padding: 6px;
+	width: 25%;
+} 
+
+.formtable td.wider,
+.pformleftw,
+.pformright{
+	width: 40%;
+}
+
+.formtable td.formright,
+.pformright{
+	border-right: 0px;
+	font-weight: normal;
+	width: auto;
+} 
+
+.formtable td.formtitle,
+.formsubtitle{
+	background: #D1DCEB;
+	border: 1px solid #9FB9D4; 
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+.formsubtitle{ 
+	border: 0;
+	color: #3A4F6C;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.formtable td.formstrip{
+	background: #DDE8F2;
+	border: 1px solid #9FB9D4;
+	border-left: 0;
+	border-right: 0;
+	font-weight: normal;
+}
+
+/* 
+ * ========================================
+ * new style quote and code wrappers MATT's DESIGN 
+ * ========================================
+ */
+
+.quotetop{
+	background: #E4EAF2 url(style_images/1/css_img_quote.gif) no-repeat right;
+	border: 1px dotted #000;
+	border-bottom: 0;
+	border-left: 4px solid #8394B2;
+	color: #000;
+	font-weight: bold;
+	font-size: 10px;
+	margin: 2px auto 0 auto;
+	padding: 3px;
+}
+
+.quotemain{
+	background: #FAFCFE;
+	border: 1px dotted #000;
+	border-left: 4px solid #8394B2;
+	border-top: 0;
+	color: #465584;
+	padding: 4px;
+	margin: 0 auto 0 auto;
+}
+
+.codetop,
+.sqltop,
+.htmltop{
+	background: #FDDBCC url(style_images/1/css_img_code.gif) no-repeat right;
+	color: #000;
+	font-weight: bold;
+	margin: 0 auto 0 auto;
+	padding: 3px;
+}
+
+.codemain,
+.sqlmain,
+.htmlmain{
+	background: #FAFCFE;
+	border: 1px dotted #000;
+	color: #465584;
+	font-family: Courier, "Courier New", Verdana, Arial;
+	margin: 0 auto 0 auto;
+	padding: 2px;
+}
+
+/* 
+ * ========================================
+ * old school quote and code styles - backwards compatibility 
+ * ========================================
+ */
+
+#QUOTE,
+#CODE{  
+	background: #FAFCFE; 
+	border: 1px solid #000; 
+	color: #465584; 
+	font-family: Verdana, Arial; 
+	font-size: 11px; 
+	padding: 2px; 
+	white-space: normal;
+}
+
+#CODE{ 
+	font-family: Courier, "Courier New", Verdana, Arial;
+}
+
+/* 
+ * ========================================
+ * All New Styles 
+ * ========================================
+ */
+.cleared{
+	clear: both;
+}
+
+.borderwrap,
+.borderwrapm{ /* this will affect the outlining border of all the tables and boxes through-out the skin. */
+	background: #FFF;
+	border: 1px solid #072A66;
+	padding: 0px; 
+	margin: 0px; 
+}
+
+.borderwrapm{
+	margin: 5px;
+}
+
+.borderwrap h3,
+.maintitle,
+.maintitlecollapse{
+	background: url(style_images/1/tile_cat.gif);
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.maintitle td {
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+.maintitlecollapse{
+	border: 1px solid #FFF;
+}
+
+.maintitle p,
+.maintitlecollapse p,
+.formsubtitle p{
+	background: transparent !important;
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.maintitle p.expand,
+.maintitle p.goto,
+.maintitlecollapse p.expand,
+.formsubtitle p.members{
+	float: right;
+	width: auto !important;
+}
+
+.maintitle a:link, 
+.maintitle a:visited,
+.maintitlecollapse a:link, 
+.maintitlecollapse a:visited{ 
+	background: transparent;
+	color: #FFF;
+	text-decoration: none; 
+}
+
+.maintitle a:hover, 
+.maintitle a:active,
+.maintitlecollapse a:hover, 
+.maintitlecollapse a:active{ 
+	background: transparent;
+	color: #F1F1F1;
+}
+
+table th,
+.borderwrap table th,
+.subtitle,
+.subtitlediv,
+.postlinksbar{ 
+	background: transparent url(style_images/1/tile_sub.gif);
+	border-bottom: 1px solid #5176B5;
+	color: #3A4F6C; 
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+.subtitlediv{
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	text-align: right;
+}
+
+.borderwrap table th a:link,
+.subtitle a:link,
+.subtitlediv a:link,
+.borderwrap table th a:visited,
+.subtitle a:visited, 
+.subtitlediv a:visited, 
+.borderwrap table th a:active,
+.subtitle a:active,
+.subtitlediv a:active,
+.borderwrap table th a:hover,
+.subtitle a:hover,
+.subtitlediv a:hover{ 
+	background: transparent;
+	color: #3A4F6C;
+	text-decoration: none; 
+}
+
+.borderwrap h4{
+	background: #DDE6F2;
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	border-top: 1px solid #5176B5;
+	color: #5176B5; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.borderwrap p{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	margin: 5px;
+	padding: 10px;
+	text-align: left;
+}
+
+
+td.formbuttonrow,
+.pformstrip,
+.borderwrap p.formbuttonrow,
+.borderwrap p.formbuttonrow1{
+	background: #D1DCEB !important; 
+	border: 1px solid #FFF;
+	border-top: 1px solid #5176B5;
+	margin: 0px !important;
+	padding: 5px !important;
+	text-align: center;
+}
+
+td.formbuttonrow{
+	border-bottom: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.borderwrap p.formbuttonrow1{
+	background: #F9F9F9 !important;
+	border: 0;
+	border-top: 1px solid #CCC;
+}
+
+.bar,
+.barb,
+.barc{
+	background: #DFE6EF;
+	border: 1px solid #FFF;
+}
+
+.barc{
+	border-bottom: 0;
+}
+
+.bar p,
+.barb p,
+.barc p{
+	background: transparent;
+	border: 0;
+	color: #222;
+	font-size: 11px;
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+
+.barb p{
+	text-align: right;
+}
+
+.bar p.over,
+.bar p.overs,
+.barc p.over,
+.barc p.overs{
+	float: right;
+}
+
+.barb p.over,
+.barb p.overs{
+	float: left;
+}
+
+.bar p.overs,
+.barb p.overs,
+.barc p.overs{
+	position: relative;
+	top: 5px;
+}
+
+.catend{
+	background: #8394B2;
+	color: #000;
+	font-size: 1px;
+	height: 5px;
+}
+
+.newslink{
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	margin: 0;
+	width: 100%;
+}
+
+.newslink td{
+	color: #222;
+	font-size: 10px;
+	padding: 5px 5px 5px 10px;
+}
+
+.newslink span{
+	background: transparent;
+	color: #072A66;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.newslink input{
+	background: #FFF;
+	border: 1px solid #999;
+	color: #072A66;
+	font-size: 10px;
+	padding: 3px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.newslink input.button{
+	background: transparent;
+	border: 0;
+	color: #072A66;
+	vertical-align: middle;
+}
+
+.fieldwrap{
+	background: #F9F9F9;
+	border: 1px solid #CCC;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+	text-align: left;
+}
+
+.fieldwrap h4{
+	background: #EEE;
+	border: 1px solid #CCC;
+	border-left: 0;
+	border-right: 0;
+	color: #444; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap {
+	background: #F2DDDD;
+	border: 1px solid #992A2A;
+	border-top: 0;
+	margin: 5px;
+	padding: 0;
+}
+
+
+.errorwrap h4 {
+	background: #E3C0C0;
+	border: 1px solid #992A2A;
+	border-left: 0;
+	border-right: 0;
+	color: #992A2A; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0;
+	padding: 5px;
+}
+
+.errorwrap p {
+	background: transparent;
+	border: 0;
+	color: #992A2A;
+	margin: 0;
+	padding: 8px;
+}
+
+
+.ruleswrap{
+	background: #f0f5fa;
+	border: 1px solid #c2cfdf;
+	color: #992A2A; 
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+#redirectwrap{
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	margin: 200px auto 0 auto;
+	text-align: left;
+	width: 500px;
+}
+
+#redirectwrap h4{
+	background: #D0DDEA;
+	border-bottom: 1px solid #C2CFDF;
+	color: #3A4F6C;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p{
+	margin: 0;
+	padding: 5px;
+}
+
+#redirectwrap p.redirectfoot{
+	background: #E3EBF4;
+	border-top: 1px solid #C2CFDF;
+	text-align: center;
+}
+
+
+#gfooter{
+	background: #8394B2;
+	margin: 5px 0 5px 0;
+	padding: 0;
+	width: 100%;
+}
+
+#gfooter td{
+	color: #FFF;
+	font-size: 10px;
+	padding: 4px;
+}
+
+#gfooter a:link,
+#gfooter a:visited{
+	color: #FFF;
+}
+
+#logostrip{ 
+	background: #3860BB url(style_images/1/tile_back.gif);
+	border: 1px solid #FFF;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+
+#logographic{
+	background: transparent url(style_images/1/logo4.gif) no-repeat left;
+	height: 68px;
+	margin: 0;
+	padding: 0;
+}
+
+#submenu{ 
+	background: transparent url(style_images/1/tile_sub.gif);
+	border: 1px solid #FFF;
+	border-top: 0;
+	color: #3A4F6C; 
+	margin: 0;
+	height: 29px;
+	text-align: right;
+}
+
+.ipb-top-left-link,
+.ipb-top-right-link
+{
+	background: transparent url(style_images/1/tile_sub-lite.gif);
+	float: right;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 0.5px;
+	margin: 0px;
+	padding: 7px 0 7px 0;
+	width: auto;
+	border-left:  1px solid #dce3ee;
+}
+
+.ipb-top-left-link
+{
+	float: left;
+	border-left: 0px;
+	border-right: 1px solid #dce3ee;
+}
+
+.ipb-top-left-link a:link, 
+.ipb-top-left-link a:visited,
+.ipb-top-right-link a:link, 
+.ipb-top-right-link a:visited
+{ 
+	background: transparent; 
+	color: #3A4F6C;
+	padding: 0 6px 0 6px;
+	text-decoration: none;
+}
+
+.ipb-top-left-link a:hover, 
+.ipb-top-left-link a:active,
+.ipb-top-right-link a:hover, 
+.ipb-top-right-link a:active
+{
+	background: transparent; 
+	color: #5176B5; 
+}
+
+#userlinks,
+#userlinksguest{ 
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	margin: 5px 0 5px 0;
+	padding: 0 5px 0 5px;
+}
+
+#userlinksguest{ 
+	background: #F4E7EA;
+	border: 1px solid #986265;
+}
+
+#userlinks p,
+#userlinksguest p{
+	background: transparent !important;
+	border: 0 !important;
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0 !important;
+	padding: 7px 0 7px 0; 
+	text-align: right;
+}
+
+#userlinks p,
+#userlinksguest p{
+	font-weight: normal;
+	letter-spacing: 0;
+}
+
+#userlinksguest p.pcen{
+	text-align: center;
+}
+
+#userlinks p.home,
+#userlinksguest p.home{
+	float: left;
+}
+
+#navstrip{ 
+	background: transparent;
+	color: #999;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 14px 0px 8px 0px; 
+}
+
+#navstrip a:link, 
+#navstrip  a:visited{ 
+	background: transparent; 
+	color: #222; 
+	text-decoration: none;
+}
+
+#navstrip a:hover, 
+#navstrip a:active{
+	background: transparent; 
+	color: #5176B5; 
+}
+
+.toplinks{
+	background: transparent;
+	color: #000;
+	margin: 0;
+	padding: 0 0 5px 0;
+	text-align: right;
+}
+
+.toplinks span{
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	border-bottom: 0;
+	color: #000;
+	font-size: 10px;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+	padding: 5px;
+}
+
+.copyright{ 
+	background: #EEE;
+	font-size: 11px; 
+	margin: 0 0 5px 0;
+	padding: 8px;
+}
+
+/* 
+ * ========================================
+ * print page styles 
+ * ========================================
+ */
+
+#print{
+	margin: 20px auto 20px auto;
+	padding: 0;
+	text-align: left;
+	width: 85%;
+}
+
+#print h1,
+#print h2,
+#print h3,
+#print h4,
+#print p{
+	color: #036;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+}
+
+#print h2,
+#print h3,
+#print p{
+	border-bottom: 1px solid #999;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#print h3{
+	background: #F5F5F5;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+}
+
+#print h4{
+	background: #F9F9F9;
+	font-size: 11px;
+}
+
+#print p{
+	margin: 0 0 5px 0;
+	padding: 10px;
+}
+
+#print p.printcopy{
+	border: 0;
+	color: #000;
+	text-align: center;
+}
+
+.dny-edit-title
+{
+	border:0px;
+	padding:3px;
+	margin:0px;
+	background: #D1DCEB; 
+	color: #3A4F6C; 
+}
+
+
+/* ======================================== */
+/* TABS
+/* ======================================== */
+
+.tabon
+{
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+	border-right:1px solid #999;
+	background-color:#FFF;
+	padding:8px;
+	padding-bottom:9px;
+	font-size:10px;
+	float:left;
+	width:auto;
+	margin-top:3px;
+}
+
+.taboff
+{
+	border-top: 1px solid #777;
+	border-left: 1px solid #777;
+	border-right: 1px solid #777;
+	background-color: #B5C3D9;
+	color: #333;
+	padding: 8px;
+	font-size:10px;
+	float: left;
+	width: auto;
+	margin-top:3px;
+}
+
+.tabon a:link, 
+.tabon a:visited, 
+.tabon a:active
+{
+	text-decoration:none;
+	color: #000;
+}
+
+.taboff a:link, 
+.taboff a:visited, 
+.taboff a:active
+{
+	text-decoration:none;
+	color: #333;
+}
+
+.mya-back
+{
+	background: #072A66;
+	margin:1px;
+	padding: 1px;
+}
+
+.mya-content
+{
+	background: #FFF;
+	padding:8px;
+	margin: 1px;
+	border: 1px solid #777;
+}
+
+.mya-content-tbl
+{
+   background: #F0F5FA;
+   border: 1px solid #777;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   margin:1px;
+}
+
+.mya-fieldwrap
+{
+	background: transparent;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 4px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Create PM box defaults           */
+/* -------------------------------- */
+
+.iframeshim
+{
+	position:absolute;
+	display:none;
+	background: #FFF;
+	border:0px;
+	width:auto;
+	height:auto;
+}
+
+
+
+/* -------------------------------- */
+/* Experimental                     */
+/* -------------------------------- */
+
+.popupmenu,
+.popupmenu-new
+{
+   background: #F0F5FA;
+   border: 1px solid #3A4F6C;
+   text-align:left;
+   font-size:10px;
+   white-space:nowrap;
+   /*padding:3px 5px 3px 3px;*/
+   /*width:300px;*/
+}
+
+.popupmenu-item
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	border-bottom: 1px solid #C2CFDF;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popupmenu-item-last
+{
+	padding: 5px;
+	/*margin-top:4px;*/
+	white-space: nowrap;
+	color:  #000000;
+	font-weight: normal;
+}
+
+.popmenubutton-new,
+.popmenubutton
+{
+	width:120px;
+	white-space:nowrap;
+	background-color: #C2CFDF;
+	border:1px solid #3A4F6C;
+	color: #3A4F6C;
+	font-weight:bold;
+	float:right;
+	height:18px;
+	text-align:center;
+	margin:0px;
+	font-size:11px;
+	padding:3px;
+}
+
+.popmenubutton-new
+{
+	float:none;
+	width:auto;
+	text-align:left;
+	height:auto;
+	padding:3px;
+	font-weight:normal;
+	background-color:#EEF2F7;
+	background-image: url(style_images/1/menu_action_down-padded.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.popmenubutton-new-out
+{
+	padding:4px;
+}
+
+
+.popupmenu-new
+{
+	background-color: #DFE6EF;
+}
+
+
+.popmenubutton a:link, 
+.popmenubutton a:visited,
+.popmenubutton-new a:link, 
+.popmenubutton-new a:visited,
+.popupmenu-item a:link, 
+.popupmenu-item a:visited,
+.popupmenu-item-last a:link, 
+.popupmenu-item-last a:visited
+{ 
+	color: #3A4F6C; 
+	text-decoration: none;
+}
+
+.popmenubutton a:hover,
+.popmenubutton-new a:hover,
+.popupmenu-item a:hover, 
+.popupmenu-item-last a:hover
+{ 
+	color: #5176B5; 
+	text-decoration: none;
+}
+
+.popupmenu-category
+{ 
+	background: transparent url(style_images/1/tile_sub.gif);
+	border-top: 1px solid #5176B5;
+	border-bottom: 1px solid #5176B5;
+	color: #3A4F6C; 
+	font-size: 10px;
+	font-weight: bold; 
+	letter-spacing: 1px;
+	margin: 0; 
+	padding: 5px; 
+}
+
+/* -------------------------------- */
+/* Loading box
+/* -------------------------------- */
+
+#loading-layer-inner
+{
+	width:220px;
+	height:28px;
+	padding:18px 10px 10px 10px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#CCC #666 #666 #CCC;
+	background-color: #FCF8C7;
+}
+
+/* -------------------------------- */
+/* Message in a bo(x|ttle)
+/* -------------------------------- */
+
+#ipd-msg-wrapper
+{
+	display: none;
+	width: 220px;
+}
+
+#ipd-msg-inner
+{
+	width:100%;
+	height:45px;
+	padding: 6px 4px 4px 4px;
+	margin: 0px;
+	text-align:center;
+	color: #000;
+	border: 1px solid;
+	border-color:#ccc #666 #666 #ccc;
+	background-color: #FCF8C7;
+	filter:alpha(opacity=75);
+	opacity:.75
+}
+
+#ipd-msg-title
+{
+	width: 100%;
+	height:20px;
+	margin: 0px;
+	padding: 6px 4px 4px 4px;
+	background: transparent url(style_images/1/css_pp_header.gif);
+	border: 1px solid #3A4F6C;
+	border-bottom: 0px;
+	color: #FFF;
+}
+
+.linked-image
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.resized-linked-image
+{
+	margin: 1px 0px 0px 0px;
+	padding: 0px;
+	background-color: #000;
+	border: 0px;
+	color: #FFF;
+	font-size: 10px;
+	width: auto;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+}
+
+.resized-linked-image-zoom
+{
+	width: 200px;
+	height: 30px;
+	filter:alpha(opacity=85);
+	opacity:.85;
+	background-color: #FFF;
+	padding-top: 6px;
+	padding-left: 5px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	display: none;
+}
+
+/* -------------------------------- */
+/* Edit post reason
+/* -------------------------------- */
+
+.post-edit-reason
+{
+	background: #E7EAEF;
+	margin-top: 9px;
+	margin-bottom: 0px;
+	padding: 4px;
+	color: #333;
+	font-size: 10px;
+	border: 1px solid #C5C7CD;
+	-moz-border-radius: 5px;
+	width: auto;
+	display: block;
+}
+
+/* -------------------------------- */
+/* Personal Profile
+/* -------------------------------- */
+
+.pp-name
+{ 
+	background: #F0F5FA;
+	border: 1px solid #C2CFDF;
+	margin: 0px;
+	padding: 10px;
+}
+
+.pp-name h3
+{
+	margin:0px;
+	padding:0px 0px 5px 0px;
+	font-size:24px;
+}
+
+.pp-header
+{ 
+	background: transparent url(style_images/1/tile_sub.gif);
+	color: #3A4F6C; 
+	font-size: 10px;
+	font-weight: bold; 
+	margin: 0px 0px 1px 0px; 
+	padding: 5px; 
+}
+
+.pp-title
+{
+	background: url(style_images/1/css_pp_header.gif);
+	border-bottom: 1px solid #5176B5;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.pp-datebox
+{
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin: 0px;
+	font-size:18px;
+	font-weight:bold;
+	line-height: 100%;
+	letter-spacing: -1px;
+	float:right;
+	width: auto;
+}
+
+.pp-datebox em
+{
+	color: #AAA;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.pp-contentbox-back
+{
+	background-image: url(style_images/1/folder_profile_portal/pp-css-contentblock.gif);
+	background-repeat: repeat-x;
+	background-color: #ACBFD9;
+	padding: 6px;
+}
+
+.pp-contentbox-entry,
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	background-color: #EEF2F7;
+	border: 1px solid #888888;
+	line-height: 140%;
+	padding: 8px;
+	margin-bottom: 6px;
+	height: 200px;
+	overflow: auto;
+	overflow-x: auto;
+}
+
+.pp-contentbox-entry-noheight-sel
+{
+	background-color:#FCECCD;
+}
+
+.pp-contentbox-entry-noheight-mod
+{
+	background-color:#FDF1DA;
+}
+
+.pp-contentbox-entry-noheight,
+.pp-contentbox-entry-noheight-mod,
+.pp-contentbox-entry-noheight-sel
+{
+	height: auto;
+	margin-bottom: 1px;
+}
+
+.pp-image-thumb-wrap,
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #555555;
+	padding: 4px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pp-image-mini-wrap,
+.pp-image-mini-wrap-floatright
+{
+	width: 27px;
+	height: 27px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.pp-image-thumb-wrap-floatright,
+.pp-image-mini-wrap-floatright
+{
+	float:right;
+}
+
+.pp-tiny-text
+{
+	color: gray;
+	font-size: 10px;
+}
+
+.pp-mini-content-entry,
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #F5F9FD;
+	padding: 6px;
+	border-bottom: 1px dotted #555555;
+	clear:both;
+	width: auto;
+	height: 60px;
+}
+
+.pp-mini-entry-noheight-shaded
+{
+	background-color: #E3DFE7;
+}
+
+.pp-mini-content-entry-noheight,
+.pp-mini-entry-noheight-shaded
+{
+	height: auto;
+}
+
+.pp-tabclear,
+.pp-maintitle
+{
+	background: url(style_images/1/css_pp_header.gif);
+	border: 1px solid #FFF;
+	border-bottom: 1px solid #5176B5;
+	color: #FFF; 
+	font-size: 12px;
+	font-weight: bold; 
+	margin: 0px;
+	padding: 8px;
+}
+
+.pp-tabclear
+{
+	border:0px;
+	border-right: 1px solid #072A66;
+	border-left: 1px solid #072A66;
+}
+
+.pp-tabon
+{
+	border-top:1px solid #3363A1;
+	border-left:1px solid #072A66;
+	border-right:1px solid #072A66;
+	background-color:#6696D6;
+	color:#FFFFFF;
+	padding:8px;
+	float:left;
+	width:auto;
+	background-image: url(style_images/1/css_pp_tab_on.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin-top:3px;
+	font-size:10px;
+}
+
+.pp-taboff,
+.pp-tabshaded
+{
+	border-top: 1px solid #759BC7;
+	border-left: 1px solid #759BC7;
+	border-right: 1px solid #759BC7;
+	background-color: #3363A1;
+	color: #3363A1;
+	padding:8px;
+	float: left;
+	width: auto;
+	background-image: url(style_images/1/css_pp_tab_off.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	margin-top:3px;
+	font-size:10px;
+}
+
+.pp-tabshaded
+{
+	background-image: url(style_images/1/css_pp_tab_shaded.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	color: #516795;
+	border-top: 1px solid #7f9BBC;
+	border-left: 1px solid #7f9BBC;
+	border-right: 1px solid #7f9BBC;
+}
+
+.pp-tabon a:link, 
+.pp-tabon a:visited, 
+.pp-tabon a:active
+{
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+.pp-taboff a:link, 
+.pp-taboff a:visited, 
+.pp-taboff a:active,
+.pp-tabshaded a:link, 
+.pp-tabshaded a:visited, 
+.pp-tabshaded a:active
+{
+	text-decoration:none;
+	color: #3363A1;
+}
+
+.pp-tabwrap
+{
+	height: 34px;
+	margin:0px;
+	padding:0px;
+}
+
+</style>
+		<script type='text/javascript'>
+		function fix_linked_image_sizes_attach_thumb( attach_id, width, height, file_size )
+		{
+			return true;
+		}
+		</script>
+	</head>
+	<body>
+	<div id="print">
+		<h1>Версия для печати темы</h1>
+		<h2><a href="http://ski.spb.ru/conf/index.php?s=1ba8ca14c2942acda452c0fe99a3e1c1&amp;showtopic=9100" title="Нажмите для просмотра темы">Нажмите сюда для просмотра этой темы в обычном формате</a></h2>
+		<h3>Питерская горнолыжная конференция _ Курилка _ Страхование жизни в пользу ребенка. Нужон совет&#33;</h3><div class="printpost">
+			<h4>Автор: <b>dkor</b>  9.8.2006, 9:02</h4>
+			<p> Страхование жизни от несчастного случая и смерти в пользу ребенка.<br>Страховщик пристает: застрахуйся, застрахуйся&#33; Ну типа каждый месяц (или квартал, год) платишь взнос. Ну а потом ребенок подрастет, получит энную сумму денех (например на 18-летие) - круто&#33;<br><br>Мне 35 лет, дочери 9 лет.<br><br>Страховщик - ООО &quot;СК &quot;Альянс РОСНО Жизнь&quot;<br>Договор вместе с доп.соглашениями занимает 27 старниц мелким шрифтом 8...<br>Пока ниасилил, но вопрос в принципе:<br><br>Каково ваше мнение, уважаемые соконфетники, есть в этом какой-либо смысл? Может кто знает какие-то подводные камни? В общем - отговорите меня :-)) Или наоборот. Может у кого-то имеется личный опыт?<br><br>Заранее спасибо за ЛЮБЫЕ каменты&#33; 
+			<br />
+			<!--IBF.ATTACHMENT_101752-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  9.8.2006, 9:14</h4>
+			<p> тот, у кого есть реальный личный опыт, который ценен настолько, чтоб им стоило бы поделиться- уже не постит  ничо в форумах- тока его наследники и выгодоприобретатели ещо могут, но, видимо, молчат :_))<br>Есть ли смысел в том, чтобы ребенку досталось бы какая-то сумма денег по результатам смерти родителя- ну, ктокак для себя это решает. А подводные камни вполне могут быть в облассти обстоятельств смерти. к примеру- в состоянии алкогольного апьянения- не в сотстоянии- а если сумма зачотная- имхо, никто не мешает страховой компании убедить врачей в заключении напесать ту фразу, которая нужна, чтоб ничо не платить. А вот сумеет ли ребенок &quot;натянуть&quot; их юристов в суде, чтоб страховщики всеж выплатили, а того врача, соответственно, за подлог осудили- в этом я сильно сомневаюсь..<br>Страховые компании, они тоже, чтоб там не говорили в рекламах, всеж в первую очередь себе деньги зарабатывают, а не в слепую &quot;бедным помогают&quot;.<br>Мораль- родителей и близких не заменит никакой полис :-)) Ну, а это и без меня известно :-)).<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101753-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>dkor</b>  9.8.2006, 9:32</h4>
+			<p> 2 depo_broker:<br><br>Я собственно помирать-то не планирую :-)) При &quot;дожитии&quot; меня-страхователя до точки Х (ну, например до 18-я дочери), енная сумма = скопленная сумма - рисковая часть + проценты выплачивается дитю (ну или мне, кого укажешь). Я думал использовать эту страховку, как способ ежемесячными небольшими относительно безболезненными взносами скопить дочери немного денег (ну там на образование, на автомобиль). Типа как кредит &quot;наоборот&quot; :-). Да плюс если что случиться (3*тьфу), то тоже какая-то помощь. Вот. 
+			<br />
+			<!--IBF.ATTACHMENT_101757-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  9.8.2006, 9:48</h4>
+			<p> а вот этот механизм прекрасно работает и без участия страховой компании :-))<br>открой счет- и перечисляй себе туда манетки, можно даже, не поленившысь, поискать с процентами и с возможностью пополнения. И даже без банка все работает прекрасно- сделал се капилку- обратите внимание- этот механизм допускает круглосуточное экстренное изъятие как всей накопленной суммы, так и ее части без каких-либо штрафных санкций, и допускает любые сочетания любых валют(&#33;) :-)))<br>Проработали бы Вы, батенька, лучше програмы страхования горнолыжников- да и доложыли бы тут. Чиста вот такие риски закрываем, вот куда звонить в этой стране, а вот  куда в этой. Вот опыт использования этой страховки в Рассее, вот опыт использования в Аффстрии, вот в Чиле. Развороты могут быть и бывают вот такие- вот так и такой ценой выкручивались мы и  нашы клеенты вот в такой ситуации. Понятно- что с этой мороки выхлоп смешной не то, что со страхования жызни- но всеж.. :-))<br>Страхование жызни, ессно, более хлебнайа тема для агента, но клиентам- то что до этого? Клиентам тут сваи риски надо закрыть, а уж йесли кто-то паходу решыт и жызнь застраховать- вот и буит для вас типа бонус :-)), за что бились-то :-))....<br>С уважением<br>ЗЫ за что не любят прямую рекламу- за то, что реклама гонит не то, что людям надо- а то, что хотелось бы продать в первую очередь. Посему- если по горнолыжным страховкам буит полный расклад- даже если это буит признано рекламой и убрано отсюда- ну в бизнес-канфе попробуем дельные вопросы осветить аккуратно- я похлопочу за такую возможность. А уж клиенты сами вас найдут- не волнуйтесь, не скроетесь Вы от них никуда :_)) 
+			<br />
+			<!--IBF.ATTACHMENT_101760-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>kadavr</b>  9.8.2006, 10:42</h4>
+			<p> История из жизни:<br>одни родители копили для любимого сына деньги на счету в советские времена. Родители зарабатывали неплохо и сумма скопилась в несколько тысяч рублей (кто помнит сколько это - оценит). Тут настали изменения в стране и дите, уже лет 17-ти - 18-ти, вполне разумное и предприимчивое, просило родителей: &quot;Отдайте эти деньги мне&#33; Я их применю в дело, сохраню и приумножу&#33;&quot; Отвечали родители: &quot;Нет&#33; Ты дите неразумное&#33; Мы всю жизнь эти деньги копили, это тебе на обустройство будущей жизни&#33;&quot;<br>Долго убеждало дите, что оно уже взрослое, долго билось. Но победа осталась за родителями, как счетораспорядителями. А потом грянул дефолт. И вся эта космическая сумма превратилась сами знаете во что. И дите до сих пор вспоминает эту историю и вздыхает: &quot;Эх, не дали мне тогда эти деньги, а какой бы был стартовый капитал&#33;&quot;<br>Это я все к чему: может Вам ребенку лучше жилплощадь организовать? 
+			<br />
+			<!--IBF.ATTACHMENT_101763-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>nwa</b>  9.8.2006, 11:39</h4>
+			<p> Согласен с брокером. Че огород городить с непонятным и имхо рисковым инструментом. Идешь в Сбер, выбираешь вклад и вперед -до 100 тыщ рублев в идеале. По достижении суммы потолка открываешь второй и.т.д. 
+			<br />
+			<!--IBF.ATTACHMENT_101770-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  9.8.2006, 12:12</h4>
+			<p> Ребенок, который плачется на отсутствие стартового капитала в 1992м году до сих пор (2006), так же вточности спустил бы стартовый капитал, как и сбербанк. А плакать и клянчить чужие, пусть даже и родительские деньги - это вааще смешно.<br><br>Каждый человек волен распоряжаться и нести ответственность за свой капитал, в том числе родители. Нельзя обвинят родителей в непредоставлении стартового капитала, в том, что они продали свою квартиру и обеспечили этим свою старость, вместо того, чтоб отдать квартиру детям (значит такие отношения с детьми) и т.п.<br><br>Каждый взрослый человек тоже сам решает что ему выгоднее - открыть банковский вклад под процент ниже инфляции, или сегодня и сейчас обеспечить себе или ребенку многа мороженого и других радостей.<br><br>Что выгоднее  копить, теряя на инфляции и отказывая себе в возможностях сегодня, или потом взять кредит и выплачивать процент, отказывая себе потом в возможностях - это философический вопрос.<br><br> 
+			<br />
+			<!--IBF.ATTACHMENT_101778-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>kadavr</b>  9.8.2006, 12:39</h4>
+			<p> 2АнтонА<br>Ну ты даешь&#33; ))<br>&quot;Просил&quot; и &quot;вздыхает&quot; превратил в &quot;клянчил&quot; и &quot;плачется&quot; ))))<br>Вот яркий пример, как, несколько изменив акценты, можно поменять и смысловую нагрузку&#33; )))))) 
+			<br />
+			<!--IBF.ATTACHMENT_101786-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>dkor</b>  9.8.2006, 12:44</h4>
+			<p> Спасибо всем ответившим&#33; Убедили&#33; Ну в смысле отговорили&#33;<br><br>Действительно: <br>- если есть с чего копить, наверное лучше в банк нести, а не в ООО&#33;&#33;&#33; &quot;альянс РОСНО-НЕРосно жисть&quot;, просто я копить паталогически не умею...<br>- если жив буду, дык потом и кредит возьмем;<br>- ну и инфляция - тоже очень смущает, а доллар падающий уж совсем картину портит.<br>- А уж ежели чего, то на край можно действительно с частью многочисленного жилья расстаться (у бабушек-дедушек очень квартиры большие ;-))...<br><br>- прально АнтонА, лучше уж сегодня покуплять ребенку мороженого вдоволь, возить на лыжах кататься, на виндсерфинге, вот&#33;<br><br>РЕШЕНО&#33; Спасибо еще раз всем. <br><br>З.Ы.  в списке ответивших оказалось большинство тех, чье мнение как раз и интересовало. чтд. Все-таки не зря третий (или даже четвертый&#33;) год форум читаю:-) 
+			<br />
+			<!--IBF.ATTACHMENT_101788-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  9.8.2006, 12:49</h4>
+			<p> 2 Кадавра Надо было в конце того поста смайлик поставить пожырней- тогда былоб все гудно :-) Йа кстати также как АнтонА воспринял картину- какой тогда был стартовый капитал- грубо гря неважно, ибо не капитал определяет возможность что-то сделать, а голова, в смысле умение всегда мыслить канструфтивно. Во всяком случае счас, мне не приходит в голову мысль о том, что &quot;вот, кабы у миня в 1989 былоб тыщ десять папиных- кстати тоже страховой полис был немаленький, йа бы счас, да и в середине 90-х лучше бы жыл&quot;. Как раз существует уверенность, что точно жыл бы хуже, чем счас жыву. Не деньги (мне:-)) нужны были в 89, а голову &quot;поправить&quot;. <br>Деньги не решают сами по себе ничего. Деньги, как источник благосостояния, да и сам термин &quot;стартовый капитал&quot;- имхо, это журналисты придумали, чтоб интересней их статьи было бы читать.(смайлика нет :_))<br>2 dkor спасибо за комплимент- но Вы всеж падумайте над моим предложением :-))<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101789-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Старый Горнолыжник Хенк</b>  9.8.2006, 13:03</h4>
+			<p><!--QuoteBegin-nwa+9.08.2006, 11:39--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (nwa @ 9.08.2006, 11:39)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> Идешь в Сбер, выбираешь вклад и вперед <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> А вот над этим яп подумал: более остойного кредитно-финансового учрежедения, чем Сбербанк, просто не существует  <!--emo&:down:--><img src='http://www.ski.spb.ru/conf/html/emoticons/down.gif' border='0' style='vertical-align:middle' alt='down.gif' /><!--endemo-->  <!--emo&:down:--><img src='http://www.ski.spb.ru/conf/html/emoticons/down.gif' border='0' style='vertical-align:middle' alt='down.gif' /><!--endemo-->  Отношение к людям(клиентам) просто наплевательское, да и проценты по депозитам устанавливают грабительские, особенно с учетом инфляции   
+			<br />
+			<!--IBF.ATTACHMENT_101790-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  9.8.2006, 13:11</h4>
+			<p> Да-да, за всю свои историю сбербанк наипывал своих вкладиков каждый раз, когда это только было возможно...<br><br>Давеча имел супер ситуевину с ихней карточкой - оказываицца ихняя процессинговая система не поддерживает современные технологии и посему ихней карточкой низзя оплатить услуги определенных учреждений. Причем именно потому, что система виза или мастеркард не видит карточку сбербанка по протоколу или как там это называется 3D Secure, по котрому уже все давно работают...<br><br>А любой разговор со сбербанком - только через очередь бабушек за пенсией... 
+			<br />
+			<!--IBF.ATTACHMENT_101791-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Yar</b>  9.8.2006, 13:18</h4>
+			<p> Макс, это в 89 году можно было бизьнес с нулем начинать. Потому как ровная площадка была, за редкими исключениями. А ты щас попробуй.<br><br>Лично у меня в Сбербанке пропало некоторое количество денег. Небольшое, но факт был. Заметного счета там у меня не будет никогда. 
+			<br />
+			<!--IBF.ATTACHMENT_101793-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Old Falc</b>  9.8.2006, 13:23</h4>
+			<p><!--QuoteBegin-dkor+9.08.2006, 9:32--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (dkor @ 9.08.2006, 9:32)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> 2 depo_broker:<br><br>...Я думал использовать эту страховку, как способ ежемесячными небольшими относительно безболезненными взносами скопить дочери немного денег (ну там на образование, на автомобиль). ... <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> Мои родители, (в своё время), решили сделать подарок своим внукам (моим детям) к совершеннолетию и оформили соответствующую страховку... Вносили &quot;малыми частями&quot;. А тут 1990 год.... потом - деноминация... И получился &quot;подарок&quot; ценою в пол презерватива...<br><br>В азартные игры в этом государстве играть ... 
+			<br />
+			<!--IBF.ATTACHMENT_101794-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  9.8.2006, 13:25</h4>
+			<p> 2 Яр А я пробовал в предпоследний раз около (чуть больше) года назад- и.... получилось :-)) Как называется результат- думаю, что знаешь. :-)) И счас коечто есть на этапе старта. Может и в самом деле, в том году ещо можно было- а в этом уже нельзя?- ну, узнаем, че там- недолго ждать :_)<br>Для-старта-бизнеса-деньги-не(&#33;)-нужны. Большая часть моей жызни после 2000 года этому подтверждение. :-)<br>Сбер- ребята, это инструмент настоящего профессионала. Если умеешь с ним работать- цены ему и тебе нет- серьезно грю, можно не верить, но это так. Очень сложный и многогранный инструмент- но сршенно ломовой по возможностям. Как знакомый со спецыфикой отрасли говорю. Сам там счета счас не держу- не по рангу мне пока со сбером работать. Но когда вырасту- альтернативы скорей всего не успеет ещо появиться- разве внешторг- но он ещо нескооро..<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101795-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  9.8.2006, 13:32</h4>
+			<p> Ну смотря что считать бизьнесом - есть бизьнесы, где вообще денех не надо, есть где надо. Один из вариантов - взял кредит &quot;на неотложные нужды&quot; и пошел открывать бизьнес... Все зависит от того какой бизьнес...<br><br> 
+			<br />
+			<!--IBF.ATTACHMENT_101797-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Yar</b>  9.8.2006, 13:35</h4>
+			<p> Макс: ты про что (&quot;около года назад&quot;)? Деньги, конечно, не нужны - когда они есть.<br><br>Сбер - именно что профессиональный инструмент. А я вот - профессионал совсем в другой области, поэтому с такими сложными заведениями на любительском уровне предпочитаю дела не иметь. 
+			<br />
+			<!--IBF.ATTACHMENT_101798-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  9.8.2006, 13:46</h4>
+			<p> на пароходе скиспбрушном, Антон и Татьяна Альтмедиа организовывали, ты вроде был, и на фесте у Юрки- помнишь мою жену? Чем она занимается, помнишь?<br>Про &quot;надо/не надо&quot;- поясню свою позицию...  ну если кто-нить, который до этого тока глядел в окно, задасцо целью нефть добывать- деньги потребуются- понятно. Но не чтоб добыть- ач тоб ему стало понятно, что в окно смареть не надо было- надо было что-то полезное делать, или учиться на крайняк... Или если захочется свой нефтепровод проложыть, ничо в этом не понимая- тогда денег надо будет очень много- но вот тока к бизнесу непосредственно их расходование иметь отношение не будет. <br>А если взгляды адекватны на реальность и мозги в общем случае работают, и в принципе чел не парится, чтоб спросить более умных, и просто клиентов- то денег не надо буит (своих вкладывать). Это стопудняк.<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101801-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Yar</b>  9.8.2006, 13:55</h4>
+			<p> Макс, какая разница - свои деньги или чужие. Реально и собственные деньги и кредитные - одна фигня, только процент по другому щитается.<br><br>Деньги - это топливо бизнеса. Сейчас без бензина мотор не запустить. А в 89 году было можно, потому что куча ресурсов была или совсем бесплатной или почти ничего не стоила. <br><br>Расскажы как пароход плавал за бесплатно :-) 
+			<br />
+			<!--IBF.ATTACHMENT_101802-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Kateyka</b>  9.8.2006, 14:16</h4>
+			<p> Чужие деньги дают тем, у кого есть свои.  
+			<br />
+			<!--IBF.ATTACHMENT_101805-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Kateyka</b>  9.8.2006, 14:21</h4>
+			<p> А точнее, не дают, а продают. Ибо деньги стоят денег. 
+			<br />
+			<!--IBF.ATTACHMENT_101806-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Старый Горнолыжник Хенк</b>  9.8.2006, 14:55</h4>
+			<p><!--QuoteBegin-depo_broker+9.08.2006, 13:25--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (depo_broker @ 9.08.2006, 13:25)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> Для-старта-бизнеса-деньги-не(&#33;)-нужны. <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> Готов подписаться под этим двумя руками - без наличия толковой бизнес-идеи вписываться в более-менее серьезное дело смысла нет.<br>Касательно многогранности Сбербанка: оно, канешна, мобыть и так, но не для рядового обывателя... 
+			<br />
+			<!--IBF.ATTACHMENT_101812-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  9.8.2006, 17:43</h4>
+			<p> про деньги на старте бизнеса- предлагаю продолжыть по крайне мере не здесь- а то совсем уж и оффтопик- и, вроде, ж бизнес канфа есть спецом для этого. Ну или тему переместить туда- и давайте продолжым, если есть интерес... Не чтоб поприпираться- а чтоб позиции прояснить- мне мнение уважаемых участников хотелось бы лучше понять- а то на первый взгляд прям никак не вяжется с моим пониманием реальности..<br>Про Сбер чиста добавлю- для бабушек-пенсионерок- супер, и для народа, класса Андрея Вавилова, Сулеймана Керимова и в их уровень- не придумать ничо лучше, чем Сбер. А мы, выходит, не сказать средний-  ну, типа &quot;промежуточный&quot; класс. Для нас- все многообразие банков, примерно 1100-1200 где-то остается на сегодня в Рассее :-).<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101853-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  9.8.2006, 18:06</h4>
+			<p><!--QuoteBegin-depo_broker+9.08.2006, 18:43--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (depo_broker @ 9.08.2006, 18:43)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> Про Сбер чиста добавлю- для бабушек-пенсионерок- супер, и для народа... <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> Не понимаю я, чего там &quot;супер&quot; -- стоять регулярно в очередях немеряных? Если вместо клуба, для общения -- кто на теннисе/гольфе, кто в очередях оных -- тогда да.<br><br>Есть у меня в Сбербанке счет. Может, даже два, если не потерял сберкнижку еще одну. Сделан один то ли для возврата подоходного налога от квартиры, то ли еще для чего-то похожего, уже давно. Второй -- и не упомню, для чего. Там даже какие-то деньги лежат, не помню, сколько-то тысяч рублев. <br><br>Несколько месяцев назад пришло мне заказное письмо, что придите, пож., для переоформления счета на какой-то другой счет. Ну, я честно раза три в это отделение заходил на протяжении этих нескольких месяцев. Каждый раз видел какие-то неохватимые взглядом, депрессивные, навевающие воспоминания о СССР и чувство глубокой безисходности, очереди. Есс-но, разворачивался и шел дальше -- в гробу я видел там стоять, пусть банк сей высокоэффективный наварится на моих тыщах руб РФ. Положительно не понимаю, как люди могут там стоять. Разве что действительно психологические/социальные факторы какие-то, внебанковские.<br> 
+			<br />
+			<!--IBF.ATTACHMENT_101857-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  9.8.2006, 18:43</h4>
+			<p> наверное сегодня пенсионерам, кто не разбогател для тенниса и гольфа, альтернативы сберу, поликлиникам и коридорам органов власти, просто нет. Ну где потусоваться, да просто пообщаться? Я не сказал, что это хорошо так, как сейчас, я сказал, что это супер (с учетом реалий сегодняшних). Ибо наши сегодняшние пенсионеры выросли в коллективах- начиная с коммуналок и колхозов, где все на виду, и заканчивая различными эффектами типа комсомола-партии и праздничных демонстраций. Они выросли, общаясь, не имея лишней копейки за душой- это был вообще говоря рецепт выжывания, такой был мир вокруг них. А сейчас у кого-то семьи нет, кто-то просто беден, у кого-то дети разъехались- че им делать, на луну чтоле выть? Их ещо много, они выросли иногда в бараках, и совали носы друг другу в личную жызнь, а про то, что кухарки должны управлять страной я уже просто не буду. Хорошо ещо, что есть Сбер да почта и очереди за пенсией- пообщаться с соседями, ровесниками можно лишний раз. Социализм вообще прошел в очередях. А ведь чем старше становишься- тем сильней распирает от гениальных идей(по себе чувствую:-))- а с кем пообщаться, с кем поделиться? А если работу отнять?Тут уже реально не до шуток.<br>Вон скиспбру собрались на озере- все кто был, сияют, рады друг друга в аське увидеть, а кто не был, типа меня- просто мечтают в следующий раз, чтоб удалось вписаться... И это мы- у нас и работа, и тырнет, и здоровье ещо позволяет на лыжах кататься, и семьи, и ровесники почти у всех, все близкие кореша (за редчайшыми исключениями) жывы- а старшым- каково?- мне просто неловко сравнивать, честна гря... Как они еще держатся вообще слабо себе представляю.<br> То есть недооценивать  пользу общения в очередях я бы не стал- ещо неизветсно как будут выкручиваться те, из нашего поколения, кто дожывет до этой самой пенсии. <br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101859-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Птаха</b>  9.8.2006, 18:48</h4>
+			<p><!--QuoteBegin-Старый Горнолыжник Хенк+9.08.2006, 14:55--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (Старый Горнолыжник Хенк @ 9.08.2006, 14:55)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> <!--QuoteBegin-depo_broker+9.08.2006, 13:25--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (depo_broker &#064; 9.08.2006, 13:25)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> Для-старта-бизнеса-деньги-не(&#33;)-нужны. <!--QuoteEnd--></td></tr></table><div class='postcolor'><!--QuoteEEnd--><br>Готов подписаться под этим двумя руками <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> И я.<br>Для начала бизнеса нужна некая константная величина (ну, допустим, 1), которая равна произведению Х на У, где Х- количество денег, а У - количество мозгов. Чем меньше мозгов, тем больше надо денег. А если мозгов хватает, необходимое количество денег начинает стремиться к нулю... Как подтверждение, могу сказать, что абсолютное большинство из нашей универовской компашки процветает, остальные отнюдь не в стесненных обстоятельствах. Всё-таки мозги - это весчь  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo-->  Из теХ, кто имел порядочно денег, родительских или иных, процветает ... ну хорошо, если простое арифметическое большинство, остальные в глубоком ауте. Еще хороший повод, кроме избытка ума, ситуация полного гуано, за которую ты тем не менее в ответе. Это в основном женский вариант, они как-то более скромные и совестливые, что ли...  <!--emo&:rolleyes:--><img src='http://www.ski.spb.ru/conf/html/emoticons/rolleyes.gif' border='0' style='vertical-align:middle' alt='rolleyes.gif' /><!--endemo-->  Начинают проблему решать, а когда она уходит, инструмент для решалава остается и продолжает чеканить монеты.<br><br>Про страховку. Сейчас я скажу циничную гнусность, но лучше услышать ее до, чем после - страховать свою жизнь в чью-то пользу значит вводить своего ближнего в ненужный соблазн и ничего больше.<br><br>Про пропавшие денешки родителей. Я бы тоже повздыхала, и другому посочуйствовала. Жаль, как бы это поясней сказать, не пропавших денег и возможностей, а пропавшего труда и надежд родителей и вообще какого черта, пусть уж лучше протратит кто-то из близких на свои бизнес-эксперименты, чем наше неправедное госудаство, которое сколько не отнимет у сограждан - всё ему мало и не впрок.<br><br>Про Сбербанк. Гнусная совковая лавочка. Внешторг рулит. 
+			<br />
+			<!--IBF.ATTACHMENT_101860-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Yar</b>  9.8.2006, 20:26</h4>
+			<p> Макс, ты про каких пенсионеров ваще? Те пенсионеры, с которыми ты в одной очереди 15 лет назад стоял, они уже почти все умерли, к сожалению. А нынешние, им тогда типа 50-60 лет было, вполне себе бодрячки. <br><br>Так что не в пенсах дело и не в желании общаться в очереди, а в том что сбер работу с розницей наладить не может. А народ прет туда по привычке и из соображений географической доступности. При том сбер кладет на них с большим прибором на самом деле, как всегда и делал. Да и я бы клал, раз хавают такое отношение. 
+			<br />
+			<!--IBF.ATTACHMENT_101866-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  9.8.2006, 22:03</h4>
+			<p> У меня есть дедушка и бабушка, которым далеко за 80. Бабушка почти не ходит, дедушка еще весьма бодр, хотя зрение начал совсем терять. Давеча возил их в сберкассу, ибо чтобы дедушка мог получать бабушкину пенсию, надо бабушку привести в сберкассу оформить доверенность... Это писец... Я не знаю кому там из пенсионеров интересно в очереди стоять - таких не видел, хотя там было человек 100 в 6 очередях...<br><br>Мне, чтоб получить выписку по карте тоже там надо постоять... я иногда стою - где-то пару раз в год... тоже кк-то довольного народа не наблюдается... а еще раньше стоял чтоб карту поменять раз в год, ща раз в три года... 
+			<br />
+			<!--IBF.ATTACHMENT_101871-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>nvg_pegas</b>  9.8.2006, 23:19</h4>
+			<p>  По поводу Сбербанка..., когда мы зарегистрировали ТОО - встал вопрос о банке, общались с разными, в том числе и со Сбербанком, да, действительно  не  удобно с ними работать (по многим причинам), в конечном итоге выбрали Северный ТОрговый <!--emo&:down:--><img src='http://www.ski.spb.ru/conf/html/emoticons/down.gif' border='0' style='vertical-align:middle' alt='down.gif' /><!--endemo--> . Все шокОладно было три года,  до тех пор.., пока не стали банкротами <!--emo&:down:--><img src='http://www.ski.spb.ru/conf/html/emoticons/down.gif' border='0' style='vertical-align:middle' alt='down.gif' /><!--endemo-->, Банк  &quot;рухнул&quot; ... И вот на &quot;остатках&quot; пришли в Сбербанк... , почему сразу туда не пришли??? <!--emo&:(--><img src='http://www.ski.spb.ru/conf/html/emoticons/sad.gif' border='0' style='vertical-align:middle' alt='sad.gif' /><!--endemo--> ПРопавшего  в Северном Торговом не вернули, практически ВСЕ деньги  потеряли...,   потом  с трудом  рассчитались с поставщиками и дело закрыли... <!--emo&:(--><img src='http://www.ski.spb.ru/conf/html/emoticons/sad.gif' border='0' style='vertical-align:middle' alt='sad.gif' /><!--endemo-->  Так, что  банкоФФ много и все разные..., не Сбербанк виноват в дефолте и не ОН опустил пенионеров, а вот если бы тогда, работать стали с ним.., то и дело  не &quot;упало бы&quot;....<br>С Уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101872-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  10.8.2006, 9:24</h4>
+			<p> Как пенсионеры живут- в последнее время видел тока со стороны. <br>Боюсь, что тех, кто толкается в очередях, поддержывает в жызни та ярость, которой они и заряжаются там (помните О&#39;Генри?). Кстати, в плане оздоровления- вполне рабочий, в определенных условиях, инструмент- сам иной раз использую, только для этого в очереди не лезу:-).<br>Мне думается- что реально изменить отношения в таких масштабах, чтоб пенсионеры не толкались бы в очередях счас нереально по многим причинам. Кто может- тот уже давно не толкается. А кто не может не толкаться тому надо оставить такую возможность, пока ему может потребоваться. <br>Тут не только общение- тут и рентабельность обслуживания такого дикого количества мелких платежей и просто неимоверных объемов кассового обслуживания, содержание такого кол-ва недвижки со специальными требованиями и прочая фигня. А сделать с этими деньгами, грубо гря, что-то достаточно доходное, не раздувая затраты ещо больше, просто нельзя. Изменится это, куда деваться,- изменится...<br>Северный Торговый- это, конечно, да.. Это попадос чуть ли не номер один в новейшей истории в России. На мой взгляд даже круче 98 года. Сочуствую- я тогда на нем не попал, потому что денег вообще не было, если бы был хоть рубль- обязательно держал бы там на счете. <br>В Сбере есть отделения для обслуживания ВИПарей, их немало- там нет очередей, приятные интерьеры, вежливые девочки и мальчики. Но глубинная тональность обслуживания такая же- что-то не нравится?- мы не навязываем- банков много. Даже оттуда по слухам народ, с трудом втиснувшийся на обслужывание, соскакивает в последнее время пачками. В Сбер ходят не за гибкостью и вежливостью обслуживания. На мой взгляд- Сбер- это банк, который, &quot;сможет&quot;, что бы ты не придумал. Вот сложылись обстоятельства, или ты придумал что-то грандиозное- он это сможет. Более того, в Сбере ты по-настоящему гарантирован(&#33;) от такой мелкой неприятности, как внезапное желание хозяев банка куда-то соскочить с остатками бабла- ну мало ли, что могло произойти :_)).  Тут Пегас абсолютно(&#33;) прав. Можно кидать в Сбер камни за 1992 год- но имхо- это счас уже непрально :-))<br>Ну, Внешторг- да, там всегда был сильный корпфин, там Геракл после окончания института работал, хотя его папа был тогда 1-м зампредом Госбанка СССР. Кстати, папа Геракла- один из создателей(&#33;) нынешней мировой(&#33;) финансовой системы, он в Бреттон-Вудской конференции участвовал, если я ничо не путаю. Хм, вернемся к Внешторгу- обслуживали они пральных клиентов и &quot;школа&quot; там будь здоров у всех- вапросов нет- но загони туда счас  пенсионеров получать пенсии- и через полгода, если они протянут столько вообще, станет ещо хуже, чем в Сбере. Кстати тоже- хозяева не соскочат :-)) То есть- хорошый банк.<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101887-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Птаха</b>  10.8.2006, 9:54</h4>
+			<p> Пигасу. Так надо выбирать пральный банк и держать нос по ветру&#33; Когда Северный Торговый накрылся, наши денешки лежали в Промстройбанке, который здравствует и до сих пор. А Северный схавал денешки двух фирм моих старых приятелей, которым я дааавно говорила, что вот не ндравится мне этот банк. А мне отвечали типа, петька, не ешь - ты ж понимаешь, никто и никогда не признает, что какая-то баба может дело говорить  <!--emo&&lt;_&lt;--><img src='http://www.ski.spb.ru/conf/html/emoticons/dry.gif' border='0' style='vertical-align:middle' alt='dry.gif' /><!--endemo--> <br>Из ПСБ ушли в СБ только по одной причине - он переехал далеко, а когда наличку надо каждый день сдавать, это большая разница, тратит сотрудник на дорогу до банка ежедневно 15 минут или полтора часа. Ну это было беееееее.... Про СБ я могу анекдотов рассказать примерно столько же, сколько по таёту  <!--emo&;)--><img src='http://www.ski.spb.ru/conf/html/emoticons/wink.gif' border='0' style='vertical-align:middle' alt='wink.gif' /><!--endemo--> <br><br>Брокеру. Знаешь, Макс, это две большие разницы - создать свой банк как новый самостоятельный бизнес или прихватизировать то, что создавалось годами на народные денешки. Скажем прямо, если бы сбер, такой, как есть, со своими скобарскими замашками пытался бы развиваться как остальные, он накрылся бы медным тазом за полгода. На него работал огромный начальный капитал - и не им созданный - и некая ригидность мышления. Что еще раз, к нашему разговору о деньгах для начала бизнеса - да уж, избыток начального капитала способен только тормозить развитие. По поводу того, кто чего сможет, когда понадобиться много - так вот, Внешторг смог чего СБ не смог и вааще никто не смог, за что ему респект немерянный, а разные приятности текущего обслуживания оценили уже позже. Однако, праздник на улице Сбербанка похоже понемногу заканчивается и придется им что-то менять, а именно - приняли (или собираются принять) разрешение крупным сетевым универсамам типа ОКея или Ленты принимать текущие платежи. И имхо когда туда пойдут эти денежные потоки, сберу просто придется подсуетится, чтобы не отпугивать оставшихся клиентов. 
+			<br />
+			<!--IBF.ATTACHMENT_101890-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  10.8.2006, 10:08</h4>
+			<p> С оценками перспектив, да и в целом, соглашусь- примерно также оно и мне видится. Но, важное, на мой взгляд, замечание. Не у Сбера отнимут коммунальные платежы- а он уже давно норовит от них как-нить избавиться. Да и технологии давно уже шагнули далеко от тех времен, когда баланс Сбера на бумаге вручную сводили. :-))<br> К примеру, в Новгороде- недалеко от нас- основной объем коммунальных платежей обслужывает(обслуживал, во всяком случае) Славянбанк. И все путем. Тьфу-тьфу-тьфу...<br>Не праздник в Сбере- им довольно тяжко :-)) это только со стороны кажется, что они в шоколаде купаются- а на самом деле это не совсем так. Чиста штрих- как насчет управляемости такой структуры, если попытаться обойтись совсем без наработок министерства обороны? :-)).... Про ВТБ- ну на международных расчетах он от рождения специализировался- вестимо, может быть такая фигня, которую он сделает сходу- например с ВВзовками, а в Сбере умаешься уговаривать, даже если точно знаешь кого :-)) <br>С уважением<br>ЗЫ я бы ещо добавил к твоей замечательной формуле. Непринципиальное замечание, но всеже- количество мозгов я бы расматривал, как некий интегральный показатель- то есть мозги, которые могут быть подключены- это как свои, так и мозги грамотных старшых товарисчей, акционеров,  и, &quot;до кучи&quot;, &quot;мозги&quot; в виде рабочих ноу-хау из отрасли, в которой чуть раньше довелось потрудиться одниму из создателей. То есть бизнес создать- это не только привилегия &quot;конченных гениев&quot;- это результат добросовестности в глубокой подготовке. То есть даже если я сам- дятел, но если мне удалось сконцентрировать надкритическую массу мозгов во всех их проявлениях- деньги мне могут понадобиться очень нескоро :-)) 
+			<br />
+			<!--IBF.ATTACHMENT_101893-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Птаха</b>  10.8.2006, 10:18</h4>
+			<p> Макс, поправочка, про гениальность - это не ко мне  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> , я проходила по второму варианту - в какой-то момент оказалась одна с двумя тяжело больными иждивенцами на руках и зряплатой стажера-исследователя толи 5 толи 8 долларов  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> . Ну а дальше привычка делать то, что делаешь, как можно лучше и поехало. Эх, об одномжалею, что в тот момент у меня уже была нормальная жилплощадь - оказалась бы в коммуналке или вообще на улице - успех был бы больше  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> <br>Про себя неинтересно, но лично знаю пару-тройку куда более потрясающих историй - это к тому, что из любого гуано всегда есть достойный выход. 
+			<br />
+			<!--IBF.ATTACHMENT_101896-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  10.8.2006, 10:28</h4>
+			<p> Подписываюсь.<br>С уважением, Макс 
+			<br />
+			<!--IBF.ATTACHMENT_101899-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>kadavr</b>  10.8.2006, 11:56</h4>
+			<p> 2Птаха<br>Ты понял меня, птиц&#33;&#33;&#33; ))) 
+			<br />
+			<!--IBF.ATTACHMENT_101911-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  10.8.2006, 12:13</h4>
+			<p> ВИПы из сбербанка валят очень активно по многим причинам. Когда народ с составе делегации был в иппонии и не смог там расплатиться своими голдовыми карточками больше одного раза, то оттудова сразу свалили все... свалили в райфайзен. А не смогли потому, что сбербанк увидев что в японии сняли деньги со счетов автоматически заблокировал карты - шоб деньги не пропали... Так же там народу предложили постоять в очереди с бабушками чтоб снять поллимона нала (рублеми) со своего счета. Не, понятно, что это все фигня и такие кленты сбербанку нафик не нужны, ему главное очередь сорганизовать чтоб пенсионерам не скучно было итти по жизни...<br><br>Ну и естессно надо забыть тех, кому деньги в 90х годах просто не отдали со счетов - нах им деньги отдавать, лучше евроремонт в сберкассах замутить, небоскроеб охфисный построить, а вкладчиков своих можно всегда нах послать - государство в обиду свой банк не даст&#33; 
+			<br />
+			<!--IBF.ATTACHMENT_101915-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>nwa</b>  10.8.2006, 12:44</h4>
+			<p><!--QuoteBegin-АнтонА+10.08.2006, 12:13--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (АнтонА @ 10.08.2006, 12:13)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> Когда народ с составе делегации был в иппонии и не смог там расплатиться своими голдовыми карточками больше одного раза <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> Эта, не пугай миня. Хотя дозвониться в службу поддержки сберовской визы нереально. 
+			<br />
+			<!--IBF.ATTACHMENT_101917-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  10.8.2006, 12:51</h4>
+			<p> Про ставшый мне практицки родным за эти пару дней сбер :_))<br>Йесли Сбер вдруг решыт в очередной раз кинуть вкладчиков, поверьте- ЗАО &quot;Райффайзенбанк Австрия&quot; с уставняком 1 ярд рублей (всего-то&#33;) тоже в стороне не останется. Вижу единсные условия, когда Сбер сольет, а второй устоит и расплатится- в случае Австрийской аккупацыи нашей страны- гы, чур меня... :-)))<br>Ярдом рубля нерезы пожертвуют вообще неглядя, тем паче что они его уже отбили не  один раз, если что серьезной приключится. Как это было в 98. Именно поэтому некоторые вполне приличные западны банки заходили в нашу страну два раза :_)) то есть открывались и начинали работать за последние 12 лет уже не один раз, называть не буду :-).<br>С уважением<br>ЗЫ против Райффайзена ничего не имею- даже очень  &quot;за&quot;. :-)) и ещо впс был на открытии его фила на Мойке когда-то давно. зачотно кстате, единсный банк с адресом- &quot;Мойка&quot;:-)) 
+			<br />
+			<!--IBF.ATTACHMENT_101918-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  10.8.2006, 12:58</h4>
+			<p> Быстрей бы уж если не оккупация, так хоть нормальная работа иностранных банков тут. Глядишь, со временем пошла бы в массы и суперсовременная  технология отсылки чеков в письме по почте, без похождений хрен-те куда с заполнением пары килобайтов цифр в кучу полей, во имя того, чтобы честных 100 руб какой платы куда перевести... 
+			<br />
+			<!--IBF.ATTACHMENT_101920-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Marmotte</b>  10.8.2006, 13:07</h4>
+			<p> Про сбербанк.<br>Давно ето было. Когда СБ сделал свои первые ЕС/МС и начал их рекламировать типа по ТВ. Пшел я, завел карту, думаю, удобно, СБ в соседнем доме, не то, что ПСБ... Положил денюшку, подхожу к банкомету (развращенный ПСБ), а он грит - нет денех&#33; Иду к тетке - контролерше, спрашиваю, а баппки где? Она глаза вылупила, грит - ты чё? Баппки упадут тока через 3 (ТРИ&#33;&#33;&#33;) рабочих дня. Больше я туда денег не носил. А из карточки сделал одну из лопастей вертушки на даче.<br><br>ЗЫ<br>А Российский Кредит мне баппки вернул.<br>Потому у мнея карточки Импекса... 
+			<br />
+			<!--IBF.ATTACHMENT_101924-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  10.8.2006, 13:09</h4>
+			<p> по роду работы, с иностранными банками и с &quot;иностранными банками&quot; опыт сотрудничества имею. И такой романтический настрой насчет того, что вот-де они все умеют и делают прально у меня развеялсо где-то году в 96. Через пару месяцев после начала сотрудничества... Чего и Вам желаю на полном серьезе. <br>И там есть сайты-конференции обманутых вкладчиков и недовольных клиентов причем по-серьезному недовольных- потерянные суммы, взысканные двойные и тройные тарифы, котрые хрен вернешь, стукачество в налоговые органы(в америке разбив одного платежа на две суммы, только чтоб не заполнять лишний формуляр уведомления налоговиков- это не шутка- загреметь можно надолго) и тд.<br>Наши банки ничем не хуже &quot;западных&quot; и западных. даже гораздо лучше- но они ещо сырые, как инструменты.<br>Кстати, не нужны нам эти дурацкие отсталые технологии с чеками- ручной работы при обращении просто пц- ведь тырнет уже давно есть- пользуйтесь на здоровье. У меня счас почти ко всем моим счетам есть тырнет доступ, отовсюду могу любые платежки, не выходя из дома или офиса, отправлять. К одному счету нет доступа- до банка дойти не могу никак :_))<br>С уважением<br>ЗЫ Кстати, Импэкс- уже дочка Райффайзена. Может и к лучшему. 
+			<br />
+			<!--IBF.ATTACHMENT_101926-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  10.8.2006, 13:15</h4>
+			<p> Ну, у меня особо романтического настроя нет. Зато есть практический опыт, как простого клиента-обывателя, жившего в US и в РФ. <br><br>Одно скажу -- платежи безналом там мне было заметно проще делать <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--><br><br>Если серьезно -- я не знаю, что должно произойти здесь, чтобы весь этот маразм, через который надо пройти, чтобы безналом что-то оплатить, исчез. Но чувствую, что конкуренция на равных с мировыми банками -- это хорошо. Так же как и с производителями автомобилей, и т.п. Отмечу, конечно, что я рассуждаю не с позиций &quot;большого бизнеса&quot; или типа того, а чисто как клиент -- частное лицо или небольшая фирма, без всяких банковских заморочек, лишь бы система свои базовые функции выполняла -- платежи там проходили, деньги мои можно было получить, и т.д.<br> 
+			<br />
+			<!--IBF.ATTACHMENT_101928-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  10.8.2006, 13:27</h4>
+			<p> да нет здесь никакого маразма, делается все наилучшим из возможных сегодня способов. А когда кажется, что это все маразм с точки зрения потребителя- так есть ещо точки зрения- например точка зрения и реалии исполнителя. Йа их-исполнителей не отмазываю- там есть куда стремиться- но и пользователи нашы- это тоже тот ещо подарок. <br>Давно ли у нас стали кредиты на покупку чего-либо(да хоть и машын) брать люди? А возвращать? - ну я понимаю, что забегаю вперед- но всеже- как насчет культуры возврата? А уж про появление потребности безналом что-то оплатить :-)) у меня- относительно недавно такие потребности возникли  :_)...<br>С уважением<br> 
+			<br />
+			<!--IBF.ATTACHMENT_101929-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  10.8.2006, 13:31</h4>
+			<p> Макс, ты все время путаешь опыт работы с банками и опыт общения клиента мелкого с банком. Но и про работу - у нас были счета в сбербанке и тогда же всем учредителям сбербанк выдал голдовые карты бесплатно и т.п. В резалте из сбера мы унесли все свои счета - постоянные проблемы,  постоянные задержки, постоянный геммор и разбирательства, непрофессионализьм персонала (на уровне общения с нами, как клентами банка) задолбали. Так же все, кроме меня закрыли там свои личные счета и карты и тоже не от жизни хорошей, а от случавшихся попадоловов с невозможностью заплатить деньги (у меня раньше таких случаев не было, но не верить своим партнерам не привык). Я вот тоже все не верил пока две недели тому назад не случилось такое, что мне в режиме онлайн говорят, что мою карту не видит система мастеркард и грят, что карту надо перевыпустить, а служба поддержки банка говорит, что у них просто нет связи со сбербанком, посему запросы в банк не доходят. Я потратил время и силы и вроде разобрался - процессинг сбербанка не поддерживает текущую современную систему безопасности, посему все больше и больше проблем будет с ихними картами причем на уровне блокировки карт в системах виза и мастеркард. То есть именно мастеркард решает что карта фуфло и даже не посылает запрос в сбербанк. Если такое происходит с банком, который считает себя ахрененно продвинутым на нашем рынке, то нахрен он мне сдался...<br><br>Я вот в пятницу отправил в сбербанк факс с подробным описанием проблемы и просил мне что-ниь ответить, ибо служба поддержки стоит просто на своем - нет обращений в банк - ПНХ, 13&#33; 169&#33;. Сбербанк и управление пластиковых карт молчит. До конца недели помолчит, закрываю счет нафик и ухожу, бегать за ними не собираюсь больше. 
+			<br />
+			<!--IBF.ATTACHMENT_101930-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  10.8.2006, 13:37</h4>
+			<p> Эк зацепило меня <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--><br><br>Так я ж говорю -- ведь мне все равно, какие реалии у банка и прочих участвующих исполнителей. Я тут рассуждаю как клиент. Если там ручная работа -- ну и славненько, если меня тарифы устраивают, и все более-менее надежно работает -- да хоть на счЕтах они пусть считают.<br><br>А если технологии высокопрогрессивные, но поддержание счета мне стоит дороже, за операцию берется бОльшая комиссия, для перевода денег нужен не один routing number &amp; account number, а тыща взаимодополняющих цифирок с разнообразными аббревиатурами a-la БИК ОКУД КПП ИНН УБЭП КГБ МВД СССР, надо куда-то идти и стоять в очереди (или бухгалтера нанимать для взаимодействия с банком и прочим финансовым миром), и при этом деньги идут две недели -- то мне-то что с их прогрессивности, как клиенту?..<br><br>Да, разумеется мне также все равно, какие тяжелые реалии у кого-то с невозвратом потреб. кредитов -- я их вообще не беру, а если и брал бы, то разумеется смотрел бы на конкретные условия, и если процент 50% годовых или сколько там -- то мне наплевать на то, что это потому, что это у них так мало кто-то чего-то возвращает.<br><br>Также как, например, плевать мне на внутренние дела того, как тяжело жить автоВАЗУ и поэтому я должен у него что-то за &#036;15k купить. Зачем бы это? Когда меня изберут президентом -- я сразу начну заботиться о всех сразу. Или когда будет много лишних денег. И то я бы нашел им более достойное применение...<br> 
+			<br />
+			<!--IBF.ATTACHMENT_101931-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  10.8.2006, 13:38</h4>
+			<p> Макс, фиг с ними с кредитами и возвратами - я просто хочу перевести 250 евро со своего счета на счет хозяев аппартов в австрии. Это писец многосерийный. Я прошу реквизиты, мне присылают название банка и ИБАН. Этого во всем мире достаточно, чтоб перевести деньги, даже одного ИБАНа достаточно. У нас же тупые клерки пучат глазки и грят, что им надо куеву тучу всяких букв и цыфр... Я сажусь за тырнет и вынимаю из просто сети все нужные им цыфры и буквы просто зная ИБАН. В чем проблема, почему они не могут это сделать????? Они же банковские спецы, а не я. Так же и с процессингом и со всем - почему я должен сам объяснять банку банковские технологии????<br><br>Мармот прально написал - полоить деньги на счет в сбербанке - это писец и стояние в двух очередях с бабушками, деньги идут по нескольку дней, получить выписку - это стоять к окошку с бабушками, тырнет протокола у них нет, получить выписку по счету в своем банкомате - 15 рублей - они просто акуели&#33;&#33;&#33;&#33; 
+			<br />
+			<!--IBF.ATTACHMENT_101932-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Kateyka</b>  10.8.2006, 14:48</h4>
+			<p> Гвозди надо заколачивать молотком, а шурупы закручивать отверткой. Можно и наоборот, но неудобно. Сбер - какой же инструмент как и все остальные, надо просто его по назначению использовать. 
+			<br />
+			<!--IBF.ATTACHMENT_101939-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  10.8.2006, 16:54</h4>
+			<p> 2 АнтонА- Почему приходится в Сбере что-то объяснять?- если кратко- потому что ты в Сбере. Йесть банки, где все объяснят тебе. Йесть, где все сделают, ничо не объясняя. Йесть банки, где вообще не сможешь никому и ничего объяснить. Их- почти 1200. А йесть Сбер, йесли угодно- the Sber- феномен то есть. Для чего или для кого он на самом деле хорош, по моему разумению- я уже рассказал. <br>Выражаясь словами Ценителя Красоты- кто сказал, что Вы- клиенты Сбера? :_))<br>Выражаясь более вежливо можно сказать, как Катейка- респект.<br>Знаешь сколько стоит перевод, ну типовой перевод валюты? Для банк-банк- нисколько, и так они бесплатно межбанки и бегают. А вот если западная операционист/ка решыла, что несмотря на формат перевода, это, по ее скромному разумению- клиентский перевод, а не межбанковский- 20 долларов. И поди потом найди эти 20 грина, один отправил 100 000.00 а другой получил 99980.00. При том, что всем известно, что сколько отправлено было столько и должно придти... За расследование этого безобразия придется потерять три-четыре дня(например на отчетную дату) и 30 долларов- не рублей. И это при том, что когда я отправляю, я сршенно точно знаю и понимаю назначение и смысел всех закорючек на этой платежке. Более того, этих платежек уже прошла по этому маршруту иногда не одна тысяча, а то и больше. Банки тоже все весьма приличные- мировой топ 20, можете мне верить. И что? какой вывод можно сделать- не нужны им клиенты- российские банки?.. <br>2 DU Это иллюзия, что как только появится конкуренция- все станет просто замечательно, ВАЗы станут равными мерседесам и будут стоить ещо дешевле. И не надо рассказывать- как замечательно жывется в Штатах- это совсем не подтверждение тому, что ВАЗы сразу станут мерседесами если открыть рынки. Этот бред усиленно внедряли демократы в головы наших людей в перестройку... Имхо, уже пора начинать думать своей головой. Да, случается, что уход клиента к конкуренту &quot;приободряет&quot;, но качество обслуживания и качетсво работы берутся не оттуда. Скажем, в сопромате есть понятие, типа, промежуток упругости- в рамках его действие равно противодействию, и нагрузив, и получив прОгиб, а потом сняв(&#33;) нагрузку- тело вернется в первоначальное состояние- а за пределами этого промежутка- сорри- просто разрушение.... Эффект повышения качества от появления конкуренции- это частный(&#33;&#33;) случай воздействия демократии и свободы на сршенно отдельных людей, в сршенно особых условиях, и в сршенно особых временных рамках... мы взрослые уже, мы уже посмотрели на результаты этих экспериментов в нашей стране- имхо, уже для имеющих глаза уже достаточно, чтоб увидеть и понять, что от чего появляется и от чего в конечном счете зависит..<br>Не конкуренция отнюдь дает нам услуги, которые нам нужны- а платежеспособный спрос формирует желание и возможности эти услуги предоставить. На первый взгляд- разницы нет- а, если всеж подумать, то- разница огромна. Конкуренция работает на улучшение только на страницах  демократических газет, которых, кстати, и в Штатах уже не осталось.<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101950-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  10.8.2006, 17:22</h4>
+			<p> Что такое &quot;демократическая газета&quot; -- не знаю. Газет просто много разных должно быть, озвучивающих разные т.з. Впрочем, в эпоху инета с этим в общем-то проблем нет, ни в штатах, ни здесь. Главное, чтобы у читателя была голова на плечах.<br><br>Зачем приписывать мне слова и причинно-следственные связи, коих я не озвучивал. Есть необходимые и достаточные условия. И я ж не спорю с тезисом, что спрос должен быть, чтобы кто-то захотел его удовлетворнуть.<br><br>Угу, да, свой путь и свои особые правила и законы физики, надо еще про суверенную демократию вспомнить <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--><br><br>Зато можно с большой вероятностью предсказать, что ВАЗы не станут мерседесами, если железный занавес отстроить и пошлину заделать 200%.<br><br>По поводу сбера и проч. -- меня просто несколько удивила логика, что сбер хорош тем, что он предоставляет социальный клуб по интересам. Я знаю ряд людей пенсионного возраста, и знаю, что они думают по поводу этого хоз-ва, если им туда приходится ходить. И знаю, что сам думаю, когда раз в полгода туда захожу, чтобы оптом вперед все разнообразные x-платы оплатить...<br><br>Хотя я понимаю вполне, что кому-то так комфортнее. Понятно что уже отсроенную инфраструктуру и людей не переделаешь, это не гипсокартоном стены выравнять. Также ничего не имею против прагматического подхода про &quot;инструменты&quot;, разумеется. Мне просто этот инструмент зафиг не нужен, надо думать. Ну так я и не обобщал свою т.з. как универсально истинную.<br>Равно как и замечательные &quot;коридоры гос. власти&quot;, еще помню, сколько ходил при оформлении бумажек на землю/дом -- очень эффективный процесс, круче сбербанка. Чувствуются общие корни. Жаль у меня не спрашивает никто, брать налоги на поддержание этого всего добра или нет.<br> 
+			<br />
+			<!--IBF.ATTACHMENT_101954-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  10.8.2006, 17:38</h4>
+			<p> Мне показалось, что Вы предположыли, что конкуренция с иностранными банками и мировыми автопроимзводителями непременно скажется благотворно на качестве обслуживания клиентов и качестве изготовления автомобилей, или мне показалось? <br>Надеюсь, что всеж мне показалось.<br>Ибо ваши постинги производят впечатление слов человека в самом деле умного и, что самое важное- думающего. А лозунги времен начала перестройки сильно контрастируют с этим впечатлением.<br>Не к Вам, а так, в воздух скажу, что когда кто-то предлагает такие замечательно простые и очевидные выходы из довольно сложных проблем- я слышу/вижу отнюдь не современную и своевременную демократию, а отзвук лозунга &quot;каждая кухарка может и должна управлять страной&quot;. Поуправляли уже, имхо- достаточно. Разве уточню- что по-моему управляли в 20-е годы да в начале 90-х,- так уж получилось- зато прикурили все. В промежутках, имхо, по большей части управляли уже те, кому мозгов Бог выделил побольше. Не без трудностей, но и не без настоящих успехов.<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_101959-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  10.8.2006, 17:51</h4>
+			<p> Про автомобили и проч. я же сказал -- зачем производителю что-то улучшать, если и так берут, благодаря разнице в цене за счет заградительных пошлин. Банальная арифметика, равно как и то, что &quot;платежеспособный спрос нужен, чтобы кто-то что-то сделал&quot;.<br><br>Поэтому &quot;из общих соображений&quot; конкуренция -- скорее хорошо, чем плохо (если не рассматривать меня как производителя на конкурентном рынке). Но, повторюсь, я не спорю, что это не единственный определяющий фактор, чего уж тут упрощать.<br><br>Насчет демократии и всего остального -- это, как понимаете, большая и сложная тема. И есть у меня подозрение, что больная для российского общества по большому ряду причин, поэтому этих самых однозначных предложений и выходов от меня не дождетесь <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> Как говорится, поживем-увидим, даже интересно.<br><br>Да и фиг-то с ней, а то топик этого издевательства боюсь не выдержет.<br><br>Насчет &quot;прикурили все&quot; -- ну не знаю, я как-то довольно спокойно жил и работал и тогда и сегодня (вот только сегодня напрягает &quot;нефтяной дождь&quot; и вытекающие следствия, т.к. я от кормушек на него завязанных далек).<br> 
+			<br />
+			<!--IBF.ATTACHMENT_101961-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  10.8.2006, 17:58</h4>
+			<p> Ладна- мир-дружба-жувачка-фестиваль. :-))<br>Антр нуа- экономика- не менее сложный вопрос, чем демократия <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo-->) посему предлагаю одновременно с демократией замять и обсуждение действенных экономических механизмов- ок? :_)))<br>С уважением<br>ЗЫ предлагаю сверить взгляды как-нить в оффлайне :-)) чтоб времени было больше и стенограммы чтоб не оставалось :_))<br> 
+			<br />
+			<!--IBF.ATTACHMENT_101962-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  10.8.2006, 18:09</h4>
+			<p> Согласен, тем более я, скажем прямо, не сильно большой экономист, я больше по устройствам електронным разным, программки там, математика, все такое.<br><br>Что-то я просто завелся. Да, как-нибудь было бы интересно встретиться. Меня вообще не покидает впечатление на протяжении последних нескольких лет, что сия конференция -- оч. полезный и интересный ресурс, в плане общения, а не только про лыжи. Такой любопытный социальный срез, я бы сказал...<br> 
+			<br />
+			<!--IBF.ATTACHMENT_101963-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>nvg_pegas</b>  10.8.2006, 19:03</h4>
+			<p> <!--QuoteBegin-Птаха+10.08.2006, 9:54--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (Птаха &#064; 10.08.2006, 9:54)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin-->Пигасу. Так надо выбирать пральный банк и держать нос по ветру&#33; Когда Северный Торговый накрылся, наши денешки лежали в Промстройбанке, который здравствует и до сих пор. А Северный схавал денешки двух фирм моих старых приятелей, которым я дааавно говорила, что вот не ндравится мне этот банк. А мне отвечали типа, петька, не ешь - ты ж понимаешь, никто и никогда не признает, что какая-то баба может дело говорить&nbsp; <!--emo&&lt;_&lt;--><img src='http://www.ski.spb.ru/conf/html/emoticons/dry.gif' border='0' style='vertical-align:middle' alt='dry.gif' /><!--endemo--> <br><!--QuoteEnd--></td></tr></table><div class='postcolor'><!--QuoteEEnd--><br>Многоуважаемая Птаха, не зря есть поговорки:<br>&quot;Знал бы прикуп - жил бы в Сочи&quot; и &quot;Если бы знал где упасть - соломки бы подстелил&quot;...<br>Фишка в том  что все три года все было архи хорошо и только последняя сделка  не была  оплачена банком <!--emo&:down:--><img src='http://www.ski.spb.ru/conf/html/emoticons/down.gif' border='0' style='vertical-align:middle' alt='down.gif' /><!--endemo--> <br> Получил товар на условиях отсрочки платежа..., потом долго &quot;разбирались&quot; с &quot;москвичами&quot; - договорились, но вся маржа ушла  в счетчик... и еще &quot;немного&quot; не хватило..., а все было прекрасно и до последнего момента проблем ни каких не было. <br><br>А по поводу &quot;никто и никогда не признает, что какая-то баба может дело говорить  &quot; имею собственное мнение - чушь говоришь  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> <br>С Уважением  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo-->  
+			<br />
+			<!--IBF.ATTACHMENT_101966-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Птаха</b>  11.8.2006, 10:50</h4>
+			<p><!--QuoteBegin-nvg_pegas+10.08.2006, 19:03--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (nvg_pegas @ 10.08.2006, 19:03)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> имею собственное мнение - чушь говоришь  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> <br> <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> Гыыыыыыыы&#33; Ой, не могу&#33; Пегасушка, ты хоть понял, что написал? <!--emo&:lol:--><img src='http://www.ski.spb.ru/conf/html/emoticons/laugh.gif' border='0' style='vertical-align:middle' alt='laugh.gif' /><!--endemo--> <br>Канешна, канешна, я чушь говорю&#33; Об том и был спич  <!--emo&:lol:--><img src='http://www.ski.spb.ru/conf/html/emoticons/laugh.gif' border='0' style='vertical-align:middle' alt='laugh.gif' /><!--endemo-->  тока потом не плачь о том, умный ты наш, где твои денешки  <!--emo&:lol:--><img src='http://www.ski.spb.ru/conf/html/emoticons/laugh.gif' border='0' style='vertical-align:middle' alt='laugh.gif' /><!--endemo-->  
+			<br />
+			<!--IBF.ATTACHMENT_101997-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Птаха</b>  11.8.2006, 11:06</h4>
+			<p><!--QuoteBegin-depo_broker+10.08.2006, 17:38--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (depo_broker @ 10.08.2006, 17:38)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> Мне показалось, что Вы предположыли, что конкуренция с иностранными банками и мировыми автопроимзводителями непременно скажется благотворно на качестве обслуживания клиентов и качестве изготовления автомобилей, или мне показалось? <br>Надеюсь, что всеж мне показалось.<br>Ибо ваши постинги производят впечатление слов человека в самом деле умного и, что самое важное- думающего. <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> Макс, мне показалось, или ты действительно считаешь, что конкуренция не влияет на качество обслуживания и  товаров? Надеюсь, что показалось, ибо ваши постинги претендуют ээээ на впечатление, что автор разбирается в экономике  <!--emo&:lol:--><img src='http://www.ski.spb.ru/conf/html/emoticons/laugh.gif' border='0' style='vertical-align:middle' alt='laugh.gif' /><!--endemo-->  <br>Давай не будем прятаться за тавтологию, ладно?  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo-->  Да, конкуренция не сделает ваз мерседесом - исключительно по причине отсуствия принципиальной возможности, так же, как женщины даже втроем не родят одного ребенка за 3 месяца  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo-->  Зато в отсутствии конкуренции ваз был бы куда хуже, а стоил как мерс и в очередь на 10 лет... Скажем так, у нас настало боль-менее прилично, а кое-где даже отлично именно там, где конкуренция в принципе возможна и легко досягаема. Пищевая промышленность, общепит, etc., etc. Да, с банками сложнее, ибо открыть банк тяжелее, чем кафе  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> , однако вот разговор 2недельной давности, в сбере:<br>- А почему у вас у второй фирмы счет во Внешторгбанке?<br>- Да просто они могут нам сделать то-то и то-то, а кроме них, больше никто. Кстати, и вы тоже...<br>-Да...<br>Через 3 дня звонок:<br>-Знаете, мы посовещались, и решили, что мы тоже можем вам это сделать...<br><br>Окак&#33; Тока конкуренция, и никак иначе 
+			<br />
+			<!--IBF.ATTACHMENT_101998-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  11.8.2006, 11:06</h4>
+			<p> Макс, ты будешь смеяться, но я действительно понял, что я не клиент сбера и я оттуда реально ухожу, причем совершенно без обид на сбер.  К сожалению, он не удовлетворяет моим потребностям и у меня нету ни одной задачи для которой мне нужен данный инструмент. Денег я там никаких не потерял вроде <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> Кредиты мне не нужны ни для себя, ни для бизьнеса - мнеб только деньги хранить и платежи асуществлять <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> Вот такой вот я клиент <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--><br><br>Вопрос с оплатой того билета, который не смог оплатить по карте сбербанка решился очень просто - пошел в балтийский банк, открыл счет и карту бесплатно, позвонил в эйрберлин, сказал номер новой карты и все, деньги ушли.<br><br>Скорее всего уйду в райф или в импекс. в импексе очень нравится годовая медицинская страховка на год по всем странам за 17 баксов - нуль геммороя по визам и как раз обслуживание карты отбивается - одно неудобство делать надо одновременно с годовым шенгеном, но я с ними поговорю еще об этом. Там же еще по текущим счетам процентов 4-5 вроде платют, если не больше... если они бы еще и карту года на три выдали - былоб вааще супер-пупер ... шоб в банк не ходить раз в год менять карту... 
+			<br />
+			<!--IBF.ATTACHMENT_101999-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Птаха</b>  11.8.2006, 11:14</h4>
+			<p><!--QuoteBegin-АнтонА+11.08.2006, 11:06--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (АнтонА @ 11.08.2006, 11:06)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> в импексе очень нравится годовая медицинская страховка на год по всем странам за 17 баксов - <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> А у меня тотгда вопрос - если импекс &quot;дочка&quot; райфа, почему сам райф этого не делает? <br><br>ЗЫ А КАтейкин пример был бы хорош, если бы этот молоток не развешивал повсюду свои фотографии с надписью &quot;отвертка&quot;  <!--emo&;)--><img src='http://www.ski.spb.ru/conf/html/emoticons/wink.gif' border='0' style='vertical-align:middle' alt='wink.gif' /><!--endemo-->  
+			<br />
+			<!--IBF.ATTACHMENT_102000-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Slash</b>  11.8.2006, 11:14</h4>
+			<p><!--QuoteBegin-АнтонА+11.08.2006, 11:06--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (АнтонА @ 11.08.2006, 11:06)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> Макс, ты будешь смеяться, но я действительно понял, что я не клиент сбера и я оттуда реально ухожу, причем совершенно без обид на сбер.  К сожалению, он не удовлетворяет моим потребностям и у меня нету ни одной задачи для которой мне нужен данный инструмент. Денег я там никаких не потерял вроде <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> Кредиты мне не нужны ни для себя, ни для бизьнеса - мнеб только деньги хранить и платежи асуществлять <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> Вот такой вот я клиент <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--><br><br>Вопрос с оплатой того билета, который не смог оплатить по карте сбербанка решился очень просто - пошел в балтийский банк, открыл счет и карту бесплатно, позвонил в эйрберлин, сказал номер новой карты и все, деньги ушли.<br><br>Скорее всего уйду в райф или в импекс. в импексе очень нравится годовая медицинская страховка на год по всем странам за 17 баксов - нуль геммороя по визам и как раз обслуживание карты отбивается - одно неудобство делать надо одновременно с годовым шенгеном, но я с ними поговорю еще об этом. Там же еще по текущим счетам процентов 4-5 вроде платют, если не больше... если они бы еще и карту года на три выдали - былоб вааще супер-пупер ... шоб в банк не ходить раз в год менять карту... <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> а в балтобанке карту открывал только для электронных платежей?<br><br>у меня там есть такая, плохо только что её каждый год надо перевыпускать 
+			<br />
+			<!--IBF.ATTACHMENT_102001-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>nvg_pegas</b>  11.8.2006, 11:28</h4>
+			<p><!--QuoteBegin-Птаха+11.08.2006, 10:50--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (Птаха @ 11.08.2006, 10:50)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> <!--QuoteBegin-nvg_pegas+10.08.2006, 19:03--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (nvg_pegas &#064; 10.08.2006, 19:03)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> имею собственное мнение - чушь говоришь&nbsp; <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> <br> <!--QuoteEnd--></td></tr></table><div class='postcolor'><!--QuoteEEnd--><br>Гыыыыыыыы&#33; Ой, не могу&#33; Пегасушка, ты хоть понял, что написал? <!--emo&:lol:--><img src='http://www.ski.spb.ru/conf/html/emoticons/laugh.gif' border='0' style='vertical-align:middle' alt='laugh.gif' /><!--endemo--> <br>Канешна, канешна, я чушь говорю&#33; Об том и был спич  <!--emo&:lol:--><img src='http://www.ski.spb.ru/conf/html/emoticons/laugh.gif' border='0' style='vertical-align:middle' alt='laugh.gif' /><!--endemo-->  тока потом не плачь о том, умный ты наш, где твои денешки  <!--emo&:lol:--><img src='http://www.ski.spb.ru/conf/html/emoticons/laugh.gif' border='0' style='vertical-align:middle' alt='laugh.gif' /><!--endemo--> <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> Ты медленнее читай <!--emo&;)--><img src='http://www.ski.spb.ru/conf/html/emoticons/wink.gif' border='0' style='vertical-align:middle' alt='wink.gif' /><!--endemo--> , так и не поняла, что пост в защиту  умных женщин  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo-->  
+			<br />
+			<!--IBF.ATTACHMENT_102003-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Kateyka</b>  11.8.2006, 11:36</h4>
+			<p><!--QuoteBegin-Птаха+11.08.2006, 11:14--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (Птаха @ 11.08.2006, 11:14)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> <br>ЗЫ А КАтейкин пример был бы хорош, если бы этот молоток не развешивал повсюду свои фотографии с надписью &quot;отвертка&quot;  <!--emo&;)--><img src='http://www.ski.spb.ru/conf/html/emoticons/wink.gif' border='0' style='vertical-align:middle' alt='wink.gif' /><!--endemo--> <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> Птичка, а ты в рекламу веришь? <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> 
+			<br />
+			<!--IBF.ATTACHMENT_102006-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  11.8.2006, 11:38</h4>
+			<p> Я не уверен, что импекс дочка райфа... то есть то что райф купил импекс это понятно, но можно ли купить дочку тут я не уверен... <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--><br><br>Я уже вообщем-то много раз озвучивал свою мысль о том, что при моих целях и задачах - хранить деньги и осуществлять платежи, глубоко все равно в каком банке иметь карту и счета - больше ста тыщ рублей иметь на подобных счетах совершенно не собираюсь, а щаз вроде до 190 госгарантии подняли... Итого выбор банка осуществляется по критериям доп услуг - вот заграничная медстраховка - одна из немногих полезных услуг...<br><br>Что касаемо обсуждения сбера - тема началась с рекомендации брокера отдать сберу деньги на храниние - это конкретная цель и я постарался объяснить, что использовать сбербанк, как инструмент для хранения денег - полный бред (в том числе по прецедентной истории отношения сбербанка со своими вкладчиками). Этот инструмент совершенно не подходит для таких целей, что вроде как уже и мне начали объяснять... <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> переключившись по привычке на обсуждение чего-то тайного и непонятного, связанного с какими-то бизнес проектами и т.п. смешно чесслово.<br><br>В балтбанке открыл счет потому что там это открывают быстро, бесплатно и безгемморройно... Кроме того для ренты в аламе компактного универсала надо иметь две карты. В балтбанке не нравится платность услуги по смс информированию - два бакса в месяц - они опупели. Вообщем пока сложил туда пачку денег, поработаем, посмотрим... Я еще даже условий особо не изучал, но есть плюс - близко от дома, нет очередей. Клерки понтанутые - на все вопросы, которые я им задал они пытались миня обсмеять, но когда я им обяснял где что и как и почему, они потупив глазки сказали, что у них такого нет... Может они хотели обсмеять мой небритый помято-рваный вид <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> 
+			<br />
+			<!--IBF.ATTACHMENT_102008-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  11.8.2006, 11:45</h4>
+			<p> Сбербанк в своей рекламе нагло врет, а если почитать его сайт, то это вааще писец.<br><br>Вот пример: http://nwsbrf.ru/departaments/ubk.asp<br><br><!--QuoteBegin--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> </td></tr><tr><td id='QUOTE'><!--QuoteEBegin-->Международные карты Visa Classic, MasterCard Mass принимаются в оплату во всем мире, ими можно оплачивать покупки в онлайновых магазинах в сети Internet и получать наличные в банкоматах. Счет карты Visa Classic, MasterCard Mass может быть открыт в долларах США или рублях РФ. Разрешенный овердрафт по счетам карт Visa Classic, MasterCard Mass не предусмотрен. Срок действия карт Visa Classic, MasterCard Mass - один год.<br>Дополнительные сервисы:<br>Служба помощи Сбербанка России. Круглосуточно по телефонам +7 (095) 957-55-05, 747-36-82, 747-37-47 позволяет через систему автоматизированного обслуживания получать в тоновом режиме по телефону и факсу информацию о доступном остатке и последних 10 операциях по карте.<br>Принимает сообщения об утрате карт и консультирует о порядке действий в случае утраты карты. Номер факса +7 (095) 957-57-50, 957-51-43<br><br>Международная ассоциация пассажиров авиалиний (IAPA)<br>Скидки при проживании в гостиницах и аренде автомобилей во многих странах мира, а также специальные программы по поиску утраченного багажа и защите авиабилетов и ключей.<br>Дополнительная информация в сети Internet: http://www.iapa.com<br>Специальные тарифы при предварительном заказе и скидки при аренде автомобиля в компании HERTZ (только держателям карт Visa Classic). При оплате аренды без предварительного заказа держателям карт VISA Gold предоставляется скидка от стандартных тарифов 25 %.<br>Дополнительная информация в сети Internet: http://www.hertz.com,<br>http://www.hertz.spb.ru <!--QuoteEnd--></td></tr></table><div class='postcolor'><!--QuoteEEnd--><br><br>Здесь нет НИ ОДНОГО слова правды:<br>где не принимают в оплату карты именно сбербанка я могу рассказать,<br>указанные телефоны отключены, куда звонить непонятно<br>карту ИАПА не дают, а продают по цене выше, чем сама ИАПа торгует для всех<br>Скидку в Герце никто не дает в таких размерах - попробуйте, расскажите. 
+			<br />
+			<!--IBF.ATTACHMENT_102009-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Птаха</b>  11.8.2006, 11:48</h4>
+			<p><!--QuoteBegin-Kateyka+11.08.2006, 11:36--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (Kateyka @ 11.08.2006, 11:36)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> <!--QuoteBegin-Птаха+11.08.2006, 11:14--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (Птаха &#064; 11.08.2006, 11:14)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> <br>ЗЫ А КАтейкин пример был бы хорош, если бы этот молоток не развешивал повсюду свои фотографии с надписью &quot;отвертка&quot;&nbsp; <!--emo&;)--><img src='http://www.ski.spb.ru/conf/html/emoticons/wink.gif' border='0' style='vertical-align:middle' alt='wink.gif' /><!--endemo--> <!--QuoteEnd--></td></tr></table><div class='postcolor'><!--QuoteEEnd--><br>Птичка, а ты в рекламу веришь? <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> ... (поперхнулась) хороший вопрос&#33;  <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> <br><br>Получается, что не всегда отличаю рекламу и информацию. Пошла работать над собой. 
+			<br />
+			<!--IBF.ATTACHMENT_102010-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  11.8.2006, 13:39</h4>
+			<p> Кстати, насчет чеков... Макс, ты будешь опять таки смеяцца, но чеки есть рулез безмерный и применяются они во франции во всю. Причем разными способами. Первый - это перевод денег со счета на счет, только бесплатный, а не за 10-30 евро, как через банк для клиента банка. Оплата проживания в аппартах во франции стандартно или чеком или банковским переводом. <br><br>Второе применение чеков - залог. Так же как на карте можно заблокировать сумму денег, так же и можно выписать чек и отдать, а потом его просто порвать. При этом с деньгами на твоем счету ничего не происходит. то есть чек - это таой замечательный кредитный инструмент. Я так французскими чекми пользовался - очень удобно.<br><br>Так же очень удобно было пользоваться чековыми книжками сбербанка еще до того, как у нас пластиковые карты появились - пришел в магазин, выписал чек, купил рюкзак ермак за 40 рублей <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> Понятно, что у нас все было через задницу и о выписать и послать чек почтой речи не шло, но ... 
+			<br />
+			<!--IBF.ATTACHMENT_102019-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  11.8.2006, 14:19</h4>
+			<p> Угу, я кстати не в курсе, насколько в Европе чеки в ходу. В США -- разумеется, полным ходом, собс-но это основное платежное средство для неспешных платежей между юр. или частными лицами, которые никуда убегать не собираются. Типа местных разнообразных квартплат и проч. <br>Только без маразма с очередями.<br><br>Т.е., в конце месяца получил счета, понавыписывал жаждущим твоих денег чеков, вложил в конверты, бросил их в почтовый ящик, все. Никаих сберов с бабушками.<br><br>А всех &quot;девочек-операционисток&quot; как раз можно было бы посадить чеки обрабатывать, без напряженных очередей. Врял ли это больше ручной работы, чем перебивать с бланков килобайты цифирок сейчас. <br><br>Кстати, с электронной эрой это вполне &quot;зашибись&quot; интегрируется -- как по интернету своего счета состояние можно посмотреть, так и выписанные тобой и предъявленные к оплате чеки можно там же посмотреть, отсканированные. Если возникнут сомнения в том, куда ушли деньги.<br><br>Подозреваю, правда, что для этого хорошо бы чтобы почта функции свои выполняла. Местной почтой давно не пользовался, когда последний раз было, помню что под месяц по России что-то шло. Ну, то есть, как обычно здесь <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> 
+			<br />
+			<!--IBF.ATTACHMENT_102024-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  11.8.2006, 14:34</h4>
+			<p> Насчет ручной работы кстати -- поскольку по крайней мере в US чеки стандартизированы, и твои routing number &amp; account number какими-то спец. чернилами в спец. месте нанесены (и, о чудо, это всего 8 разрядов счета клиента внутри банка и примерно столько же routing number идентифицирующие банк, унифицированных в пределах страны, а не фигову тучу абракадабры), то строго говоря все это сканируется, думаю, давно, автоматически, глазами надо только сумму денег ручкой написанную прочитать. Ну и, может, проверить что-нить на подлинность, если опять же не автоматизировано.<br><br>С подделками, впрочем, больших проблем не должно возникать, т.к. оба счета существуют, и если никто никуда не девается -- то всегда можно откатить транзакцию, разобраться что где, и т.п. За исключением &quot;пришел в банк, открыл счет, положил чек, снял наличные, уехал в Мексику&quot;. Но поэтому обычно в таких сценариях наличные никто сразу не выдает, и верифицируется дольше...<br><br><br> 
+			<br />
+			<!--IBF.ATTACHMENT_102025-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 14:59</h4>
+			<p> кратенько- насчет годится сбер для хранения сбережений или нет- ну, кому-то вполне годится. Кому именно годится я тоже напесал, даже с именами. Это- основная выжимка моих многочисленных слов, посвященных сберу. <br>В жызни дочку, ессно, так просто не купишь, а в бизнесе, тем более нашем- запросто :-) &quot;Дочка&quot; в бизнесе- это когда мама- другое юрлицо. Про создание и авторство не говорю. Понятно, что счас &quot;учредителями&quot; называют всех подряд, в том числе и акционеров, пришедшых через 100 лет после создная общества, но имхо- с &quot;дочками&quot;- это не про учреждение всеж, это про владение. Если старшые товарисчи сочтут возможным поправить меня в моем заблуждении- я буду использовать другой термин- тока подскажыте какой. &quot;группа связанных заемщиков&quot; из моей работы в данном случае не подходит, мне кажется :-)) <br>и вообще....<br>Блин, ну что за фигня&#33;- программисту про 21(33) прерывание никто не рассказывает- а мне стало быть рассказывать про банки и финиструменты- можно? :-)))))))))))))))))))))<br>блин- упростим задачу- Я утверждаю, что &quot;Сбер годится для хранения денег больше чем ктолибо другой в общем случае. Только пользоваться им надо уметь.&quot; Все. Кому не подходит- тому не подходит- тока гордиться этим не надо в среде финансистов (совет:-)))<br>Чеки- (сначала грубо) да что вы понимаете или знаете об реалиях в обороте чеков, не с т.з. &quot;бельгийского стоматолога&quot;, а, так сказать, с т.з. человека ответственно агитирующего за создание всей этой богадельни у нас?  Да ничо вы не знаете и никто вам не расскажет- потому что это отнюдь не так рульно. И не надо прятаться за шырму- &quot;а мне как пользователю- удобно&quot;- пользователи- сидят тихо и &quot;молчат в тряпочки&quot;, а не призывают к созданию. Надо- открой себе счета в европе- но не забудь ЦБРФ уведомить(а то могут &quot;трахнуть&quot; при случае) и жыви счастливо.. <br>ну, ладно, рулезно для пользователя- и что нового вы сообщили? за 400 лет в европе как-нить смогли навернае придумать и заточить все механизмы чтобы ими же изобретенный инструмент в 16-м веке (или чуть позже) начал намано работать. Ну работает, и что? Кремневые ружъя тоже до сих пор стреляют неплохо, но этоже не значит, что нам необходимо &quot;все бросить&quot; и начинать возрождать свою охотничью оружейную промышленность и начинать надо именно  с кремневок? или всеж лучше с кремневок? или лучше не начинать- а конкуренция поможет сама? или чтоб верней начать хотяб с кремневок- зато сразу догоним в кремневках&#33;.. тьфу&#33;....<br>тоска ... ох, как плохо у нас в стране жыть, ах какие дядтлы в нашых банках окопались- а вот за бугром- там-то дааа... куда ни кинь взгялд- строго нобелевские лауреаты повсюду и все бесплатно причем&#33;.... еще мне про рулезы тут рассказывают... блин...<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_102027-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  11.8.2006, 15:14</h4>
+			<p> хммм...  
+			<br />
+			<!--IBF.ATTACHMENT_102029-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 15:20</h4>
+			<p> предупреждение у меня есть и от Яра и от Веб-Рейсера- так что вполне законно меня можно и отцепить за переход на личности в дискуссии.<br>Извините, если что не так- сорвался в конце рабочего дня. Удачи всем&#33;<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_102032-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  11.8.2006, 15:33</h4>
+			<p> макс, ты не панимаешь одной простой вестчи - есть клиенты банка с улицы и есть великие знатоки инструментав... Я клиент банка, который заходит с улицы и просит об услугах хранения иденег и оплаты моих счетов с моего счета. Понятно, что есть те, кто умеет пользовацца сбербанком, например его хозяин или управляющий <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--><br><br>У меня тоже есть два телефона двух людей, куда я могу позвонить и попросить перевести килобакс туда или сюда, продиктовав цифирки, меня даже не спросят когда я деньги принесу... но это не банковский сервис и с тобой, возможно, те люди разговаривать не будут, посему сие не есть сфера банковских услуг... и  рекомендовать сей икс-клюзивный инструмент к использованию как-то глупо типа... 
+			<br />
+			<!--IBF.ATTACHMENT_102035-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 15:43</h4>
+			<p> хорошо, я прошу не хаять очень сложный инструмент, на основании того, что несколько начинающих не смогли с ним совладать с первого раза.<br>Дело вовсе не в Сбере- у меня как я говорил уже у самого там счас счета нет. Дело в подходе. Мыслить лозунгами, хоть и перестройки,- не комильфо мне кажется, превозносить достижения банковского обслужывания за рубежом- ну если аккуратненько- то ещо- куда не шло. Всем и так понятно, что тамошние &quot;средние&quot;  люди, в среднем же, очень хорошо там жывут, во многом лучше нас, не совсем &quot;средних&quot; уже. Но хором петь осанну тамошним, к примеру, банкирам- это меня тока злить :-))<br>прошу ещо раз извинения.<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_102037-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  11.8.2006, 15:47</h4>
+			<p> А я знаю аналогию, из области 21-х прерываний <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--><br><br>Вот ВАЗ-08, при владении спецификой -- отличная машина, и просто мегарулез с т.з. соотношения цена/качество, как средство, быстро и эффективно ездящее в городской среде. Можно какие-то отдельно взятые параметры просто &quot;вусмерть&quot; прооптимизировать (типа, цену покупки/владения минимизировать, цену ремонта после битья, или то, что можно сделать с двигателем за сравнимые деньги, или еще почти что угодно). Ни одна, любой ценовой категории, иномашина, и близко не приближается. Если забыть особенно про &quot;имиджевые&quot; компоненты, т.к. Мерседесом все равно не сделать, если хочется &quot;Мерседес&quot;.<br><br>Но почему-то не всех устраивает &quot;мелкий шрифт&quot; -- что надо лично быть знакомым с хорошим ответственным мастером, и/или вникать во все детали обслуживания, где-что покупать, и проч., возможно лично делать или контролировать какие-то работы, и т.п., как обычно. Это создает рынок для других автомобилей, хуже ВАЗ-08 по рассматриваемым параметрам.<br><br>Неплохо, когда есть выбор. Хуже, когда с ним туго.<br> 
+			<br />
+			<!--IBF.ATTACHMENT_102040-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  11.8.2006, 15:55</h4>
+			<p> Я, конешно, извиняюсь, но я не мыслю лозунгами, и осанны не пою. Я просто выразил экзестенциальное удивление, как много сделано через &quot;одно место&quot;, причем мне (и ведь не только мне&#33;) именно через это место надо ходить, когда надо какой-нить штраф оплатить... <br><br>Причем удивительно, зачем было так делать в целом (это про &quot;цифирки и очереди&quot;.  Неужели никто из делавших не видел, как это бывает по-другому? Хотя, не исключаю, что этому есть какое-то общефилософское объяснение, из серии &quot;кто где и почем в среднем лучше живет&quot;).<br> 
+			<br />
+			<!--IBF.ATTACHMENT_102041-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Kateyka</b>  11.8.2006, 15:55</h4>
+			<p> В конце поста от 14.59 подпись &quot;С уважением&quot; особенно хорошо смотрицца <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> 
+			<br />
+			<!--IBF.ATTACHMENT_102042-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  11.8.2006, 16:07</h4>
+			<p> несколько начинающих ... с первого раза ... совладать с инструментом... Блин, ну расскажы же хотяб об одном примере из жизни для чего мне может быть полезен сбербанк&#33; Почему именно в сбербанке надо хранить деньги???<br><br>1. Процент у них ниже любого другого завалящего банка.<br>2. Обслуживание - очереди с бабушками.<br>3. Кидал своих частных вкладчиков всегда и отдает (так и не отдал) свои долги со времен 199х годов, хотя денег у него навалом и прибыль ахрененная. При этом остальные уже давно расплатились - даже долбанный инком банк всем частникам долги отдал.<br>4. Надежность при вкладах до 100 или 190 тыщ рублей у всех банков сейчас одинаковая и гарантируется из одного и того же места. Открыть дцать счетов никто не запрещает, если денех многа под диваном лежит.<br> 
+			<br />
+			<!--IBF.ATTACHMENT_102044-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 16:10</h4>
+			<p> Попробую другими словами- уже известными, ещо раз свой взгляд изложыть. <br>-Нет и не может быть у сложных проблем простых и очевидных, а тем более быстрых решений.(я в целом про банковские услуги) <br>-И отнюдь не  врожденная непроходимая тупость(как бы это не казалось &quot;очевидным&quot;) руководила людьми, создававшыми ныне действующую и работающую(&#33;) сегодня  систему.(умные там люди, и задачи они вполне серьезные решают, и отнюдь не всегда, чтоб себе что-то украсть)<br>-улучшать нашу жызнь надо, но не путем копирования видимых вокруг каких-то механизмов, вроде как, на первый взгляд вполне успешно в каком-то отдаленном месте работающих.(там- мерседесы, а там- сони, а там- вон, инженеры, только выводы не надо из этого никаких делать:-)<br>Последнее утверждение может звучать весма спорно, но так уж сложылось, что я в него верю.:-) да и моим уважаемым оппонентам, думаю, когда удавалось создать что-то на самом деле достойное- приходилось пользоваться именно своей головой, а не копировать внешне чьи-то древние находки.<br>С уважением<br>ЗЫ Тебе вряд ли подойдет- не потому что ты плохой или глупый, а просто потому что у тебя сейчас задачи другие и действующие механизмы есть для решения их. Так будет не всегда. В один из моментов может(&#33;) статься так, что ты скажешь &quot;вот веть- кто бы мог подумать&#33;- брокер тогда был прав, нет, конечно он не предвидел, но всеж совпадение примечательное&quot; :-)). А я-то как раз ни при чом :-))<br>ЗЗЫ 1. %- это фигня, размеры его- это просто показатель необходимости денег (в данном случае- для банка). (Верно в общем случае). На проценты лично я смотрю в последнюю очередь, даже на работе :-)<br>2. Иногда и это неплохо, но для конфорта можно к випам присоседиться. непринципиально- обслужывание буит в среднем по рынку- отстой. Здесь ты прав.<br>3. ну это просто пардон. тот же инком через альфу да через сбер возвращал. А откуда он денег на этот благородный жест взял вообще умолчим :_)<br>4. надежность- это не только и не всегда 100 тыщ от АСВ. Так что не у всех банков она одинаковая. Хотя в пределах сотки вернет, видимо, каждый :-)) 
+			<br />
+			<!--IBF.ATTACHMENT_102045-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Kateyka</b>  11.8.2006, 16:26</h4>
+			<p><!--QuoteBegin-depo_broker+11.08.2006, 16:10--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (depo_broker @ 11.08.2006, 16:10)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> &quot;вот веть- кто бы мог подумать&#33;- брокер тогда был прав, нет, конечно он не предвидел, но всеж совпадение примечательное&quot; <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> фигасе <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> весело неделя заканчиваецца <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> 
+			<br />
+			<!--IBF.ATTACHMENT_102051-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 16:34</h4>
+			<p> погоди- вот рынок недвижки качнет- вот тогда буит Настоящая веселуха&#33; :-)) вспомнит народ про Сбер :_)) но буит уже поздно :-))<br>С уважением<br>ЗЫ вспомнил байку про проценты и Инком со Сбером кстате :-) интересно?<br>ну, слушайте- был на дворе 98 год, конец лета был. Уже все нагибалось, но Инком ещо работал. И один важный руководитель- ничо не могу сказать,- в своей области- ломовой профи- кстати, тоже брокер, и сейчас ещо, грят, трудится, ну так- он держал по  тем временам некислую сумму в Инкоме на валютном счете. %% были в самом деле зачотными- не чета сегодняшним. И срок депозита был ого. Про сервис тоже не буду :-)) хорошый сервис был... Жызненна то есть... Короче, приходит инфа к его сотруднику- типа &quot;изя всё&quot;(с) не мой. Источник- так себе. Инком- при этом работает, как часы. Короче, дядя, удавился тогда за упускаемые в случае разрыва договора проценты. Срок депозита истекал в сентябре- подождать оставалось недолго. Перекурили люди, и дядя собравшысь с духом, даже убедил тот источник в том, что его инфа не верна :-)) Дальше все просто- все помнят.. Через пару дней появились очереди. Дальше рассказывать неинтересно- то есть все просто и понятно было. В Сбере он получил рублевый эквивалент основной суммы где-то зимой уже, курс конвертации и реальный рыночный курс тоже все примерно помнят. :-)) Вот так. :-)) Я был свидетелем этого события :-)) да, тогда же, впс свой счет в Сбере с 10 рублями на нем закрыл ни с того ни с сего вечером ХХ-го августа в субботу, повинуясь неотчетливому порыву :-)) за 15 минут до закрытия отделения Сбера на выхи. В понедельник уже было ого.. зачем/почему по дождю тогда побежал? честно- не знаю :-)) 
+			<br />
+			<!--IBF.ATTACHMENT_102056-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  11.8.2006, 16:38</h4>
+			<p> Быстрей бы уж. И главное нефть, нефть, по &#036;10 пжалста <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> 
+			<br />
+			<!--IBF.ATTACHMENT_102058-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 16:40</h4>
+			<p> ага ты тогда опять в штаты убежышь :-))<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_102061-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  11.8.2006, 16:40</h4>
+			<p><!--QuoteBegin-depo_broker+11.08.2006, 17:10--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (depo_broker @ 11.08.2006, 17:10)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> ЗЫ Тебе вряд ли подойдет- не потому что ты плохой или глупый, а просто потому что у тебя сейчас задачи другие и действующие механизмы есть для решения их. Так будет не всегда. В один из моментов может(&#33;) статься так, что ты скажешь &quot;вот веть- кто бы мог подумать&#33;- брокер тогда был прав, нет, конечно он не предвидел, но всеж совпадение примечательное&quot; :-)). А я-то как раз ни при чом :-))<br> <!--QuoteEnd--> </td></tr></table><div class='postcolor'> <!--QuoteEEnd--><br> Упалпацтол (тм)<br><br>Перечитал пейджер, но все равно ниасилил...<br><br>Понял, что у меня задачи другие... не понял другие по сравнению с какими?<br><br>Что будет не всегда? Задачи станут недругими или пропадут (тьфу*3) действующие механизЬмы... блин ... как-то даже неуютно стало ...<br><br>он не предвидел что? что пропадут действующие механизьмы? блин, ну и совпадения ... (тьфу*3)...<br><br>Пойду-ка я пока не началось ...  <!--emo&:blink:--><img src='http://www.ski.spb.ru/conf/html/emoticons/blink.gif' border='0' style='vertical-align:middle' alt='blink.gif' /><!--endemo-->  <!--emo&:unsure:--><img src='http://www.ski.spb.ru/conf/html/emoticons/unsure.gif' border='0' style='vertical-align:middle' alt='unsure.gif' /><!--endemo-->  <!--emo&:ph34r:--><img src='http://www.ski.spb.ru/conf/html/emoticons/ph34r.gif' border='0' style='vertical-align:middle' alt='ph34r.gif' /><!--endemo-->  
+			<br />
+			<!--IBF.ATTACHMENT_102062-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  11.8.2006, 16:46</h4>
+			<p> <!--QuoteBegin-depo_broker+11.08.2006, 17:40--></div><table border='0' align='center' width='95%' cellpadding='3' cellspacing='1'><tr><td><b>QUOTE</b> (depo_broker &#064; 11.08.2006, 17:40)</td></tr><tr><td id='QUOTE'><!--QuoteEBegin--> ага ты тогда опять в штаты убежышь :-))<br> <!--QuoteEnd--></td></tr></table><div class='postcolor'><!--QuoteEEnd--><br>Ну вот, экономика... В штаты, или еще куда, как раз придется бежать при текущем развитии, еще местные цены поднимутся, да товарищ Буш бакс чуток еще отдевальвирует -- и можно вовсе ничего в России не делать (ну, кроме нефти, разумеется, где я не участвую к сож., или каких супер-имперских проектов, от нее же финансируемых). Придется в нефтяники или чиновники переквалифицироваться, что у меня вряд ли получится.<br><br>А при нормальном соотношении, когда тут цены не раздуты -- как раз все наоборот... 
+			<br />
+			<!--IBF.ATTACHMENT_102066-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>АнтонА</b>  11.8.2006, 16:46</h4>
+			<p> Ой, откуда инком брал деньги мне чессно гря пофик, но он их вернул, а сбер не вернул...<br><br>Слушь, ну качнет рынок недвижки и что??? Уж реально скорее бы... и нефть тож 10 баксов... Что-то как-то другие нефтестраны умудряются делать хорошо своим налогоплательщикам от нефти, а у нас чем нефть дороже, тем как-то бензин дороже и медицина более платная вместе с образованием... зато мы горды своими золотовалютными резервами и стабфондом&#33; 
+			<br />
+			<!--IBF.ATTACHMENT_102067-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>kadavr</b>  11.8.2006, 16:52</h4>
+			<p> А ну-ка, ну-ка расскажите, куда и как качнется рынок недвижки? 
+			<br />
+			<!--IBF.ATTACHMENT_102070-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 16:53</h4>
+			<p> Ребята, закончиваем уже, а? :-)) Ну вы же не красные пенсионеры же чтоб такую (простите)  нести&#33; :-))<br>С уважением<br>ЗЫ Будет и нефть дешево ещо и недвижка ещо присядет при жызни нашего поколения. хм.. свят.. свят.... 
+			<br />
+			<!--IBF.ATTACHMENT_102072-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  11.8.2006, 16:59</h4>
+			<p> Эт, если в моем случае, к сож., не чушь, а тяжелые реалии экспорта &quot;хай-тека&quot; из нашей страны, и практически осязаемое исчезновение денег из кармана, мной не спровоцированное никак...<br> 
+			<br />
+			<!--IBF.ATTACHMENT_102073-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 17:07</h4>
+			<p> 2 DU не трави душу себе, старик, там ведь хорошо- ты ж знаешь это. Так зачем себя мучаешь тут? Вон сколько уже уехало твоих же корешей- и прекрасно там устроились и жывут очень даже, и не собираются даже возращаться.. <br>:-) <br>это и без меня тебе уже не раз говорили :-))<br>от меня скажу так- старик, тут только те, кому тут лучше, чем где-либо. Например, такое дерьмо, как я.(смайликов нет) Мир изменился- границы свою роль утрачивают и нет причины тут торчать, если где-то лучше. Я здесь потому что мне лучше тут. более того- я постараюсь сделать так чтоб &quot;тут&quot; было лучше  и моим детям.<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_102078-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>DU</b>  11.8.2006, 17:17</h4>
+			<p> О, новый разворот <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--><br><br>Зачем же так -- мне и тут вполне хорошо. Строго говоря, и большой разницы где жить -- нету, если не жить совсем уж &quot;среднестатистически&quot;. А плюсы и минусы в разных местах можно долго и довольно бесполезно считать, я когда-то пробовал, с разных позиций <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo-->. Тут скорее вопросы личных привязанностей, удобства, неудобств, и проч., выходят на первый план. Ничего глобально-эпохального (ну, во всяком случае пока здесь не начали ортодоксальный коммунизм опять строить, но надеюсь до этого не дойдет, да и в любом случае это вопрос локальной адаптации при подавляющем большинстве сценариев).<br><br>Просто на данном этапе есть ряд &quot;неправильных&quot; моментов. Ну так они, надеюсь, выправятся, не бывает вечных халяв нефтяных. Ну и в целом пока бизнес типа &quot;сделал тут, продал в Америке&quot; -- еще все-таки рентабелен, так что, поживем-увидем.<br> 
+			<br />
+			<!--IBF.ATTACHMENT_102080-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 17:20</h4>
+			<p> все верно- подпишусь и сам под твоими словамии.. только перечисленные тобой &quot;неправильные&quot; моменты, по крайней мере в банках- на самом деле правильные :-) а так- все верно :_))<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_102081-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Larson</b>  11.8.2006, 17:27</h4>
+			<p> 2Брокер: Умение вовремя остановиться - редкий дар, доступный немногим... но попробовать можно всегда... 
+			<br />
+			<!--IBF.ATTACHMENT_102082-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>depo_broker</b>  11.8.2006, 17:47</h4>
+			<p> ок. стопмашына.<br>С уважением 
+			<br />
+			<!--IBF.ATTACHMENT_102083-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Yar</b>  11.8.2006, 18:17</h4>
+			<p> о&#33; как много я сегодня пропустил (занимаясь экспортом хайтека из страны) <!--emo&:)--><img src='http://www.ski.spb.ru/conf/html/emoticons/smile.gif' border='0' style='vertical-align:middle' alt='smile.gif' /><!--endemo--> 
+			<br />
+			<!--IBF.ATTACHMENT_102085-->
+			</p>
+		</div><div class="printpost">
+			<h4>Автор: <b>Yar</b>  11.8.2006, 18:18</h4>
+			<p> нет, нет, не останавливайтесь&#33; я тоже хочу пробанки паругацца&#33; у меня даже 2 счета есть, в альфе и балтийском. на обоих 0 рублей 0 копеек. 
+			<br />
+			<!--IBF.ATTACHMENT_102086-->
+			</p>
+		</div><!--Copyright-->
+
+<p class="printcopy">Русская версия Invision Power Board (http://www.invisionboard.com)<br />&copy; Invision Power Services (http://www.invisionpower.com)</p>
+
+	</div>
+</body>
+</html>

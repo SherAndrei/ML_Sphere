@@ -1,0 +1,911 @@
+yapokupayu.ru/blogs/post/kuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni
+<!DOCTYPE html>
+<html lang="ru" xml:lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"825e7cc400","applicationID":"163531","transactionName":"JgoPQBNeWl9VQBoUWRcRAFg+U1pcV21FC0URFk5HCV5B","queueTime":2,"applicationTime":213,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAMCVlBACQUDUVJT"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(12),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,s.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,s.now()])}var i=t("handle"),a=t(13),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(5),t(4),"addEventListener"in window&&t(3),s.xhrWrappable&&t(6),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(15)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,e,n){var r=t("ee").get("raf"),o=t(15)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(15)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],6:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,v,"fn-",c)}function i(t){y.push(t),h&&(g=-g,x.data=g)}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(3);var f=t("ee"),u=f.get("xhr"),d=t(15)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",v=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var w=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,w),w.prototype=p.prototype,d.inPlace(w.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,x=document.createTextNode(g);new h(a).observe(x,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],7:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(8),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(11),h=t(10),m=window.XMLHttpRequest;a.features.xhr=!0,t(6),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],8:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],9:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(12),c=t(13),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=o(l+e,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(p+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],10:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],11:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],12:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],13:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],14:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],15:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(13),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!l.aborted||i){t&&t(n,r,o);for(var a=e(o),c=h(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[w[n]];return d&&d.push([g,n,r,a]),a}}function p(t,e){y[t]=h(t).concat(e)}function h(t){return y[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",w[n]=e,e in u||(u[e]=[])})}var y={},w={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:v,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(12),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=x.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(w,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+x.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){s("mark",["domContent",a()+x.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-x.offset}var c=(new Date).getTime(),s=t("handle"),f=t(12),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},g=m&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),x=e.exports={offset:c,now:a,origin:y,features:{},xhrWrappable:g};t(9),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),s("mark",["firstbyte",c],null,"api");var b=0,E=t(14)},{}]},{},["loader",2,7]);</script>
+<title>Куда сходить потанцевать в Самаре - обзор ночной жизни! - Я Покупаю
+</title>
+<meta content="&#x000A;	Предлагаем подборку ночных клубов Самары! Где-то вы уже были, возможно, найдется место куда, после просмотра блога, вы захотите пойти. &#x000A;&#x000A;	&#x000A;&#x000A;..." name="description">
+<meta content="width=device-width" name="viewport">
+<link href="http://www.yapokupayu.ru/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link href="http://www.yapokupayu.ru/blogs/post/kuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni" rel="canonical">
+
+<meta content="Куда сходить потанцевать в Самаре - обзор ночной жизни!" property="og:title">
+<meta content="&#x000A;	Предлагаем подборку ночных клубов Самары! Где-то вы уже были, возможно, найдется место куда, после просмотра блога, вы захотите пойти. &#x000A;&#x000A;	&#x000A;&#x000A;..." property="og:description">
+<meta content="http://www.yapokupayu.ru/blogs/post/kuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni" property="og:url">
+<meta content="Ольга" name="mediator_author">
+
+
+<link href="http://st4.styapokupayu.ru/images/blog_posts/covers/000/129/032_large.jpg?1444652977" rel="image_src">
+<meta content="http://st4.styapokupayu.ru/images/blog_posts/covers/000/129/032_large.jpg?1444652977" itemprop="image">
+<meta content="http://st4.styapokupayu.ru/images/blog_posts/covers/000/129/032_large.jpg?1444652977" property="og:image">
+
+<link href="http://www.yapokupayu.ru/assets/package/section/portal_base-236428bc670b27245b08b0ca81e58dcf.css" media="all" rel="stylesheet" type="text/css" />
+
+<link href="http://www.yapokupayu.ru/assets/package/page/blog-b00a9378b5da8840b2e4420e720aeff7.css" media="screen" rel="stylesheet" type="text/css" />
+
+<!--[if IE]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<link href="http://www.yapokupayu.ru/assets/standalone/ie9fix-87c7f2f85ec4e346c72d8faae592151a.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if lt IE 9]>
+<link href="http://www.yapokupayu.ru/assets/standalone/iefix-d7d8ee9c12fb887fc03b46f7b40deb5a.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!-- Google Analytics -->
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23865166-1']);
+  _gaq.push(['_setDomainName', '.yapokupayu.ru']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- end Google Analytics -->
+<script>
+  var
+    app = app || {
+      config: {
+        shortHost: "www.yapokupayu.ru",
+        mainHost: "www.yapokupayu.ru",
+        rootHost: '.' + "www.yapokupayu.ru".replace('www.', ''),
+        assetHost: "http://www.yapokupayu.ru/assets/",
+        isUserSigned: false,
+        usersSessionURL: "http://www.yapokupayu.ru/users/session",
+        usersRegistrationURL: "http://www.yapokupayu.ru/users",
+        shopcart: {
+          workspace: false ? 'server' : 'local',
+          routes: {
+            cart: "http://www.yapokupayu.ru/cart",
+            addToCart: "http://www.yapokupayu.ru/cart/add",
+            mergeCart: "http://www.yapokupayu.ru/cart/merge_with_storage",
+            authorizeCart: "http://www.yapokupayu.ru/cart/authorize"
+          }
+        },
+        adfoxBanner: {puid1: "msk"},
+        voteApp: {
+          vk: 5637606,
+          fb: 1778534049066994
+        },
+        statsHitsAnnounce: {url: "http://www.yapokupayu.ru/statistics/post_announce_views"},
+        adfoxBanner: {puid1: "msk"},
+        analyticsCollectURL: "http://www.yapokupayu.ru/api/v1/analytics/collect",
+        api: {
+          usersURL: "http://www.yapokupayu.ru/api/v1/users",
+          updateUserURL: "http://www.yapokupayu.ru/api/v1/users/_id_",
+          validationURL: "http://www.yapokupayu.ru/api/v1/validation",
+          passwordURL: "http://www.yapokupayu.ru/api/v1/users/password",
+          authCodeURL: "http://www.yapokupayu.ru/api/v1/users/auth_code",
+          mergesURL: "http://www.yapokupayu.ru/api/v1/users/merges",
+          errorMessages: {
+            401: "\u041d\u0435\u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u044b\u0435 \u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0434\u0430\u043d\u043d\u044b\u0435",
+            403: "\u041d\u0435\u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u044b\u0435 \u0430\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0435 \u0434\u0430\u043d\u043d\u044b\u0435"
+          }
+        },
+      },
+      modules: {
+        initial: {},
+        vk: {},
+        coreApplicationBase: {},
+        applicationExt: {},
+        application: {},
+        main: {}
+      }
+    },
+    isIE8 = false,
+    isIE9 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  isIE8 = true;
+</script>
+<![endif]-->
+<!--[if IE 9]>
+<script>
+  isIE9 = true;
+</script>
+<![endif]-->
+</head>
+<body class="portal  ">
+<div class="adfox-fullscreen">
+<div class="js-adfox-block" data-id="10" data-puid2="life" data-src="//ads.adfox.ru/170866/prepareCode?pp=h&amp;amp;ps=uwd&amp;amp;p2=fkqt&amp;amp;" id="AdFox_banner_10"></div>
+<div class="adfox-baner"></div>
+</div>
+
+<div class="adfox_top">
+<div id="AdFox_banner_4"></div>
+<div class="adfox-baner"></div>
+</div>
+
+<div id="wrap">
+<div class="js-middle" id="middle">
+
+<div class="base-width">
+<header class="clearfix">
+<div class="fixed-toolbar js-fixed-toolbar">
+<div class="confirm-popup-wrapper js-confirm-popup js-modal-popup dn" data-id="6">
+<IDXSKIP><div class="guess-city">Мы угадали ваш город?</div></IDXSKIP>
+<IDXSKIP><div class="choice-region"><span class="js-agree-choice js-ga-region-confirm" data-action="Подтверждение региона" data-category="LM-Покупатели" data-label="Регион в шапке">Да, Москва!</span><a class="js-show-region-list js-ga-region-confirm" data-action="Другой регион" data-category="LM-Покупатели" data-label="Регион в шапке" href="http://www.yapokupayu.ru/choose_region"><span>Нет, выбрать другой</span></a></div></IDXSKIP>
+</div>
+
+<div class="choose-region-popup js-choose-region-popup js-modal-popup"></div>
+<IDXSKIP><div class="wrapp-toolbar clearfix">
+<div class="region-select-fixed">
+<span>Ваш город</span>
+<a class="rs-city js-show-region-list js-ga-region-confirm" data-action="Смена региона" data-category="LM-Покупатели" data-label="Регион в шапке" href="http://www.yapokupayu.ru/choose_region">
+<span id="show_mini_regions_region">Москва</span>
+</a>
+</div>
+<script>
+  app.config.confirmationRegionPopup = {
+    url: "http://www.yapokupayu.ru/ajax/region_selector?save_path=false&save_path_with_region=true"
+  };
+</script>
+
+<div id="toolbar"></div>
+
+</div></IDXSKIP>
+<div class="ub-in-cart js-product-in-cart"></div>
+</div>
+<div class="wrapp-other-head">
+<div class="adfox-top">
+<div id="AdFox_banner_1"></div>
+<div class="adfox-baner"></div>
+</div>
+
+
+<div class="base-width p0">
+<div class="flash">
+</div>
+
+</div>
+<div class="mt10"><IDXSKIP><div class="dib vat logo-head"><a href="http://msk.yapokupayu.ru" class="logo-fixed"><img alt="Yapokupayu_logos" src="http://www.yapokupayu.ru/assets/data_uri/yapokupayu_logos-332a1a2d10173fda7a64b6b10c6336c7.png" /></a></div></IDXSKIP><IDXSKIP><div class="dib vat searching-line"><script defer="defer" src="http://www.yapokupayu.ru/assets/package/mark-ff0cc809b44e7c783ce1d36fefe85c68.js" type="text/javascript"></script>
+<div class="choose_region" id="choose-region1"></div>
+<div class="wrap-portal-search">
+<form action="http://www.yapokupayu.ru/search?region=ru" class="js-portal-search-form" id="simplesearch" method="get">
+<div class="psf-search-string-cover psf-input-block">
+<input class="psf-submit js-psf-submit js-search" title="Найти" type="submit" value="">
+<div class="psf-search-string js-psf-search-string">
+<input class="psf-input psfss-input js-psfss-input" id="search-str" name="q" placeholder="Найти, например, туфли" type="text">
+</div>
+</div>
+</form>
+</div>
+
+<div class="choose_region choose-region-popup" id="choose-region"></div></div></IDXSKIP><div class="dib vat open-online-shop"><IDXSKIP><p>
+	<a class="new-company js-ga-event" data-action="Кнопка" data-category="LM-Продавцы" data-label="Хедер_клики" href="http://www.yapokupayu.ru/firms/new">Открыть интернет магазин</a></p></IDXSKIP></div><IDXSKIP><div class="fr">
+<span target="_blank" class="sn fb js-ga-link" data-ga-action="FB" data-ga-category="Хэдер" data-ga-label="Соцсети" data-to="https://www.facebook.com/yapokupayuru">&nbsp;</span><span target="_blank" class="sn vk js-ga-link" data-ga-action="VK" data-ga-category="Хэдер" data-ga-label="Соцсети" data-to="https://vk.com/yapokru">&nbsp;</span><span target="_blank" class="sn odnoklassniki js-ga-link" data-ga-action="OK" data-ga-category="Хэдер" data-ga-label="Соцсети" data-to="http://www.odnoklassniki.ru/yapokru">&nbsp;</span><span target="_blank" class="sn instagram js-ga-link" data-ga-action="IG_ekb" data-ga-category="Хэдер" data-ga-label="Соцсети" data-to="https://www.instagram.com/yapokupayu.ru/">&nbsp;</span>
+
+</div></IDXSKIP>
+<div class="clearfix"></div>
+<div class="menu-cover js-menu-cover"></div>
+<div class="wrap-menu-fixed js-wrap-menu-fixed">
+<ul class="header-quick-links js-header-quick-links"><li class="hql-item js-includes-submenu"><span class="hqli-link js-load-product-rubrics" data-to="http://msk.yapokupayu.ru/predl" data-url="http://www.yapokupayu.ru/predl_rubrics_ajax/0">Магазин</span></li><IDXSKIP><li class="hql-item js-includes-submenu js-mn-el" data-blog_rubric_id="21" data-type="blog"><span class="hqli-link" data-to="http://www.yapokupayu.ru/predl/promgood">Мода</span></li></IDXSKIP><IDXSKIP><li class="hql-item js-includes-submenu js-mn-el" data-blog_rubric_id="24" data-type="blog"><span class="hqli-link" data-to="http://www.yapokupayu.ru/predl/krasota_i_zdorovie">Красота и здоровье</span></li></IDXSKIP><IDXSKIP><li class="hql-item js-includes-submenu js-mn-el" data-blog_rubric_id="16" data-type="blog"><span class="hqli-link" data-to="http://www.yapokupayu.ru/predl/home">Дом</span></li></IDXSKIP><IDXSKIP><li class="hql-item js-includes-submenu js-mn-el" data-blog_rubric_id="29" data-type="blog"><span class="hqli-link" data-to="http://www.yapokupayu.ru/predl/provisions">Еда</span></li></IDXSKIP><IDXSKIP><li class="hql-item js-includes-submenu js-mn-el" data-blog_rubric_id="23" data-type="blog"><span class="hqli-link" data-to="http://www.yapokupayu.ru/predl/tovary_dlja_detej">Дети</span></li></IDXSKIP><IDXSKIP><li class="hql-item js-includes-submenu js-mn-el" data-blog_rubric_id="26" data-type="blog"><span class="hqli-link" data-to="http://www.yapokupayu.ru/predl/zhizn">Жизнь</span></li></IDXSKIP><IDXSKIP><li class="hql-item js-includes-submenu js-mn-el" data-blog_rubric_id="31" data-type="blog"><span class="hqli-link" data-to="http://www.yapokupayu.ru/predl/men">Мужской клуб</span></li></IDXSKIP><IDXSKIP><li class="hql-item js-mn-el"><span class="hqli-link" data-to="http://www.yapokupayu.ru/blogs/rubric/konkursy">Конкурсы</span></li></IDXSKIP><IDXSKIP><li class="hql-item js-mn-el js-includes-submenu" data-type="about"><span class="hqli-link" data-to="http://www.yapokupayu.ru/blogs/region/msk">Город</span></li></IDXSKIP><IDXSKIP><li class="hql-item mn-offers-active js-mn-el js-includes-submenu" data-type="deals"><a class="hqli-link js-ga-deals-menu" data-action="Переход из Главного меню 2" data-category="LM-Покупатели" data-label="Акции" href="http://msk.yapokupayu.ru/deals">
+Акции</a></li></IDXSKIP></ul>
+<div class="submenu-rubrics js-first-rubric js-child-rubrics js-submenu-cover"></div>
+
+</div>
+</div>
+</div>
+</header>
+<script>
+  app.config.blogMenuWithRubric = {
+    url: "http://www.yapokupayu.ru/ajax/navigation_bar?blog_rubric_id=&region_id=6&type="
+  };
+</script>
+
+<div class="page-path">
+<div class="pp-list"><IDXSKIP><a class="pp-item" href="http://msk.yapokupayu.ru">Москва</a></IDXSKIP><a class="pp-item" href="http://www.yapokupayu.ru/blogs">Блоги</a><a class="pp-item" href="http://www.yapokupayu.ru/blogs/rubric/life">Жизнь</a><span class="pp-item">Куда сходить потанцевать в Самаре - обзор ночной жизни!</span></div>
+</div>
+
+<div class="cols-2 clearfix">
+<div class="blog-post-wrapper js-blog-post-wrapper">
+<div class="post-wrapper"><div class="js-current-post js-post-block post-column-left" data-author="Ольга" data-description="&#x000A;	Предлагаем подборку ночных клубов Самары! Где-то вы уже были, возможно, найдется место куда, после просмотра блога, вы захотите пойти. &#x000A;&#x000A;	&#x000A;&#x000A;..." data-img="http://st4.styapokupayu.ru/images/blog_posts/covers/000/129/032_large.jpg?1444652977" data-metrics="sent" data-title="Куда сходить потанцевать в Самаре - обзор ночной жизни!" data-url="http://www.yapokupayu.ru/blogs/post/kuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni"><div class="post-owner-info">
+<div class="poi-name-position">
+<a href="http://www.yapokupayu.ru/users/9547/posts">
+<div class="poi-name">Екатерина Сугробова</div>
+</a>
+</div>
+</div>
+<div class="pw-title-wrapper">
+<h1 class="post-title">Куда сходить потанцевать в Самаре - обзор ночной жизни!</h1><div class="pw-announce">
+Предлагаем подборку ночных клубов Самары! Где-то вы уже были, возможно, найдется место куда, после просмотра блога, вы захотите пойти. 
+
+	
+
+...</div>
+</div>
+<div class="pw-moderation-info">
+<div class="pwmi-date">25 февраля 2013, 22:01</div>
+<a class="pwmi-comment-count js-pwmi-comment-count" href="#comment_33392" title="комментировать">1</a>
+<div class="mt10">
+</div>
+</div>
+<div class="pw-post-content js-mediator-article">
+<div class="pwpc-cover">
+<img alt="032_large" src="http://st4.styapokupayu.ru/images/blog_posts/covers/000/129/032_large.jpg?1444652977" /></div>
+<div>
+<p style="text-align: center;">
+	<strong><span style="font-size:16px;">Предлагаем подборку ночных клубов Самары! Где-то вы уже были, возможно, найдется место куда, после просмотра блога, вы захотите пойти. </span></strong></p>
+<p style="text-align: center;">
+	</p>
+<p>
+	<span style="font-size:14px;"><strong>1. Ночной клуб "Звезда" : </strong></span></p>
+<p>
+	<span style="font-size:14px;">Эксклюзивный интерьер, музыка от лучших диджеев, громкие имена, яркие шоу-программы, выступления звезд мирового уровня — вот далеко не полный список причин популярности этого ночного клуба. </span></p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 300px; height: 185px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54149/content_1.jpg?1361862027"><img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 300px; height: 185px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54150/content_2.jpg?1361862035"></p>
+<p>
+	<span data-to="http://zvezda-club.ru/events" target="_blank"><span style="font-size:14px;">Обзор ближайших мероприятий </span></span></p>
+<p style="text-align: center;">
+	</p>
+<p>
+	<span style="font-size:14px;"><strong>2. Первый танцевальный ресторан "Джем":</strong></span></p>
+<p>
+	<span style="font-size:14px;">Свежее развлекательное заведение, которое работает как ресторан, так и как клуб! Днем они приглашают гостей на деловой обед, а вечером в расслабленной атмосфере провести романтическое свидание или ужин с друзьями. Также Первый танцевальный ресторан<sup>©</sup> "Джем" идеально подходит для проведения торжеств,корпоративных мероприятий,банкетов.</span></p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 302px; height: 209px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54152/content_3.jpeg?1361863013"><img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 344px; height: 209px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54154/content_5.jpeg?1361863050"></p>
+<p>
+	<span style="font-size:14px;"><span data-to="http://www.jam-club.ru/" target="_blank">Перейти на сайт</span> </span></p>
+<p>
+	<strong><span style="font-size:14px;">3.</span><span style="font-size: 14px;"> "</span><span style="font-size:14px;">The Rooms" :</span></strong></p>
+<p>
+	<span style="font-size:14px;">The Rooms - это уникальный для города комплекс ночных заведений, в котором воплощены самые ожидаемые тенденции современного представления об отдыхе. Место, где каждый сможет насладиться атмосферой в компании красивых и успешных людей.</span></p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 400px; height: 333px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54263/content_27331582.jpg?1361951954"></p>
+<p>
+	<span data-to="http://vk.com/the_rooms_063" target="_blank"><span style="font-size:14px;">Перейти на сайт</span></span></p>
+<p>
+	</p>
+<p>
+	<strong><span style="font-size:14px;">4. Легендарный клуб <span><span><span dir="ltr" id="place-title">"Pablo Escobar</span></span></span>" :</span></strong></p>
+<p>
+	<span style="font-size:14px;">Авторский дизайн интерьера, три комфортных зала с просторными мягкими зонами, внимательный персонал, приятная музыка, уютная обстановка и располагающая к отдыху атмосфера. Очаровательные, сексуальные девушки помогут Вам окунуться в океан женственности и грации, насладиться театральными постановками, сочетающими в себе красоту танца и энергию женской страсти. Изысканные блюда европейской и японской кухни, разнообразие видов кальяна, а также ассортимент лучших алкогольных брендов, предлагаемых барменами клуба, позволят провести вечер с высоким уровнем комфорта и позитива.</span></p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 400px; height: 267px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54157/content_10.jpg?1361863909"></p>
+<p>
+	<span style="font-size:14px;"><span data-to="http://www.pabloescobar.ru/" target="_blank">Перейти на сайт </span></span></p>
+<p>
+	<span style="font-size:14px;"><strong>5. Ночной клуб "LUST" :</strong></span></p>
+<p>
+	<span style="font-size:14px;">В клубе нет едкого гламура, здесь роскошно и сдержанно, ведь волшебство не терпит фальши. Холодный как сталь, LUST для настоящих мужчин. Горячий как лучший коктейль, LUST для настоящих леди. Это место для тех кто может позволить себе легкий флирт, для тех кто готов к фантастическому ночному приключению. Насладившись ярким шоу, посетители всегда могут расслабиться в мягких зонах, ну а для жаждущих уединиться LUST предложит три закрытые V.I.P зоны.<br>
+	В пространстве клуба сочетается один танцпол, основной бар, сервис бар и welcome бар.</span></p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 300px; height: 199px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54158/content_11.jpeg?1361865160"><img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 300px; height: 199px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54159/content_12.jpeg?1361865171"></p>
+<p>
+	<span data-to="http://lustclub.ru/afisha/" target="_blank"><span style="font-size:14px;">Обзор ближайших мероприятий </span></span></p>
+<p>
+	<span style="font-size:14px;"><strong>6. Шоу-ресторан "Red Hall" :</strong></span></p>
+<p>
+	<font style="font-size:13px; line-height: 1.3em;color:#333333;">Профессионально поющий ресторан RED HALL представляет новую концепцию проведения досуга! Здесь можно пообщаться с друзьями, вкусно поесть, а также реализовать свой творческий потенциал и почувствовать себя звездой! Эксклюзивный интерьер, профессиональные звук, свет и фонограммы, звукорежиссер, бэк-вокал, большой экран, запись вашего выступления на CD. </font></p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 302px; height: 201px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54160/content_13.jpg?1361865514"><img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 302px; height: 201px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54161/content_14.jpeg?1361865528"></p>
+<p>
+	<span data-to="http://red-hall.kinup.ru/" target="_blank"><span style="font-size:14px;">Перейти на сайт</span></span></p>
+<p>
+	<strong><span style="font-size:14px;">7. Клуб-ресторан "Винил" </span></strong>:</p>
+<p>
+	<span style="font-size:14px;">В этом клубе-ресторане DJ играют основную часть лучшей танцевальной house-музыки на виниловых вертушках. До настоящего времени учёнейшие умы человечества так и не создали ни одного музыкального формата, который бы смог по качеству затмить «виниловое звучание». От CD и MP3 формата виниловые пластинки кардинально отличаются мягкостью и чёткостью восприятия. Vinyl – для тех, кто разбирается в тонкостях музыкального мира и желает весело, красиво и с комфортом проводить время в кругу близких по духу людей!</span></p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 400px; height: 354px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54162/content_14.jpg?1361866243"></p>
+<p>
+	<span data-to="http://club-vinyl.ru/afishalist/" target="_blank"><span style="font-size:14px;">Обзор ближайших мероприятий</span></span></p>
+<p>
+	<strong><span style="font-size:14px;">8. Танцевальный ресторан “Breeze” :</span></strong></p>
+<p>
+	Ресторан рассчитан на 150-200 персон. ''Breeze'' прекрасно подойдёт для небольших застолий в кругу друзей, романтического ужина, дней рождений, корпоративных мероприятий и свадеб. Зал состоит из нескольких зон: Vip комнаты, основной зал, три кальянные.</p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 300px; height: 200px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54163/content_15.jpg?1361866466"><img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 300px; height: 200px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54164/content_16.jpg?1361866474"></p>
+<p>
+	<span data-to="http://www.breeze-dance.ru/" target="_blank"><span style="font-size:14px;">Перейти на сайт </span></span></p>
+<p>
+	<strong><span style="font-size:14px;">9. Клубный ресторан "Maximillian's" :</span></strong></p>
+<p>
+	<span style="font-size:14px;">Позиционируется как самый большой в Поволжье пивной ресторан, и это – абсолютная правда. Заведений, специализирующихся на классической баварской кухне, имеющих собственную пивоварню и способных свободно вместить одновременно свыше 700 человек, в Поволжье пока не наблюдали. В ресторане «Maximilian’s» всегда царит праздничное настроение. Живая музыка, под которую так и хочется пуститься в пляс. Яркие концерты отечественных звёзд: от «Морального Кодекса» и группировки «Ленинград» до певицы Макsим. Трансляции спортивных матчей на большом экране.</span></p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 400px; height: 227px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54165/content_17.jpeg?1361866748"></p>
+<p>
+	<span data-to="http://maximilians.ru/samara/" target="_blank"><span style="font-size:14px;">Обзор ближайших мероприятий </span></span></p>
+<p>
+	<span style="font-size:14px;"><strong>10. Дом новой культуры "ART&amp;FACT" :</strong></span></p>
+<p>
+	<span style="font-size:14px;">Основной зал «АРТиФАКТ» рассчитан на 200 посадочных мест и включает в себя также танцпол, сцену и барную стойку. В вечерние часы основной зал работает в формате ресторана, по пятничным и субботним вечерам – в режиме ночного клуба. При аренде основного зала можно забронировать как всю площадь, так и отдельные зоны до 100 человек. Основной зал органично сочетает в себе очарование комфорта мягких зон и прозрачную чистоту панорамного остекления.</span></p>
+<p style="text-align: center;">
+	<img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 300px; height: 200px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54166/content_18.jpg?1361866957"><img alt="" src="http://www.yapokupayu.ru/images/z.gif" style="width: 300px; height: 200px;" class=" lazypic" data-original="/system/ckeditor_assets/pictures/54167/content_19.jpg?1361866968"></p>
+<p>
+	<span data-to="http://artfact-samara.ru/" target="_blank"><span style="font-size:14px;">Обзор ближайших мероприятий</span></span></p>
+<p style="text-align: center;">
+	</p>
+<p style="text-align: center;">
+	</p>
+<p style="text-align: center;">
+	</p>
+<p style="text-align: center;">
+	</p>
+<p>
+	</p>
+<p>
+	</p>
+<p>
+	</p>
+<p>
+	</p>
+<p>
+	</p>
+<p>
+	</p></div>
+<div>
+</div>
+<ul class="prc-share-button js-post-share" data-id="0"><li class="prcsb-item-into-content"><span class="title">Расскажите друзьям:</span></li><li class="prcsb-item-into-content js-share-social-group js-ga-link" data-ga-action="FB внизу" data-ga-category="Пост" data-ga-label="Соц. кнопки" data-provider="fb"><span class="fb"></span><span class="shape-count js-counter-fb"></span></li><li class="prcsb-item-into-content js-share-social-group js-ga-link" data-ga-action="VK внизу" data-ga-category="Пост" data-ga-label="Соц. кнопки" data-provider="vk"><span class="vk"></span><span class="shape-count js-counter-vk"></span></li><li class="prcsb-item-into-content js-share-social-group js-ga-link" data-ga-action="OK внизу" data-ga-category="Пост" data-ga-label="Соц. кнопки" data-provider="od"><span class="od"></span><span class="shape-count js-counter-od"></span></li><li class="js-post-subscription-button prcsb-item-into-content subscribe-button"><span class="subscribe js-ga-link" data-ga-action="Клик по кнопке внизу" data-ga-category="Пост" data-ga-label="Подписаться на рассылку">
+Подписаться на рассылку</span></li></ul><div class="js-sticker-fixed">
+<div class="post-comments js-post-comments js-ga-post-comments" id="comment_33392">
+<div class="postc-head js-postc-head js-ga-link" data-ga-action="Клик по ссылке «Комментарии»" data-ga-category="LM-блоги" data-ga-label="Комментарии">
+Комментарии: 1
+</div>
+<div class="dn js-postc-and-form-wrapper">
+<ul class="postc-list">
+<li class="pcl-item" id="comment-53401">
+<div class="pcli-content js-comment-block" data-id="53401">
+<span class="pcliu-user js-answer-user">
+Алина
+</span>
+<div class="pcliu-content js-pcliu-content">ТАНЦЫ| ШКОЛА/СТУДИЯ ТАНЦЕВ WHAT'S UP В САМАРЕ
+ИДЕТ НАБОР ПО ВСЕМ НАПРАВЛЕНИЯМ!
+HIP-HOP, DANCEHALL 🔥 , TWERK, MTV DANCE 🎤, ДЕТСКАЯ, ВЗРОСЛАЯ ГРУППА💃, STRETCH, BODY TRAINING 💪!!!
+
+💥💥💥СТУДИЯ ТАНЦЕВ WHAT'S UP В САМАРЕ!!! 💥💥💥 
+Адрес: ул. Аэродромная 45, офис 213 (прямо за ТЦ Аврора) 
+Телефон: 8-917-018-53-67</div>
+<div class="comment-image-wrapper js-comment-image-wrapper">
+<ul class="ciw-list"><li class="ciw-item"><a class="ciw-item js-comment-images-fancybox-53401" data-fancybox-group="gallery" href="http://st4.styapokupayu.ru/images/core_blog/blog_posts/comment_images/000/174/855_original.png">
+<img alt="" class="lazypic " data-original="http://st4.styapokupayu.ru/images/core_blog/blog_posts/comment_images/000/174/855_medium.png" src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a></li></ul>
+</div>
+05.09.2016 / 12:09
+<a class="send-answer js-send-answer" data-parent-comment-id="53401" href="#">Ответить</a>
+</div>
+</li>
+
+</ul>
+<form accept-charset="UTF-8" accept-encoding="UTF-8" action="http://www.yapokupayu.ru/blogs/post/kuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni/comment" class="post-comment-form clearfix post-comment-form-33392" data-mission="post-comment" id="comment_new" method="post" onsubmit="formSubmitter.disableButtons(this, null, null);"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="VJOCYD6RWPcXMD4ERjghI33N7Jbe2iQnUsxEjeuMVIw=" /></div><div class="pcf-user js-pcf-user">
+<div class="pcf-user-name">
+<label for="comment_guest_user_name">Ваше имя*:</label>
+<input class="pcf-input" id="comment_guest_user_name" name="comment[guest_user_name]" size="30" type="text" />
+<span class="hint-name">Обязательно для заполнения</span>
+</div>
+</div>
+<div class="pcf-comment">
+<textarea class="pcf-textarea js-pcf-textarea-hidden" cols="40" id="comment_content" name="comment[content]" rows="20">
+</textarea>
+</div>
+<div class="pcf-comment">
+<input name="comment[is_subscribed]" type="hidden" value="0" /><input class="js-ga-link js-help" data-ga-action="Получать ответы н/а" data-ga-category="Пост" data-ga-label="Комментарии" id="comment_is_subscribed" name="comment[is_subscribed]" type="checkbox" value="1" />
+<label for="comment_is_subscribed">Получать ответы на мой комментарий</label>
+<input class="js-parent-comment-id" id="comment_parent_comment_id" name="comment[parent_comment_id]" type="hidden" />
+<span class="comment-upload-image js-upload-image" data-container=".post-comment-form-33392">
+Добавить изображение
+<span class="hint">Формат .jpg, .png. Размером не более 15 Мб</span>
+</span>
+</div>
+<input class="pcf-full-name" id="comment-full-user-name" name="full_user_name" type="text" />
+<span class="pcf-submit">
+<input class="pcf-submit-button js-ga-link" data-ga-action="Комментировать н/а" data-ga-category="Пост" data-ga-label="Комментарии" name="commit" type="submit" value="Комментировать" />
+</span>
+<div class="comment-attachment-image js-images-container">
+<ul class="cai-list js-images-wrapper"></ul>
+<div class="comment-error js-upload-image-error dn"></div>
+</div>
+
+</form>
+
+<div class="ppp-help-bl js-ppp-help dn">
+<div class="ppphb-in">
+<div class="qtip-close js-blog-post-show-qtip">
+x
+</div>
+<p>
+Чтобы получать уведомления, необходимо
+<a href="http://www.yapokupayu.ru/login?return_to=http%3A%2F%2Fwww.yapokupayu.ru%2Fblogs%2Fpost%2Fkuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni">авторизоваться</a>
+или
+<a href="http://www.yapokupayu.ru/signup?return_to=http%3A%2F%2Fwww.yapokupayu.ru%2Fblogs%2Fpost%2Fkuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni">зарегистрироваться</a>
+</p>
+</div>
+</div>
+<script>
+  app.config.images = {
+   maxFilesCount: 5,
+   previewUrl: "http://www.yapokupayu.ru/images/previews",
+   uploadUrl: "http://www.yapokupayu.ru/images"
+  };
+  app.config.images.uploadData = {
+   authenticity_token: "VJOCYD6RWPcXMD4ERjghI33N7Jbe2iQnUsxEjeuMVIw=",
+   model: 'CoreBlog::BlogPosts::CommentImage',
+   subject_type: 'CoreBlog::BlogComment'
+  };
+  app.config.commentaries = {
+    token: "VJOCYD6RWPcXMD4ERjghI33N7Jbe2iQnUsxEjeuMVIw=",
+    messages: {
+      imageLimitExceeds: 'Максимальное количество изображений к комментарию 5',
+      imageTooBig: 'Допустимый размер изображения - 2 Мб',
+      imageUploadFail: 'Допустимые форматы jpg, gif, png'
+    },
+    loader: "http://www.yapokupayu.ru/assets/loader-4d3c214d01ce8a6df74d1862ba1259b6.gif",
+    isPortal: true,
+    list: '.postc-list',
+    isAdmin: false
+  };
+</script>
+
+</div>
+</div></div>
+</div>
+<script data-adaptive="true" data-counter="2819585" id="js-mpf-mediator-init">
+!function(e) {function t(t, n) {if(!(n in e)) {for(var r, a = e.document, i = a.scripts, o = i.length; o--;)
+  if(-1 !== i[o].src.indexOf(t)){r = i[o]; break}
+  if(!r) {r=a.createElement('script'), r.type = 'text/javascript', r.async =! 0, r.defer =! 0, r.src = t,
+  r.charset = 'UTF-8'; var d = function() {var e = a.getElementsByTagName('script')[0];
+  e.parentNode.insertBefore(r, e)}; '[object Opera]' == e.opera?a.addEventListener?a.addEventListener(
+  'DOMContentLoaded', d, !1):e.attachEvent('onload', d):d()}}}
+   t('//mediator.imgsmail.ru/2/mpf-mediator.min.js', '_mediator')
+}(window);
+</script><span class="article-pic-soc js-article-image-share dn">
+<div class="apc-item fb js-button" data-provider="fb"></div>
+<div class="apc-item vk js-button" data-provider="vk"></div>
+<div class="apc-item od js-button" data-provider="od"></div>
+</span></div><div class="post-column-right"><div class="js-floating-banner">
+<div class="prc-banner">
+<div class="mb25 show-adfox-banner">
+<div id="adfox_top">
+<div class="js-adfox-block" data-id="2" data-puid2="life" data-src="http://ads.adfox.ru/170866/prepareCode?pp=g&amp;amp;ps=uwd&amp;amp;p2=exez&amp;amp;pct=a&amp;amp;plp=a&amp;amp;pli=a&amp;amp;pop=a&amp;amp;pt=b&amp;amp;" id="AdFox_banner_2"></div>
+<div class="adfox-baner"></div>
+</div>
+
+</div>
+<div class="dummy-banner">
+
+</div>
+</div>
+<ul class="prc-share-button js-post-share" data-id="0">
+<li class="prcsb-item js-share-social-group js-ga-link" data-ga-action="FB справа" data-ga-category="Пост" data-ga-label="Соц. кнопки" data-provider="fb">
+<span class="fb">Поделиться на FB</span>
+</li>
+<li class="prcsb-item js-share-social-group js-ga-link" data-ga-action="VK справа" data-ga-category="Пост" data-ga-label="Соц. кнопки" data-provider="vk">
+<span class="vk">Поделиться во Вконтакте</span>
+</li><li class="js-post-subscription-button prcsb-item"><span class="subscribe js-ga-link" data-ga-action="Клик по кнопке справа" data-ga-category="Пост" data-ga-label="Подписаться на рассылку">
+Подписаться на рассылку</span></li></ul>
+
+</div></div><div class="js-sticker-fixed">
+<div class="mb20 mt10" data-widget="plista_widget_belowArticle"></div>
+
+<div class="mb15 mt10">
+<div class="adfox-top">
+<div class="js-adfox-block" data-id="3" data-puid2="life" data-src="http://ads.adfox.ru/170866/prepareCode?pp=h&amp;amp;ps=uwd&amp;amp;p2=exez&amp;amp;pct=a&amp;amp;plp=a&amp;amp;pli=a&amp;amp;pop=a&amp;amp;pt=b&amp;amp;" id="AdFox_banner_3"></div>
+<div class="adfox-baner"></div>
+</div>
+
+</div>
+</div>
+
+</div>
+<script>
+  app.config.statsRelatedCompanyPost = {
+    url: "http://www.yapokupayu.ru/stats/add_hits_by_page",
+    ids: []
+  };
+</script>
+
+</div>
+<input accept="image/*" class="js-input-file-image dn" multiple type="file">
+<div class="dn js-post-subscription-popup">
+<div class="psp-title">Чтобы подписаться на нашу рассылку, зарегистрируйтесь или авторизуйтесь</div>
+<form action="http://www.yapokupayu.ru/dashboard/subscriptions#7" class="js-form-with-auth" method="get">
+<div class="js-auth-component-container" data-error="Произошла ошибка. Пожалуйста, попробуйте повторить попытку." data-fields='{"required":["email","password"]}' data-groups='{"order":["email","password","code","name","phone"],"hiddenByDefault":["name","code"],"visibleIfDataCorrect":["password","code"]}' data-selectors='{"flashMessage":".js-popup-message"}' data-type="vertical" data-user="null"></div>
+
+<div class="form-message js-popup-message"></div>
+<input class="psp-submit js-auth-component-button" type="submit" value="Отправить">
+<div class="psp-hint-text">Нажимая кнопку «Отправить», вы соглашаетесь с условиями <a href = "http://www.yapokupayu.ru/terms/" target = "_blank">пользовательского соглашения</a></div>
+</form>
+</div>
+
+<script async src="//vk.com/js/api/openapi.js?113"></script>
+<script>
+  app.config.subscribePopup = true;
+  app.config.subscribeWidget = true;
+  
+  app.config.sticker = {
+    bottomElement: '.js-sticker-fixed'
+  };
+  
+  app.modules.fb = app.modules.fb || [];
+  app.modules.fb.load = function() {
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&appId=144133399092565&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  };
+  
+  app.config.nextPost = ["http://www.yapokupayu.ru/blogs/post/pravila-stilya-uchimsya-podbirat-galstuk-k-rubashke","http://www.yapokupayu.ru/blogs/post/krasivye-interiery-vannoy-komnaty","http://www.yapokupayu.ru/blogs/post/top-8-trendov-iz-subkultur","http://www.yapokupayu.ru/blogs/post/samye-modnye-sapogi-sezona","http://www.yapokupayu.ru/blogs/post/21-ideya-podarkov-dlya-mamy-na-8-marta"]
+  ;
+</script>
+
+</div>
+
+</div>
+</div>
+<footer id="no-addfox-clickable">
+<div class="base-width clearfix">
+<div class="f-logo">
+<IDXSKIP><noindex>
+<div class="footer-logo-wrapper">
+<span class="fl-logo logo-head" data-to="http://msk.yapokupayu.ru" rel="nofollow"><img alt="Портал «Я Покупаю». Смотри и покупай" src="http://www.yapokupayu.ru/assets/data_uri/yapokupayu_logos-332a1a2d10173fda7a64b6b10c6336c7.png"></img>
+</span></div>
+</noindex></IDXSKIP>
+<div class="f-phone">
+<IDXSKIP>Техподдержка
+<strong class="fp-phone" itemprop="telephone">8-800-700-01-66</strong></IDXSKIP>
+<div class="fp-info"><IDXSKIP>звонки бесплатны на&nbsp;территории РФ</IDXSKIP></div>
+<IDXSKIP><span itemprop="email">
+<a href="mailto:support@yapokupayu.ru">support@yapokupayu.ru</a>
+</span></IDXSKIP>
+<br>
+<IDXSKIP>Время работы техподдержки:<br>с 8.00 до 17.00<br>(время московское)
+</IDXSKIP><p class="mt5">
+	<IDXSKIP>Адрес: <span itemprop="postalCode">115280</span></IDXSKIP><IDXSKIP>, <span itemprop="addressLocality">Москва</span></IDXSKIP><IDXSKIP>, <span itemprop="streetAddress">Ленинская Слобода, д. 19</span></IDXSKIP><br />
+	<IDXSKIP>Администрация: </IDXSKIP><IDXSKIP><span itemprop="telephone">+7 495 269-02-87</span></IDXSKIP></p>
+
+</div>
+<IDXSKIP><div class="f-social-links">
+<span class="fsl-text">Присоединяйтесь к нашим группам!</span>
+<p>
+	<span class="sn fb js-ga-link" data-ga-action="FB" data-ga-category="Хэдер" data-ga-label="Соцсети" data-to="https://www.facebook.com/yapokupayuru" target="_blank"> </span> <span class="sn vk js-ga-link" data-ga-action="VK" data-ga-category="Хэдер" data-ga-label="Соцсети" data-to="https://vk.com/yapokru" target="_blank"> </span> <span class="sn odnoklassniki js-ga-link" data-ga-action="OK" data-ga-category="Хэдер" data-ga-label="Соцсети" data-to="http://www.odnoklassniki.ru/yapokru" target="_blank"> </span> <span class="sn instagram js-ga-link" data-ga-action="IG_ekb" data-ga-category="Хэдер" data-ga-label="Соцсети" data-to="https://instagram.com/ya_pokupayu_ekb" target="_blank"> </span></p>
+
+
+</div></IDXSKIP>
+<IDXSKIP><div class="mt10 ml10">
+<a class="fas-link js-change-site-version js-ga-event" data-action="Вид листинга" data-category="LM-Покупатели" data-label="Изменение дефолтного в мобильной" data-mobile-version="1" href="#">Мобильная версия сайта</a>
+</div></IDXSKIP>
+</div><div class="f-column f-column-1"><IDXSKIP><div class="fl-head">О портале</div></IDXSKIP>
+<div class="f-links js-f-portal-links">
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-target="_blank" data-to="http://www.yapokupayu.ru/mediakit-online.pdf">Скачать медиа-кит</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about">О проекте «Я Покупаю»</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link js-ga-event" data-action="Футер" data-category="LM-Продавцы" data-label="Пользовательское соглашение" data-target="_blank" data-to="http://www.yapokupayu.ru/go?to=http%3A%2F%2Fwww.yapokupayu.ru%2Fterms">Пользовательское соглашение</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-target="_blank" data-to="http://www.yapokupayu.ru/about/conf">Политика конфиденциальности</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/contact">Контакты</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-target="_blank" data-to="http://www.yapokupayu.ru/docs/franchise_yapokupayu.pdf">Франшиза</span></div></IDXSKIP>
+</div>
+<IDXSKIP><p class="fl-head">Журнал Shopping Guide «Я&nbsp;Покупаю»</p></IDXSKIP>
+<div class="f-links">
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-target="_blank" data-to="http://www.yapokupayu.ru/mediakit_2016.pdf">Скачать медиа-кит</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/reklama-journal">Реклама в журнале</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/franchise">Франшиза</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/about-journal">О журнале</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/SG_oferta">Договор-оферта</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/contact">Контакты</span></div></IDXSKIP>
+</div></div><div class="f-column f-column-2"><p class="fl-head"><IDXSKIP>Как продавать на портале «Я Покупаю»</IDXSKIP></p>
+<div class="f-links">
+<IDXSKIP><div class="fl-item">
+<span class="bright-link- js-ga-event" data-action="Футер" data-category="LM-Продавцы" data-label="Создать интернет магазин" data-to="http://www.yapokupayu.ru/firms/new">+ Открыть онлайн-бутик (бесплатно)</span></div></IDXSKIP>
+<div class="fl-item">
+<span class="bright-link-" data-to="http://www.yapokupayu.ru/firms/new?type=product"><IDXSKIP>+ Добавить свои товары/услуги (бесплатно)</IDXSKIP></span></div>
+<div class="fl-item">
+<span class="bright-link- " data-to="http://www.yapokupayu.ru/firms/new" data-url="false"><IDXSKIP>+ Добавить акцию или распродажу (бесплатно)</IDXSKIP></span></div>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about">О портале</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/auditoria">Аудитория портала</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/otzyv">Отзывы клиентов портала</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/reklama">Реклама на портале «Я Покупаю»</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/yml">Как загрузить интернет-магазин</span></div></IDXSKIP>
+<div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/promotionsite"><IDXSKIP>Как привлечь больше покупателей: 10&nbsp;практических советов</IDXSKIP></span></div>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/bonus">Бонусная программа для клиентов</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/price">Правила размещения товаров и услуг</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/faq">Часто задаваемые вопросы</span></div></IDXSKIP>
+</div></div><div class="f-column f-column-3"><IDXSKIP><p class="fl-head">Блогерам</p></IDXSKIP>
+<div class="f-links">
+<IDXSKIP><div class="fl-item">
+<span class="bright-link- js-blogger" data-to="http://www.yapokupayu.ru/blog_signup">+ Стать блогером</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/kak_vesti_blog">Как открыть блог на&nbsp;портале</span></div></IDXSKIP>
+<div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/kolumnist"><IDXSKIP>Как стать колумнистом и показываться в&nbsp;основной ленте</IDXSKIP></span></div>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/pravila_blogov">Правила ведения блога</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/contact/contacts_for_bloggers">Контакты для блогеров</span></div></IDXSKIP>
+</div>
+<IDXSKIP><div class="fl-head">Покупателям</div></IDXSKIP>
+<div class="f-links">
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/how-order">Как заказывать на портале</span></div></IDXSKIP>
+<IDXSKIP><div class="fl-item">
+<span class="fli-link" data-to="http://www.yapokupayu.ru/about/shipping-payment">Доставка и оплата</span></div></IDXSKIP>
+</div>
+<IDXSKIP><noindex>
+<div class="fl">
+<div class="f-counters">
+<script>
+  timerCounter = setTimeout(function() {
+    var counter = document.getElementById('li-counter');
+    if (!counter.complete) {
+      counter.src = '';
+    }
+  }, 1000);
+  document.write("<a href='//www.liveinternet.ru/click;lookmart' "+
+  "target=_blank><img id=\"li-counter\" onload=\"clearTimeout(timerCounter)\" src='//counter.yadro.ru/hit;lookmart?t44.2;r"+
+  escape(document.referrer)+((typeof(screen)=="undefined")?"":
+  ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+  screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+  ";"+Math.random()+
+  "' alt='' title='LiveInternet' "+
+  "border='0' width='31' height='31'><\/a>")
+</script>
+
+<div class="dn">
+<!-- /Rating@Mail.ru logo -->
+<a href="http://top.mail.ru/visits?id=2440122" target="_blank">
+<img alt="Рейтинг@Mail.ru" border="0" height="31" src="//top-fwz1.mail.ru/counter?id=2440122;t=280;l=1" width="38"></img>
+</a>
+<!-- /Rating@Mail.ru counter -->
+<script>
+  var _tmr = _tmr || [];
+  _tmr.push({id: "2440122", type: "pageView", start: (new Date()).getTime()});
+  (function (d, w) {
+     var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+     ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+     var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+     if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+  })(document, window);
+</script>
+<noscript>
+<div style="position: absolute; left: -10000px;">
+<img alt="Рейтинг@Mail.ru" border="0" height="1" src="//top-fwz1.mail.ru/counter?id=2440122;js=na" width="1"></img>
+</div>
+</noscript>
+<!-- /Rating@Mail.ru counter -->
+
+</div>
+<!-- Yandex.Metrika counter -->
+<script>
+  (function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+      try {
+        w.yaCounter7983607 = new Ya.Metrika({
+          id: 7983607,
+          webvisor: true,
+          clickmap: true,
+          accurateTrackBounce: true
+        });
+      } catch(e) { }
+    });
+  
+    var
+      n = d.getElementsByTagName('script')[0],
+      s = d.createElement('script'),
+      f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = (d.location.protocol == 'https:' ? 'https:' : 'http:') + '//mc.yandex.ru/metrika/watch.js';
+  
+    if (w.opera == '[object Opera]') {
+      d.addEventListener('DOMContentLoaded', f, false);
+    } else { f(); }
+  })(document, window, 'yandex_metrika_callbacks');
+</script>
+<noscript>
+<div>
+<img alt="" src="//mc.yandex.ru/watch/7983607" style="position: absolute; left: -9999px;"></img>
+</div>
+</noscript>
+<!-- Yandex.Metrika counter -->
+</div></div>
+</noindex></IDXSKIP>
+<span id="apress_sites"></span><IDXSKIP><div class="fcw-age">16+</div></IDXSKIP><IDXSKIP><div class="rambler-counter">
+<div id="Rambler-counter">
+<a href="http://top100.rambler.ru/navi/4423743/" target="_blank">
+<img alt="Rambler's Top100" border="0" src="http://counter.rambler.ru/top100.cnt?4423743"></img>
+</a>
+</div>
+<a href="//www.rambler.ru/" target="_blank">Партнер Рамблера</a></div></IDXSKIP></div><p class="f-text"><IDXSKIP>©&nbsp;
+<span class="fas-link" data-target="_blank" data-to="http://www.apress.ru/">Медиахолдинг «АБАК-ПРЕСС»</span></IDXSKIP><IDXSKIP>,<a href="http://www.pulscen.ru/" class="fas-link" target="_blank">Пульс&nbsp;цен</a></IDXSKIP><IDXSKIP>,<span class="fas-link" data-target="_blank" data-to="http://www.blizko.ru/">BLIZKO.ru</span></IDXSKIP><IDXSKIP>,<a class="fas-link" href="http://www.dk.ru/" target="_blank">Деловой&nbsp;квартал</a></IDXSKIP></p><p class="f-text mt10 copyright">
+<IDXSKIP>ООО Издательство «Пульс цен», 620014, Россия, Свердловская область, г. Екатеринбург, ул. Радищева, 23.
+</IDXSKIP></p>
+</div>
+</footer>
+<script>
+  app.config.footer = {
+    url: "http://www.yapokupayu.ru/blog_signup"
+  };
+</script>
+
+</div>
+<div class="popup" id="password-reset">
+<table>
+<tr>
+<td class="p-body">
+<div class="p-pad">
+<form accept-charset="UTF-8" accept-encoding="UTF-8" action="http://www.yapokupayu.ru/users/password" method="post" onsubmit="formSubmitter.disableButtons(this, null, null);"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="VJOCYD6RWPcXMD4ERjghI33N7Jbe2iQnUsxEjeuMVIw=" /></div><fieldset class="str uf-large" id="cpform_email_field">
+<input class="uf-t" id="password_email" name="password[email]" size="30" type="text" />
+</fieldset>
+<fieldset class="subm">
+<span class="uf-submit"><input class="ufs-but" name="commit" type="submit" value="Отправить" /></span>
+</fieldset>
+<div class="p-links">
+<span id="or_word_in_newpasswform"></span>
+<span id="enter_in_newpasswform"></span>
+</div>
+</form>
+</div>
+</td>
+</tr>
+</table>
+
+</div>
+<div class="popup unsub" id="popup-container">
+<div class="p-body">
+<div class="p-pad" id="popup-content"></div>
+</div>
+</div>
+
+<div class="js-dialog-popup-box"></div>
+<IDXSKIP><div class="back-to-top js-back-to-up ga-js-back-to-up">
+<span class="btt-a">Наверх</span>
+</div></IDXSKIP>
+
+<div class="invisible" id="comment_ready_to_delete">
+<div class="mt25">
+<p>Вы уверены, что хотите удалить комментарий?</p>
+<div class="mt25 clearfix">
+<input class="apress-button ab-submit" data-delcomm="true" type="button" value="Да">
+<span class="ml20 mt10 c-p js-close-popup">
+Отменить
+</span>
+</div>
+</div>
+<div class="invisible" id="comment_deleted">
+<div class="pcli-deleted">Комментарий был удален</div>
+</div>
+<div class="invisible" id="comment_deleting_error">
+<div class="mt25">
+<p>Комментарий не был удален</p>
+</div>
+</div>
+</div>
+
+<script>
+  
+</script>
+<script defer="defer" src="http://www.yapokupayu.ru/assets/package/base-84be61e752012ae853872a45d0ca2a5c.js" type="text/javascript"></script>
+<script defer="defer" src="http://www.yapokupayu.ru/assets/package/section/portal_base-00c6b98557c1f56e53cd1f2158e3f7fb.js" type="text/javascript"></script>
+
+<script defer="defer" src="http://www.yapokupayu.ru/assets/package/page/blog_base-5fce9820b1a7afa04a3d76c87ce5c25e.js" type="text/javascript"></script>
+
+<script defer="defer" src="http://www.yapokupayu.ru/assets/package/images-ed00d9a6db091023eb61bedd0bd4dbc4.js" type="text/javascript"></script>
+
+
+<script>
+  app.modules.toolbar = app.modules.toolbar || {};
+  app.modules.toolbar.load = function() {
+    function add_toolbar_return_path(element, path) {
+      if (element && element.length) element.attr('href', path);
+    }
+  
+    function add_toolbar_return_paths() {
+      add_toolbar_return_path($('.js-toolbar-sign-in-link'), 'http://www.yapokupayu.ru/users/session/request?return_to=return_to_url'.replace(/return_to_url/, window.location.href));
+      add_toolbar_return_path($('.js-toolbar-sign-up-link'), 'http://www.yapokupayu.ru/users/new?return_to=return_to_url'.replace(/return_to_url/, window.location.href));
+  
+      add_toolbar_return_path($('.js-ssodomain-signin-link'), "http://www.yapokupayu.ru/login?return_to=http%3A%2F%2Fwww.yapokupayu.ru%2Fblogs%2Fpost%2Fkuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni");
+      add_toolbar_return_path($('.js-ssodomain-signup-link'), "http://www.yapokupayu.ru/signup");
+    }
+  
+    $.ajax({
+      url: "http://www.yapokupayu.ru/ajax/toolbar?is_portal_page=true&return_to=http%3A%2F%2Fwww.yapokupayu.ru%2Fblogs%2Fpost%2Fkuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni",
+      success: function(response) { $('#toolbar').html(response) },
+      complete: function() {
+        add_toolbar_return_paths();
+        $('.js-ga-signup-link').click(function() {
+          _gaq.push(['_trackEvent', 'LM-Все', 'Зарегистрироваться', 'Шапка']);
+        });
+      }
+    });
+  };
+</script>
+
+<script>
+  app.modules.main = app.modules.main || {};
+  app.modules.main.load = function() {
+    if ($('#comment_guest_user_name').length) {
+    addAuthRegisterLinks(
+      "\u0412\u043e\u0439\u0442\u0438",
+      "\u0438\u043b\u0438",
+      "\u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f",
+      "http://www.yapokupayu.ru/login?return_to=http%3A%2F%2Fwww.yapokupayu.ru%2Fblogs%2Fpost%2Fkuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni",
+      "http://www.yapokupayu.ru/signup?return_to=http%3A%2F%2Fwww.yapokupayu.ru%2Fblogs%2Fpost%2Fkuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni"
+    );
+  }
+  
+  autocompleteSearch('/search_hints/suggestions');
+  if (!$("#search-str").hasClass('sample-text')) {
+    FindMark.setContainerSelector(".tovar-title, .tovar-desc, .firm-title, .firm_desc, .pto-name, .pgo-name");
+    FindMark.on($("#search-str").val());
+  }
+  $('.js-f-portal-links').append('<div class="fl-item"><a class="fli-link" href="http://www.yapokupayu.ru/opinion?from_url='+ urlencode(document.URL) +'">Сообщить об ошибке</a></div>');
+  
+  
+  popupsActivity({
+    closeWord: "\u0417\u0430\u043a\u0440\u044b\u0442\u044c",
+    changePasswordHead: "\u0421\u043c\u0435\u043d\u0430 \u043f\u0430\u0440\u043e\u043b\u044f",
+    registerWord: "\u0437\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f",
+    enterWord: "\u0432\u043e\u0439\u0442\u0438",
+    enterUrl: "http://www.yapokupayu.ru/login?return_to=http%3A%2F%2Fwww.yapokupayu.ru%2Fblogs%2Fpost%2Fkuda-shodit-potantsevat-v-samare-obzor-nochnoy-zhizni",
+    orWord: "\u0438\u043b\u0438"
+  });
+  
+  BackToUp.init({
+    $selectorButton: $('.js-back-to-up'),
+    $selectorContent: $('.js-middle')
+  });
+  
+  $(".js-back-to-up").on("mouseenter mouseleave", function(){
+    $(this).toggleClass("hover");
+  });
+  
+  //GA - событие на кнопку "наверх"
+  $doc.on('click', '.ga-js-back-to-up', function() {
+    _gaq.push(['_trackEvent', 'LM все', 'Наверх_клики', 'Кнопка_наверх']);
+  });
+  
+    $('#AdFox_banner_1').siblings('.adfox-baner').append(
+    '<iframe width="1" height="1" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" id="AdFox_iframe_1"></iframe>'
+  );
+  AdFox_getCodeScript(
+    1,
+    '1',
+    'http://ads.adfox.ru/170866/prepareCode?pp=g&amp;ps=uwd&amp;p2=y&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + adfox.pr + '&amp;pt=b&amp;pd=' + adfox.addate.getDate() + '&amp;pw=' + adfox.addate.getDay() + '&amp;pv=' + adfox.addate.getHours() + '&amp;prr=' + adfox.afReferrer + '&amp;puid1=msk&amp;puid2=life&amp;dl=' + adfox.dl + '&amp;pr1=1'
+  );
+  
+  
+  $('#AdFox_banner_4').siblings('.adfox-baner').append(
+    '<iframe width="1" height="1" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" id="AdFox_iframe_4"></iframe>'
+  );
+  AdFox_getCodeScript(
+    1,
+    '4',
+    'http://ads.adfox.ru/170866/prepareCode?pp=g&amp;ps=uwd&amp;p2=fcoy&amp;pct=a&amp;plp=a&amp;pli=a&amp;pop=a&amp;pr=' + adfox.pr + '&amp;pt=b&amp;pd=' + adfox.addate.getDate() + '&amp;pw=' + adfox.addate.getDay() + '&amp;pv=' + adfox.addate.getHours() + '&amp;prr=' + adfox.afReferrer + '&amp;puid1=msk&amp;puid2=life&amp;dl=' + adfox.dl + '&amp;pr1=4'
+  );
+  
+  
+  
+  
+    
+  };
+</script>
+</body>
+</html>
+
